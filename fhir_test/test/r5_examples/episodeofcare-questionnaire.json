@@ -1,14 +1,16 @@
 {
   "resourceType": "Questionnaire",
-  "id": "qs1",
+  "id": "qgen-EpisodeOfCare1",
+  "url": "http://hl7.org/fhir/Questionnaire/qgen-EpisodeOfCare1",
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "status": "draft",
-  "date": "2022-05-06T17:02:42+00:00",
+  "experimental": false,
+  "date": "2022-12-14T07:12:54+11:00",
   "publisher": "Health Level Seven International (Patient Administration)",
   "item": [
     {
@@ -69,7 +71,7 @@
                 }
               ],
               "linkId": "EpisodeOfCare.id-flyover",
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Within the context of the FHIR RESTful interactions, the resource has an id except for cases like the create and conditional update. Otherwise, the use of the resouce id depends on the given use case.",
               "type": "display"
             },
             {
@@ -261,7 +263,7 @@
                 }
               ],
               "linkId": "EpisodeOfCare.contained-flyover",
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags in their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -843,16 +845,13 @@
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                   "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "Reference"
                 }
               ],
               "linkId": "EpisodeOfCare.diagnosis.condition",
+              "text": "Conditions/problems/diagnoses this episode of care is for",
               "type": "group",
               "required": true,
-              "repeats": true,
+              "repeats": false,
               "item": [
                 {
                   "extension": [
@@ -872,23 +871,6 @@
                   "linkId": "EpisodeOfCare.diagnosis.condition-flyover",
                   "text": "A list of conditions/problems/diagnoses that this episode of care is intended to be providing care for.",
                   "type": "display"
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                      "valueCode": "Condition"
-                    },
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
-                      "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
-                    }
-                  ],
-                  "linkId": "EpisodeOfCare.diagnosis.condition.value",
-                  "text": "Conditions/problems/diagnoses this episode of care is for",
-                  "type": "reference",
-                  "required": false,
-                  "repeats": false
                 }
               ]
             },
@@ -1033,8 +1015,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Patient"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Patient, Patient"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1081,14 +1063,14 @@
                 }
               ],
               "linkId": "EpisodeOfCare.managingOrganization-flyover",
-              "text": "The organization that has assumed the specific responsibilities for the specified duration.",
+              "text": "The organization that has assumed the specific responsibilities for care coordination, care delivery, or other services for the specified duration. If multiple organizations are involved in care delivery, the care teams from those organizations would be represented in EpisodeOfCare.team, while the primary organization managing the care would be listed in EpisodeOfCare.managingOrganization.   Other organizations may have their own EpisodeOfCare for tracking their activities.",
               "type": "display"
             },
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Organization"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Organization, Organization"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1096,7 +1078,7 @@
                 }
               ],
               "linkId": "EpisodeOfCare.managingOrganization.value",
-              "text": "Organization that assumes care",
+              "text": "Organization that assumes responsibility for care coordination",
               "type": "reference",
               "required": false,
               "repeats": false
@@ -1189,8 +1171,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "ServiceRequest"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "ServiceRequest, ServiceRequest"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1243,8 +1225,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Practitioner, PractitionerRole"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Practitioner, PractitionerRole, PractitionerRole"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1266,7 +1248,7 @@
               "valueString": "Reference"
             }
           ],
-          "linkId": "EpisodeOfCare.team",
+          "linkId": "EpisodeOfCare.careTeam",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -1286,22 +1268,22 @@
                   }
                 }
               ],
-              "linkId": "EpisodeOfCare.team-flyover",
+              "linkId": "EpisodeOfCare.careTeam-flyover",
               "text": "The list of practitioners that may be facilitating this episode of care for specific purposes.",
               "type": "display"
             },
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "CareTeam"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "CareTeam, CareTeam"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
                   "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
                 }
               ],
-              "linkId": "EpisodeOfCare.team.value",
+              "linkId": "EpisodeOfCare.careTeam.value",
               "text": "Other practitioners facilitating this episode of care",
               "type": "reference",
               "required": false,
@@ -1343,8 +1325,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Account"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Account, Account"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1361,14 +1343,5 @@
         }
       ]
     }
-  ],
-  "meta": {
-    "tag": [
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-        "code": "HTEST",
-        "display": "test health data"
-      }
-    ]
-  }
+  ]
 }

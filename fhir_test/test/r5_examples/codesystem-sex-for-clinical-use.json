@@ -1,0 +1,88 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "sex-for-clinical-use",
+  "meta": {
+    "lastUpdated": "2022-12-14T07:12:54.019+11:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eProperties\u003c/b\u003e\u003c/p\u003e\u003ctable class\u003d\"grid\"\u003e\u003ctr\u003e\u003ctd\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eURL\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eType\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDescription\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003eusage-note\u003c/td\u003e\u003ctd\u003ehttp://terminology.hl7.org/CodeSystem/sex-for-clinical-use/property/usage-note\u003c/td\u003e\u003ctd\u003estring\u003c/td\u003e\u003ctd\u003eUsage notes for the concept.\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003cp\u003eThis code system \u003ccode\u003ehttp://terminology.hl7.org/CodeSystem/sex-for-clinical-use\u003c/code\u003e defines the following codes:\u003c/p\u003e\u003ctable class\u003d\"codes\"\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDisplay\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDefinition\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003efemale\u003ca name\u003d\"sex-for-clinical-use-female\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eFemale sex for clinical use\u003c/td\u003e\u003ctd\u003eAvailable data indicates that diagnostics, analytics, and treatments should consider best practices associated with female reference populations.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003emale\u003ca name\u003d\"sex-for-clinical-use-male\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eMale sex for clinical use\u003c/td\u003e\u003ctd\u003eAvailable data indicates that diagnostics, analytics, and treatments should consider best practices associated with male reference populations.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003especified\u003ca name\u003d\"sex-for-clinical-use-specified\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eSpecified sex for clinical use\u003c/td\u003e\u003ctd\u003eAvailable data indicates that diagnostics, analytics, and treatment best practices may be undefined or not aligned with sex-derived reference populations.  Additional information (usually, but not always, in the form of comments and/or observations) is available, but does not align with male sex for clinical use or female sex for clinical use. \u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eunknown\u003ca name\u003d\"sex-for-clinical-use-unknown\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eUnknown\u003c/td\u003e\u003ctd\u003eNo information can be provided.\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "pa"
+    }
+  ],
+  "url": "http://terminology.hl7.org/CodeSystem/sex-for-clinical-use",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.4.2038"
+    }
+  ],
+  "version": "5.0.0-snapshot3",
+  "name": "sexForClinicalUseCS",
+  "title": "Sex For Clinical Use",
+  "status": "active",
+  "experimental": true,
+  "description": "Codes that represent a sex characterization that can be associated with a specific clinical context",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "content": "complete",
+  "property": [
+    {
+      "code": "usage-note",
+      "uri": "http://terminology.hl7.org/CodeSystem/sex-for-clinical-use/property/usage-note",
+      "description": "Usage notes for the concept.",
+      "type": "string"
+    }
+  ],
+  "concept": [
+    {
+      "code": "female",
+      "display": "Female sex for clinical use",
+      "definition": "Available data indicates that diagnostics, analytics, and treatments should consider best practices associated with female reference populations."
+    },
+    {
+      "code": "male",
+      "display": "Male sex for clinical use",
+      "definition": "Available data indicates that diagnostics, analytics, and treatments should consider best practices associated with male reference populations."
+    },
+    {
+      "code": "specified",
+      "display": "Specified sex for clinical use",
+      "definition": "Available data indicates that diagnostics, analytics, and treatment best practices may be undefined or not aligned with sex-derived reference populations.  Additional information (usually, but not always, in the form of comments and/or observations) is available, but does not align with male sex for clinical use or female sex for clinical use. ",
+      "property": [
+        {
+          "code": "usage-note",
+          "valueString": "Individuals or systems providing care should either use default behavior that is safe for both male and female populations, individually review treatment options with the patient, or carefully inspect comments and relevant observations before proceeding with treatment. Systems that are unable to review additional information that may be associated with an SFCU value may manage a SPECIFIED and an UNKNOWN value in the same way."
+        }
+      ]
+    },
+    {
+      "code": "unknown",
+      "display": "Unknown",
+      "definition": "No information can be provided.",
+      "property": [
+        {
+          "code": "usage-note",
+          "valueString": "Systems that are unable to review additional information that may be associated with an SFCU value may manage a SPECIFIED and an UNKNOWN value in the same way."
+        }
+      ]
+    }
+  ]
+}

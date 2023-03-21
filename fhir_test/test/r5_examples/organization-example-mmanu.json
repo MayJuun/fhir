@@ -7,9 +7,11 @@
   },
   "active": true,
   "name": "Acme Corporation",
-  "address": [
+  "contact": [
     {
-      "country": "Swizterland"
+      "address": {
+        "country": "Swizterland"
+      }
     }
   ],
   "meta": {

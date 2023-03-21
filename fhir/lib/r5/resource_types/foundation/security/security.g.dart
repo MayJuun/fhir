@@ -8,9 +8,10 @@ part of 'security.dart';
 
 _$_AuditEvent _$$_AuditEventFromJson(Map<String, dynamic> json) =>
     _$_AuditEvent(
-      resourceType:
-          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
-              R5ResourceType.AuditEvent,
+      resourceType: $enumDecodeNullable(
+              _$R5ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: R5ResourceType.AuditEvent) ??
+          R5ResourceType.AuditEvent,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -139,6 +140,7 @@ Map<String, dynamic> _$$_AuditEventToJson(_$_AuditEvent instance) {
 const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Account: 'Account',
   R5ResourceType.ActivityDefinition: 'ActivityDefinition',
+  R5ResourceType.ActorDefinition: 'ActorDefinition',
   R5ResourceType.AdministrableProductDefinition:
       'AdministrableProductDefinition',
   R5ResourceType.AdverseEvent: 'AdverseEvent',
@@ -153,7 +155,6 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.BodyStructure: 'BodyStructure',
   R5ResourceType.Bundle: 'Bundle',
   R5ResourceType.CapabilityStatement: 'CapabilityStatement',
-  R5ResourceType.CapabilityStatement2: 'CapabilityStatement2',
   R5ResourceType.CarePlan: 'CarePlan',
   R5ResourceType.CareTeam: 'CareTeam',
   R5ResourceType.ChargeItem: 'ChargeItem',
@@ -169,7 +170,6 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.CompartmentDefinition: 'CompartmentDefinition',
   R5ResourceType.Composition: 'Composition',
   R5ResourceType.ConceptMap: 'ConceptMap',
-  R5ResourceType.ConceptMap2: 'ConceptMap2',
   R5ResourceType.Condition: 'Condition',
   R5ResourceType.ConditionDefinition: 'ConditionDefinition',
   R5ResourceType.Consent: 'Consent',
@@ -200,6 +200,8 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.ExplanationOfBenefit: 'ExplanationOfBenefit',
   R5ResourceType.FamilyMemberHistory: 'FamilyMemberHistory',
   R5ResourceType.Flag: 'Flag',
+  R5ResourceType.FormularyItem: 'FormularyItem',
+  R5ResourceType.GenomicStudy: 'GenomicStudy',
   R5ResourceType.Goal: 'Goal',
   R5ResourceType.GraphDefinition: 'GraphDefinition',
   R5ResourceType.Group: 'Group',
@@ -258,7 +260,8 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.QuestionnaireResponse: 'QuestionnaireResponse',
   R5ResourceType.RegulatedAuthorization: 'RegulatedAuthorization',
   R5ResourceType.RelatedPerson: 'RelatedPerson',
-  R5ResourceType.RequestGroup: 'RequestGroup',
+  R5ResourceType.RequestOrchestration: 'RequestOrchestration',
+  R5ResourceType.Requirements: 'Requirements',
   R5ResourceType.ResearchStudy: 'ResearchStudy',
   R5ResourceType.ResearchSubject: 'ResearchSubject',
   R5ResourceType.RiskAssessment: 'RiskAssessment',
@@ -368,9 +371,7 @@ _$_AuditEventAgent _$$_AuditEventAgentFromJson(Map<String, dynamic> json) =>
       networkUriElement: json['_networkUri'] == null
           ? null
           : Element.fromJson(json['_networkUri'] as Map<String, dynamic>),
-      networkString: json['networkString'] == null
-          ? null
-          : Markdown.fromJson(json['networkString']),
+      networkString: json['networkString'] as String?,
       networkStringElement: json['_networkString'] == null
           ? null
           : Element.fromJson(json['_networkString'] as Map<String, dynamic>),
@@ -405,7 +406,7 @@ Map<String, dynamic> _$$_AuditEventAgentToJson(_$_AuditEventAgent instance) {
   writeNotNull('networkReference', instance.networkReference?.toJson());
   writeNotNull('networkUri', instance.networkUri?.toJson());
   writeNotNull('_networkUri', instance.networkUriElement?.toJson());
-  writeNotNull('networkString', instance.networkString?.toJson());
+  writeNotNull('networkString', instance.networkString);
   writeNotNull('_networkString', instance.networkStringElement?.toJson());
   writeNotNull(
       'authorization', instance.authorization?.map((e) => e.toJson()).toList());
@@ -523,9 +524,7 @@ _$_AuditEventDetail _$$_AuditEventDetailFromJson(Map<String, dynamic> json) =>
           ? null
           : CodeableConcept.fromJson(
               json['valueCodeableConcept'] as Map<String, dynamic>),
-      valueString: json['valueString'] == null
-          ? null
-          : Markdown.fromJson(json['valueString']),
+      valueString: json['valueString'] as String?,
       valueStringElement: json['_valueString'] == null
           ? null
           : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
@@ -587,7 +586,7 @@ Map<String, dynamic> _$$_AuditEventDetailToJson(_$_AuditEventDetail instance) {
   val['type'] = instance.type.toJson();
   writeNotNull('valueQuantity', instance.valueQuantity?.toJson());
   writeNotNull('valueCodeableConcept', instance.valueCodeableConcept?.toJson());
-  writeNotNull('valueString', instance.valueString?.toJson());
+  writeNotNull('valueString', instance.valueString);
   writeNotNull('_valueString', instance.valueStringElement?.toJson());
   writeNotNull('valueBoolean', instance.valueBoolean?.toJson());
   writeNotNull('_valueBoolean', instance.valueBooleanElement?.toJson());
@@ -607,9 +606,10 @@ Map<String, dynamic> _$$_AuditEventDetailToJson(_$_AuditEventDetail instance) {
 }
 
 _$_Consent _$$_ConsentFromJson(Map<String, dynamic> json) => _$_Consent(
-      resourceType:
-          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
-              R5ResourceType.Consent,
+      resourceType: $enumDecodeNullable(
+              _$R5ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: R5ResourceType.Consent) ??
+          R5ResourceType.Consent,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -650,12 +650,13 @@ _$_Consent _$$_ConsentFromJson(Map<String, dynamic> json) => _$_Consent(
       subject: json['subject'] == null
           ? null
           : Reference.fromJson(json['subject'] as Map<String, dynamic>),
-      dateTime: json['dateTime'] == null
+      date: json['date'] == null ? null : Date.fromJson(json['date']),
+      dateElement: json['_date'] == null
           ? null
-          : FhirDateTime.fromJson(json['dateTime']),
-      dateTimeElement: json['_dateTime'] == null
+          : Element.fromJson(json['_date'] as Map<String, dynamic>),
+      period: json['period'] == null
           ? null
-          : Element.fromJson(json['_dateTime'] as Map<String, dynamic>),
+          : Period.fromJson(json['period'] as Map<String, dynamic>),
       grantor: (json['grantor'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -723,8 +724,9 @@ Map<String, dynamic> _$$_ConsentToJson(_$_Consent instance) {
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
   writeNotNull('subject', instance.subject?.toJson());
-  writeNotNull('dateTime', instance.dateTime?.toJson());
-  writeNotNull('_dateTime', instance.dateTimeElement?.toJson());
+  writeNotNull('date', instance.date?.toJson());
+  writeNotNull('_date', instance.dateElement?.toJson());
+  writeNotNull('period', instance.period?.toJson());
   writeNotNull('grantor', instance.grantor?.map((e) => e.toJson()).toList());
   writeNotNull('grantee', instance.grantee?.map((e) => e.toJson()).toList());
   writeNotNull('manager', instance.manager?.map((e) => e.toJson()).toList());
@@ -873,7 +875,10 @@ _$_ConsentProvision _$$_ConsentProvisionFromJson(Map<String, dynamic> json) =>
       purpose: (json['purpose'] as List<dynamic>?)
           ?.map((e) => Coding.fromJson(e as Map<String, dynamic>))
           .toList(),
-      class_: (json['class'] as List<dynamic>?)
+      documentType: (json['documentType'] as List<dynamic>?)
+          ?.map((e) => Coding.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      resourceType: (json['resourceType'] as List<dynamic>?)
           ?.map((e) => Coding.fromJson(e as Map<String, dynamic>))
           .toList(),
       code: (json['code'] as List<dynamic>?)
@@ -915,7 +920,10 @@ Map<String, dynamic> _$$_ConsentProvisionToJson(_$_ConsentProvision instance) {
   writeNotNull(
       'securityLabel', instance.securityLabel?.map((e) => e.toJson()).toList());
   writeNotNull('purpose', instance.purpose?.map((e) => e.toJson()).toList());
-  writeNotNull('class', instance.class_?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'documentType', instance.documentType?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'resourceType', instance.resourceType?.map((e) => e.toJson()).toList());
   writeNotNull('code', instance.code?.map((e) => e.toJson()).toList());
   writeNotNull('dataPeriod', instance.dataPeriod?.toJson());
   writeNotNull('data', instance.data?.map((e) => e.toJson()).toList());
@@ -999,9 +1007,10 @@ Map<String, dynamic> _$$_ConsentDataToJson(_$_ConsentData instance) {
 
 _$_Permission _$$_PermissionFromJson(Map<String, dynamic> json) =>
     _$_Permission(
-      resourceType:
-          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
-              R5ResourceType.Permission,
+      resourceType: $enumDecodeNullable(
+              _$R5ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: R5ResourceType.Permission) ??
+          R5ResourceType.Permission,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1033,37 +1042,29 @@ _$_Permission _$$_PermissionFromJson(Map<String, dynamic> json) =>
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
-      intent: json['intent'] == null
-          ? null
-          : CodeableConcept.fromJson(json['intent'] as Map<String, dynamic>),
       asserter: json['asserter'] == null
           ? null
           : Reference.fromJson(json['asserter'] as Map<String, dynamic>),
-      assertionDate: (json['assertionDate'] as List<dynamic>?)
+      date: (json['date'] as List<dynamic>?)
           ?.map((e) => FhirDateTime.fromJson(e))
           .toList(),
-      assertionDateElement: (json['_assertionDate'] as List<dynamic>?)
+      dateElement: (json['_date'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       validity: json['validity'] == null
           ? null
           : Period.fromJson(json['validity'] as Map<String, dynamic>),
-      purpose: (json['purpose'] as List<dynamic>?)
-          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      dataScope: (json['dataScope'] as List<dynamic>?)
-          ?.map((e) => Expression.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      processingActivity: (json['processingActivity'] as List<dynamic>?)
-          ?.map((e) =>
-              PermissionProcessingActivity.fromJson(e as Map<String, dynamic>))
-          .toList(),
       justification: json['justification'] == null
           ? null
           : PermissionJustification.fromJson(
               json['justification'] as Map<String, dynamic>),
-      usageLimitations: (json['usageLimitations'] as List<dynamic>?)
-          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+      combining:
+          json['combining'] == null ? null : Code.fromJson(json['combining']),
+      combiningElement: json['_combining'] == null
+          ? null
+          : Element.fromJson(json['_combining'] as Map<String, dynamic>),
+      rule: (json['rule'] as List<dynamic>?)
+          ?.map((e) => PermissionRule.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
@@ -1093,65 +1094,14 @@ Map<String, dynamic> _$$_PermissionToJson(_$_Permission instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('intent', instance.intent?.toJson());
   writeNotNull('asserter', instance.asserter?.toJson());
-  writeNotNull(
-      'assertionDate', instance.assertionDate?.map((e) => e.toJson()).toList());
-  writeNotNull('_assertionDate',
-      instance.assertionDateElement?.map((e) => e.toJson()).toList());
+  writeNotNull('date', instance.date?.map((e) => e.toJson()).toList());
+  writeNotNull('_date', instance.dateElement?.map((e) => e.toJson()).toList());
   writeNotNull('validity', instance.validity?.toJson());
-  writeNotNull('purpose', instance.purpose?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'dataScope', instance.dataScope?.map((e) => e.toJson()).toList());
-  writeNotNull('processingActivity',
-      instance.processingActivity?.map((e) => e.toJson()).toList());
   writeNotNull('justification', instance.justification?.toJson());
-  writeNotNull('usageLimitations',
-      instance.usageLimitations?.map((e) => e.toJson()).toList());
-  return val;
-}
-
-_$_PermissionProcessingActivity _$$_PermissionProcessingActivityFromJson(
-        Map<String, dynamic> json) =>
-    _$_PermissionProcessingActivity(
-      id: json['id'] as String?,
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      partyReference: (json['partyReference'] as List<dynamic>?)
-          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      partyCodeableConcept: (json['partyCodeableConcept'] as List<dynamic>?)
-          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      purpose: (json['purpose'] as List<dynamic>?)
-          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
-
-Map<String, dynamic> _$$_PermissionProcessingActivityToJson(
-    _$_PermissionProcessingActivity instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('partyReference',
-      instance.partyReference?.map((e) => e.toJson()).toList());
-  writeNotNull('partyCodeableConcept',
-      instance.partyCodeableConcept?.map((e) => e.toJson()).toList());
-  writeNotNull('purpose', instance.purpose?.map((e) => e.toJson()).toList());
+  writeNotNull('combining', instance.combining?.toJson());
+  writeNotNull('_combining', instance.combiningElement?.toJson());
+  writeNotNull('rule', instance.rule?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -1165,11 +1115,11 @@ _$_PermissionJustification _$$_PermissionJustificationFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
+      basis: (json['basis'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
       evidence: (json['evidence'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      grounds: (json['grounds'] as List<dynamic>?)
-          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
@@ -1188,16 +1138,187 @@ Map<String, dynamic> _$$_PermissionJustificationToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('basis', instance.basis?.map((e) => e.toJson()).toList());
   writeNotNull('evidence', instance.evidence?.map((e) => e.toJson()).toList());
-  writeNotNull('grounds', instance.grounds?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+_$_PermissionRule _$$_PermissionRuleFromJson(Map<String, dynamic> json) =>
+    _$_PermissionRule(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      type: json['type'] == null ? null : Code.fromJson(json['type']),
+      typeElement: json['_type'] == null
+          ? null
+          : Element.fromJson(json['_type'] as Map<String, dynamic>),
+      data: (json['data'] as List<dynamic>?)
+          ?.map((e) => PermissionData.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      activity: (json['activity'] as List<dynamic>?)
+          ?.map((e) => PermissionActivity.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      limit: (json['limit'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$$_PermissionRuleToJson(_$_PermissionRule instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('_type', instance.typeElement?.toJson());
+  writeNotNull('data', instance.data?.map((e) => e.toJson()).toList());
+  writeNotNull('activity', instance.activity?.map((e) => e.toJson()).toList());
+  writeNotNull('limit', instance.limit?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+_$_PermissionData _$$_PermissionDataFromJson(Map<String, dynamic> json) =>
+    _$_PermissionData(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      resource: (json['resource'] as List<dynamic>?)
+          ?.map((e) => PermissionResource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      security: (json['security'] as List<dynamic>?)
+          ?.map((e) => Coding.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      period: (json['period'] as List<dynamic>?)
+          ?.map((e) => Period.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      expression: json['expression'] == null
+          ? null
+          : Expression.fromJson(json['expression'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$_PermissionDataToJson(_$_PermissionData instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('resource', instance.resource?.map((e) => e.toJson()).toList());
+  writeNotNull('security', instance.security?.map((e) => e.toJson()).toList());
+  writeNotNull('period', instance.period?.map((e) => e.toJson()).toList());
+  writeNotNull('expression', instance.expression?.toJson());
+  return val;
+}
+
+_$_PermissionResource _$$_PermissionResourceFromJson(
+        Map<String, dynamic> json) =>
+    _$_PermissionResource(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      meaning: json['meaning'] == null ? null : Code.fromJson(json['meaning']),
+      meaningElement: json['_meaning'] == null
+          ? null
+          : Element.fromJson(json['_meaning'] as Map<String, dynamic>),
+      reference: Reference.fromJson(json['reference'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$_PermissionResourceToJson(
+    _$_PermissionResource instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('meaning', instance.meaning?.toJson());
+  writeNotNull('_meaning', instance.meaningElement?.toJson());
+  val['reference'] = instance.reference.toJson();
+  return val;
+}
+
+_$_PermissionActivity _$$_PermissionActivityFromJson(
+        Map<String, dynamic> json) =>
+    _$_PermissionActivity(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      actor: (json['actor'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      action: (json['action'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      purpose: (json['purpose'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$$_PermissionActivityToJson(
+    _$_PermissionActivity instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('actor', instance.actor?.map((e) => e.toJson()).toList());
+  writeNotNull('action', instance.action?.map((e) => e.toJson()).toList());
+  writeNotNull('purpose', instance.purpose?.map((e) => e.toJson()).toList());
   return val;
 }
 
 _$_Provenance _$$_ProvenanceFromJson(Map<String, dynamic> json) =>
     _$_Provenance(
-      resourceType:
-          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
-              R5ResourceType.Provenance,
+      resourceType: $enumDecodeNullable(
+              _$R5ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: R5ResourceType.Provenance) ??
+          R5ResourceType.Provenance,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

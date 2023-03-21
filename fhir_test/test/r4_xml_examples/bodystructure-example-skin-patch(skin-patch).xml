@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><BodyStructure xmlns="http://hl7.org/fhir">
+	<id value="skin-patch"/>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "skin-patch" </p></div><p><b>identifier</b>: id: 12345</p><p><b>active</b>: false</p><p><b>morphology</b>: Skin patch <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ()</span></p><p><b>location</b>: Forearm <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#14975008)</span></p><p><b>locationQualifier</b>: Left <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#419161000 "Unilateral left")</span>, Volar <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#263929005)</span></p><p><b>description</b>: inner surface (volar) of the left forearm</p><p><b>patient</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p></div></text><identifier>
+		<system value="http://goodhealth.org/bodystructure/identifiers"/>
+		<value value="12345"/>
+	</identifier>
+	<!--  	bodystructure marked as no longer active - entered in error
+  -->
+	<active value="false"/>
+		<morphology>
+		<text value="Skin patch"/>
+	</morphology>
+	<location>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="14975008"/>
+			<display value="Forearm"/>
+		</coding>
+		<text value="Forearm"/>
+	</location>
+		<locationQualifier>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="419161000"/>
+			<display value="Unilateral left"/>
+		</coding>
+		<text value="Left"/>
+	</locationQualifier>
+			<locationQualifier>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="263929005"/>
+			<display value="Volar"/>
+		</coding>
+		<text value="Volar"/>
+	</locationQualifier>
+	<description value="inner surface (volar) of the left forearm"/>
+	<patient>
+		<reference value="Patient/example"/>
+	</patient>
+</BodyStructure>

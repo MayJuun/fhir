@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><Medication xmlns="http://hl7.org/fhir">
+   <id value="med0317"/>
+   
+      <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Medication</b><a name="med0317"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Medication "med0317" </p></div><p><b>doseForm</b>: Injection Solution (qualifier value) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#385219001)</span></p><blockquote><p><b>ingredient</b></p><h3>Items</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>Potassium Chloride <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-rxNorm.html">RxNorm</a>#8591)</span></td></tr></table><p><b>strength</b>: 20 meq<span style="background: LightGoldenRodYellow"> (Details: UCUM code meq = 'meq')</span>/1000 mL<span style="background: LightGoldenRodYellow"> (Details: UCUM code mL = 'mL')</span></p></blockquote><blockquote><p><b>ingredient</b></p><h3>Items</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>1000 ml glucost 50mg/ml Injection <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-rxNorm.html">RxNorm</a>#313002)</span></td></tr></table><p><b>strength</b>: 5 g<span style="background: LightGoldenRodYellow"> (Details: UCUM code g = 'g')</span>/100 mL<span style="background: LightGoldenRodYellow"> (Details: UCUM code mL = 'mL')</span></p></blockquote></div></text><doseForm>
+         <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="385219001"/>
+            <display value="Injection Solution (qualifier value)"/>
+         </coding>
+         <text value="Injection Solution (qualifier value)"/>
+      </doseForm>
+      <ingredient>
+         <item>
+            <concept>
+            <coding>
+               <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+               <code value="8591"/>
+               <display value="Potassium Chloride"/>
+            </coding>
+            </concept>
+         </item>
+         <strengthRatio>
+            <numerator>
+               <value value="20"/>
+               <system value="http://unitsofmeasure.org"/>
+               <code value="meq"/>
+            </numerator>
+            <denominator>
+               <value value="1000"/>
+               <system value="http://unitsofmeasure.org"/>
+               <code value="mL"/>
+            </denominator>
+         </strengthRatio>
+      </ingredient>
+      <ingredient>
+         <item>
+         <concept>
+            <coding>
+               <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+               <code value="313002"/>
+               <display value="1000 ml glucost 50mg/ml Injection"/>
+            </coding>
+         </concept>
+         </item>
+         <strengthRatio>
+            <numerator>
+               <value value="5"/>
+               <system value="http://unitsofmeasure.org"/>
+               <code value="g"/>
+            </numerator>
+            <denominator>
+               <value value="100"/>
+               <system value="http://unitsofmeasure.org"/>
+               <code value="mL"/>
+            </denominator>
+         </strengthRatio>
+      </ingredient>
+   
+</Medication>

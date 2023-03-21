@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?><AuditEvent xmlns="http://hl7.org/fhir">
+	<id value="example-pixQuery"/>
+
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: AuditEvent</b><a name="example-pixQuery"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource AuditEvent "example-pixQuery" </p></div><p><b>category</b>: Query <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://dicom.nema.org/resources/ontology/DCM">DICOM</a>#110112)</span></p><p><b>code</b>: PIX Query <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (unknown#ITI-9)</span></p><p><b>action</b>: E</p><p><b>recorded</b>: 27 Aug 2015, 9:42:24 am</p><h3>Outcomes</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td></tr><tr><td>*</td><td>Success (Details: http://terminology.hl7.org/CodeSystem/audit-event-outcome code success = 'Success', stated as 'Success')</td></tr></table><blockquote><p><b>agent</b></p><p><b>AuditEvent Alternative User ID</b>: process ID: 6580</p><p><b>type</b>: Source Role ID <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://dicom.nema.org/resources/ontology/DCM">DICOM</a>#110153)</span></p><p><b>who</b>: <span/></p><p><b>requestor</b>: false</p><p><b>network</b>: Workstation1.ehr.familyclinic.com</p></blockquote><blockquote><p><b>agent</b></p><p><b>type</b>: <span title="   The Human using the software, if known   ">human user <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-extra-security-role-type.html">SecurityRoleType</a>#humanuser)</span></span></p><p><b>who</b>: <span>: Grahame Grieve</span></p><p><b>requestor</b>: true</p></blockquote><h3>Sources</h3><table class="grid"><tr><td>-</td><td><b>Observer</b></td></tr><tr><td>*</td><td><span>: hl7connect.healthintersections.com.au</span></td></tr></table><blockquote><p><b>entity</b></p><p><b>what</b>: <span title=" &#xA;  The Patient&#xA;   "><span/></span></p><p><b>role</b>: Patient <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-object-role.html">AuditEventEntityRole</a>#1)</span></p></blockquote><blockquote><p><b>entity</b></p><p><b>role</b>: <span title="  The PIX Query Parameters  ">Query <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-object-role.html">AuditEventEntityRole</a>#24)</span></span></p><p><b>query</b>: <span title="  The complete query message (including MSH and QPD segments), base64 encoded  ">PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPFBSUEFfSU4yMDEzMDlVVjAyIElUU1ZlcnNpb249IlhNTF8xLjAiIHhtbG5zPSJ1cm46aGw3LW9yZzp2MyI+CiAgPGlkIGV4dGVuc2lvbj0iMzU0MjMiIHJvb3Q9IjEuMi44NDAuMTE0MzUwLjEuMTMuMC4xLjcuMS4xIi8+CiAgPGNyZWF0aW9uVGltZSB2YWx1ZT0iMjAxNDA1MDgxNjQ5MjUiLz4KICA8aW50ZXJhY3Rpb25JZCBleHRlbnNpb249IlBSUEFfSU4yMDEzMDVVVjAyIiByb290PSIyLjE2Ljg0MC4xLjExMzg4My4xLjYiLz4KICA8cHJvY2Vzc2luZ0NvZGUgY29kZT0iVCIvPgogIDxwcm9jZXNzaW5nTW9kZUNvZGUgY29kZT0iVCIvPgogIDxhY2NlcHRBY2tDb2RlIGNvZGU9IkFMIi8+CiAgPHJlY2VpdmVyIHR5cGVDb2RlPSJSQ1YiPgogICAgPGRldmljZSBjbGFzc0NvZGU9IkRFViIgZGV0ZXJtaW5lckNvZGU9IklOU1RBTkNFIj4KICAgICAgPGlkIHJvb3Q9IkVIUl9NSVNZUyIvPgogICAgICA8YXNBZ2VudCBjbGFzc0NvZGU9IkFHTlQiPgogICAgICAgIDxyZXByZXNlbnRlZE9yZ2FuaXphdGlvbiBjbGFzc0NvZGU9Ik9SRyIgZGV0ZXJtaW5lckNvZGU9IklOU1RBTkNFIj4KICAgICAgICAgIDxpZCByb290PSJNSVNZUyIvPgogICAgICAgIDwvcmVwcmVzZW50ZWRPcmdhbml6YXRpb24+CiAgICAgIDwvYXNBZ2VudD4KICAgIDwvZGV2aWNlPgogIDwvcmVjZWl2ZXI+CiAgPHNlbmRlciB0eXBlQ29kZT0iU05EIj4KICAgIDxkZXZpY2UgY2xhc3NDb2RlPSJERVYiIGRldGVybWluZXJDb2RlPSJJTlNUQU5DRSI+CiAgICAgIDxpZCByb290PSIyLjE2Ljg0MC4xLjExMzg4My40LjIiLz4KICAgICAgPGFzQWdlbnQgY2xhc3NDb2RlPSJBR05UIj4KICAgICAgICA8cmVwcmVzZW50ZWRPcmdhbml6YXRpb24gY2xhc3NDb2RlPSJPUkciIGRldGVybWluZXJDb2RlPSJJTlNUQU5DRSI+CiAgICAgICAgICA8aWQgcm9vdD0iMi4xNi44NDAuMS4xMTM4ODMuNC4yIi8+CiAgICAgICAgPC9yZXByZXNlbnRlZE9yZ2FuaXphdGlvbj4KICAgICAgPC9hc0FnZW50PgogICAgPC9kZXZpY2U+CiAgPC9zZW5kZXI+CiAgPGNvbnRyb2xBY3RQcm9jZXNzIGNsYXNzQ29kZT0iQ0FDVCIgbW9vZENvZGU9IkVWTiI+CiAgICA8Y29kZSBjb2RlPSJQUlBBX1RFMjAxMzA5VVYwMiIgY29kZVN5c3RlbT0iMi4xNi44NDAuMS4xMTM4ODMuMS42Ii8+CiAgICA8cXVlcnlCeVBhcmFtZXRlcj4KICAgICAgPHF1ZXJ5SWQgZXh0ZW5zaW9uPSIxODQwOTk3MDg0IiByb290PSIxLjIuODQwLjExNDM1MC4xLjEzLjI4LjEuMTguNS45OTkiLz4KICAgICAgPHN0YXR1c0NvZGUgY29kZT0ibmV3Ii8+CiAgICAgIDxyZXNwb25zZVByaW9yaXR5Q29kZSBjb2RlPSJJIi8+CiAgICAgIDxwYXJhbWV0ZXJMaXN0PgogICAgICAgIDxwYXRpZW50SWRlbnRpZmllcj4KICAgICAgICAgIDx2YWx1ZSBleHRlbnNpb249IlN1cnlhQnJhbmQiIHJvb3Q9IjIuMTYuODQwLjEuMTEzODgzLjQuMiIvPgogICAgICAgICAgPHNlbWFudGljc1RleHQ+UGF0aWVudC5JZDwvc2VtYW50aWNzVGV4dD4KICAgICAgICA8L3BhdGllbnRJZGVudGlmaWVyPgogICAgICA8L3BhcmFtZXRlckxpc3Q+CiAgICA8L3F1ZXJ5QnlQYXJhbWV0ZXI+CiAgPC9jb250cm9sQWN0UHJvY2Vzcz4KPC9QUlBBX0lOMjAxMzA5VVYwMj4K</span></p><h3>Details</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td>*</td><td><span title="  MSH-10  ">MSH-10 <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#MSH-10)</span></span></td><td>MS4yLjg0MC4xMTQzNTAuMS4xMy4wLjEuNy4xLjE=</td></tr></table></blockquote></div></text><category>
+			<coding>
+		<system value="http://dicom.nema.org/resources/ontology/DCM"/>
+		<code value="110112"/>
+		<display value="Query"/>
+			</coding>
+	</category>
+	<code>
+			<coding>
+		<system value="urn:oid:1.3.6.1.4.1.19376.1.2"/>
+		<code value="ITI-9"/>
+		<display value="PIX Query"/>
+			</coding>
+	</code>
+	<action value="E"/>
+	<recorded value="2015-08-26T23:42:24Z"/>
+	<outcome>
+		<code>
+			<system value="http://terminology.hl7.org/CodeSystem/audit-event-outcome"/>
+			<code value="success"/>
+			<display value="Success"/>
+		</code>
+	</outcome> 
+
+	<agent>
+		    <!--   Source active participant, the software making the PIX query
+  UserId - The identity of the Patient Identifier Cross-reference Consumer Actor facility and sending application from the HL7 message; 
+  concatenated together, separated by the | character. 
+  AlternativeUserId - Process ID
+    -->
+		<extension url="http://hl7.org/fhir/StructureDefinition/auditevent-AlternativeUserID">
+			<valueIdentifier>
+			  <type>
+				<text value="process ID"/>
+			  </type>
+			  <value value="6580"/>
+			</valueIdentifier>
+		</extension>
+		<type>
+			<coding>
+				<system value="http://dicom.nema.org/resources/ontology/DCM"/>
+				<code value="110153"/>
+				<display value="Source Role ID"/>
+			</coding>
+		</type>
+		<who>
+			<identifier>
+				<system value="urn:oid:2.16.840.1.113883.4.2"/> 
+				<value value="2.16.840.1.113883.4.2"/> 
+			</identifier>
+		</who>
+		<requestor value="false"/>
+		<networkString value="Workstation1.ehr.familyclinic.com"/>
+
+	</agent>
+	<agent>
+		    <!--    The Human using the software, if known    -->
+
+		<type>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/extra-security-role-type"/>
+				<code value="humanuser"/>
+				<display value="human user"/>
+			</coding>
+		</type> 
+
+		<who>
+			<identifier>
+				<value value="95"/>
+			</identifier>
+		<display value="Grahame Grieve"/>
+		</who>
+		<requestor value="true"/>
+	</agent>
+	<source>
+		<observer>
+			<display value="hl7connect.healthintersections.com.au"/>
+		</observer>
+	</source>
+	<entity>
+		    <!--  
+  The Patient
+    -->
+		<what>
+			<identifier>
+				<value value="e3cdfc81a0d24bd^^^&amp;2.16.840.1.113883.4.2&amp;ISO"/>
+			</identifier>
+		</what>
+
+		<role>
+			<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/object-role"/>
+			<code value="1"/>
+			<display value="Patient"/>
+			</coding>
+		</role>
+	</entity>
+	<entity>
+		    <!--   The PIX Query Parameters   -->
+
+		<role>
+			<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/object-role"/>
+			<code value="24"/>
+			<display value="Query"/>
+			</coding>
+		</role>
+		    <!--   The complete query message (including MSH and QPD segments), base64 encoded   -->
+		<query value="PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPFBSUEFfSU4yMDEzMDlVVjAyIElUU1ZlcnNpb249IlhNTF8xLjAiIHhtbG5zPSJ1cm46aGw3LW9yZzp2MyI+CiAgPGlkIGV4dGVuc2lvbj0iMzU0MjMiIHJvb3Q9IjEuMi44NDAuMTE0MzUwLjEuMTMuMC4xLjcuMS4xIi8+CiAgPGNyZWF0aW9uVGltZSB2YWx1ZT0iMjAxNDA1MDgxNjQ5MjUiLz4KICA8aW50ZXJhY3Rpb25JZCBleHRlbnNpb249IlBSUEFfSU4yMDEzMDVVVjAyIiByb290PSIyLjE2Ljg0MC4xLjExMzg4My4xLjYiLz4KICA8cHJvY2Vzc2luZ0NvZGUgY29kZT0iVCIvPgogIDxwcm9jZXNzaW5nTW9kZUNvZGUgY29kZT0iVCIvPgogIDxhY2NlcHRBY2tDb2RlIGNvZGU9IkFMIi8+CiAgPHJlY2VpdmVyIHR5cGVDb2RlPSJSQ1YiPgogICAgPGRldmljZSBjbGFzc0NvZGU9IkRFViIgZGV0ZXJtaW5lckNvZGU9IklOU1RBTkNFIj4KICAgICAgPGlkIHJvb3Q9IkVIUl9NSVNZUyIvPgogICAgICA8YXNBZ2VudCBjbGFzc0NvZGU9IkFHTlQiPgogICAgICAgIDxyZXByZXNlbnRlZE9yZ2FuaXphdGlvbiBjbGFzc0NvZGU9Ik9SRyIgZGV0ZXJtaW5lckNvZGU9IklOU1RBTkNFIj4KICAgICAgICAgIDxpZCByb290PSJNSVNZUyIvPgogICAgICAgIDwvcmVwcmVzZW50ZWRPcmdhbml6YXRpb24+CiAgICAgIDwvYXNBZ2VudD4KICAgIDwvZGV2aWNlPgogIDwvcmVjZWl2ZXI+CiAgPHNlbmRlciB0eXBlQ29kZT0iU05EIj4KICAgIDxkZXZpY2UgY2xhc3NDb2RlPSJERVYiIGRldGVybWluZXJDb2RlPSJJTlNUQU5DRSI+CiAgICAgIDxpZCByb290PSIyLjE2Ljg0MC4xLjExMzg4My40LjIiLz4KICAgICAgPGFzQWdlbnQgY2xhc3NDb2RlPSJBR05UIj4KICAgICAgICA8cmVwcmVzZW50ZWRPcmdhbml6YXRpb24gY2xhc3NDb2RlPSJPUkciIGRldGVybWluZXJDb2RlPSJJTlNUQU5DRSI+CiAgICAgICAgICA8aWQgcm9vdD0iMi4xNi44NDAuMS4xMTM4ODMuNC4yIi8+CiAgICAgICAgPC9yZXByZXNlbnRlZE9yZ2FuaXphdGlvbj4KICAgICAgPC9hc0FnZW50PgogICAgPC9kZXZpY2U+CiAgPC9zZW5kZXI+CiAgPGNvbnRyb2xBY3RQcm9jZXNzIGNsYXNzQ29kZT0iQ0FDVCIgbW9vZENvZGU9IkVWTiI+CiAgICA8Y29kZSBjb2RlPSJQUlBBX1RFMjAxMzA5VVYwMiIgY29kZVN5c3RlbT0iMi4xNi44NDAuMS4xMTM4ODMuMS42Ii8+CiAgICA8cXVlcnlCeVBhcmFtZXRlcj4KICAgICAgPHF1ZXJ5SWQgZXh0ZW5zaW9uPSIxODQwOTk3MDg0IiByb290PSIxLjIuODQwLjExNDM1MC4xLjEzLjI4LjEuMTguNS45OTkiLz4KICAgICAgPHN0YXR1c0NvZGUgY29kZT0ibmV3Ii8+CiAgICAgIDxyZXNwb25zZVByaW9yaXR5Q29kZSBjb2RlPSJJIi8+CiAgICAgIDxwYXJhbWV0ZXJMaXN0PgogICAgICAgIDxwYXRpZW50SWRlbnRpZmllcj4KICAgICAgICAgIDx2YWx1ZSBleHRlbnNpb249IlN1cnlhQnJhbmQiIHJvb3Q9IjIuMTYuODQwLjEuMTEzODgzLjQuMiIvPgogICAgICAgICAgPHNlbWFudGljc1RleHQ+UGF0aWVudC5JZDwvc2VtYW50aWNzVGV4dD4KICAgICAgICA8L3BhdGllbnRJZGVudGlmaWVyPgogICAgICA8L3BhcmFtZXRlckxpc3Q+CiAgICA8L3F1ZXJ5QnlQYXJhbWV0ZXI+CiAgPC9jb250cm9sQWN0UHJvY2Vzcz4KPC9QUlBBX0lOMjAxMzA5VVYwMj4K"/>
+		<detail>
+			    <!--   MSH-10   -->
+			<type>
+			<coding>
+			<code value="MSH-10"/>
+			</coding>
+			</type> 
+			<valueBase64Binary value="MS4yLjg0MC4xMTQzNTAuMS4xMy4wLjEuNy4xLjE="/>
+		</detail>
+	</entity>
+</AuditEvent>

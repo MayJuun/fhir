@@ -9,12 +9,17 @@
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
       "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "trial-use"
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet",
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "name": "maxValueSet",
   "status": "draft",
+  "experimental": false,
   "date": "2015-02-28",
   "publisher": "Health Level Seven, Inc. - FHIR Core WG",
   "contact": [
@@ -27,8 +32,8 @@
       ]
     }
   ],
-  "description": "The maximum allowable value set, for use when the binding strength is \u0027extensible\u0027 or \u0027preferred\u0027. This value set is the value set from which additional codes can be taken from. This defines a \u0027required\u0027 binding over the top of the extensible binding.",
-  "fhirVersion": "4.6.0",
+  "description": "This acts as an overall \u0027required\u0027 binding for an element that already has a less restrictive binding.  It is used when there is a desire to have a \u0027small\u0027 enumerable binding that meets most needs and where the overall value set that the codes must be drawn from is \u0027infinite\u0027.  The the base less restrictive binding SHALL be a proper subset of the max binding valueset.  In most cases, this extension is used where the base binding is \u0027extensible\u0027.",
+  "fhirVersion": "5.0.0-snapshot3",
   "mapping": [
     {
       "identity": "rim",
@@ -53,7 +58,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "Maximum Value Set (when strength \u003d extensible)",
-        "definition": "The maximum allowable value set, for use when the binding strength is \u0027extensible\u0027 or \u0027preferred\u0027. This value set is the value set from which additional codes can be taken from. This defines a \u0027required\u0027 binding over the top of the extensible binding.",
+        "definition": "This acts as an overall \u0027required\u0027 binding for an element that already has a less restrictive binding.  It is used when there is a desire to have a \u0027small\u0027 enumerable binding that meets most needs and where the overall value set that the codes must be drawn from is \u0027infinite\u0027.  The the base less restrictive binding SHALL be a proper subset of the max binding valueset.  In most cases, this extension is used where the base binding is \u0027extensible\u0027.",
         "comment": "Typically, this will be an entire code system, e.g. SNOMED CT. The maximum binding needs to include all the codes in the extensible or preferred binding.",
         "min": 0,
         "max": "1",
@@ -68,7 +73,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -76,7 +80,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -108,7 +111,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "string"
+                "valueUrl": "id"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -156,7 +159,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -164,7 +166,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -237,7 +238,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -258,7 +258,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "Maximum Value Set (when strength \u003d extensible)",
-        "definition": "The maximum allowable value set, for use when the binding strength is \u0027extensible\u0027 or \u0027preferred\u0027. This value set is the value set from which additional codes can be taken from. This defines a \u0027required\u0027 binding over the top of the extensible binding.",
+        "definition": "This acts as an overall \u0027required\u0027 binding for an element that already has a less restrictive binding.  It is used when there is a desire to have a \u0027small\u0027 enumerable binding that meets most needs and where the overall value set that the codes must be drawn from is \u0027infinite\u0027.  The the base less restrictive binding SHALL be a proper subset of the max binding valueset.  In most cases, this extension is used where the base binding is \u0027extensible\u0027.",
         "comment": "Typically, this will be an entire code system, e.g. SNOMED CT. The maximum binding needs to include all the codes in the extensible or preferred binding.",
         "min": 0,
         "max": "1",

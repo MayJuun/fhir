@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><Condition xmlns="http://hl7.org/fhir">
+  <id value="f205"/>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Condition</b><a name="f205"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Condition "f205" </p></div><p><b>clinicalStatus</b>: Active <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-condition-clinical.html">Condition Clinical Status Codes</a>#active)</span></p><p><b>verificationStatus</b>: Differential <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-condition-ver-status.html">ConditionVerificationStatus</a>#differential)</span></p><p><b>code</b>: Bacterial infectious disease <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#87628006)</span></p><p><b>subject</b>: <a href="patient-example-f201-roel.html">Patient/f201: Roel</a> "Roel"</p><p><b>recordedDate</b>: 2013-04-04</p><h3>Participants</h3><table class="grid"><tr><td>-</td><td><b>Function</b></td><td><b>Actor</b></td></tr><tr><td>*</td><td>Author <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-provenance-participant-type.html">Provenance participant type</a>#author)</span></td><td><a href="practitioner-example-f201-ab.html">Practitioner/f201</a> "Dokter Bronsig"</td></tr></table></div></text><clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <code value="active"/>
+    </coding>
+  </clinicalStatus>
+
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+      <code value="differential"/>
+    </coding>
+  </verificationStatus>
+  <code>
+        <!--  The problem is a bacterial infection   -->
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="87628006"/>
+      <display value="Bacterial infectious disease"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/f201"/>
+    <display value="Roel"/>
+  </subject>
+  <recordedDate value="2013-04-04"/>
+  <participant> 
+    <function> 
+      <coding> 
+        <system value="http://terminology.hl7.org/CodeSystem/provenance-participant-type"/> 
+        <code value="author"/> 
+        <display value="Author"/> 
+      </coding> 
+    </function> 
+    <actor> 
+      <reference value="Practitioner/f201"/> 
+    </actor> 
+  </participant> 
+
+</Condition>

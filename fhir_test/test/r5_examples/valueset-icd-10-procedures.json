@@ -2,7 +2,7 @@
   "resourceType": "ValueSet",
   "id": "icd-10-procedures",
   "meta": {
-    "lastUpdated": "2022-05-06T17:02:42.916+00:00",
+    "lastUpdated": "2022-12-14T07:12:54.019+11:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
     ]
@@ -30,10 +30,15 @@
     {
       "system": "urn:ietf:rfc:3986",
       "value": "urn:oid:2.16.840.1.113883.4.642.3.574"
+    },
+    {
+      "use": "old",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.3.566"
     }
   ],
-  "version": "4.6.0",
-  "name": "ICD-10ProcedureCodes",
+  "version": "5.0.0-snapshot3",
+  "name": "ICD10ProcedureCodes",
   "title": "ICD-10 Procedure Codes",
   "status": "draft",
   "experimental": true,
@@ -49,6 +54,17 @@
     }
   ],
   "description": "This value set includes sample ICD-10 Procedure codes.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "copyright": "This is an example set.",
   "compose": {
     "include": [

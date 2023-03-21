@@ -2,7 +2,7 @@
   "resourceType": "SearchParameter",
   "id": "patient-extensions-Patient-age",
   "url": "http://hl7.org/fhir/SearchParameter/patient-extensions-Patient-age",
-  "version": "4.6.0",
+  "version": "5.0.0",
   "name": "age",
   "status": "draft",
   "experimental": true,
@@ -12,6 +12,6 @@
     "Patient"
   ],
   "type": "number",
-  "xpath": "f:Patient/f:birthDate",
-  "xpathUsage": "normal"
+  "expression": "Patient.birthDate",
+  "processingMode": "normal"
 }

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?><AuditEvent xmlns="http://hl7.org/fhir">
+	<id value="example-search"/>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: AuditEvent</b><a name="example-search"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource AuditEvent "example-search" </p></div><p><b>category</b>: Restful Operation <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-audit-event-type.html">Audit Event ID</a>#rest)</span></p><p><b>code</b>: search <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="codesystem-restful-interaction.html">FHIR Restful Interactions</a>#search)</span></p><p><b>action</b>: E</p><p><b>recorded</b>: 23 Aug 2015, 9:42:24 am</p><h3>Outcomes</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td></tr><tr><td>*</td><td>Success (Details: http://terminology.hl7.org/CodeSystem/audit-event-outcome code success = 'Success', stated as 'Success')</td></tr></table><blockquote><p><b>agent</b></p><p><b>type</b>: human user <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-extra-security-role-type.html">SecurityRoleType</a>#humanuser)</span></p><p><b>who</b>: <span>: Grahame Grieve</span></p><p><b>requestor</b>: true</p></blockquote><blockquote><p><b>agent</b></p><p><b>AuditEvent Alternative User ID</b>: process ID: 6580</p><p><b>type</b>: Source Role ID <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://dicom.nema.org/resources/ontology/DCM">DICOM</a>#110153)</span></p><p><b>who</b>: <span/></p><p><b>requestor</b>: false</p><p><b>network</b>: Workstation1.ehr.familyclinic.com</p></blockquote><h3>Sources</h3><table class="grid"><tr><td>-</td><td><b>Observer</b></td><td><b>Type</b></td></tr><tr><td>*</td><td><span>: hl7connect.healthintersections.com.au</span></td><td>Web Server <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-security-source-type.html">Audit Event Source Type</a>#3)</span></td></tr></table><h3>Entities</h3><table class="grid"><tr><td>-</td><td><b>Role</b></td><td><b>Query</b></td></tr><tr><td>*</td><td><span title="  HTTP GET encoded in base64Binary  &amp;#10;  orignal example encoded here is  &amp;#10;  &#34;http://fhir-dev.healthintersections.com.au/open/Encounter?participant=13&#34;  ">Query <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-object-role.html">AuditEventEntityRole</a>#24)</span></span></td><td>aHR0cDovL2ZoaXItZGV2LmhlYWx0aGludGVyc2VjdGlvbnMuY29tLmF1L29wZW4vRW5jb3VudGVyP3BhcnRpY2lwYW50PTEz</td></tr></table></div></text><category>
+		<coding>
+		<system value="http://terminology.hl7.org/CodeSystem/audit-event-type"/>
+		<code value="rest"/>
+		<display value="Restful Operation"/>
+		</coding>
+	</category>
+	<code>
+		<coding>
+		<system value="http://hl7.org/fhir/restful-interaction"/>
+		<code value="search"/>
+		<display value="search"/>
+		</coding>
+	</code>
+	<action value="E"/>
+	<recorded value="2015-08-22T23:42:24Z"/>
+	<outcome>
+		<code>
+			<system value="http://terminology.hl7.org/CodeSystem/audit-event-outcome"/>
+			<code value="success"/>
+			<display value="Success"/>
+		</code>
+	</outcome> 
+	<agent>
+
+		<type>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/extra-security-role-type"/>
+				<code value="humanuser"/>
+				<display value="human user"/>
+			</coding>
+		</type> 
+
+		<who>
+			<identifier>
+				<value value="95"/>
+			</identifier>
+		<display value="Grahame Grieve"/>
+		</who>
+		<requestor value="true"/>
+	</agent>
+	<agent>
+		    <!--   Source active participant, the software making the . AlternativeUserId - Process ID   --> 
+		<extension url="http://hl7.org/fhir/StructureDefinition/auditevent-AlternativeUserID">
+			<valueIdentifier>
+			  <type>
+				<text value="process ID"/>
+			  </type>
+			  <value value="6580"/>
+			</valueIdentifier>
+		</extension>
+		<type>
+			<coding>
+				<system value="http://dicom.nema.org/resources/ontology/DCM"/>
+				<code value="110153"/>
+				<display value="Source Role ID"/>
+			</coding>
+		</type> 
+		<who>
+			<identifier>
+				<system value="urn:oid:2.16.840.1.113883.4.2"/> 
+				<value value="2.16.840.1.113883.4.2"/> 
+			</identifier>
+		</who>
+		<requestor value="false"/> 
+		<networkString value="Workstation1.ehr.familyclinic.com"/>
+	</agent>
+	<source>
+		<observer>
+			<display value="hl7connect.healthintersections.com.au"/>
+		</observer>
+		<type>
+			<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/security-source-type"/>
+			<code value="3"/>
+			<display value="Web Server"/>
+			</coding>
+		</type>
+	</source>
+	<entity>
+		    <!--   HTTP GET encoded in base64Binary   -->
+		    <!--   orignal example encoded here is   -->
+		    <!--   "http://fhir-dev.healthintersections.com.au/open/Encounter?participant=13"   -->
+
+		<role>
+			<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/object-role"/>
+			<code value="24"/>
+			<display value="Query"/>
+			</coding>
+		</role>
+		<query value="aHR0cDovL2ZoaXItZGV2LmhlYWx0aGludGVyc2VjdGlvbnMuY29tLmF1L29wZW4vRW5jb3VudGVyP3BhcnRpY2lwYW50PTEz"/>
+	</entity>
+	    <!--   could include an .entity of the patient if possible   -->
+</AuditEvent>

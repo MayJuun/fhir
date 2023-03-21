@@ -1,0 +1,1747 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "research-study-classifiers",
+  "meta": {
+    "lastUpdated": "2022-12-14T07:12:54.019+11:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003eThis code system \u003ccode\u003ehttp://hl7.org/fhir/research-study-classifiers\u003c/code\u003e defines the following codes:\u003c/p\u003e\u003ctable class\u003d\"codes\"\u003e\u003ctr\u003e\u003ctd\u003e\u003cb\u003eLvl\u003c/b\u003e\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDisplay\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDefinition\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e1\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eresearch-study-prim-purp-type\u003ca name\u003d\"research-study-classifiers-research-study-prim-purp-type\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eResearch Study Primary Purpose Type\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  treatment\u003ca name\u003d\"research-study-classifiers-treatment\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eTreatment\u003c/td\u003e\u003ctd\u003eOne or more interventions are being evaluated for treating a disease, syndrome, or condition.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  prevention\u003ca name\u003d\"research-study-classifiers-prevention\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003ePrevention\u003c/td\u003e\u003ctd\u003eOne or more interventions are being assessed for preventing the development of a specific disease or health condition.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  diagnostic\u003ca name\u003d\"research-study-classifiers-diagnostic\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eDiagnostic\u003c/td\u003e\u003ctd\u003eOne or more interventions are being evaluated for identifying a disease or health condition.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  supportive-care\u003ca name\u003d\"research-study-classifiers-supportive-care\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eSupportive Care\u003c/td\u003e\u003ctd\u003eOne or more interventions are evaluated for maximizing comfort, minimizing side effects, or mitigating against a decline in the participant\u0027s health or function.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  screening\u003ca name\u003d\"research-study-classifiers-screening\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eScreening\u003c/td\u003e\u003ctd\u003eOne or more interventions are assessed or examined for identifying a condition, or risk factors for a condition, in people who are not yet known to have the condition or risk factor.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  health-services-research\u003ca name\u003d\"research-study-classifiers-health-services-research\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eHealth Services Research\u003c/td\u003e\u003ctd\u003eOne or more interventions for evaluating the delivery, processes, management, organization, or financing of healthcare.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  basic-science\u003ca name\u003d\"research-study-classifiers-basic-science\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eBasic Science\u003c/td\u003e\u003ctd\u003eOne or more interventions for examining the basic mechanism of action (for example, physiology or biomechanics of an intervention).\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  device-feasibility\u003ca name\u003d\"research-study-classifiers-device-feasibility\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eDevice Feasibility\u003c/td\u003e\u003ctd\u003eAn intervention of a device product is being evaluated to determine the feasibility of the product or to test a prototype device and not health outcomes. Such studies are conducted to confirm the design and operating specifications of a device before beginning a full clinical trial.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e1\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eresearch-study-phase\u003ca name\u003d\"research-study-classifiers-research-study-phase\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eResearch Study Phase\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  n-a\u003ca name\u003d\"research-study-classifiers-n-a\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eN/A\u003c/td\u003e\u003ctd\u003eTrials without phases (for example, studies of devices or behavioral interventions).\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  early-phase-1\u003ca name\u003d\"research-study-classifiers-early-phase-1\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eEarly Phase 1\u003c/td\u003e\u003ctd\u003eDesignation for optional exploratory trials conducted in accordance with the United States Food and Drug Administration\u0027s (FDA) 2006 Guidance on Exploratory Investigational New Drug (IND) Studies. Formerly called Phase 0.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  phase-1\u003ca name\u003d\"research-study-classifiers-phase-1\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003ePhase 1\u003c/td\u003e\u003ctd\u003eIncludes initial studies to determine the metabolism and pharmacologic actions of drugs in humans, the side effects associated with increasing doses, and to gain early evidence of effectiveness; may include healthy participants and/or patients.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  phase-1-phase-2\u003ca name\u003d\"research-study-classifiers-phase-1-phase-2\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003ePhase 1/Phase 2\u003c/td\u003e\u003ctd\u003eTrials that are a combination of phases 1 and 2.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  phase-2\u003ca name\u003d\"research-study-classifiers-phase-2\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003ePhase 2\u003c/td\u003e\u003ctd\u003eIncludes controlled clinical studies conducted to evaluate the effectiveness of the drug for a particular indication or indications in participants with the disease or condition under study and to determine the common short-term side effects and risks.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  phase-2-phase-3\u003ca name\u003d\"research-study-classifiers-phase-2-phase-3\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003ePhase 2/Phase 3\u003c/td\u003e\u003ctd\u003eTrials that are a combination of phases 2 and 3.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  phase-3\u003ca name\u003d\"research-study-classifiers-phase-3\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003ePhase 3\u003c/td\u003e\u003ctd\u003eIncludes trials conducted after preliminary evidence suggesting effectiveness of the drug has been obtained, and are intended to gather additional information to evaluate the overall benefit-risk relationship of the drug.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  phase-4\u003ca name\u003d\"research-study-classifiers-phase-4\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003ePhase 4\u003c/td\u003e\u003ctd\u003eStudies of FDA-approved drugs to delineate additional information including the drug\u0027s risks, benefits, and optimal use.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e1\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eresearch-study-focus-type\u003ca name\u003d\"research-study-classifiers-research-study-focus-type\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eResearch Study Focus Type\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  medication\u003ca name\u003d\"research-study-classifiers-medication\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eMedication\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  device\u003ca name\u003d\"research-study-classifiers-device\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eDevice\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  intervention\u003ca name\u003d\"research-study-classifiers-intervention\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eIntervention\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  factor\u003ca name\u003d\"research-study-classifiers-factor\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eFactor\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e1\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eresearch-study-classifier\u003ca name\u003d\"research-study-classifiers-research-study-classifier\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eResearch Study Classifier\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  fda-regulated-drug\u003ca name\u003d\"research-study-classifiers-fda-regulated-drug\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eFDA regulated drug\u003c/td\u003e\u003ctd\u003eA medication regulated by the U.S. Food and Drug Administration.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  fda-regulated-device\u003ca name\u003d\"research-study-classifiers-fda-regulated-device\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eFDA regulated device\u003c/td\u003e\u003ctd\u003eA medical device regulated by the U.S. Food and Drug Administration.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  mpg-paragraph-23b\u003ca name\u003d\"research-study-classifiers-mpg-paragraph-23b\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eMPG Paragraph 23b\u003c/td\u003e\u003ctd\u003eResearch regulated by a specific German legal requirement (Medizinproduktegesetz MPG Paragraph 23b).\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  irb-exempt\u003ca name\u003d\"research-study-classifiers-irb-exempt\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eIRB-exempt\u003c/td\u003e\u003ctd\u003eHuman subjects research that is excempt from oversight and monitoring by an institutional review board (IRB).\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e1\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eresearch-study-party-organization-type\u003ca name\u003d\"research-study-classifiers-research-study-party-organization-type\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eResearch Study Party Organization Type\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  nih\u003ca name\u003d\"research-study-classifiers-nih\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eNIH\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  fda\u003ca name\u003d\"research-study-classifiers-fda\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eFDA\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  government\u003ca name\u003d\"research-study-classifiers-government\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eGovernment\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  nonprofit\u003ca name\u003d\"research-study-classifiers-nonprofit\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eNonprofit\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  academic\u003ca name\u003d\"research-study-classifiers-academic\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eAcademic\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  industry\u003ca name\u003d\"research-study-classifiers-industry\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eIndustry\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e1\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eresearch-study-party-role\u003ca name\u003d\"research-study-classifiers-research-study-party-role\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eResearch Study Party Role\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  sponsor\u003ca name\u003d\"research-study-classifiers-sponsor\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eSponsor\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  lead-sponsor\u003ca name\u003d\"research-study-classifiers-lead-sponsor\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eLead Sponsor\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  sponsor-investigator\u003ca name\u003d\"research-study-classifiers-sponsor-investigator\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eSponsor-Investigator\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  primary-investigator\u003ca name\u003d\"research-study-classifiers-primary-investigator\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003ePrimary Investigator\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  collaborator\u003ca name\u003d\"research-study-classifiers-collaborator\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eCollaborator\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  funding-source\u003ca name\u003d\"research-study-classifiers-funding-source\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eFunding Source\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  general-contact\u003ca name\u003d\"research-study-classifiers-general-contact\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eGeneral Contact\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  recruitment-contact\u003ca name\u003d\"research-study-classifiers-recruitment-contact\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eRecruitment Contact\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  sub-investigator\u003ca name\u003d\"research-study-classifiers-sub-investigator\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eSub-investigator\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  study-director\u003ca name\u003d\"research-study-classifiers-study-director\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eStudy Director\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  study-chair\u003ca name\u003d\"research-study-classifiers-study-chair\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eStudy Chair\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e1\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eresearch-study-status\u003ca name\u003d\"research-study-classifiers-research-study-status\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eResearch Study Status\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  overall-study\u003ca name\u003d\"research-study-classifiers-overall-study\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eOverall study\u003c/td\u003e\u003ctd\u003eUsed for documenting the start and end of the overall study, distinct from progress states.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  active\u003ca name\u003d\"research-study-classifiers-active\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eActive\u003c/td\u003e\u003ctd\u003eStudy is opened for accrual.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  active-but-not-recruiting\u003ca name\u003d\"research-study-classifiers-active-but-not-recruiting\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eActive, not recruiting\u003c/td\u003e\u003ctd\u003eThe study is ongoing, and participants are receiving an intervention or being examined, but potential participants are not currently being recruited or enrolled.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  administratively-completed\u003ca name\u003d\"research-study-classifiers-administratively-completed\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eAdministratively Completed\u003c/td\u003e\u003ctd\u003eStudy is completed prematurely and will not resume; patients are no longer examined nor treated.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  approved\u003ca name\u003d\"research-study-classifiers-approved\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eApproved\u003c/td\u003e\u003ctd\u003eProtocol is approved by the review board.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  closed-to-accrual\u003ca name\u003d\"research-study-classifiers-closed-to-accrual\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eClosed to Accrual\u003c/td\u003e\u003ctd\u003eStudy is closed for accrual; patients can be examined and treated.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  closed-to-accrual-and-intervention\u003ca name\u003d\"research-study-classifiers-closed-to-accrual-and-intervention\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eClosed to Accrual and Intervention\u003c/td\u003e\u003ctd\u003eStudy is closed to accrual and intervention, i.e. the study is closed to enrollment, all study subjects have completed treatment or intervention but are still being followed according to the primary objective of the study.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  completed\u003ca name\u003d\"research-study-classifiers-completed\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eCompleted\u003c/td\u003e\u003ctd\u003eThe study closed according to the study plan. There will be no further treatments, interventions or data collection.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  disapproved\u003ca name\u003d\"research-study-classifiers-disapproved\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eDisapproved\u003c/td\u003e\u003ctd\u003eProtocol was disapproved by the review board.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  enrolling-by-invitation\u003ca name\u003d\"research-study-classifiers-enrolling-by-invitation\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eEnrolling by invitation\u003c/td\u003e\u003ctd\u003eThe study is selecting its participants from a population, or group of people, decided on by the researchers in advance. These studies are not open to everyone who meets the eligibility criteria but only to people in that particular population, who are specifically invited to participate.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  in-review\u003ca name\u003d\"research-study-classifiers-in-review\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eIn Review\u003c/td\u003e\u003ctd\u003eProtocol is submitted to the review board for approval.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  not-yet-recruiting\u003ca name\u003d\"research-study-classifiers-not-yet-recruiting\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eNot yet recruiting\u003c/td\u003e\u003ctd\u003eThe study has not started recruiting participants.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  recruiting\u003ca name\u003d\"research-study-classifiers-recruiting\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eRecruiting\u003c/td\u003e\u003ctd\u003eThe study is currently recruiting participants.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  temporarily-closed-to-accrual\u003ca name\u003d\"research-study-classifiers-temporarily-closed-to-accrual\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eTemporarily Closed to Accrual\u003c/td\u003e\u003ctd\u003eStudy is temporarily closed for accrual; can be potentially resumed in the future; patients can be examined and treated.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  temporarily-closed-to-accrual-and-intervention\u003ca name\u003d\"research-study-classifiers-temporarily-closed-to-accrual-and-intervention\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eTemporarily Closed to Accrual and Intervention\u003c/td\u003e\u003ctd\u003eStudy is temporarily closed for accrual and intervention and potentially can be resumed in the future.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  terminated\u003ca name\u003d\"research-study-classifiers-terminated\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eTerminated\u003c/td\u003e\u003ctd\u003eThe study has stopped early and will not start again. Participants are no longer being examined or treated.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  withdrawn\u003ca name\u003d\"research-study-classifiers-withdrawn\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eWithdrawn\u003c/td\u003e\u003ctd\u003eProtocol was withdrawn by the lead organization.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e1\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eresearch-study-registration-activity\u003ca name\u003d\"research-study-classifiers-research-study-registration-activity\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eResearch Study Registration Activity\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  record-verification\u003ca name\u003d\"research-study-classifiers-record-verification\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eRecord Verification\u003c/td\u003e\u003ctd\u003eRecord has been verified.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  primary-outcome-data-collection\u003ca name\u003d\"research-study-classifiers-primary-outcome-data-collection\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003ePrimary outcome data collection\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  registration-submission\u003ca name\u003d\"research-study-classifiers-registration-submission\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eRegistration submission\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  registration-submission-qc\u003ca name\u003d\"research-study-classifiers-registration-submission-qc\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eRegistration submission Quality Check\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  registration-posting\u003ca name\u003d\"research-study-classifiers-registration-posting\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eRegistration posting\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  results-submission\u003ca name\u003d\"research-study-classifiers-results-submission\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eResults submission\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  results-submission-qc\u003ca name\u003d\"research-study-classifiers-results-submission-qc\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eResults submission Quality Check\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  results-posting\u003ca name\u003d\"research-study-classifiers-results-posting\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eResults posting\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  disposition-submission\u003ca name\u003d\"research-study-classifiers-disposition-submission\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eDisposition submission\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  disposition-submission-qc\u003ca name\u003d\"research-study-classifiers-disposition-submission-qc\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eDisposition submission Quality Check\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  disposition-posting\u003ca name\u003d\"research-study-classifiers-disposition-posting\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eDisposition posting\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  update-submission\u003ca name\u003d\"research-study-classifiers-update-submission\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eUpdate submission \u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  update-posting\u003ca name\u003d\"research-study-classifiers-update-posting\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eUpdate posting\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e1\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eresearch-study-reason-stopped\u003ca name\u003d\"research-study-classifiers-research-study-reason-stopped\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eResearch Study Reason Stopped\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  accrual-goal-met\u003ca name\u003d\"research-study-classifiers-accrual-goal-met\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eAccrual Goal Met\u003c/td\u003e\u003ctd\u003eThe study prematurely ended because the accrual goal was met.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  closed-due-to-toxicity\u003ca name\u003d\"research-study-classifiers-closed-due-to-toxicity\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eClosed due to toxicity\u003c/td\u003e\u003ctd\u003eThe study prematurely ended due to toxicity.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  closed-due-to-lack-of-study-progress\u003ca name\u003d\"research-study-classifiers-closed-due-to-lack-of-study-progress\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eClosed due to lack of study progress\u003c/td\u003e\u003ctd\u003eThe study prematurely ended due to lack of study progress.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  temporarily-closed-per-study-design\u003ca name\u003d\"research-study-classifiers-temporarily-closed-per-study-design\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eTemporarily closed per study design\u003c/td\u003e\u003ctd\u003eThe study prematurely ended temporarily per study design.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e1\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eresearch-study-objective-type\u003ca name\u003d\"research-study-classifiers-research-study-objective-type\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eResearch Study Objective Type\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  primary\u003ca name\u003d\"research-study-classifiers-primary\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003ePrimary\u003c/td\u003e\u003ctd\u003eThe main question to be answered, and the one that drives any statistical planning for the study—e.g., calculation of the sample size to provide the appropriate power for statistical testing.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  secondary\u003ca name\u003d\"research-study-classifiers-secondary\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eSecondary\u003c/td\u003e\u003ctd\u003eQuestion to be answered in the study that is of lesser importance than the primary objective.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  exploratory\u003ca name\u003d\"research-study-classifiers-exploratory\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eExploratory\u003c/td\u003e\u003ctd\u003eExploratory questions to be answered in the study.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e1\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eresearch-study-arm-type\u003ca name\u003d\"research-study-classifiers-research-study-arm-type\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eResearch Study Arm Type\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  active-comparator\u003ca name\u003d\"research-study-classifiers-active-comparator\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eActive Comparator\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  placebo-comparator\u003ca name\u003d\"research-study-classifiers-placebo-comparator\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003ePlacebo Comparator\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  sham-comparator\u003ca name\u003d\"research-study-classifiers-sham-comparator\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eSham Comparator\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  no-intervention\u003ca name\u003d\"research-study-classifiers-no-intervention\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eNo Intervention\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  experimental\u003ca name\u003d\"research-study-classifiers-experimental\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eExperimental\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  other-arm-type\u003ca name\u003d\"research-study-classifiers-other-arm-type\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eOther Arm Type\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e1\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eSEVCO:01000\u003ca name\u003d\"research-study-classifiers-SEVCO.5801000\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eStudy Design\u003c/td\u003e\u003ctd\u003eA plan specification for how and what kinds of data will be gathered as part of an investigation which may produce testable explanations, conclusions and predictions or test a hypothesis. \u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  SEVCO:01001\u003ca name\u003d\"research-study-classifiers-SEVCO.5801001\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eInterventional research\u003c/td\u003e\u003ctd\u003eA study design in which an independent variable (an exposure or intervention) is prospectively assigned or modified by the investigator to evaluate a response in the dependent variable (an effect or outcome).\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e3\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e    SEVCO:01003\u003ca name\u003d\"research-study-classifiers-SEVCO.5801003\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003erandomized assignment\u003c/td\u003e\u003ctd\u003eAn interventional study design in which an independent variable (an exposure or intervention) is prospectively assigned or modified by random chance to separate groups.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e4\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e      SEVCO:01006\u003ca name\u003d\"research-study-classifiers-SEVCO.5801006\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003esimple randomization\u003c/td\u003e\u003ctd\u003eA randomized assignment in which each participant has the same prespecified likelihood of being assigned to a group as all other participants, independent of the assignment of any other participant.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e4\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e      SEVCO:01007\u003ca name\u003d\"research-study-classifiers-SEVCO.5801007\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003estratified randomization\u003c/td\u003e\u003ctd\u003eA randomized assignment in which participants are stratified into groups based on prognostic variables and then randomized into balanced treatment groups\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e4\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e      SEVCO:01008\u003ca name\u003d\"research-study-classifiers-SEVCO.5801008\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eblock randomization\u003c/td\u003e\u003ctd\u003eA randomized assignment in which a pre-specified number of subjects is assigned to a block containing the same pre-specified ratio of group assignments in random order.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e4\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e      SEVCO:01009\u003ca name\u003d\"research-study-classifiers-SEVCO.5801009\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eadaptive randomization\u003c/td\u003e\u003ctd\u003eA randomized assignment in which a participant’s group assignment probability is adjusted based on any factor such that the likelihood of assignment is not the same for all participants.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e3\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e    SEVCO:01005\u003ca name\u003d\"research-study-classifiers-SEVCO.5801005\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eNon-randomized assignment\u003c/td\u003e\u003ctd\u003eAn interventional study design in which an independent variable (an exposure or intervention) is prospectively assigned or modified by methods other than random chance to separate groups.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e4\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e      SEVCO:01004\u003ca name\u003d\"research-study-classifiers-SEVCO.5801004\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eQuasi-Randomized assignment\u003c/td\u003e\u003ctd\u003eAn interventional study design with a method of allocation that is not limited to random chance but is intended to produce similar baseline groups for experimentation.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e3\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e    SEVCO:01029\u003ca name\u003d\"research-study-classifiers-SEVCO.5801029\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eClinical trial\u003c/td\u003e\u003ctd\u003eInterventional research in which one or more healthcare-related actions (i.e., a diagnostic, prognostic, therapeutic, preventive or screening method or intervention) is evaluated for effects on health-related biomedical or behavioral processes and/or outcomes.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e4\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e      SEVCO:01041\u003ca name\u003d\"research-study-classifiers-SEVCO.5801041\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003ePragmatic clinical trial\u003c/td\u003e\u003ctd\u003eA clinical trial conducted under conditions of routine clinical practice.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e4\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e      SEVCO:01038\u003ca name\u003d\"research-study-classifiers-SEVCO.5801038\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eExpanded Access study\u003c/td\u003e\u003ctd\u003eA clinical trial that provides a means for obtaining an experimental drug or device for patients who are not adequately treated by existing therapy, who do not meet the eligibility criteria for enrollment, or who are otherwise unable to participate in another clinical study. \u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e4\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e      SEVCO:01030\u003ca name\u003d\"research-study-classifiers-SEVCO.5801030\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003ePhase 1 trial\u003c/td\u003e\u003ctd\u003eA clinical trial to gather initial evidence in humans to support further investigation of an intervention.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e5\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e        SEVCO:01031\u003ca name\u003d\"research-study-classifiers-SEVCO.5801031\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eExploratory investigational new drug study\u003c/td\u003e\u003ctd\u003eA clinical trial that is conducted early in phase 1, involves very limited human exposure, and has no therapeutic or diagnostic intent (e.g., screening studies, microdose studies). \u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e4\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e      SEVCO:01032\u003ca name\u003d\"research-study-classifiers-SEVCO.5801032\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003ePhase 1/Phase 2 trial\u003c/td\u003e\u003ctd\u003e A clinical trial with a component meeting the definition of phase 1 trial and a component meeting the definition of phase 2 trial.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e4\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e      SEVCO:01033\u003ca name\u003d\"research-study-classifiers-SEVCO.5801033\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003ePhase 2 trial\u003c/td\u003e\u003ctd\u003eA clinical trial to gather evidence of effectiveness and safety for an intervention in patients with the disease or condition under study, but not intended to provide an adequate basis for regulatory approval for clinical use.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e4\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e      SEVCO:01034\u003ca name\u003d\"research-study-classifiers-SEVCO.5801034\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003ePhase 2/Phase 3 trial\u003c/td\u003e\u003ctd\u003eA clinical trial with a component meeting the definition of phase 2 trial and a component meeting the definition of phase 3 trial.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e4\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e      SEVCO:01035\u003ca name\u003d\"research-study-classifiers-SEVCO.5801035\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003ePhase 3 Trial\u003c/td\u003e\u003ctd\u003eA clinical trial to gather the evidence of effectiveness and safety of an intervention, intended to provide an adequate basis for regulatory approval for clinical use.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e4\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e      SEVCO:01036\u003ca name\u003d\"research-study-classifiers-SEVCO.5801036\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003ePost-marketing study\u003c/td\u003e\u003ctd\u003eA clinical trial to gather additional evidence of effectiveness and safety of an intervention for an already approved clinical use.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  SEVCO:01002\u003ca name\u003d\"research-study-classifiers-SEVCO.5801002\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eObservational research\u003c/td\u003e\u003ctd\u003eA study design in which the independent variables (exposures or interventions) are not prospectively assigned or modified by the investigator. \u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e3\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e    SEVCO:01037\u003ca name\u003d\"research-study-classifiers-SEVCO.5801037\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003ePost-Marketing Surveillance study\u003c/td\u003e\u003ctd\u003eAn observational study to identify adverse events related to the use of an approved clinical intervention.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  SEVCO:01010\u003ca name\u003d\"research-study-classifiers-SEVCO.5801010\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eComparative study design\u003c/td\u003e\u003ctd\u003eA study design in which two or more groups are compared.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e3\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e    SEVCO:01011\u003ca name\u003d\"research-study-classifiers-SEVCO.5801011\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eParallel cohort design\u003c/td\u003e\u003ctd\u003eA comparative study design in which the groups are compared concurrently and participants are expected to remain in the groups being compared for the entire duration of participation in the study.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e3\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e    SEVCO:01012\u003ca name\u003d\"research-study-classifiers-SEVCO.5801012\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eCrossover cohort design\u003c/td\u003e\u003ctd\u003eA comparative study design in which participants receive two or more alternative exposures during separate periods of time.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e4\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e      SEVCO:01024\u003ca name\u003d\"research-study-classifiers-SEVCO.5801024\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eControlled crossover cohort design\u003c/td\u003e\u003ctd\u003eA crossover cohort design in which two or more cohorts have different orders of exposures.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e4\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e      SEVCO:01025\u003ca name\u003d\"research-study-classifiers-SEVCO.5801025\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eSingle-arm crossover design\u003c/td\u003e\u003ctd\u003eA crossover cohort design in which all participants are in a single cohort with the same order of exposures.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e3\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e    SEVCO:01013\u003ca name\u003d\"research-study-classifiers-SEVCO.5801013\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eCase control design\u003c/td\u003e\u003ctd\u003eA comparative study design in which the groups being compared are defined by outcome presence (case) or absence (control).\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e3\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e    SEVCO:01014\u003ca name\u003d\"research-study-classifiers-SEVCO.5801014\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eMatching for comparison\u003c/td\u003e\u003ctd\u003eA comparative study design in which individual participants in different groups being compared are paired or matched into sets based on selected attributes for within-set analysis.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e4\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e      SEVCO:01020\u003ca name\u003d\"research-study-classifiers-SEVCO.5801020\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eFamily study design\u003c/td\u003e\u003ctd\u003eA matched study design in which related or non-related family members are compared.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e5\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e        SEVCO:01021\u003ca name\u003d\"research-study-classifiers-SEVCO.5801021\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eTwin study design\u003c/td\u003e\u003ctd\u003eA family study design in which twin siblings are compared.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e3\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e    SEVCO:01015\u003ca name\u003d\"research-study-classifiers-SEVCO.5801015\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eCluster as unit of allocation\u003c/td\u003e\u003ctd\u003eA comparative study design in which participants are allocated to exposures (interventions) by their membership in groups (called clusters) rather than by individualized assignments.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  SEVCO:01023\u003ca name\u003d\"research-study-classifiers-SEVCO.5801023\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eNon-comparative study design\u003c/td\u003e\u003ctd\u003eA study design with no comparisons between groups with different exposures and no comparisons between groups with different outcomes.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e3\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e    SEVCO:01016\u003ca name\u003d\"research-study-classifiers-SEVCO.5801016\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eUncontrolled cohort design\u003c/td\u003e\u003ctd\u003eA non-comparative study design in which two or more participants are evaluated in a single group (or cohort).\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e3\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e    SEVCO:01017\u003ca name\u003d\"research-study-classifiers-SEVCO.5801017\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eCase report\u003c/td\u003e\u003ctd\u003eA non-comparative study design in which a single participant is evaluated.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  SEVCO:01022\u003ca name\u003d\"research-study-classifiers-SEVCO.5801022\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003ePopulation-based design\u003c/td\u003e\u003ctd\u003eA study design in which the unit of observation is a population or community. \u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e3\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e    SEVCO:01044\u003ca name\u003d\"research-study-classifiers-SEVCO.5801044\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eEcological design\u003c/td\u003e\u003ctd\u003eA study design in which the unit of observation is a population or community defined by social relationships or physical surroundings. \u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  SEVCO:01027\u003ca name\u003d\"research-study-classifiers-SEVCO.5801027\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eCross sectional data collection \u003c/td\u003e\u003ctd\u003eA study design process in which data is collected at a single point in time.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  SEVCO:01028\u003ca name\u003d\"research-study-classifiers-SEVCO.5801028\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eLongitudinal data collection\u003c/td\u003e\u003ctd\u003eA study design process in which data is collected at two or more points in time.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e3\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e    SEVCO:01018\u003ca name\u003d\"research-study-classifiers-SEVCO.5801018\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eTime series design\u003c/td\u003e\u003ctd\u003eA longitudinal data collection which includes a set of time-ordered observations.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e4\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e      SEVCO:01019\u003ca name\u003d\"research-study-classifiers-SEVCO.5801019\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eBefore and after comparison\u003c/td\u003e\u003ctd\u003eA time series design which includes comparisons of observations before and after an event or exposure.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  SEVCO:01045\u003ca name\u003d\"research-study-classifiers-SEVCO.5801045\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003ePrimary data collection\u003c/td\u003e\u003ctd\u003eA study design process in which the data are recorded and collected during the study for the purpose of the same study.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  SEVCO:01026\u003ca name\u003d\"research-study-classifiers-SEVCO.5801026\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eReal world data collection\u003c/td\u003e\u003ctd\u003eA study design process in which the study data are obtained from a source of data collected during a routine process in the natural environment rather than using a process designed or controlled by the researcher.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e3\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e    SEVCO:01039\u003ca name\u003d\"research-study-classifiers-SEVCO.5801039\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eReal world data collection from healthcare records\u003c/td\u003e\u003ctd\u003eReal world data collection from data obtained routinely for a purpose of recording healthcare delivery in a record controlled by a healthcare professional.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e3\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e    SEVCO:01050\u003ca name\u003d\"research-study-classifiers-SEVCO.5801050\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eReal world data collection from personal health records\u003c/td\u003e\u003ctd\u003eReal world data collection from data obtained routinely for a purpose of recording data related to personal health in a record controlled by the person, guardian, or caretaker.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e3\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e    SEVCO:01040\u003ca name\u003d\"research-study-classifiers-SEVCO.5801040\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eReal world data collection from healthcare financing records\u003c/td\u003e\u003ctd\u003eReal world data collection from data obtained routinely for a purpose of recording healthcare financing.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e3\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e    SEVCO:01048\u003ca name\u003d\"research-study-classifiers-SEVCO.5801048\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eReal world data collection from testing procedures\u003c/td\u003e\u003ctd\u003eReal world data collection from data obtained routinely for a purpose of testing, such as diagnostic testing or screening examination.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e4\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e      SEVCO:01046\u003ca name\u003d\"research-study-classifiers-SEVCO.5801046\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eReal world data collection from monitoring procedures\u003c/td\u003e\u003ctd\u003eReal world data collection from data obtained routinely for a purpose of repeated testing.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  SEVCO:01049\u003ca name\u003d\"research-study-classifiers-SEVCO.5801049\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eSecondary data collection from prior research\u003c/td\u003e\u003ctd\u003eA study design process in which the data are collected from data obtained during a different study than the current study.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  SEVCO:01042\u003ca name\u003d\"research-study-classifiers-SEVCO.5801042\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eSecondary data collection from a registry\u003c/td\u003e\u003ctd\u003eA study design process in which the data are collected from a system organized to obtain and maintain uniform data for discovery and analysis, and this system is organized prior to the current study.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  SEVCO:01051\u003ca name\u003d\"research-study-classifiers-SEVCO.5801051\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eMultisite data collection\u003c/td\u003e\u003ctd\u003eA study design process in which data are collected from two or more geographic locations.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  SEVCO:01086\u003ca name\u003d\"research-study-classifiers-SEVCO.5801086\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eQuantitative analysis\u003c/td\u003e\u003ctd\u003eA study design process in which data are analyzed with mathematical or statistical methods and formulas.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  SEVCO:01087\u003ca name\u003d\"research-study-classifiers-SEVCO.5801087\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eQualitative analysis\u003c/td\u003e\u003ctd\u003eA study design process in which data are analyzed, without primary reliance on mathematical or statistical techniques, by coding and organizing data to provide interpretation or understanding of experiences or hypotheses.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  SEVCO:01060\u003ca name\u003d\"research-study-classifiers-SEVCO.5801060\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eBlinding of study participants\u003c/td\u003e\u003ctd\u003eA study design process in which study participants are not informed of their intervention assignment.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  SEVCO:01061\u003ca name\u003d\"research-study-classifiers-SEVCO.5801061\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eBlinding of intervention providers\u003c/td\u003e\u003ctd\u003eA study design process in which the people administering the intervention are not informed of the intervention assignment.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  SEVCO:01062\u003ca name\u003d\"research-study-classifiers-SEVCO.5801062\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eBlinding of outcome assessors\u003c/td\u003e\u003ctd\u003eA study design process in which the people determining the outcome are not informed of the intervention assignment.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  SEVCO:01063\u003ca name\u003d\"research-study-classifiers-SEVCO.5801063\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eBlinding of data analysts\u003c/td\u003e\u003ctd\u003eA study design process in which the people managing or processing the data and statistical analysis are not informed of the intervention assignment.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  SEVCO:01064\u003ca name\u003d\"research-study-classifiers-SEVCO.5801064\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eAllocation concealment\u003c/td\u003e\u003ctd\u003eA study design process in which all parties influencing study enrollment and allocation to study groups are unaware of the group assignment for the study participant at the time of enrollment and allocation.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  SEVCO:01043\u003ca name\u003d\"research-study-classifiers-SEVCO.5801043\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eMulticentric\u003c/td\u003e\u003ctd\u003eA study design feature in which two or more institutions are responsible for the conduct of the study.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  SEVCO:01052\u003ca name\u003d\"research-study-classifiers-SEVCO.5801052\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eIncludes patient-reported outcome\u003c/td\u003e\u003ctd\u003eA study design feature in which one or more outcomes are reported directly from the patient without interpretation by a clinician or researcher.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  SEVCO:01053\u003ca name\u003d\"research-study-classifiers-SEVCO.5801053\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eIncludes patient-centered outcome\u003c/td\u003e\u003ctd\u003eA study design feature in which one or more measures are outcomes that patients directly care about, i.e. outcomes that are directly related to patients\u0027 experience of their life.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  SEVCO:01054\u003ca name\u003d\"research-study-classifiers-SEVCO.5801054\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eIncludes disease-oriented outcome\u003c/td\u003e\u003ctd\u003eA study design feature in which one or more measures are outcomes that relate to a health or illness condition but are not outcomes which patients directly care about.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  SEVCO:01085\u003ca name\u003d\"research-study-classifiers-SEVCO.5801085\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eIncludes process measure\u003c/td\u003e\u003ctd\u003eA study design feature in which one or more outcomes are actions or behaviors of a healthcare professional or care team.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e2\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e  SEVCO:01089\u003ca name\u003d\"research-study-classifiers-SEVCO.5801089\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eStudy Goal\u003c/td\u003e\u003ctd\u003eA study design feature specifying the intent of the study.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e3\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e    SEVCO:01096\u003ca name\u003d\"research-study-classifiers-SEVCO.5801096\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eEvaluation Goal\u003c/td\u003e\u003ctd\u003eA study goal to assess the efficiency, effectiveness, and impact of a given program, process, person or piece of equipment.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e3\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e    SEVCO:01097\u003ca name\u003d\"research-study-classifiers-SEVCO.5801097\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eDerivation Goal\u003c/td\u003e\u003ctd\u003eA study goal with the intent to generate a predictive algorithm.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e3\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e    SEVCO:01098\u003ca name\u003d\"research-study-classifiers-SEVCO.5801098\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eValidation Goal\u003c/td\u003e\u003ctd\u003eA study goal with the intent to determine the reliability and/or performance of a procedure for a specific predictive, classification, measurement, or communication purpose.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e3\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e    SEVCO:01088\u003ca name\u003d\"research-study-classifiers-SEVCO.5801088\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eComparison Goal\u003c/td\u003e\u003ctd\u003eA study design feature in which the study intent is to compare two or more interventions or exposures.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e4\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e      SEVCO:01091\u003ca name\u003d\"research-study-classifiers-SEVCO.5801091\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eComparative Effectiveness Goal\u003c/td\u003e\u003ctd\u003eA study design feature in which the study intent is to compare two or more interventions with respect to benefits and/or harms.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e5\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e        SEVCO:01090\u003ca name\u003d\"research-study-classifiers-SEVCO.5801090\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eComparative Efficacy Goal\u003c/td\u003e\u003ctd\u003eA study design feature in which the study intent is to compare two or more interventions with respect to effectiveness in ideal conditions.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e5\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e        SEVCO:01092\u003ca name\u003d\"research-study-classifiers-SEVCO.5801092\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eComparative Safety Goal\u003c/td\u003e\u003ctd\u003eA study design feature in which the study intent is to compare two or more interventions with respect to harms.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e4\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e      SEVCO:01093\u003ca name\u003d\"research-study-classifiers-SEVCO.5801093\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eEquivalence Goal\u003c/td\u003e\u003ctd\u003eA study goal with the intent to compare two or more interventions or exposures and determine that any difference in effects is within a prespecified range representing absence of a meaningful difference.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e4\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e      SEVCO:01094\u003ca name\u003d\"research-study-classifiers-SEVCO.5801094\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eNon-inferiority Goal\u003c/td\u003e\u003ctd\u003eA study goal with the intent to compare two or more interventions or exposures and determine that any difference in effects is below a prespecified value representing a threshold between a meaningful difference and absence of a meaningful difference.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e4\u003c/td\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e      SEVCO:01095\u003ca name\u003d\"research-study-classifiers-SEVCO.5801095\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eSuperiority Goal\u003c/td\u003e\u003ctd\u003eA study goal with the intent to compare two or more interventions or exposures and detect a difference in effects.\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "brr"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "trial-use"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 0
+    }
+  ],
+  "url": "http://hl7.org/fhir/research-study-classifiers",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.4.1967"
+    }
+  ],
+  "version": "5.0.0-snapshot3",
+  "name": "ResearchStudyClassifiers",
+  "title": "ResearchStudy Classifiers Code System",
+  "status": "active",
+  "experimental": false,
+  "date": "2022-05-15T16:55:11.085+11:00",
+  "publisher": "HL7 (FHIR Project)",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org/fhir"
+        },
+        {
+          "system": "email",
+          "value": "fhir@lists.hl7.org"
+        }
+      ]
+    }
+  ],
+  "description": "Codes for use in ResearchStudy Resource. This resource (this entire set of content) is being used for active development of a ResearchStudyClassifiers CodeSystem for use for supporting multiple value sets in the FHIR ResearchStudy StructureDefinition.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "valueSet": "http://hl7.org/fhir/ValueSet/research-study-classifiers",
+  "hierarchyMeaning": "is-a",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "research-study-prim-purp-type",
+      "display": "Research Study Primary Purpose Type",
+      "concept": [
+        {
+          "code": "treatment",
+          "display": "Treatment",
+          "definition": "One or more interventions are being evaluated for treating a disease, syndrome, or condition."
+        },
+        {
+          "code": "prevention",
+          "display": "Prevention",
+          "definition": "One or more interventions are being assessed for preventing the development of a specific disease or health condition."
+        },
+        {
+          "code": "diagnostic",
+          "display": "Diagnostic",
+          "definition": "One or more interventions are being evaluated for identifying a disease or health condition."
+        },
+        {
+          "code": "supportive-care",
+          "display": "Supportive Care",
+          "definition": "One or more interventions are evaluated for maximizing comfort, minimizing side effects, or mitigating against a decline in the participant\u0027s health or function."
+        },
+        {
+          "code": "screening",
+          "display": "Screening",
+          "definition": "One or more interventions are assessed or examined for identifying a condition, or risk factors for a condition, in people who are not yet known to have the condition or risk factor."
+        },
+        {
+          "code": "health-services-research",
+          "display": "Health Services Research",
+          "definition": "One or more interventions for evaluating the delivery, processes, management, organization, or financing of healthcare."
+        },
+        {
+          "code": "basic-science",
+          "display": "Basic Science",
+          "definition": "One or more interventions for examining the basic mechanism of action (for example, physiology or biomechanics of an intervention)."
+        },
+        {
+          "code": "device-feasibility",
+          "display": "Device Feasibility",
+          "definition": "An intervention of a device product is being evaluated to determine the feasibility of the product or to test a prototype device and not health outcomes. Such studies are conducted to confirm the design and operating specifications of a device before beginning a full clinical trial."
+        }
+      ]
+    },
+    {
+      "code": "research-study-phase",
+      "display": "Research Study Phase",
+      "concept": [
+        {
+          "code": "n-a",
+          "display": "N/A",
+          "definition": "Trials without phases (for example, studies of devices or behavioral interventions)."
+        },
+        {
+          "code": "early-phase-1",
+          "display": "Early Phase 1",
+          "definition": "Designation for optional exploratory trials conducted in accordance with the United States Food and Drug Administration\u0027s (FDA) 2006 Guidance on Exploratory Investigational New Drug (IND) Studies. Formerly called Phase 0."
+        },
+        {
+          "code": "phase-1",
+          "display": "Phase 1",
+          "definition": "Includes initial studies to determine the metabolism and pharmacologic actions of drugs in humans, the side effects associated with increasing doses, and to gain early evidence of effectiveness; may include healthy participants and/or patients."
+        },
+        {
+          "code": "phase-1-phase-2",
+          "display": "Phase 1/Phase 2",
+          "definition": "Trials that are a combination of phases 1 and 2."
+        },
+        {
+          "code": "phase-2",
+          "display": "Phase 2",
+          "definition": "Includes controlled clinical studies conducted to evaluate the effectiveness of the drug for a particular indication or indications in participants with the disease or condition under study and to determine the common short-term side effects and risks."
+        },
+        {
+          "code": "phase-2-phase-3",
+          "display": "Phase 2/Phase 3",
+          "definition": "Trials that are a combination of phases 2 and 3."
+        },
+        {
+          "code": "phase-3",
+          "display": "Phase 3",
+          "definition": "Includes trials conducted after preliminary evidence suggesting effectiveness of the drug has been obtained, and are intended to gather additional information to evaluate the overall benefit-risk relationship of the drug."
+        },
+        {
+          "code": "phase-4",
+          "display": "Phase 4",
+          "definition": "Studies of FDA-approved drugs to delineate additional information including the drug\u0027s risks, benefits, and optimal use."
+        }
+      ]
+    },
+    {
+      "code": "research-study-focus-type",
+      "display": "Research Study Focus Type",
+      "concept": [
+        {
+          "code": "medication",
+          "display": "Medication"
+        },
+        {
+          "code": "device",
+          "display": "Device"
+        },
+        {
+          "code": "intervention",
+          "display": "Intervention"
+        },
+        {
+          "code": "factor",
+          "display": "Factor"
+        }
+      ]
+    },
+    {
+      "code": "research-study-classifier",
+      "display": "Research Study Classifier",
+      "concept": [
+        {
+          "code": "fda-regulated-drug",
+          "display": "FDA regulated drug",
+          "definition": "A medication regulated by the U.S. Food and Drug Administration."
+        },
+        {
+          "code": "fda-regulated-device",
+          "display": "FDA regulated device",
+          "definition": "A medical device regulated by the U.S. Food and Drug Administration."
+        },
+        {
+          "code": "mpg-paragraph-23b",
+          "display": "MPG Paragraph 23b",
+          "definition": "Research regulated by a specific German legal requirement (Medizinproduktegesetz MPG Paragraph 23b)."
+        },
+        {
+          "code": "irb-exempt",
+          "display": "IRB-exempt",
+          "definition": "Human subjects research that is excempt from oversight and monitoring by an institutional review board (IRB)."
+        }
+      ]
+    },
+    {
+      "code": "research-study-party-organization-type",
+      "display": "Research Study Party Organization Type",
+      "concept": [
+        {
+          "code": "nih",
+          "display": "NIH"
+        },
+        {
+          "code": "fda",
+          "display": "FDA"
+        },
+        {
+          "code": "government",
+          "display": "Government"
+        },
+        {
+          "code": "nonprofit",
+          "display": "Nonprofit"
+        },
+        {
+          "code": "academic",
+          "display": "Academic"
+        },
+        {
+          "code": "industry",
+          "display": "Industry"
+        }
+      ]
+    },
+    {
+      "code": "research-study-party-role",
+      "display": "Research Study Party Role",
+      "concept": [
+        {
+          "code": "sponsor",
+          "display": "Sponsor"
+        },
+        {
+          "code": "lead-sponsor",
+          "display": "Lead Sponsor"
+        },
+        {
+          "code": "sponsor-investigator",
+          "display": "Sponsor-Investigator"
+        },
+        {
+          "code": "primary-investigator",
+          "display": "Primary Investigator"
+        },
+        {
+          "code": "collaborator",
+          "display": "Collaborator"
+        },
+        {
+          "code": "funding-source",
+          "display": "Funding Source"
+        },
+        {
+          "code": "general-contact",
+          "display": "General Contact"
+        },
+        {
+          "code": "recruitment-contact",
+          "display": "Recruitment Contact"
+        },
+        {
+          "code": "sub-investigator",
+          "display": "Sub-investigator"
+        },
+        {
+          "code": "study-director",
+          "display": "Study Director"
+        },
+        {
+          "code": "study-chair",
+          "display": "Study Chair"
+        }
+      ]
+    },
+    {
+      "code": "research-study-status",
+      "display": "Research Study Status",
+      "concept": [
+        {
+          "code": "overall-study",
+          "display": "Overall study",
+          "definition": "Used for documenting the start and end of the overall study, distinct from progress states."
+        },
+        {
+          "code": "active",
+          "display": "Active",
+          "definition": "Study is opened for accrual."
+        },
+        {
+          "code": "active-but-not-recruiting",
+          "display": "Active, not recruiting",
+          "definition": "The study is ongoing, and participants are receiving an intervention or being examined, but potential participants are not currently being recruited or enrolled."
+        },
+        {
+          "code": "administratively-completed",
+          "display": "Administratively Completed",
+          "definition": "Study is completed prematurely and will not resume; patients are no longer examined nor treated."
+        },
+        {
+          "code": "approved",
+          "display": "Approved",
+          "definition": "Protocol is approved by the review board."
+        },
+        {
+          "code": "closed-to-accrual",
+          "display": "Closed to Accrual",
+          "definition": "Study is closed for accrual; patients can be examined and treated."
+        },
+        {
+          "code": "closed-to-accrual-and-intervention",
+          "display": "Closed to Accrual and Intervention",
+          "definition": "Study is closed to accrual and intervention, i.e. the study is closed to enrollment, all study subjects have completed treatment or intervention but are still being followed according to the primary objective of the study."
+        },
+        {
+          "code": "completed",
+          "display": "Completed",
+          "definition": "The study closed according to the study plan. There will be no further treatments, interventions or data collection."
+        },
+        {
+          "code": "disapproved",
+          "display": "Disapproved",
+          "definition": "Protocol was disapproved by the review board."
+        },
+        {
+          "code": "enrolling-by-invitation",
+          "display": "Enrolling by invitation",
+          "definition": "The study is selecting its participants from a population, or group of people, decided on by the researchers in advance. These studies are not open to everyone who meets the eligibility criteria but only to people in that particular population, who are specifically invited to participate."
+        },
+        {
+          "code": "in-review",
+          "display": "In Review",
+          "definition": "Protocol is submitted to the review board for approval."
+        },
+        {
+          "code": "not-yet-recruiting",
+          "display": "Not yet recruiting",
+          "definition": "The study has not started recruiting participants."
+        },
+        {
+          "code": "recruiting",
+          "display": "Recruiting",
+          "definition": "The study is currently recruiting participants."
+        },
+        {
+          "code": "temporarily-closed-to-accrual",
+          "display": "Temporarily Closed to Accrual",
+          "definition": "Study is temporarily closed for accrual; can be potentially resumed in the future; patients can be examined and treated."
+        },
+        {
+          "code": "temporarily-closed-to-accrual-and-intervention",
+          "display": "Temporarily Closed to Accrual and Intervention",
+          "definition": "Study is temporarily closed for accrual and intervention and potentially can be resumed in the future."
+        },
+        {
+          "code": "terminated",
+          "display": "Terminated",
+          "definition": "The study has stopped early and will not start again. Participants are no longer being examined or treated."
+        },
+        {
+          "code": "withdrawn",
+          "display": "Withdrawn",
+          "definition": "Protocol was withdrawn by the lead organization."
+        }
+      ]
+    },
+    {
+      "code": "research-study-registration-activity",
+      "display": "Research Study Registration Activity",
+      "concept": [
+        {
+          "code": "record-verification",
+          "display": "Record Verification",
+          "definition": "Record has been verified."
+        },
+        {
+          "code": "primary-outcome-data-collection",
+          "display": "Primary outcome data collection"
+        },
+        {
+          "code": "registration-submission",
+          "display": "Registration submission"
+        },
+        {
+          "code": "registration-submission-qc",
+          "display": "Registration submission Quality Check"
+        },
+        {
+          "code": "registration-posting",
+          "display": "Registration posting"
+        },
+        {
+          "code": "results-submission",
+          "display": "Results submission"
+        },
+        {
+          "code": "results-submission-qc",
+          "display": "Results submission Quality Check"
+        },
+        {
+          "code": "results-posting",
+          "display": "Results posting"
+        },
+        {
+          "code": "disposition-submission",
+          "display": "Disposition submission"
+        },
+        {
+          "code": "disposition-submission-qc",
+          "display": "Disposition submission Quality Check"
+        },
+        {
+          "code": "disposition-posting",
+          "display": "Disposition posting"
+        },
+        {
+          "code": "update-submission",
+          "display": "Update submission "
+        },
+        {
+          "code": "update-posting",
+          "display": "Update posting"
+        }
+      ]
+    },
+    {
+      "code": "research-study-reason-stopped",
+      "display": "Research Study Reason Stopped",
+      "concept": [
+        {
+          "code": "accrual-goal-met",
+          "display": "Accrual Goal Met",
+          "definition": "The study prematurely ended because the accrual goal was met."
+        },
+        {
+          "code": "closed-due-to-toxicity",
+          "display": "Closed due to toxicity",
+          "definition": "The study prematurely ended due to toxicity."
+        },
+        {
+          "code": "closed-due-to-lack-of-study-progress",
+          "display": "Closed due to lack of study progress",
+          "definition": "The study prematurely ended due to lack of study progress."
+        },
+        {
+          "code": "temporarily-closed-per-study-design",
+          "display": "Temporarily closed per study design",
+          "definition": "The study prematurely ended temporarily per study design."
+        }
+      ]
+    },
+    {
+      "code": "research-study-objective-type",
+      "display": "Research Study Objective Type",
+      "concept": [
+        {
+          "code": "primary",
+          "display": "Primary",
+          "definition": "The main question to be answered, and the one that drives any statistical planning for the study—e.g., calculation of the sample size to provide the appropriate power for statistical testing."
+        },
+        {
+          "code": "secondary",
+          "display": "Secondary",
+          "definition": "Question to be answered in the study that is of lesser importance than the primary objective."
+        },
+        {
+          "code": "exploratory",
+          "display": "Exploratory",
+          "definition": "Exploratory questions to be answered in the study."
+        }
+      ]
+    },
+    {
+      "code": "research-study-arm-type",
+      "display": "Research Study Arm Type",
+      "concept": [
+        {
+          "code": "active-comparator",
+          "display": "Active Comparator"
+        },
+        {
+          "code": "placebo-comparator",
+          "display": "Placebo Comparator"
+        },
+        {
+          "code": "sham-comparator",
+          "display": "Sham Comparator"
+        },
+        {
+          "code": "no-intervention",
+          "display": "No Intervention"
+        },
+        {
+          "code": "experimental",
+          "display": "Experimental"
+        },
+        {
+          "code": "other-arm-type",
+          "display": "Other Arm Type"
+        }
+      ]
+    },
+    {
+      "code": "SEVCO:01000",
+      "display": "Study Design",
+      "definition": "A plan specification for how and what kinds of data will be gathered as part of an investigation which may produce testable explanations, conclusions and predictions or test a hypothesis. ",
+      "designation": [
+        {
+          "use": {
+            "display": "Alternative term"
+          },
+          "value": "research design"
+        },
+        {
+          "use": {
+            "display": "Alternative term"
+          },
+          "value": "experimental design"
+        }
+      ],
+      "concept": [
+        {
+          "code": "SEVCO:01001",
+          "display": "Interventional research",
+          "definition": "A study design in which an independent variable (an exposure or intervention) is prospectively assigned or modified by the investigator to evaluate a response in the dependent variable (an effect or outcome).",
+          "designation": [
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Interventional study"
+            },
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Interventional study design"
+            },
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "interventional primary research"
+            },
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "international method of research"
+            },
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "experimental research"
+            },
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "experimental study"
+            }
+          ],
+          "concept": [
+            {
+              "code": "SEVCO:01003",
+              "display": "randomized assignment",
+              "definition": "An interventional study design in which an independent variable (an exposure or intervention) is prospectively assigned or modified by random chance to separate groups.",
+              "designation": [
+                {
+                  "use": {
+                    "display": "Alternative term"
+                  },
+                  "value": "Interventional research with randomized assignment"
+                },
+                {
+                  "use": {
+                    "display": "Alternative term"
+                  },
+                  "value": "Randomized trial"
+                },
+                {
+                  "use": {
+                    "display": "Alternative term"
+                  },
+                  "value": "Randomized controlled trial"
+                },
+                {
+                  "use": {
+                    "display": "Alternative term"
+                  },
+                  "value": "RCT"
+                }
+              ],
+              "concept": [
+                {
+                  "code": "SEVCO:01006",
+                  "display": "simple randomization",
+                  "definition": "A randomized assignment in which each participant has the same prespecified likelihood of being assigned to a group as all other participants, independent of the assignment of any other participant.",
+                  "designation": [
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "Unrestricted Randomization"
+                    }
+                  ]
+                },
+                {
+                  "code": "SEVCO:01007",
+                  "display": "stratified randomization",
+                  "definition": "A randomized assignment in which participants are stratified into groups based on prognostic variables and then randomized into balanced treatment groups"
+                },
+                {
+                  "code": "SEVCO:01008",
+                  "display": "block randomization",
+                  "definition": "A randomized assignment in which a pre-specified number of subjects is assigned to a block containing the same pre-specified ratio of group assignments in random order."
+                },
+                {
+                  "code": "SEVCO:01009",
+                  "display": "adaptive randomization",
+                  "definition": "A randomized assignment in which a participant’s group assignment probability is adjusted based on any factor such that the likelihood of assignment is not the same for all participants."
+                }
+              ]
+            },
+            {
+              "code": "SEVCO:01005",
+              "display": "Non-randomized assignment",
+              "definition": "An interventional study design in which an independent variable (an exposure or intervention) is prospectively assigned or modified by methods other than random chance to separate groups.",
+              "designation": [
+                {
+                  "use": {
+                    "display": "Alternative term"
+                  },
+                  "value": "Interventional research with non-randomized assignment"
+                }
+              ],
+              "concept": [
+                {
+                  "code": "SEVCO:01004",
+                  "display": "Quasi-Randomized assignment",
+                  "definition": "An interventional study design with a method of allocation that is not limited to random chance but is intended to produce similar baseline groups for experimentation."
+                }
+              ]
+            },
+            {
+              "code": "SEVCO:01029",
+              "display": "Clinical trial",
+              "definition": "Interventional research in which one or more healthcare-related actions (i.e., a diagnostic, prognostic, therapeutic, preventive or screening method or intervention) is evaluated for effects on health-related biomedical or behavioral processes and/or outcomes.",
+              "concept": [
+                {
+                  "code": "SEVCO:01041",
+                  "display": "Pragmatic clinical trial",
+                  "definition": "A clinical trial conducted under conditions of routine clinical practice.",
+                  "designation": [
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "Pragmatic trial"
+                    }
+                  ]
+                },
+                {
+                  "code": "SEVCO:01038",
+                  "display": "Expanded Access study",
+                  "definition": "A clinical trial that provides a means for obtaining an experimental drug or device for patients who are not adequately treated by existing therapy, who do not meet the eligibility criteria for enrollment, or who are otherwise unable to participate in another clinical study. ",
+                  "designation": [
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "Compassionate use trial"
+                    },
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "Compassionate use study"
+                    },
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "Expanded access trial"
+                    }
+                  ]
+                },
+                {
+                  "code": "SEVCO:01030",
+                  "display": "Phase 1 trial",
+                  "definition": "A clinical trial to gather initial evidence in humans to support further investigation of an intervention.",
+                  "designation": [
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "Phase I trial"
+                    },
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "Phase 1 study"
+                    },
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "phase I clinical trial"
+                    }
+                  ],
+                  "concept": [
+                    {
+                      "code": "SEVCO:01031",
+                      "display": "Exploratory investigational new drug study",
+                      "definition": "A clinical trial that is conducted early in phase 1, involves very limited human exposure, and has no therapeutic or diagnostic intent (e.g., screening studies, microdose studies). ",
+                      "designation": [
+                        {
+                          "use": {
+                            "display": "Alternative term"
+                          },
+                          "value": "Phase 0 study"
+                        },
+                        {
+                          "use": {
+                            "display": "Alternative term"
+                          },
+                          "value": "Pre-clinical trial"
+                        },
+                        {
+                          "use": {
+                            "display": "Alternative term"
+                          },
+                          "value": "Exploratory IND study"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "code": "SEVCO:01032",
+                  "display": "Phase 1/Phase 2 trial",
+                  "definition": " A clinical trial with a component meeting the definition of phase 1 trial and a component meeting the definition of phase 2 trial.",
+                  "designation": [
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "Phase I/II trial"
+                    },
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "Phase 1-2 trial"
+                    },
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "Phase 1/2 trial"
+                    },
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "Trial phase 1-2"
+                    },
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "Trial phase 1/2"
+                    }
+                  ]
+                },
+                {
+                  "code": "SEVCO:01033",
+                  "display": "Phase 2 trial",
+                  "definition": "A clinical trial to gather evidence of effectiveness and safety for an intervention in patients with the disease or condition under study, but not intended to provide an adequate basis for regulatory approval for clinical use.",
+                  "designation": [
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "Phase II trial"
+                    },
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "phase 2 study"
+                    },
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "Exploratory clinical study"
+                    },
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "phase II clinical trial"
+                    }
+                  ]
+                },
+                {
+                  "code": "SEVCO:01034",
+                  "display": "Phase 2/Phase 3 trial",
+                  "definition": "A clinical trial with a component meeting the definition of phase 2 trial and a component meeting the definition of phase 3 trial.",
+                  "designation": [
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "Phase II/III trial"
+                    },
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "Phase 2-3 trial"
+                    },
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "Phase 2/3 trial"
+                    },
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "Trial phase 2-3"
+                    },
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "Trial phase 2/3"
+                    }
+                  ]
+                },
+                {
+                  "code": "SEVCO:01035",
+                  "display": "Phase 3 Trial",
+                  "definition": "A clinical trial to gather the evidence of effectiveness and safety of an intervention, intended to provide an adequate basis for regulatory approval for clinical use.",
+                  "designation": [
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "Phase III trial"
+                    },
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "phase 3 study"
+                    },
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "Confirmatory clinical study"
+                    },
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "phase III clinical trial"
+                    }
+                  ]
+                },
+                {
+                  "code": "SEVCO:01036",
+                  "display": "Post-marketing study",
+                  "definition": "A clinical trial to gather additional evidence of effectiveness and safety of an intervention for an already approved clinical use.",
+                  "designation": [
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "Phase IV trial"
+                    },
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "Phase 4 trial"
+                    },
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "Phase 4 study"
+                    },
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "Trial phase 4"
+                    },
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "Post-approval study"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "SEVCO:01002",
+          "display": "Observational research",
+          "definition": "A study design in which the independent variables (exposures or interventions) are not prospectively assigned or modified by the investigator. ",
+          "designation": [
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Observational Study"
+            },
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Observational Study Design"
+            },
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Observational primary research"
+            },
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "observational method of research"
+            },
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Non-interventional research"
+            },
+            {
+              "use": {
+                "display": "Alternative term"
+              }
+            }
+          ],
+          "concept": [
+            {
+              "code": "SEVCO:01037",
+              "display": "Post-Marketing Surveillance study",
+              "definition": "An observational study to identify adverse events related to the use of an approved clinical intervention.",
+              "designation": [
+                {
+                  "use": {
+                    "display": "Alternative term"
+                  },
+                  "value": "Postmarketing evaluation study"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "SEVCO:01010",
+          "display": "Comparative study design",
+          "definition": "A study design in which two or more groups are compared.",
+          "designation": [
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Comparative research"
+            }
+          ],
+          "concept": [
+            {
+              "code": "SEVCO:01011",
+              "display": "Parallel cohort design",
+              "definition": "A comparative study design in which the groups are compared concurrently and participants are expected to remain in the groups being compared for the entire duration of participation in the study.",
+              "designation": [
+                {
+                  "use": {
+                    "display": "Alternative term"
+                  },
+                  "value": "Concurrent cohort study"
+                }
+              ]
+            },
+            {
+              "code": "SEVCO:01012",
+              "display": "Crossover cohort design",
+              "definition": "A comparative study design in which participants receive two or more alternative exposures during separate periods of time.",
+              "designation": [
+                {
+                  "use": {
+                    "display": "Alternative term"
+                  },
+                  "value": "Crossover study"
+                },
+                {
+                  "use": {
+                    "display": "Alternative term"
+                  },
+                  "value": "Crossover trial"
+                }
+              ],
+              "concept": [
+                {
+                  "code": "SEVCO:01024",
+                  "display": "Controlled crossover cohort design",
+                  "definition": "A crossover cohort design in which two or more cohorts have different orders of exposures."
+                },
+                {
+                  "code": "SEVCO:01025",
+                  "display": "Single-arm crossover design",
+                  "definition": "A crossover cohort design in which all participants are in a single cohort with the same order of exposures."
+                }
+              ]
+            },
+            {
+              "code": "SEVCO:01013",
+              "display": "Case control design",
+              "definition": "A comparative study design in which the groups being compared are defined by outcome presence (case) or absence (control)."
+            },
+            {
+              "code": "SEVCO:01014",
+              "display": "Matching for comparison",
+              "definition": "A comparative study design in which individual participants in different groups being compared are paired or matched into sets based on selected attributes for within-set analysis.",
+              "designation": [
+                {
+                  "use": {
+                    "display": "Alternative term"
+                  },
+                  "value": "Matched study design"
+                }
+              ],
+              "concept": [
+                {
+                  "code": "SEVCO:01020",
+                  "display": "Family study design",
+                  "definition": "A matched study design in which related or non-related family members are compared.",
+                  "designation": [
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "Familial study"
+                    },
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "Family study"
+                    },
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "Family based study"
+                    }
+                  ],
+                  "concept": [
+                    {
+                      "code": "SEVCO:01021",
+                      "display": "Twin study design",
+                      "definition": "A family study design in which twin siblings are compared."
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "code": "SEVCO:01015",
+              "display": "Cluster as unit of allocation",
+              "definition": "A comparative study design in which participants are allocated to exposures (interventions) by their membership in groups (called clusters) rather than by individualized assignments.",
+              "designation": [
+                {
+                  "use": {
+                    "display": "Alternative term"
+                  },
+                  "value": "Clustering for comparison"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "SEVCO:01023",
+          "display": "Non-comparative study design",
+          "definition": "A study design with no comparisons between groups with different exposures and no comparisons between groups with different outcomes.",
+          "designation": [
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Non-comparative research"
+            },
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Descriptive study"
+            }
+          ],
+          "concept": [
+            {
+              "code": "SEVCO:01016",
+              "display": "Uncontrolled cohort design",
+              "definition": "A non-comparative study design in which two or more participants are evaluated in a single group (or cohort).",
+              "designation": [
+                {
+                  "use": {
+                    "display": "Alternative term"
+                  },
+                  "value": "Single cohort design"
+                },
+                {
+                  "use": {
+                    "display": "Alternative term"
+                  },
+                  "value": "Case series design"
+                },
+                {
+                  "use": {
+                    "display": "Alternative term"
+                  },
+                  "value": "Non-controlled cohort design"
+                }
+              ]
+            },
+            {
+              "code": "SEVCO:01017",
+              "display": "Case report",
+              "definition": "A non-comparative study design in which a single participant is evaluated.",
+              "designation": [
+                {
+                  "use": {
+                    "display": "Alternative term"
+                  },
+                  "value": "Case study"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "SEVCO:01022",
+          "display": "Population-based design",
+          "definition": "A study design in which the unit of observation is a population or community. ",
+          "designation": [
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Population study"
+            }
+          ],
+          "concept": [
+            {
+              "code": "SEVCO:01044",
+              "display": "Ecological design",
+              "definition": "A study design in which the unit of observation is a population or community defined by social relationships or physical surroundings. ",
+              "designation": [
+                {
+                  "use": {
+                    "display": "Alternative term"
+                  },
+                  "value": "Ecologic study"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "SEVCO:01027",
+          "display": "Cross sectional data collection ",
+          "definition": "A study design process in which data is collected at a single point in time.",
+          "designation": [
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Cross-sectional study"
+            }
+          ]
+        },
+        {
+          "code": "SEVCO:01028",
+          "display": "Longitudinal data collection",
+          "definition": "A study design process in which data is collected at two or more points in time.",
+          "designation": [
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Longitudinal study"
+            }
+          ],
+          "concept": [
+            {
+              "code": "SEVCO:01018",
+              "display": "Time series design",
+              "definition": "A longitudinal data collection which includes a set of time-ordered observations.",
+              "designation": [
+                {
+                  "use": {
+                    "display": "Alternative term"
+                  },
+                  "value": "Multiple time point comparison"
+                }
+              ],
+              "concept": [
+                {
+                  "code": "SEVCO:01019",
+                  "display": "Before and after comparison",
+                  "definition": "A time series design which includes comparisons of observations before and after an event or exposure.",
+                  "designation": [
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "Before and After design"
+                    },
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "Pre-Post Design"
+                    },
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "Before-After Comparison"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "SEVCO:01045",
+          "display": "Primary data collection",
+          "definition": "A study design process in which the data are recorded and collected during the study for the purpose of the same study.",
+          "designation": [
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Study-generated data collection"
+            }
+          ]
+        },
+        {
+          "code": "SEVCO:01026",
+          "display": "Real world data collection",
+          "definition": "A study design process in which the study data are obtained from a source of data collected during a routine process in the natural environment rather than using a process designed or controlled by the researcher.",
+          "designation": [
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "RWD collection"
+            }
+          ],
+          "concept": [
+            {
+              "code": "SEVCO:01039",
+              "display": "Real world data collection from healthcare records",
+              "definition": "Real world data collection from data obtained routinely for a purpose of recording healthcare delivery in a record controlled by a healthcare professional.",
+              "designation": [
+                {
+                  "use": {
+                    "display": "Alternative term"
+                  },
+                  "value": "RWD collection from clinical care records"
+                },
+                {
+                  "use": {
+                    "display": "Alternative term"
+                  },
+                  "value": "RWD from health care records"
+                },
+                {
+                  "use": {
+                    "display": "Alternative term"
+                  },
+                  "value": "RWD from healthcare delivery records"
+                },
+                {
+                  "use": {
+                    "display": "Alternative term"
+                  },
+                  "value": "Real world data collection from medical records"
+                }
+              ]
+            },
+            {
+              "code": "SEVCO:01050",
+              "display": "Real world data collection from personal health records",
+              "definition": "Real world data collection from data obtained routinely for a purpose of recording data related to personal health in a record controlled by the person, guardian, or caretaker.",
+              "designation": [
+                {
+                  "use": {
+                    "display": "Alternative term"
+                  },
+                  "value": "Real world data collection from personal care records"
+                },
+                {
+                  "use": {
+                    "display": "Alternative term"
+                  },
+                  "value": "RWD collection from personal medical records"
+                }
+              ]
+            },
+            {
+              "code": "SEVCO:01040",
+              "display": "Real world data collection from healthcare financing records",
+              "definition": "Real world data collection from data obtained routinely for a purpose of recording healthcare financing.",
+              "designation": [
+                {
+                  "use": {
+                    "display": "Alternative term"
+                  },
+                  "value": "RWD collection from healthcare financing records"
+                }
+              ]
+            },
+            {
+              "code": "SEVCO:01048",
+              "display": "Real world data collection from testing procedures",
+              "definition": "Real world data collection from data obtained routinely for a purpose of testing, such as diagnostic testing or screening examination.",
+              "designation": [
+                {
+                  "use": {
+                    "display": "Alternative term"
+                  },
+                  "value": "RWD collection from testing procedures"
+                }
+              ],
+              "concept": [
+                {
+                  "code": "SEVCO:01046",
+                  "display": "Real world data collection from monitoring procedures",
+                  "definition": "Real world data collection from data obtained routinely for a purpose of repeated testing.",
+                  "designation": [
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "RWD collection from monitoring procedures"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "code": "SEVCO:01049",
+          "display": "Secondary data collection from prior research",
+          "definition": "A study design process in which the data are collected from data obtained during a different study than the current study."
+        },
+        {
+          "code": "SEVCO:01042",
+          "display": "Secondary data collection from a registry",
+          "definition": "A study design process in which the data are collected from a system organized to obtain and maintain uniform data for discovery and analysis, and this system is organized prior to the current study."
+        },
+        {
+          "code": "SEVCO:01051",
+          "display": "Multisite data collection",
+          "definition": "A study design process in which data are collected from two or more geographic locations."
+        },
+        {
+          "code": "SEVCO:01086",
+          "display": "Quantitative analysis",
+          "definition": "A study design process in which data are analyzed with mathematical or statistical methods and formulas."
+        },
+        {
+          "code": "SEVCO:01087",
+          "display": "Qualitative analysis",
+          "definition": "A study design process in which data are analyzed, without primary reliance on mathematical or statistical techniques, by coding and organizing data to provide interpretation or understanding of experiences or hypotheses."
+        },
+        {
+          "code": "SEVCO:01060",
+          "display": "Blinding of study participants",
+          "definition": "A study design process in which study participants are not informed of their intervention assignment.",
+          "designation": [
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Masking of study participants"
+            }
+          ]
+        },
+        {
+          "code": "SEVCO:01061",
+          "display": "Blinding of intervention providers",
+          "definition": "A study design process in which the people administering the intervention are not informed of the intervention assignment.",
+          "designation": [
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Masking of intervention providers"
+            },
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Blinding of intervention deliverers"
+            },
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Masking of intervention deliverers"
+            }
+          ]
+        },
+        {
+          "code": "SEVCO:01062",
+          "display": "Blinding of outcome assessors",
+          "definition": "A study design process in which the people determining the outcome are not informed of the intervention assignment.",
+          "designation": [
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Masking of outcome assessors"
+            }
+          ]
+        },
+        {
+          "code": "SEVCO:01063",
+          "display": "Blinding of data analysts",
+          "definition": "A study design process in which the people managing or processing the data and statistical analysis are not informed of the intervention assignment.",
+          "designation": [
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Masking of data analysts"
+            }
+          ]
+        },
+        {
+          "code": "SEVCO:01064",
+          "display": "Allocation concealment",
+          "definition": "A study design process in which all parties influencing study enrollment and allocation to study groups are unaware of the group assignment for the study participant at the time of enrollment and allocation.",
+          "designation": [
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Blinding of randomization assignment"
+            },
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Masking of randomization assignment"
+            }
+          ]
+        },
+        {
+          "code": "SEVCO:01043",
+          "display": "Multicentric",
+          "definition": "A study design feature in which two or more institutions are responsible for the conduct of the study.",
+          "designation": [
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Multi-institutional study"
+            },
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Multicenter trial"
+            },
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Multicenter study"
+            }
+          ]
+        },
+        {
+          "code": "SEVCO:01052",
+          "display": "Includes patient-reported outcome",
+          "definition": "A study design feature in which one or more outcomes are reported directly from the patient without interpretation by a clinician or researcher.",
+          "designation": [
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "PRO"
+            },
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Includes patient-reported outcomes"
+            }
+          ]
+        },
+        {
+          "code": "SEVCO:01053",
+          "display": "Includes patient-centered outcome",
+          "definition": "A study design feature in which one or more measures are outcomes that patients directly care about, i.e. outcomes that are directly related to patients\u0027 experience of their life.",
+          "designation": [
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Includes patient-oriented outcome"
+            },
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Includes patient-important outcome"
+            },
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Includes patient-relevant outcome"
+            },
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Includes clinical outcome"
+            },
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Includes patient-centered outcome measure"
+            },
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Includes clinical outcome measure"
+            }
+          ]
+        },
+        {
+          "code": "SEVCO:01054",
+          "display": "Includes disease-oriented outcome",
+          "definition": "A study design feature in which one or more measures are outcomes that relate to a health or illness condition but are not outcomes which patients directly care about.",
+          "designation": [
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Includes disease-oriented outcome measure"
+            },
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Includes surrogate outcome"
+            },
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Includes surrogate outcome measure"
+            }
+          ]
+        },
+        {
+          "code": "SEVCO:01085",
+          "display": "Includes process measure",
+          "definition": "A study design feature in which one or more outcomes are actions or behaviors of a healthcare professional or care team.",
+          "designation": [
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Includes process outcome"
+            },
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Includes process outcome measure"
+            }
+          ]
+        },
+        {
+          "code": "SEVCO:01089",
+          "display": "Study Goal",
+          "definition": "A study design feature specifying the intent of the study.",
+          "designation": [
+            {
+              "use": {
+                "display": "Alternative term"
+              },
+              "value": "Study Aim"
+            }
+          ],
+          "concept": [
+            {
+              "code": "SEVCO:01096",
+              "display": "Evaluation Goal",
+              "definition": "A study goal to assess the efficiency, effectiveness, and impact of a given program, process, person or piece of equipment.",
+              "designation": [
+                {
+                  "use": {
+                    "display": "Alternative term"
+                  },
+                  "value": "Evaluation Study Goal"
+                },
+                {
+                  "use": {
+                    "display": "Alternative term"
+                  },
+                  "value": "Evaluation Aim"
+                }
+              ]
+            },
+            {
+              "code": "SEVCO:01097",
+              "display": "Derivation Goal",
+              "definition": "A study goal with the intent to generate a predictive algorithm.",
+              "designation": [
+                {
+                  "use": {
+                    "display": "Alternative term"
+                  },
+                  "value": "Derivation Study Goal"
+                }
+              ]
+            },
+            {
+              "code": "SEVCO:01098",
+              "display": "Validation Goal",
+              "definition": "A study goal with the intent to determine the reliability and/or performance of a procedure for a specific predictive, classification, measurement, or communication purpose.",
+              "designation": [
+                {
+                  "use": {
+                    "display": "Alternative term"
+                  },
+                  "value": "Validation Study Goal"
+                }
+              ]
+            },
+            {
+              "code": "SEVCO:01088",
+              "display": "Comparison Goal",
+              "definition": "A study design feature in which the study intent is to compare two or more interventions or exposures.",
+              "designation": [
+                {
+                  "use": {
+                    "display": "Alternative term"
+                  },
+                  "value": "Comparative Analysis Goal"
+                }
+              ],
+              "concept": [
+                {
+                  "code": "SEVCO:01091",
+                  "display": "Comparative Effectiveness Goal",
+                  "definition": "A study design feature in which the study intent is to compare two or more interventions with respect to benefits and/or harms.",
+                  "concept": [
+                    {
+                      "code": "SEVCO:01090",
+                      "display": "Comparative Efficacy Goal",
+                      "definition": "A study design feature in which the study intent is to compare two or more interventions with respect to effectiveness in ideal conditions."
+                    },
+                    {
+                      "code": "SEVCO:01092",
+                      "display": "Comparative Safety Goal",
+                      "definition": "A study design feature in which the study intent is to compare two or more interventions with respect to harms."
+                    }
+                  ]
+                },
+                {
+                  "code": "SEVCO:01093",
+                  "display": "Equivalence Goal",
+                  "definition": "A study goal with the intent to compare two or more interventions or exposures and determine that any difference in effects is within a prespecified range representing absence of a meaningful difference."
+                },
+                {
+                  "code": "SEVCO:01094",
+                  "display": "Non-inferiority Goal",
+                  "definition": "A study goal with the intent to compare two or more interventions or exposures and determine that any difference in effects is below a prespecified value representing a threshold between a meaningful difference and absence of a meaningful difference."
+                },
+                {
+                  "code": "SEVCO:01095",
+                  "display": "Superiority Goal",
+                  "definition": "A study goal with the intent to compare two or more interventions or exposures and detect a difference in effects.",
+                  "designation": [
+                    {
+                      "use": {
+                        "display": "Alternative term"
+                      },
+                      "value": "Superiority study goal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -9,12 +9,24 @@
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
       "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "trial-use"
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-  "version": "4.6.0",
-  "name": "itemControl",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.5.1239"
+    }
+  ],
+  "version": "5.0.0-snapshot3",
+  "name": "QItemControl",
+  "title": "Questionnaire Item Control",
   "status": "draft",
+  "experimental": false,
   "date": "2013-07-04",
   "publisher": "HL7",
   "contact": [
@@ -27,8 +39,8 @@
       ]
     }
   ],
-  "description": "The type of data entry control or structure that should be used to render the item.",
-  "fhirVersion": "4.6.0",
+  "description": "The type of data entry control or structure that should be used to render the item.  Certain item controls only make sense for certain types of items.  For example, a radio button doesn\u0027t make sense for a question where repeats\u003dtrue; few systems will know how to implement a \u0027slider\u0027 control if the question type is \u0027Attachment\u0027, etc.  Form fillers are allowed to ignore item controls that don\u0027t make sense (or that they don\u0027t know how to handle) for the type of item the extension appears on.  If the extension is ignored, the form filler will use whatever display control it supports that works best for the type of item present.  Similarly, form authoring tools may raise validation issues or prohibit the selection of certain control types based on the characteristics of the item.",
+  "fhirVersion": "5.0.0",
   "mapping": [
     {
       "identity": "rim",
@@ -42,6 +54,10 @@
     {
       "type": "element",
       "expression": "Questionnaire.item"
+    },
+    {
+      "type": "element",
+      "expression": "ElementDefinition"
     }
   ],
   "type": "Extension",
@@ -54,7 +70,7 @@
         "path": "Extension",
         "short": "E.g. Fly-over, Table, Checkbox, Combo-box, Lookup, etc.",
         "definition": "The type of data entry control or structure that should be used to render the item.",
-        "comment": "Different controls may be appropriate for different item types.  It is up to the system rendering a questionnaire as to what controls it will support and for which data types.  See additional guidance and examples in the [SDC implementation guide](http://build.fhir.org/ig/HL7/sdc/rendering.html#itemControl).",
+        "comment": "Different controls may be appropriate for different item types.  It is up to the system rendering a questionnaire as to what controls it will support and for which data types.  See additional guidance and examples in the [SDC implementation guide](http://hl7.org/fhir/uv/sdc/rendering.html#itemControl).",
         "min": 0,
         "max": "1",
         "base": {
@@ -68,7 +84,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -76,7 +91,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -102,7 +116,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "string"
+                "valueUrl": "id"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -150,7 +164,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -158,7 +171,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -226,7 +238,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -259,7 +270,7 @@
         "path": "Extension",
         "short": "E.g. Fly-over, Table, Checkbox, Combo-box, Lookup, etc.",
         "definition": "The type of data entry control or structure that should be used to render the item.",
-        "comment": "Different controls may be appropriate for different item types.  It is up to the system rendering a questionnaire as to what controls it will support and for which data types.  See additional guidance and examples in the [SDC implementation guide](http://build.fhir.org/ig/HL7/sdc/rendering.html#itemControl).",
+        "comment": "Different controls may be appropriate for different item types.  It is up to the system rendering a questionnaire as to what controls it will support and for which data types.  See additional guidance and examples in the [SDC implementation guide](http://hl7.org/fhir/uv/sdc/rendering.html#itemControl).",
         "min": 0,
         "max": "1"
       },

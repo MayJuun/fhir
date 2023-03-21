@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><MedicationUsage xmlns="http://hl7.org/fhir">
+  <id value="example004"/>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: MedicationUsage</b><a name="example004"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource MedicationUsage "example004" </p></div><p><b>status</b>: recorded</p><h3>Medications</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>Amoxicillin (product) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#27658006)</span></td></tr></table><p><b>subject</b>: <a href="patient-example-a.html">Patient/pat1: Donald Duck</a> "Donald DUCK"</p><p><b>effective</b>: 2014-01-23</p><p><b>dateAsserted</b>: 2015-02-22</p><p><b>informationSource</b>: <a href="patient-example-a.html">Patient/pat1: Donald Duck</a> "Donald DUCK"</p><p><b>note</b>: Patient indicates they miss the occasional dose</p><h3>Dosages</h3><table class="grid"><tr><td>-</td><td><b>Text</b></td><td><b>Timing</b></td><td><b>AsNeeded</b></td><td><b>Route</b></td><td><b>MaxDosePerPeriod</b></td></tr><tr><td>*</td><td>one capsule three times daily</td><td>3 per 1 days</td><td>false</td><td>Oral <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#260548002)</span></td><td>3 capsules<span style="background: LightGoldenRodYellow"> (Details: SNOMED CT code 385055001 = 'Tablet')</span>/1 d<span style="background: LightGoldenRodYellow"> (Details: UCUM code d = 'd')</span></td></tr></table><h3>Adherences</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td><td><b>Reason</b></td></tr><tr><td>*</td><td>Not Taking <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="codesystem-medication-usage-adherence.html">MedicationUsage Adherence Codes</a>#not-taking)</span></td><td>Drugs not taken/completed <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#266710000)</span></td></tr></table></div></text><status value="recorded"/>
+  <medication>
+    <concept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="27658006"/>
+      <display value="Amoxicillin (product)"/>
+    </coding>
+    </concept>
+  </medication>
+  <subject>
+    <reference value="Patient/pat1"/>
+    <display value="Donald Duck"/> 
+  </subject>
+  <effectiveDateTime value="2014-01-23"/>
+  <dateAsserted value="2015-02-22"/>
+  <informationSource>
+    <reference value="Patient/pat1"/>
+    <display value="Donald Duck"/> 
+  </informationSource>
+
+
+  
+
+  <note>
+    <text value="Patient indicates they miss the occasional dose"/>
+  </note>
+  <dosage>
+    <text value="one capsule three times daily"/>
+    <timing>
+      <repeat>
+        <frequency value="3"/>
+        <period value="1"/>
+        <periodUnit value="d"/>
+      </repeat>
+    </timing>
+    <asNeeded value="false"/>
+    <route>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="260548002"/>
+        <display value="Oral"/>
+      </coding>
+    </route>
+    <maxDosePerPeriod>
+      <numerator>
+        <value value="3"/>
+        <unit value="capsules"/>
+        <system value="http://snomed.info/sct"/>
+        <code value="385055001"/>
+      </numerator>
+      <denominator>
+        <value value="1"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="d"/>
+      </denominator>
+    </maxDosePerPeriod>
+  </dosage>
+<adherence>
+  <code>
+    <coding>
+      <system value="http://hl7.org/fhir/CodeSystem/medication-usage-adherence"/>
+      <code value="not-taking"/>
+      <display value="Not Taking"/>
+    </coding>
+  </code>
+  <reason>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="266710000"/>
+        <display value="Drugs not taken/completed"/>
+      </coding>
+  </reason>
+</adherence>
+</MedicationUsage>

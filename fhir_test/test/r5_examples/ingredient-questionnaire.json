@@ -1,6 +1,6 @@
 {
   "resourceType": "Questionnaire",
-  "id": "qs1",
+  "id": "qgen-Ingredient1",
   "contained": [
     {
       "resourceType": "ValueSet",
@@ -9,26 +9,26 @@
       "status": "active",
       "description": "Type options for Ingredient.substance.strength.presentation[x]",
       "expansion": {
-        "identifier": "urn:uuid:41a5f57e-d923-42e1-b045-ccd025dc8aa3",
-        "timestamp": "2022-05-06T17:11:21+00:00",
+        "identifier": "urn:uuid:87e94eec-f75a-4598-8ad2-debf347c808c",
+        "timestamp": "2022-12-14T07:16:45+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Ratio",
             "display": "Ratio"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "RatioRange",
             "display": "RatioRange"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "CodeableConcept",
             "display": "CodeableConcept"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Quantity",
             "display": "Quantity"
           }
@@ -42,26 +42,26 @@
       "status": "active",
       "description": "Type options for Ingredient.substance.strength.concentration[x]",
       "expansion": {
-        "identifier": "urn:uuid:6ea0ca86-b31f-4175-9ec9-d8fb07708ea6",
-        "timestamp": "2022-05-06T17:11:21+00:00",
+        "identifier": "urn:uuid:3f8f2eec-4720-4205-9674-bb8351f83470",
+        "timestamp": "2022-12-14T07:16:45+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Ratio",
             "display": "Ratio"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "RatioRange",
             "display": "RatioRange"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "CodeableConcept",
             "display": "CodeableConcept"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Quantity",
             "display": "Quantity"
           }
@@ -75,21 +75,21 @@
       "status": "active",
       "description": "Type options for Ingredient.substance.strength.referenceStrength.strength[x]",
       "expansion": {
-        "identifier": "urn:uuid:1c1d3994-aee0-4834-b541-c3c1b3badc84",
-        "timestamp": "2022-05-06T17:11:21+00:00",
+        "identifier": "urn:uuid:e89ef54c-0a44-4802-91b4-ae5550ae9847",
+        "timestamp": "2022-12-14T07:16:45+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Ratio",
             "display": "Ratio"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "RatioRange",
             "display": "RatioRange"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Quantity",
             "display": "Quantity"
           }
@@ -97,14 +97,16 @@
       }
     }
   ],
+  "url": "http://hl7.org/fhir/Questionnaire/qgen-Ingredient1",
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "status": "draft",
-  "date": "2022-05-06T17:02:42+00:00",
+  "experimental": false,
+  "date": "2022-12-14T07:12:54+11:00",
   "publisher": "Health Level Seven International (Biomedical Research and Regulation)",
   "item": [
     {
@@ -165,7 +167,7 @@
                 }
               ],
               "linkId": "Ingredient.id-flyover",
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Within the context of the FHIR RESTful interactions, the resource has an id except for cases like the create and conditional update. Otherwise, the use of the resouce id depends on the given use case.",
               "type": "display"
             },
             {
@@ -357,7 +359,7 @@
                 }
               ],
               "linkId": "Ingredient.contained-flyover",
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags in their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -560,8 +562,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "MedicinalProductDefinition, AdministrableProductDefinition, ManufacturedItemDefinition"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "MedicinalProductDefinition, AdministrableProductDefinition, ManufacturedItemDefinition, ManufacturedItemDefinition"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -992,8 +994,8 @@
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                      "valueCode": "Organization"
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                      "valueCode": "Organization, Organization"
                     },
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1385,7 +1387,7 @@
                           ]
                         },
                         {
-                          "linkId": "RatioRange",
+                          "linkId": "Ingredient.substance.strength.presentation[x]._null.RatioRange",
                           "text": "Range of ratio values",
                           "type": "group",
                           "required": false,
@@ -1909,7 +1911,7 @@
                           ]
                         },
                         {
-                          "linkId": "RatioRange",
+                          "linkId": "Ingredient.substance.strength.concentration[x]._null.RatioRange",
                           "text": "Range of ratio values",
                           "type": "group",
                           "required": false,
@@ -2743,7 +2745,7 @@
                               ]
                             },
                             {
-                              "linkId": "RatioRange",
+                              "linkId": "Ingredient.substance.strength.referenceStrength.strength[x]._null.RatioRange",
                               "text": "Range of ratio values",
                               "type": "group",
                               "required": false,
@@ -3222,14 +3224,5 @@
         }
       ]
     }
-  ],
-  "meta": {
-    "tag": [
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-        "code": "HTEST",
-        "display": "test health data"
-      }
-    ]
-  }
+  ]
 }

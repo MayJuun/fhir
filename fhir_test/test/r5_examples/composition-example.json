@@ -5,10 +5,12 @@
     "status": "generated",
     "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\u003cp\u003eConsultation note for Henry Levin the 7th\u003c/p\u003e\n\t\t\t\u003cp\u003eManaged by Good Health Clinic\u003c/p\u003e\n\t\t\u003c/div\u003e"
   },
-  "identifier": {
-    "system": "http://healthintersections.com.au/test",
-    "value": "1"
-  },
+  "identifier": [
+    {
+      "system": "http://healthintersections.com.au/test",
+      "value": "1"
+    }
+  ],
   "status": "final",
   "type": {
     "coding": [
@@ -30,10 +32,12 @@
       ]
     }
   ],
-  "subject": {
-    "reference": "Patient/xcda",
-    "display": "Henry Levin the 7th"
-  },
+  "subject": [
+    {
+      "reference": "Patient/xcda",
+      "display": "Henry Levin the 7th"
+    }
+  ],
   "encounter": {
     "reference": "Encounter/xcda"
   },
@@ -45,7 +49,6 @@
     }
   ],
   "title": "Consultation Note",
-  "confidentiality": "N",
   "attester": [
     {
       "mode": {

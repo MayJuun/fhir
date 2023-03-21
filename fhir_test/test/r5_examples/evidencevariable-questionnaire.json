@@ -1,34 +1,39 @@
 {
   "resourceType": "Questionnaire",
-  "id": "qs1",
+  "id": "qgen-EvidenceVariable1",
   "contained": [
     {
       "resourceType": "ValueSet",
       "id": "vs2",
-      "name": "Type options for EvidenceVariable.characteristic.definition[x]",
+      "name": "Type options for EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]",
       "status": "active",
-      "description": "Type options for EvidenceVariable.characteristic.definition[x]",
+      "description": "Type options for EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:cd1a3d1e-9a49-49f4-bb46-b17fcda3a726",
-        "timestamp": "2022-05-06T17:11:05+00:00",
+        "identifier": "urn:uuid:98dca8a5-4beb-4495-aefc-ce3ba7cab092",
+        "timestamp": "2022-12-14T07:16:35+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/resource-types",
-            "code": "Resource",
-            "display": "Resource"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "CodeableConcept",
             "display": "CodeableConcept"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "Expression",
-            "display": "Expression"
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "boolean",
+            "display": "boolean"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "Quantity",
+            "display": "Quantity"
+          },
+          {
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "Range",
+            "display": "Range"
+          },
+          {
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "id",
             "display": "id"
           }
@@ -38,25 +43,35 @@
     {
       "resourceType": "ValueSet",
       "id": "vs3",
-      "name": "Type options for EvidenceVariable.characteristic.defByTypeAndValue.type[x]",
+      "name": "Type options for EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]",
       "status": "active",
-      "description": "Type options for EvidenceVariable.characteristic.defByTypeAndValue.type[x]",
+      "description": "Type options for EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:4f202ba1-f049-45e9-b77f-83c7614ef741",
-        "timestamp": "2022-05-06T17:11:05+00:00",
+        "identifier": "urn:uuid:8bc23f34-8f6a-414b-9441-eea0eca03d56",
+        "timestamp": "2022-12-14T07:16:35+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "CodeableConcept",
             "display": "CodeableConcept"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
-            "code": "EvidenceVariable",
-            "display": "EvidenceVariable"
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "boolean",
+            "display": "boolean"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "Quantity",
+            "display": "Quantity"
+          },
+          {
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "Range",
+            "display": "Range"
+          },
+          {
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "id",
             "display": "id"
           }
@@ -66,35 +81,25 @@
     {
       "resourceType": "ValueSet",
       "id": "vs4",
-      "name": "Type options for EvidenceVariable.characteristic.defByTypeAndValue.value[x]",
+      "name": "Type options for EvidenceVariable.characteristic.timeFromEvent.event[x]",
       "status": "active",
-      "description": "Type options for EvidenceVariable.characteristic.defByTypeAndValue.value[x]",
+      "description": "Type options for EvidenceVariable.characteristic.timeFromEvent.event[x]",
       "expansion": {
-        "identifier": "urn:uuid:1a7d72a7-dcdc-47ed-a281-018cea7c070f",
-        "timestamp": "2022-05-06T17:11:05+00:00",
+        "identifier": "urn:uuid:d36290fb-95eb-4c12-85b5-57855a5f2ce4",
+        "timestamp": "2022-12-14T07:16:35+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "CodeableConcept",
             "display": "CodeableConcept"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "boolean",
-            "display": "boolean"
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "dateTime",
+            "display": "dateTime"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "Quantity",
-            "display": "Quantity"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "Range",
-            "display": "Range"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "id",
             "display": "id"
           }
@@ -104,30 +109,25 @@
     {
       "resourceType": "ValueSet",
       "id": "vs5",
-      "name": "Type options for EvidenceVariable.characteristic.definition[x]",
+      "name": "Type options for EvidenceVariable.characteristic.timeFromEvent.event[x]",
       "status": "active",
-      "description": "Type options for EvidenceVariable.characteristic.definition[x]",
+      "description": "Type options for EvidenceVariable.characteristic.timeFromEvent.event[x]",
       "expansion": {
-        "identifier": "urn:uuid:e63d9cbf-74fa-4250-8142-104edf114a67",
-        "timestamp": "2022-05-06T17:11:05+00:00",
+        "identifier": "urn:uuid:83b2ac9f-1fcf-46a8-a5ce-8f0960c61ac9",
+        "timestamp": "2022-12-14T07:16:35+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/resource-types",
-            "code": "Resource",
-            "display": "Resource"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "CodeableConcept",
             "display": "CodeableConcept"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "Expression",
-            "display": "Expression"
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "dateTime",
+            "display": "dateTime"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "id",
             "display": "id"
           }
@@ -137,147 +137,25 @@
     {
       "resourceType": "ValueSet",
       "id": "vs6",
-      "name": "Type options for EvidenceVariable.characteristic.defByTypeAndValue.type[x]",
-      "status": "active",
-      "description": "Type options for EvidenceVariable.characteristic.defByTypeAndValue.type[x]",
-      "expansion": {
-        "identifier": "urn:uuid:1f23bf76-d5ea-4292-bfd5-3391d0c5bda5",
-        "timestamp": "2022-05-06T17:11:05+00:00",
-        "contains": [
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "CodeableConcept",
-            "display": "CodeableConcept"
-          },
-          {
-            "system": "http://hl7.org/fhir/resource-types",
-            "code": "EvidenceVariable",
-            "display": "EvidenceVariable"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "id",
-            "display": "id"
-          }
-        ]
-      }
-    },
-    {
-      "resourceType": "ValueSet",
-      "id": "vs7",
-      "name": "Type options for EvidenceVariable.characteristic.defByTypeAndValue.value[x]",
-      "status": "active",
-      "description": "Type options for EvidenceVariable.characteristic.defByTypeAndValue.value[x]",
-      "expansion": {
-        "identifier": "urn:uuid:8d4771e9-c4c4-44b8-854f-aefc2dec56d9",
-        "timestamp": "2022-05-06T17:11:05+00:00",
-        "contains": [
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "CodeableConcept",
-            "display": "CodeableConcept"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "boolean",
-            "display": "boolean"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "Quantity",
-            "display": "Quantity"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "Range",
-            "display": "Range"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "id",
-            "display": "id"
-          }
-        ]
-      }
-    },
-    {
-      "resourceType": "ValueSet",
-      "id": "vs8",
-      "name": "Type options for EvidenceVariable.characteristic.timeFromEvent.event[x]",
-      "status": "active",
-      "description": "Type options for EvidenceVariable.characteristic.timeFromEvent.event[x]",
-      "expansion": {
-        "identifier": "urn:uuid:60b6874e-e626-4a72-9512-3befda62a1fc",
-        "timestamp": "2022-05-06T17:11:05+00:00",
-        "contains": [
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "CodeableConcept",
-            "display": "CodeableConcept"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "dateTime",
-            "display": "dateTime"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "id",
-            "display": "id"
-          }
-        ]
-      }
-    },
-    {
-      "resourceType": "ValueSet",
-      "id": "vs9",
-      "name": "Type options for EvidenceVariable.characteristic.timeFromEvent.event[x]",
-      "status": "active",
-      "description": "Type options for EvidenceVariable.characteristic.timeFromEvent.event[x]",
-      "expansion": {
-        "identifier": "urn:uuid:65738543-0c68-49eb-9faa-e55cc819d7f1",
-        "timestamp": "2022-05-06T17:11:05+00:00",
-        "contains": [
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "CodeableConcept",
-            "display": "CodeableConcept"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "dateTime",
-            "display": "dateTime"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "id",
-            "display": "id"
-          }
-        ]
-      }
-    },
-    {
-      "resourceType": "ValueSet",
-      "id": "vs10",
       "name": "Type options for EvidenceVariable.category.value[x]",
       "status": "active",
       "description": "Type options for EvidenceVariable.category.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:a6c0970c-bedd-4c47-a195-f173fde8b9e6",
-        "timestamp": "2022-05-06T17:11:05+00:00",
+        "identifier": "urn:uuid:97c8cf5d-3332-4c11-b087-dae93a7897e0",
+        "timestamp": "2022-12-14T07:16:35+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "CodeableConcept",
             "display": "CodeableConcept"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Quantity",
             "display": "Quantity"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Range",
             "display": "Range"
           }
@@ -285,14 +163,16 @@
       }
     }
   ],
+  "url": "http://hl7.org/fhir/Questionnaire/qgen-EvidenceVariable1",
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "status": "draft",
-  "date": "2022-05-06T17:02:42+00:00",
+  "experimental": false,
+  "date": "2022-12-14T07:12:54+11:00",
   "publisher": "Health Level Seven International (Clinical Decision Support)",
   "item": [
     {
@@ -358,7 +238,7 @@
                 }
               ],
               "linkId": "EvidenceVariable.id-flyover",
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Within the context of the FHIR RESTful interactions, the resource has an id except for cases like the create and conditional update. Otherwise, the use of the resouce id depends on the given use case.",
               "type": "display"
             },
             {
@@ -550,7 +430,7 @@
                 }
               ],
               "linkId": "EvidenceVariable.contained-flyover",
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags in their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -643,7 +523,7 @@
                 }
               ],
               "linkId": "EvidenceVariable.url-flyover",
-              "text": "An absolute URI that is used to identify this evidence variable when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this evidence variable is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the evidence variable is stored on different servers. Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.\n\nThe determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). \n\nIn some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.",
+              "text": "An absolute URI that is used to identify this evidence variable when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this evidence variable is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the evidence variable is stored on different servers. Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.\n\nThe determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). \n\nIn some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.",
               "type": "display"
             },
             {
@@ -742,7 +622,7 @@
                 }
               ],
               "linkId": "EvidenceVariable.version-flyover",
-              "text": "The identifier that is used to identify this version of the evidence variable when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the evidence variable author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence. To provide a version consistent with the Decision Support Service specification, use the format Major.Minor.Revision (e.g. 1.0.0). For more information on versioning knowledge assets, refer to the Decision Support Service specification. Note that a version is required for non-experimental active artifacts. There may be different evidence variable instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the evidence variable with the format [url]|[version].",
+              "text": "The identifier that is used to identify this version of the evidence variable when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the evidence variable author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence. To provide a version consistent with the Decision Support Service specification, use the format Major.Minor.Revision (e.g. 1.0.0). For more information on versioning knowledge assets, refer to the Decision Support Service specification. Note that a version is required for non-experimental active artifacts. There may be different evidence variable instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the evidence variable with the format [url]|[version]. The version SHOULD NOT contain a \u0027#\u0027 - see [Business Version](resource.html#bv-format).",
               "type": "display"
             },
             {
@@ -1055,7 +935,7 @@
                 }
               ],
               "linkId": "EvidenceVariable.date-flyover",
-              "text": "The date  (and optionally time) when the evidence variable was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the evidence variable changes. Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the evidence variable. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.",
+              "text": "The date  (and optionally time) when the evidence variable was last significantly changed. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the evidence variable changes. The date is often not tracked until the resource is published, but may be present on draft content. Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the evidence variable. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.",
               "type": "display"
             },
             {
@@ -1099,12 +979,12 @@
                 }
               ],
               "linkId": "EvidenceVariable.publisher-flyover",
-              "text": "The name of the organization or individual that published the evidence variable. Usually an organization but may be an individual. The publisher (or steward) of the evidence variable is the organization or individual primarily responsible for the maintenance and upkeep of the evidence variable. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the evidence variable. This item SHOULD be populated unless the information is available from context.",
+              "text": "The name of the organization or individual responsible for the release and ongoing maintenance of the evidence variable. Usually an organization but may be an individual. The publisher (or steward) of the evidence variable is the organization or individual primarily responsible for the maintenance and upkeep of the evidence variable. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the evidence variable. This item SHOULD be populated unless the information is available from context.",
               "type": "display"
             },
             {
               "linkId": "EvidenceVariable.publisher.value",
-              "text": "Name of the publisher (organization or individual)",
+              "text": "Name of the publisher/steward (organization or individual)",
               "type": "string",
               "required": false,
               "repeats": false
@@ -1120,7 +1000,7 @@
           "item": [
             {
               "linkId": "EvidenceVariable.contact-display",
-              "text": "Extensions to ContactDetail include: contactReference, contactAddress, and contributionTime (Details at: http://build.fhir.org/clinicalreasoning-module.html).",
+              "text": "Extensions to ContactDetail include: contactReference, contactAddress, and contributionTime (see [Clinical Reasoning Module](clinicalreasoning-module.html)).",
               "type": "display"
             },
             {
@@ -1176,7 +1056,7 @@
                 }
               ],
               "linkId": "EvidenceVariable.description-flyover",
-              "text": "A free text natural language description of the evidence variable from a consumer\u0027s perspective. This description can be used to capture details such as why the evidence variable was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the evidence variable as conveyed in the \u0027text\u0027 field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the evidence variable is presumed to be the predominant language in the place the evidence variable was created).",
+              "text": "A free text natural language description of the evidence variable from a consumer\u0027s perspective. This description can be used to capture details such as comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the evidence variable as conveyed in the \u0027text\u0027 field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the evidence variable is presumed to be the predominant language in the place the evidence variable was created).",
               "type": "display"
             },
             {
@@ -1448,7 +1328,7 @@
           "item": [
             {
               "linkId": "EvidenceVariable.author-display",
-              "text": "Extensions to ContactDetail include: contactReference, contactAddress, and contributionTime (Details at: http://build.fhir.org/clinicalreasoning-module.html).",
+              "text": "Extensions to ContactDetail include: contactReference, contactAddress, and contributionTime (see [Clinical Reasoning Module](clinicalreasoning-module.html)).",
               "type": "display"
             },
             {
@@ -1481,7 +1361,7 @@
           "item": [
             {
               "linkId": "EvidenceVariable.editor-display",
-              "text": "Extensions to ContactDetail include: contactReference, contactAddress, and contributionTime (Details at: http://build.fhir.org/clinicalreasoning-module.html).",
+              "text": "Extensions to ContactDetail include: contactReference, contactAddress, and contributionTime (see [Clinical Reasoning Module](clinicalreasoning-module.html)).",
               "type": "display"
             },
             {
@@ -1514,7 +1394,7 @@
           "item": [
             {
               "linkId": "EvidenceVariable.reviewer-display",
-              "text": "Extensions to ContactDetail include: contactReference, contactAddress, and contributionTime (Details at: http://build.fhir.org/clinicalreasoning-module.html).",
+              "text": "Extensions to ContactDetail include: contactReference, contactAddress, and contributionTime (see [Clinical Reasoning Module](clinicalreasoning-module.html)).",
               "type": "display"
             },
             {
@@ -1547,7 +1427,7 @@
           "item": [
             {
               "linkId": "EvidenceVariable.endorser-display",
-              "text": "Extensions to ContactDetail include: contactReference, contactAddress, and contributionTime (Details at: http://build.fhir.org/clinicalreasoning-module.html).",
+              "text": "Extensions to ContactDetail include: contactReference, contactAddress, and contributionTime (see [Clinical Reasoning Module](clinicalreasoning-module.html)).",
               "type": "display"
             },
             {
@@ -1933,12 +1813,12 @@
                     }
                   ],
                   "linkId": "EvidenceVariable.characteristic.exclude-flyover",
-                  "text": "When true, members with this characteristic are excluded from the element.",
+                  "text": "When true, this characteristic is an exclusion criterion. In other words, not matching this characteristic definition is equivalent to meeting this criterion.",
                   "type": "display"
                 },
                 {
                   "linkId": "EvidenceVariable.characteristic.exclude.value",
-                  "text": "Whether the characteristic includes or excludes members",
+                  "text": "Whether the characteristic is an inclusion criterion or exclusion criterion",
                   "type": "boolean",
                   "required": false,
                   "repeats": false
@@ -1950,10 +1830,13 @@
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                   "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                  "valueString": "Reference"
                 }
               ],
-              "linkId": "EvidenceVariable.characteristic.definition[x]",
-              "text": "Defines the characteristic (without using type and value)",
+              "linkId": "EvidenceVariable.characteristic.definitionReference",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -1973,432 +1856,123 @@
                       }
                     }
                   ],
-                  "linkId": "EvidenceVariable.characteristic.definition[x]-flyover",
-                  "text": "Defines the characteristic using a single DataType element.",
+                  "linkId": "EvidenceVariable.characteristic.definitionReference-flyover",
+                  "text": "Defines the characteristic using a Reference.",
                   "type": "display"
                 },
                 {
-                  "linkId": "EvidenceVariable.characteristic.definition[x]._type",
-                  "text": "type",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                      "valueCode": "EvidenceVariable, Group, Evidence, Evidence"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
+                      "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
+                    }
+                  ],
+                  "linkId": "EvidenceVariable.characteristic.definitionReference.value",
+                  "text": "Defines the characteristic (without using type and value) by a Reference",
+                  "type": "reference",
+                  "required": false,
+                  "repeats": false
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                  "valueString": "uri"
+                }
+              ],
+              "linkId": "EvidenceVariable.characteristic.definitionCanonical",
+              "type": "group",
+              "required": false,
+              "repeats": true,
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "flyover",
+                            "display": "Fly-over"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "linkId": "EvidenceVariable.characteristic.definitionCanonical-flyover",
+                  "text": "Defines the characteristic using Canonical.",
+                  "type": "display"
+                },
+                {
+                  "linkId": "EvidenceVariable.characteristic.definitionCanonical.value",
+                  "text": "Defines the characteristic (without using type and value) by a Canonical",
+                  "type": "string",
+                  "required": false,
+                  "repeats": false
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                  "valueString": "CodeableConcept"
+                }
+              ],
+              "linkId": "EvidenceVariable.characteristic.definitionCodeableConcept",
+              "text": "Defines the characteristic (without using type and value) by a CodeableConcept",
+              "type": "group",
+              "required": false,
+              "repeats": true,
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "flyover",
+                            "display": "Fly-over"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "linkId": "EvidenceVariable.characteristic.definitionCodeableConcept-flyover",
+                  "text": "Defines the characteristic using CodeableConcept.",
+                  "type": "display"
+                },
+                {
+                  "linkId": "EvidenceVariable.characteristic.definitionCodeableConcept.coding",
+                  "text": "code:",
                   "type": "coding",
                   "required": false,
                   "repeats": false,
-                  "answerConstraint": "optionsOnly",
-                  "answerValueSet": "#vs2",
-                  "item": [
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                          "valueString": "Reference"
-                        }
-                      ],
-                      "linkId": "EvidenceVariable.characteristic.definition[x]._null",
-                      "type": "group",
-                      "item": [
-                        {
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
-                              "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
-                            }
-                          ],
-                          "linkId": "EvidenceVariable.characteristic.definition[x]._null.value",
-                          "type": "reference",
-                          "required": false,
-                          "repeats": false
-                        }
-                      ]
-                    },
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                          "valueString": "uri"
-                        }
-                      ],
-                      "linkId": "EvidenceVariable.characteristic.definition[x]._null",
-                      "type": "group",
-                      "item": [
-                        {
-                          "linkId": "EvidenceVariable.characteristic.definition[x]._null.value",
-                          "type": "string",
-                          "required": false,
-                          "repeats": false
-                        }
-                      ]
-                    },
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                          "valueString": "CodeableConcept"
-                        }
-                      ],
-                      "linkId": "EvidenceVariable.characteristic.definition[x]._null",
-                      "type": "group",
-                      "item": [
-                        {
-                          "linkId": "EvidenceVariable.characteristic.definition[x]._null.coding",
-                          "text": "code:",
-                          "type": "coding",
-                          "required": false,
-                          "repeats": false,
-                          "answerConstraint": "optionsOnly"
-                        },
-                        {
-                          "linkId": "EvidenceVariable.characteristic.definition[x]._null.text",
-                          "text": "text:",
-                          "type": "string",
-                          "required": false,
-                          "repeats": false
-                        }
-                      ]
-                    },
-                    {
-                      "linkId": "Expression",
-                      "text": "An expression that can be used to generate a value",
-                      "type": "group",
-                      "required": false,
-                      "repeats": true,
-                      "item": [
-                        {
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                              "valueCodeableConcept": {
-                                "coding": [
-                                  {
-                                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                    "code": "flyover",
-                                    "display": "Fly-over"
-                                  }
-                                ]
-                              }
-                            }
-                          ],
-                          "linkId": "Expression-flyover",
-                          "text": "A expression that is evaluated in a specified context and returns a value. The context of use of the expression must specify the context in which the expression is evaluated, and how the result of the expression is used.",
-                          "type": "display"
-                        },
-                        {
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                              "valueInteger": 1
-                            },
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                              "valueString": "string"
-                            }
-                          ],
-                          "linkId": "Expression.id",
-                          "type": "group",
-                          "required": false,
-                          "repeats": true,
-                          "item": [
-                            {
-                              "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                                  "valueCodeableConcept": {
-                                    "coding": [
-                                      {
-                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                        "code": "flyover",
-                                        "display": "Fly-over"
-                                      }
-                                    ]
-                                  }
-                                }
-                              ],
-                              "linkId": "Expression.id-flyover",
-                              "text": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-                              "type": "display"
-                            },
-                            {
-                              "linkId": "Expression.id.value",
-                              "text": "Unique id for inter-element referencing",
-                              "type": "string",
-                              "required": false,
-                              "repeats": false
-                            }
-                          ]
-                        },
-                        {
-                          "linkId": "Expression.extension",
-                          "text": "Additional content defined by implementations",
-                          "type": "group",
-                          "required": false,
-                          "repeats": true,
-                          "item": [
-                            {
-                              "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                                  "valueCodeableConcept": {
-                                    "coding": [
-                                      {
-                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                        "code": "flyover",
-                                        "display": "Fly-over"
-                                      }
-                                    ]
-                                  }
-                                }
-                              ],
-                              "linkId": "Expression.extension-flyover",
-                              "text": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-                              "type": "display"
-                            }
-                          ]
-                        },
-                        {
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                              "valueInteger": 1
-                            },
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                              "valueString": "string"
-                            }
-                          ],
-                          "linkId": "Expression.description",
-                          "type": "group",
-                          "required": false,
-                          "repeats": true,
-                          "item": [
-                            {
-                              "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                                  "valueCodeableConcept": {
-                                    "coding": [
-                                      {
-                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                        "code": "flyover",
-                                        "display": "Fly-over"
-                                      }
-                                    ]
-                                  }
-                                }
-                              ],
-                              "linkId": "Expression.description-flyover",
-                              "text": "A brief, natural language description of the condition that effectively communicates the intended semantics.",
-                              "type": "display"
-                            },
-                            {
-                              "linkId": "Expression.description.value",
-                              "text": "Natural language description of the condition",
-                              "type": "string",
-                              "required": false,
-                              "repeats": false
-                            }
-                          ]
-                        },
-                        {
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                              "valueInteger": 1
-                            },
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                              "valueString": "string"
-                            }
-                          ],
-                          "linkId": "Expression.name",
-                          "type": "group",
-                          "required": false,
-                          "repeats": true,
-                          "item": [
-                            {
-                              "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                                  "valueCodeableConcept": {
-                                    "coding": [
-                                      {
-                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                        "code": "flyover",
-                                        "display": "Fly-over"
-                                      }
-                                    ]
-                                  }
-                                }
-                              ],
-                              "linkId": "Expression.name-flyover",
-                              "text": "A short name assigned to the expression to allow for multiple reuse of the expression in the context where it is defined.",
-                              "type": "display"
-                            },
-                            {
-                              "linkId": "Expression.name.value",
-                              "text": "Short name assigned to expression for reuse",
-                              "type": "string",
-                              "required": false,
-                              "repeats": false
-                            }
-                          ]
-                        },
-                        {
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
-                              "valueInteger": 1
-                            },
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                              "valueInteger": 1
-                            },
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                              "valueString": "code"
-                            }
-                          ],
-                          "linkId": "Expression.language",
-                          "type": "group",
-                          "required": true,
-                          "repeats": true,
-                          "item": [
-                            {
-                              "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                                  "valueCodeableConcept": {
-                                    "coding": [
-                                      {
-                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                        "code": "flyover",
-                                        "display": "Fly-over"
-                                      }
-                                    ]
-                                  }
-                                }
-                              ],
-                              "linkId": "Expression.language-flyover",
-                              "text": "The media type of the language for the expression.",
-                              "type": "display"
-                            },
-                            {
-                              "linkId": "Expression.language.value",
-                              "text": "language",
-                              "type": "coding",
-                              "required": false,
-                              "repeats": false,
-                              "answerConstraint": "optionsOnly"
-                            }
-                          ]
-                        },
-                        {
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                              "valueInteger": 1
-                            },
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                              "valueString": "string"
-                            }
-                          ],
-                          "linkId": "Expression.expression",
-                          "type": "group",
-                          "required": false,
-                          "repeats": true,
-                          "item": [
-                            {
-                              "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                                  "valueCodeableConcept": {
-                                    "coding": [
-                                      {
-                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                        "code": "flyover",
-                                        "display": "Fly-over"
-                                      }
-                                    ]
-                                  }
-                                }
-                              ],
-                              "linkId": "Expression.expression-flyover",
-                              "text": "An expression in the specified language that returns a value.",
-                              "type": "display"
-                            },
-                            {
-                              "linkId": "Expression.expression.value",
-                              "text": "Expression in specified language",
-                              "type": "string",
-                              "required": false,
-                              "repeats": false
-                            }
-                          ]
-                        },
-                        {
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                              "valueInteger": 1
-                            },
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                              "valueString": "uri"
-                            }
-                          ],
-                          "linkId": "Expression.reference",
-                          "type": "group",
-                          "required": false,
-                          "repeats": true,
-                          "item": [
-                            {
-                              "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                                  "valueCodeableConcept": {
-                                    "coding": [
-                                      {
-                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                        "code": "flyover",
-                                        "display": "Fly-over"
-                                      }
-                                    ]
-                                  }
-                                }
-                              ],
-                              "linkId": "Expression.reference-flyover",
-                              "text": "A URI that defines where the expression is found. If both a reference and an expression is found, the reference SHALL point to the same expression.",
-                              "type": "display"
-                            },
-                            {
-                              "linkId": "Expression.reference.value",
-                              "text": "Where the expression is found",
-                              "type": "string",
-                              "required": false,
-                              "repeats": false
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                          "valueString": "string"
-                        }
-                      ],
-                      "linkId": "EvidenceVariable.characteristic.definition[x]._null",
-                      "type": "group",
-                      "item": [
-                        {
-                          "linkId": "EvidenceVariable.characteristic.definition[x]._null.value",
-                          "type": "string",
-                          "required": false,
-                          "repeats": false
-                        }
-                      ]
-                    }
-                  ]
+                  "answerConstraint": "optionsOnly"
+                },
+                {
+                  "linkId": "EvidenceVariable.characteristic.definitionCodeableConcept.text",
+                  "text": "text:",
+                  "type": "string",
+                  "required": false,
+                  "repeats": false
                 }
               ]
             },
@@ -2409,7 +1983,85 @@
                   "valueInteger": 1
                 }
               ],
-              "linkId": "EvidenceVariable.characteristic.defByTypeAndValue",
+              "linkId": "EvidenceVariable.characteristic.definitionExpression",
+              "text": "Defines the characteristic (without using type and value) by a Expression",
+              "type": "group",
+              "required": false,
+              "repeats": false,
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "flyover",
+                            "display": "Fly-over"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "linkId": "EvidenceVariable.characteristic.definitionExpression-flyover",
+                  "text": "Defines the characteristic using Expression.",
+                  "type": "display"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                  "valueString": "string"
+                }
+              ],
+              "linkId": "EvidenceVariable.characteristic.definitionId",
+              "type": "group",
+              "required": false,
+              "repeats": true,
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "flyover",
+                            "display": "Fly-over"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "linkId": "EvidenceVariable.characteristic.definitionId-flyover",
+                  "text": "Defines the characteristic using id.",
+                  "type": "display"
+                },
+                {
+                  "linkId": "EvidenceVariable.characteristic.definitionId.value",
+                  "text": "Defines the characteristic (without using type and value) by a id",
+                  "type": "string",
+                  "required": false,
+                  "repeats": false
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                  "valueInteger": 1
+                }
+              ],
+              "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue",
               "text": "Defines the characteristic using type and value",
               "type": "group",
               "required": false,
@@ -2430,8 +2082,8 @@
                       }
                     }
                   ],
-                  "linkId": "EvidenceVariable.characteristic.defByTypeAndValue-flyover",
-                  "text": "Defines the characteristic using both a type[x] and value[x] elements.",
+                  "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue-flyover",
+                  "text": "Defines the characteristic using both a type and value[x] elements.",
                   "type": "display"
                 },
                 {
@@ -2445,7 +2097,7 @@
                       "valueString": "string"
                     }
                   ],
-                  "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.id",
+                  "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.id",
                   "type": "group",
                   "required": false,
                   "repeats": true,
@@ -2465,12 +2117,12 @@
                           }
                         }
                       ],
-                      "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.id-flyover",
+                      "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.id-flyover",
                       "text": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
                       "type": "display"
                     },
                     {
-                      "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.id.value",
+                      "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.id.value",
                       "text": "Unique id for inter-element referencing",
                       "type": "string",
                       "required": false,
@@ -2479,7 +2131,7 @@
                   ]
                 },
                 {
-                  "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.extension",
+                  "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.extension",
                   "text": "Additional content defined by implementations",
                   "type": "group",
                   "required": false,
@@ -2500,14 +2152,14 @@
                           }
                         }
                       ],
-                      "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.extension-flyover",
+                      "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.extension-flyover",
                       "text": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
                       "type": "display"
                     }
                   ]
                 },
                 {
-                  "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.modifierExtension",
+                  "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.modifierExtension",
                   "text": "Extensions that cannot be ignored even if unrecognized",
                   "type": "group",
                   "required": false,
@@ -2528,7 +2180,7 @@
                           }
                         }
                       ],
-                      "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.modifierExtension-flyover",
+                      "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.modifierExtension-flyover",
                       "text": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself). There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
                       "type": "display"
                     }
@@ -2543,9 +2195,13 @@
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                       "valueInteger": 1
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "CodeableConcept"
                     }
                   ],
-                  "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.type[x]",
+                  "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.type",
                   "text": "Expresses the type of characteristic",
                   "type": "group",
                   "required": true,
@@ -2566,93 +2222,127 @@
                           }
                         }
                       ],
-                      "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.type[x]-flyover",
+                      "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.type-flyover",
                       "text": "Used to express the type of characteristic.",
                       "type": "display"
                     },
                     {
-                      "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.type[x]._type",
-                      "text": "type",
+                      "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.type.coding",
+                      "text": "code:",
                       "type": "coding",
                       "required": false,
                       "repeats": false,
-                      "answerConstraint": "optionsOnly",
-                      "answerValueSet": "#vs3",
-                      "item": [
+                      "answerConstraint": "optionsOnly"
+                    },
+                    {
+                      "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.type.text",
+                      "text": "text:",
+                      "type": "string",
+                      "required": false,
+                      "repeats": false
+                    }
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "CodeableConcept"
+                    }
+                  ],
+                  "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.method",
+                  "text": "Method for how the characteristic value was determined",
+                  "type": "group",
+                  "required": false,
+                  "repeats": true,
+                  "item": [
+                    {
+                      "extension": [
                         {
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                              "valueString": "CodeableConcept"
-                            }
-                          ],
-                          "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.type[x]._null",
-                          "type": "group",
-                          "item": [
-                            {
-                              "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.type[x]._null.coding",
-                              "text": "code:",
-                              "type": "coding",
-                              "required": false,
-                              "repeats": false,
-                              "answerConstraint": "optionsOnly"
-                            },
-                            {
-                              "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.type[x]._null.text",
-                              "text": "text:",
-                              "type": "string",
-                              "required": false,
-                              "repeats": false
-                            }
-                          ]
-                        },
-                        {
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                              "valueString": "Reference"
-                            }
-                          ],
-                          "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.type[x]._null",
-                          "type": "group",
-                          "item": [
-                            {
-                              "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                                  "valueCode": "EvidenceVariable"
-                                },
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
-                                  "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
-                                }
-                              ],
-                              "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.type[x]._null.value",
-                              "type": "reference",
-                              "required": false,
-                              "repeats": false
-                            }
-                          ]
-                        },
-                        {
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                              "valueString": "string"
-                            }
-                          ],
-                          "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.type[x]._null",
-                          "type": "group",
-                          "item": [
-                            {
-                              "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.type[x]._null.value",
-                              "type": "string",
-                              "required": false,
-                              "repeats": false
-                            }
-                          ]
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "flyover",
+                                "display": "Fly-over"
+                              }
+                            ]
+                          }
                         }
-                      ]
+                      ],
+                      "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.method-flyover",
+                      "text": "Method for how the characteristic value was determined.",
+                      "type": "display"
+                    },
+                    {
+                      "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.method.coding",
+                      "text": "code:",
+                      "type": "coding",
+                      "required": false,
+                      "repeats": false,
+                      "answerConstraint": "optionsOnly"
+                    },
+                    {
+                      "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.method.text",
+                      "text": "text:",
+                      "type": "string",
+                      "required": false,
+                      "repeats": false
+                    }
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "Reference"
+                    }
+                  ],
+                  "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.device",
+                  "type": "group",
+                  "required": false,
+                  "repeats": true,
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "flyover",
+                                "display": "Fly-over"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.device-flyover",
+                      "text": "Device used for determining characteristic.",
+                      "type": "display"
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                          "valueCode": "Device, DeviceMetric, DeviceMetric"
+                        },
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
+                          "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
+                        }
+                      ],
+                      "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.device.value",
+                      "text": "Device used for determining characteristic",
+                      "type": "reference",
+                      "required": false,
+                      "repeats": false
                     }
                   ]
                 },
@@ -2667,8 +2357,8 @@
                       "valueInteger": 1
                     }
                   ],
-                  "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]",
-                  "text": "Defines the characteristic when coupled with characteristic.type[x]",
+                  "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]",
+                  "text": "Defines the characteristic when coupled with characteristic.type",
                   "type": "group",
                   "required": true,
                   "repeats": true,
@@ -2688,18 +2378,18 @@
                           }
                         }
                       ],
-                      "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]-flyover",
-                      "text": "Defines the characteristic when paired with characteristic.type[x].",
+                      "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]-flyover",
+                      "text": "Defines the characteristic when paired with characteristic.type.",
                       "type": "display"
                     },
                     {
-                      "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._type",
+                      "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._type",
                       "text": "type",
                       "type": "coding",
                       "required": false,
                       "repeats": false,
                       "answerConstraint": "optionsOnly",
-                      "answerValueSet": "#vs4",
+                      "answerValueSet": "#vs2",
                       "item": [
                         {
                           "extension": [
@@ -2708,11 +2398,11 @@
                               "valueString": "CodeableConcept"
                             }
                           ],
-                          "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null",
+                          "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null",
                           "type": "group",
                           "item": [
                             {
-                              "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null.coding",
+                              "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null.coding",
                               "text": "code:",
                               "type": "coding",
                               "required": false,
@@ -2720,7 +2410,7 @@
                               "answerConstraint": "optionsOnly"
                             },
                             {
-                              "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null.text",
+                              "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null.text",
                               "text": "text:",
                               "type": "string",
                               "required": false,
@@ -2735,11 +2425,11 @@
                               "valueString": "boolean"
                             }
                           ],
-                          "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null",
+                          "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null",
                           "type": "group",
                           "item": [
                             {
-                              "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null.value",
+                              "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null.value",
                               "type": "boolean",
                               "required": false,
                               "repeats": false
@@ -2753,11 +2443,11 @@
                               "valueString": "Quantity"
                             }
                           ],
-                          "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null",
+                          "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null",
                           "type": "group",
                           "item": [
                             {
-                              "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null.comparator",
+                              "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null.comparator",
                               "text": "comp:",
                               "type": "coding",
                               "required": false,
@@ -2765,28 +2455,28 @@
                               "answerConstraint": "optionsOnly"
                             },
                             {
-                              "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null.value",
+                              "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null.value",
                               "text": "value:",
                               "type": "decimal",
                               "required": false,
                               "repeats": false
                             },
                             {
-                              "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null.units",
+                              "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null.units",
                               "text": "units:",
                               "type": "string",
                               "required": false,
                               "repeats": false
                             },
                             {
-                              "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null.code",
+                              "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null.code",
                               "text": "coded units:",
                               "type": "string",
                               "required": false,
                               "repeats": false
                             },
                             {
-                              "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null.system",
+                              "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null.system",
                               "text": "units system:",
                               "type": "string",
                               "required": false,
@@ -2801,25 +2491,25 @@
                               "valueString": "Range"
                             }
                           ],
-                          "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null",
+                          "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null",
                           "type": "group",
                           "item": [
                             {
-                              "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null.low",
+                              "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null.low",
                               "text": "low:",
                               "type": "decimal",
                               "required": false,
                               "repeats": false
                             },
                             {
-                              "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null.high",
+                              "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null.high",
                               "text": "high:",
                               "type": "decimal",
                               "required": false,
                               "repeats": false
                             },
                             {
-                              "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null.units",
+                              "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null.units",
                               "text": "units:",
                               "type": "string",
                               "required": false,
@@ -2834,7 +2524,7 @@
                               "valueString": "Reference"
                             }
                           ],
-                          "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null",
+                          "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null",
                           "type": "group",
                           "item": [
                             {
@@ -2844,7 +2534,7 @@
                                   "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
                                 }
                               ],
-                              "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null.value",
+                              "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null.value",
                               "type": "reference",
                               "required": false,
                               "repeats": false
@@ -2858,11 +2548,11 @@
                               "valueString": "string"
                             }
                           ],
-                          "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null",
+                          "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null",
                           "type": "group",
                           "item": [
                             {
-                              "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null.value",
+                              "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null.value",
                               "type": "string",
                               "required": false,
                               "repeats": false
@@ -2870,6 +2560,59 @@
                           ]
                         }
                       ]
+                    }
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "CodeableConcept"
+                    }
+                  ],
+                  "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.offset",
+                  "text": "Reference point for valueQuantity",
+                  "type": "group",
+                  "required": false,
+                  "repeats": true,
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "flyover",
+                                "display": "Fly-over"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.offset-flyover",
+                      "text": "Defines the reference point for comparison when valueQuantity is not compared to zero.",
+                      "type": "display"
+                    },
+                    {
+                      "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.offset.coding",
+                      "text": "code:",
+                      "type": "coding",
+                      "required": false,
+                      "repeats": false,
+                      "answerConstraint": "optionsOnly"
+                    },
+                    {
+                      "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.offset.text",
+                      "text": "text:",
+                      "type": "string",
+                      "required": false,
+                      "repeats": false
                     }
                   ]
                 }
@@ -2882,7 +2625,7 @@
                   "valueInteger": 1
                 }
               ],
-              "linkId": "EvidenceVariable.characteristic.defByCombination",
+              "linkId": "EvidenceVariable.characteristic.definitionByCombination",
               "text": "Used to specify how two or more characteristics are combined",
               "type": "group",
               "required": false,
@@ -2903,7 +2646,7 @@
                       }
                     }
                   ],
-                  "linkId": "EvidenceVariable.characteristic.defByCombination-flyover",
+                  "linkId": "EvidenceVariable.characteristic.definitionByCombination-flyover",
                   "text": "Defines the characteristic as a combination of two or more characteristics.",
                   "type": "display"
                 },
@@ -2918,7 +2661,7 @@
                       "valueString": "string"
                     }
                   ],
-                  "linkId": "EvidenceVariable.characteristic.defByCombination.id",
+                  "linkId": "EvidenceVariable.characteristic.definitionByCombination.id",
                   "type": "group",
                   "required": false,
                   "repeats": true,
@@ -2938,12 +2681,12 @@
                           }
                         }
                       ],
-                      "linkId": "EvidenceVariable.characteristic.defByCombination.id-flyover",
+                      "linkId": "EvidenceVariable.characteristic.definitionByCombination.id-flyover",
                       "text": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
                       "type": "display"
                     },
                     {
-                      "linkId": "EvidenceVariable.characteristic.defByCombination.id.value",
+                      "linkId": "EvidenceVariable.characteristic.definitionByCombination.id.value",
                       "text": "Unique id for inter-element referencing",
                       "type": "string",
                       "required": false,
@@ -2952,7 +2695,7 @@
                   ]
                 },
                 {
-                  "linkId": "EvidenceVariable.characteristic.defByCombination.extension",
+                  "linkId": "EvidenceVariable.characteristic.definitionByCombination.extension",
                   "text": "Additional content defined by implementations",
                   "type": "group",
                   "required": false,
@@ -2973,14 +2716,14 @@
                           }
                         }
                       ],
-                      "linkId": "EvidenceVariable.characteristic.defByCombination.extension-flyover",
+                      "linkId": "EvidenceVariable.characteristic.definitionByCombination.extension-flyover",
                       "text": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
                       "type": "display"
                     }
                   ]
                 },
                 {
-                  "linkId": "EvidenceVariable.characteristic.defByCombination.modifierExtension",
+                  "linkId": "EvidenceVariable.characteristic.definitionByCombination.modifierExtension",
                   "text": "Extensions that cannot be ignored even if unrecognized",
                   "type": "group",
                   "required": false,
@@ -3001,7 +2744,7 @@
                           }
                         }
                       ],
-                      "linkId": "EvidenceVariable.characteristic.defByCombination.modifierExtension-flyover",
+                      "linkId": "EvidenceVariable.characteristic.definitionByCombination.modifierExtension-flyover",
                       "text": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself). There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
                       "type": "display"
                     }
@@ -3022,7 +2765,7 @@
                       "valueString": "code"
                     }
                   ],
-                  "linkId": "EvidenceVariable.characteristic.defByCombination.code",
+                  "linkId": "EvidenceVariable.characteristic.definitionByCombination.code",
                   "type": "group",
                   "required": true,
                   "repeats": true,
@@ -3042,12 +2785,12 @@
                           }
                         }
                       ],
-                      "linkId": "EvidenceVariable.characteristic.defByCombination.code-flyover",
+                      "linkId": "EvidenceVariable.characteristic.definitionByCombination.code-flyover",
                       "text": "Used to specify if two or more characteristics are combined with OR or AND.",
                       "type": "display"
                     },
                     {
-                      "linkId": "EvidenceVariable.characteristic.defByCombination.code.value",
+                      "linkId": "EvidenceVariable.characteristic.definitionByCombination.code.value",
                       "text": "code",
                       "type": "coding",
                       "required": false,
@@ -3067,7 +2810,7 @@
                       "valueString": "integer"
                     }
                   ],
-                  "linkId": "EvidenceVariable.characteristic.defByCombination.threshold",
+                  "linkId": "EvidenceVariable.characteristic.definitionByCombination.threshold",
                   "type": "group",
                   "required": false,
                   "repeats": true,
@@ -3087,12 +2830,12 @@
                           }
                         }
                       ],
-                      "linkId": "EvidenceVariable.characteristic.defByCombination.threshold-flyover",
+                      "linkId": "EvidenceVariable.characteristic.definitionByCombination.threshold-flyover",
                       "text": "Provides the value of \"n\" when \"at-least\" or \"at-most\" codes are used.",
                       "type": "display"
                     },
                     {
-                      "linkId": "EvidenceVariable.characteristic.defByCombination.threshold.value",
+                      "linkId": "EvidenceVariable.characteristic.definitionByCombination.threshold.value",
                       "text": "Provides the value of \"n\" when \"at-least\" or \"at-most\" codes are used",
                       "type": "integer",
                       "required": false,
@@ -3107,7 +2850,7 @@
                       "valueInteger": 1
                     }
                   ],
-                  "linkId": "EvidenceVariable.characteristic.defByCombination.characteristic",
+                  "linkId": "EvidenceVariable.characteristic.definitionByCombination.characteristic",
                   "text": "A defining factor of the characteristic",
                   "type": "group",
                   "required": true,
@@ -3128,7 +2871,7 @@
                           }
                         }
                       ],
-                      "linkId": "EvidenceVariable.characteristic.defByCombination.characteristic-flyover",
+                      "linkId": "EvidenceVariable.characteristic.definitionByCombination.characteristic-flyover",
                       "text": "A defining factor of the characteristic.",
                       "type": "display"
                     },
@@ -3386,12 +3129,12 @@
                             }
                           ],
                           "linkId": "EvidenceVariable.characteristic.exclude-flyover",
-                          "text": "When true, members with this characteristic are excluded from the element.",
+                          "text": "When true, this characteristic is an exclusion criterion. In other words, not matching this characteristic definition is equivalent to meeting this criterion.",
                           "type": "display"
                         },
                         {
                           "linkId": "EvidenceVariable.characteristic.exclude.value",
-                          "text": "Whether the characteristic includes or excludes members",
+                          "text": "Whether the characteristic is an inclusion criterion or exclusion criterion",
                           "type": "boolean",
                           "required": false,
                           "repeats": false
@@ -3403,10 +3146,13 @@
                         {
                           "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                           "valueInteger": 1
+                        },
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                          "valueString": "Reference"
                         }
                       ],
-                      "linkId": "EvidenceVariable.characteristic.definition[x]",
-                      "text": "Defines the characteristic (without using type and value)",
+                      "linkId": "EvidenceVariable.characteristic.definitionReference",
                       "type": "group",
                       "required": false,
                       "repeats": true,
@@ -3426,432 +3172,123 @@
                               }
                             }
                           ],
-                          "linkId": "EvidenceVariable.characteristic.definition[x]-flyover",
-                          "text": "Defines the characteristic using a single DataType element.",
+                          "linkId": "EvidenceVariable.characteristic.definitionReference-flyover",
+                          "text": "Defines the characteristic using a Reference.",
                           "type": "display"
                         },
                         {
-                          "linkId": "EvidenceVariable.characteristic.definition[x]._type",
-                          "text": "type",
+                          "extension": [
+                            {
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                              "valueCode": "EvidenceVariable, Group, Evidence, Evidence"
+                            },
+                            {
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
+                              "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
+                            }
+                          ],
+                          "linkId": "EvidenceVariable.characteristic.definitionReference.value",
+                          "text": "Defines the characteristic (without using type and value) by a Reference",
+                          "type": "reference",
+                          "required": false,
+                          "repeats": false
+                        }
+                      ]
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                          "valueInteger": 1
+                        },
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                          "valueString": "uri"
+                        }
+                      ],
+                      "linkId": "EvidenceVariable.characteristic.definitionCanonical",
+                      "type": "group",
+                      "required": false,
+                      "repeats": true,
+                      "item": [
+                        {
+                          "extension": [
+                            {
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                    "code": "flyover",
+                                    "display": "Fly-over"
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          "linkId": "EvidenceVariable.characteristic.definitionCanonical-flyover",
+                          "text": "Defines the characteristic using Canonical.",
+                          "type": "display"
+                        },
+                        {
+                          "linkId": "EvidenceVariable.characteristic.definitionCanonical.value",
+                          "text": "Defines the characteristic (without using type and value) by a Canonical",
+                          "type": "string",
+                          "required": false,
+                          "repeats": false
+                        }
+                      ]
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                          "valueInteger": 1
+                        },
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                          "valueString": "CodeableConcept"
+                        }
+                      ],
+                      "linkId": "EvidenceVariable.characteristic.definitionCodeableConcept",
+                      "text": "Defines the characteristic (without using type and value) by a CodeableConcept",
+                      "type": "group",
+                      "required": false,
+                      "repeats": true,
+                      "item": [
+                        {
+                          "extension": [
+                            {
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                    "code": "flyover",
+                                    "display": "Fly-over"
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          "linkId": "EvidenceVariable.characteristic.definitionCodeableConcept-flyover",
+                          "text": "Defines the characteristic using CodeableConcept.",
+                          "type": "display"
+                        },
+                        {
+                          "linkId": "EvidenceVariable.characteristic.definitionCodeableConcept.coding",
+                          "text": "code:",
                           "type": "coding",
                           "required": false,
                           "repeats": false,
-                          "answerConstraint": "optionsOnly",
-                          "answerValueSet": "#vs5",
-                          "item": [
-                            {
-                              "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                                  "valueString": "Reference"
-                                }
-                              ],
-                              "linkId": "EvidenceVariable.characteristic.definition[x]._null",
-                              "type": "group",
-                              "item": [
-                                {
-                                  "extension": [
-                                    {
-                                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
-                                      "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
-                                    }
-                                  ],
-                                  "linkId": "EvidenceVariable.characteristic.definition[x]._null.value",
-                                  "type": "reference",
-                                  "required": false,
-                                  "repeats": false
-                                }
-                              ]
-                            },
-                            {
-                              "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                                  "valueString": "uri"
-                                }
-                              ],
-                              "linkId": "EvidenceVariable.characteristic.definition[x]._null",
-                              "type": "group",
-                              "item": [
-                                {
-                                  "linkId": "EvidenceVariable.characteristic.definition[x]._null.value",
-                                  "type": "string",
-                                  "required": false,
-                                  "repeats": false
-                                }
-                              ]
-                            },
-                            {
-                              "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                                  "valueString": "CodeableConcept"
-                                }
-                              ],
-                              "linkId": "EvidenceVariable.characteristic.definition[x]._null",
-                              "type": "group",
-                              "item": [
-                                {
-                                  "linkId": "EvidenceVariable.characteristic.definition[x]._null.coding",
-                                  "text": "code:",
-                                  "type": "coding",
-                                  "required": false,
-                                  "repeats": false,
-                                  "answerConstraint": "optionsOnly"
-                                },
-                                {
-                                  "linkId": "EvidenceVariable.characteristic.definition[x]._null.text",
-                                  "text": "text:",
-                                  "type": "string",
-                                  "required": false,
-                                  "repeats": false
-                                }
-                              ]
-                            },
-                            {
-                              "linkId": "Expression",
-                              "text": "An expression that can be used to generate a value",
-                              "type": "group",
-                              "required": false,
-                              "repeats": true,
-                              "item": [
-                                {
-                                  "extension": [
-                                    {
-                                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                                      "valueCodeableConcept": {
-                                        "coding": [
-                                          {
-                                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                            "code": "flyover",
-                                            "display": "Fly-over"
-                                          }
-                                        ]
-                                      }
-                                    }
-                                  ],
-                                  "linkId": "Expression-flyover",
-                                  "text": "A expression that is evaluated in a specified context and returns a value. The context of use of the expression must specify the context in which the expression is evaluated, and how the result of the expression is used.",
-                                  "type": "display"
-                                },
-                                {
-                                  "extension": [
-                                    {
-                                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                                      "valueInteger": 1
-                                    },
-                                    {
-                                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                                      "valueString": "string"
-                                    }
-                                  ],
-                                  "linkId": "Expression.id",
-                                  "type": "group",
-                                  "required": false,
-                                  "repeats": true,
-                                  "item": [
-                                    {
-                                      "extension": [
-                                        {
-                                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                                          "valueCodeableConcept": {
-                                            "coding": [
-                                              {
-                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                                "code": "flyover",
-                                                "display": "Fly-over"
-                                              }
-                                            ]
-                                          }
-                                        }
-                                      ],
-                                      "linkId": "Expression.id-flyover",
-                                      "text": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-                                      "type": "display"
-                                    },
-                                    {
-                                      "linkId": "Expression.id.value",
-                                      "text": "Unique id for inter-element referencing",
-                                      "type": "string",
-                                      "required": false,
-                                      "repeats": false
-                                    }
-                                  ]
-                                },
-                                {
-                                  "linkId": "Expression.extension",
-                                  "text": "Additional content defined by implementations",
-                                  "type": "group",
-                                  "required": false,
-                                  "repeats": true,
-                                  "item": [
-                                    {
-                                      "extension": [
-                                        {
-                                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                                          "valueCodeableConcept": {
-                                            "coding": [
-                                              {
-                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                                "code": "flyover",
-                                                "display": "Fly-over"
-                                              }
-                                            ]
-                                          }
-                                        }
-                                      ],
-                                      "linkId": "Expression.extension-flyover",
-                                      "text": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-                                      "type": "display"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "extension": [
-                                    {
-                                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                                      "valueInteger": 1
-                                    },
-                                    {
-                                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                                      "valueString": "string"
-                                    }
-                                  ],
-                                  "linkId": "Expression.description",
-                                  "type": "group",
-                                  "required": false,
-                                  "repeats": true,
-                                  "item": [
-                                    {
-                                      "extension": [
-                                        {
-                                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                                          "valueCodeableConcept": {
-                                            "coding": [
-                                              {
-                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                                "code": "flyover",
-                                                "display": "Fly-over"
-                                              }
-                                            ]
-                                          }
-                                        }
-                                      ],
-                                      "linkId": "Expression.description-flyover",
-                                      "text": "A brief, natural language description of the condition that effectively communicates the intended semantics.",
-                                      "type": "display"
-                                    },
-                                    {
-                                      "linkId": "Expression.description.value",
-                                      "text": "Natural language description of the condition",
-                                      "type": "string",
-                                      "required": false,
-                                      "repeats": false
-                                    }
-                                  ]
-                                },
-                                {
-                                  "extension": [
-                                    {
-                                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                                      "valueInteger": 1
-                                    },
-                                    {
-                                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                                      "valueString": "string"
-                                    }
-                                  ],
-                                  "linkId": "Expression.name",
-                                  "type": "group",
-                                  "required": false,
-                                  "repeats": true,
-                                  "item": [
-                                    {
-                                      "extension": [
-                                        {
-                                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                                          "valueCodeableConcept": {
-                                            "coding": [
-                                              {
-                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                                "code": "flyover",
-                                                "display": "Fly-over"
-                                              }
-                                            ]
-                                          }
-                                        }
-                                      ],
-                                      "linkId": "Expression.name-flyover",
-                                      "text": "A short name assigned to the expression to allow for multiple reuse of the expression in the context where it is defined.",
-                                      "type": "display"
-                                    },
-                                    {
-                                      "linkId": "Expression.name.value",
-                                      "text": "Short name assigned to expression for reuse",
-                                      "type": "string",
-                                      "required": false,
-                                      "repeats": false
-                                    }
-                                  ]
-                                },
-                                {
-                                  "extension": [
-                                    {
-                                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
-                                      "valueInteger": 1
-                                    },
-                                    {
-                                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                                      "valueInteger": 1
-                                    },
-                                    {
-                                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                                      "valueString": "code"
-                                    }
-                                  ],
-                                  "linkId": "Expression.language",
-                                  "type": "group",
-                                  "required": true,
-                                  "repeats": true,
-                                  "item": [
-                                    {
-                                      "extension": [
-                                        {
-                                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                                          "valueCodeableConcept": {
-                                            "coding": [
-                                              {
-                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                                "code": "flyover",
-                                                "display": "Fly-over"
-                                              }
-                                            ]
-                                          }
-                                        }
-                                      ],
-                                      "linkId": "Expression.language-flyover",
-                                      "text": "The media type of the language for the expression.",
-                                      "type": "display"
-                                    },
-                                    {
-                                      "linkId": "Expression.language.value",
-                                      "text": "language",
-                                      "type": "coding",
-                                      "required": false,
-                                      "repeats": false,
-                                      "answerConstraint": "optionsOnly"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "extension": [
-                                    {
-                                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                                      "valueInteger": 1
-                                    },
-                                    {
-                                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                                      "valueString": "string"
-                                    }
-                                  ],
-                                  "linkId": "Expression.expression",
-                                  "type": "group",
-                                  "required": false,
-                                  "repeats": true,
-                                  "item": [
-                                    {
-                                      "extension": [
-                                        {
-                                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                                          "valueCodeableConcept": {
-                                            "coding": [
-                                              {
-                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                                "code": "flyover",
-                                                "display": "Fly-over"
-                                              }
-                                            ]
-                                          }
-                                        }
-                                      ],
-                                      "linkId": "Expression.expression-flyover",
-                                      "text": "An expression in the specified language that returns a value.",
-                                      "type": "display"
-                                    },
-                                    {
-                                      "linkId": "Expression.expression.value",
-                                      "text": "Expression in specified language",
-                                      "type": "string",
-                                      "required": false,
-                                      "repeats": false
-                                    }
-                                  ]
-                                },
-                                {
-                                  "extension": [
-                                    {
-                                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                                      "valueInteger": 1
-                                    },
-                                    {
-                                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                                      "valueString": "uri"
-                                    }
-                                  ],
-                                  "linkId": "Expression.reference",
-                                  "type": "group",
-                                  "required": false,
-                                  "repeats": true,
-                                  "item": [
-                                    {
-                                      "extension": [
-                                        {
-                                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                                          "valueCodeableConcept": {
-                                            "coding": [
-                                              {
-                                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                                "code": "flyover",
-                                                "display": "Fly-over"
-                                              }
-                                            ]
-                                          }
-                                        }
-                                      ],
-                                      "linkId": "Expression.reference-flyover",
-                                      "text": "A URI that defines where the expression is found. If both a reference and an expression is found, the reference SHALL point to the same expression.",
-                                      "type": "display"
-                                    },
-                                    {
-                                      "linkId": "Expression.reference.value",
-                                      "text": "Where the expression is found",
-                                      "type": "string",
-                                      "required": false,
-                                      "repeats": false
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                                  "valueString": "string"
-                                }
-                              ],
-                              "linkId": "EvidenceVariable.characteristic.definition[x]._null",
-                              "type": "group",
-                              "item": [
-                                {
-                                  "linkId": "EvidenceVariable.characteristic.definition[x]._null.value",
-                                  "type": "string",
-                                  "required": false,
-                                  "repeats": false
-                                }
-                              ]
-                            }
-                          ]
+                          "answerConstraint": "optionsOnly"
+                        },
+                        {
+                          "linkId": "EvidenceVariable.characteristic.definitionCodeableConcept.text",
+                          "text": "text:",
+                          "type": "string",
+                          "required": false,
+                          "repeats": false
                         }
                       ]
                     },
@@ -3862,7 +3299,85 @@
                           "valueInteger": 1
                         }
                       ],
-                      "linkId": "EvidenceVariable.characteristic.defByTypeAndValue",
+                      "linkId": "EvidenceVariable.characteristic.definitionByCombination.characteristic.definitionExpression",
+                      "text": "Defines the characteristic (without using type and value) by a Expression",
+                      "type": "group",
+                      "required": false,
+                      "repeats": false,
+                      "item": [
+                        {
+                          "extension": [
+                            {
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                    "code": "flyover",
+                                    "display": "Fly-over"
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          "linkId": "EvidenceVariable.characteristic.definitionExpression-flyover",
+                          "text": "Defines the characteristic using Expression.",
+                          "type": "display"
+                        }
+                      ]
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                          "valueInteger": 1
+                        },
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                          "valueString": "string"
+                        }
+                      ],
+                      "linkId": "EvidenceVariable.characteristic.definitionId",
+                      "type": "group",
+                      "required": false,
+                      "repeats": true,
+                      "item": [
+                        {
+                          "extension": [
+                            {
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                    "code": "flyover",
+                                    "display": "Fly-over"
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          "linkId": "EvidenceVariable.characteristic.definitionId-flyover",
+                          "text": "Defines the characteristic using id.",
+                          "type": "display"
+                        },
+                        {
+                          "linkId": "EvidenceVariable.characteristic.definitionId.value",
+                          "text": "Defines the characteristic (without using type and value) by a id",
+                          "type": "string",
+                          "required": false,
+                          "repeats": false
+                        }
+                      ]
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                          "valueInteger": 1
+                        }
+                      ],
+                      "linkId": "EvidenceVariable.characteristic.definitionByCombination.characteristic.definitionByTypeAndValue",
                       "text": "Defines the characteristic using type and value",
                       "type": "group",
                       "required": false,
@@ -3883,8 +3398,8 @@
                               }
                             }
                           ],
-                          "linkId": "EvidenceVariable.characteristic.defByTypeAndValue-flyover",
-                          "text": "Defines the characteristic using both a type[x] and value[x] elements.",
+                          "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue-flyover",
+                          "text": "Defines the characteristic using both a type and value[x] elements.",
                           "type": "display"
                         },
                         {
@@ -3898,7 +3413,7 @@
                               "valueString": "string"
                             }
                           ],
-                          "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.id",
+                          "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.id",
                           "type": "group",
                           "required": false,
                           "repeats": true,
@@ -3918,12 +3433,12 @@
                                   }
                                 }
                               ],
-                              "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.id-flyover",
+                              "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.id-flyover",
                               "text": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
                               "type": "display"
                             },
                             {
-                              "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.id.value",
+                              "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.id.value",
                               "text": "Unique id for inter-element referencing",
                               "type": "string",
                               "required": false,
@@ -3932,7 +3447,7 @@
                           ]
                         },
                         {
-                          "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.extension",
+                          "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.extension",
                           "text": "Additional content defined by implementations",
                           "type": "group",
                           "required": false,
@@ -3953,14 +3468,14 @@
                                   }
                                 }
                               ],
-                              "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.extension-flyover",
+                              "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.extension-flyover",
                               "text": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
                               "type": "display"
                             }
                           ]
                         },
                         {
-                          "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.modifierExtension",
+                          "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.modifierExtension",
                           "text": "Extensions that cannot be ignored even if unrecognized",
                           "type": "group",
                           "required": false,
@@ -3981,7 +3496,7 @@
                                   }
                                 }
                               ],
-                              "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.modifierExtension-flyover",
+                              "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.modifierExtension-flyover",
                               "text": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself). There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
                               "type": "display"
                             }
@@ -3996,9 +3511,13 @@
                             {
                               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                               "valueInteger": 1
+                            },
+                            {
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                              "valueString": "CodeableConcept"
                             }
                           ],
-                          "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.type[x]",
+                          "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.type",
                           "text": "Expresses the type of characteristic",
                           "type": "group",
                           "required": true,
@@ -4019,93 +3538,127 @@
                                   }
                                 }
                               ],
-                              "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.type[x]-flyover",
+                              "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.type-flyover",
                               "text": "Used to express the type of characteristic.",
                               "type": "display"
                             },
                             {
-                              "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.type[x]._type",
-                              "text": "type",
+                              "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.type.coding",
+                              "text": "code:",
                               "type": "coding",
                               "required": false,
                               "repeats": false,
-                              "answerConstraint": "optionsOnly",
-                              "answerValueSet": "#vs6",
-                              "item": [
+                              "answerConstraint": "optionsOnly"
+                            },
+                            {
+                              "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.type.text",
+                              "text": "text:",
+                              "type": "string",
+                              "required": false,
+                              "repeats": false
+                            }
+                          ]
+                        },
+                        {
+                          "extension": [
+                            {
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                              "valueString": "CodeableConcept"
+                            }
+                          ],
+                          "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.method",
+                          "text": "Method for how the characteristic value was determined",
+                          "type": "group",
+                          "required": false,
+                          "repeats": true,
+                          "item": [
+                            {
+                              "extension": [
                                 {
-                                  "extension": [
-                                    {
-                                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                                      "valueString": "CodeableConcept"
-                                    }
-                                  ],
-                                  "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.type[x]._null",
-                                  "type": "group",
-                                  "item": [
-                                    {
-                                      "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.type[x]._null.coding",
-                                      "text": "code:",
-                                      "type": "coding",
-                                      "required": false,
-                                      "repeats": false,
-                                      "answerConstraint": "optionsOnly"
-                                    },
-                                    {
-                                      "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.type[x]._null.text",
-                                      "text": "text:",
-                                      "type": "string",
-                                      "required": false,
-                                      "repeats": false
-                                    }
-                                  ]
-                                },
-                                {
-                                  "extension": [
-                                    {
-                                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                                      "valueString": "Reference"
-                                    }
-                                  ],
-                                  "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.type[x]._null",
-                                  "type": "group",
-                                  "item": [
-                                    {
-                                      "extension": [
-                                        {
-                                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                                          "valueCode": "EvidenceVariable"
-                                        },
-                                        {
-                                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
-                                          "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
-                                        }
-                                      ],
-                                      "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.type[x]._null.value",
-                                      "type": "reference",
-                                      "required": false,
-                                      "repeats": false
-                                    }
-                                  ]
-                                },
-                                {
-                                  "extension": [
-                                    {
-                                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                                      "valueString": "string"
-                                    }
-                                  ],
-                                  "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.type[x]._null",
-                                  "type": "group",
-                                  "item": [
-                                    {
-                                      "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.type[x]._null.value",
-                                      "type": "string",
-                                      "required": false,
-                                      "repeats": false
-                                    }
-                                  ]
+                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                  "valueCodeableConcept": {
+                                    "coding": [
+                                      {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "flyover",
+                                        "display": "Fly-over"
+                                      }
+                                    ]
+                                  }
                                 }
-                              ]
+                              ],
+                              "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.method-flyover",
+                              "text": "Method for how the characteristic value was determined.",
+                              "type": "display"
+                            },
+                            {
+                              "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.method.coding",
+                              "text": "code:",
+                              "type": "coding",
+                              "required": false,
+                              "repeats": false,
+                              "answerConstraint": "optionsOnly"
+                            },
+                            {
+                              "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.method.text",
+                              "text": "text:",
+                              "type": "string",
+                              "required": false,
+                              "repeats": false
+                            }
+                          ]
+                        },
+                        {
+                          "extension": [
+                            {
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                              "valueInteger": 1
+                            },
+                            {
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                              "valueString": "Reference"
+                            }
+                          ],
+                          "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.device",
+                          "type": "group",
+                          "required": false,
+                          "repeats": true,
+                          "item": [
+                            {
+                              "extension": [
+                                {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                  "valueCodeableConcept": {
+                                    "coding": [
+                                      {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "flyover",
+                                        "display": "Fly-over"
+                                      }
+                                    ]
+                                  }
+                                }
+                              ],
+                              "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.device-flyover",
+                              "text": "Device used for determining characteristic.",
+                              "type": "display"
+                            },
+                            {
+                              "extension": [
+                                {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                                  "valueCode": "Device, DeviceMetric, DeviceMetric"
+                                },
+                                {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
+                                  "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
+                                }
+                              ],
+                              "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.device.value",
+                              "text": "Device used for determining characteristic",
+                              "type": "reference",
+                              "required": false,
+                              "repeats": false
                             }
                           ]
                         },
@@ -4120,8 +3673,8 @@
                               "valueInteger": 1
                             }
                           ],
-                          "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]",
-                          "text": "Defines the characteristic when coupled with characteristic.type[x]",
+                          "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]",
+                          "text": "Defines the characteristic when coupled with characteristic.type",
                           "type": "group",
                           "required": true,
                           "repeats": true,
@@ -4141,18 +3694,18 @@
                                   }
                                 }
                               ],
-                              "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]-flyover",
-                              "text": "Defines the characteristic when paired with characteristic.type[x].",
+                              "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]-flyover",
+                              "text": "Defines the characteristic when paired with characteristic.type.",
                               "type": "display"
                             },
                             {
-                              "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._type",
+                              "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._type",
                               "text": "type",
                               "type": "coding",
                               "required": false,
                               "repeats": false,
                               "answerConstraint": "optionsOnly",
-                              "answerValueSet": "#vs7",
+                              "answerValueSet": "#vs3",
                               "item": [
                                 {
                                   "extension": [
@@ -4161,11 +3714,11 @@
                                       "valueString": "CodeableConcept"
                                     }
                                   ],
-                                  "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null",
+                                  "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null",
                                   "type": "group",
                                   "item": [
                                     {
-                                      "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null.coding",
+                                      "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null.coding",
                                       "text": "code:",
                                       "type": "coding",
                                       "required": false,
@@ -4173,7 +3726,7 @@
                                       "answerConstraint": "optionsOnly"
                                     },
                                     {
-                                      "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null.text",
+                                      "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null.text",
                                       "text": "text:",
                                       "type": "string",
                                       "required": false,
@@ -4188,11 +3741,11 @@
                                       "valueString": "boolean"
                                     }
                                   ],
-                                  "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null",
+                                  "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null",
                                   "type": "group",
                                   "item": [
                                     {
-                                      "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null.value",
+                                      "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null.value",
                                       "type": "boolean",
                                       "required": false,
                                       "repeats": false
@@ -4206,11 +3759,11 @@
                                       "valueString": "Quantity"
                                     }
                                   ],
-                                  "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null",
+                                  "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null",
                                   "type": "group",
                                   "item": [
                                     {
-                                      "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null.comparator",
+                                      "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null.comparator",
                                       "text": "comp:",
                                       "type": "coding",
                                       "required": false,
@@ -4218,28 +3771,28 @@
                                       "answerConstraint": "optionsOnly"
                                     },
                                     {
-                                      "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null.value",
+                                      "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null.value",
                                       "text": "value:",
                                       "type": "decimal",
                                       "required": false,
                                       "repeats": false
                                     },
                                     {
-                                      "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null.units",
+                                      "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null.units",
                                       "text": "units:",
                                       "type": "string",
                                       "required": false,
                                       "repeats": false
                                     },
                                     {
-                                      "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null.code",
+                                      "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null.code",
                                       "text": "coded units:",
                                       "type": "string",
                                       "required": false,
                                       "repeats": false
                                     },
                                     {
-                                      "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null.system",
+                                      "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null.system",
                                       "text": "units system:",
                                       "type": "string",
                                       "required": false,
@@ -4254,25 +3807,25 @@
                                       "valueString": "Range"
                                     }
                                   ],
-                                  "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null",
+                                  "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null",
                                   "type": "group",
                                   "item": [
                                     {
-                                      "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null.low",
+                                      "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null.low",
                                       "text": "low:",
                                       "type": "decimal",
                                       "required": false,
                                       "repeats": false
                                     },
                                     {
-                                      "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null.high",
+                                      "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null.high",
                                       "text": "high:",
                                       "type": "decimal",
                                       "required": false,
                                       "repeats": false
                                     },
                                     {
-                                      "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null.units",
+                                      "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null.units",
                                       "text": "units:",
                                       "type": "string",
                                       "required": false,
@@ -4287,7 +3840,7 @@
                                       "valueString": "Reference"
                                     }
                                   ],
-                                  "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null",
+                                  "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null",
                                   "type": "group",
                                   "item": [
                                     {
@@ -4297,7 +3850,7 @@
                                           "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
                                         }
                                       ],
-                                      "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null.value",
+                                      "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null.value",
                                       "type": "reference",
                                       "required": false,
                                       "repeats": false
@@ -4311,11 +3864,11 @@
                                       "valueString": "string"
                                     }
                                   ],
-                                  "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null",
+                                  "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null",
                                   "type": "group",
                                   "item": [
                                     {
-                                      "linkId": "EvidenceVariable.characteristic.defByTypeAndValue.value[x]._null.value",
+                                      "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.value[x]._null.value",
                                       "type": "string",
                                       "required": false,
                                       "repeats": false
@@ -4325,171 +3878,64 @@
                               ]
                             }
                           ]
-                        }
-                      ]
-                    },
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                          "valueInteger": 1
-                        },
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                          "valueString": "CodeableConcept"
-                        }
-                      ],
-                      "linkId": "EvidenceVariable.characteristic.method",
-                      "text": "Method used for describing characteristic",
-                      "type": "group",
-                      "required": false,
-                      "repeats": true,
-                      "item": [
-                        {
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                              "valueCodeableConcept": {
-                                "coding": [
-                                  {
-                                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                    "code": "flyover",
-                                    "display": "Fly-over"
-                                  }
-                                ]
-                              }
-                            }
-                          ],
-                          "linkId": "EvidenceVariable.characteristic.method-flyover",
-                          "text": "Method used for describing characteristic.",
-                          "type": "display"
-                        },
-                        {
-                          "linkId": "EvidenceVariable.characteristic.method.coding",
-                          "text": "code:",
-                          "type": "coding",
-                          "required": false,
-                          "repeats": false,
-                          "answerConstraint": "optionsOnly"
-                        },
-                        {
-                          "linkId": "EvidenceVariable.characteristic.method.text",
-                          "text": "text:",
-                          "type": "string",
-                          "required": false,
-                          "repeats": false
-                        }
-                      ]
-                    },
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                          "valueInteger": 1
-                        },
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                          "valueString": "Reference"
-                        }
-                      ],
-                      "linkId": "EvidenceVariable.characteristic.device",
-                      "type": "group",
-                      "required": false,
-                      "repeats": true,
-                      "item": [
-                        {
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                              "valueCodeableConcept": {
-                                "coding": [
-                                  {
-                                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                    "code": "flyover",
-                                    "display": "Fly-over"
-                                  }
-                                ]
-                              }
-                            }
-                          ],
-                          "linkId": "EvidenceVariable.characteristic.device-flyover",
-                          "text": "Device used for determining characteristic.",
-                          "type": "display"
                         },
                         {
                           "extension": [
                             {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                              "valueCode": "Device, DeviceMetric"
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                              "valueInteger": 1
                             },
                             {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
-                              "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                              "valueString": "CodeableConcept"
                             }
                           ],
-                          "linkId": "EvidenceVariable.characteristic.device.value",
-                          "text": "Device used for determining characteristic",
-                          "type": "reference",
+                          "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.offset",
+                          "text": "Reference point for valueQuantity",
+                          "type": "group",
                           "required": false,
-                          "repeats": false
-                        }
-                      ]
-                    },
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                          "valueInteger": 1
-                        },
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                          "valueString": "CodeableConcept"
-                        }
-                      ],
-                      "linkId": "EvidenceVariable.characteristic.offset",
-                      "text": "Reference point for characteristic.valueQuantity",
-                      "type": "group",
-                      "required": false,
-                      "repeats": true,
-                      "item": [
-                        {
-                          "extension": [
+                          "repeats": true,
+                          "item": [
                             {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                              "valueCodeableConcept": {
-                                "coding": [
-                                  {
-                                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                    "code": "flyover",
-                                    "display": "Fly-over"
+                              "extension": [
+                                {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                                  "valueCodeableConcept": {
+                                    "coding": [
+                                      {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "flyover",
+                                        "display": "Fly-over"
+                                      }
+                                    ]
                                   }
-                                ]
-                              }
+                                }
+                              ],
+                              "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.offset-flyover",
+                              "text": "Defines the reference point for comparison when valueQuantity is not compared to zero.",
+                              "type": "display"
+                            },
+                            {
+                              "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.offset.coding",
+                              "text": "code:",
+                              "type": "coding",
+                              "required": false,
+                              "repeats": false,
+                              "answerConstraint": "optionsOnly"
+                            },
+                            {
+                              "linkId": "EvidenceVariable.characteristic.definitionByTypeAndValue.offset.text",
+                              "text": "text:",
+                              "type": "string",
+                              "required": false,
+                              "repeats": false
                             }
-                          ],
-                          "linkId": "EvidenceVariable.characteristic.offset-flyover",
-                          "text": "Defines the reference point for comparison when characteristic.valueQuantity is not compared to zero.",
-                          "type": "display"
-                        },
-                        {
-                          "linkId": "EvidenceVariable.characteristic.offset.coding",
-                          "text": "code:",
-                          "type": "coding",
-                          "required": false,
-                          "repeats": false,
-                          "answerConstraint": "optionsOnly"
-                        },
-                        {
-                          "linkId": "EvidenceVariable.characteristic.offset.text",
-                          "text": "text:",
-                          "type": "string",
-                          "required": false,
-                          "repeats": false
+                          ]
                         }
                       ]
                     },
                     {
-                      "linkId": "EvidenceVariable.characteristic.timeFromEvent",
+                      "linkId": "EvidenceVariable.characteristic.definitionByCombination.characteristic.timeFromEvent",
                       "text": "Observation time from study specified event",
                       "type": "group",
                       "required": false,
@@ -4731,7 +4177,7 @@
                               "required": false,
                               "repeats": false,
                               "answerConstraint": "optionsOnly",
-                              "answerValueSet": "#vs8",
+                              "answerValueSet": "#vs4",
                               "item": [
                                 {
                                   "extension": [
@@ -4958,213 +4404,8 @@
                           ]
                         }
                       ]
-                    },
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                          "valueInteger": 1
-                        },
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                          "valueString": "code"
-                        }
-                      ],
-                      "linkId": "EvidenceVariable.characteristic.groupMeasure",
-                      "type": "group",
-                      "required": false,
-                      "repeats": true,
-                      "item": [
-                        {
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                              "valueCodeableConcept": {
-                                "coding": [
-                                  {
-                                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                    "code": "flyover",
-                                    "display": "Fly-over"
-                                  }
-                                ]
-                              }
-                            }
-                          ],
-                          "linkId": "EvidenceVariable.characteristic.groupMeasure-flyover",
-                          "text": "Value or set of values that define the grouping.",
-                          "type": "display"
-                        },
-                        {
-                          "linkId": "EvidenceVariable.characteristic.groupMeasure.value",
-                          "text": "group measure",
-                          "type": "coding",
-                          "required": false,
-                          "repeats": false,
-                          "answerConstraint": "optionsOrType"
-                        }
-                      ]
                     }
                   ]
-                }
-              ]
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "CodeableConcept"
-                }
-              ],
-              "linkId": "EvidenceVariable.characteristic.method",
-              "text": "Method used for describing characteristic",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "linkId": "EvidenceVariable.characteristic.method-flyover",
-                  "text": "Method used for describing characteristic.",
-                  "type": "display"
-                },
-                {
-                  "linkId": "EvidenceVariable.characteristic.method.coding",
-                  "text": "code:",
-                  "type": "coding",
-                  "required": false,
-                  "repeats": false,
-                  "answerConstraint": "optionsOnly"
-                },
-                {
-                  "linkId": "EvidenceVariable.characteristic.method.text",
-                  "text": "text:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                }
-              ]
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "Reference"
-                }
-              ],
-              "linkId": "EvidenceVariable.characteristic.device",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "linkId": "EvidenceVariable.characteristic.device-flyover",
-                  "text": "Device used for determining characteristic.",
-                  "type": "display"
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                      "valueCode": "Device, DeviceMetric"
-                    },
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
-                      "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
-                    }
-                  ],
-                  "linkId": "EvidenceVariable.characteristic.device.value",
-                  "text": "Device used for determining characteristic",
-                  "type": "reference",
-                  "required": false,
-                  "repeats": false
-                }
-              ]
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "CodeableConcept"
-                }
-              ],
-              "linkId": "EvidenceVariable.characteristic.offset",
-              "text": "Reference point for characteristic.valueQuantity",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "linkId": "EvidenceVariable.characteristic.offset-flyover",
-                  "text": "Defines the reference point for comparison when characteristic.valueQuantity is not compared to zero.",
-                  "type": "display"
-                },
-                {
-                  "linkId": "EvidenceVariable.characteristic.offset.coding",
-                  "text": "code:",
-                  "type": "coding",
-                  "required": false,
-                  "repeats": false,
-                  "answerConstraint": "optionsOnly"
-                },
-                {
-                  "linkId": "EvidenceVariable.characteristic.offset.text",
-                  "text": "text:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
                 }
               ]
             },
@@ -5411,7 +4652,7 @@
                       "required": false,
                       "repeats": false,
                       "answerConstraint": "optionsOnly",
-                      "answerValueSet": "#vs9",
+                      "answerValueSet": "#vs5",
                       "item": [
                         {
                           "extension": [
@@ -5636,51 +4877,6 @@
                       "repeats": false
                     }
                   ]
-                }
-              ]
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "code"
-                }
-              ],
-              "linkId": "EvidenceVariable.characteristic.groupMeasure",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "linkId": "EvidenceVariable.characteristic.groupMeasure-flyover",
-                  "text": "Value or set of values that define the grouping.",
-                  "type": "display"
-                },
-                {
-                  "linkId": "EvidenceVariable.characteristic.groupMeasure.value",
-                  "text": "group measure",
-                  "type": "coding",
-                  "required": false,
-                  "repeats": false,
-                  "answerConstraint": "optionsOrType"
                 }
               ]
             }
@@ -5940,7 +5136,7 @@
                   "required": false,
                   "repeats": false,
                   "answerConstraint": "optionsOnly",
-                  "answerValueSet": "#vs10",
+                  "answerValueSet": "#vs6",
                   "item": [
                     {
                       "extension": [
@@ -6058,14 +5254,5 @@
         }
       ]
     }
-  ],
-  "meta": {
-    "tag": [
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-        "code": "HTEST",
-        "display": "test health data"
-      }
-    ]
-  }
+  ]
 }

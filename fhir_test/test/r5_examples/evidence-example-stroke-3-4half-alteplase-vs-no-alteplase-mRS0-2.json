@@ -6,6 +6,12 @@
     "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n      \u003cp\u003e\n        \u0026quot;Effect of Alteplase vs No alteplase on mRS 0-2 at 90 days in Stroke 3-4.5 hours prior\u0026quot; is a comparative effect estimate.\n      \u003c/p\u003e\n\t\u003c/div\u003e"
   },
   "url": "http://hl7.org/fhir/Evidence/example-stroke-3-4half-alteplase-vs-no-alteplase-mRS0-2",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.10.3"
+    }
+  ],
   "title": "Effect of Alteplase vs No alteplase on mRS 0-2 at 90 days in Stroke 3-4.5 hours prior",
   "status": "draft",
   "relatedArtifact": [
@@ -124,15 +130,17 @@
       }
     ]
   },
-  "studyType": {
-    "coding": [
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/study-type",
-        "code": "RCT",
-        "display": "randomized trial"
-      }
-    ]
-  },
+  "studyDesign": [
+    {
+      "coding": [
+        {
+          "system": "http://hl7.org/fhir/research-study-classifiers",
+          "code": "SEVCO:01003",
+          "display": "randomized assignment"
+        }
+      ]
+    }
+  ],
   "statistic": [
     {
       "statisticType": {
@@ -181,7 +189,7 @@
       "type": {
         "coding": [
           {
-            "system": "http://terminology.hl7.org/CodeSystem/certainty-type",
+            "system": "http://hl7.org/fhir/certainty-type",
             "code": "Overall",
             "display": "Overall quality"
           }
@@ -201,7 +209,7 @@
           "type": {
             "coding": [
               {
-                "system": "http://terminology.hl7.org/CodeSystem/certainty-type",
+                "system": "http://hl7.org/fhir/certainty-type",
                 "code": "PublicationBias",
                 "display": "Publication bias"
               }
@@ -226,7 +234,7 @@
           "type": {
             "coding": [
               {
-                "system": "http://terminology.hl7.org/CodeSystem/certainty-type",
+                "system": "http://hl7.org/fhir/certainty-type",
                 "code": "Inconsistency",
                 "display": "Inconsistency"
               }
@@ -251,7 +259,7 @@
           "type": {
             "coding": [
               {
-                "system": "http://terminology.hl7.org/CodeSystem/certainty-type",
+                "system": "http://hl7.org/fhir/certainty-type",
                 "code": "Imprecision",
                 "display": "Imprecision"
               }
@@ -276,7 +284,7 @@
           "type": {
             "coding": [
               {
-                "system": "http://terminology.hl7.org/CodeSystem/certainty-type",
+                "system": "http://hl7.org/fhir/certainty-type",
                 "code": "Indirectness",
                 "display": "Indirectness"
               }
@@ -301,7 +309,7 @@
           "type": {
             "coding": [
               {
-                "system": "http://terminology.hl7.org/CodeSystem/certainty-type",
+                "system": "http://hl7.org/fhir/certainty-type",
                 "code": "RiskOfBias",
                 "display": "Risk of bias"
               }

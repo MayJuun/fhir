@@ -62,14 +62,16 @@
   ],
   "complication": [
     {
-      "coding": [
-        {
-          "system": "http://snomed.info/sct",
-          "code": "67750007",
-          "display": "Ineffective airway clearance (finding)"
-        }
-      ],
-      "text": "Ineffective airway clearance"
+      "concept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "67750007",
+            "display": "Ineffective airway clearance (finding)"
+          }
+        ],
+        "text": "Ineffective airway clearance"
+      }
     }
   ],
   "followUp": [

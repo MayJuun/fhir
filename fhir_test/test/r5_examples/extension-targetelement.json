@@ -9,12 +9,17 @@
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
       "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "trial-use"
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/targetElement",
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "name": "targetElement",
   "status": "draft",
+  "experimental": false,
   "date": "2015-02-28",
   "publisher": "Health Level Seven, Inc. - FHIR Core WG",
   "contact": [
@@ -28,7 +33,7 @@
     }
   ],
   "description": "Indicates that the reference has a  particular focus in the target resource, a particular element of interest, identified by it\u0027s element id.",
-  "fhirVersion": "4.6.0",
+  "fhirVersion": "5.0.0-snapshot3",
   "mapping": [
     {
       "identity": "v2",
@@ -47,6 +52,10 @@
     {
       "type": "element",
       "expression": "Reference"
+    },
+    {
+      "type": "element",
+      "expression": "canonical"
     }
   ],
   "type": "Extension",
@@ -59,7 +68,7 @@
         "path": "Extension",
         "short": "A particular element of interest in the target resource (by id)",
         "definition": "Indicates that the reference has a  particular focus in the target resource, a particular element of interest, identified by it\u0027s element id.",
-        "comment": "This extension can be used when the target element has an explicit id associated with it. When there is no id on the telement of interest, the extension http://hl7.org/fhir/StructureDefinition/targetPath can be used.",
+        "comment": "This behaves similar to a \u0027#\u0027 element on a URL, but is more wide-open than how \u0027#\u0027 is used in Reference.reference where it is limited to pointing only to contained resources (and where the contained resource must be of the appropriate resource type for the reference).  This extension allows referring to any Element (not necessarily a resource) within the target resource provided that it has a populated \u0027id\u0027 element. When there is no id on the telement of interest, the extension http://hl7.org/fhir/StructureDefinition/targetPath can be used.",
         "min": 0,
         "max": "*",
         "base": {
@@ -73,7 +82,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -81,7 +89,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -117,7 +124,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "string"
+                "valueUrl": "id"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -165,7 +172,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -173,7 +179,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -240,7 +245,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -262,7 +266,7 @@
         "path": "Extension",
         "short": "A particular element of interest in the target resource (by id)",
         "definition": "Indicates that the reference has a  particular focus in the target resource, a particular element of interest, identified by it\u0027s element id.",
-        "comment": "This extension can be used when the target element has an explicit id associated with it. When there is no id on the telement of interest, the extension http://hl7.org/fhir/StructureDefinition/targetPath can be used.",
+        "comment": "This behaves similar to a \u0027#\u0027 element on a URL, but is more wide-open than how \u0027#\u0027 is used in Reference.reference where it is limited to pointing only to contained resources (and where the contained resource must be of the appropriate resource type for the reference).  This extension allows referring to any Element (not necessarily a resource) within the target resource provided that it has a populated \u0027id\u0027 element. When there is no id on the telement of interest, the extension http://hl7.org/fhir/StructureDefinition/targetPath can be used.",
         "min": 0,
         "max": "*",
         "mapping": [

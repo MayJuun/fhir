@@ -1,6 +1,6 @@
 {
   "resourceType": "Questionnaire",
-  "id": "qs1",
+  "id": "qgen-MedicinalProductDefinition1",
   "contained": [
     {
       "resourceType": "ValueSet",
@@ -9,41 +9,41 @@
       "status": "active",
       "description": "Type options for MedicinalProductDefinition.characteristic.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:91624194-f4cc-42d5-a9ef-a3213a88794f",
-        "timestamp": "2022-05-06T17:11:45+00:00",
+        "identifier": "urn:uuid:160737a0-75fc-4a51-823b-e2e6c27c48b7",
+        "timestamp": "2022-12-14T07:17:01+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "CodeableConcept",
             "display": "CodeableConcept"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "string",
             "display": "string"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Quantity",
             "display": "Quantity"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "integer",
             "display": "integer"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "date",
             "display": "date"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "boolean",
             "display": "boolean"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Attachment",
             "display": "Attachment"
           }
@@ -51,14 +51,16 @@
       }
     }
   ],
+  "url": "http://hl7.org/fhir/Questionnaire/qgen-MedicinalProductDefinition1",
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "status": "draft",
-  "date": "2022-05-06T17:02:42+00:00",
+  "experimental": false,
+  "date": "2022-12-14T07:12:54+11:00",
   "publisher": "Health Level Seven International (Biomedical Research and Regulation)",
   "item": [
     {
@@ -119,7 +121,7 @@
                 }
               ],
               "linkId": "MedicinalProductDefinition.id-flyover",
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Within the context of the FHIR RESTful interactions, the resource has an id except for cases like the create and conditional update. Otherwise, the use of the resouce id depends on the given use case.",
               "type": "display"
             },
             {
@@ -311,7 +313,7 @@
                 }
               ],
               "linkId": "MedicinalProductDefinition.contained-flyover",
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags in their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -1226,14 +1228,14 @@
                 }
               ],
               "linkId": "MedicinalProductDefinition.comprisedOf-flyover",
-              "text": "A medicinal manufactured item that this product consists of, such as a tablet or capsule. Used as a direct link when the item\u0027s packaging is not being recorded (see also PackagedProductDefinition.package.containedItem.item).",
+              "text": "Types of medicinal manufactured items and/or devices that this product consists of, such as tablets, capsule, or syringes. Used as a direct link when the item\u0027s packaging is not being recorded (see also PackagedProductDefinition.package.containedItem.item).",
               "type": "display"
             },
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "ManufacturedItemDefinition"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "ManufacturedItemDefinition, DeviceDefinition, DeviceDefinition"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1241,7 +1243,7 @@
                 }
               ],
               "linkId": "MedicinalProductDefinition.comprisedOf.value",
-              "text": "A medicinal manufactured item that this product consists of, such as a tablet or capsule",
+              "text": "Types of medicinal manufactured items and/or devices that this product consists of, such as tablets, capsule, or syringes",
               "type": "reference",
               "required": false,
               "repeats": false
@@ -1359,8 +1361,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "DocumentReference"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "DocumentReference, DocumentReference"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1409,8 +1411,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "DocumentReference"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "DocumentReference, DocumentReference"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1646,8 +1648,8 @@
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                      "valueCode": "Organization, PractitionerRole"
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                      "valueCode": "Organization, PractitionerRole, PractitionerRole"
                     },
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1698,8 +1700,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "ResearchStudy"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "ResearchStudy, ResearchStudy"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1989,7 +1991,7 @@
               ]
             },
             {
-              "linkId": "MedicinalProductDefinition.name.namePart",
+              "linkId": "MedicinalProductDefinition.name.part",
               "text": "Coding words or phrases of the name",
               "type": "group",
               "required": false,
@@ -2010,7 +2012,7 @@
                       }
                     }
                   ],
-                  "linkId": "MedicinalProductDefinition.name.namePart-flyover",
+                  "linkId": "MedicinalProductDefinition.name.part-flyover",
                   "text": "Coding words or phrases of the name.",
                   "type": "display"
                 },
@@ -2025,7 +2027,7 @@
                       "valueString": "string"
                     }
                   ],
-                  "linkId": "MedicinalProductDefinition.name.namePart.id",
+                  "linkId": "MedicinalProductDefinition.name.part.id",
                   "type": "group",
                   "required": false,
                   "repeats": true,
@@ -2045,12 +2047,12 @@
                           }
                         }
                       ],
-                      "linkId": "MedicinalProductDefinition.name.namePart.id-flyover",
+                      "linkId": "MedicinalProductDefinition.name.part.id-flyover",
                       "text": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
                       "type": "display"
                     },
                     {
-                      "linkId": "MedicinalProductDefinition.name.namePart.id.value",
+                      "linkId": "MedicinalProductDefinition.name.part.id.value",
                       "text": "Unique id for inter-element referencing",
                       "type": "string",
                       "required": false,
@@ -2059,7 +2061,7 @@
                   ]
                 },
                 {
-                  "linkId": "MedicinalProductDefinition.name.namePart.extension",
+                  "linkId": "MedicinalProductDefinition.name.part.extension",
                   "text": "Additional content defined by implementations",
                   "type": "group",
                   "required": false,
@@ -2080,14 +2082,14 @@
                           }
                         }
                       ],
-                      "linkId": "MedicinalProductDefinition.name.namePart.extension-flyover",
+                      "linkId": "MedicinalProductDefinition.name.part.extension-flyover",
                       "text": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
                       "type": "display"
                     }
                   ]
                 },
                 {
-                  "linkId": "MedicinalProductDefinition.name.namePart.modifierExtension",
+                  "linkId": "MedicinalProductDefinition.name.part.modifierExtension",
                   "text": "Extensions that cannot be ignored even if unrecognized",
                   "type": "group",
                   "required": false,
@@ -2108,7 +2110,7 @@
                           }
                         }
                       ],
-                      "linkId": "MedicinalProductDefinition.name.namePart.modifierExtension-flyover",
+                      "linkId": "MedicinalProductDefinition.name.part.modifierExtension-flyover",
                       "text": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself). There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
                       "type": "display"
                     }
@@ -2129,7 +2131,7 @@
                       "valueString": "string"
                     }
                   ],
-                  "linkId": "MedicinalProductDefinition.name.namePart.part",
+                  "linkId": "MedicinalProductDefinition.name.part.part",
                   "type": "group",
                   "required": true,
                   "repeats": true,
@@ -2149,12 +2151,12 @@
                           }
                         }
                       ],
-                      "linkId": "MedicinalProductDefinition.name.namePart.part-flyover",
+                      "linkId": "MedicinalProductDefinition.name.part.part-flyover",
                       "text": "A fragment of a product name.",
                       "type": "display"
                     },
                     {
-                      "linkId": "MedicinalProductDefinition.name.namePart.part.value",
+                      "linkId": "MedicinalProductDefinition.name.part.part.value",
                       "text": "A fragment of a product name",
                       "type": "string",
                       "required": false,
@@ -2177,7 +2179,7 @@
                       "valueString": "CodeableConcept"
                     }
                   ],
-                  "linkId": "MedicinalProductDefinition.name.namePart.type",
+                  "linkId": "MedicinalProductDefinition.name.part.type",
                   "text": "Identifying type for this part of the name (e.g. strength part)",
                   "type": "group",
                   "required": true,
@@ -2198,12 +2200,12 @@
                           }
                         }
                       ],
-                      "linkId": "MedicinalProductDefinition.name.namePart.type-flyover",
+                      "linkId": "MedicinalProductDefinition.name.part.type-flyover",
                       "text": "Identifying type for this part of the name (e.g. strength part).",
                       "type": "display"
                     },
                     {
-                      "linkId": "MedicinalProductDefinition.name.namePart.type.coding",
+                      "linkId": "MedicinalProductDefinition.name.part.type.coding",
                       "text": "code:",
                       "type": "coding",
                       "required": false,
@@ -2211,7 +2213,7 @@
                       "answerConstraint": "optionsOnly"
                     },
                     {
-                      "linkId": "MedicinalProductDefinition.name.namePart.type.text",
+                      "linkId": "MedicinalProductDefinition.name.part.type.text",
                       "text": "text:",
                       "type": "string",
                       "required": false,
@@ -2222,7 +2224,7 @@
               ]
             },
             {
-              "linkId": "MedicinalProductDefinition.name.countryLanguage",
+              "linkId": "MedicinalProductDefinition.name.usage",
               "text": "Country and jurisdiction where the name applies",
               "type": "group",
               "required": false,
@@ -2243,7 +2245,7 @@
                       }
                     }
                   ],
-                  "linkId": "MedicinalProductDefinition.name.countryLanguage-flyover",
+                  "linkId": "MedicinalProductDefinition.name.usage-flyover",
                   "text": "Country and jurisdiction where the name applies, and associated language.",
                   "type": "display"
                 },
@@ -2258,7 +2260,7 @@
                       "valueString": "string"
                     }
                   ],
-                  "linkId": "MedicinalProductDefinition.name.countryLanguage.id",
+                  "linkId": "MedicinalProductDefinition.name.usage.id",
                   "type": "group",
                   "required": false,
                   "repeats": true,
@@ -2278,12 +2280,12 @@
                           }
                         }
                       ],
-                      "linkId": "MedicinalProductDefinition.name.countryLanguage.id-flyover",
+                      "linkId": "MedicinalProductDefinition.name.usage.id-flyover",
                       "text": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
                       "type": "display"
                     },
                     {
-                      "linkId": "MedicinalProductDefinition.name.countryLanguage.id.value",
+                      "linkId": "MedicinalProductDefinition.name.usage.id.value",
                       "text": "Unique id for inter-element referencing",
                       "type": "string",
                       "required": false,
@@ -2292,7 +2294,7 @@
                   ]
                 },
                 {
-                  "linkId": "MedicinalProductDefinition.name.countryLanguage.extension",
+                  "linkId": "MedicinalProductDefinition.name.usage.extension",
                   "text": "Additional content defined by implementations",
                   "type": "group",
                   "required": false,
@@ -2313,14 +2315,14 @@
                           }
                         }
                       ],
-                      "linkId": "MedicinalProductDefinition.name.countryLanguage.extension-flyover",
+                      "linkId": "MedicinalProductDefinition.name.usage.extension-flyover",
                       "text": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
                       "type": "display"
                     }
                   ]
                 },
                 {
-                  "linkId": "MedicinalProductDefinition.name.countryLanguage.modifierExtension",
+                  "linkId": "MedicinalProductDefinition.name.usage.modifierExtension",
                   "text": "Extensions that cannot be ignored even if unrecognized",
                   "type": "group",
                   "required": false,
@@ -2341,7 +2343,7 @@
                           }
                         }
                       ],
-                      "linkId": "MedicinalProductDefinition.name.countryLanguage.modifierExtension-flyover",
+                      "linkId": "MedicinalProductDefinition.name.usage.modifierExtension-flyover",
                       "text": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself). There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
                       "type": "display"
                     }
@@ -2362,7 +2364,7 @@
                       "valueString": "CodeableConcept"
                     }
                   ],
-                  "linkId": "MedicinalProductDefinition.name.countryLanguage.country",
+                  "linkId": "MedicinalProductDefinition.name.usage.country",
                   "text": "Country code for where this name applies",
                   "type": "group",
                   "required": true,
@@ -2383,12 +2385,12 @@
                           }
                         }
                       ],
-                      "linkId": "MedicinalProductDefinition.name.countryLanguage.country-flyover",
+                      "linkId": "MedicinalProductDefinition.name.usage.country-flyover",
                       "text": "Country code for where this name applies.",
                       "type": "display"
                     },
                     {
-                      "linkId": "MedicinalProductDefinition.name.countryLanguage.country.coding",
+                      "linkId": "MedicinalProductDefinition.name.usage.country.coding",
                       "text": "code:",
                       "type": "coding",
                       "required": false,
@@ -2396,7 +2398,7 @@
                       "answerConstraint": "optionsOnly"
                     },
                     {
-                      "linkId": "MedicinalProductDefinition.name.countryLanguage.country.text",
+                      "linkId": "MedicinalProductDefinition.name.usage.country.text",
                       "text": "text:",
                       "type": "string",
                       "required": false,
@@ -2415,7 +2417,7 @@
                       "valueString": "CodeableConcept"
                     }
                   ],
-                  "linkId": "MedicinalProductDefinition.name.countryLanguage.jurisdiction",
+                  "linkId": "MedicinalProductDefinition.name.usage.jurisdiction",
                   "text": "Jurisdiction code for where this name applies",
                   "type": "group",
                   "required": false,
@@ -2436,12 +2438,12 @@
                           }
                         }
                       ],
-                      "linkId": "MedicinalProductDefinition.name.countryLanguage.jurisdiction-flyover",
+                      "linkId": "MedicinalProductDefinition.name.usage.jurisdiction-flyover",
                       "text": "Jurisdiction code for where this name applies. A jurisdiction may be a sub- or supra-national entity (e.g. a state or a geographic region).",
                       "type": "display"
                     },
                     {
-                      "linkId": "MedicinalProductDefinition.name.countryLanguage.jurisdiction.coding",
+                      "linkId": "MedicinalProductDefinition.name.usage.jurisdiction.coding",
                       "text": "code:",
                       "type": "coding",
                       "required": false,
@@ -2449,7 +2451,7 @@
                       "answerConstraint": "optionsOnly"
                     },
                     {
-                      "linkId": "MedicinalProductDefinition.name.countryLanguage.jurisdiction.text",
+                      "linkId": "MedicinalProductDefinition.name.usage.jurisdiction.text",
                       "text": "text:",
                       "type": "string",
                       "required": false,
@@ -2472,7 +2474,7 @@
                       "valueString": "CodeableConcept"
                     }
                   ],
-                  "linkId": "MedicinalProductDefinition.name.countryLanguage.language",
+                  "linkId": "MedicinalProductDefinition.name.usage.language",
                   "text": "Language code for this name",
                   "type": "group",
                   "required": true,
@@ -2493,12 +2495,12 @@
                           }
                         }
                       ],
-                      "linkId": "MedicinalProductDefinition.name.countryLanguage.language-flyover",
+                      "linkId": "MedicinalProductDefinition.name.usage.language-flyover",
                       "text": "Language code for this name.",
                       "type": "display"
                     },
                     {
-                      "linkId": "MedicinalProductDefinition.name.countryLanguage.language.coding",
+                      "linkId": "MedicinalProductDefinition.name.usage.language.coding",
                       "text": "code:",
                       "type": "coding",
                       "required": false,
@@ -2506,7 +2508,7 @@
                       "answerConstraint": "optionsOnly"
                     },
                     {
-                      "linkId": "MedicinalProductDefinition.name.countryLanguage.language.text",
+                      "linkId": "MedicinalProductDefinition.name.usage.language.text",
                       "text": "text:",
                       "type": "string",
                       "required": false,
@@ -2983,8 +2985,8 @@
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                      "valueCode": "Organization"
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                      "valueCode": "Organization, Organization"
                     },
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -3443,14 +3445,5 @@
         }
       ]
     }
-  ],
-  "meta": {
-    "tag": [
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-        "code": "HTEST",
-        "display": "test health data"
-      }
-    ]
-  }
+  ]
 }

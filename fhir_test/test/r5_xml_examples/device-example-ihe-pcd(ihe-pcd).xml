@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><Device xmlns="http://hl7.org/fhir">
+	<id value="ihe-pcd"/>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Device</b><a name="ihe-pcd"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Device "ihe-pcd" </p></div><p><b>identifier</b>: Serial Number: AMID-123-456</p><p><b>manufacturer</b>: Acme Devices, Inc</p><p><b>lotNumber</b>: 12345</p><h3>DeviceNames</h3><table class="grid"><tr><td>-</td><td><b>Name</b></td><td><b>Type</b></td></tr><tr><td>*</td><td>Acme Patient Monitor</td><td>user-friendly-name</td></tr></table><p><b>modelNumber</b>: A.1.1</p><p><b>type</b>: Vital Signs Monitor <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ()</span></p></div></text><identifier>
+      <type>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+          <code value="SNO"/>
+        </coding>
+        <text value="Serial Number"/>
+      </type>
+    <value value="AMID-123-456"/>
+  </identifier>
+	<manufacturer value="Acme Devices, Inc"/>
+  <lotNumber value="12345"/>
+  <deviceName>
+    <name value="Acme Patient Monitor"/>
+    <type value="user-friendly-name"/>
+  </deviceName>
+	<modelNumber value="A.1.1"/>
+  <type>
+    <text value="Vital Signs Monitor"/>
+  </type>
+</Device>

@@ -12,6 +12,7 @@
     }
   ],
   "status": "active",
+  "kind": "insurance",
   "type": {
     "coding": [
       {
@@ -37,14 +38,12 @@
   "period": {
     "end": "2012-03-17"
   },
-  "payor": [
-    {
-      "identifier": {
-        "system": "http://ehic.com/insurer",
-        "value": "123456789"
-      }
+  "insurer": {
+    "identifier": {
+      "system": "http://ehic.com/insurer",
+      "value": "123456789"
     }
-  ],
+  },
   "meta": {
     "tag": [
       {

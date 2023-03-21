@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><Medication xmlns="http://hl7.org/fhir">
+  <id value="med0308"/>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "med0308" </p></div><p><b>code</b>: Percocet tablet <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-ndc.html">National drug codes</a>#63481-623-70)</span></p><p><b>manufacturer</b>: <a name="org1"> </a></p><blockquote><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "org1" </p></div><p><b>name</b>: Stat Rx USA LLC</p></blockquote><p><b>form</b>: Tablet dose form (qualifier value) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#385055001)</span></p><blockquote><p><b>ingredient</b></p><p><b>item</b>: Oxycodone HCl <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-rxNorm.html">RxNorm</a>#82063)</span></p><p><b>strength</b>: 5 mg<span style="background: LightGoldenRodYellow"> (Details: UCUM code mg = 'mg')</span>/1(unit TAB from http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm)<span style="background: LightGoldenRodYellow"> (Details: http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm code TAB = 'Tablet')</span></p></blockquote><blockquote><p><b>ingredient</b></p><p><b>item</b>: Acetaminophen <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-rxNorm.html">RxNorm</a>#161)</span></p><p><b>strength</b>: 325 mg<span style="background: LightGoldenRodYellow"> (Details: UCUM code mg = 'mg')</span>/1(unit TAB from http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm)<span style="background: LightGoldenRodYellow"> (Details: http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm code TAB = 'Tablet')</span></p></blockquote><h3>Batches</h3><table class="grid"><tr><td>-</td><td><b>LotNumber</b></td><td><b>ExpirationDate</b></td></tr><tr><td>*</td><td>658484</td><td>2020-07-31</td></tr></table></div></text><contained>
+    <Organization>
+      <id value="org1"/>
+      <name value="Stat Rx USA LLC"/>
+    </Organization>
+  </contained>
+  <code>
+    <coding>
+      <system value="http://hl7.org/fhir/sid/ndc"/>
+      <code value="63481-623-70"/>
+      <display value="Percocet tablet"/>
+    </coding>
+  </code>
+  
+  <manufacturer>
+    <reference value="#org1"/>
+  </manufacturer>
+    <form>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="385055001"/>
+        <display value="Tablet dose form (qualifier value)"/>
+      </coding>
+    </form>
+    <ingredient>
+      <itemCodeableConcept>
+        <coding>
+          <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+          <code value="82063"/>
+          <display value="Oxycodone HCl"/>
+        </coding>
+      </itemCodeableConcept>
+      <strength>
+        <numerator>
+          <value value="5"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mg"/>
+        </numerator>
+        <denominator>
+          <value value="1"/>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"/>
+          <code value="TAB"/>
+        </denominator>
+      </strength>
+    </ingredient>
+    <ingredient>
+      <itemCodeableConcept>
+        <coding>
+          <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+          <code value="161"/>
+          <display value="Acetaminophen"/>
+        </coding>
+      </itemCodeableConcept>
+      <strength>
+        <numerator>
+          <value value="325"/>
+          <system value="http://unitsofmeasure.org"/>
+          <code value="mg"/>
+        </numerator>
+        <denominator>
+          <value value="1"/>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"/>
+          <code value="TAB"/>
+        </denominator>
+      </strength>
+    </ingredient>
+  <batch>
+    <lotNumber value="658484"/>
+    <expirationDate value="2020-07-31"/>
+  </batch>
+</Medication>

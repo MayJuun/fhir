@@ -9,12 +9,17 @@
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
       "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "trial-use"
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/replaces",
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "name": "replaces",
   "status": "draft",
+  "experimental": false,
   "date": "2013-12-05",
   "publisher": "Health Level Seven International (FHIR Infrastructure)",
   "contact": [
@@ -27,8 +32,8 @@
       ]
     }
   ],
-  "description": "Indicates a resource that this resource is replacing.",
-  "fhirVersion": "4.6.0",
+  "description": "This indicates a separate conformance resource instance that is superseded by the current instance.",
+  "fhirVersion": "5.0.0-snapshot3",
   "mapping": [
     {
       "identity": "rim",
@@ -45,11 +50,11 @@
     },
     {
       "type": "element",
-      "expression": "CapabilityStatement"
+      "expression": "ActorDefinition"
     },
     {
       "type": "element",
-      "expression": "CapabilityStatement2"
+      "expression": "CapabilityStatement"
     },
     {
       "type": "element",
@@ -70,10 +75,6 @@
     {
       "type": "element",
       "expression": "ConceptMap"
-    },
-    {
-      "type": "element",
-      "expression": "ConceptMap2"
     },
     {
       "type": "element",
@@ -141,7 +142,15 @@
     },
     {
       "type": "element",
+      "expression": "Requirements"
+    },
+    {
+      "type": "element",
       "expression": "SearchParameter"
+    },
+    {
+      "type": "element",
+      "expression": "SpecimenDefinition"
     },
     {
       "type": "element",
@@ -177,7 +186,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "References a resource that this resource replaces",
-        "definition": "Indicates a resource that this resource is replacing.",
+        "definition": "This indicates a separate conformance resource instance that is superseded by the current instance.",
         "comment": "This is usually a versioned reference. Often, it will be to another version of the same resource.",
         "min": 0,
         "max": "*",
@@ -192,7 +201,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -200,7 +208,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -226,7 +233,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "string"
+                "valueUrl": "id"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -274,7 +281,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -282,7 +288,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -352,7 +357,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -373,7 +377,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "References a resource that this resource replaces",
-        "definition": "Indicates a resource that this resource is replacing.",
+        "definition": "This indicates a separate conformance resource instance that is superseded by the current instance.",
         "comment": "This is usually a versioned reference. Often, it will be to another version of the same resource.",
         "min": 0,
         "max": "*"

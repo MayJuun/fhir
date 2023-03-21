@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><Condition xmlns="http://hl7.org/fhir">
+  <id value="f201"/>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Condition</b><a name="f201"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Condition "f201" </p></div><p><b>identifier</b>: id: 12345</p><p><b>clinicalStatus</b>: Resolved <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-condition-clinical.html">Condition Clinical Status Codes</a>#resolved)</span></p><p><b>verificationStatus</b>: Confirmed <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-condition-ver-status.html">ConditionVerificationStatus</a>#confirmed)</span></p><p><b>category</b>: Problem <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#55607006; <a href="http://terminology.hl7.org/4.0.0/CodeSystem-condition-category.html">Condition Category Codes</a>#problem-list-item)</span></p><p><b>severity</b>: Mild <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#255604002)</span></p><p><b>code</b>: Fever <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#386661006)</span></p><p><b>bodySite</b>: Entire body as a whole <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#38266002)</span></p><p><b>subject</b>: <a href="patient-example-f201-roel.html">Patient/f201: Roel</a> "Roel"</p><p><b>encounter</b>: <a href="encounter-example-f201-20130404.html">Encounter/f201</a></p><p><b>onset</b>: 2013-04-02</p><p><b>abatement</b>: around April 9, 2013</p><p><b>recordedDate</b>: 2013-04-04</p><blockquote><p><b>participant</b></p><p><b>function</b>: Enterer <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-provenance-participant-type.html">Provenance participant type</a>#enterer)</span></p><p><b>actor</b>: <a href="practitioner-example-f201-ab.html">Practitioner/f201</a> "Dokter Bronsig"</p></blockquote><blockquote><p><b>participant</b></p><p><b>function</b>: Verifier <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-provenance-participant-type.html">Provenance participant type</a>#verifier)</span></p><p><b>actor</b>: <a href="practitioner-example-f201-ab.html">Practitioner/f201</a> "Dokter Bronsig"</p></blockquote><h3>Evidences</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td><td><b>Reference</b></td></tr><tr><td>*</td><td><span title=" Problem is confirmed by 39 degrees Celsius ">degrees C <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#258710007)</span></span></td><td><a href="observation-example-f202-temperature.html">Observation/f202: Temperature</a></td></tr></table></div></text><identifier>
+    <value value="12345"/>
+  </identifier>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <code value="resolved"/>
+    </coding>
+  </clinicalStatus>
+
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+      <code value="confirmed"/>
+    </coding>
+  </verificationStatus>
+
+  <category>
+        <!--  The fever is a mild problem  -->
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="55607006"/>
+      <display value="Problem"/>
+    </coding>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+      <code value="problem-list-item"/>
+    </coding>
+  </category>
+  <severity>
+        <!--  The fever is mild   -->
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="255604002"/>
+      <display value="Mild"/>
+    </coding>
+  </severity>
+  <code>
+        <!--  The problem is a fever  -->
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="386661006"/>
+      <display value="Fever"/>
+    </coding>
+  </code>
+  <bodySite>
+        <!--  Fever applies to whole body  -->
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="38266002"/>
+      <display value="Entire body as a whole"/>
+    </coding>
+  </bodySite>
+  <subject>
+        <!--  It entails Roel's problem  -->
+    <reference value="Patient/f201"/>
+    <display value="Roel"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/f201"/>
+  </encounter>
+  <onsetDateTime value="2013-04-02"/>
+  <abatementString value="around April 9, 2013"/>
+  <recordedDate value="2013-04-04"/>
+  <participant> 
+    <function> 
+      <coding> 
+        <system value="http://terminology.hl7.org/CodeSystem/provenance-participant-type"/> 
+        <code value="enterer"/> 
+        <display value="Enterer"/> 
+      </coding> 
+    </function> 
+    <actor> 
+      <reference value="Practitioner/f201"/> 
+    </actor> 
+  </participant> 
+  <participant> 
+    <function> 
+      <coding> 
+        <system value="http://terminology.hl7.org/CodeSystem/provenance-participant-type"/> 
+        <code value="verifier"/> 
+        <display value="Verifier"/> 
+      </coding> 
+    </function> 
+    <actor> 
+      <reference value="Practitioner/f201"/> 
+    </actor> 
+  </participant>
+  <evidence>
+        <!--  Problem is confirmed by 39 degrees Celsius  -->
+    <concept>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="258710007"/>
+        <display value="degrees C"/>
+      </coding>
+    </concept>
+    <reference>
+      <reference value="Observation/f202"/>
+      <display value="Temperature"/>
+    </reference>
+  </evidence>
+</Condition>

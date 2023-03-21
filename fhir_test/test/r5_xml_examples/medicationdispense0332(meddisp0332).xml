@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?><MedicationDispense xmlns="http://hl7.org/fhir">
+    <id value="meddisp0332"/>
+    <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: MedicationDispense</b><a name="meddisp0332"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource MedicationDispense "meddisp0332" </p></div><p><b>status</b>: in-progress</p><h3>Medications</h3><table class="grid"><tr><td>-</td><td><b>Reference</b></td></tr><tr><td>*</td><td><a name="med0318"> </a><blockquote><p/><p><a name="med0318"> </a></p><p><b>doseForm</b>: Injection emulsion <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#385221006)</span></p><blockquote><p><b>ingredient</b></p><h3>Items</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>Clinimix 4.25/10 sulfite-free (4.25% Amino Acid in 10% Dextrose) Injection, 1000ml <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-ndc.html">National drug codes</a>#0338-1134-03)</span></td></tr></table></blockquote><blockquote><p><b>ingredient</b></p><h3>Items</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>TPN Electrolytes SODIUM CHLORIDE, CALCIUM CHLORIDE, POTASSIUM CHLORIDE, MAGNESIUM CHLORIDE, and SODIUM ACETATE ANHYDROUS | INJECTION, SOLUTION, CONCENTRATE | 321 mg/20mL, 331 mg/20mL, 1491 mg/20mL, 508 mg/20mL, 2420 mg/20mL <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-ndc.html">National drug codes</a>#0409-5779-01)</span></td></tr></table></blockquote><blockquote><p><b>ingredient</b></p><h3>Items</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>Intralipid 20% IV Fat Emulsion <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-ndc.html">National drug codes</a>#0338-0519-02)</span></td></tr></table></blockquote></blockquote></td></tr></table><p><b>subject</b>: <a href="patient-example-a.html">Patient/pat1: Donald Duck</a> "Donald DUCK"</p><h3>Performers</h3><table class="grid"><tr><td>-</td><td><b>Actor</b></td></tr><tr><td>*</td><td><a href="practitioner-example-f006-rvdb.html">Practitioner/f006</a> "Rob VAN DEN BERK"</td></tr></table><p><b>authorizingPrescription</b>: <a href="medicationrequest0323.html">MedicationRequest/medrx0323</a></p><p><b>quantity</b>: 1000 ml<span style="background: LightGoldenRodYellow"> (Details: UCUM code ml = 'ml')</span></p><p><b>daysSupply</b>: 1 Day<span style="background: LightGoldenRodYellow"> (Details: UCUM code d = 'd')</span></p><blockquote><p><b>dosageInstruction</b></p><p><b>sequence</b>: 1</p><p><b>text</b>: 1000mL infused at 50ml/hour for 4 hours - hang at 2200 hours</p><p><b>timing</b>: Events: 2020-01-15T22:00:00+11:00, Starting 2020-01-15, Once per 24 hours, Until 2020-01-20</p><p><b>route</b>: Intravenous <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#255560000)</span></p></blockquote></div></text><contained>
+        <Medication>
+            <id value="med0318"/>
+                <doseForm>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="385221006"/>
+                        <display value="Injection emulsion"/>
+                    </coding>
+                </doseForm>
+                <ingredient>
+                    <item>
+                        <concept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/sid/ndc"/>
+                            <code value="0338-1134-03"/>
+                            <display value="Clinimix 4.25/10 sulfite-free (4.25% Amino Acid in 10% Dextrose) Injection, 1000ml"/>
+                        </coding>
+                        </concept>
+                    </item>
+                </ingredient>
+                <ingredient>
+                    <item>
+                        <concept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/sid/ndc"/>
+                            <code value="0409-5779-01"/>
+                            <display value="TPN Electrolytes SODIUM CHLORIDE, CALCIUM CHLORIDE, POTASSIUM CHLORIDE, MAGNESIUM CHLORIDE, and SODIUM ACETATE ANHYDROUS | INJECTION, SOLUTION, CONCENTRATE | 321 mg/20mL, 331 mg/20mL, 1491 mg/20mL, 508 mg/20mL, 2420 mg/20mL"/>
+                        </coding>
+                        </concept>
+                    </item>
+                </ingredient>
+                <ingredient>
+                    <item>
+                        <concept>
+                        <coding>
+                            <system value="http://hl7.org/fhir/sid/ndc"/>
+                            <code value="0338-0519-02"/>
+                            <display value="Intralipid 20% IV Fat Emulsion"/>
+                        </coding>
+                        </concept>
+                    </item>
+                </ingredient>
+        </Medication>
+    </contained>
+    <status value="in-progress"/>
+    <medication>
+        <reference>
+        <reference value="#med0318"/>
+        <display value="TPN Solution"/>
+        </reference>
+    </medication>
+    <subject>
+        <reference value="Patient/pat1"/>
+        <display value="Donald Duck"/>
+    </subject>
+    <performer>
+        <actor>
+            <reference value="Practitioner/f006"/>
+        </actor>
+    </performer>
+    <authorizingPrescription>
+        <reference value="MedicationRequest/medrx0323"/>
+    </authorizingPrescription>
+    <quantity>
+        <value value="1000"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="ml"/>
+    </quantity>
+    <daysSupply>
+        <value value="1"/>
+        <unit value="Day"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="d"/>
+    </daysSupply>
+    <dosageInstruction>
+        <sequence value="1"/>
+        <text value="1000mL infused at 50ml/hour for 4 hours - hang at 2200 hours"/>
+        <timing>
+            <event value="2020-01-15T22:00:00+11:00"/>
+            <repeat>
+                <boundsPeriod>
+                    <start value="2020-01-15"/>
+                    <end value="2020-01-20"/>
+                </boundsPeriod>
+                <frequency value="1"/>
+                <period value="24"/>
+                <periodUnit value="h"/>
+            </repeat>
+        </timing>
+        <route>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="255560000"/>
+                <display value="Intravenous"/>
+            </coding>
+        </route>
+        <doseAndRate>
+            <type>
+                <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/dose-rate-type"/>
+                    <code value="ordered"/>
+                    <display value="Ordered"/>
+                </coding>
+            </type>
+            <doseQuantity>
+                <value value="1000"/>
+                <unit value="mL"/>
+                <system value="http://unitsofmeasure.org"/>
+                <code value="mL"/> 
+            </doseQuantity>
+            <rateRatio>
+                <numerator>
+                    <value value="50"/>
+                    <unit value="mL"/>
+                    <system value="http://unitsofmeasure.org"/>
+                    <code value="mL"/> 
+                </numerator>
+                <denominator>
+                    <value value="1"/>
+                    <unit value="h"/>
+                    <system value="http://unitsofmeasure.org"/>
+                    <code value="h"/> 
+                </denominator>
+            </rateRatio>
+        </doseAndRate>
+
+    </dosageInstruction>
+</MedicationDispense>

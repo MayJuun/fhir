@@ -1,66 +1,26 @@
 {
   "resourceType": "Questionnaire",
-  "id": "qs1",
+  "id": "qgen-Questionnaire1",
   "contained": [
     {
       "resourceType": "ValueSet",
       "id": "vs2",
-      "name": "Type options for Questionnaire.item.enableWhen.answer[x]",
+      "name": "Type options for Questionnaire.versionAlgorithm[x]",
       "status": "active",
-      "description": "Type options for Questionnaire.item.enableWhen.answer[x]",
+      "description": "Type options for Questionnaire.versionAlgorithm[x]",
       "expansion": {
-        "identifier": "urn:uuid:9edc6a06-2a88-405c-81bc-4a500a113305",
-        "timestamp": "2022-05-06T17:12:19+00:00",
+        "identifier": "urn:uuid:dfed5974-0ed7-4f86-a799-63bda22d793a",
+        "timestamp": "2022-12-14T07:17:21+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "boolean",
-            "display": "boolean"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "decimal",
-            "display": "decimal"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "integer",
-            "display": "integer"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "date",
-            "display": "date"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "dateTime",
-            "display": "dateTime"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "time",
-            "display": "time"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "string",
             "display": "string"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Coding",
             "display": "Coding"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "Quantity",
-            "display": "Quantity"
-          },
-          {
-            "system": "http://hl7.org/fhir/resource-types",
-            "code": "Resource",
-            "display": "Resource"
           }
         ]
       }
@@ -68,40 +28,60 @@
     {
       "resourceType": "ValueSet",
       "id": "vs3",
-      "name": "Type options for Questionnaire.item.answerOption.value[x]",
+      "name": "Type options for Questionnaire.item.enableWhen.answer[x]",
       "status": "active",
-      "description": "Type options for Questionnaire.item.answerOption.value[x]",
+      "description": "Type options for Questionnaire.item.enableWhen.answer[x]",
       "expansion": {
-        "identifier": "urn:uuid:2e90a83a-161f-4586-b35c-6c1d3280c51f",
-        "timestamp": "2022-05-06T17:12:19+00:00",
+        "identifier": "urn:uuid:57c5418c-9ae0-4d4a-89dc-b95ad6972d8d",
+        "timestamp": "2022-12-14T07:17:21+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "boolean",
+            "display": "boolean"
+          },
+          {
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "decimal",
+            "display": "decimal"
+          },
+          {
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "integer",
             "display": "integer"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "date",
             "display": "date"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "dateTime",
+            "display": "dateTime"
+          },
+          {
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "time",
             "display": "time"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "string",
             "display": "string"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Coding",
             "display": "Coding"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "Quantity",
+            "display": "Quantity"
+          },
+          {
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Resource",
             "display": "Resource"
           }
@@ -111,70 +91,40 @@
     {
       "resourceType": "ValueSet",
       "id": "vs4",
-      "name": "Type options for Questionnaire.item.initial.value[x]",
+      "name": "Type options for Questionnaire.item.answerOption.value[x]",
       "status": "active",
-      "description": "Type options for Questionnaire.item.initial.value[x]",
+      "description": "Type options for Questionnaire.item.answerOption.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:269e78a5-254e-4e9f-8b1d-194a9c93cfdb",
-        "timestamp": "2022-05-06T17:12:19+00:00",
+        "identifier": "urn:uuid:1df621e8-704b-4ed7-9bc5-1338b81f3c7d",
+        "timestamp": "2022-12-14T07:17:21+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "boolean",
-            "display": "boolean"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "decimal",
-            "display": "decimal"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "integer",
             "display": "integer"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "date",
             "display": "date"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "dateTime",
-            "display": "dateTime"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "time",
             "display": "time"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "string",
             "display": "string"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "uri",
-            "display": "uri"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "Attachment",
-            "display": "Attachment"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Coding",
             "display": "Coding"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "Quantity",
-            "display": "Quantity"
-          },
-          {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Resource",
             "display": "Resource"
           }
@@ -184,60 +134,70 @@
     {
       "resourceType": "ValueSet",
       "id": "vs5",
-      "name": "Type options for Questionnaire.item.enableWhen.answer[x]",
+      "name": "Type options for Questionnaire.item.initial.value[x]",
       "status": "active",
-      "description": "Type options for Questionnaire.item.enableWhen.answer[x]",
+      "description": "Type options for Questionnaire.item.initial.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:4b6044fd-2c17-4427-b5e4-a7a7c0029c64",
-        "timestamp": "2022-05-06T17:12:19+00:00",
+        "identifier": "urn:uuid:3437c925-f76a-449a-a8f1-09deba3feca5",
+        "timestamp": "2022-12-14T07:17:21+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "boolean",
             "display": "boolean"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "decimal",
             "display": "decimal"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "integer",
             "display": "integer"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "date",
             "display": "date"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "dateTime",
             "display": "dateTime"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "time",
             "display": "time"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "string",
             "display": "string"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "uri",
+            "display": "uri"
+          },
+          {
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "Attachment",
+            "display": "Attachment"
+          },
+          {
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Coding",
             "display": "Coding"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Quantity",
             "display": "Quantity"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Resource",
             "display": "Resource"
           }
@@ -247,40 +207,60 @@
     {
       "resourceType": "ValueSet",
       "id": "vs6",
-      "name": "Type options for Questionnaire.item.answerOption.value[x]",
+      "name": "Type options for Questionnaire.item.enableWhen.answer[x]",
       "status": "active",
-      "description": "Type options for Questionnaire.item.answerOption.value[x]",
+      "description": "Type options for Questionnaire.item.enableWhen.answer[x]",
       "expansion": {
-        "identifier": "urn:uuid:d3250906-b563-4a95-b929-05bb7cd2fe36",
-        "timestamp": "2022-05-06T17:12:19+00:00",
+        "identifier": "urn:uuid:3203d603-056d-43a0-8284-95bf1bc4a101",
+        "timestamp": "2022-12-14T07:17:21+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "boolean",
+            "display": "boolean"
+          },
+          {
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "decimal",
+            "display": "decimal"
+          },
+          {
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "integer",
             "display": "integer"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "date",
             "display": "date"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "dateTime",
+            "display": "dateTime"
+          },
+          {
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "time",
             "display": "time"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "string",
             "display": "string"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Coding",
             "display": "Coding"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "Quantity",
+            "display": "Quantity"
+          },
+          {
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Resource",
             "display": "Resource"
           }
@@ -290,70 +270,113 @@
     {
       "resourceType": "ValueSet",
       "id": "vs7",
-      "name": "Type options for Questionnaire.item.initial.value[x]",
+      "name": "Type options for Questionnaire.item.answerOption.value[x]",
       "status": "active",
-      "description": "Type options for Questionnaire.item.initial.value[x]",
+      "description": "Type options for Questionnaire.item.answerOption.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:ad540870-231e-4f93-b0ec-ebbe4b22492e",
-        "timestamp": "2022-05-06T17:12:19+00:00",
+        "identifier": "urn:uuid:23c4547c-1301-4154-96b3-a505bad39223",
+        "timestamp": "2022-12-14T07:17:21+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "boolean",
-            "display": "boolean"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "decimal",
-            "display": "decimal"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "integer",
             "display": "integer"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "date",
             "display": "date"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "dateTime",
-            "display": "dateTime"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "time",
             "display": "time"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "string",
             "display": "string"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "uri",
-            "display": "uri"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "Attachment",
-            "display": "Attachment"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Coding",
             "display": "Coding"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "Resource",
+            "display": "Resource"
+          }
+        ]
+      }
+    },
+    {
+      "resourceType": "ValueSet",
+      "id": "vs8",
+      "name": "Type options for Questionnaire.item.initial.value[x]",
+      "status": "active",
+      "description": "Type options for Questionnaire.item.initial.value[x]",
+      "expansion": {
+        "identifier": "urn:uuid:59d8612a-b638-481e-ac7a-68fb19eb633e",
+        "timestamp": "2022-12-14T07:17:21+11:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "boolean",
+            "display": "boolean"
+          },
+          {
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "decimal",
+            "display": "decimal"
+          },
+          {
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "integer",
+            "display": "integer"
+          },
+          {
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "date",
+            "display": "date"
+          },
+          {
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "dateTime",
+            "display": "dateTime"
+          },
+          {
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "time",
+            "display": "time"
+          },
+          {
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "string",
+            "display": "string"
+          },
+          {
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "uri",
+            "display": "uri"
+          },
+          {
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "Attachment",
+            "display": "Attachment"
+          },
+          {
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "Coding",
+            "display": "Coding"
+          },
+          {
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Quantity",
             "display": "Quantity"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Resource",
             "display": "Resource"
           }
@@ -361,14 +384,16 @@
       }
     }
   ],
+  "url": "http://hl7.org/fhir/Questionnaire/qgen-Questionnaire1",
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "status": "draft",
-  "date": "2022-05-06T17:02:42+00:00",
+  "experimental": false,
+  "date": "2022-12-14T07:12:54+11:00",
   "publisher": "Health Level Seven International (FHIR Infrastructure)",
   "item": [
     {
@@ -429,7 +454,7 @@
                 }
               ],
               "linkId": "Questionnaire.id-flyover",
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Within the context of the FHIR RESTful interactions, the resource has an id except for cases like the create and conditional update. Otherwise, the use of the resouce id depends on the given use case.",
               "type": "display"
             },
             {
@@ -621,7 +646,7 @@
                 }
               ],
               "linkId": "Questionnaire.contained-flyover",
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags in their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -813,7 +838,7 @@
                 }
               ],
               "linkId": "Questionnaire.version-flyover",
-              "text": "The identifier that is used to identify this version of the questionnaire when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the questionnaire author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence. There may be different questionnaire instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the questionnaire with the format [url]|[version].",
+              "text": "The identifier that is used to identify this version of the questionnaire when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the questionnaire author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence. There may be different questionnaire instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the questionnaire with the format [url]|[version]. The version SHOULD NOT contain a \u0027#\u0027 - see [Business Version](resource.html#bv-format).",
               "type": "display"
             },
             {
@@ -822,6 +847,88 @@
               "type": "string",
               "required": false,
               "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            }
+          ],
+          "linkId": "Questionnaire.versionAlgorithm[x]",
+          "text": "How to compare versions",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "Questionnaire.versionAlgorithm[x]-flyover",
+              "text": "Indicates the mechanism used to compare versions to determine which is more current. If set as a string, this is a FHIRPath expression that has two additional context variables passed in - %version1 and %version2 and will return a negative number if version1 is newer, a positive number if version2 and a 0 if the version ordering can\u0027t be successfully be determined.",
+              "type": "display"
+            },
+            {
+              "linkId": "Questionnaire.versionAlgorithm[x]._type",
+              "text": "type",
+              "type": "coding",
+              "required": false,
+              "repeats": false,
+              "answerConstraint": "optionsOnly",
+              "answerValueSet": "#vs2",
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "string"
+                    }
+                  ],
+                  "linkId": "Questionnaire.versionAlgorithm[x]._null",
+                  "type": "group",
+                  "item": [
+                    {
+                      "linkId": "Questionnaire.versionAlgorithm[x]._null.value",
+                      "type": "string",
+                      "required": false,
+                      "repeats": false
+                    }
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "Coding"
+                    }
+                  ],
+                  "linkId": "Questionnaire.versionAlgorithm[x]._null",
+                  "type": "group",
+                  "item": [
+                    {
+                      "linkId": "Questionnaire.versionAlgorithm[x]._null.value",
+                      "type": "coding",
+                      "required": false,
+                      "repeats": false,
+                      "answerConstraint": "optionsOnly"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -1119,7 +1226,7 @@
                 }
               ],
               "linkId": "Questionnaire.date-flyover",
-              "text": "The date  (and optionally time) when the questionnaire was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the questionnaire changes. Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the questionnaire. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.",
+              "text": "The date  (and optionally time) when the questionnaire was last significantly changed. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the questionnaire changes. The date is often not tracked until the resource is published, but may be present on draft content. Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the questionnaire. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.",
               "type": "display"
             },
             {
@@ -1163,12 +1270,12 @@
                 }
               ],
               "linkId": "Questionnaire.publisher-flyover",
-              "text": "The name of the organization or individual that published the questionnaire. Usually an organization but may be an individual. The publisher (or steward) of the questionnaire is the organization or individual primarily responsible for the maintenance and upkeep of the questionnaire. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the questionnaire. This item SHOULD be populated unless the information is available from context.",
+              "text": "The name of the organization or individual responsible for the release and ongoing maintenance of the questionnaire. Usually an organization but may be an individual. The publisher (or steward) of the questionnaire is the organization or individual primarily responsible for the maintenance and upkeep of the questionnaire. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the questionnaire. This item SHOULD be populated unless the information is available from context.",
               "type": "display"
             },
             {
               "linkId": "Questionnaire.publisher.value",
-              "text": "Name of the publisher (organization or individual)",
+              "text": "Name of the publisher/steward (organization or individual)",
               "type": "string",
               "required": false,
               "repeats": false
@@ -1240,7 +1347,7 @@
                 }
               ],
               "linkId": "Questionnaire.description-flyover",
-              "text": "A free text natural language description of the questionnaire from a consumer\u0027s perspective. This description can be used to capture details such as why the questionnaire was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the questionnaire as conveyed in the \u0027text\u0027 field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the questionnaire is presumed to be the predominant language in the place the questionnaire was created).",
+              "text": "A free text natural language description of the questionnaire from a consumer\u0027s perspective. This description can be used to capture details such as comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the questionnaire as conveyed in the \u0027text\u0027 field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the questionnaire is presumed to be the predominant language in the place the questionnaire was created).",
               "type": "display"
             },
             {
@@ -1410,12 +1517,56 @@
                 }
               ],
               "linkId": "Questionnaire.copyright-flyover",
-              "text": "A copyright statement relating to the questionnaire and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the questionnaire.",
+              "text": "A copyright statement relating to the questionnaire and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the questionnaire. ...",
               "type": "display"
             },
             {
               "linkId": "Questionnaire.copyright.value",
               "text": "Use and/or publishing restrictions",
+              "type": "string",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "string"
+            }
+          ],
+          "linkId": "Questionnaire.copyrightLabel",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "Questionnaire.copyrightLabel-flyover",
+              "text": "A short string (\u003c50 characters), suitable for inclusion in a page footer that identifies the copyright holder, effective period, and optionally whether rights are resctricted. (e.g. \u0027All rights reserved\u0027, \u0027Some rights reserved\u0027). The (c) symbol should NOT be included in this string. It will be added by software when rendering the notation. Full details about licensing, restrictions, warrantees, etc. goes in the more general \u0027copyright\u0027 element.",
+              "type": "display"
+            },
+            {
+              "linkId": "Questionnaire.copyrightLabel.value",
+              "text": "Copyright holder and year(s)",
               "type": "string",
               "required": false,
               "repeats": false
@@ -1814,7 +1965,7 @@
                     }
                   ],
                   "linkId": "Questionnaire.item.definition-flyover",
-                  "text": "This element is a URI that refers to an [ElementDefinition](elementdefinition.html) that provides information about this item, including information that might otherwise be included in the instance of the Questionnaire resource. A detailed description of the construction of the URI is shown in [Comments](questionnaire.html#definition), below. The uri refers to an ElementDefinition in a [StructureDefinition](structuredefinition.html#) and always starts with the [canonical URL](references.html#canonical) for the target resource. When referring to a StructureDefinition, a fragment identifier is used to specify the element definition by its id [Element.id](types-definitions.html#Element.id). E.g. http://hl7.org/fhir/StructureDefinition/Observation#Observation.value[x]. In the absence of a fragment identifier, the first/root element definition in the target is the matching element definition.",
+                  "text": "This element is a URI that refers to an [ElementDefinition](elementdefinition.html) or to an [ObservationDefinition](observationdefinition.html) that provides information about this item, including information that might otherwise be included in the instance of the Questionnaire resource. A detailed description of the construction of the URI is shown in [Comments](questionnaire.html#definition), below. The uri refers to an ElementDefinition in a [StructureDefinition](structuredefinition.html#) or to an [ObservationDefinition](observationdefinition.html) and always starts with the [canonical URL](references.html#canonical) for the target resource. When referring to a StructureDefinition, a fragment identifier is used to specify the element definition by its id [Element.id](types-definitions.html#Element.id). E.g. http://hl7.org/fhir/StructureDefinition/Observation#Observation.value[x]. In the absence of a fragment identifier, the first/root element definition in the target is the matching element definition.",
                   "type": "display"
                 },
                 {
@@ -2013,7 +2164,7 @@
               "item": [
                 {
                   "linkId": "Questionnaire.item.enableWhen-display",
-                  "text": "If multiple repetitions of this extension are present, the interpretation is driven by enableBehavior (either all repetitions must evaluate to true for this item to be enabled, or only one must evaluate to true for the item to be  enabled).  If the enableWhen.question has multiple answers, the condition evaluates to true if *any* of the answers for the referenced item match the enableWhen condition.  This element is a modifier because if enableWhen is present for an item, \"required\" is ignored unless one of the enableWhen conditions is met. When an item is disabled, all of its descendants are disabled, regardless of what their own enableWhen logic might evaluate to.  If enableWhen logic depends on an item that is disabled, the logic should proceed as though the item is not valued - even if a default value or other value might be retained in memory in the event of the item being re-enabled.",
+                  "text": "If multiple repetitions of this extension are present, the interpretation is driven by enableBehavior (either all repetitions must evaluate to true for this item to be enabled, or only one must evaluate to true for the item to be enabled).  If the enableWhen.question has multiple answers, the condition evaluates to true if *any* of the answers for the referenced item match the enableWhen condition.  This element is a modifier because if enableWhen is present for an item, \"required\" is ignored unless one of the enableWhen conditions is met. When an item is disabled, all of its descendants are disabled, regardless of what their own enableWhen logic might evaluate to.  If enableWhen logic depends on an item that is disabled, the logic should proceed as though the item is not valued - even if a default value or other value might be retained in memory in the event of the item being re-enabled.  In some cases, the comparison between the indicated answer and the specified value may differ only by precision.  For example, the enableWhen might be Q1 \u003e 1970, but the answer to Q1 is 1970-10-15.  There is not a clear answer as to whether 1970-10-15 should be considered \u0027greater\u0027 than 1970, given that it is an imprecise value.  In these indeterminate situations, the form filler has the option of refusing to render the form.  If the form **is** displayed, items where enableWhen is indeterminate SHOULD be treated as enabled with a warning indicating that the questionnaire logic was faulty and it is possible that the item should not be enabled.  Questionnaires SHOULD be designed to take into account challenges around varying precision to minimize non-deterministic situations by setting constraints around expected precision, etc.",
                   "type": "display"
                 },
                 {
@@ -2275,7 +2426,7 @@
                       "required": false,
                       "repeats": false,
                       "answerConstraint": "optionsOnly",
-                      "answerValueSet": "#vs2",
+                      "answerValueSet": "#vs3",
                       "item": [
                         {
                           "extension": [
@@ -2483,8 +2634,8 @@
                             {
                               "extension": [
                                 {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                                  "valueCode": "Resource"
+                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                                  "valueCode": "Resource, Resource"
                                 },
                                 {
                                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -2626,7 +2777,7 @@
                     }
                   ],
                   "linkId": "Questionnaire.item.required-flyover",
-                  "text": "An indication, if true, that the item must be present in a \"completed\" QuestionnaireResponse.  If false, the item may be skipped when answering the questionnaire. Questionnaire.item.required only has meaning for elements that are conditionally enabled with enableWhen if the condition evaluates to true.  It also only has meaning if the parent element is present.  If a non-required \u0027group\u0027 item contains a \u0027required\u0027 question item, it\u0027s completely fine to omit the group (because it\u0027s not required) despite it having a required child.  Similarly, if an item that contains other items is marked as required, that does not automatically make the contained elements required (though required groups must contain at least one descendant item with a populated answer). The value for \u0027required\u0027 may come from the ElementDefinition referred to by .definition.",
+                  "text": "An indication, if true, that the item must be present in a \"completed\" QuestionnaireResponse.  If false, the item may be skipped when answering the questionnaire. If the required item is a question, it must have a direct answer (i.e. an answer to the question itself, not merely answers to child questions) in order for the QuestionnaireResponse to be complete.  If the required item is a group, it must have at least one descendant question which has an answer  Questionnaire.item.required only has meaning for elements that are conditionally enabled with enableWhen if the condition evaluates to true.  It also only has meaning if the parent element is present.  If a non-required \u0027group\u0027 item contains a \u0027required\u0027 question item, it\u0027s completely fine to omit the group (because it\u0027s not required) despite it having a required child.  Similarly, if an item that contains other items is marked as required, that does not automatically make the contained elements required (though required groups must contain at least one descendant item with a populated answer). The value for \u0027required\u0027 may come from the ElementDefinition referred to by .definition.",
                   "type": "display"
                 },
                 {
@@ -2670,7 +2821,7 @@
                     }
                   ],
                   "linkId": "Questionnaire.item.repeats-flyover",
-                  "text": "An indication, if true, that the item may occur multiple times in the response, collecting multiple answers for questions or multiple sets of answers for groups. If a question is marked as repeats\u003dtrue, then multiple answers can be provided for the question in the corresponding QuestionnaireResponse.  When rendering the questionnaire, it is up to the rendering software whether to render the question text for each answer repetition (i.e. \"repeat the question\") or to simply allow entry/selection of multiple answers for the question (repeat the answers).  Which is most appropriate visually may depend on the type of answer as well as whether there are nested items.\n\nThe resulting QuestionnaireResponse will be populated the same way regardless of rendering - one \u0027question\u0027 item with multiple answer values.\n\n The value may come from the ElementDefinition referred to by .definition.",
+                  "text": "An indication, if true, that a QuestionnaireResponse for this item may include multiple answers associated with a single instance of this item (for question-type items) or multiple repetitions of the item (for group-type items). If a question is marked as repeats\u003dtrue, then multiple answers can be provided for the question in the corresponding QuestionnaireResponse.  When rendering the questionnaire, it is up to the rendering software whether to render the question text for each answer repetition (i.e. \"repeat the question\") or to simply allow entry/selection of multiple answers for the question (repeat the answers).  Which is most appropriate visually may depend on the type of answer as well as whether there are nested items.\n\nThe resulting QuestionnaireResponse will be populated the same way regardless of rendering - one \u0027question\u0027 item with multiple answer values.\n\n The value may come from the ElementDefinition referred to by .definition.  When repeats\u003dtrue for a group, it\u0027ll be represented with multiple items with the same linkId in the QuestionnaireResponse.  For a question, it\u0027ll be represented by a single item with that linkId with multiple answers.",
                   "type": "display"
                 },
                 {
@@ -2847,7 +2998,7 @@
                     }
                   ],
                   "linkId": "Questionnaire.item.answerValueSet-flyover",
-                  "text": "A reference to a value set containing a list of values representing permitted answers for a question. LOINC defines many useful value sets for questionnaire responses. See [LOINC Answer Lists](loinc.html#alist). The value may come from the ElementDefinition referred to by .definition.",
+                  "text": "A reference to a value set containing a list of values representing permitted answers for a question. LOINC defines many useful value sets for questionnaire responses. See [LOINC Answer Lists](https://terminology.hl7.org/LOINC.html). The value may come from the ElementDefinition referred to by .definition.",
                   "type": "display"
                 },
                 {
@@ -3033,7 +3184,7 @@
                       "required": false,
                       "repeats": false,
                       "answerConstraint": "optionsOnly",
-                      "answerValueSet": "#vs3",
+                      "answerValueSet": "#vs4",
                       "item": [
                         {
                           "extension": [
@@ -3139,8 +3290,8 @@
                             {
                               "extension": [
                                 {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                                  "valueCode": "Resource"
+                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                                  "valueCode": "Resource, Resource"
                                 },
                                 {
                                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -3378,7 +3529,7 @@
                       "required": false,
                       "repeats": false,
                       "answerConstraint": "optionsOnly",
-                      "answerValueSet": "#vs4",
+                      "answerValueSet": "#vs5",
                       "item": [
                         {
                           "extension": [
@@ -3614,8 +3765,8 @@
                             {
                               "extension": [
                                 {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                                  "valueCode": "Resource"
+                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                                  "valueCode": "Resource, Resource"
                                 },
                                 {
                                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -3846,7 +3997,7 @@
                         }
                       ],
                       "linkId": "Questionnaire.item.definition-flyover",
-                      "text": "This element is a URI that refers to an [ElementDefinition](elementdefinition.html) that provides information about this item, including information that might otherwise be included in the instance of the Questionnaire resource. A detailed description of the construction of the URI is shown in [Comments](questionnaire.html#definition), below. The uri refers to an ElementDefinition in a [StructureDefinition](structuredefinition.html#) and always starts with the [canonical URL](references.html#canonical) for the target resource. When referring to a StructureDefinition, a fragment identifier is used to specify the element definition by its id [Element.id](types-definitions.html#Element.id). E.g. http://hl7.org/fhir/StructureDefinition/Observation#Observation.value[x]. In the absence of a fragment identifier, the first/root element definition in the target is the matching element definition.",
+                      "text": "This element is a URI that refers to an [ElementDefinition](elementdefinition.html) or to an [ObservationDefinition](observationdefinition.html) that provides information about this item, including information that might otherwise be included in the instance of the Questionnaire resource. A detailed description of the construction of the URI is shown in [Comments](questionnaire.html#definition), below. The uri refers to an ElementDefinition in a [StructureDefinition](structuredefinition.html#) or to an [ObservationDefinition](observationdefinition.html) and always starts with the [canonical URL](references.html#canonical) for the target resource. When referring to a StructureDefinition, a fragment identifier is used to specify the element definition by its id [Element.id](types-definitions.html#Element.id). E.g. http://hl7.org/fhir/StructureDefinition/Observation#Observation.value[x]. In the absence of a fragment identifier, the first/root element definition in the target is the matching element definition.",
                       "type": "display"
                     },
                     {
@@ -4037,7 +4188,7 @@
                   ]
                 },
                 {
-                  "linkId": "Questionnaire.item.enableWhen",
+                  "linkId": "Questionnaire.item.item.enableWhen",
                   "text": "Only allow data when",
                   "type": "group",
                   "required": false,
@@ -4045,7 +4196,7 @@
                   "item": [
                     {
                       "linkId": "Questionnaire.item.enableWhen-display",
-                      "text": "If multiple repetitions of this extension are present, the interpretation is driven by enableBehavior (either all repetitions must evaluate to true for this item to be enabled, or only one must evaluate to true for the item to be  enabled).  If the enableWhen.question has multiple answers, the condition evaluates to true if *any* of the answers for the referenced item match the enableWhen condition.  This element is a modifier because if enableWhen is present for an item, \"required\" is ignored unless one of the enableWhen conditions is met. When an item is disabled, all of its descendants are disabled, regardless of what their own enableWhen logic might evaluate to.  If enableWhen logic depends on an item that is disabled, the logic should proceed as though the item is not valued - even if a default value or other value might be retained in memory in the event of the item being re-enabled.",
+                      "text": "If multiple repetitions of this extension are present, the interpretation is driven by enableBehavior (either all repetitions must evaluate to true for this item to be enabled, or only one must evaluate to true for the item to be enabled).  If the enableWhen.question has multiple answers, the condition evaluates to true if *any* of the answers for the referenced item match the enableWhen condition.  This element is a modifier because if enableWhen is present for an item, \"required\" is ignored unless one of the enableWhen conditions is met. When an item is disabled, all of its descendants are disabled, regardless of what their own enableWhen logic might evaluate to.  If enableWhen logic depends on an item that is disabled, the logic should proceed as though the item is not valued - even if a default value or other value might be retained in memory in the event of the item being re-enabled.  In some cases, the comparison between the indicated answer and the specified value may differ only by precision.  For example, the enableWhen might be Q1 \u003e 1970, but the answer to Q1 is 1970-10-15.  There is not a clear answer as to whether 1970-10-15 should be considered \u0027greater\u0027 than 1970, given that it is an imprecise value.  In these indeterminate situations, the form filler has the option of refusing to render the form.  If the form **is** displayed, items where enableWhen is indeterminate SHOULD be treated as enabled with a warning indicating that the questionnaire logic was faulty and it is possible that the item should not be enabled.  Questionnaires SHOULD be designed to take into account challenges around varying precision to minimize non-deterministic situations by setting constraints around expected precision, etc.",
                       "type": "display"
                     },
                     {
@@ -4307,7 +4458,7 @@
                           "required": false,
                           "repeats": false,
                           "answerConstraint": "optionsOnly",
-                          "answerValueSet": "#vs5",
+                          "answerValueSet": "#vs6",
                           "item": [
                             {
                               "extension": [
@@ -4515,8 +4666,8 @@
                                 {
                                   "extension": [
                                     {
-                                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                                      "valueCode": "Resource"
+                                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                                      "valueCode": "Resource, Resource"
                                     },
                                     {
                                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -4658,7 +4809,7 @@
                         }
                       ],
                       "linkId": "Questionnaire.item.required-flyover",
-                      "text": "An indication, if true, that the item must be present in a \"completed\" QuestionnaireResponse.  If false, the item may be skipped when answering the questionnaire. Questionnaire.item.required only has meaning for elements that are conditionally enabled with enableWhen if the condition evaluates to true.  It also only has meaning if the parent element is present.  If a non-required \u0027group\u0027 item contains a \u0027required\u0027 question item, it\u0027s completely fine to omit the group (because it\u0027s not required) despite it having a required child.  Similarly, if an item that contains other items is marked as required, that does not automatically make the contained elements required (though required groups must contain at least one descendant item with a populated answer). The value for \u0027required\u0027 may come from the ElementDefinition referred to by .definition.",
+                      "text": "An indication, if true, that the item must be present in a \"completed\" QuestionnaireResponse.  If false, the item may be skipped when answering the questionnaire. If the required item is a question, it must have a direct answer (i.e. an answer to the question itself, not merely answers to child questions) in order for the QuestionnaireResponse to be complete.  If the required item is a group, it must have at least one descendant question which has an answer  Questionnaire.item.required only has meaning for elements that are conditionally enabled with enableWhen if the condition evaluates to true.  It also only has meaning if the parent element is present.  If a non-required \u0027group\u0027 item contains a \u0027required\u0027 question item, it\u0027s completely fine to omit the group (because it\u0027s not required) despite it having a required child.  Similarly, if an item that contains other items is marked as required, that does not automatically make the contained elements required (though required groups must contain at least one descendant item with a populated answer). The value for \u0027required\u0027 may come from the ElementDefinition referred to by .definition.",
                       "type": "display"
                     },
                     {
@@ -4702,7 +4853,7 @@
                         }
                       ],
                       "linkId": "Questionnaire.item.repeats-flyover",
-                      "text": "An indication, if true, that the item may occur multiple times in the response, collecting multiple answers for questions or multiple sets of answers for groups. If a question is marked as repeats\u003dtrue, then multiple answers can be provided for the question in the corresponding QuestionnaireResponse.  When rendering the questionnaire, it is up to the rendering software whether to render the question text for each answer repetition (i.e. \"repeat the question\") or to simply allow entry/selection of multiple answers for the question (repeat the answers).  Which is most appropriate visually may depend on the type of answer as well as whether there are nested items.\n\nThe resulting QuestionnaireResponse will be populated the same way regardless of rendering - one \u0027question\u0027 item with multiple answer values.\n\n The value may come from the ElementDefinition referred to by .definition.",
+                      "text": "An indication, if true, that a QuestionnaireResponse for this item may include multiple answers associated with a single instance of this item (for question-type items) or multiple repetitions of the item (for group-type items). If a question is marked as repeats\u003dtrue, then multiple answers can be provided for the question in the corresponding QuestionnaireResponse.  When rendering the questionnaire, it is up to the rendering software whether to render the question text for each answer repetition (i.e. \"repeat the question\") or to simply allow entry/selection of multiple answers for the question (repeat the answers).  Which is most appropriate visually may depend on the type of answer as well as whether there are nested items.\n\nThe resulting QuestionnaireResponse will be populated the same way regardless of rendering - one \u0027question\u0027 item with multiple answer values.\n\n The value may come from the ElementDefinition referred to by .definition.  When repeats\u003dtrue for a group, it\u0027ll be represented with multiple items with the same linkId in the QuestionnaireResponse.  For a question, it\u0027ll be represented by a single item with that linkId with multiple answers.",
                       "type": "display"
                     },
                     {
@@ -4879,7 +5030,7 @@
                         }
                       ],
                       "linkId": "Questionnaire.item.answerValueSet-flyover",
-                      "text": "A reference to a value set containing a list of values representing permitted answers for a question. LOINC defines many useful value sets for questionnaire responses. See [LOINC Answer Lists](loinc.html#alist). The value may come from the ElementDefinition referred to by .definition.",
+                      "text": "A reference to a value set containing a list of values representing permitted answers for a question. LOINC defines many useful value sets for questionnaire responses. See [LOINC Answer Lists](https://terminology.hl7.org/LOINC.html). The value may come from the ElementDefinition referred to by .definition.",
                       "type": "display"
                     },
                     {
@@ -4892,7 +5043,7 @@
                   ]
                 },
                 {
-                  "linkId": "Questionnaire.item.answerOption",
+                  "linkId": "Questionnaire.item.item.answerOption",
                   "text": "Permitted answer",
                   "type": "group",
                   "required": false,
@@ -5065,7 +5216,7 @@
                           "required": false,
                           "repeats": false,
                           "answerConstraint": "optionsOnly",
-                          "answerValueSet": "#vs6",
+                          "answerValueSet": "#vs7",
                           "item": [
                             {
                               "extension": [
@@ -5171,8 +5322,8 @@
                                 {
                                   "extension": [
                                     {
-                                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                                      "valueCode": "Resource"
+                                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                                      "valueCode": "Resource, Resource"
                                     },
                                     {
                                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -5237,7 +5388,7 @@
                   ]
                 },
                 {
-                  "linkId": "Questionnaire.item.initial",
+                  "linkId": "Questionnaire.item.item.initial",
                   "text": "Initial value(s) when item is first rendered",
                   "type": "group",
                   "required": false,
@@ -5410,7 +5561,7 @@
                           "required": false,
                           "repeats": false,
                           "answerConstraint": "optionsOnly",
-                          "answerValueSet": "#vs7",
+                          "answerValueSet": "#vs8",
                           "item": [
                             {
                               "extension": [
@@ -5646,8 +5797,8 @@
                                 {
                                   "extension": [
                                     {
-                                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                                      "valueCode": "Resource"
+                                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                                      "valueCode": "Resource, Resource"
                                     },
                                     {
                                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -5673,14 +5824,5 @@
         }
       ]
     }
-  ],
-  "meta": {
-    "tag": [
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-        "code": "HTEST",
-        "display": "test health data"
-      }
-    ]
-  }
+  ]
 }

@@ -738,6 +738,62 @@ class BundleEntry with _$BundleEntry {
     BundleResponse? response,
   }) = _BundleEntry;
 
+  factory BundleEntry.get(String resourcePath, [FhirUri? canonicalBaseUrl]) =>
+      BundleEntry(
+          fullUrl: canonicalBaseUrl == null
+              ? null
+              : FhirUri('$canonicalBaseUrl/$resourcePath'),
+          request: BundleRequest(
+            method: Code('GET'),
+            url: FhirUri(resourcePath),
+          ));
+
+  factory BundleEntry.post(Resource resource, [FhirUri? canonicalBaseUrl]) =>
+      BundleEntry(
+          resource: resource,
+          fullUrl: canonicalBaseUrl == null
+              ? null
+              : FhirUri('$canonicalBaseUrl/${resource.path}'),
+          request: BundleRequest(
+            method: Code('POST'),
+            url: FhirUri(resource.path),
+          ));
+
+  factory BundleEntry.put(Resource resource, [FhirUri? canonicalBaseUrl]) =>
+      BundleEntry(
+          resource: resource,
+          fullUrl: canonicalBaseUrl == null
+              ? null
+              : FhirUri('$canonicalBaseUrl/${resource.path}'),
+          request: BundleRequest(
+            method: Code('PUT'),
+            url: FhirUri(resource.path),
+          ));
+
+  factory BundleEntry.delete(
+    String resourcePath, [
+    FhirUri? canonicalBaseUrl,
+  ]) =>
+      BundleEntry(
+          fullUrl: canonicalBaseUrl == null
+              ? null
+              : FhirUri('$canonicalBaseUrl/$resourcePath'),
+          request: BundleRequest(
+            method: Code('DELETE'),
+            url: FhirUri(resourcePath),
+          ));
+
+  factory BundleEntry.patch(Resource resource, [FhirUri? canonicalBaseUrl]) =>
+      BundleEntry(
+          resource: resource,
+          fullUrl: canonicalBaseUrl == null
+              ? null
+              : FhirUri('$canonicalBaseUrl/${resource.path}'),
+          request: BundleRequest(
+            method: Code('PATCH'),
+            url: FhirUri(resource.path),
+          ));
+
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
@@ -2322,6 +2378,9 @@ class OperationOutcome with Resource, _$OperationOutcome {
     ///  system action.
     required List<OperationOutcomeIssue> issue,
   }) = _OperationOutcome;
+
+  bool get isInformational =>
+      issue.first.code.toString().toLowerCase() == 'informational';
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory OperationOutcome.fromYaml(dynamic yaml) => yaml is String

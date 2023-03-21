@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?><MedicationDispense xmlns="http://hl7.org/fhir">
+    <id value="meddisp0303"/>
+    <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: MedicationDispense</b><a name="meddisp0303"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource MedicationDispense "meddisp0303" </p></div><p><b>partOf</b>: <a href="procedure-example-biopsy.html">Procedure/biopsy</a></p><p><b>status</b>: on-hold</p><h3>NotPerformedReasons</h3><table class="grid"><tr><td>-</td><td><b>Reference</b></td></tr><tr><td>*</td><td><a href="detectedissue-example-allergy.html">DetectedIssue/allergy</a></td></tr></table><p><b>category</b>: Outpatient <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (medicationdispense-category#outpatient)</span></p><h3>Medications</h3><table class="grid"><tr><td>-</td><td><b>Reference</b></td></tr><tr><td>*</td><td><span title="  Linked to a RESOURCE Medication  "><a name="med0310"> </a></span><blockquote><p/><p><a name="med0310"> </a></p><p><b>code</b>: Oxycodone Hydrochloride 5mg oral tablet (Roxicodone <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-rxNorm.html">RxNorm</a>#1049623)</span></p></blockquote></td></tr></table><p><b>subject</b>: <a href="patient-example-a.html">Patient/pat1: Donald Duck</a> "Donald DUCK"</p><p><b>encounter</b>: <a href="encounter-example-f001-heart.html">Encounter/f001</a></p><h3>Performers</h3><table class="grid"><tr><td>-</td><td><b>Actor</b></td></tr><tr><td>*</td><td><a href="practitioner-example-f006-rvdb.html">Practitioner/f006</a> "Rob VAN DEN BERK"</td></tr></table><p><b>authorizingPrescription</b>: <a href="medicationrequest0310.html">MedicationRequest/medrx0310</a></p><p><b>type</b>: Emergency Supply <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-ActCode.html">ActCode</a>#EM)</span></p><p><b>quantity</b>: 30(unit TAB from http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm)<span style="background: LightGoldenRodYellow"> (Details: http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm code TAB = 'Tablet')</span></p><p><b>daysSupply</b>: 10 Day<span style="background: LightGoldenRodYellow"> (Details: UCUM code d = 'd')</span></p><p><b>whenPrepared</b>: 2016-04-15T07:14:00+05:00</p><h3>DosageInstructions</h3><table class="grid"><tr><td>-</td><td><b>Sequence</b></td><td><b>Text</b></td><td><b>AdditionalInstruction</b></td><td><b>Timing</b></td><td><b>AsNeededFor</b></td><td><b>Route</b></td><td><b>Method</b></td></tr><tr><td>*</td><td>1</td><td>one to two tablets every 4-6 hours as needed for rib pain</td><td>Warning. May cause drowsiness. If affected do not drive or operate machinery. Avoid alcoholic drink (qualifier value) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#418914006)</span></td><td>Once per 4-6 hours</td><td>Rib Pain (finding) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#297217002)</span></td><td>Oral Route <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#26643006)</span></td><td>Swallow - dosing instruction imperative (qualifier value) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#421521009)</span></td></tr></table></div></text><contained>
+        <Medication>
+            <id value="med0310"/>
+            <code>
+                <coding>
+                    <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+                    <code value="1049623"/>
+                    <display value="Oxycodone Hydrochloride 5mg oral tablet (Roxicodone"/>
+                </coding>
+            </code>
+        </Medication>
+    </contained>
+    <partOf>
+        <reference value="Procedure/biopsy"/>
+    </partOf>
+   <status value="on-hold"/>
+    <notPerformedReason>
+        <reference>
+            <reference value="DetectedIssue/allergy"/>
+        </reference>
+    </notPerformedReason>
+    <category>
+        <coding>
+            <system value="http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-category"/>
+            <code value="outpatient"/>
+            <display value="Outpatient"/>
+        </coding>
+    </category>
+    <medication>
+            <!--   Linked to a RESOURCE Medication   -->
+        <reference>
+        <reference value="#med0310"/>
+        </reference>
+    </medication>
+    <subject>
+        <reference value="Patient/pat1"/>
+        <display value="Donald Duck"/>  
+    </subject>
+    <encounter>
+        <reference value="Encounter/f001"/>
+    </encounter>
+    <performer>
+        <actor>
+            <reference value="Practitioner/f006"/>
+        </actor>
+    </performer>
+    <authorizingPrescription>
+        <reference value="MedicationRequest/medrx0310"/>
+    </authorizingPrescription>
+    <type>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+            <code value="EM"/>
+            <display value="Emergency Supply"/>
+        </coding>
+    </type>
+    <quantity>
+        <value value="30"/>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"/>
+        <code value="TAB"/>
+    </quantity>
+    <daysSupply>
+        <value value="10"/>
+        <unit value="Day"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="d"/>
+    </daysSupply>
+    <whenPrepared value="2016-04-15T07:14:00+05:00"/>
+    <dosageInstruction>
+        <sequence value="1"/>
+        <text value="one to two tablets every 4-6 hours as needed for rib pain"/>
+        <additionalInstruction>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="418914006"/>
+                <display value="Warning. May cause drowsiness. If affected do not drive or operate machinery. Avoid alcoholic drink (qualifier value)"/>
+            </coding>
+        </additionalInstruction>
+        <timing>
+            <repeat>
+                <frequency value="1"/>
+                <period value="4"/>
+                <periodMax value="6"/>
+                <periodUnit value="h"/>
+            </repeat>
+        </timing>
+        <asNeededFor>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="297217002"/>
+                <display value="Rib Pain (finding)"/>
+            </coding>
+        </asNeededFor>
+        <route>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="26643006"/>
+                <display value="Oral Route"/>
+            </coding>
+        </route>
+        <method>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="421521009"/>
+                <display value="Swallow - dosing instruction imperative (qualifier value)"/>
+            </coding>
+        </method>
+    </dosageInstruction>
+    
+
+</MedicationDispense>

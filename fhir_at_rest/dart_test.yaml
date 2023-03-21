@@ -1,0 +1,13 @@
+tags:
+  uri:
+  read:
+  vread:
+  transaction:
+  history:
+  update:
+  patch:
+  delete:
+  create:
+  capabilities:
+  operation:
+  search:

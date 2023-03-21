@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<OperationDefinition xmlns="http://hl7.org/fhir">
+  <id value="Subscription-events"/>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>URL: [base]/Subscription/[id]/$events</p>
+      <p>Parameters</p>
+      <table class="grid">
+        <tr>
+          <td>
+            <b>Use</b>
+          </td>
+          <td>
+            <b>Name</b>
+          </td>
+          <td>
+            <b>Cardinality</b>
+          </td>
+          <td>
+            <b>Type</b>
+          </td>
+          <td>
+            <b>Binding</b>
+          </td>
+          <td>
+            <b>Documentation</b>
+          </td>
+        </tr>
+        <tr>
+          <td>IN</td>
+          <td>eventsSinceNumber</td>
+          <td>0..1</td>
+          <td>
+            <a href="datatypes.html#integer64">integer64</a>
+          </td>
+          <td/>
+          <td>
+            <div>
+              <p>The starting event number, inclusive of this event (lower bound).</p>
+
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>IN</td>
+          <td>eventsUntilNumber</td>
+          <td>0..1</td>
+          <td>
+            <a href="datatypes.html#integer64">integer64</a>
+          </td>
+          <td/>
+          <td>
+            <div>
+              <p>The ending event number, inclusive of this event (upper bound).</p>
+
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>IN</td>
+          <td>content</td>
+          <td>0..1</td>
+          <td>
+            <a href="datatypes.html#code">code</a>
+          </td>
+          <td/>
+          <td>
+            <div>
+              <p>Requested content style of returned data. Codes from backport-content-value-set (e.g., empty, id-only, full-resource). This is a hint to the server what a client would prefer, and MAY be ignored.</p>
+
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>OUT</td>
+          <td>return</td>
+          <td>1..1</td>
+          <td>
+            <a href="bundle.html">Bundle</a>
+          </td>
+          <td/>
+          <td>
+            <div>
+              <p>The operation returns a valid notification bundle, with the first entry being a SubscriptionStatus resource. The bundle type is &quot;subscription-notification&quot;.</p>
+
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div/>
+    </div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="0"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use"/>
+  </extension>
+  <url value="http://hl7.org/fhir/OperationDefinition/Subscription-events"/>
+  <version value="5.0.0-snapshot3"/>
+  <name value="Events"/>
+  <title value="Search and retrieve prior events for a Subscription"/>
+  <status value="draft"/>
+  <kind value="operation"/>
+  <experimental value="false"/>
+  <date value="2022-12-14T07:12:54+11:00"/>
+  <publisher value="HL7 (FHIR Project)"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.org/fhir"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="fhir@lists.hl7.org"/>
+    </telecom>
+  </contact>
+  <description value="This operation is used to search for and return notifications that have been previously triggered by a topic-based Subscription."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <affectsState value="false"/>
+  <code value="events"/>
+  <resource value="Subscription"/>
+  <system value="false"/>
+  <type value="false"/>
+  <instance value="true"/>
+  <parameter>
+    <name value="eventsSinceNumber"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="The starting event number, inclusive of this event (lower bound)."/>
+    <type value="integer64"/>
+  </parameter>
+  <parameter>
+    <name value="eventsUntilNumber"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="The ending event number, inclusive of this event (upper bound)."/>
+    <type value="integer64"/>
+  </parameter>
+  <parameter>
+    <name value="content"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="Requested content style of returned data. Codes from backport-content-value-set (e.g., empty, id-only, full-resource). This is a hint to the server what a client would prefer, and MAY be ignored."/>
+    <type value="code"/>
+  </parameter>
+  <parameter>
+    <name value="return"/>
+    <use value="out"/>
+    <min value="1"/>
+    <max value="1"/>
+    <documentation value="The operation returns a valid notification bundle, with the first entry being a SubscriptionStatus resource. The bundle type is &quot;subscription-notification&quot;."/>
+    <type value="Bundle"/>
+  </parameter>
+</OperationDefinition>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="integer64"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">to do</div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="normative"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+    <valueCode value="4.0.0"/>
+  </extension>
+  <url value="http://hl7.org/fhir/StructureDefinition/integer64"/>
+  <version value="5.0.0-snapshot3"/>
+  <name value="integer64"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2022-12-14T07:12:54+11:00"/>
+  <publisher value="HL7 FHIR Standard"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.org/fhir"/>
+    </telecom>
+  </contact>
+  <description value="integer64 Type: A very large whole number"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <fhirVersion value="5.0.0-snapshot3"/>
+  <kind value="primitive-type"/>
+  <abstract value="false"/>
+  <type value="integer64"/>
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/PrimitiveType"/>
+  <derivation value="specialization"/>
+  <snapshot>
+    <element id="integer64">
+      <path value="integer64"/>
+      <short value="Primitive Type integer64"/>
+      <definition value="A very large whole number"/>
+      <comment value="Typically this is used for record counters (e.g. database keys)"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="integer64"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="integer64.id">
+      <path value="integer64.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <definition value="unique id for the element within a resource (for internal references)"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Element.id"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="string"/>
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.String"/>
+      </type>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="integer64.extension">
+      <path value="integer64.extension"/>
+      <short value="Additional content defined by implementations"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Element.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="integer64.value">
+      <path value="integer64.value"/>
+      <representation value="xmlAttr"/>
+      <short value="Primitive value for integer64"/>
+      <definition value="The actual value"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="integer64.value"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <!-- Note: special primitive values have a FHIRPath system type. e.g. this is compiler magic (c) -->
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="integer64"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/regex">
+          <valueString value="-?([0]|([1-9][0-9]*))"/>
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.Integer"/>
+      </type>
+      <minValueInteger64 value="-9223372036854775808"/>
+      <maxValueInteger64 value="9223372036854775807"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="integer64">
+      <path value="integer64"/>
+      <short value="Primitive Type integer64"/>
+      <definition value="A very large whole number"/>
+      <comment value="Typically this is used for record counters (e.g. database keys)"/>
+      <min value="0"/>
+      <max value="*"/>
+    </element>
+    <element id="integer64.value">
+      <path value="integer64.value"/>
+      <representation value="xmlAttr"/>
+      <short value="Primitive value for integer64"/>
+      <definition value="Primitive value for integer64"/>
+      <min value="0"/>
+      <max value="1"/>
+      <!-- Note: special primitive values have a FHIRPath system type. e.g. this is compiler magic (a) -->
+      <!-- Note: special primitive values have a FHIRPath system type. e.g. this is compiler magic (b) -->
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="integer64"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/regex">
+          <valueString value="-?([0]|([1-9][0-9]*))"/>
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.Integer"/>
+      </type>
+      <minValueInteger64 value="-9223372036854775808"/>
+      <maxValueInteger64 value="9223372036854775807"/>
+    </element>
+  </differential>
+</StructureDefinition>

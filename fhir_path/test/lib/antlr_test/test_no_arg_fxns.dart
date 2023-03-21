@@ -776,7 +776,7 @@ void testNoArgFxns() {
               pathExpression: "'4 days'.toQuantity()"),
           [FhirPathQuantity(4, 'days')]);
 
-      // ToDo: toQuantity - more units
+      // TODO(Dokotela):  toQuantity - more units
       // expect(
       //     walkFhirPath(
       //         context: resource.toJson(),
@@ -1234,7 +1234,7 @@ void testNoArgFxns() {
           ]);
     });
 
-    /// ToDo: descendants
+    // TODO(Dokotela):  descendants
 
     test('DateTimeFunctions', () {
       final startNow = DateTime.now();

@@ -1,6 +1,6 @@
 {
   "resourceType": "Questionnaire",
-  "id": "qs1",
+  "id": "qgen-Substance1",
   "contained": [
     {
       "resourceType": "ValueSet",
@@ -9,16 +9,16 @@
       "status": "active",
       "description": "Type options for Substance.ingredient.substance[x]",
       "expansion": {
-        "identifier": "urn:uuid:fc19a1bf-c3a0-4e49-876f-a05ac1bcc2cc",
-        "timestamp": "2022-05-06T17:12:36+00:00",
+        "identifier": "urn:uuid:87d1625c-f532-49b9-9089-5a89c075e364",
+        "timestamp": "2022-12-14T07:17:31+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "CodeableConcept",
             "display": "CodeableConcept"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Substance",
             "display": "Substance"
           }
@@ -26,14 +26,16 @@
       }
     }
   ],
+  "url": "http://hl7.org/fhir/Questionnaire/qgen-Substance1",
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "status": "draft",
-  "date": "2022-05-06T17:02:42+00:00",
+  "experimental": false,
+  "date": "2022-12-14T07:12:54+11:00",
   "publisher": "Health Level Seven International (Biomedical Research and Regulation)",
   "item": [
     {
@@ -94,7 +96,7 @@
                 }
               ],
               "linkId": "Substance.id-flyover",
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Within the context of the FHIR RESTful interactions, the resource has an id except for cases like the create and conditional update. Otherwise, the use of the resouce id depends on the given use case.",
               "type": "display"
             },
             {
@@ -286,7 +288,7 @@
                 }
               ],
               "linkId": "Substance.contained-flyover",
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags in their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -376,7 +378,7 @@
                 }
               ],
               "linkId": "Substance.identifier-flyover",
-              "text": "Unique identifier for the substance. For an instance, an identifier associated with the package/container (usually a label affixed directly). This identifier is associated with the kind of substance in contrast to the  Substance.instance.identifier which is associated with the package/container.",
+              "text": "Unique identifier for the substance. For an instance, an identifier associated with the package/container (usually a label affixed directly).",
               "type": "display"
             },
             {
@@ -1019,8 +1021,8 @@
                         {
                           "extension": [
                             {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                              "valueCode": "Substance"
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                              "valueCode": "Substance, Substance"
                             },
                             {
                               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1042,14 +1044,5 @@
         }
       ]
     }
-  ],
-  "meta": {
-    "tag": [
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-        "code": "HTEST",
-        "display": "test health data"
-      }
-    ]
-  }
+  ]
 }

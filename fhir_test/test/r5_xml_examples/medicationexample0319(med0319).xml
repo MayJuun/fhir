@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><Medication xmlns="http://hl7.org/fhir">
+   <id value="med0319"/>
+   
+      <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Medication</b><a name="med0319"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Medication "med0319" </p></div><p><b>doseForm</b>: Ointment <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#385101003)</span></p><blockquote><p><b>ingredient</b></p><h3>Items</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>Salicylic Acid (substance) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#387253001)</span></td></tr></table><p><b>strength</b>: 5 g<span style="background: LightGoldenRodYellow"> (Details: UCUM code g = 'g')</span>/100 g<span style="background: LightGoldenRodYellow"> (Details: UCUM code g = 'g')</span></p></blockquote><blockquote><p><b>ingredient</b></p><h3>Items</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>Hydrocortisone (substance) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#396458002)</span></td></tr></table><p><b>strength</b>: 1 g<span style="background: LightGoldenRodYellow"> (Details: UCUM code g = 'g')</span>/100 g<span style="background: LightGoldenRodYellow"> (Details: UCUM code g = 'g')</span></p></blockquote><blockquote><p><b>ingredient</b></p><h3>Items</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>White Petrolatum (substance) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#126066007)</span></td></tr></table><p><b>strength</b>: 94 g<span style="background: LightGoldenRodYellow"> (Details: UCUM code g = 'g')</span>/100 g<span style="background: LightGoldenRodYellow"> (Details: UCUM code g = 'g')</span></p></blockquote></div></text><doseForm>
+         <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="385101003"/>
+            <display value="Ointment"/>
+         </coding>
+         <text value="Ointment"/>
+      </doseForm>
+      <ingredient>
+         <item>
+         <concept>
+            <coding>
+               <system value="http://snomed.info/sct"/>
+               <code value="387253001"/>
+               <display value="Salicylic Acid (substance)"/>
+            </coding>
+         </concept>
+         </item>
+         <strengthRatio>
+            <numerator>
+               <value value="5"/>
+               <system value="http://unitsofmeasure.org"/>
+               <code value="g"/>
+            </numerator>
+            <denominator>
+               <value value="100"/>
+               <system value="http://unitsofmeasure.org"/>
+               <code value="g"/>
+            </denominator>
+         </strengthRatio>
+      </ingredient>
+      <ingredient>
+         <item>
+         <concept>
+            <coding>
+               <system value="http://snomed.info/sct"/>
+               <code value="396458002"/>
+               <display value="Hydrocortisone (substance)"/>
+            </coding>
+         </concept>
+         </item>
+         <strengthRatio>
+            <numerator>
+               <value value="1"/>
+               <system value="http://unitsofmeasure.org"/>
+               <code value="g"/>
+            </numerator>
+            <denominator>
+               <value value="100"/>
+               <system value="http://unitsofmeasure.org"/>
+               <code value="g"/>
+            </denominator>
+         </strengthRatio>
+      </ingredient>
+      <ingredient>
+         <item>
+         <concept>
+            <coding>
+               <system value="http://snomed.info/sct"/>
+               <code value="126066007"/>
+               <display value="White Petrolatum (substance)"/>
+            </coding>
+         </concept>
+         </item>
+         <strengthRatio>
+            <numerator>
+               <value value="94"/>
+               <system value="http://unitsofmeasure.org"/>
+               <code value="g"/>
+            </numerator>
+            <denominator>
+               <value value="100"/>
+               <system value="http://unitsofmeasure.org"/>
+               <code value="g"/>
+            </denominator>
+         </strengthRatio>
+      </ingredient>
+   
+</Medication>

@@ -20,7 +20,7 @@
     "reference": "Patient/f201",
     "display": "Roel"
   },
-  "dateTime": "2018-12-24",
+  "date": "2018-12-24",
   "grantor": [
     {
       "reference": "Patient/pat1"

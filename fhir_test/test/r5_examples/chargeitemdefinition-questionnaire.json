@@ -1,14 +1,16 @@
 {
   "resourceType": "Questionnaire",
-  "id": "qs1",
+  "id": "qgen-ChargeItemDefinition1",
+  "url": "http://hl7.org/fhir/Questionnaire/qgen-ChargeItemDefinition1",
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "status": "draft",
-  "date": "2022-05-06T17:02:42+00:00",
+  "experimental": false,
+  "date": "2022-12-14T07:12:54+11:00",
   "publisher": "Health Level Seven International (Patient Administration)",
   "item": [
     {
@@ -69,7 +71,7 @@
                 }
               ],
               "linkId": "ChargeItemDefinition.id-flyover",
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Within the context of the FHIR RESTful interactions, the resource has an id except for cases like the create and conditional update. Otherwise, the use of the resouce id depends on the given use case.",
               "type": "display"
             },
             {
@@ -261,7 +263,7 @@
                 }
               ],
               "linkId": "ChargeItemDefinition.contained-flyover",
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags in their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -358,7 +360,7 @@
                 }
               ],
               "linkId": "ChargeItemDefinition.url-flyover",
-              "text": "An absolute URI that is used to identify this charge item definition when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this charge item definition is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the charge item definition is stored on different servers. Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.\n\nThe determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). \n\nIn some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.",
+              "text": "An absolute URI that is used to identify this charge item definition when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this charge item definition is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the charge item definition is stored on different servers. Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.\n\nThe determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). \n\nIn some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.",
               "type": "display"
             },
             {
@@ -457,12 +459,56 @@
                 }
               ],
               "linkId": "ChargeItemDefinition.version-flyover",
-              "text": "The identifier that is used to identify this version of the charge item definition when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the charge item definition author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence. To provide a version consistent with the Decision Support Service specification, use the format Major.Minor.Revision (e.g. 1.0.0). For more information on versioning knowledge assets, refer to the Decision Support Service specification. Note that a version is required for non-experimental active assets. There may be different charge item definition instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the charge item definition with the format [url]|[version].",
+              "text": "The identifier that is used to identify this version of the charge item definition when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the charge item definition author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence. To provide a version consistent with the Decision Support Service specification, use the format Major.Minor.Revision (e.g. 1.0.0). For more information on versioning knowledge assets, refer to the Decision Support Service specification. Note that a version is required for non-experimental active assets. There may be different charge item definition instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the charge item definition with the format [url]|[version]. The version SHOULD NOT contain a \u0027#\u0027 - see [Business Version](resource.html#bv-format).",
               "type": "display"
             },
             {
               "linkId": "ChargeItemDefinition.version.value",
               "text": "Business version of the charge item definition",
+              "type": "string",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "string"
+            }
+          ],
+          "linkId": "ChargeItemDefinition.name",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "ChargeItemDefinition.name-flyover",
+              "text": "A natural language name identifying the ChargeItemDefinition. This name should be usable as an identifier for the module by machine processing applications such as code generation. The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.",
+              "type": "display"
+            },
+            {
+              "linkId": "ChargeItemDefinition.name.value",
+              "text": "Name for this charge item definition (computer friendly)",
               "type": "string",
               "required": false,
               "repeats": false
@@ -758,7 +804,7 @@
                 }
               ],
               "linkId": "ChargeItemDefinition.date-flyover",
-              "text": "The date  (and optionally time) when the charge item definition was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the charge item definition changes. Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the charge item definition. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.",
+              "text": "The date  (and optionally time) when the charge item definition was last significantly changed. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the charge item definition changes. The date is often not tracked until the resource is published, but may be present on draft content. Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the charge item definition. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.",
               "type": "display"
             },
             {
@@ -802,12 +848,12 @@
                 }
               ],
               "linkId": "ChargeItemDefinition.publisher-flyover",
-              "text": "The name of the organization or individual that published the charge item definition. Usually an organization but may be an individual. The publisher (or steward) of the charge item definition is the organization or individual primarily responsible for the maintenance and upkeep of the charge item definition. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the charge item definition. This item SHOULD be populated unless the information is available from context.",
+              "text": "The name of the organization or individual responsible for the release and ongoing maintenance of the charge item definition. Usually an organization but may be an individual. The publisher (or steward) of the charge item definition is the organization or individual primarily responsible for the maintenance and upkeep of the charge item definition. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the charge item definition. This item SHOULD be populated unless the information is available from context.",
               "type": "display"
             },
             {
               "linkId": "ChargeItemDefinition.publisher.value",
-              "text": "Name of the publisher (organization or individual)",
+              "text": "Name of the publisher/steward (organization or individual)",
               "type": "string",
               "required": false,
               "repeats": false
@@ -879,7 +925,7 @@
                 }
               ],
               "linkId": "ChargeItemDefinition.description-flyover",
-              "text": "A free text natural language description of the charge item definition from a consumer\u0027s perspective. This description can be used to capture details such as why the charge item definition was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the charge item definition as conveyed in the \u0027text\u0027 field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the charge item definition is presumed to be the predominant language in the place the charge item definition was created).",
+              "text": "A free text natural language description of the charge item definition from a consumer\u0027s perspective. This description can be used to capture details such as comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the charge item definition as conveyed in the \u0027text\u0027 field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the charge item definition is presumed to be the predominant language in the place the charge item definition was created).",
               "type": "display"
             },
             {
@@ -967,6 +1013,50 @@
             {
               "linkId": "ChargeItemDefinition.jurisdiction.text",
               "text": "text:",
+              "type": "string",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "string"
+            }
+          ],
+          "linkId": "ChargeItemDefinition.purpose",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "ChargeItemDefinition.purpose-flyover",
+              "text": "Explanation of why this charge item definition is needed and why it has been designed as it has. This element does not describe the usage of the charge item definition. Instead, it provides traceability of \u0027\u0027why\u0027\u0027 the resource is either needed or \u0027\u0027why\u0027\u0027 it is defined as it is.  This may be used to point to source materials or specifications that drove the structure of this charge item definition.",
+              "type": "display"
+            },
+            {
+              "linkId": "ChargeItemDefinition.purpose.value",
+              "text": "Why this charge item definition is defined",
               "type": "string",
               "required": false,
               "repeats": false
@@ -1113,58 +1203,6 @@
             },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-              "valueString": "Period"
-            }
-          ],
-          "linkId": "ChargeItemDefinition.effectivePeriod",
-          "text": "When the charge item definition is expected to be used",
-          "type": "group",
-          "required": false,
-          "repeats": true,
-          "item": [
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                  "valueCodeableConcept": {
-                    "coding": [
-                      {
-                        "system": "http://hl7.org/fhir/questionnaire-item-control",
-                        "code": "flyover",
-                        "display": "Fly-over"
-                      }
-                    ]
-                  }
-                }
-              ],
-              "linkId": "ChargeItemDefinition.effectivePeriod-flyover",
-              "text": "The period during which the charge item definition content was or is planned to be in active use. The effective period for a charge item definition  determines when the content is applicable for usage and is independent of publication and review dates. For example, a measure intended to be used for the year 2016 might be published in 2015.",
-              "type": "display"
-            },
-            {
-              "linkId": "ChargeItemDefinition.effectivePeriod.low",
-              "text": "start:",
-              "type": "dateTime",
-              "required": false,
-              "repeats": false
-            },
-            {
-              "linkId": "ChargeItemDefinition.effectivePeriod.end",
-              "text": "end:",
-              "type": "dateTime",
-              "required": false,
-              "repeats": false
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-              "valueInteger": 1
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
               "valueString": "CodeableConcept"
             }
           ],
@@ -1244,8 +1282,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Medication, Substance, Device, DeviceDefinition, ActivityDefinition, PlanDefinition, HealthcareService"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Medication, Substance, Device, DeviceDefinition, ActivityDefinition, PlanDefinition, HealthcareService, HealthcareService"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1396,17 +1434,19 @@
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                   "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "string"
                 }
               ],
-              "linkId": "ChargeItemDefinition.applicability.description",
+              "linkId": "ChargeItemDefinition.applicability.condition",
+              "text": "Boolean-valued expression",
               "type": "group",
               "required": false,
-              "repeats": true,
+              "repeats": false,
               "item": [
+                {
+                  "linkId": "ChargeItemDefinition.applicability.condition-display",
+                  "text": "Please note that FHIRPath Expressions can only be evaluated in the scope of the current ChargeItem resource to which this definition is being applied.\nFHIRPath expressions can traverse into other resources linked from the ChargeItem resource, however, testing rules such as that a billing code may be billed only once per encounter need a wider scope. In such scenarios, CQL may be the appropriate choice.",
+                  "type": "display"
+                },
                 {
                   "extension": [
                     {
@@ -1422,16 +1462,9 @@
                       }
                     }
                   ],
-                  "linkId": "ChargeItemDefinition.applicability.description-flyover",
-                  "text": "A brief, natural language description of the condition that effectively communicates the intended semantics.",
+                  "linkId": "ChargeItemDefinition.applicability.condition-flyover",
+                  "text": "An expression that returns true or false, indicating whether the condition is satisfied. When using FHIRPath expressions, the %context environment variable must be replaced at runtime with the ChargeItem resource to which this definition is applied.",
                   "type": "display"
-                },
-                {
-                  "linkId": "ChargeItemDefinition.applicability.description.value",
-                  "text": "Natural language description of the condition",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
                 }
               ]
             },
@@ -1443,10 +1476,11 @@
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "string"
+                  "valueString": "Period"
                 }
               ],
-              "linkId": "ChargeItemDefinition.applicability.language",
+              "linkId": "ChargeItemDefinition.applicability.effectivePeriod",
+              "text": "When the charge item definition is expected to be used",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -1466,14 +1500,21 @@
                       }
                     }
                   ],
-                  "linkId": "ChargeItemDefinition.applicability.language-flyover",
-                  "text": "The media type of the language for the expression, e.g. \"text/cql\" for Clinical Query Language expressions or \"text/fhirpath\" for FHIRPath expressions.",
+                  "linkId": "ChargeItemDefinition.applicability.effectivePeriod-flyover",
+                  "text": "The period during which the charge item definition content was or is planned to be in active use. The effective period for a charge item definition  determines when the content is applicable for usage and is independent of publication and review dates. For example, a measure intended to be used for the year 2016 might be published in 2015.",
                   "type": "display"
                 },
                 {
-                  "linkId": "ChargeItemDefinition.applicability.language.value",
-                  "text": "Language of the expression",
-                  "type": "string",
+                  "linkId": "ChargeItemDefinition.applicability.effectivePeriod.low",
+                  "text": "start:",
+                  "type": "dateTime",
+                  "required": false,
+                  "repeats": false
+                },
+                {
+                  "linkId": "ChargeItemDefinition.applicability.effectivePeriod.end",
+                  "text": "end:",
+                  "type": "dateTime",
                   "required": false,
                   "repeats": false
                 }
@@ -1484,16 +1525,13 @@
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                   "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "string"
                 }
               ],
-              "linkId": "ChargeItemDefinition.applicability.expression",
+              "linkId": "ChargeItemDefinition.applicability.relatedArtifact",
+              "text": "Reference to / quotation of the external source of the group of properties",
               "type": "group",
               "required": false,
-              "repeats": true,
+              "repeats": false,
               "item": [
                 {
                   "extension": [
@@ -1510,16 +1548,9 @@
                       }
                     }
                   ],
-                  "linkId": "ChargeItemDefinition.applicability.expression-flyover",
-                  "text": "An expression that returns true or false, indicating whether the condition is satisfied. When using FHIRPath expressions, the %context environment variable must be replaced at runtime with the ChargeItem resource to which this definition is applied. Please note that FHIRPath Expressions can only be evaluated in the scope of the current ChargeItem resource to which this definition is being applied.\nFHIRPath expressions can traverse into other resources linked from the ChargeItem resource, however, testing rules such as that a billing code may be billed only once per encounter need a wider scope. In such scenarios, CQL may be the appropriate choice.",
+                  "linkId": "ChargeItemDefinition.applicability.relatedArtifact-flyover",
+                  "text": "Reference to / quotation of the external source of the group of properties.",
                   "type": "display"
-                },
-                {
-                  "linkId": "ChargeItemDefinition.applicability.expression.value",
-                  "text": "Boolean-valued expression",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
                 }
               ]
             }
@@ -1787,17 +1818,19 @@
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                       "valueInteger": 1
-                    },
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                      "valueString": "string"
                     }
                   ],
-                  "linkId": "ChargeItemDefinition.applicability.description",
+                  "linkId": "ChargeItemDefinition.propertyGroup.applicability.condition",
+                  "text": "Boolean-valued expression",
                   "type": "group",
                   "required": false,
-                  "repeats": true,
+                  "repeats": false,
                   "item": [
+                    {
+                      "linkId": "ChargeItemDefinition.applicability.condition-display",
+                      "text": "Please note that FHIRPath Expressions can only be evaluated in the scope of the current ChargeItem resource to which this definition is being applied.\nFHIRPath expressions can traverse into other resources linked from the ChargeItem resource, however, testing rules such as that a billing code may be billed only once per encounter need a wider scope. In such scenarios, CQL may be the appropriate choice.",
+                      "type": "display"
+                    },
                     {
                       "extension": [
                         {
@@ -1813,16 +1846,9 @@
                           }
                         }
                       ],
-                      "linkId": "ChargeItemDefinition.applicability.description-flyover",
-                      "text": "A brief, natural language description of the condition that effectively communicates the intended semantics.",
+                      "linkId": "ChargeItemDefinition.applicability.condition-flyover",
+                      "text": "An expression that returns true or false, indicating whether the condition is satisfied. When using FHIRPath expressions, the %context environment variable must be replaced at runtime with the ChargeItem resource to which this definition is applied.",
                       "type": "display"
-                    },
-                    {
-                      "linkId": "ChargeItemDefinition.applicability.description.value",
-                      "text": "Natural language description of the condition",
-                      "type": "string",
-                      "required": false,
-                      "repeats": false
                     }
                   ]
                 },
@@ -1834,10 +1860,11 @@
                     },
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                      "valueString": "string"
+                      "valueString": "Period"
                     }
                   ],
-                  "linkId": "ChargeItemDefinition.applicability.language",
+                  "linkId": "ChargeItemDefinition.applicability.effectivePeriod",
+                  "text": "When the charge item definition is expected to be used",
                   "type": "group",
                   "required": false,
                   "repeats": true,
@@ -1857,14 +1884,21 @@
                           }
                         }
                       ],
-                      "linkId": "ChargeItemDefinition.applicability.language-flyover",
-                      "text": "The media type of the language for the expression, e.g. \"text/cql\" for Clinical Query Language expressions or \"text/fhirpath\" for FHIRPath expressions.",
+                      "linkId": "ChargeItemDefinition.applicability.effectivePeriod-flyover",
+                      "text": "The period during which the charge item definition content was or is planned to be in active use. The effective period for a charge item definition  determines when the content is applicable for usage and is independent of publication and review dates. For example, a measure intended to be used for the year 2016 might be published in 2015.",
                       "type": "display"
                     },
                     {
-                      "linkId": "ChargeItemDefinition.applicability.language.value",
-                      "text": "Language of the expression",
-                      "type": "string",
+                      "linkId": "ChargeItemDefinition.applicability.effectivePeriod.low",
+                      "text": "start:",
+                      "type": "dateTime",
+                      "required": false,
+                      "repeats": false
+                    },
+                    {
+                      "linkId": "ChargeItemDefinition.applicability.effectivePeriod.end",
+                      "text": "end:",
+                      "type": "dateTime",
                       "required": false,
                       "repeats": false
                     }
@@ -1875,16 +1909,13 @@
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                       "valueInteger": 1
-                    },
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                      "valueString": "string"
                     }
                   ],
-                  "linkId": "ChargeItemDefinition.applicability.expression",
+                  "linkId": "ChargeItemDefinition.propertyGroup.applicability.relatedArtifact",
+                  "text": "Reference to / quotation of the external source of the group of properties",
                   "type": "group",
                   "required": false,
-                  "repeats": true,
+                  "repeats": false,
                   "item": [
                     {
                       "extension": [
@@ -1901,16 +1932,9 @@
                           }
                         }
                       ],
-                      "linkId": "ChargeItemDefinition.applicability.expression-flyover",
-                      "text": "An expression that returns true or false, indicating whether the condition is satisfied. When using FHIRPath expressions, the %context environment variable must be replaced at runtime with the ChargeItem resource to which this definition is applied. Please note that FHIRPath Expressions can only be evaluated in the scope of the current ChargeItem resource to which this definition is being applied.\nFHIRPath expressions can traverse into other resources linked from the ChargeItem resource, however, testing rules such as that a billing code may be billed only once per encounter need a wider scope. In such scenarios, CQL may be the appropriate choice.",
+                      "linkId": "ChargeItemDefinition.applicability.relatedArtifact-flyover",
+                      "text": "Reference to / quotation of the external source of the group of properties.",
                       "type": "display"
-                    },
-                    {
-                      "linkId": "ChargeItemDefinition.applicability.expression.value",
-                      "text": "Boolean-valued expression",
-                      "type": "string",
-                      "required": false,
-                      "repeats": false
                     }
                   ]
                 }
@@ -1941,326 +1965,6 @@
                   "linkId": "ChargeItemDefinition.propertyGroup.priceComponent-flyover",
                   "text": "The price for a ChargeItem may be calculated as a base price with surcharges/deductions that apply in certain conditions. A ChargeItemDefinition resource that defines the prices, factors and conditions that apply to a billing code is currently under development. The priceComponent element can be used to offer transparency to the recipient of the Invoice of how the prices have been calculated.",
                   "type": "display"
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                      "valueInteger": 1
-                    },
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                      "valueString": "string"
-                    }
-                  ],
-                  "linkId": "ChargeItemDefinition.propertyGroup.priceComponent.id",
-                  "type": "group",
-                  "required": false,
-                  "repeats": true,
-                  "item": [
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                          "valueCodeableConcept": {
-                            "coding": [
-                              {
-                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                "code": "flyover",
-                                "display": "Fly-over"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "linkId": "ChargeItemDefinition.propertyGroup.priceComponent.id-flyover",
-                      "text": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-                      "type": "display"
-                    },
-                    {
-                      "linkId": "ChargeItemDefinition.propertyGroup.priceComponent.id.value",
-                      "text": "Unique id for inter-element referencing",
-                      "type": "string",
-                      "required": false,
-                      "repeats": false
-                    }
-                  ]
-                },
-                {
-                  "linkId": "ChargeItemDefinition.propertyGroup.priceComponent.extension",
-                  "text": "Additional content defined by implementations",
-                  "type": "group",
-                  "required": false,
-                  "repeats": true,
-                  "item": [
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                          "valueCodeableConcept": {
-                            "coding": [
-                              {
-                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                "code": "flyover",
-                                "display": "Fly-over"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "linkId": "ChargeItemDefinition.propertyGroup.priceComponent.extension-flyover",
-                      "text": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-                      "type": "display"
-                    }
-                  ]
-                },
-                {
-                  "linkId": "ChargeItemDefinition.propertyGroup.priceComponent.modifierExtension",
-                  "text": "Extensions that cannot be ignored even if unrecognized",
-                  "type": "group",
-                  "required": false,
-                  "repeats": true,
-                  "item": [
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                          "valueCodeableConcept": {
-                            "coding": [
-                              {
-                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                "code": "flyover",
-                                "display": "Fly-over"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "linkId": "ChargeItemDefinition.propertyGroup.priceComponent.modifierExtension-flyover",
-                      "text": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself). There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-                      "type": "display"
-                    }
-                  ]
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
-                      "valueInteger": 1
-                    },
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                      "valueInteger": 1
-                    },
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                      "valueString": "code"
-                    }
-                  ],
-                  "linkId": "ChargeItemDefinition.propertyGroup.priceComponent.type",
-                  "type": "group",
-                  "required": true,
-                  "repeats": true,
-                  "item": [
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                          "valueCodeableConcept": {
-                            "coding": [
-                              {
-                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                "code": "flyover",
-                                "display": "Fly-over"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "linkId": "ChargeItemDefinition.propertyGroup.priceComponent.type-flyover",
-                      "text": "This code identifies the type of the component.",
-                      "type": "display"
-                    },
-                    {
-                      "linkId": "ChargeItemDefinition.propertyGroup.priceComponent.type.value",
-                      "text": "type",
-                      "type": "coding",
-                      "required": false,
-                      "repeats": false,
-                      "answerConstraint": "optionsOrType"
-                    }
-                  ]
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                      "valueInteger": 1
-                    },
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                      "valueString": "CodeableConcept"
-                    }
-                  ],
-                  "linkId": "ChargeItemDefinition.propertyGroup.priceComponent.code",
-                  "text": "Code identifying the specific component",
-                  "type": "group",
-                  "required": false,
-                  "repeats": true,
-                  "item": [
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                          "valueCodeableConcept": {
-                            "coding": [
-                              {
-                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                "code": "flyover",
-                                "display": "Fly-over"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "linkId": "ChargeItemDefinition.propertyGroup.priceComponent.code-flyover",
-                      "text": "A code that identifies the component. Codes may be used to differentiate between kinds of taxes, surcharges, discounts etc.",
-                      "type": "display"
-                    },
-                    {
-                      "linkId": "ChargeItemDefinition.propertyGroup.priceComponent.code.coding",
-                      "text": "code:",
-                      "type": "coding",
-                      "required": false,
-                      "repeats": false,
-                      "answerConstraint": "optionsOnly"
-                    },
-                    {
-                      "linkId": "ChargeItemDefinition.propertyGroup.priceComponent.code.text",
-                      "text": "text:",
-                      "type": "string",
-                      "required": false,
-                      "repeats": false
-                    }
-                  ]
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                      "valueInteger": 1
-                    },
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                      "valueString": "decimal"
-                    }
-                  ],
-                  "linkId": "ChargeItemDefinition.propertyGroup.priceComponent.factor",
-                  "type": "group",
-                  "required": false,
-                  "repeats": true,
-                  "item": [
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                          "valueCodeableConcept": {
-                            "coding": [
-                              {
-                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                "code": "flyover",
-                                "display": "Fly-over"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "linkId": "ChargeItemDefinition.propertyGroup.priceComponent.factor-flyover",
-                      "text": "The factor that has been applied on the base price for calculating this component.",
-                      "type": "display"
-                    },
-                    {
-                      "linkId": "ChargeItemDefinition.propertyGroup.priceComponent.factor.value",
-                      "text": "Factor used for calculating this component",
-                      "type": "decimal",
-                      "required": false,
-                      "repeats": false
-                    }
-                  ]
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                      "valueInteger": 1
-                    },
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                      "valueString": "Quantity"
-                    }
-                  ],
-                  "linkId": "ChargeItemDefinition.propertyGroup.priceComponent.amount",
-                  "text": "Monetary amount associated with this component",
-                  "type": "group",
-                  "required": false,
-                  "repeats": true,
-                  "item": [
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                          "valueCodeableConcept": {
-                            "coding": [
-                              {
-                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                "code": "flyover",
-                                "display": "Fly-over"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "linkId": "ChargeItemDefinition.propertyGroup.priceComponent.amount-flyover",
-                      "text": "The amount calculated for this component.",
-                      "type": "display"
-                    },
-                    {
-                      "linkId": "ChargeItemDefinition.propertyGroup.priceComponent.amount.comparator",
-                      "text": "comp:",
-                      "type": "coding",
-                      "required": false,
-                      "repeats": false,
-                      "answerConstraint": "optionsOnly"
-                    },
-                    {
-                      "linkId": "ChargeItemDefinition.propertyGroup.priceComponent.amount.value",
-                      "text": "value:",
-                      "type": "decimal",
-                      "required": false,
-                      "repeats": false
-                    },
-                    {
-                      "linkId": "ChargeItemDefinition.propertyGroup.priceComponent.amount.units",
-                      "text": "units:",
-                      "type": "string",
-                      "required": false,
-                      "repeats": false
-                    },
-                    {
-                      "linkId": "ChargeItemDefinition.propertyGroup.priceComponent.amount.code",
-                      "text": "coded units:",
-                      "type": "string",
-                      "required": false,
-                      "repeats": false
-                    },
-                    {
-                      "linkId": "ChargeItemDefinition.propertyGroup.priceComponent.amount.system",
-                      "text": "units system:",
-                      "type": "string",
-                      "required": false,
-                      "repeats": false
-                    }
-                  ]
                 }
               ]
             }
@@ -2268,14 +1972,5 @@
         }
       ]
     }
-  ],
-  "meta": {
-    "tag": [
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-        "code": "HTEST",
-        "display": "test health data"
-      }
-    ]
-  }
+  ]
 }

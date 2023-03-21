@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><Organization xmlns="http://hl7.org/fhir">
+  <id value="f201"/>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "f201" </p></div><p><b>identifier</b>: id: Artis University Medical Center (OFFICIAL)</p><p><b>active</b>: true</p><p><b>type</b>: Academic Medical Center <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#405608006; unknown#V6 "University Medical Hospital"; <a href="codesystem-organization-type.html">OrganizationType</a>#prov "Healthcare Provider")</span></p><p><b>name</b>: Artis University Medical Center (AUMC)</p><p><b>telecom</b>: <a href="tel:+31715269111">+31715269111</a></p><p><b>address</b>: Walvisbaai 3 Den Helder 2333ZA NLD (WORK)</p><h3>Contacts</h3><table class="grid"><tr><td>-</td><td><b>Name</b></td><td><b>Telecom</b></td><td><b>Address</b></td></tr><tr><td>*</td><td>Professor Brand(OFFICIAL)</td><td><a href="tel:+31715269702">+31715269702</a></td><td>Walvisbaai 3 Gebouw 2 Den helder 2333ZA NLD </td></tr></table></div></text><identifier>
+  <!--   Identifier for the AUMC   -->
+    <use value="official"/>
+    <system value="http://www.zorgkaartnederland.nl/"/>
+    <value value="Artis University Medical Center"/>
+  </identifier>
+  <active value="true"/>
+  <type>
+  <!--   AUMC is an Academic Medical Center   -->
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="405608006"/>
+      <display value="Academic Medical Center"/>
+    </coding>
+    <coding>
+      <system value="urn:oid:2.16.840.1.113883.2.4.15.1060"/>
+    <!--    RoleCodeNLUZIRoleCodeOrganisaties    -->
+      <code value="V6"/>
+      <display value="University Medical Hospital"/>
+    </coding>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type"/>
+      <code value="prov"/>
+      <display value="Healthcare Provider"/>
+    </coding>
+  </type>
+  <name value="Artis University Medical Center (AUMC)"/>
+  <telecom>
+  <!--   AUMC's contact detail   -->
+    <system value="phone"/>
+    <value value="+31715269111"/>
+    <use value="work"/>
+  </telecom>
+  <address>
+  <!--   AUMC's address   -->
+    <use value="work"/>
+    <line value="Walvisbaai 3"/>
+    <city value="Den Helder"/>
+    <postalCode value="2333ZA"/>
+    <country value="NLD"/>
+  <!--   ISO 3166 3 letter code   -->
+  </address>
+<!--   The AUMC is in active use   -->
+<!--       <accreditation>
+        <!-\-HIMSS-6 Accreditation-\->
+        <identifier>
+            <system value="http://www.himss.org/"/>
+            <value value="HIMSS Stage 6 accreditation"/>
+        </identifier>
+    </accreditation>
+    <accreditation>
+        <!-\-NIAZ accreditation-\->
+        <identifier>
+            <!-\-Identifier for the accreditation -\->
+            <system value="http://www.niaz.nl/"/>
+            <value value="NIAZ accreditation"/>
+        </identifier>
+        <period>
+            <start value="2000-01-01"/>
+            <end value="2013-12-31"/>
+        </period>
+    </accreditation>    -->
+  <contact>
+  <!--   Contact for the AUMC   -->
+    <name>
+      <use value="official"/>
+      <text value="Professor Brand"/>
+      <family value="Brand"/>
+      <given value="Ronald"/>
+      <prefix value="Prof.Dr."/>
+    </name>
+    <telecom>
+      <system value="phone"/>
+      <value value="+31715269702"/>
+      <use value="work"/>
+    </telecom>
+    <address>
+      <line value="Walvisbaai 3"/>
+      <line value="Gebouw 2"/>
+      <city value="Den helder"/>
+      <postalCode value="2333ZA"/>
+      <country value="NLD"/>
+    <!--   ISO 3166 3 letter code   -->
+    </address>
+  </contact>
+</Organization>

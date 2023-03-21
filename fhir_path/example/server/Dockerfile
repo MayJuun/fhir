@@ -18,7 +18,7 @@
 # Specify the Dart SDK base image version using dart:<version> (ex: dart:2.12)
 FROM dart:stable AS build
 # Sometimes it doesn't pull properly and you need to use this
-# FROM dart:2.18.0 AS build
+# FROM dart:2.19.0 AS build
 
 # Resolve app dependencies.
 WORKDIR /app

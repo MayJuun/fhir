@@ -1,6 +1,6 @@
 {
   "resourceType": "Questionnaire",
-  "id": "qs1",
+  "id": "qgen-NutritionOrder1",
   "contained": [
     {
       "resourceType": "ValueSet",
@@ -9,16 +9,16 @@
       "status": "active",
       "description": "Type options for NutritionOrder.enteralFormula.administration.rate[x]",
       "expansion": {
-        "identifier": "urn:uuid:cf37c3c9-aa43-4c77-b512-18f7a7742919",
-        "timestamp": "2022-05-06T17:11:50+00:00",
+        "identifier": "urn:uuid:52444944-903e-4b4e-8c1c-59ad770c027d",
+        "timestamp": "2022-12-14T07:17:04+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "http://hl7.org/fhir/StructureDefinition/SimpleQuantity",
             "display": "Quantity"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Ratio",
             "display": "Ratio"
           }
@@ -26,14 +26,16 @@
       }
     }
   ],
+  "url": "http://hl7.org/fhir/Questionnaire/qgen-NutritionOrder1",
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "status": "draft",
-  "date": "2022-05-06T17:02:42+00:00",
+  "experimental": false,
+  "date": "2022-12-14T07:12:54+11:00",
   "publisher": "Health Level Seven International (Orders and Observations)",
   "item": [
     {
@@ -99,7 +101,7 @@
                 }
               ],
               "linkId": "NutritionOrder.id-flyover",
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Within the context of the FHIR RESTful interactions, the resource has an id except for cases like the create and conditional update. Otherwise, the use of the resouce id depends on the given use case.",
               "type": "display"
             },
             {
@@ -291,7 +293,7 @@
                 }
               ],
               "linkId": "NutritionOrder.contained-flyover",
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags in their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -530,6 +532,56 @@
         {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "Reference"
+            }
+          ],
+          "linkId": "NutritionOrder.basedOn",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "NutritionOrder.basedOn-flyover",
+              "text": "A plan or request that is fulfilled in whole or in part by this nutrition order.",
+              "type": "display"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "CarePlan, NutritionOrder, ServiceRequest, ServiceRequest"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
+                  "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
+                }
+              ],
+              "linkId": "NutritionOrder.basedOn.value",
+              "text": "What this order fulfills",
+              "type": "reference",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
               "valueInteger": 1
             },
@@ -628,6 +680,51 @@
         {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "code"
+            }
+          ],
+          "linkId": "NutritionOrder.priority",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "NutritionOrder.priority-flyover",
+              "text": "Indicates how quickly the Nutrition Order should be addressed with respect to other        requests.",
+              "type": "display"
+            },
+            {
+              "linkId": "NutritionOrder.priority.value",
+              "text": "priority",
+              "type": "coding",
+              "required": false,
+              "repeats": false,
+              "answerConstraint": "optionsOrType"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
               "valueInteger": 1
             },
@@ -640,7 +737,7 @@
               "valueString": "Reference"
             }
           ],
-          "linkId": "NutritionOrder.patient",
+          "linkId": "NutritionOrder.subject",
           "type": "group",
           "required": true,
           "repeats": true,
@@ -660,23 +757,23 @@
                   }
                 }
               ],
-              "linkId": "NutritionOrder.patient-flyover",
-              "text": "The person (patient) who needs the nutrition order for an oral diet, nutritional supplement and/or enteral or formula feeding.",
+              "linkId": "NutritionOrder.subject-flyover",
+              "text": "The person or set of individuals who needs the nutrition order for an oral diet, nutritional supplement and/or enteral or formula feeding.",
               "type": "display"
             },
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Patient"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Patient, Group, Group"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
                   "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
                 }
               ],
-              "linkId": "NutritionOrder.patient.value",
-              "text": "The person who requires the diet, formula or nutritional supplement",
+              "linkId": "NutritionOrder.subject.value",
+              "text": "Who requires the diet, formula or nutritional supplement",
               "type": "reference",
               "required": false,
               "repeats": false
@@ -721,8 +818,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Encounter"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Encounter, Encounter"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -731,6 +828,56 @@
               ],
               "linkId": "NutritionOrder.encounter.value",
               "text": "The encounter associated with this nutrition order",
+              "type": "reference",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "Reference"
+            }
+          ],
+          "linkId": "NutritionOrder.supportingInformation",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "NutritionOrder.supportingInformation-flyover",
+              "text": "Information to support fulfilling (i.e. dispensing or administering) of the nutrition,        for example, patient height and weight).",
+              "type": "display"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Resource, Resource"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
+                  "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
+                }
+              ],
+              "linkId": "NutritionOrder.supportingInformation.value",
+              "text": "Information to support fulfilling of the nutrition order",
               "type": "reference",
               "required": false,
               "repeats": false
@@ -823,8 +970,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Practitioner, PractitionerRole"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Practitioner, PractitionerRole, PractitionerRole"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -836,6 +983,34 @@
               "type": "reference",
               "required": false,
               "repeats": false
+            }
+          ]
+        },
+        {
+          "linkId": "NutritionOrder.performer",
+          "text": "Who is desired to perform the administration of what is being ordered",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "NutritionOrder.performer-flyover",
+              "text": "The specified desired performer of the nutrition order.",
+              "type": "display"
             }
           ]
         },
@@ -873,8 +1048,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "AllergyIntolerance"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "AllergyIntolerance, AllergyIntolerance"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -982,6 +1157,50 @@
               "linkId": "NutritionOrder.excludeFoodModifier.text",
               "text": "text:",
               "type": "string",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "boolean"
+            }
+          ],
+          "linkId": "NutritionOrder.outsideFoodAllowed",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "NutritionOrder.outsideFoodAllowed-flyover",
+              "text": "This modifier is used to convey whether a food item is allowed to be brought in by the patient and/or family.  If set to true, indicates that the receiving system does not need to supply the food item.",
+              "type": "display"
+            },
+            {
+              "linkId": "NutritionOrder.outsideFoodAllowed.value",
+              "text": "Capture when a food item is brought in by the patient and/or family",
+              "type": "boolean",
               "required": false,
               "repeats": false
             }
@@ -1171,15 +1390,15 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "Schedule"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                  "valueInteger": 1
                 }
               ],
               "linkId": "NutritionOrder.oralDiet.schedule",
-              "text": "Scheduled frequency of diet",
+              "text": "Scheduling information for oral diets",
               "type": "group",
               "required": false,
-              "repeats": true,
+              "repeats": false,
               "item": [
                 {
                   "extension": [
@@ -1197,43 +1416,274 @@
                     }
                   ],
                   "linkId": "NutritionOrder.oralDiet.schedule-flyover",
-                  "text": "The time period and frequency at which the diet should be given.  The diet should be given for the combination of all schedules if more than one schedule is present.",
+                  "text": "Schedule information for an oral diet.",
                   "type": "display"
-                },
-                {
-                  "linkId": "NutritionOrder.oralDiet.schedule.text",
-                  "text": "text:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "NutritionOrder.oralDiet.schedule.date",
-                  "text": "date:",
-                  "type": "dateTime",
-                  "required": false,
-                  "repeats": false
                 },
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                      "valueCode": "Patient"
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                      "valueInteger": 1
                     },
                     {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                      "valueCode": "Practitioner"
-                    },
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                      "valueCode": "RelatedPerson"
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "string"
                     }
                   ],
-                  "linkId": "NutritionOrder.oralDiet.schedule.author",
-                  "text": "author:",
-                  "type": "reference",
+                  "linkId": "NutritionOrder.oralDiet.schedule.id",
+                  "type": "group",
                   "required": false,
-                  "repeats": false
+                  "repeats": true,
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "flyover",
+                                "display": "Fly-over"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "linkId": "NutritionOrder.oralDiet.schedule.id-flyover",
+                      "text": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+                      "type": "display"
+                    },
+                    {
+                      "linkId": "NutritionOrder.oralDiet.schedule.id.value",
+                      "text": "Unique id for inter-element referencing",
+                      "type": "string",
+                      "required": false,
+                      "repeats": false
+                    }
+                  ]
+                },
+                {
+                  "linkId": "NutritionOrder.oralDiet.schedule.extension",
+                  "text": "Additional content defined by implementations",
+                  "type": "group",
+                  "required": false,
+                  "repeats": true,
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "flyover",
+                                "display": "Fly-over"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "linkId": "NutritionOrder.oralDiet.schedule.extension-flyover",
+                      "text": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+                      "type": "display"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "NutritionOrder.oralDiet.schedule.modifierExtension",
+                  "text": "Extensions that cannot be ignored even if unrecognized",
+                  "type": "group",
+                  "required": false,
+                  "repeats": true,
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "flyover",
+                                "display": "Fly-over"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "linkId": "NutritionOrder.oralDiet.schedule.modifierExtension-flyover",
+                      "text": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself). There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+                      "type": "display"
+                    }
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "Schedule"
+                    }
+                  ],
+                  "linkId": "NutritionOrder.oralDiet.schedule.timing",
+                  "text": "Scheduled frequency of diet",
+                  "type": "group",
+                  "required": false,
+                  "repeats": true,
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "flyover",
+                                "display": "Fly-over"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "linkId": "NutritionOrder.oralDiet.schedule.timing-flyover",
+                      "text": "The time period and frequency at which the diet should be given.  The diet should be given for the combination of all schedules if more than one schedule is present.",
+                      "type": "display"
+                    },
+                    {
+                      "linkId": "NutritionOrder.oralDiet.schedule.timing.text",
+                      "text": "text:",
+                      "type": "string",
+                      "required": false,
+                      "repeats": false
+                    },
+                    {
+                      "linkId": "NutritionOrder.oralDiet.schedule.timing.date",
+                      "text": "date:",
+                      "type": "dateTime",
+                      "required": false,
+                      "repeats": false
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                          "valueCode": "Patient"
+                        },
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                          "valueCode": "Practitioner"
+                        },
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                          "valueCode": "RelatedPerson"
+                        }
+                      ],
+                      "linkId": "NutritionOrder.oralDiet.schedule.timing.author",
+                      "text": "author:",
+                      "type": "reference",
+                      "required": false,
+                      "repeats": false
+                    }
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "boolean"
+                    }
+                  ],
+                  "linkId": "NutritionOrder.oralDiet.schedule.asNeeded",
+                  "type": "group",
+                  "required": false,
+                  "repeats": true,
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "flyover",
+                                "display": "Fly-over"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "linkId": "NutritionOrder.oralDiet.schedule.asNeeded-flyover",
+                      "text": "Indicates whether the product is only taken when needed within a specific dosing schedule.",
+                      "type": "display"
+                    },
+                    {
+                      "linkId": "NutritionOrder.oralDiet.schedule.asNeeded.value",
+                      "text": "Take \u0027as needed\u0027",
+                      "type": "boolean",
+                      "required": false,
+                      "repeats": false
+                    }
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "CodeableConcept"
+                    }
+                  ],
+                  "linkId": "NutritionOrder.oralDiet.schedule.asNeededFor",
+                  "text": "Take \u0027as needed\u0027 for x",
+                  "type": "group",
+                  "required": false,
+                  "repeats": true,
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "flyover",
+                                "display": "Fly-over"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "linkId": "NutritionOrder.oralDiet.schedule.asNeededFor-flyover",
+                      "text": "Indicates whether the product is only taken based on a precondition for taking the product.",
+                      "type": "display"
+                    },
+                    {
+                      "linkId": "NutritionOrder.oralDiet.schedule.asNeededFor.coding",
+                      "text": "code:",
+                      "type": "coding",
+                      "required": false,
+                      "repeats": false,
+                      "answerConstraint": "optionsOnly"
+                    },
+                    {
+                      "linkId": "NutritionOrder.oralDiet.schedule.asNeededFor.text",
+                      "text": "text:",
+                      "type": "string",
+                      "required": false,
+                      "repeats": false
+                    }
+                  ]
                 }
               ]
             },
@@ -1952,17 +2402,13 @@
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                   "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "CodeableConcept"
                 }
               ],
               "linkId": "NutritionOrder.supplement.type",
               "text": "Type of supplement product requested",
               "type": "group",
               "required": false,
-              "repeats": true,
+              "repeats": false,
               "item": [
                 {
                   "extension": [
@@ -1982,21 +2428,6 @@
                   "linkId": "NutritionOrder.supplement.type-flyover",
                   "text": "The kind of nutritional supplement product required such as a high protein or pediatric clear liquid supplement.",
                   "type": "display"
-                },
-                {
-                  "linkId": "NutritionOrder.supplement.type.coding",
-                  "text": "code:",
-                  "type": "coding",
-                  "required": false,
-                  "repeats": false,
-                  "answerConstraint": "optionsOnly"
-                },
-                {
-                  "linkId": "NutritionOrder.supplement.type.text",
-                  "text": "text:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
                 }
               ]
             },
@@ -2047,15 +2478,15 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "Schedule"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                  "valueInteger": 1
                 }
               ],
               "linkId": "NutritionOrder.supplement.schedule",
-              "text": "Scheduled frequency of supplement",
+              "text": "Scheduling information for supplements",
               "type": "group",
               "required": false,
-              "repeats": true,
+              "repeats": false,
               "item": [
                 {
                   "extension": [
@@ -2073,43 +2504,274 @@
                     }
                   ],
                   "linkId": "NutritionOrder.supplement.schedule-flyover",
-                  "text": "The time period and frequency at which the supplement(s) should be given.  The supplement should be given for the combination of all schedules if more than one schedule is present.",
+                  "text": "Schedule information for a supplement.",
                   "type": "display"
-                },
-                {
-                  "linkId": "NutritionOrder.supplement.schedule.text",
-                  "text": "text:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "NutritionOrder.supplement.schedule.date",
-                  "text": "date:",
-                  "type": "dateTime",
-                  "required": false,
-                  "repeats": false
                 },
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                      "valueCode": "Patient"
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                      "valueInteger": 1
                     },
                     {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                      "valueCode": "Practitioner"
-                    },
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                      "valueCode": "RelatedPerson"
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "string"
                     }
                   ],
-                  "linkId": "NutritionOrder.supplement.schedule.author",
-                  "text": "author:",
-                  "type": "reference",
+                  "linkId": "NutritionOrder.supplement.schedule.id",
+                  "type": "group",
                   "required": false,
-                  "repeats": false
+                  "repeats": true,
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "flyover",
+                                "display": "Fly-over"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "linkId": "NutritionOrder.supplement.schedule.id-flyover",
+                      "text": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+                      "type": "display"
+                    },
+                    {
+                      "linkId": "NutritionOrder.supplement.schedule.id.value",
+                      "text": "Unique id for inter-element referencing",
+                      "type": "string",
+                      "required": false,
+                      "repeats": false
+                    }
+                  ]
+                },
+                {
+                  "linkId": "NutritionOrder.supplement.schedule.extension",
+                  "text": "Additional content defined by implementations",
+                  "type": "group",
+                  "required": false,
+                  "repeats": true,
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "flyover",
+                                "display": "Fly-over"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "linkId": "NutritionOrder.supplement.schedule.extension-flyover",
+                      "text": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+                      "type": "display"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "NutritionOrder.supplement.schedule.modifierExtension",
+                  "text": "Extensions that cannot be ignored even if unrecognized",
+                  "type": "group",
+                  "required": false,
+                  "repeats": true,
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "flyover",
+                                "display": "Fly-over"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "linkId": "NutritionOrder.supplement.schedule.modifierExtension-flyover",
+                      "text": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself). There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+                      "type": "display"
+                    }
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "Schedule"
+                    }
+                  ],
+                  "linkId": "NutritionOrder.supplement.schedule.timing",
+                  "text": "Scheduled frequency of diet",
+                  "type": "group",
+                  "required": false,
+                  "repeats": true,
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "flyover",
+                                "display": "Fly-over"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "linkId": "NutritionOrder.supplement.schedule.timing-flyover",
+                      "text": "The time period and frequency at which the supplement should be given.  The supplement should be given for the combination of all schedules if more than one schedule is present.",
+                      "type": "display"
+                    },
+                    {
+                      "linkId": "NutritionOrder.supplement.schedule.timing.text",
+                      "text": "text:",
+                      "type": "string",
+                      "required": false,
+                      "repeats": false
+                    },
+                    {
+                      "linkId": "NutritionOrder.supplement.schedule.timing.date",
+                      "text": "date:",
+                      "type": "dateTime",
+                      "required": false,
+                      "repeats": false
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                          "valueCode": "Patient"
+                        },
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                          "valueCode": "Practitioner"
+                        },
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                          "valueCode": "RelatedPerson"
+                        }
+                      ],
+                      "linkId": "NutritionOrder.supplement.schedule.timing.author",
+                      "text": "author:",
+                      "type": "reference",
+                      "required": false,
+                      "repeats": false
+                    }
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "boolean"
+                    }
+                  ],
+                  "linkId": "NutritionOrder.supplement.schedule.asNeeded",
+                  "type": "group",
+                  "required": false,
+                  "repeats": true,
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "flyover",
+                                "display": "Fly-over"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "linkId": "NutritionOrder.supplement.schedule.asNeeded-flyover",
+                      "text": "Indicates whether the supplement is only taken when needed within a specific dosing schedule.",
+                      "type": "display"
+                    },
+                    {
+                      "linkId": "NutritionOrder.supplement.schedule.asNeeded.value",
+                      "text": "Take \u0027as needed\u0027",
+                      "type": "boolean",
+                      "required": false,
+                      "repeats": false
+                    }
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "CodeableConcept"
+                    }
+                  ],
+                  "linkId": "NutritionOrder.supplement.schedule.asNeededFor",
+                  "text": "Take \u0027as needed\u0027 for x",
+                  "type": "group",
+                  "required": false,
+                  "repeats": true,
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "flyover",
+                                "display": "Fly-over"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "linkId": "NutritionOrder.supplement.schedule.asNeededFor-flyover",
+                      "text": "Indicates whether the supplement is only taken based on a precondition for taking the supplement.",
+                      "type": "display"
+                    },
+                    {
+                      "linkId": "NutritionOrder.supplement.schedule.asNeededFor.coding",
+                      "text": "code:",
+                      "type": "coding",
+                      "required": false,
+                      "repeats": false,
+                      "answerConstraint": "optionsOnly"
+                    },
+                    {
+                      "linkId": "NutritionOrder.supplement.schedule.asNeededFor.text",
+                      "text": "text:",
+                      "type": "string",
+                      "required": false,
+                      "repeats": false
+                    }
+                  ]
                 }
               ]
             },
@@ -2370,17 +3032,13 @@
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                   "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "CodeableConcept"
                 }
               ],
               "linkId": "NutritionOrder.enteralFormula.baseFormulaType",
               "text": "Type of enteral or infant formula",
               "type": "group",
               "required": false,
-              "repeats": true,
+              "repeats": false,
               "item": [
                 {
                   "extension": [
@@ -2400,21 +3058,6 @@
                   "linkId": "NutritionOrder.enteralFormula.baseFormulaType-flyover",
                   "text": "The type of enteral or infant formula such as an adult standard formula with fiber or a soy-based infant formula.",
                   "type": "display"
-                },
-                {
-                  "linkId": "NutritionOrder.enteralFormula.baseFormulaType.coding",
-                  "text": "code:",
-                  "type": "coding",
-                  "required": false,
-                  "repeats": false,
-                  "answerConstraint": "optionsOnly"
-                },
-                {
-                  "linkId": "NutritionOrder.enteralFormula.baseFormulaType.text",
-                  "text": "text:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
                 }
               ]
             },
@@ -2463,18 +3106,8 @@
               ]
             },
             {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "CodeableConcept"
-                }
-              ],
-              "linkId": "NutritionOrder.enteralFormula.additiveType",
-              "text": "Type of modular component to add to the feeding",
+              "linkId": "NutritionOrder.enteralFormula.deliveryDevice",
+              "text": "Intended type of device for the administration",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -2494,39 +3127,15 @@
                       }
                     }
                   ],
-                  "linkId": "NutritionOrder.enteralFormula.additiveType-flyover",
-                  "text": "Indicates the type of modular component such as protein, carbohydrate, fat or fiber to be provided in addition to or mixed with the base formula.",
+                  "linkId": "NutritionOrder.enteralFormula.deliveryDevice-flyover",
+                  "text": "The intended type of device that is to be used for the administration of the enteral formula.",
                   "type": "display"
-                },
-                {
-                  "linkId": "NutritionOrder.enteralFormula.additiveType.coding",
-                  "text": "code:",
-                  "type": "coding",
-                  "required": false,
-                  "repeats": false,
-                  "answerConstraint": "optionsOnly"
-                },
-                {
-                  "linkId": "NutritionOrder.enteralFormula.additiveType.text",
-                  "text": "text:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
                 }
               ]
             },
             {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "string"
-                }
-              ],
-              "linkId": "NutritionOrder.enteralFormula.additiveProductName",
+              "linkId": "NutritionOrder.enteralFormula.additive",
+              "text": "Components to add to the feeding",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -2546,16 +3155,261 @@
                       }
                     }
                   ],
-                  "linkId": "NutritionOrder.enteralFormula.additiveProductName-flyover",
-                  "text": "The product or brand name of the type of modular component to be added to the formula.",
+                  "linkId": "NutritionOrder.enteralFormula.additive-flyover",
+                  "text": "Indicates modular components to be provided in addition or mixed with the base formula.",
                   "type": "display"
                 },
                 {
-                  "linkId": "NutritionOrder.enteralFormula.additiveProductName.value",
-                  "text": "Product or brand name of the modular additive",
-                  "type": "string",
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "string"
+                    }
+                  ],
+                  "linkId": "NutritionOrder.enteralFormula.additive.id",
+                  "type": "group",
                   "required": false,
-                  "repeats": false
+                  "repeats": true,
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "flyover",
+                                "display": "Fly-over"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "linkId": "NutritionOrder.enteralFormula.additive.id-flyover",
+                      "text": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+                      "type": "display"
+                    },
+                    {
+                      "linkId": "NutritionOrder.enteralFormula.additive.id.value",
+                      "text": "Unique id for inter-element referencing",
+                      "type": "string",
+                      "required": false,
+                      "repeats": false
+                    }
+                  ]
+                },
+                {
+                  "linkId": "NutritionOrder.enteralFormula.additive.extension",
+                  "text": "Additional content defined by implementations",
+                  "type": "group",
+                  "required": false,
+                  "repeats": true,
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "flyover",
+                                "display": "Fly-over"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "linkId": "NutritionOrder.enteralFormula.additive.extension-flyover",
+                      "text": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+                      "type": "display"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "NutritionOrder.enteralFormula.additive.modifierExtension",
+                  "text": "Extensions that cannot be ignored even if unrecognized",
+                  "type": "group",
+                  "required": false,
+                  "repeats": true,
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "flyover",
+                                "display": "Fly-over"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "linkId": "NutritionOrder.enteralFormula.additive.modifierExtension-flyover",
+                      "text": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself). There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+                      "type": "display"
+                    }
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                      "valueInteger": 1
+                    }
+                  ],
+                  "linkId": "NutritionOrder.enteralFormula.additive.type",
+                  "text": "Type of modular component to add to the feeding",
+                  "type": "group",
+                  "required": false,
+                  "repeats": false,
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "flyover",
+                                "display": "Fly-over"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "linkId": "NutritionOrder.enteralFormula.additive.type-flyover",
+                      "text": "Indicates the type of modular component such as protein, carbohydrate, fat or fiber to be provided in addition to or mixed with the base formula.",
+                      "type": "display"
+                    }
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "string"
+                    }
+                  ],
+                  "linkId": "NutritionOrder.enteralFormula.additive.productName",
+                  "type": "group",
+                  "required": false,
+                  "repeats": true,
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "flyover",
+                                "display": "Fly-over"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "linkId": "NutritionOrder.enteralFormula.additive.productName-flyover",
+                      "text": "The product or brand name of the type of modular component to be added to the formula.",
+                      "type": "display"
+                    },
+                    {
+                      "linkId": "NutritionOrder.enteralFormula.additive.productName.value",
+                      "text": "Product or brand name of the modular additive",
+                      "type": "string",
+                      "required": false,
+                      "repeats": false
+                    }
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "Quantity"
+                    }
+                  ],
+                  "linkId": "NutritionOrder.enteralFormula.additive.quantity",
+                  "text": "Amount of additive to be given or mixed in",
+                  "type": "group",
+                  "required": false,
+                  "repeats": true,
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "flyover",
+                                "display": "Fly-over"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "linkId": "NutritionOrder.enteralFormula.additive.quantity-flyover",
+                      "text": "The amount of additive to be given in addition or to be mixed in with the base formula.",
+                      "type": "display"
+                    },
+                    {
+                      "linkId": "NutritionOrder.enteralFormula.additive.quantity.comparator",
+                      "text": "comp:",
+                      "type": "coding",
+                      "required": false,
+                      "repeats": false,
+                      "answerConstraint": "optionsOnly"
+                    },
+                    {
+                      "linkId": "NutritionOrder.enteralFormula.additive.quantity.value",
+                      "text": "value:",
+                      "type": "decimal",
+                      "required": false,
+                      "repeats": false
+                    },
+                    {
+                      "linkId": "NutritionOrder.enteralFormula.additive.quantity.units",
+                      "text": "units:",
+                      "type": "string",
+                      "required": false,
+                      "repeats": false
+                    },
+                    {
+                      "linkId": "NutritionOrder.enteralFormula.additive.quantity.code",
+                      "text": "coded units:",
+                      "type": "string",
+                      "required": false,
+                      "repeats": false
+                    },
+                    {
+                      "linkId": "NutritionOrder.enteralFormula.additive.quantity.system",
+                      "text": "units system:",
+                      "type": "string",
+                      "required": false,
+                      "repeats": false
+                    }
+                  ]
                 }
               ]
             },
@@ -2644,7 +3498,7 @@
                   "valueString": "CodeableConcept"
                 }
               ],
-              "linkId": "NutritionOrder.enteralFormula.routeofAdministration",
+              "linkId": "NutritionOrder.enteralFormula.routeOfAdministration",
               "text": "How the formula should enter the patient\u0027s gastrointestinal tract",
               "type": "group",
               "required": false,
@@ -2665,12 +3519,12 @@
                       }
                     }
                   ],
-                  "linkId": "NutritionOrder.enteralFormula.routeofAdministration-flyover",
+                  "linkId": "NutritionOrder.enteralFormula.routeOfAdministration-flyover",
                   "text": "The route or physiological path of administration into the patient\u0027s gastrointestinal  tract for purposes of providing the formula feeding, e.g. nasogastric tube.",
                   "type": "display"
                 },
                 {
-                  "linkId": "NutritionOrder.enteralFormula.routeofAdministration.coding",
+                  "linkId": "NutritionOrder.enteralFormula.routeOfAdministration.coding",
                   "text": "code:",
                   "type": "coding",
                   "required": false,
@@ -2678,7 +3532,7 @@
                   "answerConstraint": "optionsOnly"
                 },
                 {
-                  "linkId": "NutritionOrder.enteralFormula.routeofAdministration.text",
+                  "linkId": "NutritionOrder.enteralFormula.routeOfAdministration.text",
                   "text": "text:",
                   "type": "string",
                   "required": false,
@@ -2822,17 +3676,13 @@
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                       "valueInteger": 1
-                    },
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                      "valueString": "Schedule"
                     }
                   ],
                   "linkId": "NutritionOrder.enteralFormula.administration.schedule",
-                  "text": "Scheduled frequency of enteral feeding",
+                  "text": "Scheduling information for enteral formula products",
                   "type": "group",
                   "required": false,
-                  "repeats": true,
+                  "repeats": false,
                   "item": [
                     {
                       "extension": [
@@ -2850,43 +3700,274 @@
                         }
                       ],
                       "linkId": "NutritionOrder.enteralFormula.administration.schedule-flyover",
-                      "text": "The time period and frequency at which the enteral formula should be delivered to the patient.",
+                      "text": "Schedule information for an enteral formula.",
                       "type": "display"
-                    },
-                    {
-                      "linkId": "NutritionOrder.enteralFormula.administration.schedule.text",
-                      "text": "text:",
-                      "type": "string",
-                      "required": false,
-                      "repeats": false
-                    },
-                    {
-                      "linkId": "NutritionOrder.enteralFormula.administration.schedule.date",
-                      "text": "date:",
-                      "type": "dateTime",
-                      "required": false,
-                      "repeats": false
                     },
                     {
                       "extension": [
                         {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                          "valueCode": "Patient"
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                          "valueInteger": 1
                         },
                         {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                          "valueCode": "Practitioner"
-                        },
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                          "valueCode": "RelatedPerson"
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                          "valueString": "string"
                         }
                       ],
-                      "linkId": "NutritionOrder.enteralFormula.administration.schedule.author",
-                      "text": "author:",
-                      "type": "reference",
+                      "linkId": "NutritionOrder.enteralFormula.administration.schedule.id",
+                      "type": "group",
                       "required": false,
-                      "repeats": false
+                      "repeats": true,
+                      "item": [
+                        {
+                          "extension": [
+                            {
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                    "code": "flyover",
+                                    "display": "Fly-over"
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          "linkId": "NutritionOrder.enteralFormula.administration.schedule.id-flyover",
+                          "text": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+                          "type": "display"
+                        },
+                        {
+                          "linkId": "NutritionOrder.enteralFormula.administration.schedule.id.value",
+                          "text": "Unique id for inter-element referencing",
+                          "type": "string",
+                          "required": false,
+                          "repeats": false
+                        }
+                      ]
+                    },
+                    {
+                      "linkId": "NutritionOrder.enteralFormula.administration.schedule.extension",
+                      "text": "Additional content defined by implementations",
+                      "type": "group",
+                      "required": false,
+                      "repeats": true,
+                      "item": [
+                        {
+                          "extension": [
+                            {
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                    "code": "flyover",
+                                    "display": "Fly-over"
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          "linkId": "NutritionOrder.enteralFormula.administration.schedule.extension-flyover",
+                          "text": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+                          "type": "display"
+                        }
+                      ]
+                    },
+                    {
+                      "linkId": "NutritionOrder.enteralFormula.administration.schedule.modifierExtension",
+                      "text": "Extensions that cannot be ignored even if unrecognized",
+                      "type": "group",
+                      "required": false,
+                      "repeats": true,
+                      "item": [
+                        {
+                          "extension": [
+                            {
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                    "code": "flyover",
+                                    "display": "Fly-over"
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          "linkId": "NutritionOrder.enteralFormula.administration.schedule.modifierExtension-flyover",
+                          "text": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself). There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+                          "type": "display"
+                        }
+                      ]
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                          "valueString": "Schedule"
+                        }
+                      ],
+                      "linkId": "NutritionOrder.enteralFormula.administration.schedule.timing",
+                      "text": "Scheduled frequency of enteral formula",
+                      "type": "group",
+                      "required": false,
+                      "repeats": true,
+                      "item": [
+                        {
+                          "extension": [
+                            {
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                    "code": "flyover",
+                                    "display": "Fly-over"
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          "linkId": "NutritionOrder.enteralFormula.administration.schedule.timing-flyover",
+                          "text": "The time period and frequency at which the enteral formula should be given.  The enteral formula should be given for the combination of all schedules if more than one schedule is present.",
+                          "type": "display"
+                        },
+                        {
+                          "linkId": "NutritionOrder.enteralFormula.administration.schedule.timing.text",
+                          "text": "text:",
+                          "type": "string",
+                          "required": false,
+                          "repeats": false
+                        },
+                        {
+                          "linkId": "NutritionOrder.enteralFormula.administration.schedule.timing.date",
+                          "text": "date:",
+                          "type": "dateTime",
+                          "required": false,
+                          "repeats": false
+                        },
+                        {
+                          "extension": [
+                            {
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                              "valueCode": "Patient"
+                            },
+                            {
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                              "valueCode": "Practitioner"
+                            },
+                            {
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                              "valueCode": "RelatedPerson"
+                            }
+                          ],
+                          "linkId": "NutritionOrder.enteralFormula.administration.schedule.timing.author",
+                          "text": "author:",
+                          "type": "reference",
+                          "required": false,
+                          "repeats": false
+                        }
+                      ]
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                          "valueInteger": 1
+                        },
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                          "valueString": "boolean"
+                        }
+                      ],
+                      "linkId": "NutritionOrder.enteralFormula.administration.schedule.asNeeded",
+                      "type": "group",
+                      "required": false,
+                      "repeats": true,
+                      "item": [
+                        {
+                          "extension": [
+                            {
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                    "code": "flyover",
+                                    "display": "Fly-over"
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          "linkId": "NutritionOrder.enteralFormula.administration.schedule.asNeeded-flyover",
+                          "text": "Indicates whether the enteral formula is only taken when needed within a specific dosing schedule.",
+                          "type": "display"
+                        },
+                        {
+                          "linkId": "NutritionOrder.enteralFormula.administration.schedule.asNeeded.value",
+                          "text": "Take \u0027as needed\u0027",
+                          "type": "boolean",
+                          "required": false,
+                          "repeats": false
+                        }
+                      ]
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                          "valueInteger": 1
+                        },
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                          "valueString": "CodeableConcept"
+                        }
+                      ],
+                      "linkId": "NutritionOrder.enteralFormula.administration.schedule.asNeededFor",
+                      "text": "Take \u0027as needed\u0027 for x",
+                      "type": "group",
+                      "required": false,
+                      "repeats": true,
+                      "item": [
+                        {
+                          "extension": [
+                            {
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                    "code": "flyover",
+                                    "display": "Fly-over"
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          "linkId": "NutritionOrder.enteralFormula.administration.schedule.asNeededFor-flyover",
+                          "text": "Indicates whether the enteral formula is only taken based on a precondition for taking the enteral formula.",
+                          "type": "display"
+                        },
+                        {
+                          "linkId": "NutritionOrder.enteralFormula.administration.schedule.asNeededFor.coding",
+                          "text": "code:",
+                          "type": "coding",
+                          "required": false,
+                          "repeats": false,
+                          "answerConstraint": "optionsOnly"
+                        },
+                        {
+                          "linkId": "NutritionOrder.enteralFormula.administration.schedule.asNeededFor.text",
+                          "text": "text:",
+                          "type": "string",
+                          "required": false,
+                          "repeats": false
+                        }
+                      ]
                     }
                   ]
                 },
@@ -3248,14 +4329,5 @@
         }
       ]
     }
-  ],
-  "meta": {
-    "tag": [
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-        "code": "HTEST",
-        "display": "test health data"
-      }
-    ]
-  }
+  ]
 }

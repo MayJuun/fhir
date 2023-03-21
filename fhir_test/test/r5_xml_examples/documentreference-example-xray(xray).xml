@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><DocumentReference xmlns="http://hl7.org/fhir">
+  <id value="xray"/>
+
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">Xray of left hand for Patient Henry Levin (MRN 12345) 2016-03-15</div>
+  </text>
+
+<status value="current"/>
+
+  <subject>
+    <reference value="Patient/example"/>
+  </subject>
+  <context>
+    <reference value="Encounter/example"/>
+  </context>
+  <context>
+   <reference value="DocumentReference/documentreference-example-xray-encounter"/>
+  </context>
+  <event>
+  <concept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="39714003"/>
+      <display value="Skeletal X-ray of wrist and hand"/>
+    </coding>
+	</concept>
+  </event>
+  <event>
+  <concept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="85151006"/>
+      <display value="Structure of left hand (body structure)"/>
+    </coding>
+	</concept>
+  </event>
+
+
+  <content id="a1">
+    <attachment>
+    <contentType value="image/jpeg"/>
+    <url value="http://someimagingcenter.org/fhir/Binary/A12345"/>
+      <!--  the date this image was created  -->
+    <creation value="2016-03-15"/>
+  <height value="432"/>
+  <width value="640"/>
+    </attachment>
+  </content>
+
+</DocumentReference>

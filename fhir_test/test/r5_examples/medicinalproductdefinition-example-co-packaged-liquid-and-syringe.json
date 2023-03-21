@@ -14,7 +14,7 @@
           "reference": "#"
         }
       ],
-      "package": {
+      "packaging": {
         "containedItem": [
           {
             "item": {

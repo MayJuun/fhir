@@ -6,6 +6,12 @@
     "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n      \n      \u003cp\u003e\n        \u003cb\u003eSNOMED CT\u003c/b\u003e\n      \u003c/p\u003e\n      \n      \u003cp\u003e oid: 2.16.840.1.113883.6.96\u003c/p\u003e\n      \n      \u003cp\u003e uri: http://snomed.info/sct\u003c/p\u003e\n    \n    \u003c/div\u003e"
   },
   "url": "http://hl7.org/fhir/NamingSystem/example",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.22.1"
+    }
+  ],
   "name": "SNOMED CT",
   "status": "active",
   "kind": "codesystem",

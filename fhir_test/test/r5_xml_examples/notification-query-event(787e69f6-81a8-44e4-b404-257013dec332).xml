@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?><Bundle xmlns="http://hl7.org/fhir">
+  <id value="787e69f6-81a8-44e4-b404-257013dec332"/>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <type value="subscription-notification"/>
+  <timestamp value="2020-04-17T10:24:13.1882432-05:00"/>
+  <entry>
+    <fullUrl value="urn:uuid:63c7e4fb-0a83-4cd9-9f42-cdcf7d5cd3ed"/>
+    <resource>
+      <SubscriptionStatus>
+        <id value="815477f2-a94c-4197-a82a-9f974155debc"/>
+        <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: SubscriptionStatus</b><a name="815477f2-a94c-4197-a82a-9f974155debc"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource SubscriptionStatus "815477f2-a94c-4197-a82a-9f974155debc" </p></div><p><b>status</b>: active</p><p><b>type</b>: query-event</p><p><b>eventsSinceSubscriptionStart</b>: 310</p><blockquote><p><b>notificationEvent</b></p><p><b>eventNumber</b>: 307</p><p><b>focus</b>: <a href="broken-link.html">http://example.org/FHIR/R5/Encounter/307</a></p><p><b>additionalContext</b>: <a href="broken-link.html">http://example.org/FHIR/R5/Patient/ABC</a></p></blockquote><blockquote><p><b>notificationEvent</b></p><p><b>eventNumber</b>: 308</p><p><b>focus</b>: <a href="broken-link.html">http://example.org/FHIR/R5/Encounter/308</a></p><p><b>additionalContext</b>: <a href="broken-link.html">http://example.org/FHIR/R5/Patient/ABC</a></p></blockquote><p><b>subscription</b>: <a href="broken-link.html">http://example.org/FHIR/R5/Subscription/123</a></p><p><b>topic</b>: <a href="http://example.org/FHIR/R5/SubscriptionTopic/admission">http://example.org/FHIR/R5/SubscriptionTopic/admission</a></p></div></text><status value="active"/>
+        <type value="query-event"/>
+        <eventsSinceSubscriptionStart value="310"/>
+        <notificationEvent>
+          <eventNumber value="307"/>
+          <focus>
+            <reference value="http://example.org/FHIR/R5/Encounter/307"/>
+          </focus>
+          <additionalContext>
+            <reference value="http://example.org/FHIR/R5/Patient/ABC"/>
+          </additionalContext>
+        </notificationEvent>
+        <notificationEvent>
+          <eventNumber value="308"/>
+          <focus>
+            <reference value="http://example.org/FHIR/R5/Encounter/308"/>
+          </focus>
+          <additionalContext>
+            <reference value="http://example.org/FHIR/R5/Patient/ABC"/>
+          </additionalContext>
+        </notificationEvent>
+        <subscription>
+          <reference value="http://example.org/FHIR/R5/Subscription/123"/>
+        </subscription>
+        <topic value="http://example.org/FHIR/R5/SubscriptionTopic/admission"/>
+      </SubscriptionStatus>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://example.org/FHIR/R5/Encounter/307"/>
+    <resource>
+      <Encounter>
+        <id value="307"/>
+        <meta>
+          <versionId value="1"/>
+          <lastUpdated value="2019-08-07T10:49:22Z"/>
+        </meta>
+        <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Encounter</b><a name="307"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Encounter "307" Version "1" Updated "2019-08-07T10:49:22Z" </p></div><p><b>status</b>: in-progress</p><p><b>class</b>: virtual <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-ActCode.html">ActCode</a>#VR)</span></p><p><b>subject</b>: <a href="broken-link.html">Patient/ABC</a></p></div></text><status value="in-progress"/>
+        <class>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+				<code value="VR"/>
+				<display value="virtual"/>
+			</coding>
+        </class>
+        <subject>
+          <reference value="Patient/ABC"/>
+        </subject>
+      </Encounter>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="Encounter/307"/>
+    </request>
+    <response>
+      <status value="201"/>
+    </response>
+  </entry>
+  <entry>
+    <fullUrl value="https://example.org/FHIR/R5/Patient/ABC"/>
+    <resource>
+      <Patient>
+        <id value="ABC"/>
+        <meta>
+          <versionId value="1"/>
+          <lastUpdated value="2019-08-07T10:49:22Z"/>
+        </meta>
+        <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;"><b>Patient Example (OFFICIAL)</b> (no stated gender), DoB Unknown</p><hr/></div></text><name>
+          <use value="official"/>
+          <family value="Example"/>
+          <given value="Patient"/>
+        </name>
+      </Patient>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://example.org/FHIR/R5/Encounter/308"/>
+    <resource>
+      <Encounter>
+        <id value="308"/>
+        <meta>
+          <versionId value="1"/>
+          <lastUpdated value="2019-08-07T10:49:22Z"/>
+        </meta>
+        <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Encounter</b><a name="308"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Encounter "308" Version "1" Updated "2019-08-07T10:49:22Z" </p></div><p><b>status</b>: in-progress</p><p><b>class</b>: virtual <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-ActCode.html">ActCode</a>#VR)</span></p><p><b>subject</b>: <a href="broken-link.html">Patient/ABC</a></p></div></text><status value="in-progress"/>
+        <class>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+				<code value="VR"/>
+				<display value="virtual"/>
+			</coding>
+        </class>
+        <subject>
+          <reference value="Patient/ABC"/>
+        </subject>
+      </Encounter>
+    </resource>
+    <request>
+      <method value="PUT"/>
+      <url value="Encounter/308"/>
+    </request>
+    <response>
+      <status value="201"/>
+    </response>
+  </entry>
+
+</Bundle>

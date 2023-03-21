@@ -1,6 +1,6 @@
 {
   "resourceType": "Questionnaire",
-  "id": "qs1",
+  "id": "qgen-AdverseEvent1",
   "contained": [
     {
       "resourceType": "ValueSet",
@@ -9,21 +9,21 @@
       "status": "active",
       "description": "Type options for AdverseEvent.occurrence[x]",
       "expansion": {
-        "identifier": "urn:uuid:2941b674-3fab-4852-a9de-a55a827dc5ae",
-        "timestamp": "2022-05-06T17:10:08+00:00",
+        "identifier": "urn:uuid:af74cc9d-6a3f-463b-8734-6da006da960c",
+        "timestamp": "2022-12-14T07:15:58+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "dateTime",
             "display": "dateTime"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Period",
             "display": "Period"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Timing",
             "display": "Timing"
           }
@@ -37,56 +37,56 @@
       "status": "active",
       "description": "Type options for AdverseEvent.suspectEntity.instance[x]",
       "expansion": {
-        "identifier": "urn:uuid:c5e6cd53-3f25-49e9-a6e8-73ca11d52218",
-        "timestamp": "2022-05-06T17:10:08+00:00",
+        "identifier": "urn:uuid:72950dbf-4ac9-471f-a07c-2b15140a33d0",
+        "timestamp": "2022-12-14T07:15:58+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "CodeableConcept",
             "display": "CodeableConcept"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Immunization",
             "display": "Immunization"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Procedure",
             "display": "Procedure"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Substance",
             "display": "Substance"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Medication",
             "display": "Medication"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "MedicationAdministration",
             "display": "MedicationAdministration"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "MedicationUsage",
             "display": "MedicationUsage"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Device",
             "display": "Device"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "BiologicallyDerivedProduct",
             "display": "BiologicallyDerivedProduct"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "ResearchStudy",
             "display": "ResearchStudy"
           }
@@ -100,46 +100,61 @@
       "status": "active",
       "description": "Type options for AdverseEvent.contributingFactor.item[x]",
       "expansion": {
-        "identifier": "urn:uuid:4e88560b-3cc9-4369-b5c8-0bbf7aa19e6a",
-        "timestamp": "2022-05-06T17:10:08+00:00",
+        "identifier": "urn:uuid:af360e03-fd82-4b5c-a8dc-656ed4cc1083",
+        "timestamp": "2022-12-14T07:15:58+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Condition",
             "display": "Condition"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Observation",
             "display": "Observation"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "AllergyIntolerance",
             "display": "AllergyIntolerance"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "FamilyMemberHistory",
             "display": "FamilyMemberHistory"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Immunization",
             "display": "Immunization"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Procedure",
             "display": "Procedure"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "Device",
+            "display": "Device"
+          },
+          {
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "DocumentReference",
             "display": "DocumentReference"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "MedicationAdministration",
+            "display": "MedicationAdministration"
+          },
+          {
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "MedicationUsage",
+            "display": "MedicationUsage"
+          },
+          {
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "CodeableConcept",
             "display": "CodeableConcept"
           }
@@ -153,36 +168,36 @@
       "status": "active",
       "description": "Type options for AdverseEvent.preventiveAction.item[x]",
       "expansion": {
-        "identifier": "urn:uuid:a8af0ed5-470a-434f-a0b8-791e53a1d7c3",
-        "timestamp": "2022-05-06T17:10:08+00:00",
+        "identifier": "urn:uuid:9fc3de18-dc03-496d-9070-6edfa60688f3",
+        "timestamp": "2022-12-14T07:15:58+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Immunization",
             "display": "Immunization"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Procedure",
             "display": "Procedure"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "DocumentReference",
             "display": "DocumentReference"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "MedicationAdministration",
             "display": "MedicationAdministration"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "MedicationRequest",
             "display": "MedicationRequest"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "CodeableConcept",
             "display": "CodeableConcept"
           }
@@ -196,31 +211,31 @@
       "status": "active",
       "description": "Type options for AdverseEvent.mitigatingAction.item[x]",
       "expansion": {
-        "identifier": "urn:uuid:999065e4-7bd9-49c6-a6c9-8b31b886157a",
-        "timestamp": "2022-05-06T17:10:08+00:00",
+        "identifier": "urn:uuid:2f86d833-ce62-4b08-a57d-b2378bf3603c",
+        "timestamp": "2022-12-14T07:15:58+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Procedure",
             "display": "Procedure"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "DocumentReference",
             "display": "DocumentReference"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "MedicationAdministration",
             "display": "MedicationAdministration"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "MedicationRequest",
             "display": "MedicationRequest"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "CodeableConcept",
             "display": "CodeableConcept"
           }
@@ -234,46 +249,56 @@
       "status": "active",
       "description": "Type options for AdverseEvent.supportingInfo.item[x]",
       "expansion": {
-        "identifier": "urn:uuid:60236361-4479-4bec-9267-3eaeb9c7b76a",
-        "timestamp": "2022-05-06T17:10:08+00:00",
+        "identifier": "urn:uuid:6c59c168-5904-4e09-8c8c-5d4f3a7736cf",
+        "timestamp": "2022-12-14T07:15:58+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Condition",
             "display": "Condition"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Observation",
             "display": "Observation"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "AllergyIntolerance",
             "display": "AllergyIntolerance"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "FamilyMemberHistory",
             "display": "FamilyMemberHistory"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Immunization",
             "display": "Immunization"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Procedure",
             "display": "Procedure"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "DocumentReference",
             "display": "DocumentReference"
           },
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "MedicationAdministration",
+            "display": "MedicationAdministration"
+          },
+          {
+            "system": "http://hl7.org/fhir/fhir-types",
+            "code": "MedicationUsage",
+            "display": "MedicationUsage"
+          },
+          {
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "CodeableConcept",
             "display": "CodeableConcept"
           }
@@ -281,19 +306,21 @@
       }
     }
   ],
+  "url": "http://hl7.org/fhir/Questionnaire/qgen-AdverseEvent1",
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "status": "draft",
-  "date": "2022-05-06T17:02:42+00:00",
+  "experimental": false,
+  "date": "2022-12-14T07:12:54+11:00",
   "publisher": "Health Level Seven International (Patient Care)",
   "item": [
     {
       "linkId": "AdverseEvent",
-      "text": "Medical care, research study or other healthcare event causing physical injury",
+      "text": "An event that may be related to unintended effects on a patient or research subject",
       "type": "group",
       "required": false,
       "repeats": true,
@@ -314,7 +341,7 @@
             }
           ],
           "linkId": "AdverseEvent-flyover",
-          "text": "An event (i.e. any change to current patient status) that may be related to unintended effects on a patient or research subject.  The unintended effects may require additional monitoring, treatment or hospitalization or may result in death.  The AdverseEvent resource also extends to potential or avoided events that could have had such effects.",
+          "text": "An event (i.e. any change to current patient status) that may be related to unintended effects on a patient or research subject. The unintended effects may require additional monitoring, treatment, hospitalization, or may result in death. The AdverseEvent resource also extends to potential or avoided events that could have had such effects. There are two major domains where the AdverseEvent resource is expected to be used. One is in clinical care reported adverse events and the other is in reporting adverse events in clinical  research trial management. Given the differences between these two concepts, we recommend consulting the domain specific implementation guides when implementing the AdverseEvent Resource. The implementation guides include specific extensions, value sets and constraints.",
           "type": "display"
         },
         {
@@ -349,7 +376,7 @@
                 }
               ],
               "linkId": "AdverseEvent.id-flyover",
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Within the context of the FHIR RESTful interactions, the resource has an id except for cases like the create and conditional update. Otherwise, the use of the resouce id depends on the given use case.",
               "type": "display"
             },
             {
@@ -541,7 +568,7 @@
                 }
               ],
               "linkId": "AdverseEvent.contained-flyover",
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags in their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -893,14 +920,14 @@
                 }
               ],
               "linkId": "AdverseEvent.subject-flyover",
-              "text": "This subject or group impacted by the event. If AdverseEvent.resultingCondition differs among members of the group, then use Patient as the subject.",
+              "text": "This subject or group impacted by the event. If AdverseEvent.resultingEffect differs among members of the group, then use Patient as the subject.",
               "type": "display"
             },
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Patient, Group, Practitioner, RelatedPerson"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Patient, Group, Practitioner, RelatedPerson, ResearchSubject, ResearchSubject"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -953,8 +980,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Encounter"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Encounter, Encounter"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1081,15 +1108,15 @@
                     {
                       "extension": [
                         {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
                           "valueCode": "Patient"
                         },
                         {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
                           "valueCode": "Practitioner"
                         },
                         {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
                           "valueCode": "RelatedPerson"
                         }
                       ],
@@ -1200,7 +1227,7 @@
               "valueString": "Reference"
             }
           ],
-          "linkId": "AdverseEvent.resultingCondition",
+          "linkId": "AdverseEvent.resultingEffect",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -1220,22 +1247,22 @@
                   }
                 }
               ],
-              "linkId": "AdverseEvent.resultingCondition-flyover",
+              "linkId": "AdverseEvent.resultingEffect-flyover",
               "text": "Information about the condition that occurred as a result of the adverse event, such as hives due to the exposure to a substance (for example, a drug or a chemical) or a broken leg as a result of the fall.",
               "type": "display"
             },
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Condition"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Condition, Observation, Observation"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
                   "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
                 }
               ],
-              "linkId": "AdverseEvent.resultingCondition.value",
+              "linkId": "AdverseEvent.resultingEffect.value",
               "text": "Effect on the subject due to this event",
               "type": "reference",
               "required": false,
@@ -1281,8 +1308,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Location"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Location, Location"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1330,7 +1357,7 @@
                 }
               ],
               "linkId": "AdverseEvent.seriousness-flyover",
-              "text": "Assessment whether this event, or averted event, was of clinical importance. Using an example, a rash can have an AdverseEvent.resultingCondition.severity \u003d severe, yet an AdverseEvent.seriousness \u003d non-serious.  Alternatively, a medication given with the wrong dose (chemotherapy given with too low of a dose) can have an AdverseEvent.resultingCondition.severity \u003d mild, yet a AdverseEvent.seriousness \u003d serious.  Another example would be a beta blocker clinical trial where patients with asthma should be excluded, yet a patient with asthma was included and had an asthmatic episode where  AdverseEvent.resultingCondition.severity \u003d mild, yet a AdverseEvent.seriousness \u003d serious.",
+              "text": "Assessment whether this event, or averted event, was of clinical importance. Using an example, a rash can have an AdverseEvent.resultingEffect.severity \u003d severe, yet an AdverseEvent.seriousness \u003d non-serious.  Alternatively, a medication given with the wrong dose (chemotherapy given with too low of a dose) can have an AdverseEvent.resultingEffect.severity \u003d mild, yet a AdverseEvent.seriousness \u003d serious.  Another example would be a beta blocker clinical trial where patients with asthma should be excluded, yet a patient with asthma was included and had an asthmatic episode where  AdverseEvent.resultingEffect.severity \u003d mild, yet a AdverseEvent.seriousness \u003d serious.",
               "type": "display"
             },
             {
@@ -1437,8 +1464,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Patient, Practitioner, PractitionerRole, RelatedPerson"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Patient, Practitioner, PractitionerRole, RelatedPerson, ResearchSubject, ResearchSubject"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1674,8 +1701,8 @@
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                      "valueCode": "Practitioner, PractitionerRole, Organization, CareTeam, Patient, Device, RelatedPerson"
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                      "valueCode": "Practitioner, PractitionerRole, Organization, CareTeam, Patient, Device, RelatedPerson, ResearchSubject, ResearchSubject"
                     },
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1689,6 +1716,56 @@
                   "repeats": false
                 }
               ]
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "Reference"
+            }
+          ],
+          "linkId": "AdverseEvent.study",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "AdverseEvent.study-flyover",
+              "text": "The research study that the subject is enrolled in.",
+              "type": "display"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "ResearchStudy, ResearchStudy"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
+                  "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
+                }
+              ],
+              "linkId": "AdverseEvent.study.value",
+              "text": "Research study that the subject is enrolled in",
+              "type": "reference",
+              "required": false,
+              "repeats": false
             }
           ]
         },
@@ -1947,8 +2024,8 @@
                         {
                           "extension": [
                             {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                              "valueCode": "Immunization, Procedure, Substance, Medication, MedicationAdministration, MedicationUsage, Device, BiologicallyDerivedProduct, ResearchStudy"
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                              "valueCode": "Immunization, Procedure, Substance, Medication, MedicationAdministration, MedicationUsage, Device, BiologicallyDerivedProduct, ResearchStudy, ResearchStudy"
                             },
                             {
                               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -2242,8 +2319,8 @@
                     {
                       "extension": [
                         {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                          "valueCode": "Practitioner, PractitionerRole, Patient, RelatedPerson"
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                          "valueCode": "Practitioner, PractitionerRole, Patient, RelatedPerson, ResearchSubject, ResearchSubject"
                         },
                         {
                           "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -2446,8 +2523,8 @@
                         {
                           "extension": [
                             {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                              "valueCode": "Condition, Observation, AllergyIntolerance, FamilyMemberHistory, Immunization, Procedure, DocumentReference"
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                              "valueCode": "Condition, Observation, AllergyIntolerance, FamilyMemberHistory, Immunization, Procedure, Device, DocumentReference, MedicationAdministration, MedicationUsage, MedicationUsage"
                             },
                             {
                               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -2678,8 +2755,8 @@
                         {
                           "extension": [
                             {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                              "valueCode": "Immunization, Procedure, DocumentReference, MedicationAdministration, MedicationRequest"
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                              "valueCode": "Immunization, Procedure, DocumentReference, MedicationAdministration, MedicationRequest, MedicationRequest"
                             },
                             {
                               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -2910,8 +2987,8 @@
                         {
                           "extension": [
                             {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                              "valueCode": "Procedure, DocumentReference, MedicationAdministration, MedicationRequest"
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                              "valueCode": "Procedure, DocumentReference, MedicationAdministration, MedicationRequest, MedicationRequest"
                             },
                             {
                               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -3142,8 +3219,8 @@
                         {
                           "extension": [
                             {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                              "valueCode": "Condition, Observation, AllergyIntolerance, FamilyMemberHistory, Immunization, Procedure, DocumentReference"
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                              "valueCode": "Condition, Observation, AllergyIntolerance, FamilyMemberHistory, Immunization, Procedure, DocumentReference, MedicationAdministration, MedicationUsage, MedicationUsage"
                             },
                             {
                               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -3194,10 +3271,11 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-              "valueString": "Reference"
+              "valueString": "Annotation"
             }
           ],
-          "linkId": "AdverseEvent.study",
+          "linkId": "AdverseEvent.note",
+          "text": "Comment on adverse event",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -3217,39 +3295,13 @@
                   }
                 }
               ],
-              "linkId": "AdverseEvent.study-flyover",
-              "text": "The research study that the subject is enrolled in.",
+              "linkId": "AdverseEvent.note-flyover",
+              "text": "Comments made about the adverse event by the performer, subject or other participants.",
               "type": "display"
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "ResearchStudy"
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
-                  "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
-                }
-              ],
-              "linkId": "AdverseEvent.study.value",
-              "text": "Research study that the subject is enrolled in",
-              "type": "reference",
-              "required": false,
-              "repeats": false
             }
           ]
         }
       ]
     }
-  ],
-  "meta": {
-    "tag": [
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-        "code": "HTEST",
-        "display": "test health data"
-      }
-    ]
-  }
+  ]
 }

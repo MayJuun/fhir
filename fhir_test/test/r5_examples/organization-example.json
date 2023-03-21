@@ -9,29 +9,72 @@
   "alias": [
     "HL7 International"
   ],
-  "telecom": [
+  "contact": [
     {
-      "system": "phone",
-      "value": "(+1) 734-677-7777"
-    },
-    {
-      "system": "fax",
-      "value": "(+1) 734-677-6622"
-    },
-    {
-      "system": "email",
-      "value": "hq@HL7.org"
-    }
-  ],
-  "address": [
-    {
-      "line": [
-        "3300 Washtenaw Avenue, Suite 227"
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/extended-contact-availability",
+          "valueAvailability": {
+            "availableTime": [
+              {
+                "daysOfWeek": [
+                  "mon",
+                  "tue",
+                  "wed",
+                  "thu",
+                  "fri"
+                ],
+                "availableStartTime": "09:00:00",
+                "_availableStartTime": {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/timezone",
+                      "valueCode": "America/New_York"
+                    }
+                  ]
+                },
+                "availableEndTime": "07:00:00",
+                "_availableEndTime": {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/timezone",
+                      "valueCode": "America/New_York"
+                    }
+                  ]
+                }
+              }
+            ],
+            "notAvailableTime": [
+              {
+                "description": "Public holidays"
+              }
+            ]
+          }
+        }
       ],
-      "city": "Ann Arbor",
-      "state": "MI",
-      "postalCode": "48104",
-      "country": "USA"
+      "telecom": [
+        {
+          "system": "phone",
+          "value": "(+1) 734-677-7777"
+        },
+        {
+          "system": "fax",
+          "value": "(+1) 734-677-6622"
+        },
+        {
+          "system": "email",
+          "value": "hq@HL7.org"
+        }
+      ],
+      "address": {
+        "line": [
+          "3300 Washtenaw Avenue, Suite 227"
+        ],
+        "city": "Ann Arbor",
+        "state": "MI",
+        "postalCode": "48104",
+        "country": "USA"
+      }
     }
   ],
   "endpoint": [

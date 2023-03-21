@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><AllergyIntolerance xmlns="http://hl7.org/fhir">
+  <id value="medication"/>
+  
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "medication" </p></div><p><b>clinicalStatus</b>: Active <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="codesystem-allergyintolerance-clinical.html">AllergyIntolerance Clinical Status Codes</a>#active)</span></p><p><b>verificationStatus</b>: Unconfirmed <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="codesystem-allergyintolerance-verification.html">AllergyIntolerance Verification Status Codes</a>#unconfirmed)</span></p><p><b>category</b>: medication</p><p><b>criticality</b>: high</p><p><b>code</b>: Penicillin G <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-rxNorm.html">RxNorm</a>#7980)</span></p><p><b>patient</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><p><b>recordedDate</b>: 2010-03-01</p><p><b>recorder</b>: <a href="todo.html">Practitioner/13</a></p><h3>Reactions</h3><table class="grid"><tr><td>-</td><td><b>Manifestation</b></td></tr><tr><td>*</td><td>Hives <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#247472004)</span></td></tr></table></div></text><clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"/>
+      <code value="active"/>
+      <display value="Active"/>
+    </coding>
+  </clinicalStatus>
+
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"/>
+      <code value="unconfirmed"/>
+      <display value="Unconfirmed"/>
+    </coding>
+  </verificationStatus>
+
+  <category value="medication"/>
+     
+  <criticality value="high"/> 
+
+  <!--   subtance, coded from RxNorm   -->
+  <code>
+    <coding>
+      <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+      <code value="7980"/>
+      <display value="Penicillin G"/>
+    </coding>
+  </code>
+ 
+  <!--   the patient that actually has the risk of adverse reaction   -->
+  <patient>
+    <reference value="Patient/example"/>
+  </patient>
+
+  <!--   the date that this entry was recorded   -->  
+  <recordedDate value="2010-03-01"/>
+  
+  <!--   who made the record / last updated it   -->
+  <recorder>
+    <reference value="Practitioner/13"/>
+  </recorder>
+  
+  <reaction> 
+    <manifestation>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="247472004"/>
+        <display value="Hives"/>
+      </coding>
+    </manifestation>
+  </reaction>
+</AllergyIntolerance>

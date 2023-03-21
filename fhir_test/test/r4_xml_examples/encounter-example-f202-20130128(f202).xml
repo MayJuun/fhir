@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><Encounter xmlns="http://hl7.org/fhir">
+	<id value="f202"/>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "f202" </p></div><p><b>identifier</b>: id: Encounter_Roel_20130128 (TEMP)</p><p><b>status</b>: finished</p><p><b>class</b>: ambulatory (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code AMB = 'ambulatory', stated as 'ambulatory')</p><p><b>type</b>: Chemotherapy <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#367336001)</span></p><p><b>priority</b>: Urgent <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#103391001)</span></p><p><b>subject</b>: <a href="patient-f201.html">Patient/f201: Roel</a> "Roel"</p><h3>Participants</h3><table class="grid"><tr><td>-</td><td><b>Individual</b></td></tr><tr><td>*</td><td><a href="practitioner-f201.html">Practitioner/f201</a> "Dokter Bronsig"</td></tr></table><p><b>reasonCode</b>: The patient is treated for a tumor. <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ()</span></p><blockquote><p><b>diagnosis</b></p><p><b>condition</b>: <span>: Complications from Roel's TPF chemotherapy on January 28th, 2013</span></p><p><b>use</b>: Admission diagnosis <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="codesystem-diagnosis-role.html">DiagnosisRole</a>#AD)</span></p><p><b>rank</b>: 2</p></blockquote><blockquote><p><b>diagnosis</b></p><p><b>condition</b>: <span>: The patient is treated for a tumor</span></p><p><b>use</b>: Chief complaint <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="codesystem-diagnosis-role.html">DiagnosisRole</a>#CC)</span></p><p><b>rank</b>: 1</p></blockquote><p><b>serviceProvider</b>: <a href="organization-f201.html">Organization/f201</a> "Artis University Medical Center (AUMC)"</p></div></text><identifier>
+		<use value="temp"/>
+		<!--   0..1 The use of this identifier   -->
+		<value value="Encounter_Roel_20130128"/>
+	</identifier>
+	<status value="finished"/>
+	<!--  Encounter has finished  -->
+	<class>
+		<system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+		<code value="AMB"/>
+		<!--   outpatient encounter for chemotherapy   -->
+		<display value="ambulatory"/>
+	</class>
+	<type>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="367336001"/>
+			<display value="Chemotherapy"/> 
+		</coding>
+	</type>
+	<priority>
+		<!--  Urgent priority, because of complications  -->
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="103391001"/>
+			<display value="Urgent"/>
+		</coding>
+	</priority>
+	<subject>
+		<reference value="Patient/f201"/>
+		<display value="Roel"/>
+	</subject>
+	<participant>
+		<individual>
+			<reference value="Practitioner/f201"/>
+		</individual>
+	</participant>
+	<length>
+		<value value="56"/>
+		<unit value="minutes"/>
+		<system value="http://unitsofmeasure.org"/>
+		<code value="min"/>
+	</length>
+	<reasonCode>
+		<text value="The patient is treated for a tumor."/>
+	</reasonCode>
+	<diagnosis>
+		<condition>
+			<display value="Complications from Roel's TPF chemotherapy on January 28th, 2013"/>
+		</condition>
+		<use>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/diagnosis-role"/>
+				<code value="AD"/>
+				<display value="Admission diagnosis"/>
+			</coding>
+		</use>
+		<rank value="2"/>
+	</diagnosis>
+	<!--   Example of a principal diagnosis with role=CC and rank=1  -->
+	<diagnosis>
+		<condition>
+			<display value="The patient is treated for a tumor"/>
+		</condition>
+		<use>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/diagnosis-role"/>
+				<code value="CC"/>
+				<display value="Chief complaint"/>
+			</coding>
+		</use>
+		<rank value="1"/>
+	</diagnosis>
+	<!--  No hospitalization was deemed necessary  -->
+	<serviceProvider>
+		<reference value="Organization/f201"/>
+	</serviceProvider>
+</Encounter>

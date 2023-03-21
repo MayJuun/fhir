@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?><AuditEvent xmlns="http://hl7.org/fhir">
+	<id value="example-disclosure"/>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: AuditEvent</b><a name="example-disclosure"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource AuditEvent "example-disclosure" </p></div><p><b>category</b>: Export <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://dicom.nema.org/resources/ontology/DCM">DICOM</a>#110106)</span></p><p><b>code</b>: HIPAA disclosure <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#Disclosure)</span></p><p><b>action</b>: R</p><p><b>severity</b>: notice</p><p><b>recorded</b>: 22 Sept 2013, 10:08:00 am</p><h3>Outcomes</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td><td><b>Detail</b></td></tr><tr><td>*</td><td>Success (Details: http://terminology.hl7.org/CodeSystem/audit-event-outcome code success = 'Success', stated as 'Success')</td><td>Successful Disclosure <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ()</span></td></tr></table><p><b>authorization</b>: healthcare marketing <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-ActReason.html">ActReason</a>#HMARKT)</span></p><p><b>patient</b>: <span title="  patient whos data got disclosed  "><a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</span></p><blockquote><p><b>agent</b></p><p><b>type</b>: <span title="  who disclosed the data  ">Source Role ID <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://dicom.nema.org/resources/ontology/DCM">DICOM</a>#110153)</span></span></p><p><b>who</b>: <span>: That guy everyone wishes would be caught</span></p><p><b>requestor</b>: true</p><p><b>location</b>: <a href="location-example.html">Location/1</a> "South Wing, second floor"</p><p><b>policy</b>: <a href="http://consent.com/yes">http://consent.com/yes</a></p><p><b>network</b>: custodian.net</p></blockquote><blockquote><p><b>agent</b></p><p><b>type</b>: <span title="  who received the data  ">Destination Role ID <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://dicom.nema.org/resources/ontology/DCM">DICOM</a>#110152)</span></span></p><p><b>who</b>: <a href="practitioner-example.html">Practitioner/example: Where</a> "Adam CAREFUL"</p><p><b>requestor</b>: false</p><p><b>network</b>: marketing.land</p><p><b>authorization</b>: healthcare marketing <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-ActReason.html">ActReason</a>#HMARKT)</span></p></blockquote><h3>Sources</h3><table class="grid"><tr><td>-</td><td><b>Observer</b></td><td><b>Type</b></td></tr><tr><td>*</td><td><span title="  what system detected this disclosure  "><span>: Watchers Accounting of Disclosures Application</span></span></td><td>Application Server <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-security-source-type.html">Audit Event Source Type</a>#4)</span></td></tr></table><h3>Entities</h3><table class="grid"><tr><td>-</td><td><b>What</b></td><td><b>Role</b></td><td><b>SecurityLabel</b></td></tr><tr><td>*</td><td><span title="  data that got disclosed  "><a href="patient-example.html">Patient/example/_history/1: data about Everthing important</a> "Peter CHALMERS"</span></td><td>Domain Resource <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-object-role.html">AuditEventEntityRole</a>#4)</span></td><td>very restricted <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-Confidentiality.html">Confidentiality</a>#V)</span>, sexually transmitted disease information sensitivity <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-ActCode.html">ActCode</a>#STD)</span>, delete after use <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-ActCode.html">ActCode</a>#DELAU)</span></td></tr></table></div></text><category>
+		<coding>
+			<system value="http://dicom.nema.org/resources/ontology/DCM"/>
+			<code value="110106"/>
+			<display value="Export"/>
+		</coding>
+	</category>
+	<code>
+		<coding>
+			<code value="Disclosure"/>
+			<display value="HIPAA disclosure"/>
+		</coding>
+	</code>
+	<action value="R"/>
+	<severity value="notice"/>
+	<recorded value="2013-09-22T00:08:00Z"/>
+	<outcome>
+		<code>
+			<system value="http://terminology.hl7.org/CodeSystem/audit-event-outcome"/>
+			<code value="success"/>
+			<display value="Success"/>
+		</code>
+		<detail>
+			<text value="Successful Disclosure"/>
+		</detail>
+	</outcome>
+	<authorization>
+		<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+			<code value="HMARKT"/>
+			<display value="healthcare marketing"/>
+		</coding>
+	</authorization>
+	    <!--   patient whos data got disclosed   -->
+	<patient>
+		<reference value="Patient/example"/>
+	</patient>
+	<agent>
+		    <!--   who disclosed the data   -->
+		<type>
+			<coding>
+				<system value="http://dicom.nema.org/resources/ontology/DCM"/>
+				<code value="110153"/>
+				<display value="Source Role ID"/>
+			</coding>
+		</type>
+		<who>
+			<identifier>
+				<value value="SomeIdiot@nowhere"/>
+			</identifier>
+			<display value="That guy everyone wishes would be caught"/>
+		</who>
+		<requestor value="true"/>
+		<location>
+			<reference value="Location/1"/>
+		</location>
+		<policy value="http://consent.com/yes"/>
+		<networkString value="custodian.net"/>
+	</agent>
+	<agent>
+		    <!--   who received the data   -->
+		<type>
+			<coding>
+				<system value="http://dicom.nema.org/resources/ontology/DCM"/>
+				<code value="110152"/>
+				<display value="Destination Role ID"/>
+			</coding>
+		</type>
+		<who>
+			<reference value="Practitioner/example"/>
+			<display value="Where"/>
+		</who>
+		<requestor value="false"/>
+		<networkString value="marketing.land"/>
+		<authorization>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+				<code value="HMARKT"/>
+				<display value="healthcare marketing"/>
+			</coding>
+		</authorization>
+	</agent>
+	<source>
+		    <!--   what system detected this disclosure   -->
+		<observer>
+			<display value="Watchers Accounting of Disclosures Application"/>
+		</observer>
+		<type>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/security-source-type"/>
+				<code value="4"/>
+				<display value="Application Server"/>
+			</coding>
+		</type>
+	</source>
+	<entity>
+		    <!--   data that got disclosed   -->
+		<what>
+			<reference value="Patient/example/_history/1"/>
+			<identifier>
+				<value value="What.id"/>
+			</identifier>
+			<display value="data about Everthing important"/>
+		</what>
+		<role>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/object-role"/>
+				<code value="4"/>
+				<display value="Domain Resource"/>
+			</coding>
+		</role>
+		<securityLabel>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/v3-Confidentiality"/>
+				<code value="V"/>
+				<display value="very restricted"/>
+			</coding>
+		</securityLabel>
+		<securityLabel>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+				<code value="STD"/>
+				<display value="sexually transmitted disease information sensitivity"/>
+			</coding>
+		</securityLabel>
+		<securityLabel>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+				<code value="DELAU"/>
+				<display value="delete after use"/>
+			</coding>
+		</securityLabel>
+	</entity>
+</AuditEvent>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><Encounter xmlns="http://hl7.org/fhir">
+  <id value="f201"/>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Encounter</b><a name="f201"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Encounter "f201" </p></div><p><b>identifier</b>: id: Encounter_Roel_20130404 (use: TEMP)</p><p><b>status</b>: completed</p><p><b>class</b>: <span title=" Encounter has finished ">ambulatory <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-ActCode.html">ActCode</a>#AMB)</span></span></p><p><b>priority</b>: Normal <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#17621005)</span></p><p><b>type</b>: Consultation <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#11429006)</span></p><p><b>subject</b>: <a href="patient-example-f201-roel.html">Patient/f201: Roel</a> "Roel"</p><p><b>serviceProvider</b>: <a href="organization-example-f201-aumc.html">Organization/f201</a> "Artis University Medical Center (AUMC)"</p><h3>Participants</h3><table class="grid"><tr><td>-</td><td><b>Actor</b></td></tr><tr><td>*</td><td><a href="practitioner-example-f201-ab.html">Practitioner/f201</a> "Dokter Bronsig"</td></tr></table><h3>Reasons</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>The patient had fever peaks over the last couple of days. He is worried about these peaks. <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ()</span></td></tr></table></div></text><identifier>
+		<use value="temp"/>    <!--   0..1 The use of this identifier   -->
+		<value value="Encounter_Roel_20130404"/>
+	</identifier>
+	<status value="completed"/>    <!--  Encounter has finished  -->
+    <class>
+		<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+			<code value="AMB"/>     <!--   outpatient   -->
+			<display value="ambulatory"/>
+		</coding>
+    </class>
+	<priority>    <!--  Normal priority  -->
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="17621005"/>
+			<display value="Normal"/>
+		</coding>
+	</priority>
+	<type>    <!--  TODO Why is this merely a CodeableConcept and not Resource (any)?  -->
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="11429006"/>
+			<display value="Consultation"/>
+		</coding>
+	</type>
+	<subject>
+		<reference value="Patient/f201"/>
+		<display value="Roel"/>
+	</subject>
+	<serviceProvider>
+		<reference value="Organization/f201"/>
+	</serviceProvider>
+	<participant>
+		<actor>
+			<reference value="Practitioner/f201"/>
+		</actor>
+	</participant>
+	<reason>
+		<concept>
+			<text value="The patient had fever peaks over the last couple of days. He is worried about these peaks."/>
+		</concept>
+	</reason>
+	    <!--  No indication, because no referral took place  -->
+	    <!--  No admission was deemed necessary  -->
+</Encounter>

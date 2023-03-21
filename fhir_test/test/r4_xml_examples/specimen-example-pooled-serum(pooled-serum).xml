@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><Specimen xmlns="http://hl7.org/fhir">
+	<id value="pooled-serum"/>
+	<!--    the accessionId assigned by the lab  -->
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "pooled-serum" </p></div><p><b>accessionIdentifier</b>: id: 20171120-1234</p><p><b>type</b>: Pooled serum sample <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (vdl#Serum sample, pooled "Serum sample, pooled")</span></p><p><b>subject</b>: <a href="group-herd1.html">Group/herd1</a> "Breeding herd"</p><h3>Collections</h3><table class="grid"><tr><td>-</td><td><b>Collector</b></td><td><b>Collected[x]</b></td></tr><tr><td>*</td><td><span>: James Herriot, FRCVS</span></td><td>2017-11-14</td></tr></table><h3>Containers</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td></tr><tr><td>*</td><td>Red Top Blood Collection Tube <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (vdl#RTT "Red Top Tube")</span></td></tr></table><p><b>note</b>: Pooled serum sample from 30 individuals</p></div></text><accessionIdentifier>
+		<system value="https://vetmed.iastate.edu/vdl"/>
+		<value value="20171120-1234"/>
+	</accessionIdentifier>
+	<!--   Pooled serum sample from 30 individuals in the herd- no Snomed Code for this - used a made up local code  -->
+	<type>
+		<coding>
+			<system value="https://vetmed.iastate.edu/vdl"/>
+			<code value="Serum sample, pooled"/>
+			<display value="Serum sample, pooled"/>
+		</coding>
+		<text value="Pooled serum sample"/>
+	</type>
+	<!--   subject is a herd of breeding sows   -->
+	<subject>
+		<reference value="Group/herd1"/>
+	</subject>
+
+	<collection>
+		<collector>
+			<display value="James Herriot, FRCVS"/>
+		</collector>
+		<collectedDateTime value="2017-11-14"/>
+	</collection>
+	<container>
+		<type>
+			<coding>
+				<system value="https://vetmed.iastate.edu/vdl"/>
+				<code value="RTT"/>
+				<display value="Red Top Tube"/>
+			</coding>
+			<text value="Red Top Blood Collection Tube"/>
+		</type>
+	</container>
+	<note>
+		<text value="Pooled serum sample from 30 individuals"/>
+	</note>
+</Specimen>

@@ -7,9 +7,10 @@ part of 'individuals.dart';
 // **************************************************************************
 
 _$_Group _$$_GroupFromJson(Map<String, dynamic> json) => _$_Group(
-      resourceType:
-          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
-              R5ResourceType.Group,
+      resourceType: $enumDecodeNullable(
+              _$R5ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: R5ResourceType.Group) ??
+          R5ResourceType.Group,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -48,10 +49,11 @@ _$_Group _$$_GroupFromJson(Map<String, dynamic> json) => _$_Group(
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
-      actual: json['actual'] == null ? null : Boolean.fromJson(json['actual']),
-      actualElement: json['_actual'] == null
+      membership:
+          json['membership'] == null ? null : Code.fromJson(json['membership']),
+      membershipElement: json['_membership'] == null
           ? null
-          : Element.fromJson(json['_actual'] as Map<String, dynamic>),
+          : Element.fromJson(json['_membership'] as Map<String, dynamic>),
       code: json['code'] == null
           ? null
           : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
@@ -112,8 +114,8 @@ Map<String, dynamic> _$$_GroupToJson(_$_Group instance) {
   writeNotNull('_active', instance.activeElement?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('_type', instance.typeElement?.toJson());
-  writeNotNull('actual', instance.actual?.toJson());
-  writeNotNull('_actual', instance.actualElement?.toJson());
+  writeNotNull('membership', instance.membership?.toJson());
+  writeNotNull('_membership', instance.membershipElement?.toJson());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('name', instance.name);
   writeNotNull('_name', instance.nameElement?.toJson());
@@ -131,6 +133,7 @@ Map<String, dynamic> _$$_GroupToJson(_$_Group instance) {
 const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Account: 'Account',
   R5ResourceType.ActivityDefinition: 'ActivityDefinition',
+  R5ResourceType.ActorDefinition: 'ActorDefinition',
   R5ResourceType.AdministrableProductDefinition:
       'AdministrableProductDefinition',
   R5ResourceType.AdverseEvent: 'AdverseEvent',
@@ -145,7 +148,6 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.BodyStructure: 'BodyStructure',
   R5ResourceType.Bundle: 'Bundle',
   R5ResourceType.CapabilityStatement: 'CapabilityStatement',
-  R5ResourceType.CapabilityStatement2: 'CapabilityStatement2',
   R5ResourceType.CarePlan: 'CarePlan',
   R5ResourceType.CareTeam: 'CareTeam',
   R5ResourceType.ChargeItem: 'ChargeItem',
@@ -161,7 +163,6 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.CompartmentDefinition: 'CompartmentDefinition',
   R5ResourceType.Composition: 'Composition',
   R5ResourceType.ConceptMap: 'ConceptMap',
-  R5ResourceType.ConceptMap2: 'ConceptMap2',
   R5ResourceType.Condition: 'Condition',
   R5ResourceType.ConditionDefinition: 'ConditionDefinition',
   R5ResourceType.Consent: 'Consent',
@@ -192,6 +193,8 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.ExplanationOfBenefit: 'ExplanationOfBenefit',
   R5ResourceType.FamilyMemberHistory: 'FamilyMemberHistory',
   R5ResourceType.Flag: 'Flag',
+  R5ResourceType.FormularyItem: 'FormularyItem',
+  R5ResourceType.GenomicStudy: 'GenomicStudy',
   R5ResourceType.Goal: 'Goal',
   R5ResourceType.GraphDefinition: 'GraphDefinition',
   R5ResourceType.Group: 'Group',
@@ -250,7 +253,8 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.QuestionnaireResponse: 'QuestionnaireResponse',
   R5ResourceType.RegulatedAuthorization: 'RegulatedAuthorization',
   R5ResourceType.RelatedPerson: 'RelatedPerson',
-  R5ResourceType.RequestGroup: 'RequestGroup',
+  R5ResourceType.RequestOrchestration: 'RequestOrchestration',
+  R5ResourceType.Requirements: 'Requirements',
   R5ResourceType.ResearchStudy: 'ResearchStudy',
   R5ResourceType.ResearchSubject: 'ResearchSubject',
   R5ResourceType.RiskAssessment: 'RiskAssessment',
@@ -394,9 +398,10 @@ Map<String, dynamic> _$$_GroupMemberToJson(_$_GroupMember instance) {
 }
 
 _$_Patient _$$_PatientFromJson(Map<String, dynamic> json) => _$_Patient(
-      resourceType:
-          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
-              R5ResourceType.Patient,
+      resourceType: $enumDecodeNullable(
+              _$R5ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: R5ResourceType.Patient) ??
+          R5ResourceType.Patient,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -694,9 +699,10 @@ Map<String, dynamic> _$$_PatientLinkToJson(_$_PatientLink instance) {
 }
 
 _$_Person _$$_PersonFromJson(Map<String, dynamic> json) => _$_Person(
-      resourceType:
-          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
-              R5ResourceType.Person,
+      resourceType: $enumDecodeNullable(
+              _$R5ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: R5ResourceType.Person) ??
+          R5ResourceType.Person,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -768,13 +774,13 @@ _$_Person _$$_PersonFromJson(Map<String, dynamic> json) => _$_Person(
       photo: (json['photo'] as List<dynamic>?)
           ?.map((e) => Attachment.fromJson(e as Map<String, dynamic>))
           .toList(),
+      communication: (json['communication'] as List<dynamic>?)
+          ?.map((e) => PersonCommunication.fromJson(e as Map<String, dynamic>))
+          .toList(),
       managingOrganization: json['managingOrganization'] == null
           ? null
           : Reference.fromJson(
               json['managingOrganization'] as Map<String, dynamic>),
-      communication: (json['communication'] as List<dynamic>?)
-          ?.map((e) => PersonCommunication.fromJson(e as Map<String, dynamic>))
-          .toList(),
       link: (json['link'] as List<dynamic>?)
           ?.map((e) => PersonLink.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -821,9 +827,9 @@ Map<String, dynamic> _$$_PersonToJson(_$_Person instance) {
   writeNotNull('address', instance.address?.map((e) => e.toJson()).toList());
   writeNotNull('maritalStatus', instance.maritalStatus?.toJson());
   writeNotNull('photo', instance.photo?.map((e) => e.toJson()).toList());
-  writeNotNull('managingOrganization', instance.managingOrganization?.toJson());
   writeNotNull(
       'communication', instance.communication?.map((e) => e.toJson()).toList());
+  writeNotNull('managingOrganization', instance.managingOrganization?.toJson());
   writeNotNull('link', instance.link?.map((e) => e.toJson()).toList());
   return val;
 }
@@ -908,9 +914,10 @@ Map<String, dynamic> _$$_PersonLinkToJson(_$_PersonLink instance) {
 
 _$_Practitioner _$$_PractitionerFromJson(Map<String, dynamic> json) =>
     _$_Practitioner(
-      resourceType:
-          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
-              R5ResourceType.Practitioner,
+      resourceType: $enumDecodeNullable(
+              _$R5ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: R5ResourceType.Practitioner) ??
+          R5ResourceType.Practitioner,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -951,6 +958,15 @@ _$_Practitioner _$$_PractitionerFromJson(Map<String, dynamic> json) =>
       telecom: (json['telecom'] as List<dynamic>?)
           ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))
           .toList(),
+      gender: json['gender'] == null ? null : Code.fromJson(json['gender']),
+      genderElement: json['_gender'] == null
+          ? null
+          : Element.fromJson(json['_gender'] as Map<String, dynamic>),
+      birthDate:
+          json['birthDate'] == null ? null : Date.fromJson(json['birthDate']),
+      birthDateElement: json['_birthDate'] == null
+          ? null
+          : Element.fromJson(json['_birthDate'] as Map<String, dynamic>),
       deceasedBoolean: json['deceasedBoolean'] == null
           ? null
           : Boolean.fromJson(json['deceasedBoolean']),
@@ -966,15 +982,6 @@ _$_Practitioner _$$_PractitionerFromJson(Map<String, dynamic> json) =>
       address: (json['address'] as List<dynamic>?)
           ?.map((e) => Address.fromJson(e as Map<String, dynamic>))
           .toList(),
-      gender: json['gender'] == null ? null : Code.fromJson(json['gender']),
-      genderElement: json['_gender'] == null
-          ? null
-          : Element.fromJson(json['_gender'] as Map<String, dynamic>),
-      birthDate:
-          json['birthDate'] == null ? null : Date.fromJson(json['birthDate']),
-      birthDateElement: json['_birthDate'] == null
-          ? null
-          : Element.fromJson(json['_birthDate'] as Map<String, dynamic>),
       photo: (json['photo'] as List<dynamic>?)
           ?.map((e) => Attachment.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1017,15 +1024,15 @@ Map<String, dynamic> _$$_PractitionerToJson(_$_Practitioner instance) {
   writeNotNull('_active', instance.activeElement?.toJson());
   writeNotNull('name', instance.name?.map((e) => e.toJson()).toList());
   writeNotNull('telecom', instance.telecom?.map((e) => e.toJson()).toList());
+  writeNotNull('gender', instance.gender?.toJson());
+  writeNotNull('_gender', instance.genderElement?.toJson());
+  writeNotNull('birthDate', instance.birthDate?.toJson());
+  writeNotNull('_birthDate', instance.birthDateElement?.toJson());
   writeNotNull('deceasedBoolean', instance.deceasedBoolean?.toJson());
   writeNotNull('_deceasedBoolean', instance.deceasedBooleanElement?.toJson());
   writeNotNull('deceasedDateTime', instance.deceasedDateTime?.toJson());
   writeNotNull('_deceasedDateTime', instance.deceasedDateTimeElement?.toJson());
   writeNotNull('address', instance.address?.map((e) => e.toJson()).toList());
-  writeNotNull('gender', instance.gender?.toJson());
-  writeNotNull('_gender', instance.genderElement?.toJson());
-  writeNotNull('birthDate', instance.birthDate?.toJson());
-  writeNotNull('_birthDate', instance.birthDateElement?.toJson());
   writeNotNull('photo', instance.photo?.map((e) => e.toJson()).toList());
   writeNotNull(
       'qualification', instance.qualification?.map((e) => e.toJson()).toList());
@@ -1081,9 +1088,10 @@ Map<String, dynamic> _$$_PractitionerQualificationToJson(
 
 _$_PractitionerRole _$$_PractitionerRoleFromJson(Map<String, dynamic> json) =>
     _$_PractitionerRole(
-      resourceType:
-          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
-              R5ResourceType.PractitionerRole,
+      resourceType: $enumDecodeNullable(
+              _$R5ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: R5ResourceType.PractitionerRole) ??
+          R5ResourceType.PractitionerRole,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1143,22 +1151,9 @@ _$_PractitionerRole _$$_PractitionerRoleFromJson(Map<String, dynamic> json) =>
           ?.map(
               (e) => ExtendedContactDetail.fromJson(e as Map<String, dynamic>))
           .toList(),
-      telecom: (json['telecom'] as List<dynamic>?)
-          ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))
+      availability: (json['availability'] as List<dynamic>?)
+          ?.map((e) => Availability.fromJson(e as Map<String, dynamic>))
           .toList(),
-      availableTime: (json['availableTime'] as List<dynamic>?)
-          ?.map((e) =>
-              PractitionerRoleAvailableTime.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      notAvailable: (json['notAvailable'] as List<dynamic>?)
-          ?.map((e) =>
-              PractitionerRoleNotAvailable.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      availabilityExceptions: json['availabilityExceptions'] as String?,
-      availabilityExceptionsElement: json['_availabilityExceptions'] == null
-          ? null
-          : Element.fromJson(
-              json['_availabilityExceptions'] as Map<String, dynamic>),
       endpoint: (json['endpoint'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1202,127 +1197,18 @@ Map<String, dynamic> _$$_PractitionerRoleToJson(_$_PractitionerRole instance) {
   writeNotNull('healthcareService',
       instance.healthcareService?.map((e) => e.toJson()).toList());
   writeNotNull('contact', instance.contact?.map((e) => e.toJson()).toList());
-  writeNotNull('telecom', instance.telecom?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'availableTime', instance.availableTime?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'notAvailable', instance.notAvailable?.map((e) => e.toJson()).toList());
-  writeNotNull('availabilityExceptions', instance.availabilityExceptions);
-  writeNotNull('_availabilityExceptions',
-      instance.availabilityExceptionsElement?.toJson());
+      'availability', instance.availability?.map((e) => e.toJson()).toList());
   writeNotNull('endpoint', instance.endpoint?.map((e) => e.toJson()).toList());
-  return val;
-}
-
-_$_PractitionerRoleAvailableTime _$$_PractitionerRoleAvailableTimeFromJson(
-        Map<String, dynamic> json) =>
-    _$_PractitionerRoleAvailableTime(
-      id: json['id'] as String?,
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      daysOfWeek: (json['daysOfWeek'] as List<dynamic>?)
-          ?.map((e) => Code.fromJson(e))
-          .toList(),
-      daysOfWeekElement: (json['_daysOfWeek'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      allDay: json['allDay'] == null ? null : Boolean.fromJson(json['allDay']),
-      allDayElement: json['_allDay'] == null
-          ? null
-          : Element.fromJson(json['_allDay'] as Map<String, dynamic>),
-      availableStartTime: json['availableStartTime'] == null
-          ? null
-          : Time.fromJson(json['availableStartTime']),
-      availableStartTimeElement: json['_availableStartTime'] == null
-          ? null
-          : Element.fromJson(
-              json['_availableStartTime'] as Map<String, dynamic>),
-      availableEndTime: json['availableEndTime'] == null
-          ? null
-          : Time.fromJson(json['availableEndTime']),
-      availableEndTimeElement: json['_availableEndTime'] == null
-          ? null
-          : Element.fromJson(json['_availableEndTime'] as Map<String, dynamic>),
-    );
-
-Map<String, dynamic> _$$_PractitionerRoleAvailableTimeToJson(
-    _$_PractitionerRoleAvailableTime instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'daysOfWeek', instance.daysOfWeek?.map((e) => e.toJson()).toList());
-  writeNotNull('_daysOfWeek',
-      instance.daysOfWeekElement?.map((e) => e.toJson()).toList());
-  writeNotNull('allDay', instance.allDay?.toJson());
-  writeNotNull('_allDay', instance.allDayElement?.toJson());
-  writeNotNull('availableStartTime', instance.availableStartTime?.toJson());
-  writeNotNull(
-      '_availableStartTime', instance.availableStartTimeElement?.toJson());
-  writeNotNull('availableEndTime', instance.availableEndTime?.toJson());
-  writeNotNull('_availableEndTime', instance.availableEndTimeElement?.toJson());
-  return val;
-}
-
-_$_PractitionerRoleNotAvailable _$$_PractitionerRoleNotAvailableFromJson(
-        Map<String, dynamic> json) =>
-    _$_PractitionerRoleNotAvailable(
-      id: json['id'] as String?,
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      description: json['description'] as String?,
-      descriptionElement: json['_description'] == null
-          ? null
-          : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      during: json['during'] == null
-          ? null
-          : Period.fromJson(json['during'] as Map<String, dynamic>),
-    );
-
-Map<String, dynamic> _$$_PractitionerRoleNotAvailableToJson(
-    _$_PractitionerRoleNotAvailable instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('description', instance.description);
-  writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull('during', instance.during?.toJson());
   return val;
 }
 
 _$_RelatedPerson _$$_RelatedPersonFromJson(Map<String, dynamic> json) =>
     _$_RelatedPerson(
-      resourceType:
-          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
-              R5ResourceType.RelatedPerson,
+      resourceType: $enumDecodeNullable(
+              _$R5ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: R5ResourceType.RelatedPerson) ??
+          R5ResourceType.RelatedPerson,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

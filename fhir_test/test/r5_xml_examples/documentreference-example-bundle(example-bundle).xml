@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><DocumentReference xmlns="http://hl7.org/fhir">
+  <id value="example-bundle"/>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+    </security>
+    <security>
+
+        <system value="http://terminology.hl7.org/CodeSystem/v3-Confidentiality"/>
+        <code value="N"/>
+
+    </security>
+  
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: DocumentReference</b><a name="example-bundle"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource DocumentReference "example-bundle" </p><p style="margin-bottom: 0px">Security Labels: <span title="{http://terminology.hl7.org/CodeSystem/v3-ActReason http://terminology.hl7.org/CodeSystem/v3-ActReason}">http://terminology.hl7.org/CodeSystem/v3-ActReason</span>, <span title="{http://terminology.hl7.org/CodeSystem/v3-Confidentiality http://terminology.hl7.org/CodeSystem/v3-Confidentiality}">http://terminology.hl7.org/CodeSystem/v3-Confidentiality</span></p></div><p><b>identifier</b>: id: urn:uuid:0c3151bd-1cbf-4d64-b04d-cd9187a4c6e0</p><p><b>status</b>: current</p><p><b>type</b>: Physician attending Discharge summary <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#28655-9)</span></p><p><b>subject</b>: <a href="broken-link.html">http://fhir.healthintersections.com.au/open/Patient/d1: Eve Everywoman</a></p><h3>Events</h3><table class="grid"><tr><td>-</td><td><b>Reference</b></td></tr><tr><td>*</td><td><a href="broken-link.html">http://fhir.healthintersections.com.au/open/Encounter/doc-example</a></td></tr></table><p><b>date</b>: 1 Feb 2013, 11:30:02 pm</p><p><b>author</b>: <a href="practitioner-example.html">Practitioner/example: Doctor Dave</a> "Adam CAREFUL"</p><p><b>description</b>: Discharge Summary</p><p><b>securityLabel</b>: normal <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-Confidentiality.html">Confidentiality</a>#N)</span></p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class="grid"><tr><td>-</td><td><b>Url</b></td></tr><tr><td>*</td><td><span title="  no content type as the retrieve will determine  "><code>Bundle/father</code></span></td></tr></table></blockquote></div></text><identifier>
+    <system value="urn:ietf:rfc:3986"/> 
+    <value value="urn:uuid:0c3151bd-1cbf-4d64-b04d-cd9187a4c6e0"/> 
+  </identifier>
+  <status value="current"/>
+  <type>
+    <coding>
+      <system value="http://loinc.org"/> 
+      <code value="28655-9"/> 
+    </coding>
+  </type>
+  <subject>
+    <reference value="http://fhir.healthintersections.com.au/open/Patient/d1"/> 
+    <display value="Eve Everywoman"/> 
+  </subject>
+  <event> 
+    <reference>
+     <reference value="http://fhir.healthintersections.com.au/open/Encounter/doc-example"/> 
+    </reference>
+  </event>
+  <date value="2013-02-01T12:30:02Z"/> 
+  <author>
+    <reference value="Practitioner/example"/> 
+    <display value="Doctor Dave"/> 
+  </author>
+  <description value="Discharge Summary"/>
+   
+  <securityLabel>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-Confidentiality"/>
+      <code value="N"/>
+    </coding>
+  </securityLabel>
+  <content>
+    <attachment>
+          <!--   no content type as the retrieve will determine   -->
+      <url value="Bundle/father"/>
+    </attachment>
+  </content>
+</DocumentReference>

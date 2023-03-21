@@ -12,6 +12,7 @@
     }
   ],
   "status": "active",
+  "kind": "insurance",
   "type": {
     "coding": [
       {
@@ -24,9 +25,11 @@
   "subscriber": {
     "reference": "Patient/5"
   },
-  "subscriberId": {
-    "value": "AB9876"
-  },
+  "subscriberId": [
+    {
+      "value": "AB9876"
+    }
+  ],
   "beneficiary": {
     "reference": "Patient/5"
   },
@@ -42,11 +45,9 @@
     "start": "2011-03-17",
     "end": "2012-03-17"
   },
-  "payor": [
-    {
-      "reference": "Organization/2"
-    }
-  ],
+  "insurer": {
+    "reference": "Organization/2"
+  },
   "class": [
     {
       "type": {
@@ -57,7 +58,9 @@
           }
         ]
       },
-      "value": "WESTAIR",
+      "value": {
+        "value": "WESTAIR"
+      },
       "name": "Western Airlines"
     },
     {
@@ -69,7 +72,9 @@
           }
         ]
       },
-      "value": "BG4352",
+      "value": {
+        "value": "BG4352"
+      },
       "name": "Full Coverage: Medical, Dental, Pharmacy, Vision, EHC"
     },
     {
@@ -81,7 +86,9 @@
           }
         ]
       },
-      "value": "D15C9",
+      "value": {
+        "value": "D15C9"
+      },
       "name": "Platinum"
     }
   ],

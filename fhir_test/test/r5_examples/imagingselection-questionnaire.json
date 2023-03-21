@@ -1,14 +1,16 @@
 {
   "resourceType": "Questionnaire",
-  "id": "qs1",
+  "id": "qgen-ImagingSelection1",
+  "url": "http://hl7.org/fhir/Questionnaire/qgen-ImagingSelection1",
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "status": "draft",
-  "date": "2022-05-06T17:02:42+00:00",
+  "experimental": false,
+  "date": "2022-12-14T07:12:54+11:00",
   "publisher": "Health Level Seven International (Imaging Integration)",
   "item": [
     {
@@ -69,7 +71,7 @@
                 }
               ],
               "linkId": "ImagingSelection.id-flyover",
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Within the context of the FHIR RESTful interactions, the resource has an id except for cases like the create and conditional update. Otherwise, the use of the resouce id depends on the given use case.",
               "type": "display"
             },
             {
@@ -261,7 +263,7 @@
                 }
               ],
               "linkId": "ImagingSelection.contained-flyover",
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags in their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -380,6 +382,55 @@
         {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "code"
+            }
+          ],
+          "linkId": "ImagingSelection.status",
+          "type": "group",
+          "required": true,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "ImagingSelection.status-flyover",
+              "text": "The current state of the ImagingSelection resource. This is not the status of any ImagingStudy, ServiceRequest, or Task resources associated with the ImagingSelection. Unknown does not represent \"other\" - one of the defined statuses must apply.  Unknown is used when the authoring system is not sure what the current status is.",
+              "type": "display"
+            },
+            {
+              "linkId": "ImagingSelection.status.value",
+              "text": "status",
+              "type": "coding",
+              "required": false,
+              "repeats": false,
+              "answerConstraint": "optionsOrType"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
               "valueInteger": 1
             },
@@ -415,8 +466,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Patient, Group, Device, Location, Organization, Procedure, Practitioner, Medication, Substance, Specimen"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Patient, Group, Device, Location, Organization, Procedure, Practitioner, Medication, Substance, Specimen, Specimen"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -424,7 +475,7 @@
                 }
               ],
               "linkId": "ImagingSelection.subject.value",
-              "text": "Subject of the selected instances and / or frames",
+              "text": "Subject of the selected instances",
               "type": "reference",
               "required": false,
               "repeats": false
@@ -468,7 +519,7 @@
             },
             {
               "linkId": "ImagingSelection.issued.value",
-              "text": "Date / Time when the selection of instances was made",
+              "text": "Date / Time when this imaging selection was created",
               "type": "dateTime",
               "required": false,
               "repeats": false
@@ -477,7 +528,7 @@
         },
         {
           "linkId": "ImagingSelection.performer",
-          "text": "Author (human or machine)",
+          "text": "Selector of the instances (human or machine)",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -498,7 +549,7 @@
                 }
               ],
               "linkId": "ImagingSelection.performer-flyover",
-              "text": "Author – human or machine.",
+              "text": "Selector of the instances – human or machine.",
               "type": "display"
             },
             {
@@ -692,8 +743,8 @@
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                      "valueCode": "Practitioner, PractitionerRole, Device, Organization, CareTeam, Patient, RelatedPerson, HealthcareService"
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                      "valueCode": "Practitioner, PractitionerRole, Device, Organization, CareTeam, Patient, RelatedPerson, HealthcareService, HealthcareService"
                     },
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -744,8 +795,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "CarePlan, ServiceRequest, Appointment, AppointmentResponse, Task"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "CarePlan, ServiceRequest, Appointment, AppointmentResponse, Task, Task"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -825,7 +876,7 @@
             }
           ],
           "linkId": "ImagingSelection.code",
-          "text": "Imaging Selection description text or code",
+          "text": "Imaging Selection purpose text or code",
           "type": "group",
           "required": true,
           "repeats": true,
@@ -846,7 +897,7 @@
                 }
               ],
               "linkId": "ImagingSelection.code-flyover",
-              "text": "Describes the imaging selection. *All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.",
+              "text": "Reason for referencing the selected content. *All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.",
               "type": "display"
             },
             {
@@ -944,8 +995,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "ImagingStudy"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "ImagingStudy, ImagingStudy"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -994,8 +1045,8 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Endpoint"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "Endpoint, Endpoint"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1049,6 +1100,50 @@
               "linkId": "ImagingSelection.seriesUid.value",
               "text": "DICOM Series Instance UID",
               "type": "string",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "integer"
+            }
+          ],
+          "linkId": "ImagingSelection.seriesNumber",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "ImagingSelection.seriesNumber-flyover",
+              "text": "The Series Number for the DICOM Series from which the images were selected. See [DICOM PS3.3 C.7.3](http://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.7.3.html).",
+              "type": "display"
+            },
+            {
+              "linkId": "ImagingSelection.seriesNumber.value",
+              "text": "DICOM Series Number",
+              "type": "integer",
               "required": false,
               "repeats": false
             }
@@ -1129,6 +1224,56 @@
               "linkId": "ImagingSelection.bodySite-flyover",
               "text": "The anatomic structures examined. See DICOM Part 16 Annex L (http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_L.html) for DICOM to SNOMED-CT mappings.",
               "type": "display"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "Reference"
+            }
+          ],
+          "linkId": "ImagingSelection.focus",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "linkId": "ImagingSelection.focus-flyover",
+              "text": "The actual focus of an observation when it is not the patient of record representing something or someone associated with the patient such as a spouse, parent, fetus, or donor. For example, fetus observations in a mother\u0027s record.  The focus of an observation could also be an existing condition,  an intervention, the subject\u0027s diet,  another observation of the subject,  or a body structure such as tumor or implanted device.   An example use case would be using the Observation resource to capture whether the mother is trained to change her child\u0027s tracheostomy tube. In this example, the child is the patient of record and the mother is the focus. An imaging selection may reference a DICOM resource that itself references other DICOM resources.\n       e.g. a presentation state references a set of source images or frames.",
+              "type": "display"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                  "valueCode": "ImagingSelection, ImagingSelection"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
+                  "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
+                }
+              ],
+              "linkId": "ImagingSelection.focus.value",
+              "text": "Related resource that is the focus for the imaging selection",
+              "type": "reference",
+              "required": false,
+              "repeats": false
             }
           ]
         },
@@ -1314,6 +1459,50 @@
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                  "valueString": "integer"
+                }
+              ],
+              "linkId": "ImagingSelection.instance.number",
+              "type": "group",
+              "required": false,
+              "repeats": true,
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "flyover",
+                            "display": "Fly-over"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "linkId": "ImagingSelection.instance.number-flyover",
+                  "text": "The Instance Number for the selected DICOM instance. See [DICOM PS3.3 C.7.6.1](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.7.6.html#sect_C.7.6.1).\n       Note: A multiframe instance has a single instance number with each frame identified by a frame number.",
+                  "type": "display"
+                },
+                {
+                  "linkId": "ImagingSelection.instance.number.value",
+                  "text": "DICOM Instance Number",
+                  "type": "integer",
+                  "required": false,
+                  "repeats": false
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
                   "valueString": "Coding"
                 }
               ],
@@ -1354,15 +1543,11 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
                   "valueString": "string"
                 }
               ],
-              "linkId": "ImagingSelection.instance.frameList",
+              "linkId": "ImagingSelection.instance.subset",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -1382,13 +1567,13 @@
                       }
                     }
                   ],
-                  "linkId": "ImagingSelection.instance.frameList-flyover",
-                  "text": "The set of frames within a multi-frame SOP Instance that are included in the imaging selection.       Encoded as a comma separated list of one or more non duplicate frame numbers.       If this is absent, all frames within the referenced SOP Instance are included in the selection. See [DICOM PS3.3 10.3](http://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_10.3.html).",
+                  "linkId": "ImagingSelection.instance.subset-flyover",
+                  "text": "Selected subset of the SOP Instance. The content and format of the subset item is determined by the SOP Class of the selected instance.\n       May be one of:\n       - A list of frame numbers selected from a multiframe SOP Instance.\n       - A list of Content Item Observation UID values selected from a DICOM SR or other structured document SOP Instance.\n       - A list of segment numbers selected from a segmentation SOP Instance.\n       - A list of Region of Interest (ROI) numbers selected from a radiotherapy structure set SOP Instance.",
                   "type": "display"
                 },
                 {
-                  "linkId": "ImagingSelection.instance.frameList.value",
-                  "text": "List of selected frames encoded as a comma separated list of one or more non duplicate frame numbers",
+                  "linkId": "ImagingSelection.instance.subset.value",
+                  "text": "The selected subset of the SOP Instance",
                   "type": "string",
                   "required": false,
                   "repeats": false
@@ -1396,13 +1581,8 @@
               ]
             },
             {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "string"
-                }
-              ],
-              "linkId": "ImagingSelection.instance.observationUid",
+              "linkId": "ImagingSelection.instance.imageRegion",
+              "text": "A specific 2D region in a DICOM image / frame",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -1422,121 +1602,213 @@
                       }
                     }
                   ],
-                  "linkId": "ImagingSelection.instance.observationUid-flyover",
-                  "text": "The unique identifier for the observation Content Item (and its subsidiary Content Items, if any) that are included in the imaging selection. See [DICOM PS3.3 C.12.1](http://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.12.html).",
+                  "linkId": "ImagingSelection.instance.imageRegion-flyover",
+                  "text": "Each imaging selection instance or frame list might includes an image region, specified by a region type and a set of 2D coordinates.\n       If the parent imagingSelection.instance contains a subset element of type frame, the image region applies to all frames in the subset list.",
                   "type": "display"
                 },
-                {
-                  "linkId": "ImagingSelection.instance.observationUid.value",
-                  "text": "Selected observations in a DICOM SR",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                }
-              ]
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "string"
-                }
-              ],
-              "linkId": "ImagingSelection.instance.segmentList",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "string"
                     }
                   ],
-                  "linkId": "ImagingSelection.instance.segmentList-flyover",
-                  "text": "The set of segments within a segmentation SOP Instance that are included in the imaging selection.       Encoded as a comma separated list of one or more non duplicate segment numbers.       If this is absent, all segments within the referenced segmentation SOP Instance are included in the selection. See [DICOM PS3.3 10.3](http://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_10.3.html).",
-                  "type": "display"
-                },
-                {
-                  "linkId": "ImagingSelection.instance.segmentList.value",
-                  "text": "List of selected segments encoded as a comma separated list of one or more non duplicate segnent numbers",
-                  "type": "string",
+                  "linkId": "ImagingSelection.instance.imageRegion.id",
+                  "type": "group",
                   "required": false,
-                  "repeats": false
-                }
-              ]
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
+                  "repeats": true,
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "flyover",
+                                "display": "Fly-over"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "linkId": "ImagingSelection.instance.imageRegion.id-flyover",
+                      "text": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+                      "type": "display"
+                    },
+                    {
+                      "linkId": "ImagingSelection.instance.imageRegion.id.value",
+                      "text": "Unique id for inter-element referencing",
+                      "type": "string",
+                      "required": false,
+                      "repeats": false
+                    }
+                  ]
                 },
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "string"
-                }
-              ],
-              "linkId": "ImagingSelection.instance.roiList",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
+                  "linkId": "ImagingSelection.instance.imageRegion.extension",
+                  "text": "Additional content defined by implementations",
+                  "type": "group",
+                  "required": false,
+                  "repeats": true,
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "flyover",
+                                "display": "Fly-over"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "linkId": "ImagingSelection.instance.imageRegion.extension-flyover",
+                      "text": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+                      "type": "display"
+                    }
+                  ]
+                },
+                {
+                  "linkId": "ImagingSelection.instance.imageRegion.modifierExtension",
+                  "text": "Extensions that cannot be ignored even if unrecognized",
+                  "type": "group",
+                  "required": false,
+                  "repeats": true,
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "flyover",
+                                "display": "Fly-over"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "linkId": "ImagingSelection.instance.imageRegion.modifierExtension-flyover",
+                      "text": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself). There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+                      "type": "display"
+                    }
+                  ]
+                },
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "code"
                     }
                   ],
-                  "linkId": "ImagingSelection.instance.roiList-flyover",
-                  "text": "The set of regions of interest (ROI) within a radiotherapy structure set instance that are included in the imaging selection.       Encoded as a comma separated list of one or more non duplicate ROI numbers.       If this is absent, all ROIs within the referenced radiotherapy structure set SOP Instance are included in the selection. See [DICOM PS3.3 C.8.8.5](http://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.8.8.5.html).",
-                  "type": "display"
+                  "linkId": "ImagingSelection.instance.imageRegion.regionType",
+                  "type": "group",
+                  "required": true,
+                  "repeats": true,
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "flyover",
+                                "display": "Fly-over"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "linkId": "ImagingSelection.instance.imageRegion.regionType-flyover",
+                      "text": "Specifies the type of image region. See [DICOM PS3.3 C.10.5.1.2](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.10.5.html#sect_C.10.5.1.2).",
+                      "type": "display"
+                    },
+                    {
+                      "linkId": "ImagingSelection.instance.imageRegion.regionType.value",
+                      "text": "region type",
+                      "type": "coding",
+                      "required": false,
+                      "repeats": false,
+                      "answerConstraint": "optionsOrType"
+                    }
+                  ]
                 },
                 {
-                  "linkId": "ImagingSelection.instance.roiList.value",
-                  "text": "List of selected regions of interest (ROI) encoded as a comma separated list of one or more non duplicate ROI numbers",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "decimal"
+                    }
+                  ],
+                  "linkId": "ImagingSelection.instance.imageRegion.coordinate",
+                  "type": "group",
+                  "required": true,
+                  "repeats": true,
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "flyover",
+                                "display": "Fly-over"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "linkId": "ImagingSelection.instance.imageRegion.coordinate-flyover",
+                      "text": "The coordinates describing the image region. Encoded as a set of (column, row) pairs that denote positions in the selected image / frames specified with sub-pixel resolution.\n       The origin at the TLHC of the TLHC pixel is 0.0\\0.0, the BRHC of the TLHC pixel is 1.0\\1.0, and the BRHC of the BRHC pixel is the number of columns\\rows in the image / frames. The values must be within the range 0\\0 to the number of columns\\rows in the image / frames. For a description of how 2D coordinates are encoded, see [DICOM PS3.3 C.18.6](http://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.18.6.html).",
+                      "type": "display"
+                    },
+                    {
+                      "linkId": "ImagingSelection.instance.imageRegion.coordinate.value",
+                      "text": "Specifies the coordinates that define the image region",
+                      "type": "decimal",
+                      "required": false,
+                      "repeats": false
+                    }
+                  ]
                 }
               ]
             }
           ]
         },
         {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-              "valueInteger": 1
-            }
-          ],
           "linkId": "ImagingSelection.imageRegion",
-          "text": "A specific region in a DICOM image / frame",
+          "text": "A specific 3D region in a DICOM frame of reference",
           "type": "group",
           "required": false,
-          "repeats": false,
+          "repeats": true,
           "item": [
             {
               "extension": [
@@ -1554,7 +1826,7 @@
                 }
               ],
               "linkId": "ImagingSelection.imageRegion-flyover",
-              "text": "Each imaging selection might includes one or more image regions. Image regions are specified by a region type and a set of 2D or 3D coordinates.",
+              "text": "Each imaging selection might includes a 3D image region, specified by a region type and a set of 3D coordinates.",
               "type": "display"
             },
             {
@@ -1713,55 +1985,6 @@
                   "valueInteger": 1
                 },
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "code"
-                }
-              ],
-              "linkId": "ImagingSelection.imageRegion.coordinateType",
-              "type": "group",
-              "required": true,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "linkId": "ImagingSelection.imageRegion.coordinateType-flyover",
-                  "text": "Specifies the type of coordinate system that define the image region.",
-                  "type": "display"
-                },
-                {
-                  "linkId": "ImagingSelection.imageRegion.coordinateType.value",
-                  "text": "coordinate type",
-                  "type": "coding",
-                  "required": false,
-                  "repeats": false,
-                  "answerConstraint": "optionsOrType"
-                }
-              ]
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
-                  "valueInteger": 1
-                },
-                {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
                   "valueString": "decimal"
                 }
@@ -1787,12 +2010,12 @@
                     }
                   ],
                   "linkId": "ImagingSelection.imageRegion.coordinate-flyover",
-                  "text": "The coordinates describing the image region.       If coordinateType is 2D this specifies sequence of (x,y) coordinates in the coordinate system of the image specified by the instance.uid element that contains this image region.       If coordinateType is 3D this specifies sequence of (x,y,z) coordinates in the coordinate system specified by the frameOfReferenceUid element. For a description of how 2D coordinates are encoded, see [DICOM PS3.3 C.18.6](http://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.18.6.html).       For a description of how 3D coordinates are encoded, see [DICOM PS3.3 C.18.9](http://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.18.9.html).",
+                  "text": "The coordinates describing the image region. Encoded as an ordered set of (x,y,z) triplets (in mm and may be negative) that define a region of interest in the patient-relative Reference Coordinate System defined by ImagingSelection.frameOfReferenceUid element. For a description of how 3D coordinates are encoded, see [DICOM PS3.3 C.18.9](http://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.18.9.html).",
                   "type": "display"
                 },
                 {
                   "linkId": "ImagingSelection.imageRegion.coordinate.value",
-                  "text": "Specifies the type of coordinates that define the image region 2d | 3d",
+                  "text": "Specifies the coordinates that define the image region",
                   "type": "decimal",
                   "required": false,
                   "repeats": false
@@ -1803,14 +2026,5 @@
         }
       ]
     }
-  ],
-  "meta": {
-    "tag": [
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-        "code": "HTEST",
-        "display": "test health data"
-      }
-    ]
-  }
+  ]
 }

@@ -16,10 +16,10 @@ part 'bulk_request.freezed.dart';
 
 /// Freezed union class for making different types of Bulk Requests
 class BulkRequest with _$BulkRequest {
-  BulkRequest._();
+  const BulkRequest._();
 
   ///  Patient
-  factory BulkRequest.patient({
+  const factory BulkRequest.patient({
     required Uri base,
     FhirDateTime? since,
     List<WhichResource>? types,
@@ -27,7 +27,7 @@ class BulkRequest with _$BulkRequest {
   }) = _BulkPatientRequest;
 
   ///  Group
-  factory BulkRequest.group({
+  const factory BulkRequest.group({
     required Uri base,
     required Id id,
     FhirDateTime? since,
@@ -36,7 +36,7 @@ class BulkRequest with _$BulkRequest {
   }) = _BulkGroupRequest;
 
   ///  System
-  factory BulkRequest.system({
+  const factory BulkRequest.system({
     required Uri base,
     FhirDateTime? since,
     List<WhichResource>? types,

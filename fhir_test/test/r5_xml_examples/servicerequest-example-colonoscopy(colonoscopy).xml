@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><ServiceRequest xmlns="http://hl7.org/fhir">
+	<id value="colonoscopy"/>
+	    <!--   Example of colonoscopy service request which is grouped with a bx request  -->
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: ServiceRequest</b><a name="colonoscopy"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource ServiceRequest "colonoscopy" </p></div><p><b>identifier</b>: <span title="  Example of colonoscopy service request which is grouped with a bx request ">id: 45678</span></p><p><b>requisition</b>: id: req12345</p><p><b>status</b>: completed</p><p><b>intent</b>: order</p><h3>Codes</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>Colonoscopy <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#73761001 "Colonoscopy (procedure)")</span></td></tr></table><p><b>subject</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><p><b>authoredOn</b>: 2017-03-05</p><p><b>requester</b>: <a href="practitioner-examples-general.html">Practitioner/3ad0687e-f477-468c-afd5-fcc2bf897809: Dr. Beverly Crusher</a></p><p><b>performer</b>: <a href="practitioner-example.html">Practitioner/example: Dr Adam Careful</a> "Adam CAREFUL"</p></div></text><identifier>
+		<value value="45678"/>
+	</identifier>
+	<requisition>
+		<system value="http://bumc.org/requisitions"/>
+		<value value="req12345"/>
+	</requisition>
+	<status value="completed"/>
+	<intent value="order"/>
+	<code>
+	  <concept>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="73761001"/>
+			<display value="Colonoscopy (procedure)"/>
+		</coding>
+		<text value="Colonoscopy"/>
+	  </concept>
+	</code>
+	<subject>
+		<reference value="Patient/example"/>
+	</subject>
+	<authoredOn value="2017-03-05"/>
+	<requester>
+
+			<reference value="Practitioner/3ad0687e-f477-468c-afd5-fcc2bf897809"/>
+			<display value="Dr. Beverly Crusher"/>
+
+	</requester>
+	<performer>
+		<reference value="Practitioner/example"/>
+		<display value="Dr Adam Careful"/>
+	</performer>
+</ServiceRequest>

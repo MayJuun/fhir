@@ -12,16 +12,20 @@
     }
   ],
   "name": "Gastroenterology",
-  "telecom": [
+  "contact": [
     {
-      "system": "phone",
-      "value": "+1 555 234 3523",
-      "use": "mobile"
-    },
-    {
-      "system": "email",
-      "value": "gastro@acme.org",
-      "use": "work"
+      "telecom": [
+        {
+          "system": "phone",
+          "value": "+1 555 234 3523",
+          "use": "mobile"
+        },
+        {
+          "system": "email",
+          "value": "gastro@acme.org",
+          "use": "work"
+        }
+      ]
     }
   ],
   "meta": {

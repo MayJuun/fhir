@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?><ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="example-metadata"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareableconceptmap"/>
+  
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>ExampleMetadata (http://hl7.org/fhir/ConceptMap/example-metadata)</h2>
+      <p>Mapping from 
+        <a href="valueset-address-use.html">http://hl7.org/fhir/ValueSet/address-use</a> to 
+        <a href="http://terminology.hl7.org/4.0.0/ValueSet-v3-AddressUse.html">http://terminology.hl7.org/ValueSet/v3-AddressUse</a>
+      </p>
+      <p>DRAFT (not intended for production usage). Published on 2021-07-21 by FHIR (Example) (FHIR project team: 
+        <a href="http://hl7.org/fhir">http://hl7.org/fhir</a>). 
+      </p>
+      <div>
+        <p>This is an example concept map that illustrates usage of the metadata resource elements introduced in R5</p>
+
+      </div>
+      <br/>
+      <p>
+        <b>Group 1</b>Mapping from 
+        <a href="codesystem-address-use.html">AddressUse</a> to 
+        <a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-AddressUse.html">AddressUse</a>
+      </p>
+      <table class="grid">
+        <tr>
+          <td>
+            <b>Source Code</b>
+          </td>
+          <td>
+            <b>Relationship</b>
+          </td>
+          <td>
+            <b>Target Code</b>
+          </td>
+          <td>
+            <b>Comment</b>
+          </td>
+        </tr>
+        <tr>
+          <td>home</td>
+          <td>
+            <a href="codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a>
+          </td>
+          <td>H (home)</td>
+          <td/>
+        </tr>
+        <tr>
+          <td>work</td>
+          <td>
+            <a href="codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a>
+          </td>
+          <td>WP (work place)</td>
+          <td/>
+        </tr>
+        <tr>
+          <td>temp</td>
+          <td>
+            <a href="codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a>
+          </td>
+          <td>TMP (temporary address)</td>
+          <td/>
+        </tr>
+        <tr>
+          <td>old</td>
+          <td>
+            <a href="codesystem-concept-map-relationship.html#not-related-to" title="not-related-to">is not related to</a>
+          </td>
+          <td>BAD (bad address)</td>
+          <td>In the HL7 v3 AD, old is handled by the usablePeriod element, but you have to provide a time, there's no simple equivalent of flagging an address as old</td>
+        </tr>
+      </table>
+    </div>
+  </text>
+  <url value="http://hl7.org/fhir/ConceptMap/example-metadata"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.4.642.14.5"/>
+  </identifier>
+  <version value="5.0.0-snapshot3"/>
+  <name value="ExampleMetadata"/>
+  <title value="Metadata Example"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2021-07-21"/>
+  <publisher value="FHIR (Example)"/>
+  <contact>
+    <name value="FHIR project team"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.org/fhir"/>
+    </telecom>
+  </contact>
+  <description value="This is an example concept map that illustrates usage of the metadata resource elements introduced in R5"/>
+  <approvalDate value="2021-07-21"/>
+  <lastReviewDate value="2022-07-21"/>
+  <effectivePeriod>
+    <start value="2021-08-01"/>
+    <end value="2022-07-31"/>
+  </effectivePeriod>
+  <topic>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/definition-topic"/>
+      <code value="treatment"/>
+      <display value="Treatment"/>
+    </coding>
+  </topic>
+  <author>
+    <name value="ACME ConceptMap Development"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://acme.org/development"/>
+    </telecom>
+  </author>
+  <editor>
+    <name value="ACME ConceptMap Management"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://acme.org/management"/>
+    </telecom>
+  </editor>
+  <reviewer>
+    <name value="Society for Creative ConceptMap Review"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://example.org/sccr"/>
+    </telecom>
+  </reviewer>
+  <endorser>
+    <name value="National Foundation for ConceptMap Quality"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://example.org/nfcq"/>
+    </telecom>
+  </endorser>
+  <relatedArtifact>
+    <type value="derived-from"/>
+    <resource value="http://hl7.org/fhir/ConceptMap/example"/>
+  </relatedArtifact>
+  <sourceScopeUri value="http://hl7.org/fhir/ValueSet/address-use"/>
+  <targetScopeUri value="http://terminology.hl7.org/ValueSet/v3-AddressUse"/>
+  <group>
+    <source value="http://hl7.org/fhir/address-use"/>
+    <target value="http://terminology.hl7.org/CodeSystem/v3-AddressUse"/>
+    <element>
+      <code value="home"/>
+      <display value="home"/>
+      <target>
+        <code value="H"/>
+        <display value="home"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="work"/>
+      <display value="work"/>
+      <target>
+        <code value="WP"/>
+        <display value="work place"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="temp"/>
+      <display value="temp"/>
+      <target>
+        <code value="TMP"/>
+        <display value="temporary address"/>
+        <relationship value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="old"/>
+      <display value="old"/>
+      <target>
+        <code value="BAD"/>
+        <display value="bad address"/>
+        <relationship value="not-related-to"/>
+        <comment value="In the HL7 v3 AD, old is handled by the usablePeriod element, but you have to provide a time, there's no simple equivalent of flagging an address as old"/>
+      </target>
+    </element>
+    <unmapped>
+      <mode value="fixed"/>
+      <code value="temp"/>
+      <display value="temp"/>
+      <relationship value="related-to"/>
+    </unmapped>
+  </group>
+</ConceptMap>

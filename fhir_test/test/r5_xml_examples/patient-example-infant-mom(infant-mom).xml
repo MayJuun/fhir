@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><Patient xmlns="http://hl7.org/fhir">
+	    <!--   mother of infant twins and fetal patient   -->
+	<id value="infant-mom"/>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;"><b>Leia Solo (OFFICIAL)</b> female, DoB: 1995-10-12</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Known Marital status of Patient">Marital Status:</td><td colspan="3"><span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-MaritalStatus M}">Married</span></td></tr><tr><td style="background-color: #f3f5da" title="Alternate names (see the one above)">Alt. Name:</td><td colspan="3">Leia Organa (MAIDEN)</td></tr><tr><td style="background-color: #f3f5da" title="Patient Links">Links:</td><td colspan="3"><ul><li>General Practitioner: <a href="broken-link.html">Practitioner/21B: Too-Onebee</a></li></ul></td></tr></table></div></text><name>
+		<use value="official"/>
+		<family value="Solo"/>
+		<given value="Leia"/>
+	</name>
+	<name>
+		<use value="maiden"/>
+		<family value="Organa"/>
+		<given value="Leia"/>
+	</name>
+	<gender value="female"/>
+	<birthDate value="1995-10-12"/>
+	<maritalStatus>
+		<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"/>
+			<code value="M"/>
+			<display value="Married"/>
+		</coding>
+	</maritalStatus>
+	<generalPractitioner>
+		<reference value="Practitioner/21B"/>
+		<display value="Too-Onebee"/>
+	</generalPractitioner>
+</Patient>

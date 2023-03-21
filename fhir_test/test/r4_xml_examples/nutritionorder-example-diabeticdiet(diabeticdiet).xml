@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><NutritionOrder xmlns="http://hl7.org/fhir"><!--   id = diabeticdiet  file name = nutritionorder-example-diabeticdiet.xml Name= Diabetic Diet  Description = Nutrition Order Diabetic Diet Canonical Example
+edited by Eric Haas Health eData Inc  -->
+<!--  EH  Show all the elements in this examples for preference, and intolerance   --><!--   EH: use oral Diet element   --><id value="diabeticdiet"/>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "diabeticdiet" </p></div><p><b>identifier</b>: id: 123</p><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>patient</b>: <a href="patient-example.html">Patient/example: Peter Chalmers</a> "Peter CHALMERS"</p><p><b>encounter</b>: <a href="encounter-example.html">Encounter/example: Inpatient</a></p><p><b>dateTime</b>: 2014-09-17</p><p><b>orderer</b>: <a href="practitioner-example.html">Practitioner/example: Dr Adam Careful</a> "Adam CAREFUL"</p><p><b>allergyIntolerance</b>: <a href="allergyintolerance-example.html">AllergyIntolerance/example: Cashew Nuts</a></p><p><b>foodPreferenceModifier</b>: Dairy Free <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="codesystem-encounter-diet.html">Diet</a>#dairy-free)</span></p><p><b>excludeFoodModifier</b>: Cashew Nut <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT[20140730]</a>#227493005)</span></p><blockquote><p><b>oralDiet</b></p><p><b>type</b>: DD - Diabetic diet <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#160670007 "Diabetic diet"; diet-type-codes#1030)</span></p><p><b>schedule</b>: Starting 2015-02-10, Do 3 per 1 days</p><h3>Nutrients</h3><table class="grid"><tr><td>-</td><td><b>Modifier</b></td><td><b>Amount</b></td></tr><tr><td>*</td><td>Carbohydrate <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#2331003)</span></td><td>75 grams<span style="background: LightGoldenRodYellow"> (Details: UCUM code g = 'g')</span></td></tr></table></blockquote></div></text><identifier>
+		<system value="http://goodhealthhospital.org/nutrition-requests"/>
+		<value value="123"/>
+	</identifier>
+	<status value="active"/><intent value="order"/>
+	<patient>
+		<reference value="Patient/example"/>
+		<display value="Peter Chalmers"/>
+	</patient>
+	<encounter>
+		<reference value="Encounter/example"/>
+		<display value="Inpatient"/>
+	</encounter>
+	<dateTime value="2014-09-17"/>
+	<orderer>
+		<reference value="Practitioner/example"/>
+		<display value="Dr Adam Careful"/>
+	</orderer>
+	<allergyIntolerance>
+		<reference value="AllergyIntolerance/example"/>
+		<display value="Cashew Nuts"/>
+	</allergyIntolerance>
+	<foodPreferenceModifier>
+		<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/diet"/>
+			<code value="dairy-free"/>
+		</coding>
+	</foodPreferenceModifier>
+	<excludeFoodModifier>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<version value="20140730"/>
+			<code value="227493005"/>
+			<display value="Cashew Nut"/>
+		</coding>
+	</excludeFoodModifier>
+	<oralDiet>
+		<!--   EH:  list type of diet showing standard code and local codes   -->
+		<type>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<code value="160670007"/>
+				<display value="Diabetic diet"/>
+			</coding>
+			<coding>
+				<system value="http://goodhealthhospital.org/diet-type-codes"/>
+				<code value="1030"/>
+				<display value="DD - Diabetic diet"/>
+			</coding>
+			<text value="DD - Diabetic diet"/>
+		</type>
+		<!--   EH example of three times a day starting on 2/10 using schedule   -->
+		<schedule>
+			<repeat>
+        <boundsPeriod>
+          <start value="2015-02-10"/>
+        </boundsPeriod>
+				<frequency value="3"/>
+				<period value="1"/>
+				<periodUnit value="d"/>
+			</repeat>
+		</schedule>
+		<!--   list nutrients and amounts here   -->
+		<nutrient>
+			<modifier>
+				<coding>
+					<system value="http://snomed.info/sct"/>
+					<code value="2331003"/>
+					<display value="Carbohydrate"/>
+				</coding>
+			</modifier>
+			<amount>
+				<value value="75"/>
+				<unit value="grams"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="g"/>
+			</amount>
+		</nutrient>
+	</oralDiet>
+</NutritionOrder>

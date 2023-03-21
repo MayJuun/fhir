@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><Encounter xmlns="http://hl7.org/fhir">
+  <id value="f002"/>
+    <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Encounter</b><a name="f002"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Encounter "f002" </p></div><p><b>identifier</b>: id: v3251 (use: OFFICIAL)</p><p><b>status</b>: completed</p><p><b>class</b>: ambulatory <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-ActCode.html">ActCode</a>#AMB)</span></p><p><b>priority</b>: Urgent <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#103391001)</span></p><p><b>type</b>: Patient-initiated encounter <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#270427003)</span></p><p><b>subject</b>: <a href="patient-example-f001-pieter.html">Patient/f001: P. van de Heuvel</a> "Pieter VAN DE HEUVEL"</p><p><b>serviceProvider</b>: <a href="organization-example-f001-burgers.html">Organization/f001: BMC</a> "Burgers University Medical Center"</p><h3>Participants</h3><table class="grid"><tr><td>-</td><td><b>Actor</b></td></tr><tr><td>*</td><td><a href="practitioner-example-f003-mv.html">Practitioner/f003: M.I.M Versteegh</a> "Marc VERSTEEGH"</td></tr></table><h3>Lengths</h3><table class="grid"><tr><td>-</td><td><b>Value</b></td><td><b>Unit</b></td><td><b>System</b></td><td><b>Code</b></td></tr><tr><td>*</td><td>140</td><td>min</td><td><a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-ucum.html">Unified Code for Units of Measure (UCUM)</a></td><td>min</td></tr></table><h3>Reasons</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>Partial lobectomy of lung <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#34068001)</span></td></tr></table><h3>Admissions</h3><table class="grid"><tr><td>-</td><td><b>PreAdmissionIdentifier</b></td><td><b>AdmitSource</b></td><td><b>DischargeDisposition</b></td></tr><tr><td>*</td><td>id: 98682 (use: OFFICIAL)</td><td><span title="     &lt;preAdmissionTest&gt;&#xA;            &lt;coding&gt;&#xA;                &lt;system value=&#34;http://snomed.info/sct&#34;/&gt;&#xA;                &lt;code value=&#34;399208008&#34;/&gt;&#xA;                &lt;display value=&#34;Chest X-ray&#34;/&gt;&#xA;            &lt;/coding&gt;&#xA;            &lt;coding&gt;&#xA;                &lt;system value=&#34;http://snomed.info/sct&#34;/&gt;&#xA;                &lt;code value=&#34;396550006&#34;/&gt;&#xA;                &lt;display value=&#34;Blood test&#34;/&gt;&#xA;            &lt;/coding&gt;&#xA;        &lt;/preAdmissionTest&gt;  ">Referral by radiologist <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#305997006)</span></span></td><td>Discharge to home <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#306689006)</span></td></tr></table></div></text><identifier>
+        <use value="official"/>
+        <system value="http://www.bmc.nl/zorgportal/identifiers/encounters"/>
+        <value value="v3251"/>
+    </identifier>
+    <status value="completed"/>
+    <class>
+		<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+			<code value="AMB"/>     <!--   outpatient   -->
+			<display value="ambulatory"/>
+		</coding>
+    </class>
+    <priority>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="103391001"/>
+            <display value="Urgent"/>
+        </coding>
+    </priority>
+    <type>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="270427003"/>
+            <display value="Patient-initiated encounter"/>
+        </coding>
+    </type>
+	<subject>
+        <reference value="Patient/f001"/>
+        <display value="P. van de Heuvel"/>
+    </subject>
+    <serviceProvider>
+        <reference value="Organization/f001"/>
+        <display value="BMC"/>
+    </serviceProvider>
+    <participant>
+        <actor>
+            <reference value="Practitioner/f003"/>
+            <display value="M.I.M Versteegh"/>
+        </actor>
+    </participant>
+    <length>
+        <value value="140"/>
+        <unit value="min"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="min"/>
+    </length>
+    <reason>
+      <concept>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="34068001"/>
+            <display value="Partial lobectomy of lung"/>
+        </coding>
+      </concept>
+    </reason>
+    <admission>
+        <preAdmissionIdentifier>
+            <use value="official"/>
+            <system value="http://www.bmc.nl/zorgportal/identifiers/pre-admissions"/>
+            <value value="98682"/>
+        </preAdmissionIdentifier>
+        <!--      <preAdmissionTest>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="399208008"/>
+                <display value="Chest X-ray"/>
+            </coding>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="396550006"/>
+                <display value="Blood test"/>
+            </coding>
+        </preAdmissionTest>   -->
+        <admitSource>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="305997006"/>
+                <display value="Referral by radiologist"/>
+            </coding>
+        </admitSource>
+        <dischargeDisposition>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="306689006"/>
+                <display value="Discharge to home"/>
+            </coding>
+        </dischargeDisposition>
+    </admission>
+</Encounter>

@@ -16,7 +16,7 @@ part 'fhir_request.freezed.dart';
 
 /// The class for making requests to a FHIR server
 class FhirRequest with _$FhirRequest {
-  FhirRequest._();
+  const FhirRequest._();
 
   /// READ constructor
   /// [base] - the base URI for the FHIR server
@@ -32,7 +32,7 @@ class FhirRequest with _$FhirRequest {
   /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
   ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
-  factory FhirRequest.read({
+  const factory FhirRequest.read({
     /// [base] - the base URI for the FHIR server
     required Uri base,
 
@@ -82,7 +82,7 @@ class FhirRequest with _$FhirRequest {
   /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
   ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
-  factory FhirRequest.vRead({
+  const factory FhirRequest.vRead({
     /// [base] - the base URI for the FHIR server
     required Uri base,
 
@@ -132,7 +132,7 @@ class FhirRequest with _$FhirRequest {
   /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
   ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
-  factory FhirRequest.update({
+  const factory FhirRequest.update({
     /// [base] - the base URI for the FHIR server
     required Uri base,
     required Resource resource,
@@ -174,7 +174,7 @@ class FhirRequest with _$FhirRequest {
   /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
   ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
-  factory FhirRequest.patch({
+  const factory FhirRequest.patch({
     /// [base] - the base URI for the FHIR server
     required Uri base,
     required Resource resource,
@@ -218,7 +218,7 @@ class FhirRequest with _$FhirRequest {
   /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
   ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
-  factory FhirRequest.delete({
+  const factory FhirRequest.delete({
     /// [base] - the base URI for the FHIR server
     required Uri base,
 
@@ -265,7 +265,7 @@ class FhirRequest with _$FhirRequest {
   /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
   ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
-  factory FhirRequest.create({
+  const factory FhirRequest.create({
     /// [base] - the base URI for the FHIR server
     required Uri base,
     required Resource resource,
@@ -310,7 +310,7 @@ class FhirRequest with _$FhirRequest {
   /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
   ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
-  factory FhirRequest.search({
+  const factory FhirRequest.search({
     /// [base] - the base URI for the FHIR server
     required Uri base,
 
@@ -359,7 +359,7 @@ class FhirRequest with _$FhirRequest {
   /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
   ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
-  factory FhirRequest.searchAll({
+  const factory FhirRequest.searchAll({
     /// [base] - the base URI for the FHIR server
     required Uri base,
 
@@ -401,7 +401,7 @@ class FhirRequest with _$FhirRequest {
   /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
   ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
-  factory FhirRequest.capabilities({
+  const factory FhirRequest.capabilities({
     /// [base] - the base URI for the FHIR server
     required Uri base,
 
@@ -446,7 +446,7 @@ class FhirRequest with _$FhirRequest {
   /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
   ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
-  factory FhirRequest.transaction({
+  const factory FhirRequest.transaction({
     /// [base] - the base URI for the FHIR server
     required Uri base,
 
@@ -489,7 +489,7 @@ class FhirRequest with _$FhirRequest {
   /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
   ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
-  factory FhirRequest.batch({
+  const factory FhirRequest.batch({
     /// [base] - the base URI for the FHIR server
     required Uri base,
 
@@ -542,7 +542,7 @@ class FhirRequest with _$FhirRequest {
   /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
   ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
-  factory FhirRequest.history({
+  const factory FhirRequest.history({
     /// [base] - the base URI for the FHIR server
     required Uri base,
 
@@ -616,7 +616,7 @@ class FhirRequest with _$FhirRequest {
   /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
   ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
-  factory FhirRequest.historyType({
+  const factory FhirRequest.historyType({
     /// [base] - the base URI for the FHIR server
     required Uri base,
 
@@ -686,7 +686,7 @@ class FhirRequest with _$FhirRequest {
   /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
   ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
-  factory FhirRequest.historyAll({
+  const factory FhirRequest.historyAll({
     /// [base] - the base URI for the FHIR server
     required Uri base,
 
@@ -744,12 +744,11 @@ class FhirRequest with _$FhirRequest {
   /// [elements] - elements you need to pass in
   /// [parameters] - any extra parameters
   /// [fhirParameter] - any extra fhirParameters
-  ///   ToDo: why did I include this?
   /// [usePost] - defines if you would prefer to use a post request instead of Get
   /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
   ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
-  factory FhirRequest.operation({
+  const factory FhirRequest.operation({
     /// [base] - the base URI for the FHIR server
     required Uri base,
     R5ResourceType? type,

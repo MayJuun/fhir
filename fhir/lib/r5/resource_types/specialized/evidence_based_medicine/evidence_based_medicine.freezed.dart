@@ -20,51 +20,123 @@ ArtifactAssessment _$ArtifactAssessmentFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ArtifactAssessment {
+  /// [resourceType] This is a ArtifactAssessment resource
+  @JsonKey(unknownEnumValue: R5ResourceType.ArtifactAssessment)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  /// Once assigned, this value never changes.
   Id? get id => throw _privateConstructorUsedError;
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not
+  /// always be associated with version changes to the resource.
   Meta? get meta => throw _privateConstructorUsedError;
+
+  /// [implicitRules] A reference to a set of rules that were followed when
+  /// the resource was constructed, and which must be understood when
+  /// processing the content. Often, this is a reference to an implementation
+  /// guide that defines the special rules along with other profiles etc.
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
+
+  /// [language] The base language in which the resource is written.
   Code? get language => throw _privateConstructorUsedError;
+
+  /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   Narrative? get text => throw _privateConstructorUsedError;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   List<Resource>? get contained => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [identifier] A formal identifier that is used to identify this artifact assessment when it is represented in other formats, or referenced in a specification, model, design or an instance.
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
+
+  /// [citeAsReference] Display of or reference to the bibliographic citation of the comment, classifier, or rating.
   Reference? get citeAsReference => throw _privateConstructorUsedError;
+
+  /// [citeAsMarkdown] Display of or reference to the bibliographic citation of the comment, classifier, or rating.
   Markdown? get citeAsMarkdown => throw _privateConstructorUsedError;
+
+  /// [citeAsMarkdownElement] ("_citeAsMarkdown") Extensions for citeAsMarkdown
   @JsonKey(name: '_citeAsMarkdown')
   Element? get citeAsMarkdownElement => throw _privateConstructorUsedError;
+
+  /// [date] The date  (and optionally time) when the artifact assessment was published. The date must change when the disposition changes and it must change if the workflow status code changes. In addition, it should change when the substantive content of the artifact assessment changes.
   FhirDateTime? get date => throw _privateConstructorUsedError;
+
+  /// [dateElement] ("_date") Extensions for date
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
+
+  /// [copyright] A copyright statement relating to the artifact assessment and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the artifact assessment.
   Markdown? get copyright => throw _privateConstructorUsedError;
+
+  /// [copyrightElement] ("_copyright") Extensions for copyright
   @JsonKey(name: '_copyright')
   Element? get copyrightElement => throw _privateConstructorUsedError;
-  FhirDateTime? get approvalDate => throw _privateConstructorUsedError;
+
+  /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
+  Date? get approvalDate => throw _privateConstructorUsedError;
+
+  /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
   @JsonKey(name: '_approvalDate')
   Element? get approvalDateElement => throw _privateConstructorUsedError;
-  FhirDateTime? get lastReviewDate => throw _privateConstructorUsedError;
+
+  /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
+  Date? get lastReviewDate => throw _privateConstructorUsedError;
+
+  /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement => throw _privateConstructorUsedError;
+
+  /// [artifactReference] A reference to a resource, canonical resource, or non-FHIR resource which the comment or assessment is about.
   Reference? get artifactReference => throw _privateConstructorUsedError;
+
+  /// [artifactCanonical] A reference to a resource, canonical resource, or non-FHIR resource which the comment or assessment is about.
   Canonical? get artifactCanonical => throw _privateConstructorUsedError;
+
+  /// [artifactCanonicalElement] ("_artifactCanonical") Extensions for artifactCanonical
   @JsonKey(name: '_artifactCanonical')
   Element? get artifactCanonicalElement => throw _privateConstructorUsedError;
+
+  /// [artifactUri] A reference to a resource, canonical resource, or non-FHIR resource which the comment or assessment is about.
   FhirUri? get artifactUri => throw _privateConstructorUsedError;
+
+  /// [artifactUriElement] ("_artifactUri") Extensions for artifactUri
   @JsonKey(name: '_artifactUri')
   Element? get artifactUriElement => throw _privateConstructorUsedError;
+
+  /// [content] A component comment, classifier, or rating of the artifact.
   List<ArtifactAssessmentContent>? get content =>
       throw _privateConstructorUsedError;
+
+  /// [workflowStatus] Indicates the workflow status of the comment or change request.
   Code? get workflowStatus => throw _privateConstructorUsedError;
+
+  /// [workflowStatusElement] ("_workflowStatus") Extensions for workflowStatus
   @JsonKey(name: '_workflowStatus')
   Element? get workflowStatusElement => throw _privateConstructorUsedError;
+
+  /// [disposition] Indicates the disposition of the responsible party to the comment or change request.
   Code? get disposition => throw _privateConstructorUsedError;
+
+  /// [dispositionElement] ("_disposition") Extensions for disposition
   @JsonKey(name: '_disposition')
   Element? get dispositionElement => throw _privateConstructorUsedError;
 
@@ -81,39 +153,52 @@ abstract class $ArtifactAssessmentCopyWith<$Res> {
       _$ArtifactAssessmentCopyWithImpl<$Res, ArtifactAssessment>;
   @useResult
   $Res call(
-      {R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.ArtifactAssessment)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Reference? citeAsReference,
       Markdown? citeAsMarkdown,
-      @JsonKey(name: '_citeAsMarkdown') Element? citeAsMarkdownElement,
+      @JsonKey(name: '_citeAsMarkdown')
+          Element? citeAsMarkdownElement,
       FhirDateTime? date,
-      @JsonKey(name: '_date') Element? dateElement,
+      @JsonKey(name: '_date')
+          Element? dateElement,
       Markdown? copyright,
-      @JsonKey(name: '_copyright') Element? copyrightElement,
-      FhirDateTime? approvalDate,
-      @JsonKey(name: '_approvalDate') Element? approvalDateElement,
-      FhirDateTime? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+      @JsonKey(name: '_copyright')
+          Element? copyrightElement,
+      Date? approvalDate,
+      @JsonKey(name: '_approvalDate')
+          Element? approvalDateElement,
+      Date? lastReviewDate,
+      @JsonKey(name: '_lastReviewDate')
+          Element? lastReviewDateElement,
       Reference? artifactReference,
       Canonical? artifactCanonical,
-      @JsonKey(name: '_artifactCanonical') Element? artifactCanonicalElement,
+      @JsonKey(name: '_artifactCanonical')
+          Element? artifactCanonicalElement,
       FhirUri? artifactUri,
-      @JsonKey(name: '_artifactUri') Element? artifactUriElement,
+      @JsonKey(name: '_artifactUri')
+          Element? artifactUriElement,
       List<ArtifactAssessmentContent>? content,
       Code? workflowStatus,
-      @JsonKey(name: '_workflowStatus') Element? workflowStatusElement,
+      @JsonKey(name: '_workflowStatus')
+          Element? workflowStatusElement,
       Code? disposition,
-      @JsonKey(name: '_disposition') Element? dispositionElement});
+      @JsonKey(name: '_disposition')
+          Element? dispositionElement});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -259,7 +344,7 @@ class _$ArtifactAssessmentCopyWithImpl<$Res, $Val extends ArtifactAssessment>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as FhirDateTime?,
+              as Date?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -267,7 +352,7 @@ class _$ArtifactAssessmentCopyWithImpl<$Res, $Val extends ArtifactAssessment>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as FhirDateTime?,
+              as Date?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -505,39 +590,52 @@ abstract class _$$_ArtifactAssessmentCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.ArtifactAssessment)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Reference? citeAsReference,
       Markdown? citeAsMarkdown,
-      @JsonKey(name: '_citeAsMarkdown') Element? citeAsMarkdownElement,
+      @JsonKey(name: '_citeAsMarkdown')
+          Element? citeAsMarkdownElement,
       FhirDateTime? date,
-      @JsonKey(name: '_date') Element? dateElement,
+      @JsonKey(name: '_date')
+          Element? dateElement,
       Markdown? copyright,
-      @JsonKey(name: '_copyright') Element? copyrightElement,
-      FhirDateTime? approvalDate,
-      @JsonKey(name: '_approvalDate') Element? approvalDateElement,
-      FhirDateTime? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+      @JsonKey(name: '_copyright')
+          Element? copyrightElement,
+      Date? approvalDate,
+      @JsonKey(name: '_approvalDate')
+          Element? approvalDateElement,
+      Date? lastReviewDate,
+      @JsonKey(name: '_lastReviewDate')
+          Element? lastReviewDateElement,
       Reference? artifactReference,
       Canonical? artifactCanonical,
-      @JsonKey(name: '_artifactCanonical') Element? artifactCanonicalElement,
+      @JsonKey(name: '_artifactCanonical')
+          Element? artifactCanonicalElement,
       FhirUri? artifactUri,
-      @JsonKey(name: '_artifactUri') Element? artifactUriElement,
+      @JsonKey(name: '_artifactUri')
+          Element? artifactUriElement,
       List<ArtifactAssessmentContent>? content,
       Code? workflowStatus,
-      @JsonKey(name: '_workflowStatus') Element? workflowStatusElement,
+      @JsonKey(name: '_workflowStatus')
+          Element? workflowStatusElement,
       Code? disposition,
-      @JsonKey(name: '_disposition') Element? dispositionElement});
+      @JsonKey(name: '_disposition')
+          Element? dispositionElement});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -696,7 +794,7 @@ class __$$_ArtifactAssessmentCopyWithImpl<$Res>
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
-              as FhirDateTime?,
+              as Date?,
       approvalDateElement: freezed == approvalDateElement
           ? _value.approvalDateElement
           : approvalDateElement // ignore: cast_nullable_to_non_nullable
@@ -704,7 +802,7 @@ class __$$_ArtifactAssessmentCopyWithImpl<$Res>
       lastReviewDate: freezed == lastReviewDate
           ? _value.lastReviewDate
           : lastReviewDate // ignore: cast_nullable_to_non_nullable
-              as FhirDateTime?,
+              as Date?,
       lastReviewDateElement: freezed == lastReviewDateElement
           ? _value.lastReviewDateElement
           : lastReviewDateElement // ignore: cast_nullable_to_non_nullable
@@ -757,39 +855,52 @@ class __$$_ArtifactAssessmentCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ArtifactAssessment extends _ArtifactAssessment {
   _$_ArtifactAssessment(
-      {this.resourceType = R5ResourceType.ArtifactAssessment,
+      {@JsonKey(unknownEnumValue: R5ResourceType.ArtifactAssessment)
+          this.resourceType = R5ResourceType.ArtifactAssessment,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       this.citeAsReference,
       this.citeAsMarkdown,
-      @JsonKey(name: '_citeAsMarkdown') this.citeAsMarkdownElement,
+      @JsonKey(name: '_citeAsMarkdown')
+          this.citeAsMarkdownElement,
       this.date,
-      @JsonKey(name: '_date') this.dateElement,
+      @JsonKey(name: '_date')
+          this.dateElement,
       this.copyright,
-      @JsonKey(name: '_copyright') this.copyrightElement,
+      @JsonKey(name: '_copyright')
+          this.copyrightElement,
       this.approvalDate,
-      @JsonKey(name: '_approvalDate') this.approvalDateElement,
+      @JsonKey(name: '_approvalDate')
+          this.approvalDateElement,
       this.lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') this.lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          this.lastReviewDateElement,
       this.artifactReference,
       this.artifactCanonical,
-      @JsonKey(name: '_artifactCanonical') this.artifactCanonicalElement,
+      @JsonKey(name: '_artifactCanonical')
+          this.artifactCanonicalElement,
       this.artifactUri,
-      @JsonKey(name: '_artifactUri') this.artifactUriElement,
+      @JsonKey(name: '_artifactUri')
+          this.artifactUriElement,
       final List<ArtifactAssessmentContent>? content,
       this.workflowStatus,
-      @JsonKey(name: '_workflowStatus') this.workflowStatusElement,
+      @JsonKey(name: '_workflowStatus')
+          this.workflowStatusElement,
       this.disposition,
-      @JsonKey(name: '_disposition') this.dispositionElement})
+      @JsonKey(name: '_disposition')
+          this.dispositionElement})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -800,26 +911,51 @@ class _$_ArtifactAssessment extends _ArtifactAssessment {
   factory _$_ArtifactAssessment.fromJson(Map<String, dynamic> json) =>
       _$$_ArtifactAssessmentFromJson(json);
 
+  /// [resourceType] This is a ArtifactAssessment resource
   @override
-  @JsonKey()
+  @JsonKey(unknownEnumValue: R5ResourceType.ArtifactAssessment)
   final R5ResourceType resourceType;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  /// Once assigned, this value never changes.
   @override
   final Id? id;
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not
+  /// always be associated with version changes to the resource.
   @override
   final Meta? meta;
+
+  /// [implicitRules] A reference to a set of rules that were followed when
+  /// the resource was constructed, and which must be understood when
+  /// processing the content. Often, this is a reference to an implementation
+  /// guide that defines the special rules along with other profiles etc.
   @override
   final FhirUri? implicitRules;
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
+
+  /// [language] The base language in which the resource is written.
   @override
   final Code? language;
+
+  /// [languageElement] ("_language") Extensions for language
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   @override
   final Narrative? text;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   final List<Resource>? _contained;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   @override
   List<Resource>? get contained {
     final value = _contained;
@@ -829,7 +965,10 @@ class _$_ArtifactAssessment extends _ArtifactAssessment {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -840,7 +979,10 @@ class _$_ArtifactAssessment extends _ArtifactAssessment {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -851,7 +993,10 @@ class _$_ArtifactAssessment extends _ArtifactAssessment {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [identifier] A formal identifier that is used to identify this artifact assessment when it is represented in other formats, or referenced in a specification, model, design or an instance.
   final List<Identifier>? _identifier;
+
+  /// [identifier] A formal identifier that is used to identify this artifact assessment when it is represented in other formats, or referenced in a specification, model, design or an instance.
   @override
   List<Identifier>? get identifier {
     final value = _identifier;
@@ -861,46 +1006,81 @@ class _$_ArtifactAssessment extends _ArtifactAssessment {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [citeAsReference] Display of or reference to the bibliographic citation of the comment, classifier, or rating.
   @override
   final Reference? citeAsReference;
+
+  /// [citeAsMarkdown] Display of or reference to the bibliographic citation of the comment, classifier, or rating.
   @override
   final Markdown? citeAsMarkdown;
+
+  /// [citeAsMarkdownElement] ("_citeAsMarkdown") Extensions for citeAsMarkdown
   @override
   @JsonKey(name: '_citeAsMarkdown')
   final Element? citeAsMarkdownElement;
+
+  /// [date] The date  (and optionally time) when the artifact assessment was published. The date must change when the disposition changes and it must change if the workflow status code changes. In addition, it should change when the substantive content of the artifact assessment changes.
   @override
   final FhirDateTime? date;
+
+  /// [dateElement] ("_date") Extensions for date
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
+
+  /// [copyright] A copyright statement relating to the artifact assessment and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the artifact assessment.
   @override
   final Markdown? copyright;
+
+  /// [copyrightElement] ("_copyright") Extensions for copyright
   @override
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
+
+  /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
   @override
-  final FhirDateTime? approvalDate;
+  final Date? approvalDate;
+
+  /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
   @override
   @JsonKey(name: '_approvalDate')
   final Element? approvalDateElement;
+
+  /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
   @override
-  final FhirDateTime? lastReviewDate;
+  final Date? lastReviewDate;
+
+  /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
   @override
   @JsonKey(name: '_lastReviewDate')
   final Element? lastReviewDateElement;
+
+  /// [artifactReference] A reference to a resource, canonical resource, or non-FHIR resource which the comment or assessment is about.
   @override
   final Reference? artifactReference;
+
+  /// [artifactCanonical] A reference to a resource, canonical resource, or non-FHIR resource which the comment or assessment is about.
   @override
   final Canonical? artifactCanonical;
+
+  /// [artifactCanonicalElement] ("_artifactCanonical") Extensions for artifactCanonical
   @override
   @JsonKey(name: '_artifactCanonical')
   final Element? artifactCanonicalElement;
+
+  /// [artifactUri] A reference to a resource, canonical resource, or non-FHIR resource which the comment or assessment is about.
   @override
   final FhirUri? artifactUri;
+
+  /// [artifactUriElement] ("_artifactUri") Extensions for artifactUri
   @override
   @JsonKey(name: '_artifactUri')
   final Element? artifactUriElement;
+
+  /// [content] A component comment, classifier, or rating of the artifact.
   final List<ArtifactAssessmentContent>? _content;
+
+  /// [content] A component comment, classifier, or rating of the artifact.
   @override
   List<ArtifactAssessmentContent>? get content {
     final value = _content;
@@ -910,13 +1090,20 @@ class _$_ArtifactAssessment extends _ArtifactAssessment {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [workflowStatus] Indicates the workflow status of the comment or change request.
   @override
   final Code? workflowStatus;
+
+  /// [workflowStatusElement] ("_workflowStatus") Extensions for workflowStatus
   @override
   @JsonKey(name: '_workflowStatus')
   final Element? workflowStatusElement;
+
+  /// [disposition] Indicates the disposition of the responsible party to the comment or change request.
   @override
   final Code? disposition;
+
+  /// [dispositionElement] ("_disposition") Extensions for disposition
   @override
   @JsonKey(name: '_disposition')
   final Element? dispositionElement;
@@ -1051,7 +1238,8 @@ class _$_ArtifactAssessment extends _ArtifactAssessment {
 
 abstract class _ArtifactAssessment extends ArtifactAssessment {
   factory _ArtifactAssessment(
-      {final R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.ArtifactAssessment)
+          final R5ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
@@ -1076,10 +1264,10 @@ abstract class _ArtifactAssessment extends ArtifactAssessment {
       final Markdown? copyright,
       @JsonKey(name: '_copyright')
           final Element? copyrightElement,
-      final FhirDateTime? approvalDate,
+      final Date? approvalDate,
       @JsonKey(name: '_approvalDate')
           final Element? approvalDateElement,
-      final FhirDateTime? lastReviewDate,
+      final Date? lastReviewDate,
       @JsonKey(name: '_lastReviewDate')
           final Element? lastReviewDateElement,
       final Reference? artifactReference,
@@ -1102,81 +1290,154 @@ abstract class _ArtifactAssessment extends ArtifactAssessment {
       _$_ArtifactAssessment.fromJson;
 
   @override
+
+  /// [resourceType] This is a ArtifactAssessment resource
+  @JsonKey(unknownEnumValue: R5ResourceType.ArtifactAssessment)
   R5ResourceType get resourceType;
   @override
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  /// Once assigned, this value never changes.
   Id? get id;
   @override
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not
+  /// always be associated with version changes to the resource.
   Meta? get meta;
   @override
+
+  /// [implicitRules] A reference to a set of rules that were followed when
+  /// the resource was constructed, and which must be understood when
+  /// processing the content. Often, this is a reference to an implementation
+  /// guide that defines the special rules along with other profiles etc.
   FhirUri? get implicitRules;
   @override
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
+
+  /// [language] The base language in which the resource is written.
   Code? get language;
   @override
+
+  /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   Narrative? get text;
   @override
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   List<Resource>? get contained;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [identifier] A formal identifier that is used to identify this artifact assessment when it is represented in other formats, or referenced in a specification, model, design or an instance.
   List<Identifier>? get identifier;
   @override
+
+  /// [citeAsReference] Display of or reference to the bibliographic citation of the comment, classifier, or rating.
   Reference? get citeAsReference;
   @override
+
+  /// [citeAsMarkdown] Display of or reference to the bibliographic citation of the comment, classifier, or rating.
   Markdown? get citeAsMarkdown;
   @override
+
+  /// [citeAsMarkdownElement] ("_citeAsMarkdown") Extensions for citeAsMarkdown
   @JsonKey(name: '_citeAsMarkdown')
   Element? get citeAsMarkdownElement;
   @override
+
+  /// [date] The date  (and optionally time) when the artifact assessment was published. The date must change when the disposition changes and it must change if the workflow status code changes. In addition, it should change when the substantive content of the artifact assessment changes.
   FhirDateTime? get date;
   @override
+
+  /// [dateElement] ("_date") Extensions for date
   @JsonKey(name: '_date')
   Element? get dateElement;
   @override
+
+  /// [copyright] A copyright statement relating to the artifact assessment and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the artifact assessment.
   Markdown? get copyright;
   @override
+
+  /// [copyrightElement] ("_copyright") Extensions for copyright
   @JsonKey(name: '_copyright')
   Element? get copyrightElement;
   @override
-  FhirDateTime? get approvalDate;
+
+  /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
+  Date? get approvalDate;
   @override
+
+  /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
   @JsonKey(name: '_approvalDate')
   Element? get approvalDateElement;
   @override
-  FhirDateTime? get lastReviewDate;
+
+  /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
+  Date? get lastReviewDate;
   @override
+
+  /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement;
   @override
+
+  /// [artifactReference] A reference to a resource, canonical resource, or non-FHIR resource which the comment or assessment is about.
   Reference? get artifactReference;
   @override
+
+  /// [artifactCanonical] A reference to a resource, canonical resource, or non-FHIR resource which the comment or assessment is about.
   Canonical? get artifactCanonical;
   @override
+
+  /// [artifactCanonicalElement] ("_artifactCanonical") Extensions for artifactCanonical
   @JsonKey(name: '_artifactCanonical')
   Element? get artifactCanonicalElement;
   @override
+
+  /// [artifactUri] A reference to a resource, canonical resource, or non-FHIR resource which the comment or assessment is about.
   FhirUri? get artifactUri;
   @override
+
+  /// [artifactUriElement] ("_artifactUri") Extensions for artifactUri
   @JsonKey(name: '_artifactUri')
   Element? get artifactUriElement;
   @override
+
+  /// [content] A component comment, classifier, or rating of the artifact.
   List<ArtifactAssessmentContent>? get content;
   @override
+
+  /// [workflowStatus] Indicates the workflow status of the comment or change request.
   Code? get workflowStatus;
   @override
+
+  /// [workflowStatusElement] ("_workflowStatus") Extensions for workflowStatus
   @JsonKey(name: '_workflowStatus')
   Element? get workflowStatusElement;
   @override
+
+  /// [disposition] Indicates the disposition of the responsible party to the comment or change request.
   Code? get disposition;
   @override
+
+  /// [dispositionElement] ("_disposition") Extensions for disposition
   @JsonKey(name: '_disposition')
   Element? get dispositionElement;
   @override
@@ -1192,28 +1453,76 @@ ArtifactAssessmentContent _$ArtifactAssessmentContentFromJson(
 
 /// @nodoc
 mixin _$ArtifactAssessmentContent {
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [informationType] The type of information this component of the content represents.
   Code? get informationType => throw _privateConstructorUsedError;
+
+  /// [informationTypeElement] ("_informationType") Extensions for informationType
   @JsonKey(name: '_informationType')
   Element? get informationTypeElement => throw _privateConstructorUsedError;
+
+  /// [summary] A brief summary of the content of this component.
   Markdown? get summary => throw _privateConstructorUsedError;
+
+  /// [summaryElement] ("_summary") Extensions for summary
   @JsonKey(name: '_summary')
   Element? get summaryElement => throw _privateConstructorUsedError;
+
+  /// [type] Indicates what type of content this component represents.
   CodeableConcept? get type => throw _privateConstructorUsedError;
+
+  /// [classifier] Represents a rating, classifier, or assessment of the artifact.
   List<CodeableConcept>? get classifier => throw _privateConstructorUsedError;
+
+  /// [author] Indicates who or what authored the content.
   Reference? get author => throw _privateConstructorUsedError;
+
+  /// [path] A URI that points to what the comment is about, such as a line of text in the CQL, or a specific element in a resource.
   List<FhirUri>? get path => throw _privateConstructorUsedError;
+
+  /// [pathElement] ("_path") Extensions for path
   @JsonKey(name: '_path')
   List<Element>? get pathElement => throw _privateConstructorUsedError;
+
+  /// [relatedArtifact] Additional related artifacts that provide supporting documentation, additional evidence, or further information related to the content.
   List<RelatedArtifact>? get relatedArtifact =>
       throw _privateConstructorUsedError;
+
+  /// [freeToShare] Acceptable to publicly share the comment, classifier or rating.
   Boolean? get freeToShare => throw _privateConstructorUsedError;
+
+  /// [freeToShareElement] ("_freeToShare") Extensions for freeToShare
   @JsonKey(name: '_freeToShare')
   Element? get freeToShareElement => throw _privateConstructorUsedError;
+
+  /// [component] If the informationType is container, the components of the content.
   List<ArtifactAssessmentContent>? get component =>
       throw _privateConstructorUsedError;
 
@@ -1584,9 +1893,25 @@ class _$_ArtifactAssessmentContent extends _ArtifactAssessmentContent {
   factory _$_ArtifactAssessmentContent.fromJson(Map<String, dynamic> json) =>
       _$$_ArtifactAssessmentContentFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -1597,7 +1922,32 @@ class _$_ArtifactAssessmentContent extends _ArtifactAssessmentContent {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -1608,19 +1958,32 @@ class _$_ArtifactAssessmentContent extends _ArtifactAssessmentContent {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [informationType] The type of information this component of the content represents.
   @override
   final Code? informationType;
+
+  /// [informationTypeElement] ("_informationType") Extensions for informationType
   @override
   @JsonKey(name: '_informationType')
   final Element? informationTypeElement;
+
+  /// [summary] A brief summary of the content of this component.
   @override
   final Markdown? summary;
+
+  /// [summaryElement] ("_summary") Extensions for summary
   @override
   @JsonKey(name: '_summary')
   final Element? summaryElement;
+
+  /// [type] Indicates what type of content this component represents.
   @override
   final CodeableConcept? type;
+
+  /// [classifier] Represents a rating, classifier, or assessment of the artifact.
   final List<CodeableConcept>? _classifier;
+
+  /// [classifier] Represents a rating, classifier, or assessment of the artifact.
   @override
   List<CodeableConcept>? get classifier {
     final value = _classifier;
@@ -1630,9 +1993,14 @@ class _$_ArtifactAssessmentContent extends _ArtifactAssessmentContent {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [author] Indicates who or what authored the content.
   @override
   final Reference? author;
+
+  /// [path] A URI that points to what the comment is about, such as a line of text in the CQL, or a specific element in a resource.
   final List<FhirUri>? _path;
+
+  /// [path] A URI that points to what the comment is about, such as a line of text in the CQL, or a specific element in a resource.
   @override
   List<FhirUri>? get path {
     final value = _path;
@@ -1642,7 +2010,10 @@ class _$_ArtifactAssessmentContent extends _ArtifactAssessmentContent {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [pathElement] ("_path") Extensions for path
   final List<Element>? _pathElement;
+
+  /// [pathElement] ("_path") Extensions for path
   @override
   @JsonKey(name: '_path')
   List<Element>? get pathElement {
@@ -1653,7 +2024,10 @@ class _$_ArtifactAssessmentContent extends _ArtifactAssessmentContent {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [relatedArtifact] Additional related artifacts that provide supporting documentation, additional evidence, or further information related to the content.
   final List<RelatedArtifact>? _relatedArtifact;
+
+  /// [relatedArtifact] Additional related artifacts that provide supporting documentation, additional evidence, or further information related to the content.
   @override
   List<RelatedArtifact>? get relatedArtifact {
     final value = _relatedArtifact;
@@ -1663,12 +2037,19 @@ class _$_ArtifactAssessmentContent extends _ArtifactAssessmentContent {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [freeToShare] Acceptable to publicly share the comment, classifier or rating.
   @override
   final Boolean? freeToShare;
+
+  /// [freeToShareElement] ("_freeToShare") Extensions for freeToShare
   @override
   @JsonKey(name: '_freeToShare')
   final Element? freeToShareElement;
+
+  /// [component] If the informationType is container, the components of the content.
   final List<ArtifactAssessmentContent>? _component;
+
+  /// [component] If the informationType is container, the components of the content.
   @override
   List<ArtifactAssessmentContent>? get component {
     final value = _component;
@@ -1778,41 +2159,90 @@ abstract class _ArtifactAssessmentContent extends ArtifactAssessmentContent {
       _$_ArtifactAssessmentContent.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [informationType] The type of information this component of the content represents.
   Code? get informationType;
   @override
+
+  /// [informationTypeElement] ("_informationType") Extensions for informationType
   @JsonKey(name: '_informationType')
   Element? get informationTypeElement;
   @override
+
+  /// [summary] A brief summary of the content of this component.
   Markdown? get summary;
   @override
+
+  /// [summaryElement] ("_summary") Extensions for summary
   @JsonKey(name: '_summary')
   Element? get summaryElement;
   @override
+
+  /// [type] Indicates what type of content this component represents.
   CodeableConcept? get type;
   @override
+
+  /// [classifier] Represents a rating, classifier, or assessment of the artifact.
   List<CodeableConcept>? get classifier;
   @override
+
+  /// [author] Indicates who or what authored the content.
   Reference? get author;
   @override
+
+  /// [path] A URI that points to what the comment is about, such as a line of text in the CQL, or a specific element in a resource.
   List<FhirUri>? get path;
   @override
+
+  /// [pathElement] ("_path") Extensions for path
   @JsonKey(name: '_path')
   List<Element>? get pathElement;
   @override
+
+  /// [relatedArtifact] Additional related artifacts that provide supporting documentation, additional evidence, or further information related to the content.
   List<RelatedArtifact>? get relatedArtifact;
   @override
+
+  /// [freeToShare] Acceptable to publicly share the comment, classifier or rating.
   Boolean? get freeToShare;
   @override
+
+  /// [freeToShareElement] ("_freeToShare") Extensions for freeToShare
   @JsonKey(name: '_freeToShare')
   Element? get freeToShareElement;
   @override
+
+  /// [component] If the informationType is container, the components of the content.
   List<ArtifactAssessmentContent>? get component;
   @override
   @JsonKey(ignore: true)
@@ -1826,79 +2256,211 @@ Citation _$CitationFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Citation {
+  /// [resourceType] This is a Citation resource
+  @JsonKey(unknownEnumValue: R5ResourceType.Citation)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  /// Once assigned, this value never changes.
   Id? get id => throw _privateConstructorUsedError;
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not
+  /// always be associated with version changes to the resource.
   Meta? get meta => throw _privateConstructorUsedError;
+
+  /// [implicitRules] A reference to a set of rules that were followed when
+  /// the resource was constructed, and which must be understood when
+  /// processing the content. Often, this is a reference to an implementation
+  /// guide that defines the special rules along with other profiles etc.
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
+
+  /// [language] The base language in which the resource is written.
   Code? get language => throw _privateConstructorUsedError;
+
+  /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   Narrative? get text => throw _privateConstructorUsedError;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   List<Resource>? get contained => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [url] An absolute URI that is used to identify this citation record when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this summary is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the summary is stored on different servers.
   FhirUri? get url => throw _privateConstructorUsedError;
+
+  /// [urlElement] ("_url") Extensions for url
   @JsonKey(name: '_url')
   Element? get urlElement => throw _privateConstructorUsedError;
+
+  /// [identifier] A formal identifier that is used to identify this citation record when it is represented in other formats, or referenced in a specification, model, design or an instance.
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
+
+  /// [version] The identifier that is used to identify this version of the citation record when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the citation record author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.
   String? get version => throw _privateConstructorUsedError;
+
+  /// [versionElement] ("_version") Extensions for version
   @JsonKey(name: '_version')
   Element? get versionElement => throw _privateConstructorUsedError;
+
+  /// [versionAlgorithmString] Indicates the mechanism used to compare versions to determine which is more current.
+  String? get versionAlgorithmString => throw _privateConstructorUsedError;
+
+  /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions for versionAlgorithmString
+  @JsonKey(name: '_versionAlgorithmString')
+  Element? get versionAlgorithmStringElement =>
+      throw _privateConstructorUsedError;
+
+  /// [versionAlgorithmCoding] Indicates the mechanism used to compare versions to determine which is more current.
+  Coding? get versionAlgorithmCoding => throw _privateConstructorUsedError;
+
+  /// [name] A natural language name identifying the citation record. This name should be usable as an identifier for the module by machine processing applications such as code generation.
   String? get name => throw _privateConstructorUsedError;
+
+  /// [nameElement] ("_name") Extensions for name
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
+
+  /// [title] A short, descriptive, user-friendly title for the citation record.
   String? get title => throw _privateConstructorUsedError;
+
+  /// [titleElement] ("_title") Extensions for title
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
+
+  /// [status] The status of this summary. Enables tracking the life-cycle of the content.
   Code? get status => throw _privateConstructorUsedError;
+
+  /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
+
+  /// [experimental] A Boolean value to indicate that this citation record is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
   Boolean? get experimental => throw _privateConstructorUsedError;
+
+  /// [experimentalElement] ("_experimental") Extensions for experimental
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
+
+  /// [date] The date (and optionally time) when the citation record was last significantly changed. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the citation record changes.
   FhirDateTime? get date => throw _privateConstructorUsedError;
+
+  /// [dateElement] ("_date") Extensions for date
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
+
+  /// [publisher] The name of the organization or individual that published the citation record.
   String? get publisher => throw _privateConstructorUsedError;
+
+  /// [publisherElement] ("_publisher") Extensions for publisher
   @JsonKey(name: '_publisher')
   Element? get publisherElement => throw _privateConstructorUsedError;
+
+  /// [contact] Contact details to assist a user in finding and communicating with the publisher.
   List<ContactDetail>? get contact => throw _privateConstructorUsedError;
+
+  /// [description] A free text natural language description of the citation from a consumer's perspective.
   Markdown? get description => throw _privateConstructorUsedError;
+
+  /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
+
+  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate citation record instances.
   List<UsageContext>? get useContext => throw _privateConstructorUsedError;
+
+  /// [jurisdiction] A legal or geographic region in which the citation record is intended to be used.
   List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
+
+  /// [purpose] Explanation of why this citation is needed and why it has been designed as it has.
   Markdown? get purpose => throw _privateConstructorUsedError;
+
+  /// [purposeElement] ("_purpose") Extensions for purpose
   @JsonKey(name: '_purpose')
   Element? get purposeElement => throw _privateConstructorUsedError;
+
+  /// [copyright] Use and/or publishing restrictions for the citation record, not for the cited artifact.
   Markdown? get copyright => throw _privateConstructorUsedError;
+
+  /// [copyrightElement] ("_copyright") Extensions for copyright
   @JsonKey(name: '_copyright')
   Element? get copyrightElement => throw _privateConstructorUsedError;
+
+  /// [copyrightLabel] A short string (<50 characters), suitable for inclusion in a page footer that identifies the copyright holder, effective period, and optionally whether rights are resctricted. (e.g. 'All rights reserved', 'Some rights reserved').
+  String? get copyrightLabel => throw _privateConstructorUsedError;
+
+  /// [copyrightLabelElement] ("_copyrightLabel") Extensions for copyrightLabel
+  @JsonKey(name: '_copyrightLabel')
+  Element? get copyrightLabelElement => throw _privateConstructorUsedError;
+
+  /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
   Date? get approvalDate => throw _privateConstructorUsedError;
+
+  /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
   @JsonKey(name: '_approvalDate')
   Element? get approvalDateElement => throw _privateConstructorUsedError;
+
+  /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
   Date? get lastReviewDate => throw _privateConstructorUsedError;
+
+  /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement => throw _privateConstructorUsedError;
+
+  /// [effectivePeriod] The period during which the citation record content was or is planned to be in active use.
   Period? get effectivePeriod => throw _privateConstructorUsedError;
+
+  /// [topic] Descriptive topics related to the content of the {{title}}. Topics provide a high-level categorization as well as keywords for the {{title}} that can be useful for filtering and searching.
   List<CodeableConcept>? get topic => throw _privateConstructorUsedError;
+
+  /// [author] Who authored or created the citation record.
   List<ContactDetail>? get author => throw _privateConstructorUsedError;
+
+  /// [editor] Who edited or revised the citation record.
   List<ContactDetail>? get editor => throw _privateConstructorUsedError;
+
+  /// [reviewer] Who reviewed the citation record.
   List<ContactDetail>? get reviewer => throw _privateConstructorUsedError;
+
+  /// [endorser] Who endorsed the citation record.
   List<ContactDetail>? get endorser => throw _privateConstructorUsedError;
+
+  /// [relatedArtifact] Artifact related to the citation record.
   List<RelatedArtifact>? get relatedArtifact =>
       throw _privateConstructorUsedError;
+
+  /// [summary] A human-readable display of key concepts to represent the citation.
   List<CitationSummary>? get summary => throw _privateConstructorUsedError;
+
+  /// [classification] The assignment to an organizing scheme.
   List<CitationClassification>? get classification =>
       throw _privateConstructorUsedError;
+
+  /// [note] Used for general notes and annotations not coded elsewhere.
   List<Annotation>? get note => throw _privateConstructorUsedError;
+
+  /// [currentState] The status of the citation record.
   List<CodeableConcept>? get currentState => throw _privateConstructorUsedError;
+
+  /// [statusDate] The state or status of the citation record paired with an effective date or period for that state.
   List<CitationStatusDate>? get statusDate =>
       throw _privateConstructorUsedError;
+
+  /// [citedArtifact] The article or artifact being described.
   CitationCitedArtifact? get citedArtifact =>
       throw _privateConstructorUsedError;
 
@@ -1914,47 +2476,71 @@ abstract class $CitationCopyWith<$Res> {
       _$CitationCopyWithImpl<$Res, Citation>;
   @useResult
   $Res call(
-      {R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Citation)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? url,
-      @JsonKey(name: '_url') Element? urlElement,
+      @JsonKey(name: '_url')
+          Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version') Element? versionElement,
+      @JsonKey(name: '_version')
+          Element? versionElement,
+      String? versionAlgorithmString,
+      @JsonKey(name: '_versionAlgorithmString')
+          Element? versionAlgorithmStringElement,
+      Coding? versionAlgorithmCoding,
       String? name,
-      @JsonKey(name: '_name') Element? nameElement,
+      @JsonKey(name: '_name')
+          Element? nameElement,
       String? title,
-      @JsonKey(name: '_title') Element? titleElement,
+      @JsonKey(name: '_title')
+          Element? titleElement,
       Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
+      @JsonKey(name: '_status')
+          Element? statusElement,
       Boolean? experimental,
-      @JsonKey(name: '_experimental') Element? experimentalElement,
+      @JsonKey(name: '_experimental')
+          Element? experimentalElement,
       FhirDateTime? date,
-      @JsonKey(name: '_date') Element? dateElement,
+      @JsonKey(name: '_date')
+          Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher') Element? publisherElement,
+      @JsonKey(name: '_publisher')
+          Element? publisherElement,
       List<ContactDetail>? contact,
       Markdown? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
+      @JsonKey(name: '_description')
+          Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       Markdown? purpose,
-      @JsonKey(name: '_purpose') Element? purposeElement,
+      @JsonKey(name: '_purpose')
+          Element? purposeElement,
       Markdown? copyright,
-      @JsonKey(name: '_copyright') Element? copyrightElement,
+      @JsonKey(name: '_copyright')
+          Element? copyrightElement,
+      String? copyrightLabel,
+      @JsonKey(name: '_copyrightLabel')
+          Element? copyrightLabelElement,
       Date? approvalDate,
-      @JsonKey(name: '_approvalDate') Element? approvalDateElement,
+      @JsonKey(name: '_approvalDate')
+          Element? approvalDateElement,
       Date? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element? lastReviewDateElement,
       Period? effectivePeriod,
       List<CodeableConcept>? topic,
       List<ContactDetail>? author,
@@ -1975,6 +2561,8 @@ abstract class $CitationCopyWith<$Res> {
   $NarrativeCopyWith<$Res>? get text;
   $ElementCopyWith<$Res>? get urlElement;
   $ElementCopyWith<$Res>? get versionElement;
+  $ElementCopyWith<$Res>? get versionAlgorithmStringElement;
+  $CodingCopyWith<$Res>? get versionAlgorithmCoding;
   $ElementCopyWith<$Res>? get nameElement;
   $ElementCopyWith<$Res>? get titleElement;
   $ElementCopyWith<$Res>? get statusElement;
@@ -1984,6 +2572,7 @@ abstract class $CitationCopyWith<$Res> {
   $ElementCopyWith<$Res>? get descriptionElement;
   $ElementCopyWith<$Res>? get purposeElement;
   $ElementCopyWith<$Res>? get copyrightElement;
+  $ElementCopyWith<$Res>? get copyrightLabelElement;
   $ElementCopyWith<$Res>? get approvalDateElement;
   $ElementCopyWith<$Res>? get lastReviewDateElement;
   $PeriodCopyWith<$Res>? get effectivePeriod;
@@ -2019,6 +2608,9 @@ class _$CitationCopyWithImpl<$Res, $Val extends Citation>
     Object? identifier = freezed,
     Object? version = freezed,
     Object? versionElement = freezed,
+    Object? versionAlgorithmString = freezed,
+    Object? versionAlgorithmStringElement = freezed,
+    Object? versionAlgorithmCoding = freezed,
     Object? name = freezed,
     Object? nameElement = freezed,
     Object? title = freezed,
@@ -2040,6 +2632,8 @@ class _$CitationCopyWithImpl<$Res, $Val extends Citation>
     Object? purposeElement = freezed,
     Object? copyright = freezed,
     Object? copyrightElement = freezed,
+    Object? copyrightLabel = freezed,
+    Object? copyrightLabelElement = freezed,
     Object? approvalDate = freezed,
     Object? approvalDateElement = freezed,
     Object? lastReviewDate = freezed,
@@ -2123,6 +2717,18 @@ class _$CitationCopyWithImpl<$Res, $Val extends Citation>
           ? _value.versionElement
           : versionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
+      versionAlgorithmString: freezed == versionAlgorithmString
+          ? _value.versionAlgorithmString
+          : versionAlgorithmString // ignore: cast_nullable_to_non_nullable
+              as String?,
+      versionAlgorithmStringElement: freezed == versionAlgorithmStringElement
+          ? _value.versionAlgorithmStringElement
+          : versionAlgorithmStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      versionAlgorithmCoding: freezed == versionAlgorithmCoding
+          ? _value.versionAlgorithmCoding
+          : versionAlgorithmCoding // ignore: cast_nullable_to_non_nullable
+              as Coding?,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -2206,6 +2812,14 @@ class _$CitationCopyWithImpl<$Res, $Val extends Citation>
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      copyrightLabel: freezed == copyrightLabel
+          ? _value.copyrightLabel
+          : copyrightLabel // ignore: cast_nullable_to_non_nullable
+              as String?,
+      copyrightLabelElement: freezed == copyrightLabelElement
+          ? _value.copyrightLabelElement
+          : copyrightLabelElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
@@ -2352,6 +2966,32 @@ class _$CitationCopyWithImpl<$Res, $Val extends Citation>
 
   @override
   @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get versionAlgorithmStringElement {
+    if (_value.versionAlgorithmStringElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.versionAlgorithmStringElement!,
+        (value) {
+      return _then(
+          _value.copyWith(versionAlgorithmStringElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CodingCopyWith<$Res>? get versionAlgorithmCoding {
+    if (_value.versionAlgorithmCoding == null) {
+      return null;
+    }
+
+    return $CodingCopyWith<$Res>(_value.versionAlgorithmCoding!, (value) {
+      return _then(_value.copyWith(versionAlgorithmCoding: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get nameElement {
     if (_value.nameElement == null) {
       return null;
@@ -2460,6 +3100,18 @@ class _$CitationCopyWithImpl<$Res, $Val extends Citation>
 
   @override
   @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get copyrightLabelElement {
+    if (_value.copyrightLabelElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.copyrightLabelElement!, (value) {
+      return _then(_value.copyWith(copyrightLabelElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get approvalDateElement {
     if (_value.approvalDateElement == null) {
       return null;
@@ -2515,47 +3167,71 @@ abstract class _$$_CitationCopyWith<$Res> implements $CitationCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Citation)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? url,
-      @JsonKey(name: '_url') Element? urlElement,
+      @JsonKey(name: '_url')
+          Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version') Element? versionElement,
+      @JsonKey(name: '_version')
+          Element? versionElement,
+      String? versionAlgorithmString,
+      @JsonKey(name: '_versionAlgorithmString')
+          Element? versionAlgorithmStringElement,
+      Coding? versionAlgorithmCoding,
       String? name,
-      @JsonKey(name: '_name') Element? nameElement,
+      @JsonKey(name: '_name')
+          Element? nameElement,
       String? title,
-      @JsonKey(name: '_title') Element? titleElement,
+      @JsonKey(name: '_title')
+          Element? titleElement,
       Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
+      @JsonKey(name: '_status')
+          Element? statusElement,
       Boolean? experimental,
-      @JsonKey(name: '_experimental') Element? experimentalElement,
+      @JsonKey(name: '_experimental')
+          Element? experimentalElement,
       FhirDateTime? date,
-      @JsonKey(name: '_date') Element? dateElement,
+      @JsonKey(name: '_date')
+          Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher') Element? publisherElement,
+      @JsonKey(name: '_publisher')
+          Element? publisherElement,
       List<ContactDetail>? contact,
       Markdown? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
+      @JsonKey(name: '_description')
+          Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       Markdown? purpose,
-      @JsonKey(name: '_purpose') Element? purposeElement,
+      @JsonKey(name: '_purpose')
+          Element? purposeElement,
       Markdown? copyright,
-      @JsonKey(name: '_copyright') Element? copyrightElement,
+      @JsonKey(name: '_copyright')
+          Element? copyrightElement,
+      String? copyrightLabel,
+      @JsonKey(name: '_copyrightLabel')
+          Element? copyrightLabelElement,
       Date? approvalDate,
-      @JsonKey(name: '_approvalDate') Element? approvalDateElement,
+      @JsonKey(name: '_approvalDate')
+          Element? approvalDateElement,
       Date? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element? lastReviewDateElement,
       Period? effectivePeriod,
       List<CodeableConcept>? topic,
       List<ContactDetail>? author,
@@ -2583,6 +3259,10 @@ abstract class _$$_CitationCopyWith<$Res> implements $CitationCopyWith<$Res> {
   @override
   $ElementCopyWith<$Res>? get versionElement;
   @override
+  $ElementCopyWith<$Res>? get versionAlgorithmStringElement;
+  @override
+  $CodingCopyWith<$Res>? get versionAlgorithmCoding;
+  @override
   $ElementCopyWith<$Res>? get nameElement;
   @override
   $ElementCopyWith<$Res>? get titleElement;
@@ -2600,6 +3280,8 @@ abstract class _$$_CitationCopyWith<$Res> implements $CitationCopyWith<$Res> {
   $ElementCopyWith<$Res>? get purposeElement;
   @override
   $ElementCopyWith<$Res>? get copyrightElement;
+  @override
+  $ElementCopyWith<$Res>? get copyrightLabelElement;
   @override
   $ElementCopyWith<$Res>? get approvalDateElement;
   @override
@@ -2637,6 +3319,9 @@ class __$$_CitationCopyWithImpl<$Res>
     Object? identifier = freezed,
     Object? version = freezed,
     Object? versionElement = freezed,
+    Object? versionAlgorithmString = freezed,
+    Object? versionAlgorithmStringElement = freezed,
+    Object? versionAlgorithmCoding = freezed,
     Object? name = freezed,
     Object? nameElement = freezed,
     Object? title = freezed,
@@ -2658,6 +3343,8 @@ class __$$_CitationCopyWithImpl<$Res>
     Object? purposeElement = freezed,
     Object? copyright = freezed,
     Object? copyrightElement = freezed,
+    Object? copyrightLabel = freezed,
+    Object? copyrightLabelElement = freezed,
     Object? approvalDate = freezed,
     Object? approvalDateElement = freezed,
     Object? lastReviewDate = freezed,
@@ -2741,6 +3428,18 @@ class __$$_CitationCopyWithImpl<$Res>
           ? _value.versionElement
           : versionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
+      versionAlgorithmString: freezed == versionAlgorithmString
+          ? _value.versionAlgorithmString
+          : versionAlgorithmString // ignore: cast_nullable_to_non_nullable
+              as String?,
+      versionAlgorithmStringElement: freezed == versionAlgorithmStringElement
+          ? _value.versionAlgorithmStringElement
+          : versionAlgorithmStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      versionAlgorithmCoding: freezed == versionAlgorithmCoding
+          ? _value.versionAlgorithmCoding
+          : versionAlgorithmCoding // ignore: cast_nullable_to_non_nullable
+              as Coding?,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -2825,6 +3524,14 @@ class __$$_CitationCopyWithImpl<$Res>
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
               as Element?,
+      copyrightLabel: freezed == copyrightLabel
+          ? _value.copyrightLabel
+          : copyrightLabel // ignore: cast_nullable_to_non_nullable
+              as String?,
+      copyrightLabelElement: freezed == copyrightLabelElement
+          ? _value.copyrightLabelElement
+          : copyrightLabelElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
@@ -2901,47 +3608,71 @@ class __$$_CitationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Citation extends _Citation {
   _$_Citation(
-      {this.resourceType = R5ResourceType.Citation,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Citation)
+          this.resourceType = R5ResourceType.Citation,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.url,
-      @JsonKey(name: '_url') this.urlElement,
+      @JsonKey(name: '_url')
+          this.urlElement,
       final List<Identifier>? identifier,
       this.version,
-      @JsonKey(name: '_version') this.versionElement,
+      @JsonKey(name: '_version')
+          this.versionElement,
+      this.versionAlgorithmString,
+      @JsonKey(name: '_versionAlgorithmString')
+          this.versionAlgorithmStringElement,
+      this.versionAlgorithmCoding,
       this.name,
-      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
       this.title,
-      @JsonKey(name: '_title') this.titleElement,
+      @JsonKey(name: '_title')
+          this.titleElement,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.experimental,
-      @JsonKey(name: '_experimental') this.experimentalElement,
+      @JsonKey(name: '_experimental')
+          this.experimentalElement,
       this.date,
-      @JsonKey(name: '_date') this.dateElement,
+      @JsonKey(name: '_date')
+          this.dateElement,
       this.publisher,
-      @JsonKey(name: '_publisher') this.publisherElement,
+      @JsonKey(name: '_publisher')
+          this.publisherElement,
       final List<ContactDetail>? contact,
       this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
       this.purpose,
-      @JsonKey(name: '_purpose') this.purposeElement,
+      @JsonKey(name: '_purpose')
+          this.purposeElement,
       this.copyright,
-      @JsonKey(name: '_copyright') this.copyrightElement,
+      @JsonKey(name: '_copyright')
+          this.copyrightElement,
+      this.copyrightLabel,
+      @JsonKey(name: '_copyrightLabel')
+          this.copyrightLabelElement,
       this.approvalDate,
-      @JsonKey(name: '_approvalDate') this.approvalDateElement,
+      @JsonKey(name: '_approvalDate')
+          this.approvalDateElement,
       this.lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') this.lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          this.lastReviewDateElement,
       this.effectivePeriod,
       final List<CodeableConcept>? topic,
       final List<ContactDetail>? author,
@@ -2978,26 +3709,51 @@ class _$_Citation extends _Citation {
   factory _$_Citation.fromJson(Map<String, dynamic> json) =>
       _$$_CitationFromJson(json);
 
+  /// [resourceType] This is a Citation resource
   @override
-  @JsonKey()
+  @JsonKey(unknownEnumValue: R5ResourceType.Citation)
   final R5ResourceType resourceType;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  /// Once assigned, this value never changes.
   @override
   final Id? id;
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not
+  /// always be associated with version changes to the resource.
   @override
   final Meta? meta;
+
+  /// [implicitRules] A reference to a set of rules that were followed when
+  /// the resource was constructed, and which must be understood when
+  /// processing the content. Often, this is a reference to an implementation
+  /// guide that defines the special rules along with other profiles etc.
   @override
   final FhirUri? implicitRules;
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
+
+  /// [language] The base language in which the resource is written.
   @override
   final Code? language;
+
+  /// [languageElement] ("_language") Extensions for language
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   @override
   final Narrative? text;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   final List<Resource>? _contained;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   @override
   List<Resource>? get contained {
     final value = _contained;
@@ -3007,7 +3763,10 @@ class _$_Citation extends _Citation {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -3018,7 +3777,10 @@ class _$_Citation extends _Citation {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -3029,12 +3791,19 @@ class _$_Citation extends _Citation {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [url] An absolute URI that is used to identify this citation record when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this summary is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the summary is stored on different servers.
   @override
   final FhirUri? url;
+
+  /// [urlElement] ("_url") Extensions for url
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
+
+  /// [identifier] A formal identifier that is used to identify this citation record when it is represented in other formats, or referenced in a specification, model, design or an instance.
   final List<Identifier>? _identifier;
+
+  /// [identifier] A formal identifier that is used to identify this citation record when it is represented in other formats, or referenced in a specification, model, design or an instance.
   @override
   List<Identifier>? get identifier {
     final value = _identifier;
@@ -3044,42 +3813,86 @@ class _$_Citation extends _Citation {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [version] The identifier that is used to identify this version of the citation record when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the citation record author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.
   @override
   final String? version;
+
+  /// [versionElement] ("_version") Extensions for version
   @override
   @JsonKey(name: '_version')
   final Element? versionElement;
+
+  /// [versionAlgorithmString] Indicates the mechanism used to compare versions to determine which is more current.
+  @override
+  final String? versionAlgorithmString;
+
+  /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions for versionAlgorithmString
+  @override
+  @JsonKey(name: '_versionAlgorithmString')
+  final Element? versionAlgorithmStringElement;
+
+  /// [versionAlgorithmCoding] Indicates the mechanism used to compare versions to determine which is more current.
+  @override
+  final Coding? versionAlgorithmCoding;
+
+  /// [name] A natural language name identifying the citation record. This name should be usable as an identifier for the module by machine processing applications such as code generation.
   @override
   final String? name;
+
+  /// [nameElement] ("_name") Extensions for name
   @override
   @JsonKey(name: '_name')
   final Element? nameElement;
+
+  /// [title] A short, descriptive, user-friendly title for the citation record.
   @override
   final String? title;
+
+  /// [titleElement] ("_title") Extensions for title
   @override
   @JsonKey(name: '_title')
   final Element? titleElement;
+
+  /// [status] The status of this summary. Enables tracking the life-cycle of the content.
   @override
   final Code? status;
+
+  /// [statusElement] ("_status") Extensions for status
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
+
+  /// [experimental] A Boolean value to indicate that this citation record is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
   @override
   final Boolean? experimental;
+
+  /// [experimentalElement] ("_experimental") Extensions for experimental
   @override
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
+
+  /// [date] The date (and optionally time) when the citation record was last significantly changed. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the citation record changes.
   @override
   final FhirDateTime? date;
+
+  /// [dateElement] ("_date") Extensions for date
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
+
+  /// [publisher] The name of the organization or individual that published the citation record.
   @override
   final String? publisher;
+
+  /// [publisherElement] ("_publisher") Extensions for publisher
   @override
   @JsonKey(name: '_publisher')
   final Element? publisherElement;
+
+  /// [contact] Contact details to assist a user in finding and communicating with the publisher.
   final List<ContactDetail>? _contact;
+
+  /// [contact] Contact details to assist a user in finding and communicating with the publisher.
   @override
   List<ContactDetail>? get contact {
     final value = _contact;
@@ -3089,12 +3902,19 @@ class _$_Citation extends _Citation {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [description] A free text natural language description of the citation from a consumer's perspective.
   @override
   final Markdown? description;
+
+  /// [descriptionElement] ("_description") Extensions for description
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
+
+  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate citation record instances.
   final List<UsageContext>? _useContext;
+
+  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate citation record instances.
   @override
   List<UsageContext>? get useContext {
     final value = _useContext;
@@ -3104,7 +3924,10 @@ class _$_Citation extends _Citation {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [jurisdiction] A legal or geographic region in which the citation record is intended to be used.
   final List<CodeableConcept>? _jurisdiction;
+
+  /// [jurisdiction] A legal or geographic region in which the citation record is intended to be used.
   @override
   List<CodeableConcept>? get jurisdiction {
     final value = _jurisdiction;
@@ -3114,29 +3937,59 @@ class _$_Citation extends _Citation {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [purpose] Explanation of why this citation is needed and why it has been designed as it has.
   @override
   final Markdown? purpose;
+
+  /// [purposeElement] ("_purpose") Extensions for purpose
   @override
   @JsonKey(name: '_purpose')
   final Element? purposeElement;
+
+  /// [copyright] Use and/or publishing restrictions for the citation record, not for the cited artifact.
   @override
   final Markdown? copyright;
+
+  /// [copyrightElement] ("_copyright") Extensions for copyright
   @override
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
+
+  /// [copyrightLabel] A short string (<50 characters), suitable for inclusion in a page footer that identifies the copyright holder, effective period, and optionally whether rights are resctricted. (e.g. 'All rights reserved', 'Some rights reserved').
+  @override
+  final String? copyrightLabel;
+
+  /// [copyrightLabelElement] ("_copyrightLabel") Extensions for copyrightLabel
+  @override
+  @JsonKey(name: '_copyrightLabel')
+  final Element? copyrightLabelElement;
+
+  /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
   @override
   final Date? approvalDate;
+
+  /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
   @override
   @JsonKey(name: '_approvalDate')
   final Element? approvalDateElement;
+
+  /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
   @override
   final Date? lastReviewDate;
+
+  /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
   @override
   @JsonKey(name: '_lastReviewDate')
   final Element? lastReviewDateElement;
+
+  /// [effectivePeriod] The period during which the citation record content was or is planned to be in active use.
   @override
   final Period? effectivePeriod;
+
+  /// [topic] Descriptive topics related to the content of the {{title}}. Topics provide a high-level categorization as well as keywords for the {{title}} that can be useful for filtering and searching.
   final List<CodeableConcept>? _topic;
+
+  /// [topic] Descriptive topics related to the content of the {{title}}. Topics provide a high-level categorization as well as keywords for the {{title}} that can be useful for filtering and searching.
   @override
   List<CodeableConcept>? get topic {
     final value = _topic;
@@ -3146,7 +3999,10 @@ class _$_Citation extends _Citation {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [author] Who authored or created the citation record.
   final List<ContactDetail>? _author;
+
+  /// [author] Who authored or created the citation record.
   @override
   List<ContactDetail>? get author {
     final value = _author;
@@ -3156,7 +4012,10 @@ class _$_Citation extends _Citation {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [editor] Who edited or revised the citation record.
   final List<ContactDetail>? _editor;
+
+  /// [editor] Who edited or revised the citation record.
   @override
   List<ContactDetail>? get editor {
     final value = _editor;
@@ -3166,7 +4025,10 @@ class _$_Citation extends _Citation {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [reviewer] Who reviewed the citation record.
   final List<ContactDetail>? _reviewer;
+
+  /// [reviewer] Who reviewed the citation record.
   @override
   List<ContactDetail>? get reviewer {
     final value = _reviewer;
@@ -3176,7 +4038,10 @@ class _$_Citation extends _Citation {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [endorser] Who endorsed the citation record.
   final List<ContactDetail>? _endorser;
+
+  /// [endorser] Who endorsed the citation record.
   @override
   List<ContactDetail>? get endorser {
     final value = _endorser;
@@ -3186,7 +4051,10 @@ class _$_Citation extends _Citation {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [relatedArtifact] Artifact related to the citation record.
   final List<RelatedArtifact>? _relatedArtifact;
+
+  /// [relatedArtifact] Artifact related to the citation record.
   @override
   List<RelatedArtifact>? get relatedArtifact {
     final value = _relatedArtifact;
@@ -3196,7 +4064,10 @@ class _$_Citation extends _Citation {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [summary] A human-readable display of key concepts to represent the citation.
   final List<CitationSummary>? _summary;
+
+  /// [summary] A human-readable display of key concepts to represent the citation.
   @override
   List<CitationSummary>? get summary {
     final value = _summary;
@@ -3206,7 +4077,10 @@ class _$_Citation extends _Citation {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [classification] The assignment to an organizing scheme.
   final List<CitationClassification>? _classification;
+
+  /// [classification] The assignment to an organizing scheme.
   @override
   List<CitationClassification>? get classification {
     final value = _classification;
@@ -3216,7 +4090,10 @@ class _$_Citation extends _Citation {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [note] Used for general notes and annotations not coded elsewhere.
   final List<Annotation>? _note;
+
+  /// [note] Used for general notes and annotations not coded elsewhere.
   @override
   List<Annotation>? get note {
     final value = _note;
@@ -3226,7 +4103,10 @@ class _$_Citation extends _Citation {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [currentState] The status of the citation record.
   final List<CodeableConcept>? _currentState;
+
+  /// [currentState] The status of the citation record.
   @override
   List<CodeableConcept>? get currentState {
     final value = _currentState;
@@ -3236,7 +4116,10 @@ class _$_Citation extends _Citation {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [statusDate] The state or status of the citation record paired with an effective date or period for that state.
   final List<CitationStatusDate>? _statusDate;
+
+  /// [statusDate] The state or status of the citation record paired with an effective date or period for that state.
   @override
   List<CitationStatusDate>? get statusDate {
     final value = _statusDate;
@@ -3246,12 +4129,13 @@ class _$_Citation extends _Citation {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [citedArtifact] The article or artifact being described.
   @override
   final CitationCitedArtifact? citedArtifact;
 
   @override
   String toString() {
-    return 'Citation(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, summary: $summary, classification: $classification, note: $note, currentState: $currentState, statusDate: $statusDate, citedArtifact: $citedArtifact)';
+    return 'Citation(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, versionAlgorithmString: $versionAlgorithmString, versionAlgorithmStringElement: $versionAlgorithmStringElement, versionAlgorithmCoding: $versionAlgorithmCoding, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, copyrightLabel: $copyrightLabel, copyrightLabelElement: $copyrightLabelElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, summary: $summary, classification: $classification, note: $note, currentState: $currentState, statusDate: $statusDate, citedArtifact: $citedArtifact)';
   }
 
   @override
@@ -3286,6 +4170,13 @@ class _$_Citation extends _Citation {
             (identical(other.version, version) || other.version == version) &&
             (identical(other.versionElement, versionElement) ||
                 other.versionElement == versionElement) &&
+            (identical(other.versionAlgorithmString, versionAlgorithmString) ||
+                other.versionAlgorithmString == versionAlgorithmString) &&
+            (identical(other.versionAlgorithmStringElement, versionAlgorithmStringElement) ||
+                other.versionAlgorithmStringElement ==
+                    versionAlgorithmStringElement) &&
+            (identical(other.versionAlgorithmCoding, versionAlgorithmCoding) ||
+                other.versionAlgorithmCoding == versionAlgorithmCoding) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.nameElement, nameElement) ||
                 other.nameElement == nameElement) &&
@@ -3322,6 +4213,10 @@ class _$_Citation extends _Citation {
                 other.copyright == copyright) &&
             (identical(other.copyrightElement, copyrightElement) ||
                 other.copyrightElement == copyrightElement) &&
+            (identical(other.copyrightLabel, copyrightLabel) ||
+                other.copyrightLabel == copyrightLabel) &&
+            (identical(other.copyrightLabelElement, copyrightLabelElement) ||
+                other.copyrightLabelElement == copyrightLabelElement) &&
             (identical(other.approvalDate, approvalDate) ||
                 other.approvalDate == approvalDate) &&
             (identical(other.approvalDateElement, approvalDateElement) ||
@@ -3337,18 +4232,13 @@ class _$_Citation extends _Citation {
             const DeepCollectionEquality().equals(other._editor, _editor) &&
             const DeepCollectionEquality().equals(other._reviewer, _reviewer) &&
             const DeepCollectionEquality().equals(other._endorser, _endorser) &&
-            const DeepCollectionEquality()
-                .equals(other._relatedArtifact, _relatedArtifact) &&
+            const DeepCollectionEquality().equals(other._relatedArtifact, _relatedArtifact) &&
             const DeepCollectionEquality().equals(other._summary, _summary) &&
-            const DeepCollectionEquality()
-                .equals(other._classification, _classification) &&
+            const DeepCollectionEquality().equals(other._classification, _classification) &&
             const DeepCollectionEquality().equals(other._note, _note) &&
-            const DeepCollectionEquality()
-                .equals(other._currentState, _currentState) &&
-            const DeepCollectionEquality()
-                .equals(other._statusDate, _statusDate) &&
-            (identical(other.citedArtifact, citedArtifact) ||
-                other.citedArtifact == citedArtifact));
+            const DeepCollectionEquality().equals(other._currentState, _currentState) &&
+            const DeepCollectionEquality().equals(other._statusDate, _statusDate) &&
+            (identical(other.citedArtifact, citedArtifact) || other.citedArtifact == citedArtifact));
   }
 
   @JsonKey(ignore: true)
@@ -3371,6 +4261,9 @@ class _$_Citation extends _Citation {
         const DeepCollectionEquality().hash(_identifier),
         version,
         versionElement,
+        versionAlgorithmString,
+        versionAlgorithmStringElement,
+        versionAlgorithmCoding,
         name,
         nameElement,
         title,
@@ -3392,6 +4285,8 @@ class _$_Citation extends _Citation {
         purposeElement,
         copyright,
         copyrightElement,
+        copyrightLabel,
+        copyrightLabelElement,
         approvalDate,
         approvalDateElement,
         lastReviewDate,
@@ -3427,47 +4322,71 @@ class _$_Citation extends _Citation {
 
 abstract class _Citation extends Citation {
   factory _Citation(
-      {final R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Citation)
+          final R5ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          final Element? implicitRulesElement,
       final Code? language,
-      @JsonKey(name: '_language') final Element? languageElement,
+      @JsonKey(name: '_language')
+          final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final FhirUri? url,
-      @JsonKey(name: '_url') final Element? urlElement,
+      @JsonKey(name: '_url')
+          final Element? urlElement,
       final List<Identifier>? identifier,
       final String? version,
-      @JsonKey(name: '_version') final Element? versionElement,
+      @JsonKey(name: '_version')
+          final Element? versionElement,
+      final String? versionAlgorithmString,
+      @JsonKey(name: '_versionAlgorithmString')
+          final Element? versionAlgorithmStringElement,
+      final Coding? versionAlgorithmCoding,
       final String? name,
-      @JsonKey(name: '_name') final Element? nameElement,
+      @JsonKey(name: '_name')
+          final Element? nameElement,
       final String? title,
-      @JsonKey(name: '_title') final Element? titleElement,
+      @JsonKey(name: '_title')
+          final Element? titleElement,
       final Code? status,
-      @JsonKey(name: '_status') final Element? statusElement,
+      @JsonKey(name: '_status')
+          final Element? statusElement,
       final Boolean? experimental,
-      @JsonKey(name: '_experimental') final Element? experimentalElement,
+      @JsonKey(name: '_experimental')
+          final Element? experimentalElement,
       final FhirDateTime? date,
-      @JsonKey(name: '_date') final Element? dateElement,
+      @JsonKey(name: '_date')
+          final Element? dateElement,
       final String? publisher,
-      @JsonKey(name: '_publisher') final Element? publisherElement,
+      @JsonKey(name: '_publisher')
+          final Element? publisherElement,
       final List<ContactDetail>? contact,
       final Markdown? description,
-      @JsonKey(name: '_description') final Element? descriptionElement,
+      @JsonKey(name: '_description')
+          final Element? descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
       final Markdown? purpose,
-      @JsonKey(name: '_purpose') final Element? purposeElement,
+      @JsonKey(name: '_purpose')
+          final Element? purposeElement,
       final Markdown? copyright,
-      @JsonKey(name: '_copyright') final Element? copyrightElement,
+      @JsonKey(name: '_copyright')
+          final Element? copyrightElement,
+      final String? copyrightLabel,
+      @JsonKey(name: '_copyrightLabel')
+          final Element? copyrightLabelElement,
       final Date? approvalDate,
-      @JsonKey(name: '_approvalDate') final Element? approvalDateElement,
+      @JsonKey(name: '_approvalDate')
+          final Element? approvalDateElement,
       final Date? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') final Element? lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          final Element? lastReviewDateElement,
       final Period? effectivePeriod,
       final List<CodeableConcept>? topic,
       final List<ContactDetail>? author,
@@ -3486,128 +4405,265 @@ abstract class _Citation extends Citation {
   factory _Citation.fromJson(Map<String, dynamic> json) = _$_Citation.fromJson;
 
   @override
+
+  /// [resourceType] This is a Citation resource
+  @JsonKey(unknownEnumValue: R5ResourceType.Citation)
   R5ResourceType get resourceType;
   @override
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  /// Once assigned, this value never changes.
   Id? get id;
   @override
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not
+  /// always be associated with version changes to the resource.
   Meta? get meta;
   @override
+
+  /// [implicitRules] A reference to a set of rules that were followed when
+  /// the resource was constructed, and which must be understood when
+  /// processing the content. Often, this is a reference to an implementation
+  /// guide that defines the special rules along with other profiles etc.
   FhirUri? get implicitRules;
   @override
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
+
+  /// [language] The base language in which the resource is written.
   Code? get language;
   @override
+
+  /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   Narrative? get text;
   @override
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   List<Resource>? get contained;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [url] An absolute URI that is used to identify this citation record when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this summary is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the summary is stored on different servers.
   FhirUri? get url;
   @override
+
+  /// [urlElement] ("_url") Extensions for url
   @JsonKey(name: '_url')
   Element? get urlElement;
   @override
+
+  /// [identifier] A formal identifier that is used to identify this citation record when it is represented in other formats, or referenced in a specification, model, design or an instance.
   List<Identifier>? get identifier;
   @override
+
+  /// [version] The identifier that is used to identify this version of the citation record when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the citation record author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.
   String? get version;
   @override
+
+  /// [versionElement] ("_version") Extensions for version
   @JsonKey(name: '_version')
   Element? get versionElement;
   @override
+
+  /// [versionAlgorithmString] Indicates the mechanism used to compare versions to determine which is more current.
+  String? get versionAlgorithmString;
+  @override
+
+  /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions for versionAlgorithmString
+  @JsonKey(name: '_versionAlgorithmString')
+  Element? get versionAlgorithmStringElement;
+  @override
+
+  /// [versionAlgorithmCoding] Indicates the mechanism used to compare versions to determine which is more current.
+  Coding? get versionAlgorithmCoding;
+  @override
+
+  /// [name] A natural language name identifying the citation record. This name should be usable as an identifier for the module by machine processing applications such as code generation.
   String? get name;
   @override
+
+  /// [nameElement] ("_name") Extensions for name
   @JsonKey(name: '_name')
   Element? get nameElement;
   @override
+
+  /// [title] A short, descriptive, user-friendly title for the citation record.
   String? get title;
   @override
+
+  /// [titleElement] ("_title") Extensions for title
   @JsonKey(name: '_title')
   Element? get titleElement;
   @override
+
+  /// [status] The status of this summary. Enables tracking the life-cycle of the content.
   Code? get status;
   @override
+
+  /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
+
+  /// [experimental] A Boolean value to indicate that this citation record is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
   Boolean? get experimental;
   @override
+
+  /// [experimentalElement] ("_experimental") Extensions for experimental
   @JsonKey(name: '_experimental')
   Element? get experimentalElement;
   @override
+
+  /// [date] The date (and optionally time) when the citation record was last significantly changed. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the citation record changes.
   FhirDateTime? get date;
   @override
+
+  /// [dateElement] ("_date") Extensions for date
   @JsonKey(name: '_date')
   Element? get dateElement;
   @override
+
+  /// [publisher] The name of the organization or individual that published the citation record.
   String? get publisher;
   @override
+
+  /// [publisherElement] ("_publisher") Extensions for publisher
   @JsonKey(name: '_publisher')
   Element? get publisherElement;
   @override
+
+  /// [contact] Contact details to assist a user in finding and communicating with the publisher.
   List<ContactDetail>? get contact;
   @override
+
+  /// [description] A free text natural language description of the citation from a consumer's perspective.
   Markdown? get description;
   @override
+
+  /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
+
+  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate citation record instances.
   List<UsageContext>? get useContext;
   @override
+
+  /// [jurisdiction] A legal or geographic region in which the citation record is intended to be used.
   List<CodeableConcept>? get jurisdiction;
   @override
+
+  /// [purpose] Explanation of why this citation is needed and why it has been designed as it has.
   Markdown? get purpose;
   @override
+
+  /// [purposeElement] ("_purpose") Extensions for purpose
   @JsonKey(name: '_purpose')
   Element? get purposeElement;
   @override
+
+  /// [copyright] Use and/or publishing restrictions for the citation record, not for the cited artifact.
   Markdown? get copyright;
   @override
+
+  /// [copyrightElement] ("_copyright") Extensions for copyright
   @JsonKey(name: '_copyright')
   Element? get copyrightElement;
   @override
+
+  /// [copyrightLabel] A short string (<50 characters), suitable for inclusion in a page footer that identifies the copyright holder, effective period, and optionally whether rights are resctricted. (e.g. 'All rights reserved', 'Some rights reserved').
+  String? get copyrightLabel;
+  @override
+
+  /// [copyrightLabelElement] ("_copyrightLabel") Extensions for copyrightLabel
+  @JsonKey(name: '_copyrightLabel')
+  Element? get copyrightLabelElement;
+  @override
+
+  /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
   Date? get approvalDate;
   @override
+
+  /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
   @JsonKey(name: '_approvalDate')
   Element? get approvalDateElement;
   @override
+
+  /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
   Date? get lastReviewDate;
   @override
+
+  /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement;
   @override
+
+  /// [effectivePeriod] The period during which the citation record content was or is planned to be in active use.
   Period? get effectivePeriod;
   @override
+
+  /// [topic] Descriptive topics related to the content of the {{title}}. Topics provide a high-level categorization as well as keywords for the {{title}} that can be useful for filtering and searching.
   List<CodeableConcept>? get topic;
   @override
+
+  /// [author] Who authored or created the citation record.
   List<ContactDetail>? get author;
   @override
+
+  /// [editor] Who edited or revised the citation record.
   List<ContactDetail>? get editor;
   @override
+
+  /// [reviewer] Who reviewed the citation record.
   List<ContactDetail>? get reviewer;
   @override
+
+  /// [endorser] Who endorsed the citation record.
   List<ContactDetail>? get endorser;
   @override
+
+  /// [relatedArtifact] Artifact related to the citation record.
   List<RelatedArtifact>? get relatedArtifact;
   @override
+
+  /// [summary] A human-readable display of key concepts to represent the citation.
   List<CitationSummary>? get summary;
   @override
+
+  /// [classification] The assignment to an organizing scheme.
   List<CitationClassification>? get classification;
   @override
+
+  /// [note] Used for general notes and annotations not coded elsewhere.
   List<Annotation>? get note;
   @override
+
+  /// [currentState] The status of the citation record.
   List<CodeableConcept>? get currentState;
   @override
+
+  /// [statusDate] The state or status of the citation record paired with an effective date or period for that state.
   List<CitationStatusDate>? get statusDate;
   @override
+
+  /// [citedArtifact] The article or artifact being described.
   CitationCitedArtifact? get citedArtifact;
   @override
   @JsonKey(ignore: true)
@@ -3621,13 +4677,41 @@ CitationSummary _$CitationSummaryFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CitationSummary {
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [style] Format for display of the citation summary.
   CodeableConcept? get style => throw _privateConstructorUsedError;
+
+  /// [text] The human-readable display of the citation summary.
   Markdown? get text => throw _privateConstructorUsedError;
+
+  /// [textElement] ("_text") Extensions for text
   @JsonKey(name: '_text')
   Element? get textElement => throw _privateConstructorUsedError;
 
@@ -3814,9 +4898,25 @@ class _$_CitationSummary extends _CitationSummary {
   factory _$_CitationSummary.fromJson(Map<String, dynamic> json) =>
       _$$_CitationSummaryFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -3827,7 +4927,32 @@ class _$_CitationSummary extends _CitationSummary {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -3838,10 +4963,15 @@ class _$_CitationSummary extends _CitationSummary {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [style] Format for display of the citation summary.
   @override
   final CodeableConcept? style;
+
+  /// [text] The human-readable display of the citation summary.
   @override
   final Markdown? text;
+
+  /// [textElement] ("_text") Extensions for text
   @override
   @JsonKey(name: '_text')
   final Element? textElement;
@@ -3906,17 +5036,46 @@ abstract class _CitationSummary extends CitationSummary {
       _$_CitationSummary.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [style] Format for display of the citation summary.
   CodeableConcept? get style;
   @override
+
+  /// [text] The human-readable display of the citation summary.
   Markdown? get text;
   @override
+
+  /// [textElement] ("_text") Extensions for text
   @JsonKey(name: '_text')
   Element? get textElement;
   @override
@@ -3932,12 +5091,38 @@ CitationClassification _$CitationClassificationFromJson(
 
 /// @nodoc
 mixin _$CitationClassification {
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [type] The kind of classifier (e.g. publication type, keyword).
   CodeableConcept? get type => throw _privateConstructorUsedError;
+
+  /// [classifier] The specific classification value.
   List<CodeableConcept>? get classifier => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -4098,9 +5283,25 @@ class _$_CitationClassification extends _CitationClassification {
   factory _$_CitationClassification.fromJson(Map<String, dynamic> json) =>
       _$$_CitationClassificationFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -4111,7 +5312,32 @@ class _$_CitationClassification extends _CitationClassification {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -4122,9 +5348,14 @@ class _$_CitationClassification extends _CitationClassification {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [type] The kind of classifier (e.g. publication type, keyword).
   @override
   final CodeableConcept? type;
+
+  /// [classifier] The specific classification value.
   final List<CodeableConcept>? _classifier;
+
+  /// [classifier] The specific classification value.
   @override
   List<CodeableConcept>? get classifier {
     final value = _classifier;
@@ -4192,15 +5423,42 @@ abstract class _CitationClassification extends CitationClassification {
       _$_CitationClassification.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [type] The kind of classifier (e.g. publication type, keyword).
   CodeableConcept? get type;
   @override
+
+  /// [classifier] The specific classification value.
   List<CodeableConcept>? get classifier;
   @override
   @JsonKey(ignore: true)
@@ -4214,15 +5472,45 @@ CitationStatusDate _$CitationStatusDateFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CitationStatusDate {
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [activity] The state or status of the citation record (that will be paired with the period).
   CodeableConcept get activity => throw _privateConstructorUsedError;
+
+  /// [actual] Whether the status date is actual (has occurred) or expected (estimated or anticipated).
   Boolean? get actual => throw _privateConstructorUsedError;
+
+  /// [actualElement] ("_actual") Extensions for actual
   @JsonKey(name: '_actual')
   Element? get actualElement => throw _privateConstructorUsedError;
+
+  /// [period] When the status started and/or ended.
   Period get period => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -4428,9 +5716,25 @@ class _$_CitationStatusDate extends _CitationStatusDate {
   factory _$_CitationStatusDate.fromJson(Map<String, dynamic> json) =>
       _$$_CitationStatusDateFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -4441,7 +5745,32 @@ class _$_CitationStatusDate extends _CitationStatusDate {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -4452,13 +5781,20 @@ class _$_CitationStatusDate extends _CitationStatusDate {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [activity] The state or status of the citation record (that will be paired with the period).
   @override
   final CodeableConcept activity;
+
+  /// [actual] Whether the status date is actual (has occurred) or expected (estimated or anticipated).
   @override
   final Boolean? actual;
+
+  /// [actualElement] ("_actual") Extensions for actual
   @override
   @JsonKey(name: '_actual')
   final Element? actualElement;
+
+  /// [period] When the status started and/or ended.
   @override
   final Period period;
 
@@ -4527,20 +5863,51 @@ abstract class _CitationStatusDate extends CitationStatusDate {
       _$_CitationStatusDate.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [activity] The state or status of the citation record (that will be paired with the period).
   CodeableConcept get activity;
   @override
+
+  /// [actual] Whether the status date is actual (has occurred) or expected (estimated or anticipated).
   Boolean? get actual;
   @override
+
+  /// [actualElement] ("_actual") Extensions for actual
   @JsonKey(name: '_actual')
   Element? get actualElement;
   @override
+
+  /// [period] When the status started and/or ended.
   Period get period;
   @override
   @JsonKey(ignore: true)
@@ -4555,34 +5922,88 @@ CitationCitedArtifact _$CitationCitedArtifactFromJson(
 
 /// @nodoc
 mixin _$CitationCitedArtifact {
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [identifier] A formal identifier that is used to identify the cited artifact when it is represented in other formats, or referenced in a specification, model, design or an instance.
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
+
+  /// [relatedIdentifier] A formal identifier that is used to identify things closely related to the cited artifact.
   List<Identifier>? get relatedIdentifier => throw _privateConstructorUsedError;
+
+  /// [dateAccessed] When the cited artifact was accessed.
   FhirDateTime? get dateAccessed => throw _privateConstructorUsedError;
+
+  /// [dateAccessedElement] ("_dateAccessed") Extensions for dateAccessed
   @JsonKey(name: '_dateAccessed')
   Element? get dateAccessedElement => throw _privateConstructorUsedError;
+
+  /// [version] The defined version of the cited artifact.
   CitationVersion? get version => throw _privateConstructorUsedError;
+
+  /// [currentState] The status of the cited artifact.
   List<CodeableConcept>? get currentState => throw _privateConstructorUsedError;
+
+  /// [statusDate] An effective date or period, historical or future, actual or expected, for a status of the cited artifact.
   List<CitationStatusDate1>? get statusDate =>
       throw _privateConstructorUsedError;
+
+  /// [title] The title details of the article or artifact.
   List<CitationTitle>? get title => throw _privateConstructorUsedError;
+
+  /// [abstract_] ("abstract") The abstract may be used to convey article-contained abstracts, externally-created abstracts, or other descriptive summaries.
   @JsonKey(name: 'abstract')
   List<CitationAbstract>? get abstract_ => throw _privateConstructorUsedError;
+
+  /// [part_] ("part") The component of the article or artifact.
   @JsonKey(name: 'part')
   CitationPart? get part_ => throw _privateConstructorUsedError;
+
+  /// [relatesTo] The artifact related to the cited artifact.
   List<CitationRelatesTo>? get relatesTo => throw _privateConstructorUsedError;
+
+  /// [publicationForm] If multiple, used to represent alternative forms of the article that are not separate citations.
   List<CitationPublicationForm>? get publicationForm =>
       throw _privateConstructorUsedError;
+
+  /// [webLocation] Used for any URL for the article or artifact cited.
   List<CitationWebLocation>? get webLocation =>
       throw _privateConstructorUsedError;
+
+  /// [classification] The assignment to an organizing scheme.
   List<CitationClassification1>? get classification =>
       throw _privateConstructorUsedError;
+
+  /// [contributorship] This element is used to list authors and other contributors, their contact information, specific contributions, and summary statements.
   CitationContributorship? get contributorship =>
       throw _privateConstructorUsedError;
+
+  /// [note] Any additional information or content for the article or artifact.
   List<Annotation>? get note => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -4980,9 +6401,25 @@ class _$_CitationCitedArtifact extends _CitationCitedArtifact {
   factory _$_CitationCitedArtifact.fromJson(Map<String, dynamic> json) =>
       _$$_CitationCitedArtifactFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -4993,7 +6430,32 @@ class _$_CitationCitedArtifact extends _CitationCitedArtifact {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -5004,7 +6466,10 @@ class _$_CitationCitedArtifact extends _CitationCitedArtifact {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [identifier] A formal identifier that is used to identify the cited artifact when it is represented in other formats, or referenced in a specification, model, design or an instance.
   final List<Identifier>? _identifier;
+
+  /// [identifier] A formal identifier that is used to identify the cited artifact when it is represented in other formats, or referenced in a specification, model, design or an instance.
   @override
   List<Identifier>? get identifier {
     final value = _identifier;
@@ -5014,7 +6479,10 @@ class _$_CitationCitedArtifact extends _CitationCitedArtifact {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [relatedIdentifier] A formal identifier that is used to identify things closely related to the cited artifact.
   final List<Identifier>? _relatedIdentifier;
+
+  /// [relatedIdentifier] A formal identifier that is used to identify things closely related to the cited artifact.
   @override
   List<Identifier>? get relatedIdentifier {
     final value = _relatedIdentifier;
@@ -5025,14 +6493,23 @@ class _$_CitationCitedArtifact extends _CitationCitedArtifact {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [dateAccessed] When the cited artifact was accessed.
   @override
   final FhirDateTime? dateAccessed;
+
+  /// [dateAccessedElement] ("_dateAccessed") Extensions for dateAccessed
   @override
   @JsonKey(name: '_dateAccessed')
   final Element? dateAccessedElement;
+
+  /// [version] The defined version of the cited artifact.
   @override
   final CitationVersion? version;
+
+  /// [currentState] The status of the cited artifact.
   final List<CodeableConcept>? _currentState;
+
+  /// [currentState] The status of the cited artifact.
   @override
   List<CodeableConcept>? get currentState {
     final value = _currentState;
@@ -5042,7 +6519,10 @@ class _$_CitationCitedArtifact extends _CitationCitedArtifact {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [statusDate] An effective date or period, historical or future, actual or expected, for a status of the cited artifact.
   final List<CitationStatusDate1>? _statusDate;
+
+  /// [statusDate] An effective date or period, historical or future, actual or expected, for a status of the cited artifact.
   @override
   List<CitationStatusDate1>? get statusDate {
     final value = _statusDate;
@@ -5052,7 +6532,10 @@ class _$_CitationCitedArtifact extends _CitationCitedArtifact {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [title] The title details of the article or artifact.
   final List<CitationTitle>? _title;
+
+  /// [title] The title details of the article or artifact.
   @override
   List<CitationTitle>? get title {
     final value = _title;
@@ -5062,7 +6545,10 @@ class _$_CitationCitedArtifact extends _CitationCitedArtifact {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [abstract_] ("abstract") The abstract may be used to convey article-contained abstracts, externally-created abstracts, or other descriptive summaries.
   final List<CitationAbstract>? _abstract_;
+
+  /// [abstract_] ("abstract") The abstract may be used to convey article-contained abstracts, externally-created abstracts, or other descriptive summaries.
   @override
   @JsonKey(name: 'abstract')
   List<CitationAbstract>? get abstract_ {
@@ -5073,10 +6559,15 @@ class _$_CitationCitedArtifact extends _CitationCitedArtifact {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [part_] ("part") The component of the article or artifact.
   @override
   @JsonKey(name: 'part')
   final CitationPart? part_;
+
+  /// [relatesTo] The artifact related to the cited artifact.
   final List<CitationRelatesTo>? _relatesTo;
+
+  /// [relatesTo] The artifact related to the cited artifact.
   @override
   List<CitationRelatesTo>? get relatesTo {
     final value = _relatesTo;
@@ -5086,7 +6577,10 @@ class _$_CitationCitedArtifact extends _CitationCitedArtifact {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [publicationForm] If multiple, used to represent alternative forms of the article that are not separate citations.
   final List<CitationPublicationForm>? _publicationForm;
+
+  /// [publicationForm] If multiple, used to represent alternative forms of the article that are not separate citations.
   @override
   List<CitationPublicationForm>? get publicationForm {
     final value = _publicationForm;
@@ -5096,7 +6590,10 @@ class _$_CitationCitedArtifact extends _CitationCitedArtifact {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [webLocation] Used for any URL for the article or artifact cited.
   final List<CitationWebLocation>? _webLocation;
+
+  /// [webLocation] Used for any URL for the article or artifact cited.
   @override
   List<CitationWebLocation>? get webLocation {
     final value = _webLocation;
@@ -5106,7 +6603,10 @@ class _$_CitationCitedArtifact extends _CitationCitedArtifact {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [classification] The assignment to an organizing scheme.
   final List<CitationClassification1>? _classification;
+
+  /// [classification] The assignment to an organizing scheme.
   @override
   List<CitationClassification1>? get classification {
     final value = _classification;
@@ -5116,9 +6616,14 @@ class _$_CitationCitedArtifact extends _CitationCitedArtifact {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [contributorship] This element is used to list authors and other contributors, their contact information, specific contributions, and summary statements.
   @override
   final CitationContributorship? contributorship;
+
+  /// [note] Any additional information or content for the article or artifact.
   final List<Annotation>? _note;
+
+  /// [note] Any additional information or content for the article or artifact.
   @override
   List<Annotation>? get note {
     final value = _note;
@@ -5240,46 +6745,101 @@ abstract class _CitationCitedArtifact extends CitationCitedArtifact {
       _$_CitationCitedArtifact.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [identifier] A formal identifier that is used to identify the cited artifact when it is represented in other formats, or referenced in a specification, model, design or an instance.
   List<Identifier>? get identifier;
   @override
+
+  /// [relatedIdentifier] A formal identifier that is used to identify things closely related to the cited artifact.
   List<Identifier>? get relatedIdentifier;
   @override
+
+  /// [dateAccessed] When the cited artifact was accessed.
   FhirDateTime? get dateAccessed;
   @override
+
+  /// [dateAccessedElement] ("_dateAccessed") Extensions for dateAccessed
   @JsonKey(name: '_dateAccessed')
   Element? get dateAccessedElement;
   @override
+
+  /// [version] The defined version of the cited artifact.
   CitationVersion? get version;
   @override
+
+  /// [currentState] The status of the cited artifact.
   List<CodeableConcept>? get currentState;
   @override
+
+  /// [statusDate] An effective date or period, historical or future, actual or expected, for a status of the cited artifact.
   List<CitationStatusDate1>? get statusDate;
   @override
+
+  /// [title] The title details of the article or artifact.
   List<CitationTitle>? get title;
   @override
+
+  /// [abstract_] ("abstract") The abstract may be used to convey article-contained abstracts, externally-created abstracts, or other descriptive summaries.
   @JsonKey(name: 'abstract')
   List<CitationAbstract>? get abstract_;
   @override
+
+  /// [part_] ("part") The component of the article or artifact.
   @JsonKey(name: 'part')
   CitationPart? get part_;
   @override
+
+  /// [relatesTo] The artifact related to the cited artifact.
   List<CitationRelatesTo>? get relatesTo;
   @override
+
+  /// [publicationForm] If multiple, used to represent alternative forms of the article that are not separate citations.
   List<CitationPublicationForm>? get publicationForm;
   @override
+
+  /// [webLocation] Used for any URL for the article or artifact cited.
   List<CitationWebLocation>? get webLocation;
   @override
+
+  /// [classification] The assignment to an organizing scheme.
   List<CitationClassification1>? get classification;
   @override
+
+  /// [contributorship] This element is used to list authors and other contributors, their contact information, specific contributions, and summary statements.
   CitationContributorship? get contributorship;
   @override
+
+  /// [note] Any additional information or content for the article or artifact.
   List<Annotation>? get note;
   @override
   @JsonKey(ignore: true)
@@ -5293,14 +6853,42 @@ CitationVersion _$CitationVersionFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CitationVersion {
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [value] The version number or other version identifier.
   String? get value => throw _privateConstructorUsedError;
+
+  /// [valueElement] ("_value") Extensions for value
   @JsonKey(name: '_value')
   Element? get valueElement => throw _privateConstructorUsedError;
+
+  /// [baseCitation] Citation for the main version of the cited artifact.
   Reference? get baseCitation => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -5486,9 +7074,25 @@ class _$_CitationVersion extends _CitationVersion {
   factory _$_CitationVersion.fromJson(Map<String, dynamic> json) =>
       _$$_CitationVersionFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -5499,7 +7103,32 @@ class _$_CitationVersion extends _CitationVersion {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -5510,11 +7139,16 @@ class _$_CitationVersion extends _CitationVersion {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [value] The version number or other version identifier.
   @override
   final String? value;
+
+  /// [valueElement] ("_value") Extensions for value
   @override
   @JsonKey(name: '_value')
   final Element? valueElement;
+
+  /// [baseCitation] Citation for the main version of the cited artifact.
   @override
   final Reference? baseCitation;
 
@@ -5579,18 +7213,47 @@ abstract class _CitationVersion extends CitationVersion {
       _$_CitationVersion.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [value] The version number or other version identifier.
   String? get value;
   @override
+
+  /// [valueElement] ("_value") Extensions for value
   @JsonKey(name: '_value')
   Element? get valueElement;
   @override
+
+  /// [baseCitation] Citation for the main version of the cited artifact.
   Reference? get baseCitation;
   @override
   @JsonKey(ignore: true)
@@ -5604,15 +7267,45 @@ CitationStatusDate1 _$CitationStatusDate1FromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CitationStatusDate1 {
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [activity] A definition of the status associated with a date or period.
   CodeableConcept get activity => throw _privateConstructorUsedError;
+
+  /// [actual] Either occurred or expected.
   Boolean? get actual => throw _privateConstructorUsedError;
+
+  /// [actualElement] ("_actual") Extensions for actual
   @JsonKey(name: '_actual')
   Element? get actualElement => throw _privateConstructorUsedError;
+
+  /// [period] When the status started and/or ended.
   Period get period => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -5818,9 +7511,25 @@ class _$_CitationStatusDate1 extends _CitationStatusDate1 {
   factory _$_CitationStatusDate1.fromJson(Map<String, dynamic> json) =>
       _$$_CitationStatusDate1FromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -5831,7 +7540,32 @@ class _$_CitationStatusDate1 extends _CitationStatusDate1 {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -5842,13 +7576,20 @@ class _$_CitationStatusDate1 extends _CitationStatusDate1 {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [activity] A definition of the status associated with a date or period.
   @override
   final CodeableConcept activity;
+
+  /// [actual] Either occurred or expected.
   @override
   final Boolean? actual;
+
+  /// [actualElement] ("_actual") Extensions for actual
   @override
   @JsonKey(name: '_actual')
   final Element? actualElement;
+
+  /// [period] When the status started and/or ended.
   @override
   final Period period;
 
@@ -5917,20 +7658,51 @@ abstract class _CitationStatusDate1 extends CitationStatusDate1 {
       _$_CitationStatusDate1.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [activity] A definition of the status associated with a date or period.
   CodeableConcept get activity;
   @override
+
+  /// [actual] Either occurred or expected.
   Boolean? get actual;
   @override
+
+  /// [actualElement] ("_actual") Extensions for actual
   @JsonKey(name: '_actual')
   Element? get actualElement;
   @override
+
+  /// [period] When the status started and/or ended.
   Period get period;
   @override
   @JsonKey(ignore: true)
@@ -5944,14 +7716,44 @@ CitationTitle _$CitationTitleFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CitationTitle {
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [type] Used to express the reason for or classification of the title.
   List<CodeableConcept>? get type => throw _privateConstructorUsedError;
+
+  /// [language] Used to express the specific language of the title.
   CodeableConcept? get language => throw _privateConstructorUsedError;
+
+  /// [text] The title of the article or artifact.
   Markdown? get text => throw _privateConstructorUsedError;
+
+  /// [textElement] ("_text") Extensions for text
   @JsonKey(name: '_text')
   Element? get textElement => throw _privateConstructorUsedError;
 
@@ -6152,9 +7954,25 @@ class _$_CitationTitle extends _CitationTitle {
   factory _$_CitationTitle.fromJson(Map<String, dynamic> json) =>
       _$$_CitationTitleFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -6165,7 +7983,32 @@ class _$_CitationTitle extends _CitationTitle {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -6176,7 +8019,10 @@ class _$_CitationTitle extends _CitationTitle {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [type] Used to express the reason for or classification of the title.
   final List<CodeableConcept>? _type;
+
+  /// [type] Used to express the reason for or classification of the title.
   @override
   List<CodeableConcept>? get type {
     final value = _type;
@@ -6186,10 +8032,15 @@ class _$_CitationTitle extends _CitationTitle {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [language] Used to express the specific language of the title.
   @override
   final CodeableConcept? language;
+
+  /// [text] The title of the article or artifact.
   @override
   final Markdown? text;
+
+  /// [textElement] ("_text") Extensions for text
   @override
   @JsonKey(name: '_text')
   final Element? textElement;
@@ -6258,19 +8109,50 @@ abstract class _CitationTitle extends CitationTitle {
       _$_CitationTitle.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [type] Used to express the reason for or classification of the title.
   List<CodeableConcept>? get type;
   @override
+
+  /// [language] Used to express the specific language of the title.
   CodeableConcept? get language;
   @override
+
+  /// [text] The title of the article or artifact.
   Markdown? get text;
   @override
+
+  /// [textElement] ("_text") Extensions for text
   @JsonKey(name: '_text')
   Element? get textElement;
   @override
@@ -6285,17 +8167,51 @@ CitationAbstract _$CitationAbstractFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CitationAbstract {
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [type] Used to express the reason for or classification of the abstract.
   CodeableConcept? get type => throw _privateConstructorUsedError;
+
+  /// [language] Used to express the specific language of the abstract.
   CodeableConcept? get language => throw _privateConstructorUsedError;
+
+  /// [text] Abstract content.
   Markdown? get text => throw _privateConstructorUsedError;
+
+  /// [textElement] ("_text") Extensions for text
   @JsonKey(name: '_text')
   Element? get textElement => throw _privateConstructorUsedError;
+
+  /// [copyright] Copyright notice for the abstract.
   Markdown? get copyright => throw _privateConstructorUsedError;
+
+  /// [copyrightElement] ("_copyright") Extensions for copyright
   @JsonKey(name: '_copyright')
   Element? get copyrightElement => throw _privateConstructorUsedError;
 
@@ -6551,9 +8467,25 @@ class _$_CitationAbstract extends _CitationAbstract {
   factory _$_CitationAbstract.fromJson(Map<String, dynamic> json) =>
       _$$_CitationAbstractFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -6564,7 +8496,32 @@ class _$_CitationAbstract extends _CitationAbstract {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -6575,17 +8532,28 @@ class _$_CitationAbstract extends _CitationAbstract {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [type] Used to express the reason for or classification of the abstract.
   @override
   final CodeableConcept? type;
+
+  /// [language] Used to express the specific language of the abstract.
   @override
   final CodeableConcept? language;
+
+  /// [text] Abstract content.
   @override
   final Markdown? text;
+
+  /// [textElement] ("_text") Extensions for text
   @override
   @JsonKey(name: '_text')
   final Element? textElement;
+
+  /// [copyright] Copyright notice for the abstract.
   @override
   final Markdown? copyright;
+
+  /// [copyrightElement] ("_copyright") Extensions for copyright
   @override
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
@@ -6663,24 +8631,59 @@ abstract class _CitationAbstract extends CitationAbstract {
       _$_CitationAbstract.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [type] Used to express the reason for or classification of the abstract.
   CodeableConcept? get type;
   @override
+
+  /// [language] Used to express the specific language of the abstract.
   CodeableConcept? get language;
   @override
+
+  /// [text] Abstract content.
   Markdown? get text;
   @override
+
+  /// [textElement] ("_text") Extensions for text
   @JsonKey(name: '_text')
   Element? get textElement;
   @override
+
+  /// [copyright] Copyright notice for the abstract.
   Markdown? get copyright;
   @override
+
+  /// [copyrightElement] ("_copyright") Extensions for copyright
   @JsonKey(name: '_copyright')
   Element? get copyrightElement;
   @override
@@ -6695,15 +8698,45 @@ CitationPart _$CitationPartFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CitationPart {
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [type] The kind of component.
   CodeableConcept? get type => throw _privateConstructorUsedError;
+
+  /// [value] The specification of the component.
   String? get value => throw _privateConstructorUsedError;
+
+  /// [valueElement] ("_value") Extensions for value
   @JsonKey(name: '_value')
   Element? get valueElement => throw _privateConstructorUsedError;
+
+  /// [baseCitation] The citation for the full article or artifact.
   Reference? get baseCitation => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -6917,9 +8950,25 @@ class _$_CitationPart extends _CitationPart {
   factory _$_CitationPart.fromJson(Map<String, dynamic> json) =>
       _$$_CitationPartFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -6930,7 +8979,32 @@ class _$_CitationPart extends _CitationPart {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -6941,13 +9015,20 @@ class _$_CitationPart extends _CitationPart {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [type] The kind of component.
   @override
   final CodeableConcept? type;
+
+  /// [value] The specification of the component.
   @override
   final String? value;
+
+  /// [valueElement] ("_value") Extensions for value
   @override
   @JsonKey(name: '_value')
   final Element? valueElement;
+
+  /// [baseCitation] The citation for the full article or artifact.
   @override
   final Reference? baseCitation;
 
@@ -7015,20 +9096,51 @@ abstract class _CitationPart extends CitationPart {
       _$_CitationPart.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [type] The kind of component.
   CodeableConcept? get type;
   @override
+
+  /// [value] The specification of the component.
   String? get value;
   @override
+
+  /// [valueElement] ("_value") Extensions for value
   @JsonKey(name: '_value')
   Element? get valueElement;
   @override
+
+  /// [baseCitation] The citation for the full article or artifact.
   Reference? get baseCitation;
   @override
   @JsonKey(ignore: true)
@@ -7042,28 +9154,76 @@ CitationRelatesTo _$CitationRelatesToFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CitationRelatesTo {
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [type] The type of relationship to the related artifact.
   Code? get type => throw _privateConstructorUsedError;
+
+  /// [typeElement] ("_type") Extensions for type
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
+
+  /// [classifier] Provides additional classifiers of the related artifact.
   List<CodeableConcept>? get classifier => throw _privateConstructorUsedError;
+
+  /// [label] A short label that can be used to reference the related artifact from elsewhere in the containing artifact, such as a footnote index.
   String? get label => throw _privateConstructorUsedError;
+
+  /// [labelElement] ("_label") Extensions for label
   @JsonKey(name: '_label')
   Element? get labelElement => throw _privateConstructorUsedError;
+
+  /// [display] A brief description of the document or knowledge resource being referenced, suitable for display to a consumer.
   String? get display => throw _privateConstructorUsedError;
+
+  /// [displayElement] ("_display") Extensions for display
   @JsonKey(name: '_display')
   Element? get displayElement => throw _privateConstructorUsedError;
+
+  /// [citation] A bibliographic citation for the related artifact. This text SHOULD be formatted according to an accepted citation format.
   Markdown? get citation => throw _privateConstructorUsedError;
+
+  /// [citationElement] ("_citation") Extensions for citation
   @JsonKey(name: '_citation')
   Element? get citationElement => throw _privateConstructorUsedError;
+
+  /// [document] The document being referenced, represented as an attachment. Do not use this element if using the resource element to provide the canonical to the related artifact.
   Attachment? get document => throw _privateConstructorUsedError;
+
+  /// [resource] The related artifact, such as a library, value set, profile, or other knowledge resource.
   Canonical? get resource => throw _privateConstructorUsedError;
+
+  /// [resourceElement] ("_resource") Extensions for resource
   @JsonKey(name: '_resource')
   Element? get resourceElement => throw _privateConstructorUsedError;
+
+  /// [resourceReference] The related artifact, if the artifact is not a canonical resource, or a resource reference to a canonical resource.
   Reference? get resourceReference => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -7455,9 +9615,25 @@ class _$_CitationRelatesTo extends _CitationRelatesTo {
   factory _$_CitationRelatesTo.fromJson(Map<String, dynamic> json) =>
       _$$_CitationRelatesToFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -7468,7 +9644,32 @@ class _$_CitationRelatesTo extends _CitationRelatesTo {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -7479,12 +9680,19 @@ class _$_CitationRelatesTo extends _CitationRelatesTo {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [type] The type of relationship to the related artifact.
   @override
   final Code? type;
+
+  /// [typeElement] ("_type") Extensions for type
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
+
+  /// [classifier] Provides additional classifiers of the related artifact.
   final List<CodeableConcept>? _classifier;
+
+  /// [classifier] Provides additional classifiers of the related artifact.
   @override
   List<CodeableConcept>? get classifier {
     final value = _classifier;
@@ -7494,28 +9702,47 @@ class _$_CitationRelatesTo extends _CitationRelatesTo {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [label] A short label that can be used to reference the related artifact from elsewhere in the containing artifact, such as a footnote index.
   @override
   final String? label;
+
+  /// [labelElement] ("_label") Extensions for label
   @override
   @JsonKey(name: '_label')
   final Element? labelElement;
+
+  /// [display] A brief description of the document or knowledge resource being referenced, suitable for display to a consumer.
   @override
   final String? display;
+
+  /// [displayElement] ("_display") Extensions for display
   @override
   @JsonKey(name: '_display')
   final Element? displayElement;
+
+  /// [citation] A bibliographic citation for the related artifact. This text SHOULD be formatted according to an accepted citation format.
   @override
   final Markdown? citation;
+
+  /// [citationElement] ("_citation") Extensions for citation
   @override
   @JsonKey(name: '_citation')
   final Element? citationElement;
+
+  /// [document] The document being referenced, represented as an attachment. Do not use this element if using the resource element to provide the canonical to the related artifact.
   @override
   final Attachment? document;
+
+  /// [resource] The related artifact, such as a library, value set, profile, or other knowledge resource.
   @override
   final Canonical? resource;
+
+  /// [resourceElement] ("_resource") Extensions for resource
   @override
   @JsonKey(name: '_resource')
   final Element? resourceElement;
+
+  /// [resourceReference] The related artifact, if the artifact is not a canonical resource, or a resource reference to a canonical resource.
   @override
   final Reference? resourceReference;
 
@@ -7619,42 +9846,91 @@ abstract class _CitationRelatesTo extends CitationRelatesTo {
       _$_CitationRelatesTo.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [type] The type of relationship to the related artifact.
   Code? get type;
   @override
+
+  /// [typeElement] ("_type") Extensions for type
   @JsonKey(name: '_type')
   Element? get typeElement;
   @override
+
+  /// [classifier] Provides additional classifiers of the related artifact.
   List<CodeableConcept>? get classifier;
   @override
+
+  /// [label] A short label that can be used to reference the related artifact from elsewhere in the containing artifact, such as a footnote index.
   String? get label;
   @override
+
+  /// [labelElement] ("_label") Extensions for label
   @JsonKey(name: '_label')
   Element? get labelElement;
   @override
+
+  /// [display] A brief description of the document or knowledge resource being referenced, suitable for display to a consumer.
   String? get display;
   @override
+
+  /// [displayElement] ("_display") Extensions for display
   @JsonKey(name: '_display')
   Element? get displayElement;
   @override
+
+  /// [citation] A bibliographic citation for the related artifact. This text SHOULD be formatted according to an accepted citation format.
   Markdown? get citation;
   @override
+
+  /// [citationElement] ("_citation") Extensions for citation
   @JsonKey(name: '_citation')
   Element? get citationElement;
   @override
+
+  /// [document] The document being referenced, represented as an attachment. Do not use this element if using the resource element to provide the canonical to the related artifact.
   Attachment? get document;
   @override
+
+  /// [resource] The related artifact, such as a library, value set, profile, or other knowledge resource.
   Canonical? get resource;
   @override
+
+  /// [resourceElement] ("_resource") Extensions for resource
   @JsonKey(name: '_resource')
   Element? get resourceElement;
   @override
+
+  /// [resourceReference] The related artifact, if the artifact is not a canonical resource, or a resource reference to a canonical resource.
   Reference? get resourceReference;
   @override
   @JsonKey(ignore: true)
@@ -7669,37 +9945,147 @@ CitationPublicationForm _$CitationPublicationFormFromJson(
 
 /// @nodoc
 mixin _$CitationPublicationForm {
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [publishedIn] The collection the cited article or artifact is published in.
   CitationPublishedIn? get publishedIn => throw _privateConstructorUsedError;
-  CitationPeriodicRelease? get periodicRelease =>
+
+  /// [citedMedium] Describes the form of the medium cited. Common codes are "Internet" or "Print".
+  CodeableConcept? get citedMedium => throw _privateConstructorUsedError;
+
+  /// [volume] Volume number of journal in which the article is published.
+  String? get volume => throw _privateConstructorUsedError;
+
+  /// [volumeElement] ("_volume") Extensions for volume
+  @JsonKey(name: '_volume')
+  Element? get volumeElement => throw _privateConstructorUsedError;
+
+  /// [issue] Issue, part or supplement of journal in which the article is published.
+  String? get issue => throw _privateConstructorUsedError;
+
+  /// [issueElement] ("_issue") Extensions for issue
+  @JsonKey(name: '_issue')
+  Element? get issueElement => throw _privateConstructorUsedError;
+
+  /// [publicationDateYear] Year on which the issue of the journal was published.
+  String? get publicationDateYear => throw _privateConstructorUsedError;
+
+  /// [publicationDateYearElement] ("_publicationDateYear") Extensions for publicationDateYear
+  @JsonKey(name: '_publicationDateYear')
+  Element? get publicationDateYearElement => throw _privateConstructorUsedError;
+
+  /// [publicationDateMonth] Month on which the issue of the journal was published.
+  String? get publicationDateMonth => throw _privateConstructorUsedError;
+
+  /// [publicationDateMonthElement] ("_publicationDateMonth") Extensions for publicationDateMonth
+  @JsonKey(name: '_publicationDateMonth')
+  Element? get publicationDateMonthElement =>
       throw _privateConstructorUsedError;
+
+  /// [publicationDateDay] Day on which the issue of the journal was published.
+  String? get publicationDateDay => throw _privateConstructorUsedError;
+
+  /// [publicationDateDayElement] ("_publicationDateDay") Extensions for publicationDateDay
+  @JsonKey(name: '_publicationDateDay')
+  Element? get publicationDateDayElement => throw _privateConstructorUsedError;
+
+  /// [publicationDateSeason] Spring, Summer, Fall/Autumn, Winter.
+  String? get publicationDateSeason => throw _privateConstructorUsedError;
+
+  /// [publicationDateSeasonElement] ("_publicationDateSeason") Extensions for publicationDateSeason
+  @JsonKey(name: '_publicationDateSeason')
+  Element? get publicationDateSeasonElement =>
+      throw _privateConstructorUsedError;
+
+  /// [publicationDateText] Text representation of the date of which the issue of the journal was published.
+  String? get publicationDateText => throw _privateConstructorUsedError;
+
+  /// [publicationDateTextElement] ("_publicationDateText") Extensions for publicationDateText
+  @JsonKey(name: '_publicationDateText')
+  Element? get publicationDateTextElement => throw _privateConstructorUsedError;
+
+  /// [articleDate] The date the article was added to the database, or the date the article was released (which may differ from the journal issue publication date).
   FhirDateTime? get articleDate => throw _privateConstructorUsedError;
+
+  /// [articleDateElement] ("_articleDate") Extensions for articleDate
   @JsonKey(name: '_articleDate')
   Element? get articleDateElement => throw _privateConstructorUsedError;
+
+  /// [lastRevisionDate] The date the article was last revised or updated in the database.
   FhirDateTime? get lastRevisionDate => throw _privateConstructorUsedError;
+
+  /// [lastRevisionDateElement] ("_lastRevisionDate") Extensions for lastRevisionDate
   @JsonKey(name: '_lastRevisionDate')
   Element? get lastRevisionDateElement => throw _privateConstructorUsedError;
+
+  /// [language] Language in which this form of the article is published.
   List<CodeableConcept>? get language => throw _privateConstructorUsedError;
+
+  /// [accessionNumber] Entry number or identifier for inclusion in a database.
   String? get accessionNumber => throw _privateConstructorUsedError;
+
+  /// [accessionNumberElement] ("_accessionNumber") Extensions for accessionNumber
   @JsonKey(name: '_accessionNumber')
   Element? get accessionNumberElement => throw _privateConstructorUsedError;
+
+  /// [pageString] Used for full display of pagination.
   String? get pageString => throw _privateConstructorUsedError;
+
+  /// [pageStringElement] ("_pageString") Extensions for pageString
   @JsonKey(name: '_pageString')
   Element? get pageStringElement => throw _privateConstructorUsedError;
+
+  /// [firstPage] Used for isolated representation of first page.
   String? get firstPage => throw _privateConstructorUsedError;
+
+  /// [firstPageElement] ("_firstPage") Extensions for firstPage
   @JsonKey(name: '_firstPage')
   Element? get firstPageElement => throw _privateConstructorUsedError;
+
+  /// [lastPage] Used for isolated representation of last page.
   String? get lastPage => throw _privateConstructorUsedError;
+
+  /// [lastPageElement] ("_lastPage") Extensions for lastPage
   @JsonKey(name: '_lastPage')
   Element? get lastPageElement => throw _privateConstructorUsedError;
+
+  /// [pageCount] Actual or approximate number of pages or screens.
   String? get pageCount => throw _privateConstructorUsedError;
+
+  /// [pageCountElement] ("_pageCount") Extensions for pageCount
   @JsonKey(name: '_pageCount')
   Element? get pageCountElement => throw _privateConstructorUsedError;
+
+  /// [copyright] Copyright notice for the full article or artifact.
   Markdown? get copyright => throw _privateConstructorUsedError;
+
+  /// [copyrightElement] ("_copyright") Extensions for copyright
   @JsonKey(name: '_copyright')
   Element? get copyrightElement => throw _privateConstructorUsedError;
 
@@ -7717,30 +10103,67 @@ abstract class $CitationPublicationFormCopyWith<$Res> {
   @useResult
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CitationPublishedIn? publishedIn,
-      CitationPeriodicRelease? periodicRelease,
+      CodeableConcept? citedMedium,
+      String? volume,
+      @JsonKey(name: '_volume')
+          Element? volumeElement,
+      String? issue,
+      @JsonKey(name: '_issue')
+          Element? issueElement,
+      String? publicationDateYear,
+      @JsonKey(name: '_publicationDateYear')
+          Element? publicationDateYearElement,
+      String? publicationDateMonth,
+      @JsonKey(name: '_publicationDateMonth')
+          Element? publicationDateMonthElement,
+      String? publicationDateDay,
+      @JsonKey(name: '_publicationDateDay')
+          Element? publicationDateDayElement,
+      String? publicationDateSeason,
+      @JsonKey(name: '_publicationDateSeason')
+          Element? publicationDateSeasonElement,
+      String? publicationDateText,
+      @JsonKey(name: '_publicationDateText')
+          Element? publicationDateTextElement,
       FhirDateTime? articleDate,
-      @JsonKey(name: '_articleDate') Element? articleDateElement,
+      @JsonKey(name: '_articleDate')
+          Element? articleDateElement,
       FhirDateTime? lastRevisionDate,
-      @JsonKey(name: '_lastRevisionDate') Element? lastRevisionDateElement,
+      @JsonKey(name: '_lastRevisionDate')
+          Element? lastRevisionDateElement,
       List<CodeableConcept>? language,
       String? accessionNumber,
-      @JsonKey(name: '_accessionNumber') Element? accessionNumberElement,
+      @JsonKey(name: '_accessionNumber')
+          Element? accessionNumberElement,
       String? pageString,
-      @JsonKey(name: '_pageString') Element? pageStringElement,
+      @JsonKey(name: '_pageString')
+          Element? pageStringElement,
       String? firstPage,
-      @JsonKey(name: '_firstPage') Element? firstPageElement,
+      @JsonKey(name: '_firstPage')
+          Element? firstPageElement,
       String? lastPage,
-      @JsonKey(name: '_lastPage') Element? lastPageElement,
+      @JsonKey(name: '_lastPage')
+          Element? lastPageElement,
       String? pageCount,
-      @JsonKey(name: '_pageCount') Element? pageCountElement,
+      @JsonKey(name: '_pageCount')
+          Element? pageCountElement,
       Markdown? copyright,
-      @JsonKey(name: '_copyright') Element? copyrightElement});
+      @JsonKey(name: '_copyright')
+          Element? copyrightElement});
 
   $CitationPublishedInCopyWith<$Res>? get publishedIn;
-  $CitationPeriodicReleaseCopyWith<$Res>? get periodicRelease;
+  $CodeableConceptCopyWith<$Res>? get citedMedium;
+  $ElementCopyWith<$Res>? get volumeElement;
+  $ElementCopyWith<$Res>? get issueElement;
+  $ElementCopyWith<$Res>? get publicationDateYearElement;
+  $ElementCopyWith<$Res>? get publicationDateMonthElement;
+  $ElementCopyWith<$Res>? get publicationDateDayElement;
+  $ElementCopyWith<$Res>? get publicationDateSeasonElement;
+  $ElementCopyWith<$Res>? get publicationDateTextElement;
   $ElementCopyWith<$Res>? get articleDateElement;
   $ElementCopyWith<$Res>? get lastRevisionDateElement;
   $ElementCopyWith<$Res>? get accessionNumberElement;
@@ -7769,7 +10192,21 @@ class _$CitationPublicationFormCopyWithImpl<$Res,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? publishedIn = freezed,
-    Object? periodicRelease = freezed,
+    Object? citedMedium = freezed,
+    Object? volume = freezed,
+    Object? volumeElement = freezed,
+    Object? issue = freezed,
+    Object? issueElement = freezed,
+    Object? publicationDateYear = freezed,
+    Object? publicationDateYearElement = freezed,
+    Object? publicationDateMonth = freezed,
+    Object? publicationDateMonthElement = freezed,
+    Object? publicationDateDay = freezed,
+    Object? publicationDateDayElement = freezed,
+    Object? publicationDateSeason = freezed,
+    Object? publicationDateSeasonElement = freezed,
+    Object? publicationDateText = freezed,
+    Object? publicationDateTextElement = freezed,
     Object? articleDate = freezed,
     Object? articleDateElement = freezed,
     Object? lastRevisionDate = freezed,
@@ -7805,10 +10242,66 @@ class _$CitationPublicationFormCopyWithImpl<$Res,
           ? _value.publishedIn
           : publishedIn // ignore: cast_nullable_to_non_nullable
               as CitationPublishedIn?,
-      periodicRelease: freezed == periodicRelease
-          ? _value.periodicRelease
-          : periodicRelease // ignore: cast_nullable_to_non_nullable
-              as CitationPeriodicRelease?,
+      citedMedium: freezed == citedMedium
+          ? _value.citedMedium
+          : citedMedium // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      volume: freezed == volume
+          ? _value.volume
+          : volume // ignore: cast_nullable_to_non_nullable
+              as String?,
+      volumeElement: freezed == volumeElement
+          ? _value.volumeElement
+          : volumeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      issue: freezed == issue
+          ? _value.issue
+          : issue // ignore: cast_nullable_to_non_nullable
+              as String?,
+      issueElement: freezed == issueElement
+          ? _value.issueElement
+          : issueElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publicationDateYear: freezed == publicationDateYear
+          ? _value.publicationDateYear
+          : publicationDateYear // ignore: cast_nullable_to_non_nullable
+              as String?,
+      publicationDateYearElement: freezed == publicationDateYearElement
+          ? _value.publicationDateYearElement
+          : publicationDateYearElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publicationDateMonth: freezed == publicationDateMonth
+          ? _value.publicationDateMonth
+          : publicationDateMonth // ignore: cast_nullable_to_non_nullable
+              as String?,
+      publicationDateMonthElement: freezed == publicationDateMonthElement
+          ? _value.publicationDateMonthElement
+          : publicationDateMonthElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publicationDateDay: freezed == publicationDateDay
+          ? _value.publicationDateDay
+          : publicationDateDay // ignore: cast_nullable_to_non_nullable
+              as String?,
+      publicationDateDayElement: freezed == publicationDateDayElement
+          ? _value.publicationDateDayElement
+          : publicationDateDayElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publicationDateSeason: freezed == publicationDateSeason
+          ? _value.publicationDateSeason
+          : publicationDateSeason // ignore: cast_nullable_to_non_nullable
+              as String?,
+      publicationDateSeasonElement: freezed == publicationDateSeasonElement
+          ? _value.publicationDateSeasonElement
+          : publicationDateSeasonElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publicationDateText: freezed == publicationDateText
+          ? _value.publicationDateText
+          : publicationDateText // ignore: cast_nullable_to_non_nullable
+              as String?,
+      publicationDateTextElement: freezed == publicationDateTextElement
+          ? _value.publicationDateTextElement
+          : publicationDateTextElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       articleDate: freezed == articleDate
           ? _value.articleDate
           : articleDate // ignore: cast_nullable_to_non_nullable
@@ -7894,14 +10387,99 @@ class _$CitationPublicationFormCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $CitationPeriodicReleaseCopyWith<$Res>? get periodicRelease {
-    if (_value.periodicRelease == null) {
+  $CodeableConceptCopyWith<$Res>? get citedMedium {
+    if (_value.citedMedium == null) {
       return null;
     }
 
-    return $CitationPeriodicReleaseCopyWith<$Res>(_value.periodicRelease!,
+    return $CodeableConceptCopyWith<$Res>(_value.citedMedium!, (value) {
+      return _then(_value.copyWith(citedMedium: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get volumeElement {
+    if (_value.volumeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.volumeElement!, (value) {
+      return _then(_value.copyWith(volumeElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get issueElement {
+    if (_value.issueElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.issueElement!, (value) {
+      return _then(_value.copyWith(issueElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get publicationDateYearElement {
+    if (_value.publicationDateYearElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.publicationDateYearElement!, (value) {
+      return _then(_value.copyWith(publicationDateYearElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get publicationDateMonthElement {
+    if (_value.publicationDateMonthElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.publicationDateMonthElement!, (value) {
+      return _then(_value.copyWith(publicationDateMonthElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get publicationDateDayElement {
+    if (_value.publicationDateDayElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.publicationDateDayElement!, (value) {
+      return _then(_value.copyWith(publicationDateDayElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get publicationDateSeasonElement {
+    if (_value.publicationDateSeasonElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.publicationDateSeasonElement!,
         (value) {
-      return _then(_value.copyWith(periodicRelease: value) as $Val);
+      return _then(
+          _value.copyWith(publicationDateSeasonElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get publicationDateTextElement {
+    if (_value.publicationDateTextElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.publicationDateTextElement!, (value) {
+      return _then(_value.copyWith(publicationDateTextElement: value) as $Val);
     });
   }
 
@@ -8012,32 +10590,76 @@ abstract class _$$_CitationPublicationFormCopyWith<$Res>
   @useResult
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CitationPublishedIn? publishedIn,
-      CitationPeriodicRelease? periodicRelease,
+      CodeableConcept? citedMedium,
+      String? volume,
+      @JsonKey(name: '_volume')
+          Element? volumeElement,
+      String? issue,
+      @JsonKey(name: '_issue')
+          Element? issueElement,
+      String? publicationDateYear,
+      @JsonKey(name: '_publicationDateYear')
+          Element? publicationDateYearElement,
+      String? publicationDateMonth,
+      @JsonKey(name: '_publicationDateMonth')
+          Element? publicationDateMonthElement,
+      String? publicationDateDay,
+      @JsonKey(name: '_publicationDateDay')
+          Element? publicationDateDayElement,
+      String? publicationDateSeason,
+      @JsonKey(name: '_publicationDateSeason')
+          Element? publicationDateSeasonElement,
+      String? publicationDateText,
+      @JsonKey(name: '_publicationDateText')
+          Element? publicationDateTextElement,
       FhirDateTime? articleDate,
-      @JsonKey(name: '_articleDate') Element? articleDateElement,
+      @JsonKey(name: '_articleDate')
+          Element? articleDateElement,
       FhirDateTime? lastRevisionDate,
-      @JsonKey(name: '_lastRevisionDate') Element? lastRevisionDateElement,
+      @JsonKey(name: '_lastRevisionDate')
+          Element? lastRevisionDateElement,
       List<CodeableConcept>? language,
       String? accessionNumber,
-      @JsonKey(name: '_accessionNumber') Element? accessionNumberElement,
+      @JsonKey(name: '_accessionNumber')
+          Element? accessionNumberElement,
       String? pageString,
-      @JsonKey(name: '_pageString') Element? pageStringElement,
+      @JsonKey(name: '_pageString')
+          Element? pageStringElement,
       String? firstPage,
-      @JsonKey(name: '_firstPage') Element? firstPageElement,
+      @JsonKey(name: '_firstPage')
+          Element? firstPageElement,
       String? lastPage,
-      @JsonKey(name: '_lastPage') Element? lastPageElement,
+      @JsonKey(name: '_lastPage')
+          Element? lastPageElement,
       String? pageCount,
-      @JsonKey(name: '_pageCount') Element? pageCountElement,
+      @JsonKey(name: '_pageCount')
+          Element? pageCountElement,
       Markdown? copyright,
-      @JsonKey(name: '_copyright') Element? copyrightElement});
+      @JsonKey(name: '_copyright')
+          Element? copyrightElement});
 
   @override
   $CitationPublishedInCopyWith<$Res>? get publishedIn;
   @override
-  $CitationPeriodicReleaseCopyWith<$Res>? get periodicRelease;
+  $CodeableConceptCopyWith<$Res>? get citedMedium;
+  @override
+  $ElementCopyWith<$Res>? get volumeElement;
+  @override
+  $ElementCopyWith<$Res>? get issueElement;
+  @override
+  $ElementCopyWith<$Res>? get publicationDateYearElement;
+  @override
+  $ElementCopyWith<$Res>? get publicationDateMonthElement;
+  @override
+  $ElementCopyWith<$Res>? get publicationDateDayElement;
+  @override
+  $ElementCopyWith<$Res>? get publicationDateSeasonElement;
+  @override
+  $ElementCopyWith<$Res>? get publicationDateTextElement;
   @override
   $ElementCopyWith<$Res>? get articleDateElement;
   @override
@@ -8072,7 +10694,21 @@ class __$$_CitationPublicationFormCopyWithImpl<$Res>
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? publishedIn = freezed,
-    Object? periodicRelease = freezed,
+    Object? citedMedium = freezed,
+    Object? volume = freezed,
+    Object? volumeElement = freezed,
+    Object? issue = freezed,
+    Object? issueElement = freezed,
+    Object? publicationDateYear = freezed,
+    Object? publicationDateYearElement = freezed,
+    Object? publicationDateMonth = freezed,
+    Object? publicationDateMonthElement = freezed,
+    Object? publicationDateDay = freezed,
+    Object? publicationDateDayElement = freezed,
+    Object? publicationDateSeason = freezed,
+    Object? publicationDateSeasonElement = freezed,
+    Object? publicationDateText = freezed,
+    Object? publicationDateTextElement = freezed,
     Object? articleDate = freezed,
     Object? articleDateElement = freezed,
     Object? lastRevisionDate = freezed,
@@ -8108,10 +10744,66 @@ class __$$_CitationPublicationFormCopyWithImpl<$Res>
           ? _value.publishedIn
           : publishedIn // ignore: cast_nullable_to_non_nullable
               as CitationPublishedIn?,
-      periodicRelease: freezed == periodicRelease
-          ? _value.periodicRelease
-          : periodicRelease // ignore: cast_nullable_to_non_nullable
-              as CitationPeriodicRelease?,
+      citedMedium: freezed == citedMedium
+          ? _value.citedMedium
+          : citedMedium // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      volume: freezed == volume
+          ? _value.volume
+          : volume // ignore: cast_nullable_to_non_nullable
+              as String?,
+      volumeElement: freezed == volumeElement
+          ? _value.volumeElement
+          : volumeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      issue: freezed == issue
+          ? _value.issue
+          : issue // ignore: cast_nullable_to_non_nullable
+              as String?,
+      issueElement: freezed == issueElement
+          ? _value.issueElement
+          : issueElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publicationDateYear: freezed == publicationDateYear
+          ? _value.publicationDateYear
+          : publicationDateYear // ignore: cast_nullable_to_non_nullable
+              as String?,
+      publicationDateYearElement: freezed == publicationDateYearElement
+          ? _value.publicationDateYearElement
+          : publicationDateYearElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publicationDateMonth: freezed == publicationDateMonth
+          ? _value.publicationDateMonth
+          : publicationDateMonth // ignore: cast_nullable_to_non_nullable
+              as String?,
+      publicationDateMonthElement: freezed == publicationDateMonthElement
+          ? _value.publicationDateMonthElement
+          : publicationDateMonthElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publicationDateDay: freezed == publicationDateDay
+          ? _value.publicationDateDay
+          : publicationDateDay // ignore: cast_nullable_to_non_nullable
+              as String?,
+      publicationDateDayElement: freezed == publicationDateDayElement
+          ? _value.publicationDateDayElement
+          : publicationDateDayElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publicationDateSeason: freezed == publicationDateSeason
+          ? _value.publicationDateSeason
+          : publicationDateSeason // ignore: cast_nullable_to_non_nullable
+              as String?,
+      publicationDateSeasonElement: freezed == publicationDateSeasonElement
+          ? _value.publicationDateSeasonElement
+          : publicationDateSeasonElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      publicationDateText: freezed == publicationDateText
+          ? _value.publicationDateText
+          : publicationDateText // ignore: cast_nullable_to_non_nullable
+              as String?,
+      publicationDateTextElement: freezed == publicationDateTextElement
+          ? _value.publicationDateTextElement
+          : publicationDateTextElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       articleDate: freezed == articleDate
           ? _value.articleDate
           : articleDate // ignore: cast_nullable_to_non_nullable
@@ -8189,27 +10881,57 @@ class __$$_CitationPublicationFormCopyWithImpl<$Res>
 class _$_CitationPublicationForm extends _CitationPublicationForm {
   _$_CitationPublicationForm(
       {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.publishedIn,
-      this.periodicRelease,
+      this.citedMedium,
+      this.volume,
+      @JsonKey(name: '_volume')
+          this.volumeElement,
+      this.issue,
+      @JsonKey(name: '_issue')
+          this.issueElement,
+      this.publicationDateYear,
+      @JsonKey(name: '_publicationDateYear')
+          this.publicationDateYearElement,
+      this.publicationDateMonth,
+      @JsonKey(name: '_publicationDateMonth')
+          this.publicationDateMonthElement,
+      this.publicationDateDay,
+      @JsonKey(name: '_publicationDateDay')
+          this.publicationDateDayElement,
+      this.publicationDateSeason,
+      @JsonKey(name: '_publicationDateSeason')
+          this.publicationDateSeasonElement,
+      this.publicationDateText,
+      @JsonKey(name: '_publicationDateText')
+          this.publicationDateTextElement,
       this.articleDate,
-      @JsonKey(name: '_articleDate') this.articleDateElement,
+      @JsonKey(name: '_articleDate')
+          this.articleDateElement,
       this.lastRevisionDate,
-      @JsonKey(name: '_lastRevisionDate') this.lastRevisionDateElement,
+      @JsonKey(name: '_lastRevisionDate')
+          this.lastRevisionDateElement,
       final List<CodeableConcept>? language,
       this.accessionNumber,
-      @JsonKey(name: '_accessionNumber') this.accessionNumberElement,
+      @JsonKey(name: '_accessionNumber')
+          this.accessionNumberElement,
       this.pageString,
-      @JsonKey(name: '_pageString') this.pageStringElement,
+      @JsonKey(name: '_pageString')
+          this.pageStringElement,
       this.firstPage,
-      @JsonKey(name: '_firstPage') this.firstPageElement,
+      @JsonKey(name: '_firstPage')
+          this.firstPageElement,
       this.lastPage,
-      @JsonKey(name: '_lastPage') this.lastPageElement,
+      @JsonKey(name: '_lastPage')
+          this.lastPageElement,
       this.pageCount,
-      @JsonKey(name: '_pageCount') this.pageCountElement,
+      @JsonKey(name: '_pageCount')
+          this.pageCountElement,
       this.copyright,
-      @JsonKey(name: '_copyright') this.copyrightElement})
+      @JsonKey(name: '_copyright')
+          this.copyrightElement})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         _language = language,
@@ -8218,9 +10940,25 @@ class _$_CitationPublicationForm extends _CitationPublicationForm {
   factory _$_CitationPublicationForm.fromJson(Map<String, dynamic> json) =>
       _$$_CitationPublicationFormFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -8231,7 +10969,32 @@ class _$_CitationPublicationForm extends _CitationPublicationForm {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -8242,21 +11005,99 @@ class _$_CitationPublicationForm extends _CitationPublicationForm {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [publishedIn] The collection the cited article or artifact is published in.
   @override
   final CitationPublishedIn? publishedIn;
+
+  /// [citedMedium] Describes the form of the medium cited. Common codes are "Internet" or "Print".
   @override
-  final CitationPeriodicRelease? periodicRelease;
+  final CodeableConcept? citedMedium;
+
+  /// [volume] Volume number of journal in which the article is published.
+  @override
+  final String? volume;
+
+  /// [volumeElement] ("_volume") Extensions for volume
+  @override
+  @JsonKey(name: '_volume')
+  final Element? volumeElement;
+
+  /// [issue] Issue, part or supplement of journal in which the article is published.
+  @override
+  final String? issue;
+
+  /// [issueElement] ("_issue") Extensions for issue
+  @override
+  @JsonKey(name: '_issue')
+  final Element? issueElement;
+
+  /// [publicationDateYear] Year on which the issue of the journal was published.
+  @override
+  final String? publicationDateYear;
+
+  /// [publicationDateYearElement] ("_publicationDateYear") Extensions for publicationDateYear
+  @override
+  @JsonKey(name: '_publicationDateYear')
+  final Element? publicationDateYearElement;
+
+  /// [publicationDateMonth] Month on which the issue of the journal was published.
+  @override
+  final String? publicationDateMonth;
+
+  /// [publicationDateMonthElement] ("_publicationDateMonth") Extensions for publicationDateMonth
+  @override
+  @JsonKey(name: '_publicationDateMonth')
+  final Element? publicationDateMonthElement;
+
+  /// [publicationDateDay] Day on which the issue of the journal was published.
+  @override
+  final String? publicationDateDay;
+
+  /// [publicationDateDayElement] ("_publicationDateDay") Extensions for publicationDateDay
+  @override
+  @JsonKey(name: '_publicationDateDay')
+  final Element? publicationDateDayElement;
+
+  /// [publicationDateSeason] Spring, Summer, Fall/Autumn, Winter.
+  @override
+  final String? publicationDateSeason;
+
+  /// [publicationDateSeasonElement] ("_publicationDateSeason") Extensions for publicationDateSeason
+  @override
+  @JsonKey(name: '_publicationDateSeason')
+  final Element? publicationDateSeasonElement;
+
+  /// [publicationDateText] Text representation of the date of which the issue of the journal was published.
+  @override
+  final String? publicationDateText;
+
+  /// [publicationDateTextElement] ("_publicationDateText") Extensions for publicationDateText
+  @override
+  @JsonKey(name: '_publicationDateText')
+  final Element? publicationDateTextElement;
+
+  /// [articleDate] The date the article was added to the database, or the date the article was released (which may differ from the journal issue publication date).
   @override
   final FhirDateTime? articleDate;
+
+  /// [articleDateElement] ("_articleDate") Extensions for articleDate
   @override
   @JsonKey(name: '_articleDate')
   final Element? articleDateElement;
+
+  /// [lastRevisionDate] The date the article was last revised or updated in the database.
   @override
   final FhirDateTime? lastRevisionDate;
+
+  /// [lastRevisionDateElement] ("_lastRevisionDate") Extensions for lastRevisionDate
   @override
   @JsonKey(name: '_lastRevisionDate')
   final Element? lastRevisionDateElement;
+
+  /// [language] Language in which this form of the article is published.
   final List<CodeableConcept>? _language;
+
+  /// [language] Language in which this form of the article is published.
   @override
   List<CodeableConcept>? get language {
     final value = _language;
@@ -8266,40 +11107,63 @@ class _$_CitationPublicationForm extends _CitationPublicationForm {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [accessionNumber] Entry number or identifier for inclusion in a database.
   @override
   final String? accessionNumber;
+
+  /// [accessionNumberElement] ("_accessionNumber") Extensions for accessionNumber
   @override
   @JsonKey(name: '_accessionNumber')
   final Element? accessionNumberElement;
+
+  /// [pageString] Used for full display of pagination.
   @override
   final String? pageString;
+
+  /// [pageStringElement] ("_pageString") Extensions for pageString
   @override
   @JsonKey(name: '_pageString')
   final Element? pageStringElement;
+
+  /// [firstPage] Used for isolated representation of first page.
   @override
   final String? firstPage;
+
+  /// [firstPageElement] ("_firstPage") Extensions for firstPage
   @override
   @JsonKey(name: '_firstPage')
   final Element? firstPageElement;
+
+  /// [lastPage] Used for isolated representation of last page.
   @override
   final String? lastPage;
+
+  /// [lastPageElement] ("_lastPage") Extensions for lastPage
   @override
   @JsonKey(name: '_lastPage')
   final Element? lastPageElement;
+
+  /// [pageCount] Actual or approximate number of pages or screens.
   @override
   final String? pageCount;
+
+  /// [pageCountElement] ("_pageCount") Extensions for pageCount
   @override
   @JsonKey(name: '_pageCount')
   final Element? pageCountElement;
+
+  /// [copyright] Copyright notice for the full article or artifact.
   @override
   final Markdown? copyright;
+
+  /// [copyrightElement] ("_copyright") Extensions for copyright
   @override
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
 
   @override
   String toString() {
-    return 'CitationPublicationForm(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, publishedIn: $publishedIn, periodicRelease: $periodicRelease, articleDate: $articleDate, articleDateElement: $articleDateElement, lastRevisionDate: $lastRevisionDate, lastRevisionDateElement: $lastRevisionDateElement, language: $language, accessionNumber: $accessionNumber, accessionNumberElement: $accessionNumberElement, pageString: $pageString, pageStringElement: $pageStringElement, firstPage: $firstPage, firstPageElement: $firstPageElement, lastPage: $lastPage, lastPageElement: $lastPageElement, pageCount: $pageCount, pageCountElement: $pageCountElement, copyright: $copyright, copyrightElement: $copyrightElement)';
+    return 'CitationPublicationForm(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, publishedIn: $publishedIn, citedMedium: $citedMedium, volume: $volume, volumeElement: $volumeElement, issue: $issue, issueElement: $issueElement, publicationDateYear: $publicationDateYear, publicationDateYearElement: $publicationDateYearElement, publicationDateMonth: $publicationDateMonth, publicationDateMonthElement: $publicationDateMonthElement, publicationDateDay: $publicationDateDay, publicationDateDayElement: $publicationDateDayElement, publicationDateSeason: $publicationDateSeason, publicationDateSeasonElement: $publicationDateSeasonElement, publicationDateText: $publicationDateText, publicationDateTextElement: $publicationDateTextElement, articleDate: $articleDate, articleDateElement: $articleDateElement, lastRevisionDate: $lastRevisionDate, lastRevisionDateElement: $lastRevisionDateElement, language: $language, accessionNumber: $accessionNumber, accessionNumberElement: $accessionNumberElement, pageString: $pageString, pageStringElement: $pageStringElement, firstPage: $firstPage, firstPageElement: $firstPageElement, lastPage: $lastPage, lastPageElement: $lastPageElement, pageCount: $pageCount, pageCountElement: $pageCountElement, copyright: $copyright, copyrightElement: $copyrightElement)';
   }
 
   @override
@@ -8314,16 +11178,45 @@ class _$_CitationPublicationForm extends _CitationPublicationForm {
                 .equals(other._modifierExtension, _modifierExtension) &&
             (identical(other.publishedIn, publishedIn) ||
                 other.publishedIn == publishedIn) &&
-            (identical(other.periodicRelease, periodicRelease) ||
-                other.periodicRelease == periodicRelease) &&
+            (identical(other.citedMedium, citedMedium) ||
+                other.citedMedium == citedMedium) &&
+            (identical(other.volume, volume) || other.volume == volume) &&
+            (identical(other.volumeElement, volumeElement) ||
+                other.volumeElement == volumeElement) &&
+            (identical(other.issue, issue) || other.issue == issue) &&
+            (identical(other.issueElement, issueElement) ||
+                other.issueElement == issueElement) &&
+            (identical(other.publicationDateYear, publicationDateYear) ||
+                other.publicationDateYear == publicationDateYear) &&
+            (identical(other.publicationDateYearElement, publicationDateYearElement) ||
+                other.publicationDateYearElement ==
+                    publicationDateYearElement) &&
+            (identical(other.publicationDateMonth, publicationDateMonth) ||
+                other.publicationDateMonth == publicationDateMonth) &&
+            (identical(other.publicationDateMonthElement, publicationDateMonthElement) ||
+                other.publicationDateMonthElement ==
+                    publicationDateMonthElement) &&
+            (identical(other.publicationDateDay, publicationDateDay) ||
+                other.publicationDateDay == publicationDateDay) &&
+            (identical(other.publicationDateDayElement, publicationDateDayElement) ||
+                other.publicationDateDayElement == publicationDateDayElement) &&
+            (identical(other.publicationDateSeason, publicationDateSeason) ||
+                other.publicationDateSeason == publicationDateSeason) &&
+            (identical(other.publicationDateSeasonElement, publicationDateSeasonElement) ||
+                other.publicationDateSeasonElement ==
+                    publicationDateSeasonElement) &&
+            (identical(other.publicationDateText, publicationDateText) ||
+                other.publicationDateText == publicationDateText) &&
+            (identical(other.publicationDateTextElement, publicationDateTextElement) ||
+                other.publicationDateTextElement ==
+                    publicationDateTextElement) &&
             (identical(other.articleDate, articleDate) ||
                 other.articleDate == articleDate) &&
             (identical(other.articleDateElement, articleDateElement) ||
                 other.articleDateElement == articleDateElement) &&
             (identical(other.lastRevisionDate, lastRevisionDate) ||
                 other.lastRevisionDate == lastRevisionDate) &&
-            (identical(
-                    other.lastRevisionDateElement, lastRevisionDateElement) ||
+            (identical(other.lastRevisionDateElement, lastRevisionDateElement) ||
                 other.lastRevisionDateElement == lastRevisionDateElement) &&
             const DeepCollectionEquality().equals(other._language, _language) &&
             (identical(other.accessionNumber, accessionNumber) ||
@@ -8334,22 +11227,14 @@ class _$_CitationPublicationForm extends _CitationPublicationForm {
                 other.pageString == pageString) &&
             (identical(other.pageStringElement, pageStringElement) ||
                 other.pageStringElement == pageStringElement) &&
-            (identical(other.firstPage, firstPage) ||
-                other.firstPage == firstPage) &&
-            (identical(other.firstPageElement, firstPageElement) ||
-                other.firstPageElement == firstPageElement) &&
-            (identical(other.lastPage, lastPage) ||
-                other.lastPage == lastPage) &&
-            (identical(other.lastPageElement, lastPageElement) ||
-                other.lastPageElement == lastPageElement) &&
-            (identical(other.pageCount, pageCount) ||
-                other.pageCount == pageCount) &&
-            (identical(other.pageCountElement, pageCountElement) ||
-                other.pageCountElement == pageCountElement) &&
-            (identical(other.copyright, copyright) ||
-                other.copyright == copyright) &&
-            (identical(other.copyrightElement, copyrightElement) ||
-                other.copyrightElement == copyrightElement));
+            (identical(other.firstPage, firstPage) || other.firstPage == firstPage) &&
+            (identical(other.firstPageElement, firstPageElement) || other.firstPageElement == firstPageElement) &&
+            (identical(other.lastPage, lastPage) || other.lastPage == lastPage) &&
+            (identical(other.lastPageElement, lastPageElement) || other.lastPageElement == lastPageElement) &&
+            (identical(other.pageCount, pageCount) || other.pageCount == pageCount) &&
+            (identical(other.pageCountElement, pageCountElement) || other.pageCountElement == pageCountElement) &&
+            (identical(other.copyright, copyright) || other.copyright == copyright) &&
+            (identical(other.copyrightElement, copyrightElement) || other.copyrightElement == copyrightElement));
   }
 
   @JsonKey(ignore: true)
@@ -8360,7 +11245,21 @@ class _$_CitationPublicationForm extends _CitationPublicationForm {
         const DeepCollectionEquality().hash(_extension_),
         const DeepCollectionEquality().hash(_modifierExtension),
         publishedIn,
-        periodicRelease,
+        citedMedium,
+        volume,
+        volumeElement,
+        issue,
+        issueElement,
+        publicationDateYear,
+        publicationDateYearElement,
+        publicationDateMonth,
+        publicationDateMonthElement,
+        publicationDateDay,
+        publicationDateDayElement,
+        publicationDateSeason,
+        publicationDateSeasonElement,
+        publicationDateText,
+        publicationDateTextElement,
         articleDate,
         articleDateElement,
         lastRevisionDate,
@@ -8403,7 +11302,28 @@ abstract class _CitationPublicationForm extends CitationPublicationForm {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final CitationPublishedIn? publishedIn,
-      final CitationPeriodicRelease? periodicRelease,
+      final CodeableConcept? citedMedium,
+      final String? volume,
+      @JsonKey(name: '_volume')
+          final Element? volumeElement,
+      final String? issue,
+      @JsonKey(name: '_issue')
+          final Element? issueElement,
+      final String? publicationDateYear,
+      @JsonKey(name: '_publicationDateYear')
+          final Element? publicationDateYearElement,
+      final String? publicationDateMonth,
+      @JsonKey(name: '_publicationDateMonth')
+          final Element? publicationDateMonthElement,
+      final String? publicationDateDay,
+      @JsonKey(name: '_publicationDateDay')
+          final Element? publicationDateDayElement,
+      final String? publicationDateSeason,
+      @JsonKey(name: '_publicationDateSeason')
+          final Element? publicationDateSeasonElement,
+      final String? publicationDateText,
+      @JsonKey(name: '_publicationDateText')
+          final Element? publicationDateTextElement,
       final FhirDateTime? articleDate,
       @JsonKey(name: '_articleDate')
           final Element? articleDateElement,
@@ -8435,56 +11355,180 @@ abstract class _CitationPublicationForm extends CitationPublicationForm {
       _$_CitationPublicationForm.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [publishedIn] The collection the cited article or artifact is published in.
   CitationPublishedIn? get publishedIn;
   @override
-  CitationPeriodicRelease? get periodicRelease;
+
+  /// [citedMedium] Describes the form of the medium cited. Common codes are "Internet" or "Print".
+  CodeableConcept? get citedMedium;
   @override
+
+  /// [volume] Volume number of journal in which the article is published.
+  String? get volume;
+  @override
+
+  /// [volumeElement] ("_volume") Extensions for volume
+  @JsonKey(name: '_volume')
+  Element? get volumeElement;
+  @override
+
+  /// [issue] Issue, part or supplement of journal in which the article is published.
+  String? get issue;
+  @override
+
+  /// [issueElement] ("_issue") Extensions for issue
+  @JsonKey(name: '_issue')
+  Element? get issueElement;
+  @override
+
+  /// [publicationDateYear] Year on which the issue of the journal was published.
+  String? get publicationDateYear;
+  @override
+
+  /// [publicationDateYearElement] ("_publicationDateYear") Extensions for publicationDateYear
+  @JsonKey(name: '_publicationDateYear')
+  Element? get publicationDateYearElement;
+  @override
+
+  /// [publicationDateMonth] Month on which the issue of the journal was published.
+  String? get publicationDateMonth;
+  @override
+
+  /// [publicationDateMonthElement] ("_publicationDateMonth") Extensions for publicationDateMonth
+  @JsonKey(name: '_publicationDateMonth')
+  Element? get publicationDateMonthElement;
+  @override
+
+  /// [publicationDateDay] Day on which the issue of the journal was published.
+  String? get publicationDateDay;
+  @override
+
+  /// [publicationDateDayElement] ("_publicationDateDay") Extensions for publicationDateDay
+  @JsonKey(name: '_publicationDateDay')
+  Element? get publicationDateDayElement;
+  @override
+
+  /// [publicationDateSeason] Spring, Summer, Fall/Autumn, Winter.
+  String? get publicationDateSeason;
+  @override
+
+  /// [publicationDateSeasonElement] ("_publicationDateSeason") Extensions for publicationDateSeason
+  @JsonKey(name: '_publicationDateSeason')
+  Element? get publicationDateSeasonElement;
+  @override
+
+  /// [publicationDateText] Text representation of the date of which the issue of the journal was published.
+  String? get publicationDateText;
+  @override
+
+  /// [publicationDateTextElement] ("_publicationDateText") Extensions for publicationDateText
+  @JsonKey(name: '_publicationDateText')
+  Element? get publicationDateTextElement;
+  @override
+
+  /// [articleDate] The date the article was added to the database, or the date the article was released (which may differ from the journal issue publication date).
   FhirDateTime? get articleDate;
   @override
+
+  /// [articleDateElement] ("_articleDate") Extensions for articleDate
   @JsonKey(name: '_articleDate')
   Element? get articleDateElement;
   @override
+
+  /// [lastRevisionDate] The date the article was last revised or updated in the database.
   FhirDateTime? get lastRevisionDate;
   @override
+
+  /// [lastRevisionDateElement] ("_lastRevisionDate") Extensions for lastRevisionDate
   @JsonKey(name: '_lastRevisionDate')
   Element? get lastRevisionDateElement;
   @override
+
+  /// [language] Language in which this form of the article is published.
   List<CodeableConcept>? get language;
   @override
+
+  /// [accessionNumber] Entry number or identifier for inclusion in a database.
   String? get accessionNumber;
   @override
+
+  /// [accessionNumberElement] ("_accessionNumber") Extensions for accessionNumber
   @JsonKey(name: '_accessionNumber')
   Element? get accessionNumberElement;
   @override
+
+  /// [pageString] Used for full display of pagination.
   String? get pageString;
   @override
+
+  /// [pageStringElement] ("_pageString") Extensions for pageString
   @JsonKey(name: '_pageString')
   Element? get pageStringElement;
   @override
+
+  /// [firstPage] Used for isolated representation of first page.
   String? get firstPage;
   @override
+
+  /// [firstPageElement] ("_firstPage") Extensions for firstPage
   @JsonKey(name: '_firstPage')
   Element? get firstPageElement;
   @override
+
+  /// [lastPage] Used for isolated representation of last page.
   String? get lastPage;
   @override
+
+  /// [lastPageElement] ("_lastPage") Extensions for lastPage
   @JsonKey(name: '_lastPage')
   Element? get lastPageElement;
   @override
+
+  /// [pageCount] Actual or approximate number of pages or screens.
   String? get pageCount;
   @override
+
+  /// [pageCountElement] ("_pageCount") Extensions for pageCount
   @JsonKey(name: '_pageCount')
   Element? get pageCountElement;
   @override
+
+  /// [copyright] Copyright notice for the full article or artifact.
   Markdown? get copyright;
   @override
+
+  /// [copyrightElement] ("_copyright") Extensions for copyright
   @JsonKey(name: '_copyright')
   Element? get copyrightElement;
   @override
@@ -8499,18 +11543,54 @@ CitationPublishedIn _$CitationPublishedInFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CitationPublishedIn {
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [type] Kind of container (e.g. Periodical, database, or book).
   CodeableConcept? get type => throw _privateConstructorUsedError;
+
+  /// [identifier] Journal identifiers include ISSN, ISO Abbreviation and NLMuniqueID; Book identifiers include ISBN.
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
+
+  /// [title] Name of the database or title of the book or journal.
   String? get title => throw _privateConstructorUsedError;
+
+  /// [titleElement] ("_title") Extensions for title
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
+
+  /// [publisher] Name of the publisher.
   Reference? get publisher => throw _privateConstructorUsedError;
+
+  /// [publisherLocation] Geographic location of the publisher.
   String? get publisherLocation => throw _privateConstructorUsedError;
+
+  /// [publisherLocationElement] ("_publisherLocation") Extensions for publisherLocation
   @JsonKey(name: '_publisherLocation')
   Element? get publisherLocationElement => throw _privateConstructorUsedError;
 
@@ -8780,9 +11860,25 @@ class _$_CitationPublishedIn extends _CitationPublishedIn {
   factory _$_CitationPublishedIn.fromJson(Map<String, dynamic> json) =>
       _$$_CitationPublishedInFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -8793,7 +11889,32 @@ class _$_CitationPublishedIn extends _CitationPublishedIn {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -8804,9 +11925,14 @@ class _$_CitationPublishedIn extends _CitationPublishedIn {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [type] Kind of container (e.g. Periodical, database, or book).
   @override
   final CodeableConcept? type;
+
+  /// [identifier] Journal identifiers include ISSN, ISO Abbreviation and NLMuniqueID; Book identifiers include ISBN.
   final List<Identifier>? _identifier;
+
+  /// [identifier] Journal identifiers include ISSN, ISO Abbreviation and NLMuniqueID; Book identifiers include ISBN.
   @override
   List<Identifier>? get identifier {
     final value = _identifier;
@@ -8816,15 +11942,24 @@ class _$_CitationPublishedIn extends _CitationPublishedIn {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [title] Name of the database or title of the book or journal.
   @override
   final String? title;
+
+  /// [titleElement] ("_title") Extensions for title
   @override
   @JsonKey(name: '_title')
   final Element? titleElement;
+
+  /// [publisher] Name of the publisher.
   @override
   final Reference? publisher;
+
+  /// [publisherLocation] Geographic location of the publisher.
   @override
   final String? publisherLocation;
+
+  /// [publisherLocationElement] ("_publisherLocation") Extensions for publisherLocation
   @override
   @JsonKey(name: '_publisherLocation')
   final Element? publisherLocationElement;
@@ -8910,26 +12045,63 @@ abstract class _CitationPublishedIn extends CitationPublishedIn {
       _$_CitationPublishedIn.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [type] Kind of container (e.g. Periodical, database, or book).
   CodeableConcept? get type;
   @override
+
+  /// [identifier] Journal identifiers include ISSN, ISO Abbreviation and NLMuniqueID; Book identifiers include ISBN.
   List<Identifier>? get identifier;
   @override
+
+  /// [title] Name of the database or title of the book or journal.
   String? get title;
   @override
+
+  /// [titleElement] ("_title") Extensions for title
   @JsonKey(name: '_title')
   Element? get titleElement;
   @override
+
+  /// [publisher] Name of the publisher.
   Reference? get publisher;
   @override
+
+  /// [publisherLocation] Geographic location of the publisher.
   String? get publisherLocation;
   @override
+
+  /// [publisherLocationElement] ("_publisherLocation") Extensions for publisherLocation
   @JsonKey(name: '_publisherLocation')
   Element? get publisherLocationElement;
   @override
@@ -8938,1022 +12110,47 @@ abstract class _CitationPublishedIn extends CitationPublishedIn {
       throw _privateConstructorUsedError;
 }
 
-CitationPeriodicRelease _$CitationPeriodicReleaseFromJson(
-    Map<String, dynamic> json) {
-  return _CitationPeriodicRelease.fromJson(json);
-}
-
-/// @nodoc
-mixin _$CitationPeriodicRelease {
-  String? get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
-  CodeableConcept? get citedMedium => throw _privateConstructorUsedError;
-  String? get volume => throw _privateConstructorUsedError;
-  @JsonKey(name: '_volume')
-  Element? get volumeElement => throw _privateConstructorUsedError;
-  String? get issue => throw _privateConstructorUsedError;
-  @JsonKey(name: '_issue')
-  Element? get issueElement => throw _privateConstructorUsedError;
-  CitationDateOfPublication? get dateOfPublication =>
-      throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $CitationPeriodicReleaseCopyWith<CitationPeriodicRelease> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $CitationPeriodicReleaseCopyWith<$Res> {
-  factory $CitationPeriodicReleaseCopyWith(CitationPeriodicRelease value,
-          $Res Function(CitationPeriodicRelease) then) =
-      _$CitationPeriodicReleaseCopyWithImpl<$Res, CitationPeriodicRelease>;
-  @useResult
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? citedMedium,
-      String? volume,
-      @JsonKey(name: '_volume') Element? volumeElement,
-      String? issue,
-      @JsonKey(name: '_issue') Element? issueElement,
-      CitationDateOfPublication? dateOfPublication});
-
-  $CodeableConceptCopyWith<$Res>? get citedMedium;
-  $ElementCopyWith<$Res>? get volumeElement;
-  $ElementCopyWith<$Res>? get issueElement;
-  $CitationDateOfPublicationCopyWith<$Res>? get dateOfPublication;
-}
-
-/// @nodoc
-class _$CitationPeriodicReleaseCopyWithImpl<$Res,
-        $Val extends CitationPeriodicRelease>
-    implements $CitationPeriodicReleaseCopyWith<$Res> {
-  _$CitationPeriodicReleaseCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? citedMedium = freezed,
-    Object? volume = freezed,
-    Object? volumeElement = freezed,
-    Object? issue = freezed,
-    Object? issueElement = freezed,
-    Object? dateOfPublication = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: freezed == extension_
-          ? _value.extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: freezed == modifierExtension
-          ? _value.modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      citedMedium: freezed == citedMedium
-          ? _value.citedMedium
-          : citedMedium // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      volume: freezed == volume
-          ? _value.volume
-          : volume // ignore: cast_nullable_to_non_nullable
-              as String?,
-      volumeElement: freezed == volumeElement
-          ? _value.volumeElement
-          : volumeElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      issue: freezed == issue
-          ? _value.issue
-          : issue // ignore: cast_nullable_to_non_nullable
-              as String?,
-      issueElement: freezed == issueElement
-          ? _value.issueElement
-          : issueElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      dateOfPublication: freezed == dateOfPublication
-          ? _value.dateOfPublication
-          : dateOfPublication // ignore: cast_nullable_to_non_nullable
-              as CitationDateOfPublication?,
-    ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $CodeableConceptCopyWith<$Res>? get citedMedium {
-    if (_value.citedMedium == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.citedMedium!, (value) {
-      return _then(_value.copyWith(citedMedium: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get volumeElement {
-    if (_value.volumeElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.volumeElement!, (value) {
-      return _then(_value.copyWith(volumeElement: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get issueElement {
-    if (_value.issueElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.issueElement!, (value) {
-      return _then(_value.copyWith(issueElement: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $CitationDateOfPublicationCopyWith<$Res>? get dateOfPublication {
-    if (_value.dateOfPublication == null) {
-      return null;
-    }
-
-    return $CitationDateOfPublicationCopyWith<$Res>(_value.dateOfPublication!,
-        (value) {
-      return _then(_value.copyWith(dateOfPublication: value) as $Val);
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$_CitationPeriodicReleaseCopyWith<$Res>
-    implements $CitationPeriodicReleaseCopyWith<$Res> {
-  factory _$$_CitationPeriodicReleaseCopyWith(_$_CitationPeriodicRelease value,
-          $Res Function(_$_CitationPeriodicRelease) then) =
-      __$$_CitationPeriodicReleaseCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? citedMedium,
-      String? volume,
-      @JsonKey(name: '_volume') Element? volumeElement,
-      String? issue,
-      @JsonKey(name: '_issue') Element? issueElement,
-      CitationDateOfPublication? dateOfPublication});
-
-  @override
-  $CodeableConceptCopyWith<$Res>? get citedMedium;
-  @override
-  $ElementCopyWith<$Res>? get volumeElement;
-  @override
-  $ElementCopyWith<$Res>? get issueElement;
-  @override
-  $CitationDateOfPublicationCopyWith<$Res>? get dateOfPublication;
-}
-
-/// @nodoc
-class __$$_CitationPeriodicReleaseCopyWithImpl<$Res>
-    extends _$CitationPeriodicReleaseCopyWithImpl<$Res,
-        _$_CitationPeriodicRelease>
-    implements _$$_CitationPeriodicReleaseCopyWith<$Res> {
-  __$$_CitationPeriodicReleaseCopyWithImpl(_$_CitationPeriodicRelease _value,
-      $Res Function(_$_CitationPeriodicRelease) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? citedMedium = freezed,
-    Object? volume = freezed,
-    Object? volumeElement = freezed,
-    Object? issue = freezed,
-    Object? issueElement = freezed,
-    Object? dateOfPublication = freezed,
-  }) {
-    return _then(_$_CitationPeriodicRelease(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: freezed == extension_
-          ? _value._extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      citedMedium: freezed == citedMedium
-          ? _value.citedMedium
-          : citedMedium // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      volume: freezed == volume
-          ? _value.volume
-          : volume // ignore: cast_nullable_to_non_nullable
-              as String?,
-      volumeElement: freezed == volumeElement
-          ? _value.volumeElement
-          : volumeElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      issue: freezed == issue
-          ? _value.issue
-          : issue // ignore: cast_nullable_to_non_nullable
-              as String?,
-      issueElement: freezed == issueElement
-          ? _value.issueElement
-          : issueElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      dateOfPublication: freezed == dateOfPublication
-          ? _value.dateOfPublication
-          : dateOfPublication // ignore: cast_nullable_to_non_nullable
-              as CitationDateOfPublication?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$_CitationPeriodicRelease extends _CitationPeriodicRelease {
-  _$_CitationPeriodicRelease(
-      {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.citedMedium,
-      this.volume,
-      @JsonKey(name: '_volume') this.volumeElement,
-      this.issue,
-      @JsonKey(name: '_issue') this.issueElement,
-      this.dateOfPublication})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
-
-  factory _$_CitationPeriodicRelease.fromJson(Map<String, dynamic> json) =>
-      _$$_CitationPeriodicReleaseFromJson(json);
-
-  @override
-  final String? id;
-  final List<FhirExtension>? _extension_;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    if (_extension_ is EqualUnmodifiableListView) return _extension_;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
-  @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    if (_modifierExtension is EqualUnmodifiableListView)
-      return _modifierExtension;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  final CodeableConcept? citedMedium;
-  @override
-  final String? volume;
-  @override
-  @JsonKey(name: '_volume')
-  final Element? volumeElement;
-  @override
-  final String? issue;
-  @override
-  @JsonKey(name: '_issue')
-  final Element? issueElement;
-  @override
-  final CitationDateOfPublication? dateOfPublication;
-
-  @override
-  String toString() {
-    return 'CitationPeriodicRelease(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, citedMedium: $citedMedium, volume: $volume, volumeElement: $volumeElement, issue: $issue, issueElement: $issueElement, dateOfPublication: $dateOfPublication)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_CitationPeriodicRelease &&
-            (identical(other.id, id) || other.id == id) &&
-            const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            (identical(other.citedMedium, citedMedium) ||
-                other.citedMedium == citedMedium) &&
-            (identical(other.volume, volume) || other.volume == volume) &&
-            (identical(other.volumeElement, volumeElement) ||
-                other.volumeElement == volumeElement) &&
-            (identical(other.issue, issue) || other.issue == issue) &&
-            (identical(other.issueElement, issueElement) ||
-                other.issueElement == issueElement) &&
-            (identical(other.dateOfPublication, dateOfPublication) ||
-                other.dateOfPublication == dateOfPublication));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
-      citedMedium,
-      volume,
-      volumeElement,
-      issue,
-      issueElement,
-      dateOfPublication);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$_CitationPeriodicReleaseCopyWith<_$_CitationPeriodicRelease>
-      get copyWith =>
-          __$$_CitationPeriodicReleaseCopyWithImpl<_$_CitationPeriodicRelease>(
-              this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_CitationPeriodicReleaseToJson(
-      this,
-    );
-  }
-}
-
-abstract class _CitationPeriodicRelease extends CitationPeriodicRelease {
-  factory _CitationPeriodicRelease(
-          {final String? id,
-          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-          final List<FhirExtension>? modifierExtension,
-          final CodeableConcept? citedMedium,
-          final String? volume,
-          @JsonKey(name: '_volume') final Element? volumeElement,
-          final String? issue,
-          @JsonKey(name: '_issue') final Element? issueElement,
-          final CitationDateOfPublication? dateOfPublication}) =
-      _$_CitationPeriodicRelease;
-  _CitationPeriodicRelease._() : super._();
-
-  factory _CitationPeriodicRelease.fromJson(Map<String, dynamic> json) =
-      _$_CitationPeriodicRelease.fromJson;
-
-  @override
-  String? get id;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  @override
-  List<FhirExtension>? get modifierExtension;
-  @override
-  CodeableConcept? get citedMedium;
-  @override
-  String? get volume;
-  @override
-  @JsonKey(name: '_volume')
-  Element? get volumeElement;
-  @override
-  String? get issue;
-  @override
-  @JsonKey(name: '_issue')
-  Element? get issueElement;
-  @override
-  CitationDateOfPublication? get dateOfPublication;
-  @override
-  @JsonKey(ignore: true)
-  _$$_CitationPeriodicReleaseCopyWith<_$_CitationPeriodicRelease>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-CitationDateOfPublication _$CitationDateOfPublicationFromJson(
-    Map<String, dynamic> json) {
-  return _CitationDateOfPublication.fromJson(json);
-}
-
-/// @nodoc
-mixin _$CitationDateOfPublication {
-  String? get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
-  Date? get date => throw _privateConstructorUsedError;
-  @JsonKey(name: '_date')
-  Element? get dateElement => throw _privateConstructorUsedError;
-  String? get year => throw _privateConstructorUsedError;
-  @JsonKey(name: '_year')
-  Element? get yearElement => throw _privateConstructorUsedError;
-  String? get month => throw _privateConstructorUsedError;
-  @JsonKey(name: '_month')
-  Element? get monthElement => throw _privateConstructorUsedError;
-  String? get day => throw _privateConstructorUsedError;
-  @JsonKey(name: '_day')
-  Element? get dayElement => throw _privateConstructorUsedError;
-  String? get season => throw _privateConstructorUsedError;
-  @JsonKey(name: '_season')
-  Element? get seasonElement => throw _privateConstructorUsedError;
-  String? get text => throw _privateConstructorUsedError;
-  @JsonKey(name: '_text')
-  Element? get textElement => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $CitationDateOfPublicationCopyWith<CitationDateOfPublication> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $CitationDateOfPublicationCopyWith<$Res> {
-  factory $CitationDateOfPublicationCopyWith(CitationDateOfPublication value,
-          $Res Function(CitationDateOfPublication) then) =
-      _$CitationDateOfPublicationCopyWithImpl<$Res, CitationDateOfPublication>;
-  @useResult
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Date? date,
-      @JsonKey(name: '_date') Element? dateElement,
-      String? year,
-      @JsonKey(name: '_year') Element? yearElement,
-      String? month,
-      @JsonKey(name: '_month') Element? monthElement,
-      String? day,
-      @JsonKey(name: '_day') Element? dayElement,
-      String? season,
-      @JsonKey(name: '_season') Element? seasonElement,
-      String? text,
-      @JsonKey(name: '_text') Element? textElement});
-
-  $ElementCopyWith<$Res>? get dateElement;
-  $ElementCopyWith<$Res>? get yearElement;
-  $ElementCopyWith<$Res>? get monthElement;
-  $ElementCopyWith<$Res>? get dayElement;
-  $ElementCopyWith<$Res>? get seasonElement;
-  $ElementCopyWith<$Res>? get textElement;
-}
-
-/// @nodoc
-class _$CitationDateOfPublicationCopyWithImpl<$Res,
-        $Val extends CitationDateOfPublication>
-    implements $CitationDateOfPublicationCopyWith<$Res> {
-  _$CitationDateOfPublicationCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? date = freezed,
-    Object? dateElement = freezed,
-    Object? year = freezed,
-    Object? yearElement = freezed,
-    Object? month = freezed,
-    Object? monthElement = freezed,
-    Object? day = freezed,
-    Object? dayElement = freezed,
-    Object? season = freezed,
-    Object? seasonElement = freezed,
-    Object? text = freezed,
-    Object? textElement = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: freezed == extension_
-          ? _value.extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: freezed == modifierExtension
-          ? _value.modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      date: freezed == date
-          ? _value.date
-          : date // ignore: cast_nullable_to_non_nullable
-              as Date?,
-      dateElement: freezed == dateElement
-          ? _value.dateElement
-          : dateElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      year: freezed == year
-          ? _value.year
-          : year // ignore: cast_nullable_to_non_nullable
-              as String?,
-      yearElement: freezed == yearElement
-          ? _value.yearElement
-          : yearElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      month: freezed == month
-          ? _value.month
-          : month // ignore: cast_nullable_to_non_nullable
-              as String?,
-      monthElement: freezed == monthElement
-          ? _value.monthElement
-          : monthElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      day: freezed == day
-          ? _value.day
-          : day // ignore: cast_nullable_to_non_nullable
-              as String?,
-      dayElement: freezed == dayElement
-          ? _value.dayElement
-          : dayElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      season: freezed == season
-          ? _value.season
-          : season // ignore: cast_nullable_to_non_nullable
-              as String?,
-      seasonElement: freezed == seasonElement
-          ? _value.seasonElement
-          : seasonElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      text: freezed == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as String?,
-      textElement: freezed == textElement
-          ? _value.textElement
-          : textElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-    ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get dateElement {
-    if (_value.dateElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.dateElement!, (value) {
-      return _then(_value.copyWith(dateElement: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get yearElement {
-    if (_value.yearElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.yearElement!, (value) {
-      return _then(_value.copyWith(yearElement: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get monthElement {
-    if (_value.monthElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.monthElement!, (value) {
-      return _then(_value.copyWith(monthElement: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get dayElement {
-    if (_value.dayElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.dayElement!, (value) {
-      return _then(_value.copyWith(dayElement: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get seasonElement {
-    if (_value.seasonElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.seasonElement!, (value) {
-      return _then(_value.copyWith(seasonElement: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get textElement {
-    if (_value.textElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.textElement!, (value) {
-      return _then(_value.copyWith(textElement: value) as $Val);
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$_CitationDateOfPublicationCopyWith<$Res>
-    implements $CitationDateOfPublicationCopyWith<$Res> {
-  factory _$$_CitationDateOfPublicationCopyWith(
-          _$_CitationDateOfPublication value,
-          $Res Function(_$_CitationDateOfPublication) then) =
-      __$$_CitationDateOfPublicationCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Date? date,
-      @JsonKey(name: '_date') Element? dateElement,
-      String? year,
-      @JsonKey(name: '_year') Element? yearElement,
-      String? month,
-      @JsonKey(name: '_month') Element? monthElement,
-      String? day,
-      @JsonKey(name: '_day') Element? dayElement,
-      String? season,
-      @JsonKey(name: '_season') Element? seasonElement,
-      String? text,
-      @JsonKey(name: '_text') Element? textElement});
-
-  @override
-  $ElementCopyWith<$Res>? get dateElement;
-  @override
-  $ElementCopyWith<$Res>? get yearElement;
-  @override
-  $ElementCopyWith<$Res>? get monthElement;
-  @override
-  $ElementCopyWith<$Res>? get dayElement;
-  @override
-  $ElementCopyWith<$Res>? get seasonElement;
-  @override
-  $ElementCopyWith<$Res>? get textElement;
-}
-
-/// @nodoc
-class __$$_CitationDateOfPublicationCopyWithImpl<$Res>
-    extends _$CitationDateOfPublicationCopyWithImpl<$Res,
-        _$_CitationDateOfPublication>
-    implements _$$_CitationDateOfPublicationCopyWith<$Res> {
-  __$$_CitationDateOfPublicationCopyWithImpl(
-      _$_CitationDateOfPublication _value,
-      $Res Function(_$_CitationDateOfPublication) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? date = freezed,
-    Object? dateElement = freezed,
-    Object? year = freezed,
-    Object? yearElement = freezed,
-    Object? month = freezed,
-    Object? monthElement = freezed,
-    Object? day = freezed,
-    Object? dayElement = freezed,
-    Object? season = freezed,
-    Object? seasonElement = freezed,
-    Object? text = freezed,
-    Object? textElement = freezed,
-  }) {
-    return _then(_$_CitationDateOfPublication(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: freezed == extension_
-          ? _value._extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      date: freezed == date
-          ? _value.date
-          : date // ignore: cast_nullable_to_non_nullable
-              as Date?,
-      dateElement: freezed == dateElement
-          ? _value.dateElement
-          : dateElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      year: freezed == year
-          ? _value.year
-          : year // ignore: cast_nullable_to_non_nullable
-              as String?,
-      yearElement: freezed == yearElement
-          ? _value.yearElement
-          : yearElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      month: freezed == month
-          ? _value.month
-          : month // ignore: cast_nullable_to_non_nullable
-              as String?,
-      monthElement: freezed == monthElement
-          ? _value.monthElement
-          : monthElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      day: freezed == day
-          ? _value.day
-          : day // ignore: cast_nullable_to_non_nullable
-              as String?,
-      dayElement: freezed == dayElement
-          ? _value.dayElement
-          : dayElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      season: freezed == season
-          ? _value.season
-          : season // ignore: cast_nullable_to_non_nullable
-              as String?,
-      seasonElement: freezed == seasonElement
-          ? _value.seasonElement
-          : seasonElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      text: freezed == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as String?,
-      textElement: freezed == textElement
-          ? _value.textElement
-          : textElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$_CitationDateOfPublication extends _CitationDateOfPublication {
-  _$_CitationDateOfPublication(
-      {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.date,
-      @JsonKey(name: '_date') this.dateElement,
-      this.year,
-      @JsonKey(name: '_year') this.yearElement,
-      this.month,
-      @JsonKey(name: '_month') this.monthElement,
-      this.day,
-      @JsonKey(name: '_day') this.dayElement,
-      this.season,
-      @JsonKey(name: '_season') this.seasonElement,
-      this.text,
-      @JsonKey(name: '_text') this.textElement})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
-
-  factory _$_CitationDateOfPublication.fromJson(Map<String, dynamic> json) =>
-      _$$_CitationDateOfPublicationFromJson(json);
-
-  @override
-  final String? id;
-  final List<FhirExtension>? _extension_;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    if (_extension_ is EqualUnmodifiableListView) return _extension_;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
-  @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    if (_modifierExtension is EqualUnmodifiableListView)
-      return _modifierExtension;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  final Date? date;
-  @override
-  @JsonKey(name: '_date')
-  final Element? dateElement;
-  @override
-  final String? year;
-  @override
-  @JsonKey(name: '_year')
-  final Element? yearElement;
-  @override
-  final String? month;
-  @override
-  @JsonKey(name: '_month')
-  final Element? monthElement;
-  @override
-  final String? day;
-  @override
-  @JsonKey(name: '_day')
-  final Element? dayElement;
-  @override
-  final String? season;
-  @override
-  @JsonKey(name: '_season')
-  final Element? seasonElement;
-  @override
-  final String? text;
-  @override
-  @JsonKey(name: '_text')
-  final Element? textElement;
-
-  @override
-  String toString() {
-    return 'CitationDateOfPublication(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, date: $date, dateElement: $dateElement, year: $year, yearElement: $yearElement, month: $month, monthElement: $monthElement, day: $day, dayElement: $dayElement, season: $season, seasonElement: $seasonElement, text: $text, textElement: $textElement)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_CitationDateOfPublication &&
-            (identical(other.id, id) || other.id == id) &&
-            const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            (identical(other.date, date) || other.date == date) &&
-            (identical(other.dateElement, dateElement) ||
-                other.dateElement == dateElement) &&
-            (identical(other.year, year) || other.year == year) &&
-            (identical(other.yearElement, yearElement) ||
-                other.yearElement == yearElement) &&
-            (identical(other.month, month) || other.month == month) &&
-            (identical(other.monthElement, monthElement) ||
-                other.monthElement == monthElement) &&
-            (identical(other.day, day) || other.day == day) &&
-            (identical(other.dayElement, dayElement) ||
-                other.dayElement == dayElement) &&
-            (identical(other.season, season) || other.season == season) &&
-            (identical(other.seasonElement, seasonElement) ||
-                other.seasonElement == seasonElement) &&
-            (identical(other.text, text) || other.text == text) &&
-            (identical(other.textElement, textElement) ||
-                other.textElement == textElement));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
-      date,
-      dateElement,
-      year,
-      yearElement,
-      month,
-      monthElement,
-      day,
-      dayElement,
-      season,
-      seasonElement,
-      text,
-      textElement);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$_CitationDateOfPublicationCopyWith<_$_CitationDateOfPublication>
-      get copyWith => __$$_CitationDateOfPublicationCopyWithImpl<
-          _$_CitationDateOfPublication>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_CitationDateOfPublicationToJson(
-      this,
-    );
-  }
-}
-
-abstract class _CitationDateOfPublication extends CitationDateOfPublication {
-  factory _CitationDateOfPublication(
-          {final String? id,
-          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-          final List<FhirExtension>? modifierExtension,
-          final Date? date,
-          @JsonKey(name: '_date') final Element? dateElement,
-          final String? year,
-          @JsonKey(name: '_year') final Element? yearElement,
-          final String? month,
-          @JsonKey(name: '_month') final Element? monthElement,
-          final String? day,
-          @JsonKey(name: '_day') final Element? dayElement,
-          final String? season,
-          @JsonKey(name: '_season') final Element? seasonElement,
-          final String? text,
-          @JsonKey(name: '_text') final Element? textElement}) =
-      _$_CitationDateOfPublication;
-  _CitationDateOfPublication._() : super._();
-
-  factory _CitationDateOfPublication.fromJson(Map<String, dynamic> json) =
-      _$_CitationDateOfPublication.fromJson;
-
-  @override
-  String? get id;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  @override
-  List<FhirExtension>? get modifierExtension;
-  @override
-  Date? get date;
-  @override
-  @JsonKey(name: '_date')
-  Element? get dateElement;
-  @override
-  String? get year;
-  @override
-  @JsonKey(name: '_year')
-  Element? get yearElement;
-  @override
-  String? get month;
-  @override
-  @JsonKey(name: '_month')
-  Element? get monthElement;
-  @override
-  String? get day;
-  @override
-  @JsonKey(name: '_day')
-  Element? get dayElement;
-  @override
-  String? get season;
-  @override
-  @JsonKey(name: '_season')
-  Element? get seasonElement;
-  @override
-  String? get text;
-  @override
-  @JsonKey(name: '_text')
-  Element? get textElement;
-  @override
-  @JsonKey(ignore: true)
-  _$$_CitationDateOfPublicationCopyWith<_$_CitationDateOfPublication>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
 CitationWebLocation _$CitationWebLocationFromJson(Map<String, dynamic> json) {
   return _CitationWebLocation.fromJson(json);
 }
 
 /// @nodoc
 mixin _$CitationWebLocation {
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [classifier] Code the reason for different URLs, e.g. abstract and full-text.
   List<CodeableConcept>? get classifier => throw _privateConstructorUsedError;
+
+  /// [url] The specific URL.
   FhirUri? get url => throw _privateConstructorUsedError;
+
+  /// [urlElement] ("_url") Extensions for url
   @JsonKey(name: '_url')
   Element? get urlElement => throw _privateConstructorUsedError;
 
@@ -10126,9 +12323,25 @@ class _$_CitationWebLocation extends _CitationWebLocation {
   factory _$_CitationWebLocation.fromJson(Map<String, dynamic> json) =>
       _$$_CitationWebLocationFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -10139,7 +12352,32 @@ class _$_CitationWebLocation extends _CitationWebLocation {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -10150,7 +12388,10 @@ class _$_CitationWebLocation extends _CitationWebLocation {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [classifier] Code the reason for different URLs, e.g. abstract and full-text.
   final List<CodeableConcept>? _classifier;
+
+  /// [classifier] Code the reason for different URLs, e.g. abstract and full-text.
   @override
   List<CodeableConcept>? get classifier {
     final value = _classifier;
@@ -10160,8 +12401,11 @@ class _$_CitationWebLocation extends _CitationWebLocation {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [url] The specific URL.
   @override
   final FhirUri? url;
+
+  /// [urlElement] ("_url") Extensions for url
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
@@ -10229,17 +12473,46 @@ abstract class _CitationWebLocation extends CitationWebLocation {
       _$_CitationWebLocation.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [classifier] Code the reason for different URLs, e.g. abstract and full-text.
   List<CodeableConcept>? get classifier;
   @override
+
+  /// [url] The specific URL.
   FhirUri? get url;
   @override
+
+  /// [urlElement] ("_url") Extensions for url
   @JsonKey(name: '_url')
   Element? get urlElement;
   @override
@@ -10255,13 +12528,41 @@ CitationClassification1 _$CitationClassification1FromJson(
 
 /// @nodoc
 mixin _$CitationClassification1 {
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [type] The kind of classifier (e.g. publication type, keyword).
   CodeableConcept? get type => throw _privateConstructorUsedError;
+
+  /// [classifier] The specific classification value.
   List<CodeableConcept>? get classifier => throw _privateConstructorUsedError;
+
+  /// [artifactAssessment] Complex or externally created classification.
   List<Reference>? get artifactAssessment => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -10436,9 +12737,25 @@ class _$_CitationClassification1 extends _CitationClassification1 {
   factory _$_CitationClassification1.fromJson(Map<String, dynamic> json) =>
       _$$_CitationClassification1FromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -10449,7 +12766,32 @@ class _$_CitationClassification1 extends _CitationClassification1 {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -10460,9 +12802,14 @@ class _$_CitationClassification1 extends _CitationClassification1 {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [type] The kind of classifier (e.g. publication type, keyword).
   @override
   final CodeableConcept? type;
+
+  /// [classifier] The specific classification value.
   final List<CodeableConcept>? _classifier;
+
+  /// [classifier] The specific classification value.
   @override
   List<CodeableConcept>? get classifier {
     final value = _classifier;
@@ -10472,7 +12819,10 @@ class _$_CitationClassification1 extends _CitationClassification1 {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [artifactAssessment] Complex or externally created classification.
   final List<Reference>? _artifactAssessment;
+
+  /// [artifactAssessment] Complex or externally created classification.
   @override
   List<Reference>? get artifactAssessment {
     final value = _artifactAssessment;
@@ -10546,17 +12896,46 @@ abstract class _CitationClassification1 extends CitationClassification1 {
       _$_CitationClassification1.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [type] The kind of classifier (e.g. publication type, keyword).
   CodeableConcept? get type;
   @override
+
+  /// [classifier] The specific classification value.
   List<CodeableConcept>? get classifier;
   @override
+
+  /// [artifactAssessment] Complex or externally created classification.
   List<Reference>? get artifactAssessment;
   @override
   @JsonKey(ignore: true)
@@ -10571,15 +12950,45 @@ CitationContributorship _$CitationContributorshipFromJson(
 
 /// @nodoc
 mixin _$CitationContributorship {
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [complete] Indicates if the list includes all authors and/or contributors.
   Boolean? get complete => throw _privateConstructorUsedError;
+
+  /// [completeElement] ("_complete") Extensions for complete
   @JsonKey(name: '_complete')
   Element? get completeElement => throw _privateConstructorUsedError;
+
+  /// [entry] An individual entity named in the author list or contributor list.
   List<CitationEntry>? get entry => throw _privateConstructorUsedError;
+
+  /// [summary] Used to record a display of the author/contributor list without separate coding for each list member.
   List<CitationSummary1>? get summary => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -10767,9 +13176,25 @@ class _$_CitationContributorship extends _CitationContributorship {
   factory _$_CitationContributorship.fromJson(Map<String, dynamic> json) =>
       _$$_CitationContributorshipFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -10780,7 +13205,32 @@ class _$_CitationContributorship extends _CitationContributorship {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -10791,12 +13241,19 @@ class _$_CitationContributorship extends _CitationContributorship {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [complete] Indicates if the list includes all authors and/or contributors.
   @override
   final Boolean? complete;
+
+  /// [completeElement] ("_complete") Extensions for complete
   @override
   @JsonKey(name: '_complete')
   final Element? completeElement;
+
+  /// [entry] An individual entity named in the author list or contributor list.
   final List<CitationEntry>? _entry;
+
+  /// [entry] An individual entity named in the author list or contributor list.
   @override
   List<CitationEntry>? get entry {
     final value = _entry;
@@ -10806,7 +13263,10 @@ class _$_CitationContributorship extends _CitationContributorship {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [summary] Used to record a display of the author/contributor list without separate coding for each list member.
   final List<CitationSummary1>? _summary;
+
+  /// [summary] Used to record a display of the author/contributor list without separate coding for each list member.
   @override
   List<CitationSummary1>? get summary {
     final value = _summary;
@@ -10882,408 +13342,56 @@ abstract class _CitationContributorship extends CitationContributorship {
       _$_CitationContributorship.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [complete] Indicates if the list includes all authors and/or contributors.
   Boolean? get complete;
   @override
+
+  /// [completeElement] ("_complete") Extensions for complete
   @JsonKey(name: '_complete')
   Element? get completeElement;
   @override
+
+  /// [entry] An individual entity named in the author list or contributor list.
   List<CitationEntry>? get entry;
   @override
+
+  /// [summary] Used to record a display of the author/contributor list without separate coding for each list member.
   List<CitationSummary1>? get summary;
   @override
   @JsonKey(ignore: true)
   _$$_CitationContributorshipCopyWith<_$_CitationContributorship>
       get copyWith => throw _privateConstructorUsedError;
-}
-
-CitationSummary1 _$CitationSummary1FromJson(Map<String, dynamic> json) {
-  return _CitationSummary1.fromJson(json);
-}
-
-/// @nodoc
-mixin _$CitationSummary1 {
-  String? get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
-  CodeableConcept? get type => throw _privateConstructorUsedError;
-  CodeableConcept? get style => throw _privateConstructorUsedError;
-  CodeableConcept? get source => throw _privateConstructorUsedError;
-  Markdown? get value => throw _privateConstructorUsedError;
-  @JsonKey(name: '_value')
-  Element? get valueElement => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $CitationSummary1CopyWith<CitationSummary1> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $CitationSummary1CopyWith<$Res> {
-  factory $CitationSummary1CopyWith(
-          CitationSummary1 value, $Res Function(CitationSummary1) then) =
-      _$CitationSummary1CopyWithImpl<$Res, CitationSummary1>;
-  @useResult
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
-      CodeableConcept? style,
-      CodeableConcept? source,
-      Markdown? value,
-      @JsonKey(name: '_value') Element? valueElement});
-
-  $CodeableConceptCopyWith<$Res>? get type;
-  $CodeableConceptCopyWith<$Res>? get style;
-  $CodeableConceptCopyWith<$Res>? get source;
-  $ElementCopyWith<$Res>? get valueElement;
-}
-
-/// @nodoc
-class _$CitationSummary1CopyWithImpl<$Res, $Val extends CitationSummary1>
-    implements $CitationSummary1CopyWith<$Res> {
-  _$CitationSummary1CopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? type = freezed,
-    Object? style = freezed,
-    Object? source = freezed,
-    Object? value = freezed,
-    Object? valueElement = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: freezed == extension_
-          ? _value.extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: freezed == modifierExtension
-          ? _value.modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      style: freezed == style
-          ? _value.style
-          : style // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      source: freezed == source
-          ? _value.source
-          : source // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      value: freezed == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
-      valueElement: freezed == valueElement
-          ? _value.valueElement
-          : valueElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-    ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $CodeableConceptCopyWith<$Res>? get type {
-    if (_value.type == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
-      return _then(_value.copyWith(type: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $CodeableConceptCopyWith<$Res>? get style {
-    if (_value.style == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.style!, (value) {
-      return _then(_value.copyWith(style: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $CodeableConceptCopyWith<$Res>? get source {
-    if (_value.source == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.source!, (value) {
-      return _then(_value.copyWith(source: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get valueElement {
-    if (_value.valueElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.valueElement!, (value) {
-      return _then(_value.copyWith(valueElement: value) as $Val);
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$_CitationSummary1CopyWith<$Res>
-    implements $CitationSummary1CopyWith<$Res> {
-  factory _$$_CitationSummary1CopyWith(
-          _$_CitationSummary1 value, $Res Function(_$_CitationSummary1) then) =
-      __$$_CitationSummary1CopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
-      CodeableConcept? style,
-      CodeableConcept? source,
-      Markdown? value,
-      @JsonKey(name: '_value') Element? valueElement});
-
-  @override
-  $CodeableConceptCopyWith<$Res>? get type;
-  @override
-  $CodeableConceptCopyWith<$Res>? get style;
-  @override
-  $CodeableConceptCopyWith<$Res>? get source;
-  @override
-  $ElementCopyWith<$Res>? get valueElement;
-}
-
-/// @nodoc
-class __$$_CitationSummary1CopyWithImpl<$Res>
-    extends _$CitationSummary1CopyWithImpl<$Res, _$_CitationSummary1>
-    implements _$$_CitationSummary1CopyWith<$Res> {
-  __$$_CitationSummary1CopyWithImpl(
-      _$_CitationSummary1 _value, $Res Function(_$_CitationSummary1) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? type = freezed,
-    Object? style = freezed,
-    Object? source = freezed,
-    Object? value = freezed,
-    Object? valueElement = freezed,
-  }) {
-    return _then(_$_CitationSummary1(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: freezed == extension_
-          ? _value._extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      style: freezed == style
-          ? _value.style
-          : style // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      source: freezed == source
-          ? _value.source
-          : source // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      value: freezed == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as Markdown?,
-      valueElement: freezed == valueElement
-          ? _value.valueElement
-          : valueElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$_CitationSummary1 extends _CitationSummary1 {
-  _$_CitationSummary1(
-      {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.type,
-      this.style,
-      this.source,
-      this.value,
-      @JsonKey(name: '_value') this.valueElement})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
-
-  factory _$_CitationSummary1.fromJson(Map<String, dynamic> json) =>
-      _$$_CitationSummary1FromJson(json);
-
-  @override
-  final String? id;
-  final List<FhirExtension>? _extension_;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    if (_extension_ is EqualUnmodifiableListView) return _extension_;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
-  @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    if (_modifierExtension is EqualUnmodifiableListView)
-      return _modifierExtension;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  final CodeableConcept? type;
-  @override
-  final CodeableConcept? style;
-  @override
-  final CodeableConcept? source;
-  @override
-  final Markdown? value;
-  @override
-  @JsonKey(name: '_value')
-  final Element? valueElement;
-
-  @override
-  String toString() {
-    return 'CitationSummary1(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, style: $style, source: $source, value: $value, valueElement: $valueElement)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_CitationSummary1 &&
-            (identical(other.id, id) || other.id == id) &&
-            const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.style, style) || other.style == style) &&
-            (identical(other.source, source) || other.source == source) &&
-            (identical(other.value, value) || other.value == value) &&
-            (identical(other.valueElement, valueElement) ||
-                other.valueElement == valueElement));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
-      type,
-      style,
-      source,
-      value,
-      valueElement);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$_CitationSummary1CopyWith<_$_CitationSummary1> get copyWith =>
-      __$$_CitationSummary1CopyWithImpl<_$_CitationSummary1>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_CitationSummary1ToJson(
-      this,
-    );
-  }
-}
-
-abstract class _CitationSummary1 extends CitationSummary1 {
-  factory _CitationSummary1(
-          {final String? id,
-          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-          final List<FhirExtension>? modifierExtension,
-          final CodeableConcept? type,
-          final CodeableConcept? style,
-          final CodeableConcept? source,
-          final Markdown? value,
-          @JsonKey(name: '_value') final Element? valueElement}) =
-      _$_CitationSummary1;
-  _CitationSummary1._() : super._();
-
-  factory _CitationSummary1.fromJson(Map<String, dynamic> json) =
-      _$_CitationSummary1.fromJson;
-
-  @override
-  String? get id;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  @override
-  List<FhirExtension>? get modifierExtension;
-  @override
-  CodeableConcept? get type;
-  @override
-  CodeableConcept? get style;
-  @override
-  CodeableConcept? get source;
-  @override
-  Markdown? get value;
-  @override
-  @JsonKey(name: '_value')
-  Element? get valueElement;
-  @override
-  @JsonKey(ignore: true)
-  _$$_CitationSummary1CopyWith<_$_CitationSummary1> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 CitationEntry _$CitationEntryFromJson(Map<String, dynamic> json) {
@@ -11292,26 +13400,70 @@ CitationEntry _$CitationEntryFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CitationEntry {
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [contributor] The identity of the individual entity.
   Reference get contributor => throw _privateConstructorUsedError;
+
+  /// [forenameInitials] Initials for forename.
   String? get forenameInitials => throw _privateConstructorUsedError;
+
+  /// [forenameInitialsElement] ("_forenameInitials") Extensions for forenameInitials
   @JsonKey(name: '_forenameInitials')
   Element? get forenameInitialsElement => throw _privateConstructorUsedError;
+
+  /// [affiliation] Organization affiliated with the entity.
   List<Reference>? get affiliation => throw _privateConstructorUsedError;
+
+  /// [contributionType] This element identifies the specific nature of an individual’s contribution with respect to the cited work.
   List<CodeableConcept>? get contributionType =>
       throw _privateConstructorUsedError;
+
+  /// [role] The role of the contributor (e.g. author, editor, reviewer).
   CodeableConcept? get role => throw _privateConstructorUsedError;
+
+  /// [contributionInstance] Contributions with accounting for time or number.
   List<CitationContributionInstance>? get contributionInstance =>
       throw _privateConstructorUsedError;
+
+  /// [correspondingContact] Indication of which contributor is the corresponding contributor for the role.
   Boolean? get correspondingContact => throw _privateConstructorUsedError;
+
+  /// [correspondingContactElement] ("_correspondingContact") Extensions for correspondingContact
   @JsonKey(name: '_correspondingContact')
   Element? get correspondingContactElement =>
       throw _privateConstructorUsedError;
+
+  /// [rankingOrder] Provides a numerical ranking to represent the degree of contributorship relative to other contributors, such as 1 for first author and 2 for second author.
   PositiveInt? get rankingOrder => throw _privateConstructorUsedError;
+
+  /// [rankingOrderElement] ("_rankingOrder") Extensions for rankingOrder
   @JsonKey(name: '_rankingOrder')
   Element? get rankingOrderElement => throw _privateConstructorUsedError;
 
@@ -11654,9 +13806,25 @@ class _$_CitationEntry extends _CitationEntry {
   factory _$_CitationEntry.fromJson(Map<String, dynamic> json) =>
       _$$_CitationEntryFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -11667,7 +13835,32 @@ class _$_CitationEntry extends _CitationEntry {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -11678,14 +13871,23 @@ class _$_CitationEntry extends _CitationEntry {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [contributor] The identity of the individual entity.
   @override
   final Reference contributor;
+
+  /// [forenameInitials] Initials for forename.
   @override
   final String? forenameInitials;
+
+  /// [forenameInitialsElement] ("_forenameInitials") Extensions for forenameInitials
   @override
   @JsonKey(name: '_forenameInitials')
   final Element? forenameInitialsElement;
+
+  /// [affiliation] Organization affiliated with the entity.
   final List<Reference>? _affiliation;
+
+  /// [affiliation] Organization affiliated with the entity.
   @override
   List<Reference>? get affiliation {
     final value = _affiliation;
@@ -11695,7 +13897,10 @@ class _$_CitationEntry extends _CitationEntry {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [contributionType] This element identifies the specific nature of an individual’s contribution with respect to the cited work.
   final List<CodeableConcept>? _contributionType;
+
+  /// [contributionType] This element identifies the specific nature of an individual’s contribution with respect to the cited work.
   @override
   List<CodeableConcept>? get contributionType {
     final value = _contributionType;
@@ -11706,9 +13911,14 @@ class _$_CitationEntry extends _CitationEntry {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [role] The role of the contributor (e.g. author, editor, reviewer).
   @override
   final CodeableConcept? role;
+
+  /// [contributionInstance] Contributions with accounting for time or number.
   final List<CitationContributionInstance>? _contributionInstance;
+
+  /// [contributionInstance] Contributions with accounting for time or number.
   @override
   List<CitationContributionInstance>? get contributionInstance {
     final value = _contributionInstance;
@@ -11719,13 +13929,20 @@ class _$_CitationEntry extends _CitationEntry {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [correspondingContact] Indication of which contributor is the corresponding contributor for the role.
   @override
   final Boolean? correspondingContact;
+
+  /// [correspondingContactElement] ("_correspondingContact") Extensions for correspondingContact
   @override
   @JsonKey(name: '_correspondingContact')
   final Element? correspondingContactElement;
+
+  /// [rankingOrder] Provides a numerical ranking to represent the degree of contributorship relative to other contributors, such as 1 for first author and 2 for second author.
   @override
   final PositiveInt? rankingOrder;
+
+  /// [rankingOrderElement] ("_rankingOrder") Extensions for rankingOrder
   @override
   @JsonKey(name: '_rankingOrder')
   final Element? rankingOrderElement;
@@ -11830,35 +14047,80 @@ abstract class _CitationEntry extends CitationEntry {
       _$_CitationEntry.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [contributor] The identity of the individual entity.
   Reference get contributor;
   @override
+
+  /// [forenameInitials] Initials for forename.
   String? get forenameInitials;
   @override
+
+  /// [forenameInitialsElement] ("_forenameInitials") Extensions for forenameInitials
   @JsonKey(name: '_forenameInitials')
   Element? get forenameInitialsElement;
   @override
+
+  /// [affiliation] Organization affiliated with the entity.
   List<Reference>? get affiliation;
   @override
+
+  /// [contributionType] This element identifies the specific nature of an individual’s contribution with respect to the cited work.
   List<CodeableConcept>? get contributionType;
   @override
+
+  /// [role] The role of the contributor (e.g. author, editor, reviewer).
   CodeableConcept? get role;
   @override
+
+  /// [contributionInstance] Contributions with accounting for time or number.
   List<CitationContributionInstance>? get contributionInstance;
   @override
+
+  /// [correspondingContact] Indication of which contributor is the corresponding contributor for the role.
   Boolean? get correspondingContact;
   @override
+
+  /// [correspondingContactElement] ("_correspondingContact") Extensions for correspondingContact
   @JsonKey(name: '_correspondingContact')
   Element? get correspondingContactElement;
   @override
+
+  /// [rankingOrder] Provides a numerical ranking to represent the degree of contributorship relative to other contributors, such as 1 for first author and 2 for second author.
   PositiveInt? get rankingOrder;
   @override
+
+  /// [rankingOrderElement] ("_rankingOrder") Extensions for rankingOrder
   @JsonKey(name: '_rankingOrder')
   Element? get rankingOrderElement;
   @override
@@ -11874,13 +14136,41 @@ CitationContributionInstance _$CitationContributionInstanceFromJson(
 
 /// @nodoc
 mixin _$CitationContributionInstance {
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [type] The specific contribution.
   CodeableConcept get type => throw _privateConstructorUsedError;
+
+  /// [time] The time that the contribution was made.
   FhirDateTime? get time => throw _privateConstructorUsedError;
+
+  /// [timeElement] ("_time") Extensions for time
   @JsonKey(name: '_time')
   Element? get timeElement => throw _privateConstructorUsedError;
 
@@ -12069,9 +14359,25 @@ class _$_CitationContributionInstance extends _CitationContributionInstance {
   factory _$_CitationContributionInstance.fromJson(Map<String, dynamic> json) =>
       _$$_CitationContributionInstanceFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -12082,7 +14388,32 @@ class _$_CitationContributionInstance extends _CitationContributionInstance {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -12093,10 +14424,15 @@ class _$_CitationContributionInstance extends _CitationContributionInstance {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [type] The specific contribution.
   @override
   final CodeableConcept type;
+
+  /// [time] The time that the contribution was made.
   @override
   final FhirDateTime? time;
+
+  /// [timeElement] ("_time") Extensions for time
   @override
   @JsonKey(name: '_time')
   final Element? timeElement;
@@ -12164,17 +14500,46 @@ abstract class _CitationContributionInstance
       _$_CitationContributionInstance.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [type] The specific contribution.
   CodeableConcept get type;
   @override
+
+  /// [time] The time that the contribution was made.
   FhirDateTime? get time;
   @override
+
+  /// [timeElement] ("_time") Extensions for time
   @JsonKey(name: '_time')
   Element? get timeElement;
   @override
@@ -12183,91 +14548,731 @@ abstract class _CitationContributionInstance
       get copyWith => throw _privateConstructorUsedError;
 }
 
+CitationSummary1 _$CitationSummary1FromJson(Map<String, dynamic> json) {
+  return _CitationSummary1.fromJson(json);
+}
+
+/// @nodoc
+mixin _$CitationSummary1 {
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
+  String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+
+  /// [type] Used most commonly to express an author list or a contributorship statement.
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+
+  /// [style] The format for the display string.
+  CodeableConcept? get style => throw _privateConstructorUsedError;
+
+  /// [source] Used to code the producer or rule for creating the display string.
+  CodeableConcept? get source => throw _privateConstructorUsedError;
+
+  /// [value] The display string for the author list, contributor list, or contributorship statement.
+  Markdown? get value => throw _privateConstructorUsedError;
+
+  /// [valueElement] ("_value") Extensions for value
+  @JsonKey(name: '_value')
+  Element? get valueElement => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $CitationSummary1CopyWith<CitationSummary1> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $CitationSummary1CopyWith<$Res> {
+  factory $CitationSummary1CopyWith(
+          CitationSummary1 value, $Res Function(CitationSummary1) then) =
+      _$CitationSummary1CopyWithImpl<$Res, CitationSummary1>;
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? type,
+      CodeableConcept? style,
+      CodeableConcept? source,
+      Markdown? value,
+      @JsonKey(name: '_value') Element? valueElement});
+
+  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res>? get style;
+  $CodeableConceptCopyWith<$Res>? get source;
+  $ElementCopyWith<$Res>? get valueElement;
+}
+
+/// @nodoc
+class _$CitationSummary1CopyWithImpl<$Res, $Val extends CitationSummary1>
+    implements $CitationSummary1CopyWith<$Res> {
+  _$CitationSummary1CopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? style = freezed,
+    Object? source = freezed,
+    Object? value = freezed,
+    Object? valueElement = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: freezed == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      style: freezed == style
+          ? _value.style
+          : style // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      source: freezed == source
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      value: freezed == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      valueElement: freezed == valueElement
+          ? _value.valueElement
+          : valueElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CodeableConceptCopyWith<$Res>? get type {
+    if (_value.type == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
+      return _then(_value.copyWith(type: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CodeableConceptCopyWith<$Res>? get style {
+    if (_value.style == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.style!, (value) {
+      return _then(_value.copyWith(style: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CodeableConceptCopyWith<$Res>? get source {
+    if (_value.source == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.source!, (value) {
+      return _then(_value.copyWith(source: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get valueElement {
+    if (_value.valueElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueElement!, (value) {
+      return _then(_value.copyWith(valueElement: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_CitationSummary1CopyWith<$Res>
+    implements $CitationSummary1CopyWith<$Res> {
+  factory _$$_CitationSummary1CopyWith(
+          _$_CitationSummary1 value, $Res Function(_$_CitationSummary1) then) =
+      __$$_CitationSummary1CopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? type,
+      CodeableConcept? style,
+      CodeableConcept? source,
+      Markdown? value,
+      @JsonKey(name: '_value') Element? valueElement});
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get type;
+  @override
+  $CodeableConceptCopyWith<$Res>? get style;
+  @override
+  $CodeableConceptCopyWith<$Res>? get source;
+  @override
+  $ElementCopyWith<$Res>? get valueElement;
+}
+
+/// @nodoc
+class __$$_CitationSummary1CopyWithImpl<$Res>
+    extends _$CitationSummary1CopyWithImpl<$Res, _$_CitationSummary1>
+    implements _$$_CitationSummary1CopyWith<$Res> {
+  __$$_CitationSummary1CopyWithImpl(
+      _$_CitationSummary1 _value, $Res Function(_$_CitationSummary1) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? style = freezed,
+    Object? source = freezed,
+    Object? value = freezed,
+    Object? valueElement = freezed,
+  }) {
+    return _then(_$_CitationSummary1(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: freezed == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      style: freezed == style
+          ? _value.style
+          : style // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      source: freezed == source
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      value: freezed == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      valueElement: freezed == valueElement
+          ? _value.valueElement
+          : valueElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_CitationSummary1 extends _CitationSummary1 {
+  _$_CitationSummary1(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.type,
+      this.style,
+      this.source,
+      this.value,
+      @JsonKey(name: '_value') this.valueElement})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$_CitationSummary1.fromJson(Map<String, dynamic> json) =>
+      _$$_CitationSummary1FromJson(json);
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
+  @override
+  final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [type] Used most commonly to express an author list or a contributorship statement.
+  @override
+  final CodeableConcept? type;
+
+  /// [style] The format for the display string.
+  @override
+  final CodeableConcept? style;
+
+  /// [source] Used to code the producer or rule for creating the display string.
+  @override
+  final CodeableConcept? source;
+
+  /// [value] The display string for the author list, contributor list, or contributorship statement.
+  @override
+  final Markdown? value;
+
+  /// [valueElement] ("_value") Extensions for value
+  @override
+  @JsonKey(name: '_value')
+  final Element? valueElement;
+
+  @override
+  String toString() {
+    return 'CitationSummary1(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, style: $style, source: $source, value: $value, valueElement: $valueElement)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_CitationSummary1 &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.style, style) || other.style == style) &&
+            (identical(other.source, source) || other.source == source) &&
+            (identical(other.value, value) || other.value == value) &&
+            (identical(other.valueElement, valueElement) ||
+                other.valueElement == valueElement));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      type,
+      style,
+      source,
+      value,
+      valueElement);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_CitationSummary1CopyWith<_$_CitationSummary1> get copyWith =>
+      __$$_CitationSummary1CopyWithImpl<_$_CitationSummary1>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CitationSummary1ToJson(
+      this,
+    );
+  }
+}
+
+abstract class _CitationSummary1 extends CitationSummary1 {
+  factory _CitationSummary1(
+          {final String? id,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final CodeableConcept? type,
+          final CodeableConcept? style,
+          final CodeableConcept? source,
+          final Markdown? value,
+          @JsonKey(name: '_value') final Element? valueElement}) =
+      _$_CitationSummary1;
+  _CitationSummary1._() : super._();
+
+  factory _CitationSummary1.fromJson(Map<String, dynamic> json) =
+      _$_CitationSummary1.fromJson;
+
+  @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
+  String? get id;
+  @override
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension;
+  @override
+
+  /// [type] Used most commonly to express an author list or a contributorship statement.
+  CodeableConcept? get type;
+  @override
+
+  /// [style] The format for the display string.
+  CodeableConcept? get style;
+  @override
+
+  /// [source] Used to code the producer or rule for creating the display string.
+  CodeableConcept? get source;
+  @override
+
+  /// [value] The display string for the author list, contributor list, or contributorship statement.
+  Markdown? get value;
+  @override
+
+  /// [valueElement] ("_value") Extensions for value
+  @JsonKey(name: '_value')
+  Element? get valueElement;
+  @override
+  @JsonKey(ignore: true)
+  _$$_CitationSummary1CopyWith<_$_CitationSummary1> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 Evidence _$EvidenceFromJson(Map<String, dynamic> json) {
   return _Evidence.fromJson(json);
 }
 
 /// @nodoc
 mixin _$Evidence {
+  /// [resourceType] This is a Evidence resource
+  @JsonKey(unknownEnumValue: R5ResourceType.Evidence)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  /// Once assigned, this value never changes.
   Id? get id => throw _privateConstructorUsedError;
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not
+  /// always be associated with version changes to the resource.
   Meta? get meta => throw _privateConstructorUsedError;
+
+  /// [implicitRules] A reference to a set of rules that were followed when
+  /// the resource was constructed, and which must be understood when
+  /// processing the content. Often, this is a reference to an implementation
+  /// guide that defines the special rules along with other profiles etc.
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
+
+  /// [language] The base language in which the resource is written.
   Code? get language => throw _privateConstructorUsedError;
+
+  /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   Narrative? get text => throw _privateConstructorUsedError;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   List<Resource>? get contained => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [url] An absolute URI that is used to identify this evidence when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this summary is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the summary is stored on different servers.
   FhirUri? get url => throw _privateConstructorUsedError;
+
+  /// [urlElement] ("_url") Extensions for url
   @JsonKey(name: '_url')
   Element? get urlElement => throw _privateConstructorUsedError;
+
+  /// [identifier] A formal identifier that is used to identify this summary when it is represented in other formats, or referenced in a specification, model, design or an instance.
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
+
+  /// [version] The identifier that is used to identify this version of the summary when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the summary author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.
   String? get version => throw _privateConstructorUsedError;
+
+  /// [versionElement] ("_version") Extensions for version
   @JsonKey(name: '_version')
   Element? get versionElement => throw _privateConstructorUsedError;
+
+  /// [versionAlgorithmString] Indicates the mechanism used to compare versions to determine which is more current.
+  String? get versionAlgorithmString => throw _privateConstructorUsedError;
+
+  /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions for versionAlgorithmString
+  @JsonKey(name: '_versionAlgorithmString')
+  Element? get versionAlgorithmStringElement =>
+      throw _privateConstructorUsedError;
+
+  /// [versionAlgorithmCoding] Indicates the mechanism used to compare versions to determine which is more current.
+  Coding? get versionAlgorithmCoding => throw _privateConstructorUsedError;
+
+  /// [name] A natural language name identifying the evidence. This name should be usable as an identifier for the module by machine processing applications such as code generation.
   String? get name => throw _privateConstructorUsedError;
+
+  /// [nameElement] ("_name") Extensions for name
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
+
+  /// [title] A short, descriptive, user-friendly title for the summary.
   String? get title => throw _privateConstructorUsedError;
+
+  /// [titleElement] ("_title") Extensions for title
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
+
+  /// [status] The status of this summary. Enables tracking the life-cycle of the content.
   Code? get status => throw _privateConstructorUsedError;
+
+  /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
+
+  /// [experimental] A Boolean value to indicate that this resource is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
   Boolean? get experimental => throw _privateConstructorUsedError;
+
+  /// [experimentalElement] ("_experimental") Extensions for experimental
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
+
+  /// [date] The date  (and optionally time) when the summary was last significantly changed. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the summary changes.
   FhirDateTime? get date => throw _privateConstructorUsedError;
+
+  /// [dateElement] ("_date") Extensions for date
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
+
+  /// [publisher] The name of the organization or individual responsible for the release and ongoing maintenance of the evidence.
   String? get publisher => throw _privateConstructorUsedError;
+
+  /// [publisherElement] ("_publisher") Extensions for publisher
   @JsonKey(name: '_publisher')
   Element? get publisherElement => throw _privateConstructorUsedError;
+
+  /// [contact] Contact details to assist a user in finding and communicating with the publisher.
   List<ContactDetail>? get contact => throw _privateConstructorUsedError;
+
+  /// [description] A free text natural language description of the evidence from a consumer's perspective.
   Markdown? get description => throw _privateConstructorUsedError;
+
+  /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
+
+  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate evidence instances.
   List<UsageContext>? get useContext => throw _privateConstructorUsedError;
+
+  /// [jurisdiction] A legal or geographic region in which the {{title}} is intended to be used.
   List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
+
+  /// [purpose] Explanation of why this {{title}} is needed and why it has been designed as it has.
   Markdown? get purpose => throw _privateConstructorUsedError;
+
+  /// [purposeElement] ("_purpose") Extensions for purpose
   @JsonKey(name: '_purpose')
   Element? get purposeElement => throw _privateConstructorUsedError;
+
+  /// [copyright] A copyright statement relating to the {{title}} and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the {{title}}.
   Markdown? get copyright => throw _privateConstructorUsedError;
+
+  /// [copyrightElement] ("_copyright") Extensions for copyright
   @JsonKey(name: '_copyright')
   Element? get copyrightElement => throw _privateConstructorUsedError;
+
+  /// [copyrightLabel] A short string (<50 characters), suitable for inclusion in a page footer that identifies the copyright holder, effective period, and optionally whether rights are resctricted. (e.g. 'All rights reserved', 'Some rights reserved').
+  String? get copyrightLabel => throw _privateConstructorUsedError;
+
+  /// [copyrightLabelElement] ("_copyrightLabel") Extensions for copyrightLabel
+  @JsonKey(name: '_copyrightLabel')
+  Element? get copyrightLabelElement => throw _privateConstructorUsedError;
+
+  /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
   Date? get approvalDate => throw _privateConstructorUsedError;
+
+  /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
   @JsonKey(name: '_approvalDate')
   Element? get approvalDateElement => throw _privateConstructorUsedError;
+
+  /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
   Date? get lastReviewDate => throw _privateConstructorUsedError;
+
+  /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement => throw _privateConstructorUsedError;
+
+  /// [effectivePeriod] The period during which the {{title}} content was or is planned to be in active use.
   Period? get effectivePeriod => throw _privateConstructorUsedError;
+
+  /// [topic] Descriptive topics related to the content of the {{title}}. Topics provide a high-level categorization as well as keywords for the {{title}} that can be useful for filtering and searching.
   List<CodeableConcept>? get topic => throw _privateConstructorUsedError;
+
+  /// [author] An individiual, organization, or device primarily involved in the creation and maintenance of the content.
   List<ContactDetail>? get author => throw _privateConstructorUsedError;
+
+  /// [editor] An individiual, organization, or device primarily responsible for internal coherence of the content.
   List<ContactDetail>? get editor => throw _privateConstructorUsedError;
+
+  /// [reviewer] An individiual, organization, or device primarily responsible for review of some aspect of the content.
   List<ContactDetail>? get reviewer => throw _privateConstructorUsedError;
+
+  /// [endorser] An individiual, organization, or device responsible for officially endorsing the content for use in some setting.
   List<ContactDetail>? get endorser => throw _privateConstructorUsedError;
+
+  /// [relatedArtifact] Link or citation to artifact associated with the summary.
   List<RelatedArtifact>? get relatedArtifact =>
       throw _privateConstructorUsedError;
+
+  /// [citeAsReference] Citation Resource or display of suggested citation for this evidence.
   Reference? get citeAsReference => throw _privateConstructorUsedError;
+
+  /// [citeAsMarkdown] Citation Resource or display of suggested citation for this evidence.
   Markdown? get citeAsMarkdown => throw _privateConstructorUsedError;
+
+  /// [citeAsMarkdownElement] ("_citeAsMarkdown") Extensions for citeAsMarkdown
   @JsonKey(name: '_citeAsMarkdown')
   Element? get citeAsMarkdownElement => throw _privateConstructorUsedError;
+
+  /// [assertion] Declarative description of the Evidence.
   Markdown? get assertion => throw _privateConstructorUsedError;
+
+  /// [assertionElement] ("_assertion") Extensions for assertion
   @JsonKey(name: '_assertion')
   Element? get assertionElement => throw _privateConstructorUsedError;
+
+  /// [note] Footnotes and/or explanatory notes.
   List<Annotation>? get note => throw _privateConstructorUsedError;
+
+  /// [variableDefinition] Evidence variable such as population, exposure, or outcome.
   List<EvidenceVariableDefinition> get variableDefinition =>
       throw _privateConstructorUsedError;
+
+  /// [synthesisType] The method to combine studies.
   CodeableConcept? get synthesisType => throw _privateConstructorUsedError;
-  CodeableConcept? get studyType => throw _privateConstructorUsedError;
+
+  /// [studyDesign] The design of the study that produced this evidence. The design is described with any number of study design characteristics.
+  List<CodeableConcept>? get studyDesign => throw _privateConstructorUsedError;
+
+  /// [statistic] Values and parameters for a single statistic.
   List<EvidenceStatistic>? get statistic => throw _privateConstructorUsedError;
+
+  /// [certainty] Assessment of certainty, confidence in the estimates, or quality of the evidence.
   List<EvidenceCertainty>? get certainty => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -12282,47 +15287,71 @@ abstract class $EvidenceCopyWith<$Res> {
       _$EvidenceCopyWithImpl<$Res, Evidence>;
   @useResult
   $Res call(
-      {R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Evidence)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? url,
-      @JsonKey(name: '_url') Element? urlElement,
+      @JsonKey(name: '_url')
+          Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version') Element? versionElement,
+      @JsonKey(name: '_version')
+          Element? versionElement,
+      String? versionAlgorithmString,
+      @JsonKey(name: '_versionAlgorithmString')
+          Element? versionAlgorithmStringElement,
+      Coding? versionAlgorithmCoding,
       String? name,
-      @JsonKey(name: '_name') Element? nameElement,
+      @JsonKey(name: '_name')
+          Element? nameElement,
       String? title,
-      @JsonKey(name: '_title') Element? titleElement,
+      @JsonKey(name: '_title')
+          Element? titleElement,
       Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
+      @JsonKey(name: '_status')
+          Element? statusElement,
       Boolean? experimental,
-      @JsonKey(name: '_experimental') Element? experimentalElement,
+      @JsonKey(name: '_experimental')
+          Element? experimentalElement,
       FhirDateTime? date,
-      @JsonKey(name: '_date') Element? dateElement,
+      @JsonKey(name: '_date')
+          Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher') Element? publisherElement,
+      @JsonKey(name: '_publisher')
+          Element? publisherElement,
       List<ContactDetail>? contact,
       Markdown? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
+      @JsonKey(name: '_description')
+          Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       Markdown? purpose,
-      @JsonKey(name: '_purpose') Element? purposeElement,
+      @JsonKey(name: '_purpose')
+          Element? purposeElement,
       Markdown? copyright,
-      @JsonKey(name: '_copyright') Element? copyrightElement,
+      @JsonKey(name: '_copyright')
+          Element? copyrightElement,
+      String? copyrightLabel,
+      @JsonKey(name: '_copyrightLabel')
+          Element? copyrightLabelElement,
       Date? approvalDate,
-      @JsonKey(name: '_approvalDate') Element? approvalDateElement,
+      @JsonKey(name: '_approvalDate')
+          Element? approvalDateElement,
       Date? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element? lastReviewDateElement,
       Period? effectivePeriod,
       List<CodeableConcept>? topic,
       List<ContactDetail>? author,
@@ -12332,13 +15361,15 @@ abstract class $EvidenceCopyWith<$Res> {
       List<RelatedArtifact>? relatedArtifact,
       Reference? citeAsReference,
       Markdown? citeAsMarkdown,
-      @JsonKey(name: '_citeAsMarkdown') Element? citeAsMarkdownElement,
+      @JsonKey(name: '_citeAsMarkdown')
+          Element? citeAsMarkdownElement,
       Markdown? assertion,
-      @JsonKey(name: '_assertion') Element? assertionElement,
+      @JsonKey(name: '_assertion')
+          Element? assertionElement,
       List<Annotation>? note,
       List<EvidenceVariableDefinition> variableDefinition,
       CodeableConcept? synthesisType,
-      CodeableConcept? studyType,
+      List<CodeableConcept>? studyDesign,
       List<EvidenceStatistic>? statistic,
       List<EvidenceCertainty>? certainty});
 
@@ -12348,6 +15379,8 @@ abstract class $EvidenceCopyWith<$Res> {
   $NarrativeCopyWith<$Res>? get text;
   $ElementCopyWith<$Res>? get urlElement;
   $ElementCopyWith<$Res>? get versionElement;
+  $ElementCopyWith<$Res>? get versionAlgorithmStringElement;
+  $CodingCopyWith<$Res>? get versionAlgorithmCoding;
   $ElementCopyWith<$Res>? get nameElement;
   $ElementCopyWith<$Res>? get titleElement;
   $ElementCopyWith<$Res>? get statusElement;
@@ -12357,6 +15390,7 @@ abstract class $EvidenceCopyWith<$Res> {
   $ElementCopyWith<$Res>? get descriptionElement;
   $ElementCopyWith<$Res>? get purposeElement;
   $ElementCopyWith<$Res>? get copyrightElement;
+  $ElementCopyWith<$Res>? get copyrightLabelElement;
   $ElementCopyWith<$Res>? get approvalDateElement;
   $ElementCopyWith<$Res>? get lastReviewDateElement;
   $PeriodCopyWith<$Res>? get effectivePeriod;
@@ -12364,7 +15398,6 @@ abstract class $EvidenceCopyWith<$Res> {
   $ElementCopyWith<$Res>? get citeAsMarkdownElement;
   $ElementCopyWith<$Res>? get assertionElement;
   $CodeableConceptCopyWith<$Res>? get synthesisType;
-  $CodeableConceptCopyWith<$Res>? get studyType;
 }
 
 /// @nodoc
@@ -12396,6 +15429,9 @@ class _$EvidenceCopyWithImpl<$Res, $Val extends Evidence>
     Object? identifier = freezed,
     Object? version = freezed,
     Object? versionElement = freezed,
+    Object? versionAlgorithmString = freezed,
+    Object? versionAlgorithmStringElement = freezed,
+    Object? versionAlgorithmCoding = freezed,
     Object? name = freezed,
     Object? nameElement = freezed,
     Object? title = freezed,
@@ -12417,6 +15453,8 @@ class _$EvidenceCopyWithImpl<$Res, $Val extends Evidence>
     Object? purposeElement = freezed,
     Object? copyright = freezed,
     Object? copyrightElement = freezed,
+    Object? copyrightLabel = freezed,
+    Object? copyrightLabelElement = freezed,
     Object? approvalDate = freezed,
     Object? approvalDateElement = freezed,
     Object? lastReviewDate = freezed,
@@ -12436,7 +15474,7 @@ class _$EvidenceCopyWithImpl<$Res, $Val extends Evidence>
     Object? note = freezed,
     Object? variableDefinition = null,
     Object? synthesisType = freezed,
-    Object? studyType = freezed,
+    Object? studyDesign = freezed,
     Object? statistic = freezed,
     Object? certainty = freezed,
   }) {
@@ -12505,6 +15543,18 @@ class _$EvidenceCopyWithImpl<$Res, $Val extends Evidence>
           ? _value.versionElement
           : versionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
+      versionAlgorithmString: freezed == versionAlgorithmString
+          ? _value.versionAlgorithmString
+          : versionAlgorithmString // ignore: cast_nullable_to_non_nullable
+              as String?,
+      versionAlgorithmStringElement: freezed == versionAlgorithmStringElement
+          ? _value.versionAlgorithmStringElement
+          : versionAlgorithmStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      versionAlgorithmCoding: freezed == versionAlgorithmCoding
+          ? _value.versionAlgorithmCoding
+          : versionAlgorithmCoding // ignore: cast_nullable_to_non_nullable
+              as Coding?,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -12589,6 +15639,14 @@ class _$EvidenceCopyWithImpl<$Res, $Val extends Evidence>
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
               as Element?,
+      copyrightLabel: freezed == copyrightLabel
+          ? _value.copyrightLabel
+          : copyrightLabel // ignore: cast_nullable_to_non_nullable
+              as String?,
+      copyrightLabelElement: freezed == copyrightLabelElement
+          ? _value.copyrightLabelElement
+          : copyrightLabelElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
@@ -12665,10 +15723,10 @@ class _$EvidenceCopyWithImpl<$Res, $Val extends Evidence>
           ? _value.synthesisType
           : synthesisType // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      studyType: freezed == studyType
-          ? _value.studyType
-          : studyType // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
+      studyDesign: freezed == studyDesign
+          ? _value.studyDesign
+          : studyDesign // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       statistic: freezed == statistic
           ? _value.statistic
           : statistic // ignore: cast_nullable_to_non_nullable
@@ -12749,6 +15807,32 @@ class _$EvidenceCopyWithImpl<$Res, $Val extends Evidence>
 
     return $ElementCopyWith<$Res>(_value.versionElement!, (value) {
       return _then(_value.copyWith(versionElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get versionAlgorithmStringElement {
+    if (_value.versionAlgorithmStringElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.versionAlgorithmStringElement!,
+        (value) {
+      return _then(
+          _value.copyWith(versionAlgorithmStringElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CodingCopyWith<$Res>? get versionAlgorithmCoding {
+    if (_value.versionAlgorithmCoding == null) {
+      return null;
+    }
+
+    return $CodingCopyWith<$Res>(_value.versionAlgorithmCoding!, (value) {
+      return _then(_value.copyWith(versionAlgorithmCoding: value) as $Val);
     });
   }
 
@@ -12862,6 +15946,18 @@ class _$EvidenceCopyWithImpl<$Res, $Val extends Evidence>
 
   @override
   @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get copyrightLabelElement {
+    if (_value.copyrightLabelElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.copyrightLabelElement!, (value) {
+      return _then(_value.copyWith(copyrightLabelElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get approvalDateElement {
     if (_value.approvalDateElement == null) {
       return null;
@@ -12943,18 +16039,6 @@ class _$EvidenceCopyWithImpl<$Res, $Val extends Evidence>
       return _then(_value.copyWith(synthesisType: value) as $Val);
     });
   }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $CodeableConceptCopyWith<$Res>? get studyType {
-    if (_value.studyType == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.studyType!, (value) {
-      return _then(_value.copyWith(studyType: value) as $Val);
-    });
-  }
 }
 
 /// @nodoc
@@ -12965,47 +16049,71 @@ abstract class _$$_EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Evidence)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? url,
-      @JsonKey(name: '_url') Element? urlElement,
+      @JsonKey(name: '_url')
+          Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version') Element? versionElement,
+      @JsonKey(name: '_version')
+          Element? versionElement,
+      String? versionAlgorithmString,
+      @JsonKey(name: '_versionAlgorithmString')
+          Element? versionAlgorithmStringElement,
+      Coding? versionAlgorithmCoding,
       String? name,
-      @JsonKey(name: '_name') Element? nameElement,
+      @JsonKey(name: '_name')
+          Element? nameElement,
       String? title,
-      @JsonKey(name: '_title') Element? titleElement,
+      @JsonKey(name: '_title')
+          Element? titleElement,
       Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
+      @JsonKey(name: '_status')
+          Element? statusElement,
       Boolean? experimental,
-      @JsonKey(name: '_experimental') Element? experimentalElement,
+      @JsonKey(name: '_experimental')
+          Element? experimentalElement,
       FhirDateTime? date,
-      @JsonKey(name: '_date') Element? dateElement,
+      @JsonKey(name: '_date')
+          Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher') Element? publisherElement,
+      @JsonKey(name: '_publisher')
+          Element? publisherElement,
       List<ContactDetail>? contact,
       Markdown? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
+      @JsonKey(name: '_description')
+          Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       Markdown? purpose,
-      @JsonKey(name: '_purpose') Element? purposeElement,
+      @JsonKey(name: '_purpose')
+          Element? purposeElement,
       Markdown? copyright,
-      @JsonKey(name: '_copyright') Element? copyrightElement,
+      @JsonKey(name: '_copyright')
+          Element? copyrightElement,
+      String? copyrightLabel,
+      @JsonKey(name: '_copyrightLabel')
+          Element? copyrightLabelElement,
       Date? approvalDate,
-      @JsonKey(name: '_approvalDate') Element? approvalDateElement,
+      @JsonKey(name: '_approvalDate')
+          Element? approvalDateElement,
       Date? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element? lastReviewDateElement,
       Period? effectivePeriod,
       List<CodeableConcept>? topic,
       List<ContactDetail>? author,
@@ -13015,13 +16123,15 @@ abstract class _$$_EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
       List<RelatedArtifact>? relatedArtifact,
       Reference? citeAsReference,
       Markdown? citeAsMarkdown,
-      @JsonKey(name: '_citeAsMarkdown') Element? citeAsMarkdownElement,
+      @JsonKey(name: '_citeAsMarkdown')
+          Element? citeAsMarkdownElement,
       Markdown? assertion,
-      @JsonKey(name: '_assertion') Element? assertionElement,
+      @JsonKey(name: '_assertion')
+          Element? assertionElement,
       List<Annotation>? note,
       List<EvidenceVariableDefinition> variableDefinition,
       CodeableConcept? synthesisType,
-      CodeableConcept? studyType,
+      List<CodeableConcept>? studyDesign,
       List<EvidenceStatistic>? statistic,
       List<EvidenceCertainty>? certainty});
 
@@ -13037,6 +16147,10 @@ abstract class _$$_EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
   $ElementCopyWith<$Res>? get urlElement;
   @override
   $ElementCopyWith<$Res>? get versionElement;
+  @override
+  $ElementCopyWith<$Res>? get versionAlgorithmStringElement;
+  @override
+  $CodingCopyWith<$Res>? get versionAlgorithmCoding;
   @override
   $ElementCopyWith<$Res>? get nameElement;
   @override
@@ -13056,6 +16170,8 @@ abstract class _$$_EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
   @override
   $ElementCopyWith<$Res>? get copyrightElement;
   @override
+  $ElementCopyWith<$Res>? get copyrightLabelElement;
+  @override
   $ElementCopyWith<$Res>? get approvalDateElement;
   @override
   $ElementCopyWith<$Res>? get lastReviewDateElement;
@@ -13069,8 +16185,6 @@ abstract class _$$_EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
   $ElementCopyWith<$Res>? get assertionElement;
   @override
   $CodeableConceptCopyWith<$Res>? get synthesisType;
-  @override
-  $CodeableConceptCopyWith<$Res>? get studyType;
 }
 
 /// @nodoc
@@ -13100,6 +16214,9 @@ class __$$_EvidenceCopyWithImpl<$Res>
     Object? identifier = freezed,
     Object? version = freezed,
     Object? versionElement = freezed,
+    Object? versionAlgorithmString = freezed,
+    Object? versionAlgorithmStringElement = freezed,
+    Object? versionAlgorithmCoding = freezed,
     Object? name = freezed,
     Object? nameElement = freezed,
     Object? title = freezed,
@@ -13121,6 +16238,8 @@ class __$$_EvidenceCopyWithImpl<$Res>
     Object? purposeElement = freezed,
     Object? copyright = freezed,
     Object? copyrightElement = freezed,
+    Object? copyrightLabel = freezed,
+    Object? copyrightLabelElement = freezed,
     Object? approvalDate = freezed,
     Object? approvalDateElement = freezed,
     Object? lastReviewDate = freezed,
@@ -13140,7 +16259,7 @@ class __$$_EvidenceCopyWithImpl<$Res>
     Object? note = freezed,
     Object? variableDefinition = null,
     Object? synthesisType = freezed,
-    Object? studyType = freezed,
+    Object? studyDesign = freezed,
     Object? statistic = freezed,
     Object? certainty = freezed,
   }) {
@@ -13209,6 +16328,18 @@ class __$$_EvidenceCopyWithImpl<$Res>
           ? _value.versionElement
           : versionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
+      versionAlgorithmString: freezed == versionAlgorithmString
+          ? _value.versionAlgorithmString
+          : versionAlgorithmString // ignore: cast_nullable_to_non_nullable
+              as String?,
+      versionAlgorithmStringElement: freezed == versionAlgorithmStringElement
+          ? _value.versionAlgorithmStringElement
+          : versionAlgorithmStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      versionAlgorithmCoding: freezed == versionAlgorithmCoding
+          ? _value.versionAlgorithmCoding
+          : versionAlgorithmCoding // ignore: cast_nullable_to_non_nullable
+              as Coding?,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -13293,6 +16424,14 @@ class __$$_EvidenceCopyWithImpl<$Res>
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
               as Element?,
+      copyrightLabel: freezed == copyrightLabel
+          ? _value.copyrightLabel
+          : copyrightLabel // ignore: cast_nullable_to_non_nullable
+              as String?,
+      copyrightLabelElement: freezed == copyrightLabelElement
+          ? _value.copyrightLabelElement
+          : copyrightLabelElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
           : approvalDate // ignore: cast_nullable_to_non_nullable
@@ -13369,10 +16508,10 @@ class __$$_EvidenceCopyWithImpl<$Res>
           ? _value.synthesisType
           : synthesisType // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
-      studyType: freezed == studyType
-          ? _value.studyType
-          : studyType // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
+      studyDesign: freezed == studyDesign
+          ? _value._studyDesign
+          : studyDesign // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       statistic: freezed == statistic
           ? _value._statistic
           : statistic // ignore: cast_nullable_to_non_nullable
@@ -13389,47 +16528,71 @@ class __$$_EvidenceCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Evidence extends _Evidence {
   _$_Evidence(
-      {this.resourceType = R5ResourceType.Evidence,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Evidence)
+          this.resourceType = R5ResourceType.Evidence,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.url,
-      @JsonKey(name: '_url') this.urlElement,
+      @JsonKey(name: '_url')
+          this.urlElement,
       final List<Identifier>? identifier,
       this.version,
-      @JsonKey(name: '_version') this.versionElement,
+      @JsonKey(name: '_version')
+          this.versionElement,
+      this.versionAlgorithmString,
+      @JsonKey(name: '_versionAlgorithmString')
+          this.versionAlgorithmStringElement,
+      this.versionAlgorithmCoding,
       this.name,
-      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
       this.title,
-      @JsonKey(name: '_title') this.titleElement,
+      @JsonKey(name: '_title')
+          this.titleElement,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.experimental,
-      @JsonKey(name: '_experimental') this.experimentalElement,
+      @JsonKey(name: '_experimental')
+          this.experimentalElement,
       this.date,
-      @JsonKey(name: '_date') this.dateElement,
+      @JsonKey(name: '_date')
+          this.dateElement,
       this.publisher,
-      @JsonKey(name: '_publisher') this.publisherElement,
+      @JsonKey(name: '_publisher')
+          this.publisherElement,
       final List<ContactDetail>? contact,
       this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
       this.purpose,
-      @JsonKey(name: '_purpose') this.purposeElement,
+      @JsonKey(name: '_purpose')
+          this.purposeElement,
       this.copyright,
-      @JsonKey(name: '_copyright') this.copyrightElement,
+      @JsonKey(name: '_copyright')
+          this.copyrightElement,
+      this.copyrightLabel,
+      @JsonKey(name: '_copyrightLabel')
+          this.copyrightLabelElement,
       this.approvalDate,
-      @JsonKey(name: '_approvalDate') this.approvalDateElement,
+      @JsonKey(name: '_approvalDate')
+          this.approvalDateElement,
       this.lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') this.lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          this.lastReviewDateElement,
       this.effectivePeriod,
       final List<CodeableConcept>? topic,
       final List<ContactDetail>? author,
@@ -13439,13 +16602,15 @@ class _$_Evidence extends _Evidence {
       final List<RelatedArtifact>? relatedArtifact,
       this.citeAsReference,
       this.citeAsMarkdown,
-      @JsonKey(name: '_citeAsMarkdown') this.citeAsMarkdownElement,
+      @JsonKey(name: '_citeAsMarkdown')
+          this.citeAsMarkdownElement,
       this.assertion,
-      @JsonKey(name: '_assertion') this.assertionElement,
+      @JsonKey(name: '_assertion')
+          this.assertionElement,
       final List<Annotation>? note,
       required final List<EvidenceVariableDefinition> variableDefinition,
       this.synthesisType,
-      this.studyType,
+      final List<CodeableConcept>? studyDesign,
       final List<EvidenceStatistic>? statistic,
       final List<EvidenceCertainty>? certainty})
       : _contained = contained,
@@ -13463,6 +16628,7 @@ class _$_Evidence extends _Evidence {
         _relatedArtifact = relatedArtifact,
         _note = note,
         _variableDefinition = variableDefinition,
+        _studyDesign = studyDesign,
         _statistic = statistic,
         _certainty = certainty,
         super._();
@@ -13470,26 +16636,51 @@ class _$_Evidence extends _Evidence {
   factory _$_Evidence.fromJson(Map<String, dynamic> json) =>
       _$$_EvidenceFromJson(json);
 
+  /// [resourceType] This is a Evidence resource
   @override
-  @JsonKey()
+  @JsonKey(unknownEnumValue: R5ResourceType.Evidence)
   final R5ResourceType resourceType;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  /// Once assigned, this value never changes.
   @override
   final Id? id;
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not
+  /// always be associated with version changes to the resource.
   @override
   final Meta? meta;
+
+  /// [implicitRules] A reference to a set of rules that were followed when
+  /// the resource was constructed, and which must be understood when
+  /// processing the content. Often, this is a reference to an implementation
+  /// guide that defines the special rules along with other profiles etc.
   @override
   final FhirUri? implicitRules;
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
+
+  /// [language] The base language in which the resource is written.
   @override
   final Code? language;
+
+  /// [languageElement] ("_language") Extensions for language
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   @override
   final Narrative? text;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   final List<Resource>? _contained;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   @override
   List<Resource>? get contained {
     final value = _contained;
@@ -13499,7 +16690,10 @@ class _$_Evidence extends _Evidence {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -13510,7 +16704,10 @@ class _$_Evidence extends _Evidence {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -13521,12 +16718,19 @@ class _$_Evidence extends _Evidence {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [url] An absolute URI that is used to identify this evidence when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this summary is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the summary is stored on different servers.
   @override
   final FhirUri? url;
+
+  /// [urlElement] ("_url") Extensions for url
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
+
+  /// [identifier] A formal identifier that is used to identify this summary when it is represented in other formats, or referenced in a specification, model, design or an instance.
   final List<Identifier>? _identifier;
+
+  /// [identifier] A formal identifier that is used to identify this summary when it is represented in other formats, or referenced in a specification, model, design or an instance.
   @override
   List<Identifier>? get identifier {
     final value = _identifier;
@@ -13536,42 +16740,86 @@ class _$_Evidence extends _Evidence {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [version] The identifier that is used to identify this version of the summary when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the summary author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.
   @override
   final String? version;
+
+  /// [versionElement] ("_version") Extensions for version
   @override
   @JsonKey(name: '_version')
   final Element? versionElement;
+
+  /// [versionAlgorithmString] Indicates the mechanism used to compare versions to determine which is more current.
+  @override
+  final String? versionAlgorithmString;
+
+  /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions for versionAlgorithmString
+  @override
+  @JsonKey(name: '_versionAlgorithmString')
+  final Element? versionAlgorithmStringElement;
+
+  /// [versionAlgorithmCoding] Indicates the mechanism used to compare versions to determine which is more current.
+  @override
+  final Coding? versionAlgorithmCoding;
+
+  /// [name] A natural language name identifying the evidence. This name should be usable as an identifier for the module by machine processing applications such as code generation.
   @override
   final String? name;
+
+  /// [nameElement] ("_name") Extensions for name
   @override
   @JsonKey(name: '_name')
   final Element? nameElement;
+
+  /// [title] A short, descriptive, user-friendly title for the summary.
   @override
   final String? title;
+
+  /// [titleElement] ("_title") Extensions for title
   @override
   @JsonKey(name: '_title')
   final Element? titleElement;
+
+  /// [status] The status of this summary. Enables tracking the life-cycle of the content.
   @override
   final Code? status;
+
+  /// [statusElement] ("_status") Extensions for status
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
+
+  /// [experimental] A Boolean value to indicate that this resource is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
   @override
   final Boolean? experimental;
+
+  /// [experimentalElement] ("_experimental") Extensions for experimental
   @override
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
+
+  /// [date] The date  (and optionally time) when the summary was last significantly changed. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the summary changes.
   @override
   final FhirDateTime? date;
+
+  /// [dateElement] ("_date") Extensions for date
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
+
+  /// [publisher] The name of the organization or individual responsible for the release and ongoing maintenance of the evidence.
   @override
   final String? publisher;
+
+  /// [publisherElement] ("_publisher") Extensions for publisher
   @override
   @JsonKey(name: '_publisher')
   final Element? publisherElement;
+
+  /// [contact] Contact details to assist a user in finding and communicating with the publisher.
   final List<ContactDetail>? _contact;
+
+  /// [contact] Contact details to assist a user in finding and communicating with the publisher.
   @override
   List<ContactDetail>? get contact {
     final value = _contact;
@@ -13581,12 +16829,19 @@ class _$_Evidence extends _Evidence {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [description] A free text natural language description of the evidence from a consumer's perspective.
   @override
   final Markdown? description;
+
+  /// [descriptionElement] ("_description") Extensions for description
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
+
+  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate evidence instances.
   final List<UsageContext>? _useContext;
+
+  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate evidence instances.
   @override
   List<UsageContext>? get useContext {
     final value = _useContext;
@@ -13596,7 +16851,10 @@ class _$_Evidence extends _Evidence {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [jurisdiction] A legal or geographic region in which the {{title}} is intended to be used.
   final List<CodeableConcept>? _jurisdiction;
+
+  /// [jurisdiction] A legal or geographic region in which the {{title}} is intended to be used.
   @override
   List<CodeableConcept>? get jurisdiction {
     final value = _jurisdiction;
@@ -13606,29 +16864,59 @@ class _$_Evidence extends _Evidence {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [purpose] Explanation of why this {{title}} is needed and why it has been designed as it has.
   @override
   final Markdown? purpose;
+
+  /// [purposeElement] ("_purpose") Extensions for purpose
   @override
   @JsonKey(name: '_purpose')
   final Element? purposeElement;
+
+  /// [copyright] A copyright statement relating to the {{title}} and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the {{title}}.
   @override
   final Markdown? copyright;
+
+  /// [copyrightElement] ("_copyright") Extensions for copyright
   @override
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
+
+  /// [copyrightLabel] A short string (<50 characters), suitable for inclusion in a page footer that identifies the copyright holder, effective period, and optionally whether rights are resctricted. (e.g. 'All rights reserved', 'Some rights reserved').
+  @override
+  final String? copyrightLabel;
+
+  /// [copyrightLabelElement] ("_copyrightLabel") Extensions for copyrightLabel
+  @override
+  @JsonKey(name: '_copyrightLabel')
+  final Element? copyrightLabelElement;
+
+  /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
   @override
   final Date? approvalDate;
+
+  /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
   @override
   @JsonKey(name: '_approvalDate')
   final Element? approvalDateElement;
+
+  /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
   @override
   final Date? lastReviewDate;
+
+  /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
   @override
   @JsonKey(name: '_lastReviewDate')
   final Element? lastReviewDateElement;
+
+  /// [effectivePeriod] The period during which the {{title}} content was or is planned to be in active use.
   @override
   final Period? effectivePeriod;
+
+  /// [topic] Descriptive topics related to the content of the {{title}}. Topics provide a high-level categorization as well as keywords for the {{title}} that can be useful for filtering and searching.
   final List<CodeableConcept>? _topic;
+
+  /// [topic] Descriptive topics related to the content of the {{title}}. Topics provide a high-level categorization as well as keywords for the {{title}} that can be useful for filtering and searching.
   @override
   List<CodeableConcept>? get topic {
     final value = _topic;
@@ -13638,7 +16926,10 @@ class _$_Evidence extends _Evidence {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [author] An individiual, organization, or device primarily involved in the creation and maintenance of the content.
   final List<ContactDetail>? _author;
+
+  /// [author] An individiual, organization, or device primarily involved in the creation and maintenance of the content.
   @override
   List<ContactDetail>? get author {
     final value = _author;
@@ -13648,7 +16939,10 @@ class _$_Evidence extends _Evidence {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [editor] An individiual, organization, or device primarily responsible for internal coherence of the content.
   final List<ContactDetail>? _editor;
+
+  /// [editor] An individiual, organization, or device primarily responsible for internal coherence of the content.
   @override
   List<ContactDetail>? get editor {
     final value = _editor;
@@ -13658,7 +16952,10 @@ class _$_Evidence extends _Evidence {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [reviewer] An individiual, organization, or device primarily responsible for review of some aspect of the content.
   final List<ContactDetail>? _reviewer;
+
+  /// [reviewer] An individiual, organization, or device primarily responsible for review of some aspect of the content.
   @override
   List<ContactDetail>? get reviewer {
     final value = _reviewer;
@@ -13668,7 +16965,10 @@ class _$_Evidence extends _Evidence {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [endorser] An individiual, organization, or device responsible for officially endorsing the content for use in some setting.
   final List<ContactDetail>? _endorser;
+
+  /// [endorser] An individiual, organization, or device responsible for officially endorsing the content for use in some setting.
   @override
   List<ContactDetail>? get endorser {
     final value = _endorser;
@@ -13678,7 +16978,10 @@ class _$_Evidence extends _Evidence {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [relatedArtifact] Link or citation to artifact associated with the summary.
   final List<RelatedArtifact>? _relatedArtifact;
+
+  /// [relatedArtifact] Link or citation to artifact associated with the summary.
   @override
   List<RelatedArtifact>? get relatedArtifact {
     final value = _relatedArtifact;
@@ -13688,19 +16991,32 @@ class _$_Evidence extends _Evidence {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [citeAsReference] Citation Resource or display of suggested citation for this evidence.
   @override
   final Reference? citeAsReference;
+
+  /// [citeAsMarkdown] Citation Resource or display of suggested citation for this evidence.
   @override
   final Markdown? citeAsMarkdown;
+
+  /// [citeAsMarkdownElement] ("_citeAsMarkdown") Extensions for citeAsMarkdown
   @override
   @JsonKey(name: '_citeAsMarkdown')
   final Element? citeAsMarkdownElement;
+
+  /// [assertion] Declarative description of the Evidence.
   @override
   final Markdown? assertion;
+
+  /// [assertionElement] ("_assertion") Extensions for assertion
   @override
   @JsonKey(name: '_assertion')
   final Element? assertionElement;
+
+  /// [note] Footnotes and/or explanatory notes.
   final List<Annotation>? _note;
+
+  /// [note] Footnotes and/or explanatory notes.
   @override
   List<Annotation>? get note {
     final value = _note;
@@ -13710,7 +17026,10 @@ class _$_Evidence extends _Evidence {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [variableDefinition] Evidence variable such as population, exposure, or outcome.
   final List<EvidenceVariableDefinition> _variableDefinition;
+
+  /// [variableDefinition] Evidence variable such as population, exposure, or outcome.
   @override
   List<EvidenceVariableDefinition> get variableDefinition {
     if (_variableDefinition is EqualUnmodifiableListView)
@@ -13719,11 +17038,27 @@ class _$_Evidence extends _Evidence {
     return EqualUnmodifiableListView(_variableDefinition);
   }
 
+  /// [synthesisType] The method to combine studies.
   @override
   final CodeableConcept? synthesisType;
+
+  /// [studyDesign] The design of the study that produced this evidence. The design is described with any number of study design characteristics.
+  final List<CodeableConcept>? _studyDesign;
+
+  /// [studyDesign] The design of the study that produced this evidence. The design is described with any number of study design characteristics.
   @override
-  final CodeableConcept? studyType;
+  List<CodeableConcept>? get studyDesign {
+    final value = _studyDesign;
+    if (value == null) return null;
+    if (_studyDesign is EqualUnmodifiableListView) return _studyDesign;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [statistic] Values and parameters for a single statistic.
   final List<EvidenceStatistic>? _statistic;
+
+  /// [statistic] Values and parameters for a single statistic.
   @override
   List<EvidenceStatistic>? get statistic {
     final value = _statistic;
@@ -13733,7 +17068,10 @@ class _$_Evidence extends _Evidence {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [certainty] Assessment of certainty, confidence in the estimates, or quality of the evidence.
   final List<EvidenceCertainty>? _certainty;
+
+  /// [certainty] Assessment of certainty, confidence in the estimates, or quality of the evidence.
   @override
   List<EvidenceCertainty>? get certainty {
     final value = _certainty;
@@ -13745,7 +17083,7 @@ class _$_Evidence extends _Evidence {
 
   @override
   String toString() {
-    return 'Evidence(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, citeAsReference: $citeAsReference, citeAsMarkdown: $citeAsMarkdown, citeAsMarkdownElement: $citeAsMarkdownElement, assertion: $assertion, assertionElement: $assertionElement, note: $note, variableDefinition: $variableDefinition, synthesisType: $synthesisType, studyType: $studyType, statistic: $statistic, certainty: $certainty)';
+    return 'Evidence(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, versionAlgorithmString: $versionAlgorithmString, versionAlgorithmStringElement: $versionAlgorithmStringElement, versionAlgorithmCoding: $versionAlgorithmCoding, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, copyrightLabel: $copyrightLabel, copyrightLabelElement: $copyrightLabelElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, citeAsReference: $citeAsReference, citeAsMarkdown: $citeAsMarkdown, citeAsMarkdownElement: $citeAsMarkdownElement, assertion: $assertion, assertionElement: $assertionElement, note: $note, variableDefinition: $variableDefinition, synthesisType: $synthesisType, studyDesign: $studyDesign, statistic: $statistic, certainty: $certainty)';
   }
 
   @override
@@ -13780,6 +17118,13 @@ class _$_Evidence extends _Evidence {
             (identical(other.version, version) || other.version == version) &&
             (identical(other.versionElement, versionElement) ||
                 other.versionElement == versionElement) &&
+            (identical(other.versionAlgorithmString, versionAlgorithmString) ||
+                other.versionAlgorithmString == versionAlgorithmString) &&
+            (identical(other.versionAlgorithmStringElement, versionAlgorithmStringElement) ||
+                other.versionAlgorithmStringElement ==
+                    versionAlgorithmStringElement) &&
+            (identical(other.versionAlgorithmCoding, versionAlgorithmCoding) ||
+                other.versionAlgorithmCoding == versionAlgorithmCoding) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.nameElement, nameElement) ||
                 other.nameElement == nameElement) &&
@@ -13816,6 +17161,10 @@ class _$_Evidence extends _Evidence {
                 other.copyright == copyright) &&
             (identical(other.copyrightElement, copyrightElement) ||
                 other.copyrightElement == copyrightElement) &&
+            (identical(other.copyrightLabel, copyrightLabel) ||
+                other.copyrightLabel == copyrightLabel) &&
+            (identical(other.copyrightLabelElement, copyrightLabelElement) ||
+                other.copyrightLabelElement == copyrightLabelElement) &&
             (identical(other.approvalDate, approvalDate) ||
                 other.approvalDate == approvalDate) &&
             (identical(other.approvalDateElement, approvalDateElement) ||
@@ -13831,29 +17180,18 @@ class _$_Evidence extends _Evidence {
             const DeepCollectionEquality().equals(other._editor, _editor) &&
             const DeepCollectionEquality().equals(other._reviewer, _reviewer) &&
             const DeepCollectionEquality().equals(other._endorser, _endorser) &&
-            const DeepCollectionEquality()
-                .equals(other._relatedArtifact, _relatedArtifact) &&
-            (identical(other.citeAsReference, citeAsReference) ||
-                other.citeAsReference == citeAsReference) &&
-            (identical(other.citeAsMarkdown, citeAsMarkdown) ||
-                other.citeAsMarkdown == citeAsMarkdown) &&
-            (identical(other.citeAsMarkdownElement, citeAsMarkdownElement) ||
-                other.citeAsMarkdownElement == citeAsMarkdownElement) &&
-            (identical(other.assertion, assertion) ||
-                other.assertion == assertion) &&
-            (identical(other.assertionElement, assertionElement) ||
-                other.assertionElement == assertionElement) &&
+            const DeepCollectionEquality().equals(other._relatedArtifact, _relatedArtifact) &&
+            (identical(other.citeAsReference, citeAsReference) || other.citeAsReference == citeAsReference) &&
+            (identical(other.citeAsMarkdown, citeAsMarkdown) || other.citeAsMarkdown == citeAsMarkdown) &&
+            (identical(other.citeAsMarkdownElement, citeAsMarkdownElement) || other.citeAsMarkdownElement == citeAsMarkdownElement) &&
+            (identical(other.assertion, assertion) || other.assertion == assertion) &&
+            (identical(other.assertionElement, assertionElement) || other.assertionElement == assertionElement) &&
             const DeepCollectionEquality().equals(other._note, _note) &&
-            const DeepCollectionEquality()
-                .equals(other._variableDefinition, _variableDefinition) &&
-            (identical(other.synthesisType, synthesisType) ||
-                other.synthesisType == synthesisType) &&
-            (identical(other.studyType, studyType) ||
-                other.studyType == studyType) &&
-            const DeepCollectionEquality()
-                .equals(other._statistic, _statistic) &&
-            const DeepCollectionEquality()
-                .equals(other._certainty, _certainty));
+            const DeepCollectionEquality().equals(other._variableDefinition, _variableDefinition) &&
+            (identical(other.synthesisType, synthesisType) || other.synthesisType == synthesisType) &&
+            const DeepCollectionEquality().equals(other._studyDesign, _studyDesign) &&
+            const DeepCollectionEquality().equals(other._statistic, _statistic) &&
+            const DeepCollectionEquality().equals(other._certainty, _certainty));
   }
 
   @JsonKey(ignore: true)
@@ -13876,6 +17214,9 @@ class _$_Evidence extends _Evidence {
         const DeepCollectionEquality().hash(_identifier),
         version,
         versionElement,
+        versionAlgorithmString,
+        versionAlgorithmStringElement,
+        versionAlgorithmCoding,
         name,
         nameElement,
         title,
@@ -13897,6 +17238,8 @@ class _$_Evidence extends _Evidence {
         purposeElement,
         copyright,
         copyrightElement,
+        copyrightLabel,
+        copyrightLabelElement,
         approvalDate,
         approvalDateElement,
         lastReviewDate,
@@ -13916,7 +17259,7 @@ class _$_Evidence extends _Evidence {
         const DeepCollectionEquality().hash(_note),
         const DeepCollectionEquality().hash(_variableDefinition),
         synthesisType,
-        studyType,
+        const DeepCollectionEquality().hash(_studyDesign),
         const DeepCollectionEquality().hash(_statistic),
         const DeepCollectionEquality().hash(_certainty)
       ]);
@@ -13937,47 +17280,71 @@ class _$_Evidence extends _Evidence {
 
 abstract class _Evidence extends Evidence {
   factory _Evidence(
-      {final R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.Evidence)
+          final R5ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          final Element? implicitRulesElement,
       final Code? language,
-      @JsonKey(name: '_language') final Element? languageElement,
+      @JsonKey(name: '_language')
+          final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final FhirUri? url,
-      @JsonKey(name: '_url') final Element? urlElement,
+      @JsonKey(name: '_url')
+          final Element? urlElement,
       final List<Identifier>? identifier,
       final String? version,
-      @JsonKey(name: '_version') final Element? versionElement,
+      @JsonKey(name: '_version')
+          final Element? versionElement,
+      final String? versionAlgorithmString,
+      @JsonKey(name: '_versionAlgorithmString')
+          final Element? versionAlgorithmStringElement,
+      final Coding? versionAlgorithmCoding,
       final String? name,
-      @JsonKey(name: '_name') final Element? nameElement,
+      @JsonKey(name: '_name')
+          final Element? nameElement,
       final String? title,
-      @JsonKey(name: '_title') final Element? titleElement,
+      @JsonKey(name: '_title')
+          final Element? titleElement,
       final Code? status,
-      @JsonKey(name: '_status') final Element? statusElement,
+      @JsonKey(name: '_status')
+          final Element? statusElement,
       final Boolean? experimental,
-      @JsonKey(name: '_experimental') final Element? experimentalElement,
+      @JsonKey(name: '_experimental')
+          final Element? experimentalElement,
       final FhirDateTime? date,
-      @JsonKey(name: '_date') final Element? dateElement,
+      @JsonKey(name: '_date')
+          final Element? dateElement,
       final String? publisher,
-      @JsonKey(name: '_publisher') final Element? publisherElement,
+      @JsonKey(name: '_publisher')
+          final Element? publisherElement,
       final List<ContactDetail>? contact,
       final Markdown? description,
-      @JsonKey(name: '_description') final Element? descriptionElement,
+      @JsonKey(name: '_description')
+          final Element? descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
       final Markdown? purpose,
-      @JsonKey(name: '_purpose') final Element? purposeElement,
+      @JsonKey(name: '_purpose')
+          final Element? purposeElement,
       final Markdown? copyright,
-      @JsonKey(name: '_copyright') final Element? copyrightElement,
+      @JsonKey(name: '_copyright')
+          final Element? copyrightElement,
+      final String? copyrightLabel,
+      @JsonKey(name: '_copyrightLabel')
+          final Element? copyrightLabelElement,
       final Date? approvalDate,
-      @JsonKey(name: '_approvalDate') final Element? approvalDateElement,
+      @JsonKey(name: '_approvalDate')
+          final Element? approvalDateElement,
       final Date? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') final Element? lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          final Element? lastReviewDateElement,
       final Period? effectivePeriod,
       final List<CodeableConcept>? topic,
       final List<ContactDetail>? author,
@@ -13987,13 +17354,15 @@ abstract class _Evidence extends Evidence {
       final List<RelatedArtifact>? relatedArtifact,
       final Reference? citeAsReference,
       final Markdown? citeAsMarkdown,
-      @JsonKey(name: '_citeAsMarkdown') final Element? citeAsMarkdownElement,
+      @JsonKey(name: '_citeAsMarkdown')
+          final Element? citeAsMarkdownElement,
       final Markdown? assertion,
-      @JsonKey(name: '_assertion') final Element? assertionElement,
+      @JsonKey(name: '_assertion')
+          final Element? assertionElement,
       final List<Annotation>? note,
       required final List<EvidenceVariableDefinition> variableDefinition,
       final CodeableConcept? synthesisType,
-      final CodeableConcept? studyType,
+      final List<CodeableConcept>? studyDesign,
       final List<EvidenceStatistic>? statistic,
       final List<EvidenceCertainty>? certainty}) = _$_Evidence;
   _Evidence._() : super._();
@@ -14001,140 +17370,287 @@ abstract class _Evidence extends Evidence {
   factory _Evidence.fromJson(Map<String, dynamic> json) = _$_Evidence.fromJson;
 
   @override
+
+  /// [resourceType] This is a Evidence resource
+  @JsonKey(unknownEnumValue: R5ResourceType.Evidence)
   R5ResourceType get resourceType;
   @override
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  /// Once assigned, this value never changes.
   Id? get id;
   @override
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not
+  /// always be associated with version changes to the resource.
   Meta? get meta;
   @override
+
+  /// [implicitRules] A reference to a set of rules that were followed when
+  /// the resource was constructed, and which must be understood when
+  /// processing the content. Often, this is a reference to an implementation
+  /// guide that defines the special rules along with other profiles etc.
   FhirUri? get implicitRules;
   @override
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
+
+  /// [language] The base language in which the resource is written.
   Code? get language;
   @override
+
+  /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   Narrative? get text;
   @override
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   List<Resource>? get contained;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [url] An absolute URI that is used to identify this evidence when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this summary is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the summary is stored on different servers.
   FhirUri? get url;
   @override
+
+  /// [urlElement] ("_url") Extensions for url
   @JsonKey(name: '_url')
   Element? get urlElement;
   @override
+
+  /// [identifier] A formal identifier that is used to identify this summary when it is represented in other formats, or referenced in a specification, model, design or an instance.
   List<Identifier>? get identifier;
   @override
+
+  /// [version] The identifier that is used to identify this version of the summary when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the summary author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.
   String? get version;
   @override
+
+  /// [versionElement] ("_version") Extensions for version
   @JsonKey(name: '_version')
   Element? get versionElement;
   @override
+
+  /// [versionAlgorithmString] Indicates the mechanism used to compare versions to determine which is more current.
+  String? get versionAlgorithmString;
+  @override
+
+  /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions for versionAlgorithmString
+  @JsonKey(name: '_versionAlgorithmString')
+  Element? get versionAlgorithmStringElement;
+  @override
+
+  /// [versionAlgorithmCoding] Indicates the mechanism used to compare versions to determine which is more current.
+  Coding? get versionAlgorithmCoding;
+  @override
+
+  /// [name] A natural language name identifying the evidence. This name should be usable as an identifier for the module by machine processing applications such as code generation.
   String? get name;
   @override
+
+  /// [nameElement] ("_name") Extensions for name
   @JsonKey(name: '_name')
   Element? get nameElement;
   @override
+
+  /// [title] A short, descriptive, user-friendly title for the summary.
   String? get title;
   @override
+
+  /// [titleElement] ("_title") Extensions for title
   @JsonKey(name: '_title')
   Element? get titleElement;
   @override
+
+  /// [status] The status of this summary. Enables tracking the life-cycle of the content.
   Code? get status;
   @override
+
+  /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
+
+  /// [experimental] A Boolean value to indicate that this resource is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
   Boolean? get experimental;
   @override
+
+  /// [experimentalElement] ("_experimental") Extensions for experimental
   @JsonKey(name: '_experimental')
   Element? get experimentalElement;
   @override
+
+  /// [date] The date  (and optionally time) when the summary was last significantly changed. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the summary changes.
   FhirDateTime? get date;
   @override
+
+  /// [dateElement] ("_date") Extensions for date
   @JsonKey(name: '_date')
   Element? get dateElement;
   @override
+
+  /// [publisher] The name of the organization or individual responsible for the release and ongoing maintenance of the evidence.
   String? get publisher;
   @override
+
+  /// [publisherElement] ("_publisher") Extensions for publisher
   @JsonKey(name: '_publisher')
   Element? get publisherElement;
   @override
+
+  /// [contact] Contact details to assist a user in finding and communicating with the publisher.
   List<ContactDetail>? get contact;
   @override
+
+  /// [description] A free text natural language description of the evidence from a consumer's perspective.
   Markdown? get description;
   @override
+
+  /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
+
+  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate evidence instances.
   List<UsageContext>? get useContext;
   @override
+
+  /// [jurisdiction] A legal or geographic region in which the {{title}} is intended to be used.
   List<CodeableConcept>? get jurisdiction;
   @override
+
+  /// [purpose] Explanation of why this {{title}} is needed and why it has been designed as it has.
   Markdown? get purpose;
   @override
+
+  /// [purposeElement] ("_purpose") Extensions for purpose
   @JsonKey(name: '_purpose')
   Element? get purposeElement;
   @override
+
+  /// [copyright] A copyright statement relating to the {{title}} and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the {{title}}.
   Markdown? get copyright;
   @override
+
+  /// [copyrightElement] ("_copyright") Extensions for copyright
   @JsonKey(name: '_copyright')
   Element? get copyrightElement;
   @override
+
+  /// [copyrightLabel] A short string (<50 characters), suitable for inclusion in a page footer that identifies the copyright holder, effective period, and optionally whether rights are resctricted. (e.g. 'All rights reserved', 'Some rights reserved').
+  String? get copyrightLabel;
+  @override
+
+  /// [copyrightLabelElement] ("_copyrightLabel") Extensions for copyrightLabel
+  @JsonKey(name: '_copyrightLabel')
+  Element? get copyrightLabelElement;
+  @override
+
+  /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
   Date? get approvalDate;
   @override
+
+  /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
   @JsonKey(name: '_approvalDate')
   Element? get approvalDateElement;
   @override
+
+  /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
   Date? get lastReviewDate;
   @override
+
+  /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement;
   @override
+
+  /// [effectivePeriod] The period during which the {{title}} content was or is planned to be in active use.
   Period? get effectivePeriod;
   @override
+
+  /// [topic] Descriptive topics related to the content of the {{title}}. Topics provide a high-level categorization as well as keywords for the {{title}} that can be useful for filtering and searching.
   List<CodeableConcept>? get topic;
   @override
+
+  /// [author] An individiual, organization, or device primarily involved in the creation and maintenance of the content.
   List<ContactDetail>? get author;
   @override
+
+  /// [editor] An individiual, organization, or device primarily responsible for internal coherence of the content.
   List<ContactDetail>? get editor;
   @override
+
+  /// [reviewer] An individiual, organization, or device primarily responsible for review of some aspect of the content.
   List<ContactDetail>? get reviewer;
   @override
+
+  /// [endorser] An individiual, organization, or device responsible for officially endorsing the content for use in some setting.
   List<ContactDetail>? get endorser;
   @override
+
+  /// [relatedArtifact] Link or citation to artifact associated with the summary.
   List<RelatedArtifact>? get relatedArtifact;
   @override
+
+  /// [citeAsReference] Citation Resource or display of suggested citation for this evidence.
   Reference? get citeAsReference;
   @override
+
+  /// [citeAsMarkdown] Citation Resource or display of suggested citation for this evidence.
   Markdown? get citeAsMarkdown;
   @override
+
+  /// [citeAsMarkdownElement] ("_citeAsMarkdown") Extensions for citeAsMarkdown
   @JsonKey(name: '_citeAsMarkdown')
   Element? get citeAsMarkdownElement;
   @override
+
+  /// [assertion] Declarative description of the Evidence.
   Markdown? get assertion;
   @override
+
+  /// [assertionElement] ("_assertion") Extensions for assertion
   @JsonKey(name: '_assertion')
   Element? get assertionElement;
   @override
+
+  /// [note] Footnotes and/or explanatory notes.
   List<Annotation>? get note;
   @override
+
+  /// [variableDefinition] Evidence variable such as population, exposure, or outcome.
   List<EvidenceVariableDefinition> get variableDefinition;
   @override
+
+  /// [synthesisType] The method to combine studies.
   CodeableConcept? get synthesisType;
   @override
-  CodeableConcept? get studyType;
+
+  /// [studyDesign] The design of the study that produced this evidence. The design is described with any number of study design characteristics.
+  List<CodeableConcept>? get studyDesign;
   @override
+
+  /// [statistic] Values and parameters for a single statistic.
   List<EvidenceStatistic>? get statistic;
   @override
+
+  /// [certainty] Assessment of certainty, confidence in the estimates, or quality of the evidence.
   List<EvidenceCertainty>? get certainty;
   @override
   @JsonKey(ignore: true)
@@ -14149,18 +17665,54 @@ EvidenceVariableDefinition _$EvidenceVariableDefinitionFromJson(
 
 /// @nodoc
 mixin _$EvidenceVariableDefinition {
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [description] A text description or summary of the variable.
   Markdown? get description => throw _privateConstructorUsedError;
+
+  /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
+
+  /// [note] Footnotes and/or explanatory notes.
   List<Annotation>? get note => throw _privateConstructorUsedError;
+
+  /// [variableRole] population | subpopulation | exposure | referenceExposure | measuredVariable | confounder.
   CodeableConcept get variableRole => throw _privateConstructorUsedError;
+
+  /// [observed] Definition of the actual variable related to the statistic(s).
   Reference? get observed => throw _privateConstructorUsedError;
+
+  /// [intended] Definition of the intended variable related to the Evidence.
   Reference? get intended => throw _privateConstructorUsedError;
+
+  /// [directnessMatch] Indication of quality of match between intended variable to actual variable.
   CodeableConcept? get directnessMatch => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -14445,9 +17997,25 @@ class _$_EvidenceVariableDefinition extends _EvidenceVariableDefinition {
   factory _$_EvidenceVariableDefinition.fromJson(Map<String, dynamic> json) =>
       _$$_EvidenceVariableDefinitionFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -14458,7 +18026,32 @@ class _$_EvidenceVariableDefinition extends _EvidenceVariableDefinition {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -14469,12 +18062,19 @@ class _$_EvidenceVariableDefinition extends _EvidenceVariableDefinition {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [description] A text description or summary of the variable.
   @override
   final Markdown? description;
+
+  /// [descriptionElement] ("_description") Extensions for description
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
+
+  /// [note] Footnotes and/or explanatory notes.
   final List<Annotation>? _note;
+
+  /// [note] Footnotes and/or explanatory notes.
   @override
   List<Annotation>? get note {
     final value = _note;
@@ -14484,12 +18084,19 @@ class _$_EvidenceVariableDefinition extends _EvidenceVariableDefinition {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [variableRole] population | subpopulation | exposure | referenceExposure | measuredVariable | confounder.
   @override
   final CodeableConcept variableRole;
+
+  /// [observed] Definition of the actual variable related to the statistic(s).
   @override
   final Reference? observed;
+
+  /// [intended] Definition of the intended variable related to the Evidence.
   @override
   final Reference? intended;
+
+  /// [directnessMatch] Indication of quality of match between intended variable to actual variable.
   @override
   final CodeableConcept? directnessMatch;
 
@@ -14571,26 +18178,63 @@ abstract class _EvidenceVariableDefinition extends EvidenceVariableDefinition {
       _$_EvidenceVariableDefinition.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [description] A text description or summary of the variable.
   Markdown? get description;
   @override
+
+  /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
+
+  /// [note] Footnotes and/or explanatory notes.
   List<Annotation>? get note;
   @override
+
+  /// [variableRole] population | subpopulation | exposure | referenceExposure | measuredVariable | confounder.
   CodeableConcept get variableRole;
   @override
+
+  /// [observed] Definition of the actual variable related to the statistic(s).
   Reference? get observed;
   @override
+
+  /// [intended] Definition of the intended variable related to the Evidence.
   Reference? get intended;
   @override
+
+  /// [directnessMatch] Indication of quality of match between intended variable to actual variable.
   CodeableConcept? get directnessMatch;
   @override
   @JsonKey(ignore: true)
@@ -14604,27 +18248,75 @@ EvidenceStatistic _$EvidenceStatisticFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$EvidenceStatistic {
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [description] A description of the content value of the statistic.
   String? get description => throw _privateConstructorUsedError;
+
+  /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
+
+  /// [note] Footnotes and/or explanatory notes.
   List<Annotation>? get note => throw _privateConstructorUsedError;
+
+  /// [statisticType] Type of statistic, e.g., relative risk.
   CodeableConcept? get statisticType => throw _privateConstructorUsedError;
+
+  /// [category] When the measured variable is handled categorically, the category element is used to define which category the statistic is reporting.
   CodeableConcept? get category => throw _privateConstructorUsedError;
+
+  /// [quantity] Statistic value.
   Quantity? get quantity => throw _privateConstructorUsedError;
+
+  /// [numberOfEvents] The number of events associated with the statistic, where the unit of analysis is different from numberAffected, sampleSize.knownDataCount and sampleSize.numberOfParticipants.
   UnsignedInt? get numberOfEvents => throw _privateConstructorUsedError;
+
+  /// [numberOfEventsElement] ("_numberOfEvents") Extensions for numberOfEvents
   @JsonKey(name: '_numberOfEvents')
   Element? get numberOfEventsElement => throw _privateConstructorUsedError;
+
+  /// [numberAffected] The number of participants affected where the unit of analysis is the same as sampleSize.knownDataCount and sampleSize.numberOfParticipants.
   UnsignedInt? get numberAffected => throw _privateConstructorUsedError;
+
+  /// [numberAffectedElement] ("_numberAffected") Extensions for numberAffected
   @JsonKey(name: '_numberAffected')
   Element? get numberAffectedElement => throw _privateConstructorUsedError;
+
+  /// [sampleSize] Number of samples in the statistic.
   EvidenceSampleSize? get sampleSize => throw _privateConstructorUsedError;
+
+  /// [attributeEstimate] A statistical attribute of the statistic such as a measure of heterogeneity.
   List<EvidenceAttributeEstimate>? get attributeEstimate =>
       throw _privateConstructorUsedError;
+
+  /// [modelCharacteristic] A component of the method to generate the statistic.
   List<EvidenceModelCharacteristic>? get modelCharacteristic =>
       throw _privateConstructorUsedError;
 
@@ -15019,9 +18711,25 @@ class _$_EvidenceStatistic extends _EvidenceStatistic {
   factory _$_EvidenceStatistic.fromJson(Map<String, dynamic> json) =>
       _$$_EvidenceStatisticFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -15032,7 +18740,32 @@ class _$_EvidenceStatistic extends _EvidenceStatistic {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -15043,12 +18776,19 @@ class _$_EvidenceStatistic extends _EvidenceStatistic {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [description] A description of the content value of the statistic.
   @override
   final String? description;
+
+  /// [descriptionElement] ("_description") Extensions for description
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
+
+  /// [note] Footnotes and/or explanatory notes.
   final List<Annotation>? _note;
+
+  /// [note] Footnotes and/or explanatory notes.
   @override
   List<Annotation>? get note {
     final value = _note;
@@ -15058,25 +18798,44 @@ class _$_EvidenceStatistic extends _EvidenceStatistic {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [statisticType] Type of statistic, e.g., relative risk.
   @override
   final CodeableConcept? statisticType;
+
+  /// [category] When the measured variable is handled categorically, the category element is used to define which category the statistic is reporting.
   @override
   final CodeableConcept? category;
+
+  /// [quantity] Statistic value.
   @override
   final Quantity? quantity;
+
+  /// [numberOfEvents] The number of events associated with the statistic, where the unit of analysis is different from numberAffected, sampleSize.knownDataCount and sampleSize.numberOfParticipants.
   @override
   final UnsignedInt? numberOfEvents;
+
+  /// [numberOfEventsElement] ("_numberOfEvents") Extensions for numberOfEvents
   @override
   @JsonKey(name: '_numberOfEvents')
   final Element? numberOfEventsElement;
+
+  /// [numberAffected] The number of participants affected where the unit of analysis is the same as sampleSize.knownDataCount and sampleSize.numberOfParticipants.
   @override
   final UnsignedInt? numberAffected;
+
+  /// [numberAffectedElement] ("_numberAffected") Extensions for numberAffected
   @override
   @JsonKey(name: '_numberAffected')
   final Element? numberAffectedElement;
+
+  /// [sampleSize] Number of samples in the statistic.
   @override
   final EvidenceSampleSize? sampleSize;
+
+  /// [attributeEstimate] A statistical attribute of the statistic such as a measure of heterogeneity.
   final List<EvidenceAttributeEstimate>? _attributeEstimate;
+
+  /// [attributeEstimate] A statistical attribute of the statistic such as a measure of heterogeneity.
   @override
   List<EvidenceAttributeEstimate>? get attributeEstimate {
     final value = _attributeEstimate;
@@ -15087,7 +18846,10 @@ class _$_EvidenceStatistic extends _EvidenceStatistic {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modelCharacteristic] A component of the method to generate the statistic.
   final List<EvidenceModelCharacteristic>? _modelCharacteristic;
+
+  /// [modelCharacteristic] A component of the method to generate the statistic.
   @override
   List<EvidenceModelCharacteristic>? get modelCharacteristic {
     final value = _modelCharacteristic;
@@ -15201,40 +18963,89 @@ abstract class _EvidenceStatistic extends EvidenceStatistic {
       _$_EvidenceStatistic.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [description] A description of the content value of the statistic.
   String? get description;
   @override
+
+  /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
+
+  /// [note] Footnotes and/or explanatory notes.
   List<Annotation>? get note;
   @override
+
+  /// [statisticType] Type of statistic, e.g., relative risk.
   CodeableConcept? get statisticType;
   @override
+
+  /// [category] When the measured variable is handled categorically, the category element is used to define which category the statistic is reporting.
   CodeableConcept? get category;
   @override
+
+  /// [quantity] Statistic value.
   Quantity? get quantity;
   @override
+
+  /// [numberOfEvents] The number of events associated with the statistic, where the unit of analysis is different from numberAffected, sampleSize.knownDataCount and sampleSize.numberOfParticipants.
   UnsignedInt? get numberOfEvents;
   @override
+
+  /// [numberOfEventsElement] ("_numberOfEvents") Extensions for numberOfEvents
   @JsonKey(name: '_numberOfEvents')
   Element? get numberOfEventsElement;
   @override
+
+  /// [numberAffected] The number of participants affected where the unit of analysis is the same as sampleSize.knownDataCount and sampleSize.numberOfParticipants.
   UnsignedInt? get numberAffected;
   @override
+
+  /// [numberAffectedElement] ("_numberAffected") Extensions for numberAffected
   @JsonKey(name: '_numberAffected')
   Element? get numberAffectedElement;
   @override
+
+  /// [sampleSize] Number of samples in the statistic.
   EvidenceSampleSize? get sampleSize;
   @override
+
+  /// [attributeEstimate] A statistical attribute of the statistic such as a measure of heterogeneity.
   List<EvidenceAttributeEstimate>? get attributeEstimate;
   @override
+
+  /// [modelCharacteristic] A component of the method to generate the statistic.
   List<EvidenceModelCharacteristic>? get modelCharacteristic;
   @override
   @JsonKey(ignore: true)
@@ -15248,23 +19059,63 @@ EvidenceSampleSize _$EvidenceSampleSizeFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$EvidenceSampleSize {
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [description] Human-readable summary of population sample size.
   String? get description => throw _privateConstructorUsedError;
+
+  /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
+
+  /// [note] Footnote or explanatory note about the sample size.
   List<Annotation>? get note => throw _privateConstructorUsedError;
+
+  /// [numberOfStudies] Number of participants in the population.
   UnsignedInt? get numberOfStudies => throw _privateConstructorUsedError;
+
+  /// [numberOfStudiesElement] ("_numberOfStudies") Extensions for numberOfStudies
   @JsonKey(name: '_numberOfStudies')
   Element? get numberOfStudiesElement => throw _privateConstructorUsedError;
+
+  /// [numberOfParticipants] A human-readable string to clarify or explain concepts about the sample size.
   UnsignedInt? get numberOfParticipants => throw _privateConstructorUsedError;
+
+  /// [numberOfParticipantsElement] ("_numberOfParticipants") Extensions for numberOfParticipants
   @JsonKey(name: '_numberOfParticipants')
   Element? get numberOfParticipantsElement =>
       throw _privateConstructorUsedError;
+
+  /// [knownDataCount] Number of participants with known results for measured variables.
   UnsignedInt? get knownDataCount => throw _privateConstructorUsedError;
+
+  /// [knownDataCountElement] ("_knownDataCount") Extensions for knownDataCount
   @JsonKey(name: '_knownDataCount')
   Element? get knownDataCountElement => throw _privateConstructorUsedError;
 
@@ -15570,9 +19421,25 @@ class _$_EvidenceSampleSize extends _EvidenceSampleSize {
   factory _$_EvidenceSampleSize.fromJson(Map<String, dynamic> json) =>
       _$$_EvidenceSampleSizeFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -15583,7 +19450,32 @@ class _$_EvidenceSampleSize extends _EvidenceSampleSize {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -15594,12 +19486,19 @@ class _$_EvidenceSampleSize extends _EvidenceSampleSize {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [description] Human-readable summary of population sample size.
   @override
   final String? description;
+
+  /// [descriptionElement] ("_description") Extensions for description
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
+
+  /// [note] Footnote or explanatory note about the sample size.
   final List<Annotation>? _note;
+
+  /// [note] Footnote or explanatory note about the sample size.
   @override
   List<Annotation>? get note {
     final value = _note;
@@ -15609,18 +19508,29 @@ class _$_EvidenceSampleSize extends _EvidenceSampleSize {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [numberOfStudies] Number of participants in the population.
   @override
   final UnsignedInt? numberOfStudies;
+
+  /// [numberOfStudiesElement] ("_numberOfStudies") Extensions for numberOfStudies
   @override
   @JsonKey(name: '_numberOfStudies')
   final Element? numberOfStudiesElement;
+
+  /// [numberOfParticipants] A human-readable string to clarify or explain concepts about the sample size.
   @override
   final UnsignedInt? numberOfParticipants;
+
+  /// [numberOfParticipantsElement] ("_numberOfParticipants") Extensions for numberOfParticipants
   @override
   @JsonKey(name: '_numberOfParticipants')
   final Element? numberOfParticipantsElement;
+
+  /// [knownDataCount] Number of participants with known results for measured variables.
   @override
   final UnsignedInt? knownDataCount;
+
+  /// [knownDataCountElement] ("_knownDataCount") Extensions for knownDataCount
   @override
   @JsonKey(name: '_knownDataCount')
   final Element? knownDataCountElement;
@@ -15718,32 +19628,73 @@ abstract class _EvidenceSampleSize extends EvidenceSampleSize {
       _$_EvidenceSampleSize.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [description] Human-readable summary of population sample size.
   String? get description;
   @override
+
+  /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
+
+  /// [note] Footnote or explanatory note about the sample size.
   List<Annotation>? get note;
   @override
+
+  /// [numberOfStudies] Number of participants in the population.
   UnsignedInt? get numberOfStudies;
   @override
+
+  /// [numberOfStudiesElement] ("_numberOfStudies") Extensions for numberOfStudies
   @JsonKey(name: '_numberOfStudies')
   Element? get numberOfStudiesElement;
   @override
+
+  /// [numberOfParticipants] A human-readable string to clarify or explain concepts about the sample size.
   UnsignedInt? get numberOfParticipants;
   @override
+
+  /// [numberOfParticipantsElement] ("_numberOfParticipants") Extensions for numberOfParticipants
   @JsonKey(name: '_numberOfParticipants')
   Element? get numberOfParticipantsElement;
   @override
+
+  /// [knownDataCount] Number of participants with known results for measured variables.
   UnsignedInt? get knownDataCount;
   @override
+
+  /// [knownDataCountElement] ("_knownDataCount") Extensions for knownDataCount
   @JsonKey(name: '_knownDataCount')
   Element? get knownDataCountElement;
   @override
@@ -15759,21 +19710,61 @@ EvidenceAttributeEstimate _$EvidenceAttributeEstimateFromJson(
 
 /// @nodoc
 mixin _$EvidenceAttributeEstimate {
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [description] Human-readable summary of the estimate.
   String? get description => throw _privateConstructorUsedError;
+
+  /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
+
+  /// [note] Footnote or explanatory note about the estimate.
   List<Annotation>? get note => throw _privateConstructorUsedError;
+
+  /// [type] The type of attribute estimate, e.g., confidence interval or p value.
   CodeableConcept? get type => throw _privateConstructorUsedError;
+
+  /// [quantity] The singular quantity of the attribute estimate, for attribute estimates represented as single values; also used to report unit of measure.
   Quantity? get quantity => throw _privateConstructorUsedError;
+
+  /// [level] Use 95 for a 95% confidence interval.
   Decimal? get level => throw _privateConstructorUsedError;
+
+  /// [levelElement] ("_level") Extensions for level
   @JsonKey(name: '_level')
   Element? get levelElement => throw _privateConstructorUsedError;
+
+  /// [range] Lower bound of confidence interval.
   Range? get range => throw _privateConstructorUsedError;
+
+  /// [attributeEstimate] A nested attribute estimate; which is the attribute estimate of an attribute estimate.
   List<EvidenceAttributeEstimate>? get attributeEstimate =>
       throw _privateConstructorUsedError;
 
@@ -16089,9 +20080,25 @@ class _$_EvidenceAttributeEstimate extends _EvidenceAttributeEstimate {
   factory _$_EvidenceAttributeEstimate.fromJson(Map<String, dynamic> json) =>
       _$$_EvidenceAttributeEstimateFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -16102,7 +20109,32 @@ class _$_EvidenceAttributeEstimate extends _EvidenceAttributeEstimate {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -16113,12 +20145,19 @@ class _$_EvidenceAttributeEstimate extends _EvidenceAttributeEstimate {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [description] Human-readable summary of the estimate.
   @override
   final String? description;
+
+  /// [descriptionElement] ("_description") Extensions for description
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
+
+  /// [note] Footnote or explanatory note about the estimate.
   final List<Annotation>? _note;
+
+  /// [note] Footnote or explanatory note about the estimate.
   @override
   List<Annotation>? get note {
     final value = _note;
@@ -16128,18 +20167,31 @@ class _$_EvidenceAttributeEstimate extends _EvidenceAttributeEstimate {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [type] The type of attribute estimate, e.g., confidence interval or p value.
   @override
   final CodeableConcept? type;
+
+  /// [quantity] The singular quantity of the attribute estimate, for attribute estimates represented as single values; also used to report unit of measure.
   @override
   final Quantity? quantity;
+
+  /// [level] Use 95 for a 95% confidence interval.
   @override
   final Decimal? level;
+
+  /// [levelElement] ("_level") Extensions for level
   @override
   @JsonKey(name: '_level')
   final Element? levelElement;
+
+  /// [range] Lower bound of confidence interval.
   @override
   final Range? range;
+
+  /// [attributeEstimate] A nested attribute estimate; which is the attribute estimate of an attribute estimate.
   final List<EvidenceAttributeEstimate>? _attributeEstimate;
+
+  /// [attributeEstimate] A nested attribute estimate; which is the attribute estimate of an attribute estimate.
   @override
   List<EvidenceAttributeEstimate>? get attributeEstimate {
     final value = _attributeEstimate;
@@ -16234,31 +20286,72 @@ abstract class _EvidenceAttributeEstimate extends EvidenceAttributeEstimate {
       _$_EvidenceAttributeEstimate.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [description] Human-readable summary of the estimate.
   String? get description;
   @override
+
+  /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
+
+  /// [note] Footnote or explanatory note about the estimate.
   List<Annotation>? get note;
   @override
+
+  /// [type] The type of attribute estimate, e.g., confidence interval or p value.
   CodeableConcept? get type;
   @override
+
+  /// [quantity] The singular quantity of the attribute estimate, for attribute estimates represented as single values; also used to report unit of measure.
   Quantity? get quantity;
   @override
+
+  /// [level] Use 95 for a 95% confidence interval.
   Decimal? get level;
   @override
+
+  /// [levelElement] ("_level") Extensions for level
   @JsonKey(name: '_level')
   Element? get levelElement;
   @override
+
+  /// [range] Lower bound of confidence interval.
   Range? get range;
   @override
+
+  /// [attributeEstimate] A nested attribute estimate; which is the attribute estimate of an attribute estimate.
   List<EvidenceAttributeEstimate>? get attributeEstimate;
   @override
   @JsonKey(ignore: true)
@@ -16273,15 +20366,44 @@ EvidenceModelCharacteristic _$EvidenceModelCharacteristicFromJson(
 
 /// @nodoc
 mixin _$EvidenceModelCharacteristic {
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [code] Description of a component of the method to generate the statistic.
   CodeableConcept get code => throw _privateConstructorUsedError;
+
+  /// [value] Further specification of the quantified value of the component of the method to generate the statistic.
   Quantity? get value => throw _privateConstructorUsedError;
-  List<EvidenceModelCharacteristicVariable>? get variable =>
-      throw _privateConstructorUsedError;
+
+  /// [variable] A variable adjusted for in the adjusted analysis.
+  List<Evidencevariable>? get variable => throw _privateConstructorUsedError;
+
+  /// [attributeEstimate] An attribute of the statistic used as a model characteristic.
   List<EvidenceAttributeEstimate>? get attributeEstimate =>
       throw _privateConstructorUsedError;
 
@@ -16305,7 +20427,7 @@ abstract class $EvidenceModelCharacteristicCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       CodeableConcept code,
       Quantity? value,
-      List<EvidenceModelCharacteristicVariable>? variable,
+      List<Evidencevariable>? variable,
       List<EvidenceAttributeEstimate>? attributeEstimate});
 
   $CodeableConceptCopyWith<$Res> get code;
@@ -16358,7 +20480,7 @@ class _$EvidenceModelCharacteristicCopyWithImpl<$Res,
       variable: freezed == variable
           ? _value.variable
           : variable // ignore: cast_nullable_to_non_nullable
-              as List<EvidenceModelCharacteristicVariable>?,
+              as List<Evidencevariable>?,
       attributeEstimate: freezed == attributeEstimate
           ? _value.attributeEstimate
           : attributeEstimate // ignore: cast_nullable_to_non_nullable
@@ -16402,7 +20524,7 @@ abstract class _$$_EvidenceModelCharacteristicCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       CodeableConcept code,
       Quantity? value,
-      List<EvidenceModelCharacteristicVariable>? variable,
+      List<Evidencevariable>? variable,
       List<EvidenceAttributeEstimate>? attributeEstimate});
 
   @override
@@ -16456,7 +20578,7 @@ class __$$_EvidenceModelCharacteristicCopyWithImpl<$Res>
       variable: freezed == variable
           ? _value._variable
           : variable // ignore: cast_nullable_to_non_nullable
-              as List<EvidenceModelCharacteristicVariable>?,
+              as List<Evidencevariable>?,
       attributeEstimate: freezed == attributeEstimate
           ? _value._attributeEstimate
           : attributeEstimate // ignore: cast_nullable_to_non_nullable
@@ -16474,7 +20596,7 @@ class _$_EvidenceModelCharacteristic extends _EvidenceModelCharacteristic {
       final List<FhirExtension>? modifierExtension,
       required this.code,
       this.value,
-      final List<EvidenceModelCharacteristicVariable>? variable,
+      final List<Evidencevariable>? variable,
       final List<EvidenceAttributeEstimate>? attributeEstimate})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -16485,9 +20607,25 @@ class _$_EvidenceModelCharacteristic extends _EvidenceModelCharacteristic {
   factory _$_EvidenceModelCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$$_EvidenceModelCharacteristicFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -16498,7 +20636,32 @@ class _$_EvidenceModelCharacteristic extends _EvidenceModelCharacteristic {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -16509,13 +20672,20 @@ class _$_EvidenceModelCharacteristic extends _EvidenceModelCharacteristic {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [code] Description of a component of the method to generate the statistic.
   @override
   final CodeableConcept code;
+
+  /// [value] Further specification of the quantified value of the component of the method to generate the statistic.
   @override
   final Quantity? value;
-  final List<EvidenceModelCharacteristicVariable>? _variable;
+
+  /// [variable] A variable adjusted for in the adjusted analysis.
+  final List<Evidencevariable>? _variable;
+
+  /// [variable] A variable adjusted for in the adjusted analysis.
   @override
-  List<EvidenceModelCharacteristicVariable>? get variable {
+  List<Evidencevariable>? get variable {
     final value = _variable;
     if (value == null) return null;
     if (_variable is EqualUnmodifiableListView) return _variable;
@@ -16523,7 +20693,10 @@ class _$_EvidenceModelCharacteristic extends _EvidenceModelCharacteristic {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [attributeEstimate] An attribute of the statistic used as a model characteristic.
   final List<EvidenceAttributeEstimate>? _attributeEstimate;
+
+  /// [attributeEstimate] An attribute of the statistic used as a model characteristic.
   @override
   List<EvidenceAttributeEstimate>? get attributeEstimate {
     final value = _attributeEstimate;
@@ -16591,7 +20764,7 @@ abstract class _EvidenceModelCharacteristic
           final List<FhirExtension>? modifierExtension,
           required final CodeableConcept code,
           final Quantity? value,
-          final List<EvidenceModelCharacteristicVariable>? variable,
+          final List<Evidencevariable>? variable,
           final List<EvidenceAttributeEstimate>? attributeEstimate}) =
       _$_EvidenceModelCharacteristic;
   _EvidenceModelCharacteristic._() : super._();
@@ -16600,19 +20773,50 @@ abstract class _EvidenceModelCharacteristic
       _$_EvidenceModelCharacteristic.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [code] Description of a component of the method to generate the statistic.
   CodeableConcept get code;
   @override
+
+  /// [value] Further specification of the quantified value of the component of the method to generate the statistic.
   Quantity? get value;
   @override
-  List<EvidenceModelCharacteristicVariable>? get variable;
+
+  /// [variable] A variable adjusted for in the adjusted analysis.
+  List<Evidencevariable>? get variable;
   @override
+
+  /// [attributeEstimate] An attribute of the statistic used as a model characteristic.
   List<EvidenceAttributeEstimate>? get attributeEstimate;
   @override
   @JsonKey(ignore: true)
@@ -16620,41 +20824,71 @@ abstract class _EvidenceModelCharacteristic
       get copyWith => throw _privateConstructorUsedError;
 }
 
-EvidenceModelCharacteristicVariable
-    _$EvidenceModelCharacteristicVariableFromJson(Map<String, dynamic> json) {
-  return _EvidenceModelCharacteristicVariable.fromJson(json);
+Evidencevariable _$EvidencevariableFromJson(Map<String, dynamic> json) {
+  return _Evidencevariable.fromJson(json);
 }
 
 /// @nodoc
-mixin _$EvidenceModelCharacteristicVariable {
+mixin _$Evidencevariable {
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [variableDefinition] Description of the variable.
   Reference get variableDefinition => throw _privateConstructorUsedError;
+
+  /// [handling] How the variable is classified for use in adjusted analysis.
   Code? get handling => throw _privateConstructorUsedError;
+
+  /// [handlingElement] ("_handling") Extensions for handling
   @JsonKey(name: '_handling')
   Element? get handlingElement => throw _privateConstructorUsedError;
+
+  /// [valueCategory] Description for grouping of ordinal or polychotomous variables.
   List<CodeableConcept>? get valueCategory =>
       throw _privateConstructorUsedError;
+
+  /// [valueQuantity] Discrete value for grouping of ordinal or polychotomous variables.
   List<Quantity>? get valueQuantity => throw _privateConstructorUsedError;
+
+  /// [valueRange] Range of values for grouping of ordinal or polychotomous variables.
   List<Range>? get valueRange => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $EvidenceModelCharacteristicVariableCopyWith<
-          EvidenceModelCharacteristicVariable>
-      get copyWith => throw _privateConstructorUsedError;
+  $EvidencevariableCopyWith<Evidencevariable> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $EvidenceModelCharacteristicVariableCopyWith<$Res> {
-  factory $EvidenceModelCharacteristicVariableCopyWith(
-          EvidenceModelCharacteristicVariable value,
-          $Res Function(EvidenceModelCharacteristicVariable) then) =
-      _$EvidenceModelCharacteristicVariableCopyWithImpl<$Res,
-          EvidenceModelCharacteristicVariable>;
+abstract class $EvidencevariableCopyWith<$Res> {
+  factory $EvidencevariableCopyWith(
+          Evidencevariable value, $Res Function(Evidencevariable) then) =
+      _$EvidencevariableCopyWithImpl<$Res, Evidencevariable>;
   @useResult
   $Res call(
       {String? id,
@@ -16672,10 +20906,9 @@ abstract class $EvidenceModelCharacteristicVariableCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$EvidenceModelCharacteristicVariableCopyWithImpl<$Res,
-        $Val extends EvidenceModelCharacteristicVariable>
-    implements $EvidenceModelCharacteristicVariableCopyWith<$Res> {
-  _$EvidenceModelCharacteristicVariableCopyWithImpl(this._value, this._then);
+class _$EvidencevariableCopyWithImpl<$Res, $Val extends Evidencevariable>
+    implements $EvidencevariableCopyWith<$Res> {
+  _$EvidencevariableCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -16757,12 +20990,11 @@ class _$EvidenceModelCharacteristicVariableCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_EvidenceModelCharacteristicVariableCopyWith<$Res>
-    implements $EvidenceModelCharacteristicVariableCopyWith<$Res> {
-  factory _$$_EvidenceModelCharacteristicVariableCopyWith(
-          _$_EvidenceModelCharacteristicVariable value,
-          $Res Function(_$_EvidenceModelCharacteristicVariable) then) =
-      __$$_EvidenceModelCharacteristicVariableCopyWithImpl<$Res>;
+abstract class _$$_EvidencevariableCopyWith<$Res>
+    implements $EvidencevariableCopyWith<$Res> {
+  factory _$$_EvidencevariableCopyWith(
+          _$_Evidencevariable value, $Res Function(_$_Evidencevariable) then) =
+      __$$_EvidencevariableCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -16783,13 +21015,11 @@ abstract class _$$_EvidenceModelCharacteristicVariableCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_EvidenceModelCharacteristicVariableCopyWithImpl<$Res>
-    extends _$EvidenceModelCharacteristicVariableCopyWithImpl<$Res,
-        _$_EvidenceModelCharacteristicVariable>
-    implements _$$_EvidenceModelCharacteristicVariableCopyWith<$Res> {
-  __$$_EvidenceModelCharacteristicVariableCopyWithImpl(
-      _$_EvidenceModelCharacteristicVariable _value,
-      $Res Function(_$_EvidenceModelCharacteristicVariable) _then)
+class __$$_EvidencevariableCopyWithImpl<$Res>
+    extends _$EvidencevariableCopyWithImpl<$Res, _$_Evidencevariable>
+    implements _$$_EvidencevariableCopyWith<$Res> {
+  __$$_EvidencevariableCopyWithImpl(
+      _$_Evidencevariable _value, $Res Function(_$_Evidencevariable) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -16805,7 +21035,7 @@ class __$$_EvidenceModelCharacteristicVariableCopyWithImpl<$Res>
     Object? valueQuantity = freezed,
     Object? valueRange = freezed,
   }) {
-    return _then(_$_EvidenceModelCharacteristicVariable(
+    return _then(_$_Evidencevariable(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -16848,9 +21078,8 @@ class __$$_EvidenceModelCharacteristicVariableCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_EvidenceModelCharacteristicVariable
-    extends _EvidenceModelCharacteristicVariable {
-  _$_EvidenceModelCharacteristicVariable(
+class _$_Evidencevariable extends _Evidencevariable {
+  _$_Evidencevariable(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -16867,13 +21096,28 @@ class _$_EvidenceModelCharacteristicVariable
         _valueRange = valueRange,
         super._();
 
-  factory _$_EvidenceModelCharacteristicVariable.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_EvidenceModelCharacteristicVariableFromJson(json);
+  factory _$_Evidencevariable.fromJson(Map<String, dynamic> json) =>
+      _$$_EvidencevariableFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -16884,7 +21128,32 @@ class _$_EvidenceModelCharacteristicVariable
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -16895,14 +21164,23 @@ class _$_EvidenceModelCharacteristicVariable
     return EqualUnmodifiableListView(value);
   }
 
+  /// [variableDefinition] Description of the variable.
   @override
   final Reference variableDefinition;
+
+  /// [handling] How the variable is classified for use in adjusted analysis.
   @override
   final Code? handling;
+
+  /// [handlingElement] ("_handling") Extensions for handling
   @override
   @JsonKey(name: '_handling')
   final Element? handlingElement;
+
+  /// [valueCategory] Description for grouping of ordinal or polychotomous variables.
   final List<CodeableConcept>? _valueCategory;
+
+  /// [valueCategory] Description for grouping of ordinal or polychotomous variables.
   @override
   List<CodeableConcept>? get valueCategory {
     final value = _valueCategory;
@@ -16912,7 +21190,10 @@ class _$_EvidenceModelCharacteristicVariable
     return EqualUnmodifiableListView(value);
   }
 
+  /// [valueQuantity] Discrete value for grouping of ordinal or polychotomous variables.
   final List<Quantity>? _valueQuantity;
+
+  /// [valueQuantity] Discrete value for grouping of ordinal or polychotomous variables.
   @override
   List<Quantity>? get valueQuantity {
     final value = _valueQuantity;
@@ -16922,7 +21203,10 @@ class _$_EvidenceModelCharacteristicVariable
     return EqualUnmodifiableListView(value);
   }
 
+  /// [valueRange] Range of values for grouping of ordinal or polychotomous variables.
   final List<Range>? _valueRange;
+
+  /// [valueRange] Range of values for grouping of ordinal or polychotomous variables.
   @override
   List<Range>? get valueRange {
     final value = _valueRange;
@@ -16934,14 +21218,14 @@ class _$_EvidenceModelCharacteristicVariable
 
   @override
   String toString() {
-    return 'EvidenceModelCharacteristicVariable(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, variableDefinition: $variableDefinition, handling: $handling, handlingElement: $handlingElement, valueCategory: $valueCategory, valueQuantity: $valueQuantity, valueRange: $valueRange)';
+    return 'Evidencevariable(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, variableDefinition: $variableDefinition, handling: $handling, handlingElement: $handlingElement, valueCategory: $valueCategory, valueQuantity: $valueQuantity, valueRange: $valueRange)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_EvidenceModelCharacteristicVariable &&
+            other is _$_Evidencevariable &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -16978,22 +21262,19 @@ class _$_EvidenceModelCharacteristicVariable
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EvidenceModelCharacteristicVariableCopyWith<
-          _$_EvidenceModelCharacteristicVariable>
-      get copyWith => __$$_EvidenceModelCharacteristicVariableCopyWithImpl<
-          _$_EvidenceModelCharacteristicVariable>(this, _$identity);
+  _$$_EvidencevariableCopyWith<_$_Evidencevariable> get copyWith =>
+      __$$_EvidencevariableCopyWithImpl<_$_Evidencevariable>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EvidenceModelCharacteristicVariableToJson(
+    return _$$_EvidencevariableToJson(
       this,
     );
   }
 }
 
-abstract class _EvidenceModelCharacteristicVariable
-    extends EvidenceModelCharacteristicVariable {
-  factory _EvidenceModelCharacteristicVariable(
+abstract class _Evidencevariable extends Evidencevariable {
+  factory _Evidencevariable(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -17002,38 +21283,71 @@ abstract class _EvidenceModelCharacteristicVariable
       @JsonKey(name: '_handling') final Element? handlingElement,
       final List<CodeableConcept>? valueCategory,
       final List<Quantity>? valueQuantity,
-      final List<Range>? valueRange}) = _$_EvidenceModelCharacteristicVariable;
-  _EvidenceModelCharacteristicVariable._() : super._();
+      final List<Range>? valueRange}) = _$_Evidencevariable;
+  _Evidencevariable._() : super._();
 
-  factory _EvidenceModelCharacteristicVariable.fromJson(
-          Map<String, dynamic> json) =
-      _$_EvidenceModelCharacteristicVariable.fromJson;
+  factory _Evidencevariable.fromJson(Map<String, dynamic> json) =
+      _$_Evidencevariable.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [variableDefinition] Description of the variable.
   Reference get variableDefinition;
   @override
+
+  /// [handling] How the variable is classified for use in adjusted analysis.
   Code? get handling;
   @override
+
+  /// [handlingElement] ("_handling") Extensions for handling
   @JsonKey(name: '_handling')
   Element? get handlingElement;
   @override
+
+  /// [valueCategory] Description for grouping of ordinal or polychotomous variables.
   List<CodeableConcept>? get valueCategory;
   @override
+
+  /// [valueQuantity] Discrete value for grouping of ordinal or polychotomous variables.
   List<Quantity>? get valueQuantity;
   @override
+
+  /// [valueRange] Range of values for grouping of ordinal or polychotomous variables.
   List<Range>? get valueRange;
   @override
   @JsonKey(ignore: true)
-  _$$_EvidenceModelCharacteristicVariableCopyWith<
-          _$_EvidenceModelCharacteristicVariable>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$_EvidencevariableCopyWith<_$_Evidencevariable> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 EvidenceCertainty _$EvidenceCertaintyFromJson(Map<String, dynamic> json) {
@@ -17042,20 +21356,58 @@ EvidenceCertainty _$EvidenceCertaintyFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$EvidenceCertainty {
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [description] Textual description of certainty.
   String? get description => throw _privateConstructorUsedError;
+
+  /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
+
+  /// [note] Footnotes and/or explanatory notes.
   List<Annotation>? get note => throw _privateConstructorUsedError;
+
+  /// [type] Aspect of certainty being rated.
   CodeableConcept? get type => throw _privateConstructorUsedError;
+
+  /// [rating] Assessment or judgement of the aspect.
   CodeableConcept? get rating => throw _privateConstructorUsedError;
+
+  /// [rater] Individual or group who did the rating.
   String? get rater => throw _privateConstructorUsedError;
+
+  /// [raterElement] ("_rater") Extensions for rater
   @JsonKey(name: '_rater')
   Element? get raterElement => throw _privateConstructorUsedError;
+
+  /// [subcomponent] A domain or subdomain of certainty.
   List<EvidenceCertainty>? get subcomponent =>
       throw _privateConstructorUsedError;
 
@@ -17339,9 +21691,25 @@ class _$_EvidenceCertainty extends _EvidenceCertainty {
   factory _$_EvidenceCertainty.fromJson(Map<String, dynamic> json) =>
       _$$_EvidenceCertaintyFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -17352,7 +21720,32 @@ class _$_EvidenceCertainty extends _EvidenceCertainty {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -17363,12 +21756,19 @@ class _$_EvidenceCertainty extends _EvidenceCertainty {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [description] Textual description of certainty.
   @override
   final String? description;
+
+  /// [descriptionElement] ("_description") Extensions for description
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
+
+  /// [note] Footnotes and/or explanatory notes.
   final List<Annotation>? _note;
+
+  /// [note] Footnotes and/or explanatory notes.
   @override
   List<Annotation>? get note {
     final value = _note;
@@ -17378,16 +21778,27 @@ class _$_EvidenceCertainty extends _EvidenceCertainty {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [type] Aspect of certainty being rated.
   @override
   final CodeableConcept? type;
+
+  /// [rating] Assessment or judgement of the aspect.
   @override
   final CodeableConcept? rating;
+
+  /// [rater] Individual or group who did the rating.
   @override
   final String? rater;
+
+  /// [raterElement] ("_rater") Extensions for rater
   @override
   @JsonKey(name: '_rater')
   final Element? raterElement;
+
+  /// [subcomponent] A domain or subdomain of certainty.
   final List<EvidenceCertainty>? _subcomponent;
+
+  /// [subcomponent] A domain or subdomain of certainty.
   @override
   List<EvidenceCertainty>? get subcomponent {
     final value = _subcomponent;
@@ -17476,29 +21887,68 @@ abstract class _EvidenceCertainty extends EvidenceCertainty {
       _$_EvidenceCertainty.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [description] Textual description of certainty.
   String? get description;
   @override
+
+  /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
+
+  /// [note] Footnotes and/or explanatory notes.
   List<Annotation>? get note;
   @override
+
+  /// [type] Aspect of certainty being rated.
   CodeableConcept? get type;
   @override
+
+  /// [rating] Assessment or judgement of the aspect.
   CodeableConcept? get rating;
   @override
+
+  /// [rater] Individual or group who did the rating.
   String? get rater;
   @override
+
+  /// [raterElement] ("_rater") Extensions for rater
   @JsonKey(name: '_rater')
   Element? get raterElement;
   @override
+
+  /// [subcomponent] A domain or subdomain of certainty.
   List<EvidenceCertainty>? get subcomponent;
   @override
   @JsonKey(ignore: true)
@@ -17512,82 +21962,220 @@ EvidenceReport _$EvidenceReportFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$EvidenceReport {
+  /// [resourceType] This is a EvidenceReport resource
+  @JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  /// Once assigned, this value never changes.
   Id? get id => throw _privateConstructorUsedError;
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not
+  /// always be associated with version changes to the resource.
   Meta? get meta => throw _privateConstructorUsedError;
+
+  /// [implicitRules] A reference to a set of rules that were followed when
+  /// the resource was constructed, and which must be understood when
+  /// processing the content. Often, this is a reference to an implementation
+  /// guide that defines the special rules along with other profiles etc.
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
+
+  /// [language] The base language in which the resource is written.
   Code? get language => throw _privateConstructorUsedError;
+
+  /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   Narrative? get text => throw _privateConstructorUsedError;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   List<Resource>? get contained => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [url] An absolute URI that is used to identify this EvidenceReport when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this summary is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the summary is stored on different servers.
   FhirUri? get url => throw _privateConstructorUsedError;
+
+  /// [urlElement] ("_url") Extensions for url
   @JsonKey(name: '_url')
   Element? get urlElement => throw _privateConstructorUsedError;
+
+  /// [identifier] A formal identifier that is used to identify this EvidenceReport when it is represented in other formats, or referenced in a specification, model, design or an instance.
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
+
+  /// [version] The identifier that is used to identify this version of the {{title}} when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the {{title}} author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.
   String? get version => throw _privateConstructorUsedError;
+
+  /// [versionElement] ("_version") Extensions for version
   @JsonKey(name: '_version')
   Element? get versionElement => throw _privateConstructorUsedError;
+
+  /// [versionAlgorithmString] Indicates the mechanism used to compare versions to determine which is more current.
+  String? get versionAlgorithmString => throw _privateConstructorUsedError;
+
+  /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions for versionAlgorithmString
+  @JsonKey(name: '_versionAlgorithmString')
+  Element? get versionAlgorithmStringElement =>
+      throw _privateConstructorUsedError;
+
+  /// [versionAlgorithmCoding] Indicates the mechanism used to compare versions to determine which is more current.
+  Coding? get versionAlgorithmCoding => throw _privateConstructorUsedError;
+
+  /// [name] A natural language name identifying the {{title}}. This name should be usable as an identifier for the module by machine processing applications such as code generation.
   String? get name => throw _privateConstructorUsedError;
+
+  /// [nameElement] ("_name") Extensions for name
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
+
+  /// [title] A short, descriptive, user-friendly title for the {{title}}.
   String? get title => throw _privateConstructorUsedError;
+
+  /// [titleElement] ("_title") Extensions for title
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
+
+  /// [status] The status of this summary. Enables tracking the life-cycle of the content.
   Code? get status => throw _privateConstructorUsedError;
+
+  /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
+
+  /// [experimental] A Boolean value to indicate that this {{title}} is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
   Boolean? get experimental => throw _privateConstructorUsedError;
+
+  /// [experimentalElement] ("_experimental") Extensions for experimental
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
+
+  /// [date] The date  (and optionally time) when the {{title}} was last significantly changed. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the {{title}} changes.
   FhirDateTime? get date => throw _privateConstructorUsedError;
+
+  /// [dateElement] ("_date") Extensions for date
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
+
+  /// [publisher] The name of the organization or individual responsible for the release and ongoing maintenance of the evidence report.
   String? get publisher => throw _privateConstructorUsedError;
+
+  /// [publisherElement] ("_publisher") Extensions for publisher
   @JsonKey(name: '_publisher')
   Element? get publisherElement => throw _privateConstructorUsedError;
+
+  /// [contact] Contact details to assist a user in finding and communicating with the publisher.
   List<ContactDetail>? get contact => throw _privateConstructorUsedError;
+
+  /// [description] A free text natural language description of the {{title}} from a consumer's perspective.
   Markdown? get description => throw _privateConstructorUsedError;
+
+  /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
+
+  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate evidence report instances.
   List<UsageContext>? get useContext => throw _privateConstructorUsedError;
+
+  /// [jurisdiction] A legal or geographic region in which the {{title}} is intended to be used.
   List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
+
+  /// [purpose] Explanation of why this {{title}} is needed and why it has been designed as it has.
   Markdown? get purpose => throw _privateConstructorUsedError;
+
+  /// [purposeElement] ("_purpose") Extensions for purpose
   @JsonKey(name: '_purpose')
   Element? get purposeElement => throw _privateConstructorUsedError;
+
+  /// [copyright] A copyright statement relating to the {{title}} and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the {{title}}.
   Markdown? get copyright => throw _privateConstructorUsedError;
+
+  /// [copyrightElement] ("_copyright") Extensions for copyright
   @JsonKey(name: '_copyright')
   Element? get copyrightElement => throw _privateConstructorUsedError;
+
+  /// [copyrightLabel] A short string (<50 characters), suitable for inclusion in a page footer that identifies the copyright holder, effective period, and optionally whether rights are resctricted. (e.g. 'All rights reserved', 'Some rights reserved').
+  String? get copyrightLabel => throw _privateConstructorUsedError;
+
+  /// [copyrightLabelElement] ("_copyrightLabel") Extensions for copyrightLabel
+  @JsonKey(name: '_copyrightLabel')
+  Element? get copyrightLabelElement => throw _privateConstructorUsedError;
+
+  /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
   Date? get approvalDate => throw _privateConstructorUsedError;
+
+  /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
   @JsonKey(name: '_approvalDate')
   Element? get approvalDateElement => throw _privateConstructorUsedError;
+
+  /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
   Date? get lastReviewDate => throw _privateConstructorUsedError;
+
+  /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement => throw _privateConstructorUsedError;
+
+  /// [effectivePeriod] The period during which the {{title}} content was or is planned to be in active use.
   Period? get effectivePeriod => throw _privateConstructorUsedError;
+
+  /// [topic] Descriptive topics related to the content of the {{title}}. Topics provide a high-level categorization as well as keywords for the {{title}} that can be useful for filtering and searching.
   List<CodeableConcept>? get topic => throw _privateConstructorUsedError;
+
+  /// [author] An individiual, organization, or device primarily involved in the creation and maintenance of the content.
   List<ContactDetail>? get author => throw _privateConstructorUsedError;
+
+  /// [editor] An individiual, organization, or device primarily responsible for internal coherence of the content.
   List<ContactDetail>? get editor => throw _privateConstructorUsedError;
+
+  /// [reviewer] An individiual, organization, or device primarily responsible for review of some aspect of the content.
   List<ContactDetail>? get reviewer => throw _privateConstructorUsedError;
+
+  /// [endorser] An individiual, organization, or device responsible for officially endorsing the content for use in some setting.
   List<ContactDetail>? get endorser => throw _privateConstructorUsedError;
+
+  /// [relatedArtifact] Link, description or reference to artifact associated with the report.
   List<RelatedArtifact>? get relatedArtifact =>
       throw _privateConstructorUsedError;
+
+  /// [relatedIdentifier] A formal identifier that is used to identify things closely related to this EvidenceReport.
   List<Identifier>? get relatedIdentifier => throw _privateConstructorUsedError;
+
+  /// [citeAsReference] Citation Resource or display of suggested citation for this report.
   Reference? get citeAsReference => throw _privateConstructorUsedError;
+
+  /// [citeAsMarkdown] Citation Resource or display of suggested citation for this report.
   Markdown? get citeAsMarkdown => throw _privateConstructorUsedError;
+
+  /// [citeAsMarkdownElement] ("_citeAsMarkdown") Extensions for citeAsMarkdown
   @JsonKey(name: '_citeAsMarkdown')
   Element? get citeAsMarkdownElement => throw _privateConstructorUsedError;
+
+  /// [type] Specifies the kind of report, such as grouping of classifiers, search results, or human-compiled expression.
   CodeableConcept? get type => throw _privateConstructorUsedError;
+
+  /// [note] Used for footnotes and annotations.
   List<Annotation>? get note => throw _privateConstructorUsedError;
+
+  /// [subject] Specifies the subject or focus of the report. Answers "What is this report about?".
   EvidenceReportSubject get subject => throw _privateConstructorUsedError;
+
+  /// [relatesTo] Relationships that this composition has with other compositions or documents that already exist.
   List<EvidenceReportRelatesTo>? get relatesTo =>
       throw _privateConstructorUsedError;
+
+  /// [section] The root of the sections that make up the composition.
   List<EvidenceReportSection>? get section =>
       throw _privateConstructorUsedError;
 
@@ -17604,47 +22192,71 @@ abstract class $EvidenceReportCopyWith<$Res> {
       _$EvidenceReportCopyWithImpl<$Res, EvidenceReport>;
   @useResult
   $Res call(
-      {R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? url,
-      @JsonKey(name: '_url') Element? urlElement,
+      @JsonKey(name: '_url')
+          Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version') Element? versionElement,
+      @JsonKey(name: '_version')
+          Element? versionElement,
+      String? versionAlgorithmString,
+      @JsonKey(name: '_versionAlgorithmString')
+          Element? versionAlgorithmStringElement,
+      Coding? versionAlgorithmCoding,
       String? name,
-      @JsonKey(name: '_name') Element? nameElement,
+      @JsonKey(name: '_name')
+          Element? nameElement,
       String? title,
-      @JsonKey(name: '_title') Element? titleElement,
+      @JsonKey(name: '_title')
+          Element? titleElement,
       Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
+      @JsonKey(name: '_status')
+          Element? statusElement,
       Boolean? experimental,
-      @JsonKey(name: '_experimental') Element? experimentalElement,
+      @JsonKey(name: '_experimental')
+          Element? experimentalElement,
       FhirDateTime? date,
-      @JsonKey(name: '_date') Element? dateElement,
+      @JsonKey(name: '_date')
+          Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher') Element? publisherElement,
+      @JsonKey(name: '_publisher')
+          Element? publisherElement,
       List<ContactDetail>? contact,
       Markdown? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
+      @JsonKey(name: '_description')
+          Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       Markdown? purpose,
-      @JsonKey(name: '_purpose') Element? purposeElement,
+      @JsonKey(name: '_purpose')
+          Element? purposeElement,
       Markdown? copyright,
-      @JsonKey(name: '_copyright') Element? copyrightElement,
+      @JsonKey(name: '_copyright')
+          Element? copyrightElement,
+      String? copyrightLabel,
+      @JsonKey(name: '_copyrightLabel')
+          Element? copyrightLabelElement,
       Date? approvalDate,
-      @JsonKey(name: '_approvalDate') Element? approvalDateElement,
+      @JsonKey(name: '_approvalDate')
+          Element? approvalDateElement,
       Date? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element? lastReviewDateElement,
       Period? effectivePeriod,
       List<CodeableConcept>? topic,
       List<ContactDetail>? author,
@@ -17655,7 +22267,8 @@ abstract class $EvidenceReportCopyWith<$Res> {
       List<Identifier>? relatedIdentifier,
       Reference? citeAsReference,
       Markdown? citeAsMarkdown,
-      @JsonKey(name: '_citeAsMarkdown') Element? citeAsMarkdownElement,
+      @JsonKey(name: '_citeAsMarkdown')
+          Element? citeAsMarkdownElement,
       CodeableConcept? type,
       List<Annotation>? note,
       EvidenceReportSubject subject,
@@ -17668,6 +22281,8 @@ abstract class $EvidenceReportCopyWith<$Res> {
   $NarrativeCopyWith<$Res>? get text;
   $ElementCopyWith<$Res>? get urlElement;
   $ElementCopyWith<$Res>? get versionElement;
+  $ElementCopyWith<$Res>? get versionAlgorithmStringElement;
+  $CodingCopyWith<$Res>? get versionAlgorithmCoding;
   $ElementCopyWith<$Res>? get nameElement;
   $ElementCopyWith<$Res>? get titleElement;
   $ElementCopyWith<$Res>? get statusElement;
@@ -17677,6 +22292,7 @@ abstract class $EvidenceReportCopyWith<$Res> {
   $ElementCopyWith<$Res>? get descriptionElement;
   $ElementCopyWith<$Res>? get purposeElement;
   $ElementCopyWith<$Res>? get copyrightElement;
+  $ElementCopyWith<$Res>? get copyrightLabelElement;
   $ElementCopyWith<$Res>? get approvalDateElement;
   $ElementCopyWith<$Res>? get lastReviewDateElement;
   $PeriodCopyWith<$Res>? get effectivePeriod;
@@ -17715,6 +22331,9 @@ class _$EvidenceReportCopyWithImpl<$Res, $Val extends EvidenceReport>
     Object? identifier = freezed,
     Object? version = freezed,
     Object? versionElement = freezed,
+    Object? versionAlgorithmString = freezed,
+    Object? versionAlgorithmStringElement = freezed,
+    Object? versionAlgorithmCoding = freezed,
     Object? name = freezed,
     Object? nameElement = freezed,
     Object? title = freezed,
@@ -17736,6 +22355,8 @@ class _$EvidenceReportCopyWithImpl<$Res, $Val extends EvidenceReport>
     Object? purposeElement = freezed,
     Object? copyright = freezed,
     Object? copyrightElement = freezed,
+    Object? copyrightLabel = freezed,
+    Object? copyrightLabelElement = freezed,
     Object? approvalDate = freezed,
     Object? approvalDateElement = freezed,
     Object? lastReviewDate = freezed,
@@ -17822,6 +22443,18 @@ class _$EvidenceReportCopyWithImpl<$Res, $Val extends EvidenceReport>
           ? _value.versionElement
           : versionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
+      versionAlgorithmString: freezed == versionAlgorithmString
+          ? _value.versionAlgorithmString
+          : versionAlgorithmString // ignore: cast_nullable_to_non_nullable
+              as String?,
+      versionAlgorithmStringElement: freezed == versionAlgorithmStringElement
+          ? _value.versionAlgorithmStringElement
+          : versionAlgorithmStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      versionAlgorithmCoding: freezed == versionAlgorithmCoding
+          ? _value.versionAlgorithmCoding
+          : versionAlgorithmCoding // ignore: cast_nullable_to_non_nullable
+              as Coding?,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -17905,6 +22538,14 @@ class _$EvidenceReportCopyWithImpl<$Res, $Val extends EvidenceReport>
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      copyrightLabel: freezed == copyrightLabel
+          ? _value.copyrightLabel
+          : copyrightLabel // ignore: cast_nullable_to_non_nullable
+              as String?,
+      copyrightLabelElement: freezed == copyrightLabelElement
+          ? _value.copyrightLabelElement
+          : copyrightLabelElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
@@ -18063,6 +22704,32 @@ class _$EvidenceReportCopyWithImpl<$Res, $Val extends EvidenceReport>
 
   @override
   @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get versionAlgorithmStringElement {
+    if (_value.versionAlgorithmStringElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.versionAlgorithmStringElement!,
+        (value) {
+      return _then(
+          _value.copyWith(versionAlgorithmStringElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CodingCopyWith<$Res>? get versionAlgorithmCoding {
+    if (_value.versionAlgorithmCoding == null) {
+      return null;
+    }
+
+    return $CodingCopyWith<$Res>(_value.versionAlgorithmCoding!, (value) {
+      return _then(_value.copyWith(versionAlgorithmCoding: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get nameElement {
     if (_value.nameElement == null) {
       return null;
@@ -18171,6 +22838,18 @@ class _$EvidenceReportCopyWithImpl<$Res, $Val extends EvidenceReport>
 
   @override
   @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get copyrightLabelElement {
+    if (_value.copyrightLabelElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.copyrightLabelElement!, (value) {
+      return _then(_value.copyWith(copyrightLabelElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get approvalDateElement {
     if (_value.approvalDateElement == null) {
       return null;
@@ -18259,47 +22938,71 @@ abstract class _$$_EvidenceReportCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? url,
-      @JsonKey(name: '_url') Element? urlElement,
+      @JsonKey(name: '_url')
+          Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version') Element? versionElement,
+      @JsonKey(name: '_version')
+          Element? versionElement,
+      String? versionAlgorithmString,
+      @JsonKey(name: '_versionAlgorithmString')
+          Element? versionAlgorithmStringElement,
+      Coding? versionAlgorithmCoding,
       String? name,
-      @JsonKey(name: '_name') Element? nameElement,
+      @JsonKey(name: '_name')
+          Element? nameElement,
       String? title,
-      @JsonKey(name: '_title') Element? titleElement,
+      @JsonKey(name: '_title')
+          Element? titleElement,
       Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
+      @JsonKey(name: '_status')
+          Element? statusElement,
       Boolean? experimental,
-      @JsonKey(name: '_experimental') Element? experimentalElement,
+      @JsonKey(name: '_experimental')
+          Element? experimentalElement,
       FhirDateTime? date,
-      @JsonKey(name: '_date') Element? dateElement,
+      @JsonKey(name: '_date')
+          Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher') Element? publisherElement,
+      @JsonKey(name: '_publisher')
+          Element? publisherElement,
       List<ContactDetail>? contact,
       Markdown? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
+      @JsonKey(name: '_description')
+          Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       Markdown? purpose,
-      @JsonKey(name: '_purpose') Element? purposeElement,
+      @JsonKey(name: '_purpose')
+          Element? purposeElement,
       Markdown? copyright,
-      @JsonKey(name: '_copyright') Element? copyrightElement,
+      @JsonKey(name: '_copyright')
+          Element? copyrightElement,
+      String? copyrightLabel,
+      @JsonKey(name: '_copyrightLabel')
+          Element? copyrightLabelElement,
       Date? approvalDate,
-      @JsonKey(name: '_approvalDate') Element? approvalDateElement,
+      @JsonKey(name: '_approvalDate')
+          Element? approvalDateElement,
       Date? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element? lastReviewDateElement,
       Period? effectivePeriod,
       List<CodeableConcept>? topic,
       List<ContactDetail>? author,
@@ -18310,7 +23013,8 @@ abstract class _$$_EvidenceReportCopyWith<$Res>
       List<Identifier>? relatedIdentifier,
       Reference? citeAsReference,
       Markdown? citeAsMarkdown,
-      @JsonKey(name: '_citeAsMarkdown') Element? citeAsMarkdownElement,
+      @JsonKey(name: '_citeAsMarkdown')
+          Element? citeAsMarkdownElement,
       CodeableConcept? type,
       List<Annotation>? note,
       EvidenceReportSubject subject,
@@ -18330,6 +23034,10 @@ abstract class _$$_EvidenceReportCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get versionElement;
   @override
+  $ElementCopyWith<$Res>? get versionAlgorithmStringElement;
+  @override
+  $CodingCopyWith<$Res>? get versionAlgorithmCoding;
+  @override
   $ElementCopyWith<$Res>? get nameElement;
   @override
   $ElementCopyWith<$Res>? get titleElement;
@@ -18347,6 +23055,8 @@ abstract class _$$_EvidenceReportCopyWith<$Res>
   $ElementCopyWith<$Res>? get purposeElement;
   @override
   $ElementCopyWith<$Res>? get copyrightElement;
+  @override
+  $ElementCopyWith<$Res>? get copyrightLabelElement;
   @override
   $ElementCopyWith<$Res>? get approvalDateElement;
   @override
@@ -18390,6 +23100,9 @@ class __$$_EvidenceReportCopyWithImpl<$Res>
     Object? identifier = freezed,
     Object? version = freezed,
     Object? versionElement = freezed,
+    Object? versionAlgorithmString = freezed,
+    Object? versionAlgorithmStringElement = freezed,
+    Object? versionAlgorithmCoding = freezed,
     Object? name = freezed,
     Object? nameElement = freezed,
     Object? title = freezed,
@@ -18411,6 +23124,8 @@ class __$$_EvidenceReportCopyWithImpl<$Res>
     Object? purposeElement = freezed,
     Object? copyright = freezed,
     Object? copyrightElement = freezed,
+    Object? copyrightLabel = freezed,
+    Object? copyrightLabelElement = freezed,
     Object? approvalDate = freezed,
     Object? approvalDateElement = freezed,
     Object? lastReviewDate = freezed,
@@ -18497,6 +23212,18 @@ class __$$_EvidenceReportCopyWithImpl<$Res>
           ? _value.versionElement
           : versionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
+      versionAlgorithmString: freezed == versionAlgorithmString
+          ? _value.versionAlgorithmString
+          : versionAlgorithmString // ignore: cast_nullable_to_non_nullable
+              as String?,
+      versionAlgorithmStringElement: freezed == versionAlgorithmStringElement
+          ? _value.versionAlgorithmStringElement
+          : versionAlgorithmStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      versionAlgorithmCoding: freezed == versionAlgorithmCoding
+          ? _value.versionAlgorithmCoding
+          : versionAlgorithmCoding // ignore: cast_nullable_to_non_nullable
+              as Coding?,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -18580,6 +23307,14 @@ class __$$_EvidenceReportCopyWithImpl<$Res>
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      copyrightLabel: freezed == copyrightLabel
+          ? _value.copyrightLabel
+          : copyrightLabel // ignore: cast_nullable_to_non_nullable
+              as String?,
+      copyrightLabelElement: freezed == copyrightLabelElement
+          ? _value.copyrightLabelElement
+          : copyrightLabelElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
@@ -18669,47 +23404,71 @@ class __$$_EvidenceReportCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_EvidenceReport extends _EvidenceReport {
   _$_EvidenceReport(
-      {this.resourceType = R5ResourceType.EvidenceReport,
+      {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
+          this.resourceType = R5ResourceType.EvidenceReport,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.url,
-      @JsonKey(name: '_url') this.urlElement,
+      @JsonKey(name: '_url')
+          this.urlElement,
       final List<Identifier>? identifier,
       this.version,
-      @JsonKey(name: '_version') this.versionElement,
+      @JsonKey(name: '_version')
+          this.versionElement,
+      this.versionAlgorithmString,
+      @JsonKey(name: '_versionAlgorithmString')
+          this.versionAlgorithmStringElement,
+      this.versionAlgorithmCoding,
       this.name,
-      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
       this.title,
-      @JsonKey(name: '_title') this.titleElement,
+      @JsonKey(name: '_title')
+          this.titleElement,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.experimental,
-      @JsonKey(name: '_experimental') this.experimentalElement,
+      @JsonKey(name: '_experimental')
+          this.experimentalElement,
       this.date,
-      @JsonKey(name: '_date') this.dateElement,
+      @JsonKey(name: '_date')
+          this.dateElement,
       this.publisher,
-      @JsonKey(name: '_publisher') this.publisherElement,
+      @JsonKey(name: '_publisher')
+          this.publisherElement,
       final List<ContactDetail>? contact,
       this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
       this.purpose,
-      @JsonKey(name: '_purpose') this.purposeElement,
+      @JsonKey(name: '_purpose')
+          this.purposeElement,
       this.copyright,
-      @JsonKey(name: '_copyright') this.copyrightElement,
+      @JsonKey(name: '_copyright')
+          this.copyrightElement,
+      this.copyrightLabel,
+      @JsonKey(name: '_copyrightLabel')
+          this.copyrightLabelElement,
       this.approvalDate,
-      @JsonKey(name: '_approvalDate') this.approvalDateElement,
+      @JsonKey(name: '_approvalDate')
+          this.approvalDateElement,
       this.lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') this.lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          this.lastReviewDateElement,
       this.effectivePeriod,
       final List<CodeableConcept>? topic,
       final List<ContactDetail>? author,
@@ -18720,7 +23479,8 @@ class _$_EvidenceReport extends _EvidenceReport {
       final List<Identifier>? relatedIdentifier,
       this.citeAsReference,
       this.citeAsMarkdown,
-      @JsonKey(name: '_citeAsMarkdown') this.citeAsMarkdownElement,
+      @JsonKey(name: '_citeAsMarkdown')
+          this.citeAsMarkdownElement,
       this.type,
       final List<Annotation>? note,
       required this.subject,
@@ -18748,26 +23508,51 @@ class _$_EvidenceReport extends _EvidenceReport {
   factory _$_EvidenceReport.fromJson(Map<String, dynamic> json) =>
       _$$_EvidenceReportFromJson(json);
 
+  /// [resourceType] This is a EvidenceReport resource
   @override
-  @JsonKey()
+  @JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
   final R5ResourceType resourceType;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  /// Once assigned, this value never changes.
   @override
   final Id? id;
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not
+  /// always be associated with version changes to the resource.
   @override
   final Meta? meta;
+
+  /// [implicitRules] A reference to a set of rules that were followed when
+  /// the resource was constructed, and which must be understood when
+  /// processing the content. Often, this is a reference to an implementation
+  /// guide that defines the special rules along with other profiles etc.
   @override
   final FhirUri? implicitRules;
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
+
+  /// [language] The base language in which the resource is written.
   @override
   final Code? language;
+
+  /// [languageElement] ("_language") Extensions for language
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   @override
   final Narrative? text;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   final List<Resource>? _contained;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   @override
   List<Resource>? get contained {
     final value = _contained;
@@ -18777,7 +23562,10 @@ class _$_EvidenceReport extends _EvidenceReport {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -18788,7 +23576,10 @@ class _$_EvidenceReport extends _EvidenceReport {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -18799,12 +23590,19 @@ class _$_EvidenceReport extends _EvidenceReport {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [url] An absolute URI that is used to identify this EvidenceReport when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this summary is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the summary is stored on different servers.
   @override
   final FhirUri? url;
+
+  /// [urlElement] ("_url") Extensions for url
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
+
+  /// [identifier] A formal identifier that is used to identify this EvidenceReport when it is represented in other formats, or referenced in a specification, model, design or an instance.
   final List<Identifier>? _identifier;
+
+  /// [identifier] A formal identifier that is used to identify this EvidenceReport when it is represented in other formats, or referenced in a specification, model, design or an instance.
   @override
   List<Identifier>? get identifier {
     final value = _identifier;
@@ -18814,42 +23612,86 @@ class _$_EvidenceReport extends _EvidenceReport {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [version] The identifier that is used to identify this version of the {{title}} when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the {{title}} author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.
   @override
   final String? version;
+
+  /// [versionElement] ("_version") Extensions for version
   @override
   @JsonKey(name: '_version')
   final Element? versionElement;
+
+  /// [versionAlgorithmString] Indicates the mechanism used to compare versions to determine which is more current.
+  @override
+  final String? versionAlgorithmString;
+
+  /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions for versionAlgorithmString
+  @override
+  @JsonKey(name: '_versionAlgorithmString')
+  final Element? versionAlgorithmStringElement;
+
+  /// [versionAlgorithmCoding] Indicates the mechanism used to compare versions to determine which is more current.
+  @override
+  final Coding? versionAlgorithmCoding;
+
+  /// [name] A natural language name identifying the {{title}}. This name should be usable as an identifier for the module by machine processing applications such as code generation.
   @override
   final String? name;
+
+  /// [nameElement] ("_name") Extensions for name
   @override
   @JsonKey(name: '_name')
   final Element? nameElement;
+
+  /// [title] A short, descriptive, user-friendly title for the {{title}}.
   @override
   final String? title;
+
+  /// [titleElement] ("_title") Extensions for title
   @override
   @JsonKey(name: '_title')
   final Element? titleElement;
+
+  /// [status] The status of this summary. Enables tracking the life-cycle of the content.
   @override
   final Code? status;
+
+  /// [statusElement] ("_status") Extensions for status
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
+
+  /// [experimental] A Boolean value to indicate that this {{title}} is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
   @override
   final Boolean? experimental;
+
+  /// [experimentalElement] ("_experimental") Extensions for experimental
   @override
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
+
+  /// [date] The date  (and optionally time) when the {{title}} was last significantly changed. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the {{title}} changes.
   @override
   final FhirDateTime? date;
+
+  /// [dateElement] ("_date") Extensions for date
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
+
+  /// [publisher] The name of the organization or individual responsible for the release and ongoing maintenance of the evidence report.
   @override
   final String? publisher;
+
+  /// [publisherElement] ("_publisher") Extensions for publisher
   @override
   @JsonKey(name: '_publisher')
   final Element? publisherElement;
+
+  /// [contact] Contact details to assist a user in finding and communicating with the publisher.
   final List<ContactDetail>? _contact;
+
+  /// [contact] Contact details to assist a user in finding and communicating with the publisher.
   @override
   List<ContactDetail>? get contact {
     final value = _contact;
@@ -18859,12 +23701,19 @@ class _$_EvidenceReport extends _EvidenceReport {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [description] A free text natural language description of the {{title}} from a consumer's perspective.
   @override
   final Markdown? description;
+
+  /// [descriptionElement] ("_description") Extensions for description
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
+
+  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate evidence report instances.
   final List<UsageContext>? _useContext;
+
+  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate evidence report instances.
   @override
   List<UsageContext>? get useContext {
     final value = _useContext;
@@ -18874,7 +23723,10 @@ class _$_EvidenceReport extends _EvidenceReport {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [jurisdiction] A legal or geographic region in which the {{title}} is intended to be used.
   final List<CodeableConcept>? _jurisdiction;
+
+  /// [jurisdiction] A legal or geographic region in which the {{title}} is intended to be used.
   @override
   List<CodeableConcept>? get jurisdiction {
     final value = _jurisdiction;
@@ -18884,29 +23736,59 @@ class _$_EvidenceReport extends _EvidenceReport {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [purpose] Explanation of why this {{title}} is needed and why it has been designed as it has.
   @override
   final Markdown? purpose;
+
+  /// [purposeElement] ("_purpose") Extensions for purpose
   @override
   @JsonKey(name: '_purpose')
   final Element? purposeElement;
+
+  /// [copyright] A copyright statement relating to the {{title}} and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the {{title}}.
   @override
   final Markdown? copyright;
+
+  /// [copyrightElement] ("_copyright") Extensions for copyright
   @override
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
+
+  /// [copyrightLabel] A short string (<50 characters), suitable for inclusion in a page footer that identifies the copyright holder, effective period, and optionally whether rights are resctricted. (e.g. 'All rights reserved', 'Some rights reserved').
+  @override
+  final String? copyrightLabel;
+
+  /// [copyrightLabelElement] ("_copyrightLabel") Extensions for copyrightLabel
+  @override
+  @JsonKey(name: '_copyrightLabel')
+  final Element? copyrightLabelElement;
+
+  /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
   @override
   final Date? approvalDate;
+
+  /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
   @override
   @JsonKey(name: '_approvalDate')
   final Element? approvalDateElement;
+
+  /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
   @override
   final Date? lastReviewDate;
+
+  /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
   @override
   @JsonKey(name: '_lastReviewDate')
   final Element? lastReviewDateElement;
+
+  /// [effectivePeriod] The period during which the {{title}} content was or is planned to be in active use.
   @override
   final Period? effectivePeriod;
+
+  /// [topic] Descriptive topics related to the content of the {{title}}. Topics provide a high-level categorization as well as keywords for the {{title}} that can be useful for filtering and searching.
   final List<CodeableConcept>? _topic;
+
+  /// [topic] Descriptive topics related to the content of the {{title}}. Topics provide a high-level categorization as well as keywords for the {{title}} that can be useful for filtering and searching.
   @override
   List<CodeableConcept>? get topic {
     final value = _topic;
@@ -18916,7 +23798,10 @@ class _$_EvidenceReport extends _EvidenceReport {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [author] An individiual, organization, or device primarily involved in the creation and maintenance of the content.
   final List<ContactDetail>? _author;
+
+  /// [author] An individiual, organization, or device primarily involved in the creation and maintenance of the content.
   @override
   List<ContactDetail>? get author {
     final value = _author;
@@ -18926,7 +23811,10 @@ class _$_EvidenceReport extends _EvidenceReport {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [editor] An individiual, organization, or device primarily responsible for internal coherence of the content.
   final List<ContactDetail>? _editor;
+
+  /// [editor] An individiual, organization, or device primarily responsible for internal coherence of the content.
   @override
   List<ContactDetail>? get editor {
     final value = _editor;
@@ -18936,7 +23824,10 @@ class _$_EvidenceReport extends _EvidenceReport {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [reviewer] An individiual, organization, or device primarily responsible for review of some aspect of the content.
   final List<ContactDetail>? _reviewer;
+
+  /// [reviewer] An individiual, organization, or device primarily responsible for review of some aspect of the content.
   @override
   List<ContactDetail>? get reviewer {
     final value = _reviewer;
@@ -18946,7 +23837,10 @@ class _$_EvidenceReport extends _EvidenceReport {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [endorser] An individiual, organization, or device responsible for officially endorsing the content for use in some setting.
   final List<ContactDetail>? _endorser;
+
+  /// [endorser] An individiual, organization, or device responsible for officially endorsing the content for use in some setting.
   @override
   List<ContactDetail>? get endorser {
     final value = _endorser;
@@ -18956,7 +23850,10 @@ class _$_EvidenceReport extends _EvidenceReport {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [relatedArtifact] Link, description or reference to artifact associated with the report.
   final List<RelatedArtifact>? _relatedArtifact;
+
+  /// [relatedArtifact] Link, description or reference to artifact associated with the report.
   @override
   List<RelatedArtifact>? get relatedArtifact {
     final value = _relatedArtifact;
@@ -18966,7 +23863,10 @@ class _$_EvidenceReport extends _EvidenceReport {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [relatedIdentifier] A formal identifier that is used to identify things closely related to this EvidenceReport.
   final List<Identifier>? _relatedIdentifier;
+
+  /// [relatedIdentifier] A formal identifier that is used to identify things closely related to this EvidenceReport.
   @override
   List<Identifier>? get relatedIdentifier {
     final value = _relatedIdentifier;
@@ -18977,16 +23877,27 @@ class _$_EvidenceReport extends _EvidenceReport {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [citeAsReference] Citation Resource or display of suggested citation for this report.
   @override
   final Reference? citeAsReference;
+
+  /// [citeAsMarkdown] Citation Resource or display of suggested citation for this report.
   @override
   final Markdown? citeAsMarkdown;
+
+  /// [citeAsMarkdownElement] ("_citeAsMarkdown") Extensions for citeAsMarkdown
   @override
   @JsonKey(name: '_citeAsMarkdown')
   final Element? citeAsMarkdownElement;
+
+  /// [type] Specifies the kind of report, such as grouping of classifiers, search results, or human-compiled expression.
   @override
   final CodeableConcept? type;
+
+  /// [note] Used for footnotes and annotations.
   final List<Annotation>? _note;
+
+  /// [note] Used for footnotes and annotations.
   @override
   List<Annotation>? get note {
     final value = _note;
@@ -18996,9 +23907,14 @@ class _$_EvidenceReport extends _EvidenceReport {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [subject] Specifies the subject or focus of the report. Answers "What is this report about?".
   @override
   final EvidenceReportSubject subject;
+
+  /// [relatesTo] Relationships that this composition has with other compositions or documents that already exist.
   final List<EvidenceReportRelatesTo>? _relatesTo;
+
+  /// [relatesTo] Relationships that this composition has with other compositions or documents that already exist.
   @override
   List<EvidenceReportRelatesTo>? get relatesTo {
     final value = _relatesTo;
@@ -19008,7 +23924,10 @@ class _$_EvidenceReport extends _EvidenceReport {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [section] The root of the sections that make up the composition.
   final List<EvidenceReportSection>? _section;
+
+  /// [section] The root of the sections that make up the composition.
   @override
   List<EvidenceReportSection>? get section {
     final value = _section;
@@ -19020,7 +23939,7 @@ class _$_EvidenceReport extends _EvidenceReport {
 
   @override
   String toString() {
-    return 'EvidenceReport(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, relatedIdentifier: $relatedIdentifier, citeAsReference: $citeAsReference, citeAsMarkdown: $citeAsMarkdown, citeAsMarkdownElement: $citeAsMarkdownElement, type: $type, note: $note, subject: $subject, relatesTo: $relatesTo, section: $section)';
+    return 'EvidenceReport(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, versionAlgorithmString: $versionAlgorithmString, versionAlgorithmStringElement: $versionAlgorithmStringElement, versionAlgorithmCoding: $versionAlgorithmCoding, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, copyrightLabel: $copyrightLabel, copyrightLabelElement: $copyrightLabelElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, relatedIdentifier: $relatedIdentifier, citeAsReference: $citeAsReference, citeAsMarkdown: $citeAsMarkdown, citeAsMarkdownElement: $citeAsMarkdownElement, type: $type, note: $note, subject: $subject, relatesTo: $relatesTo, section: $section)';
   }
 
   @override
@@ -19055,6 +23974,13 @@ class _$_EvidenceReport extends _EvidenceReport {
             (identical(other.version, version) || other.version == version) &&
             (identical(other.versionElement, versionElement) ||
                 other.versionElement == versionElement) &&
+            (identical(other.versionAlgorithmString, versionAlgorithmString) ||
+                other.versionAlgorithmString == versionAlgorithmString) &&
+            (identical(other.versionAlgorithmStringElement, versionAlgorithmStringElement) ||
+                other.versionAlgorithmStringElement ==
+                    versionAlgorithmStringElement) &&
+            (identical(other.versionAlgorithmCoding, versionAlgorithmCoding) ||
+                other.versionAlgorithmCoding == versionAlgorithmCoding) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.nameElement, nameElement) ||
                 other.nameElement == nameElement) &&
@@ -19091,6 +24017,10 @@ class _$_EvidenceReport extends _EvidenceReport {
                 other.copyright == copyright) &&
             (identical(other.copyrightElement, copyrightElement) ||
                 other.copyrightElement == copyrightElement) &&
+            (identical(other.copyrightLabel, copyrightLabel) ||
+                other.copyrightLabel == copyrightLabel) &&
+            (identical(other.copyrightLabelElement, copyrightLabelElement) ||
+                other.copyrightLabelElement == copyrightLabelElement) &&
             (identical(other.approvalDate, approvalDate) ||
                 other.approvalDate == approvalDate) &&
             (identical(other.approvalDateElement, approvalDateElement) ||
@@ -19106,21 +24036,15 @@ class _$_EvidenceReport extends _EvidenceReport {
             const DeepCollectionEquality().equals(other._editor, _editor) &&
             const DeepCollectionEquality().equals(other._reviewer, _reviewer) &&
             const DeepCollectionEquality().equals(other._endorser, _endorser) &&
-            const DeepCollectionEquality()
-                .equals(other._relatedArtifact, _relatedArtifact) &&
-            const DeepCollectionEquality()
-                .equals(other._relatedIdentifier, _relatedIdentifier) &&
-            (identical(other.citeAsReference, citeAsReference) ||
-                other.citeAsReference == citeAsReference) &&
-            (identical(other.citeAsMarkdown, citeAsMarkdown) ||
-                other.citeAsMarkdown == citeAsMarkdown) &&
-            (identical(other.citeAsMarkdownElement, citeAsMarkdownElement) ||
-                other.citeAsMarkdownElement == citeAsMarkdownElement) &&
+            const DeepCollectionEquality().equals(other._relatedArtifact, _relatedArtifact) &&
+            const DeepCollectionEquality().equals(other._relatedIdentifier, _relatedIdentifier) &&
+            (identical(other.citeAsReference, citeAsReference) || other.citeAsReference == citeAsReference) &&
+            (identical(other.citeAsMarkdown, citeAsMarkdown) || other.citeAsMarkdown == citeAsMarkdown) &&
+            (identical(other.citeAsMarkdownElement, citeAsMarkdownElement) || other.citeAsMarkdownElement == citeAsMarkdownElement) &&
             (identical(other.type, type) || other.type == type) &&
             const DeepCollectionEquality().equals(other._note, _note) &&
             (identical(other.subject, subject) || other.subject == subject) &&
-            const DeepCollectionEquality()
-                .equals(other._relatesTo, _relatesTo) &&
+            const DeepCollectionEquality().equals(other._relatesTo, _relatesTo) &&
             const DeepCollectionEquality().equals(other._section, _section));
   }
 
@@ -19144,6 +24068,9 @@ class _$_EvidenceReport extends _EvidenceReport {
         const DeepCollectionEquality().hash(_identifier),
         version,
         versionElement,
+        versionAlgorithmString,
+        versionAlgorithmStringElement,
+        versionAlgorithmCoding,
         name,
         nameElement,
         title,
@@ -19165,6 +24092,8 @@ class _$_EvidenceReport extends _EvidenceReport {
         purposeElement,
         copyright,
         copyrightElement,
+        copyrightLabel,
+        copyrightLabelElement,
         approvalDate,
         approvalDateElement,
         lastReviewDate,
@@ -19203,47 +24132,71 @@ class _$_EvidenceReport extends _EvidenceReport {
 
 abstract class _EvidenceReport extends EvidenceReport {
   factory _EvidenceReport(
-      {final R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
+          final R5ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          final Element? implicitRulesElement,
       final Code? language,
-      @JsonKey(name: '_language') final Element? languageElement,
+      @JsonKey(name: '_language')
+          final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final FhirUri? url,
-      @JsonKey(name: '_url') final Element? urlElement,
+      @JsonKey(name: '_url')
+          final Element? urlElement,
       final List<Identifier>? identifier,
       final String? version,
-      @JsonKey(name: '_version') final Element? versionElement,
+      @JsonKey(name: '_version')
+          final Element? versionElement,
+      final String? versionAlgorithmString,
+      @JsonKey(name: '_versionAlgorithmString')
+          final Element? versionAlgorithmStringElement,
+      final Coding? versionAlgorithmCoding,
       final String? name,
-      @JsonKey(name: '_name') final Element? nameElement,
+      @JsonKey(name: '_name')
+          final Element? nameElement,
       final String? title,
-      @JsonKey(name: '_title') final Element? titleElement,
+      @JsonKey(name: '_title')
+          final Element? titleElement,
       final Code? status,
-      @JsonKey(name: '_status') final Element? statusElement,
+      @JsonKey(name: '_status')
+          final Element? statusElement,
       final Boolean? experimental,
-      @JsonKey(name: '_experimental') final Element? experimentalElement,
+      @JsonKey(name: '_experimental')
+          final Element? experimentalElement,
       final FhirDateTime? date,
-      @JsonKey(name: '_date') final Element? dateElement,
+      @JsonKey(name: '_date')
+          final Element? dateElement,
       final String? publisher,
-      @JsonKey(name: '_publisher') final Element? publisherElement,
+      @JsonKey(name: '_publisher')
+          final Element? publisherElement,
       final List<ContactDetail>? contact,
       final Markdown? description,
-      @JsonKey(name: '_description') final Element? descriptionElement,
+      @JsonKey(name: '_description')
+          final Element? descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
       final Markdown? purpose,
-      @JsonKey(name: '_purpose') final Element? purposeElement,
+      @JsonKey(name: '_purpose')
+          final Element? purposeElement,
       final Markdown? copyright,
-      @JsonKey(name: '_copyright') final Element? copyrightElement,
+      @JsonKey(name: '_copyright')
+          final Element? copyrightElement,
+      final String? copyrightLabel,
+      @JsonKey(name: '_copyrightLabel')
+          final Element? copyrightLabelElement,
       final Date? approvalDate,
-      @JsonKey(name: '_approvalDate') final Element? approvalDateElement,
+      @JsonKey(name: '_approvalDate')
+          final Element? approvalDateElement,
       final Date? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') final Element? lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          final Element? lastReviewDateElement,
       final Period? effectivePeriod,
       final List<CodeableConcept>? topic,
       final List<ContactDetail>? author,
@@ -19254,7 +24207,8 @@ abstract class _EvidenceReport extends EvidenceReport {
       final List<Identifier>? relatedIdentifier,
       final Reference? citeAsReference,
       final Markdown? citeAsMarkdown,
-      @JsonKey(name: '_citeAsMarkdown') final Element? citeAsMarkdownElement,
+      @JsonKey(name: '_citeAsMarkdown')
+          final Element? citeAsMarkdownElement,
       final CodeableConcept? type,
       final List<Annotation>? note,
       required final EvidenceReportSubject subject,
@@ -19266,135 +24220,278 @@ abstract class _EvidenceReport extends EvidenceReport {
       _$_EvidenceReport.fromJson;
 
   @override
+
+  /// [resourceType] This is a EvidenceReport resource
+  @JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
   R5ResourceType get resourceType;
   @override
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  /// Once assigned, this value never changes.
   Id? get id;
   @override
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not
+  /// always be associated with version changes to the resource.
   Meta? get meta;
   @override
+
+  /// [implicitRules] A reference to a set of rules that were followed when
+  /// the resource was constructed, and which must be understood when
+  /// processing the content. Often, this is a reference to an implementation
+  /// guide that defines the special rules along with other profiles etc.
   FhirUri? get implicitRules;
   @override
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
+
+  /// [language] The base language in which the resource is written.
   Code? get language;
   @override
+
+  /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   Narrative? get text;
   @override
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   List<Resource>? get contained;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [url] An absolute URI that is used to identify this EvidenceReport when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this summary is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the summary is stored on different servers.
   FhirUri? get url;
   @override
+
+  /// [urlElement] ("_url") Extensions for url
   @JsonKey(name: '_url')
   Element? get urlElement;
   @override
+
+  /// [identifier] A formal identifier that is used to identify this EvidenceReport when it is represented in other formats, or referenced in a specification, model, design or an instance.
   List<Identifier>? get identifier;
   @override
+
+  /// [version] The identifier that is used to identify this version of the {{title}} when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the {{title}} author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.
   String? get version;
   @override
+
+  /// [versionElement] ("_version") Extensions for version
   @JsonKey(name: '_version')
   Element? get versionElement;
   @override
+
+  /// [versionAlgorithmString] Indicates the mechanism used to compare versions to determine which is more current.
+  String? get versionAlgorithmString;
+  @override
+
+  /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions for versionAlgorithmString
+  @JsonKey(name: '_versionAlgorithmString')
+  Element? get versionAlgorithmStringElement;
+  @override
+
+  /// [versionAlgorithmCoding] Indicates the mechanism used to compare versions to determine which is more current.
+  Coding? get versionAlgorithmCoding;
+  @override
+
+  /// [name] A natural language name identifying the {{title}}. This name should be usable as an identifier for the module by machine processing applications such as code generation.
   String? get name;
   @override
+
+  /// [nameElement] ("_name") Extensions for name
   @JsonKey(name: '_name')
   Element? get nameElement;
   @override
+
+  /// [title] A short, descriptive, user-friendly title for the {{title}}.
   String? get title;
   @override
+
+  /// [titleElement] ("_title") Extensions for title
   @JsonKey(name: '_title')
   Element? get titleElement;
   @override
+
+  /// [status] The status of this summary. Enables tracking the life-cycle of the content.
   Code? get status;
   @override
+
+  /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
+
+  /// [experimental] A Boolean value to indicate that this {{title}} is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
   Boolean? get experimental;
   @override
+
+  /// [experimentalElement] ("_experimental") Extensions for experimental
   @JsonKey(name: '_experimental')
   Element? get experimentalElement;
   @override
+
+  /// [date] The date  (and optionally time) when the {{title}} was last significantly changed. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the {{title}} changes.
   FhirDateTime? get date;
   @override
+
+  /// [dateElement] ("_date") Extensions for date
   @JsonKey(name: '_date')
   Element? get dateElement;
   @override
+
+  /// [publisher] The name of the organization or individual responsible for the release and ongoing maintenance of the evidence report.
   String? get publisher;
   @override
+
+  /// [publisherElement] ("_publisher") Extensions for publisher
   @JsonKey(name: '_publisher')
   Element? get publisherElement;
   @override
+
+  /// [contact] Contact details to assist a user in finding and communicating with the publisher.
   List<ContactDetail>? get contact;
   @override
+
+  /// [description] A free text natural language description of the {{title}} from a consumer's perspective.
   Markdown? get description;
   @override
+
+  /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
+
+  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate evidence report instances.
   List<UsageContext>? get useContext;
   @override
+
+  /// [jurisdiction] A legal or geographic region in which the {{title}} is intended to be used.
   List<CodeableConcept>? get jurisdiction;
   @override
+
+  /// [purpose] Explanation of why this {{title}} is needed and why it has been designed as it has.
   Markdown? get purpose;
   @override
+
+  /// [purposeElement] ("_purpose") Extensions for purpose
   @JsonKey(name: '_purpose')
   Element? get purposeElement;
   @override
+
+  /// [copyright] A copyright statement relating to the {{title}} and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the {{title}}.
   Markdown? get copyright;
   @override
+
+  /// [copyrightElement] ("_copyright") Extensions for copyright
   @JsonKey(name: '_copyright')
   Element? get copyrightElement;
   @override
+
+  /// [copyrightLabel] A short string (<50 characters), suitable for inclusion in a page footer that identifies the copyright holder, effective period, and optionally whether rights are resctricted. (e.g. 'All rights reserved', 'Some rights reserved').
+  String? get copyrightLabel;
+  @override
+
+  /// [copyrightLabelElement] ("_copyrightLabel") Extensions for copyrightLabel
+  @JsonKey(name: '_copyrightLabel')
+  Element? get copyrightLabelElement;
+  @override
+
+  /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
   Date? get approvalDate;
   @override
+
+  /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
   @JsonKey(name: '_approvalDate')
   Element? get approvalDateElement;
   @override
+
+  /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
   Date? get lastReviewDate;
   @override
+
+  /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement;
   @override
+
+  /// [effectivePeriod] The period during which the {{title}} content was or is planned to be in active use.
   Period? get effectivePeriod;
   @override
+
+  /// [topic] Descriptive topics related to the content of the {{title}}. Topics provide a high-level categorization as well as keywords for the {{title}} that can be useful for filtering and searching.
   List<CodeableConcept>? get topic;
   @override
+
+  /// [author] An individiual, organization, or device primarily involved in the creation and maintenance of the content.
   List<ContactDetail>? get author;
   @override
+
+  /// [editor] An individiual, organization, or device primarily responsible for internal coherence of the content.
   List<ContactDetail>? get editor;
   @override
+
+  /// [reviewer] An individiual, organization, or device primarily responsible for review of some aspect of the content.
   List<ContactDetail>? get reviewer;
   @override
+
+  /// [endorser] An individiual, organization, or device responsible for officially endorsing the content for use in some setting.
   List<ContactDetail>? get endorser;
   @override
+
+  /// [relatedArtifact] Link, description or reference to artifact associated with the report.
   List<RelatedArtifact>? get relatedArtifact;
   @override
+
+  /// [relatedIdentifier] A formal identifier that is used to identify things closely related to this EvidenceReport.
   List<Identifier>? get relatedIdentifier;
   @override
+
+  /// [citeAsReference] Citation Resource or display of suggested citation for this report.
   Reference? get citeAsReference;
   @override
+
+  /// [citeAsMarkdown] Citation Resource or display of suggested citation for this report.
   Markdown? get citeAsMarkdown;
   @override
+
+  /// [citeAsMarkdownElement] ("_citeAsMarkdown") Extensions for citeAsMarkdown
   @JsonKey(name: '_citeAsMarkdown')
   Element? get citeAsMarkdownElement;
   @override
+
+  /// [type] Specifies the kind of report, such as grouping of classifiers, search results, or human-compiled expression.
   CodeableConcept? get type;
   @override
+
+  /// [note] Used for footnotes and annotations.
   List<Annotation>? get note;
   @override
+
+  /// [subject] Specifies the subject or focus of the report. Answers "What is this report about?".
   EvidenceReportSubject get subject;
   @override
+
+  /// [relatesTo] Relationships that this composition has with other compositions or documents that already exist.
   List<EvidenceReportRelatesTo>? get relatesTo;
   @override
+
+  /// [section] The root of the sections that make up the composition.
   List<EvidenceReportSection>? get section;
   @override
   @JsonKey(ignore: true)
@@ -19409,13 +24506,39 @@ EvidenceReportSubject _$EvidenceReportSubjectFromJson(
 
 /// @nodoc
 mixin _$EvidenceReportSubject {
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [characteristic] Characteristic.
   List<EvidenceReportCharacteristic>? get characteristic =>
       throw _privateConstructorUsedError;
+
+  /// [note] Used for general notes and annotations not coded elsewhere.
   List<Annotation>? get note => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -19559,9 +24682,25 @@ class _$_EvidenceReportSubject extends _EvidenceReportSubject {
   factory _$_EvidenceReportSubject.fromJson(Map<String, dynamic> json) =>
       _$$_EvidenceReportSubjectFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -19572,7 +24711,32 @@ class _$_EvidenceReportSubject extends _EvidenceReportSubject {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -19583,7 +24747,10 @@ class _$_EvidenceReportSubject extends _EvidenceReportSubject {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [characteristic] Characteristic.
   final List<EvidenceReportCharacteristic>? _characteristic;
+
+  /// [characteristic] Characteristic.
   @override
   List<EvidenceReportCharacteristic>? get characteristic {
     final value = _characteristic;
@@ -19593,7 +24760,10 @@ class _$_EvidenceReportSubject extends _EvidenceReportSubject {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [note] Used for general notes and annotations not coded elsewhere.
   final List<Annotation>? _note;
+
+  /// [note] Used for general notes and annotations not coded elsewhere.
   @override
   List<Annotation>? get note {
     final value = _note;
@@ -19661,15 +24831,42 @@ abstract class _EvidenceReportSubject extends EvidenceReportSubject {
       _$_EvidenceReportSubject.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [characteristic] Characteristic.
   List<EvidenceReportCharacteristic>? get characteristic;
   @override
+
+  /// [note] Used for general notes and annotations not coded elsewhere.
   List<Annotation>? get note;
   @override
   @JsonKey(ignore: true)
@@ -19684,23 +24881,65 @@ EvidenceReportCharacteristic _$EvidenceReportCharacteristicFromJson(
 
 /// @nodoc
 mixin _$EvidenceReportCharacteristic {
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [code] Characteristic code.
   CodeableConcept get code => throw _privateConstructorUsedError;
+
+  /// [valueReference] Characteristic value.
   Reference? get valueReference => throw _privateConstructorUsedError;
+
+  /// [valueCodeableConcept] Characteristic value.
   CodeableConcept? get valueCodeableConcept =>
       throw _privateConstructorUsedError;
+
+  /// [valueBoolean] Characteristic value.
   Boolean? get valueBoolean => throw _privateConstructorUsedError;
+
+  /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement => throw _privateConstructorUsedError;
+
+  /// [valueQuantity] Characteristic value.
   Quantity? get valueQuantity => throw _privateConstructorUsedError;
+
+  /// [valueRange] Characteristic value.
   Range? get valueRange => throw _privateConstructorUsedError;
+
+  /// [exclude] Is used to express not the characteristic.
   Boolean? get exclude => throw _privateConstructorUsedError;
+
+  /// [excludeElement] ("_exclude") Extensions for exclude
   @JsonKey(name: '_exclude')
   Element? get excludeElement => throw _privateConstructorUsedError;
+
+  /// [period] Timeframe for the characteristic.
   Period? get period => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -20070,9 +25309,25 @@ class _$_EvidenceReportCharacteristic extends _EvidenceReportCharacteristic {
   factory _$_EvidenceReportCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$$_EvidenceReportCharacteristicFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -20083,7 +25338,32 @@ class _$_EvidenceReportCharacteristic extends _EvidenceReportCharacteristic {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -20094,26 +25374,45 @@ class _$_EvidenceReportCharacteristic extends _EvidenceReportCharacteristic {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [code] Characteristic code.
   @override
   final CodeableConcept code;
+
+  /// [valueReference] Characteristic value.
   @override
   final Reference? valueReference;
+
+  /// [valueCodeableConcept] Characteristic value.
   @override
   final CodeableConcept? valueCodeableConcept;
+
+  /// [valueBoolean] Characteristic value.
   @override
   final Boolean? valueBoolean;
+
+  /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   @override
   @JsonKey(name: '_valueBoolean')
   final Element? valueBooleanElement;
+
+  /// [valueQuantity] Characteristic value.
   @override
   final Quantity? valueQuantity;
+
+  /// [valueRange] Characteristic value.
   @override
   final Range? valueRange;
+
+  /// [exclude] Is used to express not the characteristic.
   @override
   final Boolean? exclude;
+
+  /// [excludeElement] ("_exclude") Extensions for exclude
   @override
   @JsonKey(name: '_exclude')
   final Element? excludeElement;
+
+  /// [period] Timeframe for the characteristic.
   @override
   final Period? period;
 
@@ -20206,33 +25505,76 @@ abstract class _EvidenceReportCharacteristic
       _$_EvidenceReportCharacteristic.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [code] Characteristic code.
   CodeableConcept get code;
   @override
+
+  /// [valueReference] Characteristic value.
   Reference? get valueReference;
   @override
+
+  /// [valueCodeableConcept] Characteristic value.
   CodeableConcept? get valueCodeableConcept;
   @override
+
+  /// [valueBoolean] Characteristic value.
   Boolean? get valueBoolean;
   @override
+
+  /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement;
   @override
+
+  /// [valueQuantity] Characteristic value.
   Quantity? get valueQuantity;
   @override
+
+  /// [valueRange] Characteristic value.
   Range? get valueRange;
   @override
+
+  /// [exclude] Is used to express not the characteristic.
   Boolean? get exclude;
   @override
+
+  /// [excludeElement] ("_exclude") Extensions for exclude
   @JsonKey(name: '_exclude')
   Element? get excludeElement;
   @override
+
+  /// [period] Timeframe for the characteristic.
   Period? get period;
   @override
   @JsonKey(ignore: true)
@@ -20247,14 +25589,42 @@ EvidenceReportRelatesTo _$EvidenceReportRelatesToFromJson(
 
 /// @nodoc
 mixin _$EvidenceReportRelatesTo {
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [code] The type of relationship that this composition has with anther composition or document.
   Code? get code => throw _privateConstructorUsedError;
+
+  /// [codeElement] ("_code") Extensions for code
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
+
+  /// [target] The target composition/document of this relationship.
   EvidenceReportTarget get target => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -20438,9 +25808,25 @@ class _$_EvidenceReportRelatesTo extends _EvidenceReportRelatesTo {
   factory _$_EvidenceReportRelatesTo.fromJson(Map<String, dynamic> json) =>
       _$$_EvidenceReportRelatesToFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -20451,7 +25837,32 @@ class _$_EvidenceReportRelatesTo extends _EvidenceReportRelatesTo {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -20462,11 +25873,16 @@ class _$_EvidenceReportRelatesTo extends _EvidenceReportRelatesTo {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [code] The type of relationship that this composition has with anther composition or document.
   @override
   final Code? code;
+
+  /// [codeElement] ("_code") Extensions for code
   @override
   @JsonKey(name: '_code')
   final Element? codeElement;
+
+  /// [target] The target composition/document of this relationship.
   @override
   final EvidenceReportTarget target;
 
@@ -20532,18 +25948,47 @@ abstract class _EvidenceReportRelatesTo extends EvidenceReportRelatesTo {
       _$_EvidenceReportRelatesTo.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [code] The type of relationship that this composition has with anther composition or document.
   Code? get code;
   @override
+
+  /// [codeElement] ("_code") Extensions for code
   @JsonKey(name: '_code')
   Element? get codeElement;
   @override
+
+  /// [target] The target composition/document of this relationship.
   EvidenceReportTarget get target;
   @override
   @JsonKey(ignore: true)
@@ -20557,18 +26002,52 @@ EvidenceReportTarget _$EvidenceReportTargetFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$EvidenceReportTarget {
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [url] Target of the relationship URL.
   FhirUri? get url => throw _privateConstructorUsedError;
+
+  /// [urlElement] ("_url") Extensions for url
   @JsonKey(name: '_url')
   Element? get urlElement => throw _privateConstructorUsedError;
+
+  /// [identifier] Target of the relationship Identifier.
   Identifier? get identifier => throw _privateConstructorUsedError;
+
+  /// [display] Target of the relationship Display.
   Markdown? get display => throw _privateConstructorUsedError;
+
+  /// [displayElement] ("_display") Extensions for display
   @JsonKey(name: '_display')
   Element? get displayElement => throw _privateConstructorUsedError;
+
+  /// [resource] Target of the relationship Resource reference.
   Reference? get resource => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -20824,9 +26303,25 @@ class _$_EvidenceReportTarget extends _EvidenceReportTarget {
   factory _$_EvidenceReportTarget.fromJson(Map<String, dynamic> json) =>
       _$$_EvidenceReportTargetFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -20837,7 +26332,32 @@ class _$_EvidenceReportTarget extends _EvidenceReportTarget {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -20848,18 +26368,29 @@ class _$_EvidenceReportTarget extends _EvidenceReportTarget {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [url] Target of the relationship URL.
   @override
   final FhirUri? url;
+
+  /// [urlElement] ("_url") Extensions for url
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
+
+  /// [identifier] Target of the relationship Identifier.
   @override
   final Identifier? identifier;
+
+  /// [display] Target of the relationship Display.
   @override
   final Markdown? display;
+
+  /// [displayElement] ("_display") Extensions for display
   @override
   @JsonKey(name: '_display')
   final Element? displayElement;
+
+  /// [resource] Target of the relationship Resource reference.
   @override
   final Reference? resource;
 
@@ -20936,25 +26467,60 @@ abstract class _EvidenceReportTarget extends EvidenceReportTarget {
       _$_EvidenceReportTarget.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [url] Target of the relationship URL.
   FhirUri? get url;
   @override
+
+  /// [urlElement] ("_url") Extensions for url
   @JsonKey(name: '_url')
   Element? get urlElement;
   @override
+
+  /// [identifier] Target of the relationship Identifier.
   Identifier? get identifier;
   @override
+
+  /// [display] Target of the relationship Display.
   Markdown? get display;
   @override
+
+  /// [displayElement] ("_display") Extensions for display
   @JsonKey(name: '_display')
   Element? get displayElement;
   @override
+
+  /// [resource] Target of the relationship Resource reference.
   Reference? get resource;
   @override
   @JsonKey(ignore: true)
@@ -20969,27 +26535,77 @@ EvidenceReportSection _$EvidenceReportSectionFromJson(
 
 /// @nodoc
 mixin _$EvidenceReportSection {
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [title] The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents.
   String? get title => throw _privateConstructorUsedError;
+
+  /// [titleElement] ("_title") Extensions for title
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
+
+  /// [focus] A code identifying the kind of content contained within the section. This should be consistent with the section title.
   CodeableConcept? get focus => throw _privateConstructorUsedError;
+
+  /// [focusReference] A definitional Resource identifying the kind of content contained within the section. This should be consistent with the section title.
   Reference? get focusReference => throw _privateConstructorUsedError;
+
+  /// [author] Identifies who is responsible for the information in this section, not necessarily who typed it in.
   List<Reference>? get author => throw _privateConstructorUsedError;
+
+  /// [text] A human-readable narrative that contains the attested content of the section, used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is peferred to contain sufficient detail to make it acceptable for a human to just read the narrative.
   Narrative? get text => throw _privateConstructorUsedError;
+
+  /// [mode] How the entry list was prepared - whether it is a working list that is suitable for being maintained on an ongoing basis, or if it represents a snapshot of a list of items from another source, or whether it is a prepared list where items may be marked as added, modified or deleted.
   Code? get mode => throw _privateConstructorUsedError;
+
+  /// [modeElement] ("_mode") Extensions for mode
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
+
+  /// [orderedBy] Specifies the order applied to the items in the section entries.
   CodeableConcept? get orderedBy => throw _privateConstructorUsedError;
+
+  /// [entryClassifier] Specifies any type of classification of the evidence report.
   List<CodeableConcept>? get entryClassifier =>
       throw _privateConstructorUsedError;
+
+  /// [entryReference] A reference to the actual resource from which the narrative in the section is derived.
   List<Reference>? get entryReference => throw _privateConstructorUsedError;
+
+  /// [entryQuantity] Quantity as content.
   List<Quantity>? get entryQuantity => throw _privateConstructorUsedError;
+
+  /// [emptyReason] If the section is empty, why the list is empty. An empty section typically has some text explaining the empty reason.
   CodeableConcept? get emptyReason => throw _privateConstructorUsedError;
+
+  /// [section] A nested sub-section within this section.
   List<EvidenceReportSection>? get section =>
       throw _privateConstructorUsedError;
 
@@ -21400,9 +27016,25 @@ class _$_EvidenceReportSection extends _EvidenceReportSection {
   factory _$_EvidenceReportSection.fromJson(Map<String, dynamic> json) =>
       _$$_EvidenceReportSectionFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -21413,7 +27045,32 @@ class _$_EvidenceReportSection extends _EvidenceReportSection {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -21424,16 +27081,27 @@ class _$_EvidenceReportSection extends _EvidenceReportSection {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [title] The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents.
   @override
   final String? title;
+
+  /// [titleElement] ("_title") Extensions for title
   @override
   @JsonKey(name: '_title')
   final Element? titleElement;
+
+  /// [focus] A code identifying the kind of content contained within the section. This should be consistent with the section title.
   @override
   final CodeableConcept? focus;
+
+  /// [focusReference] A definitional Resource identifying the kind of content contained within the section. This should be consistent with the section title.
   @override
   final Reference? focusReference;
+
+  /// [author] Identifies who is responsible for the information in this section, not necessarily who typed it in.
   final List<Reference>? _author;
+
+  /// [author] Identifies who is responsible for the information in this section, not necessarily who typed it in.
   @override
   List<Reference>? get author {
     final value = _author;
@@ -21443,16 +27111,27 @@ class _$_EvidenceReportSection extends _EvidenceReportSection {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [text] A human-readable narrative that contains the attested content of the section, used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is peferred to contain sufficient detail to make it acceptable for a human to just read the narrative.
   @override
   final Narrative? text;
+
+  /// [mode] How the entry list was prepared - whether it is a working list that is suitable for being maintained on an ongoing basis, or if it represents a snapshot of a list of items from another source, or whether it is a prepared list where items may be marked as added, modified or deleted.
   @override
   final Code? mode;
+
+  /// [modeElement] ("_mode") Extensions for mode
   @override
   @JsonKey(name: '_mode')
   final Element? modeElement;
+
+  /// [orderedBy] Specifies the order applied to the items in the section entries.
   @override
   final CodeableConcept? orderedBy;
+
+  /// [entryClassifier] Specifies any type of classification of the evidence report.
   final List<CodeableConcept>? _entryClassifier;
+
+  /// [entryClassifier] Specifies any type of classification of the evidence report.
   @override
   List<CodeableConcept>? get entryClassifier {
     final value = _entryClassifier;
@@ -21462,7 +27141,10 @@ class _$_EvidenceReportSection extends _EvidenceReportSection {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [entryReference] A reference to the actual resource from which the narrative in the section is derived.
   final List<Reference>? _entryReference;
+
+  /// [entryReference] A reference to the actual resource from which the narrative in the section is derived.
   @override
   List<Reference>? get entryReference {
     final value = _entryReference;
@@ -21472,7 +27154,10 @@ class _$_EvidenceReportSection extends _EvidenceReportSection {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [entryQuantity] Quantity as content.
   final List<Quantity>? _entryQuantity;
+
+  /// [entryQuantity] Quantity as content.
   @override
   List<Quantity>? get entryQuantity {
     final value = _entryQuantity;
@@ -21482,9 +27167,14 @@ class _$_EvidenceReportSection extends _EvidenceReportSection {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [emptyReason] If the section is empty, why the list is empty. An empty section typically has some text explaining the empty reason.
   @override
   final CodeableConcept? emptyReason;
+
+  /// [section] A nested sub-section within this section.
   final List<EvidenceReportSection>? _section;
+
+  /// [section] A nested sub-section within this section.
   @override
   List<EvidenceReportSection>? get section {
     final value = _section;
@@ -21595,41 +27285,92 @@ abstract class _EvidenceReportSection extends EvidenceReportSection {
       _$_EvidenceReportSection.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [title] The label for this particular section.  This will be part of the rendered content for the document, and is often used to build a table of contents.
   String? get title;
   @override
+
+  /// [titleElement] ("_title") Extensions for title
   @JsonKey(name: '_title')
   Element? get titleElement;
   @override
+
+  /// [focus] A code identifying the kind of content contained within the section. This should be consistent with the section title.
   CodeableConcept? get focus;
   @override
+
+  /// [focusReference] A definitional Resource identifying the kind of content contained within the section. This should be consistent with the section title.
   Reference? get focusReference;
   @override
+
+  /// [author] Identifies who is responsible for the information in this section, not necessarily who typed it in.
   List<Reference>? get author;
   @override
+
+  /// [text] A human-readable narrative that contains the attested content of the section, used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is peferred to contain sufficient detail to make it acceptable for a human to just read the narrative.
   Narrative? get text;
   @override
+
+  /// [mode] How the entry list was prepared - whether it is a working list that is suitable for being maintained on an ongoing basis, or if it represents a snapshot of a list of items from another source, or whether it is a prepared list where items may be marked as added, modified or deleted.
   Code? get mode;
   @override
+
+  /// [modeElement] ("_mode") Extensions for mode
   @JsonKey(name: '_mode')
   Element? get modeElement;
   @override
+
+  /// [orderedBy] Specifies the order applied to the items in the section entries.
   CodeableConcept? get orderedBy;
   @override
+
+  /// [entryClassifier] Specifies any type of classification of the evidence report.
   List<CodeableConcept>? get entryClassifier;
   @override
+
+  /// [entryReference] A reference to the actual resource from which the narrative in the section is derived.
   List<Reference>? get entryReference;
   @override
+
+  /// [entryQuantity] Quantity as content.
   List<Quantity>? get entryQuantity;
   @override
+
+  /// [emptyReason] If the section is empty, why the list is empty. An empty section typically has some text explaining the empty reason.
   CodeableConcept? get emptyReason;
   @override
+
+  /// [section] A nested sub-section within this section.
   List<EvidenceReportSection>? get section;
   @override
   @JsonKey(ignore: true)
@@ -21643,87 +27384,229 @@ EvidenceVariable _$EvidenceVariableFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$EvidenceVariable {
+  /// [resourceType] This is a EvidenceVariable resource
+  @JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  /// Once assigned, this value never changes.
   Id? get id => throw _privateConstructorUsedError;
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not
+  /// always be associated with version changes to the resource.
   Meta? get meta => throw _privateConstructorUsedError;
+
+  /// [implicitRules] A reference to a set of rules that were followed when
+  /// the resource was constructed, and which must be understood when
+  /// processing the content. Often, this is a reference to an implementation
+  /// guide that defines the special rules along with other profiles etc.
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
+
+  /// [language] The base language in which the resource is written.
   Code? get language => throw _privateConstructorUsedError;
+
+  /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   Narrative? get text => throw _privateConstructorUsedError;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   List<Resource>? get contained => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [url] An absolute URI that is used to identify this evidence variable when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this evidence variable is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the evidence variable is stored on different servers.
   FhirUri? get url => throw _privateConstructorUsedError;
+
+  /// [urlElement] ("_url") Extensions for url
   @JsonKey(name: '_url')
   Element? get urlElement => throw _privateConstructorUsedError;
+
+  /// [identifier] A formal identifier that is used to identify this evidence variable when it is represented in other formats, or referenced in a specification, model, design or an instance.
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
+
+  /// [version] The identifier that is used to identify this version of the evidence variable when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the evidence variable author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence. To provide a version consistent with the Decision Support Service specification, use the format Major.Minor.Revision (e.g. 1.0.0). For more information on versioning knowledge assets, refer to the Decision Support Service specification. Note that a version is required for non-experimental active artifacts.
   String? get version => throw _privateConstructorUsedError;
+
+  /// [versionElement] ("_version") Extensions for version
   @JsonKey(name: '_version')
   Element? get versionElement => throw _privateConstructorUsedError;
+
+  /// [versionAlgorithmString] Indicates the mechanism used to compare versions to determine which is more current.
+  String? get versionAlgorithmString => throw _privateConstructorUsedError;
+
+  /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions for versionAlgorithmString
+  @JsonKey(name: '_versionAlgorithmString')
+  Element? get versionAlgorithmStringElement =>
+      throw _privateConstructorUsedError;
+
+  /// [versionAlgorithmCoding] Indicates the mechanism used to compare versions to determine which is more current.
+  Coding? get versionAlgorithmCoding => throw _privateConstructorUsedError;
+
+  /// [name] A natural language name identifying the evidence variable. This name should be usable as an identifier for the module by machine processing applications such as code generation.
   String? get name => throw _privateConstructorUsedError;
+
+  /// [nameElement] ("_name") Extensions for name
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
+
+  /// [title] A short, descriptive, user-friendly title for the evidence variable.
   String? get title => throw _privateConstructorUsedError;
+
+  /// [titleElement] ("_title") Extensions for title
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
+
+  /// [status] The status of this evidence variable. Enables tracking the life-cycle of the content.
   Code? get status => throw _privateConstructorUsedError;
+
+  /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
+
+  /// [experimental] A Boolean value to indicate that this resource is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
   Boolean? get experimental => throw _privateConstructorUsedError;
+
+  /// [experimentalElement] ("_experimental") Extensions for experimental
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
+
+  /// [date] The date  (and optionally time) when the evidence variable was last significantly changed. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the evidence variable changes.
   FhirDateTime? get date => throw _privateConstructorUsedError;
+
+  /// [dateElement] ("_date") Extensions for date
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
+
+  /// [publisher] The name of the organization or individual responsible for the release and ongoing maintenance of the evidence variable.
   String? get publisher => throw _privateConstructorUsedError;
+
+  /// [publisherElement] ("_publisher") Extensions for publisher
   @JsonKey(name: '_publisher')
   Element? get publisherElement => throw _privateConstructorUsedError;
+
+  /// [contact] Contact details to assist a user in finding and communicating with the publisher.
   List<ContactDetail>? get contact => throw _privateConstructorUsedError;
+
+  /// [description] A free text natural language description of the evidence variable from a consumer's perspective.
   Markdown? get description => throw _privateConstructorUsedError;
+
+  /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
+
+  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate evidence variable instances.
   List<UsageContext>? get useContext => throw _privateConstructorUsedError;
+
+  /// [jurisdiction] A legal or geographic region in which the {{title}} is intended to be used.
   List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
+
+  /// [purpose] Explanation of why this {{title}} is needed and why it has been designed as it has.
   Markdown? get purpose => throw _privateConstructorUsedError;
+
+  /// [purposeElement] ("_purpose") Extensions for purpose
   @JsonKey(name: '_purpose')
   Element? get purposeElement => throw _privateConstructorUsedError;
+
+  /// [copyright] A copyright statement relating to the resource and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the resource.
   Markdown? get copyright => throw _privateConstructorUsedError;
+
+  /// [copyrightElement] ("_copyright") Extensions for copyright
   @JsonKey(name: '_copyright')
   Element? get copyrightElement => throw _privateConstructorUsedError;
+
+  /// [copyrightLabel] A short string (<50 characters), suitable for inclusion in a page footer that identifies the copyright holder, effective period, and optionally whether rights are resctricted. (e.g. 'All rights reserved', 'Some rights reserved').
+  String? get copyrightLabel => throw _privateConstructorUsedError;
+
+  /// [copyrightLabelElement] ("_copyrightLabel") Extensions for copyrightLabel
+  @JsonKey(name: '_copyrightLabel')
+  Element? get copyrightLabelElement => throw _privateConstructorUsedError;
+
+  /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
   Date? get approvalDate => throw _privateConstructorUsedError;
+
+  /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
   @JsonKey(name: '_approvalDate')
   Element? get approvalDateElement => throw _privateConstructorUsedError;
+
+  /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
   Date? get lastReviewDate => throw _privateConstructorUsedError;
+
+  /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement => throw _privateConstructorUsedError;
+
+  /// [effectivePeriod] The period during which the resource content was or is planned to be in active use.
   Period? get effectivePeriod => throw _privateConstructorUsedError;
+
+  /// [topic] Descriptive topics related to the content of the {{title}}. Topics provide a high-level categorization as well as keywords for the {{title}} that can be useful for filtering and searching.
   List<CodeableConcept>? get topic => throw _privateConstructorUsedError;
+
+  /// [author] An individiual or organization primarily involved in the creation and maintenance of the content.
   List<ContactDetail>? get author => throw _privateConstructorUsedError;
+
+  /// [editor] An individual or organization primarily responsible for internal coherence of the content.
   List<ContactDetail>? get editor => throw _privateConstructorUsedError;
+
+  /// [reviewer] An individual or organization primarily responsible for review of some aspect of the content.
   List<ContactDetail>? get reviewer => throw _privateConstructorUsedError;
+
+  /// [endorser] An individual or organization responsible for officially endorsing the content for use in some setting.
   List<ContactDetail>? get endorser => throw _privateConstructorUsedError;
+
+  /// [relatedArtifact] Related artifacts such as additional documentation, justification, or bibliographic references.
   List<RelatedArtifact>? get relatedArtifact =>
       throw _privateConstructorUsedError;
+
+  /// [shortTitle] The short title provides an alternate title for use in informal descriptive contexts where the full, formal title is not necessary.
   String? get shortTitle => throw _privateConstructorUsedError;
+
+  /// [shortTitleElement] ("_shortTitle") Extensions for shortTitle
   @JsonKey(name: '_shortTitle')
   Element? get shortTitleElement => throw _privateConstructorUsedError;
+
+  /// [subtitle] An explanatory or alternate title for the EvidenceVariable giving additional information about its content.
   String? get subtitle => throw _privateConstructorUsedError;
+
+  /// [subtitleElement] ("_subtitle") Extensions for subtitle
   @JsonKey(name: '_subtitle')
   Element? get subtitleElement => throw _privateConstructorUsedError;
+
+  /// [note] A human-readable string to clarify or explain concepts about the resource.
   List<Annotation>? get note => throw _privateConstructorUsedError;
+
+  /// [actual] True if the actual variable measured, false if a conceptual representation of the intended variable.
   Boolean? get actual => throw _privateConstructorUsedError;
+
+  /// [actualElement] ("_actual") Extensions for actual
   @JsonKey(name: '_actual')
   Element? get actualElement => throw _privateConstructorUsedError;
+
+  /// [characteristic] A defining factor of the EvidenceVariable. Multiple characteristics are applied with "and" semantics.
   List<EvidenceVariableCharacteristic>? get characteristic =>
       throw _privateConstructorUsedError;
+
+  /// [handling] The method of handling in statistical analysis.
   Code? get handling => throw _privateConstructorUsedError;
+
+  /// [handlingElement] ("_handling") Extensions for handling
   @JsonKey(name: '_handling')
   Element? get handlingElement => throw _privateConstructorUsedError;
+
+  /// [category] A grouping for ordinal or polychotomous variables.
   List<EvidenceVariableCategory>? get category =>
       throw _privateConstructorUsedError;
 
@@ -21740,47 +27623,71 @@ abstract class $EvidenceVariableCopyWith<$Res> {
       _$EvidenceVariableCopyWithImpl<$Res, EvidenceVariable>;
   @useResult
   $Res call(
-      {R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? url,
-      @JsonKey(name: '_url') Element? urlElement,
+      @JsonKey(name: '_url')
+          Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version') Element? versionElement,
+      @JsonKey(name: '_version')
+          Element? versionElement,
+      String? versionAlgorithmString,
+      @JsonKey(name: '_versionAlgorithmString')
+          Element? versionAlgorithmStringElement,
+      Coding? versionAlgorithmCoding,
       String? name,
-      @JsonKey(name: '_name') Element? nameElement,
+      @JsonKey(name: '_name')
+          Element? nameElement,
       String? title,
-      @JsonKey(name: '_title') Element? titleElement,
+      @JsonKey(name: '_title')
+          Element? titleElement,
       Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
+      @JsonKey(name: '_status')
+          Element? statusElement,
       Boolean? experimental,
-      @JsonKey(name: '_experimental') Element? experimentalElement,
+      @JsonKey(name: '_experimental')
+          Element? experimentalElement,
       FhirDateTime? date,
-      @JsonKey(name: '_date') Element? dateElement,
+      @JsonKey(name: '_date')
+          Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher') Element? publisherElement,
+      @JsonKey(name: '_publisher')
+          Element? publisherElement,
       List<ContactDetail>? contact,
       Markdown? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
+      @JsonKey(name: '_description')
+          Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       Markdown? purpose,
-      @JsonKey(name: '_purpose') Element? purposeElement,
+      @JsonKey(name: '_purpose')
+          Element? purposeElement,
       Markdown? copyright,
-      @JsonKey(name: '_copyright') Element? copyrightElement,
+      @JsonKey(name: '_copyright')
+          Element? copyrightElement,
+      String? copyrightLabel,
+      @JsonKey(name: '_copyrightLabel')
+          Element? copyrightLabelElement,
       Date? approvalDate,
-      @JsonKey(name: '_approvalDate') Element? approvalDateElement,
+      @JsonKey(name: '_approvalDate')
+          Element? approvalDateElement,
       Date? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element? lastReviewDateElement,
       Period? effectivePeriod,
       List<CodeableConcept>? topic,
       List<ContactDetail>? author,
@@ -21789,15 +27696,19 @@ abstract class $EvidenceVariableCopyWith<$Res> {
       List<ContactDetail>? endorser,
       List<RelatedArtifact>? relatedArtifact,
       String? shortTitle,
-      @JsonKey(name: '_shortTitle') Element? shortTitleElement,
+      @JsonKey(name: '_shortTitle')
+          Element? shortTitleElement,
       String? subtitle,
-      @JsonKey(name: '_subtitle') Element? subtitleElement,
+      @JsonKey(name: '_subtitle')
+          Element? subtitleElement,
       List<Annotation>? note,
       Boolean? actual,
-      @JsonKey(name: '_actual') Element? actualElement,
+      @JsonKey(name: '_actual')
+          Element? actualElement,
       List<EvidenceVariableCharacteristic>? characteristic,
       Code? handling,
-      @JsonKey(name: '_handling') Element? handlingElement,
+      @JsonKey(name: '_handling')
+          Element? handlingElement,
       List<EvidenceVariableCategory>? category});
 
   $MetaCopyWith<$Res>? get meta;
@@ -21806,6 +27717,8 @@ abstract class $EvidenceVariableCopyWith<$Res> {
   $NarrativeCopyWith<$Res>? get text;
   $ElementCopyWith<$Res>? get urlElement;
   $ElementCopyWith<$Res>? get versionElement;
+  $ElementCopyWith<$Res>? get versionAlgorithmStringElement;
+  $CodingCopyWith<$Res>? get versionAlgorithmCoding;
   $ElementCopyWith<$Res>? get nameElement;
   $ElementCopyWith<$Res>? get titleElement;
   $ElementCopyWith<$Res>? get statusElement;
@@ -21815,6 +27728,7 @@ abstract class $EvidenceVariableCopyWith<$Res> {
   $ElementCopyWith<$Res>? get descriptionElement;
   $ElementCopyWith<$Res>? get purposeElement;
   $ElementCopyWith<$Res>? get copyrightElement;
+  $ElementCopyWith<$Res>? get copyrightLabelElement;
   $ElementCopyWith<$Res>? get approvalDateElement;
   $ElementCopyWith<$Res>? get lastReviewDateElement;
   $PeriodCopyWith<$Res>? get effectivePeriod;
@@ -21853,6 +27767,9 @@ class _$EvidenceVariableCopyWithImpl<$Res, $Val extends EvidenceVariable>
     Object? identifier = freezed,
     Object? version = freezed,
     Object? versionElement = freezed,
+    Object? versionAlgorithmString = freezed,
+    Object? versionAlgorithmStringElement = freezed,
+    Object? versionAlgorithmCoding = freezed,
     Object? name = freezed,
     Object? nameElement = freezed,
     Object? title = freezed,
@@ -21874,6 +27791,8 @@ class _$EvidenceVariableCopyWithImpl<$Res, $Val extends EvidenceVariable>
     Object? purposeElement = freezed,
     Object? copyright = freezed,
     Object? copyrightElement = freezed,
+    Object? copyrightLabel = freezed,
+    Object? copyrightLabelElement = freezed,
     Object? approvalDate = freezed,
     Object? approvalDateElement = freezed,
     Object? lastReviewDate = freezed,
@@ -21962,6 +27881,18 @@ class _$EvidenceVariableCopyWithImpl<$Res, $Val extends EvidenceVariable>
           ? _value.versionElement
           : versionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
+      versionAlgorithmString: freezed == versionAlgorithmString
+          ? _value.versionAlgorithmString
+          : versionAlgorithmString // ignore: cast_nullable_to_non_nullable
+              as String?,
+      versionAlgorithmStringElement: freezed == versionAlgorithmStringElement
+          ? _value.versionAlgorithmStringElement
+          : versionAlgorithmStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      versionAlgorithmCoding: freezed == versionAlgorithmCoding
+          ? _value.versionAlgorithmCoding
+          : versionAlgorithmCoding // ignore: cast_nullable_to_non_nullable
+              as Coding?,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -22045,6 +27976,14 @@ class _$EvidenceVariableCopyWithImpl<$Res, $Val extends EvidenceVariable>
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      copyrightLabel: freezed == copyrightLabel
+          ? _value.copyrightLabel
+          : copyrightLabel // ignore: cast_nullable_to_non_nullable
+              as String?,
+      copyrightLabelElement: freezed == copyrightLabelElement
+          ? _value.copyrightLabelElement
+          : copyrightLabelElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
@@ -22211,6 +28150,32 @@ class _$EvidenceVariableCopyWithImpl<$Res, $Val extends EvidenceVariable>
 
   @override
   @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get versionAlgorithmStringElement {
+    if (_value.versionAlgorithmStringElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.versionAlgorithmStringElement!,
+        (value) {
+      return _then(
+          _value.copyWith(versionAlgorithmStringElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CodingCopyWith<$Res>? get versionAlgorithmCoding {
+    if (_value.versionAlgorithmCoding == null) {
+      return null;
+    }
+
+    return $CodingCopyWith<$Res>(_value.versionAlgorithmCoding!, (value) {
+      return _then(_value.copyWith(versionAlgorithmCoding: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get nameElement {
     if (_value.nameElement == null) {
       return null;
@@ -22319,6 +28284,18 @@ class _$EvidenceVariableCopyWithImpl<$Res, $Val extends EvidenceVariable>
 
   @override
   @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get copyrightLabelElement {
+    if (_value.copyrightLabelElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.copyrightLabelElement!, (value) {
+      return _then(_value.copyWith(copyrightLabelElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
   $ElementCopyWith<$Res>? get approvalDateElement {
     if (_value.approvalDateElement == null) {
       return null;
@@ -22411,47 +28388,71 @@ abstract class _$$_EvidenceVariableCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
+          R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? url,
-      @JsonKey(name: '_url') Element? urlElement,
+      @JsonKey(name: '_url')
+          Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version') Element? versionElement,
+      @JsonKey(name: '_version')
+          Element? versionElement,
+      String? versionAlgorithmString,
+      @JsonKey(name: '_versionAlgorithmString')
+          Element? versionAlgorithmStringElement,
+      Coding? versionAlgorithmCoding,
       String? name,
-      @JsonKey(name: '_name') Element? nameElement,
+      @JsonKey(name: '_name')
+          Element? nameElement,
       String? title,
-      @JsonKey(name: '_title') Element? titleElement,
+      @JsonKey(name: '_title')
+          Element? titleElement,
       Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
+      @JsonKey(name: '_status')
+          Element? statusElement,
       Boolean? experimental,
-      @JsonKey(name: '_experimental') Element? experimentalElement,
+      @JsonKey(name: '_experimental')
+          Element? experimentalElement,
       FhirDateTime? date,
-      @JsonKey(name: '_date') Element? dateElement,
+      @JsonKey(name: '_date')
+          Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher') Element? publisherElement,
+      @JsonKey(name: '_publisher')
+          Element? publisherElement,
       List<ContactDetail>? contact,
       Markdown? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
+      @JsonKey(name: '_description')
+          Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       Markdown? purpose,
-      @JsonKey(name: '_purpose') Element? purposeElement,
+      @JsonKey(name: '_purpose')
+          Element? purposeElement,
       Markdown? copyright,
-      @JsonKey(name: '_copyright') Element? copyrightElement,
+      @JsonKey(name: '_copyright')
+          Element? copyrightElement,
+      String? copyrightLabel,
+      @JsonKey(name: '_copyrightLabel')
+          Element? copyrightLabelElement,
       Date? approvalDate,
-      @JsonKey(name: '_approvalDate') Element? approvalDateElement,
+      @JsonKey(name: '_approvalDate')
+          Element? approvalDateElement,
       Date? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          Element? lastReviewDateElement,
       Period? effectivePeriod,
       List<CodeableConcept>? topic,
       List<ContactDetail>? author,
@@ -22460,15 +28461,19 @@ abstract class _$$_EvidenceVariableCopyWith<$Res>
       List<ContactDetail>? endorser,
       List<RelatedArtifact>? relatedArtifact,
       String? shortTitle,
-      @JsonKey(name: '_shortTitle') Element? shortTitleElement,
+      @JsonKey(name: '_shortTitle')
+          Element? shortTitleElement,
       String? subtitle,
-      @JsonKey(name: '_subtitle') Element? subtitleElement,
+      @JsonKey(name: '_subtitle')
+          Element? subtitleElement,
       List<Annotation>? note,
       Boolean? actual,
-      @JsonKey(name: '_actual') Element? actualElement,
+      @JsonKey(name: '_actual')
+          Element? actualElement,
       List<EvidenceVariableCharacteristic>? characteristic,
       Code? handling,
-      @JsonKey(name: '_handling') Element? handlingElement,
+      @JsonKey(name: '_handling')
+          Element? handlingElement,
       List<EvidenceVariableCategory>? category});
 
   @override
@@ -22483,6 +28488,10 @@ abstract class _$$_EvidenceVariableCopyWith<$Res>
   $ElementCopyWith<$Res>? get urlElement;
   @override
   $ElementCopyWith<$Res>? get versionElement;
+  @override
+  $ElementCopyWith<$Res>? get versionAlgorithmStringElement;
+  @override
+  $CodingCopyWith<$Res>? get versionAlgorithmCoding;
   @override
   $ElementCopyWith<$Res>? get nameElement;
   @override
@@ -22501,6 +28510,8 @@ abstract class _$$_EvidenceVariableCopyWith<$Res>
   $ElementCopyWith<$Res>? get purposeElement;
   @override
   $ElementCopyWith<$Res>? get copyrightElement;
+  @override
+  $ElementCopyWith<$Res>? get copyrightLabelElement;
   @override
   $ElementCopyWith<$Res>? get approvalDateElement;
   @override
@@ -22544,6 +28555,9 @@ class __$$_EvidenceVariableCopyWithImpl<$Res>
     Object? identifier = freezed,
     Object? version = freezed,
     Object? versionElement = freezed,
+    Object? versionAlgorithmString = freezed,
+    Object? versionAlgorithmStringElement = freezed,
+    Object? versionAlgorithmCoding = freezed,
     Object? name = freezed,
     Object? nameElement = freezed,
     Object? title = freezed,
@@ -22565,6 +28579,8 @@ class __$$_EvidenceVariableCopyWithImpl<$Res>
     Object? purposeElement = freezed,
     Object? copyright = freezed,
     Object? copyrightElement = freezed,
+    Object? copyrightLabel = freezed,
+    Object? copyrightLabelElement = freezed,
     Object? approvalDate = freezed,
     Object? approvalDateElement = freezed,
     Object? lastReviewDate = freezed,
@@ -22653,6 +28669,18 @@ class __$$_EvidenceVariableCopyWithImpl<$Res>
           ? _value.versionElement
           : versionElement // ignore: cast_nullable_to_non_nullable
               as Element?,
+      versionAlgorithmString: freezed == versionAlgorithmString
+          ? _value.versionAlgorithmString
+          : versionAlgorithmString // ignore: cast_nullable_to_non_nullable
+              as String?,
+      versionAlgorithmStringElement: freezed == versionAlgorithmStringElement
+          ? _value.versionAlgorithmStringElement
+          : versionAlgorithmStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      versionAlgorithmCoding: freezed == versionAlgorithmCoding
+          ? _value.versionAlgorithmCoding
+          : versionAlgorithmCoding // ignore: cast_nullable_to_non_nullable
+              as Coding?,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -22736,6 +28764,14 @@ class __$$_EvidenceVariableCopyWithImpl<$Res>
       copyrightElement: freezed == copyrightElement
           ? _value.copyrightElement
           : copyrightElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      copyrightLabel: freezed == copyrightLabel
+          ? _value.copyrightLabel
+          : copyrightLabel // ignore: cast_nullable_to_non_nullable
+              as String?,
+      copyrightLabelElement: freezed == copyrightLabelElement
+          ? _value.copyrightLabelElement
+          : copyrightLabelElement // ignore: cast_nullable_to_non_nullable
               as Element?,
       approvalDate: freezed == approvalDate
           ? _value.approvalDate
@@ -22833,47 +28869,71 @@ class __$$_EvidenceVariableCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_EvidenceVariable extends _EvidenceVariable {
   _$_EvidenceVariable(
-      {this.resourceType = R5ResourceType.EvidenceVariable,
+      {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
+          this.resourceType = R5ResourceType.EvidenceVariable,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language') this.languageElement,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.url,
-      @JsonKey(name: '_url') this.urlElement,
+      @JsonKey(name: '_url')
+          this.urlElement,
       final List<Identifier>? identifier,
       this.version,
-      @JsonKey(name: '_version') this.versionElement,
+      @JsonKey(name: '_version')
+          this.versionElement,
+      this.versionAlgorithmString,
+      @JsonKey(name: '_versionAlgorithmString')
+          this.versionAlgorithmStringElement,
+      this.versionAlgorithmCoding,
       this.name,
-      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
       this.title,
-      @JsonKey(name: '_title') this.titleElement,
+      @JsonKey(name: '_title')
+          this.titleElement,
       this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.experimental,
-      @JsonKey(name: '_experimental') this.experimentalElement,
+      @JsonKey(name: '_experimental')
+          this.experimentalElement,
       this.date,
-      @JsonKey(name: '_date') this.dateElement,
+      @JsonKey(name: '_date')
+          this.dateElement,
       this.publisher,
-      @JsonKey(name: '_publisher') this.publisherElement,
+      @JsonKey(name: '_publisher')
+          this.publisherElement,
       final List<ContactDetail>? contact,
       this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
       this.purpose,
-      @JsonKey(name: '_purpose') this.purposeElement,
+      @JsonKey(name: '_purpose')
+          this.purposeElement,
       this.copyright,
-      @JsonKey(name: '_copyright') this.copyrightElement,
+      @JsonKey(name: '_copyright')
+          this.copyrightElement,
+      this.copyrightLabel,
+      @JsonKey(name: '_copyrightLabel')
+          this.copyrightLabelElement,
       this.approvalDate,
-      @JsonKey(name: '_approvalDate') this.approvalDateElement,
+      @JsonKey(name: '_approvalDate')
+          this.approvalDateElement,
       this.lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') this.lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          this.lastReviewDateElement,
       this.effectivePeriod,
       final List<CodeableConcept>? topic,
       final List<ContactDetail>? author,
@@ -22882,15 +28942,19 @@ class _$_EvidenceVariable extends _EvidenceVariable {
       final List<ContactDetail>? endorser,
       final List<RelatedArtifact>? relatedArtifact,
       this.shortTitle,
-      @JsonKey(name: '_shortTitle') this.shortTitleElement,
+      @JsonKey(name: '_shortTitle')
+          this.shortTitleElement,
       this.subtitle,
-      @JsonKey(name: '_subtitle') this.subtitleElement,
+      @JsonKey(name: '_subtitle')
+          this.subtitleElement,
       final List<Annotation>? note,
       this.actual,
-      @JsonKey(name: '_actual') this.actualElement,
+      @JsonKey(name: '_actual')
+          this.actualElement,
       final List<EvidenceVariableCharacteristic>? characteristic,
       this.handling,
-      @JsonKey(name: '_handling') this.handlingElement,
+      @JsonKey(name: '_handling')
+          this.handlingElement,
       final List<EvidenceVariableCategory>? category})
       : _contained = contained,
         _extension_ = extension_,
@@ -22913,26 +28977,51 @@ class _$_EvidenceVariable extends _EvidenceVariable {
   factory _$_EvidenceVariable.fromJson(Map<String, dynamic> json) =>
       _$$_EvidenceVariableFromJson(json);
 
+  /// [resourceType] This is a EvidenceVariable resource
   @override
-  @JsonKey()
+  @JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
   final R5ResourceType resourceType;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  /// Once assigned, this value never changes.
   @override
   final Id? id;
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not
+  /// always be associated with version changes to the resource.
   @override
   final Meta? meta;
+
+  /// [implicitRules] A reference to a set of rules that were followed when
+  /// the resource was constructed, and which must be understood when
+  /// processing the content. Often, this is a reference to an implementation
+  /// guide that defines the special rules along with other profiles etc.
   @override
   final FhirUri? implicitRules;
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
+
+  /// [language] The base language in which the resource is written.
   @override
   final Code? language;
+
+  /// [languageElement] ("_language") Extensions for language
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   @override
   final Narrative? text;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   final List<Resource>? _contained;
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   @override
   List<Resource>? get contained {
     final value = _contained;
@@ -22942,7 +29031,10 @@ class _$_EvidenceVariable extends _EvidenceVariable {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -22953,7 +29045,10 @@ class _$_EvidenceVariable extends _EvidenceVariable {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -22964,12 +29059,19 @@ class _$_EvidenceVariable extends _EvidenceVariable {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [url] An absolute URI that is used to identify this evidence variable when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this evidence variable is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the evidence variable is stored on different servers.
   @override
   final FhirUri? url;
+
+  /// [urlElement] ("_url") Extensions for url
   @override
   @JsonKey(name: '_url')
   final Element? urlElement;
+
+  /// [identifier] A formal identifier that is used to identify this evidence variable when it is represented in other formats, or referenced in a specification, model, design or an instance.
   final List<Identifier>? _identifier;
+
+  /// [identifier] A formal identifier that is used to identify this evidence variable when it is represented in other formats, or referenced in a specification, model, design or an instance.
   @override
   List<Identifier>? get identifier {
     final value = _identifier;
@@ -22979,42 +29081,86 @@ class _$_EvidenceVariable extends _EvidenceVariable {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [version] The identifier that is used to identify this version of the evidence variable when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the evidence variable author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence. To provide a version consistent with the Decision Support Service specification, use the format Major.Minor.Revision (e.g. 1.0.0). For more information on versioning knowledge assets, refer to the Decision Support Service specification. Note that a version is required for non-experimental active artifacts.
   @override
   final String? version;
+
+  /// [versionElement] ("_version") Extensions for version
   @override
   @JsonKey(name: '_version')
   final Element? versionElement;
+
+  /// [versionAlgorithmString] Indicates the mechanism used to compare versions to determine which is more current.
+  @override
+  final String? versionAlgorithmString;
+
+  /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions for versionAlgorithmString
+  @override
+  @JsonKey(name: '_versionAlgorithmString')
+  final Element? versionAlgorithmStringElement;
+
+  /// [versionAlgorithmCoding] Indicates the mechanism used to compare versions to determine which is more current.
+  @override
+  final Coding? versionAlgorithmCoding;
+
+  /// [name] A natural language name identifying the evidence variable. This name should be usable as an identifier for the module by machine processing applications such as code generation.
   @override
   final String? name;
+
+  /// [nameElement] ("_name") Extensions for name
   @override
   @JsonKey(name: '_name')
   final Element? nameElement;
+
+  /// [title] A short, descriptive, user-friendly title for the evidence variable.
   @override
   final String? title;
+
+  /// [titleElement] ("_title") Extensions for title
   @override
   @JsonKey(name: '_title')
   final Element? titleElement;
+
+  /// [status] The status of this evidence variable. Enables tracking the life-cycle of the content.
   @override
   final Code? status;
+
+  /// [statusElement] ("_status") Extensions for status
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
+
+  /// [experimental] A Boolean value to indicate that this resource is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
   @override
   final Boolean? experimental;
+
+  /// [experimentalElement] ("_experimental") Extensions for experimental
   @override
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
+
+  /// [date] The date  (and optionally time) when the evidence variable was last significantly changed. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the evidence variable changes.
   @override
   final FhirDateTime? date;
+
+  /// [dateElement] ("_date") Extensions for date
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
+
+  /// [publisher] The name of the organization or individual responsible for the release and ongoing maintenance of the evidence variable.
   @override
   final String? publisher;
+
+  /// [publisherElement] ("_publisher") Extensions for publisher
   @override
   @JsonKey(name: '_publisher')
   final Element? publisherElement;
+
+  /// [contact] Contact details to assist a user in finding and communicating with the publisher.
   final List<ContactDetail>? _contact;
+
+  /// [contact] Contact details to assist a user in finding and communicating with the publisher.
   @override
   List<ContactDetail>? get contact {
     final value = _contact;
@@ -23024,12 +29170,19 @@ class _$_EvidenceVariable extends _EvidenceVariable {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [description] A free text natural language description of the evidence variable from a consumer's perspective.
   @override
   final Markdown? description;
+
+  /// [descriptionElement] ("_description") Extensions for description
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
+
+  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate evidence variable instances.
   final List<UsageContext>? _useContext;
+
+  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate evidence variable instances.
   @override
   List<UsageContext>? get useContext {
     final value = _useContext;
@@ -23039,7 +29192,10 @@ class _$_EvidenceVariable extends _EvidenceVariable {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [jurisdiction] A legal or geographic region in which the {{title}} is intended to be used.
   final List<CodeableConcept>? _jurisdiction;
+
+  /// [jurisdiction] A legal or geographic region in which the {{title}} is intended to be used.
   @override
   List<CodeableConcept>? get jurisdiction {
     final value = _jurisdiction;
@@ -23049,29 +29205,59 @@ class _$_EvidenceVariable extends _EvidenceVariable {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [purpose] Explanation of why this {{title}} is needed and why it has been designed as it has.
   @override
   final Markdown? purpose;
+
+  /// [purposeElement] ("_purpose") Extensions for purpose
   @override
   @JsonKey(name: '_purpose')
   final Element? purposeElement;
+
+  /// [copyright] A copyright statement relating to the resource and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the resource.
   @override
   final Markdown? copyright;
+
+  /// [copyrightElement] ("_copyright") Extensions for copyright
   @override
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
+
+  /// [copyrightLabel] A short string (<50 characters), suitable for inclusion in a page footer that identifies the copyright holder, effective period, and optionally whether rights are resctricted. (e.g. 'All rights reserved', 'Some rights reserved').
+  @override
+  final String? copyrightLabel;
+
+  /// [copyrightLabelElement] ("_copyrightLabel") Extensions for copyrightLabel
+  @override
+  @JsonKey(name: '_copyrightLabel')
+  final Element? copyrightLabelElement;
+
+  /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
   @override
   final Date? approvalDate;
+
+  /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
   @override
   @JsonKey(name: '_approvalDate')
   final Element? approvalDateElement;
+
+  /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
   @override
   final Date? lastReviewDate;
+
+  /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
   @override
   @JsonKey(name: '_lastReviewDate')
   final Element? lastReviewDateElement;
+
+  /// [effectivePeriod] The period during which the resource content was or is planned to be in active use.
   @override
   final Period? effectivePeriod;
+
+  /// [topic] Descriptive topics related to the content of the {{title}}. Topics provide a high-level categorization as well as keywords for the {{title}} that can be useful for filtering and searching.
   final List<CodeableConcept>? _topic;
+
+  /// [topic] Descriptive topics related to the content of the {{title}}. Topics provide a high-level categorization as well as keywords for the {{title}} that can be useful for filtering and searching.
   @override
   List<CodeableConcept>? get topic {
     final value = _topic;
@@ -23081,7 +29267,10 @@ class _$_EvidenceVariable extends _EvidenceVariable {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [author] An individiual or organization primarily involved in the creation and maintenance of the content.
   final List<ContactDetail>? _author;
+
+  /// [author] An individiual or organization primarily involved in the creation and maintenance of the content.
   @override
   List<ContactDetail>? get author {
     final value = _author;
@@ -23091,7 +29280,10 @@ class _$_EvidenceVariable extends _EvidenceVariable {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [editor] An individual or organization primarily responsible for internal coherence of the content.
   final List<ContactDetail>? _editor;
+
+  /// [editor] An individual or organization primarily responsible for internal coherence of the content.
   @override
   List<ContactDetail>? get editor {
     final value = _editor;
@@ -23101,7 +29293,10 @@ class _$_EvidenceVariable extends _EvidenceVariable {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [reviewer] An individual or organization primarily responsible for review of some aspect of the content.
   final List<ContactDetail>? _reviewer;
+
+  /// [reviewer] An individual or organization primarily responsible for review of some aspect of the content.
   @override
   List<ContactDetail>? get reviewer {
     final value = _reviewer;
@@ -23111,7 +29306,10 @@ class _$_EvidenceVariable extends _EvidenceVariable {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [endorser] An individual or organization responsible for officially endorsing the content for use in some setting.
   final List<ContactDetail>? _endorser;
+
+  /// [endorser] An individual or organization responsible for officially endorsing the content for use in some setting.
   @override
   List<ContactDetail>? get endorser {
     final value = _endorser;
@@ -23121,7 +29319,10 @@ class _$_EvidenceVariable extends _EvidenceVariable {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [relatedArtifact] Related artifacts such as additional documentation, justification, or bibliographic references.
   final List<RelatedArtifact>? _relatedArtifact;
+
+  /// [relatedArtifact] Related artifacts such as additional documentation, justification, or bibliographic references.
   @override
   List<RelatedArtifact>? get relatedArtifact {
     final value = _relatedArtifact;
@@ -23131,17 +29332,28 @@ class _$_EvidenceVariable extends _EvidenceVariable {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [shortTitle] The short title provides an alternate title for use in informal descriptive contexts where the full, formal title is not necessary.
   @override
   final String? shortTitle;
+
+  /// [shortTitleElement] ("_shortTitle") Extensions for shortTitle
   @override
   @JsonKey(name: '_shortTitle')
   final Element? shortTitleElement;
+
+  /// [subtitle] An explanatory or alternate title for the EvidenceVariable giving additional information about its content.
   @override
   final String? subtitle;
+
+  /// [subtitleElement] ("_subtitle") Extensions for subtitle
   @override
   @JsonKey(name: '_subtitle')
   final Element? subtitleElement;
+
+  /// [note] A human-readable string to clarify or explain concepts about the resource.
   final List<Annotation>? _note;
+
+  /// [note] A human-readable string to clarify or explain concepts about the resource.
   @override
   List<Annotation>? get note {
     final value = _note;
@@ -23151,12 +29363,19 @@ class _$_EvidenceVariable extends _EvidenceVariable {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [actual] True if the actual variable measured, false if a conceptual representation of the intended variable.
   @override
   final Boolean? actual;
+
+  /// [actualElement] ("_actual") Extensions for actual
   @override
   @JsonKey(name: '_actual')
   final Element? actualElement;
+
+  /// [characteristic] A defining factor of the EvidenceVariable. Multiple characteristics are applied with "and" semantics.
   final List<EvidenceVariableCharacteristic>? _characteristic;
+
+  /// [characteristic] A defining factor of the EvidenceVariable. Multiple characteristics are applied with "and" semantics.
   @override
   List<EvidenceVariableCharacteristic>? get characteristic {
     final value = _characteristic;
@@ -23166,12 +29385,19 @@ class _$_EvidenceVariable extends _EvidenceVariable {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [handling] The method of handling in statistical analysis.
   @override
   final Code? handling;
+
+  /// [handlingElement] ("_handling") Extensions for handling
   @override
   @JsonKey(name: '_handling')
   final Element? handlingElement;
+
+  /// [category] A grouping for ordinal or polychotomous variables.
   final List<EvidenceVariableCategory>? _category;
+
+  /// [category] A grouping for ordinal or polychotomous variables.
   @override
   List<EvidenceVariableCategory>? get category {
     final value = _category;
@@ -23183,7 +29409,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
 
   @override
   String toString() {
-    return 'EvidenceVariable(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, shortTitle: $shortTitle, shortTitleElement: $shortTitleElement, subtitle: $subtitle, subtitleElement: $subtitleElement, note: $note, actual: $actual, actualElement: $actualElement, characteristic: $characteristic, handling: $handling, handlingElement: $handlingElement, category: $category)';
+    return 'EvidenceVariable(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, versionAlgorithmString: $versionAlgorithmString, versionAlgorithmStringElement: $versionAlgorithmStringElement, versionAlgorithmCoding: $versionAlgorithmCoding, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, copyrightLabel: $copyrightLabel, copyrightLabelElement: $copyrightLabelElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, shortTitle: $shortTitle, shortTitleElement: $shortTitleElement, subtitle: $subtitle, subtitleElement: $subtitleElement, note: $note, actual: $actual, actualElement: $actualElement, characteristic: $characteristic, handling: $handling, handlingElement: $handlingElement, category: $category)';
   }
 
   @override
@@ -23218,6 +29444,13 @@ class _$_EvidenceVariable extends _EvidenceVariable {
             (identical(other.version, version) || other.version == version) &&
             (identical(other.versionElement, versionElement) ||
                 other.versionElement == versionElement) &&
+            (identical(other.versionAlgorithmString, versionAlgorithmString) ||
+                other.versionAlgorithmString == versionAlgorithmString) &&
+            (identical(other.versionAlgorithmStringElement, versionAlgorithmStringElement) ||
+                other.versionAlgorithmStringElement ==
+                    versionAlgorithmStringElement) &&
+            (identical(other.versionAlgorithmCoding, versionAlgorithmCoding) ||
+                other.versionAlgorithmCoding == versionAlgorithmCoding) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.nameElement, nameElement) ||
                 other.nameElement == nameElement) &&
@@ -23254,6 +29487,10 @@ class _$_EvidenceVariable extends _EvidenceVariable {
                 other.copyright == copyright) &&
             (identical(other.copyrightElement, copyrightElement) ||
                 other.copyrightElement == copyrightElement) &&
+            (identical(other.copyrightLabel, copyrightLabel) ||
+                other.copyrightLabel == copyrightLabel) &&
+            (identical(other.copyrightLabelElement, copyrightLabelElement) ||
+                other.copyrightLabelElement == copyrightLabelElement) &&
             (identical(other.approvalDate, approvalDate) ||
                 other.approvalDate == approvalDate) &&
             (identical(other.approvalDateElement, approvalDateElement) ||
@@ -23269,26 +29506,17 @@ class _$_EvidenceVariable extends _EvidenceVariable {
             const DeepCollectionEquality().equals(other._editor, _editor) &&
             const DeepCollectionEquality().equals(other._reviewer, _reviewer) &&
             const DeepCollectionEquality().equals(other._endorser, _endorser) &&
-            const DeepCollectionEquality()
-                .equals(other._relatedArtifact, _relatedArtifact) &&
-            (identical(other.shortTitle, shortTitle) ||
-                other.shortTitle == shortTitle) &&
-            (identical(other.shortTitleElement, shortTitleElement) ||
-                other.shortTitleElement == shortTitleElement) &&
-            (identical(other.subtitle, subtitle) ||
-                other.subtitle == subtitle) &&
-            (identical(other.subtitleElement, subtitleElement) ||
-                other.subtitleElement == subtitleElement) &&
+            const DeepCollectionEquality().equals(other._relatedArtifact, _relatedArtifact) &&
+            (identical(other.shortTitle, shortTitle) || other.shortTitle == shortTitle) &&
+            (identical(other.shortTitleElement, shortTitleElement) || other.shortTitleElement == shortTitleElement) &&
+            (identical(other.subtitle, subtitle) || other.subtitle == subtitle) &&
+            (identical(other.subtitleElement, subtitleElement) || other.subtitleElement == subtitleElement) &&
             const DeepCollectionEquality().equals(other._note, _note) &&
             (identical(other.actual, actual) || other.actual == actual) &&
-            (identical(other.actualElement, actualElement) ||
-                other.actualElement == actualElement) &&
-            const DeepCollectionEquality()
-                .equals(other._characteristic, _characteristic) &&
-            (identical(other.handling, handling) ||
-                other.handling == handling) &&
-            (identical(other.handlingElement, handlingElement) ||
-                other.handlingElement == handlingElement) &&
+            (identical(other.actualElement, actualElement) || other.actualElement == actualElement) &&
+            const DeepCollectionEquality().equals(other._characteristic, _characteristic) &&
+            (identical(other.handling, handling) || other.handling == handling) &&
+            (identical(other.handlingElement, handlingElement) || other.handlingElement == handlingElement) &&
             const DeepCollectionEquality().equals(other._category, _category));
   }
 
@@ -23312,6 +29540,9 @@ class _$_EvidenceVariable extends _EvidenceVariable {
         const DeepCollectionEquality().hash(_identifier),
         version,
         versionElement,
+        versionAlgorithmString,
+        versionAlgorithmStringElement,
+        versionAlgorithmCoding,
         name,
         nameElement,
         title,
@@ -23333,6 +29564,8 @@ class _$_EvidenceVariable extends _EvidenceVariable {
         purposeElement,
         copyright,
         copyrightElement,
+        copyrightLabel,
+        copyrightLabelElement,
         approvalDate,
         approvalDateElement,
         lastReviewDate,
@@ -23373,47 +29606,71 @@ class _$_EvidenceVariable extends _EvidenceVariable {
 
 abstract class _EvidenceVariable extends EvidenceVariable {
   factory _EvidenceVariable(
-      {final R5ResourceType resourceType,
+      {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
+          final R5ResourceType resourceType,
       final Id? id,
       final Meta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules')
+          final Element? implicitRulesElement,
       final Code? language,
-      @JsonKey(name: '_language') final Element? languageElement,
+      @JsonKey(name: '_language')
+          final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final FhirUri? url,
-      @JsonKey(name: '_url') final Element? urlElement,
+      @JsonKey(name: '_url')
+          final Element? urlElement,
       final List<Identifier>? identifier,
       final String? version,
-      @JsonKey(name: '_version') final Element? versionElement,
+      @JsonKey(name: '_version')
+          final Element? versionElement,
+      final String? versionAlgorithmString,
+      @JsonKey(name: '_versionAlgorithmString')
+          final Element? versionAlgorithmStringElement,
+      final Coding? versionAlgorithmCoding,
       final String? name,
-      @JsonKey(name: '_name') final Element? nameElement,
+      @JsonKey(name: '_name')
+          final Element? nameElement,
       final String? title,
-      @JsonKey(name: '_title') final Element? titleElement,
+      @JsonKey(name: '_title')
+          final Element? titleElement,
       final Code? status,
-      @JsonKey(name: '_status') final Element? statusElement,
+      @JsonKey(name: '_status')
+          final Element? statusElement,
       final Boolean? experimental,
-      @JsonKey(name: '_experimental') final Element? experimentalElement,
+      @JsonKey(name: '_experimental')
+          final Element? experimentalElement,
       final FhirDateTime? date,
-      @JsonKey(name: '_date') final Element? dateElement,
+      @JsonKey(name: '_date')
+          final Element? dateElement,
       final String? publisher,
-      @JsonKey(name: '_publisher') final Element? publisherElement,
+      @JsonKey(name: '_publisher')
+          final Element? publisherElement,
       final List<ContactDetail>? contact,
       final Markdown? description,
-      @JsonKey(name: '_description') final Element? descriptionElement,
+      @JsonKey(name: '_description')
+          final Element? descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
       final Markdown? purpose,
-      @JsonKey(name: '_purpose') final Element? purposeElement,
+      @JsonKey(name: '_purpose')
+          final Element? purposeElement,
       final Markdown? copyright,
-      @JsonKey(name: '_copyright') final Element? copyrightElement,
+      @JsonKey(name: '_copyright')
+          final Element? copyrightElement,
+      final String? copyrightLabel,
+      @JsonKey(name: '_copyrightLabel')
+          final Element? copyrightLabelElement,
       final Date? approvalDate,
-      @JsonKey(name: '_approvalDate') final Element? approvalDateElement,
+      @JsonKey(name: '_approvalDate')
+          final Element? approvalDateElement,
       final Date? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') final Element? lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate')
+          final Element? lastReviewDateElement,
       final Period? effectivePeriod,
       final List<CodeableConcept>? topic,
       final List<ContactDetail>? author,
@@ -23422,15 +29679,19 @@ abstract class _EvidenceVariable extends EvidenceVariable {
       final List<ContactDetail>? endorser,
       final List<RelatedArtifact>? relatedArtifact,
       final String? shortTitle,
-      @JsonKey(name: '_shortTitle') final Element? shortTitleElement,
+      @JsonKey(name: '_shortTitle')
+          final Element? shortTitleElement,
       final String? subtitle,
-      @JsonKey(name: '_subtitle') final Element? subtitleElement,
+      @JsonKey(name: '_subtitle')
+          final Element? subtitleElement,
       final List<Annotation>? note,
       final Boolean? actual,
-      @JsonKey(name: '_actual') final Element? actualElement,
+      @JsonKey(name: '_actual')
+          final Element? actualElement,
       final List<EvidenceVariableCharacteristic>? characteristic,
       final Code? handling,
-      @JsonKey(name: '_handling') final Element? handlingElement,
+      @JsonKey(name: '_handling')
+          final Element? handlingElement,
       final List<EvidenceVariableCategory>? category}) = _$_EvidenceVariable;
   _EvidenceVariable._() : super._();
 
@@ -23438,142 +29699,289 @@ abstract class _EvidenceVariable extends EvidenceVariable {
       _$_EvidenceVariable.fromJson;
 
   @override
+
+  /// [resourceType] This is a EvidenceVariable resource
+  @JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
   R5ResourceType get resourceType;
   @override
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  /// Once assigned, this value never changes.
   Id? get id;
   @override
+
+  /// [meta] The metadata about the resource. This is content that is
+  /// maintained by the infrastructure. Changes to the content might not
+  /// always be associated with version changes to the resource.
   Meta? get meta;
   @override
+
+  /// [implicitRules] A reference to a set of rules that were followed when
+  /// the resource was constructed, and which must be understood when
+  /// processing the content. Often, this is a reference to an implementation
+  /// guide that defines the special rules along with other profiles etc.
   FhirUri? get implicitRules;
   @override
+
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
+
+  /// [language] The base language in which the resource is written.
   Code? get language;
   @override
+
+  /// [languageElement] ("_language") Extensions for language
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+
+  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
   Narrative? get text;
   @override
+
+  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
   List<Resource>? get contained;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [url] An absolute URI that is used to identify this evidence variable when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this evidence variable is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the evidence variable is stored on different servers.
   FhirUri? get url;
   @override
+
+  /// [urlElement] ("_url") Extensions for url
   @JsonKey(name: '_url')
   Element? get urlElement;
   @override
+
+  /// [identifier] A formal identifier that is used to identify this evidence variable when it is represented in other formats, or referenced in a specification, model, design or an instance.
   List<Identifier>? get identifier;
   @override
+
+  /// [version] The identifier that is used to identify this version of the evidence variable when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the evidence variable author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence. To provide a version consistent with the Decision Support Service specification, use the format Major.Minor.Revision (e.g. 1.0.0). For more information on versioning knowledge assets, refer to the Decision Support Service specification. Note that a version is required for non-experimental active artifacts.
   String? get version;
   @override
+
+  /// [versionElement] ("_version") Extensions for version
   @JsonKey(name: '_version')
   Element? get versionElement;
   @override
+
+  /// [versionAlgorithmString] Indicates the mechanism used to compare versions to determine which is more current.
+  String? get versionAlgorithmString;
+  @override
+
+  /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions for versionAlgorithmString
+  @JsonKey(name: '_versionAlgorithmString')
+  Element? get versionAlgorithmStringElement;
+  @override
+
+  /// [versionAlgorithmCoding] Indicates the mechanism used to compare versions to determine which is more current.
+  Coding? get versionAlgorithmCoding;
+  @override
+
+  /// [name] A natural language name identifying the evidence variable. This name should be usable as an identifier for the module by machine processing applications such as code generation.
   String? get name;
   @override
+
+  /// [nameElement] ("_name") Extensions for name
   @JsonKey(name: '_name')
   Element? get nameElement;
   @override
+
+  /// [title] A short, descriptive, user-friendly title for the evidence variable.
   String? get title;
   @override
+
+  /// [titleElement] ("_title") Extensions for title
   @JsonKey(name: '_title')
   Element? get titleElement;
   @override
+
+  /// [status] The status of this evidence variable. Enables tracking the life-cycle of the content.
   Code? get status;
   @override
+
+  /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
+
+  /// [experimental] A Boolean value to indicate that this resource is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
   Boolean? get experimental;
   @override
+
+  /// [experimentalElement] ("_experimental") Extensions for experimental
   @JsonKey(name: '_experimental')
   Element? get experimentalElement;
   @override
+
+  /// [date] The date  (and optionally time) when the evidence variable was last significantly changed. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the evidence variable changes.
   FhirDateTime? get date;
   @override
+
+  /// [dateElement] ("_date") Extensions for date
   @JsonKey(name: '_date')
   Element? get dateElement;
   @override
+
+  /// [publisher] The name of the organization or individual responsible for the release and ongoing maintenance of the evidence variable.
   String? get publisher;
   @override
+
+  /// [publisherElement] ("_publisher") Extensions for publisher
   @JsonKey(name: '_publisher')
   Element? get publisherElement;
   @override
+
+  /// [contact] Contact details to assist a user in finding and communicating with the publisher.
   List<ContactDetail>? get contact;
   @override
+
+  /// [description] A free text natural language description of the evidence variable from a consumer's perspective.
   Markdown? get description;
   @override
+
+  /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
+
+  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate evidence variable instances.
   List<UsageContext>? get useContext;
   @override
+
+  /// [jurisdiction] A legal or geographic region in which the {{title}} is intended to be used.
   List<CodeableConcept>? get jurisdiction;
   @override
+
+  /// [purpose] Explanation of why this {{title}} is needed and why it has been designed as it has.
   Markdown? get purpose;
   @override
+
+  /// [purposeElement] ("_purpose") Extensions for purpose
   @JsonKey(name: '_purpose')
   Element? get purposeElement;
   @override
+
+  /// [copyright] A copyright statement relating to the resource and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the resource.
   Markdown? get copyright;
   @override
+
+  /// [copyrightElement] ("_copyright") Extensions for copyright
   @JsonKey(name: '_copyright')
   Element? get copyrightElement;
   @override
+
+  /// [copyrightLabel] A short string (<50 characters), suitable for inclusion in a page footer that identifies the copyright holder, effective period, and optionally whether rights are resctricted. (e.g. 'All rights reserved', 'Some rights reserved').
+  String? get copyrightLabel;
+  @override
+
+  /// [copyrightLabelElement] ("_copyrightLabel") Extensions for copyrightLabel
+  @JsonKey(name: '_copyrightLabel')
+  Element? get copyrightLabelElement;
+  @override
+
+  /// [approvalDate] The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage.
   Date? get approvalDate;
   @override
+
+  /// [approvalDateElement] ("_approvalDate") Extensions for approvalDate
   @JsonKey(name: '_approvalDate')
   Element? get approvalDateElement;
   @override
+
+  /// [lastReviewDate] The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date.
   Date? get lastReviewDate;
   @override
+
+  /// [lastReviewDateElement] ("_lastReviewDate") Extensions for lastReviewDate
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement;
   @override
+
+  /// [effectivePeriod] The period during which the resource content was or is planned to be in active use.
   Period? get effectivePeriod;
   @override
+
+  /// [topic] Descriptive topics related to the content of the {{title}}. Topics provide a high-level categorization as well as keywords for the {{title}} that can be useful for filtering and searching.
   List<CodeableConcept>? get topic;
   @override
+
+  /// [author] An individiual or organization primarily involved in the creation and maintenance of the content.
   List<ContactDetail>? get author;
   @override
+
+  /// [editor] An individual or organization primarily responsible for internal coherence of the content.
   List<ContactDetail>? get editor;
   @override
+
+  /// [reviewer] An individual or organization primarily responsible for review of some aspect of the content.
   List<ContactDetail>? get reviewer;
   @override
+
+  /// [endorser] An individual or organization responsible for officially endorsing the content for use in some setting.
   List<ContactDetail>? get endorser;
   @override
+
+  /// [relatedArtifact] Related artifacts such as additional documentation, justification, or bibliographic references.
   List<RelatedArtifact>? get relatedArtifact;
   @override
+
+  /// [shortTitle] The short title provides an alternate title for use in informal descriptive contexts where the full, formal title is not necessary.
   String? get shortTitle;
   @override
+
+  /// [shortTitleElement] ("_shortTitle") Extensions for shortTitle
   @JsonKey(name: '_shortTitle')
   Element? get shortTitleElement;
   @override
+
+  /// [subtitle] An explanatory or alternate title for the EvidenceVariable giving additional information about its content.
   String? get subtitle;
   @override
+
+  /// [subtitleElement] ("_subtitle") Extensions for subtitle
   @JsonKey(name: '_subtitle')
   Element? get subtitleElement;
   @override
+
+  /// [note] A human-readable string to clarify or explain concepts about the resource.
   List<Annotation>? get note;
   @override
+
+  /// [actual] True if the actual variable measured, false if a conceptual representation of the intended variable.
   Boolean? get actual;
   @override
+
+  /// [actualElement] ("_actual") Extensions for actual
   @JsonKey(name: '_actual')
   Element? get actualElement;
   @override
+
+  /// [characteristic] A defining factor of the EvidenceVariable. Multiple characteristics are applied with "and" semantics.
   List<EvidenceVariableCharacteristic>? get characteristic;
   @override
+
+  /// [handling] The method of handling in statistical analysis.
   Code? get handling;
   @override
+
+  /// [handlingElement] ("_handling") Extensions for handling
   @JsonKey(name: '_handling')
   Element? get handlingElement;
   @override
+
+  /// [category] A grouping for ordinal or polychotomous variables.
   List<EvidenceVariableCategory>? get category;
   @override
   @JsonKey(ignore: true)
@@ -23588,43 +29996,89 @@ EvidenceVariableCharacteristic _$EvidenceVariableCharacteristicFromJson(
 
 /// @nodoc
 mixin _$EvidenceVariableCharacteristic {
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [linkId] Label used for when a characteristic refers to another characteristic.
   Id? get linkId => throw _privateConstructorUsedError;
+
+  /// [linkIdElement] ("_linkId") Extensions for linkId
   @JsonKey(name: '_linkId')
   Element? get linkIdElement => throw _privateConstructorUsedError;
+
+  /// [description] A short, natural language description of the characteristic that could be used to communicate the criteria to an end-user.
   String? get description => throw _privateConstructorUsedError;
+
+  /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
+
+  /// [note] A human-readable string to clarify or explain concepts about the characteristic.
   List<Annotation>? get note => throw _privateConstructorUsedError;
+
+  /// [exclude] When true, this characteristic is an exclusion criterion. In other words, not matching this characteristic definition is equivalent to meeting this criterion.
   Boolean? get exclude => throw _privateConstructorUsedError;
+
+  /// [excludeElement] ("_exclude") Extensions for exclude
   @JsonKey(name: '_exclude')
   Element? get excludeElement => throw _privateConstructorUsedError;
+
+  /// [definitionReference] Defines the characteristic using a Reference.
   Reference? get definitionReference => throw _privateConstructorUsedError;
+
+  /// [definitionCanonical] Defines the characteristic using Canonical.
   Canonical? get definitionCanonical => throw _privateConstructorUsedError;
-  @JsonKey(name: '_definitionCanonical')
-  Element? get definitionCanonicalElement => throw _privateConstructorUsedError;
+
+  /// [definitionCodeableConcept] Defines the characteristic using CodeableConcept.
   CodeableConcept? get definitionCodeableConcept =>
       throw _privateConstructorUsedError;
+
+  /// [definitionExpression] Defines the characteristic using Expression.
   Expression? get definitionExpression => throw _privateConstructorUsedError;
+
+  /// [definitionId] Defines the characteristic using id.
   Id? get definitionId => throw _privateConstructorUsedError;
+
+  /// [definitionIdElement] ("_definitionId") Extensions for definitionId
   @JsonKey(name: '_definitionId')
   Element? get definitionIdElement => throw _privateConstructorUsedError;
-  EvidenceVariableDefByTypeAndValue? get defByTypeAndValue =>
+
+  /// [definitionByTypeAndValue] Defines the characteristic using both a type and value[x] elements.
+  EvidenceVariableDefinitionByTypeAndValue? get definitionByTypeAndValue =>
       throw _privateConstructorUsedError;
-  EvidenceVariableDefByCombination? get defByCombination =>
+
+  /// [definitionByCombination] Defines the characteristic as a combination of two or more characteristics.
+  EvidenceVariableDefinitionByCombination? get definitionByCombination =>
       throw _privateConstructorUsedError;
-  CodeableConcept? get method => throw _privateConstructorUsedError;
-  Reference? get device => throw _privateConstructorUsedError;
-  CodeableConcept? get offset => throw _privateConstructorUsedError;
+
+  /// [timeFromEvent] Observation time from study specified event.
   List<EvidenceVariableTimeFromEvent>? get timeFromEvent =>
       throw _privateConstructorUsedError;
-  Code? get groupMeasure => throw _privateConstructorUsedError;
-  @JsonKey(name: '_groupMeasure')
-  Element? get groupMeasureElement => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -23642,52 +30096,36 @@ abstract class $EvidenceVariableCharacteristicCopyWith<$Res> {
   @useResult
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Id? linkId,
-      @JsonKey(name: '_linkId')
-          Element? linkIdElement,
+      @JsonKey(name: '_linkId') Element? linkIdElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<Annotation>? note,
       Boolean? exclude,
-      @JsonKey(name: '_exclude')
-          Element? excludeElement,
+      @JsonKey(name: '_exclude') Element? excludeElement,
       Reference? definitionReference,
       Canonical? definitionCanonical,
-      @JsonKey(name: '_definitionCanonical')
-          Element? definitionCanonicalElement,
       CodeableConcept? definitionCodeableConcept,
       Expression? definitionExpression,
       Id? definitionId,
-      @JsonKey(name: '_definitionId')
-          Element? definitionIdElement,
-      EvidenceVariableDefByTypeAndValue? defByTypeAndValue,
-      EvidenceVariableDefByCombination? defByCombination,
-      CodeableConcept? method,
-      Reference? device,
-      CodeableConcept? offset,
-      List<EvidenceVariableTimeFromEvent>? timeFromEvent,
-      Code? groupMeasure,
-      @JsonKey(name: '_groupMeasure')
-          Element? groupMeasureElement});
+      @JsonKey(name: '_definitionId') Element? definitionIdElement,
+      EvidenceVariableDefinitionByTypeAndValue? definitionByTypeAndValue,
+      EvidenceVariableDefinitionByCombination? definitionByCombination,
+      List<EvidenceVariableTimeFromEvent>? timeFromEvent});
 
   $ElementCopyWith<$Res>? get linkIdElement;
   $ElementCopyWith<$Res>? get descriptionElement;
   $ElementCopyWith<$Res>? get excludeElement;
   $ReferenceCopyWith<$Res>? get definitionReference;
-  $ElementCopyWith<$Res>? get definitionCanonicalElement;
   $CodeableConceptCopyWith<$Res>? get definitionCodeableConcept;
   $ExpressionCopyWith<$Res>? get definitionExpression;
   $ElementCopyWith<$Res>? get definitionIdElement;
-  $EvidenceVariableDefByTypeAndValueCopyWith<$Res>? get defByTypeAndValue;
-  $EvidenceVariableDefByCombinationCopyWith<$Res>? get defByCombination;
-  $CodeableConceptCopyWith<$Res>? get method;
-  $ReferenceCopyWith<$Res>? get device;
-  $CodeableConceptCopyWith<$Res>? get offset;
-  $ElementCopyWith<$Res>? get groupMeasureElement;
+  $EvidenceVariableDefinitionByTypeAndValueCopyWith<$Res>?
+      get definitionByTypeAndValue;
+  $EvidenceVariableDefinitionByCombinationCopyWith<$Res>?
+      get definitionByCombination;
 }
 
 /// @nodoc
@@ -23716,19 +30154,13 @@ class _$EvidenceVariableCharacteristicCopyWithImpl<$Res,
     Object? excludeElement = freezed,
     Object? definitionReference = freezed,
     Object? definitionCanonical = freezed,
-    Object? definitionCanonicalElement = freezed,
     Object? definitionCodeableConcept = freezed,
     Object? definitionExpression = freezed,
     Object? definitionId = freezed,
     Object? definitionIdElement = freezed,
-    Object? defByTypeAndValue = freezed,
-    Object? defByCombination = freezed,
-    Object? method = freezed,
-    Object? device = freezed,
-    Object? offset = freezed,
+    Object? definitionByTypeAndValue = freezed,
+    Object? definitionByCombination = freezed,
     Object? timeFromEvent = freezed,
-    Object? groupMeasure = freezed,
-    Object? groupMeasureElement = freezed,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -23779,10 +30211,6 @@ class _$EvidenceVariableCharacteristicCopyWithImpl<$Res,
           ? _value.definitionCanonical
           : definitionCanonical // ignore: cast_nullable_to_non_nullable
               as Canonical?,
-      definitionCanonicalElement: freezed == definitionCanonicalElement
-          ? _value.definitionCanonicalElement
-          : definitionCanonicalElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
       definitionCodeableConcept: freezed == definitionCodeableConcept
           ? _value.definitionCodeableConcept
           : definitionCodeableConcept // ignore: cast_nullable_to_non_nullable
@@ -23799,38 +30227,18 @@ class _$EvidenceVariableCharacteristicCopyWithImpl<$Res,
           ? _value.definitionIdElement
           : definitionIdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      defByTypeAndValue: freezed == defByTypeAndValue
-          ? _value.defByTypeAndValue
-          : defByTypeAndValue // ignore: cast_nullable_to_non_nullable
-              as EvidenceVariableDefByTypeAndValue?,
-      defByCombination: freezed == defByCombination
-          ? _value.defByCombination
-          : defByCombination // ignore: cast_nullable_to_non_nullable
-              as EvidenceVariableDefByCombination?,
-      method: freezed == method
-          ? _value.method
-          : method // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      device: freezed == device
-          ? _value.device
-          : device // ignore: cast_nullable_to_non_nullable
-              as Reference?,
-      offset: freezed == offset
-          ? _value.offset
-          : offset // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
+      definitionByTypeAndValue: freezed == definitionByTypeAndValue
+          ? _value.definitionByTypeAndValue
+          : definitionByTypeAndValue // ignore: cast_nullable_to_non_nullable
+              as EvidenceVariableDefinitionByTypeAndValue?,
+      definitionByCombination: freezed == definitionByCombination
+          ? _value.definitionByCombination
+          : definitionByCombination // ignore: cast_nullable_to_non_nullable
+              as EvidenceVariableDefinitionByCombination?,
       timeFromEvent: freezed == timeFromEvent
           ? _value.timeFromEvent
           : timeFromEvent // ignore: cast_nullable_to_non_nullable
               as List<EvidenceVariableTimeFromEvent>?,
-      groupMeasure: freezed == groupMeasure
-          ? _value.groupMeasure
-          : groupMeasure // ignore: cast_nullable_to_non_nullable
-              as Code?,
-      groupMeasureElement: freezed == groupMeasureElement
-          ? _value.groupMeasureElement
-          : groupMeasureElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
     ) as $Val);
   }
 
@@ -23884,18 +30292,6 @@ class _$EvidenceVariableCharacteristicCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get definitionCanonicalElement {
-    if (_value.definitionCanonicalElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.definitionCanonicalElement!, (value) {
-      return _then(_value.copyWith(definitionCanonicalElement: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
   $CodeableConceptCopyWith<$Res>? get definitionCodeableConcept {
     if (_value.definitionCodeableConcept == null) {
       return null;
@@ -23933,75 +30329,29 @@ class _$EvidenceVariableCharacteristicCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $EvidenceVariableDefByTypeAndValueCopyWith<$Res>? get defByTypeAndValue {
-    if (_value.defByTypeAndValue == null) {
+  $EvidenceVariableDefinitionByTypeAndValueCopyWith<$Res>?
+      get definitionByTypeAndValue {
+    if (_value.definitionByTypeAndValue == null) {
       return null;
     }
 
-    return $EvidenceVariableDefByTypeAndValueCopyWith<$Res>(
-        _value.defByTypeAndValue!, (value) {
-      return _then(_value.copyWith(defByTypeAndValue: value) as $Val);
+    return $EvidenceVariableDefinitionByTypeAndValueCopyWith<$Res>(
+        _value.definitionByTypeAndValue!, (value) {
+      return _then(_value.copyWith(definitionByTypeAndValue: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $EvidenceVariableDefByCombinationCopyWith<$Res>? get defByCombination {
-    if (_value.defByCombination == null) {
+  $EvidenceVariableDefinitionByCombinationCopyWith<$Res>?
+      get definitionByCombination {
+    if (_value.definitionByCombination == null) {
       return null;
     }
 
-    return $EvidenceVariableDefByCombinationCopyWith<$Res>(
-        _value.defByCombination!, (value) {
-      return _then(_value.copyWith(defByCombination: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $CodeableConceptCopyWith<$Res>? get method {
-    if (_value.method == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.method!, (value) {
-      return _then(_value.copyWith(method: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ReferenceCopyWith<$Res>? get device {
-    if (_value.device == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.device!, (value) {
-      return _then(_value.copyWith(device: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $CodeableConceptCopyWith<$Res>? get offset {
-    if (_value.offset == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.offset!, (value) {
-      return _then(_value.copyWith(offset: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get groupMeasureElement {
-    if (_value.groupMeasureElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.groupMeasureElement!, (value) {
-      return _then(_value.copyWith(groupMeasureElement: value) as $Val);
+    return $EvidenceVariableDefinitionByCombinationCopyWith<$Res>(
+        _value.definitionByCombination!, (value) {
+      return _then(_value.copyWith(definitionByCombination: value) as $Val);
     });
   }
 }
@@ -24017,37 +30367,24 @@ abstract class _$$_EvidenceVariableCharacteristicCopyWith<$Res>
   @useResult
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Id? linkId,
-      @JsonKey(name: '_linkId')
-          Element? linkIdElement,
+      @JsonKey(name: '_linkId') Element? linkIdElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<Annotation>? note,
       Boolean? exclude,
-      @JsonKey(name: '_exclude')
-          Element? excludeElement,
+      @JsonKey(name: '_exclude') Element? excludeElement,
       Reference? definitionReference,
       Canonical? definitionCanonical,
-      @JsonKey(name: '_definitionCanonical')
-          Element? definitionCanonicalElement,
       CodeableConcept? definitionCodeableConcept,
       Expression? definitionExpression,
       Id? definitionId,
-      @JsonKey(name: '_definitionId')
-          Element? definitionIdElement,
-      EvidenceVariableDefByTypeAndValue? defByTypeAndValue,
-      EvidenceVariableDefByCombination? defByCombination,
-      CodeableConcept? method,
-      Reference? device,
-      CodeableConcept? offset,
-      List<EvidenceVariableTimeFromEvent>? timeFromEvent,
-      Code? groupMeasure,
-      @JsonKey(name: '_groupMeasure')
-          Element? groupMeasureElement});
+      @JsonKey(name: '_definitionId') Element? definitionIdElement,
+      EvidenceVariableDefinitionByTypeAndValue? definitionByTypeAndValue,
+      EvidenceVariableDefinitionByCombination? definitionByCombination,
+      List<EvidenceVariableTimeFromEvent>? timeFromEvent});
 
   @override
   $ElementCopyWith<$Res>? get linkIdElement;
@@ -24058,25 +30395,17 @@ abstract class _$$_EvidenceVariableCharacteristicCopyWith<$Res>
   @override
   $ReferenceCopyWith<$Res>? get definitionReference;
   @override
-  $ElementCopyWith<$Res>? get definitionCanonicalElement;
-  @override
   $CodeableConceptCopyWith<$Res>? get definitionCodeableConcept;
   @override
   $ExpressionCopyWith<$Res>? get definitionExpression;
   @override
   $ElementCopyWith<$Res>? get definitionIdElement;
   @override
-  $EvidenceVariableDefByTypeAndValueCopyWith<$Res>? get defByTypeAndValue;
+  $EvidenceVariableDefinitionByTypeAndValueCopyWith<$Res>?
+      get definitionByTypeAndValue;
   @override
-  $EvidenceVariableDefByCombinationCopyWith<$Res>? get defByCombination;
-  @override
-  $CodeableConceptCopyWith<$Res>? get method;
-  @override
-  $ReferenceCopyWith<$Res>? get device;
-  @override
-  $CodeableConceptCopyWith<$Res>? get offset;
-  @override
-  $ElementCopyWith<$Res>? get groupMeasureElement;
+  $EvidenceVariableDefinitionByCombinationCopyWith<$Res>?
+      get definitionByCombination;
 }
 
 /// @nodoc
@@ -24104,19 +30433,13 @@ class __$$_EvidenceVariableCharacteristicCopyWithImpl<$Res>
     Object? excludeElement = freezed,
     Object? definitionReference = freezed,
     Object? definitionCanonical = freezed,
-    Object? definitionCanonicalElement = freezed,
     Object? definitionCodeableConcept = freezed,
     Object? definitionExpression = freezed,
     Object? definitionId = freezed,
     Object? definitionIdElement = freezed,
-    Object? defByTypeAndValue = freezed,
-    Object? defByCombination = freezed,
-    Object? method = freezed,
-    Object? device = freezed,
-    Object? offset = freezed,
+    Object? definitionByTypeAndValue = freezed,
+    Object? definitionByCombination = freezed,
     Object? timeFromEvent = freezed,
-    Object? groupMeasure = freezed,
-    Object? groupMeasureElement = freezed,
   }) {
     return _then(_$_EvidenceVariableCharacteristic(
       id: freezed == id
@@ -24167,10 +30490,6 @@ class __$$_EvidenceVariableCharacteristicCopyWithImpl<$Res>
           ? _value.definitionCanonical
           : definitionCanonical // ignore: cast_nullable_to_non_nullable
               as Canonical?,
-      definitionCanonicalElement: freezed == definitionCanonicalElement
-          ? _value.definitionCanonicalElement
-          : definitionCanonicalElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
       definitionCodeableConcept: freezed == definitionCodeableConcept
           ? _value.definitionCodeableConcept
           : definitionCodeableConcept // ignore: cast_nullable_to_non_nullable
@@ -24187,38 +30506,18 @@ class __$$_EvidenceVariableCharacteristicCopyWithImpl<$Res>
           ? _value.definitionIdElement
           : definitionIdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      defByTypeAndValue: freezed == defByTypeAndValue
-          ? _value.defByTypeAndValue
-          : defByTypeAndValue // ignore: cast_nullable_to_non_nullable
-              as EvidenceVariableDefByTypeAndValue?,
-      defByCombination: freezed == defByCombination
-          ? _value.defByCombination
-          : defByCombination // ignore: cast_nullable_to_non_nullable
-              as EvidenceVariableDefByCombination?,
-      method: freezed == method
-          ? _value.method
-          : method // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      device: freezed == device
-          ? _value.device
-          : device // ignore: cast_nullable_to_non_nullable
-              as Reference?,
-      offset: freezed == offset
-          ? _value.offset
-          : offset // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
+      definitionByTypeAndValue: freezed == definitionByTypeAndValue
+          ? _value.definitionByTypeAndValue
+          : definitionByTypeAndValue // ignore: cast_nullable_to_non_nullable
+              as EvidenceVariableDefinitionByTypeAndValue?,
+      definitionByCombination: freezed == definitionByCombination
+          ? _value.definitionByCombination
+          : definitionByCombination // ignore: cast_nullable_to_non_nullable
+              as EvidenceVariableDefinitionByCombination?,
       timeFromEvent: freezed == timeFromEvent
           ? _value._timeFromEvent
           : timeFromEvent // ignore: cast_nullable_to_non_nullable
               as List<EvidenceVariableTimeFromEvent>?,
-      groupMeasure: freezed == groupMeasure
-          ? _value.groupMeasure
-          : groupMeasure // ignore: cast_nullable_to_non_nullable
-              as Code?,
-      groupMeasureElement: freezed == groupMeasureElement
-          ? _value.groupMeasureElement
-          : groupMeasureElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
     ));
   }
 }
@@ -24240,19 +30539,13 @@ class _$_EvidenceVariableCharacteristic
       @JsonKey(name: '_exclude') this.excludeElement,
       this.definitionReference,
       this.definitionCanonical,
-      @JsonKey(name: '_definitionCanonical') this.definitionCanonicalElement,
       this.definitionCodeableConcept,
       this.definitionExpression,
       this.definitionId,
       @JsonKey(name: '_definitionId') this.definitionIdElement,
-      this.defByTypeAndValue,
-      this.defByCombination,
-      this.method,
-      this.device,
-      this.offset,
-      final List<EvidenceVariableTimeFromEvent>? timeFromEvent,
-      this.groupMeasure,
-      @JsonKey(name: '_groupMeasure') this.groupMeasureElement})
+      this.definitionByTypeAndValue,
+      this.definitionByCombination,
+      final List<EvidenceVariableTimeFromEvent>? timeFromEvent})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         _note = note,
@@ -24263,9 +30556,25 @@ class _$_EvidenceVariableCharacteristic
           Map<String, dynamic> json) =>
       _$$_EvidenceVariableCharacteristicFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -24276,7 +30585,32 @@ class _$_EvidenceVariableCharacteristic
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -24287,17 +30621,28 @@ class _$_EvidenceVariableCharacteristic
     return EqualUnmodifiableListView(value);
   }
 
+  /// [linkId] Label used for when a characteristic refers to another characteristic.
   @override
   final Id? linkId;
+
+  /// [linkIdElement] ("_linkId") Extensions for linkId
   @override
   @JsonKey(name: '_linkId')
   final Element? linkIdElement;
+
+  /// [description] A short, natural language description of the characteristic that could be used to communicate the criteria to an end-user.
   @override
   final String? description;
+
+  /// [descriptionElement] ("_description") Extensions for description
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
+
+  /// [note] A human-readable string to clarify or explain concepts about the characteristic.
   final List<Annotation>? _note;
+
+  /// [note] A human-readable string to clarify or explain concepts about the characteristic.
   @override
   List<Annotation>? get note {
     final value = _note;
@@ -24307,38 +30652,52 @@ class _$_EvidenceVariableCharacteristic
     return EqualUnmodifiableListView(value);
   }
 
+  /// [exclude] When true, this characteristic is an exclusion criterion. In other words, not matching this characteristic definition is equivalent to meeting this criterion.
   @override
   final Boolean? exclude;
+
+  /// [excludeElement] ("_exclude") Extensions for exclude
   @override
   @JsonKey(name: '_exclude')
   final Element? excludeElement;
+
+  /// [definitionReference] Defines the characteristic using a Reference.
   @override
   final Reference? definitionReference;
+
+  /// [definitionCanonical] Defines the characteristic using Canonical.
   @override
   final Canonical? definitionCanonical;
-  @override
-  @JsonKey(name: '_definitionCanonical')
-  final Element? definitionCanonicalElement;
+
+  /// [definitionCodeableConcept] Defines the characteristic using CodeableConcept.
   @override
   final CodeableConcept? definitionCodeableConcept;
+
+  /// [definitionExpression] Defines the characteristic using Expression.
   @override
   final Expression? definitionExpression;
+
+  /// [definitionId] Defines the characteristic using id.
   @override
   final Id? definitionId;
+
+  /// [definitionIdElement] ("_definitionId") Extensions for definitionId
   @override
   @JsonKey(name: '_definitionId')
   final Element? definitionIdElement;
+
+  /// [definitionByTypeAndValue] Defines the characteristic using both a type and value[x] elements.
   @override
-  final EvidenceVariableDefByTypeAndValue? defByTypeAndValue;
+  final EvidenceVariableDefinitionByTypeAndValue? definitionByTypeAndValue;
+
+  /// [definitionByCombination] Defines the characteristic as a combination of two or more characteristics.
   @override
-  final EvidenceVariableDefByCombination? defByCombination;
-  @override
-  final CodeableConcept? method;
-  @override
-  final Reference? device;
-  @override
-  final CodeableConcept? offset;
+  final EvidenceVariableDefinitionByCombination? definitionByCombination;
+
+  /// [timeFromEvent] Observation time from study specified event.
   final List<EvidenceVariableTimeFromEvent>? _timeFromEvent;
+
+  /// [timeFromEvent] Observation time from study specified event.
   @override
   List<EvidenceVariableTimeFromEvent>? get timeFromEvent {
     final value = _timeFromEvent;
@@ -24349,14 +30708,8 @@ class _$_EvidenceVariableCharacteristic
   }
 
   @override
-  final Code? groupMeasure;
-  @override
-  @JsonKey(name: '_groupMeasure')
-  final Element? groupMeasureElement;
-
-  @override
   String toString() {
-    return 'EvidenceVariableCharacteristic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, linkId: $linkId, linkIdElement: $linkIdElement, description: $description, descriptionElement: $descriptionElement, note: $note, exclude: $exclude, excludeElement: $excludeElement, definitionReference: $definitionReference, definitionCanonical: $definitionCanonical, definitionCanonicalElement: $definitionCanonicalElement, definitionCodeableConcept: $definitionCodeableConcept, definitionExpression: $definitionExpression, definitionId: $definitionId, definitionIdElement: $definitionIdElement, defByTypeAndValue: $defByTypeAndValue, defByCombination: $defByCombination, method: $method, device: $device, offset: $offset, timeFromEvent: $timeFromEvent, groupMeasure: $groupMeasure, groupMeasureElement: $groupMeasureElement)';
+    return 'EvidenceVariableCharacteristic(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, linkId: $linkId, linkIdElement: $linkIdElement, description: $description, descriptionElement: $descriptionElement, note: $note, exclude: $exclude, excludeElement: $excludeElement, definitionReference: $definitionReference, definitionCanonical: $definitionCanonical, definitionCodeableConcept: $definitionCodeableConcept, definitionExpression: $definitionExpression, definitionId: $definitionId, definitionIdElement: $definitionIdElement, definitionByTypeAndValue: $definitionByTypeAndValue, definitionByCombination: $definitionByCombination, timeFromEvent: $timeFromEvent)';
   }
 
   @override
@@ -24384,10 +30737,6 @@ class _$_EvidenceVariableCharacteristic
                 other.definitionReference == definitionReference) &&
             (identical(other.definitionCanonical, definitionCanonical) ||
                 other.definitionCanonical == definitionCanonical) &&
-            (identical(other.definitionCanonicalElement,
-                    definitionCanonicalElement) ||
-                other.definitionCanonicalElement ==
-                    definitionCanonicalElement) &&
             (identical(other.definitionCodeableConcept,
                     definitionCodeableConcept) ||
                 other.definitionCodeableConcept == definitionCodeableConcept) &&
@@ -24397,19 +30746,14 @@ class _$_EvidenceVariableCharacteristic
                 other.definitionId == definitionId) &&
             (identical(other.definitionIdElement, definitionIdElement) ||
                 other.definitionIdElement == definitionIdElement) &&
-            (identical(other.defByTypeAndValue, defByTypeAndValue) ||
-                other.defByTypeAndValue == defByTypeAndValue) &&
-            (identical(other.defByCombination, defByCombination) ||
-                other.defByCombination == defByCombination) &&
-            (identical(other.method, method) || other.method == method) &&
-            (identical(other.device, device) || other.device == device) &&
-            (identical(other.offset, offset) || other.offset == offset) &&
+            (identical(
+                    other.definitionByTypeAndValue, definitionByTypeAndValue) ||
+                other.definitionByTypeAndValue == definitionByTypeAndValue) &&
+            (identical(
+                    other.definitionByCombination, definitionByCombination) ||
+                other.definitionByCombination == definitionByCombination) &&
             const DeepCollectionEquality()
-                .equals(other._timeFromEvent, _timeFromEvent) &&
-            (identical(other.groupMeasure, groupMeasure) ||
-                other.groupMeasure == groupMeasure) &&
-            (identical(other.groupMeasureElement, groupMeasureElement) ||
-                other.groupMeasureElement == groupMeasureElement));
+                .equals(other._timeFromEvent, _timeFromEvent));
   }
 
   @JsonKey(ignore: true)
@@ -24428,19 +30772,13 @@ class _$_EvidenceVariableCharacteristic
         excludeElement,
         definitionReference,
         definitionCanonical,
-        definitionCanonicalElement,
         definitionCodeableConcept,
         definitionExpression,
         definitionId,
         definitionIdElement,
-        defByTypeAndValue,
-        defByCombination,
-        method,
-        device,
-        offset,
-        const DeepCollectionEquality().hash(_timeFromEvent),
-        groupMeasure,
-        groupMeasureElement
+        definitionByTypeAndValue,
+        definitionByCombination,
+        const DeepCollectionEquality().hash(_timeFromEvent)
       ]);
 
   @JsonKey(ignore: true)
@@ -24461,551 +30799,232 @@ class _$_EvidenceVariableCharacteristic
 abstract class _EvidenceVariableCharacteristic
     extends EvidenceVariableCharacteristic {
   factory _EvidenceVariableCharacteristic(
-          {final String? id,
-          @JsonKey(name: 'extension')
-              final List<FhirExtension>? extension_,
-          final List<FhirExtension>? modifierExtension,
-          final Id? linkId,
-          @JsonKey(name: '_linkId')
-              final Element? linkIdElement,
-          final String? description,
-          @JsonKey(name: '_description')
-              final Element? descriptionElement,
-          final List<Annotation>? note,
-          final Boolean? exclude,
-          @JsonKey(name: '_exclude')
-              final Element? excludeElement,
-          final Reference? definitionReference,
-          final Canonical? definitionCanonical,
-          @JsonKey(name: '_definitionCanonical')
-              final Element? definitionCanonicalElement,
-          final CodeableConcept? definitionCodeableConcept,
-          final Expression? definitionExpression,
-          final Id? definitionId,
-          @JsonKey(name: '_definitionId')
-              final Element? definitionIdElement,
-          final EvidenceVariableDefByTypeAndValue? defByTypeAndValue,
-          final EvidenceVariableDefByCombination? defByCombination,
-          final CodeableConcept? method,
-          final Reference? device,
-          final CodeableConcept? offset,
-          final List<EvidenceVariableTimeFromEvent>? timeFromEvent,
-          final Code? groupMeasure,
-          @JsonKey(name: '_groupMeasure')
-              final Element? groupMeasureElement}) =
-      _$_EvidenceVariableCharacteristic;
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final Id? linkId,
+      @JsonKey(name: '_linkId') final Element? linkIdElement,
+      final String? description,
+      @JsonKey(name: '_description') final Element? descriptionElement,
+      final List<Annotation>? note,
+      final Boolean? exclude,
+      @JsonKey(name: '_exclude') final Element? excludeElement,
+      final Reference? definitionReference,
+      final Canonical? definitionCanonical,
+      final CodeableConcept? definitionCodeableConcept,
+      final Expression? definitionExpression,
+      final Id? definitionId,
+      @JsonKey(name: '_definitionId') final Element? definitionIdElement,
+      final EvidenceVariableDefinitionByTypeAndValue? definitionByTypeAndValue,
+      final EvidenceVariableDefinitionByCombination? definitionByCombination,
+      final List<EvidenceVariableTimeFromEvent>?
+          timeFromEvent}) = _$_EvidenceVariableCharacteristic;
   _EvidenceVariableCharacteristic._() : super._();
 
   factory _EvidenceVariableCharacteristic.fromJson(Map<String, dynamic> json) =
       _$_EvidenceVariableCharacteristic.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [linkId] Label used for when a characteristic refers to another characteristic.
   Id? get linkId;
   @override
+
+  /// [linkIdElement] ("_linkId") Extensions for linkId
   @JsonKey(name: '_linkId')
   Element? get linkIdElement;
   @override
+
+  /// [description] A short, natural language description of the characteristic that could be used to communicate the criteria to an end-user.
   String? get description;
   @override
+
+  /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
+
+  /// [note] A human-readable string to clarify or explain concepts about the characteristic.
   List<Annotation>? get note;
   @override
+
+  /// [exclude] When true, this characteristic is an exclusion criterion. In other words, not matching this characteristic definition is equivalent to meeting this criterion.
   Boolean? get exclude;
   @override
+
+  /// [excludeElement] ("_exclude") Extensions for exclude
   @JsonKey(name: '_exclude')
   Element? get excludeElement;
   @override
+
+  /// [definitionReference] Defines the characteristic using a Reference.
   Reference? get definitionReference;
   @override
+
+  /// [definitionCanonical] Defines the characteristic using Canonical.
   Canonical? get definitionCanonical;
   @override
-  @JsonKey(name: '_definitionCanonical')
-  Element? get definitionCanonicalElement;
-  @override
+
+  /// [definitionCodeableConcept] Defines the characteristic using CodeableConcept.
   CodeableConcept? get definitionCodeableConcept;
   @override
+
+  /// [definitionExpression] Defines the characteristic using Expression.
   Expression? get definitionExpression;
   @override
+
+  /// [definitionId] Defines the characteristic using id.
   Id? get definitionId;
   @override
+
+  /// [definitionIdElement] ("_definitionId") Extensions for definitionId
   @JsonKey(name: '_definitionId')
   Element? get definitionIdElement;
   @override
-  EvidenceVariableDefByTypeAndValue? get defByTypeAndValue;
+
+  /// [definitionByTypeAndValue] Defines the characteristic using both a type and value[x] elements.
+  EvidenceVariableDefinitionByTypeAndValue? get definitionByTypeAndValue;
   @override
-  EvidenceVariableDefByCombination? get defByCombination;
+
+  /// [definitionByCombination] Defines the characteristic as a combination of two or more characteristics.
+  EvidenceVariableDefinitionByCombination? get definitionByCombination;
   @override
-  CodeableConcept? get method;
-  @override
-  Reference? get device;
-  @override
-  CodeableConcept? get offset;
-  @override
+
+  /// [timeFromEvent] Observation time from study specified event.
   List<EvidenceVariableTimeFromEvent>? get timeFromEvent;
-  @override
-  Code? get groupMeasure;
-  @override
-  @JsonKey(name: '_groupMeasure')
-  Element? get groupMeasureElement;
   @override
   @JsonKey(ignore: true)
   _$$_EvidenceVariableCharacteristicCopyWith<_$_EvidenceVariableCharacteristic>
       get copyWith => throw _privateConstructorUsedError;
 }
 
-EvidenceVariableCategory _$EvidenceVariableCategoryFromJson(
-    Map<String, dynamic> json) {
-  return _EvidenceVariableCategory.fromJson(json);
+EvidenceVariableDefinitionByTypeAndValue
+    _$EvidenceVariableDefinitionByTypeAndValueFromJson(
+        Map<String, dynamic> json) {
+  return _EvidenceVariableDefinitionByTypeAndValue.fromJson(json);
 }
 
 /// @nodoc
-mixin _$EvidenceVariableCategory {
+mixin _$EvidenceVariableDefinitionByTypeAndValue {
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  String? get name => throw _privateConstructorUsedError;
-  @JsonKey(name: '_name')
-  Element? get nameElement => throw _privateConstructorUsedError;
+
+  /// [type] Used to express the type of characteristic.
+  CodeableConcept get type => throw _privateConstructorUsedError;
+
+  /// [method] Method for how the characteristic value was determined.
+  List<CodeableConcept>? get method => throw _privateConstructorUsedError;
+
+  /// [device] Device used for determining characteristic.
+  Reference? get device => throw _privateConstructorUsedError;
+
+  /// [valueCodeableConcept] Defines the characteristic when paired with characteristic.type.
   CodeableConcept? get valueCodeableConcept =>
       throw _privateConstructorUsedError;
-  Quantity? get valueQuantity => throw _privateConstructorUsedError;
-  Range? get valueRange => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $EvidenceVariableCategoryCopyWith<EvidenceVariableCategory> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $EvidenceVariableCategoryCopyWith<$Res> {
-  factory $EvidenceVariableCategoryCopyWith(EvidenceVariableCategory value,
-          $Res Function(EvidenceVariableCategory) then) =
-      _$EvidenceVariableCategoryCopyWithImpl<$Res, EvidenceVariableCategory>;
-  @useResult
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      CodeableConcept? valueCodeableConcept,
-      Quantity? valueQuantity,
-      Range? valueRange});
-
-  $ElementCopyWith<$Res>? get nameElement;
-  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
-  $QuantityCopyWith<$Res>? get valueQuantity;
-  $RangeCopyWith<$Res>? get valueRange;
-}
-
-/// @nodoc
-class _$EvidenceVariableCategoryCopyWithImpl<$Res,
-        $Val extends EvidenceVariableCategory>
-    implements $EvidenceVariableCategoryCopyWith<$Res> {
-  _$EvidenceVariableCategoryCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? name = freezed,
-    Object? nameElement = freezed,
-    Object? valueCodeableConcept = freezed,
-    Object? valueQuantity = freezed,
-    Object? valueRange = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: freezed == extension_
-          ? _value.extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: freezed == modifierExtension
-          ? _value.modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      nameElement: freezed == nameElement
-          ? _value.nameElement
-          : nameElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      valueCodeableConcept: freezed == valueCodeableConcept
-          ? _value.valueCodeableConcept
-          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      valueQuantity: freezed == valueQuantity
-          ? _value.valueQuantity
-          : valueQuantity // ignore: cast_nullable_to_non_nullable
-              as Quantity?,
-      valueRange: freezed == valueRange
-          ? _value.valueRange
-          : valueRange // ignore: cast_nullable_to_non_nullable
-              as Range?,
-    ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get nameElement {
-    if (_value.nameElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.nameElement!, (value) {
-      return _then(_value.copyWith(nameElement: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept {
-    if (_value.valueCodeableConcept == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept!,
-        (value) {
-      return _then(_value.copyWith(valueCodeableConcept: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $QuantityCopyWith<$Res>? get valueQuantity {
-    if (_value.valueQuantity == null) {
-      return null;
-    }
-
-    return $QuantityCopyWith<$Res>(_value.valueQuantity!, (value) {
-      return _then(_value.copyWith(valueQuantity: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $RangeCopyWith<$Res>? get valueRange {
-    if (_value.valueRange == null) {
-      return null;
-    }
-
-    return $RangeCopyWith<$Res>(_value.valueRange!, (value) {
-      return _then(_value.copyWith(valueRange: value) as $Val);
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$_EvidenceVariableCategoryCopyWith<$Res>
-    implements $EvidenceVariableCategoryCopyWith<$Res> {
-  factory _$$_EvidenceVariableCategoryCopyWith(
-          _$_EvidenceVariableCategory value,
-          $Res Function(_$_EvidenceVariableCategory) then) =
-      __$$_EvidenceVariableCategoryCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      CodeableConcept? valueCodeableConcept,
-      Quantity? valueQuantity,
-      Range? valueRange});
-
-  @override
-  $ElementCopyWith<$Res>? get nameElement;
-  @override
-  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
-  @override
-  $QuantityCopyWith<$Res>? get valueQuantity;
-  @override
-  $RangeCopyWith<$Res>? get valueRange;
-}
-
-/// @nodoc
-class __$$_EvidenceVariableCategoryCopyWithImpl<$Res>
-    extends _$EvidenceVariableCategoryCopyWithImpl<$Res,
-        _$_EvidenceVariableCategory>
-    implements _$$_EvidenceVariableCategoryCopyWith<$Res> {
-  __$$_EvidenceVariableCategoryCopyWithImpl(_$_EvidenceVariableCategory _value,
-      $Res Function(_$_EvidenceVariableCategory) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? name = freezed,
-    Object? nameElement = freezed,
-    Object? valueCodeableConcept = freezed,
-    Object? valueQuantity = freezed,
-    Object? valueRange = freezed,
-  }) {
-    return _then(_$_EvidenceVariableCategory(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: freezed == extension_
-          ? _value._extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: freezed == modifierExtension
-          ? _value._modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      nameElement: freezed == nameElement
-          ? _value.nameElement
-          : nameElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
-      valueCodeableConcept: freezed == valueCodeableConcept
-          ? _value.valueCodeableConcept
-          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      valueQuantity: freezed == valueQuantity
-          ? _value.valueQuantity
-          : valueQuantity // ignore: cast_nullable_to_non_nullable
-              as Quantity?,
-      valueRange: freezed == valueRange
-          ? _value.valueRange
-          : valueRange // ignore: cast_nullable_to_non_nullable
-              as Range?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$_EvidenceVariableCategory extends _EvidenceVariableCategory {
-  _$_EvidenceVariableCategory(
-      {this.id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.name,
-      @JsonKey(name: '_name') this.nameElement,
-      this.valueCodeableConcept,
-      this.valueQuantity,
-      this.valueRange})
-      : _extension_ = extension_,
-        _modifierExtension = modifierExtension,
-        super._();
-
-  factory _$_EvidenceVariableCategory.fromJson(Map<String, dynamic> json) =>
-      _$$_EvidenceVariableCategoryFromJson(json);
-
-  @override
-  final String? id;
-  final List<FhirExtension>? _extension_;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ {
-    final value = _extension_;
-    if (value == null) return null;
-    if (_extension_ is EqualUnmodifiableListView) return _extension_;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<FhirExtension>? _modifierExtension;
-  @override
-  List<FhirExtension>? get modifierExtension {
-    final value = _modifierExtension;
-    if (value == null) return null;
-    if (_modifierExtension is EqualUnmodifiableListView)
-      return _modifierExtension;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  final String? name;
-  @override
-  @JsonKey(name: '_name')
-  final Element? nameElement;
-  @override
-  final CodeableConcept? valueCodeableConcept;
-  @override
-  final Quantity? valueQuantity;
-  @override
-  final Range? valueRange;
-
-  @override
-  String toString() {
-    return 'EvidenceVariableCategory(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, nameElement: $nameElement, valueCodeableConcept: $valueCodeableConcept, valueQuantity: $valueQuantity, valueRange: $valueRange)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_EvidenceVariableCategory &&
-            (identical(other.id, id) || other.id == id) &&
-            const DeepCollectionEquality()
-                .equals(other._extension_, _extension_) &&
-            const DeepCollectionEquality()
-                .equals(other._modifierExtension, _modifierExtension) &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.nameElement, nameElement) ||
-                other.nameElement == nameElement) &&
-            (identical(other.valueCodeableConcept, valueCodeableConcept) ||
-                other.valueCodeableConcept == valueCodeableConcept) &&
-            (identical(other.valueQuantity, valueQuantity) ||
-                other.valueQuantity == valueQuantity) &&
-            (identical(other.valueRange, valueRange) ||
-                other.valueRange == valueRange));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_modifierExtension),
-      name,
-      nameElement,
-      valueCodeableConcept,
-      valueQuantity,
-      valueRange);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$_EvidenceVariableCategoryCopyWith<_$_EvidenceVariableCategory>
-      get copyWith => __$$_EvidenceVariableCategoryCopyWithImpl<
-          _$_EvidenceVariableCategory>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_EvidenceVariableCategoryToJson(
-      this,
-    );
-  }
-}
-
-abstract class _EvidenceVariableCategory extends EvidenceVariableCategory {
-  factory _EvidenceVariableCategory(
-      {final String? id,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final String? name,
-      @JsonKey(name: '_name') final Element? nameElement,
-      final CodeableConcept? valueCodeableConcept,
-      final Quantity? valueQuantity,
-      final Range? valueRange}) = _$_EvidenceVariableCategory;
-  _EvidenceVariableCategory._() : super._();
-
-  factory _EvidenceVariableCategory.fromJson(Map<String, dynamic> json) =
-      _$_EvidenceVariableCategory.fromJson;
-
-  @override
-  String? get id;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  @override
-  List<FhirExtension>? get modifierExtension;
-  @override
-  String? get name;
-  @override
-  @JsonKey(name: '_name')
-  Element? get nameElement;
-  @override
-  CodeableConcept? get valueCodeableConcept;
-  @override
-  Quantity? get valueQuantity;
-  @override
-  Range? get valueRange;
-  @override
-  @JsonKey(ignore: true)
-  _$$_EvidenceVariableCategoryCopyWith<_$_EvidenceVariableCategory>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-EvidenceVariableDefByTypeAndValue _$EvidenceVariableDefByTypeAndValueFromJson(
-    Map<String, dynamic> json) {
-  return _EvidenceVariableDefByTypeAndValue.fromJson(json);
-}
-
-/// @nodoc
-mixin _$EvidenceVariableDefByTypeAndValue {
-  String? get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
-  CodeableConcept? get typeCodeableConcept =>
-      throw _privateConstructorUsedError;
-  Reference? get typeReference => throw _privateConstructorUsedError;
-  Id? get typeId => throw _privateConstructorUsedError;
-  @JsonKey(name: '_typeId')
-  Element? get typeIdElement => throw _privateConstructorUsedError;
-  CodeableConcept? get valueCodeableConcept =>
-      throw _privateConstructorUsedError;
+  /// [valueBoolean] Defines the characteristic when paired with characteristic.type.
   Boolean? get valueBoolean => throw _privateConstructorUsedError;
+
+  /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement => throw _privateConstructorUsedError;
+
+  /// [valueQuantity] Defines the characteristic when paired with characteristic.type.
   Quantity? get valueQuantity => throw _privateConstructorUsedError;
+
+  /// [valueRange] Defines the characteristic when paired with characteristic.type.
   Range? get valueRange => throw _privateConstructorUsedError;
+
+  /// [valueReference] Defines the characteristic when paired with characteristic.type.
   Reference? get valueReference => throw _privateConstructorUsedError;
+
+  /// [valueId] Defines the characteristic when paired with characteristic.type.
   Id? get valueId => throw _privateConstructorUsedError;
+
+  /// [valueIdElement] ("_valueId") Extensions for valueId
   @JsonKey(name: '_valueId')
   Element? get valueIdElement => throw _privateConstructorUsedError;
 
+  /// [offset] Defines the reference point for comparison when valueQuantity is not compared to zero.
+  CodeableConcept? get offset => throw _privateConstructorUsedError;
+
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $EvidenceVariableDefByTypeAndValueCopyWith<EvidenceVariableDefByTypeAndValue>
+  $EvidenceVariableDefinitionByTypeAndValueCopyWith<
+          EvidenceVariableDefinitionByTypeAndValue>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $EvidenceVariableDefByTypeAndValueCopyWith<$Res> {
-  factory $EvidenceVariableDefByTypeAndValueCopyWith(
-          EvidenceVariableDefByTypeAndValue value,
-          $Res Function(EvidenceVariableDefByTypeAndValue) then) =
-      _$EvidenceVariableDefByTypeAndValueCopyWithImpl<$Res,
-          EvidenceVariableDefByTypeAndValue>;
+abstract class $EvidenceVariableDefinitionByTypeAndValueCopyWith<$Res> {
+  factory $EvidenceVariableDefinitionByTypeAndValueCopyWith(
+          EvidenceVariableDefinitionByTypeAndValue value,
+          $Res Function(EvidenceVariableDefinitionByTypeAndValue) then) =
+      _$EvidenceVariableDefinitionByTypeAndValueCopyWithImpl<$Res,
+          EvidenceVariableDefinitionByTypeAndValue>;
   @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      CodeableConcept? typeCodeableConcept,
-      Reference? typeReference,
-      Id? typeId,
-      @JsonKey(name: '_typeId') Element? typeIdElement,
+      CodeableConcept type,
+      List<CodeableConcept>? method,
+      Reference? device,
       CodeableConcept? valueCodeableConcept,
       Boolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -25013,24 +31032,26 @@ abstract class $EvidenceVariableDefByTypeAndValueCopyWith<$Res> {
       Range? valueRange,
       Reference? valueReference,
       Id? valueId,
-      @JsonKey(name: '_valueId') Element? valueIdElement});
+      @JsonKey(name: '_valueId') Element? valueIdElement,
+      CodeableConcept? offset});
 
-  $CodeableConceptCopyWith<$Res>? get typeCodeableConcept;
-  $ReferenceCopyWith<$Res>? get typeReference;
-  $ElementCopyWith<$Res>? get typeIdElement;
+  $CodeableConceptCopyWith<$Res> get type;
+  $ReferenceCopyWith<$Res>? get device;
   $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
   $ElementCopyWith<$Res>? get valueBooleanElement;
   $QuantityCopyWith<$Res>? get valueQuantity;
   $RangeCopyWith<$Res>? get valueRange;
   $ReferenceCopyWith<$Res>? get valueReference;
   $ElementCopyWith<$Res>? get valueIdElement;
+  $CodeableConceptCopyWith<$Res>? get offset;
 }
 
 /// @nodoc
-class _$EvidenceVariableDefByTypeAndValueCopyWithImpl<$Res,
-        $Val extends EvidenceVariableDefByTypeAndValue>
-    implements $EvidenceVariableDefByTypeAndValueCopyWith<$Res> {
-  _$EvidenceVariableDefByTypeAndValueCopyWithImpl(this._value, this._then);
+class _$EvidenceVariableDefinitionByTypeAndValueCopyWithImpl<$Res,
+        $Val extends EvidenceVariableDefinitionByTypeAndValue>
+    implements $EvidenceVariableDefinitionByTypeAndValueCopyWith<$Res> {
+  _$EvidenceVariableDefinitionByTypeAndValueCopyWithImpl(
+      this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -25043,10 +31064,9 @@ class _$EvidenceVariableDefByTypeAndValueCopyWithImpl<$Res,
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? typeCodeableConcept = freezed,
-    Object? typeReference = freezed,
-    Object? typeId = freezed,
-    Object? typeIdElement = freezed,
+    Object? type = null,
+    Object? method = freezed,
+    Object? device = freezed,
     Object? valueCodeableConcept = freezed,
     Object? valueBoolean = freezed,
     Object? valueBooleanElement = freezed,
@@ -25055,6 +31075,7 @@ class _$EvidenceVariableDefByTypeAndValueCopyWithImpl<$Res,
     Object? valueReference = freezed,
     Object? valueId = freezed,
     Object? valueIdElement = freezed,
+    Object? offset = freezed,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -25069,22 +31090,18 @@ class _$EvidenceVariableDefByTypeAndValueCopyWithImpl<$Res,
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      typeCodeableConcept: freezed == typeCodeableConcept
-          ? _value.typeCodeableConcept
-          : typeCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      typeReference: freezed == typeReference
-          ? _value.typeReference
-          : typeReference // ignore: cast_nullable_to_non_nullable
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      method: freezed == method
+          ? _value.method
+          : method // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      device: freezed == device
+          ? _value.device
+          : device // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      typeId: freezed == typeId
-          ? _value.typeId
-          : typeId // ignore: cast_nullable_to_non_nullable
-              as Id?,
-      typeIdElement: freezed == typeIdElement
-          ? _value.typeIdElement
-          : typeIdElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
       valueCodeableConcept: freezed == valueCodeableConcept
           ? _value.valueCodeableConcept
           : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
@@ -25117,42 +31134,30 @@ class _$EvidenceVariableDefByTypeAndValueCopyWithImpl<$Res,
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
+      offset: freezed == offset
+          ? _value.offset
+          : offset // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $CodeableConceptCopyWith<$Res>? get typeCodeableConcept {
-    if (_value.typeCodeableConcept == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.typeCodeableConcept!, (value) {
-      return _then(_value.copyWith(typeCodeableConcept: value) as $Val);
+  $CodeableConceptCopyWith<$Res> get type {
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $ReferenceCopyWith<$Res>? get typeReference {
-    if (_value.typeReference == null) {
+  $ReferenceCopyWith<$Res>? get device {
+    if (_value.device == null) {
       return null;
     }
 
-    return $ReferenceCopyWith<$Res>(_value.typeReference!, (value) {
-      return _then(_value.copyWith(typeReference: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get typeIdElement {
-    if (_value.typeIdElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.typeIdElement!, (value) {
-      return _then(_value.copyWith(typeIdElement: value) as $Val);
+    return $ReferenceCopyWith<$Res>(_value.device!, (value) {
+      return _then(_value.copyWith(device: value) as $Val);
     });
   }
 
@@ -25228,25 +31233,36 @@ class _$EvidenceVariableDefByTypeAndValueCopyWithImpl<$Res,
       return _then(_value.copyWith(valueIdElement: value) as $Val);
     });
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CodeableConceptCopyWith<$Res>? get offset {
+    if (_value.offset == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.offset!, (value) {
+      return _then(_value.copyWith(offset: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
-abstract class _$$_EvidenceVariableDefByTypeAndValueCopyWith<$Res>
-    implements $EvidenceVariableDefByTypeAndValueCopyWith<$Res> {
-  factory _$$_EvidenceVariableDefByTypeAndValueCopyWith(
-          _$_EvidenceVariableDefByTypeAndValue value,
-          $Res Function(_$_EvidenceVariableDefByTypeAndValue) then) =
-      __$$_EvidenceVariableDefByTypeAndValueCopyWithImpl<$Res>;
+abstract class _$$_EvidenceVariableDefinitionByTypeAndValueCopyWith<$Res>
+    implements $EvidenceVariableDefinitionByTypeAndValueCopyWith<$Res> {
+  factory _$$_EvidenceVariableDefinitionByTypeAndValueCopyWith(
+          _$_EvidenceVariableDefinitionByTypeAndValue value,
+          $Res Function(_$_EvidenceVariableDefinitionByTypeAndValue) then) =
+      __$$_EvidenceVariableDefinitionByTypeAndValueCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      CodeableConcept? typeCodeableConcept,
-      Reference? typeReference,
-      Id? typeId,
-      @JsonKey(name: '_typeId') Element? typeIdElement,
+      CodeableConcept type,
+      List<CodeableConcept>? method,
+      Reference? device,
       CodeableConcept? valueCodeableConcept,
       Boolean? valueBoolean,
       @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -25254,14 +31270,13 @@ abstract class _$$_EvidenceVariableDefByTypeAndValueCopyWith<$Res>
       Range? valueRange,
       Reference? valueReference,
       Id? valueId,
-      @JsonKey(name: '_valueId') Element? valueIdElement});
+      @JsonKey(name: '_valueId') Element? valueIdElement,
+      CodeableConcept? offset});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get typeCodeableConcept;
+  $CodeableConceptCopyWith<$Res> get type;
   @override
-  $ReferenceCopyWith<$Res>? get typeReference;
-  @override
-  $ElementCopyWith<$Res>? get typeIdElement;
+  $ReferenceCopyWith<$Res>? get device;
   @override
   $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
   @override
@@ -25274,16 +31289,18 @@ abstract class _$$_EvidenceVariableDefByTypeAndValueCopyWith<$Res>
   $ReferenceCopyWith<$Res>? get valueReference;
   @override
   $ElementCopyWith<$Res>? get valueIdElement;
+  @override
+  $CodeableConceptCopyWith<$Res>? get offset;
 }
 
 /// @nodoc
-class __$$_EvidenceVariableDefByTypeAndValueCopyWithImpl<$Res>
-    extends _$EvidenceVariableDefByTypeAndValueCopyWithImpl<$Res,
-        _$_EvidenceVariableDefByTypeAndValue>
-    implements _$$_EvidenceVariableDefByTypeAndValueCopyWith<$Res> {
-  __$$_EvidenceVariableDefByTypeAndValueCopyWithImpl(
-      _$_EvidenceVariableDefByTypeAndValue _value,
-      $Res Function(_$_EvidenceVariableDefByTypeAndValue) _then)
+class __$$_EvidenceVariableDefinitionByTypeAndValueCopyWithImpl<$Res>
+    extends _$EvidenceVariableDefinitionByTypeAndValueCopyWithImpl<$Res,
+        _$_EvidenceVariableDefinitionByTypeAndValue>
+    implements _$$_EvidenceVariableDefinitionByTypeAndValueCopyWith<$Res> {
+  __$$_EvidenceVariableDefinitionByTypeAndValueCopyWithImpl(
+      _$_EvidenceVariableDefinitionByTypeAndValue _value,
+      $Res Function(_$_EvidenceVariableDefinitionByTypeAndValue) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -25292,10 +31309,9 @@ class __$$_EvidenceVariableDefByTypeAndValueCopyWithImpl<$Res>
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? typeCodeableConcept = freezed,
-    Object? typeReference = freezed,
-    Object? typeId = freezed,
-    Object? typeIdElement = freezed,
+    Object? type = null,
+    Object? method = freezed,
+    Object? device = freezed,
     Object? valueCodeableConcept = freezed,
     Object? valueBoolean = freezed,
     Object? valueBooleanElement = freezed,
@@ -25304,8 +31320,9 @@ class __$$_EvidenceVariableDefByTypeAndValueCopyWithImpl<$Res>
     Object? valueReference = freezed,
     Object? valueId = freezed,
     Object? valueIdElement = freezed,
+    Object? offset = freezed,
   }) {
-    return _then(_$_EvidenceVariableDefByTypeAndValue(
+    return _then(_$_EvidenceVariableDefinitionByTypeAndValue(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -25318,22 +31335,18 @@ class __$$_EvidenceVariableDefByTypeAndValueCopyWithImpl<$Res>
           ? _value._modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      typeCodeableConcept: freezed == typeCodeableConcept
-          ? _value.typeCodeableConcept
-          : typeCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      typeReference: freezed == typeReference
-          ? _value.typeReference
-          : typeReference // ignore: cast_nullable_to_non_nullable
+      type: null == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      method: freezed == method
+          ? _value._method
+          : method // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      device: freezed == device
+          ? _value.device
+          : device // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      typeId: freezed == typeId
-          ? _value.typeId
-          : typeId // ignore: cast_nullable_to_non_nullable
-              as Id?,
-      typeIdElement: freezed == typeIdElement
-          ? _value.typeIdElement
-          : typeIdElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
       valueCodeableConcept: freezed == valueCodeableConcept
           ? _value.valueCodeableConcept
           : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
@@ -25366,22 +31379,25 @@ class __$$_EvidenceVariableDefByTypeAndValueCopyWithImpl<$Res>
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
               as Element?,
+      offset: freezed == offset
+          ? _value.offset
+          : offset // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_EvidenceVariableDefByTypeAndValue
-    extends _EvidenceVariableDefByTypeAndValue {
-  _$_EvidenceVariableDefByTypeAndValue(
+class _$_EvidenceVariableDefinitionByTypeAndValue
+    extends _EvidenceVariableDefinitionByTypeAndValue {
+  _$_EvidenceVariableDefinitionByTypeAndValue(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      this.typeCodeableConcept,
-      this.typeReference,
-      this.typeId,
-      @JsonKey(name: '_typeId') this.typeIdElement,
+      required this.type,
+      final List<CodeableConcept>? method,
+      this.device,
       this.valueCodeableConcept,
       this.valueBoolean,
       @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
@@ -25389,18 +31405,36 @@ class _$_EvidenceVariableDefByTypeAndValue
       this.valueRange,
       this.valueReference,
       this.valueId,
-      @JsonKey(name: '_valueId') this.valueIdElement})
+      @JsonKey(name: '_valueId') this.valueIdElement,
+      this.offset})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
+        _method = method,
         super._();
 
-  factory _$_EvidenceVariableDefByTypeAndValue.fromJson(
+  factory _$_EvidenceVariableDefinitionByTypeAndValue.fromJson(
           Map<String, dynamic> json) =>
-      _$$_EvidenceVariableDefByTypeAndValueFromJson(json);
+      _$$_EvidenceVariableDefinitionByTypeAndValueFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -25411,7 +31445,32 @@ class _$_EvidenceVariableDefByTypeAndValue
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -25422,56 +31481,83 @@ class _$_EvidenceVariableDefByTypeAndValue
     return EqualUnmodifiableListView(value);
   }
 
+  /// [type] Used to express the type of characteristic.
   @override
-  final CodeableConcept? typeCodeableConcept;
+  final CodeableConcept type;
+
+  /// [method] Method for how the characteristic value was determined.
+  final List<CodeableConcept>? _method;
+
+  /// [method] Method for how the characteristic value was determined.
   @override
-  final Reference? typeReference;
+  List<CodeableConcept>? get method {
+    final value = _method;
+    if (value == null) return null;
+    if (_method is EqualUnmodifiableListView) return _method;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [device] Device used for determining characteristic.
   @override
-  final Id? typeId;
-  @override
-  @JsonKey(name: '_typeId')
-  final Element? typeIdElement;
+  final Reference? device;
+
+  /// [valueCodeableConcept] Defines the characteristic when paired with characteristic.type.
   @override
   final CodeableConcept? valueCodeableConcept;
+
+  /// [valueBoolean] Defines the characteristic when paired with characteristic.type.
   @override
   final Boolean? valueBoolean;
+
+  /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   @override
   @JsonKey(name: '_valueBoolean')
   final Element? valueBooleanElement;
+
+  /// [valueQuantity] Defines the characteristic when paired with characteristic.type.
   @override
   final Quantity? valueQuantity;
+
+  /// [valueRange] Defines the characteristic when paired with characteristic.type.
   @override
   final Range? valueRange;
+
+  /// [valueReference] Defines the characteristic when paired with characteristic.type.
   @override
   final Reference? valueReference;
+
+  /// [valueId] Defines the characteristic when paired with characteristic.type.
   @override
   final Id? valueId;
+
+  /// [valueIdElement] ("_valueId") Extensions for valueId
   @override
   @JsonKey(name: '_valueId')
   final Element? valueIdElement;
 
+  /// [offset] Defines the reference point for comparison when valueQuantity is not compared to zero.
+  @override
+  final CodeableConcept? offset;
+
   @override
   String toString() {
-    return 'EvidenceVariableDefByTypeAndValue(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, typeCodeableConcept: $typeCodeableConcept, typeReference: $typeReference, typeId: $typeId, typeIdElement: $typeIdElement, valueCodeableConcept: $valueCodeableConcept, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueQuantity: $valueQuantity, valueRange: $valueRange, valueReference: $valueReference, valueId: $valueId, valueIdElement: $valueIdElement)';
+    return 'EvidenceVariableDefinitionByTypeAndValue(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, method: $method, device: $device, valueCodeableConcept: $valueCodeableConcept, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueQuantity: $valueQuantity, valueRange: $valueRange, valueReference: $valueReference, valueId: $valueId, valueIdElement: $valueIdElement, offset: $offset)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_EvidenceVariableDefByTypeAndValue &&
+            other is _$_EvidenceVariableDefinitionByTypeAndValue &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
                 .equals(other._modifierExtension, _modifierExtension) &&
-            (identical(other.typeCodeableConcept, typeCodeableConcept) ||
-                other.typeCodeableConcept == typeCodeableConcept) &&
-            (identical(other.typeReference, typeReference) ||
-                other.typeReference == typeReference) &&
-            (identical(other.typeId, typeId) || other.typeId == typeId) &&
-            (identical(other.typeIdElement, typeIdElement) ||
-                other.typeIdElement == typeIdElement) &&
+            (identical(other.type, type) || other.type == type) &&
+            const DeepCollectionEquality().equals(other._method, _method) &&
+            (identical(other.device, device) || other.device == device) &&
             (identical(other.valueCodeableConcept, valueCodeableConcept) ||
                 other.valueCodeableConcept == valueCodeableConcept) &&
             (identical(other.valueBoolean, valueBoolean) ||
@@ -25486,7 +31572,8 @@ class _$_EvidenceVariableDefByTypeAndValue
                 other.valueReference == valueReference) &&
             (identical(other.valueId, valueId) || other.valueId == valueId) &&
             (identical(other.valueIdElement, valueIdElement) ||
-                other.valueIdElement == valueIdElement));
+                other.valueIdElement == valueIdElement) &&
+            (identical(other.offset, offset) || other.offset == offset));
   }
 
   @JsonKey(ignore: true)
@@ -25496,10 +31583,9 @@ class _$_EvidenceVariableDefByTypeAndValue
       id,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
-      typeCodeableConcept,
-      typeReference,
-      typeId,
-      typeIdElement,
+      type,
+      const DeepCollectionEquality().hash(_method),
+      device,
       valueCodeableConcept,
       valueBoolean,
       valueBooleanElement,
@@ -25507,34 +31593,34 @@ class _$_EvidenceVariableDefByTypeAndValue
       valueRange,
       valueReference,
       valueId,
-      valueIdElement);
+      valueIdElement,
+      offset);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EvidenceVariableDefByTypeAndValueCopyWith<
-          _$_EvidenceVariableDefByTypeAndValue>
-      get copyWith => __$$_EvidenceVariableDefByTypeAndValueCopyWithImpl<
-          _$_EvidenceVariableDefByTypeAndValue>(this, _$identity);
+  _$$_EvidenceVariableDefinitionByTypeAndValueCopyWith<
+          _$_EvidenceVariableDefinitionByTypeAndValue>
+      get copyWith => __$$_EvidenceVariableDefinitionByTypeAndValueCopyWithImpl<
+          _$_EvidenceVariableDefinitionByTypeAndValue>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EvidenceVariableDefByTypeAndValueToJson(
+    return _$$_EvidenceVariableDefinitionByTypeAndValueToJson(
       this,
     );
   }
 }
 
-abstract class _EvidenceVariableDefByTypeAndValue
-    extends EvidenceVariableDefByTypeAndValue {
-  factory _EvidenceVariableDefByTypeAndValue(
+abstract class _EvidenceVariableDefinitionByTypeAndValue
+    extends EvidenceVariableDefinitionByTypeAndValue {
+  factory _EvidenceVariableDefinitionByTypeAndValue(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final CodeableConcept? typeCodeableConcept,
-          final Reference? typeReference,
-          final Id? typeId,
-          @JsonKey(name: '_typeId') final Element? typeIdElement,
+          required final CodeableConcept type,
+          final List<CodeableConcept>? method,
+          final Reference? device,
           final CodeableConcept? valueCodeableConcept,
           final Boolean? valueBoolean,
           @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
@@ -25542,89 +31628,170 @@ abstract class _EvidenceVariableDefByTypeAndValue
           final Range? valueRange,
           final Reference? valueReference,
           final Id? valueId,
-          @JsonKey(name: '_valueId') final Element? valueIdElement}) =
-      _$_EvidenceVariableDefByTypeAndValue;
-  _EvidenceVariableDefByTypeAndValue._() : super._();
+          @JsonKey(name: '_valueId') final Element? valueIdElement,
+          final CodeableConcept? offset}) =
+      _$_EvidenceVariableDefinitionByTypeAndValue;
+  _EvidenceVariableDefinitionByTypeAndValue._() : super._();
 
-  factory _EvidenceVariableDefByTypeAndValue.fromJson(
+  factory _EvidenceVariableDefinitionByTypeAndValue.fromJson(
           Map<String, dynamic> json) =
-      _$_EvidenceVariableDefByTypeAndValue.fromJson;
+      _$_EvidenceVariableDefinitionByTypeAndValue.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
-  CodeableConcept? get typeCodeableConcept;
+
+  /// [type] Used to express the type of characteristic.
+  CodeableConcept get type;
   @override
-  Reference? get typeReference;
+
+  /// [method] Method for how the characteristic value was determined.
+  List<CodeableConcept>? get method;
   @override
-  Id? get typeId;
+
+  /// [device] Device used for determining characteristic.
+  Reference? get device;
   @override
-  @JsonKey(name: '_typeId')
-  Element? get typeIdElement;
-  @override
+
+  /// [valueCodeableConcept] Defines the characteristic when paired with characteristic.type.
   CodeableConcept? get valueCodeableConcept;
   @override
+
+  /// [valueBoolean] Defines the characteristic when paired with characteristic.type.
   Boolean? get valueBoolean;
   @override
+
+  /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   @JsonKey(name: '_valueBoolean')
   Element? get valueBooleanElement;
   @override
+
+  /// [valueQuantity] Defines the characteristic when paired with characteristic.type.
   Quantity? get valueQuantity;
   @override
+
+  /// [valueRange] Defines the characteristic when paired with characteristic.type.
   Range? get valueRange;
   @override
+
+  /// [valueReference] Defines the characteristic when paired with characteristic.type.
   Reference? get valueReference;
   @override
+
+  /// [valueId] Defines the characteristic when paired with characteristic.type.
   Id? get valueId;
   @override
+
+  /// [valueIdElement] ("_valueId") Extensions for valueId
   @JsonKey(name: '_valueId')
   Element? get valueIdElement;
   @override
+
+  /// [offset] Defines the reference point for comparison when valueQuantity is not compared to zero.
+  CodeableConcept? get offset;
+  @override
   @JsonKey(ignore: true)
-  _$$_EvidenceVariableDefByTypeAndValueCopyWith<
-          _$_EvidenceVariableDefByTypeAndValue>
+  _$$_EvidenceVariableDefinitionByTypeAndValueCopyWith<
+          _$_EvidenceVariableDefinitionByTypeAndValue>
       get copyWith => throw _privateConstructorUsedError;
 }
 
-EvidenceVariableDefByCombination _$EvidenceVariableDefByCombinationFromJson(
-    Map<String, dynamic> json) {
-  return _EvidenceVariableDefByCombination.fromJson(json);
+EvidenceVariableDefinitionByCombination
+    _$EvidenceVariableDefinitionByCombinationFromJson(
+        Map<String, dynamic> json) {
+  return _EvidenceVariableDefinitionByCombination.fromJson(json);
 }
 
 /// @nodoc
-mixin _$EvidenceVariableDefByCombination {
+mixin _$EvidenceVariableDefinitionByCombination {
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [code] Used to specify if two or more characteristics are combined with OR or AND.
   Code? get code => throw _privateConstructorUsedError;
+
+  /// [codeElement] ("_code") Extensions for code
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
+
+  /// [threshold] Provides the value of "n" when "at-least" or "at-most" codes are used.
   PositiveInt? get threshold => throw _privateConstructorUsedError;
+
+  /// [thresholdElement] ("_threshold") Extensions for threshold
   @JsonKey(name: '_threshold')
   Element? get thresholdElement => throw _privateConstructorUsedError;
+
+  /// [characteristic] A defining factor of the characteristic.
   List<EvidenceVariableCharacteristic> get characteristic =>
       throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $EvidenceVariableDefByCombinationCopyWith<EvidenceVariableDefByCombination>
+  $EvidenceVariableDefinitionByCombinationCopyWith<
+          EvidenceVariableDefinitionByCombination>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $EvidenceVariableDefByCombinationCopyWith<$Res> {
-  factory $EvidenceVariableDefByCombinationCopyWith(
-          EvidenceVariableDefByCombination value,
-          $Res Function(EvidenceVariableDefByCombination) then) =
-      _$EvidenceVariableDefByCombinationCopyWithImpl<$Res,
-          EvidenceVariableDefByCombination>;
+abstract class $EvidenceVariableDefinitionByCombinationCopyWith<$Res> {
+  factory $EvidenceVariableDefinitionByCombinationCopyWith(
+          EvidenceVariableDefinitionByCombination value,
+          $Res Function(EvidenceVariableDefinitionByCombination) then) =
+      _$EvidenceVariableDefinitionByCombinationCopyWithImpl<$Res,
+          EvidenceVariableDefinitionByCombination>;
   @useResult
   $Res call(
       {String? id,
@@ -25641,10 +31808,11 @@ abstract class $EvidenceVariableDefByCombinationCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$EvidenceVariableDefByCombinationCopyWithImpl<$Res,
-        $Val extends EvidenceVariableDefByCombination>
-    implements $EvidenceVariableDefByCombinationCopyWith<$Res> {
-  _$EvidenceVariableDefByCombinationCopyWithImpl(this._value, this._then);
+class _$EvidenceVariableDefinitionByCombinationCopyWithImpl<$Res,
+        $Val extends EvidenceVariableDefinitionByCombination>
+    implements $EvidenceVariableDefinitionByCombinationCopyWith<$Res> {
+  _$EvidenceVariableDefinitionByCombinationCopyWithImpl(
+      this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -25725,12 +31893,12 @@ class _$EvidenceVariableDefByCombinationCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_EvidenceVariableDefByCombinationCopyWith<$Res>
-    implements $EvidenceVariableDefByCombinationCopyWith<$Res> {
-  factory _$$_EvidenceVariableDefByCombinationCopyWith(
-          _$_EvidenceVariableDefByCombination value,
-          $Res Function(_$_EvidenceVariableDefByCombination) then) =
-      __$$_EvidenceVariableDefByCombinationCopyWithImpl<$Res>;
+abstract class _$$_EvidenceVariableDefinitionByCombinationCopyWith<$Res>
+    implements $EvidenceVariableDefinitionByCombinationCopyWith<$Res> {
+  factory _$$_EvidenceVariableDefinitionByCombinationCopyWith(
+          _$_EvidenceVariableDefinitionByCombination value,
+          $Res Function(_$_EvidenceVariableDefinitionByCombination) then) =
+      __$$_EvidenceVariableDefinitionByCombinationCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -25750,13 +31918,13 @@ abstract class _$$_EvidenceVariableDefByCombinationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_EvidenceVariableDefByCombinationCopyWithImpl<$Res>
-    extends _$EvidenceVariableDefByCombinationCopyWithImpl<$Res,
-        _$_EvidenceVariableDefByCombination>
-    implements _$$_EvidenceVariableDefByCombinationCopyWith<$Res> {
-  __$$_EvidenceVariableDefByCombinationCopyWithImpl(
-      _$_EvidenceVariableDefByCombination _value,
-      $Res Function(_$_EvidenceVariableDefByCombination) _then)
+class __$$_EvidenceVariableDefinitionByCombinationCopyWithImpl<$Res>
+    extends _$EvidenceVariableDefinitionByCombinationCopyWithImpl<$Res,
+        _$_EvidenceVariableDefinitionByCombination>
+    implements _$$_EvidenceVariableDefinitionByCombinationCopyWith<$Res> {
+  __$$_EvidenceVariableDefinitionByCombinationCopyWithImpl(
+      _$_EvidenceVariableDefinitionByCombination _value,
+      $Res Function(_$_EvidenceVariableDefinitionByCombination) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -25771,7 +31939,7 @@ class __$$_EvidenceVariableDefByCombinationCopyWithImpl<$Res>
     Object? thresholdElement = freezed,
     Object? characteristic = null,
   }) {
-    return _then(_$_EvidenceVariableDefByCombination(
+    return _then(_$_EvidenceVariableDefinitionByCombination(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -25810,9 +31978,9 @@ class __$$_EvidenceVariableDefByCombinationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_EvidenceVariableDefByCombination
-    extends _EvidenceVariableDefByCombination {
-  _$_EvidenceVariableDefByCombination(
+class _$_EvidenceVariableDefinitionByCombination
+    extends _EvidenceVariableDefinitionByCombination {
+  _$_EvidenceVariableDefinitionByCombination(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -25826,13 +31994,29 @@ class _$_EvidenceVariableDefByCombination
         _characteristic = characteristic,
         super._();
 
-  factory _$_EvidenceVariableDefByCombination.fromJson(
+  factory _$_EvidenceVariableDefinitionByCombination.fromJson(
           Map<String, dynamic> json) =>
-      _$$_EvidenceVariableDefByCombinationFromJson(json);
+      _$$_EvidenceVariableDefinitionByCombinationFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -25843,7 +32027,32 @@ class _$_EvidenceVariableDefByCombination
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -25854,17 +32063,28 @@ class _$_EvidenceVariableDefByCombination
     return EqualUnmodifiableListView(value);
   }
 
+  /// [code] Used to specify if two or more characteristics are combined with OR or AND.
   @override
   final Code? code;
+
+  /// [codeElement] ("_code") Extensions for code
   @override
   @JsonKey(name: '_code')
   final Element? codeElement;
+
+  /// [threshold] Provides the value of "n" when "at-least" or "at-most" codes are used.
   @override
   final PositiveInt? threshold;
+
+  /// [thresholdElement] ("_threshold") Extensions for threshold
   @override
   @JsonKey(name: '_threshold')
   final Element? thresholdElement;
+
+  /// [characteristic] A defining factor of the characteristic.
   final List<EvidenceVariableCharacteristic> _characteristic;
+
+  /// [characteristic] A defining factor of the characteristic.
   @override
   List<EvidenceVariableCharacteristic> get characteristic {
     if (_characteristic is EqualUnmodifiableListView) return _characteristic;
@@ -25874,14 +32094,14 @@ class _$_EvidenceVariableDefByCombination
 
   @override
   String toString() {
-    return 'EvidenceVariableDefByCombination(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, codeElement: $codeElement, threshold: $threshold, thresholdElement: $thresholdElement, characteristic: $characteristic)';
+    return 'EvidenceVariableDefinitionByCombination(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, codeElement: $codeElement, threshold: $threshold, thresholdElement: $thresholdElement, characteristic: $characteristic)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_EvidenceVariableDefByCombination &&
+            other is _$_EvidenceVariableDefinitionByCombination &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -25914,22 +32134,22 @@ class _$_EvidenceVariableDefByCombination
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EvidenceVariableDefByCombinationCopyWith<
-          _$_EvidenceVariableDefByCombination>
-      get copyWith => __$$_EvidenceVariableDefByCombinationCopyWithImpl<
-          _$_EvidenceVariableDefByCombination>(this, _$identity);
+  _$$_EvidenceVariableDefinitionByCombinationCopyWith<
+          _$_EvidenceVariableDefinitionByCombination>
+      get copyWith => __$$_EvidenceVariableDefinitionByCombinationCopyWithImpl<
+          _$_EvidenceVariableDefinitionByCombination>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EvidenceVariableDefByCombinationToJson(
+    return _$$_EvidenceVariableDefinitionByCombinationToJson(
       this,
     );
   }
 }
 
-abstract class _EvidenceVariableDefByCombination
-    extends EvidenceVariableDefByCombination {
-  factory _EvidenceVariableDefByCombination(
+abstract class _EvidenceVariableDefinitionByCombination
+    extends EvidenceVariableDefinitionByCombination {
+  factory _EvidenceVariableDefinitionByCombination(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -25938,35 +32158,69 @@ abstract class _EvidenceVariableDefByCombination
           final PositiveInt? threshold,
           @JsonKey(name: '_threshold') final Element? thresholdElement,
           required final List<EvidenceVariableCharacteristic> characteristic}) =
-      _$_EvidenceVariableDefByCombination;
-  _EvidenceVariableDefByCombination._() : super._();
+      _$_EvidenceVariableDefinitionByCombination;
+  _EvidenceVariableDefinitionByCombination._() : super._();
 
-  factory _EvidenceVariableDefByCombination.fromJson(
-      Map<String, dynamic> json) = _$_EvidenceVariableDefByCombination.fromJson;
+  factory _EvidenceVariableDefinitionByCombination.fromJson(
+          Map<String, dynamic> json) =
+      _$_EvidenceVariableDefinitionByCombination.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [code] Used to specify if two or more characteristics are combined with OR or AND.
   Code? get code;
   @override
+
+  /// [codeElement] ("_code") Extensions for code
   @JsonKey(name: '_code')
   Element? get codeElement;
   @override
+
+  /// [threshold] Provides the value of "n" when "at-least" or "at-most" codes are used.
   PositiveInt? get threshold;
   @override
+
+  /// [thresholdElement] ("_threshold") Extensions for threshold
   @JsonKey(name: '_threshold')
   Element? get thresholdElement;
   @override
+
+  /// [characteristic] A defining factor of the characteristic.
   List<EvidenceVariableCharacteristic> get characteristic;
   @override
   @JsonKey(ignore: true)
-  _$$_EvidenceVariableDefByCombinationCopyWith<
-          _$_EvidenceVariableDefByCombination>
+  _$$_EvidenceVariableDefinitionByCombinationCopyWith<
+          _$_EvidenceVariableDefinitionByCombination>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -25977,25 +32231,69 @@ EvidenceVariableTimeFromEvent _$EvidenceVariableTimeFromEventFromJson(
 
 /// @nodoc
 mixin _$EvidenceVariableTimeFromEvent {
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+
+  /// [description] Human readable description.
   String? get description => throw _privateConstructorUsedError;
+
+  /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
+
+  /// [note] A human-readable string to clarify or explain concepts about the timeFromEvent.
   List<Annotation>? get note => throw _privateConstructorUsedError;
+
+  /// [eventCodeableConcept] The event used as a base point (reference point) in time.
   CodeableConcept? get eventCodeableConcept =>
       throw _privateConstructorUsedError;
+
+  /// [eventReference] The event used as a base point (reference point) in time.
   Reference? get eventReference => throw _privateConstructorUsedError;
+
+  /// [eventDateTime] The event used as a base point (reference point) in time.
   FhirDateTime? get eventDateTime => throw _privateConstructorUsedError;
+
+  /// [eventDateTimeElement] ("_eventDateTime") Extensions for eventDateTime
   @JsonKey(name: '_eventDateTime')
   Element? get eventDateTimeElement => throw _privateConstructorUsedError;
+
+  /// [eventId] The event used as a base point (reference point) in time.
   Id? get eventId => throw _privateConstructorUsedError;
+
+  /// [eventIdElement] ("_eventId") Extensions for eventId
   @JsonKey(name: '_eventId')
   Element? get eventIdElement => throw _privateConstructorUsedError;
+
+  /// [quantity] Used to express the observation at a defined amount of time after the study start.
   Quantity? get quantity => throw _privateConstructorUsedError;
+
+  /// [range] Used to express the observation within a period after the study start.
   Range? get range => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -26369,9 +32667,25 @@ class _$_EvidenceVariableTimeFromEvent extends _EvidenceVariableTimeFromEvent {
           Map<String, dynamic> json) =>
       _$$_EvidenceVariableTimeFromEventFromJson(json);
 
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   @override
   final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -26382,7 +32696,32 @@ class _$_EvidenceVariableTimeFromEvent extends _EvidenceVariableTimeFromEvent {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -26393,12 +32732,19 @@ class _$_EvidenceVariableTimeFromEvent extends _EvidenceVariableTimeFromEvent {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [description] Human readable description.
   @override
   final String? description;
+
+  /// [descriptionElement] ("_description") Extensions for description
   @override
   @JsonKey(name: '_description')
   final Element? descriptionElement;
+
+  /// [note] A human-readable string to clarify or explain concepts about the timeFromEvent.
   final List<Annotation>? _note;
+
+  /// [note] A human-readable string to clarify or explain concepts about the timeFromEvent.
   @override
   List<Annotation>? get note {
     final value = _note;
@@ -26408,22 +32754,37 @@ class _$_EvidenceVariableTimeFromEvent extends _EvidenceVariableTimeFromEvent {
     return EqualUnmodifiableListView(value);
   }
 
+  /// [eventCodeableConcept] The event used as a base point (reference point) in time.
   @override
   final CodeableConcept? eventCodeableConcept;
+
+  /// [eventReference] The event used as a base point (reference point) in time.
   @override
   final Reference? eventReference;
+
+  /// [eventDateTime] The event used as a base point (reference point) in time.
   @override
   final FhirDateTime? eventDateTime;
+
+  /// [eventDateTimeElement] ("_eventDateTime") Extensions for eventDateTime
   @override
   @JsonKey(name: '_eventDateTime')
   final Element? eventDateTimeElement;
+
+  /// [eventId] The event used as a base point (reference point) in time.
   @override
   final Id? eventId;
+
+  /// [eventIdElement] ("_eventId") Extensions for eventId
   @override
   @JsonKey(name: '_eventId')
   final Element? eventIdElement;
+
+  /// [quantity] Used to express the observation at a defined amount of time after the study start.
   @override
   final Quantity? quantity;
+
+  /// [range] Used to express the observation within a period after the study start.
   @override
   final Range? range;
 
@@ -26520,39 +32881,591 @@ abstract class _EvidenceVariableTimeFromEvent
       _$_EvidenceVariableTimeFromEvent.fromJson;
 
   @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
   String? get id;
   @override
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
+
+  /// [description] Human readable description.
   String? get description;
   @override
+
+  /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
+
+  /// [note] A human-readable string to clarify or explain concepts about the timeFromEvent.
   List<Annotation>? get note;
   @override
+
+  /// [eventCodeableConcept] The event used as a base point (reference point) in time.
   CodeableConcept? get eventCodeableConcept;
   @override
+
+  /// [eventReference] The event used as a base point (reference point) in time.
   Reference? get eventReference;
   @override
+
+  /// [eventDateTime] The event used as a base point (reference point) in time.
   FhirDateTime? get eventDateTime;
   @override
+
+  /// [eventDateTimeElement] ("_eventDateTime") Extensions for eventDateTime
   @JsonKey(name: '_eventDateTime')
   Element? get eventDateTimeElement;
   @override
+
+  /// [eventId] The event used as a base point (reference point) in time.
   Id? get eventId;
   @override
+
+  /// [eventIdElement] ("_eventId") Extensions for eventId
   @JsonKey(name: '_eventId')
   Element? get eventIdElement;
   @override
+
+  /// [quantity] Used to express the observation at a defined amount of time after the study start.
   Quantity? get quantity;
   @override
+
+  /// [range] Used to express the observation within a period after the study start.
   Range? get range;
   @override
   @JsonKey(ignore: true)
   _$$_EvidenceVariableTimeFromEventCopyWith<_$_EvidenceVariableTimeFromEvent>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+EvidenceVariableCategory _$EvidenceVariableCategoryFromJson(
+    Map<String, dynamic> json) {
+  return _EvidenceVariableCategory.fromJson(json);
+}
+
+/// @nodoc
+mixin _$EvidenceVariableCategory {
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
+  String? get id => throw _privateConstructorUsedError;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+
+  /// [name] Description of the grouping.
+  String? get name => throw _privateConstructorUsedError;
+
+  /// [nameElement] ("_name") Extensions for name
+  @JsonKey(name: '_name')
+  Element? get nameElement => throw _privateConstructorUsedError;
+
+  /// [valueCodeableConcept] Definition of the grouping.
+  CodeableConcept? get valueCodeableConcept =>
+      throw _privateConstructorUsedError;
+
+  /// [valueQuantity] Definition of the grouping.
+  Quantity? get valueQuantity => throw _privateConstructorUsedError;
+
+  /// [valueRange] Definition of the grouping.
+  Range? get valueRange => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $EvidenceVariableCategoryCopyWith<EvidenceVariableCategory> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $EvidenceVariableCategoryCopyWith<$Res> {
+  factory $EvidenceVariableCategoryCopyWith(EvidenceVariableCategory value,
+          $Res Function(EvidenceVariableCategory) then) =
+      _$EvidenceVariableCategoryCopyWithImpl<$Res, EvidenceVariableCategory>;
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String? name,
+      @JsonKey(name: '_name') Element? nameElement,
+      CodeableConcept? valueCodeableConcept,
+      Quantity? valueQuantity,
+      Range? valueRange});
+
+  $ElementCopyWith<$Res>? get nameElement;
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
+  $QuantityCopyWith<$Res>? get valueQuantity;
+  $RangeCopyWith<$Res>? get valueRange;
+}
+
+/// @nodoc
+class _$EvidenceVariableCategoryCopyWithImpl<$Res,
+        $Val extends EvidenceVariableCategory>
+    implements $EvidenceVariableCategoryCopyWith<$Res> {
+  _$EvidenceVariableCategoryCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? name = freezed,
+    Object? nameElement = freezed,
+    Object? valueCodeableConcept = freezed,
+    Object? valueQuantity = freezed,
+    Object? valueRange = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: freezed == nameElement
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueCodeableConcept: freezed == valueCodeableConcept
+          ? _value.valueCodeableConcept
+          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      valueQuantity: freezed == valueQuantity
+          ? _value.valueQuantity
+          : valueQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      valueRange: freezed == valueRange
+          ? _value.valueRange
+          : valueRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get nameElement {
+    if (_value.nameElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.nameElement!, (value) {
+      return _then(_value.copyWith(nameElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept {
+    if (_value.valueCodeableConcept == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept!,
+        (value) {
+      return _then(_value.copyWith(valueCodeableConcept: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $QuantityCopyWith<$Res>? get valueQuantity {
+    if (_value.valueQuantity == null) {
+      return null;
+    }
+
+    return $QuantityCopyWith<$Res>(_value.valueQuantity!, (value) {
+      return _then(_value.copyWith(valueQuantity: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $RangeCopyWith<$Res>? get valueRange {
+    if (_value.valueRange == null) {
+      return null;
+    }
+
+    return $RangeCopyWith<$Res>(_value.valueRange!, (value) {
+      return _then(_value.copyWith(valueRange: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_EvidenceVariableCategoryCopyWith<$Res>
+    implements $EvidenceVariableCategoryCopyWith<$Res> {
+  factory _$$_EvidenceVariableCategoryCopyWith(
+          _$_EvidenceVariableCategory value,
+          $Res Function(_$_EvidenceVariableCategory) then) =
+      __$$_EvidenceVariableCategoryCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String? name,
+      @JsonKey(name: '_name') Element? nameElement,
+      CodeableConcept? valueCodeableConcept,
+      Quantity? valueQuantity,
+      Range? valueRange});
+
+  @override
+  $ElementCopyWith<$Res>? get nameElement;
+  @override
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
+  @override
+  $QuantityCopyWith<$Res>? get valueQuantity;
+  @override
+  $RangeCopyWith<$Res>? get valueRange;
+}
+
+/// @nodoc
+class __$$_EvidenceVariableCategoryCopyWithImpl<$Res>
+    extends _$EvidenceVariableCategoryCopyWithImpl<$Res,
+        _$_EvidenceVariableCategory>
+    implements _$$_EvidenceVariableCategoryCopyWith<$Res> {
+  __$$_EvidenceVariableCategoryCopyWithImpl(_$_EvidenceVariableCategory _value,
+      $Res Function(_$_EvidenceVariableCategory) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? name = freezed,
+    Object? nameElement = freezed,
+    Object? valueCodeableConcept = freezed,
+    Object? valueQuantity = freezed,
+    Object? valueRange = freezed,
+  }) {
+    return _then(_$_EvidenceVariableCategory(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: freezed == extension_
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: freezed == nameElement
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueCodeableConcept: freezed == valueCodeableConcept
+          ? _value.valueCodeableConcept
+          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      valueQuantity: freezed == valueQuantity
+          ? _value.valueQuantity
+          : valueQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      valueRange: freezed == valueRange
+          ? _value.valueRange
+          : valueRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_EvidenceVariableCategory extends _EvidenceVariableCategory {
+  _$_EvidenceVariableCategory(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.name,
+      @JsonKey(name: '_name') this.nameElement,
+      this.valueCodeableConcept,
+      this.valueQuantity,
+      this.valueRange})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$_EvidenceVariableCategory.fromJson(Map<String, dynamic> json) =>
+      _$$_EvidenceVariableCategoryFromJson(json);
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
+  @override
+  final String? id;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [name] Description of the grouping.
+  @override
+  final String? name;
+
+  /// [nameElement] ("_name") Extensions for name
+  @override
+  @JsonKey(name: '_name')
+  final Element? nameElement;
+
+  /// [valueCodeableConcept] Definition of the grouping.
+  @override
+  final CodeableConcept? valueCodeableConcept;
+
+  /// [valueQuantity] Definition of the grouping.
+  @override
+  final Quantity? valueQuantity;
+
+  /// [valueRange] Definition of the grouping.
+  @override
+  final Range? valueRange;
+
+  @override
+  String toString() {
+    return 'EvidenceVariableCategory(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, nameElement: $nameElement, valueCodeableConcept: $valueCodeableConcept, valueQuantity: $valueQuantity, valueRange: $valueRange)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_EvidenceVariableCategory &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.nameElement, nameElement) ||
+                other.nameElement == nameElement) &&
+            (identical(other.valueCodeableConcept, valueCodeableConcept) ||
+                other.valueCodeableConcept == valueCodeableConcept) &&
+            (identical(other.valueQuantity, valueQuantity) ||
+                other.valueQuantity == valueQuantity) &&
+            (identical(other.valueRange, valueRange) ||
+                other.valueRange == valueRange));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      name,
+      nameElement,
+      valueCodeableConcept,
+      valueQuantity,
+      valueRange);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_EvidenceVariableCategoryCopyWith<_$_EvidenceVariableCategory>
+      get copyWith => __$$_EvidenceVariableCategoryCopyWithImpl<
+          _$_EvidenceVariableCategory>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_EvidenceVariableCategoryToJson(
+      this,
+    );
+  }
+}
+
+abstract class _EvidenceVariableCategory extends EvidenceVariableCategory {
+  factory _EvidenceVariableCategory(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final String? name,
+      @JsonKey(name: '_name') final Element? nameElement,
+      final CodeableConcept? valueCodeableConcept,
+      final Quantity? valueQuantity,
+      final Range? valueRange}) = _$_EvidenceVariableCategory;
+  _EvidenceVariableCategory._() : super._();
+
+  factory _EvidenceVariableCategory.fromJson(Map<String, dynamic> json) =
+      _$_EvidenceVariableCategory.fromJson;
+
+  @override
+
+  /// [id] Unique id for the element within a resource (for internal
+  /// references). This may be any string value that does not contain spaces.
+  String? get id;
+  @override
+
+  /// [extension_] ("extension") May be used to represent additional
+  /// information that is not part of the basic definition of the element.
+  /// To make the use of extensions safe and manageable, there is a strict set
+  /// of governance  applied to the definition and use of extensions. Though
+  /// any implementer can define an extension, there is a set of requirements
+  /// that SHALL be met as part of the definition of the extension.
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies
+  /// the understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions.Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension;
+  @override
+
+  /// [name] Description of the grouping.
+  String? get name;
+  @override
+
+  /// [nameElement] ("_name") Extensions for name
+  @JsonKey(name: '_name')
+  Element? get nameElement;
+  @override
+
+  /// [valueCodeableConcept] Definition of the grouping.
+  CodeableConcept? get valueCodeableConcept;
+  @override
+
+  /// [valueQuantity] Definition of the grouping.
+  Quantity? get valueQuantity;
+  @override
+
+  /// [valueRange] Definition of the grouping.
+  Range? get valueRange;
+  @override
+  @JsonKey(ignore: true)
+  _$$_EvidenceVariableCategoryCopyWith<_$_EvidenceVariableCategory>
       get copyWith => throw _privateConstructorUsedError;
 }

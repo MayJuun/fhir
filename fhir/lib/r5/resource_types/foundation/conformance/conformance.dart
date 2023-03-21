@@ -11,176 +11,437 @@ import '../../../../r5.dart';
 part 'conformance.freezed.dart';
 part 'conformance.g.dart';
 
-/// [CapabilityStatement] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
+/// [CapabilityStatement] A Capability Statement documents a set of
+///  capabilities (behaviors) of a FHIR Server or Client for a particular
+///  version of FHIR that may be used as a statement of actual server
+///  functionality or a statement of required or desired server implementation.
 @freezed
 class CapabilityStatement with Resource, _$CapabilityStatement {
+  /// [CapabilityStatement] A Capability Statement documents a set of
+  ///  capabilities (behaviors) of a FHIR Server or Client for a particular
+  ///  version of FHIR that may be used as a statement of actual server
+  ///  functionality or a statement of required or desired server
+  ///  implementation.
   CapabilityStatement._();
 
-  /// [CapabilityStatement] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
-
+  /// [CapabilityStatement] A Capability Statement documents a set of
+  ///  capabilities (behaviors) of a FHIR Server or Client for a particular
+  ///  version of FHIR that may be used as a statement of actual server
+  ///  functionality or a statement of required or desired server
+  ///  implementation.
   ///
-  /// [resourceType] This is a CapabilityStatement resource;
+  /// [resourceType] This is a CapabilityStatement resource
   ///
-  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
   ///
-  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  /// [meta] The metadata about the resource. This is content that is
+  ///  maintained by the infrastructure. Changes to the content might not
+  ///  always be associated with version changes to the resource.
   ///
-  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  ///  resource was constructed, and which must be understood when processing
+  ///  the content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   ///
-  /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   ///
-  /// [language] The base language in which the resource is written.;
+  /// [language] The base language in which the resource is written.
   ///
-  /// [languageElement] (_language): Extensions for language;
+  /// [languageElement] ("_language") Extensions for language
   ///
-  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  /// [text] A human-readable narrative that contains a summary of the resource
+  ///  and can be used to represent the content of the resource to a human. The
+  ///  narrative need not encode all the structured data, but is required to
+  ///  contain sufficient detail to make it "clinically safe" for a human to
+  ///  just read the narrative. Resource definitions may define what content
+  ///  should be represented in the narrative to ensure clinical safety.
   ///
-  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  /// [contained] These resources do not have an independent existence apart
+  ///  from the resource that contains them - they cannot be identified
+  ///  independently, nor can they have their own independent transaction
+  ///  scope. This is allowed to be a Parameters resource if and only if it is
+  ///  referenced by a resource that provides context/meaning.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the resource. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the resource and that modifies
+  ///  the understanding of the element that contains it and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  is allowed to define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension. Applications
+  ///  processing a resource are required to check for modifier
+  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
+  ///  elements on Resource or DomainResource (including cannot change the
+  ///  meaning of modifierExtension itself).
   ///
-  /// [url] An absolute URI that is used to identify this capability statement when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this capability statement is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the capability statement is stored on different servers.;
+  /// [url] An absolute URI that is used to identify this capability statement
+  ///  when it is referenced in a specification, model, design or an instance;
+  ///  also called its canonical identifier. This SHOULD be globally unique and
+  ///  SHOULD be a literal address at which an authoritative instance of this
+  ///  capability statement is (or will be) published. This URL can be the
+  ///  target of a canonical reference. It SHALL remain the same when the
+  ///  capability statement is stored on different servers.
   ///
-  /// [urlElement] (_url): Extensions for url;
+  /// [urlElement] ("_url") Extensions for url
   ///
-  /// [identifier] A formal identifier that is used to identify this {{title}} when it is represented in other formats, or referenced in a specification, model, design or an instance.;
+  /// [identifier] A formal identifier that is used to identify this {{title}}
+  ///  when it is represented in other formats, or referenced in a
+  ///  specification, model, design or an instance.
   ///
-  /// [version] The identifier that is used to identify this version of the capability statement when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the capability statement author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.;
+  /// [version] The identifier that is used to identify this version of the
+  ///  capability statement when it is referenced in a specification, model,
+  ///  design or instance. This is an arbitrary value managed by the capability
+  ///  statement author and is not expected to be globally unique. For example,
+  ///  it might be a timestamp (e.g. yyyymmdd) if a managed version is not
+  ///  available. There is also no expectation that versions can be placed in a
+  ///  lexicographical sequence.
   ///
-  /// [versionElement] (_version): Extensions for version;
+  /// [versionElement] ("_version") Extensions for version
   ///
-  /// [name] A natural language name identifying the capability statement. This name should be usable as an identifier for the module by machine processing applications such as code generation.;
+  /// [versionAlgorithmString] Indicates the mechanism used to compare versions
+  ///  to determine which is more current.
   ///
-  /// [nameElement] (_name): Extensions for name;
+  /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
+  ///  for versionAlgorithmString
   ///
-  /// [title] A short, descriptive, user-friendly title for the capability statement.;
+  /// [versionAlgorithmCoding] Indicates the mechanism used to compare versions
+  ///  to determine which is more current.
   ///
-  /// [titleElement] (_title): Extensions for title;
+  /// [name] A natural language name identifying the capability statement. This
+  ///  name should be usable as an identifier for the module by machine
+  ///  processing applications such as code generation.
   ///
-  /// [status] The status of this capability statement. Enables tracking the life-cycle of the content.;
+  /// [nameElement] ("_name") Extensions for name
   ///
-  /// [statusElement] (_status): Extensions for status;
+  /// [title] A short, descriptive, user-friendly title for the capability
+  ///  statement.
   ///
-  /// [experimental] A Boolean value to indicate that this capability statement is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.;
+  /// [titleElement] ("_title") Extensions for title
   ///
-  /// [experimentalElement] (_experimental): Extensions for experimental;
+  /// [status] The status of this capability statement. Enables tracking the
+  ///  life-cycle of the content.
   ///
-  /// [date] The date  (and optionally time) when the capability statement was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the capability statement changes.;
+  /// [statusElement] ("_status") Extensions for status
   ///
-  /// [dateElement] (_date): Extensions for date;
+  /// [experimental] A Boolean value to indicate that this capability statement
+  ///  is authored for testing purposes (or education/evaluation/marketing) and
+  ///  is not intended to be used for genuine usage.
   ///
-  /// [publisher] The name of the organization or individual that published the capability statement.;
+  /// [experimentalElement] ("_experimental") Extensions for experimental
   ///
-  /// [publisherElement] (_publisher): Extensions for publisher;
+  /// [date] The date  (and optionally time) when the capability statement was
+  ///  last significantly changed. The date must change when the business
+  ///  version changes and it must change if the status code changes. In
+  ///  addition, it should change when the substantive content of the
+  ///  capability statement changes.
   ///
-  /// [contact] Contact details to assist a user in finding and communicating with the publisher.;
+  /// [dateElement] ("_date") Extensions for date
   ///
-  /// [description] A free text natural language description of the capability statement from a consumer's perspective. Typically, this is used when the capability statement describes a desired rather than an actual solution, for example as a formal expression of requirements as part of an RFP.;
+  /// [publisher] The name of the organization or individual responsible for
+  ///  the release and ongoing maintenance of the capability statement.
   ///
-  /// [descriptionElement] (_description): Extensions for description;
+  /// [publisherElement] ("_publisher") Extensions for publisher
   ///
-  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate capability statement instances.;
+  /// [contact] Contact details to assist a user in finding and communicating
+  ///  with the publisher.
   ///
-  /// [jurisdiction] A legal or geographic region in which the capability statement is intended to be used.;
+  /// [description] A free text natural language description of the capability
+  ///  statement from a consumer's perspective. Typically, this is used when
+  ///  the capability statement describes a desired rather than an actual
+  ///  solution, for example as a formal expression of requirements as part of
+  ///  an RFP.
   ///
-  /// [purpose] Explanation of why this capability statement is needed and why it has been designed as it has.;
+  /// [descriptionElement] ("_description") Extensions for description
   ///
-  /// [purposeElement] (_purpose): Extensions for purpose;
+  /// [useContext] The content was developed with a focus and intent of
+  ///  supporting the contexts that are listed. These contexts may be general
+  ///  categories (gender, age, ...) or may be references to specific programs
+  ///  (insurance plans, studies, ...) and may be used to assist with indexing
+  ///  and searching for appropriate capability statement instances.
   ///
-  /// [copyright] A copyright statement relating to the capability statement and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the capability statement.;
+  /// [jurisdiction] A legal or geographic region in which the capability
+  ///  statement is intended to be used.
   ///
-  /// [copyrightElement] (_copyright): Extensions for copyright;
+  /// [purpose] Explanation of why this capability statement is needed and why
+  ///  it has been designed as it has.
   ///
-  /// [kind] The way that this statement is intended to be used, to describe an actual running instance of software, a particular product (kind, not instance of software) or a class of implementation (e.g. a desired purchase).;
+  /// [purposeElement] ("_purpose") Extensions for purpose
   ///
-  /// [kindElement] (_kind): Extensions for kind;
+  /// [copyright] A copyright statement relating to the capability statement
+  ///  and/or its contents. Copyright statements are generally legal
+  ///  restrictions on the use and publishing of the capability statement.
   ///
-  /// [instantiates] Reference to a canonical URL of another CapabilityStatement that this software implements. This capability statement is a published API description that corresponds to a business service. The server may actually implement a subset of the capability statement it claims to implement, so the capability statement must specify the full capability details.;
+  /// [copyrightElement] ("_copyright") Extensions for copyright
   ///
-  /// [imports] Reference to a canonical URL of another CapabilityStatement that this software adds to. The capability statement automatically includes everything in the other statement, and it is not duplicated, though the server may repeat the same resources, interactions and operations to add additional details to them.;
+  /// [copyrightLabel] A short string (<50 characters), suitable for inclusion
+  ///  in a page footer that identifies the copyright holder, effective period,
+  ///  and optionally whether rights are resctricted. (e.g. 'All rights
+  ///  reserved', 'Some rights reserved').
   ///
-  /// [software] Software that is covered by this capability statement.  It is used when the capability statement describes the capabilities of a particular software version, independent of an installation.;
+  /// [copyrightLabelElement] ("_copyrightLabel") Extensions for copyrightLabel
   ///
-  /// [implementation] Identifies a specific implementation instance that is described by the capability statement - i.e. a particular installation, rather than the capabilities of a software program.;
+  /// [kind] The way that this statement is intended to be used, to describe an
+  ///  actual running instance of software, a particular product (kind, not
+  ///  instance of software) or a class of implementation (e.g. a desired
+  ///  purchase).
   ///
-  /// [fhirVersion] The version of the FHIR specification that this CapabilityStatement describes (which SHALL be the same as the FHIR version of the CapabilityStatement itself). There is no default value.;
+  /// [kindElement] ("_kind") Extensions for kind
   ///
-  /// [fhirVersionElement] (_fhirVersion): Extensions for fhirVersion;
+  /// [instantiates] Reference to a canonical URL of another
+  ///  CapabilityStatement that this software implements. This capability
+  ///  statement is a published API description that corresponds to a business
+  ///  service. The server may actually implement a subset of the capability
+  ///  statement it claims to implement, so the capability statement must
+  ///  specify the full capability details.
   ///
-  /// [format] A list of the formats supported by this implementation using their content types.;
+  /// [imports] Reference to a canonical URL of another CapabilityStatement
+  ///  that this software adds to. The capability statement automatically
+  ///  includes everything in the other statement, and it is not duplicated,
+  ///  though the server may repeat the same resources, interactions and
+  ///  operations to add additional details to them.
   ///
-  /// [formatElement] (_format): Extensions for format;
+  /// [software] Software that is covered by this capability statement.  It is
+  ///  used when the capability statement describes the capabilities of a
+  ///  particular software version, independent of an installation.
   ///
-  /// [patchFormat] A list of the patch formats supported by this implementation using their content types.;
+  /// [implementation] Identifies a specific implementation instance that is
+  ///  described by the capability statement - i.e. a particular installation,
+  ///  rather than the capabilities of a software program.
   ///
-  /// [patchFormatElement] (_patchFormat): Extensions for patchFormat;
+  /// [fhirVersion] The version of the FHIR specification that this
+  ///  CapabilityStatement describes (which SHALL be the same as the FHIR
+  ///  version of the CapabilityStatement itself). There is no default value.
   ///
-  /// [implementationGuide] A list of implementation guides that the server does (or should) support in their entirety.;
+  /// [fhirVersionElement] ("_fhirVersion") Extensions for fhirVersion
   ///
-  /// [rest] A definition of the restful capabilities of the solution, if any.;
+  /// [format] A list of the formats supported by this implementation using
+  ///  their content types.
   ///
-  /// [messaging] A description of the messaging capabilities of the solution.;
+  /// [formatElement] ("_format") Extensions for format
   ///
-  /// [document] A document definition.;
+  /// [patchFormat] A list of the patch formats supported by this
+  ///  implementation using their content types.
+  ///
+  /// [patchFormatElement] ("_patchFormat") Extensions for patchFormat
+  ///
+  /// [acceptLanguage] A list of the languages supported by this implementation
+  ///  that are usefully supported in the ```Accept-Language``` header.
+  ///
+  /// [acceptLanguageElement] ("_acceptLanguage") Extensions for acceptLanguage
+  ///
+  /// [implementationGuide] A list of implementation guides that the server
+  ///  does (or should) support in their entirety.
+  ///
+  /// [rest] A definition of the restful capabilities of the solution, if any.
+  ///
+  /// [messaging] A description of the messaging capabilities of the solution.
+  ///
+  /// [document] A document definition.
+  ///
   factory CapabilityStatement({
-    @Default(R5ResourceType.CapabilityStatement) R5ResourceType resourceType,
+    /// [resourceType] This is a CapabilityStatement resource
+    @Default(R5ResourceType.CapabilityStatement)
+    @JsonKey(unknownEnumValue: R5ResourceType.CapabilityStatement)
+        R5ResourceType resourceType,
+
+    /// [id] The logical id of the resource, as used in the URL for the resource.
+    /// Once assigned, this value never changes.
     Id? id,
+
+    /// [meta] The metadata about the resource. This is content that is
+    /// maintained by the infrastructure. Changes to the content might not
+    /// always be associated with version changes to the resource.
     Meta? meta,
+
+    /// [implicitRules] A reference to a set of rules that were followed when
+    /// the resource was constructed, and which must be understood when
+    /// processing the content. Often, this is a reference to an implementation
+    /// guide that defines the special rules along with other profiles etc.
     FhirUri? implicitRules,
+
+    /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+
+    /// [language] The base language in which the resource is written.
     Code? language,
+
+    /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
+
+    /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
     Narrative? text,
+
+    /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
     List<Resource>? contained,
+
+    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [url] An absolute URI that is used to identify this capability statement when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this capability statement is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the capability statement is stored on different servers.
     FhirUri? url,
+
+    /// [urlElement] ("_url") Extensions for url
     @JsonKey(name: '_url') Element? urlElement,
+
+    /// [identifier] A formal identifier that is used to identify this {{title}} when it is represented in other formats, or referenced in a specification, model, design or an instance.
     List<Identifier>? identifier,
+
+    /// [version] The identifier that is used to identify this version of the capability statement when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the capability statement author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.
     String? version,
+
+    /// [versionElement] ("_version") Extensions for version
     @JsonKey(name: '_version') Element? versionElement,
+
+    /// [versionAlgorithmString] Indicates the mechanism used to compare versions to determine which is more current.
+    String? versionAlgorithmString,
+
+    /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions for versionAlgorithmString
+    @JsonKey(name: '_versionAlgorithmString')
+        Element? versionAlgorithmStringElement,
+
+    /// [versionAlgorithmCoding] Indicates the mechanism used to compare versions to determine which is more current.
+    Coding? versionAlgorithmCoding,
+
+    /// [name] A natural language name identifying the capability statement. This name should be usable as an identifier for the module by machine processing applications such as code generation.
     String? name,
+
+    /// [nameElement] ("_name") Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
+
+    /// [title] A short, descriptive, user-friendly title for the capability statement.
     String? title,
+
+    /// [titleElement] ("_title") Extensions for title
     @JsonKey(name: '_title') Element? titleElement,
+
+    /// [status] The status of this capability statement. Enables tracking the life-cycle of the content.
     Code? status,
+
+    /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
+
+    /// [experimental] A Boolean value to indicate that this capability statement is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
     Boolean? experimental,
+
+    /// [experimentalElement] ("_experimental") Extensions for experimental
     @JsonKey(name: '_experimental') Element? experimentalElement,
+
+    /// [date] The date  (and optionally time) when the capability statement was last significantly changed. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the capability statement changes.
     FhirDateTime? date,
+
+    /// [dateElement] ("_date") Extensions for date
     @JsonKey(name: '_date') Element? dateElement,
+
+    /// [publisher] The name of the organization or individual responsible for the release and ongoing maintenance of the capability statement.
     String? publisher,
+
+    /// [publisherElement] ("_publisher") Extensions for publisher
     @JsonKey(name: '_publisher') Element? publisherElement,
+
+    /// [contact] Contact details to assist a user in finding and communicating with the publisher.
     List<ContactDetail>? contact,
+
+    /// [description] A free text natural language description of the capability statement from a consumer's perspective. Typically, this is used when the capability statement describes a desired rather than an actual solution, for example as a formal expression of requirements as part of an RFP.
     Markdown? description,
+
+    /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
+
+    /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate capability statement instances.
     List<UsageContext>? useContext,
+
+    /// [jurisdiction] A legal or geographic region in which the capability statement is intended to be used.
     List<CodeableConcept>? jurisdiction,
+
+    /// [purpose] Explanation of why this capability statement is needed and why it has been designed as it has.
     Markdown? purpose,
+
+    /// [purposeElement] ("_purpose") Extensions for purpose
     @JsonKey(name: '_purpose') Element? purposeElement,
+
+    /// [copyright] A copyright statement relating to the capability statement and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the capability statement.
     Markdown? copyright,
+
+    /// [copyrightElement] ("_copyright") Extensions for copyright
     @JsonKey(name: '_copyright') Element? copyrightElement,
+
+    /// [copyrightLabel] A short string (<50 characters), suitable for inclusion in a page footer that identifies the copyright holder, effective period, and optionally whether rights are resctricted. (e.g. 'All rights reserved', 'Some rights reserved').
+    String? copyrightLabel,
+
+    /// [copyrightLabelElement] ("_copyrightLabel") Extensions for copyrightLabel
+    @JsonKey(name: '_copyrightLabel') Element? copyrightLabelElement,
+
+    /// [kind] The way that this statement is intended to be used, to describe an actual running instance of software, a particular product (kind, not instance of software) or a class of implementation (e.g. a desired purchase).
     Code? kind,
+
+    /// [kindElement] ("_kind") Extensions for kind
     @JsonKey(name: '_kind') Element? kindElement,
+
+    /// [instantiates] Reference to a canonical URL of another CapabilityStatement that this software implements. This capability statement is a published API description that corresponds to a business service. The server may actually implement a subset of the capability statement it claims to implement, so the capability statement must specify the full capability details.
     List<Canonical>? instantiates,
+
+    /// [imports] Reference to a canonical URL of another CapabilityStatement that this software adds to. The capability statement automatically includes everything in the other statement, and it is not duplicated, though the server may repeat the same resources, interactions and operations to add additional details to them.
     List<Canonical>? imports,
+
+    /// [software] Software that is covered by this capability statement.  It is used when the capability statement describes the capabilities of a particular software version, independent of an installation.
     CapabilityStatementSoftware? software,
+
+    /// [implementation] Identifies a specific implementation instance that is described by the capability statement - i.e. a particular installation, rather than the capabilities of a software program.
     CapabilityStatementImplementation? implementation,
+
+    /// [fhirVersion] The version of the FHIR specification that this CapabilityStatement describes (which SHALL be the same as the FHIR version of the CapabilityStatement itself). There is no default value.
     Code? fhirVersion,
+
+    /// [fhirVersionElement] ("_fhirVersion") Extensions for fhirVersion
     @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
+
+    /// [format] A list of the formats supported by this implementation using their content types.
     List<Code>? format,
+
+    /// [formatElement] ("_format") Extensions for format
     @JsonKey(name: '_format') List<Element>? formatElement,
+
+    /// [patchFormat] A list of the patch formats supported by this implementation using their content types.
     List<Code>? patchFormat,
+
+    /// [patchFormatElement] ("_patchFormat") Extensions for patchFormat
     @JsonKey(name: '_patchFormat') List<Element>? patchFormatElement,
+
+    /// [acceptLanguage] A list of the languages supported by this implementation that are usefully supported in the ```Accept-Language``` header.
+    List<Code>? acceptLanguage,
+
+    /// [acceptLanguageElement] ("_acceptLanguage") Extensions for acceptLanguage
+    @JsonKey(name: '_acceptLanguage') List<Element>? acceptLanguageElement,
+
+    /// [implementationGuide] A list of implementation guides that the server does (or should) support in their entirety.
     List<Canonical>? implementationGuide,
+
+    /// [rest] A definition of the restful capabilities of the solution, if any.
     List<CapabilityStatementRest>? rest,
+
+    /// [messaging] A description of the messaging capabilities of the solution.
     List<CapabilityStatementMessaging>? messaging,
+
+    /// [document] A document definition.
     List<CapabilityStatementDocument>? document,
   }) = _CapabilityStatement;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatement.fromYaml(dynamic yaml) => yaml is String
@@ -204,48 +465,111 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     if (json is Map<String, dynamic>) {
       return _$CapabilityStatementFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [CapabilityStatementSoftware] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
+/// [CapabilityStatementSoftware] A Capability Statement documents a set of
+///  capabilities (behaviors) of a FHIR Server or Client for a particular
+///  version of FHIR that may be used as a statement of actual server
+///  functionality or a statement of required or desired server implementation.
 @freezed
 class CapabilityStatementSoftware with _$CapabilityStatementSoftware {
+  /// [CapabilityStatementSoftware] A Capability Statement documents a set of
+  ///  capabilities (behaviors) of a FHIR Server or Client for a particular
+  ///  version of FHIR that may be used as a statement of actual server
+  ///  functionality or a statement of required or desired server
+  ///  implementation.
   CapabilityStatementSoftware._();
 
-  /// [CapabilityStatementSoftware] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
-
+  /// [CapabilityStatementSoftware] A Capability Statement documents a set of
+  ///  capabilities (behaviors) of a FHIR Server or Client for a particular
+  ///  version of FHIR that may be used as a statement of actual server
+  ///  functionality or a statement of required or desired server
+  ///  implementation.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [name] Name the software is known by.;
+  /// [name] Name the software is known by.
   ///
-  /// [nameElement] (_name): Extensions for name;
+  /// [nameElement] ("_name") Extensions for name
   ///
-  /// [version] The version identifier for the software covered by this statement.;
+  /// [version] The version identifier for the software covered by this
+  ///  statement.
   ///
-  /// [versionElement] (_version): Extensions for version;
+  /// [versionElement] ("_version") Extensions for version
   ///
-  /// [releaseDate] Date this version of the software was released.;
+  /// [releaseDate] Date this version of the software was released.
   ///
-  /// [releaseDateElement] (_releaseDate): Extensions for releaseDate;
+  /// [releaseDateElement] ("_releaseDate") Extensions for releaseDate
+  ///
   factory CapabilityStatementSoftware({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [name] Name the software is known by.
     String? name,
+
+    /// [nameElement] ("_name") Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
+
+    /// [version] The version identifier for the software covered by this statement.
     String? version,
+
+    /// [versionElement] ("_version") Extensions for version
     @JsonKey(name: '_version') Element? versionElement,
+
+    /// [releaseDate] Date this version of the software was released.
     FhirDateTime? releaseDate,
+
+    /// [releaseDateElement] ("_releaseDate") Extensions for releaseDate
     @JsonKey(name: '_releaseDate') Element? releaseDateElement,
   }) = _CapabilityStatementSoftware;
 
@@ -267,52 +591,117 @@ class CapabilityStatementSoftware with _$CapabilityStatementSoftware {
   factory CapabilityStatementSoftware.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementSoftwareFromJson(json);
 
-  /// Acts like a constructor, returns a [CapabilityStatementSoftware], accepts a
+  /// Acts like a constructor, returns a [CapabilityStatementSoftware], accepts
+  ///  a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CapabilityStatementSoftware.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CapabilityStatementSoftwareFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
+/// [CapabilityStatementImplementation] A Capability Statement documents a set
+///  of capabilities (behaviors) of a FHIR Server or Client for a particular
+///  version of FHIR that may be used as a statement of actual server
+///  functionality or a statement of required or desired server implementation.
 @freezed
 class CapabilityStatementImplementation
     with _$CapabilityStatementImplementation {
+  /// [CapabilityStatementImplementation] A Capability Statement documents a
+  ///  set of capabilities (behaviors) of a FHIR Server or Client for a
+  ///  particular version of FHIR that may be used as a statement of actual
+  ///  server functionality or a statement of required or desired server
+  ///  implementation.
   CapabilityStatementImplementation._();
 
-  /// [CapabilityStatementImplementation] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
-
+  /// [CapabilityStatementImplementation] A Capability Statement documents a
+  ///  set of capabilities (behaviors) of a FHIR Server or Client for a
+  ///  particular version of FHIR that may be used as a statement of actual
+  ///  server functionality or a statement of required or desired server
+  ///  implementation.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [description] Information about the specific installation that this capability statement relates to.;
+  /// [description] Information about the specific installation that this
+  ///  capability statement relates to.
   ///
-  /// [descriptionElement] (_description): Extensions for description;
+  /// [descriptionElement] ("_description") Extensions for description
   ///
-  /// [url] An absolute base URL for the implementation.  This forms the base for REST interfaces as well as the mailbox and document interfaces.;
+  /// [url] An absolute base URL for the implementation.  This forms the base
+  ///  for REST interfaces as well as the mailbox and document interfaces.
   ///
-  /// [urlElement] (_url): Extensions for url;
+  /// [urlElement] ("_url") Extensions for url
   ///
-  /// [custodian] The organization responsible for the management of the instance and oversight of the data on the server at the specified URL.;
+  /// [custodian] The organization responsible for the management of the
+  ///  instance and oversight of the data on the server at the specified URL.
+  ///
   factory CapabilityStatementImplementation({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [description] Information about the specific installation that this capability statement relates to.
     String? description,
+
+    /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
+
+    /// [url] An absolute base URL for the implementation.  This forms the base for REST interfaces as well as the mailbox and document interfaces.
     FhirUrl? url,
+
+    /// [urlElement] ("_url") Extensions for url
     @JsonKey(name: '_url') Element? urlElement,
+
+    /// [custodian] The organization responsible for the management of the instance and oversight of the data on the server at the specified URL.
     Reference? custodian,
   }) = _CapabilityStatementImplementation;
 
@@ -336,67 +725,150 @@ class CapabilityStatementImplementation
           Map<String, dynamic> json) =>
       _$CapabilityStatementImplementationFromJson(json);
 
-  /// Acts like a constructor, returns a [CapabilityStatementImplementation], accepts a
+  /// Acts like a constructor, returns a [CapabilityStatementImplementation],
+  ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CapabilityStatementImplementation.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CapabilityStatementImplementationFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [CapabilityStatementRest] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
+/// [CapabilityStatementRest] A Capability Statement documents a set of
+///  capabilities (behaviors) of a FHIR Server or Client for a particular
+///  version of FHIR that may be used as a statement of actual server
+///  functionality or a statement of required or desired server implementation.
 @freezed
 class CapabilityStatementRest with _$CapabilityStatementRest {
+  /// [CapabilityStatementRest] A Capability Statement documents a set of
+  ///  capabilities (behaviors) of a FHIR Server or Client for a particular
+  ///  version of FHIR that may be used as a statement of actual server
+  ///  functionality or a statement of required or desired server
+  ///  implementation.
   CapabilityStatementRest._();
 
-  /// [CapabilityStatementRest] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
-
+  /// [CapabilityStatementRest] A Capability Statement documents a set of
+  ///  capabilities (behaviors) of a FHIR Server or Client for a particular
+  ///  version of FHIR that may be used as a statement of actual server
+  ///  functionality or a statement of required or desired server
+  ///  implementation.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [mode] Identifies whether this portion of the statement is describing the ability to initiate or receive restful operations.;
+  /// [mode] Identifies whether this portion of the statement is describing the
+  ///  ability to initiate or receive restful operations.
   ///
-  /// [modeElement] (_mode): Extensions for mode;
+  /// [modeElement] ("_mode") Extensions for mode
   ///
-  /// [documentation] Information about the system's restful capabilities that apply across all applications, such as security.;
+  /// [documentation] Information about the system's restful capabilities that
+  ///  apply across all applications, such as security.
   ///
-  /// [documentationElement] (_documentation): Extensions for documentation;
+  /// [documentationElement] ("_documentation") Extensions for documentation
   ///
-  /// [security] Information about security implementation from an interface perspective - what a client needs to know.;
+  /// [security] Information about security implementation from an interface
+  ///  perspective - what a client needs to know.
   ///
-  /// [resource] A specification of the restful capabilities of the solution for a specific resource type.;
+  /// [resource] A specification of the restful capabilities of the solution
+  ///  for a specific resource type.
   ///
-  /// [interaction] A specification of restful operations supported by the system.;
+  /// [interaction] A specification of restful operations supported by the
+  ///  system.
   ///
-  /// [searchParam] Search parameters that are supported for searching all resources for implementations to support and/or make use of - either references to ones defined in the specification, or additional ones defined for/by the implementation.;
+  /// [searchParam] Search parameters that are supported for searching all
+  ///  resources for implementations to support and/or make use of - either
+  ///  references to ones defined in the specification, or additional ones
+  ///  defined for/by the implementation. This is only for searches executed
+  ///  against the system-level endpoint.
   ///
-  /// [operation] Definition of an operation or a named query together with its parameters and their meaning and type.;
+  /// [operation] Definition of an operation or a named query together with its
+  ///  parameters and their meaning and type.
   ///
-  /// [compartment] An absolute URI which is a reference to the definition of a compartment that the system supports. The reference is to a CompartmentDefinition resource by its canonical URL .;
+  /// [compartment] An absolute URI which is a reference to the definition of a
+  ///  compartment that the system supports. The reference is to a
+  ///  CompartmentDefinition resource by its canonical URL .
+  ///
   factory CapabilityStatementRest({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [mode] Identifies whether this portion of the statement is describing the ability to initiate or receive restful operations.
     Code? mode,
+
+    /// [modeElement] ("_mode") Extensions for mode
     @JsonKey(name: '_mode') Element? modeElement,
+
+    /// [documentation] Information about the system's restful capabilities that apply across all applications, such as security.
     Markdown? documentation,
+
+    /// [documentationElement] ("_documentation") Extensions for documentation
     @JsonKey(name: '_documentation') Element? documentationElement,
+
+    /// [security] Information about security implementation from an interface perspective - what a client needs to know.
     CapabilityStatementSecurity? security,
+
+    /// [resource] A specification of the restful capabilities of the solution for a specific resource type.
     List<CapabilityStatementResource>? resource,
+
+    /// [interaction] A specification of restful operations supported by the system.
     List<CapabilityStatementInteraction1>? interaction,
+
+    /// [searchParam] Search parameters that are supported for searching all resources for implementations to support and/or make use of - either references to ones defined in the specification, or additional ones defined for/by the implementation. This is only for searches executed against the system-level endpoint.
     List<CapabilityStatementSearchParam>? searchParam,
+
+    /// [operation] Definition of an operation or a named query together with its parameters and their meaning and type.
     List<CapabilityStatementOperation>? operation,
+
+    /// [compartment] An absolute URI which is a reference to the definition of a compartment that the system supports. The reference is to a CompartmentDefinition resource by its canonical URL .
     List<Canonical>? compartment,
   }) = _CapabilityStatementRest;
 
@@ -425,45 +897,107 @@ class CapabilityStatementRest with _$CapabilityStatementRest {
     if (json is Map<String, dynamic>) {
       return _$CapabilityStatementRestFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [CapabilityStatementSecurity] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
+/// [CapabilityStatementSecurity] A Capability Statement documents a set of
+///  capabilities (behaviors) of a FHIR Server or Client for a particular
+///  version of FHIR that may be used as a statement of actual server
+///  functionality or a statement of required or desired server implementation.
 @freezed
 class CapabilityStatementSecurity with _$CapabilityStatementSecurity {
+  /// [CapabilityStatementSecurity] A Capability Statement documents a set of
+  ///  capabilities (behaviors) of a FHIR Server or Client for a particular
+  ///  version of FHIR that may be used as a statement of actual server
+  ///  functionality or a statement of required or desired server
+  ///  implementation.
   CapabilityStatementSecurity._();
 
-  /// [CapabilityStatementSecurity] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
-
+  /// [CapabilityStatementSecurity] A Capability Statement documents a set of
+  ///  capabilities (behaviors) of a FHIR Server or Client for a particular
+  ///  version of FHIR that may be used as a statement of actual server
+  ///  functionality or a statement of required or desired server
+  ///  implementation.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [cors] Server adds CORS headers when responding to requests - this enables Javascript applications to use the server.;
+  /// [cors] Server adds CORS headers when responding to requests - this
+  ///  enables Javascript applications to use the server.
   ///
-  /// [corsElement] (_cors): Extensions for cors;
+  /// [corsElement] ("_cors") Extensions for cors
   ///
-  /// [service] Types of security services that are supported/required by the system.;
+  /// [service] Types of security services that are supported/required by the
+  ///  system.
   ///
-  /// [description] General description of how security works.;
+  /// [description] General description of how security works.
   ///
-  /// [descriptionElement] (_description): Extensions for description;
+  /// [descriptionElement] ("_description") Extensions for description
+  ///
   factory CapabilityStatementSecurity({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [cors] Server adds CORS headers when responding to requests - this enables Javascript applications to use the server.
     Boolean? cors,
+
+    /// [corsElement] ("_cors") Extensions for cors
     @JsonKey(name: '_cors') Element? corsElement,
+
+    /// [service] Types of security services that are supported/required by the system.
     List<CodeableConcept>? service,
+
+    /// [description] General description of how security works.
     Markdown? description,
+
+    /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
   }) = _CapabilityStatementSecurity;
 
@@ -485,124 +1019,284 @@ class CapabilityStatementSecurity with _$CapabilityStatementSecurity {
   factory CapabilityStatementSecurity.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementSecurityFromJson(json);
 
-  /// Acts like a constructor, returns a [CapabilityStatementSecurity], accepts a
+  /// Acts like a constructor, returns a [CapabilityStatementSecurity], accepts
+  ///  a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CapabilityStatementSecurity.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CapabilityStatementSecurityFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [CapabilityStatementResource] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
+/// [CapabilityStatementResource] A Capability Statement documents a set of
+///  capabilities (behaviors) of a FHIR Server or Client for a particular
+///  version of FHIR that may be used as a statement of actual server
+///  functionality or a statement of required or desired server implementation.
 @freezed
 class CapabilityStatementResource with _$CapabilityStatementResource {
+  /// [CapabilityStatementResource] A Capability Statement documents a set of
+  ///  capabilities (behaviors) of a FHIR Server or Client for a particular
+  ///  version of FHIR that may be used as a statement of actual server
+  ///  functionality or a statement of required or desired server
+  ///  implementation.
   CapabilityStatementResource._();
 
-  /// [CapabilityStatementResource] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
-
+  /// [CapabilityStatementResource] A Capability Statement documents a set of
+  ///  capabilities (behaviors) of a FHIR Server or Client for a particular
+  ///  version of FHIR that may be used as a statement of actual server
+  ///  functionality or a statement of required or desired server
+  ///  implementation.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [type] A type of resource exposed via the restful interface.;
+  /// [type] A type of resource exposed via the restful interface.
   ///
-  /// [typeElement] (_type): Extensions for type;
+  /// [typeElement] ("_type") Extensions for type
   ///
-  /// [profile] A specification of the profile that describes the solution's overall support for the resource, including any constraints on cardinality, bindings, lengths or other limitations. See further discussion in [Using Profiles](profiling.html#profile-uses).;
+  /// [profile] A system-wide profile that is applied across *all* instances of
+  ///  the resource supported by the system. For example, if declared on
+  ///  Observation, this profile is the "superset" of capabilities for
+  ///  laboratory *and* vitals *and* other domains. See further discussion in
+  ///  [Using Profiles](profiling.html#profile-uses).
   ///
-  /// [supportedProfile] A list of profiles that represent different use cases supported by the system. For a server, "supported by the system" means the system hosts/produces a set of resources that are conformant to a particular profile, and allows clients that use its services to search using this profile and to find appropriate data. For a client, it means the system will search by this profile and process data according to the guidance implicit in the profile. See further discussion in [Using Profiles](profiling.html#profile-uses).;
+  /// [supportedProfile] A list of profiles representing different use cases
+  ///  the system hosts/produces. A supported profile is a statement about the
+  ///  functionality of the data and services provided by the server (or the
+  ///  client) for supported use cases. For example, a system can define and
+  ///  declare multiple Observation profiles for laboratory observations, vital
+  ///  sign observations, etc. By declaring supported profiles, systems provide
+  ///  a way to determine whether individual resources are conformant. See
+  ///  further discussion in [Using Profiles](profiling.html#profile-uses).
   ///
-  /// [documentation] Additional information about the resource type used by the system.;
+  /// [documentation] Additional information about the resource type used by
+  ///  the system.
   ///
-  /// [documentationElement] (_documentation): Extensions for documentation;
+  /// [documentationElement] ("_documentation") Extensions for documentation
   ///
-  /// [interaction] Identifies a restful operation supported by the solution.;
+  /// [interaction] Identifies a restful operation supported by the solution.
   ///
-  /// [versioning] This field is set to no-version to specify that the system does not support (server) or use (client) versioning for this resource type. If this has some other value, the server must at least correctly track and populate the versionId meta-property on resources. If the value is 'versioned-update', then the server supports all the versioning features, including using e-tags for version integrity in the API.;
+  /// [versioning] This field is set to no-version to specify that the system
+  ///  does not support (server) or use (client) versioning for this resource
+  ///  type. If this has some other value, the server must at least correctly
+  ///  track and populate the versionId meta-property on resources. If the
+  ///  value is 'versioned-update', then the server supports all the versioning
+  ///  features, including using e-tags for version integrity in the API.
   ///
-  /// [versioningElement] (_versioning): Extensions for versioning;
+  /// [versioningElement] ("_versioning") Extensions for versioning
   ///
-  /// [readHistory] A flag for whether the server is able to return past versions as part of the vRead operation.;
+  /// [readHistory] A flag for whether the server is able to return past
+  ///  versions as part of the vRead operation.
   ///
-  /// [readHistoryElement] (_readHistory): Extensions for readHistory;
+  /// [readHistoryElement] ("_readHistory") Extensions for readHistory
   ///
-  /// [updateCreate] A flag to indicate that the server allows or needs to allow the client to create new identities on the server (that is, the client PUTs to a location where there is no existing resource). Allowing this operation means that the server allows the client to create new identities on the server.;
+  /// [updateCreate] A flag to indicate that the server allows or needs to
+  ///  allow the client to create new identities on the server (that is, the
+  ///  client PUTs to a location where there is no existing resource). Allowing
+  ///  this operation means that the server allows the client to create new
+  ///  identities on the server.
   ///
-  /// [updateCreateElement] (_updateCreate): Extensions for updateCreate;
+  /// [updateCreateElement] ("_updateCreate") Extensions for updateCreate
   ///
-  /// [conditionalCreate] A flag that indicates that the server supports conditional create.;
+  /// [conditionalCreate] A flag that indicates that the server supports
+  ///  conditional create.
   ///
-  /// [conditionalCreateElement] (_conditionalCreate): Extensions for conditionalCreate;
+  /// [conditionalCreateElement] ("_conditionalCreate") Extensions for
+  ///  conditionalCreate
   ///
-  /// [conditionalRead] A code that indicates how the server supports conditional read.;
+  /// [conditionalRead] A code that indicates how the server supports
+  ///  conditional read.
   ///
-  /// [conditionalReadElement] (_conditionalRead): Extensions for conditionalRead;
+  /// [conditionalReadElement] ("_conditionalRead") Extensions for
+  ///  conditionalRead
   ///
-  /// [conditionalUpdate] A flag that indicates that the server supports conditional update.;
+  /// [conditionalUpdate] A flag that indicates that the server supports
+  ///  conditional update.
   ///
-  /// [conditionalUpdateElement] (_conditionalUpdate): Extensions for conditionalUpdate;
+  /// [conditionalUpdateElement] ("_conditionalUpdate") Extensions for
+  ///  conditionalUpdate
   ///
-  /// [conditionalDelete] A code that indicates how the server supports conditional delete.;
+  /// [conditionalPatch] A flag that indicates that the server supports
+  ///  conditional patch.
   ///
-  /// [conditionalDeleteElement] (_conditionalDelete): Extensions for conditionalDelete;
+  /// [conditionalPatchElement] ("_conditionalPatch") Extensions for
+  ///  conditionalPatch
   ///
-  /// [referencePolicy] A set of flags that defines how references are supported.;
+  /// [conditionalDelete] A code that indicates how the server supports
+  ///  conditional delete.
   ///
-  /// [referencePolicyElement] (_referencePolicy): Extensions for referencePolicy;
+  /// [conditionalDeleteElement] ("_conditionalDelete") Extensions for
+  ///  conditionalDelete
   ///
-  /// [searchInclude] A list of _include values supported by the server.;
+  /// [referencePolicy] A set of flags that defines how references are
+  ///  supported.
   ///
-  /// [searchIncludeElement] (_searchInclude): Extensions for searchInclude;
+  /// [referencePolicyElement] ("_referencePolicy") Extensions for
+  ///  referencePolicy
   ///
-  /// [searchRevInclude] A list of _revinclude (reverse include) values supported by the server.;
+  /// [searchInclude] A list of _include values supported by the server.
   ///
-  /// [searchRevIncludeElement] (_searchRevInclude): Extensions for searchRevInclude;
+  /// [searchIncludeElement] ("_searchInclude") Extensions for searchInclude
   ///
-  /// [searchParam] Search parameters for implementations to support and/or make use of - either references to ones defined in the specification, or additional ones defined for/by the implementation.;
+  /// [searchRevInclude] A list of _revinclude (reverse include) values
+  ///  supported by the server.
   ///
-  /// [operation] Definition of an operation or a named query together with its parameters and their meaning and type. Consult the definition of the operation for details about how to invoke the operation, and the parameters.;
+  /// [searchRevIncludeElement] ("_searchRevInclude") Extensions for
+  ///  searchRevInclude
+  ///
+  /// [searchParam] Search parameters for implementations to support and/or
+  ///  make use of - either references to ones defined in the specification, or
+  ///  additional ones defined for/by the implementation.
+  ///
+  /// [operation] Definition of an operation or a named query together with its
+  ///  parameters and their meaning and type. Consult the definition of the
+  ///  operation for details about how to invoke the operation, and the
+  ///  parameters.
+  ///
   factory CapabilityStatementResource({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [type] A type of resource exposed via the restful interface.
     Code? type,
+
+    /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
+
+    /// [profile] A system-wide profile that is applied across *all* instances of the resource supported by the system. For example, if declared on Observation, this profile is the "superset" of capabilities for laboratory *and* vitals *and* other domains. See further discussion in [Using Profiles](profiling.html#profile-uses).
     Canonical? profile,
+
+    /// [supportedProfile] A list of profiles representing different use cases the system hosts/produces. A supported profile is a statement about the functionality of the data and services provided by the server (or the client) for supported use cases. For example, a system can define and declare multiple Observation profiles for laboratory observations, vital sign observations, etc. By declaring supported profiles, systems provide a way to determine whether individual resources are conformant. See further discussion in [Using Profiles](profiling.html#profile-uses).
     List<Canonical>? supportedProfile,
+
+    /// [documentation] Additional information about the resource type used by the system.
     Markdown? documentation,
+
+    /// [documentationElement] ("_documentation") Extensions for documentation
     @JsonKey(name: '_documentation') Element? documentationElement,
+
+    /// [interaction] Identifies a restful operation supported by the solution.
     List<CapabilityStatementInteraction>? interaction,
+
+    /// [versioning] This field is set to no-version to specify that the system does not support (server) or use (client) versioning for this resource type. If this has some other value, the server must at least correctly track and populate the versionId meta-property on resources. If the value is 'versioned-update', then the server supports all the versioning features, including using e-tags for version integrity in the API.
     Code? versioning,
+
+    /// [versioningElement] ("_versioning") Extensions for versioning
     @JsonKey(name: '_versioning') Element? versioningElement,
+
+    /// [readHistory] A flag for whether the server is able to return past versions as part of the vRead operation.
     Boolean? readHistory,
+
+    /// [readHistoryElement] ("_readHistory") Extensions for readHistory
     @JsonKey(name: '_readHistory') Element? readHistoryElement,
+
+    /// [updateCreate] A flag to indicate that the server allows or needs to allow the client to create new identities on the server (that is, the client PUTs to a location where there is no existing resource). Allowing this operation means that the server allows the client to create new identities on the server.
     Boolean? updateCreate,
+
+    /// [updateCreateElement] ("_updateCreate") Extensions for updateCreate
     @JsonKey(name: '_updateCreate') Element? updateCreateElement,
+
+    /// [conditionalCreate] A flag that indicates that the server supports conditional create.
     Boolean? conditionalCreate,
+
+    /// [conditionalCreateElement] ("_conditionalCreate") Extensions for conditionalCreate
     @JsonKey(name: '_conditionalCreate') Element? conditionalCreateElement,
+
+    /// [conditionalRead] A code that indicates how the server supports conditional read.
     Code? conditionalRead,
+
+    /// [conditionalReadElement] ("_conditionalRead") Extensions for conditionalRead
     @JsonKey(name: '_conditionalRead') Element? conditionalReadElement,
+
+    /// [conditionalUpdate] A flag that indicates that the server supports conditional update.
     Boolean? conditionalUpdate,
+
+    /// [conditionalUpdateElement] ("_conditionalUpdate") Extensions for conditionalUpdate
     @JsonKey(name: '_conditionalUpdate') Element? conditionalUpdateElement,
+
+    /// [conditionalPatch] A flag that indicates that the server supports conditional patch.
+    Boolean? conditionalPatch,
+
+    /// [conditionalPatchElement] ("_conditionalPatch") Extensions for conditionalPatch
+    @JsonKey(name: '_conditionalPatch') Element? conditionalPatchElement,
+
+    /// [conditionalDelete] A code that indicates how the server supports conditional delete.
     Code? conditionalDelete,
+
+    /// [conditionalDeleteElement] ("_conditionalDelete") Extensions for conditionalDelete
     @JsonKey(name: '_conditionalDelete') Element? conditionalDeleteElement,
+
+    /// [referencePolicy] A set of flags that defines how references are supported.
     List<Code>? referencePolicy,
+
+    /// [referencePolicyElement] ("_referencePolicy") Extensions for referencePolicy
     @JsonKey(name: '_referencePolicy') List<Element>? referencePolicyElement,
+
+    /// [searchInclude] A list of _include values supported by the server.
     List<String>? searchInclude,
+
+    /// [searchIncludeElement] ("_searchInclude") Extensions for searchInclude
     @JsonKey(name: '_searchInclude') List<Element>? searchIncludeElement,
+
+    /// [searchRevInclude] A list of _revinclude (reverse include) values supported by the server.
     List<String>? searchRevInclude,
+
+    /// [searchRevIncludeElement] ("_searchRevInclude") Extensions for searchRevInclude
     @JsonKey(name: '_searchRevInclude') List<Element>? searchRevIncludeElement,
+
+    /// [searchParam] Search parameters for implementations to support and/or make use of - either references to ones defined in the specification, or additional ones defined for/by the implementation.
     List<CapabilityStatementSearchParam>? searchParam,
+
+    /// [operation] Definition of an operation or a named query together with its parameters and their meaning and type. Consult the definition of the operation for details about how to invoke the operation, and the parameters.
     List<CapabilityStatementOperation>? operation,
   }) = _CapabilityStatementResource;
 
@@ -624,49 +1318,112 @@ class CapabilityStatementResource with _$CapabilityStatementResource {
   factory CapabilityStatementResource.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementResourceFromJson(json);
 
-  /// Acts like a constructor, returns a [CapabilityStatementResource], accepts a
+  /// Acts like a constructor, returns a [CapabilityStatementResource], accepts
+  ///  a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CapabilityStatementResource.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CapabilityStatementResourceFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [CapabilityStatementInteraction] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
+/// [CapabilityStatementInteraction] A Capability Statement documents a set of
+///  capabilities (behaviors) of a FHIR Server or Client for a particular
+///  version of FHIR that may be used as a statement of actual server
+///  functionality or a statement of required or desired server implementation.
 @freezed
 class CapabilityStatementInteraction with _$CapabilityStatementInteraction {
+  /// [CapabilityStatementInteraction] A Capability Statement documents a set
+  ///  of capabilities (behaviors) of a FHIR Server or Client for a particular
+  ///  version of FHIR that may be used as a statement of actual server
+  ///  functionality or a statement of required or desired server
+  ///  implementation.
   CapabilityStatementInteraction._();
 
-  /// [CapabilityStatementInteraction] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
-
+  /// [CapabilityStatementInteraction] A Capability Statement documents a set
+  ///  of capabilities (behaviors) of a FHIR Server or Client for a particular
+  ///  version of FHIR that may be used as a statement of actual server
+  ///  functionality or a statement of required or desired server
+  ///  implementation.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [code] Coded identifier of the operation, supported by the system resource.;
+  /// [code] Coded identifier of the operation, supported by the system
+  ///  resource.
   ///
-  /// [codeElement] (_code): Extensions for code;
+  /// [codeElement] ("_code") Extensions for code
   ///
-  /// [documentation] Guidance specific to the implementation of this operation, such as 'delete is a logical delete' or 'updates are only allowed with version id' or 'creates permitted from pre-authorized certificates only'.;
+  /// [documentation] Guidance specific to the implementation of this
+  ///  operation, such as 'delete is a logical delete' or 'updates are only
+  ///  allowed with version id' or 'creates permitted from pre-authorized
+  ///  certificates only'.
   ///
-  /// [documentationElement] (_documentation): Extensions for documentation;
+  /// [documentationElement] ("_documentation") Extensions for documentation
+  ///
   factory CapabilityStatementInteraction({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [code] Coded identifier of the operation, supported by the system resource.
     Code? code,
+
+    /// [codeElement] ("_code") Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
+
+    /// [documentation] Guidance specific to the implementation of this operation, such as 'delete is a logical delete' or 'updates are only allowed with version id' or 'creates permitted from pre-authorized certificates only'.
     Markdown? documentation,
+
+    /// [documentationElement] ("_documentation") Extensions for documentation
     @JsonKey(name: '_documentation') Element? documentationElement,
   }) = _CapabilityStatementInteraction;
 
@@ -689,58 +1446,137 @@ class CapabilityStatementInteraction with _$CapabilityStatementInteraction {
   factory CapabilityStatementInteraction.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementInteractionFromJson(json);
 
-  /// Acts like a constructor, returns a [CapabilityStatementInteraction], accepts a
+  /// Acts like a constructor, returns a [CapabilityStatementInteraction],
+  ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CapabilityStatementInteraction.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CapabilityStatementInteractionFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [CapabilityStatementSearchParam] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
+/// [CapabilityStatementSearchParam] A Capability Statement documents a set of
+///  capabilities (behaviors) of a FHIR Server or Client for a particular
+///  version of FHIR that may be used as a statement of actual server
+///  functionality or a statement of required or desired server implementation.
 @freezed
 class CapabilityStatementSearchParam with _$CapabilityStatementSearchParam {
+  /// [CapabilityStatementSearchParam] A Capability Statement documents a set
+  ///  of capabilities (behaviors) of a FHIR Server or Client for a particular
+  ///  version of FHIR that may be used as a statement of actual server
+  ///  functionality or a statement of required or desired server
+  ///  implementation.
   CapabilityStatementSearchParam._();
 
-  /// [CapabilityStatementSearchParam] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
-
+  /// [CapabilityStatementSearchParam] A Capability Statement documents a set
+  ///  of capabilities (behaviors) of a FHIR Server or Client for a particular
+  ///  version of FHIR that may be used as a statement of actual server
+  ///  functionality or a statement of required or desired server
+  ///  implementation.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [name] The name of the search parameter used in the interface.;
+  /// [name] The label used for the search parameter in this particular
+  ///  system's API - i.e. the 'name' portion of the name-value pair that will
+  ///  appear as part of the search URL.  This SHOULD be the same as the
+  ///  SearchParameter.code of the defining SearchParameter.  However, it can
+  ///  sometimes differ if necessary to disambiguate when a server supports
+  ///  multiple SearchParameters that happen to share the same code.
   ///
-  /// [nameElement] (_name): Extensions for name;
+  /// [nameElement] ("_name") Extensions for name
   ///
-  /// [definition] An absolute URI that is a formal reference to where this parameter was first defined, so that a client can be confident of the meaning of the search parameter (a reference to [SearchParameter.url](searchparameter-definitions.html#SearchParameter.url)). This element SHALL be populated if the search parameter refers to a SearchParameter defined by the FHIR core specification or externally defined IGs.;
+  /// [definition] An absolute URI that is a formal reference to where this
+  ///  parameter was first defined, so that a client can be confident of the
+  ///  meaning of the search parameter (a reference to
+  ///  [SearchParameter.url](searchparameter-definitions.html#SearchParameter.url)). This
   ///
-  /// [type] The type of value a search parameter refers to, and how the content is interpreted.;
+  ///  element SHALL be populated if the search parameter refers to a
+  ///  SearchParameter defined by the FHIR core specification or externally
+  ///  defined IGs.
   ///
-  /// [typeElement] (_type): Extensions for type;
+  /// [type] The type of value a search parameter refers to, and how the
+  ///  content is interpreted.
   ///
-  /// [documentation] This allows documentation of any distinct behaviors about how the search parameter is used.  For example, text matching algorithms.;
+  /// [typeElement] ("_type") Extensions for type
   ///
-  /// [documentationElement] (_documentation): Extensions for documentation;
+  /// [documentation] This allows documentation of any distinct behaviors about
+  ///  how the search parameter is used.  For example, text matching algorithms.
+  ///
+  /// [documentationElement] ("_documentation") Extensions for documentation
+  ///
   factory CapabilityStatementSearchParam({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [name] The label used for the search parameter in this particular system's API - i.e. the 'name' portion of the name-value pair that will appear as part of the search URL.  This SHOULD be the same as the SearchParameter.code of the defining SearchParameter.  However, it can sometimes differ if necessary to disambiguate when a server supports multiple SearchParameters that happen to share the same code.
     String? name,
+
+    /// [nameElement] ("_name") Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
+
+    /// [definition] An absolute URI that is a formal reference to where this parameter was first defined, so that a client can be confident of the meaning of the search parameter (a reference to [SearchParameter.url](searchparameter-definitions.html#SearchParameter.url)). This element SHALL be populated if the search parameter refers to a SearchParameter defined by the FHIR core specification or externally defined IGs.
     Canonical? definition,
+
+    /// [type] The type of value a search parameter refers to, and how the content is interpreted.
     Code? type,
+
+    /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
+
+    /// [documentation] This allows documentation of any distinct behaviors about how the search parameter is used.  For example, text matching algorithms.
     Markdown? documentation,
+
+    /// [documentationElement] ("_documentation") Extensions for documentation
     @JsonKey(name: '_documentation') Element? documentationElement,
   }) = _CapabilityStatementSearchParam;
 
@@ -763,52 +1599,129 @@ class CapabilityStatementSearchParam with _$CapabilityStatementSearchParam {
   factory CapabilityStatementSearchParam.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementSearchParamFromJson(json);
 
-  /// Acts like a constructor, returns a [CapabilityStatementSearchParam], accepts a
+  /// Acts like a constructor, returns a [CapabilityStatementSearchParam],
+  ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CapabilityStatementSearchParam.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CapabilityStatementSearchParamFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [CapabilityStatementOperation] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
+/// [CapabilityStatementOperation] A Capability Statement documents a set of
+///  capabilities (behaviors) of a FHIR Server or Client for a particular
+///  version of FHIR that may be used as a statement of actual server
+///  functionality or a statement of required or desired server implementation.
 @freezed
 class CapabilityStatementOperation with _$CapabilityStatementOperation {
+  /// [CapabilityStatementOperation] A Capability Statement documents a set of
+  ///  capabilities (behaviors) of a FHIR Server or Client for a particular
+  ///  version of FHIR that may be used as a statement of actual server
+  ///  functionality or a statement of required or desired server
+  ///  implementation.
   CapabilityStatementOperation._();
 
-  /// [CapabilityStatementOperation] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
-
+  /// [CapabilityStatementOperation] A Capability Statement documents a set of
+  ///  capabilities (behaviors) of a FHIR Server or Client for a particular
+  ///  version of FHIR that may be used as a statement of actual server
+  ///  functionality or a statement of required or desired server
+  ///  implementation.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [name] The name of the operation or query. For an operation, this is the name  prefixed with $ and used in the URL. For a query, this is the name used in the _query parameter when the query is called.;
+  /// [name] The name of the operation or query. For an operation, this name is
+  ///  prefixed with $ and used in the URL. For a query, this is the name used
+  ///  in the _query parameter when the query is called. This SHOULD be the
+  ///  same as the OperationDefinition.code of the defining
+  ///  OperationDefinition.  However, it can sometimes differ if necessary to
+  ///  disambiguate when a server supports multiple OperationDefinition that
+  ///  happen to share the same code.
   ///
-  /// [nameElement] (_name): Extensions for name;
+  /// [nameElement] ("_name") Extensions for name
   ///
-  /// [definition] Where the formal definition can be found. If a server references the base definition of an Operation (i.e. from the specification itself such as ```http://hl7.org/fhir/OperationDefinition/ValueSet-expand```), that means it supports the full capabilities of the operation - e.g. both GET and POST invocation.  If it only supports a subset, it must define its own custom [OperationDefinition](operationdefinition.html#) with a 'base' of the original OperationDefinition.  The custom definition would describe the specific subset of functionality supported.;
+  /// [definition] Where the formal definition can be found. If a server
+  ///  references the base definition of an Operation (i.e. from the
+  ///  specification itself such as
+  ///  ```http://hl7.org/fhir/OperationDefinition/ValueSet-expand```), that
+  ///  means it supports the full capabilities of the operation - e.g. both GET
+  ///  and POST invocation.  If it only supports a subset, it must define its
+  ///  own custom [OperationDefinition](operationdefinition.html#) with a
+  ///  'base' of the original OperationDefinition.  The custom definition would
+  ///  describe the specific subset of functionality supported.
   ///
-  /// [documentation] Documentation that describes anything special about the operation behavior, possibly detailing different behavior for system, type and instance-level invocation of the operation.;
+  /// [documentation] Documentation that describes anything special about the
+  ///  operation behavior, possibly detailing different behavior for system,
+  ///  type and instance-level invocation of the operation.
   ///
-  /// [documentationElement] (_documentation): Extensions for documentation;
+  /// [documentationElement] ("_documentation") Extensions for documentation
+  ///
   factory CapabilityStatementOperation({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [name] The name of the operation or query. For an operation, this name is prefixed with $ and used in the URL. For a query, this is the name used in the _query parameter when the query is called. This SHOULD be the same as the OperationDefinition.code of the defining OperationDefinition.  However, it can sometimes differ if necessary to disambiguate when a server supports multiple OperationDefinition that happen to share the same code.
     String? name,
+
+    /// [nameElement] ("_name") Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
+
+    /// [definition] Where the formal definition can be found. If a server references the base definition of an Operation (i.e. from the specification itself such as ```http://hl7.org/fhir/OperationDefinition/ValueSet-expand```), that means it supports the full capabilities of the operation - e.g. both GET and POST invocation.  If it only supports a subset, it must define its own custom [OperationDefinition](operationdefinition.html#) with a 'base' of the original OperationDefinition.  The custom definition would describe the specific subset of functionality supported.
     required Canonical definition,
+
+    /// [documentation] Documentation that describes anything special about the operation behavior, possibly detailing different behavior for system, type and instance-level invocation of the operation.
     Markdown? documentation,
+
+    /// [documentationElement] ("_documentation") Extensions for documentation
     @JsonKey(name: '_documentation') Element? documentationElement,
   }) = _CapabilityStatementOperation;
 
@@ -830,49 +1743,110 @@ class CapabilityStatementOperation with _$CapabilityStatementOperation {
   factory CapabilityStatementOperation.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementOperationFromJson(json);
 
-  /// Acts like a constructor, returns a [CapabilityStatementOperation], accepts a
+  /// Acts like a constructor, returns a [CapabilityStatementOperation],
+  ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CapabilityStatementOperation.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CapabilityStatementOperationFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [CapabilityStatementInteraction1] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
+/// [CapabilityStatementInteraction1] A Capability Statement documents a set of
+///  capabilities (behaviors) of a FHIR Server or Client for a particular
+///  version of FHIR that may be used as a statement of actual server
+///  functionality or a statement of required or desired server implementation.
 @freezed
 class CapabilityStatementInteraction1 with _$CapabilityStatementInteraction1 {
+  /// [CapabilityStatementInteraction1] A Capability Statement documents a set
+  ///  of capabilities (behaviors) of a FHIR Server or Client for a particular
+  ///  version of FHIR that may be used as a statement of actual server
+  ///  functionality or a statement of required or desired server
+  ///  implementation.
   CapabilityStatementInteraction1._();
 
-  /// [CapabilityStatementInteraction1] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
-
+  /// [CapabilityStatementInteraction1] A Capability Statement documents a set
+  ///  of capabilities (behaviors) of a FHIR Server or Client for a particular
+  ///  version of FHIR that may be used as a statement of actual server
+  ///  functionality or a statement of required or desired server
+  ///  implementation.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [code] A coded identifier of the operation, supported by the system.;
+  /// [code] A coded identifier of the operation, supported by the system.
   ///
-  /// [codeElement] (_code): Extensions for code;
+  /// [codeElement] ("_code") Extensions for code
   ///
-  /// [documentation] Guidance specific to the implementation of this operation, such as limitations on the kind of transactions allowed, or information about system wide search is implemented.;
+  /// [documentation] Guidance specific to the implementation of this
+  ///  operation, such as limitations on the kind of transactions allowed, or
+  ///  information about system wide search is implemented.
   ///
-  /// [documentationElement] (_documentation): Extensions for documentation;
+  /// [documentationElement] ("_documentation") Extensions for documentation
+  ///
   factory CapabilityStatementInteraction1({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [code] A coded identifier of the operation, supported by the system.
     Code? code,
+
+    /// [codeElement] ("_code") Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
+
+    /// [documentation] Guidance specific to the implementation of this operation, such as limitations on the kind of transactions allowed, or information about system wide search is implemented.
     Markdown? documentation,
+
+    /// [documentationElement] ("_documentation") Extensions for documentation
     @JsonKey(name: '_documentation') Element? documentationElement,
   }) = _CapabilityStatementInteraction1;
 
@@ -895,55 +1869,125 @@ class CapabilityStatementInteraction1 with _$CapabilityStatementInteraction1 {
   factory CapabilityStatementInteraction1.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementInteraction1FromJson(json);
 
-  /// Acts like a constructor, returns a [CapabilityStatementInteraction1], accepts a
+  /// Acts like a constructor, returns a [CapabilityStatementInteraction1],
+  ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CapabilityStatementInteraction1.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CapabilityStatementInteraction1FromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [CapabilityStatementMessaging] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
+/// [CapabilityStatementMessaging] A Capability Statement documents a set of
+///  capabilities (behaviors) of a FHIR Server or Client for a particular
+///  version of FHIR that may be used as a statement of actual server
+///  functionality or a statement of required or desired server implementation.
 @freezed
 class CapabilityStatementMessaging with _$CapabilityStatementMessaging {
+  /// [CapabilityStatementMessaging] A Capability Statement documents a set of
+  ///  capabilities (behaviors) of a FHIR Server or Client for a particular
+  ///  version of FHIR that may be used as a statement of actual server
+  ///  functionality or a statement of required or desired server
+  ///  implementation.
   CapabilityStatementMessaging._();
 
-  /// [CapabilityStatementMessaging] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
-
+  /// [CapabilityStatementMessaging] A Capability Statement documents a set of
+  ///  capabilities (behaviors) of a FHIR Server or Client for a particular
+  ///  version of FHIR that may be used as a statement of actual server
+  ///  functionality or a statement of required or desired server
+  ///  implementation.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [endpoint] An endpoint (network accessible address) to which messages and/or replies are to be sent.;
+  /// [endpoint] An endpoint (network accessible address) to which messages
+  ///  and/or replies are to be sent.
   ///
-  /// [reliableCache] Length if the receiver's reliable messaging cache in minutes (if a receiver) or how long the cache length on the receiver should be (if a sender).;
+  /// [reliableCache] Length if the receiver's reliable messaging cache in
+  ///  minutes (if a receiver) or how long the cache length on the receiver
+  ///  should be (if a sender).
   ///
-  /// [reliableCacheElement] (_reliableCache): Extensions for reliableCache;
+  /// [reliableCacheElement] ("_reliableCache") Extensions for reliableCache
   ///
-  /// [documentation] Documentation about the system's messaging capabilities for this endpoint not otherwise documented by the capability statement.  For example, the process for becoming an authorized messaging exchange partner.;
+  /// [documentation] Documentation about the system's messaging capabilities
+  ///  for this endpoint not otherwise documented by the capability statement.
+  ///  For example, the process for becoming an authorized messaging exchange
+  ///  partner.
   ///
-  /// [documentationElement] (_documentation): Extensions for documentation;
+  /// [documentationElement] ("_documentation") Extensions for documentation
   ///
-  /// [supportedMessage] References to message definitions for messages this system can send or receive.;
+  /// [supportedMessage] References to message definitions for messages this
+  ///  system can send or receive.
+  ///
   factory CapabilityStatementMessaging({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [endpoint] An endpoint (network accessible address) to which messages and/or replies are to be sent.
     List<CapabilityStatementEndpoint>? endpoint,
+
+    /// [reliableCache] Length if the receiver's reliable messaging cache in minutes (if a receiver) or how long the cache length on the receiver should be (if a sender).
     UnsignedInt? reliableCache,
+
+    /// [reliableCacheElement] ("_reliableCache") Extensions for reliableCache
     @JsonKey(name: '_reliableCache') Element? reliableCacheElement,
+
+    /// [documentation] Documentation about the system's messaging capabilities for this endpoint not otherwise documented by the capability statement.  For example, the process for becoming an authorized messaging exchange partner.
     Markdown? documentation,
+
+    /// [documentationElement] ("_documentation") Extensions for documentation
     @JsonKey(name: '_documentation') Element? documentationElement,
+
+    /// [supportedMessage] References to message definitions for messages this system can send or receive.
     List<CapabilityStatementSupportedMessage>? supportedMessage,
   }) = _CapabilityStatementMessaging;
 
@@ -965,46 +2009,105 @@ class CapabilityStatementMessaging with _$CapabilityStatementMessaging {
   factory CapabilityStatementMessaging.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementMessagingFromJson(json);
 
-  /// Acts like a constructor, returns a [CapabilityStatementMessaging], accepts a
+  /// Acts like a constructor, returns a [CapabilityStatementMessaging],
+  ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CapabilityStatementMessaging.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CapabilityStatementMessagingFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [CapabilityStatementEndpoint] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
+/// [CapabilityStatementEndpoint] A Capability Statement documents a set of
+///  capabilities (behaviors) of a FHIR Server or Client for a particular
+///  version of FHIR that may be used as a statement of actual server
+///  functionality or a statement of required or desired server implementation.
 @freezed
 class CapabilityStatementEndpoint with _$CapabilityStatementEndpoint {
+  /// [CapabilityStatementEndpoint] A Capability Statement documents a set of
+  ///  capabilities (behaviors) of a FHIR Server or Client for a particular
+  ///  version of FHIR that may be used as a statement of actual server
+  ///  functionality or a statement of required or desired server
+  ///  implementation.
   CapabilityStatementEndpoint._();
 
-  /// [CapabilityStatementEndpoint] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
-
+  /// [CapabilityStatementEndpoint] A Capability Statement documents a set of
+  ///  capabilities (behaviors) of a FHIR Server or Client for a particular
+  ///  version of FHIR that may be used as a statement of actual server
+  ///  functionality or a statement of required or desired server
+  ///  implementation.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [protocol] A list of the messaging transport protocol(s) identifiers, supported by this endpoint.;
+  /// [protocol] A list of the messaging transport protocol(s) identifiers,
+  ///  supported by this endpoint.
   ///
-  /// [address] The network address of the endpoint. For solutions that do not use network addresses for routing, it can be just an identifier.;
+  /// [address] The network address of the endpoint. For solutions that do not
+  ///  use network addresses for routing, it can be just an identifier.
   ///
-  /// [addressElement] (_address): Extensions for address;
+  /// [addressElement] ("_address") Extensions for address
+  ///
   factory CapabilityStatementEndpoint({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [protocol] A list of the messaging transport protocol(s) identifiers, supported by this endpoint.
     required Coding protocol,
+
+    /// [address] The network address of the endpoint. For solutions that do not use network addresses for routing, it can be just an identifier.
     FhirUrl? address,
+
+    /// [addressElement] ("_address") Extensions for address
     @JsonKey(name: '_address') Element? addressElement,
   }) = _CapabilityStatementEndpoint;
 
@@ -1026,46 +2129,107 @@ class CapabilityStatementEndpoint with _$CapabilityStatementEndpoint {
   factory CapabilityStatementEndpoint.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementEndpointFromJson(json);
 
-  /// Acts like a constructor, returns a [CapabilityStatementEndpoint], accepts a
+  /// Acts like a constructor, returns a [CapabilityStatementEndpoint], accepts
+  ///  a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CapabilityStatementEndpoint.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CapabilityStatementEndpointFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
+/// [CapabilityStatementSupportedMessage] A Capability Statement documents a
+///  set of capabilities (behaviors) of a FHIR Server or Client for a
+///  particular version of FHIR that may be used as a statement of actual
+///  server functionality or a statement of required or desired server
+///  implementation.
 @freezed
 class CapabilityStatementSupportedMessage
     with _$CapabilityStatementSupportedMessage {
+  /// [CapabilityStatementSupportedMessage] A Capability Statement documents a
+  ///  set of capabilities (behaviors) of a FHIR Server or Client for a
+  ///  particular version of FHIR that may be used as a statement of actual
+  ///  server functionality or a statement of required or desired server
+  ///  implementation.
   CapabilityStatementSupportedMessage._();
 
-  /// [CapabilityStatementSupportedMessage] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
-
+  /// [CapabilityStatementSupportedMessage] A Capability Statement documents a
+  ///  set of capabilities (behaviors) of a FHIR Server or Client for a
+  ///  particular version of FHIR that may be used as a statement of actual
+  ///  server functionality or a statement of required or desired server
+  ///  implementation.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [mode] The mode of this event declaration - whether application is sender or receiver.;
+  /// [mode] The mode of this event declaration - whether application is sender
+  ///  or receiver.
   ///
-  /// [modeElement] (_mode): Extensions for mode;
+  /// [modeElement] ("_mode") Extensions for mode
   ///
-  /// [definition] Points to a message definition that identifies the messaging event, message structure, allowed responses, etc.;
+  /// [definition] Points to a message definition that identifies the messaging
+  ///  event, message structure, allowed responses, etc.
+  ///
   factory CapabilityStatementSupportedMessage({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [mode] The mode of this event declaration - whether application is sender or receiver.
     Code? mode,
+
+    /// [modeElement] ("_mode") Extensions for mode
     @JsonKey(name: '_mode') Element? modeElement,
+
+    /// [definition] Points to a message definition that identifies the messaging event, message structure, allowed responses, etc.
     required Canonical definition,
   }) = _CapabilityStatementSupportedMessage;
 
@@ -1089,52 +2253,117 @@ class CapabilityStatementSupportedMessage
           Map<String, dynamic> json) =>
       _$CapabilityStatementSupportedMessageFromJson(json);
 
-  /// Acts like a constructor, returns a [CapabilityStatementSupportedMessage], accepts a
+  /// Acts like a constructor, returns a [CapabilityStatementSupportedMessage],
+  ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CapabilityStatementSupportedMessage.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CapabilityStatementSupportedMessageFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [CapabilityStatementDocument] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
+/// [CapabilityStatementDocument] A Capability Statement documents a set of
+///  capabilities (behaviors) of a FHIR Server or Client for a particular
+///  version of FHIR that may be used as a statement of actual server
+///  functionality or a statement of required or desired server implementation.
 @freezed
 class CapabilityStatementDocument with _$CapabilityStatementDocument {
+  /// [CapabilityStatementDocument] A Capability Statement documents a set of
+  ///  capabilities (behaviors) of a FHIR Server or Client for a particular
+  ///  version of FHIR that may be used as a statement of actual server
+  ///  functionality or a statement of required or desired server
+  ///  implementation.
   CapabilityStatementDocument._();
 
-  /// [CapabilityStatementDocument] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
-
+  /// [CapabilityStatementDocument] A Capability Statement documents a set of
+  ///  capabilities (behaviors) of a FHIR Server or Client for a particular
+  ///  version of FHIR that may be used as a statement of actual server
+  ///  functionality or a statement of required or desired server
+  ///  implementation.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [mode] Mode of this document declaration - whether an application is a producer or consumer.;
+  /// [mode] Mode of this document declaration - whether an application is a
+  ///  producer or consumer.
   ///
-  /// [modeElement] (_mode): Extensions for mode;
+  /// [modeElement] ("_mode") Extensions for mode
   ///
-  /// [documentation] A description of how the application supports or uses the specified document profile.  For example, when documents are created, what action is taken with consumed documents, etc.;
+  /// [documentation] A description of how the application supports or uses the
+  ///  specified document profile.  For example, when documents are created,
+  ///  what action is taken with consumed documents, etc.
   ///
-  /// [documentationElement] (_documentation): Extensions for documentation;
+  /// [documentationElement] ("_documentation") Extensions for documentation
   ///
-  /// [profile] A profile on the document Bundle that constrains which resources are present, and their contents.;
+  /// [profile] A profile on the document Bundle that constrains which
+  ///  resources are present, and their contents.
+  ///
   factory CapabilityStatementDocument({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [mode] Mode of this document declaration - whether an application is a producer or consumer.
     Code? mode,
+
+    /// [modeElement] ("_mode") Extensions for mode
     @JsonKey(name: '_mode') Element? modeElement,
+
+    /// [documentation] A description of how the application supports or uses the specified document profile.  For example, when documents are created, what action is taken with consumed documents, etc.
     Markdown? documentation,
+
+    /// [documentationElement] ("_documentation") Extensions for documentation
     @JsonKey(name: '_documentation') Element? documentationElement,
+
+    /// [profile] A profile on the document Bundle that constrains which resources are present, and their contents.
     required Canonical profile,
   }) = _CapabilityStatementDocument;
 
@@ -1156,1000 +2385,354 @@ class CapabilityStatementDocument with _$CapabilityStatementDocument {
   factory CapabilityStatementDocument.fromJson(Map<String, dynamic> json) =>
       _$CapabilityStatementDocumentFromJson(json);
 
-  /// Acts like a constructor, returns a [CapabilityStatementDocument], accepts a
+  /// Acts like a constructor, returns a [CapabilityStatementDocument], accepts
+  ///  a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CapabilityStatementDocument.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CapabilityStatementDocumentFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [CapabilityStatement2] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
-@freezed
-class CapabilityStatement2 with Resource, _$CapabilityStatement2 {
-  CapabilityStatement2._();
-
-  /// [CapabilityStatement2] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
-
-  ///
-  /// [resourceType] This is a CapabilityStatement2 resource;
-  ///
-  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
-  ///
-  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
-  ///
-  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  ///
-  /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
-  ///
-  /// [language] The base language in which the resource is written.;
-  ///
-  /// [languageElement] (_language): Extensions for language;
-  ///
-  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
-  ///
-  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
-  ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-  ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  ///
-  /// [url] An absolute URI that is used to identify this capability statement2 when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this capability statement2 is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the capability statement2 is stored on different servers.;
-  ///
-  /// [urlElement] (_url): Extensions for url;
-  ///
-  /// [identifier] A formal identifier that is used to identify this {{title}} when it is represented in other formats, or referenced in a specification, model, design or an instance.;
-  ///
-  /// [version] The identifier that is used to identify this version of the capability statement2 when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the capability statement2 author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.;
-  ///
-  /// [versionElement] (_version): Extensions for version;
-  ///
-  /// [name] A natural language name identifying the capability statement2. This name should be usable as an identifier for the module by machine processing applications such as code generation.;
-  ///
-  /// [nameElement] (_name): Extensions for name;
-  ///
-  /// [title] A short, descriptive, user-friendly title for the capability statement2.;
-  ///
-  /// [titleElement] (_title): Extensions for title;
-  ///
-  /// [status] The status of this capability statement2. Enables tracking the life-cycle of the content.;
-  ///
-  /// [statusElement] (_status): Extensions for status;
-  ///
-  /// [experimental] A Boolean value to indicate that this capability statement2 is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.;
-  ///
-  /// [experimentalElement] (_experimental): Extensions for experimental;
-  ///
-  /// [date] The date  (and optionally time) when the capability statement2 was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the capability statement2 changes.;
-  ///
-  /// [dateElement] (_date): Extensions for date;
-  ///
-  /// [publisher] The name of the organization or individual that published the capability statement2.;
-  ///
-  /// [publisherElement] (_publisher): Extensions for publisher;
-  ///
-  /// [contact] Contact details to assist a user in finding and communicating with the publisher.;
-  ///
-  /// [description] A free text natural language description of the capability statement2 from a consumer's perspective. Typically, this is used when the capability statement describes a desired rather than an actual solution, for example as a formal expression of requirements as part of an RFP.;
-  ///
-  /// [descriptionElement] (_description): Extensions for description;
-  ///
-  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate capability statement2 instances.;
-  ///
-  /// [jurisdiction] A legal or geographic region in which the capability statement2 is intended to be used.;
-  ///
-  /// [purpose] Explanation of why this capability statement2 is needed and why it has been designed as it has.;
-  ///
-  /// [purposeElement] (_purpose): Extensions for purpose;
-  ///
-  /// [copyright] A copyright statement relating to the capability statement2 and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the capability statement2.;
-  ///
-  /// [copyrightElement] (_copyright): Extensions for copyright;
-  ///
-  /// [kind] The way that this statement is intended to be used, to describe an actual running instance of software, a particular product (kind, not instance of software) or a class of implementation (e.g. a desired purchase).;
-  ///
-  /// [kindElement] (_kind): Extensions for kind;
-  ///
-  /// [instantiates] Reference to a canonical URL of another CapabilityStatement2 that this software implements. This capability statement is a published API description that corresponds to a business service. The server may actually implement a subset of the capability statement it claims to implement, so the capability statement must specify the full capability details.;
-  ///
-  /// [imports] Reference to a canonical URL of another CapabilityStatement2 that this software adds to. The capability statement automatically includes everything in the other statement, and it is not duplicated, though the server may repeat the same resources, interactions and operations to add additional details to them.;
-  ///
-  /// [software] Software that is covered by this capability statement.  It is used when the capability statement describes the capabilities of a particular software version, independent of an installation.;
-  ///
-  /// [implementation] Identifies a specific implementation instance that is described by the capability statement - i.e. a particular installation, rather than the capabilities of a software program.;
-  ///
-  /// [fhirVersion] The version of the FHIR specification that this CapabilityStatement2 describes (which SHALL be the same as the FHIR version of the CapabilityStatement2 itself). There is no default value.;
-  ///
-  /// [fhirVersionElement] (_fhirVersion): Extensions for fhirVersion;
-  ///
-  /// [format] A list of the formats supported by this implementation using their content types.;
-  ///
-  /// [formatElement] (_format): Extensions for format;
-  ///
-  /// [patchFormat] A list of the patch formats supported by this implementation using their content types.;
-  ///
-  /// [patchFormatElement] (_patchFormat): Extensions for patchFormat;
-  ///
-  /// [implementationGuide] A list of implementation guides that the server does (or should) support in their entirety.;
-  ///
-  /// [rest] A definition of the restful capabilities of the solution, if any.;
-  factory CapabilityStatement2({
-    @Default(R5ResourceType.CapabilityStatement2) R5ResourceType resourceType,
-    Id? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    FhirUri? url,
-    @JsonKey(name: '_url') Element? urlElement,
-    List<Identifier>? identifier,
-    String? version,
-    @JsonKey(name: '_version') Element? versionElement,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? title,
-    @JsonKey(name: '_title') Element? titleElement,
-    Code? status,
-    @JsonKey(name: '_status') Element? statusElement,
-    Boolean? experimental,
-    @JsonKey(name: '_experimental') Element? experimentalElement,
-    FhirDateTime? date,
-    @JsonKey(name: '_date') Element? dateElement,
-    String? publisher,
-    @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail>? contact,
-    Markdown? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext>? useContext,
-    List<CodeableConcept>? jurisdiction,
-    Markdown? purpose,
-    @JsonKey(name: '_purpose') Element? purposeElement,
-    Markdown? copyright,
-    @JsonKey(name: '_copyright') Element? copyrightElement,
-    Code? kind,
-    @JsonKey(name: '_kind') Element? kindElement,
-    List<Canonical>? instantiates,
-    List<Canonical>? imports,
-    CapabilityStatement2Software? software,
-    CapabilityStatement2Implementation? implementation,
-    Code? fhirVersion,
-    @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
-    List<Code>? format,
-    @JsonKey(name: '_format') List<Element>? formatElement,
-    List<Code>? patchFormat,
-    @JsonKey(name: '_patchFormat') List<Element>? patchFormatElement,
-    List<Canonical>? implementationGuide,
-    List<CapabilityStatement2Rest>? rest,
-  }) = _CapabilityStatement2;
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory CapabilityStatement2.fromYaml(dynamic yaml) => yaml is String
-      ? CapabilityStatement2.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? CapabilityStatement2.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'CapabilityStatement2 cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CapabilityStatement2.fromJson(Map<String, dynamic> json) =>
-      _$CapabilityStatement2FromJson(json);
-
-  /// Acts like a constructor, returns a [CapabilityStatement2], accepts a
-  /// [String] as an argument, mostly because I got tired of typing it out
-  factory CapabilityStatement2.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$CapabilityStatement2FromJson(json);
-    } else {
-      throw FormatException('FormatException: You passed $json'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-/// [CapabilityStatement2Software] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
-@freezed
-class CapabilityStatement2Software with _$CapabilityStatement2Software {
-  CapabilityStatement2Software._();
-
-  /// [CapabilityStatement2Software] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
-
-  ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
-  ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-  ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  ///
-  /// [name] Name the software is known by.;
-  ///
-  /// [nameElement] (_name): Extensions for name;
-  ///
-  /// [version] The version identifier for the software covered by this statement.;
-  ///
-  /// [versionElement] (_version): Extensions for version;
-  ///
-  /// [releaseDate] Date this version of the software was released.;
-  ///
-  /// [releaseDateElement] (_releaseDate): Extensions for releaseDate;
-  factory CapabilityStatement2Software({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? version,
-    @JsonKey(name: '_version') Element? versionElement,
-    FhirDateTime? releaseDate,
-    @JsonKey(name: '_releaseDate') Element? releaseDateElement,
-  }) = _CapabilityStatement2Software;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory CapabilityStatement2Software.fromYaml(dynamic yaml) => yaml is String
-      ? CapabilityStatement2Software.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? CapabilityStatement2Software.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'CapabilityStatement2Software cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CapabilityStatement2Software.fromJson(Map<String, dynamic> json) =>
-      _$CapabilityStatement2SoftwareFromJson(json);
-
-  /// Acts like a constructor, returns a [CapabilityStatement2Software], accepts a
-  /// [String] as an argument, mostly because I got tired of typing it out
-  factory CapabilityStatement2Software.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$CapabilityStatement2SoftwareFromJson(json);
-    } else {
-      throw FormatException('FormatException: You passed $json'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class CapabilityStatement2Implementation
-    with _$CapabilityStatement2Implementation {
-  CapabilityStatement2Implementation._();
-
-  /// [CapabilityStatement2Implementation] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
-
-  ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
-  ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-  ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  ///
-  /// [description] Information about the specific installation that this capability statement relates to.;
-  ///
-  /// [descriptionElement] (_description): Extensions for description;
-  ///
-  /// [url] An absolute base URL for the implementation.  This forms the base for REST interfaces as well as the mailbox and document interfaces.;
-  ///
-  /// [urlElement] (_url): Extensions for url;
-  ///
-  /// [custodian] The organization responsible for the management of the instance and oversight of the data on the server at the specified URL.;
-  factory CapabilityStatement2Implementation({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    FhirUrl? url,
-    @JsonKey(name: '_url') Element? urlElement,
-    Reference? custodian,
-  }) = _CapabilityStatement2Implementation;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory CapabilityStatement2Implementation.fromYaml(dynamic yaml) => yaml
-          is String
-      ? CapabilityStatement2Implementation.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? CapabilityStatement2Implementation.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'CapabilityStatement2Implementation cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CapabilityStatement2Implementation.fromJson(
-          Map<String, dynamic> json) =>
-      _$CapabilityStatement2ImplementationFromJson(json);
-
-  /// Acts like a constructor, returns a [CapabilityStatement2Implementation], accepts a
-  /// [String] as an argument, mostly because I got tired of typing it out
-  factory CapabilityStatement2Implementation.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$CapabilityStatement2ImplementationFromJson(json);
-    } else {
-      throw FormatException('FormatException: You passed $json'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-/// [CapabilityStatement2Rest] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
-@freezed
-class CapabilityStatement2Rest with _$CapabilityStatement2Rest {
-  CapabilityStatement2Rest._();
-
-  /// [CapabilityStatement2Rest] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
-
-  ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
-  ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-  ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  ///
-  /// [mode] Identifies whether this portion of the statement is describing the ability to initiate or receive restful operations.;
-  ///
-  /// [modeElement] (_mode): Extensions for mode;
-  ///
-  /// [documentation] Information about the system's restful capabilities that apply across all applications, such as security.;
-  ///
-  /// [documentationElement] (_documentation): Extensions for documentation;
-  ///
-  /// [feature] A statement that affirms support for a feature.;
-  ///
-  /// [resource] A specification of the restful capabilities of the solution for a specific resource type.;
-  ///
-  /// [interaction] A specification of restful operations supported by the system.;
-  ///
-  /// [searchParam] Search parameters that are supported for searching all resources for implementations to support and/or make use of - either references to ones defined in the specification, or additional ones defined for/by the implementation.;
-  ///
-  /// [operation] Definition of an operation or a named query together with its parameters and their meaning and type.;
-  ///
-  /// [compartment] An absolute URI which is a reference to the definition of a compartment that the system supports. The reference is to a CompartmentDefinition resource by its canonical URL .;
-  factory CapabilityStatement2Rest({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? mode,
-    @JsonKey(name: '_mode') Element? modeElement,
-    Markdown? documentation,
-    @JsonKey(name: '_documentation') Element? documentationElement,
-    List<CapabilityStatement2Feature>? feature,
-    List<CapabilityStatement2Resource>? resource,
-    List<CapabilityStatement2Interaction1>? interaction,
-    List<CapabilityStatement2SearchParam>? searchParam,
-    List<CapabilityStatement2Operation>? operation,
-    List<Canonical>? compartment,
-  }) = _CapabilityStatement2Rest;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory CapabilityStatement2Rest.fromYaml(dynamic yaml) => yaml is String
-      ? CapabilityStatement2Rest.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? CapabilityStatement2Rest.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'CapabilityStatement2Rest cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CapabilityStatement2Rest.fromJson(Map<String, dynamic> json) =>
-      _$CapabilityStatement2RestFromJson(json);
-
-  /// Acts like a constructor, returns a [CapabilityStatement2Rest], accepts a
-  /// [String] as an argument, mostly because I got tired of typing it out
-  factory CapabilityStatement2Rest.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$CapabilityStatement2RestFromJson(json);
-    } else {
-      throw FormatException('FormatException: You passed $json'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-/// [CapabilityStatement2Feature] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
-@freezed
-class CapabilityStatement2Feature with _$CapabilityStatement2Feature {
-  CapabilityStatement2Feature._();
-
-  /// [CapabilityStatement2Feature] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
-
-  ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
-  ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-  ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  ///
-  /// [code] A code that describes the feature being reported on.;
-  ///
-  /// [codeElement] (_code): Extensions for code;
-  ///
-  /// [value] A value for the feature - maybe true, false, or one of the set of codes allowed in the definition of the feature code.;
-  ///
-  /// [valueElement] (_value): Extensions for value;
-  factory CapabilityStatement2Feature({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? code,
-    @JsonKey(name: '_code') Element? codeElement,
-    Code? value,
-    @JsonKey(name: '_value') Element? valueElement,
-  }) = _CapabilityStatement2Feature;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory CapabilityStatement2Feature.fromYaml(dynamic yaml) => yaml is String
-      ? CapabilityStatement2Feature.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? CapabilityStatement2Feature.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'CapabilityStatement2Feature cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CapabilityStatement2Feature.fromJson(Map<String, dynamic> json) =>
-      _$CapabilityStatement2FeatureFromJson(json);
-
-  /// Acts like a constructor, returns a [CapabilityStatement2Feature], accepts a
-  /// [String] as an argument, mostly because I got tired of typing it out
-  factory CapabilityStatement2Feature.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$CapabilityStatement2FeatureFromJson(json);
-    } else {
-      throw FormatException('FormatException: You passed $json'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-/// [CapabilityStatement2Resource] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
-@freezed
-class CapabilityStatement2Resource with _$CapabilityStatement2Resource {
-  CapabilityStatement2Resource._();
-
-  /// [CapabilityStatement2Resource] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
-
-  ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
-  ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-  ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  ///
-  /// [type] A type of resource exposed via the restful interface.;
-  ///
-  /// [typeElement] (_type): Extensions for type;
-  ///
-  /// [profile] A specification of the profile that describes the solution's overall support for the resource, including any constraints on cardinality, bindings, lengths or other limitations. See further discussion in [Using Profiles](profiling.html#profile-uses).;
-  ///
-  /// [supportedProfile] A list of profiles that represent different use cases supported by the system. For a server, "supported by the system" means the system hosts/produces a set of resources that are conformant to a particular profile, and allows clients that use its services to search using this profile and to find appropriate data. For a client, it means the system will search by this profile and process data according to the guidance implicit in the profile. See further discussion in [Using Profiles](profiling.html#profile-uses).;
-  ///
-  /// [documentation] Additional information about the resource type used by the system.;
-  ///
-  /// [documentationElement] (_documentation): Extensions for documentation;
-  ///
-  /// [feature] A statement that affirms support for a feature, in this context.;
-  ///
-  /// [interaction] Identifies a restful operation supported by the solution.;
-  ///
-  /// [searchParam] Search parameters for implementations to support and/or make use of - either references to ones defined in the specification, or additional ones defined for/by the implementation.;
-  ///
-  /// [operation] Definition of an operation or a named query together with its parameters and their meaning and type. Consult the definition of the operation for details about how to invoke the operation, and the parameters.;
-  factory CapabilityStatement2Resource({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    Canonical? profile,
-    List<Canonical>? supportedProfile,
-    Markdown? documentation,
-    @JsonKey(name: '_documentation') Element? documentationElement,
-    List<CapabilityStatement2Feature>? feature,
-    List<CapabilityStatement2Interaction>? interaction,
-    List<CapabilityStatement2SearchParam>? searchParam,
-    List<CapabilityStatement2Operation>? operation,
-  }) = _CapabilityStatement2Resource;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory CapabilityStatement2Resource.fromYaml(dynamic yaml) => yaml is String
-      ? CapabilityStatement2Resource.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? CapabilityStatement2Resource.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'CapabilityStatement2Resource cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CapabilityStatement2Resource.fromJson(Map<String, dynamic> json) =>
-      _$CapabilityStatement2ResourceFromJson(json);
-
-  /// Acts like a constructor, returns a [CapabilityStatement2Resource], accepts a
-  /// [String] as an argument, mostly because I got tired of typing it out
-  factory CapabilityStatement2Resource.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$CapabilityStatement2ResourceFromJson(json);
-    } else {
-      throw FormatException('FormatException: You passed $json'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-/// [CapabilityStatement2Interaction] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
-@freezed
-class CapabilityStatement2Interaction with _$CapabilityStatement2Interaction {
-  CapabilityStatement2Interaction._();
-
-  /// [CapabilityStatement2Interaction] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
-
-  ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
-  ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-  ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  ///
-  /// [code] Coded identifier of the operation, supported by the system resource.;
-  ///
-  /// [codeElement] (_code): Extensions for code;
-  ///
-  /// [documentation] Guidance specific to the implementation of this operation, such as 'delete is a logical delete' or 'updates are only allowed with version id' or 'creates permitted from pre-authorized certificates only'.;
-  ///
-  /// [documentationElement] (_documentation): Extensions for documentation;
-  ///
-  /// [feature] A statement that affirms support for a feature, in this context.;
-  factory CapabilityStatement2Interaction({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? code,
-    @JsonKey(name: '_code') Element? codeElement,
-    Markdown? documentation,
-    @JsonKey(name: '_documentation') Element? documentationElement,
-    List<CapabilityStatement2Feature>? feature,
-  }) = _CapabilityStatement2Interaction;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory CapabilityStatement2Interaction.fromYaml(dynamic yaml) => yaml
-          is String
-      ? CapabilityStatement2Interaction.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? CapabilityStatement2Interaction.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'CapabilityStatement2Interaction cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CapabilityStatement2Interaction.fromJson(Map<String, dynamic> json) =>
-      _$CapabilityStatement2InteractionFromJson(json);
-
-  /// Acts like a constructor, returns a [CapabilityStatement2Interaction], accepts a
-  /// [String] as an argument, mostly because I got tired of typing it out
-  factory CapabilityStatement2Interaction.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$CapabilityStatement2InteractionFromJson(json);
-    } else {
-      throw FormatException('FormatException: You passed $json'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-/// [CapabilityStatement2SearchParam] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
-@freezed
-class CapabilityStatement2SearchParam with _$CapabilityStatement2SearchParam {
-  CapabilityStatement2SearchParam._();
-
-  /// [CapabilityStatement2SearchParam] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
-
-  ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
-  ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-  ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  ///
-  /// [name] The name of the search parameter used in the interface.;
-  ///
-  /// [nameElement] (_name): Extensions for name;
-  ///
-  /// [definition] An absolute URI that is a formal reference to where this parameter was first defined, so that a client can be confident of the meaning of the search parameter (a reference to [SearchParameter.url](searchparameter-definitions.html#SearchParameter.url)). This element SHALL be populated if the search parameter refers to a SearchParameter defined by the FHIR core specification or externally defined IGs.;
-  ///
-  /// [type] The type of value a search parameter refers to, and how the content is interpreted.;
-  ///
-  /// [typeElement] (_type): Extensions for type;
-  ///
-  /// [documentation] This allows documentation of any distinct behaviors about how the search parameter is used.  For example, text matching algorithms.;
-  ///
-  /// [documentationElement] (_documentation): Extensions for documentation;
-  ///
-  /// [feature] A statement that affirms support for a feature, in this context.;
-  factory CapabilityStatement2SearchParam({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    Canonical? definition,
-    Code? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    Markdown? documentation,
-    @JsonKey(name: '_documentation') Element? documentationElement,
-    List<CapabilityStatement2Feature>? feature,
-  }) = _CapabilityStatement2SearchParam;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory CapabilityStatement2SearchParam.fromYaml(dynamic yaml) => yaml
-          is String
-      ? CapabilityStatement2SearchParam.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? CapabilityStatement2SearchParam.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'CapabilityStatement2SearchParam cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CapabilityStatement2SearchParam.fromJson(Map<String, dynamic> json) =>
-      _$CapabilityStatement2SearchParamFromJson(json);
-
-  /// Acts like a constructor, returns a [CapabilityStatement2SearchParam], accepts a
-  /// [String] as an argument, mostly because I got tired of typing it out
-  factory CapabilityStatement2SearchParam.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$CapabilityStatement2SearchParamFromJson(json);
-    } else {
-      throw FormatException('FormatException: You passed $json'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-/// [CapabilityStatement2Operation] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
-@freezed
-class CapabilityStatement2Operation with _$CapabilityStatement2Operation {
-  CapabilityStatement2Operation._();
-
-  /// [CapabilityStatement2Operation] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
-
-  ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
-  ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-  ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  ///
-  /// [name] The name of the operation or query. For an operation, this is the name  prefixed with $ and used in the URL. For a query, this is the name used in the _query parameter when the query is called.;
-  ///
-  /// [nameElement] (_name): Extensions for name;
-  ///
-  /// [definition] Where the formal definition can be found. If a server references the base definition of an Operation (i.e. from the specification itself such as ```http://hl7.org/fhir/OperationDefinition/ValueSet-expand```), that means it supports the full capabilities of the operation - e.g. both GET and POST invocation.  If it only supports a subset, it must define its own custom [OperationDefinition](operationdefinition.html#) with a 'base' of the original OperationDefinition.  The custom definition would describe the specific subset of functionality supported.;
-  ///
-  /// [documentation] Documentation that describes anything special about the operation behavior, possibly detailing different behavior for system, type and instance-level invocation of the operation.;
-  ///
-  /// [documentationElement] (_documentation): Extensions for documentation;
-  ///
-  /// [feature] A statement that affirms support for a feature, in this context.;
-  factory CapabilityStatement2Operation({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    required Canonical definition,
-    Markdown? documentation,
-    @JsonKey(name: '_documentation') Element? documentationElement,
-    List<CapabilityStatement2Feature>? feature,
-  }) = _CapabilityStatement2Operation;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory CapabilityStatement2Operation.fromYaml(dynamic yaml) => yaml is String
-      ? CapabilityStatement2Operation.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? CapabilityStatement2Operation.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'CapabilityStatement2Operation cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CapabilityStatement2Operation.fromJson(Map<String, dynamic> json) =>
-      _$CapabilityStatement2OperationFromJson(json);
-
-  /// Acts like a constructor, returns a [CapabilityStatement2Operation], accepts a
-  /// [String] as an argument, mostly because I got tired of typing it out
-  factory CapabilityStatement2Operation.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$CapabilityStatement2OperationFromJson(json);
-    } else {
-      throw FormatException('FormatException: You passed $json'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-/// [CapabilityStatement2Interaction1] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
-@freezed
-class CapabilityStatement2Interaction1 with _$CapabilityStatement2Interaction1 {
-  CapabilityStatement2Interaction1._();
-
-  /// [CapabilityStatement2Interaction1] A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation.
-
-  ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
-  ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-  ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  ///
-  /// [code] A coded identifier of the operation, supported by the system.;
-  ///
-  /// [codeElement] (_code): Extensions for code;
-  ///
-  /// [documentation] Guidance specific to the implementation of this operation, such as limitations on the kind of transactions allowed, or information about system wide search is implemented.;
-  ///
-  /// [documentationElement] (_documentation): Extensions for documentation;
-  ///
-  /// [feature] A statement that affirms support for a feature, in this context.;
-  factory CapabilityStatement2Interaction1({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? code,
-    @JsonKey(name: '_code') Element? codeElement,
-    Markdown? documentation,
-    @JsonKey(name: '_documentation') Element? documentationElement,
-    List<CapabilityStatement2Feature>? feature,
-  }) = _CapabilityStatement2Interaction1;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory CapabilityStatement2Interaction1.fromYaml(dynamic yaml) => yaml
-          is String
-      ? CapabilityStatement2Interaction1.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? CapabilityStatement2Interaction1.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'CapabilityStatement2Interaction1 cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CapabilityStatement2Interaction1.fromJson(
-          Map<String, dynamic> json) =>
-      _$CapabilityStatement2Interaction1FromJson(json);
-
-  /// Acts like a constructor, returns a [CapabilityStatement2Interaction1], accepts a
-  /// [String] as an argument, mostly because I got tired of typing it out
-  factory CapabilityStatement2Interaction1.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$CapabilityStatement2Interaction1FromJson(json);
-    } else {
-      throw FormatException('FormatException: You passed $json'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-/// [CompartmentDefinition] A compartment definition that defines how resources are accessed on a server.
+/// [CompartmentDefinition] A compartment definition that defines how resources
+///  are accessed on a server.
 @freezed
 class CompartmentDefinition with Resource, _$CompartmentDefinition {
+  /// [CompartmentDefinition] A compartment definition that defines how
+  ///  resources are accessed on a server.
   CompartmentDefinition._();
 
-  /// [CompartmentDefinition] A compartment definition that defines how resources are accessed on a server.
-
+  /// [CompartmentDefinition] A compartment definition that defines how
+  ///  resources are accessed on a server.
   ///
-  /// [resourceType] This is a CompartmentDefinition resource;
+  /// [resourceType] This is a CompartmentDefinition resource
   ///
-  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
   ///
-  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  /// [meta] The metadata about the resource. This is content that is
+  ///  maintained by the infrastructure. Changes to the content might not
+  ///  always be associated with version changes to the resource.
   ///
-  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  ///  resource was constructed, and which must be understood when processing
+  ///  the content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   ///
-  /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   ///
-  /// [language] The base language in which the resource is written.;
+  /// [language] The base language in which the resource is written.
   ///
-  /// [languageElement] (_language): Extensions for language;
+  /// [languageElement] ("_language") Extensions for language
   ///
-  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  /// [text] A human-readable narrative that contains a summary of the resource
+  ///  and can be used to represent the content of the resource to a human. The
+  ///  narrative need not encode all the structured data, but is required to
+  ///  contain sufficient detail to make it "clinically safe" for a human to
+  ///  just read the narrative. Resource definitions may define what content
+  ///  should be represented in the narrative to ensure clinical safety.
   ///
-  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  /// [contained] These resources do not have an independent existence apart
+  ///  from the resource that contains them - they cannot be identified
+  ///  independently, nor can they have their own independent transaction
+  ///  scope. This is allowed to be a Parameters resource if and only if it is
+  ///  referenced by a resource that provides context/meaning.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the resource. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the resource and that modifies
+  ///  the understanding of the element that contains it and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  is allowed to define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension. Applications
+  ///  processing a resource are required to check for modifier
+  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
+  ///  elements on Resource or DomainResource (including cannot change the
+  ///  meaning of modifierExtension itself).
   ///
-  /// [url] An absolute URI that is used to identify this compartment definition when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this compartment definition is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the compartment definition is stored on different servers.;
+  /// [url] An absolute URI that is used to identify this compartment
+  ///  definition when it is referenced in a specification, model, design or an
+  ///  instance; also called its canonical identifier. This SHOULD be globally
+  ///  unique and SHOULD be a literal address at which an authoritative
+  ///  instance of this compartment definition is (or will be) published. This
+  ///  URL can be the target of a canonical reference. It SHALL remain the same
+  ///  when the compartment definition is stored on different servers.
   ///
-  /// [urlElement] (_url): Extensions for url;
+  /// [urlElement] ("_url") Extensions for url
   ///
-  /// [identifier] A formal identifier that is used to identify this {{title}} when it is represented in other formats, or referenced in a specification, model, design or an instance.;
+  /// [identifier] A formal identifier that is used to identify this {{title}}
+  ///  when it is represented in other formats, or referenced in a
+  ///  specification, model, design or an instance.
   ///
-  /// [version] The identifier that is used to identify this version of the compartment definition when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the compartment definition author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.;
+  /// [version] The identifier that is used to identify this version of the
+  ///  compartment definition when it is referenced in a specification, model,
+  ///  design or instance. This is an arbitrary value managed by the
+  ///  compartment definition author and is not expected to be globally unique.
+  ///  For example, it might be a timestamp (e.g. yyyymmdd) if a managed
+  ///  version is not available. There is also no expectation that versions can
+  ///  be placed in a lexicographical sequence.
   ///
-  /// [versionElement] (_version): Extensions for version;
+  /// [versionElement] ("_version") Extensions for version
   ///
-  /// [name] A natural language name identifying the compartment definition. This name should be usable as an identifier for the module by machine processing applications such as code generation.;
+  /// [versionAlgorithmString] Indicates the mechanism used to compare versions
+  ///  to determine which is more current.
   ///
-  /// [nameElement] (_name): Extensions for name;
+  /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
+  ///  for versionAlgorithmString
   ///
-  /// [title] A short, descriptive, user-friendly title for the {{title}}.;
+  /// [versionAlgorithmCoding] Indicates the mechanism used to compare versions
+  ///  to determine which is more current.
   ///
-  /// [titleElement] (_title): Extensions for title;
+  /// [name] A natural language name identifying the compartment definition.
+  ///  This name should be usable as an identifier for the module by machine
+  ///  processing applications such as code generation.
   ///
-  /// [status] The status of this compartment definition. Enables tracking the life-cycle of the content.;
+  /// [nameElement] ("_name") Extensions for name
   ///
-  /// [statusElement] (_status): Extensions for status;
+  /// [title] A short, descriptive, user-friendly title for the capability
+  ///  statement.
   ///
-  /// [experimental] A Boolean value to indicate that this compartment definition is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.;
+  /// [titleElement] ("_title") Extensions for title
   ///
-  /// [experimentalElement] (_experimental): Extensions for experimental;
+  /// [status] The status of this compartment definition. Enables tracking the
+  ///  life-cycle of the content.
   ///
-  /// [date] The date  (and optionally time) when the compartment definition was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the compartment definition changes.;
+  /// [statusElement] ("_status") Extensions for status
   ///
-  /// [dateElement] (_date): Extensions for date;
+  /// [experimental] A Boolean value to indicate that this compartment
+  ///  definition is authored for testing purposes (or
+  ///  education/evaluation/marketing) and is not intended to be used for
+  ///  genuine usage.
   ///
-  /// [publisher] The name of the organization or individual that published the compartment definition.;
+  /// [experimentalElement] ("_experimental") Extensions for experimental
   ///
-  /// [publisherElement] (_publisher): Extensions for publisher;
+  /// [date] The date  (and optionally time) when the compartment definition
+  ///  was last significantly changed. The date must change when the business
+  ///  version changes and it must change if the status code changes. In
+  ///  addition, it should change when the substantive content of the
+  ///  compartment definition changes.
   ///
-  /// [contact] Contact details to assist a user in finding and communicating with the publisher.;
+  /// [dateElement] ("_date") Extensions for date
   ///
-  /// [description] A free text natural language description of the compartment definition from a consumer's perspective.;
+  /// [publisher] The name of the organization or individual responsible for
+  ///  the release and ongoing maintenance of the compartment definition.
   ///
-  /// [descriptionElement] (_description): Extensions for description;
+  /// [publisherElement] ("_publisher") Extensions for publisher
   ///
-  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate compartment definition instances.;
+  /// [contact] Contact details to assist a user in finding and communicating
+  ///  with the publisher.
   ///
-  /// [jurisdiction] A legal or geographic region in which the {{title}} is intended to be used.;
+  /// [description] A free text natural language description of the compartment
+  ///  definition from a consumer's perspective.
   ///
-  /// [purpose] Explanation of why this compartment definition is needed and why it has been designed as it has.;
+  /// [descriptionElement] ("_description") Extensions for description
   ///
-  /// [purposeElement] (_purpose): Extensions for purpose;
+  /// [useContext] The content was developed with a focus and intent of
+  ///  supporting the contexts that are listed. These contexts may be general
+  ///  categories (gender, age, ...) or may be references to specific programs
+  ///  (insurance plans, studies, ...) and may be used to assist with indexing
+  ///  and searching for appropriate compartment definition instances.
   ///
-  /// [copyright] A copyright statement relating to the {{title}} and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the {{title}}.;
+  /// [jurisdiction] A legal or geographic region in which the {{title}} is
+  ///  intended to be used.
   ///
-  /// [copyrightElement] (_copyright): Extensions for copyright;
+  /// [purpose] Explanation of why this compartment definition is needed and
+  ///  why it has been designed as it has.
   ///
-  /// [code] Which compartment this definition describes.;
+  /// [purposeElement] ("_purpose") Extensions for purpose
   ///
-  /// [codeElement] (_code): Extensions for code;
+  /// [copyright] A copyright statement relating to the {{title}} and/or its
+  ///  contents. Copyright statements are generally legal restrictions on the
+  ///  use and publishing of the {{title}}.
   ///
-  /// [search] Whether the search syntax is supported,.;
+  /// [copyrightElement] ("_copyright") Extensions for copyright
   ///
-  /// [searchElement] (_search): Extensions for search;
+  /// [copyrightLabel] A short string (<50 characters), suitable for inclusion
+  ///  in a page footer that identifies the copyright holder, effective period,
+  ///  and optionally whether rights are resctricted. (e.g. 'All rights
+  ///  reserved', 'Some rights reserved').
   ///
-  /// [resource] Information about how a resource is related to the compartment.;
+  /// [copyrightLabelElement] ("_copyrightLabel") Extensions for copyrightLabel
+  ///
+  /// [code] Which compartment this definition describes.
+  ///
+  /// [codeElement] ("_code") Extensions for code
+  ///
+  /// [search] Whether the search syntax is supported,.
+  ///
+  /// [searchElement] ("_search") Extensions for search
+  ///
+  /// [resource] Information about how a resource is related to the compartment.
+  ///
   factory CompartmentDefinition({
-    @Default(R5ResourceType.CompartmentDefinition) R5ResourceType resourceType,
+    /// [resourceType] This is a CompartmentDefinition resource
+    @Default(R5ResourceType.CompartmentDefinition)
+    @JsonKey(unknownEnumValue: R5ResourceType.CompartmentDefinition)
+        R5ResourceType resourceType,
+
+    /// [id] The logical id of the resource, as used in the URL for the resource.
+    /// Once assigned, this value never changes.
     Id? id,
+
+    /// [meta] The metadata about the resource. This is content that is
+    /// maintained by the infrastructure. Changes to the content might not
+    /// always be associated with version changes to the resource.
     Meta? meta,
+
+    /// [implicitRules] A reference to a set of rules that were followed when
+    /// the resource was constructed, and which must be understood when
+    /// processing the content. Often, this is a reference to an implementation
+    /// guide that defines the special rules along with other profiles etc.
     FhirUri? implicitRules,
+
+    /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+
+    /// [language] The base language in which the resource is written.
     Code? language,
+
+    /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
+
+    /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
     Narrative? text,
+
+    /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
     List<Resource>? contained,
+
+    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [url] An absolute URI that is used to identify this compartment definition when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this compartment definition is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the compartment definition is stored on different servers.
     FhirUri? url,
+
+    /// [urlElement] ("_url") Extensions for url
     @JsonKey(name: '_url') Element? urlElement,
+
+    /// [identifier] A formal identifier that is used to identify this {{title}} when it is represented in other formats, or referenced in a specification, model, design or an instance.
     List<Identifier>? identifier,
+
+    /// [version] The identifier that is used to identify this version of the compartment definition when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the compartment definition author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.
     String? version,
+
+    /// [versionElement] ("_version") Extensions for version
     @JsonKey(name: '_version') Element? versionElement,
+
+    /// [versionAlgorithmString] Indicates the mechanism used to compare versions to determine which is more current.
+    String? versionAlgorithmString,
+
+    /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions for versionAlgorithmString
+    @JsonKey(name: '_versionAlgorithmString')
+        Element? versionAlgorithmStringElement,
+
+    /// [versionAlgorithmCoding] Indicates the mechanism used to compare versions to determine which is more current.
+    Coding? versionAlgorithmCoding,
+
+    /// [name] A natural language name identifying the compartment definition. This name should be usable as an identifier for the module by machine processing applications such as code generation.
     String? name,
+
+    /// [nameElement] ("_name") Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
+
+    /// [title] A short, descriptive, user-friendly title for the capability statement.
     String? title,
+
+    /// [titleElement] ("_title") Extensions for title
     @JsonKey(name: '_title') Element? titleElement,
+
+    /// [status] The status of this compartment definition. Enables tracking the life-cycle of the content.
     Code? status,
+
+    /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
+
+    /// [experimental] A Boolean value to indicate that this compartment definition is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
     Boolean? experimental,
+
+    /// [experimentalElement] ("_experimental") Extensions for experimental
     @JsonKey(name: '_experimental') Element? experimentalElement,
+
+    /// [date] The date  (and optionally time) when the compartment definition was last significantly changed. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the compartment definition changes.
     FhirDateTime? date,
+
+    /// [dateElement] ("_date") Extensions for date
     @JsonKey(name: '_date') Element? dateElement,
+
+    /// [publisher] The name of the organization or individual responsible for the release and ongoing maintenance of the compartment definition.
     String? publisher,
+
+    /// [publisherElement] ("_publisher") Extensions for publisher
     @JsonKey(name: '_publisher') Element? publisherElement,
+
+    /// [contact] Contact details to assist a user in finding and communicating with the publisher.
     List<ContactDetail>? contact,
+
+    /// [description] A free text natural language description of the compartment definition from a consumer's perspective.
     Markdown? description,
+
+    /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
+
+    /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate compartment definition instances.
     List<UsageContext>? useContext,
+
+    /// [jurisdiction] A legal or geographic region in which the {{title}} is intended to be used.
     List<CodeableConcept>? jurisdiction,
+
+    /// [purpose] Explanation of why this compartment definition is needed and why it has been designed as it has.
     Markdown? purpose,
+
+    /// [purposeElement] ("_purpose") Extensions for purpose
     @JsonKey(name: '_purpose') Element? purposeElement,
+
+    /// [copyright] A copyright statement relating to the {{title}} and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the {{title}}.
     Markdown? copyright,
+
+    /// [copyrightElement] ("_copyright") Extensions for copyright
     @JsonKey(name: '_copyright') Element? copyrightElement,
+
+    /// [copyrightLabel] A short string (<50 characters), suitable for inclusion in a page footer that identifies the copyright holder, effective period, and optionally whether rights are resctricted. (e.g. 'All rights reserved', 'Some rights reserved').
+    String? copyrightLabel,
+
+    /// [copyrightLabelElement] ("_copyrightLabel") Extensions for copyrightLabel
+    @JsonKey(name: '_copyrightLabel') Element? copyrightLabelElement,
+
+    /// [code] Which compartment this definition describes.
     Code? code,
+
+    /// [codeElement] ("_code") Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
+
+    /// [search] Whether the search syntax is supported,.
     Boolean? search,
+
+    /// [searchElement] ("_search") Extensions for search
     @JsonKey(name: '_search') Element? searchElement,
+
+    /// [resource] Information about how a resource is related to the compartment.
     List<CompartmentDefinitionResource>? resource,
   }) = _CompartmentDefinition;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CompartmentDefinition.fromYaml(dynamic yaml) => yaml is String
@@ -2173,49 +2756,130 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
     if (json is Map<String, dynamic>) {
       return _$CompartmentDefinitionFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [CompartmentDefinitionResource] A compartment definition that defines how resources are accessed on a server.
+/// [CompartmentDefinitionResource] A compartment definition that defines how
+///  resources are accessed on a server.
 @freezed
 class CompartmentDefinitionResource with _$CompartmentDefinitionResource {
+  /// [CompartmentDefinitionResource] A compartment definition that defines how
+  ///  resources are accessed on a server.
   CompartmentDefinitionResource._();
 
-  /// [CompartmentDefinitionResource] A compartment definition that defines how resources are accessed on a server.
-
+  /// [CompartmentDefinitionResource] A compartment definition that defines how
+  ///  resources are accessed on a server.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [code] The name of a resource supported by the server.;
+  /// [code] The name of a resource supported by the server.
   ///
-  /// [codeElement] (_code): Extensions for code;
+  /// [codeElement] ("_code") Extensions for code
   ///
-  /// [param] The name of a search parameter that represents the link to the compartment. More than one may be listed because a resource may be linked to a compartment in more than one way,.;
+  /// [param] The name of a search parameter that represents the link to the
+  ///  compartment. More than one may be listed because a resource may be
+  ///  linked to a compartment in more than one way,.
   ///
-  /// [paramElement] (_param): Extensions for param;
+  /// [paramElement] ("_param") Extensions for param
   ///
-  /// [documentation] Additional documentation about the resource and compartment.;
+  /// [documentation] Additional documentation about the resource and
+  ///  compartment.
   ///
-  /// [documentationElement] (_documentation): Extensions for documentation;
+  /// [documentationElement] ("_documentation") Extensions for documentation
+  ///
+  /// [startParam] Search Parameter for mapping requests made with
+  ///  $everything.start (e.g. on
+  ///  [Patient.$everything](patient-operation-everything.html)).
+  ///
+  /// [startParamElement] ("_startParam") Extensions for startParam
+  ///
+  /// [endParam] Search Parameter for mapping requests made with
+  ///  $everything.end (e.g. on
+  ///  [Patient.$everything](patient-operation-everything.html)).
+  ///
+  /// [endParamElement] ("_endParam") Extensions for endParam
+  ///
   factory CompartmentDefinitionResource({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [code] The name of a resource supported by the server.
     Code? code,
+
+    /// [codeElement] ("_code") Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
+
+    /// [param] The name of a search parameter that represents the link to the compartment. More than one may be listed because a resource may be linked to a compartment in more than one way,.
     List<String>? param,
+
+    /// [paramElement] ("_param") Extensions for param
     @JsonKey(name: '_param') List<Element>? paramElement,
+
+    /// [documentation] Additional documentation about the resource and compartment.
     String? documentation,
+
+    /// [documentationElement] ("_documentation") Extensions for documentation
     @JsonKey(name: '_documentation') Element? documentationElement,
+
+    /// [startParam] Search Parameter for mapping requests made with $everything.start (e.g. on [Patient.$everything](patient-operation-everything.html)).
+    FhirUri? startParam,
+
+    /// [startParamElement] ("_startParam") Extensions for startParam
+    @JsonKey(name: '_startParam') Element? startParamElement,
+
+    /// [endParam] Search Parameter for mapping requests made with $everything.end (e.g. on [Patient.$everything](patient-operation-everything.html)).
+    FhirUri? endParam,
+
+    /// [endParamElement] ("_endParam") Extensions for endParam
+    @JsonKey(name: '_endParam') Element? endParamElement,
   }) = _CompartmentDefinitionResource;
 
   /// Produces a Yaml formatted String version of the object
@@ -2236,923 +2900,355 @@ class CompartmentDefinitionResource with _$CompartmentDefinitionResource {
   factory CompartmentDefinitionResource.fromJson(Map<String, dynamic> json) =>
       _$CompartmentDefinitionResourceFromJson(json);
 
-  /// Acts like a constructor, returns a [CompartmentDefinitionResource], accepts a
+  /// Acts like a constructor, returns a [CompartmentDefinitionResource],
+  ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CompartmentDefinitionResource.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CompartmentDefinitionResourceFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [ExampleScenario] Example of workflow instance.
-@freezed
-class ExampleScenario with Resource, _$ExampleScenario {
-  ExampleScenario._();
-
-  /// [ExampleScenario] Example of workflow instance.
-
-  ///
-  /// [resourceType] This is a ExampleScenario resource;
-  ///
-  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
-  ///
-  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
-  ///
-  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
-  ///
-  /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
-  ///
-  /// [language] The base language in which the resource is written.;
-  ///
-  /// [languageElement] (_language): Extensions for language;
-  ///
-  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
-  ///
-  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
-  ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-  ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  ///
-  /// [url] An absolute URI that is used to identify this example scenario when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this example scenario is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the example scenario is stored on different servers.;
-  ///
-  /// [urlElement] (_url): Extensions for url;
-  ///
-  /// [identifier] A formal identifier that is used to identify this example scenario when it is represented in other formats, or referenced in a specification, model, design or an instance.;
-  ///
-  /// [version] The identifier that is used to identify this version of the example scenario when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the example scenario author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.;
-  ///
-  /// [versionElement] (_version): Extensions for version;
-  ///
-  /// [name] A natural language name identifying the example scenario. This name should be usable as an identifier for the module by machine processing applications such as code generation.;
-  ///
-  /// [nameElement] (_name): Extensions for name;
-  ///
-  /// [title] A short, descriptive, user-friendly title for the {{title}}.;
-  ///
-  /// [titleElement] (_title): Extensions for title;
-  ///
-  /// [status] The status of this example scenario. Enables tracking the life-cycle of the content.;
-  ///
-  /// [statusElement] (_status): Extensions for status;
-  ///
-  /// [experimental] A Boolean value to indicate that this example scenario is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.;
-  ///
-  /// [experimentalElement] (_experimental): Extensions for experimental;
-  ///
-  /// [date] The date  (and optionally time) when the example scenario was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the example scenario changes. (e.g. the 'content logical definition').;
-  ///
-  /// [dateElement] (_date): Extensions for date;
-  ///
-  /// [publisher] The name of the organization or individual that published the example scenario.;
-  ///
-  /// [publisherElement] (_publisher): Extensions for publisher;
-  ///
-  /// [contact] Contact details to assist a user in finding and communicating with the publisher.;
-  ///
-  /// [description] A free text natural language description of the {{title}} from a consumer's perspective.;
-  ///
-  /// [descriptionElement] (_description): Extensions for description;
-  ///
-  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate example scenario instances.;
-  ///
-  /// [jurisdiction] A legal or geographic region in which the example scenario is intended to be used.;
-  ///
-  /// [purpose] What the example scenario resource is created for. This should not be used to show the business purpose of the scenario itself, but the purpose of documenting a scenario.;
-  ///
-  /// [purposeElement] (_purpose): Extensions for purpose;
-  ///
-  /// [copyright] A copyright statement relating to the example scenario and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the example scenario.;
-  ///
-  /// [copyrightElement] (_copyright): Extensions for copyright;
-  ///
-  /// [actor] Actor participating in the resource.;
-  ///
-  /// [instance] Each resource and each version that is present in the workflow.;
-  ///
-  /// [process] Each major process - a group of operations.;
-  ///
-  /// [workflow] Another nested workflow.;
-  factory ExampleScenario({
-    @Default(R5ResourceType.ExampleScenario) R5ResourceType resourceType,
-    Id? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    FhirUri? url,
-    @JsonKey(name: '_url') Element? urlElement,
-    List<Identifier>? identifier,
-    String? version,
-    @JsonKey(name: '_version') Element? versionElement,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? title,
-    @JsonKey(name: '_title') Element? titleElement,
-    Code? status,
-    @JsonKey(name: '_status') Element? statusElement,
-    Boolean? experimental,
-    @JsonKey(name: '_experimental') Element? experimentalElement,
-    FhirDateTime? date,
-    @JsonKey(name: '_date') Element? dateElement,
-    String? publisher,
-    @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail>? contact,
-    Markdown? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext>? useContext,
-    List<CodeableConcept>? jurisdiction,
-    Markdown? purpose,
-    @JsonKey(name: '_purpose') Element? purposeElement,
-    Markdown? copyright,
-    @JsonKey(name: '_copyright') Element? copyrightElement,
-    List<ExampleScenarioActor>? actor,
-    List<ExampleScenarioInstance>? instance,
-    List<ExampleScenarioProcess>? process,
-    List<Canonical>? workflow,
-  }) = _ExampleScenario;
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ExampleScenario.fromYaml(dynamic yaml) => yaml is String
-      ? ExampleScenario.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ExampleScenario.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ExampleScenario cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ExampleScenario.fromJson(Map<String, dynamic> json) =>
-      _$ExampleScenarioFromJson(json);
-
-  /// Acts like a constructor, returns a [ExampleScenario], accepts a
-  /// [String] as an argument, mostly because I got tired of typing it out
-  factory ExampleScenario.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ExampleScenarioFromJson(json);
-    } else {
-      throw FormatException('FormatException: You passed $json'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-/// [ExampleScenarioActor] Example of workflow instance.
-@freezed
-class ExampleScenarioActor with _$ExampleScenarioActor {
-  ExampleScenarioActor._();
-
-  /// [ExampleScenarioActor] Example of workflow instance.
-
-  ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
-  ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-  ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  ///
-  /// [actorId] ID or acronym of actor.;
-  ///
-  /// [actorIdElement] (_actorId): Extensions for actorId;
-  ///
-  /// [type] The type of actor - person or system.;
-  ///
-  /// [typeElement] (_type): Extensions for type;
-  ///
-  /// [name] The name of the actor as shown in the page.;
-  ///
-  /// [nameElement] (_name): Extensions for name;
-  ///
-  /// [description] The description of the actor.;
-  ///
-  /// [descriptionElement] (_description): Extensions for description;
-  factory ExampleScenarioActor({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? actorId,
-    @JsonKey(name: '_actorId') Element? actorIdElement,
-    Code? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    Markdown? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-  }) = _ExampleScenarioActor;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ExampleScenarioActor.fromYaml(dynamic yaml) => yaml is String
-      ? ExampleScenarioActor.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ExampleScenarioActor.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ExampleScenarioActor cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ExampleScenarioActor.fromJson(Map<String, dynamic> json) =>
-      _$ExampleScenarioActorFromJson(json);
-
-  /// Acts like a constructor, returns a [ExampleScenarioActor], accepts a
-  /// [String] as an argument, mostly because I got tired of typing it out
-  factory ExampleScenarioActor.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ExampleScenarioActorFromJson(json);
-    } else {
-      throw FormatException('FormatException: You passed $json'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-/// [ExampleScenarioInstance] Example of workflow instance.
-@freezed
-class ExampleScenarioInstance with _$ExampleScenarioInstance {
-  ExampleScenarioInstance._();
-
-  /// [ExampleScenarioInstance] Example of workflow instance.
-
-  ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
-  ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-  ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  ///
-  /// [resourceId] The id of the resource for referencing.;
-  ///
-  /// [resourceIdElement] (_resourceId): Extensions for resourceId;
-  ///
-  /// [resourceType] The type of the resource.;
-  ///
-  /// [resourceTypeElement] (_resourceType): Extensions for resourceType;
-  ///
-  /// [name] A short name for the resource instance.;
-  ///
-  /// [nameElement] (_name): Extensions for name;
-  ///
-  /// [description] Human-friendly description of the resource instance.;
-  ///
-  /// [descriptionElement] (_description): Extensions for description;
-  ///
-  /// [version] A specific version of the resource.;
-  ///
-  /// [containedInstance] Resources contained in the instance (e.g. the observations contained in a bundle).;
-  factory ExampleScenarioInstance({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? resourceId,
-    @JsonKey(name: '_resourceId') Element? resourceIdElement,
-    Code? resourceType,
-    @JsonKey(name: '_resourceType') Element? resourceTypeElement,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    Markdown? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    List<ExampleScenarioVersion>? version,
-    List<ExampleScenarioContainedInstance>? containedInstance,
-  }) = _ExampleScenarioInstance;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ExampleScenarioInstance.fromYaml(dynamic yaml) => yaml is String
-      ? ExampleScenarioInstance.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ExampleScenarioInstance.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ExampleScenarioInstance cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ExampleScenarioInstance.fromJson(Map<String, dynamic> json) =>
-      _$ExampleScenarioInstanceFromJson(json);
-
-  /// Acts like a constructor, returns a [ExampleScenarioInstance], accepts a
-  /// [String] as an argument, mostly because I got tired of typing it out
-  factory ExampleScenarioInstance.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ExampleScenarioInstanceFromJson(json);
-    } else {
-      throw FormatException('FormatException: You passed $json'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-/// [ExampleScenarioVersion] Example of workflow instance.
-@freezed
-class ExampleScenarioVersion with _$ExampleScenarioVersion {
-  ExampleScenarioVersion._();
-
-  /// [ExampleScenarioVersion] Example of workflow instance.
-
-  ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
-  ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-  ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  ///
-  /// [versionId] The identifier of a specific version of a resource.;
-  ///
-  /// [versionIdElement] (_versionId): Extensions for versionId;
-  ///
-  /// [description] The description of the resource version.;
-  ///
-  /// [descriptionElement] (_description): Extensions for description;
-  factory ExampleScenarioVersion({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? versionId,
-    @JsonKey(name: '_versionId') Element? versionIdElement,
-    Markdown? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-  }) = _ExampleScenarioVersion;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ExampleScenarioVersion.fromYaml(dynamic yaml) => yaml is String
-      ? ExampleScenarioVersion.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ExampleScenarioVersion.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ExampleScenarioVersion cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ExampleScenarioVersion.fromJson(Map<String, dynamic> json) =>
-      _$ExampleScenarioVersionFromJson(json);
-
-  /// Acts like a constructor, returns a [ExampleScenarioVersion], accepts a
-  /// [String] as an argument, mostly because I got tired of typing it out
-  factory ExampleScenarioVersion.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ExampleScenarioVersionFromJson(json);
-    } else {
-      throw FormatException('FormatException: You passed $json'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-/// [ExampleScenarioContainedInstance] Example of workflow instance.
-@freezed
-class ExampleScenarioContainedInstance with _$ExampleScenarioContainedInstance {
-  ExampleScenarioContainedInstance._();
-
-  /// [ExampleScenarioContainedInstance] Example of workflow instance.
-
-  ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
-  ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-  ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  ///
-  /// [resourceId] Each resource contained in the instance.;
-  ///
-  /// [resourceIdElement] (_resourceId): Extensions for resourceId;
-  ///
-  /// [versionId] A specific version of a resource contained in the instance.;
-  ///
-  /// [versionIdElement] (_versionId): Extensions for versionId;
-  factory ExampleScenarioContainedInstance({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? resourceId,
-    @JsonKey(name: '_resourceId') Element? resourceIdElement,
-    String? versionId,
-    @JsonKey(name: '_versionId') Element? versionIdElement,
-  }) = _ExampleScenarioContainedInstance;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ExampleScenarioContainedInstance.fromYaml(dynamic yaml) => yaml
-          is String
-      ? ExampleScenarioContainedInstance.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ExampleScenarioContainedInstance.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ExampleScenarioContainedInstance cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ExampleScenarioContainedInstance.fromJson(
-          Map<String, dynamic> json) =>
-      _$ExampleScenarioContainedInstanceFromJson(json);
-
-  /// Acts like a constructor, returns a [ExampleScenarioContainedInstance], accepts a
-  /// [String] as an argument, mostly because I got tired of typing it out
-  factory ExampleScenarioContainedInstance.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ExampleScenarioContainedInstanceFromJson(json);
-    } else {
-      throw FormatException('FormatException: You passed $json'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-/// [ExampleScenarioProcess] Example of workflow instance.
-@freezed
-class ExampleScenarioProcess with _$ExampleScenarioProcess {
-  ExampleScenarioProcess._();
-
-  /// [ExampleScenarioProcess] Example of workflow instance.
-
-  ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
-  ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-  ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  ///
-  /// [title] The diagram title of the group of operations.;
-  ///
-  /// [titleElement] (_title): Extensions for title;
-  ///
-  /// [description] A longer description of the group of operations.;
-  ///
-  /// [descriptionElement] (_description): Extensions for description;
-  ///
-  /// [preConditions] Description of initial status before the process starts.;
-  ///
-  /// [preConditionsElement] (_preConditions): Extensions for preConditions;
-  ///
-  /// [postConditions] Description of final status after the process ends.;
-  ///
-  /// [postConditionsElement] (_postConditions): Extensions for postConditions;
-  ///
-  /// [step] Each step of the process.;
-  factory ExampleScenarioProcess({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? title,
-    @JsonKey(name: '_title') Element? titleElement,
-    Markdown? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    Markdown? preConditions,
-    @JsonKey(name: '_preConditions') Element? preConditionsElement,
-    Markdown? postConditions,
-    @JsonKey(name: '_postConditions') Element? postConditionsElement,
-    List<ExampleScenarioStep>? step,
-  }) = _ExampleScenarioProcess;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ExampleScenarioProcess.fromYaml(dynamic yaml) => yaml is String
-      ? ExampleScenarioProcess.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ExampleScenarioProcess.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ExampleScenarioProcess cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ExampleScenarioProcess.fromJson(Map<String, dynamic> json) =>
-      _$ExampleScenarioProcessFromJson(json);
-
-  /// Acts like a constructor, returns a [ExampleScenarioProcess], accepts a
-  /// [String] as an argument, mostly because I got tired of typing it out
-  factory ExampleScenarioProcess.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ExampleScenarioProcessFromJson(json);
-    } else {
-      throw FormatException('FormatException: You passed $json'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-/// [ExampleScenarioStep] Example of workflow instance.
-@freezed
-class ExampleScenarioStep with _$ExampleScenarioStep {
-  ExampleScenarioStep._();
-
-  /// [ExampleScenarioStep] Example of workflow instance.
-
-  ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
-  ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-  ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  ///
-  /// [process] Nested process.;
-  ///
-  /// [pause] If there is a pause in the flow.;
-  ///
-  /// [pauseElement] (_pause): Extensions for pause;
-  ///
-  /// [operation] Each interaction or action.;
-  ///
-  /// [alternative] Indicates an alternative step that can be taken instead of the operations on the base step in exceptional/atypical circumstances.;
-  factory ExampleScenarioStep({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<ExampleScenarioProcess>? process,
-    Boolean? pause,
-    @JsonKey(name: '_pause') Element? pauseElement,
-    ExampleScenarioOperation? operation,
-    List<ExampleScenarioAlternative>? alternative,
-  }) = _ExampleScenarioStep;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ExampleScenarioStep.fromYaml(dynamic yaml) => yaml is String
-      ? ExampleScenarioStep.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ExampleScenarioStep.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ExampleScenarioStep cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ExampleScenarioStep.fromJson(Map<String, dynamic> json) =>
-      _$ExampleScenarioStepFromJson(json);
-
-  /// Acts like a constructor, returns a [ExampleScenarioStep], accepts a
-  /// [String] as an argument, mostly because I got tired of typing it out
-  factory ExampleScenarioStep.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ExampleScenarioStepFromJson(json);
-    } else {
-      throw FormatException('FormatException: You passed $json'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-/// [ExampleScenarioOperation] Example of workflow instance.
-@freezed
-class ExampleScenarioOperation with _$ExampleScenarioOperation {
-  ExampleScenarioOperation._();
-
-  /// [ExampleScenarioOperation] Example of workflow instance.
-
-  ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
-  ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-  ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  ///
-  /// [number] The sequential number of the interaction, e.g. 1.2.5.;
-  ///
-  /// [numberElement] (_number): Extensions for number;
-  ///
-  /// [type] The type of operation - CRUD.;
-  ///
-  /// [typeElement] (_type): Extensions for type;
-  ///
-  /// [name] The human-friendly name of the interaction.;
-  ///
-  /// [nameElement] (_name): Extensions for name;
-  ///
-  /// [initiator] Who starts the transaction.;
-  ///
-  /// [initiatorElement] (_initiator): Extensions for initiator;
-  ///
-  /// [receiver] Who receives the transaction.;
-  ///
-  /// [receiverElement] (_receiver): Extensions for receiver;
-  ///
-  /// [description] A comment to be inserted in the diagram.;
-  ///
-  /// [descriptionElement] (_description): Extensions for description;
-  ///
-  /// [initiatorActive] Whether the initiator is deactivated right after the transaction.;
-  ///
-  /// [initiatorActiveElement] (_initiatorActive): Extensions for initiatorActive;
-  ///
-  /// [receiverActive] Whether the receiver is deactivated right after the transaction.;
-  ///
-  /// [receiverActiveElement] (_receiverActive): Extensions for receiverActive;
-  ///
-  /// [request] Each resource instance used by the initiator.;
-  ///
-  /// [response] Each resource instance used by the responder.;
-  factory ExampleScenarioOperation({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? number,
-    @JsonKey(name: '_number') Element? numberElement,
-    String? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? initiator,
-    @JsonKey(name: '_initiator') Element? initiatorElement,
-    String? receiver,
-    @JsonKey(name: '_receiver') Element? receiverElement,
-    Markdown? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    Boolean? initiatorActive,
-    @JsonKey(name: '_initiatorActive') Element? initiatorActiveElement,
-    Boolean? receiverActive,
-    @JsonKey(name: '_receiverActive') Element? receiverActiveElement,
-    ExampleScenarioContainedInstance? request,
-    ExampleScenarioContainedInstance? response,
-  }) = _ExampleScenarioOperation;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ExampleScenarioOperation.fromYaml(dynamic yaml) => yaml is String
-      ? ExampleScenarioOperation.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ExampleScenarioOperation.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ExampleScenarioOperation cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ExampleScenarioOperation.fromJson(Map<String, dynamic> json) =>
-      _$ExampleScenarioOperationFromJson(json);
-
-  /// Acts like a constructor, returns a [ExampleScenarioOperation], accepts a
-  /// [String] as an argument, mostly because I got tired of typing it out
-  factory ExampleScenarioOperation.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ExampleScenarioOperationFromJson(json);
-    } else {
-      throw FormatException('FormatException: You passed $json'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-/// [ExampleScenarioAlternative] Example of workflow instance.
-@freezed
-class ExampleScenarioAlternative with _$ExampleScenarioAlternative {
-  ExampleScenarioAlternative._();
-
-  /// [ExampleScenarioAlternative] Example of workflow instance.
-
-  ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
-  ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-  ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  ///
-  /// [title] The label to display for the alternative that gives a sense of the circumstance in which the alternative should be invoked.;
-  ///
-  /// [titleElement] (_title): Extensions for title;
-  ///
-  /// [description] A human-readable description of the alternative explaining when the alternative should occur rather than the base step.;
-  ///
-  /// [descriptionElement] (_description): Extensions for description;
-  ///
-  /// [step] What happens in each alternative option.;
-  factory ExampleScenarioAlternative({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? title,
-    @JsonKey(name: '_title') Element? titleElement,
-    Markdown? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    List<ExampleScenarioStep>? step,
-  }) = _ExampleScenarioAlternative;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ExampleScenarioAlternative.fromYaml(dynamic yaml) => yaml is String
-      ? ExampleScenarioAlternative.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ExampleScenarioAlternative.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ExampleScenarioAlternative cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ExampleScenarioAlternative.fromJson(Map<String, dynamic> json) =>
-      _$ExampleScenarioAlternativeFromJson(json);
-
-  /// Acts like a constructor, returns a [ExampleScenarioAlternative], accepts a
-  /// [String] as an argument, mostly because I got tired of typing it out
-  factory ExampleScenarioAlternative.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ExampleScenarioAlternativeFromJson(json);
-    } else {
-      throw FormatException('FormatException: You passed $json'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-/// [GraphDefinition] A formal computable definition of a graph of resources - that is, a coherent set of resources that form a graph by following references. The Graph Definition resource defines a set and makes rules about the set.
+/// [GraphDefinition] A formal computable definition of a graph of resources -
+///  that is, a coherent set of resources that form a graph by following
+///  references. The Graph Definition resource defines a set and makes rules
+///  about the set.
 @freezed
 class GraphDefinition with Resource, _$GraphDefinition {
+  /// [GraphDefinition] A formal computable definition of a graph of resources
+  ///  - that is, a coherent set of resources that form a graph by following
+  ///  references. The Graph Definition resource defines a set and makes rules
+  ///  about the set.
   GraphDefinition._();
 
-  /// [GraphDefinition] A formal computable definition of a graph of resources - that is, a coherent set of resources that form a graph by following references. The Graph Definition resource defines a set and makes rules about the set.
-
+  /// [GraphDefinition] A formal computable definition of a graph of resources
+  ///  - that is, a coherent set of resources that form a graph by following
+  ///  references. The Graph Definition resource defines a set and makes rules
+  ///  about the set.
   ///
-  /// [resourceType] This is a GraphDefinition resource;
+  /// [resourceType] This is a GraphDefinition resource
   ///
-  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
   ///
-  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  /// [meta] The metadata about the resource. This is content that is
+  ///  maintained by the infrastructure. Changes to the content might not
+  ///  always be associated with version changes to the resource.
   ///
-  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  ///  resource was constructed, and which must be understood when processing
+  ///  the content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   ///
-  /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   ///
-  /// [language] The base language in which the resource is written.;
+  /// [language] The base language in which the resource is written.
   ///
-  /// [languageElement] (_language): Extensions for language;
+  /// [languageElement] ("_language") Extensions for language
   ///
-  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  /// [text] A human-readable narrative that contains a summary of the resource
+  ///  and can be used to represent the content of the resource to a human. The
+  ///  narrative need not encode all the structured data, but is required to
+  ///  contain sufficient detail to make it "clinically safe" for a human to
+  ///  just read the narrative. Resource definitions may define what content
+  ///  should be represented in the narrative to ensure clinical safety.
   ///
-  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  /// [contained] These resources do not have an independent existence apart
+  ///  from the resource that contains them - they cannot be identified
+  ///  independently, nor can they have their own independent transaction
+  ///  scope. This is allowed to be a Parameters resource if and only if it is
+  ///  referenced by a resource that provides context/meaning.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the resource. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the resource and that modifies
+  ///  the understanding of the element that contains it and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  is allowed to define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension. Applications
+  ///  processing a resource are required to check for modifier
+  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
+  ///  elements on Resource or DomainResource (including cannot change the
+  ///  meaning of modifierExtension itself).
   ///
-  /// [url] An absolute URI that is used to identify this graph definition when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this graph definition is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the graph definition is stored on different servers.;
+  /// [url] An absolute URI that is used to identify this graph definition when
+  ///  it is referenced in a specification, model, design or an instance; also
+  ///  called its canonical identifier. This SHOULD be globally unique and
+  ///  SHOULD be a literal address at which an authoritative instance of this
+  ///  graph definition is (or will be) published. This URL can be the target
+  ///  of a canonical reference. It SHALL remain the same when the graph
+  ///  definition is stored on different servers.
   ///
-  /// [urlElement] (_url): Extensions for url;
+  /// [urlElement] ("_url") Extensions for url
   ///
-  /// [identifier] A formal identifier that is used to identify this {{title}} when it is represented in other formats, or referenced in a specification, model, design or an instance.;
+  /// [identifier] A formal identifier that is used to identify this {{title}}
+  ///  when it is represented in other formats, or referenced in a
+  ///  specification, model, design or an instance.
   ///
-  /// [version] The identifier that is used to identify this version of the graph definition when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the graph definition author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.;
+  /// [version] The identifier that is used to identify this version of the
+  ///  graph definition when it is referenced in a specification, model, design
+  ///  or instance. This is an arbitrary value managed by the graph definition
+  ///  author and is not expected to be globally unique. For example, it might
+  ///  be a timestamp (e.g. yyyymmdd) if a managed version is not available.
+  ///  There is also no expectation that versions can be placed in a
+  ///  lexicographical sequence.
   ///
-  /// [versionElement] (_version): Extensions for version;
+  /// [versionElement] ("_version") Extensions for version
   ///
-  /// [name] A natural language name identifying the graph definition. This name should be usable as an identifier for the module by machine processing applications such as code generation.;
+  /// [versionAlgorithmString] Indicates the mechanism used to compare versions
+  ///  to determine which is more current.
   ///
-  /// [nameElement] (_name): Extensions for name;
+  /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
+  ///  for versionAlgorithmString
   ///
-  /// [title] A short, descriptive, user-friendly title for the {{title}}.;
+  /// [versionAlgorithmCoding] Indicates the mechanism used to compare versions
+  ///  to determine which is more current.
   ///
-  /// [titleElement] (_title): Extensions for title;
+  /// [name] A natural language name identifying the graph definition. This
+  ///  name should be usable as an identifier for the module by machine
+  ///  processing applications such as code generation.
   ///
-  /// [status] The status of this graph definition. Enables tracking the life-cycle of the content.;
+  /// [nameElement] ("_name") Extensions for name
   ///
-  /// [statusElement] (_status): Extensions for status;
+  /// [title] A short, descriptive, user-friendly title for the capability
+  ///  statement.
   ///
-  /// [experimental] A Boolean value to indicate that this graph definition is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.;
+  /// [titleElement] ("_title") Extensions for title
   ///
-  /// [experimentalElement] (_experimental): Extensions for experimental;
+  /// [status] The status of this graph definition. Enables tracking the
+  ///  life-cycle of the content.
   ///
-  /// [date] The date  (and optionally time) when the graph definition was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the graph definition changes.;
+  /// [statusElement] ("_status") Extensions for status
   ///
-  /// [dateElement] (_date): Extensions for date;
+  /// [experimental] A Boolean value to indicate that this graph definition is
+  ///  authored for testing purposes (or education/evaluation/marketing) and is
+  ///  not intended to be used for genuine usage.
   ///
-  /// [publisher] The name of the organization or individual that published the graph definition.;
+  /// [experimentalElement] ("_experimental") Extensions for experimental
   ///
-  /// [publisherElement] (_publisher): Extensions for publisher;
+  /// [date] The date  (and optionally time) when the graph definition was last
+  ///  significantly changed. The date must change when the business version
+  ///  changes and it must change if the status code changes. In addition, it
+  ///  should change when the substantive content of the graph definition
+  ///  changes.
   ///
-  /// [contact] Contact details to assist a user in finding and communicating with the publisher.;
+  /// [dateElement] ("_date") Extensions for date
   ///
-  /// [description] A free text natural language description of the graph definition from a consumer's perspective.;
+  /// [publisher] The name of the organization or individual responsible for
+  ///  the release and ongoing maintenance of the graph definition.
   ///
-  /// [descriptionElement] (_description): Extensions for description;
+  /// [publisherElement] ("_publisher") Extensions for publisher
   ///
-  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate graph definition instances.;
+  /// [contact] Contact details to assist a user in finding and communicating
+  ///  with the publisher.
   ///
-  /// [jurisdiction] A legal or geographic region in which the graph definition is intended to be used.;
+  /// [description] A free text natural language description of the graph
+  ///  definition from a consumer's perspective.
   ///
-  /// [purpose] Explanation of why this graph definition is needed and why it has been designed as it has.;
+  /// [descriptionElement] ("_description") Extensions for description
   ///
-  /// [purposeElement] (_purpose): Extensions for purpose;
+  /// [useContext] The content was developed with a focus and intent of
+  ///  supporting the contexts that are listed. These contexts may be general
+  ///  categories (gender, age, ...) or may be references to specific programs
+  ///  (insurance plans, studies, ...) and may be used to assist with indexing
+  ///  and searching for appropriate graph definition instances.
   ///
-  /// [copyright] A copyright statement relating to the {{title}} and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the {{title}}.;
+  /// [jurisdiction] A legal or geographic region in which the graph definition
+  ///  is intended to be used.
   ///
-  /// [copyrightElement] (_copyright): Extensions for copyright;
+  /// [purpose] Explanation of why this graph definition is needed and why it
+  ///  has been designed as it has.
   ///
-  /// [start] The type of FHIR resource at which instances of this graph start.;
+  /// [purposeElement] ("_purpose") Extensions for purpose
   ///
-  /// [startElement] (_start): Extensions for start;
+  /// [copyright] A copyright statement relating to the {{title}} and/or its
+  ///  contents. Copyright statements are generally legal restrictions on the
+  ///  use and publishing of the {{title}}.
   ///
-  /// [profile] The profile that describes the use of the base resource.;
+  /// [copyrightElement] ("_copyright") Extensions for copyright
   ///
-  /// [link] Links this graph makes rules about.;
+  /// [copyrightLabel] A short string (<50 characters), suitable for inclusion
+  ///  in a page footer that identifies the copyright holder, effective period,
+  ///  and optionally whether rights are resctricted. (e.g. 'All rights
+  ///  reserved', 'Some rights reserved').
+  ///
+  /// [copyrightLabelElement] ("_copyrightLabel") Extensions for copyrightLabel
+  ///
+  /// [start] The Node at which instances of this graph start. If there is no
+  ///  nominated start, the graph can start at any of the nodes.
+  ///
+  /// [startElement] ("_start") Extensions for start
+  ///
+  /// [node] Potential target for the link.
+  ///
+  /// [link] Links this graph makes rules about.
+  ///
   factory GraphDefinition({
-    @Default(R5ResourceType.GraphDefinition) R5ResourceType resourceType,
+    /// [resourceType] This is a GraphDefinition resource
+    @Default(R5ResourceType.GraphDefinition)
+    @JsonKey(unknownEnumValue: R5ResourceType.GraphDefinition)
+        R5ResourceType resourceType,
+
+    /// [id] The logical id of the resource, as used in the URL for the resource.
+    /// Once assigned, this value never changes.
     Id? id,
+
+    /// [meta] The metadata about the resource. This is content that is
+    /// maintained by the infrastructure. Changes to the content might not
+    /// always be associated with version changes to the resource.
     Meta? meta,
+
+    /// [implicitRules] A reference to a set of rules that were followed when
+    /// the resource was constructed, and which must be understood when
+    /// processing the content. Often, this is a reference to an implementation
+    /// guide that defines the special rules along with other profiles etc.
     FhirUri? implicitRules,
+
+    /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+
+    /// [language] The base language in which the resource is written.
     Code? language,
+
+    /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
+
+    /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
     Narrative? text,
+
+    /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
     List<Resource>? contained,
+
+    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [url] An absolute URI that is used to identify this graph definition when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this graph definition is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the graph definition is stored on different servers.
     FhirUri? url,
+
+    /// [urlElement] ("_url") Extensions for url
     @JsonKey(name: '_url') Element? urlElement,
+
+    /// [identifier] A formal identifier that is used to identify this {{title}} when it is represented in other formats, or referenced in a specification, model, design or an instance.
     List<Identifier>? identifier,
+
+    /// [version] The identifier that is used to identify this version of the graph definition when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the graph definition author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.
     String? version,
+
+    /// [versionElement] ("_version") Extensions for version
     @JsonKey(name: '_version') Element? versionElement,
+
+    /// [versionAlgorithmString] Indicates the mechanism used to compare versions to determine which is more current.
+    String? versionAlgorithmString,
+
+    /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions for versionAlgorithmString
+    @JsonKey(name: '_versionAlgorithmString')
+        Element? versionAlgorithmStringElement,
+
+    /// [versionAlgorithmCoding] Indicates the mechanism used to compare versions to determine which is more current.
+    Coding? versionAlgorithmCoding,
+
+    /// [name] A natural language name identifying the graph definition. This name should be usable as an identifier for the module by machine processing applications such as code generation.
     String? name,
+
+    /// [nameElement] ("_name") Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
+
+    /// [title] A short, descriptive, user-friendly title for the capability statement.
     String? title,
+
+    /// [titleElement] ("_title") Extensions for title
     @JsonKey(name: '_title') Element? titleElement,
+
+    /// [status] The status of this graph definition. Enables tracking the life-cycle of the content.
     Code? status,
+
+    /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
+
+    /// [experimental] A Boolean value to indicate that this graph definition is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
     Boolean? experimental,
+
+    /// [experimentalElement] ("_experimental") Extensions for experimental
     @JsonKey(name: '_experimental') Element? experimentalElement,
+
+    /// [date] The date  (and optionally time) when the graph definition was last significantly changed. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the graph definition changes.
     FhirDateTime? date,
+
+    /// [dateElement] ("_date") Extensions for date
     @JsonKey(name: '_date') Element? dateElement,
+
+    /// [publisher] The name of the organization or individual responsible for the release and ongoing maintenance of the graph definition.
     String? publisher,
+
+    /// [publisherElement] ("_publisher") Extensions for publisher
     @JsonKey(name: '_publisher') Element? publisherElement,
+
+    /// [contact] Contact details to assist a user in finding and communicating with the publisher.
     List<ContactDetail>? contact,
+
+    /// [description] A free text natural language description of the graph definition from a consumer's perspective.
     Markdown? description,
+
+    /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
+
+    /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate graph definition instances.
     List<UsageContext>? useContext,
+
+    /// [jurisdiction] A legal or geographic region in which the graph definition is intended to be used.
     List<CodeableConcept>? jurisdiction,
+
+    /// [purpose] Explanation of why this graph definition is needed and why it has been designed as it has.
     Markdown? purpose,
+
+    /// [purposeElement] ("_purpose") Extensions for purpose
     @JsonKey(name: '_purpose') Element? purposeElement,
+
+    /// [copyright] A copyright statement relating to the {{title}} and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the {{title}}.
     Markdown? copyright,
+
+    /// [copyrightElement] ("_copyright") Extensions for copyright
     @JsonKey(name: '_copyright') Element? copyrightElement,
-    Code? start,
+
+    /// [copyrightLabel] A short string (<50 characters), suitable for inclusion in a page footer that identifies the copyright holder, effective period, and optionally whether rights are resctricted. (e.g. 'All rights reserved', 'Some rights reserved').
+    String? copyrightLabel,
+
+    /// [copyrightLabelElement] ("_copyrightLabel") Extensions for copyrightLabel
+    @JsonKey(name: '_copyrightLabel') Element? copyrightLabelElement,
+
+    /// [start] The Node at which instances of this graph start. If there is no nominated start, the graph can start at any of the nodes.
+    Id? start,
+
+    /// [startElement] ("_start") Extensions for start
     @JsonKey(name: '_start') Element? startElement,
-    Canonical? profile,
+
+    /// [node] Potential target for the link.
+    List<GraphDefinitionNode>? node,
+
+    /// [link] Links this graph makes rules about.
     List<GraphDefinitionLink>? link,
   }) = _GraphDefinition;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory GraphDefinition.fromYaml(dynamic yaml) => yaml is String
@@ -3176,64 +3272,302 @@ class GraphDefinition with Resource, _$GraphDefinition {
     if (json is Map<String, dynamic>) {
       return _$GraphDefinitionFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [GraphDefinitionLink] A formal computable definition of a graph of resources - that is, a coherent set of resources that form a graph by following references. The Graph Definition resource defines a set and makes rules about the set.
+/// [GraphDefinitionNode] A formal computable definition of a graph of
+///  resources - that is, a coherent set of resources that form a graph by
+///  following references. The Graph Definition resource defines a set and
+///  makes rules about the set.
+@freezed
+class GraphDefinitionNode with _$GraphDefinitionNode {
+  /// [GraphDefinitionNode] A formal computable definition of a graph of
+  ///  resources - that is, a coherent set of resources that form a graph by
+  ///  following references. The Graph Definition resource defines a set and
+  ///  makes rules about the set.
+  GraphDefinitionNode._();
+
+  /// [GraphDefinitionNode] A formal computable definition of a graph of
+  ///  resources - that is, a coherent set of resources that form a graph by
+  ///  following references. The Graph Definition resource defines a set and
+  ///  makes rules about the set.
+  ///
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
+  ///
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
+  ///
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
+  ///
+  /// [nodeId] Internal ID of node - target for link references.
+  ///
+  /// [nodeIdElement] ("_nodeId") Extensions for nodeId
+  ///
+  /// [description] Information about why this node is of interest in this
+  ///  graph definition.
+  ///
+  /// [descriptionElement] ("_description") Extensions for description
+  ///
+  /// [type] Type of resource this link refers to.
+  ///
+  /// [typeElement] ("_type") Extensions for type
+  ///
+  /// [profile] Profile for the target resource.
+  ///
+  factory GraphDefinitionNode({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
+    String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
+    List<FhirExtension>? modifierExtension,
+
+    /// [nodeId] Internal ID of node - target for link references.
+    Id? nodeId,
+
+    /// [nodeIdElement] ("_nodeId") Extensions for nodeId
+    @JsonKey(name: '_nodeId') Element? nodeIdElement,
+
+    /// [description] Information about why this node is of interest in this graph definition.
+    String? description,
+
+    /// [descriptionElement] ("_description") Extensions for description
+    @JsonKey(name: '_description') Element? descriptionElement,
+
+    /// [type] Type of resource this link refers to.
+    Code? type,
+
+    /// [typeElement] ("_type") Extensions for type
+    @JsonKey(name: '_type') Element? typeElement,
+
+    /// [profile] Profile for the target resource.
+    Canonical? profile,
+  }) = _GraphDefinitionNode;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory GraphDefinitionNode.fromYaml(dynamic yaml) => yaml is String
+      ? GraphDefinitionNode.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? GraphDefinitionNode.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'GraphDefinitionNode cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory GraphDefinitionNode.fromJson(Map<String, dynamic> json) =>
+      _$GraphDefinitionNodeFromJson(json);
+
+  /// Acts like a constructor, returns a [GraphDefinitionNode], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory GraphDefinitionNode.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$GraphDefinitionNodeFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+/// [GraphDefinitionLink] A formal computable definition of a graph of
+///  resources - that is, a coherent set of resources that form a graph by
+///  following references. The Graph Definition resource defines a set and
+///  makes rules about the set.
 @freezed
 class GraphDefinitionLink with _$GraphDefinitionLink {
+  /// [GraphDefinitionLink] A formal computable definition of a graph of
+  ///  resources - that is, a coherent set of resources that form a graph by
+  ///  following references. The Graph Definition resource defines a set and
+  ///  makes rules about the set.
   GraphDefinitionLink._();
 
-  /// [GraphDefinitionLink] A formal computable definition of a graph of resources - that is, a coherent set of resources that form a graph by following references. The Graph Definition resource defines a set and makes rules about the set.
-
+  /// [GraphDefinitionLink] A formal computable definition of a graph of
+  ///  resources - that is, a coherent set of resources that form a graph by
+  ///  following references. The Graph Definition resource defines a set and
+  ///  makes rules about the set.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [path] A FHIR expression that identifies one of FHIR References to other resources.;
+  /// [description] Information about why this link is of interest in this
+  ///  graph definition.
   ///
-  /// [pathElement] (_path): Extensions for path;
+  /// [descriptionElement] ("_description") Extensions for description
   ///
-  /// [sliceName] Which slice (if profiled).;
+  /// [min] Minimum occurrences for this link.
   ///
-  /// [sliceNameElement] (_sliceName): Extensions for sliceName;
+  /// [minElement] ("_min") Extensions for min
   ///
-  /// [min] Minimum occurrences for this link.;
+  /// [max] Maximum occurrences for this link.
   ///
-  /// [minElement] (_min): Extensions for min;
+  /// [maxElement] ("_max") Extensions for max
   ///
-  /// [max] Maximum occurrences for this link.;
+  /// [sourceId] The source node for this link.
   ///
-  /// [maxElement] (_max): Extensions for max;
+  /// [sourceIdElement] ("_sourceId") Extensions for sourceId
   ///
-  /// [description] Information about why this link is of interest in this graph definition.;
+  /// [path] A FHIRPath expression that identifies one of FHIR References to
+  ///  other resources.
   ///
-  /// [descriptionElement] (_description): Extensions for description;
+  /// [pathElement] ("_path") Extensions for path
   ///
-  /// [target] Potential target for the link.;
+  /// [sliceName] Which slice (if profiled).
+  ///
+  /// [sliceNameElement] ("_sliceName") Extensions for sliceName
+  ///
+  /// [targetId] The target node for this link.
+  ///
+  /// [targetIdElement] ("_targetId") Extensions for targetId
+  ///
+  /// [params] A set of parameters to look up.
+  ///
+  /// [paramsElement] ("_params") Extensions for params
+  ///
+  /// [compartment] Compartment Consistency Rules.
+  ///
   factory GraphDefinitionLink({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
-    String? path,
-    @JsonKey(name: '_path') Element? pathElement,
-    String? sliceName,
-    @JsonKey(name: '_sliceName') Element? sliceNameElement,
-    Integer? min,
-    @JsonKey(name: '_min') Element? minElement,
-    String? max,
-    @JsonKey(name: '_max') Element? maxElement,
+
+    /// [description] Information about why this link is of interest in this graph definition.
     String? description,
+
+    /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<GraphDefinitionTarget>? target,
+
+    /// [min] Minimum occurrences for this link.
+    Integer? min,
+
+    /// [minElement] ("_min") Extensions for min
+    @JsonKey(name: '_min') Element? minElement,
+
+    /// [max] Maximum occurrences for this link.
+    String? max,
+
+    /// [maxElement] ("_max") Extensions for max
+    @JsonKey(name: '_max') Element? maxElement,
+
+    /// [sourceId] The source node for this link.
+    Id? sourceId,
+
+    /// [sourceIdElement] ("_sourceId") Extensions for sourceId
+    @JsonKey(name: '_sourceId') Element? sourceIdElement,
+
+    /// [path] A FHIRPath expression that identifies one of FHIR References to other resources.
+    String? path,
+
+    /// [pathElement] ("_path") Extensions for path
+    @JsonKey(name: '_path') Element? pathElement,
+
+    /// [sliceName] Which slice (if profiled).
+    String? sliceName,
+
+    /// [sliceNameElement] ("_sliceName") Extensions for sliceName
+    @JsonKey(name: '_sliceName') Element? sliceNameElement,
+
+    /// [targetId] The target node for this link.
+    Id? targetId,
+
+    /// [targetIdElement] ("_targetId") Extensions for targetId
+    @JsonKey(name: '_targetId') Element? targetIdElement,
+
+    /// [params] A set of parameters to look up.
+    String? params,
+
+    /// [paramsElement] ("_params") Extensions for params
+    @JsonKey(name: '_params') Element? paramsElement,
+
+    /// [compartment] Compartment Consistency Rules.
+    List<GraphDefinitionCompartment>? compartment,
   }) = _GraphDefinitionLink;
 
   /// Produces a Yaml formatted String version of the object
@@ -3261,133 +3595,130 @@ class GraphDefinitionLink with _$GraphDefinitionLink {
     if (json is Map<String, dynamic>) {
       return _$GraphDefinitionLinkFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [GraphDefinitionTarget] A formal computable definition of a graph of resources - that is, a coherent set of resources that form a graph by following references. The Graph Definition resource defines a set and makes rules about the set.
-@freezed
-class GraphDefinitionTarget with _$GraphDefinitionTarget {
-  GraphDefinitionTarget._();
-
-  /// [GraphDefinitionTarget] A formal computable definition of a graph of resources - that is, a coherent set of resources that form a graph by following references. The Graph Definition resource defines a set and makes rules about the set.
-
-  ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
-  ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-  ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  ///
-  /// [type] Type of resource this link refers to.;
-  ///
-  /// [typeElement] (_type): Extensions for type;
-  ///
-  /// [params] A set of parameters to look up.;
-  ///
-  /// [paramsElement] (_params): Extensions for params;
-  ///
-  /// [profile] Profile for the target resource.;
-  ///
-  /// [compartment] Compartment Consistency Rules.;
-  ///
-  /// [link] Additional links from target resource.;
-  factory GraphDefinitionTarget({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    String? params,
-    @JsonKey(name: '_params') Element? paramsElement,
-    Canonical? profile,
-    List<GraphDefinitionCompartment>? compartment,
-    List<GraphDefinitionLink>? link,
-  }) = _GraphDefinitionTarget;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory GraphDefinitionTarget.fromYaml(dynamic yaml) => yaml is String
-      ? GraphDefinitionTarget.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? GraphDefinitionTarget.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'GraphDefinitionTarget cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory GraphDefinitionTarget.fromJson(Map<String, dynamic> json) =>
-      _$GraphDefinitionTargetFromJson(json);
-
-  /// Acts like a constructor, returns a [GraphDefinitionTarget], accepts a
-  /// [String] as an argument, mostly because I got tired of typing it out
-  factory GraphDefinitionTarget.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$GraphDefinitionTargetFromJson(json);
-    } else {
-      throw FormatException('FormatException: You passed $json'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-/// [GraphDefinitionCompartment] A formal computable definition of a graph of resources - that is, a coherent set of resources that form a graph by following references. The Graph Definition resource defines a set and makes rules about the set.
+/// [GraphDefinitionCompartment] A formal computable definition of a graph of
+///  resources - that is, a coherent set of resources that form a graph by
+///  following references. The Graph Definition resource defines a set and
+///  makes rules about the set.
 @freezed
 class GraphDefinitionCompartment with _$GraphDefinitionCompartment {
+  /// [GraphDefinitionCompartment] A formal computable definition of a graph of
+  ///  resources - that is, a coherent set of resources that form a graph by
+  ///  following references. The Graph Definition resource defines a set and
+  ///  makes rules about the set.
   GraphDefinitionCompartment._();
 
-  /// [GraphDefinitionCompartment] A formal computable definition of a graph of resources - that is, a coherent set of resources that form a graph by following references. The Graph Definition resource defines a set and makes rules about the set.
-
+  /// [GraphDefinitionCompartment] A formal computable definition of a graph of
+  ///  resources - that is, a coherent set of resources that form a graph by
+  ///  following references. The Graph Definition resource defines a set and
+  ///  makes rules about the set.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [use] Defines how the compartment rule is used - whether it it is used to test whether resources are subject to the rule, or whether it is a rule that must be followed.;
+  /// [use] Defines how the compartment rule is used - whether it it is used to
+  ///  test whether resources are subject to the rule, or whether it is a rule
+  ///  that must be followed.
   ///
-  /// [useElement] (_use): Extensions for use;
+  /// [useElement] ("_use") Extensions for use
   ///
-  /// [code] Identifies the compartment.;
+  /// [rule] identical | matching | different | no-rule | custom.
   ///
-  /// [codeElement] (_code): Extensions for code;
+  /// [ruleElement] ("_rule") Extensions for rule
   ///
-  /// [rule] identical | matching | different | no-rule | custom.;
+  /// [code] Identifies the compartment.
   ///
-  /// [ruleElement] (_rule): Extensions for rule;
+  /// [codeElement] ("_code") Extensions for code
   ///
-  /// [expression] Custom rule, as a FHIRPath expression.;
+  /// [expression] Custom rule, as a FHIRPath expression.
   ///
-  /// [expressionElement] (_expression): Extensions for expression;
+  /// [expressionElement] ("_expression") Extensions for expression
   ///
-  /// [description] Documentation for FHIRPath expression.;
+  /// [description] Documentation for FHIRPath expression.
   ///
-  /// [descriptionElement] (_description): Extensions for description;
+  /// [descriptionElement] ("_description") Extensions for description
+  ///
   factory GraphDefinitionCompartment({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [use] Defines how the compartment rule is used - whether it it is used to test whether resources are subject to the rule, or whether it is a rule that must be followed.
     Code? use,
+
+    /// [useElement] ("_use") Extensions for use
     @JsonKey(name: '_use') Element? useElement,
-    Code? code,
-    @JsonKey(name: '_code') Element? codeElement,
+
+    /// [rule] identical | matching | different | no-rule | custom.
     Code? rule,
+
+    /// [ruleElement] ("_rule") Extensions for rule
     @JsonKey(name: '_rule') Element? ruleElement,
+
+    /// [code] Identifies the compartment.
+    Code? code,
+
+    /// [codeElement] ("_code") Extensions for code
+    @JsonKey(name: '_code') Element? codeElement,
+
+    /// [expression] Custom rule, as a FHIRPath expression.
     String? expression,
+
+    /// [expressionElement] ("_expression") Extensions for expression
     @JsonKey(name: '_expression') Element? expressionElement,
+
+    /// [description] Documentation for FHIRPath expression.
     String? description,
+
+    /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
   }) = _GraphDefinitionCompartment;
 
@@ -3416,164 +3747,392 @@ class GraphDefinitionCompartment with _$GraphDefinitionCompartment {
     if (json is Map<String, dynamic>) {
       return _$GraphDefinitionCompartmentFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [ImplementationGuide] A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
+/// [ImplementationGuide] A set of rules of how a particular interoperability
+///  or standards problem is solved - typically through the use of FHIR
+///  resources. This resource is used to gather all the parts of an
+///  implementation guide into a logical whole and to publish a computable
+///  definition of all the parts.
 @freezed
 class ImplementationGuide with Resource, _$ImplementationGuide {
+  /// [ImplementationGuide] A set of rules of how a particular interoperability
+  ///  or standards problem is solved - typically through the use of FHIR
+  ///  resources. This resource is used to gather all the parts of an
+  ///  implementation guide into a logical whole and to publish a computable
+  ///  definition of all the parts.
   ImplementationGuide._();
 
-  /// [ImplementationGuide] A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
-
+  /// [ImplementationGuide] A set of rules of how a particular interoperability
+  ///  or standards problem is solved - typically through the use of FHIR
+  ///  resources. This resource is used to gather all the parts of an
+  ///  implementation guide into a logical whole and to publish a computable
+  ///  definition of all the parts.
   ///
-  /// [resourceType] This is a ImplementationGuide resource;
+  /// [resourceType] This is a ImplementationGuide resource
   ///
-  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
   ///
-  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  /// [meta] The metadata about the resource. This is content that is
+  ///  maintained by the infrastructure. Changes to the content might not
+  ///  always be associated with version changes to the resource.
   ///
-  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  ///  resource was constructed, and which must be understood when processing
+  ///  the content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   ///
-  /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   ///
-  /// [language] The base language in which the resource is written.;
+  /// [language] The base language in which the resource is written.
   ///
-  /// [languageElement] (_language): Extensions for language;
+  /// [languageElement] ("_language") Extensions for language
   ///
-  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  /// [text] A human-readable narrative that contains a summary of the resource
+  ///  and can be used to represent the content of the resource to a human. The
+  ///  narrative need not encode all the structured data, but is required to
+  ///  contain sufficient detail to make it "clinically safe" for a human to
+  ///  just read the narrative. Resource definitions may define what content
+  ///  should be represented in the narrative to ensure clinical safety.
   ///
-  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  /// [contained] These resources do not have an independent existence apart
+  ///  from the resource that contains them - they cannot be identified
+  ///  independently, nor can they have their own independent transaction
+  ///  scope. This is allowed to be a Parameters resource if and only if it is
+  ///  referenced by a resource that provides context/meaning.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the resource. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the resource and that modifies
+  ///  the understanding of the element that contains it and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  is allowed to define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension. Applications
+  ///  processing a resource are required to check for modifier
+  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
+  ///  elements on Resource or DomainResource (including cannot change the
+  ///  meaning of modifierExtension itself).
   ///
-  /// [url] An absolute URI that is used to identify this implementation guide when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this implementation guide is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the implementation guide is stored on different servers.;
+  /// [url] An absolute URI that is used to identify this implementation guide
+  ///  when it is referenced in a specification, model, design or an instance;
+  ///  also called its canonical identifier. This SHOULD be globally unique and
+  ///  SHOULD be a literal address at which an authoritative instance of this
+  ///  implementation guide is (or will be) published. This URL can be the
+  ///  target of a canonical reference. It SHALL remain the same when the
+  ///  implementation guide is stored on different servers.
   ///
-  /// [urlElement] (_url): Extensions for url;
+  /// [urlElement] ("_url") Extensions for url
   ///
-  /// [identifier] A formal identifier that is used to identify this {{title}} when it is represented in other formats, or referenced in a specification, model, design or an instance.;
+  /// [identifier] A formal identifier that is used to identify this {{title}}
+  ///  when it is represented in other formats, or referenced in a
+  ///  specification, model, design or an instance.
   ///
-  /// [version] The identifier that is used to identify this version of the implementation guide when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the implementation guide author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.;
+  /// [version] The identifier that is used to identify this version of the
+  ///  implementation guide when it is referenced in a specification, model,
+  ///  design or instance. This is an arbitrary value managed by the
+  ///  implementation guide author and is not expected to be globally unique.
+  ///  For example, it might be a timestamp (e.g. yyyymmdd) if a managed
+  ///  version is not available. There is also no expectation that versions can
+  ///  be placed in a lexicographical sequence.
   ///
-  /// [versionElement] (_version): Extensions for version;
+  /// [versionElement] ("_version") Extensions for version
   ///
-  /// [name] A natural language name identifying the implementation guide. This name should be usable as an identifier for the module by machine processing applications such as code generation.;
+  /// [versionAlgorithmString] Indicates the mechanism used to compare versions
+  ///  to determine which is more current.
   ///
-  /// [nameElement] (_name): Extensions for name;
+  /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
+  ///  for versionAlgorithmString
   ///
-  /// [title] A short, descriptive, user-friendly title for the implementation guide.;
+  /// [versionAlgorithmCoding] Indicates the mechanism used to compare versions
+  ///  to determine which is more current.
   ///
-  /// [titleElement] (_title): Extensions for title;
+  /// [name] A natural language name identifying the implementation guide. This
+  ///  name should be usable as an identifier for the module by machine
+  ///  processing applications such as code generation.
   ///
-  /// [status] The status of this implementation guide. Enables tracking the life-cycle of the content.;
+  /// [nameElement] ("_name") Extensions for name
   ///
-  /// [statusElement] (_status): Extensions for status;
+  /// [title] A short, descriptive, user-friendly title for the implementation
+  ///  guide.
   ///
-  /// [experimental] A Boolean value to indicate that this implementation guide is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.;
+  /// [titleElement] ("_title") Extensions for title
   ///
-  /// [experimentalElement] (_experimental): Extensions for experimental;
+  /// [status] The status of this implementation guide. Enables tracking the
+  ///  life-cycle of the content.
   ///
-  /// [date] The date  (and optionally time) when the implementation guide was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the implementation guide changes.;
+  /// [statusElement] ("_status") Extensions for status
   ///
-  /// [dateElement] (_date): Extensions for date;
+  /// [experimental] A Boolean value to indicate that this implementation guide
+  ///  is authored for testing purposes (or education/evaluation/marketing) and
+  ///  is not intended to be used for genuine usage.
   ///
-  /// [publisher] The name of the organization or individual that published the implementation guide.;
+  /// [experimentalElement] ("_experimental") Extensions for experimental
   ///
-  /// [publisherElement] (_publisher): Extensions for publisher;
+  /// [date] The date  (and optionally time) when the implementation guide was
+  ///  last significantly changed. The date must change when the business
+  ///  version changes and it must change if the status code changes. In
+  ///  addition, it should change when the substantive content of the
+  ///  implementation guide changes.
   ///
-  /// [contact] Contact details to assist a user in finding and communicating with the publisher.;
+  /// [dateElement] ("_date") Extensions for date
   ///
-  /// [description] A free text natural language description of the implementation guide from a consumer's perspective.;
+  /// [publisher] The name of the organization or individual responsible for
+  ///  the release and ongoing maintenance of the implementation guide.
   ///
-  /// [descriptionElement] (_description): Extensions for description;
+  /// [publisherElement] ("_publisher") Extensions for publisher
   ///
-  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate implementation guide instances.;
+  /// [contact] Contact details to assist a user in finding and communicating
+  ///  with the publisher.
   ///
-  /// [jurisdiction] A legal or geographic region in which the implementation guide is intended to be used.;
+  /// [description] A free text natural language description of the
+  ///  implementation guide from a consumer's perspective.
   ///
-  /// [purpose] Explanation of why this {{title}} is needed and why it has been designed as it has.;
+  /// [descriptionElement] ("_description") Extensions for description
   ///
-  /// [purposeElement] (_purpose): Extensions for purpose;
+  /// [useContext] The content was developed with a focus and intent of
+  ///  supporting the contexts that are listed. These contexts may be general
+  ///  categories (gender, age, ...) or may be references to specific programs
+  ///  (insurance plans, studies, ...) and may be used to assist with indexing
+  ///  and searching for appropriate implementation guide instances.
   ///
-  /// [copyright] A copyright statement relating to the implementation guide and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the implementation guide.;
+  /// [jurisdiction] A legal or geographic region in which the implementation
+  ///  guide is intended to be used.
   ///
-  /// [copyrightElement] (_copyright): Extensions for copyright;
+  /// [purpose] Explanation of why this {{title}} is needed and why it has been
+  ///  designed as it has.
   ///
-  /// [packageId] The NPM package name for this Implementation Guide, used in the NPM package distribution, which is the primary mechanism by which FHIR based tooling manages IG dependencies. This value must be globally unique, and should be assigned with care.;
+  /// [purposeElement] ("_purpose") Extensions for purpose
   ///
-  /// [packageIdElement] (_packageId): Extensions for packageId;
+  /// [copyright] A copyright statement relating to the implementation guide
+  ///  and/or its contents. Copyright statements are generally legal
+  ///  restrictions on the use and publishing of the implementation guide.
   ///
-  /// [license] The license that applies to this Implementation Guide, using an SPDX license code, or 'not-open-source'.;
+  /// [copyrightElement] ("_copyright") Extensions for copyright
   ///
-  /// [licenseElement] (_license): Extensions for license;
+  /// [copyrightLabel] A short string (<50 characters), suitable for inclusion
+  ///  in a page footer that identifies the copyright holder, effective period,
+  ///  and optionally whether rights are resctricted. (e.g. 'All rights
+  ///  reserved', 'Some rights reserved').
   ///
-  /// [fhirVersion] The version(s) of the FHIR specification that this ImplementationGuide targets - e.g. describes how to use. The value of this element is the formal version of the specification, without the revision number, e.g. [publication].[major].[minor], which is 4.6.0. for this version.;
+  /// [copyrightLabelElement] ("_copyrightLabel") Extensions for copyrightLabel
   ///
-  /// [fhirVersionElement] (_fhirVersion): Extensions for fhirVersion;
+  /// [packageId] The NPM package name for this Implementation Guide, used in
+  ///  the NPM package distribution, which is the primary mechanism by which
+  ///  FHIR based tooling manages IG dependencies. This value must be globally
+  ///  unique, and should be assigned with care.
   ///
-  /// [dependsOn] Another implementation guide that this implementation depends on. Typically, an implementation guide uses value sets, profiles etc.defined in other implementation guides.;
+  /// [packageIdElement] ("_packageId") Extensions for packageId
   ///
-  /// [global] A set of profiles that all resources covered by this implementation guide must conform to.;
+  /// [license] The license that applies to this Implementation Guide, using an
+  ///  SPDX license code, or 'not-open-source'.
   ///
-  /// [definition] The information needed by an IG publisher tool to publish the whole implementation guide.;
+  /// [licenseElement] ("_license") Extensions for license
   ///
-  /// [manifest] Information about an assembled implementation guide, created by the publication tooling.;
+  /// [fhirVersion] The version(s) of the FHIR specification that this
+  ///  ImplementationGuide targets - e.g. describes how to use. The value of
+  ///  this element is the formal version of the specification, without the
+  ///  revision number, e.g. [publication].[major].[minor], which is 4.6.0. for
+  ///  this version.
+  ///
+  /// [fhirVersionElement] ("_fhirVersion") Extensions for fhirVersion
+  ///
+  /// [dependsOn] Another implementation guide that this implementation depends
+  ///  on. Typically, an implementation guide uses value sets, profiles
+  ///  etc.defined in other implementation guides.
+  ///
+  /// [global] A set of profiles that all resources covered by this
+  ///  implementation guide must conform to.
+  ///
+  /// [definition] The information needed by an IG publisher tool to publish
+  ///  the whole implementation guide.
+  ///
+  /// [manifest] Information about an assembled implementation guide, created
+  ///  by the publication tooling.
+  ///
   factory ImplementationGuide({
-    @Default(R5ResourceType.ImplementationGuide) R5ResourceType resourceType,
+    /// [resourceType] This is a ImplementationGuide resource
+    @Default(R5ResourceType.ImplementationGuide)
+    @JsonKey(unknownEnumValue: R5ResourceType.ImplementationGuide)
+        R5ResourceType resourceType,
+
+    /// [id] The logical id of the resource, as used in the URL for the resource.
+    /// Once assigned, this value never changes.
     Id? id,
+
+    /// [meta] The metadata about the resource. This is content that is
+    /// maintained by the infrastructure. Changes to the content might not
+    /// always be associated with version changes to the resource.
     Meta? meta,
+
+    /// [implicitRules] A reference to a set of rules that were followed when
+    /// the resource was constructed, and which must be understood when
+    /// processing the content. Often, this is a reference to an implementation
+    /// guide that defines the special rules along with other profiles etc.
     FhirUri? implicitRules,
+
+    /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+
+    /// [language] The base language in which the resource is written.
     Code? language,
+
+    /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
+
+    /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
     Narrative? text,
+
+    /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
     List<Resource>? contained,
+
+    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [url] An absolute URI that is used to identify this implementation guide when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this implementation guide is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the implementation guide is stored on different servers.
     FhirUri? url,
+
+    /// [urlElement] ("_url") Extensions for url
     @JsonKey(name: '_url') Element? urlElement,
+
+    /// [identifier] A formal identifier that is used to identify this {{title}} when it is represented in other formats, or referenced in a specification, model, design or an instance.
     List<Identifier>? identifier,
+
+    /// [version] The identifier that is used to identify this version of the implementation guide when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the implementation guide author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.
     String? version,
+
+    /// [versionElement] ("_version") Extensions for version
     @JsonKey(name: '_version') Element? versionElement,
+
+    /// [versionAlgorithmString] Indicates the mechanism used to compare versions to determine which is more current.
+    String? versionAlgorithmString,
+
+    /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions for versionAlgorithmString
+    @JsonKey(name: '_versionAlgorithmString')
+        Element? versionAlgorithmStringElement,
+
+    /// [versionAlgorithmCoding] Indicates the mechanism used to compare versions to determine which is more current.
+    Coding? versionAlgorithmCoding,
+
+    /// [name] A natural language name identifying the implementation guide. This name should be usable as an identifier for the module by machine processing applications such as code generation.
     String? name,
+
+    /// [nameElement] ("_name") Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
+
+    /// [title] A short, descriptive, user-friendly title for the implementation guide.
     String? title,
+
+    /// [titleElement] ("_title") Extensions for title
     @JsonKey(name: '_title') Element? titleElement,
+
+    /// [status] The status of this implementation guide. Enables tracking the life-cycle of the content.
     Code? status,
+
+    /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
+
+    /// [experimental] A Boolean value to indicate that this implementation guide is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
     Boolean? experimental,
+
+    /// [experimentalElement] ("_experimental") Extensions for experimental
     @JsonKey(name: '_experimental') Element? experimentalElement,
+
+    /// [date] The date  (and optionally time) when the implementation guide was last significantly changed. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the implementation guide changes.
     FhirDateTime? date,
+
+    /// [dateElement] ("_date") Extensions for date
     @JsonKey(name: '_date') Element? dateElement,
+
+    /// [publisher] The name of the organization or individual responsible for the release and ongoing maintenance of the implementation guide.
     String? publisher,
+
+    /// [publisherElement] ("_publisher") Extensions for publisher
     @JsonKey(name: '_publisher') Element? publisherElement,
+
+    /// [contact] Contact details to assist a user in finding and communicating with the publisher.
     List<ContactDetail>? contact,
+
+    /// [description] A free text natural language description of the implementation guide from a consumer's perspective.
     Markdown? description,
+
+    /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
+
+    /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate implementation guide instances.
     List<UsageContext>? useContext,
+
+    /// [jurisdiction] A legal or geographic region in which the implementation guide is intended to be used.
     List<CodeableConcept>? jurisdiction,
+
+    /// [purpose] Explanation of why this {{title}} is needed and why it has been designed as it has.
     Markdown? purpose,
+
+    /// [purposeElement] ("_purpose") Extensions for purpose
     @JsonKey(name: '_purpose') Element? purposeElement,
+
+    /// [copyright] A copyright statement relating to the implementation guide and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the implementation guide.
     Markdown? copyright,
+
+    /// [copyrightElement] ("_copyright") Extensions for copyright
     @JsonKey(name: '_copyright') Element? copyrightElement,
+
+    /// [copyrightLabel] A short string (<50 characters), suitable for inclusion in a page footer that identifies the copyright holder, effective period, and optionally whether rights are resctricted. (e.g. 'All rights reserved', 'Some rights reserved').
+    String? copyrightLabel,
+
+    /// [copyrightLabelElement] ("_copyrightLabel") Extensions for copyrightLabel
+    @JsonKey(name: '_copyrightLabel') Element? copyrightLabelElement,
+
+    /// [packageId] The NPM package name for this Implementation Guide, used in the NPM package distribution, which is the primary mechanism by which FHIR based tooling manages IG dependencies. This value must be globally unique, and should be assigned with care.
     Id? packageId,
+
+    /// [packageIdElement] ("_packageId") Extensions for packageId
     @JsonKey(name: '_packageId') Element? packageIdElement,
+
+    /// [license] The license that applies to this Implementation Guide, using an SPDX license code, or 'not-open-source'.
     Code? license,
+
+    /// [licenseElement] ("_license") Extensions for license
     @JsonKey(name: '_license') Element? licenseElement,
+
+    /// [fhirVersion] The version(s) of the FHIR specification that this ImplementationGuide targets - e.g. describes how to use. The value of this element is the formal version of the specification, without the revision number, e.g. [publication].[major].[minor], which is 4.6.0. for this version.
     List<Code>? fhirVersion,
+
+    /// [fhirVersionElement] ("_fhirVersion") Extensions for fhirVersion
     @JsonKey(name: '_fhirVersion') List<Element>? fhirVersionElement,
+
+    /// [dependsOn] Another implementation guide that this implementation depends on. Typically, an implementation guide uses value sets, profiles etc.defined in other implementation guides.
     List<ImplementationGuideDependsOn>? dependsOn,
+
+    /// [global] A set of profiles that all resources covered by this implementation guide must conform to.
     List<ImplementationGuideGlobal>? global,
+
+    /// [definition] The information needed by an IG publisher tool to publish the whole implementation guide.
     ImplementationGuideDefinition? definition,
+
+    /// [manifest] Information about an assembled implementation guide, created by the publication tooling.
     ImplementationGuideManifest? manifest,
   }) = _ImplementationGuide;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImplementationGuide.fromYaml(dynamic yaml) => yaml is String
@@ -3597,46 +4156,121 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
     if (json is Map<String, dynamic>) {
       return _$ImplementationGuideFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [ImplementationGuideDependsOn] A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
+/// [ImplementationGuideDependsOn] A set of rules of how a particular
+///  interoperability or standards problem is solved - typically through the
+///  use of FHIR resources. This resource is used to gather all the parts of an
+///  implementation guide into a logical whole and to publish a computable
+///  definition of all the parts.
 @freezed
 class ImplementationGuideDependsOn with _$ImplementationGuideDependsOn {
+  /// [ImplementationGuideDependsOn] A set of rules of how a particular
+  ///  interoperability or standards problem is solved - typically through the
+  ///  use of FHIR resources. This resource is used to gather all the parts of
+  ///  an implementation guide into a logical whole and to publish a computable
+  ///  definition of all the parts.
   ImplementationGuideDependsOn._();
 
-  /// [ImplementationGuideDependsOn] A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
-
+  /// [ImplementationGuideDependsOn] A set of rules of how a particular
+  ///  interoperability or standards problem is solved - typically through the
+  ///  use of FHIR resources. This resource is used to gather all the parts of
+  ///  an implementation guide into a logical whole and to publish a computable
+  ///  definition of all the parts.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [uri] A canonical reference to the Implementation guide for the dependency.;
+  /// [uri] A canonical reference to the Implementation guide for the
+  ///  dependency.
   ///
-  /// [packageId] The NPM package name for the Implementation Guide that this IG depends on.;
+  /// [packageId] The NPM package name for the Implementation Guide that this
+  ///  IG depends on.
   ///
-  /// [packageIdElement] (_packageId): Extensions for packageId;
+  /// [packageIdElement] ("_packageId") Extensions for packageId
   ///
-  /// [version] The version of the IG that is depended on, when the correct version is required to understand the IG correctly.;
+  /// [version] The version of the IG that is depended on, when the correct
+  ///  version is required to understand the IG correctly.
   ///
-  /// [versionElement] (_version): Extensions for version;
+  /// [versionElement] ("_version") Extensions for version
+  ///
+  /// [reason] A description explaining the nature of the dependency on the
+  ///  listed IG.
+  ///
+  /// [reasonElement] ("_reason") Extensions for reason
+  ///
   factory ImplementationGuideDependsOn({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [uri] A canonical reference to the Implementation guide for the dependency.
     required Canonical uri,
+
+    /// [packageId] The NPM package name for the Implementation Guide that this IG depends on.
     Id? packageId,
+
+    /// [packageIdElement] ("_packageId") Extensions for packageId
     @JsonKey(name: '_packageId') Element? packageIdElement,
+
+    /// [version] The version of the IG that is depended on, when the correct version is required to understand the IG correctly.
     String? version,
+
+    /// [versionElement] ("_version") Extensions for version
     @JsonKey(name: '_version') Element? versionElement,
+
+    /// [reason] A description explaining the nature of the dependency on the listed IG.
+    Markdown? reason,
+
+    /// [reasonElement] ("_reason") Extensions for reason
+    @JsonKey(name: '_reason') Element? reasonElement,
   }) = _ImplementationGuideDependsOn;
 
   /// Produces a Yaml formatted String version of the object
@@ -3657,46 +4291,104 @@ class ImplementationGuideDependsOn with _$ImplementationGuideDependsOn {
   factory ImplementationGuideDependsOn.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideDependsOnFromJson(json);
 
-  /// Acts like a constructor, returns a [ImplementationGuideDependsOn], accepts a
+  /// Acts like a constructor, returns a [ImplementationGuideDependsOn],
+  ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ImplementationGuideDependsOn.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ImplementationGuideDependsOnFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [ImplementationGuideGlobal] A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
+/// [ImplementationGuideGlobal] A set of rules of how a particular
+///  interoperability or standards problem is solved - typically through the
+///  use of FHIR resources. This resource is used to gather all the parts of an
+///  implementation guide into a logical whole and to publish a computable
+///  definition of all the parts.
 @freezed
 class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
+  /// [ImplementationGuideGlobal] A set of rules of how a particular
+  ///  interoperability or standards problem is solved - typically through the
+  ///  use of FHIR resources. This resource is used to gather all the parts of
+  ///  an implementation guide into a logical whole and to publish a computable
+  ///  definition of all the parts.
   ImplementationGuideGlobal._();
 
-  /// [ImplementationGuideGlobal] A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
-
+  /// [ImplementationGuideGlobal] A set of rules of how a particular
+  ///  interoperability or standards problem is solved - typically through the
+  ///  use of FHIR resources. This resource is used to gather all the parts of
+  ///  an implementation guide into a logical whole and to publish a computable
+  ///  definition of all the parts.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [type] The type of resource that all instances must conform to.;
+  /// [type] The type of resource that all instances must conform to.
   ///
-  /// [typeElement] (_type): Extensions for type;
+  /// [typeElement] ("_type") Extensions for type
   ///
-  /// [profile] A reference to the profile that all instances must conform to.;
+  /// [profile] A reference to the profile that all instances must conform to.
+  ///
   factory ImplementationGuideGlobal({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [type] The type of resource that all instances must conform to.
     Code? type,
+
+    /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
+
+    /// [profile] A reference to the profile that all instances must conform to.
     required Canonical profile,
   }) = _ImplementationGuideGlobal;
 
@@ -3725,45 +4417,113 @@ class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
     if (json is Map<String, dynamic>) {
       return _$ImplementationGuideGlobalFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [ImplementationGuideDefinition] A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
+/// [ImplementationGuideDefinition] A set of rules of how a particular
+///  interoperability or standards problem is solved - typically through the
+///  use of FHIR resources. This resource is used to gather all the parts of an
+///  implementation guide into a logical whole and to publish a computable
+///  definition of all the parts.
 @freezed
 class ImplementationGuideDefinition with _$ImplementationGuideDefinition {
+  /// [ImplementationGuideDefinition] A set of rules of how a particular
+  ///  interoperability or standards problem is solved - typically through the
+  ///  use of FHIR resources. This resource is used to gather all the parts of
+  ///  an implementation guide into a logical whole and to publish a computable
+  ///  definition of all the parts.
   ImplementationGuideDefinition._();
 
-  /// [ImplementationGuideDefinition] A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
-
+  /// [ImplementationGuideDefinition] A set of rules of how a particular
+  ///  interoperability or standards problem is solved - typically through the
+  ///  use of FHIR resources. This resource is used to gather all the parts of
+  ///  an implementation guide into a logical whole and to publish a computable
+  ///  definition of all the parts.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [grouping] A logical group of resources. Logical groups can be used when building pages.;
+  /// [grouping] A logical group of resources. Logical groups can be used when
+  ///  building pages.
   ///
-  /// [resource] A resource that is part of the implementation guide. Conformance resources (value set, structure definition, capability statements etc.) are obvious candidates for inclusion, but any kind of resource can be included as an example resource.;
+  /// [resource] A resource that is part of the implementation guide.
+  ///  Conformance resources (value set, structure definition, capability
+  ///  statements etc.) are obvious candidates for inclusion, but any kind of
+  ///  resource can be included as an example resource.
   ///
-  /// [page] A page / section in the implementation guide. The root page is the implementation guide home page.;
+  /// [page] A page / section in the implementation guide. The root page is the
+  ///  implementation guide home page.
   ///
-  /// [parameter] A set of parameters that defines how the implementation guide is built. The parameters are defined by the relevant tools that build the implementation guides.;
+  /// [parameter] A set of parameters that defines how the implementation guide
+  ///  is built. The parameters are defined by the relevant tools that build
+  ///  the implementation guides.
   ///
-  /// [template] A template for building resources.;
+  /// [template] A template for building resources.
+  ///
   factory ImplementationGuideDefinition({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [grouping] A logical group of resources. Logical groups can be used when building pages.
     List<ImplementationGuideGrouping>? grouping,
+
+    /// [resource] A resource that is part of the implementation guide. Conformance resources (value set, structure definition, capability statements etc.) are obvious candidates for inclusion, but any kind of resource can be included as an example resource.
     List<ImplementationGuideResource>? resource,
+
+    /// [page] A page / section in the implementation guide. The root page is the implementation guide home page.
     ImplementationGuidePage? page,
+
+    /// [parameter] A set of parameters that defines how the implementation guide is built. The parameters are defined by the relevant tools that build the implementation guides.
     List<ImplementationGuideParameter>? parameter,
+
+    /// [template] A template for building resources.
     List<ImplementationGuideTemplate>? template,
   }) = _ImplementationGuideDefinition;
 
@@ -3785,49 +4545,110 @@ class ImplementationGuideDefinition with _$ImplementationGuideDefinition {
   factory ImplementationGuideDefinition.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideDefinitionFromJson(json);
 
-  /// Acts like a constructor, returns a [ImplementationGuideDefinition], accepts a
+  /// Acts like a constructor, returns a [ImplementationGuideDefinition],
+  ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ImplementationGuideDefinition.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ImplementationGuideDefinitionFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [ImplementationGuideGrouping] A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
+/// [ImplementationGuideGrouping] A set of rules of how a particular
+///  interoperability or standards problem is solved - typically through the
+///  use of FHIR resources. This resource is used to gather all the parts of an
+///  implementation guide into a logical whole and to publish a computable
+///  definition of all the parts.
 @freezed
 class ImplementationGuideGrouping with _$ImplementationGuideGrouping {
+  /// [ImplementationGuideGrouping] A set of rules of how a particular
+  ///  interoperability or standards problem is solved - typically through the
+  ///  use of FHIR resources. This resource is used to gather all the parts of
+  ///  an implementation guide into a logical whole and to publish a computable
+  ///  definition of all the parts.
   ImplementationGuideGrouping._();
 
-  /// [ImplementationGuideGrouping] A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
-
+  /// [ImplementationGuideGrouping] A set of rules of how a particular
+  ///  interoperability or standards problem is solved - typically through the
+  ///  use of FHIR resources. This resource is used to gather all the parts of
+  ///  an implementation guide into a logical whole and to publish a computable
+  ///  definition of all the parts.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [name] The human-readable title to display for the package of resources when rendering the implementation guide.;
+  /// [name] The human-readable title to display for the package of resources
+  ///  when rendering the implementation guide.
   ///
-  /// [nameElement] (_name): Extensions for name;
+  /// [nameElement] ("_name") Extensions for name
   ///
-  /// [description] Human readable text describing the package.;
+  /// [description] Human readable text describing the package.
   ///
-  /// [descriptionElement] (_description): Extensions for description;
+  /// [descriptionElement] ("_description") Extensions for description
+  ///
   factory ImplementationGuideGrouping({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [name] The human-readable title to display for the package of resources when rendering the implementation guide.
     String? name,
+
+    /// [nameElement] ("_name") Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
+
+    /// [description] Human readable text describing the package.
     Markdown? description,
+
+    /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
   }) = _ImplementationGuideGrouping;
 
@@ -3849,76 +4670,154 @@ class ImplementationGuideGrouping with _$ImplementationGuideGrouping {
   factory ImplementationGuideGrouping.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideGroupingFromJson(json);
 
-  /// Acts like a constructor, returns a [ImplementationGuideGrouping], accepts a
+  /// Acts like a constructor, returns a [ImplementationGuideGrouping], accepts
+  ///  a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ImplementationGuideGrouping.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ImplementationGuideGroupingFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [ImplementationGuideResource] A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
+/// [ImplementationGuideResource] A set of rules of how a particular
+///  interoperability or standards problem is solved - typically through the
+///  use of FHIR resources. This resource is used to gather all the parts of an
+///  implementation guide into a logical whole and to publish a computable
+///  definition of all the parts.
 @freezed
 class ImplementationGuideResource with _$ImplementationGuideResource {
+  /// [ImplementationGuideResource] A set of rules of how a particular
+  ///  interoperability or standards problem is solved - typically through the
+  ///  use of FHIR resources. This resource is used to gather all the parts of
+  ///  an implementation guide into a logical whole and to publish a computable
+  ///  definition of all the parts.
   ImplementationGuideResource._();
 
-  /// [ImplementationGuideResource] A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
-
+  /// [ImplementationGuideResource] A set of rules of how a particular
+  ///  interoperability or standards problem is solved - typically through the
+  ///  use of FHIR resources. This resource is used to gather all the parts of
+  ///  an implementation guide into a logical whole and to publish a computable
+  ///  definition of all the parts.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [reference] Where this resource is found.;
+  /// [reference] Where this resource is found.
   ///
-  /// [fhirVersion] Indicates the FHIR Version(s) this artifact is intended to apply to. If no versions are specified, the resource is assumed to apply to all the versions stated in ImplementationGuide.fhirVersion.;
+  /// [fhirVersion] Indicates the FHIR Version(s) this artifact is intended to
+  ///  apply to. If no versions are specified, the resource is assumed to apply
+  ///  to all the versions stated in ImplementationGuide.fhirVersion.
   ///
-  /// [fhirVersionElement] (_fhirVersion): Extensions for fhirVersion;
+  /// [fhirVersionElement] ("_fhirVersion") Extensions for fhirVersion
   ///
-  /// [name] A human assigned name for the resource. All resources SHOULD have a name, but the name may be extracted from the resource (e.g. ValueSet.name).;
+  /// [name] A human assigned name for the resource. All resources SHOULD have
+  ///  a name, but the name may be extracted from the resource (e.g.
+  ///  ValueSet.name).
   ///
-  /// [nameElement] (_name): Extensions for name;
+  /// [nameElement] ("_name") Extensions for name
   ///
-  /// [description] A description of the reason that a resource has been included in the implementation guide.;
+  /// [description] A description of the reason that a resource has been
+  ///  included in the implementation guide.
   ///
-  /// [descriptionElement] (_description): Extensions for description;
+  /// [descriptionElement] ("_description") Extensions for description
   ///
-  /// [exampleBoolean] If true or a reference, indicates the resource is an example instance.  If a reference is present, indicates that the example is an example of the specified profile.;
+  /// [isExample] If true, indicates the resource is an example instance.
   ///
-  /// [exampleBooleanElement] (_exampleBoolean): Extensions for exampleBoolean;
+  /// [isExampleElement] ("_isExample") Extensions for isExample
   ///
-  /// [exampleCanonical] If true or a reference, indicates the resource is an example instance.  If a reference is present, indicates that the example is an example of the specified profile.;
+  /// [profile] If present, indicates profile(s) the instance is valid against.
   ///
-  /// [exampleCanonicalElement] (_exampleCanonical): Extensions for exampleCanonical;
+  /// [groupingId] Reference to the id of the grouping this resource appears in.
   ///
-  /// [groupingId] Reference to the id of the grouping this resource appears in.;
+  /// [groupingIdElement] ("_groupingId") Extensions for groupingId
   ///
-  /// [groupingIdElement] (_groupingId): Extensions for groupingId;
   factory ImplementationGuideResource({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [reference] Where this resource is found.
     required Reference reference,
+
+    /// [fhirVersion] Indicates the FHIR Version(s) this artifact is intended to apply to. If no versions are specified, the resource is assumed to apply to all the versions stated in ImplementationGuide.fhirVersion.
     List<Code>? fhirVersion,
+
+    /// [fhirVersionElement] ("_fhirVersion") Extensions for fhirVersion
     @JsonKey(name: '_fhirVersion') List<Element>? fhirVersionElement,
+
+    /// [name] A human assigned name for the resource. All resources SHOULD have a name, but the name may be extracted from the resource (e.g. ValueSet.name).
     String? name,
+
+    /// [nameElement] ("_name") Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
+
+    /// [description] A description of the reason that a resource has been included in the implementation guide.
     Markdown? description,
+
+    /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
-    Boolean? exampleBoolean,
-    @JsonKey(name: '_exampleBoolean') Element? exampleBooleanElement,
-    Canonical? exampleCanonical,
-    @JsonKey(name: '_exampleCanonical') Element? exampleCanonicalElement,
+
+    /// [isExample] If true, indicates the resource is an example instance.
+    Boolean? isExample,
+
+    /// [isExampleElement] ("_isExample") Extensions for isExample
+    @JsonKey(name: '_isExample') Element? isExampleElement,
+
+    /// [profile] If present, indicates profile(s) the instance is valid against.
+    List<Canonical>? profile,
+
+    /// [groupingId] Reference to the id of the grouping this resource appears in.
     Id? groupingId,
+
+    /// [groupingIdElement] ("_groupingId") Extensions for groupingId
     @JsonKey(name: '_groupingId') Element? groupingIdElement,
   }) = _ImplementationGuideResource;
 
@@ -3940,61 +4839,158 @@ class ImplementationGuideResource with _$ImplementationGuideResource {
   factory ImplementationGuideResource.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideResourceFromJson(json);
 
-  /// Acts like a constructor, returns a [ImplementationGuideResource], accepts a
+  /// Acts like a constructor, returns a [ImplementationGuideResource], accepts
+  ///  a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ImplementationGuideResource.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ImplementationGuideResourceFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [ImplementationGuidePage] A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
+/// [ImplementationGuidePage] A set of rules of how a particular
+///  interoperability or standards problem is solved - typically through the
+///  use of FHIR resources. This resource is used to gather all the parts of an
+///  implementation guide into a logical whole and to publish a computable
+///  definition of all the parts.
 @freezed
 class ImplementationGuidePage with _$ImplementationGuidePage {
+  /// [ImplementationGuidePage] A set of rules of how a particular
+  ///  interoperability or standards problem is solved - typically through the
+  ///  use of FHIR resources. This resource is used to gather all the parts of
+  ///  an implementation guide into a logical whole and to publish a computable
+  ///  definition of all the parts.
   ImplementationGuidePage._();
 
-  /// [ImplementationGuidePage] A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
-
+  /// [ImplementationGuidePage] A set of rules of how a particular
+  ///  interoperability or standards problem is solved - typically through the
+  ///  use of FHIR resources. This resource is used to gather all the parts of
+  ///  an implementation guide into a logical whole and to publish a computable
+  ///  definition of all the parts.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [nameUrl] The source address for the page.;
+  /// [sourceUrl] Indicates the URL or the actual content to provide for the
+  ///  page.
   ///
-  /// [nameUrlElement] (_nameUrl): Extensions for nameUrl;
+  /// [sourceUrlElement] ("_sourceUrl") Extensions for sourceUrl
   ///
-  /// [nameReference] The source address for the page.;
+  /// [sourceString] Indicates the URL or the actual content to provide for the
+  ///  page.
   ///
-  /// [title] A short title used to represent this page in navigational structures such as table of contents, bread crumbs, etc.;
+  /// [sourceStringElement] ("_sourceString") Extensions for sourceString
   ///
-  /// [titleElement] (_title): Extensions for title;
+  /// [sourceMarkdown] Indicates the URL or the actual content to provide for
+  ///  the page.
   ///
-  /// [generation] A code that indicates how the page is generated.;
+  /// [sourceMarkdownElement] ("_sourceMarkdown") Extensions for sourceMarkdown
   ///
-  /// [generationElement] (_generation): Extensions for generation;
+  /// [name] The url by which the page should be known when published.
   ///
-  /// [page] Nested Pages/Sections under this page.;
+  /// [nameElement] ("_name") Extensions for name
+  ///
+  /// [title] A short title used to represent this page in navigational
+  ///  structures such as table of contents, bread crumbs, etc.
+  ///
+  /// [titleElement] ("_title") Extensions for title
+  ///
+  /// [generation] A code that indicates how the page is generated.
+  ///
+  /// [generationElement] ("_generation") Extensions for generation
+  ///
+  /// [page] Nested Pages/Sections under this page.
+  ///
   factory ImplementationGuidePage({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
-    FhirUrl? nameUrl,
-    @JsonKey(name: '_nameUrl') Element? nameUrlElement,
-    Reference? nameReference,
+
+    /// [sourceUrl] Indicates the URL or the actual content to provide for the page.
+    FhirUrl? sourceUrl,
+
+    /// [sourceUrlElement] ("_sourceUrl") Extensions for sourceUrl
+    @JsonKey(name: '_sourceUrl') Element? sourceUrlElement,
+
+    /// [sourceString] Indicates the URL or the actual content to provide for the page.
+    String? sourceString,
+
+    /// [sourceStringElement] ("_sourceString") Extensions for sourceString
+    @JsonKey(name: '_sourceString') Element? sourceStringElement,
+
+    /// [sourceMarkdown] Indicates the URL or the actual content to provide for the page.
+    Markdown? sourceMarkdown,
+
+    /// [sourceMarkdownElement] ("_sourceMarkdown") Extensions for sourceMarkdown
+    @JsonKey(name: '_sourceMarkdown') Element? sourceMarkdownElement,
+
+    /// [name] The url by which the page should be known when published.
+    FhirUrl? name,
+
+    /// [nameElement] ("_name") Extensions for name
+    @JsonKey(name: '_name') Element? nameElement,
+
+    /// [title] A short title used to represent this page in navigational structures such as table of contents, bread crumbs, etc.
     String? title,
+
+    /// [titleElement] ("_title") Extensions for title
     @JsonKey(name: '_title') Element? titleElement,
+
+    /// [generation] A code that indicates how the page is generated.
     Code? generation,
+
+    /// [generationElement] ("_generation") Extensions for generation
     @JsonKey(name: '_generation') Element? generationElement,
+
+    /// [page] Nested Pages/Sections under this page.
     List<ImplementationGuidePage>? page,
   }) = _ImplementationGuidePage;
 
@@ -4023,42 +5019,96 @@ class ImplementationGuidePage with _$ImplementationGuidePage {
     if (json is Map<String, dynamic>) {
       return _$ImplementationGuidePageFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [ImplementationGuideParameter] A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
+/// [ImplementationGuideParameter] A set of rules of how a particular
+///  interoperability or standards problem is solved - typically through the
+///  use of FHIR resources. This resource is used to gather all the parts of an
+///  implementation guide into a logical whole and to publish a computable
+///  definition of all the parts.
 @freezed
 class ImplementationGuideParameter with _$ImplementationGuideParameter {
+  /// [ImplementationGuideParameter] A set of rules of how a particular
+  ///  interoperability or standards problem is solved - typically through the
+  ///  use of FHIR resources. This resource is used to gather all the parts of
+  ///  an implementation guide into a logical whole and to publish a computable
+  ///  definition of all the parts.
   ImplementationGuideParameter._();
 
-  /// [ImplementationGuideParameter] A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
-
+  /// [ImplementationGuideParameter] A set of rules of how a particular
+  ///  interoperability or standards problem is solved - typically through the
+  ///  use of FHIR resources. This resource is used to gather all the parts of
+  ///  an implementation guide into a logical whole and to publish a computable
+  ///  definition of all the parts.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [code] Code that identifies parameter.;
+  /// [code] A tool-specific code that defines the parameter.
   ///
-  /// [codeElement] (_code): Extensions for code;
+  /// [value] Value for named type.
   ///
-  /// [value] Value for named type.;
+  /// [valueElement] ("_value") Extensions for value
   ///
-  /// [valueElement] (_value): Extensions for value;
   factory ImplementationGuideParameter({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
-    String? code,
-    @JsonKey(name: '_code') Element? codeElement,
+
+    /// [code] A tool-specific code that defines the parameter.
+    required Coding code,
+
+    /// [value] Value for named type.
     String? value,
+
+    /// [valueElement] ("_value") Extensions for value
     @JsonKey(name: '_value') Element? valueElement,
   }) = _ImplementationGuideParameter;
 
@@ -4080,55 +5130,119 @@ class ImplementationGuideParameter with _$ImplementationGuideParameter {
   factory ImplementationGuideParameter.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideParameterFromJson(json);
 
-  /// Acts like a constructor, returns a [ImplementationGuideParameter], accepts a
+  /// Acts like a constructor, returns a [ImplementationGuideParameter],
+  ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ImplementationGuideParameter.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ImplementationGuideParameterFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [ImplementationGuideTemplate] A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
+/// [ImplementationGuideTemplate] A set of rules of how a particular
+///  interoperability or standards problem is solved - typically through the
+///  use of FHIR resources. This resource is used to gather all the parts of an
+///  implementation guide into a logical whole and to publish a computable
+///  definition of all the parts.
 @freezed
 class ImplementationGuideTemplate with _$ImplementationGuideTemplate {
+  /// [ImplementationGuideTemplate] A set of rules of how a particular
+  ///  interoperability or standards problem is solved - typically through the
+  ///  use of FHIR resources. This resource is used to gather all the parts of
+  ///  an implementation guide into a logical whole and to publish a computable
+  ///  definition of all the parts.
   ImplementationGuideTemplate._();
 
-  /// [ImplementationGuideTemplate] A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
-
+  /// [ImplementationGuideTemplate] A set of rules of how a particular
+  ///  interoperability or standards problem is solved - typically through the
+  ///  use of FHIR resources. This resource is used to gather all the parts of
+  ///  an implementation guide into a logical whole and to publish a computable
+  ///  definition of all the parts.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [code] Type of template specified.;
+  /// [code] Type of template specified.
   ///
-  /// [codeElement] (_code): Extensions for code;
+  /// [codeElement] ("_code") Extensions for code
   ///
-  /// [source] The source location for the template.;
+  /// [source] The source location for the template.
   ///
-  /// [sourceElement] (_source): Extensions for source;
+  /// [sourceElement] ("_source") Extensions for source
   ///
-  /// [scope] The scope in which the template applies.;
+  /// [scope] The scope in which the template applies.
   ///
-  /// [scopeElement] (_scope): Extensions for scope;
+  /// [scopeElement] ("_scope") Extensions for scope
+  ///
   factory ImplementationGuideTemplate({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [code] Type of template specified.
     Code? code,
+
+    /// [codeElement] ("_code") Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
+
+    /// [source] The source location for the template.
     String? source,
+
+    /// [sourceElement] ("_source") Extensions for source
     @JsonKey(name: '_source') Element? sourceElement,
+
+    /// [scope] The scope in which the template applies.
     String? scope,
+
+    /// [scopeElement] ("_scope") Extensions for scope
     @JsonKey(name: '_scope') Element? scopeElement,
   }) = _ImplementationGuideTemplate;
 
@@ -4150,61 +5264,135 @@ class ImplementationGuideTemplate with _$ImplementationGuideTemplate {
   factory ImplementationGuideTemplate.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideTemplateFromJson(json);
 
-  /// Acts like a constructor, returns a [ImplementationGuideTemplate], accepts a
+  /// Acts like a constructor, returns a [ImplementationGuideTemplate], accepts
+  ///  a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ImplementationGuideTemplate.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ImplementationGuideTemplateFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [ImplementationGuideManifest] A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
+/// [ImplementationGuideManifest] A set of rules of how a particular
+///  interoperability or standards problem is solved - typically through the
+///  use of FHIR resources. This resource is used to gather all the parts of an
+///  implementation guide into a logical whole and to publish a computable
+///  definition of all the parts.
 @freezed
 class ImplementationGuideManifest with _$ImplementationGuideManifest {
+  /// [ImplementationGuideManifest] A set of rules of how a particular
+  ///  interoperability or standards problem is solved - typically through the
+  ///  use of FHIR resources. This resource is used to gather all the parts of
+  ///  an implementation guide into a logical whole and to publish a computable
+  ///  definition of all the parts.
   ImplementationGuideManifest._();
 
-  /// [ImplementationGuideManifest] A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
-
+  /// [ImplementationGuideManifest] A set of rules of how a particular
+  ///  interoperability or standards problem is solved - typically through the
+  ///  use of FHIR resources. This resource is used to gather all the parts of
+  ///  an implementation guide into a logical whole and to publish a computable
+  ///  definition of all the parts.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [rendering] A pointer to official web page, PDF or other rendering of the implementation guide.;
+  /// [rendering] A pointer to official web page, PDF or other rendering of the
+  ///  implementation guide.
   ///
-  /// [renderingElement] (_rendering): Extensions for rendering;
+  /// [renderingElement] ("_rendering") Extensions for rendering
   ///
-  /// [resource] A resource that is part of the implementation guide. Conformance resources (value set, structure definition, capability statements etc.) are obvious candidates for inclusion, but any kind of resource can be included as an example resource.;
+  /// [resource] A resource that is part of the implementation guide.
+  ///  Conformance resources (value set, structure definition, capability
+  ///  statements etc.) are obvious candidates for inclusion, but any kind of
+  ///  resource can be included as an example resource.
   ///
-  /// [page] Information about a page within the IG.;
+  /// [page] Information about a page within the IG.
   ///
-  /// [image] Indicates a relative path to an image that exists within the IG.;
+  /// [image] Indicates a relative path to an image that exists within the IG.
   ///
-  /// [imageElement] (_image): Extensions for image;
+  /// [imageElement] ("_image") Extensions for image
   ///
-  /// [other] Indicates the relative path of an additional non-page, non-image file that is part of the IG - e.g. zip, jar and similar files that could be the target of a hyperlink in a derived IG.;
+  /// [other] Indicates the relative path of an additional non-page, non-image
+  ///  file that is part of the IG - e.g. zip, jar and similar files that could
+  ///  be the target of a hyperlink in a derived IG.
   ///
-  /// [otherElement] (_other): Extensions for other;
+  /// [otherElement] ("_other") Extensions for other
+  ///
   factory ImplementationGuideManifest({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [rendering] A pointer to official web page, PDF or other rendering of the implementation guide.
     FhirUrl? rendering,
+
+    /// [renderingElement] ("_rendering") Extensions for rendering
     @JsonKey(name: '_rendering') Element? renderingElement,
+
+    /// [resource] A resource that is part of the implementation guide. Conformance resources (value set, structure definition, capability statements etc.) are obvious candidates for inclusion, but any kind of resource can be included as an example resource.
     required List<ImplementationGuideResource1> resource,
+
+    /// [page] Information about a page within the IG.
     List<ImplementationGuidePage1>? page,
+
+    /// [image] Indicates a relative path to an image that exists within the IG.
     List<String>? image,
+
+    /// [imageElement] ("_image") Extensions for image
     @JsonKey(name: '_image') List<Element>? imageElement,
+
+    /// [other] Indicates the relative path of an additional non-page, non-image file that is part of the IG - e.g. zip, jar and similar files that could be the target of a hyperlink in a derived IG.
     List<String>? other,
+
+    /// [otherElement] ("_other") Extensions for other
     @JsonKey(name: '_other') List<Element>? otherElement,
   }) = _ImplementationGuideManifest;
 
@@ -4226,58 +5414,120 @@ class ImplementationGuideManifest with _$ImplementationGuideManifest {
   factory ImplementationGuideManifest.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideManifestFromJson(json);
 
-  /// Acts like a constructor, returns a [ImplementationGuideManifest], accepts a
+  /// Acts like a constructor, returns a [ImplementationGuideManifest], accepts
+  ///  a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ImplementationGuideManifest.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ImplementationGuideManifestFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [ImplementationGuideResource1] A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
+/// [ImplementationGuideResource1] A set of rules of how a particular
+///  interoperability or standards problem is solved - typically through the
+///  use of FHIR resources. This resource is used to gather all the parts of an
+///  implementation guide into a logical whole and to publish a computable
+///  definition of all the parts.
 @freezed
 class ImplementationGuideResource1 with _$ImplementationGuideResource1 {
+  /// [ImplementationGuideResource1] A set of rules of how a particular
+  ///  interoperability or standards problem is solved - typically through the
+  ///  use of FHIR resources. This resource is used to gather all the parts of
+  ///  an implementation guide into a logical whole and to publish a computable
+  ///  definition of all the parts.
   ImplementationGuideResource1._();
 
-  /// [ImplementationGuideResource1] A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
-
+  /// [ImplementationGuideResource1] A set of rules of how a particular
+  ///  interoperability or standards problem is solved - typically through the
+  ///  use of FHIR resources. This resource is used to gather all the parts of
+  ///  an implementation guide into a logical whole and to publish a computable
+  ///  definition of all the parts.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [reference] Where this resource is found.;
+  /// [reference] Where this resource is found.
   ///
-  /// [exampleBoolean] If true or a reference, indicates the resource is an example instance.  If a reference is present, indicates that the example is an example of the specified profile.;
+  /// [isExample] If true, indicates the resource is an example instance.
   ///
-  /// [exampleBooleanElement] (_exampleBoolean): Extensions for exampleBoolean;
+  /// [isExampleElement] ("_isExample") Extensions for isExample
   ///
-  /// [exampleCanonical] If true or a reference, indicates the resource is an example instance.  If a reference is present, indicates that the example is an example of the specified profile.;
+  /// [profile] If present, indicates profile(s) the instance is valid against.
   ///
-  /// [exampleCanonicalElement] (_exampleCanonical): Extensions for exampleCanonical;
+  /// [relativePath] The relative path for primary page for this resource
+  ///  within the IG.
   ///
-  /// [relativePath] The relative path for primary page for this resource within the IG.;
+  /// [relativePathElement] ("_relativePath") Extensions for relativePath
   ///
-  /// [relativePathElement] (_relativePath): Extensions for relativePath;
   factory ImplementationGuideResource1({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [reference] Where this resource is found.
     required Reference reference,
-    Boolean? exampleBoolean,
-    @JsonKey(name: '_exampleBoolean') Element? exampleBooleanElement,
-    Canonical? exampleCanonical,
-    @JsonKey(name: '_exampleCanonical') Element? exampleCanonicalElement,
+
+    /// [isExample] If true, indicates the resource is an example instance.
+    Boolean? isExample,
+
+    /// [isExampleElement] ("_isExample") Extensions for isExample
+    @JsonKey(name: '_isExample') Element? isExampleElement,
+
+    /// [profile] If present, indicates profile(s) the instance is valid against.
+    List<Canonical>? profile,
+
+    /// [relativePath] The relative path for primary page for this resource within the IG.
     FhirUrl? relativePath,
+
+    /// [relativePathElement] ("_relativePath") Extensions for relativePath
     @JsonKey(name: '_relativePath') Element? relativePathElement,
   }) = _ImplementationGuideResource1;
 
@@ -4299,55 +5549,119 @@ class ImplementationGuideResource1 with _$ImplementationGuideResource1 {
   factory ImplementationGuideResource1.fromJson(Map<String, dynamic> json) =>
       _$ImplementationGuideResource1FromJson(json);
 
-  /// Acts like a constructor, returns a [ImplementationGuideResource1], accepts a
+  /// Acts like a constructor, returns a [ImplementationGuideResource1],
+  ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ImplementationGuideResource1.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ImplementationGuideResource1FromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [ImplementationGuidePage1] A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
+/// [ImplementationGuidePage1] A set of rules of how a particular
+///  interoperability or standards problem is solved - typically through the
+///  use of FHIR resources. This resource is used to gather all the parts of an
+///  implementation guide into a logical whole and to publish a computable
+///  definition of all the parts.
 @freezed
 class ImplementationGuidePage1 with _$ImplementationGuidePage1 {
+  /// [ImplementationGuidePage1] A set of rules of how a particular
+  ///  interoperability or standards problem is solved - typically through the
+  ///  use of FHIR resources. This resource is used to gather all the parts of
+  ///  an implementation guide into a logical whole and to publish a computable
+  ///  definition of all the parts.
   ImplementationGuidePage1._();
 
-  /// [ImplementationGuidePage1] A set of rules of how a particular interoperability or standards problem is solved - typically through the use of FHIR resources. This resource is used to gather all the parts of an implementation guide into a logical whole and to publish a computable definition of all the parts.
-
+  /// [ImplementationGuidePage1] A set of rules of how a particular
+  ///  interoperability or standards problem is solved - typically through the
+  ///  use of FHIR resources. This resource is used to gather all the parts of
+  ///  an implementation guide into a logical whole and to publish a computable
+  ///  definition of all the parts.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [name] Relative path to the page.;
+  /// [name] Relative path to the page.
   ///
-  /// [nameElement] (_name): Extensions for name;
+  /// [nameElement] ("_name") Extensions for name
   ///
-  /// [title] Label for the page intended for human display.;
+  /// [title] Label for the page intended for human display.
   ///
-  /// [titleElement] (_title): Extensions for title;
+  /// [titleElement] ("_title") Extensions for title
   ///
-  /// [anchor] The name of an anchor available on the page.;
+  /// [anchor] The name of an anchor available on the page.
   ///
-  /// [anchorElement] (_anchor): Extensions for anchor;
+  /// [anchorElement] ("_anchor") Extensions for anchor
+  ///
   factory ImplementationGuidePage1({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [name] Relative path to the page.
     String? name,
+
+    /// [nameElement] ("_name") Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
+
+    /// [title] Label for the page intended for human display.
     String? title,
+
+    /// [titleElement] ("_title") Extensions for title
     @JsonKey(name: '_title') Element? titleElement,
+
+    /// [anchor] The name of an anchor available on the page.
     List<String>? anchor,
+
+    /// [anchorElement] ("_anchor") Extensions for anchor
     @JsonKey(name: '_anchor') List<Element>? anchorElement,
   }) = _ImplementationGuidePage1;
 
@@ -4376,173 +5690,399 @@ class ImplementationGuidePage1 with _$ImplementationGuidePage1 {
     if (json is Map<String, dynamic>) {
       return _$ImplementationGuidePage1FromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [MessageDefinition] Defines the characteristics of a message that can be shared between systems, including the type of event that initiates the message, the content to be transmitted and what response(s), if any, are permitted.
+/// [MessageDefinition] Defines the characteristics of a message that can be
+///  shared between systems, including the type of event that initiates the
+///  message, the content to be transmitted and what response(s), if any, are
+///  permitted.
 @freezed
 class MessageDefinition with Resource, _$MessageDefinition {
+  /// [MessageDefinition] Defines the characteristics of a message that can be
+  ///  shared between systems, including the type of event that initiates the
+  ///  message, the content to be transmitted and what response(s), if any, are
+  ///  permitted.
   MessageDefinition._();
 
-  /// [MessageDefinition] Defines the characteristics of a message that can be shared between systems, including the type of event that initiates the message, the content to be transmitted and what response(s), if any, are permitted.
-
+  /// [MessageDefinition] Defines the characteristics of a message that can be
+  ///  shared between systems, including the type of event that initiates the
+  ///  message, the content to be transmitted and what response(s), if any, are
+  ///  permitted.
   ///
-  /// [resourceType] This is a MessageDefinition resource;
+  /// [resourceType] This is a MessageDefinition resource
   ///
-  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
   ///
-  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  /// [meta] The metadata about the resource. This is content that is
+  ///  maintained by the infrastructure. Changes to the content might not
+  ///  always be associated with version changes to the resource.
   ///
-  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  ///  resource was constructed, and which must be understood when processing
+  ///  the content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   ///
-  /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   ///
-  /// [language] The base language in which the resource is written.;
+  /// [language] The base language in which the resource is written.
   ///
-  /// [languageElement] (_language): Extensions for language;
+  /// [languageElement] ("_language") Extensions for language
   ///
-  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  /// [text] A human-readable narrative that contains a summary of the resource
+  ///  and can be used to represent the content of the resource to a human. The
+  ///  narrative need not encode all the structured data, but is required to
+  ///  contain sufficient detail to make it "clinically safe" for a human to
+  ///  just read the narrative. Resource definitions may define what content
+  ///  should be represented in the narrative to ensure clinical safety.
   ///
-  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  /// [contained] These resources do not have an independent existence apart
+  ///  from the resource that contains them - they cannot be identified
+  ///  independently, nor can they have their own independent transaction
+  ///  scope. This is allowed to be a Parameters resource if and only if it is
+  ///  referenced by a resource that provides context/meaning.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the resource. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the resource and that modifies
+  ///  the understanding of the element that contains it and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  is allowed to define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension. Applications
+  ///  processing a resource are required to check for modifier
+  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
+  ///  elements on Resource or DomainResource (including cannot change the
+  ///  meaning of modifierExtension itself).
   ///
-  /// [url] The business identifier that is used to reference the MessageDefinition and *is* expected to be consistent from server to server.;
+  /// [url] The business identifier that is used to reference the
+  ///  MessageDefinition and *is* expected to be consistent from server to
+  ///  server.
   ///
-  /// [urlElement] (_url): Extensions for url;
+  /// [urlElement] ("_url") Extensions for url
   ///
-  /// [identifier] A formal identifier that is used to identify this message definition when it is represented in other formats, or referenced in a specification, model, design or an instance.;
+  /// [identifier] A formal identifier that is used to identify this message
+  ///  definition when it is represented in other formats, or referenced in a
+  ///  specification, model, design or an instance.
   ///
-  /// [version] The identifier that is used to identify this version of the message definition when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the message definition author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.;
+  /// [version] The identifier that is used to identify this version of the
+  ///  message definition when it is referenced in a specification, model,
+  ///  design or instance. This is an arbitrary value managed by the message
+  ///  definition author and is not expected to be globally unique. For
+  ///  example, it might be a timestamp (e.g. yyyymmdd) if a managed version is
+  ///  not available. There is also no expectation that versions can be placed
+  ///  in a lexicographical sequence.
   ///
-  /// [versionElement] (_version): Extensions for version;
+  /// [versionElement] ("_version") Extensions for version
   ///
-  /// [name] A natural language name identifying the message definition. This name should be usable as an identifier for the module by machine processing applications such as code generation.;
+  /// [versionAlgorithmString] Indicates the mechanism used to compare versions
+  ///  to determine which is more current.
   ///
-  /// [nameElement] (_name): Extensions for name;
+  /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
+  ///  for versionAlgorithmString
   ///
-  /// [title] A short, descriptive, user-friendly title for the message definition.;
+  /// [versionAlgorithmCoding] Indicates the mechanism used to compare versions
+  ///  to determine which is more current.
   ///
-  /// [titleElement] (_title): Extensions for title;
+  /// [name] A natural language name identifying the message definition. This
+  ///  name should be usable as an identifier for the module by machine
+  ///  processing applications such as code generation.
   ///
-  /// [status] The status of this message definition. Enables tracking the life-cycle of the content.;
+  /// [nameElement] ("_name") Extensions for name
   ///
-  /// [statusElement] (_status): Extensions for status;
+  /// [title] A short, descriptive, user-friendly title for the message
+  ///  definition.
   ///
-  /// [experimental] A Boolean value to indicate that this message definition is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.;
+  /// [titleElement] ("_title") Extensions for title
   ///
-  /// [experimentalElement] (_experimental): Extensions for experimental;
+  /// [status] The status of this message definition. Enables tracking the
+  ///  life-cycle of the content.
   ///
-  /// [date] The date  (and optionally time) when the message definition was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the message definition changes.;
+  /// [statusElement] ("_status") Extensions for status
   ///
-  /// [dateElement] (_date): Extensions for date;
+  /// [experimental] A Boolean value to indicate that this message definition
+  ///  is authored for testing purposes (or education/evaluation/marketing) and
+  ///  is not intended to be used for genuine usage.
   ///
-  /// [publisher] The name of the organization or individual that published the message definition.;
+  /// [experimentalElement] ("_experimental") Extensions for experimental
   ///
-  /// [publisherElement] (_publisher): Extensions for publisher;
+  /// [date] The date  (and optionally time) when the message definition was
+  ///  last significantly changed. The date must change when the business
+  ///  version changes and it must change if the status code changes. In
+  ///  addition, it should change when the substantive content of the message
+  ///  definition changes.
   ///
-  /// [contact] Contact details to assist a user in finding and communicating with the publisher.;
+  /// [dateElement] ("_date") Extensions for date
   ///
-  /// [description] A free text natural language description of the message definition from a consumer's perspective.;
+  /// [publisher] The name of the organization or individual responsible for
+  ///  the release and ongoing maintenance of the message definition.
   ///
-  /// [descriptionElement] (_description): Extensions for description;
+  /// [publisherElement] ("_publisher") Extensions for publisher
   ///
-  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate message definition instances.;
+  /// [contact] Contact details to assist a user in finding and communicating
+  ///  with the publisher.
   ///
-  /// [jurisdiction] A legal or geographic region in which the message definition is intended to be used.;
+  /// [description] A free text natural language description of the message
+  ///  definition from a consumer's perspective.
   ///
-  /// [purpose] Explanation of why this message definition is needed and why it has been designed as it has.;
+  /// [descriptionElement] ("_description") Extensions for description
   ///
-  /// [purposeElement] (_purpose): Extensions for purpose;
+  /// [useContext] The content was developed with a focus and intent of
+  ///  supporting the contexts that are listed. These contexts may be general
+  ///  categories (gender, age, ...) or may be references to specific programs
+  ///  (insurance plans, studies, ...) and may be used to assist with indexing
+  ///  and searching for appropriate message definition instances.
   ///
-  /// [copyright] A copyright statement relating to the message definition and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the message definition.;
+  /// [jurisdiction] A legal or geographic region in which the message
+  ///  definition is intended to be used.
   ///
-  /// [copyrightElement] (_copyright): Extensions for copyright;
+  /// [purpose] Explanation of why this message definition is needed and why it
+  ///  has been designed as it has.
   ///
-  /// [replaces] A MessageDefinition that is superseded by this definition.;
+  /// [purposeElement] ("_purpose") Extensions for purpose
   ///
-  /// [base] The MessageDefinition that is the basis for the contents of this resource.;
+  /// [copyright] A copyright statement relating to the message definition
+  ///  and/or its contents. Copyright statements are generally legal
+  ///  restrictions on the use and publishing of the message definition.
   ///
-  /// [parent] Identifies a protocol or workflow that this MessageDefinition represents a step in.;
+  /// [copyrightElement] ("_copyright") Extensions for copyright
   ///
-  /// [eventCoding] Event code or link to the EventDefinition.;
+  /// [copyrightLabel] A short string (<50 characters), suitable for inclusion
+  ///  in a page footer that identifies the copyright holder, effective period,
+  ///  and optionally whether rights are resctricted. (e.g. 'All rights
+  ///  reserved', 'Some rights reserved').
   ///
-  /// [eventUri] Event code or link to the EventDefinition.;
+  /// [copyrightLabelElement] ("_copyrightLabel") Extensions for copyrightLabel
   ///
-  /// [eventUriElement] (_eventUri): Extensions for eventUri;
+  /// [replaces] A MessageDefinition that is superseded by this definition.
   ///
-  /// [category] The impact of the content of the message.;
+  /// [base] The MessageDefinition that is the basis for the contents of this
+  ///  resource.
   ///
-  /// [categoryElement] (_category): Extensions for category;
+  /// [parent] Identifies a protocol or workflow that this MessageDefinition
+  ///  represents a step in.
   ///
-  /// [focus] Identifies the resource (or resources) that are being addressed by the event.  For example, the Encounter for an admit message or two Account records for a merge.;
+  /// [eventCoding] Event code or link to the EventDefinition.
   ///
-  /// [responseRequired] Declare at a message definition level whether a response is required or only upon error or success, or never.;
+  /// [eventUri] Event code or link to the EventDefinition.
   ///
-  /// [responseRequiredElement] (_responseRequired): Extensions for responseRequired;
+  /// [eventUriElement] ("_eventUri") Extensions for eventUri
   ///
-  /// [allowedResponse] Indicates what types of messages may be sent as an application-level response to this message.;
+  /// [category] The impact of the content of the message.
   ///
-  /// [graph] Canonical reference to a GraphDefinition. If a URL is provided, it is the canonical reference to a [GraphDefinition](graphdefinition.html) that it controls what resources are to be added to the bundle when building the document. The GraphDefinition can also specify profiles that apply to the various resources.;
+  /// [categoryElement] ("_category") Extensions for category
+  ///
+  /// [focus] Identifies the resource (or resources) that are being addressed
+  ///  by the event.  For example, the Encounter for an admit message or two
+  ///  Account records for a merge.
+  ///
+  /// [responseRequired] Declare at a message definition level whether a
+  ///  response is required or only upon error or success, or never.
+  ///
+  /// [responseRequiredElement] ("_responseRequired") Extensions for
+  ///  responseRequired
+  ///
+  /// [allowedResponse] Indicates what types of messages may be sent as an
+  ///  application-level response to this message.
+  ///
+  /// [graph] Canonical reference to a GraphDefinition. If a URL is provided,
+  ///  it is the canonical reference to a
+  ///  [GraphDefinition](graphdefinition.html) that it controls what resources
+  ///  are to be added to the bundle when building the document. The
+  ///  GraphDefinition can also specify profiles that apply to the various
+  ///  resources.
+  ///
   factory MessageDefinition({
-    @Default(R5ResourceType.MessageDefinition) R5ResourceType resourceType,
+    /// [resourceType] This is a MessageDefinition resource
+    @Default(R5ResourceType.MessageDefinition)
+    @JsonKey(unknownEnumValue: R5ResourceType.MessageDefinition)
+        R5ResourceType resourceType,
+
+    /// [id] The logical id of the resource, as used in the URL for the resource.
+    /// Once assigned, this value never changes.
     Id? id,
+
+    /// [meta] The metadata about the resource. This is content that is
+    /// maintained by the infrastructure. Changes to the content might not
+    /// always be associated with version changes to the resource.
     Meta? meta,
+
+    /// [implicitRules] A reference to a set of rules that were followed when
+    /// the resource was constructed, and which must be understood when
+    /// processing the content. Often, this is a reference to an implementation
+    /// guide that defines the special rules along with other profiles etc.
     FhirUri? implicitRules,
+
+    /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+
+    /// [language] The base language in which the resource is written.
     Code? language,
+
+    /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
+
+    /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
     Narrative? text,
+
+    /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
     List<Resource>? contained,
+
+    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [url] The business identifier that is used to reference the MessageDefinition and *is* expected to be consistent from server to server.
     FhirUri? url,
+
+    /// [urlElement] ("_url") Extensions for url
     @JsonKey(name: '_url') Element? urlElement,
+
+    /// [identifier] A formal identifier that is used to identify this message definition when it is represented in other formats, or referenced in a specification, model, design or an instance.
     List<Identifier>? identifier,
+
+    /// [version] The identifier that is used to identify this version of the message definition when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the message definition author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.
     String? version,
+
+    /// [versionElement] ("_version") Extensions for version
     @JsonKey(name: '_version') Element? versionElement,
+
+    /// [versionAlgorithmString] Indicates the mechanism used to compare versions to determine which is more current.
+    String? versionAlgorithmString,
+
+    /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions for versionAlgorithmString
+    @JsonKey(name: '_versionAlgorithmString')
+        Element? versionAlgorithmStringElement,
+
+    /// [versionAlgorithmCoding] Indicates the mechanism used to compare versions to determine which is more current.
+    Coding? versionAlgorithmCoding,
+
+    /// [name] A natural language name identifying the message definition. This name should be usable as an identifier for the module by machine processing applications such as code generation.
     String? name,
+
+    /// [nameElement] ("_name") Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
+
+    /// [title] A short, descriptive, user-friendly title for the message definition.
     String? title,
+
+    /// [titleElement] ("_title") Extensions for title
     @JsonKey(name: '_title') Element? titleElement,
+
+    /// [status] The status of this message definition. Enables tracking the life-cycle of the content.
     Code? status,
+
+    /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
+
+    /// [experimental] A Boolean value to indicate that this message definition is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
     Boolean? experimental,
+
+    /// [experimentalElement] ("_experimental") Extensions for experimental
     @JsonKey(name: '_experimental') Element? experimentalElement,
+
+    /// [date] The date  (and optionally time) when the message definition was last significantly changed. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the message definition changes.
     FhirDateTime? date,
+
+    /// [dateElement] ("_date") Extensions for date
     @JsonKey(name: '_date') Element? dateElement,
+
+    /// [publisher] The name of the organization or individual responsible for the release and ongoing maintenance of the message definition.
     String? publisher,
+
+    /// [publisherElement] ("_publisher") Extensions for publisher
     @JsonKey(name: '_publisher') Element? publisherElement,
+
+    /// [contact] Contact details to assist a user in finding and communicating with the publisher.
     List<ContactDetail>? contact,
+
+    /// [description] A free text natural language description of the message definition from a consumer's perspective.
     Markdown? description,
+
+    /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
+
+    /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate message definition instances.
     List<UsageContext>? useContext,
+
+    /// [jurisdiction] A legal or geographic region in which the message definition is intended to be used.
     List<CodeableConcept>? jurisdiction,
+
+    /// [purpose] Explanation of why this message definition is needed and why it has been designed as it has.
     Markdown? purpose,
+
+    /// [purposeElement] ("_purpose") Extensions for purpose
     @JsonKey(name: '_purpose') Element? purposeElement,
+
+    /// [copyright] A copyright statement relating to the message definition and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the message definition.
     Markdown? copyright,
+
+    /// [copyrightElement] ("_copyright") Extensions for copyright
     @JsonKey(name: '_copyright') Element? copyrightElement,
+
+    /// [copyrightLabel] A short string (<50 characters), suitable for inclusion in a page footer that identifies the copyright holder, effective period, and optionally whether rights are resctricted. (e.g. 'All rights reserved', 'Some rights reserved').
+    String? copyrightLabel,
+
+    /// [copyrightLabelElement] ("_copyrightLabel") Extensions for copyrightLabel
+    @JsonKey(name: '_copyrightLabel') Element? copyrightLabelElement,
+
+    /// [replaces] A MessageDefinition that is superseded by this definition.
     List<Canonical>? replaces,
+
+    /// [base] The MessageDefinition that is the basis for the contents of this resource.
     Canonical? base,
+
+    /// [parent] Identifies a protocol or workflow that this MessageDefinition represents a step in.
     List<Canonical>? parent,
+
+    /// [eventCoding] Event code or link to the EventDefinition.
     Coding? eventCoding,
+
+    /// [eventUri] Event code or link to the EventDefinition.
     FhirUri? eventUri,
+
+    /// [eventUriElement] ("_eventUri") Extensions for eventUri
     @JsonKey(name: '_eventUri') Element? eventUriElement,
+
+    /// [category] The impact of the content of the message.
     Code? category,
+
+    /// [categoryElement] ("_category") Extensions for category
     @JsonKey(name: '_category') Element? categoryElement,
+
+    /// [focus] Identifies the resource (or resources) that are being addressed by the event.  For example, the Encounter for an admit message or two Account records for a merge.
     List<MessageDefinitionFocus>? focus,
+
+    /// [responseRequired] Declare at a message definition level whether a response is required or only upon error or success, or never.
     Code? responseRequired,
+
+    /// [responseRequiredElement] ("_responseRequired") Extensions for responseRequired
     @JsonKey(name: '_responseRequired') Element? responseRequiredElement,
+
+    /// [allowedResponse] Indicates what types of messages may be sent as an application-level response to this message.
     List<MessageDefinitionAllowedResponse>? allowedResponse,
+
+    /// [graph] Canonical reference to a GraphDefinition. If a URL is provided, it is the canonical reference to a [GraphDefinition](graphdefinition.html) that it controls what resources are to be added to the bundle when building the document. The GraphDefinition can also specify profiles that apply to the various resources.
     Canonical? graph,
   }) = _MessageDefinition;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MessageDefinition.fromYaml(dynamic yaml) => yaml is String
@@ -4566,51 +6106,118 @@ class MessageDefinition with Resource, _$MessageDefinition {
     if (json is Map<String, dynamic>) {
       return _$MessageDefinitionFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [MessageDefinitionFocus] Defines the characteristics of a message that can be shared between systems, including the type of event that initiates the message, the content to be transmitted and what response(s), if any, are permitted.
+/// [MessageDefinitionFocus] Defines the characteristics of a message that can
+///  be shared between systems, including the type of event that initiates the
+///  message, the content to be transmitted and what response(s), if any, are
+///  permitted.
 @freezed
 class MessageDefinitionFocus with _$MessageDefinitionFocus {
+  /// [MessageDefinitionFocus] Defines the characteristics of a message that
+  ///  can be shared between systems, including the type of event that
+  ///  initiates the message, the content to be transmitted and what
+  ///  response(s), if any, are permitted.
   MessageDefinitionFocus._();
 
-  /// [MessageDefinitionFocus] Defines the characteristics of a message that can be shared between systems, including the type of event that initiates the message, the content to be transmitted and what response(s), if any, are permitted.
-
+  /// [MessageDefinitionFocus] Defines the characteristics of a message that
+  ///  can be shared between systems, including the type of event that
+  ///  initiates the message, the content to be transmitted and what
+  ///  response(s), if any, are permitted.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [code] The kind of resource that must be the focus for this message.;
+  /// [code] The kind of resource that must be the focus for this message.
   ///
-  /// [codeElement] (_code): Extensions for code;
+  /// [codeElement] ("_code") Extensions for code
   ///
-  /// [profile] A profile that reflects constraints for the focal resource (and potentially for related resources).;
+  /// [profile] A profile that reflects constraints for the focal resource (and
+  ///  potentially for related resources).
   ///
-  /// [min] Identifies the minimum number of resources of this type that must be pointed to by a message in order for it to be valid against this MessageDefinition.;
+  /// [min] Identifies the minimum number of resources of this type that must
+  ///  be pointed to by a message in order for it to be valid against this
+  ///  MessageDefinition.
   ///
-  /// [minElement] (_min): Extensions for min;
+  /// [minElement] ("_min") Extensions for min
   ///
-  /// [max] Identifies the maximum number of resources of this type that must be pointed to by a message in order for it to be valid against this MessageDefinition.;
+  /// [max] Identifies the maximum number of resources of this type that must
+  ///  be pointed to by a message in order for it to be valid against this
+  ///  MessageDefinition.
   ///
-  /// [maxElement] (_max): Extensions for max;
+  /// [maxElement] ("_max") Extensions for max
+  ///
   factory MessageDefinitionFocus({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [code] The kind of resource that must be the focus for this message.
     Code? code,
+
+    /// [codeElement] ("_code") Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
+
+    /// [profile] A profile that reflects constraints for the focal resource (and potentially for related resources).
     Canonical? profile,
+
+    /// [min] Identifies the minimum number of resources of this type that must be pointed to by a message in order for it to be valid against this MessageDefinition.
     UnsignedInt? min,
+
+    /// [minElement] ("_min") Extensions for min
     @JsonKey(name: '_min') Element? minElement,
+
+    /// [max] Identifies the maximum number of resources of this type that must be pointed to by a message in order for it to be valid against this MessageDefinition.
     String? max,
+
+    /// [maxElement] ("_max") Extensions for max
     @JsonKey(name: '_max') Element? maxElement,
   }) = _MessageDefinitionFocus;
 
@@ -4639,39 +6246,95 @@ class MessageDefinitionFocus with _$MessageDefinitionFocus {
     if (json is Map<String, dynamic>) {
       return _$MessageDefinitionFocusFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [MessageDefinitionAllowedResponse] Defines the characteristics of a message that can be shared between systems, including the type of event that initiates the message, the content to be transmitted and what response(s), if any, are permitted.
+/// [MessageDefinitionAllowedResponse] Defines the characteristics of a message
+///  that can be shared between systems, including the type of event that
+///  initiates the message, the content to be transmitted and what response(s),
+///  if any, are permitted.
 @freezed
 class MessageDefinitionAllowedResponse with _$MessageDefinitionAllowedResponse {
+  /// [MessageDefinitionAllowedResponse] Defines the characteristics of a
+  ///  message that can be shared between systems, including the type of event
+  ///  that initiates the message, the content to be transmitted and what
+  ///  response(s), if any, are permitted.
   MessageDefinitionAllowedResponse._();
 
-  /// [MessageDefinitionAllowedResponse] Defines the characteristics of a message that can be shared between systems, including the type of event that initiates the message, the content to be transmitted and what response(s), if any, are permitted.
-
+  /// [MessageDefinitionAllowedResponse] Defines the characteristics of a
+  ///  message that can be shared between systems, including the type of event
+  ///  that initiates the message, the content to be transmitted and what
+  ///  response(s), if any, are permitted.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [message] A reference to the message definition that must be adhered to by this supported response.;
+  /// [message] A reference to the message definition that must be adhered to
+  ///  by this supported response.
   ///
-  /// [situation] Provides a description of the circumstances in which this response should be used (as opposed to one of the alternative responses).;
+  /// [situation] Provides a description of the circumstances in which this
+  ///  response should be used (as opposed to one of the alternative responses).
   ///
-  /// [situationElement] (_situation): Extensions for situation;
+  /// [situationElement] ("_situation") Extensions for situation
+  ///
   factory MessageDefinitionAllowedResponse({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [message] A reference to the message definition that must be adhered to by this supported response.
     required Canonical message,
+
+    /// [situation] Provides a description of the circumstances in which this response should be used (as opposed to one of the alternative responses).
     Markdown? situation,
+
+    /// [situationElement] ("_situation") Extensions for situation
     @JsonKey(name: '_situation') Element? situationElement,
   }) = _MessageDefinitionAllowedResponse;
 
@@ -4695,204 +6358,450 @@ class MessageDefinitionAllowedResponse with _$MessageDefinitionAllowedResponse {
           Map<String, dynamic> json) =>
       _$MessageDefinitionAllowedResponseFromJson(json);
 
-  /// Acts like a constructor, returns a [MessageDefinitionAllowedResponse], accepts a
+  /// Acts like a constructor, returns a [MessageDefinitionAllowedResponse],
+  ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MessageDefinitionAllowedResponse.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MessageDefinitionAllowedResponseFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [OperationDefinition] A formal computable definition of an operation (on the RESTful interface) or a named query (using the search interaction).
+/// [OperationDefinition] A formal computable definition of an operation (on
+///  the RESTful interface) or a named query (using the search interaction).
 @freezed
 class OperationDefinition with Resource, _$OperationDefinition {
+  /// [OperationDefinition] A formal computable definition of an operation (on
+  ///  the RESTful interface) or a named query (using the search interaction).
   OperationDefinition._();
 
-  /// [OperationDefinition] A formal computable definition of an operation (on the RESTful interface) or a named query (using the search interaction).
-
+  /// [OperationDefinition] A formal computable definition of an operation (on
+  ///  the RESTful interface) or a named query (using the search interaction).
   ///
-  /// [resourceType] This is a OperationDefinition resource;
+  /// [resourceType] This is a OperationDefinition resource
   ///
-  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
   ///
-  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  /// [meta] The metadata about the resource. This is content that is
+  ///  maintained by the infrastructure. Changes to the content might not
+  ///  always be associated with version changes to the resource.
   ///
-  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  ///  resource was constructed, and which must be understood when processing
+  ///  the content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   ///
-  /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   ///
-  /// [language] The base language in which the resource is written.;
+  /// [language] The base language in which the resource is written.
   ///
-  /// [languageElement] (_language): Extensions for language;
+  /// [languageElement] ("_language") Extensions for language
   ///
-  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  /// [text] A human-readable narrative that contains a summary of the resource
+  ///  and can be used to represent the content of the resource to a human. The
+  ///  narrative need not encode all the structured data, but is required to
+  ///  contain sufficient detail to make it "clinically safe" for a human to
+  ///  just read the narrative. Resource definitions may define what content
+  ///  should be represented in the narrative to ensure clinical safety.
   ///
-  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  /// [contained] These resources do not have an independent existence apart
+  ///  from the resource that contains them - they cannot be identified
+  ///  independently, nor can they have their own independent transaction
+  ///  scope. This is allowed to be a Parameters resource if and only if it is
+  ///  referenced by a resource that provides context/meaning.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the resource. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the resource and that modifies
+  ///  the understanding of the element that contains it and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  is allowed to define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension. Applications
+  ///  processing a resource are required to check for modifier
+  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
+  ///  elements on Resource or DomainResource (including cannot change the
+  ///  meaning of modifierExtension itself).
   ///
-  /// [url] An absolute URI that is used to identify this operation definition when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this operation definition is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the operation definition is stored on different servers.;
+  /// [url] An absolute URI that is used to identify this operation definition
+  ///  when it is referenced in a specification, model, design or an instance;
+  ///  also called its canonical identifier. This SHOULD be globally unique and
+  ///  SHOULD be a literal address at which an authoritative instance of this
+  ///  operation definition is (or will be) published. This URL can be the
+  ///  target of a canonical reference. It SHALL remain the same when the
+  ///  operation definition is stored on different servers.
   ///
-  /// [urlElement] (_url): Extensions for url;
+  /// [urlElement] ("_url") Extensions for url
   ///
-  /// [identifier] A formal identifier that is used to identify this {{title}} when it is represented in other formats, or referenced in a specification, model, design or an instance.;
+  /// [identifier] A formal identifier that is used to identify this {{title}}
+  ///  when it is represented in other formats, or referenced in a
+  ///  specification, model, design or an instance.
   ///
-  /// [version] The identifier that is used to identify this version of the operation definition when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the operation definition author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.;
+  /// [version] The identifier that is used to identify this version of the
+  ///  operation definition when it is referenced in a specification, model,
+  ///  design or instance. This is an arbitrary value managed by the operation
+  ///  definition author and is not expected to be globally unique. For
+  ///  example, it might be a timestamp (e.g. yyyymmdd) if a managed version is
+  ///  not available. There is also no expectation that versions can be placed
+  ///  in a lexicographical sequence.
   ///
-  /// [versionElement] (_version): Extensions for version;
+  /// [versionElement] ("_version") Extensions for version
   ///
-  /// [name] A natural language name identifying the operation definition. This name should be usable as an identifier for the module by machine processing applications such as code generation.;
+  /// [versionAlgorithmString] Indicates the mechanism used to compare versions
+  ///  to determine which is more current.
   ///
-  /// [nameElement] (_name): Extensions for name;
+  /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
+  ///  for versionAlgorithmString
   ///
-  /// [title] A short, descriptive, user-friendly title for the operation definition.;
+  /// [versionAlgorithmCoding] Indicates the mechanism used to compare versions
+  ///  to determine which is more current.
   ///
-  /// [titleElement] (_title): Extensions for title;
+  /// [name] A natural language name identifying the operation definition. This
+  ///  name should be usable as an identifier for the module by machine
+  ///  processing applications such as code generation.
   ///
-  /// [status] The status of this operation definition. Enables tracking the life-cycle of the content.;
+  /// [nameElement] ("_name") Extensions for name
   ///
-  /// [statusElement] (_status): Extensions for status;
+  /// [title] A short, descriptive, user-friendly title for the operation
+  ///  definition.
   ///
-  /// [experimental] A Boolean value to indicate that this operation definition is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.;
+  /// [titleElement] ("_title") Extensions for title
   ///
-  /// [experimentalElement] (_experimental): Extensions for experimental;
+  /// [status] The status of this operation definition. Enables tracking the
+  ///  life-cycle of the content.
   ///
-  /// [date] The date  (and optionally time) when the operation definition was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the operation definition changes.;
+  /// [statusElement] ("_status") Extensions for status
   ///
-  /// [dateElement] (_date): Extensions for date;
+  /// [experimental] A Boolean value to indicate that this operation definition
+  ///  is authored for testing purposes (or education/evaluation/marketing) and
+  ///  is not intended to be used for genuine usage.
   ///
-  /// [publisher] The name of the organization or individual that published the operation definition.;
+  /// [experimentalElement] ("_experimental") Extensions for experimental
   ///
-  /// [publisherElement] (_publisher): Extensions for publisher;
+  /// [date] The date  (and optionally time) when the operation definition was
+  ///  last significantly changed. The date must change when the business
+  ///  version changes and it must change if the status code changes. In
+  ///  addition, it should change when the substantive content of the operation
+  ///  definition changes.
   ///
-  /// [contact] Contact details to assist a user in finding and communicating with the publisher.;
+  /// [dateElement] ("_date") Extensions for date
   ///
-  /// [description] A free text natural language description of the operation definition from a consumer's perspective.;
+  /// [publisher] The name of the organization or individual responsible for
+  ///  the release and ongoing maintenance of the operation definition.
   ///
-  /// [descriptionElement] (_description): Extensions for description;
+  /// [publisherElement] ("_publisher") Extensions for publisher
   ///
-  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate operation definition instances.;
+  /// [contact] Contact details to assist a user in finding and communicating
+  ///  with the publisher.
   ///
-  /// [jurisdiction] A legal or geographic region in which the operation definition is intended to be used.;
+  /// [description] A free text natural language description of the operation
+  ///  definition from a consumer's perspective.
   ///
-  /// [purpose] Explanation of why this operation definition is needed and why it has been designed as it has.;
+  /// [descriptionElement] ("_description") Extensions for description
   ///
-  /// [purposeElement] (_purpose): Extensions for purpose;
+  /// [useContext] The content was developed with a focus and intent of
+  ///  supporting the contexts that are listed. These contexts may be general
+  ///  categories (gender, age, ...) or may be references to specific programs
+  ///  (insurance plans, studies, ...) and may be used to assist with indexing
+  ///  and searching for appropriate operation definition instances.
   ///
-  /// [copyright] A copyright statement relating to the {{title}} and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the {{title}}.;
+  /// [jurisdiction] A legal or geographic region in which the operation
+  ///  definition is intended to be used.
   ///
-  /// [copyrightElement] (_copyright): Extensions for copyright;
+  /// [purpose] Explanation of why this operation definition is needed and why
+  ///  it has been designed as it has.
   ///
-  /// [kind] Whether this is an operation or a named query.;
+  /// [purposeElement] ("_purpose") Extensions for purpose
   ///
-  /// [kindElement] (_kind): Extensions for kind;
+  /// [copyright] A copyright statement relating to the OperationDefinition
+  ///  and/or its contents. Copyright statements are generally legal
+  ///  restrictions on the use and publishing of the OperationDefinition.
   ///
-  /// [affectsState] Whether the operation affects state. Side effects such as producing audit trail entries do not count as 'affecting  state'.;
+  /// [copyrightElement] ("_copyright") Extensions for copyright
   ///
-  /// [affectsStateElement] (_affectsState): Extensions for affectsState;
+  /// [copyrightLabel] A short string (<50 characters), suitable for inclusion
+  ///  in a page footer that identifies the copyright holder, effective period,
+  ///  and optionally whether rights are resctricted. (e.g. 'All rights
+  ///  reserved', 'Some rights reserved').
   ///
-  /// [code] The name used to invoke the operation.;
+  /// [copyrightLabelElement] ("_copyrightLabel") Extensions for copyrightLabel
   ///
-  /// [codeElement] (_code): Extensions for code;
+  /// [kind] Whether this is an operation or a named query.
   ///
-  /// [comment] Additional information about how to use this operation or named query.;
+  /// [kindElement] ("_kind") Extensions for kind
   ///
-  /// [commentElement] (_comment): Extensions for comment;
+  /// [affectsState] Whether the operation affects state. Side effects such as
+  ///  producing audit trail entries do not count as 'affecting  state'.
   ///
-  /// [base] Indicates that this operation definition is a constraining profile on the base.;
+  /// [affectsStateElement] ("_affectsState") Extensions for affectsState
   ///
-  /// [resource] The types on which this operation can be executed.;
+  /// [code] The label that is recommended to be used in the URL for this
+  ///  operation. In some cases, servers may need to use a different
+  ///  CapabilityStatement operation.name to differentiate between multiple
+  ///  SearchParameters that happen to have the same code.
   ///
-  /// [resourceElement] (_resource): Extensions for resource;
+  /// [codeElement] ("_code") Extensions for code
   ///
-  /// [system] Indicates whether this operation or named query can be invoked at the system level (e.g. without needing to choose a resource type for the context).;
+  /// [comment] Additional information about how to use this operation or named
+  ///  query.
   ///
-  /// [systemElement] (_system): Extensions for system;
+  /// [commentElement] ("_comment") Extensions for comment
   ///
-  /// [type] Indicates whether this operation or named query can be invoked at the resource type level for any given resource type level (e.g. without needing to choose a specific resource id for the context).;
+  /// [base] Indicates that this operation definition is a constraining profile
+  ///  on the base.
   ///
-  /// [typeElement] (_type): Extensions for type;
+  /// [resource] The types on which this operation can be executed.
   ///
-  /// [instance] Indicates whether this operation can be invoked on a particular instance of one of the given types.;
+  /// [resourceElement] ("_resource") Extensions for resource
   ///
-  /// [instanceElement] (_instance): Extensions for instance;
+  /// [system] Indicates whether this operation or named query can be invoked
+  ///  at the system level (e.g. without needing to choose a resource type for
+  ///  the context).
   ///
-  /// [inputProfile] Additional validation information for the in parameters - a single profile that covers all the parameters. The profile is a constraint on the parameters resource as a whole.;
+  /// [systemElement] ("_system") Extensions for system
   ///
-  /// [outputProfile] Additional validation information for the out parameters - a single profile that covers all the parameters. The profile is a constraint on the parameters resource.;
+  /// [type] Indicates whether this operation or named query can be invoked at
+  ///  the resource type level for any given resource type level (e.g. without
+  ///  needing to choose a specific resource id for the context).
   ///
-  /// [parameter] The parameters for the operation/query.;
+  /// [typeElement] ("_type") Extensions for type
   ///
-  /// [overload] Defines an appropriate combination of parameters to use when invoking this operation, to help code generators when generating overloaded parameter sets for this operation.;
+  /// [instance] Indicates whether this operation can be invoked on a
+  ///  particular instance of one of the given types.
+  ///
+  /// [instanceElement] ("_instance") Extensions for instance
+  ///
+  /// [inputProfile] Additional validation information for the in parameters -
+  ///  a single profile that covers all the parameters. The profile is a
+  ///  constraint on the parameters resource as a whole.
+  ///
+  /// [outputProfile] Additional validation information for the out parameters
+  ///  - a single profile that covers all the parameters. The profile is a
+  ///  constraint on the parameters resource.
+  ///
+  /// [parameter] The parameters for the operation/query.
+  ///
+  /// [overload] Defines an appropriate combination of parameters to use when
+  ///  invoking this operation, to help code generators when generating
+  ///  overloaded parameter sets for this operation.
+  ///
   factory OperationDefinition({
-    @Default(R5ResourceType.OperationDefinition) R5ResourceType resourceType,
+    /// [resourceType] This is a OperationDefinition resource
+    @Default(R5ResourceType.OperationDefinition)
+    @JsonKey(unknownEnumValue: R5ResourceType.OperationDefinition)
+        R5ResourceType resourceType,
+
+    /// [id] The logical id of the resource, as used in the URL for the resource.
+    /// Once assigned, this value never changes.
     Id? id,
+
+    /// [meta] The metadata about the resource. This is content that is
+    /// maintained by the infrastructure. Changes to the content might not
+    /// always be associated with version changes to the resource.
     Meta? meta,
+
+    /// [implicitRules] A reference to a set of rules that were followed when
+    /// the resource was constructed, and which must be understood when
+    /// processing the content. Often, this is a reference to an implementation
+    /// guide that defines the special rules along with other profiles etc.
     FhirUri? implicitRules,
+
+    /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+
+    /// [language] The base language in which the resource is written.
     Code? language,
+
+    /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
+
+    /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
     Narrative? text,
+
+    /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
     List<Resource>? contained,
+
+    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [url] An absolute URI that is used to identify this operation definition when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this operation definition is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the operation definition is stored on different servers.
     FhirUri? url,
+
+    /// [urlElement] ("_url") Extensions for url
     @JsonKey(name: '_url') Element? urlElement,
+
+    /// [identifier] A formal identifier that is used to identify this {{title}} when it is represented in other formats, or referenced in a specification, model, design or an instance.
     List<Identifier>? identifier,
+
+    /// [version] The identifier that is used to identify this version of the operation definition when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the operation definition author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.
     String? version,
+
+    /// [versionElement] ("_version") Extensions for version
     @JsonKey(name: '_version') Element? versionElement,
+
+    /// [versionAlgorithmString] Indicates the mechanism used to compare versions to determine which is more current.
+    String? versionAlgorithmString,
+
+    /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions for versionAlgorithmString
+    @JsonKey(name: '_versionAlgorithmString')
+        Element? versionAlgorithmStringElement,
+
+    /// [versionAlgorithmCoding] Indicates the mechanism used to compare versions to determine which is more current.
+    Coding? versionAlgorithmCoding,
+
+    /// [name] A natural language name identifying the operation definition. This name should be usable as an identifier for the module by machine processing applications such as code generation.
     String? name,
+
+    /// [nameElement] ("_name") Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
+
+    /// [title] A short, descriptive, user-friendly title for the operation definition.
     String? title,
+
+    /// [titleElement] ("_title") Extensions for title
     @JsonKey(name: '_title') Element? titleElement,
+
+    /// [status] The status of this operation definition. Enables tracking the life-cycle of the content.
     Code? status,
+
+    /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
+
+    /// [experimental] A Boolean value to indicate that this operation definition is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
     Boolean? experimental,
+
+    /// [experimentalElement] ("_experimental") Extensions for experimental
     @JsonKey(name: '_experimental') Element? experimentalElement,
+
+    /// [date] The date  (and optionally time) when the operation definition was last significantly changed. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the operation definition changes.
     FhirDateTime? date,
+
+    /// [dateElement] ("_date") Extensions for date
     @JsonKey(name: '_date') Element? dateElement,
+
+    /// [publisher] The name of the organization or individual responsible for the release and ongoing maintenance of the operation definition.
     String? publisher,
+
+    /// [publisherElement] ("_publisher") Extensions for publisher
     @JsonKey(name: '_publisher') Element? publisherElement,
+
+    /// [contact] Contact details to assist a user in finding and communicating with the publisher.
     List<ContactDetail>? contact,
+
+    /// [description] A free text natural language description of the operation definition from a consumer's perspective.
     Markdown? description,
+
+    /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
+
+    /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate operation definition instances.
     List<UsageContext>? useContext,
+
+    /// [jurisdiction] A legal or geographic region in which the operation definition is intended to be used.
     List<CodeableConcept>? jurisdiction,
+
+    /// [purpose] Explanation of why this operation definition is needed and why it has been designed as it has.
     Markdown? purpose,
+
+    /// [purposeElement] ("_purpose") Extensions for purpose
     @JsonKey(name: '_purpose') Element? purposeElement,
+
+    /// [copyright] A copyright statement relating to the OperationDefinition and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the OperationDefinition.
     Markdown? copyright,
+
+    /// [copyrightElement] ("_copyright") Extensions for copyright
     @JsonKey(name: '_copyright') Element? copyrightElement,
+
+    /// [copyrightLabel] A short string (<50 characters), suitable for inclusion in a page footer that identifies the copyright holder, effective period, and optionally whether rights are resctricted. (e.g. 'All rights reserved', 'Some rights reserved').
+    String? copyrightLabel,
+
+    /// [copyrightLabelElement] ("_copyrightLabel") Extensions for copyrightLabel
+    @JsonKey(name: '_copyrightLabel') Element? copyrightLabelElement,
+
+    /// [kind] Whether this is an operation or a named query.
     Code? kind,
+
+    /// [kindElement] ("_kind") Extensions for kind
     @JsonKey(name: '_kind') Element? kindElement,
+
+    /// [affectsState] Whether the operation affects state. Side effects such as producing audit trail entries do not count as 'affecting  state'.
     Boolean? affectsState,
+
+    /// [affectsStateElement] ("_affectsState") Extensions for affectsState
     @JsonKey(name: '_affectsState') Element? affectsStateElement,
+
+    /// [code] The label that is recommended to be used in the URL for this operation. In some cases, servers may need to use a different CapabilityStatement operation.name to differentiate between multiple SearchParameters that happen to have the same code.
     Code? code,
+
+    /// [codeElement] ("_code") Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
+
+    /// [comment] Additional information about how to use this operation or named query.
     Markdown? comment,
+
+    /// [commentElement] ("_comment") Extensions for comment
     @JsonKey(name: '_comment') Element? commentElement,
+
+    /// [base] Indicates that this operation definition is a constraining profile on the base.
     Canonical? base,
+
+    /// [resource] The types on which this operation can be executed.
     List<Code>? resource,
+
+    /// [resourceElement] ("_resource") Extensions for resource
     @JsonKey(name: '_resource') List<Element>? resourceElement,
+
+    /// [system] Indicates whether this operation or named query can be invoked at the system level (e.g. without needing to choose a resource type for the context).
     Boolean? system,
+
+    /// [systemElement] ("_system") Extensions for system
     @JsonKey(name: '_system') Element? systemElement,
+
+    /// [type] Indicates whether this operation or named query can be invoked at the resource type level for any given resource type level (e.g. without needing to choose a specific resource id for the context).
     Boolean? type,
+
+    /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
+
+    /// [instance] Indicates whether this operation can be invoked on a particular instance of one of the given types.
     Boolean? instance,
+
+    /// [instanceElement] ("_instance") Extensions for instance
     @JsonKey(name: '_instance') Element? instanceElement,
+
+    /// [inputProfile] Additional validation information for the in parameters - a single profile that covers all the parameters. The profile is a constraint on the parameters resource as a whole.
     Canonical? inputProfile,
+
+    /// [outputProfile] Additional validation information for the out parameters - a single profile that covers all the parameters. The profile is a constraint on the parameters resource.
     Canonical? outputProfile,
+
+    /// [parameter] The parameters for the operation/query.
     List<OperationDefinitionParameter>? parameter,
+
+    /// [overload] Defines an appropriate combination of parameters to use when invoking this operation, to help code generators when generating overloaded parameter sets for this operation.
     List<OperationDefinitionOverload>? overload,
   }) = _OperationDefinition;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory OperationDefinition.fromYaml(dynamic yaml) => yaml is String
@@ -4916,84 +6825,200 @@ class OperationDefinition with Resource, _$OperationDefinition {
     if (json is Map<String, dynamic>) {
       return _$OperationDefinitionFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [OperationDefinitionParameter] A formal computable definition of an operation (on the RESTful interface) or a named query (using the search interaction).
+/// [OperationDefinitionParameter] A formal computable definition of an
+///  operation (on the RESTful interface) or a named query (using the search
+///  interaction).
 @freezed
 class OperationDefinitionParameter with _$OperationDefinitionParameter {
+  /// [OperationDefinitionParameter] A formal computable definition of an
+  ///  operation (on the RESTful interface) or a named query (using the search
+  ///  interaction).
   OperationDefinitionParameter._();
 
-  /// [OperationDefinitionParameter] A formal computable definition of an operation (on the RESTful interface) or a named query (using the search interaction).
-
+  /// [OperationDefinitionParameter] A formal computable definition of an
+  ///  operation (on the RESTful interface) or a named query (using the search
+  ///  interaction).
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [name] The name of used to identify the parameter.;
+  /// [name] The name of used to identify the parameter.
   ///
-  /// [nameElement] (_name): Extensions for name;
+  /// [nameElement] ("_name") Extensions for name
   ///
-  /// [use] Whether this is an input or an output parameter.;
+  /// [use] Whether this is an input or an output parameter.
   ///
-  /// [useElement] (_use): Extensions for use;
+  /// [useElement] ("_use") Extensions for use
   ///
-  /// [min] The minimum number of times this parameter SHALL appear in the request or response.;
+  /// [scope] If present, indicates that the parameter applies when the
+  ///  operation is being invoked at the specified level.
   ///
-  /// [minElement] (_min): Extensions for min;
+  /// [scopeElement] ("_scope") Extensions for scope
   ///
-  /// [max] The maximum number of times this element is permitted to appear in the request or response.;
+  /// [min] The minimum number of times this parameter SHALL appear in the
+  ///  request or response.
   ///
-  /// [maxElement] (_max): Extensions for max;
+  /// [minElement] ("_min") Extensions for min
   ///
-  /// [documentation] Describes the meaning or use of this parameter.;
+  /// [max] The maximum number of times this element is permitted to appear in
+  ///  the request or response.
   ///
-  /// [documentationElement] (_documentation): Extensions for documentation;
+  /// [maxElement] ("_max") Extensions for max
   ///
-  /// [type] The type for this parameter.;
+  /// [documentation] Describes the meaning or use of this parameter.
   ///
-  /// [typeElement] (_type): Extensions for type;
+  /// [documentationElement] ("_documentation") Extensions for documentation
   ///
-  /// [targetProfile] Used when the type is "Reference" or "canonical", and identifies a profile structure or implementation Guide that applies to the target of the reference this parameter refers to. If any profiles are specified, then the content must conform to at least one of them. The URL can be a local reference - to a contained StructureDefinition, or a reference to another StructureDefinition or Implementation Guide by a canonical URL. When an implementation guide is specified, the target resource SHALL conform to at least one profile defined in the implementation guide.;
+  /// [type] The type for this parameter.
   ///
-  /// [searchType] How the parameter is understood as a search parameter. This is only used if the parameter type is 'string'.;
+  /// [typeElement] ("_type") Extensions for type
   ///
-  /// [searchTypeElement] (_searchType): Extensions for searchType;
+  /// [allowedType] Support for polymorphic types. If the parameter type is
+  ///  abstract, this element lists allowed sub-types for the parameter.
   ///
-  /// [binding] Binds to a value set if this parameter is coded (code, Coding, CodeableConcept).;
+  /// [allowedTypeElement] ("_allowedType") Extensions for allowedType
   ///
-  /// [referencedFrom] Identifies other resource parameters within the operation invocation that are expected to resolve to this resource.;
+  /// [targetProfile] Used when the type is "Reference" or "canonical", and
+  ///  identifies a profile structure or implementation Guide that applies to
+  ///  the target of the reference this parameter refers to. If any profiles
+  ///  are specified, then the content must conform to at least one of them.
+  ///  The URL can be a local reference - to a contained StructureDefinition,
+  ///  or a reference to another StructureDefinition or Implementation Guide by
+  ///  a canonical URL. When an implementation guide is specified, the target
+  ///  resource SHALL conform to at least one profile defined in the
+  ///  implementation guide.
   ///
-  /// [part] The parts of a nested Parameter.;
+  /// [searchType] How the parameter is understood if/when it used as search
+  ///  parameter. This is only used if the parameter is a string.
+  ///
+  /// [searchTypeElement] ("_searchType") Extensions for searchType
+  ///
+  /// [binding] Binds to a value set if this parameter is coded (code, Coding,
+  ///  CodeableConcept).
+  ///
+  /// [referencedFrom] Identifies other resource parameters within the
+  ///  operation invocation that are expected to resolve to this resource.
+  ///
+  /// [part_] ("part") The parts of a nested Parameter.
+  ///
   factory OperationDefinitionParameter({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [name] The name of used to identify the parameter.
     Code? name,
+
+    /// [nameElement] ("_name") Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
+
+    /// [use] Whether this is an input or an output parameter.
     Code? use,
+
+    /// [useElement] ("_use") Extensions for use
     @JsonKey(name: '_use') Element? useElement,
+
+    /// [scope] If present, indicates that the parameter applies when the operation is being invoked at the specified level.
+    List<Code>? scope,
+
+    /// [scopeElement] ("_scope") Extensions for scope
+    @JsonKey(name: '_scope') List<Element>? scopeElement,
+
+    /// [min] The minimum number of times this parameter SHALL appear in the request or response.
     Integer? min,
+
+    /// [minElement] ("_min") Extensions for min
     @JsonKey(name: '_min') Element? minElement,
+
+    /// [max] The maximum number of times this element is permitted to appear in the request or response.
     String? max,
+
+    /// [maxElement] ("_max") Extensions for max
     @JsonKey(name: '_max') Element? maxElement,
-    String? documentation,
+
+    /// [documentation] Describes the meaning or use of this parameter.
+    Markdown? documentation,
+
+    /// [documentationElement] ("_documentation") Extensions for documentation
     @JsonKey(name: '_documentation') Element? documentationElement,
+
+    /// [type] The type for this parameter.
     Code? type,
+
+    /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
+
+    /// [allowedType] Support for polymorphic types. If the parameter type is abstract, this element lists allowed sub-types for the parameter.
+    List<Code>? allowedType,
+
+    /// [allowedTypeElement] ("_allowedType") Extensions for allowedType
+    @JsonKey(name: '_allowedType') List<Element>? allowedTypeElement,
+
+    /// [targetProfile] Used when the type is "Reference" or "canonical", and identifies a profile structure or implementation Guide that applies to the target of the reference this parameter refers to. If any profiles are specified, then the content must conform to at least one of them. The URL can be a local reference - to a contained StructureDefinition, or a reference to another StructureDefinition or Implementation Guide by a canonical URL. When an implementation guide is specified, the target resource SHALL conform to at least one profile defined in the implementation guide.
     List<Canonical>? targetProfile,
+
+    /// [searchType] How the parameter is understood if/when it used as search parameter. This is only used if the parameter is a string.
     Code? searchType,
+
+    /// [searchTypeElement] ("_searchType") Extensions for searchType
     @JsonKey(name: '_searchType') Element? searchTypeElement,
+
+    /// [binding] Binds to a value set if this parameter is coded (code, Coding, CodeableConcept).
     OperationDefinitionBinding? binding,
+
+    /// [referencedFrom] Identifies other resource parameters within the operation invocation that are expected to resolve to this resource.
     List<OperationDefinitionReferencedFrom>? referencedFrom,
+
+    /// [part_] ("part") The parts of a nested Parameter.
     @JsonKey(name: 'part') List<OperationDefinitionParameter>? part_,
   }) = _OperationDefinitionParameter;
 
@@ -5015,46 +7040,100 @@ class OperationDefinitionParameter with _$OperationDefinitionParameter {
   factory OperationDefinitionParameter.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionParameterFromJson(json);
 
-  /// Acts like a constructor, returns a [OperationDefinitionParameter], accepts a
+  /// Acts like a constructor, returns a [OperationDefinitionParameter],
+  ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory OperationDefinitionParameter.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$OperationDefinitionParameterFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [OperationDefinitionBinding] A formal computable definition of an operation (on the RESTful interface) or a named query (using the search interaction).
+/// [OperationDefinitionBinding] A formal computable definition of an operation
+///  (on the RESTful interface) or a named query (using the search interaction).
 @freezed
 class OperationDefinitionBinding with _$OperationDefinitionBinding {
+  /// [OperationDefinitionBinding] A formal computable definition of an
+  ///  operation (on the RESTful interface) or a named query (using the search
+  ///  interaction).
   OperationDefinitionBinding._();
 
-  /// [OperationDefinitionBinding] A formal computable definition of an operation (on the RESTful interface) or a named query (using the search interaction).
-
+  /// [OperationDefinitionBinding] A formal computable definition of an
+  ///  operation (on the RESTful interface) or a named query (using the search
+  ///  interaction).
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [strength] Indicates the degree of conformance expectations associated with this binding - that is, the degree to which the provided value set must be adhered to in the instances.;
+  /// [strength] Indicates the degree of conformance expectations associated
+  ///  with this binding - that is, the degree to which the provided value set
+  ///  must be adhered to in the instances.
   ///
-  /// [strengthElement] (_strength): Extensions for strength;
+  /// [strengthElement] ("_strength") Extensions for strength
   ///
-  /// [valueSet] Points to the value set or external definition (e.g. implicit value set) that identifies the set of codes to be used.;
+  /// [valueSet] Points to the value set or external definition (e.g. implicit
+  ///  value set) that identifies the set of codes to be used.
+  ///
   factory OperationDefinitionBinding({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [strength] Indicates the degree of conformance expectations associated with this binding - that is, the degree to which the provided value set must be adhered to in the instances.
     Code? strength,
+
+    /// [strengthElement] ("_strength") Extensions for strength
     @JsonKey(name: '_strength') Element? strengthElement,
+
+    /// [valueSet] Points to the value set or external definition (e.g. implicit value set) that identifies the set of codes to be used.
     required Canonical valueSet,
   }) = _OperationDefinitionBinding;
 
@@ -5083,42 +7162,99 @@ class OperationDefinitionBinding with _$OperationDefinitionBinding {
     if (json is Map<String, dynamic>) {
       return _$OperationDefinitionBindingFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
+/// [OperationDefinitionReferencedFrom] A formal computable definition of an
+///  operation (on the RESTful interface) or a named query (using the search
+///  interaction).
 @freezed
 class OperationDefinitionReferencedFrom
     with _$OperationDefinitionReferencedFrom {
+  /// [OperationDefinitionReferencedFrom] A formal computable definition of an
+  ///  operation (on the RESTful interface) or a named query (using the search
+  ///  interaction).
   OperationDefinitionReferencedFrom._();
 
-  /// [OperationDefinitionReferencedFrom] A formal computable definition of an operation (on the RESTful interface) or a named query (using the search interaction).
-
+  /// [OperationDefinitionReferencedFrom] A formal computable definition of an
+  ///  operation (on the RESTful interface) or a named query (using the search
+  ///  interaction).
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [source] The name of the parameter or dot-separated path of parameter names pointing to the resource parameter that is expected to contain a reference to this resource.;
+  /// [source] The name of the parameter or dot-separated path of parameter
+  ///  names pointing to the resource parameter that is expected to contain a
+  ///  reference to this resource.
   ///
-  /// [sourceElement] (_source): Extensions for source;
+  /// [sourceElement] ("_source") Extensions for source
   ///
-  /// [sourceId] The id of the element in the referencing resource that is expected to resolve to this resource.;
+  /// [sourceId] The id of the element in the referencing resource that is
+  ///  expected to resolve to this resource.
   ///
-  /// [sourceIdElement] (_sourceId): Extensions for sourceId;
+  /// [sourceIdElement] ("_sourceId") Extensions for sourceId
+  ///
   factory OperationDefinitionReferencedFrom({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [source] The name of the parameter or dot-separated path of parameter names pointing to the resource parameter that is expected to contain a reference to this resource.
     String? source,
+
+    /// [sourceElement] ("_source") Extensions for source
     @JsonKey(name: '_source') Element? sourceElement,
+
+    /// [sourceId] The id of the element in the referencing resource that is expected to resolve to this resource.
     String? sourceId,
+
+    /// [sourceIdElement] ("_sourceId") Extensions for sourceId
     @JsonKey(name: '_sourceId') Element? sourceIdElement,
   }) = _OperationDefinitionReferencedFrom;
 
@@ -5142,49 +7278,103 @@ class OperationDefinitionReferencedFrom
           Map<String, dynamic> json) =>
       _$OperationDefinitionReferencedFromFromJson(json);
 
-  /// Acts like a constructor, returns a [OperationDefinitionReferencedFrom], accepts a
+  /// Acts like a constructor, returns a [OperationDefinitionReferencedFrom],
+  ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory OperationDefinitionReferencedFrom.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$OperationDefinitionReferencedFromFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [OperationDefinitionOverload] A formal computable definition of an operation (on the RESTful interface) or a named query (using the search interaction).
+/// [OperationDefinitionOverload] A formal computable definition of an
+///  operation (on the RESTful interface) or a named query (using the search
+///  interaction).
 @freezed
 class OperationDefinitionOverload with _$OperationDefinitionOverload {
+  /// [OperationDefinitionOverload] A formal computable definition of an
+  ///  operation (on the RESTful interface) or a named query (using the search
+  ///  interaction).
   OperationDefinitionOverload._();
 
-  /// [OperationDefinitionOverload] A formal computable definition of an operation (on the RESTful interface) or a named query (using the search interaction).
-
+  /// [OperationDefinitionOverload] A formal computable definition of an
+  ///  operation (on the RESTful interface) or a named query (using the search
+  ///  interaction).
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [parameterName] Name of parameter to include in overload.;
+  /// [parameterName] Name of parameter to include in overload.
   ///
-  /// [parameterNameElement] (_parameterName): Extensions for parameterName;
+  /// [parameterNameElement] ("_parameterName") Extensions for parameterName
   ///
-  /// [comment] Comments to go on overload.;
+  /// [comment] Comments to go on overload.
   ///
-  /// [commentElement] (_comment): Extensions for comment;
+  /// [commentElement] ("_comment") Extensions for comment
+  ///
   factory OperationDefinitionOverload({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [parameterName] Name of parameter to include in overload.
     List<String>? parameterName,
+
+    /// [parameterNameElement] ("_parameterName") Extensions for parameterName
     @JsonKey(name: '_parameterName') List<Element>? parameterNameElement,
+
+    /// [comment] Comments to go on overload.
     String? comment,
+
+    /// [commentElement] ("_comment") Extensions for comment
     @JsonKey(name: '_comment') Element? commentElement,
   }) = _OperationDefinitionOverload;
 
@@ -5206,219 +7396,479 @@ class OperationDefinitionOverload with _$OperationDefinitionOverload {
   factory OperationDefinitionOverload.fromJson(Map<String, dynamic> json) =>
       _$OperationDefinitionOverloadFromJson(json);
 
-  /// Acts like a constructor, returns a [OperationDefinitionOverload], accepts a
+  /// Acts like a constructor, returns a [OperationDefinitionOverload], accepts
+  ///  a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory OperationDefinitionOverload.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$OperationDefinitionOverloadFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [SearchParameter] A search parameter that defines a named search item that can be used to search/filter on a resource.
+/// [SearchParameter] A search parameter that defines a named search item that
+///  can be used to search/filter on a resource.
 @freezed
 class SearchParameter with Resource, _$SearchParameter {
+  /// [SearchParameter] A search parameter that defines a named search item
+  ///  that can be used to search/filter on a resource.
   SearchParameter._();
 
-  /// [SearchParameter] A search parameter that defines a named search item that can be used to search/filter on a resource.
-
+  /// [SearchParameter] A search parameter that defines a named search item
+  ///  that can be used to search/filter on a resource.
   ///
-  /// [resourceType] This is a SearchParameter resource;
+  /// [resourceType] This is a SearchParameter resource
   ///
-  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
   ///
-  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  /// [meta] The metadata about the resource. This is content that is
+  ///  maintained by the infrastructure. Changes to the content might not
+  ///  always be associated with version changes to the resource.
   ///
-  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  ///  resource was constructed, and which must be understood when processing
+  ///  the content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   ///
-  /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   ///
-  /// [language] The base language in which the resource is written.;
+  /// [language] The base language in which the resource is written.
   ///
-  /// [languageElement] (_language): Extensions for language;
+  /// [languageElement] ("_language") Extensions for language
   ///
-  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  /// [text] A human-readable narrative that contains a summary of the resource
+  ///  and can be used to represent the content of the resource to a human. The
+  ///  narrative need not encode all the structured data, but is required to
+  ///  contain sufficient detail to make it "clinically safe" for a human to
+  ///  just read the narrative. Resource definitions may define what content
+  ///  should be represented in the narrative to ensure clinical safety.
   ///
-  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  /// [contained] These resources do not have an independent existence apart
+  ///  from the resource that contains them - they cannot be identified
+  ///  independently, nor can they have their own independent transaction
+  ///  scope. This is allowed to be a Parameters resource if and only if it is
+  ///  referenced by a resource that provides context/meaning.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the resource. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the resource and that modifies
+  ///  the understanding of the element that contains it and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  is allowed to define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension. Applications
+  ///  processing a resource are required to check for modifier
+  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
+  ///  elements on Resource or DomainResource (including cannot change the
+  ///  meaning of modifierExtension itself).
   ///
-  /// [url] An absolute URI that is used to identify this search parameter when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this search parameter is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the search parameter is stored on different servers.;
+  /// [url] An absolute URI that is used to identify this search parameter when
+  ///  it is referenced in a specification, model, design or an instance; also
+  ///  called its canonical identifier. This SHOULD be globally unique and
+  ///  SHOULD be a literal address at which an authoritative instance of this
+  ///  search parameter is (or will be) published. This URL can be the target
+  ///  of a canonical reference. It SHALL remain the same when the search
+  ///  parameter is stored on different servers.
   ///
-  /// [urlElement] (_url): Extensions for url;
+  /// [urlElement] ("_url") Extensions for url
   ///
-  /// [identifier] A formal identifier that is used to identify this {{title}} when it is represented in other formats, or referenced in a specification, model, design or an instance.;
+  /// [identifier] A formal identifier that is used to identify this {{title}}
+  ///  when it is represented in other formats, or referenced in a
+  ///  specification, model, design or an instance.
   ///
-  /// [version] The identifier that is used to identify this version of the search parameter when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the search parameter author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.;
+  /// [version] The identifier that is used to identify this version of the
+  ///  search parameter when it is referenced in a specification, model, design
+  ///  or instance. This is an arbitrary value managed by the search parameter
+  ///  author and is not expected to be globally unique. For example, it might
+  ///  be a timestamp (e.g. yyyymmdd) if a managed version is not available.
+  ///  There is also no expectation that versions can be placed in a
+  ///  lexicographical sequence.
   ///
-  /// [versionElement] (_version): Extensions for version;
+  /// [versionElement] ("_version") Extensions for version
   ///
-  /// [name] A natural language name identifying the search parameter. This name should be usable as an identifier for the module by machine processing applications such as code generation.;
+  /// [versionAlgorithmString] Indicates the mechanism used to compare versions
+  ///  to determine which is more current.
   ///
-  /// [nameElement] (_name): Extensions for name;
+  /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
+  ///  for versionAlgorithmString
   ///
-  /// [title] A short, descriptive, user-friendly title for the {{title}}.;
+  /// [versionAlgorithmCoding] Indicates the mechanism used to compare versions
+  ///  to determine which is more current.
   ///
-  /// [titleElement] (_title): Extensions for title;
+  /// [name] A natural language name identifying the search parameter. This
+  ///  name should be usable as an identifier for the module by machine
+  ///  processing applications such as code generation.
   ///
-  /// [status] The status of this search parameter. Enables tracking the life-cycle of the content.;
+  /// [nameElement] ("_name") Extensions for name
   ///
-  /// [statusElement] (_status): Extensions for status;
+  /// [title] A short, descriptive, user-friendly title for the search
+  ///  parameter.
   ///
-  /// [experimental] A Boolean value to indicate that this search parameter is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.;
+  /// [titleElement] ("_title") Extensions for title
   ///
-  /// [experimentalElement] (_experimental): Extensions for experimental;
+  /// [status] The status of this search parameter. Enables tracking the
+  ///  life-cycle of the content.
   ///
-  /// [date] The date  (and optionally time) when the search parameter was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the search parameter changes.;
+  /// [statusElement] ("_status") Extensions for status
   ///
-  /// [dateElement] (_date): Extensions for date;
+  /// [experimental] A Boolean value to indicate that this search parameter is
+  ///  authored for testing purposes (or education/evaluation/marketing) and is
+  ///  not intended to be used for genuine usage.
   ///
-  /// [publisher] The name of the organization or individual that published the search parameter.;
+  /// [experimentalElement] ("_experimental") Extensions for experimental
   ///
-  /// [publisherElement] (_publisher): Extensions for publisher;
+  /// [date] The date  (and optionally time) when the search parameter was last
+  ///  significantly changed. The date must change when the business version
+  ///  changes and it must change if the status code changes. In addition, it
+  ///  should change when the substantive content of the search parameter
+  ///  changes.
   ///
-  /// [contact] Contact details to assist a user in finding and communicating with the publisher.;
+  /// [dateElement] ("_date") Extensions for date
   ///
-  /// [description] And how it used.;
+  /// [publisher] The name of the organization or individual tresponsible for
+  ///  the release and ongoing maintenance of the search parameter.
   ///
-  /// [descriptionElement] (_description): Extensions for description;
+  /// [publisherElement] ("_publisher") Extensions for publisher
   ///
-  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate search parameter instances.;
+  /// [contact] Contact details to assist a user in finding and communicating
+  ///  with the publisher.
   ///
-  /// [jurisdiction] A legal or geographic region in which the search parameter is intended to be used.;
+  /// [description] And how it used.
   ///
-  /// [purpose] Explanation of why this search parameter is needed and why it has been designed as it has.;
+  /// [descriptionElement] ("_description") Extensions for description
   ///
-  /// [purposeElement] (_purpose): Extensions for purpose;
+  /// [useContext] The content was developed with a focus and intent of
+  ///  supporting the contexts that are listed. These contexts may be general
+  ///  categories (gender, age, ...) or may be references to specific programs
+  ///  (insurance plans, studies, ...) and may be used to assist with indexing
+  ///  and searching for appropriate search parameter instances.
   ///
-  /// [copyright] A copyright statement relating to the {{title}} and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the {{title}}.;
+  /// [jurisdiction] A legal or geographic region in which the search parameter
+  ///  is intended to be used.
   ///
-  /// [copyrightElement] (_copyright): Extensions for copyright;
+  /// [purpose] Explanation of why this search parameter is needed and why it
+  ///  has been designed as it has.
   ///
-  /// [derivedFrom] Where this search parameter is originally defined. If a derivedFrom is provided, then the details in the search parameter must be consistent with the definition from which it is defined. i.e. the parameter should have the same meaning, and (usually) the functionality should be a proper subset of the underlying search parameter.;
+  /// [purposeElement] ("_purpose") Extensions for purpose
   ///
-  /// [code] The code used in the URL or the parameter name in a parameters resource for this search parameter.;
+  /// [copyright] A copyright statement relating to the {{title}} and/or its
+  ///  contents. Copyright statements are generally legal restrictions on the
+  ///  use and publishing of the {{title}}.
   ///
-  /// [codeElement] (_code): Extensions for code;
+  /// [copyrightElement] ("_copyright") Extensions for copyright
   ///
-  /// [base] The base resource type(s) that this search parameter can be used against.;
+  /// [copyrightLabel] A short string (<50 characters), suitable for inclusion
+  ///  in a page footer that identifies the copyright holder, effective period,
+  ///  and optionally whether rights are resctricted. (e.g. 'All rights
+  ///  reserved', 'Some rights reserved').
   ///
-  /// [baseElement] (_base): Extensions for base;
+  /// [copyrightLabelElement] ("_copyrightLabel") Extensions for copyrightLabel
   ///
-  /// [type] The type of value that a search parameter may contain, and how the content is interpreted.;
+  /// [derivedFrom] Where this search parameter is originally defined. If a
+  ///  derivedFrom is provided, then the details in the search parameter must
+  ///  be consistent with the definition from which it is defined. i.e. the
+  ///  parameter should have the same meaning, and (usually) the functionality
+  ///  should be a proper subset of the underlying search parameter.
   ///
-  /// [typeElement] (_type): Extensions for type;
+  /// [code] The label that is recommended to be used in the URL or the
+  ///  parameter name in a parameters resource for this search parameter.  In
+  ///  some cases, servers may need to use a different CapabilityStatement
+  ///  searchParam.name to differentiate between multiple SearchParameters that
+  ///  happen to have the same code.
   ///
-  /// [expression] A FHIRPath expression that returns a set of elements for the search parameter.;
+  /// [codeElement] ("_code") Extensions for code
   ///
-  /// [expressionElement] (_expression): Extensions for expression;
+  /// [base] The base resource type(s) that this search parameter can be used
+  ///  against.
   ///
-  /// [xpath] An XPath expression that returns a set of elements for the search parameter.;
+  /// [baseElement] ("_base") Extensions for base
   ///
-  /// [xpathElement] (_xpath): Extensions for xpath;
+  /// [type] The type of value that a search parameter may contain, and how the
+  ///  content is interpreted.
   ///
-  /// [xpathUsage] How the search parameter relates to the set of elements returned by evaluating the xpath query.;
+  /// [typeElement] ("_type") Extensions for type
   ///
-  /// [xpathUsageElement] (_xpathUsage): Extensions for xpathUsage;
+  /// [expression] A FHIRPath expression that returns a set of elements for the
+  ///  search parameter.
   ///
-  /// [target] Types of resource (if a resource is referenced).;
+  /// [expressionElement] ("_expression") Extensions for expression
   ///
-  /// [targetElement] (_target): Extensions for target;
+  /// [processingMode] How the search parameter relates to the set of elements
+  ///  returned by evaluating the expression query.
   ///
-  /// [multipleOr] Whether multiple values are allowed for each time the parameter exists. Values are separated by commas, and the parameter matches if any of the values match.;
+  /// [processingModeElement] ("_processingMode") Extensions for processingMode
   ///
-  /// [multipleOrElement] (_multipleOr): Extensions for multipleOr;
+  /// [constraint] FHIRPath expression that defines/sets a complex constraint
+  ///  for when this SearchParameter is applicable.
   ///
-  /// [multipleAnd] Whether multiple parameters are allowed - e.g. more than one parameter with the same name. The search matches if all the parameters match.;
+  /// [constraintElement] ("_constraint") Extensions for constraint
   ///
-  /// [multipleAndElement] (_multipleAnd): Extensions for multipleAnd;
+  /// [target] Types of resource (if a resource is referenced).
   ///
-  /// [comparator] Comparators supported for the search parameter.;
+  /// [targetElement] ("_target") Extensions for target
   ///
-  /// [comparatorElement] (_comparator): Extensions for comparator;
+  /// [multipleOr] Whether multiple values are allowed for each time the
+  ///  parameter exists. Values are separated by commas, and the parameter
+  ///  matches if any of the values match.
   ///
-  /// [modifier] A modifier supported for the search parameter.;
+  /// [multipleOrElement] ("_multipleOr") Extensions for multipleOr
   ///
-  /// [modifierElement] (_modifier): Extensions for modifier;
+  /// [multipleAnd] Whether multiple parameters are allowed - e.g. more than
+  ///  one parameter with the same name. The search matches if all the
+  ///  parameters match.
   ///
-  /// [chain] Contains the names of any search parameters which may be chained to the containing search parameter. Chained parameters may be added to search parameters of type reference and specify that resources will only be returned if they contain a reference to a resource which matches the chained parameter value. Values for this field should be drawn from SearchParameter.code for a parameter on the target resource type.;
+  /// [multipleAndElement] ("_multipleAnd") Extensions for multipleAnd
   ///
-  /// [chainElement] (_chain): Extensions for chain;
+  /// [comparator] Comparators supported for the search parameter.
   ///
-  /// [component] Used to define the parts of a composite search parameter.;
+  /// [comparatorElement] ("_comparator") Extensions for comparator
+  ///
+  /// [modifier] A modifier supported for the search parameter.
+  ///
+  /// [modifierElement] ("_modifier") Extensions for modifier
+  ///
+  /// [chain] Contains the names of any search parameters which may be chained
+  ///  to the containing search parameter. Chained parameters may be added to
+  ///  search parameters of type reference and specify that resources will only
+  ///  be returned if they contain a reference to a resource which matches the
+  ///  chained parameter value. Values for this field should be drawn from
+  ///  SearchParameter.code for a parameter on the target resource type.
+  ///
+  /// [chainElement] ("_chain") Extensions for chain
+  ///
+  /// [component] Used to define the parts of a composite search parameter.
+  ///
   factory SearchParameter({
-    @Default(R5ResourceType.SearchParameter) R5ResourceType resourceType,
+    /// [resourceType] This is a SearchParameter resource
+    @Default(R5ResourceType.SearchParameter)
+    @JsonKey(unknownEnumValue: R5ResourceType.SearchParameter)
+        R5ResourceType resourceType,
+
+    /// [id] The logical id of the resource, as used in the URL for the resource.
+    /// Once assigned, this value never changes.
     Id? id,
+
+    /// [meta] The metadata about the resource. This is content that is
+    /// maintained by the infrastructure. Changes to the content might not
+    /// always be associated with version changes to the resource.
     Meta? meta,
+
+    /// [implicitRules] A reference to a set of rules that were followed when
+    /// the resource was constructed, and which must be understood when
+    /// processing the content. Often, this is a reference to an implementation
+    /// guide that defines the special rules along with other profiles etc.
     FhirUri? implicitRules,
+
+    /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+
+    /// [language] The base language in which the resource is written.
     Code? language,
+
+    /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
+
+    /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
     Narrative? text,
+
+    /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
     List<Resource>? contained,
+
+    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [url] An absolute URI that is used to identify this search parameter when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this search parameter is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the search parameter is stored on different servers.
     FhirUri? url,
+
+    /// [urlElement] ("_url") Extensions for url
     @JsonKey(name: '_url') Element? urlElement,
+
+    /// [identifier] A formal identifier that is used to identify this {{title}} when it is represented in other formats, or referenced in a specification, model, design or an instance.
     List<Identifier>? identifier,
+
+    /// [version] The identifier that is used to identify this version of the search parameter when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the search parameter author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.
     String? version,
+
+    /// [versionElement] ("_version") Extensions for version
     @JsonKey(name: '_version') Element? versionElement,
+
+    /// [versionAlgorithmString] Indicates the mechanism used to compare versions to determine which is more current.
+    String? versionAlgorithmString,
+
+    /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions for versionAlgorithmString
+    @JsonKey(name: '_versionAlgorithmString')
+        Element? versionAlgorithmStringElement,
+
+    /// [versionAlgorithmCoding] Indicates the mechanism used to compare versions to determine which is more current.
+    Coding? versionAlgorithmCoding,
+
+    /// [name] A natural language name identifying the search parameter. This name should be usable as an identifier for the module by machine processing applications such as code generation.
     String? name,
+
+    /// [nameElement] ("_name") Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
+
+    /// [title] A short, descriptive, user-friendly title for the search parameter.
     String? title,
+
+    /// [titleElement] ("_title") Extensions for title
     @JsonKey(name: '_title') Element? titleElement,
+
+    /// [status] The status of this search parameter. Enables tracking the life-cycle of the content.
     Code? status,
+
+    /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
+
+    /// [experimental] A Boolean value to indicate that this search parameter is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
     Boolean? experimental,
+
+    /// [experimentalElement] ("_experimental") Extensions for experimental
     @JsonKey(name: '_experimental') Element? experimentalElement,
+
+    /// [date] The date  (and optionally time) when the search parameter was last significantly changed. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the search parameter changes.
     FhirDateTime? date,
+
+    /// [dateElement] ("_date") Extensions for date
     @JsonKey(name: '_date') Element? dateElement,
+
+    /// [publisher] The name of the organization or individual tresponsible for the release and ongoing maintenance of the search parameter.
     String? publisher,
+
+    /// [publisherElement] ("_publisher") Extensions for publisher
     @JsonKey(name: '_publisher') Element? publisherElement,
+
+    /// [contact] Contact details to assist a user in finding and communicating with the publisher.
     List<ContactDetail>? contact,
+
+    /// [description] And how it used.
     Markdown? description,
+
+    /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
+
+    /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate search parameter instances.
     List<UsageContext>? useContext,
+
+    /// [jurisdiction] A legal or geographic region in which the search parameter is intended to be used.
     List<CodeableConcept>? jurisdiction,
+
+    /// [purpose] Explanation of why this search parameter is needed and why it has been designed as it has.
     Markdown? purpose,
+
+    /// [purposeElement] ("_purpose") Extensions for purpose
     @JsonKey(name: '_purpose') Element? purposeElement,
+
+    /// [copyright] A copyright statement relating to the {{title}} and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the {{title}}.
     Markdown? copyright,
+
+    /// [copyrightElement] ("_copyright") Extensions for copyright
     @JsonKey(name: '_copyright') Element? copyrightElement,
+
+    /// [copyrightLabel] A short string (<50 characters), suitable for inclusion in a page footer that identifies the copyright holder, effective period, and optionally whether rights are resctricted. (e.g. 'All rights reserved', 'Some rights reserved').
+    String? copyrightLabel,
+
+    /// [copyrightLabelElement] ("_copyrightLabel") Extensions for copyrightLabel
+    @JsonKey(name: '_copyrightLabel') Element? copyrightLabelElement,
+
+    /// [derivedFrom] Where this search parameter is originally defined. If a derivedFrom is provided, then the details in the search parameter must be consistent with the definition from which it is defined. i.e. the parameter should have the same meaning, and (usually) the functionality should be a proper subset of the underlying search parameter.
     Canonical? derivedFrom,
+
+    /// [code] The label that is recommended to be used in the URL or the parameter name in a parameters resource for this search parameter.  In some cases, servers may need to use a different CapabilityStatement searchParam.name to differentiate between multiple SearchParameters that happen to have the same code.
     Code? code,
+
+    /// [codeElement] ("_code") Extensions for code
     @JsonKey(name: '_code') Element? codeElement,
+
+    /// [base] The base resource type(s) that this search parameter can be used against.
     List<Code>? base,
+
+    /// [baseElement] ("_base") Extensions for base
     @JsonKey(name: '_base') List<Element>? baseElement,
+
+    /// [type] The type of value that a search parameter may contain, and how the content is interpreted.
     Code? type,
+
+    /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
+
+    /// [expression] A FHIRPath expression that returns a set of elements for the search parameter.
     String? expression,
+
+    /// [expressionElement] ("_expression") Extensions for expression
     @JsonKey(name: '_expression') Element? expressionElement,
-    String? xpath,
-    @JsonKey(name: '_xpath') Element? xpathElement,
-    Code? xpathUsage,
-    @JsonKey(name: '_xpathUsage') Element? xpathUsageElement,
+
+    /// [processingMode] How the search parameter relates to the set of elements returned by evaluating the expression query.
+    Code? processingMode,
+
+    /// [processingModeElement] ("_processingMode") Extensions for processingMode
+    @JsonKey(name: '_processingMode') Element? processingModeElement,
+
+    /// [constraint] FHIRPath expression that defines/sets a complex constraint for when this SearchParameter is applicable.
+    String? constraint,
+
+    /// [constraintElement] ("_constraint") Extensions for constraint
+    @JsonKey(name: '_constraint') Element? constraintElement,
+
+    /// [target] Types of resource (if a resource is referenced).
     List<Code>? target,
+
+    /// [targetElement] ("_target") Extensions for target
     @JsonKey(name: '_target') List<Element>? targetElement,
+
+    /// [multipleOr] Whether multiple values are allowed for each time the parameter exists. Values are separated by commas, and the parameter matches if any of the values match.
     Boolean? multipleOr,
+
+    /// [multipleOrElement] ("_multipleOr") Extensions for multipleOr
     @JsonKey(name: '_multipleOr') Element? multipleOrElement,
+
+    /// [multipleAnd] Whether multiple parameters are allowed - e.g. more than one parameter with the same name. The search matches if all the parameters match.
     Boolean? multipleAnd,
+
+    /// [multipleAndElement] ("_multipleAnd") Extensions for multipleAnd
     @JsonKey(name: '_multipleAnd') Element? multipleAndElement,
+
+    /// [comparator] Comparators supported for the search parameter.
     List<Code>? comparator,
+
+    /// [comparatorElement] ("_comparator") Extensions for comparator
     @JsonKey(name: '_comparator') List<Element>? comparatorElement,
+
+    /// [modifier] A modifier supported for the search parameter.
     List<Code>? modifier,
+
+    /// [modifierElement] ("_modifier") Extensions for modifier
     @JsonKey(name: '_modifier') List<Element>? modifierElement,
+
+    /// [chain] Contains the names of any search parameters which may be chained to the containing search parameter. Chained parameters may be added to search parameters of type reference and specify that resources will only be returned if they contain a reference to a resource which matches the chained parameter value. Values for this field should be drawn from SearchParameter.code for a parameter on the target resource type.
     List<String>? chain,
+
+    /// [chainElement] ("_chain") Extensions for chain
     @JsonKey(name: '_chain') List<Element>? chainElement,
+
+    /// [component] Used to define the parts of a composite search parameter.
     List<SearchParameterComponent>? component,
   }) = _SearchParameter;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SearchParameter.fromYaml(dynamic yaml) => yaml is String
@@ -5442,39 +7892,89 @@ class SearchParameter with Resource, _$SearchParameter {
     if (json is Map<String, dynamic>) {
       return _$SearchParameterFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [SearchParameterComponent] A search parameter that defines a named search item that can be used to search/filter on a resource.
+/// [SearchParameterComponent] A search parameter that defines a named search
+///  item that can be used to search/filter on a resource.
 @freezed
 class SearchParameterComponent with _$SearchParameterComponent {
+  /// [SearchParameterComponent] A search parameter that defines a named search
+  ///  item that can be used to search/filter on a resource.
   SearchParameterComponent._();
 
-  /// [SearchParameterComponent] A search parameter that defines a named search item that can be used to search/filter on a resource.
-
+  /// [SearchParameterComponent] A search parameter that defines a named search
+  ///  item that can be used to search/filter on a resource.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [definition] The definition of the search parameter that describes this part.;
+  /// [definition] The definition of the search parameter that describes this
+  ///  part.
   ///
-  /// [expression] A sub-expression that defines how to extract values for this component from the output of the main SearchParameter.expression.;
+  /// [expression] A sub-expression that defines how to extract values for this
+  ///  component from the output of the main SearchParameter.expression.
   ///
-  /// [expressionElement] (_expression): Extensions for expression;
+  /// [expressionElement] ("_expression") Extensions for expression
+  ///
   factory SearchParameterComponent({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [definition] The definition of the search parameter that describes this part.
     required Canonical definition,
+
+    /// [expression] A sub-expression that defines how to extract values for this component from the output of the main SearchParameter.expression.
     String? expression,
+
+    /// [expressionElement] ("_expression") Extensions for expression
     @JsonKey(name: '_expression') Element? expressionElement,
   }) = _SearchParameterComponent;
 
@@ -5503,188 +8003,441 @@ class SearchParameterComponent with _$SearchParameterComponent {
     if (json is Map<String, dynamic>) {
       return _$SearchParameterComponentFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [StructureDefinition] A definition of a FHIR structure. This resource is used to describe the underlying resources, data types defined in FHIR, and also for describing extensions and constraints on resources and data types.
+/// [StructureDefinition] A definition of a FHIR structure. This resource is
+///  used to describe the underlying resources, data types defined in FHIR, and
+///  also for describing extensions and constraints on resources and data types.
 @freezed
 class StructureDefinition with Resource, _$StructureDefinition {
+  /// [StructureDefinition] A definition of a FHIR structure. This resource is
+  ///  used to describe the underlying resources, data types defined in FHIR,
+  ///  and also for describing extensions and constraints on resources and data
+  ///  types.
   StructureDefinition._();
 
-  /// [StructureDefinition] A definition of a FHIR structure. This resource is used to describe the underlying resources, data types defined in FHIR, and also for describing extensions and constraints on resources and data types.
-
+  /// [StructureDefinition] A definition of a FHIR structure. This resource is
+  ///  used to describe the underlying resources, data types defined in FHIR,
+  ///  and also for describing extensions and constraints on resources and data
+  ///  types.
   ///
-  /// [resourceType] This is a StructureDefinition resource;
+  /// [resourceType] This is a StructureDefinition resource
   ///
-  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
   ///
-  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  /// [meta] The metadata about the resource. This is content that is
+  ///  maintained by the infrastructure. Changes to the content might not
+  ///  always be associated with version changes to the resource.
   ///
-  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  ///  resource was constructed, and which must be understood when processing
+  ///  the content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   ///
-  /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   ///
-  /// [language] The base language in which the resource is written.;
+  /// [language] The base language in which the resource is written.
   ///
-  /// [languageElement] (_language): Extensions for language;
+  /// [languageElement] ("_language") Extensions for language
   ///
-  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  /// [text] A human-readable narrative that contains a summary of the resource
+  ///  and can be used to represent the content of the resource to a human. The
+  ///  narrative need not encode all the structured data, but is required to
+  ///  contain sufficient detail to make it "clinically safe" for a human to
+  ///  just read the narrative. Resource definitions may define what content
+  ///  should be represented in the narrative to ensure clinical safety.
   ///
-  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  /// [contained] These resources do not have an independent existence apart
+  ///  from the resource that contains them - they cannot be identified
+  ///  independently, nor can they have their own independent transaction
+  ///  scope. This is allowed to be a Parameters resource if and only if it is
+  ///  referenced by a resource that provides context/meaning.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the resource. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the resource and that modifies
+  ///  the understanding of the element that contains it and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  is allowed to define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension. Applications
+  ///  processing a resource are required to check for modifier
+  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
+  ///  elements on Resource or DomainResource (including cannot change the
+  ///  meaning of modifierExtension itself).
   ///
-  /// [url] An absolute URI that is used to identify this structure definition when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this structure definition is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the structure definition is stored on different servers.;
+  /// [url] An absolute URI that is used to identify this structure definition
+  ///  when it is referenced in a specification, model, design or an instance;
+  ///  also called its canonical identifier. This SHOULD be globally unique and
+  ///  SHOULD be a literal address at which an authoritative instance of this
+  ///  structure definition is (or will be) published. This URL can be the
+  ///  target of a canonical reference. It SHALL remain the same when the
+  ///  structure definition is stored on different servers.
   ///
-  /// [urlElement] (_url): Extensions for url;
+  /// [urlElement] ("_url") Extensions for url
   ///
-  /// [identifier] A formal identifier that is used to identify this structure definition when it is represented in other formats, or referenced in a specification, model, design or an instance.;
+  /// [identifier] A formal identifier that is used to identify this structure
+  ///  definition when it is represented in other formats, or referenced in a
+  ///  specification, model, design or an instance.
   ///
-  /// [version] The identifier that is used to identify this version of the structure definition when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the structure definition author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.;
+  /// [version] The identifier that is used to identify this version of the
+  ///  structure definition when it is referenced in a specification, model,
+  ///  design or instance. This is an arbitrary value managed by the structure
+  ///  definition author and is not expected to be globally unique. For
+  ///  example, it might be a timestamp (e.g. yyyymmdd) if a managed version is
+  ///  not available. There is also no expectation that versions can be placed
+  ///  in a lexicographical sequence.
   ///
-  /// [versionElement] (_version): Extensions for version;
+  /// [versionElement] ("_version") Extensions for version
   ///
-  /// [name] A natural language name identifying the structure definition. This name should be usable as an identifier for the module by machine processing applications such as code generation.;
+  /// [versionAlgorithmString] Indicates the mechanism used to compare versions
+  ///  to determine which is more current.
   ///
-  /// [nameElement] (_name): Extensions for name;
+  /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
+  ///  for versionAlgorithmString
   ///
-  /// [title] A short, descriptive, user-friendly title for the structure definition.;
+  /// [versionAlgorithmCoding] Indicates the mechanism used to compare versions
+  ///  to determine which is more current.
   ///
-  /// [titleElement] (_title): Extensions for title;
+  /// [name] A natural language name identifying the structure definition. This
+  ///  name should be usable as an identifier for the module by machine
+  ///  processing applications such as code generation.
   ///
-  /// [status] The status of this structure definition. Enables tracking the life-cycle of the content.;
+  /// [nameElement] ("_name") Extensions for name
   ///
-  /// [statusElement] (_status): Extensions for status;
+  /// [title] A short, descriptive, user-friendly title for the structure
+  ///  definition.
   ///
-  /// [experimental] A Boolean value to indicate that this structure definition is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.;
+  /// [titleElement] ("_title") Extensions for title
   ///
-  /// [experimentalElement] (_experimental): Extensions for experimental;
+  /// [status] The status of this structure definition. Enables tracking the
+  ///  life-cycle of the content.
   ///
-  /// [date] The date  (and optionally time) when the structure definition was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the structure definition changes.;
+  /// [statusElement] ("_status") Extensions for status
   ///
-  /// [dateElement] (_date): Extensions for date;
+  /// [experimental] A Boolean value to indicate that this structure definition
+  ///  is authored for testing purposes (or education/evaluation/marketing) and
+  ///  is not intended to be used for genuine usage.
   ///
-  /// [publisher] The name of the organization or individual that published the structure definition.;
+  /// [experimentalElement] ("_experimental") Extensions for experimental
   ///
-  /// [publisherElement] (_publisher): Extensions for publisher;
+  /// [date] The date  (and optionally time) when the structure definition was
+  ///  last significantly changed. The date must change when the business
+  ///  version changes and it must change if the status code changes. In
+  ///  addition, it should change when the substantive content of the structure
+  ///  definition changes.
   ///
-  /// [contact] Contact details to assist a user in finding and communicating with the publisher.;
+  /// [dateElement] ("_date") Extensions for date
   ///
-  /// [description] A free text natural language description of the structure definition from a consumer's perspective.;
+  /// [publisher] The name of the organization or individual responsible for
+  ///  the release and ongoing maintenance of the structure definition.
   ///
-  /// [descriptionElement] (_description): Extensions for description;
+  /// [publisherElement] ("_publisher") Extensions for publisher
   ///
-  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate structure definition instances.;
+  /// [contact] Contact details to assist a user in finding and communicating
+  ///  with the publisher.
   ///
-  /// [jurisdiction] A legal or geographic region in which the structure definition is intended to be used.;
+  /// [description] A free text natural language description of the structure
+  ///  definition from a consumer's perspective.
   ///
-  /// [purpose] Explanation of why this structure definition is needed and why it has been designed as it has.;
+  /// [descriptionElement] ("_description") Extensions for description
   ///
-  /// [purposeElement] (_purpose): Extensions for purpose;
+  /// [useContext] The content was developed with a focus and intent of
+  ///  supporting the contexts that are listed. These contexts may be general
+  ///  categories (gender, age, ...) or may be references to specific programs
+  ///  (insurance plans, studies, ...) and may be used to assist with indexing
+  ///  and searching for appropriate structure definition instances.
   ///
-  /// [copyright] A copyright statement relating to the structure definition and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the structure definition.;
+  /// [jurisdiction] A legal or geographic region in which the structure
+  ///  definition is intended to be used.
   ///
-  /// [copyrightElement] (_copyright): Extensions for copyright;
+  /// [purpose] Explanation of why this structure definition is needed and why
+  ///  it has been designed as it has.
   ///
-  /// [keyword] A set of key words or terms from external terminologies that may be used to assist with indexing and searching of templates nby describing the use of this structure definition, or the content it describes.;
+  /// [purposeElement] ("_purpose") Extensions for purpose
   ///
-  /// [fhirVersion] The version of the FHIR specification on which this StructureDefinition is based - this is the formal version of the specification, without the revision number, e.g. [publication].[major].[minor], which is 4.6.0. for this version.;
+  /// [copyright] A copyright statement relating to the structure definition
+  ///  and/or its contents. Copyright statements are generally legal
+  ///  restrictions on the use and publishing of the structure definition.  The
+  ///  short copyright declaration (e.g. (c) '2015+ xyz organization' should be
+  ///  sent in the copyrightLabel element.
   ///
-  /// [fhirVersionElement] (_fhirVersion): Extensions for fhirVersion;
+  /// [copyrightElement] ("_copyright") Extensions for copyright
   ///
-  /// [mapping] An external specification that the content is mapped to.;
+  /// [copyrightLabel] A short string (<50 characters), suitable for inclusion
+  ///  in a page footer that identifies the copyright holder, effective period,
+  ///  and optionally whether rights are resctricted. (e.g. 'All rights
+  ///  reserved', 'Some rights reserved').
   ///
-  /// [kind] Defines the kind of structure that this definition is describing.;
+  /// [copyrightLabelElement] ("_copyrightLabel") Extensions for copyrightLabel
   ///
-  /// [kindElement] (_kind): Extensions for kind;
+  /// [keyword] (DEPRECATED) A set of key words or terms from external
+  ///  terminologies that may be used to assist with indexing and searching of
+  ///  templates nby describing the use of this structure definition, or the
+  ///  content it describes.
   ///
-  /// [abstract] Whether structure this definition describes is abstract or not  - that is, whether the structure is not intended to be instantiated. For Resources and Data types, abstract types will never be exchanged  between systems.;
+  /// [fhirVersion] The version of the FHIR specification on which this
+  ///  StructureDefinition is based - this is the formal version of the
+  ///  specification, without the revision number, e.g.
+  ///  [publication].[major].[minor], which is 4.6.0. for this version.
   ///
-  /// [abstractElement] (_abstract): Extensions for abstract;
+  /// [fhirVersionElement] ("_fhirVersion") Extensions for fhirVersion
   ///
-  /// [context] Identifies the types of resource or data type elements to which the extension can be applied.;
+  /// [mapping] An external specification that the content is mapped to.
   ///
-  /// [contextInvariant] A set of rules as FHIRPath Invariants about when the extension can be used (e.g. co-occurrence variants for the extension). All the rules must be true.;
+  /// [kind] Defines the kind of structure that this definition is describing.
   ///
-  /// [contextInvariantElement] (_contextInvariant): Extensions for contextInvariant;
+  /// [kindElement] ("_kind") Extensions for kind
   ///
-  /// [type] The type this structure describes. If the derivation kind is 'specialization' then this is the master definition for a type, and there is always one of these (a data type, an extension, a resource, including abstract ones). Otherwise the structure definition is a constraint on the stated type (and in this case, the type cannot be an abstract type).  References are URLs that are relative to http://hl7.org/fhir/StructureDefinition e.g. "string" is a reference to http://hl7.org/fhir/StructureDefinition/string. Absolute URLs are only allowed in logical models.;
+  /// [abstract_] ("abstract") Whether structure this definition describes is
+  ///  abstract or not  - that is, whether the structure is not intended to be
+  ///  instantiated. For Resources and Data types, abstract types will never be
+  ///  exchanged  between systems.
   ///
-  /// [typeElement] (_type): Extensions for type;
+  /// [abstractElement] ("_abstract") Extensions for abstract
   ///
-  /// [baseDefinition] An absolute URI that is the base structure from which this type is derived, either by specialization or constraint.;
+  /// [context] Identifies the types of resource or data type elements to which
+  ///  the extension can be applied.
   ///
-  /// [derivation] How the type relates to the baseDefinition.;
+  /// [contextInvariant] A set of rules as FHIRPath Invariants about when the
+  ///  extension can be used (e.g. co-occurrence variants for the extension).
+  ///  All the rules must be true.
   ///
-  /// [derivationElement] (_derivation): Extensions for derivation;
+  /// [contextInvariantElement] ("_contextInvariant") Extensions for
+  ///  contextInvariant
   ///
-  /// [snapshot] A snapshot view is expressed in a standalone form that can be used and interpreted without considering the base StructureDefinition.;
+  /// [type] The type this structure describes. If the derivation kind is
+  ///  'specialization' then this is the master definition for a type, and
+  ///  there is always one of these (a data type, an extension, a resource,
+  ///  including abstract ones). Otherwise the structure definition is a
+  ///  constraint on the stated type (and in this case, the type cannot be an
+  ///  abstract type).  References are URLs that are relative to
+  ///  http://hl7.org/fhir/StructureDefinition e.g. "string" is a reference to
+  ///  http://hl7.org/fhir/StructureDefinition/string. Absolute URLs are only
+  ///  allowed in logical models, where they are required.
   ///
-  /// [differential] A differential view is expressed relative to the base StructureDefinition - a statement of differences that it applies.;
+  /// [typeElement] ("_type") Extensions for type
+  ///
+  /// [baseDefinition] An absolute URI that is the base structure from which
+  ///  this type is derived, either by specialization or constraint.
+  ///
+  /// [derivation] How the type relates to the baseDefinition.
+  ///
+  /// [derivationElement] ("_derivation") Extensions for derivation
+  ///
+  /// [snapshot] A snapshot view is expressed in a standalone form that can be
+  ///  used and interpreted without considering the base StructureDefinition.
+  ///
+  /// [differential] A differential view is expressed relative to the base
+  ///  StructureDefinition - a statement of differences that it applies.
+  ///
   factory StructureDefinition({
-    @Default(R5ResourceType.StructureDefinition) R5ResourceType resourceType,
+    /// [resourceType] This is a StructureDefinition resource
+    @Default(R5ResourceType.StructureDefinition)
+    @JsonKey(unknownEnumValue: R5ResourceType.StructureDefinition)
+        R5ResourceType resourceType,
+
+    /// [id] The logical id of the resource, as used in the URL for the resource.
+    /// Once assigned, this value never changes.
     Id? id,
+
+    /// [meta] The metadata about the resource. This is content that is
+    /// maintained by the infrastructure. Changes to the content might not
+    /// always be associated with version changes to the resource.
     Meta? meta,
+
+    /// [implicitRules] A reference to a set of rules that were followed when
+    /// the resource was constructed, and which must be understood when
+    /// processing the content. Often, this is a reference to an implementation
+    /// guide that defines the special rules along with other profiles etc.
     FhirUri? implicitRules,
+
+    /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+
+    /// [language] The base language in which the resource is written.
     Code? language,
+
+    /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
+
+    /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
     Narrative? text,
+
+    /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
     List<Resource>? contained,
+
+    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [url] An absolute URI that is used to identify this structure definition when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this structure definition is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the structure definition is stored on different servers.
     FhirUri? url,
+
+    /// [urlElement] ("_url") Extensions for url
     @JsonKey(name: '_url') Element? urlElement,
+
+    /// [identifier] A formal identifier that is used to identify this structure definition when it is represented in other formats, or referenced in a specification, model, design or an instance.
     List<Identifier>? identifier,
+
+    /// [version] The identifier that is used to identify this version of the structure definition when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the structure definition author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.
     String? version,
+
+    /// [versionElement] ("_version") Extensions for version
     @JsonKey(name: '_version') Element? versionElement,
+
+    /// [versionAlgorithmString] Indicates the mechanism used to compare versions to determine which is more current.
+    String? versionAlgorithmString,
+
+    /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions for versionAlgorithmString
+    @JsonKey(name: '_versionAlgorithmString')
+        Element? versionAlgorithmStringElement,
+
+    /// [versionAlgorithmCoding] Indicates the mechanism used to compare versions to determine which is more current.
+    Coding? versionAlgorithmCoding,
+
+    /// [name] A natural language name identifying the structure definition. This name should be usable as an identifier for the module by machine processing applications such as code generation.
     String? name,
+
+    /// [nameElement] ("_name") Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
+
+    /// [title] A short, descriptive, user-friendly title for the structure definition.
     String? title,
+
+    /// [titleElement] ("_title") Extensions for title
     @JsonKey(name: '_title') Element? titleElement,
+
+    /// [status] The status of this structure definition. Enables tracking the life-cycle of the content.
     Code? status,
+
+    /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
+
+    /// [experimental] A Boolean value to indicate that this structure definition is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
     Boolean? experimental,
+
+    /// [experimentalElement] ("_experimental") Extensions for experimental
     @JsonKey(name: '_experimental') Element? experimentalElement,
+
+    /// [date] The date  (and optionally time) when the structure definition was last significantly changed. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the structure definition changes.
     FhirDateTime? date,
+
+    /// [dateElement] ("_date") Extensions for date
     @JsonKey(name: '_date') Element? dateElement,
+
+    /// [publisher] The name of the organization or individual responsible for the release and ongoing maintenance of the structure definition.
     String? publisher,
+
+    /// [publisherElement] ("_publisher") Extensions for publisher
     @JsonKey(name: '_publisher') Element? publisherElement,
+
+    /// [contact] Contact details to assist a user in finding and communicating with the publisher.
     List<ContactDetail>? contact,
+
+    /// [description] A free text natural language description of the structure definition from a consumer's perspective.
     Markdown? description,
+
+    /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
+
+    /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate structure definition instances.
     List<UsageContext>? useContext,
+
+    /// [jurisdiction] A legal or geographic region in which the structure definition is intended to be used.
     List<CodeableConcept>? jurisdiction,
+
+    /// [purpose] Explanation of why this structure definition is needed and why it has been designed as it has.
     Markdown? purpose,
+
+    /// [purposeElement] ("_purpose") Extensions for purpose
     @JsonKey(name: '_purpose') Element? purposeElement,
+
+    /// [copyright] A copyright statement relating to the structure definition and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the structure definition.  The short copyright declaration (e.g. (c) '2015+ xyz organization' should be sent in the copyrightLabel element.
     Markdown? copyright,
+
+    /// [copyrightElement] ("_copyright") Extensions for copyright
     @JsonKey(name: '_copyright') Element? copyrightElement,
+
+    /// [copyrightLabel] A short string (<50 characters), suitable for inclusion in a page footer that identifies the copyright holder, effective period, and optionally whether rights are resctricted. (e.g. 'All rights reserved', 'Some rights reserved').
+    String? copyrightLabel,
+
+    /// [copyrightLabelElement] ("_copyrightLabel") Extensions for copyrightLabel
+    @JsonKey(name: '_copyrightLabel') Element? copyrightLabelElement,
+
+    /// [keyword] (DEPRECATED) A set of key words or terms from external terminologies that may be used to assist with indexing and searching of templates nby describing the use of this structure definition, or the content it describes.
     List<Coding>? keyword,
+
+    /// [fhirVersion] The version of the FHIR specification on which this StructureDefinition is based - this is the formal version of the specification, without the revision number, e.g. [publication].[major].[minor], which is 4.6.0. for this version.
     Code? fhirVersion,
+
+    /// [fhirVersionElement] ("_fhirVersion") Extensions for fhirVersion
     @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
+
+    /// [mapping] An external specification that the content is mapped to.
     List<StructureDefinitionMapping>? mapping,
+
+    /// [kind] Defines the kind of structure that this definition is describing.
     Code? kind,
+
+    /// [kindElement] ("_kind") Extensions for kind
     @JsonKey(name: '_kind') Element? kindElement,
+
+    /// [abstract_] ("abstract") Whether structure this definition describes is abstract or not  - that is, whether the structure is not intended to be instantiated. For Resources and Data types, abstract types will never be exchanged  between systems.
     @JsonKey(name: 'abstract') Boolean? abstract_,
+
+    /// [abstractElement] ("_abstract") Extensions for abstract
     @JsonKey(name: '_abstract') Element? abstractElement,
+
+    /// [context] Identifies the types of resource or data type elements to which the extension can be applied.
     List<StructureDefinitionContext>? context,
+
+    /// [contextInvariant] A set of rules as FHIRPath Invariants about when the extension can be used (e.g. co-occurrence variants for the extension). All the rules must be true.
     List<String>? contextInvariant,
+
+    /// [contextInvariantElement] ("_contextInvariant") Extensions for contextInvariant
     @JsonKey(name: '_contextInvariant') List<Element>? contextInvariantElement,
+
+    /// [type] The type this structure describes. If the derivation kind is 'specialization' then this is the master definition for a type, and there is always one of these (a data type, an extension, a resource, including abstract ones). Otherwise the structure definition is a constraint on the stated type (and in this case, the type cannot be an abstract type).  References are URLs that are relative to http://hl7.org/fhir/StructureDefinition e.g. "string" is a reference to http://hl7.org/fhir/StructureDefinition/string. Absolute URLs are only allowed in logical models, where they are required.
     FhirUri? type,
+
+    /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
+
+    /// [baseDefinition] An absolute URI that is the base structure from which this type is derived, either by specialization or constraint.
     Canonical? baseDefinition,
+
+    /// [derivation] How the type relates to the baseDefinition.
     Code? derivation,
+
+    /// [derivationElement] ("_derivation") Extensions for derivation
     @JsonKey(name: '_derivation') Element? derivationElement,
+
+    /// [snapshot] A snapshot view is expressed in a standalone form that can be used and interpreted without considering the base StructureDefinition.
     StructureDefinitionSnapshot? snapshot,
+
+    /// [differential] A differential view is expressed relative to the base StructureDefinition - a statement of differences that it applies.
     StructureDefinitionDifferential? differential,
   }) = _StructureDefinition;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory StructureDefinition.fromYaml(dynamic yaml) => yaml is String
@@ -5708,54 +8461,121 @@ class StructureDefinition with Resource, _$StructureDefinition {
     if (json is Map<String, dynamic>) {
       return _$StructureDefinitionFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [StructureDefinitionMapping] A definition of a FHIR structure. This resource is used to describe the underlying resources, data types defined in FHIR, and also for describing extensions and constraints on resources and data types.
+/// [StructureDefinitionMapping] A definition of a FHIR structure. This
+///  resource is used to describe the underlying resources, data types defined
+///  in FHIR, and also for describing extensions and constraints on resources
+///  and data types.
 @freezed
 class StructureDefinitionMapping with _$StructureDefinitionMapping {
+  /// [StructureDefinitionMapping] A definition of a FHIR structure. This
+  ///  resource is used to describe the underlying resources, data types
+  ///  defined in FHIR, and also for describing extensions and constraints on
+  ///  resources and data types.
   StructureDefinitionMapping._();
 
-  /// [StructureDefinitionMapping] A definition of a FHIR structure. This resource is used to describe the underlying resources, data types defined in FHIR, and also for describing extensions and constraints on resources and data types.
-
+  /// [StructureDefinitionMapping] A definition of a FHIR structure. This
+  ///  resource is used to describe the underlying resources, data types
+  ///  defined in FHIR, and also for describing extensions and constraints on
+  ///  resources and data types.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [identity] An Internal id that is used to identify this mapping set when specific mappings are made.;
+  /// [identity] An Internal id that is used to identify this mapping set when
+  ///  specific mappings are made.
   ///
-  /// [identityElement] (_identity): Extensions for identity;
+  /// [identityElement] ("_identity") Extensions for identity
   ///
-  /// [uri] An absolute URI that identifies the specification that this mapping is expressed to.;
+  /// [uri] An absolute URI that identifies the specification that this mapping
+  ///  is expressed to.
   ///
-  /// [uriElement] (_uri): Extensions for uri;
+  /// [uriElement] ("_uri") Extensions for uri
   ///
-  /// [name] A name for the specification that is being mapped to.;
+  /// [name] A name for the specification that is being mapped to.
   ///
-  /// [nameElement] (_name): Extensions for name;
+  /// [nameElement] ("_name") Extensions for name
   ///
-  /// [comment] Comments about this mapping, including version notes, issues, scope limitations, and other important notes for usage.;
+  /// [comment] Comments about this mapping, including version notes, issues,
+  ///  scope limitations, and other important notes for usage.
   ///
-  /// [commentElement] (_comment): Extensions for comment;
+  /// [commentElement] ("_comment") Extensions for comment
+  ///
   factory StructureDefinitionMapping({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [identity] An Internal id that is used to identify this mapping set when specific mappings are made.
     Id? identity,
+
+    /// [identityElement] ("_identity") Extensions for identity
     @JsonKey(name: '_identity') Element? identityElement,
+
+    /// [uri] An absolute URI that identifies the specification that this mapping is expressed to.
     FhirUri? uri,
+
+    /// [uriElement] ("_uri") Extensions for uri
     @JsonKey(name: '_uri') Element? uriElement,
+
+    /// [name] A name for the specification that is being mapped to.
     String? name,
+
+    /// [nameElement] ("_name") Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
+
+    /// [comment] Comments about this mapping, including version notes, issues, scope limitations, and other important notes for usage.
     String? comment,
+
+    /// [commentElement] ("_comment") Extensions for comment
     @JsonKey(name: '_comment') Element? commentElement,
   }) = _StructureDefinitionMapping;
 
@@ -5784,42 +8604,100 @@ class StructureDefinitionMapping with _$StructureDefinitionMapping {
     if (json is Map<String, dynamic>) {
       return _$StructureDefinitionMappingFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [StructureDefinitionContext] A definition of a FHIR structure. This resource is used to describe the underlying resources, data types defined in FHIR, and also for describing extensions and constraints on resources and data types.
+/// [StructureDefinitionContext] A definition of a FHIR structure. This
+///  resource is used to describe the underlying resources, data types defined
+///  in FHIR, and also for describing extensions and constraints on resources
+///  and data types.
 @freezed
 class StructureDefinitionContext with _$StructureDefinitionContext {
+  /// [StructureDefinitionContext] A definition of a FHIR structure. This
+  ///  resource is used to describe the underlying resources, data types
+  ///  defined in FHIR, and also for describing extensions and constraints on
+  ///  resources and data types.
   StructureDefinitionContext._();
 
-  /// [StructureDefinitionContext] A definition of a FHIR structure. This resource is used to describe the underlying resources, data types defined in FHIR, and also for describing extensions and constraints on resources and data types.
-
+  /// [StructureDefinitionContext] A definition of a FHIR structure. This
+  ///  resource is used to describe the underlying resources, data types
+  ///  defined in FHIR, and also for describing extensions and constraints on
+  ///  resources and data types.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [type] Defines how to interpret the expression that defines what the context of the extension is.;
+  /// [type] Defines how to interpret the expression that defines what the
+  ///  context of the extension is.
   ///
-  /// [typeElement] (_type): Extensions for type;
+  /// [typeElement] ("_type") Extensions for type
   ///
-  /// [expression] An expression that defines where an extension can be used in resources.;
+  /// [expression] An expression that defines where an extension can be used in
+  ///  resources.
   ///
-  /// [expressionElement] (_expression): Extensions for expression;
+  /// [expressionElement] ("_expression") Extensions for expression
+  ///
   factory StructureDefinitionContext({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [type] Defines how to interpret the expression that defines what the context of the extension is.
     Code? type,
+
+    /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
+
+    /// [expression] An expression that defines where an extension can be used in resources.
     String? expression,
+
+    /// [expressionElement] ("_expression") Extensions for expression
     @JsonKey(name: '_expression') Element? expressionElement,
   }) = _StructureDefinitionContext;
 
@@ -5848,33 +8726,83 @@ class StructureDefinitionContext with _$StructureDefinitionContext {
     if (json is Map<String, dynamic>) {
       return _$StructureDefinitionContextFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [StructureDefinitionSnapshot] A definition of a FHIR structure. This resource is used to describe the underlying resources, data types defined in FHIR, and also for describing extensions and constraints on resources and data types.
+/// [StructureDefinitionSnapshot] A definition of a FHIR structure. This
+///  resource is used to describe the underlying resources, data types defined
+///  in FHIR, and also for describing extensions and constraints on resources
+///  and data types.
 @freezed
 class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
+  /// [StructureDefinitionSnapshot] A definition of a FHIR structure. This
+  ///  resource is used to describe the underlying resources, data types
+  ///  defined in FHIR, and also for describing extensions and constraints on
+  ///  resources and data types.
   StructureDefinitionSnapshot._();
 
-  /// [StructureDefinitionSnapshot] A definition of a FHIR structure. This resource is used to describe the underlying resources, data types defined in FHIR, and also for describing extensions and constraints on resources and data types.
-
+  /// [StructureDefinitionSnapshot] A definition of a FHIR structure. This
+  ///  resource is used to describe the underlying resources, data types
+  ///  defined in FHIR, and also for describing extensions and constraints on
+  ///  resources and data types.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [element] Captures constraints on each element within the resource.;
+  /// [element] Captures constraints on each element within the resource.
+  ///
   factory StructureDefinitionSnapshot({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [element] Captures constraints on each element within the resource.
     required List<ElementDefinition> element,
   }) = _StructureDefinitionSnapshot;
 
@@ -5896,40 +8824,91 @@ class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
   factory StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionSnapshotFromJson(json);
 
-  /// Acts like a constructor, returns a [StructureDefinitionSnapshot], accepts a
+  /// Acts like a constructor, returns a [StructureDefinitionSnapshot], accepts
+  ///  a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory StructureDefinitionSnapshot.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$StructureDefinitionSnapshotFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [StructureDefinitionDifferential] A definition of a FHIR structure. This resource is used to describe the underlying resources, data types defined in FHIR, and also for describing extensions and constraints on resources and data types.
+/// [StructureDefinitionDifferential] A definition of a FHIR structure. This
+///  resource is used to describe the underlying resources, data types defined
+///  in FHIR, and also for describing extensions and constraints on resources
+///  and data types.
 @freezed
 class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
+  /// [StructureDefinitionDifferential] A definition of a FHIR structure. This
+  ///  resource is used to describe the underlying resources, data types
+  ///  defined in FHIR, and also for describing extensions and constraints on
+  ///  resources and data types.
   StructureDefinitionDifferential._();
 
-  /// [StructureDefinitionDifferential] A definition of a FHIR structure. This resource is used to describe the underlying resources, data types defined in FHIR, and also for describing extensions and constraints on resources and data types.
-
+  /// [StructureDefinitionDifferential] A definition of a FHIR structure. This
+  ///  resource is used to describe the underlying resources, data types
+  ///  defined in FHIR, and also for describing extensions and constraints on
+  ///  resources and data types.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [element] Captures constraints on each element within the resource.;
+  /// [element] Captures constraints on each element within the resource.
+  ///
   factory StructureDefinitionDifferential({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [element] Captures constraints on each element within the resource.
     required List<ElementDefinition> element,
   }) = _StructureDefinitionDifferential;
 
@@ -5952,150 +8931,344 @@ class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
   factory StructureDefinitionDifferential.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionDifferentialFromJson(json);
 
-  /// Acts like a constructor, returns a [StructureDefinitionDifferential], accepts a
+  /// Acts like a constructor, returns a [StructureDefinitionDifferential],
+  ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory StructureDefinitionDifferential.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$StructureDefinitionDifferentialFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [StructureMap] A Map of relationships between 2 structures that can be used to transform data.
+/// [StructureMap] A Map of relationships between 2 structures that can be used
+///  to transform data.
 @freezed
 class StructureMap with Resource, _$StructureMap {
+  /// [StructureMap] A Map of relationships between 2 structures that can be
+  ///  used to transform data.
   StructureMap._();
 
-  /// [StructureMap] A Map of relationships between 2 structures that can be used to transform data.
-
+  /// [StructureMap] A Map of relationships between 2 structures that can be
+  ///  used to transform data.
   ///
-  /// [resourceType] This is a StructureMap resource;
+  /// [resourceType] This is a StructureMap resource
   ///
-  /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
   ///
-  /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  /// [meta] The metadata about the resource. This is content that is
+  ///  maintained by the infrastructure. Changes to the content might not
+  ///  always be associated with version changes to the resource.
   ///
-  /// [implicitRules] A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  ///  resource was constructed, and which must be understood when processing
+  ///  the content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   ///
-  /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
+  /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
   ///
-  /// [language] The base language in which the resource is written.;
+  /// [language] The base language in which the resource is written.
   ///
-  /// [languageElement] (_language): Extensions for language;
+  /// [languageElement] ("_language") Extensions for language
   ///
-  /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  /// [text] A human-readable narrative that contains a summary of the resource
+  ///  and can be used to represent the content of the resource to a human. The
+  ///  narrative need not encode all the structured data, but is required to
+  ///  contain sufficient detail to make it "clinically safe" for a human to
+  ///  just read the narrative. Resource definitions may define what content
+  ///  should be represented in the narrative to ensure clinical safety.
   ///
-  /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  /// [contained] These resources do not have an independent existence apart
+  ///  from the resource that contains them - they cannot be identified
+  ///  independently, nor can they have their own independent transaction
+  ///  scope. This is allowed to be a Parameters resource if and only if it is
+  ///  referenced by a resource that provides context/meaning.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the resource. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the resource and that modifies
+  ///  the understanding of the element that contains it and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  is allowed to define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension. Applications
+  ///  processing a resource are required to check for modifier
+  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
+  ///  elements on Resource or DomainResource (including cannot change the
+  ///  meaning of modifierExtension itself).
   ///
-  /// [url] An absolute URI that is used to identify this structure map when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this structure map is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the structure map is stored on different servers.;
+  /// [url] An absolute URI that is used to identify this structure map when it
+  ///  is referenced in a specification, model, design or an instance; also
+  ///  called its canonical identifier. This SHOULD be globally unique and
+  ///  SHOULD be a literal address at which an authoritative instance of this
+  ///  structure map is (or will be) published. This URL can be the target of a
+  ///  canonical reference. It SHALL remain the same when the structure map is
+  ///  stored on different servers.
   ///
-  /// [urlElement] (_url): Extensions for url;
+  /// [urlElement] ("_url") Extensions for url
   ///
-  /// [identifier] A formal identifier that is used to identify this structure map when it is represented in other formats, or referenced in a specification, model, design or an instance.;
+  /// [identifier] A formal identifier that is used to identify this structure
+  ///  map when it is represented in other formats, or referenced in a
+  ///  specification, model, design or an instance.
   ///
-  /// [version] The identifier that is used to identify this version of the structure map when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the structure map author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.;
+  /// [version] The identifier that is used to identify this version of the
+  ///  structure map when it is referenced in a specification, model, design or
+  ///  instance. This is an arbitrary value managed by the structure map author
+  ///  and is not expected to be globally unique. For example, it might be a
+  ///  timestamp (e.g. yyyymmdd) if a managed version is not available. There
+  ///  is also no expectation that versions can be placed in a lexicographical
+  ///  sequence.
   ///
-  /// [versionElement] (_version): Extensions for version;
+  /// [versionElement] ("_version") Extensions for version
   ///
-  /// [name] A natural language name identifying the structure map. This name should be usable as an identifier for the module by machine processing applications such as code generation.;
+  /// [versionAlgorithmString] Indicates the mechanism used to compare versions
+  ///  to determine which is more current.
   ///
-  /// [nameElement] (_name): Extensions for name;
+  /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
+  ///  for versionAlgorithmString
   ///
-  /// [title] A short, descriptive, user-friendly title for the structure map.;
+  /// [versionAlgorithmCoding] Indicates the mechanism used to compare versions
+  ///  to determine which is more current.
   ///
-  /// [titleElement] (_title): Extensions for title;
+  /// [name] A natural language name identifying the structure map. This name
+  ///  should be usable as an identifier for the module by machine processing
+  ///  applications such as code generation.
   ///
-  /// [status] The status of this structure map. Enables tracking the life-cycle of the content.;
+  /// [nameElement] ("_name") Extensions for name
   ///
-  /// [statusElement] (_status): Extensions for status;
+  /// [title] A short, descriptive, user-friendly title for the structure map.
   ///
-  /// [experimental] A Boolean value to indicate that this structure map is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.;
+  /// [titleElement] ("_title") Extensions for title
   ///
-  /// [experimentalElement] (_experimental): Extensions for experimental;
+  /// [status] The status of this structure map. Enables tracking the
+  ///  life-cycle of the content.
   ///
-  /// [date] The date  (and optionally time) when the structure map was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the structure map changes.;
+  /// [statusElement] ("_status") Extensions for status
   ///
-  /// [dateElement] (_date): Extensions for date;
+  /// [experimental] A Boolean value to indicate that this structure map is
+  ///  authored for testing purposes (or education/evaluation/marketing) and is
+  ///  not intended to be used for genuine usage.
   ///
-  /// [publisher] The name of the organization or individual that published the structure map.;
+  /// [experimentalElement] ("_experimental") Extensions for experimental
   ///
-  /// [publisherElement] (_publisher): Extensions for publisher;
+  /// [date] The date  (and optionally time) when the structure map was last
+  ///  significantly changed. The date must change when the business version
+  ///  changes and it must change if the status code changes. In addition, it
+  ///  should change when the substantive content of the structure map changes.
   ///
-  /// [contact] Contact details to assist a user in finding and communicating with the publisher.;
+  /// [dateElement] ("_date") Extensions for date
   ///
-  /// [description] A free text natural language description of the structure map from a consumer's perspective.;
+  /// [publisher] The name of the organization or individual responsible for
+  ///  the release and ongoing maintenance of the structure map.
   ///
-  /// [descriptionElement] (_description): Extensions for description;
+  /// [publisherElement] ("_publisher") Extensions for publisher
   ///
-  /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate structure map instances.;
+  /// [contact] Contact details to assist a user in finding and communicating
+  ///  with the publisher.
   ///
-  /// [jurisdiction] A legal or geographic region in which the structure map is intended to be used.;
+  /// [description] A free text natural language description of the structure
+  ///  map from a consumer's perspective.
   ///
-  /// [purpose] Explanation of why this structure map is needed and why it has been designed as it has.;
+  /// [descriptionElement] ("_description") Extensions for description
   ///
-  /// [purposeElement] (_purpose): Extensions for purpose;
+  /// [useContext] The content was developed with a focus and intent of
+  ///  supporting the contexts that are listed. These contexts may be general
+  ///  categories (gender, age, ...) or may be references to specific programs
+  ///  (insurance plans, studies, ...) and may be used to assist with indexing
+  ///  and searching for appropriate structure map instances.
   ///
-  /// [copyright] A copyright statement relating to the structure map and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the structure map.;
+  /// [jurisdiction] A legal or geographic region in which the structure map is
+  ///  intended to be used.
   ///
-  /// [copyrightElement] (_copyright): Extensions for copyright;
+  /// [purpose] Explanation of why this structure map is needed and why it has
+  ///  been designed as it has.
   ///
-  /// [structure] A structure definition used by this map. The structure definition may describe instances that are converted, or the instances that are produced.;
+  /// [purposeElement] ("_purpose") Extensions for purpose
   ///
-  /// [import] Other maps used by this map (canonical URLs).;
+  /// [copyright] A copyright statement relating to the structure map and/or
+  ///  its contents. Copyright statements are generally legal restrictions on
+  ///  the use and publishing of the structure map.
   ///
-  /// [group] Organizes the mapping into manageable chunks for human review/ease of maintenance.;
+  /// [copyrightElement] ("_copyright") Extensions for copyright
+  ///
+  /// [copyrightLabel] A short string (<50 characters), suitable for inclusion
+  ///  in a page footer that identifies the copyright holder, effective period,
+  ///  and optionally whether rights are resctricted. (e.g. 'All rights
+  ///  reserved', 'Some rights reserved').
+  ///
+  /// [copyrightLabelElement] ("_copyrightLabel") Extensions for copyrightLabel
+  ///
+  /// [structure] A structure definition used by this map. The structure
+  ///  definition may describe instances that are converted, or the instances
+  ///  that are produced.
+  ///
+  /// [import_] ("import") Other maps used by this map (canonical URLs).
+  ///
+  /// [group] Organizes the mapping into manageable chunks for human
+  ///  review/ease of maintenance.
+  ///
   factory StructureMap({
-    @Default(R5ResourceType.StructureMap) R5ResourceType resourceType,
+    /// [resourceType] This is a StructureMap resource
+    @Default(R5ResourceType.StructureMap)
+    @JsonKey(unknownEnumValue: R5ResourceType.StructureMap)
+        R5ResourceType resourceType,
+
+    /// [id] The logical id of the resource, as used in the URL for the resource.
+    /// Once assigned, this value never changes.
     Id? id,
+
+    /// [meta] The metadata about the resource. This is content that is
+    /// maintained by the infrastructure. Changes to the content might not
+    /// always be associated with version changes to the resource.
     Meta? meta,
+
+    /// [implicitRules] A reference to a set of rules that were followed when
+    /// the resource was constructed, and which must be understood when
+    /// processing the content. Often, this is a reference to an implementation
+    /// guide that defines the special rules along with other profiles etc.
     FhirUri? implicitRules,
+
+    /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+
+    /// [language] The base language in which the resource is written.
     Code? language,
+
+    /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
+
+    /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.
     Narrative? text,
+
+    /// [contained] These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning.
     List<Resource>? contained,
+
+    /// [extension_] ("extension") May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [url] An absolute URI that is used to identify this structure map when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this structure map is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the structure map is stored on different servers.
     FhirUri? url,
+
+    /// [urlElement] ("_url") Extensions for url
     @JsonKey(name: '_url') Element? urlElement,
+
+    /// [identifier] A formal identifier that is used to identify this structure map when it is represented in other formats, or referenced in a specification, model, design or an instance.
     List<Identifier>? identifier,
+
+    /// [version] The identifier that is used to identify this version of the structure map when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the structure map author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence.
     String? version,
+
+    /// [versionElement] ("_version") Extensions for version
     @JsonKey(name: '_version') Element? versionElement,
+
+    /// [versionAlgorithmString] Indicates the mechanism used to compare versions to determine which is more current.
+    String? versionAlgorithmString,
+
+    /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions for versionAlgorithmString
+    @JsonKey(name: '_versionAlgorithmString')
+        Element? versionAlgorithmStringElement,
+
+    /// [versionAlgorithmCoding] Indicates the mechanism used to compare versions to determine which is more current.
+    Coding? versionAlgorithmCoding,
+
+    /// [name] A natural language name identifying the structure map. This name should be usable as an identifier for the module by machine processing applications such as code generation.
     String? name,
+
+    /// [nameElement] ("_name") Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
+
+    /// [title] A short, descriptive, user-friendly title for the structure map.
     String? title,
+
+    /// [titleElement] ("_title") Extensions for title
     @JsonKey(name: '_title') Element? titleElement,
+
+    /// [status] The status of this structure map. Enables tracking the life-cycle of the content.
     Code? status,
+
+    /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
+
+    /// [experimental] A Boolean value to indicate that this structure map is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage.
     Boolean? experimental,
+
+    /// [experimentalElement] ("_experimental") Extensions for experimental
     @JsonKey(name: '_experimental') Element? experimentalElement,
+
+    /// [date] The date  (and optionally time) when the structure map was last significantly changed. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the structure map changes.
     FhirDateTime? date,
+
+    /// [dateElement] ("_date") Extensions for date
     @JsonKey(name: '_date') Element? dateElement,
+
+    /// [publisher] The name of the organization or individual responsible for the release and ongoing maintenance of the structure map.
     String? publisher,
+
+    /// [publisherElement] ("_publisher") Extensions for publisher
     @JsonKey(name: '_publisher') Element? publisherElement,
+
+    /// [contact] Contact details to assist a user in finding and communicating with the publisher.
     List<ContactDetail>? contact,
+
+    /// [description] A free text natural language description of the structure map from a consumer's perspective.
     Markdown? description,
+
+    /// [descriptionElement] ("_description") Extensions for description
     @JsonKey(name: '_description') Element? descriptionElement,
+
+    /// [useContext] The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate structure map instances.
     List<UsageContext>? useContext,
+
+    /// [jurisdiction] A legal or geographic region in which the structure map is intended to be used.
     List<CodeableConcept>? jurisdiction,
+
+    /// [purpose] Explanation of why this structure map is needed and why it has been designed as it has.
     Markdown? purpose,
+
+    /// [purposeElement] ("_purpose") Extensions for purpose
     @JsonKey(name: '_purpose') Element? purposeElement,
+
+    /// [copyright] A copyright statement relating to the structure map and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the structure map.
     Markdown? copyright,
+
+    /// [copyrightElement] ("_copyright") Extensions for copyright
     @JsonKey(name: '_copyright') Element? copyrightElement,
+
+    /// [copyrightLabel] A short string (<50 characters), suitable for inclusion in a page footer that identifies the copyright holder, effective period, and optionally whether rights are resctricted. (e.g. 'All rights reserved', 'Some rights reserved').
+    String? copyrightLabel,
+
+    /// [copyrightLabelElement] ("_copyrightLabel") Extensions for copyrightLabel
+    @JsonKey(name: '_copyrightLabel') Element? copyrightLabelElement,
+
+    /// [structure] A structure definition used by this map. The structure definition may describe instances that are converted, or the instances that are produced.
     List<StructureMapStructure>? structure,
+
+    /// [import_] ("import") Other maps used by this map (canonical URLs).
     @JsonKey(name: 'import') List<Canonical>? import_,
+
+    /// [group] Organizes the mapping into manageable chunks for human review/ease of maintenance.
     required List<StructureMapGroup> group,
   }) = _StructureMap;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory StructureMap.fromYaml(dynamic yaml) => yaml is String
@@ -6119,51 +9292,108 @@ class StructureMap with Resource, _$StructureMap {
     if (json is Map<String, dynamic>) {
       return _$StructureMapFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [StructureMapStructure] A Map of relationships between 2 structures that can be used to transform data.
+/// [StructureMapStructure] A Map of relationships between 2 structures that
+///  can be used to transform data.
 @freezed
 class StructureMapStructure with _$StructureMapStructure {
+  /// [StructureMapStructure] A Map of relationships between 2 structures that
+  ///  can be used to transform data.
   StructureMapStructure._();
 
-  /// [StructureMapStructure] A Map of relationships between 2 structures that can be used to transform data.
-
+  /// [StructureMapStructure] A Map of relationships between 2 structures that
+  ///  can be used to transform data.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [url] The canonical reference to the structure.;
+  /// [url] The canonical reference to the structure.
   ///
-  /// [mode] How the referenced structure is used in this mapping.;
+  /// [mode] How the referenced structure is used in this mapping.
   ///
-  /// [modeElement] (_mode): Extensions for mode;
+  /// [modeElement] ("_mode") Extensions for mode
   ///
-  /// [alias] The name used for this type in the map.;
+  /// [alias] The name used for this type in the map.
   ///
-  /// [aliasElement] (_alias): Extensions for alias;
+  /// [aliasElement] ("_alias") Extensions for alias
   ///
-  /// [documentation] Documentation that describes how the structure is used in the mapping.;
+  /// [documentation] Documentation that describes how the structure is used in
+  ///  the mapping.
   ///
-  /// [documentationElement] (_documentation): Extensions for documentation;
+  /// [documentationElement] ("_documentation") Extensions for documentation
+  ///
   factory StructureMapStructure({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [url] The canonical reference to the structure.
     required Canonical url,
+
+    /// [mode] How the referenced structure is used in this mapping.
     Code? mode,
+
+    /// [modeElement] ("_mode") Extensions for mode
     @JsonKey(name: '_mode') Element? modeElement,
+
+    /// [alias] The name used for this type in the map.
     String? alias,
+
+    /// [aliasElement] ("_alias") Extensions for alias
     @JsonKey(name: '_alias') Element? aliasElement,
+
+    /// [documentation] Documentation that describes how the structure is used in the mapping.
     String? documentation,
+
+    /// [documentationElement] ("_documentation") Extensions for documentation
     @JsonKey(name: '_documentation') Element? documentationElement,
   }) = _StructureMapStructure;
 
@@ -6192,60 +9422,125 @@ class StructureMapStructure with _$StructureMapStructure {
     if (json is Map<String, dynamic>) {
       return _$StructureMapStructureFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [StructureMapGroup] A Map of relationships between 2 structures that can be used to transform data.
+/// [StructureMapGroup] A Map of relationships between 2 structures that can be
+///  used to transform data.
 @freezed
 class StructureMapGroup with _$StructureMapGroup {
+  /// [StructureMapGroup] A Map of relationships between 2 structures that can
+  ///  be used to transform data.
   StructureMapGroup._();
 
-  /// [StructureMapGroup] A Map of relationships between 2 structures that can be used to transform data.
-
+  /// [StructureMapGroup] A Map of relationships between 2 structures that can
+  ///  be used to transform data.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [name] A unique name for the group for the convenience of human readers.;
+  /// [name] A unique name for the group for the convenience of human readers.
   ///
-  /// [nameElement] (_name): Extensions for name;
+  /// [nameElement] ("_name") Extensions for name
   ///
-  /// [extends] Another group that this group adds rules to.;
+  /// [extends_] ("extends") Another group that this group adds rules to.
   ///
-  /// [extendsElement] (_extends): Extensions for extends;
+  /// [extendsElement] ("_extends") Extensions for extends
   ///
-  /// [typeMode] If this is the default rule set to apply for the source type or this combination of types.;
+  /// [typeMode] If this is the default rule set to apply for the source type
+  ///  or this combination of types.
   ///
-  /// [typeModeElement] (_typeMode): Extensions for typeMode;
+  /// [typeModeElement] ("_typeMode") Extensions for typeMode
   ///
-  /// [documentation] Additional supporting documentation that explains the purpose of the group and the types of mappings within it.;
+  /// [documentation] Additional supporting documentation that explains the
+  ///  purpose of the group and the types of mappings within it.
   ///
-  /// [documentationElement] (_documentation): Extensions for documentation;
+  /// [documentationElement] ("_documentation") Extensions for documentation
   ///
-  /// [input] A name assigned to an instance of data. The instance must be provided when the mapping is invoked.;
+  /// [input] A name assigned to an instance of data. The instance must be
+  ///  provided when the mapping is invoked.
   ///
-  /// [rule] Transform Rule from source to target.;
+  /// [rule] Transform Rule from source to target.
+  ///
   factory StructureMapGroup({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [name] A unique name for the group for the convenience of human readers.
     Id? name,
+
+    /// [nameElement] ("_name") Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
+
+    /// [extends_] ("extends") Another group that this group adds rules to.
     @JsonKey(name: 'extends') Id? extends_,
+
+    /// [extendsElement] ("_extends") Extensions for extends
     @JsonKey(name: '_extends') Element? extendsElement,
+
+    /// [typeMode] If this is the default rule set to apply for the source type or this combination of types.
     Code? typeMode,
+
+    /// [typeModeElement] ("_typeMode") Extensions for typeMode
     @JsonKey(name: '_typeMode') Element? typeModeElement,
+
+    /// [documentation] Additional supporting documentation that explains the purpose of the group and the types of mappings within it.
     String? documentation,
+
+    /// [documentationElement] ("_documentation") Extensions for documentation
     @JsonKey(name: '_documentation') Element? documentationElement,
+
+    /// [input] A name assigned to an instance of data. The instance must be provided when the mapping is invoked.
     required List<StructureMapInput> input,
+
+    /// [rule] Transform Rule from source to target.
     List<StructureMapRule>? rule,
   }) = _StructureMapGroup;
 
@@ -6274,54 +9569,112 @@ class StructureMapGroup with _$StructureMapGroup {
     if (json is Map<String, dynamic>) {
       return _$StructureMapGroupFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [StructureMapInput] A Map of relationships between 2 structures that can be used to transform data.
+/// [StructureMapInput] A Map of relationships between 2 structures that can be
+///  used to transform data.
 @freezed
 class StructureMapInput with _$StructureMapInput {
+  /// [StructureMapInput] A Map of relationships between 2 structures that can
+  ///  be used to transform data.
   StructureMapInput._();
 
-  /// [StructureMapInput] A Map of relationships between 2 structures that can be used to transform data.
-
+  /// [StructureMapInput] A Map of relationships between 2 structures that can
+  ///  be used to transform data.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [name] Name for this instance of data.;
+  /// [name] Name for this instance of data.
   ///
-  /// [nameElement] (_name): Extensions for name;
+  /// [nameElement] ("_name") Extensions for name
   ///
-  /// [type] Type for this instance of data.;
+  /// [type] Type for this instance of data.
   ///
-  /// [typeElement] (_type): Extensions for type;
+  /// [typeElement] ("_type") Extensions for type
   ///
-  /// [mode] Mode for this instance of data.;
+  /// [mode] Mode for this instance of data.
   ///
-  /// [modeElement] (_mode): Extensions for mode;
+  /// [modeElement] ("_mode") Extensions for mode
   ///
-  /// [documentation] Documentation for this instance of data.;
+  /// [documentation] Documentation for this instance of data.
   ///
-  /// [documentationElement] (_documentation): Extensions for documentation;
+  /// [documentationElement] ("_documentation") Extensions for documentation
+  ///
   factory StructureMapInput({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [name] Name for this instance of data.
     Id? name,
+
+    /// [nameElement] ("_name") Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
+
+    /// [type] Type for this instance of data.
     String? type,
+
+    /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
+
+    /// [mode] Mode for this instance of data.
     Code? mode,
+
+    /// [modeElement] ("_mode") Extensions for mode
     @JsonKey(name: '_mode') Element? modeElement,
+
+    /// [documentation] Documentation for this instance of data.
     String? documentation,
+
+    /// [documentationElement] ("_documentation") Extensions for documentation
     @JsonKey(name: '_documentation') Element? documentationElement,
   }) = _StructureMapInput;
 
@@ -6350,54 +9703,112 @@ class StructureMapInput with _$StructureMapInput {
     if (json is Map<String, dynamic>) {
       return _$StructureMapInputFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [StructureMapRule] A Map of relationships between 2 structures that can be used to transform data.
+/// [StructureMapRule] A Map of relationships between 2 structures that can be
+///  used to transform data.
 @freezed
 class StructureMapRule with _$StructureMapRule {
+  /// [StructureMapRule] A Map of relationships between 2 structures that can
+  ///  be used to transform data.
   StructureMapRule._();
 
-  /// [StructureMapRule] A Map of relationships between 2 structures that can be used to transform data.
-
+  /// [StructureMapRule] A Map of relationships between 2 structures that can
+  ///  be used to transform data.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [name] Name of the rule for internal references.;
+  /// [name] Name of the rule for internal references.
   ///
-  /// [nameElement] (_name): Extensions for name;
+  /// [nameElement] ("_name") Extensions for name
   ///
-  /// [source] Source inputs to the mapping.;
+  /// [source] Source inputs to the mapping.
   ///
-  /// [target] Content to create because of this mapping rule.;
+  /// [target] Content to create because of this mapping rule.
   ///
-  /// [rule] Rules contained in this rule.;
+  /// [rule] Rules contained in this rule.
   ///
-  /// [dependent] Which other rules to apply in the context of this rule.;
+  /// [dependent] Which other rules to apply in the context of this rule.
   ///
-  /// [documentation] Documentation for this instance of data.;
+  /// [documentation] Documentation for this instance of data.
   ///
-  /// [documentationElement] (_documentation): Extensions for documentation;
+  /// [documentationElement] ("_documentation") Extensions for documentation
+  ///
   factory StructureMapRule({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [name] Name of the rule for internal references.
     Id? name,
+
+    /// [nameElement] ("_name") Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
+
+    /// [source] Source inputs to the mapping.
     required List<StructureMapSource> source,
+
+    /// [target] Content to create because of this mapping rule.
     List<StructureMapTarget>? target,
+
+    /// [rule] Rules contained in this rule.
     List<StructureMapRule>? rule,
+
+    /// [dependent] Which other rules to apply in the context of this rule.
     List<StructureMapDependent>? dependent,
+
+    /// [documentation] Documentation for this instance of data.
     String? documentation,
+
+    /// [documentationElement] ("_documentation") Extensions for documentation
     @JsonKey(name: '_documentation') Element? documentationElement,
   }) = _StructureMapRule;
 
@@ -6426,96 +9837,190 @@ class StructureMapRule with _$StructureMapRule {
     if (json is Map<String, dynamic>) {
       return _$StructureMapRuleFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [StructureMapSource] A Map of relationships between 2 structures that can be used to transform data.
+/// [StructureMapSource] A Map of relationships between 2 structures that can
+///  be used to transform data.
 @freezed
 class StructureMapSource with _$StructureMapSource {
+  /// [StructureMapSource] A Map of relationships between 2 structures that can
+  ///  be used to transform data.
   StructureMapSource._();
 
-  /// [StructureMapSource] A Map of relationships between 2 structures that can be used to transform data.
-
+  /// [StructureMapSource] A Map of relationships between 2 structures that can
+  ///  be used to transform data.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [context] Type or variable this rule applies to.;
+  /// [context] Type or variable this rule applies to.
   ///
-  /// [contextElement] (_context): Extensions for context;
+  /// [contextElement] ("_context") Extensions for context
   ///
-  /// [min] Specified minimum cardinality for the element. This is optional; if present, it acts an implicit check on the input content.;
+  /// [min] Specified minimum cardinality for the element. This is optional; if
+  ///  present, it acts an implicit check on the input content.
   ///
-  /// [minElement] (_min): Extensions for min;
+  /// [minElement] ("_min") Extensions for min
   ///
-  /// [max] Specified maximum cardinality for the element - a number or a "*". This is optional; if present, it acts an implicit check on the input content (* just serves as documentation; it's the default value).;
+  /// [max] Specified maximum cardinality for the element - a number or a "*".
+  ///  This is optional; if present, it acts an implicit check on the input
+  ///  content (* just serves as documentation; it's the default value).
   ///
-  /// [maxElement] (_max): Extensions for max;
+  /// [maxElement] ("_max") Extensions for max
   ///
-  /// [type] Specified type for the element. This works as a condition on the mapping - use for polymorphic elements.;
+  /// [type] Specified type for the element. This works as a condition on the
+  ///  mapping - use for polymorphic elements.
   ///
-  /// [typeElement] (_type): Extensions for type;
+  /// [typeElement] ("_type") Extensions for type
   ///
-  /// [defaultValue] A value to use if there is no existing value in the source object.;
+  /// [defaultValue] A value to use if there is no existing value in the source
+  ///  object.
   ///
-  /// [defaultValueElement] (_defaultValue): Extensions for defaultValue;
+  /// [defaultValueElement] ("_defaultValue") Extensions for defaultValue
   ///
-  /// [element] Optional field for this source.;
+  /// [element] Optional field for this source.
   ///
-  /// [elementElement] (_element): Extensions for element;
+  /// [elementElement] ("_element") Extensions for element
   ///
-  /// [listMode] How to handle the list mode for this element.;
+  /// [listMode] How to handle the list mode for this element.
   ///
-  /// [listModeElement] (_listMode): Extensions for listMode;
+  /// [listModeElement] ("_listMode") Extensions for listMode
   ///
-  /// [variable] Named context for field, if a field is specified.;
+  /// [variable] Named context for field, if a field is specified.
   ///
-  /// [variableElement] (_variable): Extensions for variable;
+  /// [variableElement] ("_variable") Extensions for variable
   ///
-  /// [condition] FHIRPath expression  - must be true or the rule does not apply.;
+  /// [condition] FHIRPath expression  - must be true or the rule does not
+  ///  apply.
   ///
-  /// [conditionElement] (_condition): Extensions for condition;
+  /// [conditionElement] ("_condition") Extensions for condition
   ///
-  /// [check] FHIRPath expression  - must be true or the mapping engine throws an error instead of completing.;
+  /// [check] FHIRPath expression  - must be true or the mapping engine throws
+  ///  an error instead of completing.
   ///
-  /// [checkElement] (_check): Extensions for check;
+  /// [checkElement] ("_check") Extensions for check
   ///
-  /// [logMessage] A FHIRPath expression which specifies a message to put in the transform log when content matching the source rule is found.;
+  /// [logMessage] A FHIRPath expression which specifies a message to put in
+  ///  the transform log when content matching the source rule is found.
   ///
-  /// [logMessageElement] (_logMessage): Extensions for logMessage;
+  /// [logMessageElement] ("_logMessage") Extensions for logMessage
+  ///
   factory StructureMapSource({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [context] Type or variable this rule applies to.
     Id? context,
+
+    /// [contextElement] ("_context") Extensions for context
     @JsonKey(name: '_context') Element? contextElement,
+
+    /// [min] Specified minimum cardinality for the element. This is optional; if present, it acts an implicit check on the input content.
     Integer? min,
+
+    /// [minElement] ("_min") Extensions for min
     @JsonKey(name: '_min') Element? minElement,
+
+    /// [max] Specified maximum cardinality for the element - a number or a "*". This is optional; if present, it acts an implicit check on the input content (* just serves as documentation; it's the default value).
     String? max,
+
+    /// [maxElement] ("_max") Extensions for max
     @JsonKey(name: '_max') Element? maxElement,
+
+    /// [type] Specified type for the element. This works as a condition on the mapping - use for polymorphic elements.
     String? type,
+
+    /// [typeElement] ("_type") Extensions for type
     @JsonKey(name: '_type') Element? typeElement,
+
+    /// [defaultValue] A value to use if there is no existing value in the source object.
     String? defaultValue,
+
+    /// [defaultValueElement] ("_defaultValue") Extensions for defaultValue
     @JsonKey(name: '_defaultValue') Element? defaultValueElement,
+
+    /// [element] Optional field for this source.
     String? element,
+
+    /// [elementElement] ("_element") Extensions for element
     @JsonKey(name: '_element') Element? elementElement,
+
+    /// [listMode] How to handle the list mode for this element.
     Code? listMode,
+
+    /// [listModeElement] ("_listMode") Extensions for listMode
     @JsonKey(name: '_listMode') Element? listModeElement,
+
+    /// [variable] Named context for field, if a field is specified.
     Id? variable,
+
+    /// [variableElement] ("_variable") Extensions for variable
     @JsonKey(name: '_variable') Element? variableElement,
+
+    /// [condition] FHIRPath expression  - must be true or the rule does not apply.
     String? condition,
+
+    /// [conditionElement] ("_condition") Extensions for condition
     @JsonKey(name: '_condition') Element? conditionElement,
+
+    /// [check] FHIRPath expression  - must be true or the mapping engine throws an error instead of completing.
     String? check,
+
+    /// [checkElement] ("_check") Extensions for check
     @JsonKey(name: '_check') Element? checkElement,
+
+    /// [logMessage] A FHIRPath expression which specifies a message to put in the transform log when content matching the source rule is found.
     String? logMessage,
+
+    /// [logMessageElement] ("_logMessage") Extensions for logMessage
     @JsonKey(name: '_logMessage') Element? logMessageElement,
   }) = _StructureMapSource;
 
@@ -6544,69 +10049,137 @@ class StructureMapSource with _$StructureMapSource {
     if (json is Map<String, dynamic>) {
       return _$StructureMapSourceFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [StructureMapTarget] A Map of relationships between 2 structures that can be used to transform data.
+/// [StructureMapTarget] A Map of relationships between 2 structures that can
+///  be used to transform data.
 @freezed
 class StructureMapTarget with _$StructureMapTarget {
+  /// [StructureMapTarget] A Map of relationships between 2 structures that can
+  ///  be used to transform data.
   StructureMapTarget._();
 
-  /// [StructureMapTarget] A Map of relationships between 2 structures that can be used to transform data.
-
+  /// [StructureMapTarget] A Map of relationships between 2 structures that can
+  ///  be used to transform data.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [context] Variable this rule applies to.;
+  /// [context] Variable this rule applies to.
   ///
-  /// [contextElement] (_context): Extensions for context;
+  /// [contextElement] ("_context") Extensions for context
   ///
-  /// [element] Field to create in the context.;
+  /// [element] Field to create in the context.
   ///
-  /// [elementElement] (_element): Extensions for element;
+  /// [elementElement] ("_element") Extensions for element
   ///
-  /// [variable] Named context for field, if desired, and a field is specified.;
+  /// [variable] Named context for field, if desired, and a field is specified.
   ///
-  /// [variableElement] (_variable): Extensions for variable;
+  /// [variableElement] ("_variable") Extensions for variable
   ///
-  /// [listMode] If field is a list, how to manage the list.;
+  /// [listMode] If field is a list, how to manage the list.
   ///
-  /// [listModeElement] (_listMode): Extensions for listMode;
+  /// [listModeElement] ("_listMode") Extensions for listMode
   ///
-  /// [listRuleId] Internal rule reference for shared list items.;
+  /// [listRuleId] Internal rule reference for shared list items.
   ///
-  /// [listRuleIdElement] (_listRuleId): Extensions for listRuleId;
+  /// [listRuleIdElement] ("_listRuleId") Extensions for listRuleId
   ///
-  /// [transform] How the data is copied / created.;
+  /// [transform] How the data is copied / created.
   ///
-  /// [transformElement] (_transform): Extensions for transform;
+  /// [transformElement] ("_transform") Extensions for transform
   ///
-  /// [parameter] Parameters to the transform.;
+  /// [parameter] Parameters to the transform.
+  ///
   factory StructureMapTarget({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [context] Variable this rule applies to.
     Id? context,
+
+    /// [contextElement] ("_context") Extensions for context
     @JsonKey(name: '_context') Element? contextElement,
+
+    /// [element] Field to create in the context.
     String? element,
+
+    /// [elementElement] ("_element") Extensions for element
     @JsonKey(name: '_element') Element? elementElement,
+
+    /// [variable] Named context for field, if desired, and a field is specified.
     Id? variable,
+
+    /// [variableElement] ("_variable") Extensions for variable
     @JsonKey(name: '_variable') Element? variableElement,
+
+    /// [listMode] If field is a list, how to manage the list.
     List<Code>? listMode,
+
+    /// [listModeElement] ("_listMode") Extensions for listMode
     @JsonKey(name: '_listMode') List<Element>? listModeElement,
+
+    /// [listRuleId] Internal rule reference for shared list items.
     Id? listRuleId,
+
+    /// [listRuleIdElement] ("_listRuleId") Extensions for listRuleId
     @JsonKey(name: '_listRuleId') Element? listRuleIdElement,
+
+    /// [transform] How the data is copied / created.
     Code? transform,
+
+    /// [transformElement] ("_transform") Extensions for transform
     @JsonKey(name: '_transform') Element? transformElement,
+
+    /// [parameter] Parameters to the transform.
     List<StructureMapParameter>? parameter,
   }) = _StructureMapTarget;
 
@@ -6635,78 +10208,152 @@ class StructureMapTarget with _$StructureMapTarget {
     if (json is Map<String, dynamic>) {
       return _$StructureMapTargetFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [StructureMapParameter] A Map of relationships between 2 structures that can be used to transform data.
+/// [StructureMapParameter] A Map of relationships between 2 structures that
+///  can be used to transform data.
 @freezed
 class StructureMapParameter with _$StructureMapParameter {
+  /// [StructureMapParameter] A Map of relationships between 2 structures that
+  ///  can be used to transform data.
   StructureMapParameter._();
 
-  /// [StructureMapParameter] A Map of relationships between 2 structures that can be used to transform data.
-
+  /// [StructureMapParameter] A Map of relationships between 2 structures that
+  ///  can be used to transform data.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [valueId] Parameter value - variable or literal.;
+  /// [valueId] Parameter value - variable or literal.
   ///
-  /// [valueIdElement] (_valueId): Extensions for valueId;
+  /// [valueIdElement] ("_valueId") Extensions for valueId
   ///
-  /// [valueString] Parameter value - variable or literal.;
+  /// [valueString] Parameter value - variable or literal.
   ///
-  /// [valueStringElement] (_valueString): Extensions for valueString;
+  /// [valueStringElement] ("_valueString") Extensions for valueString
   ///
-  /// [valueBoolean] Parameter value - variable or literal.;
+  /// [valueBoolean] Parameter value - variable or literal.
   ///
-  /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
+  /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   ///
-  /// [valueInteger] Parameter value - variable or literal.;
+  /// [valueInteger] Parameter value - variable or literal.
   ///
-  /// [valueIntegerElement] (_valueInteger): Extensions for valueInteger;
+  /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
   ///
-  /// [valueDecimal] Parameter value - variable or literal.;
+  /// [valueDecimal] Parameter value - variable or literal.
   ///
-  /// [valueDecimalElement] (_valueDecimal): Extensions for valueDecimal;
+  /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
   ///
-  /// [valueDate] Parameter value - variable or literal.;
+  /// [valueDate] Parameter value - variable or literal.
   ///
-  /// [valueDateElement] (_valueDate): Extensions for valueDate;
+  /// [valueDateElement] ("_valueDate") Extensions for valueDate
   ///
-  /// [valueTime] Parameter value - variable or literal.;
+  /// [valueTime] Parameter value - variable or literal.
   ///
-  /// [valueTimeElement] (_valueTime): Extensions for valueTime;
+  /// [valueTimeElement] ("_valueTime") Extensions for valueTime
   ///
-  /// [valueDateTime] Parameter value - variable or literal.;
+  /// [valueDateTime] Parameter value - variable or literal.
   ///
-  /// [valueDateTimeElement] (_valueDateTime): Extensions for valueDateTime;
+  /// [valueDateTimeElement] ("_valueDateTime") Extensions for valueDateTime
+  ///
   factory StructureMapParameter({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [valueId] Parameter value - variable or literal.
     Id? valueId,
+
+    /// [valueIdElement] ("_valueId") Extensions for valueId
     @JsonKey(name: '_valueId') Element? valueIdElement,
-    Markdown? valueString,
+
+    /// [valueString] Parameter value - variable or literal.
+    String? valueString,
+
+    /// [valueStringElement] ("_valueString") Extensions for valueString
     @JsonKey(name: '_valueString') Element? valueStringElement,
+
+    /// [valueBoolean] Parameter value - variable or literal.
     Boolean? valueBoolean,
+
+    /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+
+    /// [valueInteger] Parameter value - variable or literal.
     Integer? valueInteger,
+
+    /// [valueIntegerElement] ("_valueInteger") Extensions for valueInteger
     @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
+
+    /// [valueDecimal] Parameter value - variable or literal.
     Decimal? valueDecimal,
+
+    /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
+
+    /// [valueDate] Parameter value - variable or literal.
     Date? valueDate,
+
+    /// [valueDateElement] ("_valueDate") Extensions for valueDate
     @JsonKey(name: '_valueDate') Element? valueDateElement,
+
+    /// [valueTime] Parameter value - variable or literal.
     Time? valueTime,
+
+    /// [valueTimeElement] ("_valueTime") Extensions for valueTime
     @JsonKey(name: '_valueTime') Element? valueTimeElement,
+
+    /// [valueDateTime] Parameter value - variable or literal.
     FhirDateTime? valueDateTime,
+
+    /// [valueDateTimeElement] ("_valueDateTime") Extensions for valueDateTime
     @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
   }) = _StructureMapParameter;
 
@@ -6735,39 +10382,87 @@ class StructureMapParameter with _$StructureMapParameter {
     if (json is Map<String, dynamic>) {
       return _$StructureMapParameterFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
-/// [StructureMapDependent] A Map of relationships between 2 structures that can be used to transform data.
+/// [StructureMapDependent] A Map of relationships between 2 structures that
+///  can be used to transform data.
 @freezed
 class StructureMapDependent with _$StructureMapDependent {
+  /// [StructureMapDependent] A Map of relationships between 2 structures that
+  ///  can be used to transform data.
   StructureMapDependent._();
 
-  /// [StructureMapDependent] A Map of relationships between 2 structures that can be used to transform data.
-
+  /// [StructureMapDependent] A Map of relationships between 2 structures that
+  ///  can be used to transform data.
   ///
-  /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  /// [id] Unique id for the element within a resource (for internal
+  ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_] May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  /// [extension_] ("extension") May be used to represent additional
+  ///  information that is not part of the basic definition of the element. To
+  ///  make the use of extensions safe and manageable, there is a strict set of
+  ///  governance  applied to the definition and use of extensions. Though any
+  ///  implementer can define an extension, there is a set of requirements that
+  ///  SHALL be met as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
-
-  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  /// [modifierExtension] May be used to represent additional information that
+  ///  is not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of
+  ///  extensions safe and manageable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be
+  ///  met as part of the definition of the extension. Applications processing
+  ///  a resource are required to check for modifier extensions.Modifier
+  ///  extensions SHALL NOT change the meaning of any elements on Resource or
+  ///  DomainResource (including cannot change the meaning of modifierExtension
+  ///  itself).
   ///
-  /// [name] Name of a rule or group to apply.;
+  /// [name] Name of a rule or group to apply.
   ///
-  /// [nameElement] (_name): Extensions for name;
+  /// [nameElement] ("_name") Extensions for name
   ///
-  /// [parameter] Parameter to pass to the rule or group.;
+  /// [parameter] Parameter to pass to the rule or group.
+  ///
   factory StructureMapDependent({
+    /// [id] Unique id for the element within a resource (for internal
+    /// references). This may be any string value that does not contain spaces.
     String? id,
+
+    /// [extension_] ("extension") May be used to represent additional
+    /// information that is not part of the basic definition of the element.
+    /// To make the use of extensions safe and manageable, there is a strict set
+    /// of governance  applied to the definition and use of extensions. Though
+    /// any implementer can define an extension, there is a set of requirements
+    /// that SHALL be met as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the element and that modifies
+    /// the understanding of the element in which it is contained and/or the
+    /// understanding of the containing element's descendants. Usually modifier
+    /// elements provide negation or qualification. To make the use of extensions
+    /// safe and manageable, there is a strict set of governance applied to the
+    /// definition and use of extensions. Though any implementer can define an
+    /// extension, there is a set of requirements that SHALL be met as part of
+    /// the definition of the extension. Applications processing a resource are
+    /// required to check for modifier extensions.Modifier extensions SHALL NOT
+    /// change the meaning of any elements on Resource or DomainResource
+    /// (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
+
+    /// [name] Name of a rule or group to apply.
     Id? name,
+
+    /// [nameElement] ("_name") Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
+
+    /// [parameter] Parameter to pass to the rule or group.
     required List<StructureMapParameter> parameter,
   }) = _StructureMapDependent;
 
@@ -6796,7 +10491,7 @@ class StructureMapDependent with _$StructureMapDependent {
     if (json is Map<String, dynamic>) {
       return _$StructureMapDependentFromJson(json);
     } else {
-      throw FormatException('FormatException: You passed $json'
+      throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }

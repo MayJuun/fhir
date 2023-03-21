@@ -2,7 +2,7 @@
   "resourceType": "ValueSet",
   "id": "administration-subpotent-reason",
   "meta": {
-    "lastUpdated": "2022-05-06T17:02:42.916+00:00",
+    "lastUpdated": "2022-12-14T07:12:54.019+11:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
     ]
@@ -29,11 +29,12 @@
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986",
-      "value": "urn:oid:2.16.840.1.113883.4.642.3.0"
+      "value": "urn:oid:2.16.840.1.113883.4.642.3.3128"
     }
   ],
-  "version": "4.6.0",
-  "name": "MedicationAdministration Subpotent Reason",
+  "version": "5.0.0-snapshot3",
+  "name": "MedicationAdministrationSubpotentReason",
+  "title": "MedicationAdministration Subpotent Reason",
   "status": "draft",
   "experimental": true,
   "publisher": "FHIR Project team",
@@ -48,6 +49,17 @@
     }
   ],
   "description": "MedicationAdministration Subpotent Reason",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "compose": {
     "include": [
       {

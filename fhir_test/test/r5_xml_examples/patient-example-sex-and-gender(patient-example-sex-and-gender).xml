@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?><Patient xmlns="http://hl7.org/fhir">
+	<id value="patient-example-sex-and-gender"/>
+		
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;"><b>Patricia Roth </b> male, DoB: 1974-12-25 ( Medical record number: 12345 (use: USUAL))</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Record is active">Active:</td><td>true</td><td style="background-color: #f3f5da" title="Known status of Patient">Deceased:</td><td colspan="3">false</td></tr><tr><td style="background-color: #f3f5da" title="Alternate names (see the one above)">Alt Names:</td><td colspan="3"><ul><li>Patrick Roth (OFFICIAL)</li><li>Pat (NICKNAME)</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Patient Links">Links:</td><td colspan="3"><ul><li>Managing Organization: <a href="organization-example-gastro.html">Organization/1</a> "Gastroenterology"</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="The pronouns to use when referring to an individual in verbal or written communication.">Individual Pronouns:</td><td colspan="3"><ul><li>value: <span title="Codes: {http://loinc.org LA29519-8}">she/her/her/hers/herself</span></li><li>period: 2001-05-06 --&gt; (ongoing)</li><li>comment: Patient transitioned from male to female in 2001.</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="The recorded sex and gender is to be used to differentiate existing sex or gender data. This element is used for existing 'sex' or 'gender' elements in a document or record when the intent and meaning is unclear. For example, the individual's birth certificate information, passport information, and national identity document information may all be present. This is necessary because an individual's documents may be updated at different rates or for different reasons. Sex assigned at birth (SAAB), while very common and considered essential in some jurisdictions, is considered a recorded sex and gender entry.">Person Recorded Sex Or Gender:</td><td colspan="3"><ul><li>value: <span title="Codes: {http://hl7.org/fhir/administrative-gender male}">Male</span></li><li>internationalEquivalent: <span title="Codes: {http://terminology.hl7.org/CodeSystem/icaosex M}">Male</span></li><li>type: <span title="Codes: {http://loinc.org 76689-9}">Sex Assigned At Birth</span></li><li>effectivePeriod: 1974-12-25 --&gt; (ongoing)</li><li>acquisitionDate: 2005-12-06</li><li>sourceDocument: <a href="broken-link.html">DocumentReference/1</a></li><li>sourceField: SEX</li><li>jurisdiction: <span title="Codes: {https://www.usps.com/ OH}">Ohio</span></li><li>comment: Patient transitioned from male to female in 2001, but their birth certificate still indicates male.</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="The recorded sex and gender is to be used to differentiate existing sex or gender data. This element is used for existing 'sex' or 'gender' elements in a document or record when the intent and meaning is unclear. For example, the individual's birth certificate information, passport information, and national identity document information may all be present. This is necessary because an individual's documents may be updated at different rates or for different reasons. Sex assigned at birth (SAAB), while very common and considered essential in some jurisdictions, is considered a recorded sex and gender entry.">Person Recorded Sex Or Gender:</td><td colspan="3"><ul><li>value: <span title="Codes: {http://hl7.org/fhir/administrative-gender male}">Male</span></li><li>internationalEquivalent: <span title="Codes: {http://terminology.hl7.org/CodeSystem/icaosex M}">Male</span></li><li>type: <span title="Codes: {http://local-code-system.org/recorded-sex-or-gender-type insurance-card}">Insurance Card</span></li><li>effectivePeriod: 2021-05-25 --&gt; (ongoing)</li><li>acquisitionDate: 2021-06-06</li><li>sourceDocument: <a href="broken-link.html">DocumentReference/2</a></li><li>sourceField: SEX</li><li>jurisdiction: <span title="Codes: {http://local-code-system.org/recorded-sex-or-gender-jurisdiction ICCA-P}">Indigo Crucifix Cobalt Aegis Payer</span></li><li>comment: Patient transitioned from male to female in 2001, but their insurance card still indicates male.</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="The recorded sex and gender is to be used to differentiate existing sex or gender data. This element is used for existing 'sex' or 'gender' elements in a document or record when the intent and meaning is unclear. For example, the individual's birth certificate information, passport information, and national identity document information may all be present. This is necessary because an individual's documents may be updated at different rates or for different reasons. Sex assigned at birth (SAAB), while very common and considered essential in some jurisdictions, is considered a recorded sex and gender entry.">Person Recorded Sex Or Gender:</td><td colspan="3"><ul><li>value: <span title="Codes: {http://ohio.example.gov/drivers-license-sex M}">Male</span></li><li>internationalEquivalent: <span title="Codes: {http://terminology.hl7.org/CodeSystem/icaosex M}">Male</span></li><li>type: <span title="Codes: {http://jurisdiction-specific.example.com/document-type-code-system drivers-license}">Driver's License</span></li><li>effectivePeriod: 1974-12-25 --&gt; (ongoing)</li><li>acquisitionDate: 2005-12-06</li><li>sourceDocument: <a href="broken-link.html">DocumentReference/1</a></li><li>jurisdiction: <span title="Codes: {https://www.usps.com/ OH}">Ohio</span></li><li>comment: Patient transitioned from male to female in 2001, but their driver's license still indicates male.</li></ul></td></tr><tr><td style="background-color: #f3f5da" title="An individual's personal sense of being a man, woman, boy, girl, nonbinary, or something else. This represents an individual’s identity, ascertained by asking them what that identity is.">Individual Gender Identity:</td><td colspan="3"><ul><li>value: <span title="Codes: {http://snomed.info/sct 446141000124107}">Identifies as female gender (finding)</span></li><li>period: 2001-05-06 --&gt; (ongoing)</li><li>comment: Patient transitioned from male to female in 2001.</li></ul></td></tr><tr><td style="background-color: #f3f5da" title=" **Sex for Clinical Use (SFCU) Overview**&#xA; &#xA; Sex for Clinical Use is a categorization of sex derived from observable information such as an organ inventory, recent hormone lab tests, genetic testing, menstrual status, obstetric history, etc. This property is intended for use in clinical decision making and indicates that treatment or diagnostic tests should consider best practices associated with the relevant reference population.&#xA; &#xA; While clinical decision-making processes could account for the specific physiological or anatomical attributes of the patient, there are several practical considerations, such as patient privacy and limited capabilities of existing systems which create the need for a categorization that is easy to exchange.  The Sex for Clinical Use categorization is intended to bridge the gap between the hypothetical ideal and the practical needs of operational systems.&#xA; &#xA; **Sex for Clinical Use (SFCU) Contexts**&#xA; &#xA; Sex for Clinical Use is a contextual concept. For example, a patient may generally be categorized as male, but for a specific lab test, the resulting lab should use the reference ranges associated with a female reference population.  In this case, systems may provide a patient-context [sexForClinicalUse](extension-patient-sexforclinicaluse.html) that acts as a 'default' for most care and annotate the lab order with a context-specific sexForClinicalUse.  Systems may determine what enclosing contexts are useful, but Patient, Encounter and EpisodeOfCare are three enclosing contexts that may often apply.&#xA; &#xA; The [sexForClinicalUse](extension-patient-sexforclinicaluse.html) extension can be used to communicate a clinical sex category on the on relevant clinical resources (e.g., DiagnosticReport, ServiceRequest) or enclosing contexts (e.g., Patient, Encounter, EpisodeOfCare).&#xA; &#xA; **Sex for Clinical Use (SFCU) Categorization**&#xA; &#xA; For ease of interoperability, a patient’s sex for clinical use is constrained to four possible categories.  Any patient for which special considerations apply should be categorized as 'Specified'.  The 'Specified' category is often represented as 'Other' in existing systems.&#xA; &#xA; **Female** - Available data indicates that diagnostics, analytics, and treatments should consider best practices associated with female reference populations.&#xA; &#xA; **Male** - Available data indicates that diagnostics, analytics, and treatments should consider best practices associated with male reference populations.&#xA; &#xA; **Specified** - Available data indicates that diagnostics, analytics, and treatment best practices may be undefined or not aligned with existing sex-derived reference populations.  Individuals or systems providing care should either use default behavior that is safe for both male and female populations, individually review treatment options with the patient, or carefully inspect relevant observations before proceeding with treatment.&#xA; &#xA; **Unknown** - The sex for clinical use cannot be determined because there are no relevant evidence or documentation, or the evidence or documentation are not sufficient to determine a value. **Sex for Clinical Use (SFCU) History and Practices**&#xA; &#xA; Prior to the definition of Sex for Clinical Use as a concept, systems may have used administrative gender as an approximation of patient-level sex for clinical use.  This practice required pre-coordination among exchange parters to explicitly overload the administrative sex concept for use as a clinical sex concept.  In cases where there was no pre-coordination, some systems may have incorrectly inferred information about a patient's clinical sex from administrative  gender.&#xA; &#xA; In the context of ordering workflows, systems may use Ask at Order Entry (AOE) questions to collect concepts similar to sex for clinical use.&#xA; ">Patient Sex For Clinical Use:</td><td colspan="3"><ul><li>value: <span title="Codes: {http://terminology.hl7.org/CodeSystem/sex-for-clinical-use specified}">Specified sex for clinical use</span></li><li>period: 2002-07-13 --&gt; (ongoing)</li><li>comment: Patient transitioned from male to female in 2001.</li><li>supportingInfo: <a href="broken-link.html">Observation/1</a></li><li>supportingInfo: <a href="broken-link.html">MedicationUsage/2</a></li></ul></td></tr></table></div></text><extension url="http://hl7.org/fhir/StructureDefinition/individual-genderIdentity">
+		<extension url="value">
+			<valueCodeableConcept>
+				<coding>
+					<system value="http://snomed.info/sct"/>
+					<code value="446141000124107"/>
+					<display value="Identifies as female gender (finding)"/>
+				</coding>
+			</valueCodeableConcept>
+		</extension>
+		<extension url="period">
+			<valuePeriod>
+				<start value="2001-05-06"/>
+			</valuePeriod>
+		</extension>
+		<extension url="comment">
+			<valueString value="Patient transitioned from male to female in 2001."/>				
+		</extension>
+	</extension>
+		
+	<extension url="http://hl7.org/fhir/StructureDefinition/individual-pronouns">
+		<extension url="value">
+			<valueCodeableConcept>
+			  <coding>
+				<system value="http://loinc.org"/>
+				<code value="LA29519-8"/>
+				<display value="she/her/her/hers/herself"/>
+			  </coding>
+			</valueCodeableConcept>
+		</extension>
+		<extension url="period">
+			<valuePeriod>
+				<start value="2001-05-06"/>
+			</valuePeriod>
+		</extension>
+		<extension url="comment">
+			<valueString value="Patient transitioned from male to female in 2001."/>				
+		</extension>
+	</extension>
+		
+	<extension url="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">
+		<extension url="value">
+			<valueCodeableConcept>
+			  <coding>
+				<system value="http://hl7.org/fhir/administrative-gender"/>
+				<code value="male"/>
+				<display value="Male"/>
+			  </coding>
+			</valueCodeableConcept>
+		</extension>
+		<extension url="internationalEquivalent">
+			<valueCodeableConcept>
+			  <coding>
+				<system value="http://terminology.hl7.org/CodeSystem/icaosex"/>
+				<code value="M"/>
+				<display value="Male"/>
+			  </coding>
+			</valueCodeableConcept>
+		</extension>
+		<extension url="type">
+			<valueCodeableConcept>
+			  <coding>
+				<system value="http://loinc.org"/>
+				<code value="76689-9"/>
+				<display value="Sex Assigned At Birth"/>
+			  </coding>
+			</valueCodeableConcept>
+		</extension>
+		<extension url="effectivePeriod">
+			<valuePeriod>
+				<start value="1974-12-25"/>
+			</valuePeriod>
+		</extension>
+		<extension url="acquisitionDate">
+			<valueDateTime value="2005-12-06"/>
+		</extension>
+		<extension url="sourceDocument">
+			    <!--   Reference to a scan of the birth certificate   -->
+			<valueCodeableReference>
+			  <reference>
+  				<reference value="DocumentReference/1"/>
+			  </reference>
+			</valueCodeableReference>
+		</extension>
+		<extension url="sourceField">
+			<valueString value="SEX"/>
+		</extension>
+		<extension url="jurisdiction">
+			<valueCodeableConcept>
+			  <coding>
+				<system value="https://www.usps.com/"/>
+				<code value="OH"/>
+				<display value="Ohio"/>
+			  </coding>
+			</valueCodeableConcept>
+		</extension>
+		<extension url="comment">
+			<valueString value="Patient transitioned from male to female in 2001, but their birth certificate still indicates male."/>				
+		</extension>
+	</extension>
+		
+	<extension url="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">
+		<extension url="value">
+			<valueCodeableConcept>
+			  <coding>
+				<system value="http://hl7.org/fhir/administrative-gender"/>
+				<code value="male"/>
+				<display value="Male"/>
+			  </coding>
+			</valueCodeableConcept>
+		</extension>
+		<extension url="internationalEquivalent">
+			<valueCodeableConcept>
+			  <coding>
+				<system value="http://terminology.hl7.org/CodeSystem/icaosex"/>
+				<code value="M"/>
+				<display value="Male"/>
+			  </coding>
+			</valueCodeableConcept>
+		</extension>
+		<extension url="type">
+			<valueCodeableConcept>
+			  <coding>
+				<system value="http://local-code-system.org/recorded-sex-or-gender-type"/>
+				<code value="insurance-card"/>
+				<display value="Insurance Card"/>
+			  </coding>
+			</valueCodeableConcept>
+		</extension>
+		<extension url="effectivePeriod">
+			<valuePeriod>
+				<start value="2021-05-25"/>
+			</valuePeriod>
+		</extension>
+		<extension url="acquisitionDate">
+			<valueDateTime value="2021-06-06"/>
+		</extension>
+		<extension url="sourceDocument">
+			    <!--   Reference to a scan of the insurance card  -->
+			<valueCodeableReference>
+			  <reference>
+  				<reference value="DocumentReference/2"/>
+			  </reference>
+			</valueCodeableReference>
+		</extension>
+		<extension url="sourceField">
+			<valueString value="SEX"/>
+		</extension>
+		<extension url="jurisdiction">
+			<valueCodeableConcept>
+			  <coding>
+				<system value="http://local-code-system.org/recorded-sex-or-gender-jurisdiction"/>
+				<code value="ICCA-P"/>
+				<display value="Indigo Crucifix Cobalt Aegis Payer"/>
+			  </coding>
+			</valueCodeableConcept>
+		</extension>
+		<extension url="comment">
+			<valueString value="Patient transitioned from male to female in 2001, but their insurance card still indicates male."/>				
+		</extension>
+	</extension>
+	
+	<extension url="http://hl7.org/fhir/StructureDefinition/individual-recordedSexOrGender">
+		<extension url="value">
+			<valueCodeableConcept>
+			  <coding>
+				<system value="http://ohio.example.gov/drivers-license-sex"/>
+				<code value="M"/>
+				<display value="Male"/>
+			  </coding>
+			</valueCodeableConcept>
+		</extension>
+		<extension url="internationalEquivalent">
+			<valueCodeableConcept>
+			  <coding>
+				<system value="http://terminology.hl7.org/CodeSystem/icaosex"/>
+				<code value="M"/>
+				<display value="Male"/>
+			  </coding>
+			</valueCodeableConcept>
+		</extension>
+		<extension url="type">
+			<valueCodeableConcept>
+			  <coding>
+				<system value="http://jurisdiction-specific.example.com/document-type-code-system"/>
+				<code value="drivers-license"/>
+				<display value="Driver's License"/>
+			  </coding>
+			</valueCodeableConcept>
+		</extension>
+		<extension url="effectivePeriod">
+			<valuePeriod>
+				<start value="1974-12-25"/>
+			</valuePeriod>
+		</extension>
+		<extension url="acquisitionDate">
+			<valueDateTime value="2005-12-06"/>
+		</extension>
+		<extension url="sourceDocument">
+			    <!--   Reference to a scan of the driver's license   -->
+			<valueCodeableReference>
+			  <reference>
+  				<reference value="DocumentReference/1"/>
+			  </reference>
+			</valueCodeableReference>
+		</extension>
+		<extension url="jurisdiction">
+			<valueCodeableConcept>
+			  <coding>
+				<system value="https://www.usps.com/"/>
+				<code value="OH"/>
+				<display value="Ohio"/>
+			  </coding>
+			</valueCodeableConcept>
+		</extension>
+		<extension url="comment">
+			<valueString value="Patient transitioned from male to female in 2001, but their driver's license still indicates male."/>				
+		</extension>
+	</extension>
+		
+	<extension url="http://hl7.org/fhir/StructureDefinition/patient-sexForClinicalUse">
+		<extension url="value">
+			<valueCodeableConcept>
+			  <coding>
+				<system value="http://terminology.hl7.org/CodeSystem/sex-for-clinical-use"/>
+				<code value="specified"/>
+				<display value="Specified sex for clinical use"/>
+			  </coding>
+			</valueCodeableConcept>
+		</extension>
+		<extension url="period">
+			<valuePeriod>
+				<start value="2002-07-13"/>
+			</valuePeriod>
+		</extension>
+		<extension url="comment">
+			<valueString value="Patient transitioned from male to female in 2001."/>				
+		</extension>
+		<extension url="supportingInfo">
+			    <!--   Observation about an organ inventory (prostate)   -->
+			<valueCodeableReference>
+			  <reference>
+  				<reference value="Observation/1"/>
+			  </reference>
+			</valueCodeableReference>
+		</extension>
+		<extension url="supportingInfo">
+			    <!--   MedicationUsage indicating patient underwent hormone therapy   -->
+			<valueCodeableReference>
+			  <reference>
+				  <reference value="MedicationUsage/2"/>
+			  </reference>
+			</valueCodeableReference>
+		</extension>
+	</extension>
+		
+	<identifier>
+		<use value="usual"/>
+		<type>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+				<code value="MR"/>
+			</coding>
+		</type>
+		<system value="urn:oid:1.2.36.146.595.217.0.1"/>
+		<value value="12345"/>
+	</identifier>
+	<active value="true"/>
+	    <!--   Legal Name: Patrick Roth, goes by Patricia (formally), but also Pat (informally)   -->
+	<name>
+		<use value="official"/>
+		<family value="Roth"/>
+		<given value="Patrick"/>
+	</name>
+	<name>
+		<use value="usual"/>
+		<family value="Roth"/>
+		<given value="Patricia"/>
+	</name>
+	<name>
+		<use value="nickname"/>
+		<given value="Pat"/>
+	</name>
+	<gender value="male"/>
+	<birthDate value="1974-12-25">
+	</birthDate>
+	<deceasedBoolean value="false"/>
+	<managingOrganization>
+		<reference value="Organization/1"/>
+	</managingOrganization>
+</Patient>

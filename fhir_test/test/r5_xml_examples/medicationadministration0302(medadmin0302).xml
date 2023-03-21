@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?><MedicationAdministration xmlns="http://hl7.org/fhir"> 
+  <id value="medadmin0302"/>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: MedicationAdministration</b><a name="medadmin0302"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource MedicationAdministration "medadmin0302" </p></div><p><b>partOf</b>: <a href="procedure-example-biopsy.html">Procedure/biopsy</a></p><p><b>status</b>: completed</p><p><b>category</b>: Inpatient <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (medication-admin-category#inpatient)</span></p><h3>Medications</h3><table class="grid"><tr><td>-</td><td><b>Reference</b></td></tr><tr><td>*</td><td><a name="med0317"> </a><blockquote><p/><p><a name="med0317"> </a></p><p><b>doseForm</b>: Injection Solution (qualifier value) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#385219001)</span></p><blockquote><p><b>ingredient</b></p><h3>Items</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>Potassium Chloride <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-rxNorm.html">RxNorm</a>#204520)</span></td></tr></table><p><b>strength</b>: 2 meq<span style="background: LightGoldenRodYellow"> (Details: UCUM code meq = 'meq')</span>/1 mL<span style="background: LightGoldenRodYellow"> (Details: UCUM code mL = 'mL')</span></p></blockquote><blockquote><p><b>ingredient</b></p><h3>Items</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>Sodium Chloride 0.9% injectable solution <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-rxNorm.html">RxNorm</a>#313002)</span></td></tr></table><p><b>strength</b>: 0.9 g<span style="background: LightGoldenRodYellow"> (Details: UCUM code g = 'g')</span>/100 mL<span style="background: LightGoldenRodYellow"> (Details: UCUM code mL = 'mL')</span></p></blockquote></blockquote></td></tr></table><p><b>subject</b>: <a href="patient-example-a.html">Patient/pat1: Donald Duck</a> "Donald DUCK"</p><p><b>encounter</b>: <a href="encounter-example-f001-heart.html">Encounter/f001: encounter who leads to this prescription</a></p><p><b>occurence</b>: 2015-01-15T04:30:00+01:00 --&gt; 2015-01-15T14:30:00+01:00</p><h3>Performers</h3><table class="grid"><tr><td>-</td><td><b>Actor</b></td></tr><tr><td>*</td><td><a href="practitioner-example-f007-sh.html">Practitioner/f007: Patrick Pump</a> "Simone HEPS"</td></tr></table><h3>Reasons</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>Given as Ordered <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-reason-medication-given.html">Reason Medication Given Codes</a>#b)</span></td></tr></table><p><b>request</b>: <a href="medicationrequest0322.html">MedicationRequest/medrx0322</a></p><h3>Dosages</h3><table class="grid"><tr><td>-</td><td><b>Text</b></td><td><b>Site</b></td><td><b>Route</b></td><td><b>Method</b></td><td><b>Dose</b></td><td><b>Rate[x]</b></td></tr><tr><td>*</td><td>KCl 20 mEq in 1 L 0.9%NS IV at 100 ml/hr</td><td>Structure of ligament of left superior vena cava <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#6073002)</span></td><td>Intravenous route (qualifier value) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#47625008)</span></td><td>Continuous infusion <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ()</span></td><td>20 meq<span style="background: LightGoldenRodYellow"> (Details: UCUM code meq = 'meq')</span></td><td>100 mL<span style="background: LightGoldenRodYellow"> (Details: UCUM code mL = 'mL')</span>/1 h<span style="background: LightGoldenRodYellow"> (Details: UCUM code h = 'h')</span></td></tr></table></div></text><contained>
+    <Medication>
+      <id value="med0317"/>
+        <doseForm>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="385219001"/>
+            <display value="Injection Solution (qualifier value)"/>
+          </coding>
+          <text value="Injection Solution (qualifier value)"/>
+        </doseForm>
+        <ingredient>
+          <item>
+            <concept>
+            <coding>
+              <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+              <code value="204520"/>
+              <display value="Potassium Chloride"/>
+            </coding>
+            </concept>
+          </item>
+          <strengthRatio>
+            <numerator>
+              <value value="2"/>
+              <system value="http://unitsofmeasure.org"/>
+              <code value="meq"/>
+            </numerator>
+            <denominator>
+              <value value="1"/>
+              <system value="http://unitsofmeasure.org"/>
+              <code value="mL"/>
+            </denominator>
+          </strengthRatio>
+        </ingredient>
+        <ingredient>
+          <item>
+          <concept>
+            <coding>
+              <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+              <code value="313002"/>
+              <display value="Sodium Chloride 0.9% injectable solution"/>
+            </coding>
+          </concept>
+          </item>
+          <strengthRatio>
+            <numerator>
+              <value value="0.9"/>
+              <system value="http://unitsofmeasure.org"/>
+              <code value="g"/>
+            </numerator>
+            <denominator>
+              <value value="100"/>
+              <system value="http://unitsofmeasure.org"/>
+              <code value="mL"/>
+            </denominator>
+          </strengthRatio>
+        </ingredient>   
+    </Medication>
+  </contained>
+  <partOf>
+    <reference value="Procedure/biopsy"/>
+  </partOf>
+  <status value="completed"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/medication-admin-category"/>
+      <code value="inpatient"/>
+      <display value="Inpatient"/>
+    </coding>
+  </category>
+  <medication>
+    <reference>
+    <reference value="#med0317"/> 
+    </reference>
+  </medication>
+ <subject>
+   <reference value="Patient/pat1"/>
+   <display value="Donald Duck"/> 
+  </subject>
+  <encounter> 
+    <reference value="Encounter/f001"/>
+    <display value="encounter who leads to this prescription"/>
+  </encounter>
+ <occurencePeriod>
+  <start value="2015-01-15T04:30:00+01:00"/>
+   <end value="2015-01-15T14:30:00+01:00"/>
+</occurencePeriod>
+  <performer>
+    <actor>
+    <reference value="Practitioner/f007"/>
+    <display value="Patrick Pump"/>
+    </actor>
+  </performer>
+  <reason>
+    <concept>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/reason-medication-given"/>
+        <code value="b"/>
+        <display value="Given as Ordered"/>
+      </coding>
+    </concept>
+  </reason>
+  <request>
+    <reference value="MedicationRequest/medrx0322"/>
+  </request>
+  <dosage>
+    <text value="KCl 20 mEq in 1 L 0.9%NS IV at 100 ml/hr"/>
+    <site>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="6073002"/>
+        <display value="Structure of ligament of left superior vena cava"/>
+      </coding>
+    </site>
+    <route>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="47625008"/>
+        <display value="Intravenous route (qualifier value)"/>
+      </coding>
+    </route>
+    <method>
+      <text value="Continuous infusion"/>
+    </method>
+    <dose>
+      <value value="20"/>
+      <unit value="meq"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="meq"/>
+    </dose>
+    <rateRatio>
+      <numerator>
+        <value value="100"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mL"/>
+      </numerator>
+      <denominator>
+        <value value="1"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="h"/>
+      </denominator>
+    </rateRatio>
+  </dosage>
+</MedicationAdministration>

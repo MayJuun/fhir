@@ -60,11 +60,15 @@
       "reference": "HealthcareService/example"
     }
   ],
-  "telecom": [
+  "contact": [
     {
-      "system": "email",
-      "value": "general.practice@example.org",
-      "use": "work"
+      "telecom": [
+        {
+          "system": "email",
+          "value": "general.practice@example.org",
+          "use": "work"
+        }
+      ]
     }
   ],
   "endpoint": [

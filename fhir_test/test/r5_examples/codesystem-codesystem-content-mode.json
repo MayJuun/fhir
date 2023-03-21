@@ -2,14 +2,14 @@
   "resourceType": "CodeSystem",
   "id": "codesystem-content-mode",
   "meta": {
-    "lastUpdated": "2022-05-07T04:02:42.916+11:00",
+    "lastUpdated": "2022-12-14T07:12:54.019+11:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
     ]
   },
   "text": {
     "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n      \n      \u003cp\u003eThis code system http://hl7.org/fhir/codesystem-content-mode defines the following codes:\u003c/p\u003e\n      \n      \u003ctable class\u003d\"codes\"\u003e\n        \n        \u003ctr\u003e\n          \n          \u003ctd style\u003d\"white-space:nowrap\"\u003e\n            \n            \u003cb\u003eCode\u003c/b\u003e\n          \n          \u003c/td\u003e\n          \n          \u003ctd\u003e\n            \n            \u003cb\u003eDisplay\u003c/b\u003e\n          \n          \u003c/td\u003e\n          \n          \u003ctd\u003e\n            \n            \u003cb\u003eDefinition\u003c/b\u003e\n          \n          \u003c/td\u003e\n        \n        \u003c/tr\u003e\n        \n        \u003ctr\u003e\n          \n          \u003ctd style\u003d\"white-space:nowrap\"\u003enot-present\n            \n            \u003ca name\u003d\"codesystem-content-mode-not-present\"\u003e \u003c/a\u003e\n          \n          \u003c/td\u003e\n          \n          \u003ctd\u003eNot Present\u003c/td\u003e\n          \n          \u003ctd\u003eNone of the concepts defined by the code system are included in the code system resource.\u003c/td\u003e\n        \n        \u003c/tr\u003e\n        \n        \u003ctr\u003e\n          \n          \u003ctd style\u003d\"white-space:nowrap\"\u003eexample\n            \n            \u003ca name\u003d\"codesystem-content-mode-example\"\u003e \u003c/a\u003e\n          \n          \u003c/td\u003e\n          \n          \u003ctd\u003eExample\u003c/td\u003e\n          \n          \u003ctd\u003eA few representative concepts are included in the code system resource. There is no useful intent in the subset choice and there\u0027s no process to make it workable: it\u0027s not intended to be workable.\u003c/td\u003e\n        \n        \u003c/tr\u003e\n        \n        \u003ctr\u003e\n          \n          \u003ctd style\u003d\"white-space:nowrap\"\u003efragment\n            \n            \u003ca name\u003d\"codesystem-content-mode-fragment\"\u003e \u003c/a\u003e\n          \n          \u003c/td\u003e\n          \n          \u003ctd\u003eFragment\u003c/td\u003e\n          \n          \u003ctd\u003eA subset of the code system concepts are included in the code system resource. This is a curated subset released for a specific purpose under the governance of the code system steward, and that the intent, bounds and consequences of the fragmentation are clearly defined in the fragment or the code system documentation. Fragments are also known as partitions.\u003c/td\u003e\n        \n        \u003c/tr\u003e\n        \n        \u003ctr\u003e\n          \n          \u003ctd style\u003d\"white-space:nowrap\"\u003ecomplete\n            \n            \u003ca name\u003d\"codesystem-content-mode-complete\"\u003e \u003c/a\u003e\n          \n          \u003c/td\u003e\n          \n          \u003ctd\u003eComplete\u003c/td\u003e\n          \n          \u003ctd\u003eAll the concepts defined by the code system are included in the code system resource.\u003c/td\u003e\n        \n        \u003c/tr\u003e\n        \n        \u003ctr\u003e\n          \n          \u003ctd style\u003d\"white-space:nowrap\"\u003esupplement\n            \n            \u003ca name\u003d\"codesystem-content-mode-supplement\"\u003e \u003c/a\u003e\n          \n          \u003c/td\u003e\n          \n          \u003ctd\u003eSupplement\u003c/td\u003e\n          \n          \u003ctd\u003eThe resource doesn\u0027t define any new concepts; it just provides additional designations and properties to another code system.\u003c/td\u003e\n        \n        \u003c/tr\u003e\n      \n      \u003c/table\u003e\n    \n    \u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003eThis code system \u003ccode\u003ehttp://hl7.org/fhir/codesystem-content-mode\u003c/code\u003e defines the following codes:\u003c/p\u003e\u003ctable class\u003d\"codes\"\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDisplay\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDefinition\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003enot-present\u003ca name\u003d\"codesystem-content-mode-not-present\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eNot Present\u003c/td\u003e\u003ctd\u003eNone of the concepts defined by the code system are included in the code system resource.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eexample\u003ca name\u003d\"codesystem-content-mode-example\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eExample\u003c/td\u003e\u003ctd\u003eA subset of the valid externally defined concepts are included in the code system resource. There is no specific purpose or documented intent other than for illustrative purposes.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003efragment\u003ca name\u003d\"codesystem-content-mode-fragment\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eFragment\u003c/td\u003e\u003ctd\u003eA subset of the code system concepts are included in the code system resource. This is a curated subset released for a specific purpose under the governance of the code system steward, and that the intent, bounds and consequences of the fragmentation are clearly defined in the fragment or the code system documentation. Fragments are also known as partitions.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003ecomplete\u003ca name\u003d\"codesystem-content-mode-complete\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eComplete\u003c/td\u003e\u003ctd\u003eAll the concepts defined by the code system are included in the code system resource.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003esupplement\u003ca name\u003d\"codesystem-content-mode-supplement\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eSupplement\u003c/td\u003e\u003ctd\u003eThe resource doesn\u0027t define any new concepts; it just provides additional designations and properties to another code system.\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
   },
   "extension": [
     {
@@ -33,10 +33,15 @@
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986",
-      "value": "urn:oid:2.16.840.1.113883.4.642.1.783"
+      "value": "urn:oid:2.16.840.1.113883.4.642.4.783"
+    },
+    {
+      "use": "old",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.1.766"
     }
   ],
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "name": "CodeSystemContentMode",
   "title": "CodeSystemContentMode",
   "status": "active",
@@ -58,6 +63,17 @@
     }
   ],
   "description": "The extent of the content of the code system (the concepts and codes it defines) are represented in a code system resource.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "caseSensitive": true,
   "valueSet": "http://hl7.org/fhir/ValueSet/codesystem-content-mode",
   "content": "complete",
@@ -70,7 +86,7 @@
     {
       "code": "example",
       "display": "Example",
-      "definition": "A few representative concepts are included in the code system resource. There is no useful intent in the subset choice and there\u0027s no process to make it workable: it\u0027s not intended to be workable."
+      "definition": "A subset of the valid externally defined concepts are included in the code system resource. There is no specific purpose or documented intent other than for illustrative purposes."
     },
     {
       "code": "fragment",

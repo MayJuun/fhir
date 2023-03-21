@@ -7,4 +7,5 @@ Future<void> main() async {
   resourceTest();
   await roundtripTestJson();
   await roundtripTestYaml();
+  await roundtripTestXml();
 }

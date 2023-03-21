@@ -744,9 +744,15 @@ class CapabilityStatementImplementation
 }
 
 /// [CapabilityStatementRest] A Capability Statement documents a set of
+/// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
+/// that may be used as a statement of actual server functionality or a
+///  statement of required or desired server implementation.
 @freezed
 class CapabilityStatementRest with _$CapabilityStatementRest {
   /// [CapabilityStatementRest] A Capability Statement documents a set of
+  /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
+  /// that may be used as a statement of actual server functionality or a
+  ///  statement of required or desired server implementation.
   CapabilityStatementRest._();
 
   /// [CapabilityStatementRest] A Capability Statement documents a set of
@@ -910,9 +916,15 @@ class CapabilityStatementRest with _$CapabilityStatementRest {
 }
 
 /// [CapabilityStatementSecurity] A Capability Statement documents a set of
+/// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
+/// that may be used as a statement of actual server functionality or a
+///  statement of required or desired server implementation.
 @freezed
 class CapabilityStatementSecurity with _$CapabilityStatementSecurity {
   /// [CapabilityStatementSecurity] A Capability Statement documents a set of
+  /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
+  /// that may be used as a statement of actual server functionality or a
+  ///  statement of required or desired server implementation.
   CapabilityStatementSecurity._();
 
   /// [CapabilityStatementSecurity] A Capability Statement documents a set of
@@ -1033,9 +1045,15 @@ class CapabilityStatementSecurity with _$CapabilityStatementSecurity {
 }
 
 /// [CapabilityStatementResource] A Capability Statement documents a set of
+/// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
+/// that may be used as a statement of actual server functionality or a
+///  statement of required or desired server implementation.
 @freezed
 class CapabilityStatementResource with _$CapabilityStatementResource {
   /// [CapabilityStatementResource] A Capability Statement documents a set of
+  /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
+  /// that may be used as a statement of actual server functionality or a
+  ///  statement of required or desired server implementation.
   CapabilityStatementResource._();
 
   /// [CapabilityStatementResource] A Capability Statement documents a set of
@@ -1336,9 +1354,15 @@ class CapabilityStatementResource with _$CapabilityStatementResource {
 }
 
 /// [CapabilityStatementInteraction] A Capability Statement documents a set
+/// of capabilities (behaviors) of a FHIR Server for a particular version of
+/// FHIR that may be used as a statement of actual server functionality or a
+///  statement of required or desired server implementation.
 @freezed
 class CapabilityStatementInteraction with _$CapabilityStatementInteraction {
   /// [CapabilityStatementInteraction] A Capability Statement documents a set
+  /// of capabilities (behaviors) of a FHIR Server for a particular version of
+  /// FHIR that may be used as a statement of actual server functionality or a
+  ///  statement of required or desired server implementation.
   CapabilityStatementInteraction._();
 
   /// [CapabilityStatementInteraction] A Capability Statement documents a set
@@ -1459,9 +1483,15 @@ class CapabilityStatementInteraction with _$CapabilityStatementInteraction {
 }
 
 /// [CapabilityStatementSearchParam] A Capability Statement documents a set
+/// of capabilities (behaviors) of a FHIR Server for a particular version of
+/// FHIR that may be used as a statement of actual server functionality or a
+///  statement of required or desired server implementation.
 @freezed
 class CapabilityStatementSearchParam with _$CapabilityStatementSearchParam {
   /// [CapabilityStatementSearchParam] A Capability Statement documents a set
+  /// of capabilities (behaviors) of a FHIR Server for a particular version of
+  /// FHIR that may be used as a statement of actual server functionality or a
+  ///  statement of required or desired server implementation.
   CapabilityStatementSearchParam._();
 
   /// [CapabilityStatementSearchParam] A Capability Statement documents a set
@@ -1601,9 +1631,15 @@ class CapabilityStatementSearchParam with _$CapabilityStatementSearchParam {
 }
 
 /// [CapabilityStatementOperation] A Capability Statement documents a set of
+/// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
+/// that may be used as a statement of actual server functionality or a
+///  statement of required or desired server implementation.
 @freezed
 class CapabilityStatementOperation with _$CapabilityStatementOperation {
   /// [CapabilityStatementOperation] A Capability Statement documents a set of
+  /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
+  /// that may be used as a statement of actual server functionality or a
+  ///  statement of required or desired server implementation.
   CapabilityStatementOperation._();
 
   /// [CapabilityStatementOperation] A Capability Statement documents a set of
@@ -1744,9 +1780,15 @@ class CapabilityStatementOperation with _$CapabilityStatementOperation {
 }
 
 /// [CapabilityStatementInteraction1] A Capability Statement documents a set
+/// of capabilities (behaviors) of a FHIR Server for a particular version of
+/// FHIR that may be used as a statement of actual server functionality or a
+///  statement of required or desired server implementation.
 @freezed
 class CapabilityStatementInteraction1 with _$CapabilityStatementInteraction1 {
   /// [CapabilityStatementInteraction1] A Capability Statement documents a set
+  /// of capabilities (behaviors) of a FHIR Server for a particular version of
+  /// FHIR that may be used as a statement of actual server functionality or a
+  ///  statement of required or desired server implementation.
   CapabilityStatementInteraction1._();
 
   /// [CapabilityStatementInteraction1] A Capability Statement documents a set
@@ -1863,9 +1905,15 @@ class CapabilityStatementInteraction1 with _$CapabilityStatementInteraction1 {
 }
 
 /// [CapabilityStatementMessaging] A Capability Statement documents a set of
+/// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
+/// that may be used as a statement of actual server functionality or a
+///  statement of required or desired server implementation.
 @freezed
 class CapabilityStatementMessaging with _$CapabilityStatementMessaging {
   /// [CapabilityStatementMessaging] A Capability Statement documents a set of
+  /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
+  /// that may be used as a statement of actual server functionality or a
+  ///  statement of required or desired server implementation.
   CapabilityStatementMessaging._();
 
   /// [CapabilityStatementMessaging] A Capability Statement documents a set of
@@ -2001,9 +2049,15 @@ class CapabilityStatementMessaging with _$CapabilityStatementMessaging {
 }
 
 /// [CapabilityStatementEndpoint] A Capability Statement documents a set of
+/// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
+/// that may be used as a statement of actual server functionality or a
+///  statement of required or desired server implementation.
 @freezed
 class CapabilityStatementEndpoint with _$CapabilityStatementEndpoint {
   /// [CapabilityStatementEndpoint] A Capability Statement documents a set of
+  /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
+  /// that may be used as a statement of actual server functionality or a
+  ///  statement of required or desired server implementation.
   CapabilityStatementEndpoint._();
 
   /// [CapabilityStatementEndpoint] A Capability Statement documents a set of
@@ -2113,9 +2167,17 @@ class CapabilityStatementEndpoint with _$CapabilityStatementEndpoint {
   }
 }
 
+/// [CapabilityStatementSupportedMessage] A Capability Statement documents a
+/// set of capabilities (behaviors) of a FHIR Server for a particular version
+/// of FHIR that may be used as a statement of actual server functionality or
+///  a statement of required or desired server implementation.
 @freezed
 class CapabilityStatementSupportedMessage
     with _$CapabilityStatementSupportedMessage {
+  /// [CapabilityStatementSupportedMessage] A Capability Statement documents a
+  /// set of capabilities (behaviors) of a FHIR Server for a particular version
+  /// of FHIR that may be used as a statement of actual server functionality or
+  ///  a statement of required or desired server implementation.
   CapabilityStatementSupportedMessage._();
 
   /// [CapabilityStatementSupportedMessage] A Capability Statement documents a
@@ -2215,9 +2277,15 @@ class CapabilityStatementSupportedMessage
 }
 
 /// [CapabilityStatementDocument] A Capability Statement documents a set of
+/// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
+/// that may be used as a statement of actual server functionality or a
+///  statement of required or desired server implementation.
 @freezed
 class CapabilityStatementDocument with _$CapabilityStatementDocument {
   /// [CapabilityStatementDocument] A Capability Statement documents a set of
+  /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
+  /// that may be used as a statement of actual server functionality or a
+  ///  statement of required or desired server implementation.
   CapabilityStatementDocument._();
 
   /// [CapabilityStatementDocument] A Capability Statement documents a set of

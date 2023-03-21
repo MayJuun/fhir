@@ -9,13 +9,18 @@
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
       "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "trial-use"
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/timezone",
-  "version": "4.6.0",
-  "name": "Timezone Code",
-  "title": "An IANA timezone code for  the timezone offset per BCP 175",
+  "version": "5.0.0-snapshot3",
+  "name": "TimezoneCode",
+  "title": "Timezone Code",
   "status": "draft",
+  "experimental": false,
   "date": "2013-12-05",
   "publisher": "Health Level Seven International (FHIR Infrastructure)",
   "contact": [
@@ -29,7 +34,7 @@
     }
   ],
   "description": "An IANA timezone code for  the timezone offset per [BCP 175](https://www.iana.org/go/rfc6557). The offset is specified as part of a dateTime/instant (or using the tzOffset extension on a date if necessary). The timezone code may also be provided to allow for human display of the location associated with the offset.",
-  "fhirVersion": "4.6.0",
+  "fhirVersion": "5.0.0-snapshot3",
   "mapping": [
     {
       "identity": "rim",
@@ -51,6 +56,14 @@
     {
       "type": "element",
       "expression": "instant"
+    },
+    {
+      "type": "element",
+      "expression": "Meta"
+    },
+    {
+      "type": "element",
+      "expression": "time"
     }
   ],
   "type": "Extension",
@@ -63,7 +76,7 @@
         "path": "Extension",
         "short": "IANA Timezone Code per BCP 175",
         "definition": "An IANA timezone code for  the timezone offset per [BCP 175](https://www.iana.org/go/rfc6557). The offset is specified as part of a dateTime/instant (or using the tzOffset extension on a date if necessary). The timezone code may also be provided to allow for human display of the location associated with the offset.",
-        "comment": "See [https://www.iana.org/time-zones](https://www.iana.org/time-zones).",
+        "comment": "These are codes like \"America/New_York\" or \"America/Los_Angeles\". See https://www.iana.org/time-zones for the official source, and https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for more information.",
         "min": 0,
         "max": "1",
         "base": {
@@ -77,7 +90,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -85,7 +97,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -111,7 +122,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "string"
+                "valueUrl": "id"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -159,7 +170,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -167,7 +177,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -234,7 +243,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -253,7 +261,7 @@
           ],
           "strength": "required",
           "description": "IANA Timezones (BCP 175)",
-          "valueSet": "http://hl7.org/fhir/ValueSet/timezones|4.6.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/timezones|5.0.0-snapshot3"
         },
         "mapping": [
           {
@@ -271,7 +279,7 @@
         "path": "Extension",
         "short": "IANA Timezone Code per BCP 175",
         "definition": "An IANA timezone code for  the timezone offset per [BCP 175](https://www.iana.org/go/rfc6557). The offset is specified as part of a dateTime/instant (or using the tzOffset extension on a date if necessary). The timezone code may also be provided to allow for human display of the location associated with the offset.",
-        "comment": "See [https://www.iana.org/time-zones](https://www.iana.org/time-zones).",
+        "comment": "These are codes like \"America/New_York\" or \"America/Los_Angeles\". See https://www.iana.org/time-zones for the official source, and https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for more information.",
         "min": 0,
         "max": "1"
       },
@@ -307,7 +315,7 @@
           ],
           "strength": "required",
           "description": "IANA Timezones (BCP 175)",
-          "valueSet": "http://hl7.org/fhir/ValueSet/timezones|4.6.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/timezones|5.0.0-snapshot3"
         }
       }
     ]

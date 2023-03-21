@@ -20,13 +20,15 @@
     }
   ],
   "code": {
-    "coding": [
-      {
-        "system": "http://snomed.info/sct",
-        "code": "303653007",
-        "display": "Computed tomography of head"
-      }
-    ]
+    "concept": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "303653007",
+          "display": "Computed tomography of head"
+        }
+      ]
+    }
   },
   "subject": {
     "reference": "Patient/example"

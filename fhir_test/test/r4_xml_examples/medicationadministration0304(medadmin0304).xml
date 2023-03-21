@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><MedicationAdministration xmlns="http://hl7.org/fhir"> 
+  <id value="medadmin0304"/>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "medadmin0304" </p></div><p><b>status</b>: completed</p><p><b>medication</b>: <a name="med0303"> </a></p><blockquote><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "med0303" </p></div><p><b>code</b>: Alemtuzumab 10mg/ml (Lemtrada) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-rxNorm.html">RxNorm</a>#1594660)</span></p></blockquote><p><b>subject</b>: <a href="patient-pat1.html">Patient/pat1: Donald Duck</a> "Duck DONALD"</p><p><b>context</b>: <a href="encounter-f001.html">Encounter/f001: encounter who leads to this prescription</a></p><p><b>effective</b>: 2015-01-15T04:30:00+01:00 --&gt; 2015-01-15T14:30:00+01:00</p><h3>Performers</h3><table class="grid"><tr><td>-</td><td><b>Actor</b></td></tr><tr><td>*</td><td><a href="practitioner-f007.html">Practitioner/f007: Patrick Pump</a> "Simone HEPS"</td></tr></table><p><b>reasonReference</b>: <a href="condition-f202.html">Condition/f202</a></p><p><b>request</b>: <a href="medicationrequest-medrx0319.html">MedicationRequest/medrx0319</a></p><h3>Dosages</h3><table class="grid"><tr><td>-</td><td><b>Text</b></td><td><b>Route</b></td><td><b>Method</b></td><td><b>Dose</b></td></tr><tr><td>*</td><td>Rapid daily-dose escalation, until tolerated, from 3 mg/d, and then 10 mg/d, to the recommended maintenance dose of 30 mg IV over 120 min, 3 times per wk on alternate days for up to 12 wk</td><td>Intravenous route (qualifier value) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#47625008)</span></td><td>Inject - dosing instruction imperative (qualifier value) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#422145002)</span></td><td>3 mg<span style="background: LightGoldenRodYellow"> (Details: UCUM code mg = 'mg')</span></td></tr></table></div></text><contained>
+    <Medication>
+      <id value="med0303"/>
+      <code>
+        <coding>
+          <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+          <code value="1594660"/>
+          <display value="Alemtuzumab 10mg/ml (Lemtrada)"/>
+        </coding>
+      </code>
+    </Medication>
+  </contained>
+  <status value="completed"/>
+  <medicationReference>
+    <reference value="#med0303"/> 
+  </medicationReference>
+ <subject>
+   <reference value="Patient/pat1"/>
+   <display value="Donald Duck"/> 
+  </subject>
+  <context> 
+    <reference value="Encounter/f001"/>
+    <display value="encounter who leads to this prescription"/>
+  </context>
+ <effectivePeriod>
+  <start value="2015-01-15T04:30:00+01:00"/>
+   <end value="2015-01-15T14:30:00+01:00"/>
+</effectivePeriod>
+  <performer>
+    <actor>
+      <reference value="Practitioner/f007"/>
+      <display value="Patrick Pump"/>
+    </actor>
+  </performer>
+  <reasonReference>
+    <reference value="Condition/f202"/>
+  </reasonReference>
+  <request>
+    <reference value="MedicationRequest/medrx0319"/>
+  </request>
+  <dosage>
+    <text value="Rapid daily-dose escalation, until tolerated, from 3 mg/d, and then 10 mg/d, to the recommended maintenance dose of 30 mg IV over 120 min, 3 times per wk on alternate days for up to 12 wk"/>
+    <route>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="47625008"/>
+        <display value="Intravenous route (qualifier value)"/>
+      </coding>
+    </route>
+    <method>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="422145002"/>
+        <display value="Inject - dosing instruction imperative (qualifier value)"/>
+      </coding>
+    </method>
+    <dose>
+      <value value="3"/>
+      <unit value="mg"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mg"/>
+    </dose>
+  </dosage>
+</MedicationAdministration>

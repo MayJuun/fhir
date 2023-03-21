@@ -11,7 +11,7 @@
         "id": "815477f2-a94c-4197-a82a-9f974155debc",
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative\u003c/b\u003e\u003c/p\u003e\u003cdiv style\u003d\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"\u003e\u003cp style\u003d\"margin-bottom: 0px\"\u003eResource \u0026quot;815477f2-a94c-4197-a82a-9f974155debc\u0026quot; \u003c/p\u003e\u003c/div\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: active\u003c/p\u003e\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: query-event\u003c/p\u003e\u003cp\u003e\u003cb\u003eeventsSinceSubscriptionStart\u003c/b\u003e: 310\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003enotificationEvent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eeventNumber\u003c/b\u003e: 307\u003c/p\u003e\u003cp\u003e\u003cb\u003efocus\u003c/b\u003e: \u003ca href\u003d\"todo.html\"\u003ehttp://example.org/FHIR/R5/Encounter/307\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eadditionalContext\u003c/b\u003e: \u003ca href\u003d\"todo.html\"\u003ehttp://example.org/FHIR/R5/Patient/ABC\u003c/a\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003enotificationEvent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eeventNumber\u003c/b\u003e: 308\u003c/p\u003e\u003cp\u003e\u003cb\u003efocus\u003c/b\u003e: \u003ca href\u003d\"todo.html\"\u003ehttp://example.org/FHIR/R5/Encounter/308\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eadditionalContext\u003c/b\u003e: \u003ca href\u003d\"todo.html\"\u003ehttp://example.org/FHIR/R5/Patient/ABC\u003c/a\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003cp\u003e\u003cb\u003esubscription\u003c/b\u003e: \u003ca href\u003d\"todo.html\"\u003ehttp://example.org/FHIR/R5/Subscription/123\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003etopic\u003c/b\u003e: \u003ca href\u003d\"http://example.org/FHIR/R5/SubscriptionTopic/admission\"\u003ehttp://example.org/FHIR/R5/SubscriptionTopic/admission\u003c/a\u003e\u003c/p\u003e\u003c/div\u003e"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative: SubscriptionStatus\u003c/b\u003e\u003ca name\u003d\"815477f2-a94c-4197-a82a-9f974155debc\"\u003e \u003c/a\u003e\u003c/p\u003e\u003cdiv style\u003d\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"\u003e\u003cp style\u003d\"margin-bottom: 0px\"\u003eResource SubscriptionStatus \u0026quot;815477f2-a94c-4197-a82a-9f974155debc\u0026quot; \u003c/p\u003e\u003c/div\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: active\u003c/p\u003e\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: query-event\u003c/p\u003e\u003cp\u003e\u003cb\u003eeventsSinceSubscriptionStart\u003c/b\u003e: 310\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003enotificationEvent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eeventNumber\u003c/b\u003e: 307\u003c/p\u003e\u003cp\u003e\u003cb\u003efocus\u003c/b\u003e: \u003ca href\u003d\"broken-link.html\"\u003ehttp://example.org/FHIR/R5/Encounter/307\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eadditionalContext\u003c/b\u003e: \u003ca href\u003d\"broken-link.html\"\u003ehttp://example.org/FHIR/R5/Patient/ABC\u003c/a\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003enotificationEvent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eeventNumber\u003c/b\u003e: 308\u003c/p\u003e\u003cp\u003e\u003cb\u003efocus\u003c/b\u003e: \u003ca href\u003d\"broken-link.html\"\u003ehttp://example.org/FHIR/R5/Encounter/308\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eadditionalContext\u003c/b\u003e: \u003ca href\u003d\"broken-link.html\"\u003ehttp://example.org/FHIR/R5/Patient/ABC\u003c/a\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003cp\u003e\u003cb\u003esubscription\u003c/b\u003e: \u003ca href\u003d\"broken-link.html\"\u003ehttp://example.org/FHIR/R5/Subscription/123\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003etopic\u003c/b\u003e: \u003ca href\u003d\"http://example.org/FHIR/R5/SubscriptionTopic/admission\"\u003ehttp://example.org/FHIR/R5/SubscriptionTopic/admission\u003c/a\u003e\u003c/p\u003e\u003c/div\u003e"
         },
         "status": "active",
         "type": "query-event",
@@ -57,14 +57,20 @@
         },
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative\u003c/b\u003e\u003c/p\u003e\u003cdiv style\u003d\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"\u003e\u003cp style\u003d\"margin-bottom: 0px\"\u003eResource \u0026quot;307\u0026quot; Version \u0026quot;1\u0026quot; Updated \u0026quot;2019-08-07T10:49:22Z\u0026quot; \u003c/p\u003e\u003c/div\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: in-progress\u003c/p\u003e\u003cp\u003e\u003cb\u003eclass\u003c/b\u003e: virtual (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code VR \u003d \u0027virtual\u0027, stated as \u0027virtual\u0027)\u003c/p\u003e\u003cp\u003e\u003cb\u003esubject\u003c/b\u003e: \u003ca href\u003d\"todo.html\"\u003ePatient/ABC\u003c/a\u003e\u003c/p\u003e\u003c/div\u003e"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative: Encounter\u003c/b\u003e\u003ca name\u003d\"307\"\u003e \u003c/a\u003e\u003c/p\u003e\u003cdiv style\u003d\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"\u003e\u003cp style\u003d\"margin-bottom: 0px\"\u003eResource Encounter \u0026quot;307\u0026quot; Version \u0026quot;1\u0026quot; Updated \u0026quot;2019-08-07T10:49:22Z\u0026quot; \u003c/p\u003e\u003c/div\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: in-progress\u003c/p\u003e\u003cp\u003e\u003cb\u003eclass\u003c/b\u003e: virtual \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"http://terminology.hl7.org/4.0.0/CodeSystem-v3-ActCode.html\"\u003eActCode\u003c/a\u003e#VR)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003esubject\u003c/b\u003e: \u003ca href\u003d\"broken-link.html\"\u003ePatient/ABC\u003c/a\u003e\u003c/p\u003e\u003c/div\u003e"
         },
         "status": "in-progress",
-        "class": {
-          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-          "code": "VR",
-          "display": "virtual"
-        },
+        "class": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "VR",
+                "display": "virtual"
+              }
+            ]
+          }
+        ],
         "subject": {
           "reference": "Patient/ABC"
         }
@@ -88,7 +94,7 @@
         },
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003ePatient Example (OFFICIAL)\u003c/b\u003e (no stated gender) DoB Unknown\u003c/p\u003e\u003c/div\u003e"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp style\u003d\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"\u003e\u003cb\u003ePatient Example (OFFICIAL)\u003c/b\u003e (no stated gender), DoB Unknown\u003c/p\u003e\u003chr/\u003e\u003c/div\u003e"
         },
         "name": [
           {
@@ -112,14 +118,20 @@
         },
         "text": {
           "status": "generated",
-          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative\u003c/b\u003e\u003c/p\u003e\u003cdiv style\u003d\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"\u003e\u003cp style\u003d\"margin-bottom: 0px\"\u003eResource \u0026quot;308\u0026quot; Version \u0026quot;1\u0026quot; Updated \u0026quot;2019-08-07T10:49:22Z\u0026quot; \u003c/p\u003e\u003c/div\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: in-progress\u003c/p\u003e\u003cp\u003e\u003cb\u003eclass\u003c/b\u003e: virtual (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code VR \u003d \u0027virtual\u0027, stated as \u0027virtual\u0027)\u003c/p\u003e\u003cp\u003e\u003cb\u003esubject\u003c/b\u003e: \u003ca href\u003d\"todo.html\"\u003ePatient/ABC\u003c/a\u003e\u003c/p\u003e\u003c/div\u003e"
+          "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative: Encounter\u003c/b\u003e\u003ca name\u003d\"308\"\u003e \u003c/a\u003e\u003c/p\u003e\u003cdiv style\u003d\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"\u003e\u003cp style\u003d\"margin-bottom: 0px\"\u003eResource Encounter \u0026quot;308\u0026quot; Version \u0026quot;1\u0026quot; Updated \u0026quot;2019-08-07T10:49:22Z\u0026quot; \u003c/p\u003e\u003c/div\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: in-progress\u003c/p\u003e\u003cp\u003e\u003cb\u003eclass\u003c/b\u003e: virtual \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"http://terminology.hl7.org/4.0.0/CodeSystem-v3-ActCode.html\"\u003eActCode\u003c/a\u003e#VR)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003esubject\u003c/b\u003e: \u003ca href\u003d\"broken-link.html\"\u003ePatient/ABC\u003c/a\u003e\u003c/p\u003e\u003c/div\u003e"
         },
         "status": "in-progress",
-        "class": {
-          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-          "code": "VR",
-          "display": "virtual"
-        },
+        "class": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "VR",
+                "display": "virtual"
+              }
+            ]
+          }
+        ],
         "subject": {
           "reference": "Patient/ABC"
         }

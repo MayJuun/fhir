@@ -72,6 +72,7 @@
         }
       ],
       "status": "active",
+      "kind": "insurance",
       "type": {
         "coding": [
           {
@@ -94,14 +95,12 @@
           }
         ]
       },
-      "payor": [
-        {
-          "identifier": {
-            "system": "http://www.bindb.com/bin",
-            "value": "123456"
-          }
+      "insurer": {
+        "identifier": {
+          "system": "http://www.bindb.com/bin",
+          "value": "123456"
         }
-      ],
+      },
       "class": [
         {
           "type": {
@@ -112,7 +111,9 @@
               }
             ]
           },
-          "value": "CBI35",
+          "value": {
+            "value": "CBI35"
+          },
           "name": "Corporate Baker\u0027s Inc. Plan#35"
         },
         {
@@ -124,7 +125,9 @@
               }
             ]
           },
-          "value": "123",
+          "value": {
+            "value": "123"
+          },
           "name": "Trainee Part-time Benefits"
         },
         {
@@ -136,7 +139,9 @@
               }
             ]
           },
-          "value": "1"
+          "value": {
+            "value": "1"
+          }
         }
       ]
     }

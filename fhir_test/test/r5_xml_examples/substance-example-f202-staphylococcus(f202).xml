@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><Substance xmlns="http://hl7.org/fhir">
+ <id value="f202"/>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Substance</b><a name="f202"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Substance "f202" </p></div><p><b>instance</b>: false</p><h3>Codes</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>Staphylococcus Aureus <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#3092008)</span></td></tr></table></div></text><instance value="false"/>
+  <code>     
+    <concept>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="3092008"/>
+        <display value="Staphylococcus Aureus"/>
+      </coding>
+    </concept>
+  </code>
+</Substance>

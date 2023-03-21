@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><ServiceRequest xmlns="http://hl7.org/fhir">
+	<id value="example-implant"/>
+	    <!--   Example of a device manipulation service request  -->
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: ServiceRequest</b><a name="example-implant"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource ServiceRequest "example-implant" </p></div><p><b>status</b>: <span title="  Example of a device manipulation service request ">completed</span></p><p><b>intent</b>: order</p><h3>Codes</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>Implant Pacemaker <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#25267002 "Insertion of intracardiac pacemaker (procedure)")</span></td></tr></table><p><b>subject</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><p><b>authoredOn</b>: 2015-03-30</p><p><b>requester</b>: <a href="practitioner-examples-general.html">Practitioner/3ad0687e-f477-468c-afd5-fcc2bf897809: Dr. Beverly Crusher</a></p><p><b>performer</b>: <a href="practitioner-example.html">Practitioner/example: Dr Cecil Surgeon</a> "Adam CAREFUL"</p><h3>Reasons</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>Bradycardia <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ()</span></td></tr></table></div></text><status value="completed"/>
+	<intent value="order"/>
+	<code>
+	  <concept>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="25267002"/>
+			<display value="Insertion of intracardiac pacemaker (procedure)"/>
+		</coding>
+		<text value="Implant Pacemaker"/>
+	  </concept>
+	</code>
+	<subject>
+		<reference value="Patient/example"/>
+	</subject>
+	<authoredOn value="2015-03-30"/>
+	<requester>
+			<reference value="Practitioner/3ad0687e-f477-468c-afd5-fcc2bf897809"/>
+			<display value="Dr. Beverly Crusher"/>
+	</requester>
+	<performer>
+		<reference value="Practitioner/example"/>
+		<display value="Dr Cecil Surgeon"/>
+	</performer>
+	<reason>
+    <concept>
+  		<text value="Bradycardia"/>
+    </concept>
+	</reason>
+</ServiceRequest>

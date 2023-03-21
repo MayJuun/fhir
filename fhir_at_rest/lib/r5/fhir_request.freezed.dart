@@ -847,7 +847,7 @@ class __$$FhirReadRequestCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FhirReadRequest extends FhirReadRequest {
-  _$FhirReadRequest(
+  const _$FhirReadRequest(
       {required this.base,
       required this.type,
       required this.id,
@@ -1629,7 +1629,7 @@ class _$FhirReadRequest extends FhirReadRequest {
 }
 
 abstract class FhirReadRequest extends FhirRequest {
-  factory FhirReadRequest(
+  const factory FhirReadRequest(
       {required final Uri base,
       required final R5ResourceType type,
       required final Id id,
@@ -1640,7 +1640,7 @@ abstract class FhirReadRequest extends FhirRequest {
       final List<String> parameters,
       final MimeType? mimeType,
       final Client? client}) = _$FhirReadRequest;
-  FhirReadRequest._() : super._();
+  const FhirReadRequest._() : super._();
 
   @override
 
@@ -1786,7 +1786,7 @@ class __$$FhirVReadRequestCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FhirVReadRequest extends FhirVReadRequest {
-  _$FhirVReadRequest(
+  const _$FhirVReadRequest(
       {required this.base,
       required this.type,
       required this.id,
@@ -2575,7 +2575,7 @@ class _$FhirVReadRequest extends FhirVReadRequest {
 }
 
 abstract class FhirVReadRequest extends FhirRequest {
-  factory FhirVReadRequest(
+  const factory FhirVReadRequest(
       {required final Uri base,
       required final R5ResourceType type,
       required final Id id,
@@ -2587,7 +2587,7 @@ abstract class FhirVReadRequest extends FhirRequest {
       final List<String> parameters,
       final MimeType? mimeType,
       final Client? client}) = _$FhirVReadRequest;
-  FhirVReadRequest._() : super._();
+  const FhirVReadRequest._() : super._();
 
   @override
 
@@ -2724,7 +2724,7 @@ class __$$FhirUpdateRequestCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FhirUpdateRequest extends FhirUpdateRequest {
-  _$FhirUpdateRequest(
+  const _$FhirUpdateRequest(
       {required this.base,
       required this.resource,
       this.pretty = false,
@@ -3498,7 +3498,7 @@ class _$FhirUpdateRequest extends FhirUpdateRequest {
 }
 
 abstract class FhirUpdateRequest extends FhirRequest {
-  factory FhirUpdateRequest(
+  const factory FhirUpdateRequest(
       {required final Uri base,
       required final Resource resource,
       final bool pretty,
@@ -3508,7 +3508,7 @@ abstract class FhirUpdateRequest extends FhirRequest {
       final List<String> parameters,
       final MimeType? mimeType,
       final Client? client}) = _$FhirUpdateRequest;
-  FhirUpdateRequest._() : super._();
+  const FhirUpdateRequest._() : super._();
 
   @override
 
@@ -3637,7 +3637,7 @@ class __$$FhirPatchRequestCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FhirPatchRequest extends FhirPatchRequest {
-  _$FhirPatchRequest(
+  const _$FhirPatchRequest(
       {required this.base,
       required this.resource,
       this.pretty = false,
@@ -4411,7 +4411,7 @@ class _$FhirPatchRequest extends FhirPatchRequest {
 }
 
 abstract class FhirPatchRequest extends FhirRequest {
-  factory FhirPatchRequest(
+  const factory FhirPatchRequest(
       {required final Uri base,
       required final Resource resource,
       final bool pretty,
@@ -4421,7 +4421,7 @@ abstract class FhirPatchRequest extends FhirRequest {
       final List<String> parameters,
       final MimeType? mimeType,
       final Client? client}) = _$FhirPatchRequest;
-  FhirPatchRequest._() : super._();
+  const FhirPatchRequest._() : super._();
 
   @override
 
@@ -4556,7 +4556,7 @@ class __$$FhirDeleteRequestCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FhirDeleteRequest extends FhirDeleteRequest {
-  _$FhirDeleteRequest(
+  const _$FhirDeleteRequest(
       {required this.base,
       required this.type,
       required this.id,
@@ -5338,7 +5338,7 @@ class _$FhirDeleteRequest extends FhirDeleteRequest {
 }
 
 abstract class FhirDeleteRequest extends FhirRequest {
-  factory FhirDeleteRequest(
+  const factory FhirDeleteRequest(
       {required final Uri base,
       required final R5ResourceType type,
       required final Id id,
@@ -5349,7 +5349,7 @@ abstract class FhirDeleteRequest extends FhirRequest {
       final List<String> parameters,
       final MimeType? mimeType,
       final Client? client}) = _$FhirDeleteRequest;
-  FhirDeleteRequest._() : super._();
+  const FhirDeleteRequest._() : super._();
 
   @override
 
@@ -5483,7 +5483,7 @@ class __$$FhirCreateRequestCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FhirCreateRequest extends FhirCreateRequest {
-  _$FhirCreateRequest(
+  const _$FhirCreateRequest(
       {required this.base,
       required this.resource,
       this.pretty = false,
@@ -6257,7 +6257,7 @@ class _$FhirCreateRequest extends FhirCreateRequest {
 }
 
 abstract class FhirCreateRequest extends FhirRequest {
-  factory FhirCreateRequest(
+  const factory FhirCreateRequest(
       {required final Uri base,
       required final Resource resource,
       final bool pretty,
@@ -6267,7 +6267,7 @@ abstract class FhirCreateRequest extends FhirRequest {
       final List<String> parameters,
       final MimeType? mimeType,
       final Client? client}) = _$FhirCreateRequest;
-  FhirCreateRequest._() : super._();
+  const FhirCreateRequest._() : super._();
 
   @override
 
@@ -6408,7 +6408,7 @@ class __$$FhirSearchRequestCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FhirSearchRequest extends FhirSearchRequest {
-  _$FhirSearchRequest(
+  const _$FhirSearchRequest(
       {required this.base,
       required this.type,
       this.pretty = false,
@@ -7199,7 +7199,7 @@ class _$FhirSearchRequest extends FhirSearchRequest {
 }
 
 abstract class FhirSearchRequest extends FhirRequest {
-  factory FhirSearchRequest(
+  const factory FhirSearchRequest(
       {required final Uri base,
       required final R5ResourceType type,
       final bool pretty,
@@ -7211,7 +7211,7 @@ abstract class FhirSearchRequest extends FhirRequest {
       final RestfulRequest restfulRequest,
       final MimeType? mimeType,
       final Client? client}) = _$FhirSearchRequest;
-  FhirSearchRequest._() : super._();
+  const FhirSearchRequest._() : super._();
 
   @override
 
@@ -7341,7 +7341,7 @@ class __$$FhirSearchAllRequestCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FhirSearchAllRequest extends FhirSearchAllRequest {
-  _$FhirSearchAllRequest(
+  const _$FhirSearchAllRequest(
       {required this.base,
       this.pretty = false,
       this.summary = Summary.none,
@@ -8110,7 +8110,7 @@ class _$FhirSearchAllRequest extends FhirSearchAllRequest {
 }
 
 abstract class FhirSearchAllRequest extends FhirRequest {
-  factory FhirSearchAllRequest(
+  const factory FhirSearchAllRequest(
       {required final Uri base,
       final bool pretty,
       final Summary summary,
@@ -8119,7 +8119,7 @@ abstract class FhirSearchAllRequest extends FhirRequest {
       final List<String> parameters,
       final MimeType? mimeType,
       final Client? client}) = _$FhirSearchAllRequest;
-  FhirSearchAllRequest._() : super._();
+  const FhirSearchAllRequest._() : super._();
 
   @override
 
@@ -8247,7 +8247,7 @@ class __$$FhirCapabilitiesRequestCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
-  _$FhirCapabilitiesRequest(
+  const _$FhirCapabilitiesRequest(
       {required this.base,
       this.pretty = false,
       this.summary = Summary.none,
@@ -9024,7 +9024,7 @@ class _$FhirCapabilitiesRequest extends FhirCapabilitiesRequest {
 }
 
 abstract class FhirCapabilitiesRequest extends FhirRequest {
-  factory FhirCapabilitiesRequest(
+  const factory FhirCapabilitiesRequest(
       {required final Uri base,
       final bool pretty,
       final Summary summary,
@@ -9034,7 +9034,7 @@ abstract class FhirCapabilitiesRequest extends FhirRequest {
       final Mode mode,
       final MimeType? mimeType,
       final Client? client}) = _$FhirCapabilitiesRequest;
-  FhirCapabilitiesRequest._() : super._();
+  const FhirCapabilitiesRequest._() : super._();
 
   @override
 
@@ -9175,7 +9175,7 @@ class __$$FhirTransactionRequestCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FhirTransactionRequest extends FhirTransactionRequest {
-  _$FhirTransactionRequest(
+  const _$FhirTransactionRequest(
       {required this.base,
       this.pretty = false,
       this.summary = Summary.none,
@@ -9950,7 +9950,7 @@ class _$FhirTransactionRequest extends FhirTransactionRequest {
 }
 
 abstract class FhirTransactionRequest extends FhirRequest {
-  factory FhirTransactionRequest(
+  const factory FhirTransactionRequest(
       {required final Uri base,
       final bool pretty,
       final Summary summary,
@@ -9960,7 +9960,7 @@ abstract class FhirTransactionRequest extends FhirRequest {
       required final Bundle bundle,
       final MimeType? mimeType,
       final Client? client}) = _$FhirTransactionRequest;
-  FhirTransactionRequest._() : super._();
+  const FhirTransactionRequest._() : super._();
 
   @override
 
@@ -10099,7 +10099,7 @@ class __$$FhirBatchRequestCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FhirBatchRequest extends FhirBatchRequest {
-  _$FhirBatchRequest(
+  const _$FhirBatchRequest(
       {required this.base,
       this.pretty = false,
       this.summary = Summary.none,
@@ -10873,7 +10873,7 @@ class _$FhirBatchRequest extends FhirBatchRequest {
 }
 
 abstract class FhirBatchRequest extends FhirRequest {
-  factory FhirBatchRequest(
+  const factory FhirBatchRequest(
       {required final Uri base,
       final bool pretty,
       final Summary summary,
@@ -10883,7 +10883,7 @@ abstract class FhirBatchRequest extends FhirRequest {
       required final Bundle bundle,
       final MimeType? mimeType,
       final Client? client}) = _$FhirBatchRequest;
-  FhirBatchRequest._() : super._();
+  const FhirBatchRequest._() : super._();
 
   @override
 
@@ -11042,7 +11042,7 @@ class __$$FhirHistoryRequestCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FhirHistoryRequest extends FhirHistoryRequest {
-  _$FhirHistoryRequest(
+  const _$FhirHistoryRequest(
       {required this.base,
       required this.type,
       required this.id,
@@ -11859,7 +11859,7 @@ class _$FhirHistoryRequest extends FhirHistoryRequest {
 }
 
 abstract class FhirHistoryRequest extends FhirRequest {
-  factory FhirHistoryRequest(
+  const factory FhirHistoryRequest(
       {required final Uri base,
       required final R5ResourceType type,
       required final Id id,
@@ -11874,7 +11874,7 @@ abstract class FhirHistoryRequest extends FhirRequest {
       final String? reference,
       final MimeType? mimeType,
       final Client? client}) = _$FhirHistoryRequest;
-  FhirHistoryRequest._() : super._();
+  const FhirHistoryRequest._() : super._();
 
   @override
 
@@ -12049,7 +12049,7 @@ class __$$FhirHistoryTypeRequestCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
-  _$FhirHistoryTypeRequest(
+  const _$FhirHistoryTypeRequest(
       {required this.base,
       required this.type,
       this.pretty = false,
@@ -12859,7 +12859,7 @@ class _$FhirHistoryTypeRequest extends FhirHistoryTypeRequest {
 }
 
 abstract class FhirHistoryTypeRequest extends FhirRequest {
-  factory FhirHistoryTypeRequest(
+  const factory FhirHistoryTypeRequest(
       {required final Uri base,
       required final R5ResourceType type,
       final bool pretty,
@@ -12873,7 +12873,7 @@ abstract class FhirHistoryTypeRequest extends FhirRequest {
       final String? reference,
       final MimeType? mimeType,
       final Client? client}) = _$FhirHistoryTypeRequest;
-  FhirHistoryTypeRequest._() : super._();
+  const FhirHistoryTypeRequest._() : super._();
 
   @override
 
@@ -13039,7 +13039,7 @@ class __$$FhirHistoryAllRequestCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
-  _$FhirHistoryAllRequest(
+  const _$FhirHistoryAllRequest(
       {required this.base,
       this.pretty = false,
       this.summary = Summary.none,
@@ -13842,7 +13842,7 @@ class _$FhirHistoryAllRequest extends FhirHistoryAllRequest {
 }
 
 abstract class FhirHistoryAllRequest extends FhirRequest {
-  factory FhirHistoryAllRequest(
+  const factory FhirHistoryAllRequest(
       {required final Uri base,
       final bool pretty,
       final Summary summary,
@@ -13855,7 +13855,7 @@ abstract class FhirHistoryAllRequest extends FhirRequest {
       final String? reference,
       final MimeType? mimeType,
       final Client? client}) = _$FhirHistoryAllRequest;
-  FhirHistoryAllRequest._() : super._();
+  const FhirHistoryAllRequest._() : super._();
 
   @override
 
@@ -14030,7 +14030,7 @@ class __$$FhirOperationRequestCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FhirOperationRequest extends FhirOperationRequest {
-  _$FhirOperationRequest(
+  const _$FhirOperationRequest(
       {required this.base,
       this.type,
       this.id,
@@ -14888,7 +14888,7 @@ class _$FhirOperationRequest extends FhirOperationRequest {
 }
 
 abstract class FhirOperationRequest extends FhirRequest {
-  factory FhirOperationRequest(
+  const factory FhirOperationRequest(
       {required final Uri base,
       final R5ResourceType? type,
       final Id? id,
@@ -14903,7 +14903,7 @@ abstract class FhirOperationRequest extends FhirRequest {
       final bool useFormData,
       final MimeType? mimeType,
       final Client? client}) = _$FhirOperationRequest;
-  FhirOperationRequest._() : super._();
+  const FhirOperationRequest._() : super._();
 
   @override
 

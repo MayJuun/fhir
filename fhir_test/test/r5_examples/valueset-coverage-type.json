@@ -2,14 +2,14 @@
   "resourceType": "ValueSet",
   "id": "coverage-type",
   "meta": {
-    "lastUpdated": "2022-05-06T17:02:42.916+00:00",
+    "lastUpdated": "2022-12-14T07:12:54.019+11:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
     ]
   },
   "text": {
     "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003eThis value set includes codes based on the following rules:\u003c/p\u003e\u003cul\u003e\u003cli\u003eInclude all codes defined in \u003ca href\u003d\"http://terminology.hl7.org/3.1.0/CodeSystem-coverage-selfpay.html\"\u003e\u003ccode\u003ehttp://terminology.hl7.org/CodeSystem/coverage-selfpay\u003c/code\u003e\u003c/a\u003e\u003c/li\u003e\u003cli\u003eImport all the codes that are contained in \u003ca href\u003d\"http://terminology.hl7.org/3.1.0/ValueSet-v3-ActCoverageTypeCode.html\"\u003ehttp://terminology.hl7.org/ValueSet/v3-ActCoverageTypeCode\u003c/a\u003e\u003c/li\u003e\u003c/ul\u003e\u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003eThis value set includes codes based on the following rules:\u003c/p\u003e\u003cul\u003e\u003cli\u003eInclude all codes defined in \u003ca href\u003d\"http://terminology.hl7.org/4.0.0/CodeSystem-coverage-selfpay.html\"\u003e\u003ccode\u003ehttp://terminology.hl7.org/CodeSystem/coverage-selfpay\u003c/code\u003e\u003c/a\u003e\u003c/li\u003e\u003cli\u003eImport all the codes that are contained in \u003ca href\u003d\"http://terminology.hl7.org/4.0.0/ValueSet-v3-ActCoverageTypeCode.html\"\u003ehttp://terminology.hl7.org/ValueSet/v3-ActCoverageTypeCode\u003c/a\u003e\u003c/li\u003e\u003c/ul\u003e\u003c/div\u003e"
   },
   "extension": [
     {
@@ -22,12 +22,18 @@
     {
       "system": "urn:ietf:rfc:3986",
       "value": "urn:oid:2.16.840.1.113883.4.642.3.520"
+    },
+    {
+      "use": "old",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.3.514"
     }
   ],
-  "version": "4.6.0",
-  "name": "CoverageTypeAndSelf-PayCodes",
+  "version": "5.0.0-snapshot3",
+  "name": "CoverageTypeAndSelfPayCodes",
   "title": "Coverage Type and Self-Pay Codes",
   "status": "draft",
+  "experimental": false,
   "publisher": "Financial Management",
   "contact": [
     {
@@ -40,6 +46,17 @@
     }
   ],
   "description": "This value set includes Coverage Type codes.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "copyright": "HL7 International.",
   "compose": {
     "include": [

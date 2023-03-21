@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><Observation xmlns="http://hl7.org/fhir">
+	<id value="bloodgroup"/>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "bloodgroup" </p></div><p><b>status</b>: final</p><p><b>category</b>: Laboratory <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="codesystem-observation-category.html">Observation Category Codes</a>#laboratory)</span></p><p><b>code</b>: Blood Group <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#883-9 "ABO group [Type] in Blood")</span></p><p><b>subject</b>: <a href="todo.html">Patient/infant</a></p><p><b>effective</b>: 2018-03-11T16:07:54Z</p><p><b>value</b>: A <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#112144000 "Blood group A (finding)")</span></p></div></text><status value="final"/>
+	<category>
+		<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+			<code value="laboratory"/>
+			<display value="Laboratory"/>
+		</coding>
+		<text value="Laboratory"/>
+	</category>
+	<code>
+		<coding>
+			<system value="http://loinc.org"/>
+			<code value="883-9"/>
+			<display value="ABO group [Type] in Blood"/>
+		</coding>
+		<text value="Blood Group"/>
+	</code>
+	<subject>
+		<reference value="Patient/infant"/>
+	</subject>
+	<effectiveDateTime value="2018-03-11T16:07:54+00:00"/>
+	<valueCodeableConcept>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="112144000"/>
+			<display value="Blood group A (finding)"/>
+		</coding>
+				<text value="A"/>
+	</valueCodeableConcept>
+</Observation>

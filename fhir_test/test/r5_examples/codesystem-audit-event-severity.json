@@ -2,14 +2,14 @@
   "resourceType": "CodeSystem",
   "id": "audit-event-severity",
   "meta": {
-    "lastUpdated": "2022-05-07T04:02:42.916+11:00",
+    "lastUpdated": "2022-12-14T07:12:54.019+11:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
     ]
   },
   "text": {
     "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n      \n      \u003cp\u003eThis code system http://hl7.org/fhir/audit-event-severity defines the following codes:\u003c/p\u003e\n      \n      \u003ctable class\u003d\"codes\"\u003e\n        \n        \u003ctr\u003e\n          \n          \u003ctd style\u003d\"white-space:nowrap\"\u003e\n            \n            \u003cb\u003eCode\u003c/b\u003e\n          \n          \u003c/td\u003e\n          \n          \u003ctd\u003e\n            \n            \u003cb\u003eDisplay\u003c/b\u003e\n          \n          \u003c/td\u003e\n          \n          \u003ctd\u003e\n            \n            \u003cb\u003eDefinition\u003c/b\u003e\n          \n          \u003c/td\u003e\n        \n        \u003c/tr\u003e\n        \n        \u003ctr\u003e\n          \n          \u003ctd style\u003d\"white-space:nowrap\"\u003eemergency\n            \n            \u003ca name\u003d\"audit-event-severity-emergency\"\u003e \u003c/a\u003e\n          \n          \u003c/td\u003e\n          \n          \u003ctd\u003eEmergency\u003c/td\u003e\n          \n          \u003ctd\u003eSystem is unusable.\u003c/td\u003e\n        \n        \u003c/tr\u003e\n        \n        \u003ctr\u003e\n          \n          \u003ctd style\u003d\"white-space:nowrap\"\u003ealert\n            \n            \u003ca name\u003d\"audit-event-severity-alert\"\u003e \u003c/a\u003e\n          \n          \u003c/td\u003e\n          \n          \u003ctd\u003eAlert\u003c/td\u003e\n          \n          \u003ctd\u003eAction must be taken immediately.\u003c/td\u003e\n        \n        \u003c/tr\u003e\n        \n        \u003ctr\u003e\n          \n          \u003ctd style\u003d\"white-space:nowrap\"\u003ecritical\n            \n            \u003ca name\u003d\"audit-event-severity-critical\"\u003e \u003c/a\u003e\n          \n          \u003c/td\u003e\n          \n          \u003ctd\u003eCritical\u003c/td\u003e\n          \n          \u003ctd\u003eCritical conditions.\u003c/td\u003e\n        \n        \u003c/tr\u003e\n        \n        \u003ctr\u003e\n          \n          \u003ctd style\u003d\"white-space:nowrap\"\u003eerror\n            \n            \u003ca name\u003d\"audit-event-severity-error\"\u003e \u003c/a\u003e\n          \n          \u003c/td\u003e\n          \n          \u003ctd\u003eError\u003c/td\u003e\n          \n          \u003ctd\u003eError conditions.\u003c/td\u003e\n        \n        \u003c/tr\u003e\n        \n        \u003ctr\u003e\n          \n          \u003ctd style\u003d\"white-space:nowrap\"\u003ewarning\n            \n            \u003ca name\u003d\"audit-event-severity-warning\"\u003e \u003c/a\u003e\n          \n          \u003c/td\u003e\n          \n          \u003ctd\u003eWarning\u003c/td\u003e\n          \n          \u003ctd\u003eWarning conditions.\u003c/td\u003e\n        \n        \u003c/tr\u003e\n        \n        \u003ctr\u003e\n          \n          \u003ctd style\u003d\"white-space:nowrap\"\u003enotice\n            \n            \u003ca name\u003d\"audit-event-severity-notice\"\u003e \u003c/a\u003e\n          \n          \u003c/td\u003e\n          \n          \u003ctd\u003eNotice\u003c/td\u003e\n          \n          \u003ctd\u003eNormal but significant condition.\u003c/td\u003e\n        \n        \u003c/tr\u003e\n        \n        \u003ctr\u003e\n          \n          \u003ctd style\u003d\"white-space:nowrap\"\u003einformational\n            \n            \u003ca name\u003d\"audit-event-severity-informational\"\u003e \u003c/a\u003e\n          \n          \u003c/td\u003e\n          \n          \u003ctd\u003eInformational\u003c/td\u003e\n          \n          \u003ctd\u003eInformational messages.\u003c/td\u003e\n        \n        \u003c/tr\u003e\n        \n        \u003ctr\u003e\n          \n          \u003ctd style\u003d\"white-space:nowrap\"\u003edebug\n            \n            \u003ca name\u003d\"audit-event-severity-debug\"\u003e \u003c/a\u003e\n          \n          \u003c/td\u003e\n          \n          \u003ctd\u003eDebug\u003c/td\u003e\n          \n          \u003ctd\u003eDebug-level messages.\u003c/td\u003e\n        \n        \u003c/tr\u003e\n      \n      \u003c/table\u003e\n    \n    \u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003eThis code system \u003ccode\u003ehttp://hl7.org/fhir/audit-event-severity\u003c/code\u003e defines the following codes:\u003c/p\u003e\u003ctable class\u003d\"codes\"\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDisplay\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDefinition\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eemergency\u003ca name\u003d\"audit-event-severity-emergency\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eEmergency\u003c/td\u003e\u003ctd\u003eSystem is unusable. e.g., This level should only be reported by infrastructure and should not be used by applications.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003ealert\u003ca name\u003d\"audit-event-severity-alert\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eAlert\u003c/td\u003e\u003ctd\u003eNotification should be sent to trigger action be taken. e.g., Loss of the primary network connection needing attention.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003ecritical\u003ca name\u003d\"audit-event-severity-critical\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eCritical\u003c/td\u003e\u003ctd\u003eCritical conditions. e.g., A failure in the system\u0027s primary application that will reset automatically.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eerror\u003ca name\u003d\"audit-event-severity-error\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eError\u003c/td\u003e\u003ctd\u003eError conditions. e.g., An application has exceeded its file storage limit and attempts to write are failing. \u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003ewarning\u003ca name\u003d\"audit-event-severity-warning\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eWarning\u003c/td\u003e\u003ctd\u003eWarning conditions. May indicate that an error will occur if action is not taken. e.g., A non-root file system has only 2GB remaining.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003enotice\u003ca name\u003d\"audit-event-severity-notice\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eNotice\u003c/td\u003e\u003ctd\u003eNotice messages. Normal but significant condition. Events that are unusual, but not error conditions.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003einformational\u003ca name\u003d\"audit-event-severity-informational\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eInformational\u003c/td\u003e\u003ctd\u003eNormal operational messages that require no action. e.g., An application has started, paused, or ended successfully.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003edebug\u003ca name\u003d\"audit-event-severity-debug\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eDebug\u003c/td\u003e\u003ctd\u003eDebug-level messages. Information useful to developers for debugging the application.\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
   },
   "extension": [
     {
@@ -29,15 +29,15 @@
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986",
-      "value": "urn:oid:2.16.840.1.113883.4.642.1.1467"
+      "value": "urn:oid:2.16.840.1.113883.4.642.4.1894"
     }
   ],
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "name": "AuditEventSeverity",
   "title": "AuditEventSeverity",
-  "status": "draft",
+  "status": "active",
   "experimental": false,
-  "date": "2021-01-05T10:01:24+11:00",
+  "date": "2022-06-06T10:01:24+11:00",
   "publisher": "HL7 (FHIR Project)",
   "contact": [
     {
@@ -54,6 +54,17 @@
     }
   ],
   "description": "The severity of the audit entry.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "caseSensitive": true,
   "valueSet": "http://hl7.org/fhir/ValueSet/audit-event-severity",
   "content": "complete",
@@ -61,42 +72,42 @@
     {
       "code": "emergency",
       "display": "Emergency",
-      "definition": "System is unusable."
+      "definition": "System is unusable. e.g., This level should only be reported by infrastructure and should not be used by applications."
     },
     {
       "code": "alert",
       "display": "Alert",
-      "definition": "Action must be taken immediately."
+      "definition": "Notification should be sent to trigger action be taken. e.g., Loss of the primary network connection needing attention."
     },
     {
       "code": "critical",
       "display": "Critical",
-      "definition": "Critical conditions."
+      "definition": "Critical conditions. e.g., A failure in the system\u0027s primary application that will reset automatically."
     },
     {
       "code": "error",
       "display": "Error",
-      "definition": "Error conditions."
+      "definition": "Error conditions. e.g., An application has exceeded its file storage limit and attempts to write are failing. "
     },
     {
       "code": "warning",
       "display": "Warning",
-      "definition": "Warning conditions."
+      "definition": "Warning conditions. May indicate that an error will occur if action is not taken. e.g., A non-root file system has only 2GB remaining."
     },
     {
       "code": "notice",
       "display": "Notice",
-      "definition": "Normal but significant condition."
+      "definition": "Notice messages. Normal but significant condition. Events that are unusual, but not error conditions."
     },
     {
       "code": "informational",
       "display": "Informational",
-      "definition": "Informational messages."
+      "definition": "Normal operational messages that require no action. e.g., An application has started, paused, or ended successfully."
     },
     {
       "code": "debug",
       "display": "Debug",
-      "definition": "Debug-level messages."
+      "definition": "Debug-level messages. Information useful to developers for debugging the application."
     }
   ]
 }

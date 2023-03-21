@@ -11,6 +11,14 @@
       "value": "781234"
     }
   ],
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/payment-type",
+        "code": "payment"
+      }
+    ]
+  },
   "status": "active",
   "period": {
     "start": "2014-08-16",
@@ -28,8 +36,8 @@
   },
   "outcome": "complete",
   "disposition": "2014 August mid-month settlement.",
-  "paymentDate": "2014-08-01",
-  "paymentAmount": {
+  "date": "2014-08-01",
+  "amount": {
     "value": 7000.00,
     "currency": "USD"
   },
@@ -37,11 +45,17 @@
     "system": "http://www.BenefitsInc.com/payment/2018",
     "value": "10-12345"
   },
-  "detail": [
+  "allocation": [
     {
       "identifier": {
         "system": "http://www.BenefitsInc.com/payment/2018/detail",
         "value": "10-12345-001"
+      },
+      "target": {
+        "identifier": {
+          "system": "http://happyvalleyclinic.com/claim",
+          "value": "AB12345"
+        }
       },
       "type": {
         "coding": [
@@ -50,12 +64,6 @@
             "code": "payment"
           }
         ]
-      },
-      "request": {
-        "identifier": {
-          "system": "http://happyvalleyclinic.com/claim",
-          "value": "AB12345"
-        }
       },
       "submitter": {
         "reference": "Organization/1"
@@ -80,6 +88,9 @@
         "system": "http://www.BenefitsInc.com/payment/2018/detail",
         "value": "10-12345-002"
       },
+      "target": {
+        "reference": "http://www.BenefitsInc.com/fhir/oralhealthclaim/225476332699"
+      },
       "type": {
         "coding": [
           {
@@ -87,9 +98,6 @@
             "code": "payment"
           }
         ]
-      },
-      "request": {
-        "reference": "http://www.BenefitsInc.com/fhir/oralhealthclaim/225476332699"
       },
       "date": "2014-08-12",
       "amount": {

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><ServiceRequest xmlns="http://hl7.org/fhir">
+	<id value="di"/>    <!--  	<extension url="http://hl7.org/fhir/StructureDefinition/bodysitecode">
+		<valueCodeableConcept>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<code value="51185008"/>
+				<display value="Thoracic structure"/>
+			</coding>
+		</valueCodeableConcept>
+</extension>
+	  --><meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: ServiceRequest</b><a name="di"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource ServiceRequest "di" </p></div><p><b>status</b>: <span title=" &#x9;&lt;extension url=&#34;http://hl7.org/fhir/StructureDefinition/bodysitecode&#34;&gt;&#xA;&#x9;&#x9;&lt;valueCodeableConcept&gt;&#xA;&#x9;&#x9;&#x9;&lt;coding&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;system value=&#34;http://snomed.info/sct&#34;/&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;code value=&#34;51185008&#34;/&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;display value=&#34;Thoracic structure&#34;/&gt;&#xA;&#x9;&#x9;&#x9;&lt;/coding&gt;&#xA;&#x9;&#x9;&lt;/valueCodeableConcept&gt;&#xA;&lt;/extension&gt;&#xA;&#x9; ">active</span></p><p><b>intent</b>: original-order</p><h3>Codes</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>Chest CT <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#24627-2)</span></td></tr></table><p><b>subject</b>: <a href="patient-example-dicom.html">Patient/dicom</a> " MINT_TEST"</p><p><b>occurrence</b>: 2013-05-08T09:33:27+07:00</p><p><b>requester</b>: <a href="practitioner-example.html">Practitioner/example: Dr. Adam Careful</a> "Adam CAREFUL"</p><h3>Reasons</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>Check for metastatic disease <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ()</span></td></tr></table></div></text><status value="active"/>
+	<intent value="original-order"/>
+	<code>
+	  <concept>
+		<coding>
+			<system value="http://loinc.org"/>
+			<code value="24627-2"/>
+		</coding>
+		<text value="Chest CT"/>
+	  </concept>
+	</code>
+	<subject>
+		<reference value="Patient/dicom"/>
+	</subject>
+	<occurrenceDateTime value="2013-05-08T09:33:27+07:00"/>
+	<requester>
+			<reference value="Practitioner/example"/>
+			<display value="Dr. Adam Careful"/>
+	</requester>
+	<reason>
+    <concept>
+  		<text value="Check for metastatic disease"/>
+    </concept>
+	</reason>
+</ServiceRequest>

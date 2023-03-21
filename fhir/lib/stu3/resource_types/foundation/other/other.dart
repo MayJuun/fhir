@@ -222,6 +222,51 @@ class BundleEntry with _$BundleEntry {
     BundleResponse? response,
   }) = _BundleEntry;
 
+  factory BundleEntry.get(String resourcePath, [FhirUri? canonicalBaseUrl]) =>
+      BundleEntry(
+          fullUrl: canonicalBaseUrl == null
+              ? null
+              : '$canonicalBaseUrl/$resourcePath',
+          request: BundleRequest(
+            method: BundleRequestMethod.get_,
+            url: resourcePath,
+          ));
+
+  factory BundleEntry.post(Resource resource, [FhirUri? canonicalBaseUrl]) =>
+      BundleEntry(
+          resource: resource,
+          fullUrl: canonicalBaseUrl == null
+              ? null
+              : '$canonicalBaseUrl/${resource.path}',
+          request: BundleRequest(
+            method: BundleRequestMethod.post,
+            url: resource.path,
+          ));
+
+  factory BundleEntry.put(Resource resource, [FhirUri? canonicalBaseUrl]) =>
+      BundleEntry(
+          resource: resource,
+          fullUrl: canonicalBaseUrl == null
+              ? null
+              : '$canonicalBaseUrl/${resource.path}',
+          request: BundleRequest(
+            method: BundleRequestMethod.put,
+            url: resource.path,
+          ));
+
+  factory BundleEntry.delete(
+    String resourcePath, [
+    FhirUri? canonicalBaseUrl,
+  ]) =>
+      BundleEntry(
+          fullUrl: canonicalBaseUrl == null
+              ? null
+              : '$canonicalBaseUrl/$resourcePath',
+          request: BundleRequest(
+            method: BundleRequestMethod.delete,
+            url: resourcePath,
+          ));
+
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
@@ -759,6 +804,9 @@ class OperationOutcome with Resource, _$OperationOutcome {
     List<FhirExtension>? modifierExtension,
     required List<OperationOutcomeIssue> issue,
   }) = _OperationOutcome;
+
+  bool get isInformational =>
+      issue.first.code.toString().toLowerCase() == 'informational';
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory OperationOutcome.fromYaml(dynamic yaml) => yaml is String

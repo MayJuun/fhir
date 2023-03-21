@@ -17,6 +17,7 @@
     {
       "coding": [
         {
+          "system": "http://terminology.hl7.org/CodeSystem/service-category",
           "code": "31",
           "display": "Specialist Surgical"
         }
@@ -25,18 +26,22 @@
   ],
   "serviceType": [
     {
-      "coding": [
-        {
-          "code": "221",
-          "display": "Surgery - General"
-        }
-      ]
+      "concept": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/service-type",
+            "code": "221",
+            "display": "Surgery - General"
+          }
+        ]
+      }
     }
   ],
   "specialty": [
     {
       "coding": [
         {
+          "system": "http://snomed.info/sct",
           "code": "394610002",
           "display": "Surgery-Neurosurgery"
         }

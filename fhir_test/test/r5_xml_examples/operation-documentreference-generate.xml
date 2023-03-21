@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<OperationDefinition xmlns="http://hl7.org/fhir">
+  <id value="DocumentReference-generate"/>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>URL: [base]/DocumentReference/$generate</p>
+      <p>Parameters</p>
+      <table class="grid">
+        <tr>
+          <td>
+            <b>Use</b>
+          </td>
+          <td>
+            <b>Name</b>
+          </td>
+          <td>
+            <b>Cardinality</b>
+          </td>
+          <td>
+            <b>Type</b>
+          </td>
+          <td>
+            <b>Binding</b>
+          </td>
+          <td>
+            <b>Documentation</b>
+          </td>
+        </tr>
+        <tr>
+          <td>IN</td>
+          <td>url</td>
+          <td>1..1</td>
+          <td>
+            <a href="datatypes.html#uri">uri</a>
+          </td>
+          <td/>
+          <td>
+            <div>
+              <p>The URL to the source document. This may be a general URL or a Binary or a Composition or a Bundle.</p>
+
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>IN</td>
+          <td>persist</td>
+          <td>0..1</td>
+          <td>
+            <a href="datatypes.html#boolean">boolean</a>
+          </td>
+          <td/>
+          <td>
+            <div>
+              <p>Whether to store the document at the document end-point (/Document) or not, once it is generated (default is for the server to decide).</p>
+
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>OUT</td>
+          <td>docRef</td>
+          <td>0..1</td>
+          <td>
+            <a href="documentreference.html">DocumentReference</a>
+          </td>
+          <td/>
+          <td>
+            <div>
+              <p>The server either returns a single document reference, or it returns an error. If the input url refers to another server, it is at the discretion of the server whether to retrieve it or return an error.</p>
+
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div>
+        <p>The server either returns a search result containing a single document reference,
+or it returns an error.
+If the URI refers to another server, it is at the discretion of the
+server whether to retrieve it or return an error.</p>
+
+      </div>
+    </div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="3"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use"/>
+  </extension>
+  <url value="http://hl7.org/fhir/OperationDefinition/DocumentReference-generate"/>
+  <version value="5.0.0-snapshot3"/>
+  <name value="Generate"/>
+  <title value="Generate a DocumentReference from a document"/>
+  <status value="draft"/>
+  <kind value="operation"/>
+  <experimental value="false"/>
+  <date value="2022-12-14T07:12:54+11:00"/>
+  <publisher value="HL7 (FHIR Project)"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.org/fhir"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="fhir@lists.hl7.org"/>
+    </telecom>
+  </contact>
+  <description value="A client can ask a server to generate a document reference from a document.&#xA;The server reads the existing document and generates a matching DocumentReference&#xA;resource, or returns one it has previously generated. Servers may be able to &#xA;return or generate document references for the following types of content:"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <affectsState value="true"/>
+  <code value="generate"/>
+  <comment value="The server either returns a search result containing a single document reference, &#xA;or it returns an error. &#xA;If the URI refers to another server, it is at the discretion of the &#xA;server whether to retrieve it or return an error."/>
+  <resource value="DocumentReference"/>
+  <system value="false"/>
+  <type value="true"/>
+  <instance value="false"/>
+  <parameter>
+    <name value="url"/>
+    <use value="in"/>
+    <min value="1"/>
+    <max value="1"/>
+    <documentation value="The URL to the source document. This may be a general URL or a Binary or a Composition or a Bundle."/>
+    <type value="uri"/>
+  </parameter>
+  <parameter>
+    <name value="persist"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="Whether to store the document at the document end-point (/Document) or not, once it is generated (default is for the server to decide)."/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="docRef"/>
+    <use value="out"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="The server either returns a single document reference, or it returns an error. If the input url refers to another server, it is at the discretion of the server whether to retrieve it or return an error."/>
+    <type value="DocumentReference"/>
+  </parameter>
+</OperationDefinition>

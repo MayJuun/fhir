@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><ResearchSubject xmlns="http://hl7.org/fhir">
+	<id value="example"/>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text>
+		<status value="generated"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">[Put rendering here]</div>
+	</text>
+	<identifier>
+    <type>
+      <text value="Subject id"/>
+    </type>
+    <system value="http://example.org/studysubjectids"/>
+    <value value="123"/>
+	</identifier>
+	<status value="active"/>
+
+  <progress>
+    <type>
+      <coding>
+        <code value="state"/>
+      </coding>
+    </type>
+    <subjectState>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/research-subject-state"/>
+				<code value="on-study"/>
+      </coding>
+    </subjectState>
+    <startDate value="2019-06-10"/>
+  </progress>
+  <progress>
+    <type>
+      <coding>
+        <code value="milestone"/>
+      </coding>
+    </type>
+    <milestone>
+      <coding>
+        <code value="SignedUp"/>
+      </coding>
+    </milestone>
+    <startDate value="2019-06-06"/>
+  </progress>
+  <progress>
+    <type>
+      <coding>
+        <code value="milestone"/>
+      </coding>
+    </type>
+    <milestone>
+      <coding>
+        <code value="Randomized"/>
+      </coding>
+    </milestone>
+    <startDate value="2019-06-10"/>
+  </progress>
+	<study>
+    <reference value="ResearchStudy/example"/>
+	</study>
+	<subject>
+    <reference value="Patient/example"/>
+	</subject>
+</ResearchSubject>

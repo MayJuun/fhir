@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><Observation xmlns="http://hl7.org/fhir">
+    <id value="body-weight-with-arabic-code"/>
+    <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Observation</b><a name="body-weight-with-arabic-code"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Observation "body-weight-with-arabic-code" </p></div><p><b>status</b>: final</p><p><b>category</b>: Vital Signs <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-observation-category.html">Observation Category Codes</a>#vital-signs)</span></p><p><b>code</b>: Body Weight <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#29463-7; <a href="https://loinc.org/">LOINC</a>#3141-9 "Body weight Measured"; <a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#27113001 "Body weight"; clinical-codes#body-weight; #وزن-الجسم "وزن الجسم")</span></p><p><b>subject</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><p><b>encounter</b>: <a href="encounter-example.html">Encounter/example</a></p><p><b>effective</b>: 2016-03-28</p><p><b>value</b>: 185 lbs<span style="background: LightGoldenRodYellow"> (Details: UCUM code [lb_av] = 'lb_av')</span></p></div></text><status value="final"/>
+    <category>
+        <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="vital-signs"/>
+            <display value="Vital Signs"/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="29463-7"/>     <!--   more generic methodless LOINC   -->
+            <display value="Body Weight"/>
+        </coding>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="3141-9"/>     <!--   translation is more specific method = measured LOINC   -->
+            <display value="Body weight Measured"/>
+        </coding>
+            <!--   SNOMED CT Codes - becoming more common   -->
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="27113001"/>
+            <display value="Body weight"/>
+        </coding>
+            <!--   Also, a local code specific to the source system   -->
+        <coding>
+            <system value="http://acme.org/devices/clinical-codes"/>
+            <code value="body-weight"/>
+            <display value="Body Weight"/>
+        </coding>
+            <!--   Plus, a local code and display for body weight in Arabic   -->
+        <coding>
+            <system value="http://i18n.example/rtl-code/"/>
+            <code value="وزن-الجسم"/>
+            <display value="وزن الجسم"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/example"/>
+    </subject>
+    <encounter>
+        <reference value="Encounter/example"/>
+    </encounter>
+    <effectiveDateTime value="2016-03-28"/>
+    <valueQuantity>
+        <value value="185"/>
+        <unit value="lbs"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="[lb_av]"/>
+    </valueQuantity>
+</Observation>

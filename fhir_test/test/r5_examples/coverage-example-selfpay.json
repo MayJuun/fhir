@@ -12,6 +12,14 @@
     }
   ],
   "status": "active",
+  "kind": "self-pay",
+  "paymentBy": [
+    {
+      "party": {
+        "reference": "Patient/5"
+      }
+    }
+  ],
   "type": {
     "coding": [
       {
@@ -37,11 +45,6 @@
   "period": {
     "end": "2012-03-17"
   },
-  "payor": [
-    {
-      "reference": "Patient/5"
-    }
-  ],
   "meta": {
     "tag": [
       {

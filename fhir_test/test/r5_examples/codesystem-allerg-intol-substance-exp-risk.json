@@ -2,14 +2,14 @@
   "resourceType": "CodeSystem",
   "id": "allerg-intol-substance-exp-risk",
   "meta": {
-    "lastUpdated": "2022-05-06T17:02:42.916+00:00",
+    "lastUpdated": "2022-12-14T07:12:54.019+11:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
     ]
   },
   "text": {
     "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003eThis code system http://hl7.org/fhir/allerg-intol-substance-exp-risk defines the following codes:\u003c/p\u003e\u003ctable class\u003d\"codes\"\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDisplay\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDefinition\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eknown-reaction-risk\u003ca name\u003d\"allerg-intol-substance-exp-risk-known-reaction-risk\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eKnown Reaction Risk\u003c/td\u003e\u003ctd\u003eKnown risk of allergy or intolerance reaction upon exposure to the specified substance.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eno-known-reaction-risk\u003ca name\u003d\"allerg-intol-substance-exp-risk-no-known-reaction-risk\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eNo Known Reaction Risk\u003c/td\u003e\u003ctd\u003eNo known risk of allergy or intolerance reaction upon exposure to the specified substance.\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003eThis code system \u003ccode\u003ehttp://hl7.org/fhir/allerg-intol-substance-exp-risk\u003c/code\u003e defines the following codes:\u003c/p\u003e\u003ctable class\u003d\"codes\"\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDisplay\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDefinition\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eknown-reaction-risk\u003ca name\u003d\"allerg-intol-substance-exp-risk-known-reaction-risk\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eKnown Reaction Risk\u003c/td\u003e\u003ctd\u003eKnown risk of allergy or intolerance reaction upon exposure to the specified substance.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eno-known-reaction-risk\u003ca name\u003d\"allerg-intol-substance-exp-risk-no-known-reaction-risk\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eNo Known Reaction Risk\u003c/td\u003e\u003ctd\u003eNo known risk of allergy or intolerance reaction upon exposure to the specified substance.\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
   },
   "extension": [
     {
@@ -21,11 +21,30 @@
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986",
-      "value": "urn:oid:2.16.840.1.113883.4.642.1.941"
+      "value": "urn:oid:2.16.840.1.113883.4.642.1.1275"
+    },
+    {
+      "use": "old",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.1.858"
     }
   ],
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "name": "AllergyIntoleranceSubstanceExposureRisk",
+  "status": "draft",
+  "experimental": false,
+  "description": "AllergyIntoleranceSubstanceExposureRisk",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "caseSensitive": true,
   "content": "complete",
   "concept": [

@@ -1,6 +1,6 @@
 {
   "resourceType": "Questionnaire",
-  "id": "qs1",
+  "id": "qgen-elmlibrary1",
   "contained": [
     {
       "resourceType": "ValueSet",
@@ -9,16 +9,16 @@
       "status": "active",
       "description": "Type options for Library.subject[x]",
       "expansion": {
-        "identifier": "urn:uuid:c7f66fe0-6477-4599-8072-63dea94fe598",
-        "timestamp": "2022-05-06T17:11:27+00:00",
+        "identifier": "urn:uuid:102433a0-468f-4ef9-a52e-301c6b2861ba",
+        "timestamp": "2022-12-14T07:16:49+11:00",
         "contains": [
           {
-            "system": "http://hl7.org/fhir/data-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "CodeableConcept",
             "display": "CodeableConcept"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
+            "system": "http://hl7.org/fhir/fhir-types",
             "code": "Group",
             "display": "Group"
           }
@@ -26,14 +26,16 @@
       }
     }
   ],
+  "url": "http://hl7.org/fhir/Questionnaire/qgen-elmlibrary1",
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "status": "draft",
-  "date": "2020-12-28T05:55:11+00:00",
+  "experimental": false,
+  "date": "2020-12-28T16:55:11+11:00",
   "publisher": "HL7",
   "item": [
     {
@@ -104,7 +106,7 @@
                 }
               ],
               "linkId": "Library.id-flyover",
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Within the context of the FHIR RESTful interactions, the resource has an id except for cases like the create and conditional update. Otherwise, the use of the resouce id depends on the given use case.",
               "type": "display"
             },
             {
@@ -296,7 +298,7 @@
                 }
               ],
               "linkId": "Library.contained-flyover",
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This is allowed to be a Parameters resource if and only if it is referenced by a resource that provides context/meaning. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags in their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -393,7 +395,7 @@
                 }
               ],
               "linkId": "Library.url-flyover",
-              "text": "An absolute URI that is used to identify this library when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this library is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the library is stored on different servers. Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.\n\nThe determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). \n\nIn some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.",
+              "text": "An absolute URI that is used to identify this library when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this library is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the library is stored on different servers. Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.\n\nThe determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). \n\nIn some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.",
               "type": "display"
             },
             {
@@ -496,7 +498,7 @@
                 }
               ],
               "linkId": "Library.version-flyover",
-              "text": "The identifier that is used to identify this version of the library when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the library author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence. To provide a version consistent with the Decision Support Service specification, use the format Major.Minor.Revision (e.g. 1.0.0). For more information on versioning knowledge assets, refer to the Decision Support Service specification. Note that a version is required for non-experimental active artifacts. There may be different library instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the library with the format [url]|[version].",
+              "text": "The identifier that is used to identify this version of the library when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the library author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence. To provide a version consistent with the Decision Support Service specification, use the format Major.Minor.Revision (e.g. 1.0.0). For more information on versioning knowledge assets, refer to the Decision Support Service specification. Note that a version is required for non-experimental active artifacts. There may be different library instances that have the same identifier but different versions.  The version can be appended to the url in a reference to allow a reference to a particular business version of the library with the format [url]|[version]. The version SHOULD NOT contain a \u0027#\u0027 - see [Business Version](resource.html#bv-format).",
               "type": "display"
             },
             {
@@ -879,8 +881,8 @@
                     {
                       "extension": [
                         {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                          "valueCode": "Group"
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                          "valueCode": "Group, Group"
                         },
                         {
                           "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -930,7 +932,7 @@
                 }
               ],
               "linkId": "Library.date-flyover",
-              "text": "The date  (and optionally time) when the library was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the library changes. Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the library. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.",
+              "text": "The date  (and optionally time) when the library was last significantly changed. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the library changes. The date is often not tracked until the resource is published, but may be present on draft content. Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the library. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.",
               "type": "display"
             },
             {
@@ -978,12 +980,12 @@
                 }
               ],
               "linkId": "Library.publisher-flyover",
-              "text": "The name of the organization or individual that published the library. Usually an organization but may be an individual. The publisher (or steward) of the library is the organization or individual primarily responsible for the maintenance and upkeep of the library. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the library. This item SHOULD be populated unless the information is available from context.",
+              "text": "The name of the organization or individual responsible for the release and ongoing maintenance of the library. Usually an organization but may be an individual. The publisher (or steward) of the library is the organization or individual primarily responsible for the maintenance and upkeep of the library. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the library. This item SHOULD be populated unless the information is available from context.",
               "type": "display"
             },
             {
               "linkId": "Library.publisher.value",
-              "text": "Name of the publisher (organization or individual)",
+              "text": "Name of the publisher/steward (organization or individual)",
               "type": "string",
               "required": false,
               "repeats": false
@@ -1059,7 +1061,7 @@
                 }
               ],
               "linkId": "Library.description-flyover",
-              "text": "A free text natural language description of the library from a consumer\u0027s perspective. This description can be used to capture details such as why the library was built, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the library as conveyed in the \u0027text\u0027 field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the library is presumed to be the predominant language in the place the library was created).",
+              "text": "A free text natural language description of the library from a consumer\u0027s perspective. This description can be used to capture details such as comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc. It is not a rendering of the library as conveyed in the \u0027text\u0027 field of the resource itself. This item SHOULD be populated unless the information is available from context (e.g. the language of the library is presumed to be the predominant language in the place the library was created).",
               "type": "display"
             },
             {
@@ -1620,479 +1622,8 @@
           ]
         },
         {
-          "linkId": "Library.relatedArtifact",
-          "text": "Additional documentation, citations, etc.",
-          "type": "group",
-          "required": false,
-          "repeats": true,
-          "item": [
-            {
-              "linkId": "Library.relatedArtifact:dependency-display",
-              "text": "Each related artifact is either an attachment, or a reference to another resource, but not both.",
-              "type": "display"
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                  "valueCodeableConcept": {
-                    "coding": [
-                      {
-                        "system": "http://hl7.org/fhir/questionnaire-item-control",
-                        "code": "flyover",
-                        "display": "Fly-over"
-                      }
-                    ]
-                  }
-                }
-              ],
-              "linkId": "Library.relatedArtifact:dependency-flyover",
-              "text": "Related artifacts such as additional documentation, justification, or bibliographic references.",
-              "type": "display"
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "string"
-                }
-              ],
-              "linkId": "Library.relatedArtifact.id",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "linkId": "Library.relatedArtifact.id-flyover",
-                  "text": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-                  "type": "display"
-                },
-                {
-                  "linkId": "Library.relatedArtifact.id.value",
-                  "text": "Unique id for inter-element referencing",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                }
-              ]
-            },
-            {
-              "linkId": "Library.relatedArtifact.extension",
-              "text": "Additional content defined by implementations",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "linkId": "Library.relatedArtifact.extension-flyover",
-                  "text": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-                  "type": "display"
-                }
-              ]
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "code"
-                }
-              ],
-              "linkId": "Library.relatedArtifact.type",
-              "type": "group",
-              "required": true,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "linkId": "Library.relatedArtifact.type-flyover",
-                  "text": "The type of relationship to the related artifact. The presence of both sides of a relationship type (e.g. successor and predecessor) is required to support use cases where one side of a relationship is not represented in FHIR. However, this feature SHALL NOT be used to create bi-directional resource links in FHIR instances.",
-                  "type": "display"
-                },
-                {
-                  "linkId": "Library.relatedArtifact.type.value",
-                  "text": "type",
-                  "type": "coding",
-                  "required": false,
-                  "repeats": false,
-                  "answerConstraint": "optionsOrType"
-                }
-              ]
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "CodeableConcept"
-                }
-              ],
-              "linkId": "Library.relatedArtifact.classifier",
-              "text": "Additional classifiers",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "linkId": "Library.relatedArtifact.classifier-flyover",
-                  "text": "Provides additional classifiers of the related artifact.",
-                  "type": "display"
-                },
-                {
-                  "linkId": "Library.relatedArtifact.classifier.coding",
-                  "text": "code:",
-                  "type": "coding",
-                  "required": false,
-                  "repeats": false,
-                  "answerConstraint": "optionsOnly"
-                },
-                {
-                  "linkId": "Library.relatedArtifact.classifier.text",
-                  "text": "text:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                }
-              ]
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "string"
-                }
-              ],
-              "linkId": "Library.relatedArtifact.label",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "linkId": "Library.relatedArtifact.label-flyover",
-                  "text": "A short label that can be used to reference the citation from elsewhere in the containing artifact, such as a footnote index.",
-                  "type": "display"
-                },
-                {
-                  "linkId": "Library.relatedArtifact.label.value",
-                  "text": "Short label",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                }
-              ]
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "string"
-                }
-              ],
-              "linkId": "Library.relatedArtifact.display",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "linkId": "Library.relatedArtifact.display-flyover",
-                  "text": "A brief description of the document or knowledge resource being referenced, suitable for display to a consumer.",
-                  "type": "display"
-                },
-                {
-                  "linkId": "Library.relatedArtifact.display.value",
-                  "text": "Brief description of the related artifact",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                }
-              ]
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "string"
-                }
-              ],
-              "linkId": "Library.relatedArtifact.citation",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "linkId": "Library.relatedArtifact.citation-flyover",
-                  "text": "A bibliographic citation for the related artifact. This text SHOULD be formatted according to an accepted citation format. Additional structured information about citations should be captured as extensions.",
-                  "type": "display"
-                },
-                {
-                  "linkId": "Library.relatedArtifact.citation.value",
-                  "text": "Bibliographic citation for the artifact",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                }
-              ]
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "Attachment"
-                }
-              ],
-              "linkId": "Library.relatedArtifact.document",
-              "text": "What document is being referenced",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "linkId": "Library.relatedArtifact.document-flyover",
-                  "text": "The document being referenced, represented as an attachment. This is exclusive with the resource element.",
-                  "type": "display"
-                }
-              ]
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "uri"
-                }
-              ],
-              "linkId": "Library.relatedArtifact.resource",
-              "type": "group",
-              "required": true,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "linkId": "Library.relatedArtifact.resource-flyover",
-                  "text": "The related artifact, such as a library, value set, profile, or other knowledge resource. If the type is predecessor, this is a reference to the succeeding knowledge resource. If the type is successor, this is a reference to the prior knowledge resource.",
-                  "type": "display"
-                },
-                {
-                  "linkId": "Library.relatedArtifact.resource.value",
-                  "text": "What artifact is being referenced",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                }
-              ]
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "Reference"
-                }
-              ],
-              "linkId": "Library.relatedArtifact.resourceReference",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "linkId": "Library.relatedArtifact.resourceReference-flyover",
-                  "text": "The related artifact, if the artifact is not a canonical resource, or a resource reference to a canonical resource. If both resource and resourceReference are present, they SHOULD be consistent and reference the same resource. Although relatedArtifact is intended to support references to definitional resources, there are cases where non-definitional resources can be definitional (such as Location where the kind is mode). Related artifacts SHOULD be used to reference definitional resources, and profiles SHOULD be used to make that explicit for particular use cases.",
-                  "type": "display"
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                      "valueCode": "Resource"
-                    },
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
-                      "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
-                    }
-                  ],
-                  "linkId": "Library.relatedArtifact.resourceReference.value",
-                  "text": "What artifact, if not a conformance resource",
-                  "type": "reference",
-                  "required": false,
-                  "repeats": false
-                }
-              ]
-            }
-          ]
+          "linkId": "Library.relatedArtifact:dependency-grp",
+          "type": "group"
         },
         {
           "linkId": "Library.parameter",
@@ -2254,14 +1785,5 @@
         }
       ]
     }
-  ],
-  "meta": {
-    "tag": [
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-        "code": "HTEST",
-        "display": "test health data"
-      }
-    ]
-  }
+  ]
 }

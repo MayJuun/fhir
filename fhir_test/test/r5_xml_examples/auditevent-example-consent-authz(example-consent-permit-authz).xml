@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><AuditEvent xmlns="http://hl7.org/fhir">
+	<id value="example-consent-permit-authz"/>
+
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: AuditEvent</b><a name="example-consent-permit-authz"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource AuditEvent "example-consent-permit-authz" </p></div><p><b>code</b>: Query <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://dicom.nema.org/resources/ontology/DCM">DICOM</a>#110112)</span></p><p><b>action</b>: E</p><p><b>recorded</b>: 9 Sept 2021, 7:51:59 am</p><h3>Outcomes</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td><td><b>Detail</b></td></tr><tr><td>*</td><td>Success (Details: http://terminology.hl7.org/CodeSystem/audit-event-outcome code success = 'Success', stated as 'Success')</td><td>CONSENT_PERMIT <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ()</span></td></tr></table><p><b>patient</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><h3>Agents</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Who</b></td><td><b>Requestor</b></td><td><b>Authorization</b></td></tr><tr><td>*</td><td>Destination Role ID <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://dicom.nema.org/resources/ontology/DCM">DICOM</a>#110152)</span></td><td><span/></td><td>true</td><td>treatment <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-ActReason.html">ActReason</a>#TREAT)</span></td></tr></table><h3>Sources</h3><table class="grid"><tr><td>-</td><td><b>Observer</b></td><td><b>Type</b></td></tr><tr><td>*</td><td><span>: LEAP Consent Decision Service</span></td><td>Application Server <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-security-source-type.html">Audit Event Source Type</a>#4)</span></td></tr></table><h3>Entities</h3><table class="grid"><tr><td>-</td><td><b>What</b></td><td><b>Role</b></td></tr><tr><td>*</td><td><a href="consent-example.html">Consent/consent-example-basic</a></td><td>Domain Resource <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-object-role.html">AuditEventEntityRole</a>#4)</span></td></tr></table></div></text><code>
+		<coding>
+			<system value="http://dicom.nema.org/resources/ontology/DCM"/>
+			<code value="110112"/>
+			<display value="Query"/>
+		</coding>
+	</code>
+	<action value="E"/>
+	<recorded value="2021-09-08T21:51:59.932Z"/>
+	<outcome>
+		<code>
+			<system value="http://terminology.hl7.org/CodeSystem/audit-event-outcome"/>
+			<code value="success"/>
+			<display value="Success"/>
+		</code>
+		<detail>
+			<text value="CONSENT_PERMIT"/>
+		</detail>
+	</outcome>
+		<patient>
+			<reference value="Patient/example"/>
+		</patient>
+	<agent>
+		<type>
+			<coding>
+				<system value="http://dicom.nema.org/resources/ontology/DCM"/>
+				<code value="110152"/>
+				<display value="Destination Role ID"/>
+			</coding>
+		</type>
+		<who>
+			<identifier>
+				<system value="https://github.com/synthetichealth/synthea"/>
+				<value value="Org1"/>
+			</identifier>
+		</who>
+		<requestor value="true"/>
+		<authorization>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+				<code value="TREAT"/>
+			</coding>
+		</authorization>
+	</agent>
+	<source>
+		<observer>
+			<display value="LEAP Consent Decision Service"/>
+		</observer>
+		<type>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/security-source-type"/>
+				<code value="4"/>
+				<display value="Application Server"/>
+			</coding>
+		</type>
+	</source>
+	<entity>
+		<what>
+			<reference value="Consent/consent-example-basic"/>
+		</what>
+		<role>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/object-role"/>
+				<code value="4"/>
+				<display value="Domain Resource"/>
+			</coding>
+		</role>
+	</entity>
+</AuditEvent>

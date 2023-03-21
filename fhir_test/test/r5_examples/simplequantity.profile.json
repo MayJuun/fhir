@@ -3,7 +3,7 @@
   "id": "SimpleQuantity",
   "text": {
     "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003ch2\u003eData type SimpleQuantity\u003c/h2\u003e\u003cp\u003eA fixed quantity (no comparator)\u003c/p\u003e\u003ch3\u003eRule\u003c/h3\u003e\u003cp\u003eThe comparator is not used on a SimpleQuantity\u003c/p\u003e\u003cp\u003eXPath:\u003c/p\u003e\u003cblockquote\u003e\u003cpre\u003enot(exists(f:comparator))\u003c/pre\u003e\u003c/blockquote\u003e\u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003ch2\u003eDatatype SimpleQuantity\u003c/h2\u003e\u003cp\u003eA fixed quantity (no comparator)\u003c/p\u003e\u003ch3\u003eRule\u003c/h3\u003e\u003cp\u003eThe comparator is not used on a SimpleQuantity\u003c/p\u003e\u003cp\u003eExpression:\u003c/p\u003e\u003cblockquote\u003e\u003cpre\u003ecomparator.empty()\u003c/pre\u003e\u003c/blockquote\u003e\u003c/div\u003e"
   },
   "extension": [
     {
@@ -16,10 +16,11 @@
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/SimpleQuantity",
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "name": "SimpleQuantity",
   "status": "active",
-  "date": "2022-05-06T17:02:42+00:00",
+  "experimental": false,
+  "date": "2022-12-14T07:12:54+11:00",
   "publisher": "HL7 FHIR Standard",
   "contact": [
     {
@@ -32,7 +33,18 @@
     }
   ],
   "description": "A fixed quantity (no comparator)",
-  "fhirVersion": "4.6.0",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "5.0.0-snapshot3",
   "mapping": [
     {
       "identity": "v2",
@@ -71,7 +83,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -79,15 +90,13 @@
             "severity": "error",
             "human": "If a code for the unit is present, the system SHALL also be present",
             "expression": "code.empty() or system.exists()",
-            "xpath": "not(exists(f:code)) or exists(f:system)",
             "source": "http://hl7.org/fhir/StructureDefinition/Quantity"
           },
           {
             "key": "sqty-1",
             "severity": "error",
             "human": "The comparator is not used on a SimpleQuantity",
-            "expression": "comparator.empty()",
-            "xpath": "not(exists(f:comparator))"
+            "expression": "comparator.empty()"
           }
         ],
         "isModifier": false,
@@ -126,7 +135,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "string"
+                "valueUrl": "id"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -179,7 +188,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -187,7 +195,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -225,7 +232,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -267,7 +273,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -286,7 +291,7 @@
             }
           ],
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/ValueSet/quantity-comparator|4.6.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/quantity-comparator|5.0.0-snapshot3"
         },
         "mapping": [
           {
@@ -333,7 +338,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -377,7 +381,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -425,7 +428,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -458,8 +460,7 @@
             "key": "sqty-1",
             "severity": "error",
             "human": "The comparator is not used on a SimpleQuantity",
-            "expression": "comparator.empty()",
-            "xpath": "not(exists(f:comparator))"
+            "expression": "comparator.empty()"
           }
         ],
         "isModifier": false

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><Observation xmlns="http://hl7.org/fhir">
+	<id value="f203"/>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "f203" </p></div><p><b>identifier</b>: id: 1304-03720-Bicarbonate</p><p><b>status</b>: final</p><p><b>code</b>: Bicarbonate [Moles/?volume] in Serum <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#1963-8; <a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#365722008 "Bicarbonate level")</span></p><p><b>subject</b>: <a href="patient-f201.html">Patient/f201: Roel</a> "Roel"</p><p><b>issued</b>: 05/04/2013 12:34:00 AM</p><p><b>performer</b>: <a href="practitioner-f202.html">Practitioner/f202: Luigi Maas</a> "Luigi Maas"</p><p><b>value</b>: 28 mmol/L<span style="background: LightGoldenRodYellow"> (Details: SNOMED CT code 258813002 = 'mM')</span></p><p><b>interpretation</b>: Serum bicarbonate level normal <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#166698001; <a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-ObservationInterpretation.html">ObservationInterpretation</a>#N)</span></p><p><b>method</b>: enzymatic method <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ()</span></p><h3>ReferenceRanges</h3><table class="grid"><tr><td>-</td><td><b>Low</b></td><td><b>High</b></td><td><b>Type</b></td></tr><tr><td>*</td><td>22</td><td>29</td><td>Normal Range <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="codesystem-referencerange-meaning.html">Observation Reference Range Meaning Codes</a>#normal)</span></td></tr></table></div></text><identifier>
+		<system value="https://intranet.aumc.nl/labvalues"/><!--   Does not exist   --><value value="1304-03720-Bicarbonate"/>
+	</identifier><!--   Bicarbonate was measured on April fourth   --><status value="final"/>
+	<code><!--   Kind of observation = Bicarbonate LOINC and SNOMED CT translations here - Note in the US the primary code will be LOINC per meaningful use.  Further SNOMED CT  has acceeded to LOINC being the primary coding system for vitals and anthropromorphic measures.  SNOMED CT is required in some countries such as the UK.  --><coding>
+			<system value="http://loinc.org"/>
+			<code value="1963-8"/>
+			<display value="Bicarbonate [Moles/?volume] in Serum"/>
+		</coding>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="365722008"/>
+			<display value="Bicarbonate level"/>
+		</coding>
+	</code>
+	<subject>
+		<reference value="Patient/f201"/>
+		<display value="Roel"/>
+	</subject>
+	<issued value="2013-04-04T14:34:00+01:00"/>
+	<performer>
+		<reference value="Practitioner/f202"/>
+		<display value="Luigi Maas"/>
+	</performer>
+	<valueQuantity><!--   Bicarbonate=28mmol/L   --><value value="28"/>
+		<unit value="mmol/L"/>
+		<system value="http://snomed.info/sct"/>
+		<code value="258813002"/>
+	</valueQuantity>
+	<interpretation>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="166698001"/>
+			<display value="Serum bicarbonate level normal"/>
+		</coding>
+		<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+			<code value="N"/>
+		</coding>
+	</interpretation><!--   The observation is complete   --><!--   No reliability concerns   --><method><!--   Method was enzymatic method   --><text value="enzymatic method"/>
+	</method>
+	<referenceRange><!--   Healthy bicarbonate level ranges from 22mmol/L to 29mmol/L   --><low>
+			<value value="22"/>
+		</low>
+		<high>
+			<value value="29"/>
+		</high>
+		<type>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/referencerange-meaning"/>
+				<code value="normal"/>
+				<display value="Normal Range"/>
+			</coding>
+		</type>
+	</referenceRange>
+</Observation>

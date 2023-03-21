@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><ValueSet xmlns="http://hl7.org/fhir">
+  <id value="example-metadata-2"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+  
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <ul>
+        <li>Include all codes defined in 
+          <a href="codesystem-example-metadata.html">
+            <code>http://hl7.org/fhir/CodeSystem/example-metadata</code>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </text>
+  <url value="http://hl7.org/fhir/ValueSet/example-metadata-2"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.4.642.3.3143"/>
+  </identifier>
+  <version value="5.0.0-snapshot3"/>
+  <name value="ExampleMetadata"/>
+  <title value="Metadata Example"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2022-07-21"/>
+  <publisher value="FHIR (Example)"/>
+  <contact>
+    <name value="FHIR project team"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.org/fhir"/>
+    </telecom>
+  </contact>
+  <description value="This is an example value set that illustrates usage of the metadata resource elements introduced in R5"/>
+  <approvalDate value="2021-07-21"/>
+  <lastReviewDate value="2022-07-21"/>
+  <effectivePeriod>
+    <start value="2022-08-01"/>
+    <end value="2023-07-31"/>
+  </effectivePeriod>
+  <topic>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/definition-topic"/>
+      <code value="treatment"/>
+      <display value="Treatment"/>
+    </coding>
+  </topic>
+  <author>
+    <name value="ACME ValueSet Development"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://acme.org/development"/>
+    </telecom>
+  </author>
+  <editor>
+    <name value="ACME ValueSet Management"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://acme.org/management"/>
+    </telecom>
+  </editor>
+  <reviewer>
+    <name value="Society for Creative ValueSet Review"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://example.org/scvr"/>
+    </telecom>
+  </reviewer>
+  <endorser>
+    <name value="National Foundation for ValueSet Quality"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://example.org/nfvq"/>
+    </telecom>
+  </endorser>
+  <relatedArtifact>
+    <type value="derived-from"/>
+    <resource value="http://hl7.org/fhir/ValueSet/example"/>
+  </relatedArtifact>
+  <relatedArtifact>
+    <type value="predecessor"/>
+    <resource value="http://hl7.org/fhir/ValueSet/example-metadata|20210701"/>
+  </relatedArtifact>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/CodeSystem/example-metadata"/>
+      <version value="20220721"/>
+    </include>
+  </compose>
+</ValueSet>

@@ -230,6 +230,9 @@ class OperationOutcome with Resource, _$OperationOutcome {
     required List<OperationOutcomeIssue> issue,
   }) = _OperationOutcome;
 
+  bool get isInformational =>
+      issue.first.code.toString().toLowerCase() == 'informational';
+
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory OperationOutcome.fromYaml(dynamic yaml) => yaml is String
       ? OperationOutcome.fromJson(

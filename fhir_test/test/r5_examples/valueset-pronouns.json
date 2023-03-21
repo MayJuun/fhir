@@ -1,0 +1,77 @@
+{
+  "resourceType": "ValueSet",
+  "id": "pronouns",
+  "meta": {
+    "lastUpdated": "2022-12-14T07:12:54.019+11:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cul\u003e\u003cli\u003eInclude these codes as defined in \u003ca href\u003d\"http://loinc.org\"\u003e\u003ccode\u003ehttp://loinc.org\u003c/code\u003e\u003c/a\u003e\u003ctable class\u003d\"none\"\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDisplay\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e\u003ca href\u003d\"https://loinc.org/LA29518-0/\"\u003eLA29518-0\u003c/a\u003e\u003c/td\u003e\u003ctd\u003eHe, Him, His, Himself\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e\u003ca href\u003d\"https://loinc.org/LA29519-8/\"\u003eLA29519-8\u003c/a\u003e\u003c/td\u003e\u003ctd\u003eShe, Her, Hers, Herself\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e\u003ca href\u003d\"https://loinc.org/LA29520-6/\"\u003eLA29520-6\u003c/a\u003e\u003c/td\u003e\u003ctd\u003eThey, Them, Their, Theirs, Themself\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/li\u003e\u003c/ul\u003e\u003c/div\u003e"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "pa"
+    }
+  ],
+  "url": "http://terminology.hl7.org/ValueSet/pronouns",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.3.3290"
+    }
+  ],
+  "version": "5.0.0-snapshot3",
+  "name": "personalPronouns",
+  "title": "Personal Pronouns",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "FHIR Project team",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org/fhir"
+        }
+      ]
+    }
+  ],
+  "description": "Codes that indicate the pronouns to be used when communicating with or about an individual.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
+  "copyright": "This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "LA29518-0",
+            "display": "He, Him, His, Himself"
+          },
+          {
+            "code": "LA29519-8",
+            "display": "She, Her, Hers, Herself"
+          },
+          {
+            "code": "LA29520-6",
+            "display": "They, Them, Their, Theirs, Themself"
+          }
+        ]
+      }
+    ]
+  }
+}

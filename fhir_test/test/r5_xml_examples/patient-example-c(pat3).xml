@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><Patient xmlns="http://hl7.org/fhir">
+  <id value="pat3"/>
+  <meta>
+    <versionId value="1"/>
+  
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>  
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;"><b>Simon Notsowell (OFFICIAL)</b> male, DoB: 1982-01-23 ( Medical record number: 123457 (use: USUAL))</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Record is active">Active:</td><td>true</td><td style="background-color: #f3f5da" title="Known status of Patient">Deceased:</td><td colspan="3">2015-02-14T13:42:00+10:00</td></tr><tr><td style="background-color: #f3f5da" title="Alternate names (see the one above)">Alt. Name:</td><td colspan="3">Jock (NICKNAME)</td></tr><tr><td style="background-color: #f3f5da" title="Patient Links">Links:</td><td colspan="3"><ul><li>Managing Organization: <a href="organization-example-gastro.html">Organization/1: ACME Healthcare, Inc</a> "Gastroenterology"</li></ul></td></tr></table></div></text><identifier>
+    <use value="usual"/>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="MR"/>
+      </coding>
+    </type>
+    <system value="urn:oid:0.1.2.3.4.5.6.7"/>
+    <value value="123457"/>
+  </identifier>
+  <active value="true"/>
+  <name id="n1">
+    <use value="official"/>
+    <family value="Notsowell"/>
+    <given value="Simon"/>
+  </name>
+  <name id="n2">
+    <use value="nickname"/>
+    <given value="Jock"/>
+  </name>
+  <gender value="male"/>
+  <birthDate value="1982-01-23"/>
+  <deceasedDateTime value="2015-02-14T13:42:00+10:00"/>
+  <managingOrganization>
+    <reference value="Organization/1"/>
+    <display value="ACME Healthcare, Inc"/>
+  </managingOrganization>
+</Patient>

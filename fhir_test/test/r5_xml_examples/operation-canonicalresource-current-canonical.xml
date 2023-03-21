@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<OperationDefinition xmlns="http://hl7.org/fhir">
+  <id value="CanonicalResource-current-canonical"/>
+  <text>
+    <status value="extensions"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>URL: [base]/$current-canonical</p>
+      <p>URL: [base]/CanonicalResource/$current-canonical</p>
+      <p>Parameters</p>
+      <table class="grid">
+        <tr>
+          <td>
+            <b>Use</b>
+          </td>
+          <td>
+            <b>Name</b>
+          </td>
+          <td>
+            <b>Cardinality</b>
+          </td>
+          <td>
+            <b>Type</b>
+          </td>
+          <td>
+            <b>Binding</b>
+          </td>
+          <td>
+            <b>Documentation</b>
+          </td>
+        </tr>
+        <tr>
+          <td>IN</td>
+          <td>url</td>
+          <td>1..1</td>
+          <td>
+            <a href="datatypes.html#uri">uri</a>
+          </td>
+          <td/>
+          <td>
+            <div>
+              <p>This is the canonical URL (with no version declared)</p>
+
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>IN</td>
+          <td>status</td>
+          <td>0..*</td>
+          <td>
+            <a href="datatypes.html#code">code</a>
+          </td>
+          <td/>
+          <td>
+            <div>
+              <p>The statuses to allow to be returned. If no status codes are provided, then any status is ok</p>
+
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>OUT</td>
+          <td>result</td>
+          <td>0..1</td>
+          <td>
+            <a href="canonicalresource.html">CanonicalResource</a>
+          </td>
+          <td/>
+          <td>
+            <div>
+              <p>If no resources can be found, will return nothing.  If multiple resources are found for the specified statuses and 'most current' can't be determined by comparing the versions, the operation will fail with an operation outcome.</p>
+
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div>
+        <p>If none of the instances define the versionAlgorithm to use, a server may  dynamically attempt to determine which versioning system is implied by the data.</p>
+
+        <p>If the instances found with the provided canonical URL define different versionAlgorithm values the server may return an error.</p>
+
+        <p>Note that the 
+          <em>CanonicalResource</em> is an interface and not an actual resource type, as such the operation is actually called on the canonical resource types such as CodeSystem, Questionnaire etc.
+        </p>
+
+      </div>
+    </div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use"/>
+  </extension>
+  <url value="http://hl7.org/fhir/OperationDefinition/CanonicalResource-current-canonical"/>
+  <version value="5.0.0-snapshot3"/>
+  <name value="CurrentCanonical"/>
+  <title value="Fetch the current version of a canonical resource (based on canonical versioning)"/>
+  <status value="draft"/>
+  <kind value="operation"/>
+  <experimental value="false"/>
+  <date value="2022-12-14T07:12:54+11:00"/>
+  <publisher value="HL7 (FHIR Project)"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.org/fhir"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="fhir@lists.hl7.org"/>
+    </telecom>
+  </contact>
+  <description value="Returns the most current version of the canonical resource with the specified url available on the server.  It optionally also allows filtering to only expose the most current version with a particular status or set of statuses.&#xD;&#xD;Note that 'current' is determined by comparing version values using the specified versionAlgorithm, NOT by looking at lastUpdated."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <affectsState value="false"/>
+  <code value="current-canonical"/>
+  <comment value="If none of the instances define the versionAlgorithm to use, a server may  dynamically attempt to determine which versioning system is implied by the data.&#xD;&#xD;If the instances found with the provided canonical URL define different versionAlgorithm values the server may return an error.&#xD;&#xD;Note that the *CanonicalResource* is an interface and not an actual resource type, as such the operation is actually called on the canonical resource types such as CodeSystem, Questionnaire etc."/>
+  <resource value="CanonicalResource"/>
+  <system value="true"/>
+  <type value="true"/>
+  <instance value="false"/>
+  <parameter>
+    <name value="url"/>
+    <use value="in"/>
+    <min value="1"/>
+    <max value="1"/>
+    <documentation value="This is the canonical URL (with no version declared)"/>
+    <type value="uri"/>
+  </parameter>
+  <parameter>
+    <name value="status"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="*"/>
+    <documentation value="The statuses to allow to be returned. If no status codes are provided, then any status is ok"/>
+    <type value="code"/>
+  </parameter>
+  <parameter>
+    <name value="result"/>
+    <use value="out"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="If no resources can be found, will return nothing.  If multiple resources are found for the specified statuses and 'most current' can't be determined by comparing the versions, the operation will fail with an operation outcome."/>
+    <type value="CanonicalResource"/>
+  </parameter>
+</OperationDefinition>

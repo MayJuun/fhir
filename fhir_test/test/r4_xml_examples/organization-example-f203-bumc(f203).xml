@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><Organization xmlns="http://hl7.org/fhir">
+  <id value="f203"/>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "f203" </p></div><p><b>identifier</b>: Zorginstelling naam: Blijdorp MC (OFFICIAL)</p><p><b>active</b>: true</p><p><b>type</b>: Academic Medical Center <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#405608006; <a href="codesystem-organization-type.html">OrganizationType</a>#prov)</span></p><p><b>name</b>: Blijdorp Medisch Centrum (BUMC)</p><p><b>telecom</b>: <a href="tel:+31107040704">+31107040704</a></p><p><b>address</b>: apenrots 230 Blijdorp 3056BE NLD (WORK)</p></div></text><identifier>
+  <!--   Identifier for the BMC   -->
+    <use value="official"/>
+    <type>
+      <text value="Zorginstelling naam"/>
+    </type>
+    <system value="http://www.zorgkaartnederland.nl/"/>
+    <value value="Blijdorp MC"/>
+  </identifier>
+<!--      <accreditation>
+      <!-\-NIAZ Accreditatie-\->
+      <identifier>
+         <!-\-Identifier for the accreditation -\->
+         <system value="http://www.niaz.nl/"/>
+         <value value="NIAZ accreditation"/>
+      </identifier>
+      <period>
+         <start value="2008-11-07"/>
+         <end value="2013-11-07"/>
+      </period>
+   </accreditation>   -->
+<!--   The BMC is in active use   -->
+  <active value="true"/>
+  <type>
+  <!--   BMC is an Academic Medical Center   -->
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="405608006"/>
+      <display value="Academic Medical Center"/>
+    </coding>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/organization-type"/>
+      <code value="prov"/>
+    </coding>
+  </type>
+  <name value="Blijdorp Medisch Centrum (BUMC)"/>
+  <telecom>
+  <!--   BMC's contact detail   -->
+    <system value="phone"/>
+    <value value="+31107040704"/>
+    <use value="work"/>
+  </telecom>
+  <address>
+  <!--   BMC's address   -->
+    <use value="work"/>
+    <line value="apenrots 230"/>
+    <city value="Blijdorp"/>
+    <postalCode value="3056BE"/>
+    <country value="NLD"/>
+  <!--   ISO 3166 3 letter code   -->
+  </address>
+</Organization>

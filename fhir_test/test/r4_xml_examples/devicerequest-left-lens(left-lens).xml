@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><DeviceRequest xmlns="http://hl7.org/fhir">
+  <id value="left-lens"/>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "left-lens" </p></div><p><b>identifier</b>: id: 15013L</p><p><b>groupIdentifier</b>: id: 15013</p><p><b>status</b>: completed</p><p><b>intent</b>: original-order</p><p><b>code</b>: Lens <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="codesystem-vision-product.html">Example Vision Prescription Product Codes</a>#lens)</span></p><blockquote><p><b>parameter</b></p><p><b>code</b>: sphere, left lens <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#28842-3 "Sphere distance Glasses prescription.lens - left")</span></p><p><b>value</b>: -1.00 Diopter<span style="background: LightGoldenRodYellow"> (Details: UCUM code [diop] = 'diop')</span></p></blockquote><blockquote><p><b>parameter</b></p><p><b>code</b>: cylinder, left lens <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#28843-1 "Cylinder base distance Glasses prescription.lens - left")</span></p><p><b>value</b>: -0.50 Diopter<span style="background: LightGoldenRodYellow"> (Details: UCUM code [diop] = 'diop')</span></p></blockquote><blockquote><p><b>parameter</b></p><p><b>code</b>: axis, left lens <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#28844-9 " Axis distance Glasses prescription.lens - left")</span></p><p><b>value</b>: 180 Degrees<span style="background: LightGoldenRodYellow"> (Details: UCUM code deg = 'deg')</span></p></blockquote><p><b>subject</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><p><b>occurrence</b>: 2014-06-15</p><p><b>requester</b>: <a href="practitioner-example.html">Practitioner/example</a> "Adam CAREFUL"</p></div></text><identifier>
+    <system value="http://www.happysight.com/prescription"/>
+    <value value="15013L"/>
+  </identifier>
+  <!--   insert contents here   -->
+  <groupIdentifier>
+    <system value="http://acme.org"/>
+    <value value="15013"/>
+  </groupIdentifier>
+  <status value="completed"/>
+  <intent value="original-order"/>
+  <codeCodeableConcept>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/ex-visionprescriptionproduct"/>
+      <code value="lens"/>
+    </coding>
+  </codeCodeableConcept>
+  <parameter>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="28842-3"/>
+        <display value="Sphere distance Glasses prescription.lens - left"/>
+      </coding>
+      <text value="sphere, left lens"/>
+    </code>
+    <valueQuantity>
+      <value value="-1.00"/>
+      <unit value="Diopter"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="[diop]">
+      </code>
+    </valueQuantity>
+  </parameter>
+  <parameter>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="28843-1"/>
+        <display value="Cylinder base distance Glasses prescription.lens - left"/>
+      </coding>
+      <text value="cylinder, left lens"/>
+    </code>
+    <valueQuantity>
+      <value value="-0.50"/>
+      <unit value="Diopter"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="[diop]">
+      </code>
+    </valueQuantity>
+  </parameter>
+  <parameter>
+    <code>
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="28844-9"/>
+        <display value=" Axis distance Glasses prescription.lens - left"/>
+      </coding>
+      <text value="axis, left lens"/>
+    </code>
+    <valueQuantity>
+      <value value="180"/>
+      <unit value="Degrees"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="deg">
+      </code>
+    </valueQuantity>
+  </parameter>
+  <subject>
+    <reference value="Patient/example"/>
+  </subject>
+  <occurrenceDateTime value="2014-06-15"/>
+  <requester>
+    <reference value="Practitioner/example"/>
+  </requester>
+</DeviceRequest>

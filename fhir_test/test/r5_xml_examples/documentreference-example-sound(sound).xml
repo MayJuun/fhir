@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><DocumentReference xmlns="http://hl7.org/fhir">
+  <id value="sound"/>
+
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">Sound recording of speech example for Patient Henry Levin (MRN 12345):<br/><img alt="diagram" src="#11"/></div>
+  </text>
+
+<status value="current"/>
+
+
+
+  <subject>
+    <reference value="Patient/xcda"/>
+  </subject>
+  <author>
+    <reference value="Practitioner/xcda-author"/>
+  </author>
+
+
+  <content>
+    <attachment>
+    <contentType value="audio/mpeg"/>
+      <!--  too big too include the whole  -->
+    <data value="dG9vIGJpZyB0b28gaW5jbHVkZSB0aGUgd2hvbGU="/>
+    <duration value="65"/>
+
+	</attachment>
+  </content>
+</DocumentReference>

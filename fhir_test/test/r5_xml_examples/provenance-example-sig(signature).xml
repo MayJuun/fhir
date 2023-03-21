@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><Provenance xmlns="http://hl7.org/fhir">
+	<id value="signature"/>
+    <!--  
+	<text>
+		<status value="extensions"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">procedure record authored on 27-June 2015 by Harold Hippocrates, MD Content extracted from Referral received 26-June</div>
+	</text>
+  -->
+	    <!--   
+    where possible, provenance targets should be version specific,
+    so that there is no ambiguity about which version of the 
+    record this relates to
+    -->
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Provenance</b><a name="signature"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Provenance "signature" </p></div><p><b>target</b>: <span title=" &#xA;&#x9;&lt;text&gt;&#xA;&#x9;&#x9;&lt;status value=&#34;extensions&#34;/&gt;&#xA;&#x9;&#x9;&lt;div xmlns=&#34;http://www.w3.org/1999/xhtml&#34;&gt;procedure record authored on 27-June 2015 by Harold Hippocrates, MD Content extracted from Referral received 26-June&lt;/div&gt;&#xA;&#x9;&lt;/text&gt;&#xA; &amp;#10;  &#xA;    where possible, provenance targets should be version specific,&#xA;    so that there is no ambiguity about which version of the &#xA;    record this relates to&#xA;   "><a href="documentreference-example.html">DocumentReference/example/_history/4</a></span></p><p><b>recorded</b>: 27 Aug 2015, 8:39:24 am</p><h3>Authorizations</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>treatment <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-ActReason.html">ActReason</a>#TREAT)</span></td></tr></table><p><b>activity</b>: authenticated <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-DocumentCompletion.html">DocumentCompletion</a>#AU)</span></p><h3>Agents</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Who</b></td></tr><tr><td>*</td><td>Verifier <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-contractsignertypecodes.html">Contract Signer Type Codes</a>#VERF)</span></td><td><span title="  very often, the user won't have a known system - these aren't available &#xA;      for security system log ons. But where you can define it, you should.&#xA;      Most of the time the userId is fully qualfied such as an email address&#x9;   "><span/></span></td></tr></table><h3>Signatures</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>When</b></td><td><b>Who</b></td><td><b>TargetFormat</b></td><td><b>SigFormat</b></td><td><b>Data</b></td></tr><tr><td>*</td><td><span title="  verification signature  ">Verification Signature (Details: urn:iso-astm:E1762-95:2013 code 1.2.840.10065.1.12.1.5 = 'Verification Signature', stated as 'Verification Signature')</span></td><td>27 Aug 2015, 8:39:24 am</td><td><a href="practitioner-example-xcda-author.html">Practitioner/xcda-author</a> "Harold HIPPOCRATES"</td><td>application/fhir+xml</td><td>application/signature+xml</td><td>Li4u</td></tr></table></div></text><target>
+		<reference value="DocumentReference/example/_history/4"/>    
+	</target>
+	<recorded value="2015-08-27T08:39:24+10:00"/>
+	<authorization>
+	  <concept>
+		<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+			<code value="TREAT"/>
+			<display value="treatment"/>
+		</coding>
+      </concept>
+	</authorization>
+	<activity>
+		<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/v3-DocumentCompletion"/>
+			<code value="AU"/>
+			<display value="authenticated"/>
+		</coding>
+	</activity>
+
+	    <!--   signer = Harold Hippocrates   -->
+	<agent>
+		<type>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/contractsignertypecodes"/>
+				<code value="VERF"/>
+			</coding>
+		</type>
+
+		    <!--   very often, the user won't have a known system - these aren't available 
+      for security system log ons. But where you can define it, you should.
+      Most of the time the userId is fully qualfied such as an email address	    -->
+		<who>
+			<identifier>
+				<system value="urn:ietf:rfc:3986"/>
+				<value value="mailto://hhd@ssa.gov"/>
+			</identifier>
+		</who>
+	</agent>
+	<signature>
+		    <!--   verification signature   -->
+		<type>
+			<system value="urn:iso-astm:E1762-95:2013"/>
+			<code value="1.2.840.10065.1.12.1.5"/>
+			<display value="Verification Signature"/>
+		</type>
+		<when value="2015-08-27T08:39:24+10:00"/>
+		<who>
+			<reference value="Practitioner/xcda-author"/>
+		</who>	
+		<targetFormat value="application/fhir+xml"/>
+		<sigFormat value="application/signature+xml"/>
+		<data value="Li4u"/>
+	</signature>
+</Provenance>

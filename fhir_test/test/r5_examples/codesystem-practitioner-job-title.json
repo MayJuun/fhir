@@ -1,0 +1,60 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "practitioner-job-title",
+  "meta": {
+    "lastUpdated": "2022-12-14T07:12:54.019+11:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003eThis code system \u003ccode\u003ehttp://hl7.org/fhir/practitioner-job-title\u003c/code\u003e defines the following codes:\u003c/p\u003e\u003ctable class\u003d\"codes\"\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDisplay\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003ehead-surgery\u003ca name\u003d\"practitioner-job-title-head-surgery\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eHead of Surgery\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003evp-marketing\u003ca name\u003d\"practitioner-job-title-vp-marketing\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eVice President of Marketing\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003ehead-research\u003ca name\u003d\"practitioner-job-title-head-research\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eHead of Research\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "pa"
+    }
+  ],
+  "url": "http://hl7.org/fhir/practitioner-job-title",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.4.1951"
+    }
+  ],
+  "version": "5.0.0-snapshot3",
+  "name": "PractitionerJobTitle",
+  "title": "Practitioner Job Title",
+  "status": "active",
+  "experimental": false,
+  "description": "This example value set defines a set of codes that can be used to indicate the specialty of a Practitioner.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "head-surgery",
+      "display": "Head of Surgery"
+    },
+    {
+      "code": "vp-marketing",
+      "display": "Vice President of Marketing"
+    },
+    {
+      "code": "head-research",
+      "display": "Head of Research"
+    }
+  ]
+}

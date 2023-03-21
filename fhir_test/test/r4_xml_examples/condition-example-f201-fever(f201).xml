@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><Condition xmlns="http://hl7.org/fhir">
+  <id value="f201"/>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "f201" </p></div><p><b>identifier</b>: id: 12345</p><p><b>clinicalStatus</b>: Resolved <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="codesystem-condition-clinical.html">Condition Clinical Status Codes</a>#resolved)</span></p><p><b>verificationStatus</b>: Confirmed <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="codesystem-condition-ver-status.html">ConditionVerificationStatus</a>#confirmed)</span></p><p><b>category</b>: Problem <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#55607006; <a href="codesystem-condition-category.html">Condition Category Codes</a>#problem-list-item)</span></p><p><b>severity</b>: Mild <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#255604002)</span></p><p><b>code</b>: Fever <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#386661006)</span></p><p><b>bodySite</b>: Entire body as a whole <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#38266002)</span></p><p><b>subject</b>: <a href="patient-f201.html">Patient/f201: Roel</a> "Roel"</p><p><b>encounter</b>: <a href="encounter-f201.html">Encounter/f201</a></p><p><b>onset</b>: 2013-04-02</p><p><b>abatement</b>: around April 9, 2013</p><p><b>recordedDate</b>: 2013-04-04</p><p><b>recorder</b>: <a href="practitioner-f201.html">Practitioner/f201</a> "Dokter Bronsig"</p><p><b>asserter</b>: <a href="practitioner-f201.html">Practitioner/f201</a> "Dokter Bronsig"</p><h3>Evidences</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td><td><b>Detail</b></td></tr><tr><td>*</td><td>degrees C <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#258710007)</span></td><td><a href="observation-f202.html">Observation/f202: Temperature</a></td></tr></table></div></text><identifier>
+    <value value="12345"/>
+  </identifier>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <code value="resolved"/>
+    </coding>
+  </clinicalStatus>
+
+  <verificationStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+      <code value="confirmed"/>
+    </coding>
+  </verificationStatus>
+
+  <category>
+    <!--  The fever is a mild problem  -->
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="55607006"/>
+      <display value="Problem"/>
+    </coding>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-category"/>
+      <code value="problem-list-item"/>
+    </coding>
+  </category>
+  <severity>
+    <!--  The fever is mild   -->
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="255604002"/>
+      <display value="Mild"/>
+    </coding>
+  </severity>
+  <code>
+    <!--  The problem is a fever  -->
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="386661006"/>
+      <display value="Fever"/>
+    </coding>
+  </code>
+  <bodySite>
+    <!--  Fever applies to whole body  -->
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="38266002"/>
+      <display value="Entire body as a whole"/>
+    </coding>
+  </bodySite>
+  <subject>
+    <!--  It entails Roel's problem  -->
+    <reference value="Patient/f201"/>
+    <display value="Roel"/>
+  </subject>
+  <encounter>
+    <reference value="Encounter/f201"/>
+  </encounter>
+  <onsetDateTime value="2013-04-02"/>
+  <abatementString value="around April 9, 2013"/>
+  <recordedDate value="2013-04-04"/>
+  <recorder>
+    <reference value="Practitioner/f201"/>
+  </recorder>
+  <asserter>
+    <reference value="Practitioner/f201"/>
+  </asserter>
+  <evidence>
+    <!--  Problem is confirmed by 39 degrees Celsius  -->
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="258710007"/>
+        <display value="degrees C"/>
+      </coding>
+    </code>
+    <detail>
+      <reference value="Observation/f202"/>
+      <display value="Temperature"/>
+    </detail>
+  </evidence>
+</Condition>

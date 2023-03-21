@@ -16,7 +16,7 @@
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-de",
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "name": "DataElement constraint on ElementDefinition data type",
   "status": "draft",
   "experimental": false,
@@ -33,7 +33,18 @@
     }
   ],
   "description": "Identifies how the ElementDefinition data type is used when it appears within a data element",
-  "fhirVersion": "4.6.0",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "5.0.0-snapshot3",
   "mapping": [
     {
       "identity": "v2",
@@ -54,11 +65,6 @@
       "identity": "dex",
       "uri": "http://ihe.net/data-element-exchange",
       "name": "IHE Data Element Exchange (DEX)"
-    },
-    {
-      "identity": "loinc",
-      "uri": "http://loinc.org",
-      "name": "LOINC code for the element"
     }
   ],
   "kind": "complex-type",
@@ -86,7 +92,6 @@
             "severity": "error",
             "human": "Min \u003c\u003d Max",
             "expression": "min.empty() or max.empty() or (max \u003d \u0027*\u0027) or iif(max !\u003d \u0027*\u0027, min \u003c\u003d max.toInteger())",
-            "xpath": "not(exists(f:min)) or not(exists(f:max)) or (not(f:max/@value) and not(f:min/@value)) or (f:max/@value \u003d \u0027*\u0027) or (number(f:max/@value) \u003e\u003d f:min/@value)",
             "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition"
           },
           {
@@ -94,7 +99,6 @@
             "severity": "error",
             "human": "if the element definition has a contentReference, it cannot have type, defaultValue, fixed, pattern, example, minValue, maxValue, maxLength, or binding",
             "expression": "contentReference.empty() or (type.empty() and defaultValue.empty() and fixed.empty() and pattern.empty() and example.empty() and minValue.empty() and maxValue.empty() and maxLength.empty() and binding.empty())",
-            "xpath": "not(exists(f:contentReference) and (exists(f:type) or exists(f:*[starts-with(local-name(.), \u0027value\u0027)]) or exists(f:*[starts-with(local-name(.), \u0027defaultValue\u0027)])  or exists(f:*[starts-with(local-name(.), \u0027fixed\u0027)]) or exists(f:*[starts-with(local-name(.), \u0027pattern\u0027)]) or exists(f:*[starts-with(local-name(.), \u0027example\u0027)]) or exists(f:*[starts-with(local-name(.), \u0027f:minValue\u0027)]) or exists(f:*[starts-with(local-name(.), \u0027f:maxValue\u0027)]) or exists(f:maxLength) or exists(f:binding)))",
             "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition"
           },
           {
@@ -102,7 +106,6 @@
             "severity": "error",
             "human": "Fixed value may only be specified if there is one type",
             "expression": "fixed.empty() or (type.count()  \u003c\u003d 1)",
-            "xpath": "not(exists(f:*[starts-with(local-name(.), \u0027fixed\u0027)])) or (count(f:type)\u003c\u003d1)",
             "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition"
           },
           {
@@ -110,7 +113,6 @@
             "severity": "error",
             "human": "Pattern may only be specified if there is one type",
             "expression": "pattern.empty() or (type.count() \u003c\u003d 1)",
-            "xpath": "not(exists(f:*[starts-with(local-name(.), \u0027pattern\u0027)])) or (count(f:type)\u003c\u003d1)",
             "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition"
           },
           {
@@ -118,15 +120,13 @@
             "severity": "error",
             "human": "Pattern and fixed are mutually exclusive",
             "expression": "pattern.empty() or fixed.empty()",
-            "xpath": "not(exists(f:*[starts-with(local-name(.), \u0027pattern\u0027)])) or not(exists(f:*[starts-with(local-name(.), \u0027fixed\u0027)]))",
             "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition"
           },
           {
             "key": "eld-11",
             "severity": "error",
-            "human": "Binding can only be present for coded elements, string, and uri",
-            "expression": "binding.empty() or type.code.empty() or type.select((code \u003d \u0027code\u0027) or (code \u003d \u0027Coding\u0027) or (code\u003d\u0027CodeableConcept\u0027) or (code \u003d \u0027Quantity\u0027) or (code \u003d \u0027string\u0027) or (code \u003d \u0027uri\u0027) or (code \u003d \u0027Duration\u0027)).exists()",
-            "xpath": "not(exists(f:binding)) or (count(f:type/f:code) \u003d 0) or  f:type/f:code/@value\u003d(\u0027code\u0027,\u0027Coding\u0027,\u0027CodeableConcept\u0027,\u0027Quantity\u0027,\u0027string\u0027, \u0027uri\u0027, \u0027Duration\u0027)",
+            "human": "Binding can only be present for coded elements, string, and uri if using FHIR-defined types",
+            "expression": "binding.empty() or type.code.empty() or type.code.contains(\":\") or type.select((code \u003d \u0027code\u0027) or (code \u003d \u0027Coding\u0027) or (code\u003d\u0027CodeableConcept\u0027) or (code \u003d \u0027Quantity\u0027) or (code \u003d \u0027string\u0027) or (code \u003d \u0027uri\u0027) or (code \u003d \u0027Duration\u0027)).exists()",
             "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition"
           },
           {
@@ -134,7 +134,6 @@
             "severity": "error",
             "human": "Types must be unique by code",
             "expression": "type.select(code).isDistinct()",
-            "xpath": "not(exists(for $type in f:type return $type/preceding-sibling::f:type[f:code/@value\u003d$type/f:code/@value]))",
             "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition"
           },
           {
@@ -142,7 +141,6 @@
             "severity": "error",
             "human": "Constraints must be unique by key",
             "expression": "constraint.select(key).isDistinct()",
-            "xpath": "count(f:constraint) \u003d count(distinct-values(f:constraint/f:key/@value))",
             "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition"
           },
           {
@@ -150,7 +148,6 @@
             "severity": "error",
             "human": "default value and meaningWhenMissing are mutually exclusive",
             "expression": "defaultValue.empty() or meaningWhenMissing.empty()",
-            "xpath": "not(exists(f:*[starts-with(local-name(.), \u0027fixed\u0027)])) or not(exists(f:meaningWhenMissing))",
             "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition"
           },
           {
@@ -158,7 +155,6 @@
             "severity": "error",
             "human": "sliceName must be composed of proper tokens separated by \"/\"",
             "expression": "sliceName.empty() or sliceName.matches(\u0027^[a-zA-Z0-9\\\\/\\\\-_\\\\[\\\\]\\\\@]+$\u0027)",
-            "xpath": "not(exists(f:sliceName/@value)) or matches(f:sliceName/@value, \u0027^[a-zA-Z0-9\\/\\-_\\[\\]\\@]+$\u0027)",
             "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition"
           },
           {
@@ -166,23 +162,20 @@
             "severity": "error",
             "human": "Must have a modifier reason if isModifier \u003d true",
             "expression": "(isModifier.exists() and isModifier) implies isModifierReason.exists()",
-            "xpath": "not(f:isModifier/@value \u003d \u0027true\u0027) or exists(f:isModifierReason)",
             "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition"
           },
           {
             "key": "eld-19",
             "severity": "error",
-            "human": "Element names cannot include some special characters",
+            "human": "Element names cannot include some special characters with a max of 64 characters,",
             "expression": "path.matches(\u0027^[^\\\\s\\\\.,:;\\\\\\\u0027\"\\\\/|?!@#$%\u0026*()\\\\[\\\\]{}]{1,64}(\\\\.[^\\\\s\\\\.,:;\\\\\\\u0027\"\\\\/|?!@#$%\u0026*()\\\\[\\\\]{}]{1,64}(\\\\[x\\\\])?(\\\\:[^\\\\s\\\\.]+)?)*$\u0027)",
-            "xpath": "matches(f:path/@value, \u0027^[^\\s\\.,:;\\\u0027\u0026quot;\\/|?!@#$%\u0026*()\\[\\]{}]{1,64}(\\.[^\\s\\.,:;\\\u0027\u0026quot;\\/|?!@#$%\u0026*()\\[\\]{}]{1,64}(\\[x\\])?(\\:[^\\s\\.]+)?)*$\u0027)",
             "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition"
           },
           {
             "key": "eld-20",
             "severity": "warning",
-            "human": "Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken",
-            "expression": "path.matches(\u0027^[A-Za-z][A-Za-z0-9]*(\\\\.[a-z][A-Za-z0-9]*(\\\\[x])?)*$\u0027)",
-            "xpath": "matches(f:path/@value, \u0027^[A-Za-z][A-Za-z0-9]*(\\.[a-z][A-Za-z0-9]*(\\[x])?)*$\u0027)",
+            "human": "Element names should be simple alphanumerics with a max of 64 characters or code generation tools may be broken",
+            "expression": "path.matches(\u0027^[A-Za-z][A-Za-z0-9]{0,63}(\\\\.[a-z][A-Za-z0-9]{0,63}(\\\\[x])?)*$\u0027)",
             "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition"
           },
           {
@@ -190,7 +183,44 @@
             "severity": "error",
             "human": "sliceIsConstraining can only appear if slicename is present",
             "expression": "sliceIsConstraining.exists() implies sliceName.exists()",
-            "xpath": "exists(f:sliceName) or not(exists(f:sliceIsConstraining))",
+            "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice",
+                "valueBoolean": true
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation",
+                "valueMarkdown": "pattern[x] is generally preferred over fixed[x] because it doesn\u0027t preclude the use of id and additional extensions, though there are corner cases when it\u0027s appropriate to exclude those"
+              }
+            ],
+            "key": "eld-24",
+            "severity": "warning",
+            "human": "pattern[x] should be used rather than fixed[x]",
+            "expression": "fixed.exists().not()",
+            "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition"
+          },
+          {
+            "key": "eld-25",
+            "severity": "warning",
+            "human": "Order has no meaning (and cannot be asserted to have meaning), so enforcing rules on order is improper",
+            "expression": "orderMeaning.empty() implies slicing.where(rules\u003d\u0027openAtEnd\u0027 or ordered).exists().not()",
+            "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition"
+          },
+          {
+            "key": "eld-27",
+            "severity": "warning",
+            "human": "Mappings SHOULD be unique by key",
+            "expression": "mapping.select(identity).isDistinct()",
+            "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition"
+          },
+          {
+            "key": "eld-28",
+            "severity": "error",
+            "human": "Can\u0027t have valueAlternatives if mustHaveValue is true",
+            "expression": "mustHaveValue.value implies valueAlternatives.empty()",
             "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition"
           },
           {
@@ -198,7 +228,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -246,7 +275,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "string"
+                "valueUrl": "id"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -299,7 +328,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -307,7 +335,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -348,7 +375,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -356,7 +382,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -397,7 +422,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -405,7 +429,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -428,7 +451,7 @@
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://build.fhir.org/extensibility.html#modifierExtension).",
+        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](extensibility.html#modifierExtension).",
         "alias": [
           "extensions",
           "user content",
@@ -452,7 +475,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -460,7 +482,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -497,7 +518,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -522,7 +542,7 @@
         "id": "ElementDefinition.representation",
         "path": "ElementDefinition.representation",
         "short": "xmlAttr | xmlText | typeAttr | cdaText | xhtml",
-        "definition": "Codes that define how this element is represented in instances, when the deviation varies from the normal case.",
+        "definition": "Codes that define how this element is represented in instances, when the deviation varies from the normal case. No extensions are allowed on elements with a representation of \u0027xmlAttr\u0027, no matter what FHIR serialization format is used.",
         "comment": "In resources, this is rarely used except for special cases where the representation deviates from the normal, and can only be done in the base standard (and profiles must reproduce what the base standard does). This element is used quite commonly in Logical models when the logical models represent a specific serialization format (e.g. CDA, v2 etc.).",
         "min": 0,
         "max": "0",
@@ -542,7 +562,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -560,7 +579,7 @@
             }
           ],
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/ValueSet/property-representation|4.6.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/property-representation|5.0.0-snapshot3"
         },
         "mapping": [
           {
@@ -602,7 +621,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -654,7 +672,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -709,7 +726,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -751,7 +767,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -769,7 +784,7 @@
             }
           ],
           "strength": "example",
-          "valueSet": "http://hl7.org/fhir/ValueSet/observation-codes"
+          "valueSet": "http://loinc.org/vs"
         },
         "mapping": [
           {
@@ -783,10 +798,6 @@
           {
             "identity": "iso11179",
             "map": "(Data_Element).data_element_concept.identifier"
-          },
-          {
-            "identity": "loinc",
-            "map": "LOINC_NUM"
           }
         ]
       },
@@ -810,19 +821,10 @@
         ],
         "constraint": [
           {
-            "key": "eld-1",
-            "severity": "error",
-            "human": "If there are no discriminators, there must be a definition",
-            "expression": "discriminator.exists() or description.exists()",
-            "xpath": "(f:discriminator) or (f:description)",
-            "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition"
-          },
-          {
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -912,7 +914,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -920,7 +921,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -957,7 +957,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1047,7 +1046,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -1055,7 +1053,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -1071,8 +1068,9 @@
       {
         "id": "ElementDefinition.slicing.discriminator.type",
         "path": "ElementDefinition.slicing.discriminator.type",
-        "short": "value | exists | pattern | type | profile",
+        "short": "value | exists | type | profile | position",
         "definition": "How the element value is interpreted when discrimination is evaluated.",
+        "comment": "\u0027pattern\u0027 is deprecated - it works exactly the same as \u0027value\u0027.",
         "min": 1,
         "max": "1",
         "base": {
@@ -1091,7 +1089,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1109,7 +1106,7 @@
             }
           ],
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/ValueSet/discriminator-type|4.6.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/discriminator-type|5.0.0-snapshot3"
         },
         "mapping": [
           {
@@ -1122,8 +1119,7 @@
         "id": "ElementDefinition.slicing.discriminator.path",
         "path": "ElementDefinition.slicing.discriminator.path",
         "short": "Path to element value",
-        "definition": "A FHIRPath expression, using [the simple subset of FHIRPath](http://build.fhir.org/fhirpath.html#simple), that is used to identify the element on which discrimination is based.",
-        "comment": "The only FHIRPath functions that are allowed are as(type), resolve(), and extension(url).",
+        "definition": "A FHIRPath expression, using [the simple subset of FHIRPath](fhirpath.html#simple), that is used to identify the element on which discrimination is based.",
         "min": 1,
         "max": "1",
         "base": {
@@ -1142,7 +1138,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1187,16 +1182,12 @@
             "code": "string"
           }
         ],
-        "condition": [
-          "eld-1"
-        ],
         "constraint": [
           {
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1234,7 +1225,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1275,7 +1265,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1293,7 +1282,7 @@
             }
           ],
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/ValueSet/resource-slicing-rules|4.6.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/resource-slicing-rules|5.0.0-snapshot3"
         },
         "mapping": [
           {
@@ -1340,7 +1329,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1395,7 +1383,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1413,10 +1400,6 @@
           {
             "identity": "iso11179",
             "map": "(Designatable_Item).definition.text  acceptability\u003dpreferred in default context"
-          },
-          {
-            "identity": "loinc",
-            "map": "TERM DEFINITION/DESCRIPTION(S)"
           }
         ]
       },
@@ -1454,7 +1437,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1472,10 +1454,6 @@
           {
             "identity": "iso11179",
             "map": "(Administered_Item).explanatory_comment"
-          },
-          {
-            "identity": "loinc",
-            "map": "COMMENTS"
           }
         ]
       },
@@ -1513,7 +1491,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1568,7 +1545,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1586,10 +1562,6 @@
           {
             "identity": "iso11179",
             "map": "(Designatable_Item).designation.sign  acceptability!\u003dpreferred or context is other than default"
-          },
-          {
-            "identity": "loinc",
-            "map": "RELATED NAMES (only some of these apply)"
           }
         ]
       },
@@ -1619,7 +1591,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1663,7 +1634,6 @@
             "severity": "error",
             "human": "Max SHALL be a number or \"*\"",
             "expression": "empty() or ($this \u003d \u0027*\u0027) or (toInteger() \u003e\u003d 0)",
-            "xpath": "@value\u003d\u0027*\u0027 or (normalize-space(@value)!\u003d\u0027\u0027 and normalize-space(translate(@value, \u00270123456789\u0027,\u0027\u0027))\u003d\u0027\u0027)",
             "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition"
           },
           {
@@ -1671,7 +1641,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1716,7 +1685,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1806,7 +1774,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -1814,7 +1781,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -1831,7 +1797,7 @@
         "id": "ElementDefinition.base.path",
         "path": "ElementDefinition.base.path",
         "short": "Path that identifies the base element",
-        "definition": "The Path that identifies the base element - this matches the ElementDefinition.path for that element. Across FHIR, there is only one base definition of any element - that is, an element definition on a [StructureDefinition](http://build.fhir.org/structuredefinition.html#) without a StructureDefinition.base.",
+        "definition": "The Path that identifies the base element - this matches the ElementDefinition.path for that element. Across FHIR, there is only one base definition of any element - that is, an element definition on a [StructureDefinition](structuredefinition.html#) without a StructureDefinition.base.",
         "min": 1,
         "max": "1",
         "base": {
@@ -1850,7 +1816,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1891,7 +1856,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1932,7 +1896,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -1976,7 +1939,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -2021,8 +1983,7 @@
             "key": "eld-4",
             "severity": "error",
             "human": "Aggregation may only be specified if one of the allowed types for the element is a reference",
-            "expression": "aggregation.empty() or (code \u003d \u0027Reference\u0027)",
-            "xpath": "not(exists(f:aggregation)) or exists(f:code[@value \u003d \u0027Reference\u0027])",
+            "expression": "aggregation.empty() or (code \u003d \u0027Reference\u0027) or (code \u003d \u0027canonical\u0027) or (code \u003d \u0027CodeableReference\u0027)",
             "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition"
           },
           {
@@ -2030,7 +1991,6 @@
             "severity": "error",
             "human": "targetProfile is only allowed if the type is Reference or canonical",
             "expression": "(code\u003d\u0027Reference\u0027 or code \u003d \u0027canonical\u0027 or code \u003d \u0027CodeableReference\u0027) or targetProfile.empty()",
-            "xpath": "not(exists(f:targetProfile)) or (f:code/@value \u003d (\u0027Reference\u0027, \u0027canonical\u0027, \u0027CodeableReference\u0027))",
             "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition"
           },
           {
@@ -2038,7 +1998,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -2060,10 +2019,6 @@
           {
             "identity": "dex",
             "map": "valueDomain.dataType"
-          },
-          {
-            "identity": "loinc",
-            "map": "HL7_V2_DATATYPE (translation required), HL7_V3_DATATYPE (translation required)"
           }
         ]
       },
@@ -2140,7 +2095,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -2148,7 +2102,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -2185,7 +2138,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -2195,11 +2147,11 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/build/StructureDefinition/binding-definition",
-              "valueString": "Either a resource or a data type, including logical model types."
+              "valueString": "List of all Types for ElementDefinition.type.code."
             },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "FHIRDefinedTypeExt"
+              "valueString": "ElementDefinitionTypes"
             },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding",
@@ -2207,7 +2159,7 @@
             }
           ],
           "strength": "extensible",
-          "valueSet": "http://hl7.org/fhir/ValueSet/fhir-element-types"
+          "valueSet": "http://hl7.org/fhir/ValueSet/elementdefinition-types"
         },
         "mapping": [
           {
@@ -2221,10 +2173,6 @@
           {
             "identity": "iso11179",
             "map": ".domain.data+Q14type"
-          },
-          {
-            "identity": "loinc",
-            "map": "HL7_V2_DATATYPE (translation required), HL7_V3_DATATYPE (translation required)"
           }
         ]
       },
@@ -2233,7 +2181,7 @@
         "path": "ElementDefinition.type.profile",
         "short": "Profiles (StructureDefinition or IG) - one must apply",
         "definition": "Identifies a profile structure or implementation Guide that applies to the datatype this element refers to. If any profiles are specified, then the content must conform to at least one of them. The URL can be a local reference - to a contained StructureDefinition, or a reference to another StructureDefinition or Implementation Guide by a canonical URL. When an implementation guide is specified, the type SHALL conform to at least one profile defined in the implementation guide.",
-        "comment": "It is possible to profile  backbone element (e.g. part of a resource), using the [profile-element](http://build.fhir.org/extension-elementdefinition-profile-element.html) extension.",
+        "comment": "It is possible to profile  backbone element (e.g. part of a resource), using the [profile-element](extension-elementdefinition-profile-element.html) extension.",
         "min": 0,
         "max": "0",
         "base": {
@@ -2256,7 +2204,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -2300,7 +2247,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -2322,7 +2268,7 @@
         "path": "ElementDefinition.type.aggregation",
         "short": "contained | referenced | bundled - how aggregated",
         "definition": "If the type is a reference to another resource, how the resource is or can be aggregated - is it a contained resource, or a reference, and if the context is a bundle, is it included in the bundle.",
-        "comment": "See [Aggregation Rules](http://build.fhir.org/elementdefinition.html#aggregation) for further clarification.",
+        "comment": "See [Aggregation Rules](elementdefinition.html#aggregation) for further clarification.",
         "min": 0,
         "max": "0",
         "base": {
@@ -2344,7 +2290,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -2362,7 +2307,7 @@
             }
           ],
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/ValueSet/resource-aggregation-mode|4.6.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/resource-aggregation-mode|5.0.0-snapshot3"
         },
         "mapping": [
           {
@@ -2380,7 +2325,7 @@
         "path": "ElementDefinition.type.versioning",
         "short": "either | independent | specific",
         "definition": "Whether this reference needs to be version specific or version independent, or whether either can be used.",
-        "comment": "The base specification never makes a rule as to which form is allowed, but implementation guides may do this. See [Aggregation Rules](http://build.fhir.org/elementdefinition.html#aggregation) for further clarification.",
+        "comment": "The base specification never makes a rule as to which form is allowed, but implementation guides may do this. See [Aggregation Rules](elementdefinition.html#aggregation) for further clarification.",
         "min": 0,
         "max": "1",
         "base": {
@@ -2399,7 +2344,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -2417,7 +2361,7 @@
             }
           ],
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/ValueSet/reference-version-rules|4.6.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/reference-version-rules|5.0.0-snapshot3"
         },
         "mapping": [
           {
@@ -2573,9 +2517,6 @@
             "code": "ContactDetail"
           },
           {
-            "code": "Contributor"
-          },
-          {
             "code": "DataRequirement"
           },
           {
@@ -2594,6 +2535,12 @@
             "code": "UsageContext"
           },
           {
+            "code": "Availability"
+          },
+          {
+            "code": "ExtendedContactDetail"
+          },
+          {
             "code": "Dosage"
           },
           {
@@ -2609,7 +2556,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -2659,7 +2605,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -2696,7 +2641,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -2713,7 +2657,7 @@
         "id": "ElementDefinition.fixed[x]",
         "path": "ElementDefinition.fixed[x]",
         "short": "Value must be exactly this",
-        "definition": "Specifies a value that SHALL be exactly the value  for this element in the instance. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.",
+        "definition": "Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.",
         "comment": "This is not recommended for Coding and CodeableConcept since these often have highly contextual properties such as version or display.",
         "min": 0,
         "max": "0",
@@ -2856,9 +2800,6 @@
             "code": "ContactDetail"
           },
           {
-            "code": "Contributor"
-          },
-          {
             "code": "DataRequirement"
           },
           {
@@ -2875,6 +2816,12 @@
           },
           {
             "code": "UsageContext"
+          },
+          {
+            "code": "Availability"
+          },
+          {
+            "code": "ExtendedContactDetail"
           },
           {
             "code": "Dosage"
@@ -2894,7 +2841,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -2915,7 +2861,7 @@
         "id": "ElementDefinition.pattern[x]",
         "path": "ElementDefinition.pattern[x]",
         "short": "Value must have at least these property values",
-        "definition": "Specifies a value that the value in the instance SHALL follow - that is, any value in the pattern must be found in the instance. Other additional values may be found too. This is effectively constraint by example.  \n\nWhen pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.\n\nWhen pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] array must (recursively) match at least one element from the instance array.\n\nWhen pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,\n\n1. If primitive: it must match exactly the pattern value\n2. If a complex object: it must match (recursively) the pattern value\n3. If an array: it must match (recursively) the pattern value.",
+        "definition": "Specifies a value that each occurrence of the element in the instance SHALL follow - that is, any value in the pattern must be found in the instance, if the element has a value. Other additional values may be found too. This is effectively constraint by example.  \n\nWhen pattern[x] is used to constrain a primitive, it means that the value provided in the pattern[x] must match the instance value exactly.\n\nWhen an element within a pattern[x] is used to constrain an array, it means that each element provided in the pattern[x] must (recursively) match at least one element from the instance array.\n\nWhen pattern[x] is used to constrain a complex object, it means that each property in the pattern must be present in the complex object, and its value must recursively match -- i.e.,\n\n1. If primitive: it must match exactly the pattern value\n2. If a complex object: it must match (recursively) the pattern value\n3. If an array: it must match (recursively) the pattern value\n\nIf a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.",
         "comment": "Mostly used for fixing values of CodeableConcept. In general, pattern[x] is not intended for use with primitive types, where is has the same meaning as fixed[x].",
         "min": 0,
         "max": "0",
@@ -3058,9 +3004,6 @@
             "code": "ContactDetail"
           },
           {
-            "code": "Contributor"
-          },
-          {
             "code": "DataRequirement"
           },
           {
@@ -3077,6 +3020,12 @@
           },
           {
             "code": "UsageContext"
+          },
+          {
+            "code": "Availability"
+          },
+          {
+            "code": "ExtendedContactDetail"
           },
           {
             "code": "Dosage"
@@ -3096,7 +3045,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -3133,7 +3081,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -3219,7 +3166,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -3227,7 +3173,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -3273,7 +3218,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -3432,9 +3376,6 @@
             "code": "ContactDetail"
           },
           {
-            "code": "Contributor"
-          },
-          {
             "code": "DataRequirement"
           },
           {
@@ -3453,6 +3394,12 @@
             "code": "UsageContext"
           },
           {
+            "code": "Availability"
+          },
+          {
+            "code": "ExtendedContactDetail"
+          },
+          {
             "code": "Dosage"
           },
           {
@@ -3465,7 +3412,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -3479,10 +3425,6 @@
           {
             "identity": "iso11179",
             "map": ".example"
-          },
-          {
-            "identity": "loinc",
-            "map": "EXMPL_ANSWERS"
           }
         ]
       },
@@ -3491,7 +3433,7 @@
         "path": "ElementDefinition.minValue[x]",
         "short": "Minimum Allowed Value (for some types)",
         "definition": "The minimum allowed value for the element. The value is inclusive. This is allowed for the types date, dateTime, instant, time, decimal, integer, and Quantity.",
-        "comment": "Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](http://build.fhir.org/datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.",
+        "comment": "Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.",
         "min": 0,
         "max": "1",
         "base": {
@@ -3537,7 +3479,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -3555,7 +3496,7 @@
         "path": "ElementDefinition.maxValue[x]",
         "short": "Maximum Allowed Value (for some types)",
         "definition": "The maximum allowed value for the element. The value is inclusive. This is allowed for the types date, dateTime, instant, time, decimal, integer, and Quantity.",
-        "comment": "Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](http://build.fhir.org/datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.",
+        "comment": "Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.",
         "min": 0,
         "max": "1",
         "base": {
@@ -3601,7 +3542,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -3617,8 +3557,8 @@
       {
         "id": "ElementDefinition.maxLength",
         "path": "ElementDefinition.maxLength",
-        "short": "Max length for strings",
-        "definition": "Indicates the maximum length in characters that is permitted to be present in conformant instances and which is expected to be supported by conformant consumers that support the element.",
+        "short": "Max length for string type data",
+        "definition": "Indicates the maximum length in characters that is permitted to be present in conformant instances and which is expected to be supported by conformant consumers that support the element. ```maxLength``` SHOULD only be used on primitive data types that have a string representation (see [Datatype characteristics](extension-structuredefinition-type-characteristics.html)).",
         "comment": "Receivers are not required to reject instances that exceed the maximum length.  The full length could be stored.  In some cases, data might be truncated, though truncation should be undertaken with care and an understanding of the consequences of doing so. If not specified, there is no conformance expectation for length support.",
         "min": 0,
         "max": "1",
@@ -3638,7 +3578,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -3682,7 +3621,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -3719,7 +3657,13 @@
             "severity": "warning",
             "human": "Constraints should have an expression or else validators will not be able to enforce them",
             "expression": "expression.exists()",
-            "xpath": "exists(f:expression/@value)",
+            "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition"
+          },
+          {
+            "key": "eld-26",
+            "severity": "error",
+            "human": "Errors cannot be suppressed",
+            "expression": "(severity \u003d \u0027error\u0027) implies suppress.empty()",
             "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition"
           },
           {
@@ -3727,7 +3671,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -3817,7 +3760,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -3825,7 +3767,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -3864,7 +3805,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -3892,7 +3832,7 @@
         },
         "type": [
           {
-            "code": "string"
+            "code": "markdown"
           }
         ],
         "constraint": [
@@ -3901,7 +3841,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -3938,7 +3877,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -3956,8 +3894,44 @@
             }
           ],
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/ValueSet/constraint-severity|4.6.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/constraint-severity|5.0.0-snapshot3"
         },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          }
+        ]
+      },
+      {
+        "id": "ElementDefinition.constraint.suppress",
+        "path": "ElementDefinition.constraint.suppress",
+        "short": "Suppress warning or hint in profile",
+        "definition": "If true, indicates that the warning or best practice guideline should be suppressed.",
+        "comment": "This element should only be present in a derived profile where a warning or hint has been determined to be spurious/incorrect. E.g. a warning encouraging the inclusion of an element that the profile explicitly prohibits.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "ElementDefinition.constraint.suppress",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
         "mapping": [
           {
             "identity": "rim",
@@ -3999,7 +3973,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -4016,7 +3989,7 @@
         "id": "ElementDefinition.constraint.expression",
         "path": "ElementDefinition.constraint.expression",
         "short": "FHIRPath expression of constraint",
-        "definition": "A [FHIRPath](http://build.fhir.org/fhirpath.html) expression of constraint that can be executed to see if this constraint is met.",
+        "definition": "A [FHIRPath](fhirpath.html) expression of constraint that can be executed to see if this constraint is met.",
         "comment": "In the absense of an expression, the expression is likely not enforceable by validators, and might be missed by many systems.",
         "requirements": "Used by validation tooling tests of the validity of the resource.",
         "min": 0,
@@ -4037,51 +4010,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "N/A (MIF territory)"
-          }
-        ]
-      },
-      {
-        "id": "ElementDefinition.constraint.xpath",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
-            "valueCode": "trial-use"
-          }
-        ],
-        "path": "ElementDefinition.constraint.xpath",
-        "short": "XPath expression of constraint",
-        "definition": "An XPath expression of constraint that can be executed to see if this constraint is met.",
-        "comment": "Elements SHALL use \"f\" as the namespace prefix for the FHIR namespace, and \"x\" for the xhtml namespace, and SHALL NOT use any other prefixes.     Note: XPath is generally considered not useful because it does not apply to JSON and other formats and because of XSLT implementation issues, and may be removed in the future.",
-        "requirements": "Used in Schematron tests of the validity of the resource.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "ElementDefinition.constraint.xpath",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -4121,7 +4049,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -4135,11 +4062,87 @@
         ]
       },
       {
+        "id": "ElementDefinition.mustHaveValue",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use"
+          }
+        ],
+        "path": "ElementDefinition.mustHaveValue",
+        "short": "For primitives, that a value must be present - not replaced by an extension",
+        "definition": "Specifies for a primitive data type that the value of the data type cannot be replaced by an extension.",
+        "comment": "Typical extensions that can be provided in place of a the value are [data-absent-reason](extension-data-absent-reason.html),  [nullflavor](extension-iso21090-nullflavor.html),  [OriginalText](extension-originaltext.html), and [expression](extension-cqf-expression.html). Note that this element has no meaning when a value is provided, and extensions can be provided in addition to a value.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "ElementDefinition.mustHaveValue",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "ElementDefinition.valueAlternatives",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use"
+          }
+        ],
+        "path": "ElementDefinition.valueAlternatives",
+        "short": "Extensions that are allowed to replace a primitive value",
+        "definition": "Specifies a list of extensions that can appear in place of a primitive value.",
+        "comment": "if mustHaveValue is true, then this element should not be present, since no extensions are allowed in place of the value. Note that this element has no impact if the value is present.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "ElementDefinition.valueAlternatives",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "canonical",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/StructureDefinition"
+            ]
+          }
+        ],
+        "meaningWhenMissing": "If this element is missing, then any extension can be used if it\u0027s context is appropriate",
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
         "id": "ElementDefinition.mustSupport",
         "path": "ElementDefinition.mustSupport",
-        "short": "If the element must be supported",
-        "definition": "If true, implementations that produce or consume resources SHALL provide \"support\" for the element in some meaningful way.  If false, the element may be ignored and not supported. If false, whether to populate or use the data element in any way is at the discretion of the implementation.",
-        "comment": "\"Something useful\" is context dependent and impossible to describe in the base FHIR specification. For this reason, tue mustSupport flag is never set to true by the FHIR specification itself - it is only set to true in profiles.  A profile on a type can always make mustSupport \u003d true if it is false in the base type but cannot make mustSupport \u003d false if it is true in the base type.   This is done in [Resource Profiles](http://hl7.org/fhir/profiling.html#mustsupport), where the profile labels an element as mustSupport\u003dtrue. When a profile does this, it SHALL also make clear exactly what kind of \"support\" is required, as this can mean many things.    Note that an element that has the property IsModifier is not necessarily a \"key\" element (e.g. one of the important elements to make use of the resource), nor is it automatically mustSupport - however both of these things are more likely to be true for IsModifier elements than for other elements.",
+        "short": "If the element must be supported (discouraged - see obligations)",
+        "definition": "If true, implementations that produce or consume resources SHALL provide \"support\" for the element in some meaningful way. Note that this is being phased out and replaced by obligations (see below).  If false, the element may be ignored and not supported. If false, whether to populate or use the data element in any way is at the discretion of the implementation.",
+        "comment": "\"Something meaningful\" is context dependent and impossible to describe in the base FHIR specification. For this reason, the mustSupport flag is never set to true by the FHIR specification itself - it is only set to true in profiles.  A profile on a type can always make mustSupport \u003d true if it is false in the base type but cannot make mustSupport \u003d false if it is true in the base type.   This is done in [Resource Profiles](profiling.html#mustsupport), where the profile labels an element as mustSupport\u003dtrue. When a profile does this, it SHALL also make clear exactly what kind of \"support\" is required, as this can mean many things.    Note that an element that has the property IsModifier is not necessarily a \"key\" element (e.g. one of the important elements to make use of the resource), nor is it automatically mustSupport - however both of these things are more likely to be true for IsModifier elements than for other elements.",
         "requirements": "Allows a profile to set expectations for system capabilities beyond merely respecting cardinality constraints.",
         "min": 0,
         "max": "1",
@@ -4153,14 +4156,13 @@
             "code": "boolean"
           }
         ],
-        "meaningWhenMissing": "In a base type, where the element is being defined for the first time, the element is assumed to be mustSupport \u003d false. In a profile (a constraint on an existing type), if mustSupport is not specific in either the differentil or the snapshot, the mustSupport value is not changed fro the base definition. Not, though, that the snapshot SHOULD always populate the mustSuppot value",
+        "meaningWhenMissing": "In a base type, where the element is being defined for the first time, the element is assumed to be mustSupport \u003d false. In a profile (a constraint on an existing type), if mustSupport is not specific in either the differential or the snapshot, the mustSupport value is not changed from the base definition. Note, though, that the snapshot SHOULD always populate the mustSupport value",
         "constraint": [
           {
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -4176,6 +4178,397 @@
             "map": "??"
           }
         ]
+      },
+      {
+        "id": "ElementDefinition.obligation",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use"
+          }
+        ],
+        "path": "ElementDefinition.obligation",
+        "short": "Documents obligations for applications making use of this element",
+        "definition": "Documents obligations that apply to applications implementing this element. The obligations relate to application behaviour, not the content of the element itself in the resource instances that contain this element.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "ElementDefinition.obligation",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Element"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "ElementDefinition.obligation.id",
+        "path": "ElementDefinition.obligation.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "Unique id for inter-element referencing",
+        "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+                "valueUrl": "string"
+              }
+            ],
+            "code": "http://hl7.org/fhirpath/System.String"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "ElementDefinition.obligation.extension",
+        "path": "ElementDefinition.obligation.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "open"
+        },
+        "short": "Additional content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() !\u003d value.exists()",
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "ElementDefinition.obligation.code",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use"
+          }
+        ],
+        "path": "ElementDefinition.obligation.code",
+        "short": "Combination code describing the nature of the obligation",
+        "definition": "Codes, potentially combination code, that describe the obligations that apply to implementing applications.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "ElementDefinition.obligation.code",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/build/StructureDefinition/binding-definition",
+              "valueString": "Codes, potentially combination code, that describe an obligation that applies to implementing applications."
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObligationCodes"
+            }
+          ],
+          "strength": "extensible",
+          "valueSet": "http://hl7.org/fhir/ValueSet/obligation"
+        }
+      },
+      {
+        "id": "ElementDefinition.obligation.actor",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use"
+          }
+        ],
+        "path": "ElementDefinition.obligation.actor",
+        "short": "Actor(s) this obligation applies to (all actors if none)",
+        "definition": "Actor(s) to which the obligation applies.",
+        "comment": "If not actors are specified, then the obligation applies to all implementations.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "ElementDefinition.obligation.actor",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "canonical",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/ActorDefinition"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "ElementDefinition.obligation.documentation",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use"
+          }
+        ],
+        "path": "ElementDefinition.obligation.documentation",
+        "short": "Documentation of the purpose or application of the obligation",
+        "definition": "Human readable documentation of the purpose or application of the obligation.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "ElementDefinition.obligation.documentation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "markdown"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "ElementDefinition.obligation.usage",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use"
+          }
+        ],
+        "path": "ElementDefinition.obligation.usage",
+        "short": "Qualifies the usage - jurisdiction, gender, workflow status etc",
+        "definition": "Qualifies the usage of the obligation. Typically obligations are qualified by jurisdiction, but they may also be qualified by gender, workflow status, clinical domain etc. The information to decide whether a usege context applies is usually outside the resource, determined by context, and this might present challenges for validation tooling.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "ElementDefinition.obligation.usage",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "UsageContext"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "ElementDefinition.obligation.filter",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use"
+          }
+        ],
+        "path": "ElementDefinition.obligation.filter",
+        "short": "Limits obligation to some repeats by FHIRPath",
+        "definition": "A FHIRPath expression that restricts to the obligation to one of a set of repeats.",
+        "comment": "This might be used to indicate obligations that apply to home phone number, and not to other phone numbers, for example.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "ElementDefinition.obligation.filter",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "ElementDefinition.obligation.filterDocumentation",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use"
+          }
+        ],
+        "path": "ElementDefinition.obligation.filterDocumentation",
+        "short": "Ddescribes the intent of the filter (short)",
+        "definition": "Documents the FHIRPath expression for the benefit of users who are not familiar with FHIRPath.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "ElementDefinition.obligation.filterDocumentation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "ElementDefinition.obligation.process",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use"
+          }
+        ],
+        "path": "ElementDefinition.obligation.process",
+        "short": "The obligation only applies when perfomring the indicated process",
+        "definition": "A process that the obligation applies to. This might a canonical URL for an OperationDefinition, or some other reference.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "ElementDefinition.obligation.process",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true
       },
       {
         "id": "ElementDefinition.isModifier",
@@ -4203,7 +4596,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -4243,7 +4635,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -4261,7 +4652,7 @@
         "path": "ElementDefinition.isSummary",
         "short": "Include when _summary \u003d true?",
         "definition": "Whether the element should be included if a client requests a search with the parameter _summary\u003dtrue.",
-        "comment": "Some resources include a set of simple metadata, and some very large data. This element is used to reduce the quantity of data returned in searches. Note that servers may pre-cache summarized resources for optimal performance, so servers might not support per-profile use of the isSummary flag. When a request is made with _summary\u003dtrue, serailisers only include elements marked as \u0027isSummary \u003d true\u0027. Other than Attachment.data, all data type properties are included in the summary form. In resource and data type definitions, if an element is at the root or has a parent that is \u0027mustSupport\u0027 and the minimum cardinality is 1 or the element is a modifier, it must be marked as isSummary\u003dtrue.",
+        "comment": "Some resources include a set of simple metadata, and some very large data. This element is used to reduce the quantity of data returned in searches. Note that servers may pre-cache summarized resources for optimal performance. When a request is made with _summary\u003dtrue, serializers only include elements marked as \u0027isSummary \u003d true\u0027. With a few exceptions (listed below), all datatype properties are included in the summary form. In resource and datatype definitions, if an element has a descendant marked as isSummary\u003dtrue or if it satisfies both of the following conditions, it must be marked as isSummary\u003dtrue:\n* is at the root or has a parent that is \u0027mustSupport\u0027\n* has a minimum cardinality of 1 or is a modifier element\n\nThe following datatype properties are exceptions, and are not marked as isSummary:\n* Attachment.data\n* Signature.data, Signature.targetFormat, Signature.sigFormat\n* Narrative.status, Narrative.div\n* SampledData.data.",
         "requirements": "Allow clients to search through large resources quickly.",
         "min": 0,
         "max": "0",
@@ -4282,7 +4673,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -4332,7 +4722,13 @@
             "severity": "error",
             "human": "ValueSet SHALL start with http:// or https:// or urn: or #",
             "expression": "valueSet.exists() implies (valueSet.startsWith(\u0027http:\u0027) or valueSet.startsWith(\u0027https\u0027) or valueSet.startsWith(\u0027urn:\u0027) or valueSet.startsWith(\u0027#\u0027))",
-            "xpath": "(starts-with(string(f:valueSet/@value), \u0027http:\u0027) or starts-with(string(f:valueSet/@value), \u0027https:\u0027) or starts-with(string(f:valueSet/@value), \u0027urn:\u0027) or starts-with(string(f:valueSet/@value), \u0027x\u0027))",
+            "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition"
+          },
+          {
+            "key": "eld-23",
+            "severity": "error",
+            "human": "binding SHALL have either description or valueSet",
+            "expression": "description.exists() or valueSet.exists()",
             "source": "http://hl7.org/fhir/StructureDefinition/ElementDefinition"
           },
           {
@@ -4340,7 +4736,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -4358,10 +4753,6 @@
           {
             "identity": "iso11179",
             "map": ".domain"
-          },
-          {
-            "identity": "loinc",
-            "map": "ANSWER LIST, NORMATIVE ANSWER LIST"
           }
         ]
       },
@@ -4438,7 +4829,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -4446,7 +4836,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -4464,7 +4853,7 @@
         "path": "ElementDefinition.binding.strength",
         "short": "required | extensible | preferred | example",
         "definition": "Indicates the degree of conformance expectations associated with this binding - that is, the degree to which the provided value set must be adhered to in the instances.",
-        "comment": "For further discussion, see [Using Terminologies](http://build.fhir.org/terminologies.html).",
+        "comment": "For further discussion, see [Using Terminologies](terminologies.html).",
         "alias": [
           "conformance",
           "extensibility"
@@ -4487,7 +4876,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -4509,7 +4897,7 @@
             }
           ],
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/ValueSet/binding-strength|4.6.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/binding-strength|5.0.0-snapshot3"
         },
         "mapping": [
           {
@@ -4519,10 +4907,6 @@
           {
             "identity": "rim",
             "map": "N/A (MIF territory)"
-          },
-          {
-            "identity": "loinc",
-            "map": "N/A"
           }
         ]
       },
@@ -4539,7 +4923,7 @@
           }
         ],
         "path": "ElementDefinition.binding.description",
-        "short": "Human explanation of the value set",
+        "short": "Intended use of codes in the bound value set",
         "definition": "Describes the intended use of this particular set of codes.",
         "min": 0,
         "max": "1",
@@ -4550,7 +4934,7 @@
         },
         "type": [
           {
-            "code": "string"
+            "code": "markdown"
           }
         ],
         "constraint": [
@@ -4559,7 +4943,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -4606,7 +4989,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -4624,12 +5006,365 @@
           {
             "identity": "dex",
             "map": "valueDomain.valueSet"
-          },
-          {
-            "identity": "loinc",
-            "map": "CODE_TABLE"
           }
         ]
+      },
+      {
+        "id": "ElementDefinition.binding.additional",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use"
+          }
+        ],
+        "path": "ElementDefinition.binding.additional",
+        "short": "Additional Bindings - more rules about the binding",
+        "definition": "Additional bindings that help applications implementing this element. Additional bindings do not replace the main binding but provide more information and/or context.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "ElementDefinition.binding.additional",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Element"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "ElementDefinition.binding.additional.id",
+        "path": "ElementDefinition.binding.additional.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "Unique id for inter-element referencing",
+        "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+                "valueUrl": "string"
+              }
+            ],
+            "code": "http://hl7.org/fhirpath/System.String"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "ElementDefinition.binding.additional.extension",
+        "path": "ElementDefinition.binding.additional.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "open"
+        },
+        "short": "Additional content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() !\u003d value.exists()",
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "ElementDefinition.binding.additional.purpose",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use"
+          }
+        ],
+        "path": "ElementDefinition.binding.additional.purpose",
+        "short": "maximum | minimum | required | extensible | candidate | current | preferred | ui | starter | component",
+        "definition": "The use of this additional binding.",
+        "comment": "Conformance bindings are in addition to the base binding, not instead of it.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "ElementDefinition.binding.additional.purpose",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/build/StructureDefinition/binding-definition",
+              "valueString": "The use of an additional binding."
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "AdditionalBindingPurpose"
+            }
+          ],
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/additional-binding-purpose|5.0.0-snapshot3"
+        }
+      },
+      {
+        "id": "ElementDefinition.binding.additional.valueSet",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use"
+          }
+        ],
+        "path": "ElementDefinition.binding.additional.valueSet",
+        "short": "The value set for the additional binding",
+        "definition": "The valueSet that is being bound for the purpose.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "ElementDefinition.binding.additional.valueSet",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "canonical",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/ValueSet"
+            ]
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "ElementDefinition.binding.additional.documentation",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use"
+          }
+        ],
+        "path": "ElementDefinition.binding.additional.documentation",
+        "short": "Documentation of the purpose of use of the binding",
+        "definition": "Documentation of the purpose of use of the bindingproviding additional information about how it is intended to be used.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "ElementDefinition.binding.additional.documentation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "markdown"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "ElementDefinition.binding.additional.shortDoco",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use"
+          }
+        ],
+        "path": "ElementDefinition.binding.additional.shortDoco",
+        "short": "Concise documentation - for summary tables",
+        "definition": "Concise documentation - for summary tables.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "ElementDefinition.binding.additional.shortDoco",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "ElementDefinition.binding.additional.usage",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use"
+          }
+        ],
+        "path": "ElementDefinition.binding.additional.usage",
+        "short": "Qualifies the usage - jurisdiction, gender, workflow status etc",
+        "definition": "Qualifies the usage of the binding. Typically bindings are qualified by jurisdiction, but they may also be qualified by gender, workflow status, clinical domain etc. The information to decide whether a usege context applies is usually outside the resource, determined by context, and this might present challenges for validation tooling.",
+        "comment": "This specification does not define exactly how the context is determined for the usage; typically, this will be described in implementation guides.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "ElementDefinition.binding.additional.usage",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "UsageContext"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true
+      },
+      {
+        "id": "ElementDefinition.binding.additional.any",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "trial-use"
+          }
+        ],
+        "path": "ElementDefinition.binding.additional.any",
+        "short": "Whether binding can applies to all repeats, or just one",
+        "definition": "Whether the binding applies to all repeats, or just to any one of them. This is only relevant for elements that can repeat.",
+        "comment": "A common pattern is to make a conformance binding to all repeats, and then make a binding that one of the repeats must conform to.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "ElementDefinition.binding.additional.any",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() \u003e id.count())",
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true
       },
       {
         "id": "ElementDefinition.mapping",
@@ -4656,7 +5391,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -4750,7 +5484,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
@@ -4758,7 +5491,6 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
-            "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
             "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
@@ -4794,7 +5526,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -4831,7 +5562,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -4854,7 +5584,7 @@
           ],
           "strength": "required",
           "description": "BCP 13 (RFCs 2045, 2046, 2047, 4288, 4289 and 2049)",
-          "valueSet": "http://hl7.org/fhir/ValueSet/mimetypes|4.6.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/mimetypes|5.0.0-snapshot3"
         },
         "mapping": [
           {
@@ -4887,7 +5617,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
@@ -4918,7 +5647,7 @@
         },
         "type": [
           {
-            "code": "string"
+            "code": "markdown"
           }
         ],
         "constraint": [
@@ -4927,7 +5656,6 @@
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
-            "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],

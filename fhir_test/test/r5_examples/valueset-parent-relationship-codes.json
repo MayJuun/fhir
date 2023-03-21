@@ -2,14 +2,14 @@
   "resourceType": "ValueSet",
   "id": "parent-relationship-codes",
   "meta": {
-    "lastUpdated": "2022-05-06T17:02:42.916+00:00",
+    "lastUpdated": "2022-12-14T07:12:54.019+11:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
     ]
   },
   "text": {
     "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n      \n      \u003cp\u003eThe value set includes the v3 RoleCode PRN (parent), TWIN (twin) and all of their specializations.  It covers the relationships needed to establish genetic pedigree relationships between family members.\u003c/p\u003e\n    \n    \u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003eThis value set includes codes based on the following rules:\u003c/p\u003e\u003cul\u003e\u003cli\u003eInclude codes from \u003ca href\u003d\"http://terminology.hl7.org/4.0.0/CodeSystem-v3-RoleCode.html\"\u003e\u003ccode\u003ehttp://terminology.hl7.org/CodeSystem/v3-RoleCode\u003c/code\u003e\u003c/a\u003e where concept  is-a  \u003ca href\u003d\"http://terminology.hl7.org/4.0.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-PRN\"\u003ePRN\u003c/a\u003e\u003c/li\u003e\u003cli\u003eInclude codes from \u003ca href\u003d\"http://terminology.hl7.org/4.0.0/CodeSystem-v3-RoleCode.html\"\u003e\u003ccode\u003ehttp://terminology.hl7.org/CodeSystem/v3-RoleCode\u003c/code\u003e\u003c/a\u003e where concept  is-a  \u003ca href\u003d\"http://terminology.hl7.org/4.0.0/CodeSystem-v3-RoleCode.html#v3-RoleCode-TWIN\"\u003eTWIN\u003c/a\u003e\u003c/li\u003e\u003c/ul\u003e\u003c/div\u003e"
   },
   "extension": [
     {
@@ -22,12 +22,23 @@
     {
       "system": "urn:ietf:rfc:3986",
       "value": "urn:oid:2.16.840.1.113883.4.642.3.921"
+    },
+    {
+      "use": "old",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.3.840"
+    },
+    {
+      "use": "old",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.2.382"
     }
   ],
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "name": "ParentRelationshipCodes",
   "title": "Parent Relationship Codes",
   "status": "draft",
+  "experimental": false,
   "publisher": "FHIR Project team",
   "contact": [
     {
@@ -40,6 +51,17 @@
     }
   ],
   "description": "The value set includes the v3 RoleCode PRN (parent), TWIN (twin) and all of their specializations.  It covers the relationships needed to establish genetic pedigree relationships between family members.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "compose": {
     "include": [
       {

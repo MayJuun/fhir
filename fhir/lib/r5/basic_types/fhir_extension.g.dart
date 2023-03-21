@@ -140,10 +140,18 @@ _$_FhirExtension _$$_FhirExtensionFromJson(Map<String, dynamic> json) =>
           ? null
           : Attachment.fromJson(
               json['valueAttachment'] as Map<String, dynamic>),
+      valueAvailability: json['valueAvailability'] == null
+          ? null
+          : Availability.fromJson(
+              json['valueAvailability'] as Map<String, dynamic>),
       valueCodeableConcept: json['valueCodeableConcept'] == null
           ? null
           : CodeableConcept.fromJson(
               json['valueCodeableConcept'] as Map<String, dynamic>),
+      valueCodeableReference: json['valueCodeableReference'] == null
+          ? null
+          : CodeableReference.fromJson(
+              json['valueCodeableReference'] as Map<String, dynamic>),
       valueCoding: json['valueCoding'] == null
           ? null
           : Coding.fromJson(json['valueCoding'] as Map<String, dynamic>),
@@ -295,7 +303,10 @@ Map<String, dynamic> _$$_FhirExtensionToJson(_$_FhirExtension instance) {
   writeNotNull('valueAge', instance.valueAge?.toJson());
   writeNotNull('valueAnnotation', instance.valueAnnotation?.toJson());
   writeNotNull('valueAttachment', instance.valueAttachment?.toJson());
+  writeNotNull('valueAvailability', instance.valueAvailability?.toJson());
   writeNotNull('valueCodeableConcept', instance.valueCodeableConcept?.toJson());
+  writeNotNull(
+      'valueCodeableReference', instance.valueCodeableReference?.toJson());
   writeNotNull('valueCoding', instance.valueCoding?.toJson());
   writeNotNull('valueContactPoint', instance.valueContactPoint?.toJson());
   writeNotNull('valueCount', instance.valueCount?.toJson());

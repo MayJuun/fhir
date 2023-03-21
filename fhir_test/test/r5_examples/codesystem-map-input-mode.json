@@ -2,14 +2,14 @@
   "resourceType": "CodeSystem",
   "id": "map-input-mode",
   "meta": {
-    "lastUpdated": "2022-05-07T04:02:42.916+11:00",
+    "lastUpdated": "2022-12-14T07:12:54.019+11:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
     ]
   },
   "text": {
     "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n      \n      \u003cp\u003eThis code system http://hl7.org/fhir/map-input-mode defines the following codes:\u003c/p\u003e\n      \n      \u003ctable class\u003d\"codes\"\u003e\n        \n        \u003ctr\u003e\n          \n          \u003ctd style\u003d\"white-space:nowrap\"\u003e\n            \n            \u003cb\u003eCode\u003c/b\u003e\n          \n          \u003c/td\u003e\n          \n          \u003ctd\u003e\n            \n            \u003cb\u003eDisplay\u003c/b\u003e\n          \n          \u003c/td\u003e\n          \n          \u003ctd\u003e\n            \n            \u003cb\u003eDefinition\u003c/b\u003e\n          \n          \u003c/td\u003e\n        \n        \u003c/tr\u003e\n        \n        \u003ctr\u003e\n          \n          \u003ctd style\u003d\"white-space:nowrap\"\u003esource\n            \n            \u003ca name\u003d\"map-input-mode-source\"\u003e \u003c/a\u003e\n          \n          \u003c/td\u003e\n          \n          \u003ctd\u003eSource Instance\u003c/td\u003e\n          \n          \u003ctd\u003eNames an input instance used a source for mapping.\u003c/td\u003e\n        \n        \u003c/tr\u003e\n        \n        \u003ctr\u003e\n          \n          \u003ctd style\u003d\"white-space:nowrap\"\u003etarget\n            \n            \u003ca name\u003d\"map-input-mode-target\"\u003e \u003c/a\u003e\n          \n          \u003c/td\u003e\n          \n          \u003ctd\u003eTarget Instance\u003c/td\u003e\n          \n          \u003ctd\u003eNames an instance that is being populated.\u003c/td\u003e\n        \n        \u003c/tr\u003e\n      \n      \u003c/table\u003e\n    \n    \u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003eThis code system \u003ccode\u003ehttp://hl7.org/fhir/map-input-mode\u003c/code\u003e defines the following codes:\u003c/p\u003e\u003ctable class\u003d\"codes\"\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDisplay\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDefinition\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003esource\u003ca name\u003d\"map-input-mode-source\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eSource Instance\u003c/td\u003e\u003ctd\u003eNames an input instance used a source for mapping.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003etarget\u003ca name\u003d\"map-input-mode-target\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eTarget Instance\u003c/td\u003e\u003ctd\u003eNames an instance that is being populated.\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
   },
   "extension": [
     {
@@ -29,13 +29,18 @@
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986",
-      "value": "urn:oid:2.16.840.1.113883.4.642.1.678"
+      "value": "urn:oid:2.16.840.1.113883.4.642.4.678"
+    },
+    {
+      "use": "old",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.1.664"
     }
   ],
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "name": "StructureMapInputMode",
   "title": "StructureMapInputMode",
-  "status": "draft",
+  "status": "active",
   "experimental": false,
   "date": "2021-01-05T10:01:24+11:00",
   "publisher": "HL7 (FHIR Project)",
@@ -54,6 +59,17 @@
     }
   ],
   "description": "Mode for this instance of data.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "caseSensitive": true,
   "valueSet": "http://hl7.org/fhir/ValueSet/map-input-mode",
   "content": "complete",

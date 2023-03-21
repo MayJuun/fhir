@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><EvidenceVariable xmlns="http://hl7.org/fhir">
+  <id value="example-mRS3-6-at-90days"/>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <p>
+        "mRS 3-6 at 90 days" is an outcome, defined by a CQL expression, used in expressing what an Evidence is about.
+      </p>
+	</div>
+  </text>
+  <title value="Modified Rankin Scale score 3-6 at 90 days after treatment"/>
+  <status value="draft"/>
+  <actual value="true"/>
+  <characteristic>
+		<description value="mRS 3-6 at 90 days"/>
+		<definitionExpression>
+			<description value="mRS 3-6"/>
+			<language value="text/cql"/>
+			<expression value="[&#34;Observation&#34;: code in &#34;75859-9|LOINC&#34;] mRS where mRS.value between 3 and 6"/>
+		</definitionExpression>
+		<timeFromEvent>
+			<eventCodeableConcept>
+				<coding>
+					<system value="http://hl7.org/fhir/evidence-variable-event"/>
+					<code value="study-start"/>
+					<display value="Study Start"/>
+				</coding>
+			</eventCodeableConcept>
+			<quantity>
+				<value value="90"/>
+				<unit value="day"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="d"/>
+			</quantity>
+		</timeFromEvent>
+  </characteristic>
+  <handling value="dichotomous"/>
+</EvidenceVariable>

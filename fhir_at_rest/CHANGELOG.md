@@ -1,12 +1,22 @@
 # fhir_at_rest
 
+## [0.9.5]
+
+* Updates for parsing bundles
+* Changed all classes to const, because freezed is immutable anyway and hopefully this can give a little performance boost
+
+## [0.9.4]
+
+* Updated to fhir 0.9.4
+* Updated to Dart 2.19.0
+
 ## [0.9.3]
 
-* Updated ependencies
+* Updated dependencies
 
 ## [0.9.2]
 
-* Updated ependencies
+* Updated dependencies
 
 ## [0.9.1]
 

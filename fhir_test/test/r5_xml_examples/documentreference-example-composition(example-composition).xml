@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><DocumentReference xmlns="http://hl7.org/fhir">
+  <id value="example-composition"/>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+    </security>
+  
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: DocumentReference</b><a name="example-composition"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource DocumentReference "example-composition" </p><p style="margin-bottom: 0px">Security Labels: <span title="{http://terminology.hl7.org/CodeSystem/v3-ActReason http://terminology.hl7.org/CodeSystem/v3-ActReason}">http://terminology.hl7.org/CodeSystem/v3-ActReason</span></p></div><p><b>identifier</b>: id: 1</p><p><b>status</b>: current</p><p><b>type</b>: Consult note <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#11488-4)</span></p><p><b>category</b>: Report <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#LP173421-1)</span></p><p><b>subject</b>: <a href="patient-example-xcda.html">Patient/xcda: Henry Levin the 7th</a> "Henry LEVIN"</p><p><b>context</b>: <a href="encounter-example-xcda.html">Encounter/xcda</a></p><h3>Events</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td><td><b>Reference</b></td></tr><tr><td>*</td><td>health record <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-ActCode.html">ActCode</a>#HEALTHREC)</span></td><td> </td></tr><tr><td>*</td><td> </td><td><a href="observation-example.html">Observation/example</a></td></tr></table><p><b>period</b>: 2010-07-18 --&gt; 2012-11-12</p><p><b>date</b>: 4 Jan 2012, 8:10:14 pm</p><p><b>author</b>: <a href="practitioner-example-xcda-author.html">Practitioner/xcda-author: Harold Hippocrates, MD</a> "Harold HIPPOCRATES"</p><h3>Attesters</h3><table class="grid"><tr><td>-</td><td><b>Mode</b></td><td><b>Party</b></td></tr><tr><td>*</td><td>Professional <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="codesystem-composition-attestation-mode.html">CompositionAttestationMode</a>#professional)</span></td><td><a href="practitioner-example-xcda-author.html">Practitioner/xcda-author: Harold Hippocrates, MD</a> "Harold HIPPOCRATES"</td></tr></table><h3>RelatesTos</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td><td><b>Target</b></td></tr><tr><td>*</td><td>Replaces <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="codesystem-document-relationship-type.html">DocumentRelationshipType</a>#replaces)</span></td><td><a href="broken-link.html">DocumentReference/old-example</a></td></tr></table><p><b>description</b>: Example of a Comprehensive DocumentReference resource. This is fully filled for all mandatory elements and all optional elements.</p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class="grid"><tr><td>-</td><td><b>Url</b></td></tr><tr><td>*</td><td><code>Composition/example</code></td></tr></table></blockquote></div></text><identifier>
+    <system value="http://healthintersections.com.au/test"/> 
+    <value value="1"/> 
+  </identifier>
+  <status value="current"/>
+  <type>
+    <coding>
+      <system value="http://loinc.org"/> 
+      <code value="11488-4"/> 
+      <display value="Consult note"/> 
+    </coding>
+  </type>
+  <category>
+    <coding>
+      <system value="http://loinc.org"/> 
+      <code value="LP173421-1"/> 
+      <display value="Report"/> 
+    </coding>
+  </category>
+  <subject>
+    <reference value="Patient/xcda"/> 
+    <display value="Henry Levin the 7th"/> 
+  </subject>
+  <context> 
+    <reference value="Encounter/xcda"/> 
+  </context> 
+  <event> 
+    <concept>
+      <coding> 
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/> 
+        <code value="HEALTHREC"/> 
+        <display value="health record"/> 
+      </coding> 
+  </concept>
+  </event>
+
+  <event>
+    <reference>
+      <reference value="Observation/example"/> 
+    </reference>
+  </event> 
+  <period> 
+    <start value="2010-07-18"/> 
+    <end value="2012-11-12"/> 
+  </period> 
+    <date value="2012-01-04T09:10:14Z"/> 
+  <author> 
+    <reference value="Practitioner/xcda-author"/> 
+    <display value="Harold Hippocrates, MD"/> 
+  </author> 
+  <attester>
+    <mode>
+      <coding>
+        <system value="http://hl7.org/fhir/composition-attestation-mode"/>
+        <code value="professional"/>
+      </coding>
+    </mode>
+    <party>
+      <reference value="Practitioner/xcda-author"/> 
+      <display value="Harold Hippocrates, MD"/> 
+    </party>
+  </attester>
+  <relatesTo>
+    <code>
+      <coding>
+        <system value="http://hl7.org/fhir/document-relationship-type"/>
+        <code value="replaces"/>
+      </coding>
+    </code>
+
+    <target>
+      <reference value="DocumentReference/old-example"/>
+    </target>
+  </relatesTo>
+  <description value="Example of a Comprehensive DocumentReference resource. This is fully filled for all mandatory elements and all optional elements."/>
+  <content>
+    <attachment>
+      <url value="Composition/example"/>
+    </attachment>
+  </content>
+
+</DocumentReference>

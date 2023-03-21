@@ -2,7 +2,7 @@
   "resourceType": "ValueSet",
   "id": "biologicallyderived-product-property-type-codes",
   "meta": {
-    "lastUpdated": "2022-05-06T17:02:42.916+00:00",
+    "lastUpdated": "2022-12-14T07:12:54.019+11:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
     ]
@@ -29,10 +29,10 @@
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986",
-      "value": "urn:oid:2.16.840.1.113883.4.642.3.0"
+      "value": "urn:oid:2.16.840.1.113883.4.642.3.3123"
     }
   ],
-  "version": "4.6.0",
+  "version": "5.0.0-snapshot3",
   "name": "BiologicallyDerivedProductPropertyTypeCodes",
   "title": "BiologicallyDerivedProductPropertyTypeCodes",
   "status": "draft",
@@ -50,6 +50,17 @@
     }
   ],
   "description": "This value set can enumerate ISBT 128 Codes published by ICCBBA as a part of the ISBT 128 standard. These example codes represent data elements defined in ST-027 ISBT 128 Dictionary of Standard Data Elements and are used to define data structure and format expectations for electronic exchange with the ISBT 128 standard.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
   "copyright": "This content from ICCBBA® is copyright © 2021 ICCBBA.",
   "compose": {
     "include": [

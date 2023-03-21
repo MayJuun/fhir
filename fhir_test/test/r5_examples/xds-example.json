@@ -24,6 +24,15 @@
           "status": "generated",
           "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\n\t\t\t\t\t\t\u003ca href\u003d\"http://localhost:9556/svc/fhir/Binary/1e404af3-077f-4bee-b7a6-a9be97e1ce32\"\u003eDocument: urn:oid:129.6.58.92.88336\u003c/a\u003eundefined, created 24/12/2005\n\t\t\t\t\t\u003c/div\u003e"
         },
+        "identifier": [
+          {
+            "type": {
+              "text": "uniqueId"
+            },
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:129.6.58.92.88336"
+          }
+        ],
         "status": "current",
         "type": {
           "coding": [
@@ -98,11 +107,7 @@
                   "code": "urn:ihe:pcc:handp:2008"
                 }
               }
-            ],
-            "identifier": {
-              "system": "urn:ietf:rfc:3986",
-              "value": "urn:oid:129.6.58.92.88336"
-            }
+            ]
           }
         ]
       },

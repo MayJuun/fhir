@@ -75,11 +75,9 @@
       ],
       "stratifier": [
         {
-          "code": [
-            {
-              "text": "stratifier-ages-up-to-9"
-            }
-          ],
+          "code": {
+            "text": "stratifier-ages-up-to-9"
+          },
           "stratum": [
             {
               "valueBoolean": true,
@@ -174,11 +172,9 @@
           ]
         },
         {
-          "code": [
-            {
-              "text": "stratifier-ages-10-plus"
-            }
-          ],
+          "code": {
+            "text": "stratifier-ages-10-plus"
+          },
           "stratum": [
             {
               "valueBoolean": true,
@@ -273,11 +269,9 @@
           ]
         },
         {
-          "code": [
-            {
-              "text": "stratifier-gender"
-            }
-          ],
+          "code": {
+            "text": "stratifier-gender"
+          },
           "stratum": [
             {
               "valueCodeableConcept": {

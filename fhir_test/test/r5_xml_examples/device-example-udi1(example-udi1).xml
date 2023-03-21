@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><Device xmlns="http://hl7.org/fhir">
+
+	<id value="example-udi1"/>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Device</b><a name="example-udi1"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Device "example-udi1" </p></div><p><b>identifier</b>: 1234-5678-90AB-CDEF, Serial Number: 10987654d321</p><h3>UdiCarriers</h3><table class="grid"><tr><td>-</td><td><b>DeviceIdentifier</b></td><td><b>Issuer</b></td><td><b>Jurisdiction</b></td><td><b>CarrierAIDC</b></td><td><b>CarrierHRF</b></td><td><b>EntryType</b></td></tr><tr><td>*</td><td>00844588003288</td><td><a href="http://hl7.org/fhir/NamingSystem/gs1">http://hl7.org/fhir/NamingSystem/gs1</a></td><td><a href="http://hl7.org/fhir/NamingSystem/fda-udi">http://hl7.org/fhir/NamingSystem/fda-udi</a></td><td>XWQyMDExMDg1NzY3NDAwMjAxNzE3MTQxMTIwMTBOWUZVTDAx4oaUMjExOTI4MzfihpQ3MTNBMUIyQzNENEU1RjZH</td><td>{01}00844588003288{17}141120{10}7654321D{21}10987654d321</td><td>barcode</td></tr></table><p><b>status</b>: active</p><p><b>manufacturer</b>: Acme Devices, Inc</p><p><b>expirationDate</b>: 2014-11-20</p><p><b>lotNumber</b>: 7654321D</p><h3>DeviceNames</h3><table class="grid"><tr><td>-</td><td><b>Name</b></td><td><b>Type</b></td></tr><tr><td>*</td><td>PM/Octane 2014</td><td>user-friendly-name</td></tr></table><p><b>type</b>: Coated femoral stem prosthesis, modular <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#468063009)</span></p><h3>Associations</h3><table class="grid"><tr><td>-</td><td><b>Status</b></td><td><b>HumanSubject</b></td></tr><tr><td>*</td><td>attached <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (device-association-status#attached)</span></td><td><a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</td></tr></table><p><b>safety</b>: MR Unsafe <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (unknown#mr-unsafe)</span></p></div></text><identifier>
+	   <type>
+	    <coding>
+           <system value="http://acme.com/devices/pacemakers/octane/serial"/>
+		</coding>
+	   </type>
+	   <value value="1234-5678-90AB-CDEF"/>
+	</identifier>
+	<identifier>
+		<type>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+				<code value="SNO"/>
+			</coding>
+		</type>
+		<value value="10987654d321"/>
+	</identifier>
+	<udiCarrier>
+		<deviceIdentifier value="00844588003288"/>
+		<issuer value="http://hl7.org/fhir/NamingSystem/gs1"/>
+		<jurisdiction value="http://hl7.org/fhir/NamingSystem/fda-udi"/>
+		<carrierAIDC value="XWQyMDExMDg1NzY3NDAwMjAxNzE3MTQxMTIwMTBOWUZVTDAx4oaUMjExOTI4MzfihpQ3MTNBMUIyQzNENEU1RjZH"/>
+		<carrierHRF value="{01}00844588003288{17}141120{10}7654321D{21}10987654d321"/>
+		<entryType value="barcode"/>
+	</udiCarrier>
+	<status value="active"/>
+	<manufacturer value="Acme Devices, Inc"/>
+	<expirationDate value="2014-11-20"/>
+	<lotNumber value="7654321D"/>
+	<deviceName>
+      <name value="PM/Octane 2014"/>
+      <type value="user-friendly-name"/>
+    </deviceName>
+	<type>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="468063009"/>
+			<display value="Coated femoral stem prosthesis, modular"/>
+		</coding>
+		<text value="Coated femoral stem prosthesis, modular"/>
+		    <!--   note: optional text value added here for a prettier generated narrative   -->
+	</type>
+	<association>
+	  <status> 
+	     <coding>
+		   <system value="http://terminology.hl7.org/CodeSystem/device-association-status"/>
+           <code value="attached"/>
+		 </coding>
+	  </status>
+      <humanSubject>
+		<reference value="Patient/example"/>
+	  </humanSubject>
+	</association>
+	<safety>
+		<coding>
+			<system value="urn:oid:2.16.840.1.113883.3.26.1.1"/>
+			<code value="mr-unsafe"/>
+			<display value="MR Unsafe"/>
+		</coding>
+		<text value="MR Unsafe"/>
+		    <!--   note: optional text value added here for a prettier generated narrative   -->
+	</safety>
+	
+</Device>

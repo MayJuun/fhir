@@ -22,7 +22,7 @@
       }
     ]
   },
-  "patient": {
+  "subject": {
     "reference": "Patient/dicom"
   },
   "identifiedDateTime": "2013-05-08",

@@ -230,6 +230,49 @@ class BundleEntry with _$BundleEntry {
     BundleEntryResponse? response,
   }) = _BundleEntry;
 
+  factory BundleEntry.get(String resourcePath, [FhirUri? canonicalBaseUrl]) =>
+      BundleEntry(
+          fullUrl: canonicalBaseUrl == null
+              ? null
+              : FhirUri('$canonicalBaseUrl/$resourcePath'),
+          request: BundleEntryRequest(
+            method: RequestMethod.get_,
+            url: FhirUri(resourcePath),
+          ));
+
+  factory BundleEntry.post(Resource resource, [FhirUri? canonicalBaseUrl]) =>
+      BundleEntry(
+          resource: resource,
+          fullUrl: canonicalBaseUrl == null
+              ? null
+              : FhirUri('$canonicalBaseUrl/${resource.path}'),
+          request: BundleEntryRequest(
+            method: RequestMethod.post,
+            url: FhirUri(resource.path),
+          ));
+
+  factory BundleEntry.put(Resource resource, [FhirUri? canonicalBaseUrl]) =>
+      BundleEntry(
+          resource: resource,
+          fullUrl: canonicalBaseUrl == null
+              ? null
+              : FhirUri('$canonicalBaseUrl/${resource.path}'),
+          request: BundleEntryRequest(
+            method: RequestMethod.put,
+            url: FhirUri(resource.path),
+          ));
+
+  factory BundleEntry.delete(String resourcePath,
+          [FhirUri? canonicalBaseUrl]) =>
+      BundleEntry(
+          fullUrl: canonicalBaseUrl == null
+              ? null
+              : FhirUri('$canonicalBaseUrl/$resourcePath'),
+          request: BundleEntryRequest(
+            method: RequestMethod.delete,
+            url: FhirUri(resourcePath),
+          ));
+
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 

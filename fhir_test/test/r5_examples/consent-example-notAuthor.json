@@ -20,7 +20,7 @@
     "reference": "Patient/f001",
     "display": "P. van de Heuvel"
   },
-  "dateTime": "2015-11-18",
+  "date": "2015-11-18",
   "controller": [
     {
       "reference": "Organization/f001"

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><Provenance xmlns="http://hl7.org/fhir">
+	<id value="example-diagnosticreport-sig"/>
+	    <!--   
+    an example Provenance of a verification without changing the content, electronic signature
+    -->
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Provenance</b><a name="example-diagnosticreport-sig"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Provenance "example-diagnosticreport-sig" </p></div><p><b>target</b>: <span title="  &#xA;    an example Provenance of a verification without changing the content, electronic signature&#xA;   "><a href="diagnosticreport-example.html">DiagnosticReport/101</a></span></p><p><b>recorded</b>: 4 Mar 2011, 8:30:00 am</p><p><b>policy</b>: <a href="http://example.org/policy/Reviewed">http://example.org/policy/Reviewed</a></p><p><b>activity</b>: Verify Record Lifecycle Event <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-iso-21089-lifecycle.html">Iso_21089_2017_Health_Record_Lifecycle_Events</a>#verify)</span></p><p><b>patient</b>: <a href="patient-example-b.html">Patient/pat2</a> "Duck DONALD"</p><h3>Agents</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Who</b></td></tr><tr><td>*</td><td>Verifier <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-provenance-participant-type.html">Provenance participant type</a>#verifier)</span></td><td><a href="organization-example-lab.html">Organization/1832473e-2fe0-452d-abe9-3cdb9879522f</a> "Clinical Lab"</td></tr></table><h3>Signatures</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>When</b></td><td><b>Who</b></td></tr><tr><td>*</td><td><span title="  verification signature  ">Proof of approval (Details: http://uri.etsi.org/01903/v1.2.2 code ProofOfapproval = 'Proof of approval', stated as 'Proof of approval')</span></td><td>4 Mar 2011, 8:30:00 am</td><td><a href="organization-example-lab.html">Organization/1832473e-2fe0-452d-abe9-3cdb9879522f</a> "Clinical Lab"</td></tr></table></div></text><target>
+		<reference value="DiagnosticReport/101"/>
+	</target>
+	<recorded value="2011-03-04T08:30:00+11:00"/>
+	<policy value="http://example.org/policy/Reviewed"/>
+	<activity>
+		<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"/>
+			<code value="verify"/>
+		</coding>
+	</activity>
+	<patient>
+		<reference value="Patient/pat2"/>
+	</patient>
+	<agent>
+		<type>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/provenance-participant-type"/>
+				<code value="verifier"/>
+				<display value="Verifier"/>
+			</coding>
+		</type>
+		<who>
+			<reference value="Organization/1832473e-2fe0-452d-abe9-3cdb9879522f"/>
+		</who>
+	</agent>
+	<signature>
+		    <!--   verification signature   -->
+		<type>
+			<system value="http://uri.etsi.org/01903/v1.2.2"/>
+			<code value="ProofOfapproval"/>
+			<display value="Proof of approval"/>
+		</type>
+		<when value="2011-03-04T08:30:00+11:00"/>
+		<who>
+			<reference value="Organization/1832473e-2fe0-452d-abe9-3cdb9879522f"/>
+		</who>
+	</signature>
+</Provenance>

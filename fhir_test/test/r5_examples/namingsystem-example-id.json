@@ -6,6 +6,12 @@
     "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n      \u003cp\u003e\n        \u003cb\u003eAustralian IHI Number\u003c/b\u003e\n      \u003c/p\u003e\n      \n      \u003cp\u003e oid: 1.2.36.1.2001.1003.0\u003c/p\u003e\n      \n      \u003cp\u003e uri: http://ns.electronichealth.net.au/id/hi/ihi/1.0\u003c/p\u003e\n    \n    \u003c/div\u003e"
   },
   "url": "http://hl7.org/fhir/NamingSystem/example-id",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.22.3"
+    }
+  ],
   "name": "Austalian Healthcare Identifier - Individual",
   "status": "active",
   "kind": "identifier",

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><NutritionOrder xmlns="http://hl7.org/fhir">    <!--   id = enteralbolus  file name = nutritionorder-example-enteralbolus.xml Name= Enteral Bolus  Description = Nutrition Order Enteral Bolus Feeding  Example
+Tube feedings are given in boluses several times a day   edited by Eric Haas Health eData Inc
+  -->    <!--  EH  Show all the elements in this examples for preference, and intolerance   --><id value="enteralbolus"/>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: NutritionOrder</b><a name="enteralbolus"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource NutritionOrder "enteralbolus" </p></div><p><b>identifier</b>: id: 123</p><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>subject</b>: <a href="patient-example.html">Patient/example: Peter Chalmers</a> "Peter CHALMERS"</p><p><b>encounter</b>: <a href="encounter-example.html">Encounter/example: Inpatient</a></p><p><b>dateTime</b>: 2014-09-17</p><p><b>orderer</b>: <a href="practitioner-example.html">Practitioner/example: Dr Adam Careful</a> "Adam CAREFUL"</p><p><b>allergyIntolerance</b>: <a href="allergyintolerance-example.html">AllergyIntolerance/example: Cashew Nuts</a></p><p><b>foodPreferenceModifier</b>: Dairy Free <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-diet.html">Diet</a>#dairy-free)</span></p><p><b>excludeFoodModifier</b>: Cashew Nut <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT[20140730]</a>#227493005)</span></p><blockquote><p><b>enteralFormula</b></p><h3>BaseFormulaTypes</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>Adult high protein formula <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#442991000124104)</span></td></tr></table><p><b>baseFormulaProductName</b>: Acme High Protein Formula</p><blockquote><p><b>additive</b></p><h3>Types</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>Lipid <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-entformula-additive.html">Enteral Formula Additive Type Code</a>#lipid)</span></td></tr></table><p><b>productName</b>: Acme Lipid Additive</p></blockquote><p><b>caloricDensity</b>: 1.5 calories per milliliter<span style="background: LightGoldenRodYellow"> (Details: UCUM code cal/mL = 'cal/mL')</span></p><p><b>routeOfAdministration</b>: Instillation, gastrostomy tube <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-RouteOfAdministration.html">RouteOfAdministration</a>#GT)</span></p><blockquote><p><b>administration</b></p><h3>Schedules</h3><table class="grid"><tr><td>-</td><td><b>Timing</b></td></tr><tr><td>*</td><td>Starting 2014-09-17T16:00:00Z, Once per 4 hours</td></tr></table><p><b>quantity</b>: 240 milliliters<span style="background: LightGoldenRodYellow"> (Details: UCUM code mL = 'mL')</span></p></blockquote><p><b>maxVolumeToDeliver</b>: 1440 milliliter/day<span style="background: LightGoldenRodYellow"> (Details: UCUM code mL/d = 'mL/d')</span></p><p><b>administrationInstruction</b>: 240 mls every 4hrs </p></blockquote></div></text><identifier>
+		<system value="http://www.acme.org/nutritionorders"/>
+		<value value="123"/>
+	</identifier>
+	<status value="active"/><intent value="order"/>
+	<subject>
+		<reference value="Patient/example"/>
+		<display value="Peter Chalmers"/>
+	</subject>
+	<encounter>
+		<reference value="Encounter/example"/>
+		<display value="Inpatient"/>
+	</encounter>
+	<dateTime value="2014-09-17"/>
+	<orderer>
+		<reference value="Practitioner/example"/>
+		<display value="Dr Adam Careful"/>
+	</orderer>
+	<allergyIntolerance>
+		<reference value="AllergyIntolerance/example"/>
+		<display value="Cashew Nuts"/>
+	</allergyIntolerance>
+	<foodPreferenceModifier>
+		<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/diet"/>
+			<code value="dairy-free"/>
+		</coding>
+	</foodPreferenceModifier>
+	<excludeFoodModifier>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<version value="20140730"/>
+			<code value="227493005"/>
+			<display value="Cashew Nut"/>
+		</coding>
+	</excludeFoodModifier>
+	<enteralFormula>
+
+		<baseFormulaType>
+			<concept>
+			<coding>
+				    <!--  EH:  bolus tube feeding instruction in text  -->
+				<system value="http://snomed.info/sct"/>
+				<code value="442991000124104"/>
+				<display value="Adult high protein formula"/>
+			</coding>
+		</concept>
+		</baseFormulaType>
+		<baseFormulaProductName value="Acme High Protein Formula"/>
+
+		<additive>
+		<type>
+			<concept>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/entformula-additive"/>
+				<code value="lipid"/>
+				<display value="Lipid"/>
+			</coding>
+		</concept>
+		</type>
+		<productName value="Acme Lipid Additive"/>
+	</additive>
+		<caloricDensity>
+			<value value="1.5"/>
+			<unit value="calories per milliliter"/>
+			<system value="http://unitsofmeasure.org"/>
+			<code value="cal/mL"/>
+		</caloricDensity>
+		<routeOfAdministration>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration"/>
+				<code value="GT"/>
+				<display value="Instillation, gastrostomy tube"/>
+			</coding>
+		</routeOfAdministration>
+		<administration>
+			<schedule>
+				<timing>
+				<repeat>
+				<boundsPeriod>
+				  <start value="2014-09-17T16:00:00Z"/>
+				</boundsPeriod>
+					<frequency value="1"/>
+					<period value="4"/>
+					<periodUnit value="h"/>
+				</repeat>
+			</timing>
+			</schedule>
+			<quantity>
+				<value value="240"/>
+				<unit value="milliliters"/>
+				<system value="http://unitsofmeasure.org"/>
+				<code value="mL"/>
+			</quantity>
+		</administration>
+		<maxVolumeToDeliver>
+			<value value="1440"/>
+			<unit value="milliliter/day"/>
+			<system value="http://unitsofmeasure.org"/>
+			<code value="mL/d"/>
+		</maxVolumeToDeliver>
+		<administrationInstruction value="240 mls every 4hrs "/>
+	</enteralFormula>
+</NutritionOrder>

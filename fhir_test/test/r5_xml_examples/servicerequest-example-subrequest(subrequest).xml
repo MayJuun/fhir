@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><ServiceRequest xmlns="http://hl7.org/fhir">
+	<id value="subrequest"/>    <!--  	<extension url="http://hl7.org/fhir/StructureDefinition/bodysitecode">
+		<valueCodeableConcept>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<code value="51185008"/>
+				<display value="Thoracic structure"/>
+			</coding>
+		</valueCodeableConcept>
+</extension>
+	  -->
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: ServiceRequest</b><a name="subrequest"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource ServiceRequest "subrequest" </p></div><p><b>basedOn</b>: <span title=" &#x9;&lt;extension url=&#34;http://hl7.org/fhir/StructureDefinition/bodysitecode&#34;&gt;&#xA;&#x9;&#x9;&lt;valueCodeableConcept&gt;&#xA;&#x9;&#x9;&#x9;&lt;coding&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;system value=&#34;http://snomed.info/sct&#34;/&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;code value=&#34;51185008&#34;/&gt;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;display value=&#34;Thoracic structure&#34;/&gt;&#xA;&#x9;&#x9;&#x9;&lt;/coding&gt;&#xA;&#x9;&#x9;&lt;/valueCodeableConcept&gt;&#xA;&lt;/extension&gt;&#xA;&#x9; "><span>: Original Request</span></span></p><p><b>replaces</b>: <span>: Previous allergy test</span></p><p><b>requisition</b>: id: A13848392</p><p><b>status</b>: active</p><p><b>intent</b>: instance-order</p><p><b>priority</b>: routine</p><h3>Codes</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>Peanut IgG <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#35542-0)</span></td></tr></table><p><b>subject</b>: <a href="patient-example-dicom.html">Patient/dicom</a> " MINT_TEST"</p><p><b>occurrence</b>: 2013-05-08T09:33:27+07:00</p><p><b>requester</b>: <a href="practitioner-example.html">Practitioner/example: Dr. Adam Careful</a> "Adam CAREFUL"</p><p><b>performerType</b>: Nurse <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated] "Qualified nurse")</span></p><h3>Reasons</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>Check for Peanut Allergy <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ()</span></td></tr></table><p><b>bodySite</b>: Right arm <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated])</span></p></div></text><basedOn>
+		<display value="Original Request"/>
+	</basedOn>
+	<replaces>
+		<display value="Previous allergy test"/>
+	</replaces>
+
+	<requisition>
+	        <!--   from Element: extension   -->
+	    <value value="A13848392"/>      <!--   0..1 The value that is unique   -->
+	</requisition>
+
+	<status value="active"/>
+	<intent value="instance-order"/>
+	<priority value="routine"/>
+
+	<code>
+	  <concept>
+		<coding>
+			<system value="http://loinc.org"/>
+			<code value="35542-0"/>
+		</coding>
+		<text value="Peanut IgG"/>
+	  </concept>
+	</code>
+	<subject>
+		<reference value="Patient/dicom"/>
+	</subject>
+	<occurrenceDateTime value="2013-05-08T09:33:27+07:00"/>
+	<requester>
+			<reference value="Practitioner/example"/>
+			<display value="Dr. Adam Careful"/>
+	</requester>
+	<performerType>
+	    <coding>
+	        <display value="Qualified nurse"/>
+	    </coding>
+	    <text value="Nurse"/>
+	</performerType>
+	<reason>
+    <concept>
+  		<text value="Check for Peanut Allergy"/>
+    </concept>
+	</reason>
+	<bodySite>
+			<coding>
+					<display value="Right arm"/>
+			</coding>
+			<text value="Right arm"/>
+	</bodySite>        <!--   insert contents here   -->
+
+</ServiceRequest>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?><AuditEvent xmlns="http://hl7.org/fhir">
+	<id value="example-media"/>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: AuditEvent</b><a name="example-media"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource AuditEvent "example-media" </p></div><p><b>category</b>: Export <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://dicom.nema.org/resources/ontology/DCM">DICOM</a>#110106)</span></p><p><b>code</b>: Distribute Document Set on Media <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (unknown#ITI-32)</span></p><p><b>action</b>: R</p><p><b>recorded</b>: 28 Aug 2015, 9:42:24 am</p><h3>Outcomes</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td></tr><tr><td>*</td><td>Success (Details: http://terminology.hl7.org/CodeSystem/audit-event-outcome code success = 'Success', stated as 'Success')</td></tr></table><blockquote><p><b>agent</b></p><p><b>type</b>: <span title="  Source active participant, the software making the PIX query&#xA;  UserId - The identity of the Patient Identifier Cross-reference Consumer Actor facility and sending application from the HL7 message; &#xA;  concatenated together, separated by the | character. &#xA;  AlternativeUserId - Process ID&#xA;   ">Source Role ID <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://dicom.nema.org/resources/ontology/DCM">DICOM</a>#110153)</span></span></p><p><b>who</b>: <span>: ExportToMedia.app</span></p><p><b>requestor</b>: false</p></blockquote><blockquote><p><b>agent</b></p><p><b>type</b>: <span title="   The Human using the software, if known   ">human user <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-extra-security-role-type.html">SecurityRoleType</a>#humanuser)</span></span></p><p><b>who</b>: <span>: Grahame Grieve</span></p><p><b>requestor</b>: true</p></blockquote><blockquote><p><b>agent</b></p><p><b>type</b>: <span title="   The media exported onto   ">Destination Media <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://dicom.nema.org/resources/ontology/DCM">DICOM</a>#110154)</span></span></p><p><b>who</b>: <span>: Media title: Hello World</span></p><p><b>requestor</b>: false</p></blockquote><h3>Sources</h3><table class="grid"><tr><td>-</td><td><b>Observer</b></td></tr><tr><td>*</td><td><span>: Cloud</span></td></tr></table><blockquote><p><b>entity</b></p><p><b>what</b>: <span title=" &#xA;  The Patient&#xA;   "><span/></span></p><p><b>role</b>: Patient <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-object-role.html">AuditEventEntityRole</a>#1)</span></p></blockquote><blockquote><p><b>entity</b></p><p><b>what</b>: <span title="  The SubmissionSet identifier  "><span/></span></p><p><b>role</b>: Job <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-object-role.html">AuditEventEntityRole</a>#20)</span></p></blockquote><blockquote><p><b>entity</b></p><p><b>what</b>: <span title="  The Document Manifest exported  "><a href="documentmanifest-example.html">DocumentManifest/example</a></span></p></blockquote></div></text><category>
+		<coding>
+			<system value="http://dicom.nema.org/resources/ontology/DCM"/>
+			<code value="110106"/>
+			<display value="Export"/>
+		</coding>
+	</category>
+	<code>
+		<coding>
+			<system value="urn:ihe:event-type-code"/>
+			<code value="ITI-32"/>
+			<display value="Distribute Document Set on Media"/>
+		</coding>
+	</code>
+	<action value="R"/>
+	<recorded value="2015-08-27T23:42:24Z"/>
+	<outcome>
+		<code>
+			<system value="http://terminology.hl7.org/CodeSystem/audit-event-outcome"/>
+			<code value="success"/>
+			<display value="Success"/>
+		</code>
+	</outcome>
+	<agent>
+		    <!--   Source active participant, the software making the PIX query
+  UserId - The identity of the Patient Identifier Cross-reference Consumer Actor facility and sending application from the HL7 message; 
+  concatenated together, separated by the | character. 
+  AlternativeUserId - Process ID
+    -->
+		<type>
+			<coding>
+				<system value="http://dicom.nema.org/resources/ontology/DCM"/>
+				<code value="110153"/>
+				<display value="Source Role ID"/>
+			</coding>
+		</type>
+		<who>
+			<display value="ExportToMedia.app"/>
+		</who>
+		<requestor value="false"/>
+	</agent>
+	<agent>
+		    <!--    The Human using the software, if known    -->
+		<type>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/extra-security-role-type"/>
+				<code value="humanuser"/>
+				<display value="human user"/>
+			</coding>
+		</type>
+		<who>
+			<identifier>
+				<value value="95"/>
+			</identifier>
+			<display value="Grahame Grieve"/>
+		</who>
+		<requestor value="true"/>
+	</agent>
+	<agent>
+		    <!--    The media exported onto    -->
+		<type>
+			<coding>
+				<system value="http://dicom.nema.org/resources/ontology/DCM"/>
+				<code value="110154"/>
+				<display value="Destination Media"/>
+			</coding>
+		</type>
+		<who>
+			<display value="Media title: Hello World"/>
+		</who>
+		<requestor value="false"/>
+
+	</agent>
+	<source>
+		<observer>
+			<identifier>
+				<value value="hl7connect.healthintersections.com.au"/>
+			</identifier>
+			<display value="Cloud"/>
+		</observer>
+	</source>
+	<entity>
+		    <!--  
+  The Patient
+    -->
+		<what>
+			<identifier>
+				<value value="e3cdfc81a0d24bd^^^&amp;2.16.840.1.113883.4.2&amp;ISO"/>
+			</identifier>
+		</what>
+		<role>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/object-role"/>
+				<code value="1"/>
+				<display value="Patient"/>
+			</coding>
+		</role>
+	</entity>
+	<entity>
+		    <!--   The SubmissionSet identifier   -->
+		<what>
+			<identifier>
+				<type>
+					<coding>
+						<system value="urn:uuid:a54d6aa5-d40d-43f9-88c5-b4633d873bdd"/>
+						<code value="IHE XDS Metadata"/>
+						<display value="submission set classificationNode"/>
+					</coding>
+				</type>
+				<value value="e3cdfc81a0d24bd^^^&amp;2.16.840.1.113883.4.2&amp;ISO"/>
+			</identifier>
+		</what>
+		<role>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/object-role"/>
+				<code value="20"/>
+				<display value="Job"/>
+			</coding>
+		</role>
+	</entity>
+	<entity>
+		    <!--   The Document Manifest exported   -->
+		<what>
+			<reference value="DocumentManifest/example"/>
+		</what>
+	</entity>
+	    <!--   TODO need to make a new style entity with entity.agent for this media
+		<media>
+			<coding>
+				<system value="http://dicom.nema.org/resources/ontology/DCM"/>
+				<code value="110033"/>
+				<display value="DVD"/>
+			</coding>
+		</media>
+    -->
+</AuditEvent>

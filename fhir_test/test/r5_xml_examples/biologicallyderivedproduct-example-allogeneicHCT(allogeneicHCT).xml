@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><BiologicallyDerivedProduct xmlns="http://hl7.org/fhir">
+  <id value="allogeneicHCT"/>
+      <!--   <text>
+    <status value="generated" />
+    <div xmlns="http://www.w3.org/1999/xhtml">[Put rendering here]</div>
+  </text>   -->
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: BiologicallyDerivedProduct</b><a name="allogeneicHCT"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource BiologicallyDerivedProduct "allogeneicHCT" </p></div><p><b>request</b>: <span title="  &lt;text&gt;&#xA;    &lt;status value=&#34;generated&#34; /&gt;&#xA;    &lt;div xmlns=&#34;http://www.w3.org/1999/xhtml&#34;&gt;[Put rendering here]&lt;/div&gt;&#xA;  &lt;/text&gt;  "><a href="broken-link.html">BiologicallyDerivedProduct/HCTcollection-servicerequest: Service Request for HCT Collection</a></span></p><h3>Collections</h3><table class="grid"><tr><td>-</td><td><b>Source</b></td></tr><tr><td>*</td><td><a href="broken-link.html">Patient/example-b: HCT Donor</a></td></tr></table></div></text><request>
+    <reference value="BiologicallyDerivedProduct/HCTcollection-servicerequest"/>
+    <display value="Service Request for HCT Collection"/>    
+  </request>
+  <collection>
+    <source>
+		  <reference value="Patient/example-b"/>
+	  <display value="HCT Donor"/>
+    </source>
+  </collection>
+</BiologicallyDerivedProduct>

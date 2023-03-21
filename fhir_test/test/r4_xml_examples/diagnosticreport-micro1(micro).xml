@@ -1,0 +1,772 @@
+<?xml version="1.0" encoding="UTF-8"?><Bundle xmlns="http://hl7.org/fhir">
+	<id value="micro"/>
+	<meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <type value="collection"/>
+	<entry>
+		<fullUrl value="https://example.com/base/DiagnosticReport/micro"/>
+		<resource>
+			<DiagnosticReport><!--     start of the main resource     --><id value="micro"/>
+				<text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2><span title="Codes: {http://loinc.org 632-0}">Culture, MRSA</span> (<span title="Codes: {http://terminology.hl7.org/CodeSystem/v2-0074 MB}">Microbiology</span>) </h2><table class="grid"><tr><td>Subject</td><td><b>Jim </b> male, DoB: 1974-12-25 ( Medical record number: 12345 (USUAL))</td></tr><tr><td>Reported</td><td>2009-08-10T08:25:44+10:00</td></tr><tr><td>Identifier:</td><td> id: 290741144</td></tr></table><p><b>Report Details</b></p><table class="grid"><tr><td><b>Code</b></td><td><b>Value</b></td></tr><tr><td colspan="2"><i>Observation</i></td></tr></table></div></text><identifier>
+					<system value="http://hnam.org/identifiers/orders"/><!--     seems like a likely choice     --><value value="290741144"/>
+				</identifier>
+				<basedOn>
+					<reference value="ServiceRequest/req"/>
+				</basedOn>
+				<status value="final"/>
+				<category>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
+						<code value="MB"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="632-0"/>
+					</coding>
+					<text value="Culture, MRSA"/>
+				</code>
+				<subject>
+					<reference value="Patient/example"/><!--     patient chosen at random     --></subject><issued value="2009-08-10T08:25:44+10:00"/>
+				<performer>
+					<display value="Todd Ashby"/>
+				</performer>
+				<result>
+					<reference value="Observation/org1"/>
+				</result>
+			</DiagnosticReport>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="https://example.com/base/Observation/obx1-4"/>
+		<resource>
+			<Observation>
+				<id value="obx1-4"/>
+				<text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "obx1-4" </p></div><p><b>status</b>: final</p><p><b>code</b>: ORGANISM <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (tests#ORGANISM)</span></p><p><b>subject</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><p><b>performer</b>: <span>: Todd Ashby</span></p><p><b>value</b>: Staphylococcus aureus <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (organisms#Staaur)</span></p></div></text><status value="final"/>
+				<code>
+					<coding>
+						<system value="http://acme.org/lab/codes/tests"/>
+						<code value="ORGANISM"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/example"/><!--     patient chosen at random     --></subject><performer>
+					<display value="Todd Ashby"/><!--     of course, in practive, this would be a real reference     --></performer><valueCodeableConcept><!--     CE     --><coding>
+						<system value="http://acme.org/lab/codes/organisms"/>
+						<code value="Staaur"/>
+					</coding>
+					<text value="Staphylococcus aureus"/>
+				</valueCodeableConcept>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="https://example.com/base/Observation/obx1-5"/>
+		<resource>
+			<Observation>
+				<id value="obx1-5"/>
+				<text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "obx1-5" </p></div><p><b>status</b>: final</p><p><b>code</b>: CULTPOSNEG <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (tests#CULTPOSNEG)</span></p><p><b>subject</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><p><b>performer</b>: <span>: Todd Ashby</span></p><p><b>value</b>: POS <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (flags#POS)</span></p></div></text><status value="final"/>
+				<code>
+					<coding>
+						<system value="http://acme.org/lab/codes/tests"/>
+						<code value="CULTPOSNEG"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/example"/><!--     patient chosen at random     --></subject><performer>
+					<display value="Todd Ashby"/><!--     of course, in practive, this would be a real reference     --></performer><valueCodeableConcept>
+					<coding>
+						<system value="http://acme.org/lab/codes/flags"/>
+						<code value="POS"/>
+					</coding>
+				</valueCodeableConcept>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="https://example.com/base/Observation/obx2-1"/>
+		<resource>
+			<Observation>
+				<id value="obx2-1"/>
+				<text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "obx2-1" </p></div><p><b>status</b>: final</p><p><b>code</b>: Ampicillin <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (tests#60504)</span></p><p><b>subject</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><p><b>performer</b>: <span>: Todd Ashby</span></p><p><b>interpretation</b>: Resistant <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-ObservationInterpretation.html">ObservationInterpretation</a>#R)</span></p></div></text><status value="final"/>
+				<code>
+					<coding>
+						<system value="http://acme.org/lab/codes/tests"/>
+						<code value="60504"/>
+						<display value="Ampicillin"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/example"/><!--     patient chosen at random     --></subject><performer>
+					<display value="Todd Ashby"/><!--     of course, in practive, this would be a real reference     --></performer><interpretation>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+						<code value="R"/>
+					</coding>
+				</interpretation>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="https://example.com/base/Observation/obx2-2"/>
+		<resource>
+			<Observation>
+				<id value="obx2-2"/>
+				<text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "obx2-2" </p></div><p><b>status</b>: final</p><p><b>code</b>: Cefazolin <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (tests#60512)</span></p><p><b>subject</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><p><b>performer</b>: <span>: Todd Ashby</span></p><p><b>value</b>: &lt;=2</p><p><b>interpretation</b>: Susceptible <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-ObservationInterpretation.html">ObservationInterpretation</a>#S)</span></p></div></text><status value="final"/>
+				<code>
+					<coding>
+						<system value="http://acme.org/lab/codes/tests"/>
+						<code value="60512"/>
+						<display value="Cefazolin"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/example"/><!--     patient chosen at random     --></subject><performer>
+					<display value="Todd Ashby"/><!--     of course, in practive, this would be a real reference     --></performer><valueQuantity>
+					<value value="2"/>
+					<comparator value="&lt;="/>
+				</valueQuantity>
+				<interpretation>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+						<code value="S"/>
+					</coding>
+				</interpretation>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="https://example.com/base/Observation/obx2-4"/>
+		<resource>
+			<Observation>
+				<id value="obx2-4"/>
+				<text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "obx2-4" </p></div><p><b>status</b>: final</p><p><b>code</b>: Cefoxitin <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (tests#60516)</span></p><p><b>subject</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><p><b>performer</b>: <span>: Todd Ashby</span></p><p><b>value</b>: &lt;=4</p><p><b>interpretation</b>: Susceptible <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-ObservationInterpretation.html">ObservationInterpretation</a>#S)</span></p></div></text><status value="final"/>
+				<code>
+					<coding>
+						<system value="http://acme.org/lab/codes/tests"/>
+						<code value="60516"/>
+						<display value="Cefoxitin"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/example"/><!--     patient chosen at random     --></subject><performer>
+					<display value="Todd Ashby"/><!--     of course, in practive, this would be a real reference     --></performer><valueQuantity>
+					<value value="4"/>
+					<comparator value="&lt;="/>
+				</valueQuantity>
+				<interpretation>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+						<code value="S"/>
+					</coding>
+				</interpretation>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="https://example.com/base/Observation/obx2-6"/>
+		<resource>
+			<Observation>
+				<id value="obx2-6"/>
+				<text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "obx2-6" </p></div><p><b>status</b>: final</p><p><b>code</b>: Clindamycin <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (tests#60527)</span></p><p><b>subject</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><p><b>performer</b>: <span>: Todd Ashby</span></p><p><b>value</b>: &gt;=0.5</p><p><b>interpretation</b>: Susceptible <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-ObservationInterpretation.html">ObservationInterpretation</a>#S)</span></p></div></text><status value="final"/>
+				<code>
+					<coding>
+						<system value="http://acme.org/lab/codes/tests"/>
+						<code value="60527"/>
+						<display value="Clindamycin"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/example"/><!--     patient chosen at random     --></subject><performer>
+					<display value="Todd Ashby"/><!--     of course, in practive, this would be a real reference     --></performer><valueQuantity>
+					<value value="0.5"/>
+					<comparator value="&gt;="/>
+				</valueQuantity>
+				<interpretation>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+						<code value="S"/>
+					</coding>
+				</interpretation>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="https://example.com/base/Observation/obx2-8"/>
+		<resource>
+			<Observation>
+				<id value="obx2-8"/>
+				<text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "obx2-8" </p></div><p><b>status</b>: final</p><p><b>code</b>: Daptomycin <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (tests#61203)</span></p><p><b>subject</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><p><b>performer</b>: <span>: Todd Ashby</span></p><p><b>value</b>: &gt;=1</p><p><b>interpretation</b>: Susceptible <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-ObservationInterpretation.html">ObservationInterpretation</a>#S)</span></p></div></text><status value="final"/>
+				<code>
+					<coding>
+						<system value="http://acme.org/lab/codes/tests"/>
+						<code value="61203"/>
+						<display value="Daptomycin"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/example"/><!--     patient chosen at random     --></subject><performer>
+					<display value="Todd Ashby"/><!--     of course, in practive, this would be a real reference     --></performer><valueQuantity>
+					<value value="1"/>
+					<comparator value="&gt;="/>
+				</valueQuantity>
+				<interpretation>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+						<code value="S"/>
+					</coding>
+				</interpretation>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="https://example.com/base/Observation/obx2-10"/>
+		<resource>
+			<Observation>
+				<id value="obx2-10"/>
+				<text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "obx2-10" </p></div><p><b>status</b>: final</p><p><b>code</b>: Doxycycline <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (tests#60532)</span></p><p><b>subject</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><p><b>performer</b>: <span>: Todd Ashby</span></p><p><b>value</b>: &lt;=0.5</p><p><b>interpretation</b>: Susceptible <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-ObservationInterpretation.html">ObservationInterpretation</a>#S)</span></p></div></text><status value="final"/>
+				<code>
+					<coding>
+						<system value="http://acme.org/lab/codes/tests"/>
+						<code value="60532"/>
+						<display value="Doxycycline"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/example"/><!--     patient chosen at random     --></subject><performer>
+					<display value="Todd Ashby"/><!--     of course, in practive, this would be a real reference     --></performer><valueQuantity>
+					<value value="0.5"/>
+					<comparator value="&lt;="/>
+				</valueQuantity>
+				<interpretation>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+						<code value="S"/>
+					</coding>
+				</interpretation>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="https://example.com/base/Observation/obx2-12"/>
+		<resource>
+			<Observation>
+				<id value="obx2-12"/>
+				<text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "obx2-12" </p></div><p><b>status</b>: final</p><p><b>code</b>: Erythromycin <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (tests#60533)</span></p><p><b>subject</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><p><b>performer</b>: <span>: Todd Ashby</span></p><p><b>value</b>: &gt;=8</p><p><b>interpretation</b>: Resistant <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-ObservationInterpretation.html">ObservationInterpretation</a>#R)</span></p></div></text><status value="final"/>
+				<code>
+					<coding>
+						<system value="http://acme.org/lab/codes/tests"/>
+						<code value="60533"/>
+						<display value="Erythromycin"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/example"/><!--     patient chosen at random     --></subject><performer>
+					<display value="Todd Ashby"/><!--     of course, in practive, this would be a real reference     --></performer><valueQuantity>
+					<value value="8"/>
+					<comparator value="&gt;="/>
+				</valueQuantity>
+				<interpretation>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+						<code value="R"/>
+					</coding>
+				</interpretation>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="https://example.com/base/Observation/obx2-14"/>
+		<resource>
+			<Observation>
+				<id value="obx2-14"/>
+				<text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "obx2-14" </p></div><p><b>status</b>: final</p><p><b>code</b>: Gentamicin <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (tests#60536)</span></p><p><b>subject</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><p><b>performer</b>: <span>: Todd Ashby</span></p><p><b>value</b>: &lt;=2</p><p><b>interpretation</b>: Susceptible <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-ObservationInterpretation.html">ObservationInterpretation</a>#S)</span></p></div></text><status value="final"/>
+				<code>
+					<coding>
+						<system value="http://acme.org/lab/codes/tests"/>
+						<code value="60536"/>
+						<display value="Gentamicin"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/example"/><!--     patient chosen at random     --></subject><performer>
+					<display value="Todd Ashby"/><!--     of course, in practive, this would be a real reference     --></performer><valueQuantity>
+					<value value="2"/>
+					<comparator value="&lt;="/>
+				</valueQuantity>
+				<interpretation>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+						<code value="S"/>
+					</coding>
+				</interpretation>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="https://example.com/base/Observation/obx2-16"/>
+		<resource>
+			<Observation>
+				<id value="obx2-16"/>
+				<text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "obx2-16" </p></div><p><b>status</b>: final</p><p><b>code</b>: Levofloxacin <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (tests#61007)</span></p><p><b>subject</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><p><b>performer</b>: <span>: Todd Ashby</span></p><p><b>value</b>: &lt;=0.5</p><p><b>interpretation</b>: Susceptible <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-ObservationInterpretation.html">ObservationInterpretation</a>#S)</span></p></div></text><status value="final"/>
+				<code>
+					<coding>
+						<system value="http://acme.org/lab/codes/tests"/>
+						<code value="61007"/>
+						<display value="Levofloxacin"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/example"/><!--     patient chosen at random     --></subject><performer>
+					<display value="Todd Ashby"/><!--     of course, in practive, this would be a real reference     --></performer><valueQuantity>
+					<value value="0.5"/>
+					<comparator value="&lt;="/>
+				</valueQuantity>
+				<interpretation>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+						<code value="S"/>
+					</coding>
+				</interpretation>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="https://example.com/base/Observation/obx2-18"/>
+		<resource>
+			<Observation>
+				<id value="obx2-18"/>
+				<text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "obx2-18" </p></div><p><b>status</b>: final</p><p><b>code</b>: Linezolid <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (tests#60699)</span></p><p><b>subject</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><p><b>performer</b>: <span>: Todd Ashby</span></p><p><b>value</b>: 4</p><p><b>interpretation</b>: Susceptible <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-ObservationInterpretation.html">ObservationInterpretation</a>#S)</span></p></div></text><status value="final"/>
+				<code>
+					<coding>
+						<system value="http://acme.org/lab/codes/tests"/>
+						<code value="60699"/>
+						<display value="Linezolid"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/example"/><!--     patient chosen at random     --></subject><performer>
+					<display value="Todd Ashby"/><!--     of course, in practive, this would be a real reference     --></performer><valueQuantity>
+					<value value="4"/>
+				</valueQuantity>
+				<interpretation>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+						<code value="S"/>
+					</coding>
+				</interpretation>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="https://example.com/base/Observation/obx2-20"/>
+		<resource>
+			<Observation>
+				<id value="obx2-20"/>
+				<text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "obx2-20" </p></div><p><b>status</b>: final</p><p><b>code</b>: Moxifloxacin <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (tests#61204)</span></p><p><b>subject</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><p><b>performer</b>: <span>: Todd Ashby</span></p><p><b>value</b>: &lt;=0.5</p><p><b>interpretation</b>: Susceptible <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-ObservationInterpretation.html">ObservationInterpretation</a>#S)</span></p></div></text><status value="final"/>
+				<code>
+					<coding>
+						<system value="http://acme.org/lab/codes/tests"/>
+						<code value="61204"/>
+						<display value="Moxifloxacin"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/example"/><!--     patient chosen at random     --></subject><performer>
+					<display value="Todd Ashby"/><!--     of course, in practive, this would be a real reference     --></performer><valueQuantity>
+					<value value="0.5"/>
+					<comparator value="&lt;="/>
+				</valueQuantity>
+				<interpretation>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+						<code value="S"/>
+					</coding>
+				</interpretation>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="https://example.com/base/Observation/obx2-22"/>
+		<resource>
+			<Observation>
+				<id value="obx2-22"/>
+				<text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "obx2-22" </p></div><p><b>status</b>: final</p><p><b>code</b>: Oxacillin <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (tests#60551)</span></p><p><b>subject</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><p><b>performer</b>: <span>: Todd Ashby</span></p><p><b>value</b>: 0.5</p><p><b>interpretation</b>: Susceptible <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-ObservationInterpretation.html">ObservationInterpretation</a>#S)</span></p></div></text><status value="final"/>
+				<code>
+					<coding>
+						<system value="http://acme.org/lab/codes/tests"/>
+						<code value="60551"/>
+						<display value="Oxacillin"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/example"/><!--     patient chosen at random     --></subject><performer>
+					<display value="Todd Ashby"/><!--     of course, in practive, this would be a real reference     --></performer><valueQuantity>
+					<value value="0.5"/>
+				</valueQuantity>
+				<interpretation>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+						<code value="S"/>
+					</coding>
+				</interpretation>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="https://example.com/base/Observation/obx2-24"/>
+		<resource>
+			<Observation>
+				<id value="obx2-24"/>
+				<text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "obx2-24" </p></div><p><b>status</b>: final</p><p><b>code</b>: Penicillin <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (tests#60552)</span></p><p><b>subject</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><p><b>performer</b>: <span>: Todd Ashby</span></p><p><b>value</b>: &gt;=2</p><p><b>interpretation</b>: Resistant <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-ObservationInterpretation.html">ObservationInterpretation</a>#R)</span></p></div></text><status value="final"/>
+				<code>
+					<coding>
+						<system value="http://acme.org/lab/codes/tests"/>
+						<code value="60552"/>
+						<display value="Penicillin"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/example"/><!--     patient chosen at random     --></subject><performer>
+					<display value="Todd Ashby"/><!--     of course, in practive, this would be a real reference     --></performer><valueQuantity>
+					<value value="2"/>
+					<comparator value="&gt;="/>
+				</valueQuantity>
+				<interpretation>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+						<code value="R"/>
+					</coding>
+				</interpretation>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="https://example.com/base/Observation/obx2-26"/>
+		<resource>
+			<Observation>
+				<id value="obx2-26"/>
+				<text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "obx2-26" </p></div><p><b>status</b>: final</p><p><b>code</b>: Quinupristin/Dalfopristin <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (tests#60697)</span></p><p><b>subject</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><p><b>performer</b>: <span>: Todd Ashby</span></p><p><b>value</b>: 0.5</p><p><b>interpretation</b>: Susceptible <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-ObservationInterpretation.html">ObservationInterpretation</a>#S)</span></p></div></text><status value="final"/>
+				<code>
+					<coding>
+						<system value="http://acme.org/lab/codes/tests"/>
+						<code value="60697"/>
+						<display value="Quinupristin/Dalfopristin"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/example"/><!--     patient chosen at random     --></subject><performer>
+					<display value="Todd Ashby"/><!--     of course, in practive, this would be a real reference     --></performer><valueQuantity>
+					<value value="0.5"/>
+				</valueQuantity>
+				<interpretation>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+						<code value="S"/>
+					</coding>
+				</interpretation>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="https://example.com/base/Observation/obx2-28"/>
+		<resource>
+			<Observation>
+				<id value="obx2-28"/>
+				<text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "obx2-28" </p></div><p><b>status</b>: final</p><p><b>code</b>: Rifampin <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (tests#60555)</span></p><p><b>subject</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><p><b>performer</b>: <span>: Todd Ashby</span></p><p><b>value</b>: &lt;=0.5</p><p><b>interpretation</b>: Susceptible <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-ObservationInterpretation.html">ObservationInterpretation</a>#S)</span></p></div></text><status value="final"/>
+				<code>
+					<coding>
+						<system value="http://acme.org/lab/codes/tests"/>
+						<code value="60555"/>
+						<display value="Rifampin"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/example"/><!--     patient chosen at random     --></subject><performer>
+					<display value="Todd Ashby"/><!--     of course, in practive, this would be a real reference     --></performer><valueQuantity>
+					<value value="0.5"/>
+					<comparator value="&lt;="/>
+				</valueQuantity>
+				<interpretation>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+						<code value="S"/>
+					</coding>
+				</interpretation>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="https://example.com/base/Observation/obx2-30"/>
+		<resource>
+			<Observation>
+				<id value="obx2-30"/>
+				<text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "obx2-30" </p></div><p><b>status</b>: final</p><p><b>code</b>: Tetracycline <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (tests#60558)</span></p><p><b>subject</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><p><b>performer</b>: <span>: Todd Ashby</span></p><p><b>value</b>: &lt;=0.5</p><p><b>interpretation</b>: Susceptible <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-ObservationInterpretation.html">ObservationInterpretation</a>#S)</span></p></div></text><status value="final"/>
+				<code>
+					<coding>
+						<system value="http://acme.org/lab/codes/tests"/>
+						<code value="60558"/>
+						<display value="Tetracycline"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/example"/><!--     patient chosen at random     --></subject><performer>
+					<display value="Todd Ashby"/><!--     of course, in practive, this would be a real reference     --></performer><valueQuantity>
+					<value value="0.5"/>
+					<comparator value="&lt;="/>
+				</valueQuantity>
+				<interpretation>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+						<code value="S"/>
+					</coding>
+				</interpretation>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="https://example.com/base/Observation/obx2-32"/>
+		<resource>
+			<Observation>
+				<id value="obx2-32"/>
+				<text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "obx2-32" </p></div><p><b>status</b>: final</p><p><b>code</b>: Trimethoprim/Sulfamethoxazole <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (tests#60561)</span></p><p><b>subject</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><p><b>performer</b>: <span>: Todd Ashby</span></p><p><b>value</b>: &lt;=0.0526</p><p><b>interpretation</b>: Susceptible <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-ObservationInterpretation.html">ObservationInterpretation</a>#S)</span></p></div></text><status value="final"/>
+				<code>
+					<coding>
+						<system value="http://acme.org/lab/codes/tests"/>
+						<code value="60561"/>
+						<display value="Trimethoprim/Sulfamethoxazole"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/example"/><!--     patient chosen at random     --></subject><performer>
+					<display value="Todd Ashby"/><!--     of course, in practive, this would be a real reference     --></performer><valueQuantity>
+					<value value="0.0526"/><!--     not sure what to do with <=1/19     --><comparator value="&lt;="/>
+				</valueQuantity>
+				<interpretation>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+						<code value="S"/>
+					</coding>
+				</interpretation>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="https://example.com/base/Observation/obx2-34"/>
+		<resource>
+			<Observation>
+				<id value="obx2-34"/>
+				<text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "obx2-34" </p></div><p><b>status</b>: final</p><p><b>code</b>: Vancomycin <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (tests#60563)</span></p><p><b>subject</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><p><b>performer</b>: <span>: Todd Ashby</span></p><p><b>value</b>: 1</p><p><b>interpretation</b>: Susceptible <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-ObservationInterpretation.html">ObservationInterpretation</a>#S)</span></p></div></text><status value="final"/>
+				<code>
+					<coding>
+						<system value="http://acme.org/lab/codes/tests"/>
+						<code value="60563"/>
+						<display value="Vancomycin"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/example"/><!--     patient chosen at random     --></subject><performer>
+					<display value="Todd Ashby"/><!--     of course, in practive, this would be a real reference     --></performer><valueQuantity>
+					<value value="1"/>
+				</valueQuantity>
+				<interpretation>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+						<code value="S"/>
+					</coding>
+				</interpretation>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="https://example.com/base/Observation/nte-1"/>
+		<resource>
+			<Observation>
+				<id value="nte-1"/>
+				<text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "nte-1" </p></div><p><b>status</b>: final</p><p><b>code</b>: D-Test <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (tests#2099930)</span></p><p><b>subject</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><p><b>performer</b>: <span>: Todd Ashby</span></p><p><b>value</b>: D-Test:  Negative - This isolate does not demonstrate inducible clindamycin resistance in vitro.</p></div></text><status value="final"/>
+				<code>
+					<coding>
+						<system value="http://acme.org/lab/codes/tests"/>
+						<code value="2099930"/>
+						<display value="D-Test"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/example"/><!--     patient chosen at random     --></subject><performer>
+					<display value="Todd Ashby"/><!--     of course, in practive, this would be a real reference     --></performer><valueString value="D-Test:  Negative - This isolate does not demonstrate inducible clindamycin resistance in vitro."/>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="https://example.com/base/Observation/obx3-1"/>
+		<resource>
+			<Observation>
+				<id value="obx3-1"/>
+				<text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "obx3-1" </p></div><p><b>status</b>: final</p><p><b>code</b>: Oxacillin <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (tests#60036)</span></p><p><b>subject</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><p><b>performer</b>: <span>: Todd Ashby</span></p><p><b>interpretation</b>: Susceptible <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-ObservationInterpretation.html">ObservationInterpretation</a>#S)</span></p></div></text><status value="final"/>
+				<code>
+					<coding>
+						<system value="http://acme.org/lab/codes/tests"/>
+						<code value="60036"/>
+						<display value="Oxacillin"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/example"/><!--     patient chosen at random     --></subject><performer>
+					<display value="Todd Ashby"/><!--     of course, in practive, this would be a real reference     --></performer><interpretation>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+						<code value="S"/>
+					</coding>
+				</interpretation>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="https://example.com/base/Observation/obr-2"/>
+		<resource>
+			<Observation>
+				<id value="obr-2"/>
+				<text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "obr-2" </p></div><p><b>status</b>: final</p><p><b>code</b>: Susceptibility - Automated broth dilution (Billed) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (panels#60790)</span></p><p><b>subject</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><p><b>performer</b>: <span>: Todd Ashby</span></p><p><b>hasMember</b>: </p><ul><li><a href="todo.html">Observation/obx2-1</a></li><li><a href="todo.html">Observation/obx2-2</a></li><li><a href="todo.html">Observation/obx2-4</a></li><li><a href="todo.html">Observation/obx2-6</a></li><li><a href="todo.html">Observation/obx2-8</a></li><li><a href="todo.html">Observation/obx2-10</a></li><li><a href="todo.html">Observation/obx2-12</a></li><li><a href="todo.html">Observation/obx2-14</a></li><li><a href="todo.html">Observation/obx2-16</a></li><li><a href="todo.html">Observation/obx2-18</a></li><li><a href="todo.html">Observation/obx2-20</a></li><li><a href="todo.html">Observation/obx2-22</a></li><li><a href="todo.html">Observation/obx2-24</a></li><li><a href="todo.html">Observation/obx2-26</a></li><li><a href="todo.html">Observation/obx2-28</a></li><li><a href="todo.html">Observation/obx2-30</a></li><li><a href="todo.html">Observation/obx2-32</a></li><li><a href="todo.html">Observation/obx2-34</a></li><li><a href="todo.html">Observation/nte-1</a></li></ul></div></text><status value="final"/><!--     OBR 2     --><code>
+					<coding>
+						<system value="http://acme.org/lab/codes/panels"/>
+						<code value="60790"/>
+						<display value="Susceptibility - Automated broth dilution (Billed)"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/example"/><!--     patient chosen at random     --></subject><performer>
+					<display value="Todd Ashby"/><!--     of course, in practive, this would be a real reference     --></performer><!--     now, references to the OBXs. for reader convenience, we take keep the OBX identification, though this is not required in practice. Note that many of the oBX segments are pairs that get collapsed     --><hasMember>
+					<reference value="Observation/obx2-1"/>
+				</hasMember>
+				<hasMember>
+					<reference value="Observation/obx2-2"/>
+				</hasMember>
+				<hasMember>
+					<reference value="Observation/obx2-4"/>
+				</hasMember>
+				<hasMember>
+					<reference value="Observation/obx2-6"/>
+				</hasMember>
+				<hasMember>
+					<reference value="Observation/obx2-8"/>
+				</hasMember>
+				<hasMember>
+					<reference value="Observation/obx2-10"/>
+				</hasMember>
+				<hasMember>
+					<reference value="Observation/obx2-12"/>
+				</hasMember>
+				<hasMember>
+					<reference value="Observation/obx2-14"/>
+				</hasMember>
+				<hasMember>
+					<reference value="Observation/obx2-16"/>
+				</hasMember>
+				<hasMember>
+					<reference value="Observation/obx2-18"/>
+				</hasMember>
+				<hasMember>
+					<reference value="Observation/obx2-20"/>
+				</hasMember>
+				<hasMember>
+					<reference value="Observation/obx2-22"/>
+				</hasMember>
+				<hasMember>
+					<reference value="Observation/obx2-24"/>
+				</hasMember>
+				<hasMember>
+					<reference value="Observation/obx2-26"/>
+				</hasMember>
+				<hasMember>
+					<reference value="Observation/obx2-28"/>
+				</hasMember>
+				<hasMember>
+					<reference value="Observation/obx2-30"/>
+				</hasMember>
+				<hasMember>
+					<reference value="Observation/obx2-32"/>
+				</hasMember>
+				<hasMember>
+					<reference value="Observation/obx2-34"/>
+				</hasMember>
+				<hasMember>
+					<reference value="Observation/nte-1"/>
+				</hasMember>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="https://example.com/base/Observation/obr-3"/>
+		<resource>
+			<Observation>
+				<id value="obr-3"/>
+				<text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "obr-3" </p></div><p><b>status</b>: final</p><p><b>code</b>: Susceptibility - Disk diffusion (Billed) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (panels#60418)</span></p><p><b>subject</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><p><b>hasMember</b>: <a href="todo.html">Observation/obx3-1</a></p></div></text><status value="final"/><!--     OBR 3     --><code>
+					<coding>
+						<system value="http://acme.org/lab/codes/panels"/>
+						<code value="60418"/>
+						<display value="Susceptibility - Disk diffusion (Billed)"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/example"/><!--     patient chosen at random     --></subject><hasMember>
+					<reference value="Observation/obx3-1"/>
+				</hasMember>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="https://example.com/base/Observation/org1"/>
+		<resource>
+			<Observation>
+				<id value="org1"/>
+				<text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "org1" </p></div><p><b>status</b>: final</p><p><b>code</b>: Staphylococcus aureus Panel <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (organisms#Staaur)</span></p><p><b>subject</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><p><b>hasMember</b>: </p><ul><li><a href="todo.html">Observation/obx1-4</a></li><li><a href="todo.html">Observation/obx1-5</a></li><li><a href="todo.html">Observation/obr-2</a></li><li><a href="todo.html">Observation/obr-3</a></li></ul></div></text><status value="final"/><!--     OBR 1     --><code>
+					<coding>
+						<system value="http://acme.org/lab/codes/organisms"/>
+						<code value="Staaur"/>
+					</coding>
+					<text value="Staphylococcus aureus Panel"/>
+				</code>
+				<subject>
+					<reference value="Patient/example"/><!--     patient chosen at random     --></subject><hasMember>
+					<reference value="Observation/obx1-4"/>
+				</hasMember>
+				<hasMember>
+					<reference value="Observation/obx1-5"/>
+				</hasMember><!--     group - automated broth dilution. This is unusual - usually, there's just one level of group, and this group would be skipped     --><hasMember>
+					<reference value="Observation/obr-2"/>
+				</hasMember><!--     group - Disk diffusion     --><hasMember>
+					<reference value="Observation/obr-3"/>
+				</hasMember>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="https://example.com/base/ServiceRequest/req"/>
+		<resource>
+			<ServiceRequest>
+				<id value="req"/>
+				<text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "req" </p></div><p><b>identifier</b>: id: 255337816</p><p><b>status</b>: active</p><p><b>intent</b>: original-order</p><p><b>code</b>: Culture, MRSA <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#632-0)</span></p><p><b>subject</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p></div></text><identifier>
+					<value value="255337816"/>
+				</identifier>
+				<status value="active"/>
+				<intent value="original-order"/>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<code value="632-0"/>
+					</coding>
+					<text value="Culture, MRSA"/>
+				</code>
+				<subject>
+					<reference value="Patient/example"/>
+				</subject>
+			</ServiceRequest>
+		</resource>
+	</entry>
+</Bundle>

@@ -8,6 +8,10 @@
   "url": "http://motivemi.com/artifacts/ActivityDefinition/referralPrimaryCareMentalHealth",
   "identifier": [
     {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.4.642.19.5"
+    },
+    {
       "use": "official",
       "system": "http://motivemi.com/artifacts",
       "value": "referralPrimaryCareMentalHealth"

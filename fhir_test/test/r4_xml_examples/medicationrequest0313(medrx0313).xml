@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><MedicationRequest xmlns="http://hl7.org/fhir">
+  <id value="medrx0313"/>
+    <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "medrx0313" </p></div><p><b>identifier</b>: id: 12345689 (OFFICIAL)</p><p><b>status</b>: completed</p><p><b>intent</b>: order</p><p><b>medication</b>: Azithromycin 250mg capsule (product) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#324252006)</span></p><p><b>subject</b>: <a href="patient-pat1.html">Patient/pat1: Donald Duck</a> "Duck DONALD"</p><p><b>authoredOn</b>: 2015-01-15</p><p><b>requester</b>: <a href="practitioner-f007.html">Practitioner/f007: Patrick Pump</a> "Simone HEPS"</p><p><b>reasonCode</b>: Traveller's Diarrhea (disorder) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#11840006)</span></p><blockquote><p><b>dispenseRequest</b></p><p><b>validityPeriod</b>: 2015-01-15 --&gt; 2016-01-15</p><p><b>quantity</b>: 5 Tab<span style="background: LightGoldenRodYellow"> (Details: http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm code TAB = 'Tablet')</span></p></blockquote><p><b>priorPrescription</b>: <a href="medicationrequest-medrx0318.html">MedicationRequest/medrx0318: Vancomycin IV</a></p></div></text><identifier>
+        <use value="official"/>
+        <system value="http://www.bmc.nl/portal/prescriptions"/>
+        <value value="12345689"/>
+    </identifier>
+    <status value="completed"/>
+    <intent value="order"/>
+    <medicationCodeableConcept>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="324252006"/>
+            <display value="Azithromycin 250mg capsule (product)"/>
+        </coding>
+    </medicationCodeableConcept>
+    <subject> <!--   Linked to the resource patient who needs the medication   -->
+        <reference value="Patient/pat1"/>
+        <display value="Donald Duck"/>           
+    </subject>
+    <authoredOn value="2015-01-15"/>
+    <requester>
+        <reference value="Practitioner/f007"/>
+        <display value="Patrick Pump"/>
+    </requester>
+    <reasonCode>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="11840006"/>
+            <display value="Traveller's Diarrhea (disorder)"/>
+        </coding>
+    </reasonCode>
+    <dosageInstruction>
+        <sequence value="1"/>
+        <text value="500mg daily for 5 days"/>
+        <additionalInstruction>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="421984009"/>
+                <display value="Until finished - dosing instruction fragment (qualifier value)"/>
+            </coding>
+        </additionalInstruction>
+        <timing>
+            <repeat>
+                <frequency value="1"/>
+                <period value="1"/>
+                <periodUnit value="d"/>
+            </repeat>
+        </timing>
+        <route>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="26643006"/>
+                <display value="Oral Route (qualifier value)"/>
+            </coding>
+        </route>
+        <doseAndRate>
+            <type>
+                <coding>
+                    <system value="http://terminology.hl7.org/CodeSystem/dose-rate-type"/>
+                    <code value="ordered"/>
+                    <display value="Ordered"/>
+                </coding>
+            </type>
+            <doseQuantity>
+                <value value="500"/>
+                <unit value="mg"/>
+                <system value="http://unitsofmeasure.org"/>
+                <code value="mg"/>
+            </doseQuantity>
+        </doseAndRate>
+      
+    </dosageInstruction> 
+    <dispenseRequest>
+        <validityPeriod>
+            <start value="2015-01-15"/>
+            <end value="2016-01-15"/> 
+        </validityPeriod>
+        <quantity>
+            <value value="5"/>
+            <unit value="Tab"/>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"/>
+            <code value="TAB"/> 
+        </quantity>
+        <expectedSupplyDuration>
+            <value value="5"/>
+            <unit value="days"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="d"/>
+        </expectedSupplyDuration>
+    </dispenseRequest>
+    <priorPrescription>
+        <reference value="MedicationRequest/medrx0318"/>
+            <display value="Vancomycin IV"/>
+    </priorPrescription>
+</MedicationRequest>

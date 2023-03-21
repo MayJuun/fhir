@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?><Encounter xmlns="http://hl7.org/fhir">
+    <id value="f203"/>
+    <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "f203" </p></div><p><b>identifier</b>: id: Encounter_Roel_20130311 (TEMP)</p><p><b>status</b>: finished</p><h3>StatusHistories</h3><table class="grid"><tr><td>-</td><td><b>Status</b></td><td><b>Period</b></td></tr><tr><td>*</td><td>arrived</td><td>2013-03-08 --&gt; (ongoing)</td></tr></table><p><b>class</b>: inpatient encounter (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code IMP = 'inpatient encounter', stated as 'inpatient encounter')</p><p><b>type</b>: Inpatient stay for nine days <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#183807002)</span></p><p><b>priority</b>: High priority <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#394849002)</span></p><p><b>subject</b>: <a href="patient-f201.html">Patient/f201: Roel</a> "Roel"</p><p><b>episodeOfCare</b>: <a href="episodeofcare-example.html">EpisodeOfCare/example</a></p><p><b>basedOn</b>: <a href="servicerequest-myringotomy.html">ServiceRequest/myringotomy</a></p><h3>Participants</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Individual</b></td></tr><tr><td>*</td><td>Participation <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-ParticipationType.html">ParticipationType</a>#PART)</span></td><td><a href="practitioner-f201.html">Practitioner/f201</a> "Dokter Bronsig"</td></tr></table><p><b>appointment</b>: <a href="appointment-example.html">Appointment/example</a></p><p><b>period</b>: 2013-03-11 --&gt; 2013-03-20</p><p><b>reasonCode</b>: The patient seems to suffer from bilateral pneumonia and renal insufficiency, most likely due to chemotherapy. <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ()</span></p><blockquote><p><b>diagnosis</b></p><p><b>condition</b>: <a href="condition-stroke.html">Condition/stroke</a></p><p><b>use</b>: Admission diagnosis <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="codesystem-diagnosis-role.html">DiagnosisRole</a>#AD)</span></p><p><b>rank</b>: 1</p></blockquote><blockquote><p><b>diagnosis</b></p><p><b>condition</b>: <a href="condition-f201.html">Condition/f201</a></p><p><b>use</b>: Discharge diagnosis <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="codesystem-diagnosis-role.html">DiagnosisRole</a>#DD)</span></p></blockquote><p><b>account</b>: <a href="account-example.html">Account/example</a> "HACC Funded Billing for Peter James Chalmers"</p><h3>Hospitalizations</h3><table class="grid"><tr><td>-</td><td><b>Origin</b></td><td><b>AdmitSource</b></td><td><b>ReAdmission</b></td><td><b>DietPreference</b></td><td><b>SpecialCourtesy</b></td><td><b>SpecialArrangement</b></td><td><b>Destination</b></td></tr><tr><td>*</td><td><a href="location-2.html">Location/2</a> "South Wing Neuro OR 1"</td><td>Clinical Oncology Department <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#309902002)</span></td><td>readmitted <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated])</span></td><td>Fluid balance regulation <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#276026009)</span></td><td>normal courtesy <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-EncounterSpecialCourtesy.html">EncounterSpecialCourtesy</a>#NRM)</span></td><td>Wheelchair <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="codesystem-encounter-special-arrangements.html">SpecialArrangements</a>#wheel)</span></td><td><a href="location-2.html">Location/2</a> "South Wing Neuro OR 1"</td></tr></table><p><b>serviceProvider</b>: <a href="organization-2.html">Organization/2</a> "XYZ Insurance"</p><p><b>partOf</b>: <a href="encounter-f203.html">Encounter/f203</a></p></div></text><identifier>
+        <use value="temp"/>
+        <value value="Encounter_Roel_20130311"/>
+    </identifier>
+    <status value="finished"/>
+    <statusHistory>
+        <status value="arrived"/>
+        <period>
+            <start value="2013-03-08"/>
+        </period>
+    </statusHistory>
+    <!--  Encounter has finished  -->
+    <class>
+        <!--  Inpatient encounter for straphylococcus infection  -->
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+        <code value="IMP"/>
+        <display value="inpatient encounter"/>
+    </class>
+    <type>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="183807002"/>
+            <display value="Inpatient stay for nine days"/>
+        </coding>
+    </type>
+    <priority>
+        <!--  High priority  -->
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="394849002"/>
+            <display value="High priority"/>
+        </coding>
+    </priority>
+    <subject>
+        <reference value="Patient/f201"/>
+        <display value="Roel"/>
+    </subject>
+    <episodeOfCare>
+        <reference value="EpisodeOfCare/example"/>
+    </episodeOfCare>
+    <basedOn>
+        <reference value="ServiceRequest/myringotomy"/>
+    </basedOn>
+    <participant>
+        <type>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v3-ParticipationType"/>
+                <code value="PART"/>
+            </coding>
+        </type>
+        <individual>
+            <reference value="Practitioner/f201"/>
+        </individual>
+    </participant>
+    <appointment>
+        <reference value="Appointment/example"/>
+    </appointment>
+    <period>
+        <start value="2013-03-11"/>
+        <end value="2013-03-20"/>
+    </period>
+    <reasonCode>
+        <text value="The patient seems to suffer from bilateral pneumonia and renal insufficiency, most likely due to chemotherapy."/>
+    </reasonCode>
+    <diagnosis>
+      <condition>
+          <reference value="Condition/stroke"/>
+      </condition>
+      <use>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/diagnosis-role"/>
+          <code value="AD"/>
+          <display value="Admission diagnosis"/>
+        </coding>
+      </use>
+      <rank value="1"/>
+    </diagnosis>
+    <diagnosis>
+      <condition>
+          <reference value="Condition/f201"/>
+      </condition>
+      <use>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/diagnosis-role"/>
+          <code value="DD"/>
+          <display value="Discharge diagnosis"/>
+        </coding>
+      </use>
+    </diagnosis>
+<account>
+        <reference value="Account/example"/>
+    </account>
+    <!--  No indication, because no referral took place  -->
+    <hospitalization>
+        <origin>
+            <reference value="Location/2"/>
+        </origin>
+        <admitSource>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="309902002"/>
+                <display value="Clinical Oncology Department"/>
+            </coding>
+        </admitSource>
+        <reAdmission>
+            <coding>
+                <display value="readmitted"/>
+            </coding>
+        </reAdmission>
+        <!--  accomodation details are not available  -->
+        <dietPreference>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="276026009"/>
+                <display value="Fluid balance regulation"/>
+            </coding>
+        </dietPreference>
+        <specialCourtesy>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/v3-EncounterSpecialCourtesy"/>
+                <code value="NRM"/>
+                <display value="normal courtesy"/>
+            </coding>
+        </specialCourtesy>
+        <specialArrangement>
+            <coding>
+                <system value="http://terminology.hl7.org/CodeSystem/encounter-special-arrangements"/>
+                <code value="wheel"/>
+                <display value="Wheelchair"/>
+            </coding>
+        </specialArrangement>
+        <destination>
+            <!--  Fictive  -->
+            <reference value="Location/2"/>
+        </destination>
+    </hospitalization>
+    <serviceProvider>
+        <reference value="Organization/2"/>
+    </serviceProvider>
+    <partOf>
+        <reference value="Encounter/f203"/>
+    </partOf>
+</Encounter>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!--
     If you are serving your web app in a path other than the root, change the
@@ -27,11 +28,15 @@
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/png" href="favicon.png" />
 
   <title>webauthdemo</title>
   <link rel="manifest" href="manifest.json">
+  <!-- This is now required after the migration from Google Sign-In JavaScript for Web JS SDK is set to 
+       Google Identity Services (GIS) SDK, which is supposed to happen March 31, 2023-->
+  <!-- <meta name="google-signin-client_id" content="746873113207-a7k1tt5uaadvdpphfb86enblkua8hqaa.apps.googleusercontent.com"> -->
 </head>
+
 <body>
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
@@ -101,4 +106,5 @@
     }
   </script>
 </body>
+
 </html>

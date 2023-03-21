@@ -43,7 +43,6 @@ Future<Resource?> makeRequest(
   /// [id] - the id for the resource
 
   String id, {
-
   /// [resource] - the resource itself, if appropriate
   Resource? resource,
 

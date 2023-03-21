@@ -17,6 +17,7 @@
     {
       "coding": [
         {
+          "system": "http://terminology.hl7.org/CodeSystem/service-category",
           "code": "17",
           "display": "General Practice"
         }
@@ -25,18 +26,22 @@
   ],
   "serviceType": [
     {
-      "coding": [
-        {
-          "code": "75",
-          "display": "Genetic Counselling"
-        }
-      ]
+      "concept": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/service-type",
+            "code": "75",
+            "display": "Genetic Counselling"
+          }
+        ]
+      }
     }
   ],
   "specialty": [
     {
       "coding": [
         {
+          "system": "http://snomed.info/sct",
           "code": "394580004",
           "display": "Clinical genetics"
         }

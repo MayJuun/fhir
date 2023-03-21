@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><Procedure xmlns="http://hl7.org/fhir">
+  <id value="example-implant"/>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Procedure</b><a name="example-implant"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Procedure "example-implant" </p></div><p><b>status</b>: completed</p><p><b>code</b>: Implant Pacemaker <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#25267002 "Insertion of intracardiac pacemaker (procedure)")</span></p><p><b>subject</b>: <a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</p><p><b>occurrence</b>: 2015-04-05</p><h3>Performers</h3><table class="grid"><tr><td>-</td><td><b>Actor</b></td></tr><tr><td>*</td><td><a href="practitioner-example.html">Practitioner/example: Dr Cecil Surgeon</a> "Adam CAREFUL"</td></tr></table><h3>Reasons</h3><table class="grid"><tr><td>-</td><td><b>Concept</b></td></tr><tr><td>*</td><td>Bradycardia <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ()</span></td></tr></table><p><b>followUp</b>: ROS 5 days  - 2013-04-10 <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ()</span></p><p><b>note</b>: Routine Appendectomy. Appendix was inflamed and in retro-caecal position</p><h3>FocalDevices</h3><table class="grid"><tr><td>-</td><td><b>Action</b></td><td><b>Manipulated</b></td></tr><tr><td>*</td><td>Implanted <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="codesystem-device-action.html">Procedure Device Action Codes</a>#implanted)</span></td><td><a name="example-pacemaker"> </a><blockquote><p/><p><a name="example-pacemaker"> </a></p><p><b>manufacturer</b>: Acme Devices, Inc</p><p><b>lotNumber</b>: 1234-5678</p><p><b>type</b>: Cardiac pacemaker implant <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#14106009)</span></p><h3>Associations</h3><table class="grid"><tr><td>-</td><td><b>Status</b></td><td><b>HumanSubject</b></td></tr><tr><td>*</td><td>Implanted <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="codesystem-device-association-status.html">FHIRDeviceaAsociationStatus</a>#implanted)</span></td><td><a href="patient-example.html">Patient/example</a> "Peter CHALMERS"</td></tr></table></blockquote></td></tr></table></div></text><contained>
+	<Device>
+		<id value="example-pacemaker"/>
+		<manufacturer value="Acme Devices, Inc"/> 
+		<lotNumber value="1234-5678"/> 
+		<type> 
+			<coding> 
+			  <system value="http://snomed.info/sct"/> 
+			  <code value="14106009"/> 
+			  <display value="Cardiac pacemaker implant"/> 
+			</coding> 
+		</type> 
+		<association> 
+      <status> 
+        <coding>
+          <system value="http://hl7.org/fhir/device-association-status"/>
+          <code value="implanted"/>
+        </coding>
+      </status>
+      <humanSubject> 
+        <reference value="Patient/example"/> 
+      </humanSubject> 
+		</association> 
+	</Device>
+  </contained>
+  <status value="completed"/>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="25267002"/>
+      <display value="Insertion of intracardiac pacemaker (procedure)"/>
+    </coding>
+    <text value="Implant Pacemaker"/>
+  </code>
+  <subject> 
+    <reference value="Patient/example"/> 
+  </subject> 
+  <occurrenceDateTime value="2015-04-05"/>
+  <performer>
+    <actor>
+      <reference value="Practitioner/example"/>
+      <display value="Dr Cecil Surgeon"/>
+    </actor>
+  </performer>
+  <reason>
+       <concept>
+       <text value="Bradycardia"/>
+       </concept>
+  </reason>
+  <followUp>
+      <text value="ROS 5 days  - 2013-04-10"/>
+  </followUp>
+  <note> <text value="Routine Appendectomy. Appendix was inflamed and in retro-caecal position"/>
+  </note>
+  <focalDevice>
+    <action>
+      <coding>
+        <system value="http://hl7.org/fhir/device-action"/>
+        <code value="implanted"/>
+      </coding>
+    </action>
+    <manipulated>
+      <reference value="#example-pacemaker"/>
+    </manipulated>
+  </focalDevice>
+</Procedure>

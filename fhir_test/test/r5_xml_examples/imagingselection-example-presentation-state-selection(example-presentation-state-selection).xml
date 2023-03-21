@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><ImagingSelection xmlns="http://hl7.org/fhir">
+  <id value="example-presentation-state-selection"/>
+  <meta>
+    <security>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+      <code value="HTEST"/>
+      <display value="test health data"/>
+    </security>
+  </meta>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: ImagingSelection</b><a name="example-presentation-state-selection"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource ImagingSelection "example-presentation-state-selection" </p></div><p><b>identifier</b>: id: urn:oid:1.2.840.113747.20080222.104120739293836151163903631439818.2.1</p><p><b>status</b>: available</p><p><b>subject</b>: <span/></p><p><b>code</b>: Referenced DICOM Grayscale Softcopy Presentation State <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ()</span></p><p><b>studyUid</b>: 1.2.840.113747.20080222.104120739293836153163903631439818</p><p><b>derivedFrom</b>: <span/></p><p><b>seriesUid</b>: 1.2.840.113747.20080222.104120739293836151283903631439818.1</p><p><b>frameOfReferenceUid</b>: 1.2.840.113747.20080222.104120739293289003163903631439818.0</p><p><b>focus</b>: <a href="imagingselection-example-basic-image-selection.html">ImagingSelection/example-basic-image-selection</a></p><h3>Instances</h3><table class="grid"><tr><td>-</td><td><b>Uid</b></td><td><b>SopClass</b></td></tr><tr><td>*</td><td>1.2.840.113747.20080222.104120739293836151289903631439818.1.0</td><td>urn:oid:1.2.840.10008.5.1.4.1.1.11.1 (Details: urn:ietf:rfc:3986 code urn:oid:1.2.840.10008.5.1.4.1.1.11.1 = 'urn:oid:1.2.840.10008.5.1.4.1.1.11.1', stated as 'null')</td></tr></table></div></text><identifier>
+    <system value="urn:dicom:uid"/>
+    <value value="urn:oid:1.2.840.113747.20080222.104120739293836151163903631439818.2.1"/>
+  </identifier>
+	<status value="available"/>
+	<subject>
+    <type value="Patient"/>
+    <identifier>
+      <system value="https://fhirhospital.org"/>
+      <value value="WMQVWGBPNPQHAWCO"/>
+    </identifier>
+  </subject>
+  <code>
+    <text value="Referenced DICOM Grayscale Softcopy Presentation State"/>
+  </code>
+  <studyUid value="1.2.840.113747.20080222.104120739293836153163903631439818"/>
+  <derivedFrom>
+    <type value="ImagingStudy"/>
+    <identifier>
+      <system value="urn:dicom:uid"/>
+      <value value="urn:oid:1.2.840.113747.20080222.104120739291289003163903631439818"/>
+    </identifier>
+  </derivedFrom>
+  <seriesUid value="1.2.840.113747.20080222.104120739293836151283903631439818.1"/>
+  <frameOfReferenceUid value="1.2.840.113747.20080222.104120739293289003163903631439818.0"/>
+  <focus>
+    <reference value="ImagingSelection/example-basic-image-selection"/>
+  </focus>
+  <instance>
+    <uid value="1.2.840.113747.20080222.104120739293836151289903631439818.1.0"/>
+    <sopClass>
+      <system value="urn:ietf:rfc:3986"/>
+      <code value="urn:oid:1.2.840.10008.5.1.4.1.1.11.1"/>
+    </sopClass>
+  </instance>
+</ImagingSelection>
