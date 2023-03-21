@@ -61,10 +61,10 @@ packages:
     dependency: "direct main"
     description:
       name: fhir
-      sha256: cd391724af904fddd1ef76b195043cd6e2c7f2c90a780b6d75bc4a333b313c77
+      sha256: "852c533fd5f29b31692af9264df7bddd23e1103e14db0c42c1693b343b6cbe44"
       url: "https://pub.dev"
     source: hosted
-    version: "0.9.4"
+    version: "0.9.5"
   fhir_at_rest:
     dependency: "direct main"
     description:
@@ -79,7 +79,7 @@ packages:
       path: "../.."
       relative: true
     source: path
-    version: "0.9.4"
+    version: "0.9.5"
   flutter:
     dependency: "direct main"
     description: flutter
