@@ -575,12 +575,8 @@ However, the result is the same:
 ```
 GET http://hapi.fhir.org/baseR4/Observation?_format%3D$mimeType%26subject%3DPatient%2F123
 ```
-#### ToDo: References and Versions
+#### ToDo: Lots of things still to build
 
-#### ToDo: Searching Hierarchies
-
-#### ToDO: Recently removed ability to specify all resource types
-
-#### ToDo: update examples after updating FHIR package
+As I've been working on SQL queries, I'm trying to align them with RESTful calls, and so I've gone back to trying to create a more structured way of creating them for this package. They are still incomplete however. Also, I'm not sure I'm ever going to attempt chaining and reverse chaining, so I will always leave the ability to pass in specific parameters.
 
 FHIR® is a registered trademark of Health Level Seven International (HL7) and its use does not constitute an endorsement of products by HL7®

@@ -1,6 +1,11 @@
+import 'package:fhir/r4.dart';
+import 'package:fhir_supabase/api.dart';
 import 'package:flutter/material.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
-void main() => runApp(const MyApp());
+Future<void> main() async {
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -27,12 +32,54 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  // Get a reference your Supabase client
+  SupabaseClient? supabase;
 
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
+  void _initialize() async {
+    try {
+      await Supabase.initialize(
+        url: SUPABASE_URL,
+        anonKey: SUPABASE_ANON_KEY,
+        // schema: 'dev.fhirfli.fhir_supabase',
+        // authCallbackUrlHostname: 'dev.fhirfli.fhir_supabase://callback',
+      );
+      supabase = Supabase.instance.client;
+    } catch (e, s) {
+      print(e);
+      print(s);
+    }
+  }
+
+  void _signup() async {
+    try {
+      await supabase!.auth.signUp(
+          email: 'grey@fhirfli.dev',
+          password: 'grey@fhirfli.dev',
+          data: {'username': 'greyfhirflidev'});
+    } catch (e, s) {
+      print(e);
+      print(s);
+    }
+  }
+
+  void _login() async {
+    supabase!.auth.signInWithPassword(
+        email: 'grey@fhirfli.dev', password: 'grey@fhirfli.dev');
+  }
+
+  void _download() async {
+    try {
+      final data = await supabase!.from('patient').select('resource');
+      (data as List).forEach((e) {
+        final resourceJson = e['resource'];
+        final resource = Resource.fromJson(resourceJson);
+        print(resource.resourceTypeString);
+        print(resource.id);
+      });
+    } catch (e, s) {
+      print(e);
+      print(s);
+    }
   }
 
   @override
@@ -45,20 +92,45 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+            FloatingActionButton(
+              onPressed: _initialize,
+              tooltip: 'Initialize',
+              child: Column(
+                children: const [Icon(Icons.start), Text('Initialize')],
+              ),
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+            FloatingActionButton(
+              onPressed: _signup,
+              tooltip: 'Signup',
+              child: Column(
+                children: const [
+                  Icon(Icons.new_label),
+                  Text('Signup'),
+                ],
+              ),
+            ),
+            FloatingActionButton(
+              onPressed: _login,
+              tooltip: 'Login',
+              child: Column(
+                children: const [
+                  Icon(Icons.lock),
+                  Text('Login'),
+                ],
+              ),
+            ),
+            FloatingActionButton(
+              onPressed: _download,
+              tooltip: 'Download',
+              child: Column(
+                children: const [
+                  Icon(Icons.add),
+                  Text('Download'),
+                ],
+              ),
             ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
       ),
     );
   }

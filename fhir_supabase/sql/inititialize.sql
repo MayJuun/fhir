@@ -18,7 +18,7 @@
 --  where schemaname = 'public'; -- or any other schema
 
 -- Should remove everything
-DROP SCHEMA public CASCADE;
+-- DROP SCHEMA public CASCADE;
 
 -- Recreate the public schema if necessary
 CREATE SCHEMA IF NOT EXISTS public;
