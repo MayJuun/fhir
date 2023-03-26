@@ -4,6 +4,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'search_param.dart';
 
 part 'search_param_uri.freezed.dart';
+part 'search_param_uri.g.dart';
 
 @freezed
 class SearchParamUri with SearchParam, _$SearchParamUri {
@@ -17,5 +18,16 @@ class SearchParamUri with SearchParam, _$SearchParamUri {
   const factory SearchParamUri.below({
     required FhirUri uri,
   }) = _SearchParamUriBelow;
-  const factory SearchParamUri.missing() = _SearchParamUriMissing;
+  const factory SearchParamUri.missing(bool missing) = _SearchParamUriMissing;
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory SearchParamUri.fromJson(Map<String, dynamic> json) =>
+      _$SearchParamUriFromJson(json);
+
+  String toRequest() => map(
+        equal: (value) => '=${value.uri}',
+        above: (value) => ':above=${value.uri}',
+        below: (value) => ':below=${value.uri}',
+        missing: (value) => ':missing=${value.missing}',
+      );
 }

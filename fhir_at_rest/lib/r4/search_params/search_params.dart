@@ -1,2 +1,2 @@
-export 'search_param_date.dart';
-export 'search_param.dart';
+export 'types/types.dart';
+export 'resource_search_params.dart';

@@ -14,48 +14,77 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+SearchParamNumber _$SearchParamNumberFromJson(Map<String, dynamic> json) {
+  switch (json['runtimeType']) {
+    case 'equal':
+      return _SearchParamNumberEqual.fromJson(json);
+    case 'notEqual':
+      return _SearchParamNumberNotEqual.fromJson(json);
+    case 'greaterThan':
+      return _SearchParamNumberGreaterThan.fromJson(json);
+    case 'lessThan':
+      return _SearchParamNumberLessThan.fromJson(json);
+    case 'greaterOrEqual':
+      return _SearchParamNumberGreaterOrEqual.fromJson(json);
+    case 'lessOrEqual':
+      return _SearchParamNumberLessOrEqual.fromJson(json);
+    case 'startsAfter':
+      return _SearchParamNumberStartsAfter.fromJson(json);
+    case 'endsBefore':
+      return _SearchParamNumberEndsBefore.fromJson(json);
+    case 'approximately':
+      return _SearchParamNumberApproximately.fromJson(json);
+    case 'missing':
+      return _SearchParamNumberMissing.fromJson(json);
+
+    default:
+      throw CheckedFromJsonException(json, 'runtimeType', 'SearchParamNumber',
+          'Invalid union type "${json['runtimeType']}"!');
+  }
+}
+
 /// @nodoc
 mixin _$SearchParamNumber {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirNumber date) equal,
-    required TResult Function(FhirNumber date) notEqual,
-    required TResult Function(FhirNumber date) greaterThan,
-    required TResult Function(FhirNumber date) lessThan,
-    required TResult Function(FhirNumber date) greaterOrEqual,
-    required TResult Function(FhirNumber date) lessOrEqual,
-    required TResult Function(FhirNumber date) startsAfter,
-    required TResult Function(FhirNumber date) endsBefore,
-    required TResult Function(FhirNumber date) approximately,
-    required TResult Function() missing,
+    required TResult Function(num number) equal,
+    required TResult Function(num number) notEqual,
+    required TResult Function(num number) greaterThan,
+    required TResult Function(num number) lessThan,
+    required TResult Function(num number) greaterOrEqual,
+    required TResult Function(num number) lessOrEqual,
+    required TResult Function(num number) startsAfter,
+    required TResult Function(num number) endsBefore,
+    required TResult Function(num number) approximately,
+    required TResult Function(bool missing) missing,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirNumber date)? equal,
-    TResult? Function(FhirNumber date)? notEqual,
-    TResult? Function(FhirNumber date)? greaterThan,
-    TResult? Function(FhirNumber date)? lessThan,
-    TResult? Function(FhirNumber date)? greaterOrEqual,
-    TResult? Function(FhirNumber date)? lessOrEqual,
-    TResult? Function(FhirNumber date)? startsAfter,
-    TResult? Function(FhirNumber date)? endsBefore,
-    TResult? Function(FhirNumber date)? approximately,
-    TResult? Function()? missing,
+    TResult? Function(num number)? equal,
+    TResult? Function(num number)? notEqual,
+    TResult? Function(num number)? greaterThan,
+    TResult? Function(num number)? lessThan,
+    TResult? Function(num number)? greaterOrEqual,
+    TResult? Function(num number)? lessOrEqual,
+    TResult? Function(num number)? startsAfter,
+    TResult? Function(num number)? endsBefore,
+    TResult? Function(num number)? approximately,
+    TResult? Function(bool missing)? missing,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirNumber date)? equal,
-    TResult Function(FhirNumber date)? notEqual,
-    TResult Function(FhirNumber date)? greaterThan,
-    TResult Function(FhirNumber date)? lessThan,
-    TResult Function(FhirNumber date)? greaterOrEqual,
-    TResult Function(FhirNumber date)? lessOrEqual,
-    TResult Function(FhirNumber date)? startsAfter,
-    TResult Function(FhirNumber date)? endsBefore,
-    TResult Function(FhirNumber date)? approximately,
-    TResult Function()? missing,
+    TResult Function(num number)? equal,
+    TResult Function(num number)? notEqual,
+    TResult Function(num number)? greaterThan,
+    TResult Function(num number)? lessThan,
+    TResult Function(num number)? greaterOrEqual,
+    TResult Function(num number)? lessOrEqual,
+    TResult Function(num number)? startsAfter,
+    TResult Function(num number)? endsBefore,
+    TResult Function(num number)? approximately,
+    TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -104,6 +133,7 @@ mixin _$SearchParamNumber {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -130,7 +160,7 @@ abstract class _$$_SearchParamNumberEqualCopyWith<$Res> {
           $Res Function(_$_SearchParamNumberEqual) then) =
       __$$_SearchParamNumberEqualCopyWithImpl<$Res>;
   @useResult
-  $Res call({FhirNumber date});
+  $Res call({num number});
 }
 
 /// @nodoc
@@ -144,28 +174,36 @@ class __$$_SearchParamNumberEqualCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? date = null,
+    Object? number = null,
   }) {
     return _then(_$_SearchParamNumberEqual(
-      date: null == date
-          ? _value.date
-          : date // ignore: cast_nullable_to_non_nullable
-              as FhirNumber,
+      number: null == number
+          ? _value.number
+          : number // ignore: cast_nullable_to_non_nullable
+              as num,
     ));
   }
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_SearchParamNumberEqual extends _SearchParamNumberEqual {
-  const _$_SearchParamNumberEqual({required this.date}) : super._();
+  const _$_SearchParamNumberEqual({required this.number, final String? $type})
+      : $type = $type ?? 'equal',
+        super._();
+
+  factory _$_SearchParamNumberEqual.fromJson(Map<String, dynamic> json) =>
+      _$$_SearchParamNumberEqualFromJson(json);
 
   @override
-  final FhirNumber date;
+  final num number;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
-    return 'SearchParamNumber.equal(date: $date)';
+    return 'SearchParamNumber.equal(number: $number)';
   }
 
   @override
@@ -173,11 +211,12 @@ class _$_SearchParamNumberEqual extends _SearchParamNumberEqual {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SearchParamNumberEqual &&
-            (identical(other.date, date) || other.date == date));
+            (identical(other.number, number) || other.number == number));
   }
 
+  @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, date);
+  int get hashCode => Object.hash(runtimeType, number);
 
   @JsonKey(ignore: true)
   @override
@@ -189,54 +228,54 @@ class _$_SearchParamNumberEqual extends _SearchParamNumberEqual {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirNumber date) equal,
-    required TResult Function(FhirNumber date) notEqual,
-    required TResult Function(FhirNumber date) greaterThan,
-    required TResult Function(FhirNumber date) lessThan,
-    required TResult Function(FhirNumber date) greaterOrEqual,
-    required TResult Function(FhirNumber date) lessOrEqual,
-    required TResult Function(FhirNumber date) startsAfter,
-    required TResult Function(FhirNumber date) endsBefore,
-    required TResult Function(FhirNumber date) approximately,
-    required TResult Function() missing,
+    required TResult Function(num number) equal,
+    required TResult Function(num number) notEqual,
+    required TResult Function(num number) greaterThan,
+    required TResult Function(num number) lessThan,
+    required TResult Function(num number) greaterOrEqual,
+    required TResult Function(num number) lessOrEqual,
+    required TResult Function(num number) startsAfter,
+    required TResult Function(num number) endsBefore,
+    required TResult Function(num number) approximately,
+    required TResult Function(bool missing) missing,
   }) {
-    return equal(date);
+    return equal(number);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirNumber date)? equal,
-    TResult? Function(FhirNumber date)? notEqual,
-    TResult? Function(FhirNumber date)? greaterThan,
-    TResult? Function(FhirNumber date)? lessThan,
-    TResult? Function(FhirNumber date)? greaterOrEqual,
-    TResult? Function(FhirNumber date)? lessOrEqual,
-    TResult? Function(FhirNumber date)? startsAfter,
-    TResult? Function(FhirNumber date)? endsBefore,
-    TResult? Function(FhirNumber date)? approximately,
-    TResult? Function()? missing,
+    TResult? Function(num number)? equal,
+    TResult? Function(num number)? notEqual,
+    TResult? Function(num number)? greaterThan,
+    TResult? Function(num number)? lessThan,
+    TResult? Function(num number)? greaterOrEqual,
+    TResult? Function(num number)? lessOrEqual,
+    TResult? Function(num number)? startsAfter,
+    TResult? Function(num number)? endsBefore,
+    TResult? Function(num number)? approximately,
+    TResult? Function(bool missing)? missing,
   }) {
-    return equal?.call(date);
+    return equal?.call(number);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirNumber date)? equal,
-    TResult Function(FhirNumber date)? notEqual,
-    TResult Function(FhirNumber date)? greaterThan,
-    TResult Function(FhirNumber date)? lessThan,
-    TResult Function(FhirNumber date)? greaterOrEqual,
-    TResult Function(FhirNumber date)? lessOrEqual,
-    TResult Function(FhirNumber date)? startsAfter,
-    TResult Function(FhirNumber date)? endsBefore,
-    TResult Function(FhirNumber date)? approximately,
-    TResult Function()? missing,
+    TResult Function(num number)? equal,
+    TResult Function(num number)? notEqual,
+    TResult Function(num number)? greaterThan,
+    TResult Function(num number)? lessThan,
+    TResult Function(num number)? greaterOrEqual,
+    TResult Function(num number)? lessOrEqual,
+    TResult Function(num number)? startsAfter,
+    TResult Function(num number)? endsBefore,
+    TResult Function(num number)? approximately,
+    TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
     if (equal != null) {
-      return equal(date);
+      return equal(number);
     }
     return orElse();
   }
@@ -297,14 +336,24 @@ class _$_SearchParamNumberEqual extends _SearchParamNumberEqual {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_SearchParamNumberEqualToJson(
+      this,
+    );
+  }
 }
 
 abstract class _SearchParamNumberEqual extends SearchParamNumber {
-  const factory _SearchParamNumberEqual({required final FhirNumber date}) =
+  const factory _SearchParamNumberEqual({required final num number}) =
       _$_SearchParamNumberEqual;
   const _SearchParamNumberEqual._() : super._();
 
-  FhirNumber get date;
+  factory _SearchParamNumberEqual.fromJson(Map<String, dynamic> json) =
+      _$_SearchParamNumberEqual.fromJson;
+
+  num get number;
   @JsonKey(ignore: true)
   _$$_SearchParamNumberEqualCopyWith<_$_SearchParamNumberEqual> get copyWith =>
       throw _privateConstructorUsedError;
@@ -317,7 +366,7 @@ abstract class _$$_SearchParamNumberNotEqualCopyWith<$Res> {
           $Res Function(_$_SearchParamNumberNotEqual) then) =
       __$$_SearchParamNumberNotEqualCopyWithImpl<$Res>;
   @useResult
-  $Res call({FhirNumber date});
+  $Res call({num number});
 }
 
 /// @nodoc
@@ -332,28 +381,37 @@ class __$$_SearchParamNumberNotEqualCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? date = null,
+    Object? number = null,
   }) {
     return _then(_$_SearchParamNumberNotEqual(
-      date: null == date
-          ? _value.date
-          : date // ignore: cast_nullable_to_non_nullable
-              as FhirNumber,
+      number: null == number
+          ? _value.number
+          : number // ignore: cast_nullable_to_non_nullable
+              as num,
     ));
   }
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_SearchParamNumberNotEqual extends _SearchParamNumberNotEqual {
-  const _$_SearchParamNumberNotEqual({required this.date}) : super._();
+  const _$_SearchParamNumberNotEqual(
+      {required this.number, final String? $type})
+      : $type = $type ?? 'notEqual',
+        super._();
+
+  factory _$_SearchParamNumberNotEqual.fromJson(Map<String, dynamic> json) =>
+      _$$_SearchParamNumberNotEqualFromJson(json);
 
   @override
-  final FhirNumber date;
+  final num number;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
-    return 'SearchParamNumber.notEqual(date: $date)';
+    return 'SearchParamNumber.notEqual(number: $number)';
   }
 
   @override
@@ -361,11 +419,12 @@ class _$_SearchParamNumberNotEqual extends _SearchParamNumberNotEqual {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SearchParamNumberNotEqual &&
-            (identical(other.date, date) || other.date == date));
+            (identical(other.number, number) || other.number == number));
   }
 
+  @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, date);
+  int get hashCode => Object.hash(runtimeType, number);
 
   @JsonKey(ignore: true)
   @override
@@ -377,54 +436,54 @@ class _$_SearchParamNumberNotEqual extends _SearchParamNumberNotEqual {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirNumber date) equal,
-    required TResult Function(FhirNumber date) notEqual,
-    required TResult Function(FhirNumber date) greaterThan,
-    required TResult Function(FhirNumber date) lessThan,
-    required TResult Function(FhirNumber date) greaterOrEqual,
-    required TResult Function(FhirNumber date) lessOrEqual,
-    required TResult Function(FhirNumber date) startsAfter,
-    required TResult Function(FhirNumber date) endsBefore,
-    required TResult Function(FhirNumber date) approximately,
-    required TResult Function() missing,
+    required TResult Function(num number) equal,
+    required TResult Function(num number) notEqual,
+    required TResult Function(num number) greaterThan,
+    required TResult Function(num number) lessThan,
+    required TResult Function(num number) greaterOrEqual,
+    required TResult Function(num number) lessOrEqual,
+    required TResult Function(num number) startsAfter,
+    required TResult Function(num number) endsBefore,
+    required TResult Function(num number) approximately,
+    required TResult Function(bool missing) missing,
   }) {
-    return notEqual(date);
+    return notEqual(number);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirNumber date)? equal,
-    TResult? Function(FhirNumber date)? notEqual,
-    TResult? Function(FhirNumber date)? greaterThan,
-    TResult? Function(FhirNumber date)? lessThan,
-    TResult? Function(FhirNumber date)? greaterOrEqual,
-    TResult? Function(FhirNumber date)? lessOrEqual,
-    TResult? Function(FhirNumber date)? startsAfter,
-    TResult? Function(FhirNumber date)? endsBefore,
-    TResult? Function(FhirNumber date)? approximately,
-    TResult? Function()? missing,
+    TResult? Function(num number)? equal,
+    TResult? Function(num number)? notEqual,
+    TResult? Function(num number)? greaterThan,
+    TResult? Function(num number)? lessThan,
+    TResult? Function(num number)? greaterOrEqual,
+    TResult? Function(num number)? lessOrEqual,
+    TResult? Function(num number)? startsAfter,
+    TResult? Function(num number)? endsBefore,
+    TResult? Function(num number)? approximately,
+    TResult? Function(bool missing)? missing,
   }) {
-    return notEqual?.call(date);
+    return notEqual?.call(number);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirNumber date)? equal,
-    TResult Function(FhirNumber date)? notEqual,
-    TResult Function(FhirNumber date)? greaterThan,
-    TResult Function(FhirNumber date)? lessThan,
-    TResult Function(FhirNumber date)? greaterOrEqual,
-    TResult Function(FhirNumber date)? lessOrEqual,
-    TResult Function(FhirNumber date)? startsAfter,
-    TResult Function(FhirNumber date)? endsBefore,
-    TResult Function(FhirNumber date)? approximately,
-    TResult Function()? missing,
+    TResult Function(num number)? equal,
+    TResult Function(num number)? notEqual,
+    TResult Function(num number)? greaterThan,
+    TResult Function(num number)? lessThan,
+    TResult Function(num number)? greaterOrEqual,
+    TResult Function(num number)? lessOrEqual,
+    TResult Function(num number)? startsAfter,
+    TResult Function(num number)? endsBefore,
+    TResult Function(num number)? approximately,
+    TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
     if (notEqual != null) {
-      return notEqual(date);
+      return notEqual(number);
     }
     return orElse();
   }
@@ -485,14 +544,24 @@ class _$_SearchParamNumberNotEqual extends _SearchParamNumberNotEqual {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_SearchParamNumberNotEqualToJson(
+      this,
+    );
+  }
 }
 
 abstract class _SearchParamNumberNotEqual extends SearchParamNumber {
-  const factory _SearchParamNumberNotEqual({required final FhirNumber date}) =
+  const factory _SearchParamNumberNotEqual({required final num number}) =
       _$_SearchParamNumberNotEqual;
   const _SearchParamNumberNotEqual._() : super._();
 
-  FhirNumber get date;
+  factory _SearchParamNumberNotEqual.fromJson(Map<String, dynamic> json) =
+      _$_SearchParamNumberNotEqual.fromJson;
+
+  num get number;
   @JsonKey(ignore: true)
   _$$_SearchParamNumberNotEqualCopyWith<_$_SearchParamNumberNotEqual>
       get copyWith => throw _privateConstructorUsedError;
@@ -505,7 +574,7 @@ abstract class _$$_SearchParamNumberGreaterThanCopyWith<$Res> {
           $Res Function(_$_SearchParamNumberGreaterThan) then) =
       __$$_SearchParamNumberGreaterThanCopyWithImpl<$Res>;
   @useResult
-  $Res call({FhirNumber date});
+  $Res call({num number});
 }
 
 /// @nodoc
@@ -521,28 +590,37 @@ class __$$_SearchParamNumberGreaterThanCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? date = null,
+    Object? number = null,
   }) {
     return _then(_$_SearchParamNumberGreaterThan(
-      date: null == date
-          ? _value.date
-          : date // ignore: cast_nullable_to_non_nullable
-              as FhirNumber,
+      number: null == number
+          ? _value.number
+          : number // ignore: cast_nullable_to_non_nullable
+              as num,
     ));
   }
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_SearchParamNumberGreaterThan extends _SearchParamNumberGreaterThan {
-  const _$_SearchParamNumberGreaterThan({required this.date}) : super._();
+  const _$_SearchParamNumberGreaterThan(
+      {required this.number, final String? $type})
+      : $type = $type ?? 'greaterThan',
+        super._();
+
+  factory _$_SearchParamNumberGreaterThan.fromJson(Map<String, dynamic> json) =>
+      _$$_SearchParamNumberGreaterThanFromJson(json);
 
   @override
-  final FhirNumber date;
+  final num number;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
-    return 'SearchParamNumber.greaterThan(date: $date)';
+    return 'SearchParamNumber.greaterThan(number: $number)';
   }
 
   @override
@@ -550,11 +628,12 @@ class _$_SearchParamNumberGreaterThan extends _SearchParamNumberGreaterThan {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SearchParamNumberGreaterThan &&
-            (identical(other.date, date) || other.date == date));
+            (identical(other.number, number) || other.number == number));
   }
 
+  @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, date);
+  int get hashCode => Object.hash(runtimeType, number);
 
   @JsonKey(ignore: true)
   @override
@@ -566,54 +645,54 @@ class _$_SearchParamNumberGreaterThan extends _SearchParamNumberGreaterThan {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirNumber date) equal,
-    required TResult Function(FhirNumber date) notEqual,
-    required TResult Function(FhirNumber date) greaterThan,
-    required TResult Function(FhirNumber date) lessThan,
-    required TResult Function(FhirNumber date) greaterOrEqual,
-    required TResult Function(FhirNumber date) lessOrEqual,
-    required TResult Function(FhirNumber date) startsAfter,
-    required TResult Function(FhirNumber date) endsBefore,
-    required TResult Function(FhirNumber date) approximately,
-    required TResult Function() missing,
+    required TResult Function(num number) equal,
+    required TResult Function(num number) notEqual,
+    required TResult Function(num number) greaterThan,
+    required TResult Function(num number) lessThan,
+    required TResult Function(num number) greaterOrEqual,
+    required TResult Function(num number) lessOrEqual,
+    required TResult Function(num number) startsAfter,
+    required TResult Function(num number) endsBefore,
+    required TResult Function(num number) approximately,
+    required TResult Function(bool missing) missing,
   }) {
-    return greaterThan(date);
+    return greaterThan(number);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirNumber date)? equal,
-    TResult? Function(FhirNumber date)? notEqual,
-    TResult? Function(FhirNumber date)? greaterThan,
-    TResult? Function(FhirNumber date)? lessThan,
-    TResult? Function(FhirNumber date)? greaterOrEqual,
-    TResult? Function(FhirNumber date)? lessOrEqual,
-    TResult? Function(FhirNumber date)? startsAfter,
-    TResult? Function(FhirNumber date)? endsBefore,
-    TResult? Function(FhirNumber date)? approximately,
-    TResult? Function()? missing,
+    TResult? Function(num number)? equal,
+    TResult? Function(num number)? notEqual,
+    TResult? Function(num number)? greaterThan,
+    TResult? Function(num number)? lessThan,
+    TResult? Function(num number)? greaterOrEqual,
+    TResult? Function(num number)? lessOrEqual,
+    TResult? Function(num number)? startsAfter,
+    TResult? Function(num number)? endsBefore,
+    TResult? Function(num number)? approximately,
+    TResult? Function(bool missing)? missing,
   }) {
-    return greaterThan?.call(date);
+    return greaterThan?.call(number);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirNumber date)? equal,
-    TResult Function(FhirNumber date)? notEqual,
-    TResult Function(FhirNumber date)? greaterThan,
-    TResult Function(FhirNumber date)? lessThan,
-    TResult Function(FhirNumber date)? greaterOrEqual,
-    TResult Function(FhirNumber date)? lessOrEqual,
-    TResult Function(FhirNumber date)? startsAfter,
-    TResult Function(FhirNumber date)? endsBefore,
-    TResult Function(FhirNumber date)? approximately,
-    TResult Function()? missing,
+    TResult Function(num number)? equal,
+    TResult Function(num number)? notEqual,
+    TResult Function(num number)? greaterThan,
+    TResult Function(num number)? lessThan,
+    TResult Function(num number)? greaterOrEqual,
+    TResult Function(num number)? lessOrEqual,
+    TResult Function(num number)? startsAfter,
+    TResult Function(num number)? endsBefore,
+    TResult Function(num number)? approximately,
+    TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
     if (greaterThan != null) {
-      return greaterThan(date);
+      return greaterThan(number);
     }
     return orElse();
   }
@@ -674,14 +753,24 @@ class _$_SearchParamNumberGreaterThan extends _SearchParamNumberGreaterThan {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_SearchParamNumberGreaterThanToJson(
+      this,
+    );
+  }
 }
 
 abstract class _SearchParamNumberGreaterThan extends SearchParamNumber {
-  const factory _SearchParamNumberGreaterThan(
-      {required final FhirNumber date}) = _$_SearchParamNumberGreaterThan;
+  const factory _SearchParamNumberGreaterThan({required final num number}) =
+      _$_SearchParamNumberGreaterThan;
   const _SearchParamNumberGreaterThan._() : super._();
 
-  FhirNumber get date;
+  factory _SearchParamNumberGreaterThan.fromJson(Map<String, dynamic> json) =
+      _$_SearchParamNumberGreaterThan.fromJson;
+
+  num get number;
   @JsonKey(ignore: true)
   _$$_SearchParamNumberGreaterThanCopyWith<_$_SearchParamNumberGreaterThan>
       get copyWith => throw _privateConstructorUsedError;
@@ -694,7 +783,7 @@ abstract class _$$_SearchParamNumberLessThanCopyWith<$Res> {
           $Res Function(_$_SearchParamNumberLessThan) then) =
       __$$_SearchParamNumberLessThanCopyWithImpl<$Res>;
   @useResult
-  $Res call({FhirNumber date});
+  $Res call({num number});
 }
 
 /// @nodoc
@@ -709,28 +798,37 @@ class __$$_SearchParamNumberLessThanCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? date = null,
+    Object? number = null,
   }) {
     return _then(_$_SearchParamNumberLessThan(
-      date: null == date
-          ? _value.date
-          : date // ignore: cast_nullable_to_non_nullable
-              as FhirNumber,
+      number: null == number
+          ? _value.number
+          : number // ignore: cast_nullable_to_non_nullable
+              as num,
     ));
   }
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_SearchParamNumberLessThan extends _SearchParamNumberLessThan {
-  const _$_SearchParamNumberLessThan({required this.date}) : super._();
+  const _$_SearchParamNumberLessThan(
+      {required this.number, final String? $type})
+      : $type = $type ?? 'lessThan',
+        super._();
+
+  factory _$_SearchParamNumberLessThan.fromJson(Map<String, dynamic> json) =>
+      _$$_SearchParamNumberLessThanFromJson(json);
 
   @override
-  final FhirNumber date;
+  final num number;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
-    return 'SearchParamNumber.lessThan(date: $date)';
+    return 'SearchParamNumber.lessThan(number: $number)';
   }
 
   @override
@@ -738,11 +836,12 @@ class _$_SearchParamNumberLessThan extends _SearchParamNumberLessThan {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SearchParamNumberLessThan &&
-            (identical(other.date, date) || other.date == date));
+            (identical(other.number, number) || other.number == number));
   }
 
+  @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, date);
+  int get hashCode => Object.hash(runtimeType, number);
 
   @JsonKey(ignore: true)
   @override
@@ -754,54 +853,54 @@ class _$_SearchParamNumberLessThan extends _SearchParamNumberLessThan {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirNumber date) equal,
-    required TResult Function(FhirNumber date) notEqual,
-    required TResult Function(FhirNumber date) greaterThan,
-    required TResult Function(FhirNumber date) lessThan,
-    required TResult Function(FhirNumber date) greaterOrEqual,
-    required TResult Function(FhirNumber date) lessOrEqual,
-    required TResult Function(FhirNumber date) startsAfter,
-    required TResult Function(FhirNumber date) endsBefore,
-    required TResult Function(FhirNumber date) approximately,
-    required TResult Function() missing,
+    required TResult Function(num number) equal,
+    required TResult Function(num number) notEqual,
+    required TResult Function(num number) greaterThan,
+    required TResult Function(num number) lessThan,
+    required TResult Function(num number) greaterOrEqual,
+    required TResult Function(num number) lessOrEqual,
+    required TResult Function(num number) startsAfter,
+    required TResult Function(num number) endsBefore,
+    required TResult Function(num number) approximately,
+    required TResult Function(bool missing) missing,
   }) {
-    return lessThan(date);
+    return lessThan(number);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirNumber date)? equal,
-    TResult? Function(FhirNumber date)? notEqual,
-    TResult? Function(FhirNumber date)? greaterThan,
-    TResult? Function(FhirNumber date)? lessThan,
-    TResult? Function(FhirNumber date)? greaterOrEqual,
-    TResult? Function(FhirNumber date)? lessOrEqual,
-    TResult? Function(FhirNumber date)? startsAfter,
-    TResult? Function(FhirNumber date)? endsBefore,
-    TResult? Function(FhirNumber date)? approximately,
-    TResult? Function()? missing,
+    TResult? Function(num number)? equal,
+    TResult? Function(num number)? notEqual,
+    TResult? Function(num number)? greaterThan,
+    TResult? Function(num number)? lessThan,
+    TResult? Function(num number)? greaterOrEqual,
+    TResult? Function(num number)? lessOrEqual,
+    TResult? Function(num number)? startsAfter,
+    TResult? Function(num number)? endsBefore,
+    TResult? Function(num number)? approximately,
+    TResult? Function(bool missing)? missing,
   }) {
-    return lessThan?.call(date);
+    return lessThan?.call(number);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirNumber date)? equal,
-    TResult Function(FhirNumber date)? notEqual,
-    TResult Function(FhirNumber date)? greaterThan,
-    TResult Function(FhirNumber date)? lessThan,
-    TResult Function(FhirNumber date)? greaterOrEqual,
-    TResult Function(FhirNumber date)? lessOrEqual,
-    TResult Function(FhirNumber date)? startsAfter,
-    TResult Function(FhirNumber date)? endsBefore,
-    TResult Function(FhirNumber date)? approximately,
-    TResult Function()? missing,
+    TResult Function(num number)? equal,
+    TResult Function(num number)? notEqual,
+    TResult Function(num number)? greaterThan,
+    TResult Function(num number)? lessThan,
+    TResult Function(num number)? greaterOrEqual,
+    TResult Function(num number)? lessOrEqual,
+    TResult Function(num number)? startsAfter,
+    TResult Function(num number)? endsBefore,
+    TResult Function(num number)? approximately,
+    TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
     if (lessThan != null) {
-      return lessThan(date);
+      return lessThan(number);
     }
     return orElse();
   }
@@ -862,14 +961,24 @@ class _$_SearchParamNumberLessThan extends _SearchParamNumberLessThan {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_SearchParamNumberLessThanToJson(
+      this,
+    );
+  }
 }
 
 abstract class _SearchParamNumberLessThan extends SearchParamNumber {
-  const factory _SearchParamNumberLessThan({required final FhirNumber date}) =
+  const factory _SearchParamNumberLessThan({required final num number}) =
       _$_SearchParamNumberLessThan;
   const _SearchParamNumberLessThan._() : super._();
 
-  FhirNumber get date;
+  factory _SearchParamNumberLessThan.fromJson(Map<String, dynamic> json) =
+      _$_SearchParamNumberLessThan.fromJson;
+
+  num get number;
   @JsonKey(ignore: true)
   _$$_SearchParamNumberLessThanCopyWith<_$_SearchParamNumberLessThan>
       get copyWith => throw _privateConstructorUsedError;
@@ -882,7 +991,7 @@ abstract class _$$_SearchParamNumberGreaterOrEqualCopyWith<$Res> {
           $Res Function(_$_SearchParamNumberGreaterOrEqual) then) =
       __$$_SearchParamNumberGreaterOrEqualCopyWithImpl<$Res>;
   @useResult
-  $Res call({FhirNumber date});
+  $Res call({num number});
 }
 
 /// @nodoc
@@ -898,29 +1007,39 @@ class __$$_SearchParamNumberGreaterOrEqualCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? date = null,
+    Object? number = null,
   }) {
     return _then(_$_SearchParamNumberGreaterOrEqual(
-      date: null == date
-          ? _value.date
-          : date // ignore: cast_nullable_to_non_nullable
-              as FhirNumber,
+      number: null == number
+          ? _value.number
+          : number // ignore: cast_nullable_to_non_nullable
+              as num,
     ));
   }
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_SearchParamNumberGreaterOrEqual
     extends _SearchParamNumberGreaterOrEqual {
-  const _$_SearchParamNumberGreaterOrEqual({required this.date}) : super._();
+  const _$_SearchParamNumberGreaterOrEqual(
+      {required this.number, final String? $type})
+      : $type = $type ?? 'greaterOrEqual',
+        super._();
+
+  factory _$_SearchParamNumberGreaterOrEqual.fromJson(
+          Map<String, dynamic> json) =>
+      _$$_SearchParamNumberGreaterOrEqualFromJson(json);
 
   @override
-  final FhirNumber date;
+  final num number;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
-    return 'SearchParamNumber.greaterOrEqual(date: $date)';
+    return 'SearchParamNumber.greaterOrEqual(number: $number)';
   }
 
   @override
@@ -928,11 +1047,12 @@ class _$_SearchParamNumberGreaterOrEqual
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SearchParamNumberGreaterOrEqual &&
-            (identical(other.date, date) || other.date == date));
+            (identical(other.number, number) || other.number == number));
   }
 
+  @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, date);
+  int get hashCode => Object.hash(runtimeType, number);
 
   @JsonKey(ignore: true)
   @override
@@ -945,54 +1065,54 @@ class _$_SearchParamNumberGreaterOrEqual
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirNumber date) equal,
-    required TResult Function(FhirNumber date) notEqual,
-    required TResult Function(FhirNumber date) greaterThan,
-    required TResult Function(FhirNumber date) lessThan,
-    required TResult Function(FhirNumber date) greaterOrEqual,
-    required TResult Function(FhirNumber date) lessOrEqual,
-    required TResult Function(FhirNumber date) startsAfter,
-    required TResult Function(FhirNumber date) endsBefore,
-    required TResult Function(FhirNumber date) approximately,
-    required TResult Function() missing,
+    required TResult Function(num number) equal,
+    required TResult Function(num number) notEqual,
+    required TResult Function(num number) greaterThan,
+    required TResult Function(num number) lessThan,
+    required TResult Function(num number) greaterOrEqual,
+    required TResult Function(num number) lessOrEqual,
+    required TResult Function(num number) startsAfter,
+    required TResult Function(num number) endsBefore,
+    required TResult Function(num number) approximately,
+    required TResult Function(bool missing) missing,
   }) {
-    return greaterOrEqual(date);
+    return greaterOrEqual(number);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirNumber date)? equal,
-    TResult? Function(FhirNumber date)? notEqual,
-    TResult? Function(FhirNumber date)? greaterThan,
-    TResult? Function(FhirNumber date)? lessThan,
-    TResult? Function(FhirNumber date)? greaterOrEqual,
-    TResult? Function(FhirNumber date)? lessOrEqual,
-    TResult? Function(FhirNumber date)? startsAfter,
-    TResult? Function(FhirNumber date)? endsBefore,
-    TResult? Function(FhirNumber date)? approximately,
-    TResult? Function()? missing,
+    TResult? Function(num number)? equal,
+    TResult? Function(num number)? notEqual,
+    TResult? Function(num number)? greaterThan,
+    TResult? Function(num number)? lessThan,
+    TResult? Function(num number)? greaterOrEqual,
+    TResult? Function(num number)? lessOrEqual,
+    TResult? Function(num number)? startsAfter,
+    TResult? Function(num number)? endsBefore,
+    TResult? Function(num number)? approximately,
+    TResult? Function(bool missing)? missing,
   }) {
-    return greaterOrEqual?.call(date);
+    return greaterOrEqual?.call(number);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirNumber date)? equal,
-    TResult Function(FhirNumber date)? notEqual,
-    TResult Function(FhirNumber date)? greaterThan,
-    TResult Function(FhirNumber date)? lessThan,
-    TResult Function(FhirNumber date)? greaterOrEqual,
-    TResult Function(FhirNumber date)? lessOrEqual,
-    TResult Function(FhirNumber date)? startsAfter,
-    TResult Function(FhirNumber date)? endsBefore,
-    TResult Function(FhirNumber date)? approximately,
-    TResult Function()? missing,
+    TResult Function(num number)? equal,
+    TResult Function(num number)? notEqual,
+    TResult Function(num number)? greaterThan,
+    TResult Function(num number)? lessThan,
+    TResult Function(num number)? greaterOrEqual,
+    TResult Function(num number)? lessOrEqual,
+    TResult Function(num number)? startsAfter,
+    TResult Function(num number)? endsBefore,
+    TResult Function(num number)? approximately,
+    TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
     if (greaterOrEqual != null) {
-      return greaterOrEqual(date);
+      return greaterOrEqual(number);
     }
     return orElse();
   }
@@ -1053,14 +1173,24 @@ class _$_SearchParamNumberGreaterOrEqual
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_SearchParamNumberGreaterOrEqualToJson(
+      this,
+    );
+  }
 }
 
 abstract class _SearchParamNumberGreaterOrEqual extends SearchParamNumber {
-  const factory _SearchParamNumberGreaterOrEqual(
-      {required final FhirNumber date}) = _$_SearchParamNumberGreaterOrEqual;
+  const factory _SearchParamNumberGreaterOrEqual({required final num number}) =
+      _$_SearchParamNumberGreaterOrEqual;
   const _SearchParamNumberGreaterOrEqual._() : super._();
 
-  FhirNumber get date;
+  factory _SearchParamNumberGreaterOrEqual.fromJson(Map<String, dynamic> json) =
+      _$_SearchParamNumberGreaterOrEqual.fromJson;
+
+  num get number;
   @JsonKey(ignore: true)
   _$$_SearchParamNumberGreaterOrEqualCopyWith<
           _$_SearchParamNumberGreaterOrEqual>
@@ -1074,7 +1204,7 @@ abstract class _$$_SearchParamNumberLessOrEqualCopyWith<$Res> {
           $Res Function(_$_SearchParamNumberLessOrEqual) then) =
       __$$_SearchParamNumberLessOrEqualCopyWithImpl<$Res>;
   @useResult
-  $Res call({FhirNumber date});
+  $Res call({num number});
 }
 
 /// @nodoc
@@ -1090,28 +1220,37 @@ class __$$_SearchParamNumberLessOrEqualCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? date = null,
+    Object? number = null,
   }) {
     return _then(_$_SearchParamNumberLessOrEqual(
-      date: null == date
-          ? _value.date
-          : date // ignore: cast_nullable_to_non_nullable
-              as FhirNumber,
+      number: null == number
+          ? _value.number
+          : number // ignore: cast_nullable_to_non_nullable
+              as num,
     ));
   }
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_SearchParamNumberLessOrEqual extends _SearchParamNumberLessOrEqual {
-  const _$_SearchParamNumberLessOrEqual({required this.date}) : super._();
+  const _$_SearchParamNumberLessOrEqual(
+      {required this.number, final String? $type})
+      : $type = $type ?? 'lessOrEqual',
+        super._();
+
+  factory _$_SearchParamNumberLessOrEqual.fromJson(Map<String, dynamic> json) =>
+      _$$_SearchParamNumberLessOrEqualFromJson(json);
 
   @override
-  final FhirNumber date;
+  final num number;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
-    return 'SearchParamNumber.lessOrEqual(date: $date)';
+    return 'SearchParamNumber.lessOrEqual(number: $number)';
   }
 
   @override
@@ -1119,11 +1258,12 @@ class _$_SearchParamNumberLessOrEqual extends _SearchParamNumberLessOrEqual {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SearchParamNumberLessOrEqual &&
-            (identical(other.date, date) || other.date == date));
+            (identical(other.number, number) || other.number == number));
   }
 
+  @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, date);
+  int get hashCode => Object.hash(runtimeType, number);
 
   @JsonKey(ignore: true)
   @override
@@ -1135,54 +1275,54 @@ class _$_SearchParamNumberLessOrEqual extends _SearchParamNumberLessOrEqual {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirNumber date) equal,
-    required TResult Function(FhirNumber date) notEqual,
-    required TResult Function(FhirNumber date) greaterThan,
-    required TResult Function(FhirNumber date) lessThan,
-    required TResult Function(FhirNumber date) greaterOrEqual,
-    required TResult Function(FhirNumber date) lessOrEqual,
-    required TResult Function(FhirNumber date) startsAfter,
-    required TResult Function(FhirNumber date) endsBefore,
-    required TResult Function(FhirNumber date) approximately,
-    required TResult Function() missing,
+    required TResult Function(num number) equal,
+    required TResult Function(num number) notEqual,
+    required TResult Function(num number) greaterThan,
+    required TResult Function(num number) lessThan,
+    required TResult Function(num number) greaterOrEqual,
+    required TResult Function(num number) lessOrEqual,
+    required TResult Function(num number) startsAfter,
+    required TResult Function(num number) endsBefore,
+    required TResult Function(num number) approximately,
+    required TResult Function(bool missing) missing,
   }) {
-    return lessOrEqual(date);
+    return lessOrEqual(number);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirNumber date)? equal,
-    TResult? Function(FhirNumber date)? notEqual,
-    TResult? Function(FhirNumber date)? greaterThan,
-    TResult? Function(FhirNumber date)? lessThan,
-    TResult? Function(FhirNumber date)? greaterOrEqual,
-    TResult? Function(FhirNumber date)? lessOrEqual,
-    TResult? Function(FhirNumber date)? startsAfter,
-    TResult? Function(FhirNumber date)? endsBefore,
-    TResult? Function(FhirNumber date)? approximately,
-    TResult? Function()? missing,
+    TResult? Function(num number)? equal,
+    TResult? Function(num number)? notEqual,
+    TResult? Function(num number)? greaterThan,
+    TResult? Function(num number)? lessThan,
+    TResult? Function(num number)? greaterOrEqual,
+    TResult? Function(num number)? lessOrEqual,
+    TResult? Function(num number)? startsAfter,
+    TResult? Function(num number)? endsBefore,
+    TResult? Function(num number)? approximately,
+    TResult? Function(bool missing)? missing,
   }) {
-    return lessOrEqual?.call(date);
+    return lessOrEqual?.call(number);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirNumber date)? equal,
-    TResult Function(FhirNumber date)? notEqual,
-    TResult Function(FhirNumber date)? greaterThan,
-    TResult Function(FhirNumber date)? lessThan,
-    TResult Function(FhirNumber date)? greaterOrEqual,
-    TResult Function(FhirNumber date)? lessOrEqual,
-    TResult Function(FhirNumber date)? startsAfter,
-    TResult Function(FhirNumber date)? endsBefore,
-    TResult Function(FhirNumber date)? approximately,
-    TResult Function()? missing,
+    TResult Function(num number)? equal,
+    TResult Function(num number)? notEqual,
+    TResult Function(num number)? greaterThan,
+    TResult Function(num number)? lessThan,
+    TResult Function(num number)? greaterOrEqual,
+    TResult Function(num number)? lessOrEqual,
+    TResult Function(num number)? startsAfter,
+    TResult Function(num number)? endsBefore,
+    TResult Function(num number)? approximately,
+    TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
     if (lessOrEqual != null) {
-      return lessOrEqual(date);
+      return lessOrEqual(number);
     }
     return orElse();
   }
@@ -1243,14 +1383,24 @@ class _$_SearchParamNumberLessOrEqual extends _SearchParamNumberLessOrEqual {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_SearchParamNumberLessOrEqualToJson(
+      this,
+    );
+  }
 }
 
 abstract class _SearchParamNumberLessOrEqual extends SearchParamNumber {
-  const factory _SearchParamNumberLessOrEqual(
-      {required final FhirNumber date}) = _$_SearchParamNumberLessOrEqual;
+  const factory _SearchParamNumberLessOrEqual({required final num number}) =
+      _$_SearchParamNumberLessOrEqual;
   const _SearchParamNumberLessOrEqual._() : super._();
 
-  FhirNumber get date;
+  factory _SearchParamNumberLessOrEqual.fromJson(Map<String, dynamic> json) =
+      _$_SearchParamNumberLessOrEqual.fromJson;
+
+  num get number;
   @JsonKey(ignore: true)
   _$$_SearchParamNumberLessOrEqualCopyWith<_$_SearchParamNumberLessOrEqual>
       get copyWith => throw _privateConstructorUsedError;
@@ -1263,7 +1413,7 @@ abstract class _$$_SearchParamNumberStartsAfterCopyWith<$Res> {
           $Res Function(_$_SearchParamNumberStartsAfter) then) =
       __$$_SearchParamNumberStartsAfterCopyWithImpl<$Res>;
   @useResult
-  $Res call({FhirNumber date});
+  $Res call({num number});
 }
 
 /// @nodoc
@@ -1279,28 +1429,37 @@ class __$$_SearchParamNumberStartsAfterCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? date = null,
+    Object? number = null,
   }) {
     return _then(_$_SearchParamNumberStartsAfter(
-      date: null == date
-          ? _value.date
-          : date // ignore: cast_nullable_to_non_nullable
-              as FhirNumber,
+      number: null == number
+          ? _value.number
+          : number // ignore: cast_nullable_to_non_nullable
+              as num,
     ));
   }
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_SearchParamNumberStartsAfter extends _SearchParamNumberStartsAfter {
-  const _$_SearchParamNumberStartsAfter({required this.date}) : super._();
+  const _$_SearchParamNumberStartsAfter(
+      {required this.number, final String? $type})
+      : $type = $type ?? 'startsAfter',
+        super._();
+
+  factory _$_SearchParamNumberStartsAfter.fromJson(Map<String, dynamic> json) =>
+      _$$_SearchParamNumberStartsAfterFromJson(json);
 
   @override
-  final FhirNumber date;
+  final num number;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
-    return 'SearchParamNumber.startsAfter(date: $date)';
+    return 'SearchParamNumber.startsAfter(number: $number)';
   }
 
   @override
@@ -1308,11 +1467,12 @@ class _$_SearchParamNumberStartsAfter extends _SearchParamNumberStartsAfter {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SearchParamNumberStartsAfter &&
-            (identical(other.date, date) || other.date == date));
+            (identical(other.number, number) || other.number == number));
   }
 
+  @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, date);
+  int get hashCode => Object.hash(runtimeType, number);
 
   @JsonKey(ignore: true)
   @override
@@ -1324,54 +1484,54 @@ class _$_SearchParamNumberStartsAfter extends _SearchParamNumberStartsAfter {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirNumber date) equal,
-    required TResult Function(FhirNumber date) notEqual,
-    required TResult Function(FhirNumber date) greaterThan,
-    required TResult Function(FhirNumber date) lessThan,
-    required TResult Function(FhirNumber date) greaterOrEqual,
-    required TResult Function(FhirNumber date) lessOrEqual,
-    required TResult Function(FhirNumber date) startsAfter,
-    required TResult Function(FhirNumber date) endsBefore,
-    required TResult Function(FhirNumber date) approximately,
-    required TResult Function() missing,
+    required TResult Function(num number) equal,
+    required TResult Function(num number) notEqual,
+    required TResult Function(num number) greaterThan,
+    required TResult Function(num number) lessThan,
+    required TResult Function(num number) greaterOrEqual,
+    required TResult Function(num number) lessOrEqual,
+    required TResult Function(num number) startsAfter,
+    required TResult Function(num number) endsBefore,
+    required TResult Function(num number) approximately,
+    required TResult Function(bool missing) missing,
   }) {
-    return startsAfter(date);
+    return startsAfter(number);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirNumber date)? equal,
-    TResult? Function(FhirNumber date)? notEqual,
-    TResult? Function(FhirNumber date)? greaterThan,
-    TResult? Function(FhirNumber date)? lessThan,
-    TResult? Function(FhirNumber date)? greaterOrEqual,
-    TResult? Function(FhirNumber date)? lessOrEqual,
-    TResult? Function(FhirNumber date)? startsAfter,
-    TResult? Function(FhirNumber date)? endsBefore,
-    TResult? Function(FhirNumber date)? approximately,
-    TResult? Function()? missing,
+    TResult? Function(num number)? equal,
+    TResult? Function(num number)? notEqual,
+    TResult? Function(num number)? greaterThan,
+    TResult? Function(num number)? lessThan,
+    TResult? Function(num number)? greaterOrEqual,
+    TResult? Function(num number)? lessOrEqual,
+    TResult? Function(num number)? startsAfter,
+    TResult? Function(num number)? endsBefore,
+    TResult? Function(num number)? approximately,
+    TResult? Function(bool missing)? missing,
   }) {
-    return startsAfter?.call(date);
+    return startsAfter?.call(number);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirNumber date)? equal,
-    TResult Function(FhirNumber date)? notEqual,
-    TResult Function(FhirNumber date)? greaterThan,
-    TResult Function(FhirNumber date)? lessThan,
-    TResult Function(FhirNumber date)? greaterOrEqual,
-    TResult Function(FhirNumber date)? lessOrEqual,
-    TResult Function(FhirNumber date)? startsAfter,
-    TResult Function(FhirNumber date)? endsBefore,
-    TResult Function(FhirNumber date)? approximately,
-    TResult Function()? missing,
+    TResult Function(num number)? equal,
+    TResult Function(num number)? notEqual,
+    TResult Function(num number)? greaterThan,
+    TResult Function(num number)? lessThan,
+    TResult Function(num number)? greaterOrEqual,
+    TResult Function(num number)? lessOrEqual,
+    TResult Function(num number)? startsAfter,
+    TResult Function(num number)? endsBefore,
+    TResult Function(num number)? approximately,
+    TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
     if (startsAfter != null) {
-      return startsAfter(date);
+      return startsAfter(number);
     }
     return orElse();
   }
@@ -1432,14 +1592,24 @@ class _$_SearchParamNumberStartsAfter extends _SearchParamNumberStartsAfter {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_SearchParamNumberStartsAfterToJson(
+      this,
+    );
+  }
 }
 
 abstract class _SearchParamNumberStartsAfter extends SearchParamNumber {
-  const factory _SearchParamNumberStartsAfter(
-      {required final FhirNumber date}) = _$_SearchParamNumberStartsAfter;
+  const factory _SearchParamNumberStartsAfter({required final num number}) =
+      _$_SearchParamNumberStartsAfter;
   const _SearchParamNumberStartsAfter._() : super._();
 
-  FhirNumber get date;
+  factory _SearchParamNumberStartsAfter.fromJson(Map<String, dynamic> json) =
+      _$_SearchParamNumberStartsAfter.fromJson;
+
+  num get number;
   @JsonKey(ignore: true)
   _$$_SearchParamNumberStartsAfterCopyWith<_$_SearchParamNumberStartsAfter>
       get copyWith => throw _privateConstructorUsedError;
@@ -1452,7 +1622,7 @@ abstract class _$$_SearchParamNumberEndsBeforeCopyWith<$Res> {
           $Res Function(_$_SearchParamNumberEndsBefore) then) =
       __$$_SearchParamNumberEndsBeforeCopyWithImpl<$Res>;
   @useResult
-  $Res call({FhirNumber date});
+  $Res call({num number});
 }
 
 /// @nodoc
@@ -1468,28 +1638,37 @@ class __$$_SearchParamNumberEndsBeforeCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? date = null,
+    Object? number = null,
   }) {
     return _then(_$_SearchParamNumberEndsBefore(
-      date: null == date
-          ? _value.date
-          : date // ignore: cast_nullable_to_non_nullable
-              as FhirNumber,
+      number: null == number
+          ? _value.number
+          : number // ignore: cast_nullable_to_non_nullable
+              as num,
     ));
   }
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_SearchParamNumberEndsBefore extends _SearchParamNumberEndsBefore {
-  const _$_SearchParamNumberEndsBefore({required this.date}) : super._();
+  const _$_SearchParamNumberEndsBefore(
+      {required this.number, final String? $type})
+      : $type = $type ?? 'endsBefore',
+        super._();
+
+  factory _$_SearchParamNumberEndsBefore.fromJson(Map<String, dynamic> json) =>
+      _$$_SearchParamNumberEndsBeforeFromJson(json);
 
   @override
-  final FhirNumber date;
+  final num number;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
-    return 'SearchParamNumber.endsBefore(date: $date)';
+    return 'SearchParamNumber.endsBefore(number: $number)';
   }
 
   @override
@@ -1497,11 +1676,12 @@ class _$_SearchParamNumberEndsBefore extends _SearchParamNumberEndsBefore {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SearchParamNumberEndsBefore &&
-            (identical(other.date, date) || other.date == date));
+            (identical(other.number, number) || other.number == number));
   }
 
+  @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, date);
+  int get hashCode => Object.hash(runtimeType, number);
 
   @JsonKey(ignore: true)
   @override
@@ -1513,54 +1693,54 @@ class _$_SearchParamNumberEndsBefore extends _SearchParamNumberEndsBefore {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirNumber date) equal,
-    required TResult Function(FhirNumber date) notEqual,
-    required TResult Function(FhirNumber date) greaterThan,
-    required TResult Function(FhirNumber date) lessThan,
-    required TResult Function(FhirNumber date) greaterOrEqual,
-    required TResult Function(FhirNumber date) lessOrEqual,
-    required TResult Function(FhirNumber date) startsAfter,
-    required TResult Function(FhirNumber date) endsBefore,
-    required TResult Function(FhirNumber date) approximately,
-    required TResult Function() missing,
+    required TResult Function(num number) equal,
+    required TResult Function(num number) notEqual,
+    required TResult Function(num number) greaterThan,
+    required TResult Function(num number) lessThan,
+    required TResult Function(num number) greaterOrEqual,
+    required TResult Function(num number) lessOrEqual,
+    required TResult Function(num number) startsAfter,
+    required TResult Function(num number) endsBefore,
+    required TResult Function(num number) approximately,
+    required TResult Function(bool missing) missing,
   }) {
-    return endsBefore(date);
+    return endsBefore(number);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirNumber date)? equal,
-    TResult? Function(FhirNumber date)? notEqual,
-    TResult? Function(FhirNumber date)? greaterThan,
-    TResult? Function(FhirNumber date)? lessThan,
-    TResult? Function(FhirNumber date)? greaterOrEqual,
-    TResult? Function(FhirNumber date)? lessOrEqual,
-    TResult? Function(FhirNumber date)? startsAfter,
-    TResult? Function(FhirNumber date)? endsBefore,
-    TResult? Function(FhirNumber date)? approximately,
-    TResult? Function()? missing,
+    TResult? Function(num number)? equal,
+    TResult? Function(num number)? notEqual,
+    TResult? Function(num number)? greaterThan,
+    TResult? Function(num number)? lessThan,
+    TResult? Function(num number)? greaterOrEqual,
+    TResult? Function(num number)? lessOrEqual,
+    TResult? Function(num number)? startsAfter,
+    TResult? Function(num number)? endsBefore,
+    TResult? Function(num number)? approximately,
+    TResult? Function(bool missing)? missing,
   }) {
-    return endsBefore?.call(date);
+    return endsBefore?.call(number);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirNumber date)? equal,
-    TResult Function(FhirNumber date)? notEqual,
-    TResult Function(FhirNumber date)? greaterThan,
-    TResult Function(FhirNumber date)? lessThan,
-    TResult Function(FhirNumber date)? greaterOrEqual,
-    TResult Function(FhirNumber date)? lessOrEqual,
-    TResult Function(FhirNumber date)? startsAfter,
-    TResult Function(FhirNumber date)? endsBefore,
-    TResult Function(FhirNumber date)? approximately,
-    TResult Function()? missing,
+    TResult Function(num number)? equal,
+    TResult Function(num number)? notEqual,
+    TResult Function(num number)? greaterThan,
+    TResult Function(num number)? lessThan,
+    TResult Function(num number)? greaterOrEqual,
+    TResult Function(num number)? lessOrEqual,
+    TResult Function(num number)? startsAfter,
+    TResult Function(num number)? endsBefore,
+    TResult Function(num number)? approximately,
+    TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
     if (endsBefore != null) {
-      return endsBefore(date);
+      return endsBefore(number);
     }
     return orElse();
   }
@@ -1621,14 +1801,24 @@ class _$_SearchParamNumberEndsBefore extends _SearchParamNumberEndsBefore {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_SearchParamNumberEndsBeforeToJson(
+      this,
+    );
+  }
 }
 
 abstract class _SearchParamNumberEndsBefore extends SearchParamNumber {
-  const factory _SearchParamNumberEndsBefore({required final FhirNumber date}) =
+  const factory _SearchParamNumberEndsBefore({required final num number}) =
       _$_SearchParamNumberEndsBefore;
   const _SearchParamNumberEndsBefore._() : super._();
 
-  FhirNumber get date;
+  factory _SearchParamNumberEndsBefore.fromJson(Map<String, dynamic> json) =
+      _$_SearchParamNumberEndsBefore.fromJson;
+
+  num get number;
   @JsonKey(ignore: true)
   _$$_SearchParamNumberEndsBeforeCopyWith<_$_SearchParamNumberEndsBefore>
       get copyWith => throw _privateConstructorUsedError;
@@ -1641,7 +1831,7 @@ abstract class _$$_SearchParamNumberApproximatelyCopyWith<$Res> {
           $Res Function(_$_SearchParamNumberApproximately) then) =
       __$$_SearchParamNumberApproximatelyCopyWithImpl<$Res>;
   @useResult
-  $Res call({FhirNumber date});
+  $Res call({num number});
 }
 
 /// @nodoc
@@ -1657,29 +1847,39 @@ class __$$_SearchParamNumberApproximatelyCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? date = null,
+    Object? number = null,
   }) {
     return _then(_$_SearchParamNumberApproximately(
-      date: null == date
-          ? _value.date
-          : date // ignore: cast_nullable_to_non_nullable
-              as FhirNumber,
+      number: null == number
+          ? _value.number
+          : number // ignore: cast_nullable_to_non_nullable
+              as num,
     ));
   }
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_SearchParamNumberApproximately
     extends _SearchParamNumberApproximately {
-  const _$_SearchParamNumberApproximately({required this.date}) : super._();
+  const _$_SearchParamNumberApproximately(
+      {required this.number, final String? $type})
+      : $type = $type ?? 'approximately',
+        super._();
+
+  factory _$_SearchParamNumberApproximately.fromJson(
+          Map<String, dynamic> json) =>
+      _$$_SearchParamNumberApproximatelyFromJson(json);
 
   @override
-  final FhirNumber date;
+  final num number;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
-    return 'SearchParamNumber.approximately(date: $date)';
+    return 'SearchParamNumber.approximately(number: $number)';
   }
 
   @override
@@ -1687,11 +1887,12 @@ class _$_SearchParamNumberApproximately
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SearchParamNumberApproximately &&
-            (identical(other.date, date) || other.date == date));
+            (identical(other.number, number) || other.number == number));
   }
 
+  @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, date);
+  int get hashCode => Object.hash(runtimeType, number);
 
   @JsonKey(ignore: true)
   @override
@@ -1703,54 +1904,54 @@ class _$_SearchParamNumberApproximately
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirNumber date) equal,
-    required TResult Function(FhirNumber date) notEqual,
-    required TResult Function(FhirNumber date) greaterThan,
-    required TResult Function(FhirNumber date) lessThan,
-    required TResult Function(FhirNumber date) greaterOrEqual,
-    required TResult Function(FhirNumber date) lessOrEqual,
-    required TResult Function(FhirNumber date) startsAfter,
-    required TResult Function(FhirNumber date) endsBefore,
-    required TResult Function(FhirNumber date) approximately,
-    required TResult Function() missing,
+    required TResult Function(num number) equal,
+    required TResult Function(num number) notEqual,
+    required TResult Function(num number) greaterThan,
+    required TResult Function(num number) lessThan,
+    required TResult Function(num number) greaterOrEqual,
+    required TResult Function(num number) lessOrEqual,
+    required TResult Function(num number) startsAfter,
+    required TResult Function(num number) endsBefore,
+    required TResult Function(num number) approximately,
+    required TResult Function(bool missing) missing,
   }) {
-    return approximately(date);
+    return approximately(number);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirNumber date)? equal,
-    TResult? Function(FhirNumber date)? notEqual,
-    TResult? Function(FhirNumber date)? greaterThan,
-    TResult? Function(FhirNumber date)? lessThan,
-    TResult? Function(FhirNumber date)? greaterOrEqual,
-    TResult? Function(FhirNumber date)? lessOrEqual,
-    TResult? Function(FhirNumber date)? startsAfter,
-    TResult? Function(FhirNumber date)? endsBefore,
-    TResult? Function(FhirNumber date)? approximately,
-    TResult? Function()? missing,
+    TResult? Function(num number)? equal,
+    TResult? Function(num number)? notEqual,
+    TResult? Function(num number)? greaterThan,
+    TResult? Function(num number)? lessThan,
+    TResult? Function(num number)? greaterOrEqual,
+    TResult? Function(num number)? lessOrEqual,
+    TResult? Function(num number)? startsAfter,
+    TResult? Function(num number)? endsBefore,
+    TResult? Function(num number)? approximately,
+    TResult? Function(bool missing)? missing,
   }) {
-    return approximately?.call(date);
+    return approximately?.call(number);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirNumber date)? equal,
-    TResult Function(FhirNumber date)? notEqual,
-    TResult Function(FhirNumber date)? greaterThan,
-    TResult Function(FhirNumber date)? lessThan,
-    TResult Function(FhirNumber date)? greaterOrEqual,
-    TResult Function(FhirNumber date)? lessOrEqual,
-    TResult Function(FhirNumber date)? startsAfter,
-    TResult Function(FhirNumber date)? endsBefore,
-    TResult Function(FhirNumber date)? approximately,
-    TResult Function()? missing,
+    TResult Function(num number)? equal,
+    TResult Function(num number)? notEqual,
+    TResult Function(num number)? greaterThan,
+    TResult Function(num number)? lessThan,
+    TResult Function(num number)? greaterOrEqual,
+    TResult Function(num number)? lessOrEqual,
+    TResult Function(num number)? startsAfter,
+    TResult Function(num number)? endsBefore,
+    TResult Function(num number)? approximately,
+    TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
     if (approximately != null) {
-      return approximately(date);
+      return approximately(number);
     }
     return orElse();
   }
@@ -1811,14 +2012,24 @@ class _$_SearchParamNumberApproximately
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_SearchParamNumberApproximatelyToJson(
+      this,
+    );
+  }
 }
 
 abstract class _SearchParamNumberApproximately extends SearchParamNumber {
-  const factory _SearchParamNumberApproximately(
-      {required final FhirNumber date}) = _$_SearchParamNumberApproximately;
+  const factory _SearchParamNumberApproximately({required final num number}) =
+      _$_SearchParamNumberApproximately;
   const _SearchParamNumberApproximately._() : super._();
 
-  FhirNumber get date;
+  factory _SearchParamNumberApproximately.fromJson(Map<String, dynamic> json) =
+      _$_SearchParamNumberApproximately.fromJson;
+
+  num get number;
   @JsonKey(ignore: true)
   _$$_SearchParamNumberApproximatelyCopyWith<_$_SearchParamNumberApproximately>
       get copyWith => throw _privateConstructorUsedError;
@@ -1830,6 +2041,8 @@ abstract class _$$_SearchParamNumberMissingCopyWith<$Res> {
           _$_SearchParamNumberMissing value,
           $Res Function(_$_SearchParamNumberMissing) then) =
       __$$_SearchParamNumberMissingCopyWithImpl<$Res>;
+  @useResult
+  $Res call({bool missing});
 }
 
 /// @nodoc
@@ -1839,79 +2052,112 @@ class __$$_SearchParamNumberMissingCopyWithImpl<$Res>
   __$$_SearchParamNumberMissingCopyWithImpl(_$_SearchParamNumberMissing _value,
       $Res Function(_$_SearchParamNumberMissing) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? missing = null,
+  }) {
+    return _then(_$_SearchParamNumberMissing(
+      null == missing
+          ? _value.missing
+          : missing // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_SearchParamNumberMissing extends _SearchParamNumberMissing {
-  const _$_SearchParamNumberMissing() : super._();
+  const _$_SearchParamNumberMissing(this.missing, {final String? $type})
+      : $type = $type ?? 'missing',
+        super._();
+
+  factory _$_SearchParamNumberMissing.fromJson(Map<String, dynamic> json) =>
+      _$$_SearchParamNumberMissingFromJson(json);
+
+  @override
+  final bool missing;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
-    return 'SearchParamNumber.missing()';
+    return 'SearchParamNumber.missing(missing: $missing)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SearchParamNumberMissing);
+            other is _$_SearchParamNumberMissing &&
+            (identical(other.missing, missing) || other.missing == missing));
   }
 
+  @JsonKey(ignore: true)
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, missing);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_SearchParamNumberMissingCopyWith<_$_SearchParamNumberMissing>
+      get copyWith => __$$_SearchParamNumberMissingCopyWithImpl<
+          _$_SearchParamNumberMissing>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirNumber date) equal,
-    required TResult Function(FhirNumber date) notEqual,
-    required TResult Function(FhirNumber date) greaterThan,
-    required TResult Function(FhirNumber date) lessThan,
-    required TResult Function(FhirNumber date) greaterOrEqual,
-    required TResult Function(FhirNumber date) lessOrEqual,
-    required TResult Function(FhirNumber date) startsAfter,
-    required TResult Function(FhirNumber date) endsBefore,
-    required TResult Function(FhirNumber date) approximately,
-    required TResult Function() missing,
+    required TResult Function(num number) equal,
+    required TResult Function(num number) notEqual,
+    required TResult Function(num number) greaterThan,
+    required TResult Function(num number) lessThan,
+    required TResult Function(num number) greaterOrEqual,
+    required TResult Function(num number) lessOrEqual,
+    required TResult Function(num number) startsAfter,
+    required TResult Function(num number) endsBefore,
+    required TResult Function(num number) approximately,
+    required TResult Function(bool missing) missing,
   }) {
-    return missing();
+    return missing(this.missing);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirNumber date)? equal,
-    TResult? Function(FhirNumber date)? notEqual,
-    TResult? Function(FhirNumber date)? greaterThan,
-    TResult? Function(FhirNumber date)? lessThan,
-    TResult? Function(FhirNumber date)? greaterOrEqual,
-    TResult? Function(FhirNumber date)? lessOrEqual,
-    TResult? Function(FhirNumber date)? startsAfter,
-    TResult? Function(FhirNumber date)? endsBefore,
-    TResult? Function(FhirNumber date)? approximately,
-    TResult? Function()? missing,
+    TResult? Function(num number)? equal,
+    TResult? Function(num number)? notEqual,
+    TResult? Function(num number)? greaterThan,
+    TResult? Function(num number)? lessThan,
+    TResult? Function(num number)? greaterOrEqual,
+    TResult? Function(num number)? lessOrEqual,
+    TResult? Function(num number)? startsAfter,
+    TResult? Function(num number)? endsBefore,
+    TResult? Function(num number)? approximately,
+    TResult? Function(bool missing)? missing,
   }) {
-    return missing?.call();
+    return missing?.call(this.missing);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirNumber date)? equal,
-    TResult Function(FhirNumber date)? notEqual,
-    TResult Function(FhirNumber date)? greaterThan,
-    TResult Function(FhirNumber date)? lessThan,
-    TResult Function(FhirNumber date)? greaterOrEqual,
-    TResult Function(FhirNumber date)? lessOrEqual,
-    TResult Function(FhirNumber date)? startsAfter,
-    TResult Function(FhirNumber date)? endsBefore,
-    TResult Function(FhirNumber date)? approximately,
-    TResult Function()? missing,
+    TResult Function(num number)? equal,
+    TResult Function(num number)? notEqual,
+    TResult Function(num number)? greaterThan,
+    TResult Function(num number)? lessThan,
+    TResult Function(num number)? greaterOrEqual,
+    TResult Function(num number)? lessOrEqual,
+    TResult Function(num number)? startsAfter,
+    TResult Function(num number)? endsBefore,
+    TResult Function(num number)? approximately,
+    TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
     if (missing != null) {
-      return missing();
+      return missing(this.missing);
     }
     return orElse();
   }
@@ -1972,9 +2218,25 @@ class _$_SearchParamNumberMissing extends _SearchParamNumberMissing {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_SearchParamNumberMissingToJson(
+      this,
+    );
+  }
 }
 
 abstract class _SearchParamNumberMissing extends SearchParamNumber {
-  const factory _SearchParamNumberMissing() = _$_SearchParamNumberMissing;
+  const factory _SearchParamNumberMissing(final bool missing) =
+      _$_SearchParamNumberMissing;
   const _SearchParamNumberMissing._() : super._();
+
+  factory _SearchParamNumberMissing.fromJson(Map<String, dynamic> json) =
+      _$_SearchParamNumberMissing.fromJson;
+
+  bool get missing;
+  @JsonKey(ignore: true)
+  _$$_SearchParamNumberMissingCopyWith<_$_SearchParamNumberMissing>
+      get copyWith => throw _privateConstructorUsedError;
 }

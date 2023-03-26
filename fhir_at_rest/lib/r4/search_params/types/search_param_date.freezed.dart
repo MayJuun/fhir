@@ -14,48 +14,77 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+SearchParamDate _$SearchParamDateFromJson(Map<String, dynamic> json) {
+  switch (json['runtimeType']) {
+    case 'equal':
+      return _SearchParamDateEqual.fromJson(json);
+    case 'notEqual':
+      return _SearchParamDateNotEqual.fromJson(json);
+    case 'greaterThan':
+      return _SearchParamDateGreaterThan.fromJson(json);
+    case 'lessThan':
+      return _SearchParamDateLessThan.fromJson(json);
+    case 'greaterOrEqual':
+      return _SearchParamDateGreaterOrEqual.fromJson(json);
+    case 'lessOrEqual':
+      return _SearchParamDateLessOrEqual.fromJson(json);
+    case 'startsAfter':
+      return _SearchParamDateStartsAfter.fromJson(json);
+    case 'endsBefore':
+      return _SearchParamDateEndsBefore.fromJson(json);
+    case 'approximately':
+      return _SearchParamDateApproximately.fromJson(json);
+    case 'missing':
+      return _SearchParamDateMissing.fromJson(json);
+
+    default:
+      throw CheckedFromJsonException(json, 'runtimeType', 'SearchParamDate',
+          'Invalid union type "${json['runtimeType']}"!');
+  }
+}
+
 /// @nodoc
 mixin _$SearchParamDate {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirDateTimeBase date) equal,
-    required TResult Function(FhirDateTimeBase date) notEqual,
-    required TResult Function(FhirDateTimeBase date) greaterThan,
-    required TResult Function(FhirDateTimeBase date) lessThan,
-    required TResult Function(FhirDateTimeBase date) greaterOrEqual,
-    required TResult Function(FhirDateTimeBase date) lessOrEqual,
-    required TResult Function(FhirDateTimeBase date) startsAfter,
-    required TResult Function(FhirDateTimeBase date) endsBefore,
-    required TResult Function(FhirDateTimeBase date) approximately,
-    required TResult Function() missing,
+    required TResult Function(String date) equal,
+    required TResult Function(String date) notEqual,
+    required TResult Function(String date) greaterThan,
+    required TResult Function(String date) lessThan,
+    required TResult Function(String date) greaterOrEqual,
+    required TResult Function(String date) lessOrEqual,
+    required TResult Function(String date) startsAfter,
+    required TResult Function(String date) endsBefore,
+    required TResult Function(String date) approximately,
+    required TResult Function(bool missing) missing,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirDateTimeBase date)? equal,
-    TResult? Function(FhirDateTimeBase date)? notEqual,
-    TResult? Function(FhirDateTimeBase date)? greaterThan,
-    TResult? Function(FhirDateTimeBase date)? lessThan,
-    TResult? Function(FhirDateTimeBase date)? greaterOrEqual,
-    TResult? Function(FhirDateTimeBase date)? lessOrEqual,
-    TResult? Function(FhirDateTimeBase date)? startsAfter,
-    TResult? Function(FhirDateTimeBase date)? endsBefore,
-    TResult? Function(FhirDateTimeBase date)? approximately,
-    TResult? Function()? missing,
+    TResult? Function(String date)? equal,
+    TResult? Function(String date)? notEqual,
+    TResult? Function(String date)? greaterThan,
+    TResult? Function(String date)? lessThan,
+    TResult? Function(String date)? greaterOrEqual,
+    TResult? Function(String date)? lessOrEqual,
+    TResult? Function(String date)? startsAfter,
+    TResult? Function(String date)? endsBefore,
+    TResult? Function(String date)? approximately,
+    TResult? Function(bool missing)? missing,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirDateTimeBase date)? equal,
-    TResult Function(FhirDateTimeBase date)? notEqual,
-    TResult Function(FhirDateTimeBase date)? greaterThan,
-    TResult Function(FhirDateTimeBase date)? lessThan,
-    TResult Function(FhirDateTimeBase date)? greaterOrEqual,
-    TResult Function(FhirDateTimeBase date)? lessOrEqual,
-    TResult Function(FhirDateTimeBase date)? startsAfter,
-    TResult Function(FhirDateTimeBase date)? endsBefore,
-    TResult Function(FhirDateTimeBase date)? approximately,
-    TResult Function()? missing,
+    TResult Function(String date)? equal,
+    TResult Function(String date)? notEqual,
+    TResult Function(String date)? greaterThan,
+    TResult Function(String date)? lessThan,
+    TResult Function(String date)? greaterOrEqual,
+    TResult Function(String date)? lessOrEqual,
+    TResult Function(String date)? startsAfter,
+    TResult Function(String date)? endsBefore,
+    TResult Function(String date)? approximately,
+    TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -104,6 +133,7 @@ mixin _$SearchParamDate {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -130,7 +160,7 @@ abstract class _$$_SearchParamDateEqualCopyWith<$Res> {
           $Res Function(_$_SearchParamDateEqual) then) =
       __$$_SearchParamDateEqualCopyWithImpl<$Res>;
   @useResult
-  $Res call({FhirDateTimeBase date});
+  $Res call({String date});
 }
 
 /// @nodoc
@@ -150,18 +180,26 @@ class __$$_SearchParamDateEqualCopyWithImpl<$Res>
       date: null == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as FhirDateTimeBase,
+              as String,
     ));
   }
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_SearchParamDateEqual extends _SearchParamDateEqual {
-  const _$_SearchParamDateEqual({required this.date}) : super._();
+  const _$_SearchParamDateEqual({required this.date, final String? $type})
+      : $type = $type ?? 'equal',
+        super._();
+
+  factory _$_SearchParamDateEqual.fromJson(Map<String, dynamic> json) =>
+      _$$_SearchParamDateEqualFromJson(json);
 
   @override
-  final FhirDateTimeBase date;
+  final String date;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -176,6 +214,7 @@ class _$_SearchParamDateEqual extends _SearchParamDateEqual {
             (identical(other.date, date) || other.date == date));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, date);
 
@@ -189,16 +228,16 @@ class _$_SearchParamDateEqual extends _SearchParamDateEqual {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirDateTimeBase date) equal,
-    required TResult Function(FhirDateTimeBase date) notEqual,
-    required TResult Function(FhirDateTimeBase date) greaterThan,
-    required TResult Function(FhirDateTimeBase date) lessThan,
-    required TResult Function(FhirDateTimeBase date) greaterOrEqual,
-    required TResult Function(FhirDateTimeBase date) lessOrEqual,
-    required TResult Function(FhirDateTimeBase date) startsAfter,
-    required TResult Function(FhirDateTimeBase date) endsBefore,
-    required TResult Function(FhirDateTimeBase date) approximately,
-    required TResult Function() missing,
+    required TResult Function(String date) equal,
+    required TResult Function(String date) notEqual,
+    required TResult Function(String date) greaterThan,
+    required TResult Function(String date) lessThan,
+    required TResult Function(String date) greaterOrEqual,
+    required TResult Function(String date) lessOrEqual,
+    required TResult Function(String date) startsAfter,
+    required TResult Function(String date) endsBefore,
+    required TResult Function(String date) approximately,
+    required TResult Function(bool missing) missing,
   }) {
     return equal(date);
   }
@@ -206,16 +245,16 @@ class _$_SearchParamDateEqual extends _SearchParamDateEqual {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirDateTimeBase date)? equal,
-    TResult? Function(FhirDateTimeBase date)? notEqual,
-    TResult? Function(FhirDateTimeBase date)? greaterThan,
-    TResult? Function(FhirDateTimeBase date)? lessThan,
-    TResult? Function(FhirDateTimeBase date)? greaterOrEqual,
-    TResult? Function(FhirDateTimeBase date)? lessOrEqual,
-    TResult? Function(FhirDateTimeBase date)? startsAfter,
-    TResult? Function(FhirDateTimeBase date)? endsBefore,
-    TResult? Function(FhirDateTimeBase date)? approximately,
-    TResult? Function()? missing,
+    TResult? Function(String date)? equal,
+    TResult? Function(String date)? notEqual,
+    TResult? Function(String date)? greaterThan,
+    TResult? Function(String date)? lessThan,
+    TResult? Function(String date)? greaterOrEqual,
+    TResult? Function(String date)? lessOrEqual,
+    TResult? Function(String date)? startsAfter,
+    TResult? Function(String date)? endsBefore,
+    TResult? Function(String date)? approximately,
+    TResult? Function(bool missing)? missing,
   }) {
     return equal?.call(date);
   }
@@ -223,16 +262,16 @@ class _$_SearchParamDateEqual extends _SearchParamDateEqual {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirDateTimeBase date)? equal,
-    TResult Function(FhirDateTimeBase date)? notEqual,
-    TResult Function(FhirDateTimeBase date)? greaterThan,
-    TResult Function(FhirDateTimeBase date)? lessThan,
-    TResult Function(FhirDateTimeBase date)? greaterOrEqual,
-    TResult Function(FhirDateTimeBase date)? lessOrEqual,
-    TResult Function(FhirDateTimeBase date)? startsAfter,
-    TResult Function(FhirDateTimeBase date)? endsBefore,
-    TResult Function(FhirDateTimeBase date)? approximately,
-    TResult Function()? missing,
+    TResult Function(String date)? equal,
+    TResult Function(String date)? notEqual,
+    TResult Function(String date)? greaterThan,
+    TResult Function(String date)? lessThan,
+    TResult Function(String date)? greaterOrEqual,
+    TResult Function(String date)? lessOrEqual,
+    TResult Function(String date)? startsAfter,
+    TResult Function(String date)? endsBefore,
+    TResult Function(String date)? approximately,
+    TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
     if (equal != null) {
@@ -297,14 +336,24 @@ class _$_SearchParamDateEqual extends _SearchParamDateEqual {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_SearchParamDateEqualToJson(
+      this,
+    );
+  }
 }
 
 abstract class _SearchParamDateEqual extends SearchParamDate {
-  const factory _SearchParamDateEqual({required final FhirDateTimeBase date}) =
+  const factory _SearchParamDateEqual({required final String date}) =
       _$_SearchParamDateEqual;
   const _SearchParamDateEqual._() : super._();
 
-  FhirDateTimeBase get date;
+  factory _SearchParamDateEqual.fromJson(Map<String, dynamic> json) =
+      _$_SearchParamDateEqual.fromJson;
+
+  String get date;
   @JsonKey(ignore: true)
   _$$_SearchParamDateEqualCopyWith<_$_SearchParamDateEqual> get copyWith =>
       throw _privateConstructorUsedError;
@@ -316,7 +365,7 @@ abstract class _$$_SearchParamDateNotEqualCopyWith<$Res> {
           $Res Function(_$_SearchParamDateNotEqual) then) =
       __$$_SearchParamDateNotEqualCopyWithImpl<$Res>;
   @useResult
-  $Res call({FhirDateTimeBase date});
+  $Res call({String date});
 }
 
 /// @nodoc
@@ -336,18 +385,26 @@ class __$$_SearchParamDateNotEqualCopyWithImpl<$Res>
       date: null == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as FhirDateTimeBase,
+              as String,
     ));
   }
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_SearchParamDateNotEqual extends _SearchParamDateNotEqual {
-  const _$_SearchParamDateNotEqual({required this.date}) : super._();
+  const _$_SearchParamDateNotEqual({required this.date, final String? $type})
+      : $type = $type ?? 'notEqual',
+        super._();
+
+  factory _$_SearchParamDateNotEqual.fromJson(Map<String, dynamic> json) =>
+      _$$_SearchParamDateNotEqualFromJson(json);
 
   @override
-  final FhirDateTimeBase date;
+  final String date;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -362,6 +419,7 @@ class _$_SearchParamDateNotEqual extends _SearchParamDateNotEqual {
             (identical(other.date, date) || other.date == date));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, date);
 
@@ -376,16 +434,16 @@ class _$_SearchParamDateNotEqual extends _SearchParamDateNotEqual {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirDateTimeBase date) equal,
-    required TResult Function(FhirDateTimeBase date) notEqual,
-    required TResult Function(FhirDateTimeBase date) greaterThan,
-    required TResult Function(FhirDateTimeBase date) lessThan,
-    required TResult Function(FhirDateTimeBase date) greaterOrEqual,
-    required TResult Function(FhirDateTimeBase date) lessOrEqual,
-    required TResult Function(FhirDateTimeBase date) startsAfter,
-    required TResult Function(FhirDateTimeBase date) endsBefore,
-    required TResult Function(FhirDateTimeBase date) approximately,
-    required TResult Function() missing,
+    required TResult Function(String date) equal,
+    required TResult Function(String date) notEqual,
+    required TResult Function(String date) greaterThan,
+    required TResult Function(String date) lessThan,
+    required TResult Function(String date) greaterOrEqual,
+    required TResult Function(String date) lessOrEqual,
+    required TResult Function(String date) startsAfter,
+    required TResult Function(String date) endsBefore,
+    required TResult Function(String date) approximately,
+    required TResult Function(bool missing) missing,
   }) {
     return notEqual(date);
   }
@@ -393,16 +451,16 @@ class _$_SearchParamDateNotEqual extends _SearchParamDateNotEqual {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirDateTimeBase date)? equal,
-    TResult? Function(FhirDateTimeBase date)? notEqual,
-    TResult? Function(FhirDateTimeBase date)? greaterThan,
-    TResult? Function(FhirDateTimeBase date)? lessThan,
-    TResult? Function(FhirDateTimeBase date)? greaterOrEqual,
-    TResult? Function(FhirDateTimeBase date)? lessOrEqual,
-    TResult? Function(FhirDateTimeBase date)? startsAfter,
-    TResult? Function(FhirDateTimeBase date)? endsBefore,
-    TResult? Function(FhirDateTimeBase date)? approximately,
-    TResult? Function()? missing,
+    TResult? Function(String date)? equal,
+    TResult? Function(String date)? notEqual,
+    TResult? Function(String date)? greaterThan,
+    TResult? Function(String date)? lessThan,
+    TResult? Function(String date)? greaterOrEqual,
+    TResult? Function(String date)? lessOrEqual,
+    TResult? Function(String date)? startsAfter,
+    TResult? Function(String date)? endsBefore,
+    TResult? Function(String date)? approximately,
+    TResult? Function(bool missing)? missing,
   }) {
     return notEqual?.call(date);
   }
@@ -410,16 +468,16 @@ class _$_SearchParamDateNotEqual extends _SearchParamDateNotEqual {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirDateTimeBase date)? equal,
-    TResult Function(FhirDateTimeBase date)? notEqual,
-    TResult Function(FhirDateTimeBase date)? greaterThan,
-    TResult Function(FhirDateTimeBase date)? lessThan,
-    TResult Function(FhirDateTimeBase date)? greaterOrEqual,
-    TResult Function(FhirDateTimeBase date)? lessOrEqual,
-    TResult Function(FhirDateTimeBase date)? startsAfter,
-    TResult Function(FhirDateTimeBase date)? endsBefore,
-    TResult Function(FhirDateTimeBase date)? approximately,
-    TResult Function()? missing,
+    TResult Function(String date)? equal,
+    TResult Function(String date)? notEqual,
+    TResult Function(String date)? greaterThan,
+    TResult Function(String date)? lessThan,
+    TResult Function(String date)? greaterOrEqual,
+    TResult Function(String date)? lessOrEqual,
+    TResult Function(String date)? startsAfter,
+    TResult Function(String date)? endsBefore,
+    TResult Function(String date)? approximately,
+    TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
     if (notEqual != null) {
@@ -484,14 +542,24 @@ class _$_SearchParamDateNotEqual extends _SearchParamDateNotEqual {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_SearchParamDateNotEqualToJson(
+      this,
+    );
+  }
 }
 
 abstract class _SearchParamDateNotEqual extends SearchParamDate {
-  const factory _SearchParamDateNotEqual(
-      {required final FhirDateTimeBase date}) = _$_SearchParamDateNotEqual;
+  const factory _SearchParamDateNotEqual({required final String date}) =
+      _$_SearchParamDateNotEqual;
   const _SearchParamDateNotEqual._() : super._();
 
-  FhirDateTimeBase get date;
+  factory _SearchParamDateNotEqual.fromJson(Map<String, dynamic> json) =
+      _$_SearchParamDateNotEqual.fromJson;
+
+  String get date;
   @JsonKey(ignore: true)
   _$$_SearchParamDateNotEqualCopyWith<_$_SearchParamDateNotEqual>
       get copyWith => throw _privateConstructorUsedError;
@@ -504,7 +572,7 @@ abstract class _$$_SearchParamDateGreaterThanCopyWith<$Res> {
           $Res Function(_$_SearchParamDateGreaterThan) then) =
       __$$_SearchParamDateGreaterThanCopyWithImpl<$Res>;
   @useResult
-  $Res call({FhirDateTimeBase date});
+  $Res call({String date});
 }
 
 /// @nodoc
@@ -525,18 +593,26 @@ class __$$_SearchParamDateGreaterThanCopyWithImpl<$Res>
       date: null == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as FhirDateTimeBase,
+              as String,
     ));
   }
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_SearchParamDateGreaterThan extends _SearchParamDateGreaterThan {
-  const _$_SearchParamDateGreaterThan({required this.date}) : super._();
+  const _$_SearchParamDateGreaterThan({required this.date, final String? $type})
+      : $type = $type ?? 'greaterThan',
+        super._();
+
+  factory _$_SearchParamDateGreaterThan.fromJson(Map<String, dynamic> json) =>
+      _$$_SearchParamDateGreaterThanFromJson(json);
 
   @override
-  final FhirDateTimeBase date;
+  final String date;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -551,6 +627,7 @@ class _$_SearchParamDateGreaterThan extends _SearchParamDateGreaterThan {
             (identical(other.date, date) || other.date == date));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, date);
 
@@ -564,16 +641,16 @@ class _$_SearchParamDateGreaterThan extends _SearchParamDateGreaterThan {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirDateTimeBase date) equal,
-    required TResult Function(FhirDateTimeBase date) notEqual,
-    required TResult Function(FhirDateTimeBase date) greaterThan,
-    required TResult Function(FhirDateTimeBase date) lessThan,
-    required TResult Function(FhirDateTimeBase date) greaterOrEqual,
-    required TResult Function(FhirDateTimeBase date) lessOrEqual,
-    required TResult Function(FhirDateTimeBase date) startsAfter,
-    required TResult Function(FhirDateTimeBase date) endsBefore,
-    required TResult Function(FhirDateTimeBase date) approximately,
-    required TResult Function() missing,
+    required TResult Function(String date) equal,
+    required TResult Function(String date) notEqual,
+    required TResult Function(String date) greaterThan,
+    required TResult Function(String date) lessThan,
+    required TResult Function(String date) greaterOrEqual,
+    required TResult Function(String date) lessOrEqual,
+    required TResult Function(String date) startsAfter,
+    required TResult Function(String date) endsBefore,
+    required TResult Function(String date) approximately,
+    required TResult Function(bool missing) missing,
   }) {
     return greaterThan(date);
   }
@@ -581,16 +658,16 @@ class _$_SearchParamDateGreaterThan extends _SearchParamDateGreaterThan {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirDateTimeBase date)? equal,
-    TResult? Function(FhirDateTimeBase date)? notEqual,
-    TResult? Function(FhirDateTimeBase date)? greaterThan,
-    TResult? Function(FhirDateTimeBase date)? lessThan,
-    TResult? Function(FhirDateTimeBase date)? greaterOrEqual,
-    TResult? Function(FhirDateTimeBase date)? lessOrEqual,
-    TResult? Function(FhirDateTimeBase date)? startsAfter,
-    TResult? Function(FhirDateTimeBase date)? endsBefore,
-    TResult? Function(FhirDateTimeBase date)? approximately,
-    TResult? Function()? missing,
+    TResult? Function(String date)? equal,
+    TResult? Function(String date)? notEqual,
+    TResult? Function(String date)? greaterThan,
+    TResult? Function(String date)? lessThan,
+    TResult? Function(String date)? greaterOrEqual,
+    TResult? Function(String date)? lessOrEqual,
+    TResult? Function(String date)? startsAfter,
+    TResult? Function(String date)? endsBefore,
+    TResult? Function(String date)? approximately,
+    TResult? Function(bool missing)? missing,
   }) {
     return greaterThan?.call(date);
   }
@@ -598,16 +675,16 @@ class _$_SearchParamDateGreaterThan extends _SearchParamDateGreaterThan {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirDateTimeBase date)? equal,
-    TResult Function(FhirDateTimeBase date)? notEqual,
-    TResult Function(FhirDateTimeBase date)? greaterThan,
-    TResult Function(FhirDateTimeBase date)? lessThan,
-    TResult Function(FhirDateTimeBase date)? greaterOrEqual,
-    TResult Function(FhirDateTimeBase date)? lessOrEqual,
-    TResult Function(FhirDateTimeBase date)? startsAfter,
-    TResult Function(FhirDateTimeBase date)? endsBefore,
-    TResult Function(FhirDateTimeBase date)? approximately,
-    TResult Function()? missing,
+    TResult Function(String date)? equal,
+    TResult Function(String date)? notEqual,
+    TResult Function(String date)? greaterThan,
+    TResult Function(String date)? lessThan,
+    TResult Function(String date)? greaterOrEqual,
+    TResult Function(String date)? lessOrEqual,
+    TResult Function(String date)? startsAfter,
+    TResult Function(String date)? endsBefore,
+    TResult Function(String date)? approximately,
+    TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
     if (greaterThan != null) {
@@ -672,14 +749,24 @@ class _$_SearchParamDateGreaterThan extends _SearchParamDateGreaterThan {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_SearchParamDateGreaterThanToJson(
+      this,
+    );
+  }
 }
 
 abstract class _SearchParamDateGreaterThan extends SearchParamDate {
-  const factory _SearchParamDateGreaterThan(
-      {required final FhirDateTimeBase date}) = _$_SearchParamDateGreaterThan;
+  const factory _SearchParamDateGreaterThan({required final String date}) =
+      _$_SearchParamDateGreaterThan;
   const _SearchParamDateGreaterThan._() : super._();
 
-  FhirDateTimeBase get date;
+  factory _SearchParamDateGreaterThan.fromJson(Map<String, dynamic> json) =
+      _$_SearchParamDateGreaterThan.fromJson;
+
+  String get date;
   @JsonKey(ignore: true)
   _$$_SearchParamDateGreaterThanCopyWith<_$_SearchParamDateGreaterThan>
       get copyWith => throw _privateConstructorUsedError;
@@ -691,7 +778,7 @@ abstract class _$$_SearchParamDateLessThanCopyWith<$Res> {
           $Res Function(_$_SearchParamDateLessThan) then) =
       __$$_SearchParamDateLessThanCopyWithImpl<$Res>;
   @useResult
-  $Res call({FhirDateTimeBase date});
+  $Res call({String date});
 }
 
 /// @nodoc
@@ -711,18 +798,26 @@ class __$$_SearchParamDateLessThanCopyWithImpl<$Res>
       date: null == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as FhirDateTimeBase,
+              as String,
     ));
   }
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_SearchParamDateLessThan extends _SearchParamDateLessThan {
-  const _$_SearchParamDateLessThan({required this.date}) : super._();
+  const _$_SearchParamDateLessThan({required this.date, final String? $type})
+      : $type = $type ?? 'lessThan',
+        super._();
+
+  factory _$_SearchParamDateLessThan.fromJson(Map<String, dynamic> json) =>
+      _$$_SearchParamDateLessThanFromJson(json);
 
   @override
-  final FhirDateTimeBase date;
+  final String date;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -737,6 +832,7 @@ class _$_SearchParamDateLessThan extends _SearchParamDateLessThan {
             (identical(other.date, date) || other.date == date));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, date);
 
@@ -751,16 +847,16 @@ class _$_SearchParamDateLessThan extends _SearchParamDateLessThan {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirDateTimeBase date) equal,
-    required TResult Function(FhirDateTimeBase date) notEqual,
-    required TResult Function(FhirDateTimeBase date) greaterThan,
-    required TResult Function(FhirDateTimeBase date) lessThan,
-    required TResult Function(FhirDateTimeBase date) greaterOrEqual,
-    required TResult Function(FhirDateTimeBase date) lessOrEqual,
-    required TResult Function(FhirDateTimeBase date) startsAfter,
-    required TResult Function(FhirDateTimeBase date) endsBefore,
-    required TResult Function(FhirDateTimeBase date) approximately,
-    required TResult Function() missing,
+    required TResult Function(String date) equal,
+    required TResult Function(String date) notEqual,
+    required TResult Function(String date) greaterThan,
+    required TResult Function(String date) lessThan,
+    required TResult Function(String date) greaterOrEqual,
+    required TResult Function(String date) lessOrEqual,
+    required TResult Function(String date) startsAfter,
+    required TResult Function(String date) endsBefore,
+    required TResult Function(String date) approximately,
+    required TResult Function(bool missing) missing,
   }) {
     return lessThan(date);
   }
@@ -768,16 +864,16 @@ class _$_SearchParamDateLessThan extends _SearchParamDateLessThan {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirDateTimeBase date)? equal,
-    TResult? Function(FhirDateTimeBase date)? notEqual,
-    TResult? Function(FhirDateTimeBase date)? greaterThan,
-    TResult? Function(FhirDateTimeBase date)? lessThan,
-    TResult? Function(FhirDateTimeBase date)? greaterOrEqual,
-    TResult? Function(FhirDateTimeBase date)? lessOrEqual,
-    TResult? Function(FhirDateTimeBase date)? startsAfter,
-    TResult? Function(FhirDateTimeBase date)? endsBefore,
-    TResult? Function(FhirDateTimeBase date)? approximately,
-    TResult? Function()? missing,
+    TResult? Function(String date)? equal,
+    TResult? Function(String date)? notEqual,
+    TResult? Function(String date)? greaterThan,
+    TResult? Function(String date)? lessThan,
+    TResult? Function(String date)? greaterOrEqual,
+    TResult? Function(String date)? lessOrEqual,
+    TResult? Function(String date)? startsAfter,
+    TResult? Function(String date)? endsBefore,
+    TResult? Function(String date)? approximately,
+    TResult? Function(bool missing)? missing,
   }) {
     return lessThan?.call(date);
   }
@@ -785,16 +881,16 @@ class _$_SearchParamDateLessThan extends _SearchParamDateLessThan {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirDateTimeBase date)? equal,
-    TResult Function(FhirDateTimeBase date)? notEqual,
-    TResult Function(FhirDateTimeBase date)? greaterThan,
-    TResult Function(FhirDateTimeBase date)? lessThan,
-    TResult Function(FhirDateTimeBase date)? greaterOrEqual,
-    TResult Function(FhirDateTimeBase date)? lessOrEqual,
-    TResult Function(FhirDateTimeBase date)? startsAfter,
-    TResult Function(FhirDateTimeBase date)? endsBefore,
-    TResult Function(FhirDateTimeBase date)? approximately,
-    TResult Function()? missing,
+    TResult Function(String date)? equal,
+    TResult Function(String date)? notEqual,
+    TResult Function(String date)? greaterThan,
+    TResult Function(String date)? lessThan,
+    TResult Function(String date)? greaterOrEqual,
+    TResult Function(String date)? lessOrEqual,
+    TResult Function(String date)? startsAfter,
+    TResult Function(String date)? endsBefore,
+    TResult Function(String date)? approximately,
+    TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
     if (lessThan != null) {
@@ -859,14 +955,24 @@ class _$_SearchParamDateLessThan extends _SearchParamDateLessThan {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_SearchParamDateLessThanToJson(
+      this,
+    );
+  }
 }
 
 abstract class _SearchParamDateLessThan extends SearchParamDate {
-  const factory _SearchParamDateLessThan(
-      {required final FhirDateTimeBase date}) = _$_SearchParamDateLessThan;
+  const factory _SearchParamDateLessThan({required final String date}) =
+      _$_SearchParamDateLessThan;
   const _SearchParamDateLessThan._() : super._();
 
-  FhirDateTimeBase get date;
+  factory _SearchParamDateLessThan.fromJson(Map<String, dynamic> json) =
+      _$_SearchParamDateLessThan.fromJson;
+
+  String get date;
   @JsonKey(ignore: true)
   _$$_SearchParamDateLessThanCopyWith<_$_SearchParamDateLessThan>
       get copyWith => throw _privateConstructorUsedError;
@@ -879,7 +985,7 @@ abstract class _$$_SearchParamDateGreaterOrEqualCopyWith<$Res> {
           $Res Function(_$_SearchParamDateGreaterOrEqual) then) =
       __$$_SearchParamDateGreaterOrEqualCopyWithImpl<$Res>;
   @useResult
-  $Res call({FhirDateTimeBase date});
+  $Res call({String date});
 }
 
 /// @nodoc
@@ -901,18 +1007,28 @@ class __$$_SearchParamDateGreaterOrEqualCopyWithImpl<$Res>
       date: null == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as FhirDateTimeBase,
+              as String,
     ));
   }
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_SearchParamDateGreaterOrEqual extends _SearchParamDateGreaterOrEqual {
-  const _$_SearchParamDateGreaterOrEqual({required this.date}) : super._();
+  const _$_SearchParamDateGreaterOrEqual(
+      {required this.date, final String? $type})
+      : $type = $type ?? 'greaterOrEqual',
+        super._();
+
+  factory _$_SearchParamDateGreaterOrEqual.fromJson(
+          Map<String, dynamic> json) =>
+      _$$_SearchParamDateGreaterOrEqualFromJson(json);
 
   @override
-  final FhirDateTimeBase date;
+  final String date;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -927,6 +1043,7 @@ class _$_SearchParamDateGreaterOrEqual extends _SearchParamDateGreaterOrEqual {
             (identical(other.date, date) || other.date == date));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, date);
 
@@ -940,16 +1057,16 @@ class _$_SearchParamDateGreaterOrEqual extends _SearchParamDateGreaterOrEqual {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirDateTimeBase date) equal,
-    required TResult Function(FhirDateTimeBase date) notEqual,
-    required TResult Function(FhirDateTimeBase date) greaterThan,
-    required TResult Function(FhirDateTimeBase date) lessThan,
-    required TResult Function(FhirDateTimeBase date) greaterOrEqual,
-    required TResult Function(FhirDateTimeBase date) lessOrEqual,
-    required TResult Function(FhirDateTimeBase date) startsAfter,
-    required TResult Function(FhirDateTimeBase date) endsBefore,
-    required TResult Function(FhirDateTimeBase date) approximately,
-    required TResult Function() missing,
+    required TResult Function(String date) equal,
+    required TResult Function(String date) notEqual,
+    required TResult Function(String date) greaterThan,
+    required TResult Function(String date) lessThan,
+    required TResult Function(String date) greaterOrEqual,
+    required TResult Function(String date) lessOrEqual,
+    required TResult Function(String date) startsAfter,
+    required TResult Function(String date) endsBefore,
+    required TResult Function(String date) approximately,
+    required TResult Function(bool missing) missing,
   }) {
     return greaterOrEqual(date);
   }
@@ -957,16 +1074,16 @@ class _$_SearchParamDateGreaterOrEqual extends _SearchParamDateGreaterOrEqual {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirDateTimeBase date)? equal,
-    TResult? Function(FhirDateTimeBase date)? notEqual,
-    TResult? Function(FhirDateTimeBase date)? greaterThan,
-    TResult? Function(FhirDateTimeBase date)? lessThan,
-    TResult? Function(FhirDateTimeBase date)? greaterOrEqual,
-    TResult? Function(FhirDateTimeBase date)? lessOrEqual,
-    TResult? Function(FhirDateTimeBase date)? startsAfter,
-    TResult? Function(FhirDateTimeBase date)? endsBefore,
-    TResult? Function(FhirDateTimeBase date)? approximately,
-    TResult? Function()? missing,
+    TResult? Function(String date)? equal,
+    TResult? Function(String date)? notEqual,
+    TResult? Function(String date)? greaterThan,
+    TResult? Function(String date)? lessThan,
+    TResult? Function(String date)? greaterOrEqual,
+    TResult? Function(String date)? lessOrEqual,
+    TResult? Function(String date)? startsAfter,
+    TResult? Function(String date)? endsBefore,
+    TResult? Function(String date)? approximately,
+    TResult? Function(bool missing)? missing,
   }) {
     return greaterOrEqual?.call(date);
   }
@@ -974,16 +1091,16 @@ class _$_SearchParamDateGreaterOrEqual extends _SearchParamDateGreaterOrEqual {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirDateTimeBase date)? equal,
-    TResult Function(FhirDateTimeBase date)? notEqual,
-    TResult Function(FhirDateTimeBase date)? greaterThan,
-    TResult Function(FhirDateTimeBase date)? lessThan,
-    TResult Function(FhirDateTimeBase date)? greaterOrEqual,
-    TResult Function(FhirDateTimeBase date)? lessOrEqual,
-    TResult Function(FhirDateTimeBase date)? startsAfter,
-    TResult Function(FhirDateTimeBase date)? endsBefore,
-    TResult Function(FhirDateTimeBase date)? approximately,
-    TResult Function()? missing,
+    TResult Function(String date)? equal,
+    TResult Function(String date)? notEqual,
+    TResult Function(String date)? greaterThan,
+    TResult Function(String date)? lessThan,
+    TResult Function(String date)? greaterOrEqual,
+    TResult Function(String date)? lessOrEqual,
+    TResult Function(String date)? startsAfter,
+    TResult Function(String date)? endsBefore,
+    TResult Function(String date)? approximately,
+    TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
     if (greaterOrEqual != null) {
@@ -1048,15 +1165,24 @@ class _$_SearchParamDateGreaterOrEqual extends _SearchParamDateGreaterOrEqual {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_SearchParamDateGreaterOrEqualToJson(
+      this,
+    );
+  }
 }
 
 abstract class _SearchParamDateGreaterOrEqual extends SearchParamDate {
-  const factory _SearchParamDateGreaterOrEqual(
-          {required final FhirDateTimeBase date}) =
+  const factory _SearchParamDateGreaterOrEqual({required final String date}) =
       _$_SearchParamDateGreaterOrEqual;
   const _SearchParamDateGreaterOrEqual._() : super._();
 
-  FhirDateTimeBase get date;
+  factory _SearchParamDateGreaterOrEqual.fromJson(Map<String, dynamic> json) =
+      _$_SearchParamDateGreaterOrEqual.fromJson;
+
+  String get date;
   @JsonKey(ignore: true)
   _$$_SearchParamDateGreaterOrEqualCopyWith<_$_SearchParamDateGreaterOrEqual>
       get copyWith => throw _privateConstructorUsedError;
@@ -1069,7 +1195,7 @@ abstract class _$$_SearchParamDateLessOrEqualCopyWith<$Res> {
           $Res Function(_$_SearchParamDateLessOrEqual) then) =
       __$$_SearchParamDateLessOrEqualCopyWithImpl<$Res>;
   @useResult
-  $Res call({FhirDateTimeBase date});
+  $Res call({String date});
 }
 
 /// @nodoc
@@ -1090,18 +1216,26 @@ class __$$_SearchParamDateLessOrEqualCopyWithImpl<$Res>
       date: null == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as FhirDateTimeBase,
+              as String,
     ));
   }
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_SearchParamDateLessOrEqual extends _SearchParamDateLessOrEqual {
-  const _$_SearchParamDateLessOrEqual({required this.date}) : super._();
+  const _$_SearchParamDateLessOrEqual({required this.date, final String? $type})
+      : $type = $type ?? 'lessOrEqual',
+        super._();
+
+  factory _$_SearchParamDateLessOrEqual.fromJson(Map<String, dynamic> json) =>
+      _$$_SearchParamDateLessOrEqualFromJson(json);
 
   @override
-  final FhirDateTimeBase date;
+  final String date;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -1116,6 +1250,7 @@ class _$_SearchParamDateLessOrEqual extends _SearchParamDateLessOrEqual {
             (identical(other.date, date) || other.date == date));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, date);
 
@@ -1129,16 +1264,16 @@ class _$_SearchParamDateLessOrEqual extends _SearchParamDateLessOrEqual {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirDateTimeBase date) equal,
-    required TResult Function(FhirDateTimeBase date) notEqual,
-    required TResult Function(FhirDateTimeBase date) greaterThan,
-    required TResult Function(FhirDateTimeBase date) lessThan,
-    required TResult Function(FhirDateTimeBase date) greaterOrEqual,
-    required TResult Function(FhirDateTimeBase date) lessOrEqual,
-    required TResult Function(FhirDateTimeBase date) startsAfter,
-    required TResult Function(FhirDateTimeBase date) endsBefore,
-    required TResult Function(FhirDateTimeBase date) approximately,
-    required TResult Function() missing,
+    required TResult Function(String date) equal,
+    required TResult Function(String date) notEqual,
+    required TResult Function(String date) greaterThan,
+    required TResult Function(String date) lessThan,
+    required TResult Function(String date) greaterOrEqual,
+    required TResult Function(String date) lessOrEqual,
+    required TResult Function(String date) startsAfter,
+    required TResult Function(String date) endsBefore,
+    required TResult Function(String date) approximately,
+    required TResult Function(bool missing) missing,
   }) {
     return lessOrEqual(date);
   }
@@ -1146,16 +1281,16 @@ class _$_SearchParamDateLessOrEqual extends _SearchParamDateLessOrEqual {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirDateTimeBase date)? equal,
-    TResult? Function(FhirDateTimeBase date)? notEqual,
-    TResult? Function(FhirDateTimeBase date)? greaterThan,
-    TResult? Function(FhirDateTimeBase date)? lessThan,
-    TResult? Function(FhirDateTimeBase date)? greaterOrEqual,
-    TResult? Function(FhirDateTimeBase date)? lessOrEqual,
-    TResult? Function(FhirDateTimeBase date)? startsAfter,
-    TResult? Function(FhirDateTimeBase date)? endsBefore,
-    TResult? Function(FhirDateTimeBase date)? approximately,
-    TResult? Function()? missing,
+    TResult? Function(String date)? equal,
+    TResult? Function(String date)? notEqual,
+    TResult? Function(String date)? greaterThan,
+    TResult? Function(String date)? lessThan,
+    TResult? Function(String date)? greaterOrEqual,
+    TResult? Function(String date)? lessOrEqual,
+    TResult? Function(String date)? startsAfter,
+    TResult? Function(String date)? endsBefore,
+    TResult? Function(String date)? approximately,
+    TResult? Function(bool missing)? missing,
   }) {
     return lessOrEqual?.call(date);
   }
@@ -1163,16 +1298,16 @@ class _$_SearchParamDateLessOrEqual extends _SearchParamDateLessOrEqual {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirDateTimeBase date)? equal,
-    TResult Function(FhirDateTimeBase date)? notEqual,
-    TResult Function(FhirDateTimeBase date)? greaterThan,
-    TResult Function(FhirDateTimeBase date)? lessThan,
-    TResult Function(FhirDateTimeBase date)? greaterOrEqual,
-    TResult Function(FhirDateTimeBase date)? lessOrEqual,
-    TResult Function(FhirDateTimeBase date)? startsAfter,
-    TResult Function(FhirDateTimeBase date)? endsBefore,
-    TResult Function(FhirDateTimeBase date)? approximately,
-    TResult Function()? missing,
+    TResult Function(String date)? equal,
+    TResult Function(String date)? notEqual,
+    TResult Function(String date)? greaterThan,
+    TResult Function(String date)? lessThan,
+    TResult Function(String date)? greaterOrEqual,
+    TResult Function(String date)? lessOrEqual,
+    TResult Function(String date)? startsAfter,
+    TResult Function(String date)? endsBefore,
+    TResult Function(String date)? approximately,
+    TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
     if (lessOrEqual != null) {
@@ -1237,14 +1372,24 @@ class _$_SearchParamDateLessOrEqual extends _SearchParamDateLessOrEqual {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_SearchParamDateLessOrEqualToJson(
+      this,
+    );
+  }
 }
 
 abstract class _SearchParamDateLessOrEqual extends SearchParamDate {
-  const factory _SearchParamDateLessOrEqual(
-      {required final FhirDateTimeBase date}) = _$_SearchParamDateLessOrEqual;
+  const factory _SearchParamDateLessOrEqual({required final String date}) =
+      _$_SearchParamDateLessOrEqual;
   const _SearchParamDateLessOrEqual._() : super._();
 
-  FhirDateTimeBase get date;
+  factory _SearchParamDateLessOrEqual.fromJson(Map<String, dynamic> json) =
+      _$_SearchParamDateLessOrEqual.fromJson;
+
+  String get date;
   @JsonKey(ignore: true)
   _$$_SearchParamDateLessOrEqualCopyWith<_$_SearchParamDateLessOrEqual>
       get copyWith => throw _privateConstructorUsedError;
@@ -1257,7 +1402,7 @@ abstract class _$$_SearchParamDateStartsAfterCopyWith<$Res> {
           $Res Function(_$_SearchParamDateStartsAfter) then) =
       __$$_SearchParamDateStartsAfterCopyWithImpl<$Res>;
   @useResult
-  $Res call({FhirDateTimeBase date});
+  $Res call({String date});
 }
 
 /// @nodoc
@@ -1278,18 +1423,26 @@ class __$$_SearchParamDateStartsAfterCopyWithImpl<$Res>
       date: null == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as FhirDateTimeBase,
+              as String,
     ));
   }
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_SearchParamDateStartsAfter extends _SearchParamDateStartsAfter {
-  const _$_SearchParamDateStartsAfter({required this.date}) : super._();
+  const _$_SearchParamDateStartsAfter({required this.date, final String? $type})
+      : $type = $type ?? 'startsAfter',
+        super._();
+
+  factory _$_SearchParamDateStartsAfter.fromJson(Map<String, dynamic> json) =>
+      _$$_SearchParamDateStartsAfterFromJson(json);
 
   @override
-  final FhirDateTimeBase date;
+  final String date;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -1304,6 +1457,7 @@ class _$_SearchParamDateStartsAfter extends _SearchParamDateStartsAfter {
             (identical(other.date, date) || other.date == date));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, date);
 
@@ -1317,16 +1471,16 @@ class _$_SearchParamDateStartsAfter extends _SearchParamDateStartsAfter {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirDateTimeBase date) equal,
-    required TResult Function(FhirDateTimeBase date) notEqual,
-    required TResult Function(FhirDateTimeBase date) greaterThan,
-    required TResult Function(FhirDateTimeBase date) lessThan,
-    required TResult Function(FhirDateTimeBase date) greaterOrEqual,
-    required TResult Function(FhirDateTimeBase date) lessOrEqual,
-    required TResult Function(FhirDateTimeBase date) startsAfter,
-    required TResult Function(FhirDateTimeBase date) endsBefore,
-    required TResult Function(FhirDateTimeBase date) approximately,
-    required TResult Function() missing,
+    required TResult Function(String date) equal,
+    required TResult Function(String date) notEqual,
+    required TResult Function(String date) greaterThan,
+    required TResult Function(String date) lessThan,
+    required TResult Function(String date) greaterOrEqual,
+    required TResult Function(String date) lessOrEqual,
+    required TResult Function(String date) startsAfter,
+    required TResult Function(String date) endsBefore,
+    required TResult Function(String date) approximately,
+    required TResult Function(bool missing) missing,
   }) {
     return startsAfter(date);
   }
@@ -1334,16 +1488,16 @@ class _$_SearchParamDateStartsAfter extends _SearchParamDateStartsAfter {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirDateTimeBase date)? equal,
-    TResult? Function(FhirDateTimeBase date)? notEqual,
-    TResult? Function(FhirDateTimeBase date)? greaterThan,
-    TResult? Function(FhirDateTimeBase date)? lessThan,
-    TResult? Function(FhirDateTimeBase date)? greaterOrEqual,
-    TResult? Function(FhirDateTimeBase date)? lessOrEqual,
-    TResult? Function(FhirDateTimeBase date)? startsAfter,
-    TResult? Function(FhirDateTimeBase date)? endsBefore,
-    TResult? Function(FhirDateTimeBase date)? approximately,
-    TResult? Function()? missing,
+    TResult? Function(String date)? equal,
+    TResult? Function(String date)? notEqual,
+    TResult? Function(String date)? greaterThan,
+    TResult? Function(String date)? lessThan,
+    TResult? Function(String date)? greaterOrEqual,
+    TResult? Function(String date)? lessOrEqual,
+    TResult? Function(String date)? startsAfter,
+    TResult? Function(String date)? endsBefore,
+    TResult? Function(String date)? approximately,
+    TResult? Function(bool missing)? missing,
   }) {
     return startsAfter?.call(date);
   }
@@ -1351,16 +1505,16 @@ class _$_SearchParamDateStartsAfter extends _SearchParamDateStartsAfter {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirDateTimeBase date)? equal,
-    TResult Function(FhirDateTimeBase date)? notEqual,
-    TResult Function(FhirDateTimeBase date)? greaterThan,
-    TResult Function(FhirDateTimeBase date)? lessThan,
-    TResult Function(FhirDateTimeBase date)? greaterOrEqual,
-    TResult Function(FhirDateTimeBase date)? lessOrEqual,
-    TResult Function(FhirDateTimeBase date)? startsAfter,
-    TResult Function(FhirDateTimeBase date)? endsBefore,
-    TResult Function(FhirDateTimeBase date)? approximately,
-    TResult Function()? missing,
+    TResult Function(String date)? equal,
+    TResult Function(String date)? notEqual,
+    TResult Function(String date)? greaterThan,
+    TResult Function(String date)? lessThan,
+    TResult Function(String date)? greaterOrEqual,
+    TResult Function(String date)? lessOrEqual,
+    TResult Function(String date)? startsAfter,
+    TResult Function(String date)? endsBefore,
+    TResult Function(String date)? approximately,
+    TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
     if (startsAfter != null) {
@@ -1425,14 +1579,24 @@ class _$_SearchParamDateStartsAfter extends _SearchParamDateStartsAfter {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_SearchParamDateStartsAfterToJson(
+      this,
+    );
+  }
 }
 
 abstract class _SearchParamDateStartsAfter extends SearchParamDate {
-  const factory _SearchParamDateStartsAfter(
-      {required final FhirDateTimeBase date}) = _$_SearchParamDateStartsAfter;
+  const factory _SearchParamDateStartsAfter({required final String date}) =
+      _$_SearchParamDateStartsAfter;
   const _SearchParamDateStartsAfter._() : super._();
 
-  FhirDateTimeBase get date;
+  factory _SearchParamDateStartsAfter.fromJson(Map<String, dynamic> json) =
+      _$_SearchParamDateStartsAfter.fromJson;
+
+  String get date;
   @JsonKey(ignore: true)
   _$$_SearchParamDateStartsAfterCopyWith<_$_SearchParamDateStartsAfter>
       get copyWith => throw _privateConstructorUsedError;
@@ -1445,7 +1609,7 @@ abstract class _$$_SearchParamDateEndsBeforeCopyWith<$Res> {
           $Res Function(_$_SearchParamDateEndsBefore) then) =
       __$$_SearchParamDateEndsBeforeCopyWithImpl<$Res>;
   @useResult
-  $Res call({FhirDateTimeBase date});
+  $Res call({String date});
 }
 
 /// @nodoc
@@ -1466,18 +1630,26 @@ class __$$_SearchParamDateEndsBeforeCopyWithImpl<$Res>
       date: null == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as FhirDateTimeBase,
+              as String,
     ));
   }
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_SearchParamDateEndsBefore extends _SearchParamDateEndsBefore {
-  const _$_SearchParamDateEndsBefore({required this.date}) : super._();
+  const _$_SearchParamDateEndsBefore({required this.date, final String? $type})
+      : $type = $type ?? 'endsBefore',
+        super._();
+
+  factory _$_SearchParamDateEndsBefore.fromJson(Map<String, dynamic> json) =>
+      _$$_SearchParamDateEndsBeforeFromJson(json);
 
   @override
-  final FhirDateTimeBase date;
+  final String date;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -1492,6 +1664,7 @@ class _$_SearchParamDateEndsBefore extends _SearchParamDateEndsBefore {
             (identical(other.date, date) || other.date == date));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, date);
 
@@ -1505,16 +1678,16 @@ class _$_SearchParamDateEndsBefore extends _SearchParamDateEndsBefore {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirDateTimeBase date) equal,
-    required TResult Function(FhirDateTimeBase date) notEqual,
-    required TResult Function(FhirDateTimeBase date) greaterThan,
-    required TResult Function(FhirDateTimeBase date) lessThan,
-    required TResult Function(FhirDateTimeBase date) greaterOrEqual,
-    required TResult Function(FhirDateTimeBase date) lessOrEqual,
-    required TResult Function(FhirDateTimeBase date) startsAfter,
-    required TResult Function(FhirDateTimeBase date) endsBefore,
-    required TResult Function(FhirDateTimeBase date) approximately,
-    required TResult Function() missing,
+    required TResult Function(String date) equal,
+    required TResult Function(String date) notEqual,
+    required TResult Function(String date) greaterThan,
+    required TResult Function(String date) lessThan,
+    required TResult Function(String date) greaterOrEqual,
+    required TResult Function(String date) lessOrEqual,
+    required TResult Function(String date) startsAfter,
+    required TResult Function(String date) endsBefore,
+    required TResult Function(String date) approximately,
+    required TResult Function(bool missing) missing,
   }) {
     return endsBefore(date);
   }
@@ -1522,16 +1695,16 @@ class _$_SearchParamDateEndsBefore extends _SearchParamDateEndsBefore {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirDateTimeBase date)? equal,
-    TResult? Function(FhirDateTimeBase date)? notEqual,
-    TResult? Function(FhirDateTimeBase date)? greaterThan,
-    TResult? Function(FhirDateTimeBase date)? lessThan,
-    TResult? Function(FhirDateTimeBase date)? greaterOrEqual,
-    TResult? Function(FhirDateTimeBase date)? lessOrEqual,
-    TResult? Function(FhirDateTimeBase date)? startsAfter,
-    TResult? Function(FhirDateTimeBase date)? endsBefore,
-    TResult? Function(FhirDateTimeBase date)? approximately,
-    TResult? Function()? missing,
+    TResult? Function(String date)? equal,
+    TResult? Function(String date)? notEqual,
+    TResult? Function(String date)? greaterThan,
+    TResult? Function(String date)? lessThan,
+    TResult? Function(String date)? greaterOrEqual,
+    TResult? Function(String date)? lessOrEqual,
+    TResult? Function(String date)? startsAfter,
+    TResult? Function(String date)? endsBefore,
+    TResult? Function(String date)? approximately,
+    TResult? Function(bool missing)? missing,
   }) {
     return endsBefore?.call(date);
   }
@@ -1539,16 +1712,16 @@ class _$_SearchParamDateEndsBefore extends _SearchParamDateEndsBefore {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirDateTimeBase date)? equal,
-    TResult Function(FhirDateTimeBase date)? notEqual,
-    TResult Function(FhirDateTimeBase date)? greaterThan,
-    TResult Function(FhirDateTimeBase date)? lessThan,
-    TResult Function(FhirDateTimeBase date)? greaterOrEqual,
-    TResult Function(FhirDateTimeBase date)? lessOrEqual,
-    TResult Function(FhirDateTimeBase date)? startsAfter,
-    TResult Function(FhirDateTimeBase date)? endsBefore,
-    TResult Function(FhirDateTimeBase date)? approximately,
-    TResult Function()? missing,
+    TResult Function(String date)? equal,
+    TResult Function(String date)? notEqual,
+    TResult Function(String date)? greaterThan,
+    TResult Function(String date)? lessThan,
+    TResult Function(String date)? greaterOrEqual,
+    TResult Function(String date)? lessOrEqual,
+    TResult Function(String date)? startsAfter,
+    TResult Function(String date)? endsBefore,
+    TResult Function(String date)? approximately,
+    TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
     if (endsBefore != null) {
@@ -1613,14 +1786,24 @@ class _$_SearchParamDateEndsBefore extends _SearchParamDateEndsBefore {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_SearchParamDateEndsBeforeToJson(
+      this,
+    );
+  }
 }
 
 abstract class _SearchParamDateEndsBefore extends SearchParamDate {
-  const factory _SearchParamDateEndsBefore(
-      {required final FhirDateTimeBase date}) = _$_SearchParamDateEndsBefore;
+  const factory _SearchParamDateEndsBefore({required final String date}) =
+      _$_SearchParamDateEndsBefore;
   const _SearchParamDateEndsBefore._() : super._();
 
-  FhirDateTimeBase get date;
+  factory _SearchParamDateEndsBefore.fromJson(Map<String, dynamic> json) =
+      _$_SearchParamDateEndsBefore.fromJson;
+
+  String get date;
   @JsonKey(ignore: true)
   _$$_SearchParamDateEndsBeforeCopyWith<_$_SearchParamDateEndsBefore>
       get copyWith => throw _privateConstructorUsedError;
@@ -1633,7 +1816,7 @@ abstract class _$$_SearchParamDateApproximatelyCopyWith<$Res> {
           $Res Function(_$_SearchParamDateApproximately) then) =
       __$$_SearchParamDateApproximatelyCopyWithImpl<$Res>;
   @useResult
-  $Res call({FhirDateTimeBase date});
+  $Res call({String date});
 }
 
 /// @nodoc
@@ -1654,18 +1837,27 @@ class __$$_SearchParamDateApproximatelyCopyWithImpl<$Res>
       date: null == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as FhirDateTimeBase,
+              as String,
     ));
   }
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_SearchParamDateApproximately extends _SearchParamDateApproximately {
-  const _$_SearchParamDateApproximately({required this.date}) : super._();
+  const _$_SearchParamDateApproximately(
+      {required this.date, final String? $type})
+      : $type = $type ?? 'approximately',
+        super._();
+
+  factory _$_SearchParamDateApproximately.fromJson(Map<String, dynamic> json) =>
+      _$$_SearchParamDateApproximatelyFromJson(json);
 
   @override
-  final FhirDateTimeBase date;
+  final String date;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -1680,6 +1872,7 @@ class _$_SearchParamDateApproximately extends _SearchParamDateApproximately {
             (identical(other.date, date) || other.date == date));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, date);
 
@@ -1693,16 +1886,16 @@ class _$_SearchParamDateApproximately extends _SearchParamDateApproximately {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirDateTimeBase date) equal,
-    required TResult Function(FhirDateTimeBase date) notEqual,
-    required TResult Function(FhirDateTimeBase date) greaterThan,
-    required TResult Function(FhirDateTimeBase date) lessThan,
-    required TResult Function(FhirDateTimeBase date) greaterOrEqual,
-    required TResult Function(FhirDateTimeBase date) lessOrEqual,
-    required TResult Function(FhirDateTimeBase date) startsAfter,
-    required TResult Function(FhirDateTimeBase date) endsBefore,
-    required TResult Function(FhirDateTimeBase date) approximately,
-    required TResult Function() missing,
+    required TResult Function(String date) equal,
+    required TResult Function(String date) notEqual,
+    required TResult Function(String date) greaterThan,
+    required TResult Function(String date) lessThan,
+    required TResult Function(String date) greaterOrEqual,
+    required TResult Function(String date) lessOrEqual,
+    required TResult Function(String date) startsAfter,
+    required TResult Function(String date) endsBefore,
+    required TResult Function(String date) approximately,
+    required TResult Function(bool missing) missing,
   }) {
     return approximately(date);
   }
@@ -1710,16 +1903,16 @@ class _$_SearchParamDateApproximately extends _SearchParamDateApproximately {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirDateTimeBase date)? equal,
-    TResult? Function(FhirDateTimeBase date)? notEqual,
-    TResult? Function(FhirDateTimeBase date)? greaterThan,
-    TResult? Function(FhirDateTimeBase date)? lessThan,
-    TResult? Function(FhirDateTimeBase date)? greaterOrEqual,
-    TResult? Function(FhirDateTimeBase date)? lessOrEqual,
-    TResult? Function(FhirDateTimeBase date)? startsAfter,
-    TResult? Function(FhirDateTimeBase date)? endsBefore,
-    TResult? Function(FhirDateTimeBase date)? approximately,
-    TResult? Function()? missing,
+    TResult? Function(String date)? equal,
+    TResult? Function(String date)? notEqual,
+    TResult? Function(String date)? greaterThan,
+    TResult? Function(String date)? lessThan,
+    TResult? Function(String date)? greaterOrEqual,
+    TResult? Function(String date)? lessOrEqual,
+    TResult? Function(String date)? startsAfter,
+    TResult? Function(String date)? endsBefore,
+    TResult? Function(String date)? approximately,
+    TResult? Function(bool missing)? missing,
   }) {
     return approximately?.call(date);
   }
@@ -1727,16 +1920,16 @@ class _$_SearchParamDateApproximately extends _SearchParamDateApproximately {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirDateTimeBase date)? equal,
-    TResult Function(FhirDateTimeBase date)? notEqual,
-    TResult Function(FhirDateTimeBase date)? greaterThan,
-    TResult Function(FhirDateTimeBase date)? lessThan,
-    TResult Function(FhirDateTimeBase date)? greaterOrEqual,
-    TResult Function(FhirDateTimeBase date)? lessOrEqual,
-    TResult Function(FhirDateTimeBase date)? startsAfter,
-    TResult Function(FhirDateTimeBase date)? endsBefore,
-    TResult Function(FhirDateTimeBase date)? approximately,
-    TResult Function()? missing,
+    TResult Function(String date)? equal,
+    TResult Function(String date)? notEqual,
+    TResult Function(String date)? greaterThan,
+    TResult Function(String date)? lessThan,
+    TResult Function(String date)? greaterOrEqual,
+    TResult Function(String date)? lessOrEqual,
+    TResult Function(String date)? startsAfter,
+    TResult Function(String date)? endsBefore,
+    TResult Function(String date)? approximately,
+    TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
     if (approximately != null) {
@@ -1801,14 +1994,24 @@ class _$_SearchParamDateApproximately extends _SearchParamDateApproximately {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_SearchParamDateApproximatelyToJson(
+      this,
+    );
+  }
 }
 
 abstract class _SearchParamDateApproximately extends SearchParamDate {
-  const factory _SearchParamDateApproximately(
-      {required final FhirDateTimeBase date}) = _$_SearchParamDateApproximately;
+  const factory _SearchParamDateApproximately({required final String date}) =
+      _$_SearchParamDateApproximately;
   const _SearchParamDateApproximately._() : super._();
 
-  FhirDateTimeBase get date;
+  factory _SearchParamDateApproximately.fromJson(Map<String, dynamic> json) =
+      _$_SearchParamDateApproximately.fromJson;
+
+  String get date;
   @JsonKey(ignore: true)
   _$$_SearchParamDateApproximatelyCopyWith<_$_SearchParamDateApproximately>
       get copyWith => throw _privateConstructorUsedError;
@@ -1819,6 +2022,8 @@ abstract class _$$_SearchParamDateMissingCopyWith<$Res> {
   factory _$$_SearchParamDateMissingCopyWith(_$_SearchParamDateMissing value,
           $Res Function(_$_SearchParamDateMissing) then) =
       __$$_SearchParamDateMissingCopyWithImpl<$Res>;
+  @useResult
+  $Res call({bool missing});
 }
 
 /// @nodoc
@@ -1828,79 +2033,112 @@ class __$$_SearchParamDateMissingCopyWithImpl<$Res>
   __$$_SearchParamDateMissingCopyWithImpl(_$_SearchParamDateMissing _value,
       $Res Function(_$_SearchParamDateMissing) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? missing = null,
+  }) {
+    return _then(_$_SearchParamDateMissing(
+      null == missing
+          ? _value.missing
+          : missing // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_SearchParamDateMissing extends _SearchParamDateMissing {
-  const _$_SearchParamDateMissing() : super._();
+  const _$_SearchParamDateMissing(this.missing, {final String? $type})
+      : $type = $type ?? 'missing',
+        super._();
+
+  factory _$_SearchParamDateMissing.fromJson(Map<String, dynamic> json) =>
+      _$$_SearchParamDateMissingFromJson(json);
+
+  @override
+  final bool missing;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
-    return 'SearchParamDate.missing()';
+    return 'SearchParamDate.missing(missing: $missing)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SearchParamDateMissing);
+            other is _$_SearchParamDateMissing &&
+            (identical(other.missing, missing) || other.missing == missing));
   }
 
+  @JsonKey(ignore: true)
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, missing);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_SearchParamDateMissingCopyWith<_$_SearchParamDateMissing> get copyWith =>
+      __$$_SearchParamDateMissingCopyWithImpl<_$_SearchParamDateMissing>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirDateTimeBase date) equal,
-    required TResult Function(FhirDateTimeBase date) notEqual,
-    required TResult Function(FhirDateTimeBase date) greaterThan,
-    required TResult Function(FhirDateTimeBase date) lessThan,
-    required TResult Function(FhirDateTimeBase date) greaterOrEqual,
-    required TResult Function(FhirDateTimeBase date) lessOrEqual,
-    required TResult Function(FhirDateTimeBase date) startsAfter,
-    required TResult Function(FhirDateTimeBase date) endsBefore,
-    required TResult Function(FhirDateTimeBase date) approximately,
-    required TResult Function() missing,
+    required TResult Function(String date) equal,
+    required TResult Function(String date) notEqual,
+    required TResult Function(String date) greaterThan,
+    required TResult Function(String date) lessThan,
+    required TResult Function(String date) greaterOrEqual,
+    required TResult Function(String date) lessOrEqual,
+    required TResult Function(String date) startsAfter,
+    required TResult Function(String date) endsBefore,
+    required TResult Function(String date) approximately,
+    required TResult Function(bool missing) missing,
   }) {
-    return missing();
+    return missing(this.missing);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirDateTimeBase date)? equal,
-    TResult? Function(FhirDateTimeBase date)? notEqual,
-    TResult? Function(FhirDateTimeBase date)? greaterThan,
-    TResult? Function(FhirDateTimeBase date)? lessThan,
-    TResult? Function(FhirDateTimeBase date)? greaterOrEqual,
-    TResult? Function(FhirDateTimeBase date)? lessOrEqual,
-    TResult? Function(FhirDateTimeBase date)? startsAfter,
-    TResult? Function(FhirDateTimeBase date)? endsBefore,
-    TResult? Function(FhirDateTimeBase date)? approximately,
-    TResult? Function()? missing,
+    TResult? Function(String date)? equal,
+    TResult? Function(String date)? notEqual,
+    TResult? Function(String date)? greaterThan,
+    TResult? Function(String date)? lessThan,
+    TResult? Function(String date)? greaterOrEqual,
+    TResult? Function(String date)? lessOrEqual,
+    TResult? Function(String date)? startsAfter,
+    TResult? Function(String date)? endsBefore,
+    TResult? Function(String date)? approximately,
+    TResult? Function(bool missing)? missing,
   }) {
-    return missing?.call();
+    return missing?.call(this.missing);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirDateTimeBase date)? equal,
-    TResult Function(FhirDateTimeBase date)? notEqual,
-    TResult Function(FhirDateTimeBase date)? greaterThan,
-    TResult Function(FhirDateTimeBase date)? lessThan,
-    TResult Function(FhirDateTimeBase date)? greaterOrEqual,
-    TResult Function(FhirDateTimeBase date)? lessOrEqual,
-    TResult Function(FhirDateTimeBase date)? startsAfter,
-    TResult Function(FhirDateTimeBase date)? endsBefore,
-    TResult Function(FhirDateTimeBase date)? approximately,
-    TResult Function()? missing,
+    TResult Function(String date)? equal,
+    TResult Function(String date)? notEqual,
+    TResult Function(String date)? greaterThan,
+    TResult Function(String date)? lessThan,
+    TResult Function(String date)? greaterOrEqual,
+    TResult Function(String date)? lessOrEqual,
+    TResult Function(String date)? startsAfter,
+    TResult Function(String date)? endsBefore,
+    TResult Function(String date)? approximately,
+    TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
     if (missing != null) {
-      return missing();
+      return missing(this.missing);
     }
     return orElse();
   }
@@ -1961,9 +2199,25 @@ class _$_SearchParamDateMissing extends _SearchParamDateMissing {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_SearchParamDateMissingToJson(
+      this,
+    );
+  }
 }
 
 abstract class _SearchParamDateMissing extends SearchParamDate {
-  const factory _SearchParamDateMissing() = _$_SearchParamDateMissing;
+  const factory _SearchParamDateMissing(final bool missing) =
+      _$_SearchParamDateMissing;
   const _SearchParamDateMissing._() : super._();
+
+  factory _SearchParamDateMissing.fromJson(Map<String, dynamic> json) =
+      _$_SearchParamDateMissing.fromJson;
+
+  bool get missing;
+  @JsonKey(ignore: true)
+  _$$_SearchParamDateMissingCopyWith<_$_SearchParamDateMissing> get copyWith =>
+      throw _privateConstructorUsedError;
 }

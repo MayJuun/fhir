@@ -14,68 +14,83 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+SearchParamQuantity _$SearchParamQuantityFromJson(Map<String, dynamic> json) {
+  switch (json['runtimeType']) {
+    case 'equal':
+      return _SearchParamQuantityEqual.fromJson(json);
+    case 'notEqual':
+      return _SearchParamQuantityNotEqual.fromJson(json);
+    case 'greaterThan':
+      return _SearchParamQuantityGreaterThan.fromJson(json);
+    case 'lessThan':
+      return _SearchParamQuantityLessThan.fromJson(json);
+    case 'greaterOrEqual':
+      return _SearchParamQuantityGreaterOrEqual.fromJson(json);
+    case 'lessOrEqual':
+      return _SearchParamQuantityLessOrEqual.fromJson(json);
+    case 'startsAfter':
+      return _SearchParamQuantityStartsAfter.fromJson(json);
+    case 'endsBefore':
+      return _SearchParamQuantityEndsBefore.fromJson(json);
+    case 'approximately':
+      return _SearchParamQuantityApproximately.fromJson(json);
+    case 'missing':
+      return _SearchParamQuantityMissing.fromJson(json);
+
+    default:
+      throw CheckedFromJsonException(json, 'runtimeType', 'SearchParamQuantity',
+          'Invalid union type "${json['runtimeType']}"!');
+  }
+}
+
 /// @nodoc
 mixin _$SearchParamQuantity {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
-        equal,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
-        notEqual,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value) equal,
+    required TResult Function(FhirUri? system, Code? code, num value) notEqual,
+    required TResult Function(FhirUri? system, Code? code, num value)
         greaterThan,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
-        lessThan,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value) lessThan,
+    required TResult Function(FhirUri? system, Code? code, num value)
         greaterOrEqual,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         lessOrEqual,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         startsAfter,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         endsBefore,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         approximately,
-    required TResult Function() missing,
+    required TResult Function(bool missing) missing,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)? equal,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)? notEqual,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterThan,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)? lessThan,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterOrEqual,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        lessOrEqual,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        startsAfter,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        endsBefore,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        approximately,
-    TResult? Function()? missing,
+    TResult? Function(FhirUri? system, Code? code, num value)? equal,
+    TResult? Function(FhirUri? system, Code? code, num value)? notEqual,
+    TResult? Function(FhirUri? system, Code? code, num value)? greaterThan,
+    TResult? Function(FhirUri? system, Code? code, num value)? lessThan,
+    TResult? Function(FhirUri? system, Code? code, num value)? greaterOrEqual,
+    TResult? Function(FhirUri? system, Code? code, num value)? lessOrEqual,
+    TResult? Function(FhirUri? system, Code? code, num value)? startsAfter,
+    TResult? Function(FhirUri? system, Code? code, num value)? endsBefore,
+    TResult? Function(FhirUri? system, Code? code, num value)? approximately,
+    TResult? Function(bool missing)? missing,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? equal,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? notEqual,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterThan,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? lessThan,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterOrEqual,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        lessOrEqual,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        startsAfter,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? endsBefore,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        approximately,
-    TResult Function()? missing,
+    TResult Function(FhirUri? system, Code? code, num value)? equal,
+    TResult Function(FhirUri? system, Code? code, num value)? notEqual,
+    TResult Function(FhirUri? system, Code? code, num value)? greaterThan,
+    TResult Function(FhirUri? system, Code? code, num value)? lessThan,
+    TResult Function(FhirUri? system, Code? code, num value)? greaterOrEqual,
+    TResult Function(FhirUri? system, Code? code, num value)? lessOrEqual,
+    TResult Function(FhirUri? system, Code? code, num value)? startsAfter,
+    TResult Function(FhirUri? system, Code? code, num value)? endsBefore,
+    TResult Function(FhirUri? system, Code? code, num value)? approximately,
+    TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -127,6 +142,7 @@ mixin _$SearchParamQuantity {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -154,7 +170,7 @@ abstract class _$$_SearchParamQuantityEqualCopyWith<$Res> {
           $Res Function(_$_SearchParamQuantityEqual) then) =
       __$$_SearchParamQuantityEqualCopyWithImpl<$Res>;
   @useResult
-  $Res call({FhirUri? system, Code? code, FhirNumber value});
+  $Res call({FhirUri? system, Code? code, num value});
 }
 
 /// @nodoc
@@ -184,24 +200,31 @@ class __$$_SearchParamQuantityEqualCopyWithImpl<$Res>
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as FhirNumber,
+              as num,
     ));
   }
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_SearchParamQuantityEqual extends _SearchParamQuantityEqual {
   const _$_SearchParamQuantityEqual(
-      {this.system, this.code, required this.value})
-      : super._();
+      {this.system, this.code, required this.value, final String? $type})
+      : $type = $type ?? 'equal',
+        super._();
+
+  factory _$_SearchParamQuantityEqual.fromJson(Map<String, dynamic> json) =>
+      _$$_SearchParamQuantityEqualFromJson(json);
 
   @override
   final FhirUri? system;
   @override
   final Code? code;
   @override
-  final FhirNumber value;
+  final num value;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -218,6 +241,7 @@ class _$_SearchParamQuantityEqual extends _SearchParamQuantityEqual {
             (identical(other.value, value) || other.value == value));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, system, code, value);
 
@@ -231,25 +255,22 @@ class _$_SearchParamQuantityEqual extends _SearchParamQuantityEqual {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
-        equal,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
-        notEqual,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value) equal,
+    required TResult Function(FhirUri? system, Code? code, num value) notEqual,
+    required TResult Function(FhirUri? system, Code? code, num value)
         greaterThan,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
-        lessThan,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value) lessThan,
+    required TResult Function(FhirUri? system, Code? code, num value)
         greaterOrEqual,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         lessOrEqual,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         startsAfter,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         endsBefore,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         approximately,
-    required TResult Function() missing,
+    required TResult Function(bool missing) missing,
   }) {
     return equal(system, code, value);
   }
@@ -257,22 +278,16 @@ class _$_SearchParamQuantityEqual extends _SearchParamQuantityEqual {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)? equal,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)? notEqual,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterThan,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)? lessThan,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterOrEqual,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        lessOrEqual,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        startsAfter,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        endsBefore,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        approximately,
-    TResult? Function()? missing,
+    TResult? Function(FhirUri? system, Code? code, num value)? equal,
+    TResult? Function(FhirUri? system, Code? code, num value)? notEqual,
+    TResult? Function(FhirUri? system, Code? code, num value)? greaterThan,
+    TResult? Function(FhirUri? system, Code? code, num value)? lessThan,
+    TResult? Function(FhirUri? system, Code? code, num value)? greaterOrEqual,
+    TResult? Function(FhirUri? system, Code? code, num value)? lessOrEqual,
+    TResult? Function(FhirUri? system, Code? code, num value)? startsAfter,
+    TResult? Function(FhirUri? system, Code? code, num value)? endsBefore,
+    TResult? Function(FhirUri? system, Code? code, num value)? approximately,
+    TResult? Function(bool missing)? missing,
   }) {
     return equal?.call(system, code, value);
   }
@@ -280,21 +295,16 @@ class _$_SearchParamQuantityEqual extends _SearchParamQuantityEqual {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? equal,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? notEqual,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterThan,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? lessThan,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterOrEqual,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        lessOrEqual,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        startsAfter,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? endsBefore,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        approximately,
-    TResult Function()? missing,
+    TResult Function(FhirUri? system, Code? code, num value)? equal,
+    TResult Function(FhirUri? system, Code? code, num value)? notEqual,
+    TResult Function(FhirUri? system, Code? code, num value)? greaterThan,
+    TResult Function(FhirUri? system, Code? code, num value)? lessThan,
+    TResult Function(FhirUri? system, Code? code, num value)? greaterOrEqual,
+    TResult Function(FhirUri? system, Code? code, num value)? lessOrEqual,
+    TResult Function(FhirUri? system, Code? code, num value)? startsAfter,
+    TResult Function(FhirUri? system, Code? code, num value)? endsBefore,
+    TResult Function(FhirUri? system, Code? code, num value)? approximately,
+    TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
     if (equal != null) {
@@ -362,18 +372,28 @@ class _$_SearchParamQuantityEqual extends _SearchParamQuantityEqual {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_SearchParamQuantityEqualToJson(
+      this,
+    );
+  }
 }
 
 abstract class _SearchParamQuantityEqual extends SearchParamQuantity {
   const factory _SearchParamQuantityEqual(
       {final FhirUri? system,
       final Code? code,
-      required final FhirNumber value}) = _$_SearchParamQuantityEqual;
+      required final num value}) = _$_SearchParamQuantityEqual;
   const _SearchParamQuantityEqual._() : super._();
+
+  factory _SearchParamQuantityEqual.fromJson(Map<String, dynamic> json) =
+      _$_SearchParamQuantityEqual.fromJson;
 
   FhirUri? get system;
   Code? get code;
-  FhirNumber get value;
+  num get value;
   @JsonKey(ignore: true)
   _$$_SearchParamQuantityEqualCopyWith<_$_SearchParamQuantityEqual>
       get copyWith => throw _privateConstructorUsedError;
@@ -386,7 +406,7 @@ abstract class _$$_SearchParamQuantityNotEqualCopyWith<$Res> {
           $Res Function(_$_SearchParamQuantityNotEqual) then) =
       __$$_SearchParamQuantityNotEqualCopyWithImpl<$Res>;
   @useResult
-  $Res call({FhirUri? system, Code? code, FhirNumber value});
+  $Res call({FhirUri? system, Code? code, num value});
 }
 
 /// @nodoc
@@ -418,24 +438,31 @@ class __$$_SearchParamQuantityNotEqualCopyWithImpl<$Res>
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as FhirNumber,
+              as num,
     ));
   }
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_SearchParamQuantityNotEqual extends _SearchParamQuantityNotEqual {
   const _$_SearchParamQuantityNotEqual(
-      {this.system, this.code, required this.value})
-      : super._();
+      {this.system, this.code, required this.value, final String? $type})
+      : $type = $type ?? 'notEqual',
+        super._();
+
+  factory _$_SearchParamQuantityNotEqual.fromJson(Map<String, dynamic> json) =>
+      _$$_SearchParamQuantityNotEqualFromJson(json);
 
   @override
   final FhirUri? system;
   @override
   final Code? code;
   @override
-  final FhirNumber value;
+  final num value;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -452,6 +479,7 @@ class _$_SearchParamQuantityNotEqual extends _SearchParamQuantityNotEqual {
             (identical(other.value, value) || other.value == value));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, system, code, value);
 
@@ -465,25 +493,22 @@ class _$_SearchParamQuantityNotEqual extends _SearchParamQuantityNotEqual {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
-        equal,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
-        notEqual,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value) equal,
+    required TResult Function(FhirUri? system, Code? code, num value) notEqual,
+    required TResult Function(FhirUri? system, Code? code, num value)
         greaterThan,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
-        lessThan,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value) lessThan,
+    required TResult Function(FhirUri? system, Code? code, num value)
         greaterOrEqual,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         lessOrEqual,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         startsAfter,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         endsBefore,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         approximately,
-    required TResult Function() missing,
+    required TResult Function(bool missing) missing,
   }) {
     return notEqual(system, code, value);
   }
@@ -491,22 +516,16 @@ class _$_SearchParamQuantityNotEqual extends _SearchParamQuantityNotEqual {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)? equal,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)? notEqual,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterThan,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)? lessThan,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterOrEqual,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        lessOrEqual,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        startsAfter,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        endsBefore,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        approximately,
-    TResult? Function()? missing,
+    TResult? Function(FhirUri? system, Code? code, num value)? equal,
+    TResult? Function(FhirUri? system, Code? code, num value)? notEqual,
+    TResult? Function(FhirUri? system, Code? code, num value)? greaterThan,
+    TResult? Function(FhirUri? system, Code? code, num value)? lessThan,
+    TResult? Function(FhirUri? system, Code? code, num value)? greaterOrEqual,
+    TResult? Function(FhirUri? system, Code? code, num value)? lessOrEqual,
+    TResult? Function(FhirUri? system, Code? code, num value)? startsAfter,
+    TResult? Function(FhirUri? system, Code? code, num value)? endsBefore,
+    TResult? Function(FhirUri? system, Code? code, num value)? approximately,
+    TResult? Function(bool missing)? missing,
   }) {
     return notEqual?.call(system, code, value);
   }
@@ -514,21 +533,16 @@ class _$_SearchParamQuantityNotEqual extends _SearchParamQuantityNotEqual {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? equal,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? notEqual,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterThan,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? lessThan,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterOrEqual,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        lessOrEqual,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        startsAfter,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? endsBefore,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        approximately,
-    TResult Function()? missing,
+    TResult Function(FhirUri? system, Code? code, num value)? equal,
+    TResult Function(FhirUri? system, Code? code, num value)? notEqual,
+    TResult Function(FhirUri? system, Code? code, num value)? greaterThan,
+    TResult Function(FhirUri? system, Code? code, num value)? lessThan,
+    TResult Function(FhirUri? system, Code? code, num value)? greaterOrEqual,
+    TResult Function(FhirUri? system, Code? code, num value)? lessOrEqual,
+    TResult Function(FhirUri? system, Code? code, num value)? startsAfter,
+    TResult Function(FhirUri? system, Code? code, num value)? endsBefore,
+    TResult Function(FhirUri? system, Code? code, num value)? approximately,
+    TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
     if (notEqual != null) {
@@ -596,18 +610,28 @@ class _$_SearchParamQuantityNotEqual extends _SearchParamQuantityNotEqual {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_SearchParamQuantityNotEqualToJson(
+      this,
+    );
+  }
 }
 
 abstract class _SearchParamQuantityNotEqual extends SearchParamQuantity {
   const factory _SearchParamQuantityNotEqual(
       {final FhirUri? system,
       final Code? code,
-      required final FhirNumber value}) = _$_SearchParamQuantityNotEqual;
+      required final num value}) = _$_SearchParamQuantityNotEqual;
   const _SearchParamQuantityNotEqual._() : super._();
+
+  factory _SearchParamQuantityNotEqual.fromJson(Map<String, dynamic> json) =
+      _$_SearchParamQuantityNotEqual.fromJson;
 
   FhirUri? get system;
   Code? get code;
-  FhirNumber get value;
+  num get value;
   @JsonKey(ignore: true)
   _$$_SearchParamQuantityNotEqualCopyWith<_$_SearchParamQuantityNotEqual>
       get copyWith => throw _privateConstructorUsedError;
@@ -620,7 +644,7 @@ abstract class _$$_SearchParamQuantityGreaterThanCopyWith<$Res> {
           $Res Function(_$_SearchParamQuantityGreaterThan) then) =
       __$$_SearchParamQuantityGreaterThanCopyWithImpl<$Res>;
   @useResult
-  $Res call({FhirUri? system, Code? code, FhirNumber value});
+  $Res call({FhirUri? system, Code? code, num value});
 }
 
 /// @nodoc
@@ -652,25 +676,33 @@ class __$$_SearchParamQuantityGreaterThanCopyWithImpl<$Res>
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as FhirNumber,
+              as num,
     ));
   }
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_SearchParamQuantityGreaterThan
     extends _SearchParamQuantityGreaterThan {
   const _$_SearchParamQuantityGreaterThan(
-      {this.system, this.code, required this.value})
-      : super._();
+      {this.system, this.code, required this.value, final String? $type})
+      : $type = $type ?? 'greaterThan',
+        super._();
+
+  factory _$_SearchParamQuantityGreaterThan.fromJson(
+          Map<String, dynamic> json) =>
+      _$$_SearchParamQuantityGreaterThanFromJson(json);
 
   @override
   final FhirUri? system;
   @override
   final Code? code;
   @override
-  final FhirNumber value;
+  final num value;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -687,6 +719,7 @@ class _$_SearchParamQuantityGreaterThan
             (identical(other.value, value) || other.value == value));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, system, code, value);
 
@@ -700,25 +733,22 @@ class _$_SearchParamQuantityGreaterThan
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
-        equal,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
-        notEqual,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value) equal,
+    required TResult Function(FhirUri? system, Code? code, num value) notEqual,
+    required TResult Function(FhirUri? system, Code? code, num value)
         greaterThan,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
-        lessThan,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value) lessThan,
+    required TResult Function(FhirUri? system, Code? code, num value)
         greaterOrEqual,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         lessOrEqual,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         startsAfter,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         endsBefore,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         approximately,
-    required TResult Function() missing,
+    required TResult Function(bool missing) missing,
   }) {
     return greaterThan(system, code, value);
   }
@@ -726,22 +756,16 @@ class _$_SearchParamQuantityGreaterThan
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)? equal,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)? notEqual,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterThan,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)? lessThan,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterOrEqual,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        lessOrEqual,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        startsAfter,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        endsBefore,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        approximately,
-    TResult? Function()? missing,
+    TResult? Function(FhirUri? system, Code? code, num value)? equal,
+    TResult? Function(FhirUri? system, Code? code, num value)? notEqual,
+    TResult? Function(FhirUri? system, Code? code, num value)? greaterThan,
+    TResult? Function(FhirUri? system, Code? code, num value)? lessThan,
+    TResult? Function(FhirUri? system, Code? code, num value)? greaterOrEqual,
+    TResult? Function(FhirUri? system, Code? code, num value)? lessOrEqual,
+    TResult? Function(FhirUri? system, Code? code, num value)? startsAfter,
+    TResult? Function(FhirUri? system, Code? code, num value)? endsBefore,
+    TResult? Function(FhirUri? system, Code? code, num value)? approximately,
+    TResult? Function(bool missing)? missing,
   }) {
     return greaterThan?.call(system, code, value);
   }
@@ -749,21 +773,16 @@ class _$_SearchParamQuantityGreaterThan
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? equal,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? notEqual,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterThan,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? lessThan,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterOrEqual,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        lessOrEqual,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        startsAfter,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? endsBefore,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        approximately,
-    TResult Function()? missing,
+    TResult Function(FhirUri? system, Code? code, num value)? equal,
+    TResult Function(FhirUri? system, Code? code, num value)? notEqual,
+    TResult Function(FhirUri? system, Code? code, num value)? greaterThan,
+    TResult Function(FhirUri? system, Code? code, num value)? lessThan,
+    TResult Function(FhirUri? system, Code? code, num value)? greaterOrEqual,
+    TResult Function(FhirUri? system, Code? code, num value)? lessOrEqual,
+    TResult Function(FhirUri? system, Code? code, num value)? startsAfter,
+    TResult Function(FhirUri? system, Code? code, num value)? endsBefore,
+    TResult Function(FhirUri? system, Code? code, num value)? approximately,
+    TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
     if (greaterThan != null) {
@@ -831,18 +850,28 @@ class _$_SearchParamQuantityGreaterThan
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_SearchParamQuantityGreaterThanToJson(
+      this,
+    );
+  }
 }
 
 abstract class _SearchParamQuantityGreaterThan extends SearchParamQuantity {
   const factory _SearchParamQuantityGreaterThan(
       {final FhirUri? system,
       final Code? code,
-      required final FhirNumber value}) = _$_SearchParamQuantityGreaterThan;
+      required final num value}) = _$_SearchParamQuantityGreaterThan;
   const _SearchParamQuantityGreaterThan._() : super._();
+
+  factory _SearchParamQuantityGreaterThan.fromJson(Map<String, dynamic> json) =
+      _$_SearchParamQuantityGreaterThan.fromJson;
 
   FhirUri? get system;
   Code? get code;
-  FhirNumber get value;
+  num get value;
   @JsonKey(ignore: true)
   _$$_SearchParamQuantityGreaterThanCopyWith<_$_SearchParamQuantityGreaterThan>
       get copyWith => throw _privateConstructorUsedError;
@@ -855,7 +884,7 @@ abstract class _$$_SearchParamQuantityLessThanCopyWith<$Res> {
           $Res Function(_$_SearchParamQuantityLessThan) then) =
       __$$_SearchParamQuantityLessThanCopyWithImpl<$Res>;
   @useResult
-  $Res call({FhirUri? system, Code? code, FhirNumber value});
+  $Res call({FhirUri? system, Code? code, num value});
 }
 
 /// @nodoc
@@ -887,24 +916,31 @@ class __$$_SearchParamQuantityLessThanCopyWithImpl<$Res>
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as FhirNumber,
+              as num,
     ));
   }
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_SearchParamQuantityLessThan extends _SearchParamQuantityLessThan {
   const _$_SearchParamQuantityLessThan(
-      {this.system, this.code, required this.value})
-      : super._();
+      {this.system, this.code, required this.value, final String? $type})
+      : $type = $type ?? 'lessThan',
+        super._();
+
+  factory _$_SearchParamQuantityLessThan.fromJson(Map<String, dynamic> json) =>
+      _$$_SearchParamQuantityLessThanFromJson(json);
 
   @override
   final FhirUri? system;
   @override
   final Code? code;
   @override
-  final FhirNumber value;
+  final num value;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -921,6 +957,7 @@ class _$_SearchParamQuantityLessThan extends _SearchParamQuantityLessThan {
             (identical(other.value, value) || other.value == value));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, system, code, value);
 
@@ -934,25 +971,22 @@ class _$_SearchParamQuantityLessThan extends _SearchParamQuantityLessThan {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
-        equal,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
-        notEqual,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value) equal,
+    required TResult Function(FhirUri? system, Code? code, num value) notEqual,
+    required TResult Function(FhirUri? system, Code? code, num value)
         greaterThan,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
-        lessThan,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value) lessThan,
+    required TResult Function(FhirUri? system, Code? code, num value)
         greaterOrEqual,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         lessOrEqual,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         startsAfter,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         endsBefore,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         approximately,
-    required TResult Function() missing,
+    required TResult Function(bool missing) missing,
   }) {
     return lessThan(system, code, value);
   }
@@ -960,22 +994,16 @@ class _$_SearchParamQuantityLessThan extends _SearchParamQuantityLessThan {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)? equal,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)? notEqual,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterThan,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)? lessThan,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterOrEqual,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        lessOrEqual,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        startsAfter,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        endsBefore,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        approximately,
-    TResult? Function()? missing,
+    TResult? Function(FhirUri? system, Code? code, num value)? equal,
+    TResult? Function(FhirUri? system, Code? code, num value)? notEqual,
+    TResult? Function(FhirUri? system, Code? code, num value)? greaterThan,
+    TResult? Function(FhirUri? system, Code? code, num value)? lessThan,
+    TResult? Function(FhirUri? system, Code? code, num value)? greaterOrEqual,
+    TResult? Function(FhirUri? system, Code? code, num value)? lessOrEqual,
+    TResult? Function(FhirUri? system, Code? code, num value)? startsAfter,
+    TResult? Function(FhirUri? system, Code? code, num value)? endsBefore,
+    TResult? Function(FhirUri? system, Code? code, num value)? approximately,
+    TResult? Function(bool missing)? missing,
   }) {
     return lessThan?.call(system, code, value);
   }
@@ -983,21 +1011,16 @@ class _$_SearchParamQuantityLessThan extends _SearchParamQuantityLessThan {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? equal,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? notEqual,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterThan,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? lessThan,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterOrEqual,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        lessOrEqual,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        startsAfter,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? endsBefore,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        approximately,
-    TResult Function()? missing,
+    TResult Function(FhirUri? system, Code? code, num value)? equal,
+    TResult Function(FhirUri? system, Code? code, num value)? notEqual,
+    TResult Function(FhirUri? system, Code? code, num value)? greaterThan,
+    TResult Function(FhirUri? system, Code? code, num value)? lessThan,
+    TResult Function(FhirUri? system, Code? code, num value)? greaterOrEqual,
+    TResult Function(FhirUri? system, Code? code, num value)? lessOrEqual,
+    TResult Function(FhirUri? system, Code? code, num value)? startsAfter,
+    TResult Function(FhirUri? system, Code? code, num value)? endsBefore,
+    TResult Function(FhirUri? system, Code? code, num value)? approximately,
+    TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
     if (lessThan != null) {
@@ -1065,18 +1088,28 @@ class _$_SearchParamQuantityLessThan extends _SearchParamQuantityLessThan {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_SearchParamQuantityLessThanToJson(
+      this,
+    );
+  }
 }
 
 abstract class _SearchParamQuantityLessThan extends SearchParamQuantity {
   const factory _SearchParamQuantityLessThan(
       {final FhirUri? system,
       final Code? code,
-      required final FhirNumber value}) = _$_SearchParamQuantityLessThan;
+      required final num value}) = _$_SearchParamQuantityLessThan;
   const _SearchParamQuantityLessThan._() : super._();
+
+  factory _SearchParamQuantityLessThan.fromJson(Map<String, dynamic> json) =
+      _$_SearchParamQuantityLessThan.fromJson;
 
   FhirUri? get system;
   Code? get code;
-  FhirNumber get value;
+  num get value;
   @JsonKey(ignore: true)
   _$$_SearchParamQuantityLessThanCopyWith<_$_SearchParamQuantityLessThan>
       get copyWith => throw _privateConstructorUsedError;
@@ -1089,7 +1122,7 @@ abstract class _$$_SearchParamQuantityGreaterOrEqualCopyWith<$Res> {
           $Res Function(_$_SearchParamQuantityGreaterOrEqual) then) =
       __$$_SearchParamQuantityGreaterOrEqualCopyWithImpl<$Res>;
   @useResult
-  $Res call({FhirUri? system, Code? code, FhirNumber value});
+  $Res call({FhirUri? system, Code? code, num value});
 }
 
 /// @nodoc
@@ -1121,25 +1154,33 @@ class __$$_SearchParamQuantityGreaterOrEqualCopyWithImpl<$Res>
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as FhirNumber,
+              as num,
     ));
   }
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_SearchParamQuantityGreaterOrEqual
     extends _SearchParamQuantityGreaterOrEqual {
   const _$_SearchParamQuantityGreaterOrEqual(
-      {this.system, this.code, required this.value})
-      : super._();
+      {this.system, this.code, required this.value, final String? $type})
+      : $type = $type ?? 'greaterOrEqual',
+        super._();
+
+  factory _$_SearchParamQuantityGreaterOrEqual.fromJson(
+          Map<String, dynamic> json) =>
+      _$$_SearchParamQuantityGreaterOrEqualFromJson(json);
 
   @override
   final FhirUri? system;
   @override
   final Code? code;
   @override
-  final FhirNumber value;
+  final num value;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -1156,6 +1197,7 @@ class _$_SearchParamQuantityGreaterOrEqual
             (identical(other.value, value) || other.value == value));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, system, code, value);
 
@@ -1170,25 +1212,22 @@ class _$_SearchParamQuantityGreaterOrEqual
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
-        equal,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
-        notEqual,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value) equal,
+    required TResult Function(FhirUri? system, Code? code, num value) notEqual,
+    required TResult Function(FhirUri? system, Code? code, num value)
         greaterThan,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
-        lessThan,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value) lessThan,
+    required TResult Function(FhirUri? system, Code? code, num value)
         greaterOrEqual,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         lessOrEqual,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         startsAfter,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         endsBefore,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         approximately,
-    required TResult Function() missing,
+    required TResult Function(bool missing) missing,
   }) {
     return greaterOrEqual(system, code, value);
   }
@@ -1196,22 +1235,16 @@ class _$_SearchParamQuantityGreaterOrEqual
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)? equal,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)? notEqual,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterThan,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)? lessThan,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterOrEqual,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        lessOrEqual,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        startsAfter,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        endsBefore,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        approximately,
-    TResult? Function()? missing,
+    TResult? Function(FhirUri? system, Code? code, num value)? equal,
+    TResult? Function(FhirUri? system, Code? code, num value)? notEqual,
+    TResult? Function(FhirUri? system, Code? code, num value)? greaterThan,
+    TResult? Function(FhirUri? system, Code? code, num value)? lessThan,
+    TResult? Function(FhirUri? system, Code? code, num value)? greaterOrEqual,
+    TResult? Function(FhirUri? system, Code? code, num value)? lessOrEqual,
+    TResult? Function(FhirUri? system, Code? code, num value)? startsAfter,
+    TResult? Function(FhirUri? system, Code? code, num value)? endsBefore,
+    TResult? Function(FhirUri? system, Code? code, num value)? approximately,
+    TResult? Function(bool missing)? missing,
   }) {
     return greaterOrEqual?.call(system, code, value);
   }
@@ -1219,21 +1252,16 @@ class _$_SearchParamQuantityGreaterOrEqual
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? equal,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? notEqual,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterThan,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? lessThan,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterOrEqual,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        lessOrEqual,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        startsAfter,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? endsBefore,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        approximately,
-    TResult Function()? missing,
+    TResult Function(FhirUri? system, Code? code, num value)? equal,
+    TResult Function(FhirUri? system, Code? code, num value)? notEqual,
+    TResult Function(FhirUri? system, Code? code, num value)? greaterThan,
+    TResult Function(FhirUri? system, Code? code, num value)? lessThan,
+    TResult Function(FhirUri? system, Code? code, num value)? greaterOrEqual,
+    TResult Function(FhirUri? system, Code? code, num value)? lessOrEqual,
+    TResult Function(FhirUri? system, Code? code, num value)? startsAfter,
+    TResult Function(FhirUri? system, Code? code, num value)? endsBefore,
+    TResult Function(FhirUri? system, Code? code, num value)? approximately,
+    TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
     if (greaterOrEqual != null) {
@@ -1301,18 +1329,29 @@ class _$_SearchParamQuantityGreaterOrEqual
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_SearchParamQuantityGreaterOrEqualToJson(
+      this,
+    );
+  }
 }
 
 abstract class _SearchParamQuantityGreaterOrEqual extends SearchParamQuantity {
   const factory _SearchParamQuantityGreaterOrEqual(
       {final FhirUri? system,
       final Code? code,
-      required final FhirNumber value}) = _$_SearchParamQuantityGreaterOrEqual;
+      required final num value}) = _$_SearchParamQuantityGreaterOrEqual;
   const _SearchParamQuantityGreaterOrEqual._() : super._();
+
+  factory _SearchParamQuantityGreaterOrEqual.fromJson(
+          Map<String, dynamic> json) =
+      _$_SearchParamQuantityGreaterOrEqual.fromJson;
 
   FhirUri? get system;
   Code? get code;
-  FhirNumber get value;
+  num get value;
   @JsonKey(ignore: true)
   _$$_SearchParamQuantityGreaterOrEqualCopyWith<
           _$_SearchParamQuantityGreaterOrEqual>
@@ -1326,7 +1365,7 @@ abstract class _$$_SearchParamQuantityLessOrEqualCopyWith<$Res> {
           $Res Function(_$_SearchParamQuantityLessOrEqual) then) =
       __$$_SearchParamQuantityLessOrEqualCopyWithImpl<$Res>;
   @useResult
-  $Res call({FhirUri? system, Code? code, FhirNumber value});
+  $Res call({FhirUri? system, Code? code, num value});
 }
 
 /// @nodoc
@@ -1358,25 +1397,33 @@ class __$$_SearchParamQuantityLessOrEqualCopyWithImpl<$Res>
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as FhirNumber,
+              as num,
     ));
   }
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_SearchParamQuantityLessOrEqual
     extends _SearchParamQuantityLessOrEqual {
   const _$_SearchParamQuantityLessOrEqual(
-      {this.system, this.code, required this.value})
-      : super._();
+      {this.system, this.code, required this.value, final String? $type})
+      : $type = $type ?? 'lessOrEqual',
+        super._();
+
+  factory _$_SearchParamQuantityLessOrEqual.fromJson(
+          Map<String, dynamic> json) =>
+      _$$_SearchParamQuantityLessOrEqualFromJson(json);
 
   @override
   final FhirUri? system;
   @override
   final Code? code;
   @override
-  final FhirNumber value;
+  final num value;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -1393,6 +1440,7 @@ class _$_SearchParamQuantityLessOrEqual
             (identical(other.value, value) || other.value == value));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, system, code, value);
 
@@ -1406,25 +1454,22 @@ class _$_SearchParamQuantityLessOrEqual
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
-        equal,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
-        notEqual,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value) equal,
+    required TResult Function(FhirUri? system, Code? code, num value) notEqual,
+    required TResult Function(FhirUri? system, Code? code, num value)
         greaterThan,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
-        lessThan,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value) lessThan,
+    required TResult Function(FhirUri? system, Code? code, num value)
         greaterOrEqual,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         lessOrEqual,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         startsAfter,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         endsBefore,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         approximately,
-    required TResult Function() missing,
+    required TResult Function(bool missing) missing,
   }) {
     return lessOrEqual(system, code, value);
   }
@@ -1432,22 +1477,16 @@ class _$_SearchParamQuantityLessOrEqual
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)? equal,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)? notEqual,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterThan,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)? lessThan,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterOrEqual,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        lessOrEqual,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        startsAfter,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        endsBefore,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        approximately,
-    TResult? Function()? missing,
+    TResult? Function(FhirUri? system, Code? code, num value)? equal,
+    TResult? Function(FhirUri? system, Code? code, num value)? notEqual,
+    TResult? Function(FhirUri? system, Code? code, num value)? greaterThan,
+    TResult? Function(FhirUri? system, Code? code, num value)? lessThan,
+    TResult? Function(FhirUri? system, Code? code, num value)? greaterOrEqual,
+    TResult? Function(FhirUri? system, Code? code, num value)? lessOrEqual,
+    TResult? Function(FhirUri? system, Code? code, num value)? startsAfter,
+    TResult? Function(FhirUri? system, Code? code, num value)? endsBefore,
+    TResult? Function(FhirUri? system, Code? code, num value)? approximately,
+    TResult? Function(bool missing)? missing,
   }) {
     return lessOrEqual?.call(system, code, value);
   }
@@ -1455,21 +1494,16 @@ class _$_SearchParamQuantityLessOrEqual
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? equal,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? notEqual,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterThan,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? lessThan,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterOrEqual,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        lessOrEqual,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        startsAfter,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? endsBefore,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        approximately,
-    TResult Function()? missing,
+    TResult Function(FhirUri? system, Code? code, num value)? equal,
+    TResult Function(FhirUri? system, Code? code, num value)? notEqual,
+    TResult Function(FhirUri? system, Code? code, num value)? greaterThan,
+    TResult Function(FhirUri? system, Code? code, num value)? lessThan,
+    TResult Function(FhirUri? system, Code? code, num value)? greaterOrEqual,
+    TResult Function(FhirUri? system, Code? code, num value)? lessOrEqual,
+    TResult Function(FhirUri? system, Code? code, num value)? startsAfter,
+    TResult Function(FhirUri? system, Code? code, num value)? endsBefore,
+    TResult Function(FhirUri? system, Code? code, num value)? approximately,
+    TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
     if (lessOrEqual != null) {
@@ -1537,18 +1571,28 @@ class _$_SearchParamQuantityLessOrEqual
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_SearchParamQuantityLessOrEqualToJson(
+      this,
+    );
+  }
 }
 
 abstract class _SearchParamQuantityLessOrEqual extends SearchParamQuantity {
   const factory _SearchParamQuantityLessOrEqual(
       {final FhirUri? system,
       final Code? code,
-      required final FhirNumber value}) = _$_SearchParamQuantityLessOrEqual;
+      required final num value}) = _$_SearchParamQuantityLessOrEqual;
   const _SearchParamQuantityLessOrEqual._() : super._();
+
+  factory _SearchParamQuantityLessOrEqual.fromJson(Map<String, dynamic> json) =
+      _$_SearchParamQuantityLessOrEqual.fromJson;
 
   FhirUri? get system;
   Code? get code;
-  FhirNumber get value;
+  num get value;
   @JsonKey(ignore: true)
   _$$_SearchParamQuantityLessOrEqualCopyWith<_$_SearchParamQuantityLessOrEqual>
       get copyWith => throw _privateConstructorUsedError;
@@ -1561,7 +1605,7 @@ abstract class _$$_SearchParamQuantityStartsAfterCopyWith<$Res> {
           $Res Function(_$_SearchParamQuantityStartsAfter) then) =
       __$$_SearchParamQuantityStartsAfterCopyWithImpl<$Res>;
   @useResult
-  $Res call({FhirUri? system, Code? code, FhirNumber value});
+  $Res call({FhirUri? system, Code? code, num value});
 }
 
 /// @nodoc
@@ -1593,25 +1637,33 @@ class __$$_SearchParamQuantityStartsAfterCopyWithImpl<$Res>
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as FhirNumber,
+              as num,
     ));
   }
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_SearchParamQuantityStartsAfter
     extends _SearchParamQuantityStartsAfter {
   const _$_SearchParamQuantityStartsAfter(
-      {this.system, this.code, required this.value})
-      : super._();
+      {this.system, this.code, required this.value, final String? $type})
+      : $type = $type ?? 'startsAfter',
+        super._();
+
+  factory _$_SearchParamQuantityStartsAfter.fromJson(
+          Map<String, dynamic> json) =>
+      _$$_SearchParamQuantityStartsAfterFromJson(json);
 
   @override
   final FhirUri? system;
   @override
   final Code? code;
   @override
-  final FhirNumber value;
+  final num value;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -1628,6 +1680,7 @@ class _$_SearchParamQuantityStartsAfter
             (identical(other.value, value) || other.value == value));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, system, code, value);
 
@@ -1641,25 +1694,22 @@ class _$_SearchParamQuantityStartsAfter
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
-        equal,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
-        notEqual,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value) equal,
+    required TResult Function(FhirUri? system, Code? code, num value) notEqual,
+    required TResult Function(FhirUri? system, Code? code, num value)
         greaterThan,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
-        lessThan,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value) lessThan,
+    required TResult Function(FhirUri? system, Code? code, num value)
         greaterOrEqual,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         lessOrEqual,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         startsAfter,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         endsBefore,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         approximately,
-    required TResult Function() missing,
+    required TResult Function(bool missing) missing,
   }) {
     return startsAfter(system, code, value);
   }
@@ -1667,22 +1717,16 @@ class _$_SearchParamQuantityStartsAfter
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)? equal,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)? notEqual,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterThan,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)? lessThan,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterOrEqual,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        lessOrEqual,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        startsAfter,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        endsBefore,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        approximately,
-    TResult? Function()? missing,
+    TResult? Function(FhirUri? system, Code? code, num value)? equal,
+    TResult? Function(FhirUri? system, Code? code, num value)? notEqual,
+    TResult? Function(FhirUri? system, Code? code, num value)? greaterThan,
+    TResult? Function(FhirUri? system, Code? code, num value)? lessThan,
+    TResult? Function(FhirUri? system, Code? code, num value)? greaterOrEqual,
+    TResult? Function(FhirUri? system, Code? code, num value)? lessOrEqual,
+    TResult? Function(FhirUri? system, Code? code, num value)? startsAfter,
+    TResult? Function(FhirUri? system, Code? code, num value)? endsBefore,
+    TResult? Function(FhirUri? system, Code? code, num value)? approximately,
+    TResult? Function(bool missing)? missing,
   }) {
     return startsAfter?.call(system, code, value);
   }
@@ -1690,21 +1734,16 @@ class _$_SearchParamQuantityStartsAfter
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? equal,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? notEqual,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterThan,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? lessThan,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterOrEqual,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        lessOrEqual,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        startsAfter,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? endsBefore,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        approximately,
-    TResult Function()? missing,
+    TResult Function(FhirUri? system, Code? code, num value)? equal,
+    TResult Function(FhirUri? system, Code? code, num value)? notEqual,
+    TResult Function(FhirUri? system, Code? code, num value)? greaterThan,
+    TResult Function(FhirUri? system, Code? code, num value)? lessThan,
+    TResult Function(FhirUri? system, Code? code, num value)? greaterOrEqual,
+    TResult Function(FhirUri? system, Code? code, num value)? lessOrEqual,
+    TResult Function(FhirUri? system, Code? code, num value)? startsAfter,
+    TResult Function(FhirUri? system, Code? code, num value)? endsBefore,
+    TResult Function(FhirUri? system, Code? code, num value)? approximately,
+    TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
     if (startsAfter != null) {
@@ -1772,18 +1811,28 @@ class _$_SearchParamQuantityStartsAfter
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_SearchParamQuantityStartsAfterToJson(
+      this,
+    );
+  }
 }
 
 abstract class _SearchParamQuantityStartsAfter extends SearchParamQuantity {
   const factory _SearchParamQuantityStartsAfter(
       {final FhirUri? system,
       final Code? code,
-      required final FhirNumber value}) = _$_SearchParamQuantityStartsAfter;
+      required final num value}) = _$_SearchParamQuantityStartsAfter;
   const _SearchParamQuantityStartsAfter._() : super._();
+
+  factory _SearchParamQuantityStartsAfter.fromJson(Map<String, dynamic> json) =
+      _$_SearchParamQuantityStartsAfter.fromJson;
 
   FhirUri? get system;
   Code? get code;
-  FhirNumber get value;
+  num get value;
   @JsonKey(ignore: true)
   _$$_SearchParamQuantityStartsAfterCopyWith<_$_SearchParamQuantityStartsAfter>
       get copyWith => throw _privateConstructorUsedError;
@@ -1796,7 +1845,7 @@ abstract class _$$_SearchParamQuantityEndsBeforeCopyWith<$Res> {
           $Res Function(_$_SearchParamQuantityEndsBefore) then) =
       __$$_SearchParamQuantityEndsBeforeCopyWithImpl<$Res>;
   @useResult
-  $Res call({FhirUri? system, Code? code, FhirNumber value});
+  $Res call({FhirUri? system, Code? code, num value});
 }
 
 /// @nodoc
@@ -1828,24 +1877,32 @@ class __$$_SearchParamQuantityEndsBeforeCopyWithImpl<$Res>
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as FhirNumber,
+              as num,
     ));
   }
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_SearchParamQuantityEndsBefore extends _SearchParamQuantityEndsBefore {
   const _$_SearchParamQuantityEndsBefore(
-      {this.system, this.code, required this.value})
-      : super._();
+      {this.system, this.code, required this.value, final String? $type})
+      : $type = $type ?? 'endsBefore',
+        super._();
+
+  factory _$_SearchParamQuantityEndsBefore.fromJson(
+          Map<String, dynamic> json) =>
+      _$$_SearchParamQuantityEndsBeforeFromJson(json);
 
   @override
   final FhirUri? system;
   @override
   final Code? code;
   @override
-  final FhirNumber value;
+  final num value;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -1862,6 +1919,7 @@ class _$_SearchParamQuantityEndsBefore extends _SearchParamQuantityEndsBefore {
             (identical(other.value, value) || other.value == value));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, system, code, value);
 
@@ -1875,25 +1933,22 @@ class _$_SearchParamQuantityEndsBefore extends _SearchParamQuantityEndsBefore {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
-        equal,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
-        notEqual,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value) equal,
+    required TResult Function(FhirUri? system, Code? code, num value) notEqual,
+    required TResult Function(FhirUri? system, Code? code, num value)
         greaterThan,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
-        lessThan,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value) lessThan,
+    required TResult Function(FhirUri? system, Code? code, num value)
         greaterOrEqual,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         lessOrEqual,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         startsAfter,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         endsBefore,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         approximately,
-    required TResult Function() missing,
+    required TResult Function(bool missing) missing,
   }) {
     return endsBefore(system, code, value);
   }
@@ -1901,22 +1956,16 @@ class _$_SearchParamQuantityEndsBefore extends _SearchParamQuantityEndsBefore {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)? equal,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)? notEqual,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterThan,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)? lessThan,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterOrEqual,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        lessOrEqual,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        startsAfter,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        endsBefore,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        approximately,
-    TResult? Function()? missing,
+    TResult? Function(FhirUri? system, Code? code, num value)? equal,
+    TResult? Function(FhirUri? system, Code? code, num value)? notEqual,
+    TResult? Function(FhirUri? system, Code? code, num value)? greaterThan,
+    TResult? Function(FhirUri? system, Code? code, num value)? lessThan,
+    TResult? Function(FhirUri? system, Code? code, num value)? greaterOrEqual,
+    TResult? Function(FhirUri? system, Code? code, num value)? lessOrEqual,
+    TResult? Function(FhirUri? system, Code? code, num value)? startsAfter,
+    TResult? Function(FhirUri? system, Code? code, num value)? endsBefore,
+    TResult? Function(FhirUri? system, Code? code, num value)? approximately,
+    TResult? Function(bool missing)? missing,
   }) {
     return endsBefore?.call(system, code, value);
   }
@@ -1924,21 +1973,16 @@ class _$_SearchParamQuantityEndsBefore extends _SearchParamQuantityEndsBefore {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? equal,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? notEqual,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterThan,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? lessThan,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterOrEqual,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        lessOrEqual,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        startsAfter,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? endsBefore,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        approximately,
-    TResult Function()? missing,
+    TResult Function(FhirUri? system, Code? code, num value)? equal,
+    TResult Function(FhirUri? system, Code? code, num value)? notEqual,
+    TResult Function(FhirUri? system, Code? code, num value)? greaterThan,
+    TResult Function(FhirUri? system, Code? code, num value)? lessThan,
+    TResult Function(FhirUri? system, Code? code, num value)? greaterOrEqual,
+    TResult Function(FhirUri? system, Code? code, num value)? lessOrEqual,
+    TResult Function(FhirUri? system, Code? code, num value)? startsAfter,
+    TResult Function(FhirUri? system, Code? code, num value)? endsBefore,
+    TResult Function(FhirUri? system, Code? code, num value)? approximately,
+    TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
     if (endsBefore != null) {
@@ -2006,18 +2050,28 @@ class _$_SearchParamQuantityEndsBefore extends _SearchParamQuantityEndsBefore {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_SearchParamQuantityEndsBeforeToJson(
+      this,
+    );
+  }
 }
 
 abstract class _SearchParamQuantityEndsBefore extends SearchParamQuantity {
   const factory _SearchParamQuantityEndsBefore(
       {final FhirUri? system,
       final Code? code,
-      required final FhirNumber value}) = _$_SearchParamQuantityEndsBefore;
+      required final num value}) = _$_SearchParamQuantityEndsBefore;
   const _SearchParamQuantityEndsBefore._() : super._();
+
+  factory _SearchParamQuantityEndsBefore.fromJson(Map<String, dynamic> json) =
+      _$_SearchParamQuantityEndsBefore.fromJson;
 
   FhirUri? get system;
   Code? get code;
-  FhirNumber get value;
+  num get value;
   @JsonKey(ignore: true)
   _$$_SearchParamQuantityEndsBeforeCopyWith<_$_SearchParamQuantityEndsBefore>
       get copyWith => throw _privateConstructorUsedError;
@@ -2030,7 +2084,7 @@ abstract class _$$_SearchParamQuantityApproximatelyCopyWith<$Res> {
           $Res Function(_$_SearchParamQuantityApproximately) then) =
       __$$_SearchParamQuantityApproximatelyCopyWithImpl<$Res>;
   @useResult
-  $Res call({FhirUri? system, Code? code, FhirNumber value});
+  $Res call({FhirUri? system, Code? code, num value});
 }
 
 /// @nodoc
@@ -2062,25 +2116,33 @@ class __$$_SearchParamQuantityApproximatelyCopyWithImpl<$Res>
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as FhirNumber,
+              as num,
     ));
   }
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_SearchParamQuantityApproximately
     extends _SearchParamQuantityApproximately {
   const _$_SearchParamQuantityApproximately(
-      {this.system, this.code, required this.value})
-      : super._();
+      {this.system, this.code, required this.value, final String? $type})
+      : $type = $type ?? 'approximately',
+        super._();
+
+  factory _$_SearchParamQuantityApproximately.fromJson(
+          Map<String, dynamic> json) =>
+      _$$_SearchParamQuantityApproximatelyFromJson(json);
 
   @override
   final FhirUri? system;
   @override
   final Code? code;
   @override
-  final FhirNumber value;
+  final num value;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
@@ -2097,6 +2159,7 @@ class _$_SearchParamQuantityApproximately
             (identical(other.value, value) || other.value == value));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, system, code, value);
 
@@ -2111,25 +2174,22 @@ class _$_SearchParamQuantityApproximately
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
-        equal,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
-        notEqual,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value) equal,
+    required TResult Function(FhirUri? system, Code? code, num value) notEqual,
+    required TResult Function(FhirUri? system, Code? code, num value)
         greaterThan,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
-        lessThan,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value) lessThan,
+    required TResult Function(FhirUri? system, Code? code, num value)
         greaterOrEqual,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         lessOrEqual,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         startsAfter,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         endsBefore,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         approximately,
-    required TResult Function() missing,
+    required TResult Function(bool missing) missing,
   }) {
     return approximately(system, code, value);
   }
@@ -2137,22 +2197,16 @@ class _$_SearchParamQuantityApproximately
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)? equal,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)? notEqual,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterThan,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)? lessThan,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterOrEqual,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        lessOrEqual,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        startsAfter,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        endsBefore,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        approximately,
-    TResult? Function()? missing,
+    TResult? Function(FhirUri? system, Code? code, num value)? equal,
+    TResult? Function(FhirUri? system, Code? code, num value)? notEqual,
+    TResult? Function(FhirUri? system, Code? code, num value)? greaterThan,
+    TResult? Function(FhirUri? system, Code? code, num value)? lessThan,
+    TResult? Function(FhirUri? system, Code? code, num value)? greaterOrEqual,
+    TResult? Function(FhirUri? system, Code? code, num value)? lessOrEqual,
+    TResult? Function(FhirUri? system, Code? code, num value)? startsAfter,
+    TResult? Function(FhirUri? system, Code? code, num value)? endsBefore,
+    TResult? Function(FhirUri? system, Code? code, num value)? approximately,
+    TResult? Function(bool missing)? missing,
   }) {
     return approximately?.call(system, code, value);
   }
@@ -2160,21 +2214,16 @@ class _$_SearchParamQuantityApproximately
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? equal,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? notEqual,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterThan,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? lessThan,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterOrEqual,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        lessOrEqual,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        startsAfter,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? endsBefore,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        approximately,
-    TResult Function()? missing,
+    TResult Function(FhirUri? system, Code? code, num value)? equal,
+    TResult Function(FhirUri? system, Code? code, num value)? notEqual,
+    TResult Function(FhirUri? system, Code? code, num value)? greaterThan,
+    TResult Function(FhirUri? system, Code? code, num value)? lessThan,
+    TResult Function(FhirUri? system, Code? code, num value)? greaterOrEqual,
+    TResult Function(FhirUri? system, Code? code, num value)? lessOrEqual,
+    TResult Function(FhirUri? system, Code? code, num value)? startsAfter,
+    TResult Function(FhirUri? system, Code? code, num value)? endsBefore,
+    TResult Function(FhirUri? system, Code? code, num value)? approximately,
+    TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
     if (approximately != null) {
@@ -2242,18 +2291,28 @@ class _$_SearchParamQuantityApproximately
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_SearchParamQuantityApproximatelyToJson(
+      this,
+    );
+  }
 }
 
 abstract class _SearchParamQuantityApproximately extends SearchParamQuantity {
   const factory _SearchParamQuantityApproximately(
       {final FhirUri? system,
       final Code? code,
-      required final FhirNumber value}) = _$_SearchParamQuantityApproximately;
+      required final num value}) = _$_SearchParamQuantityApproximately;
   const _SearchParamQuantityApproximately._() : super._();
+
+  factory _SearchParamQuantityApproximately.fromJson(
+      Map<String, dynamic> json) = _$_SearchParamQuantityApproximately.fromJson;
 
   FhirUri? get system;
   Code? get code;
-  FhirNumber get value;
+  num get value;
   @JsonKey(ignore: true)
   _$$_SearchParamQuantityApproximatelyCopyWith<
           _$_SearchParamQuantityApproximately>
@@ -2266,6 +2325,8 @@ abstract class _$$_SearchParamQuantityMissingCopyWith<$Res> {
           _$_SearchParamQuantityMissing value,
           $Res Function(_$_SearchParamQuantityMissing) then) =
       __$$_SearchParamQuantityMissingCopyWithImpl<$Res>;
+  @useResult
+  $Res call({bool missing});
 }
 
 /// @nodoc
@@ -2277,99 +2338,118 @@ class __$$_SearchParamQuantityMissingCopyWithImpl<$Res>
       _$_SearchParamQuantityMissing _value,
       $Res Function(_$_SearchParamQuantityMissing) _then)
       : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? missing = null,
+  }) {
+    return _then(_$_SearchParamQuantityMissing(
+      null == missing
+          ? _value.missing
+          : missing // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_SearchParamQuantityMissing extends _SearchParamQuantityMissing {
-  const _$_SearchParamQuantityMissing() : super._();
+  const _$_SearchParamQuantityMissing(this.missing, {final String? $type})
+      : $type = $type ?? 'missing',
+        super._();
+
+  factory _$_SearchParamQuantityMissing.fromJson(Map<String, dynamic> json) =>
+      _$$_SearchParamQuantityMissingFromJson(json);
+
+  @override
+  final bool missing;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
 
   @override
   String toString() {
-    return 'SearchParamQuantity.missing()';
+    return 'SearchParamQuantity.missing(missing: $missing)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SearchParamQuantityMissing);
+            other is _$_SearchParamQuantityMissing &&
+            (identical(other.missing, missing) || other.missing == missing));
   }
 
+  @JsonKey(ignore: true)
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(runtimeType, missing);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_SearchParamQuantityMissingCopyWith<_$_SearchParamQuantityMissing>
+      get copyWith => __$$_SearchParamQuantityMissingCopyWithImpl<
+          _$_SearchParamQuantityMissing>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
-        equal,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
-        notEqual,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value) equal,
+    required TResult Function(FhirUri? system, Code? code, num value) notEqual,
+    required TResult Function(FhirUri? system, Code? code, num value)
         greaterThan,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
-        lessThan,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value) lessThan,
+    required TResult Function(FhirUri? system, Code? code, num value)
         greaterOrEqual,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         lessOrEqual,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         startsAfter,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         endsBefore,
-    required TResult Function(FhirUri? system, Code? code, FhirNumber value)
+    required TResult Function(FhirUri? system, Code? code, num value)
         approximately,
-    required TResult Function() missing,
+    required TResult Function(bool missing) missing,
   }) {
-    return missing();
+    return missing(this.missing);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)? equal,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)? notEqual,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterThan,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)? lessThan,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterOrEqual,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        lessOrEqual,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        startsAfter,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        endsBefore,
-    TResult? Function(FhirUri? system, Code? code, FhirNumber value)?
-        approximately,
-    TResult? Function()? missing,
+    TResult? Function(FhirUri? system, Code? code, num value)? equal,
+    TResult? Function(FhirUri? system, Code? code, num value)? notEqual,
+    TResult? Function(FhirUri? system, Code? code, num value)? greaterThan,
+    TResult? Function(FhirUri? system, Code? code, num value)? lessThan,
+    TResult? Function(FhirUri? system, Code? code, num value)? greaterOrEqual,
+    TResult? Function(FhirUri? system, Code? code, num value)? lessOrEqual,
+    TResult? Function(FhirUri? system, Code? code, num value)? startsAfter,
+    TResult? Function(FhirUri? system, Code? code, num value)? endsBefore,
+    TResult? Function(FhirUri? system, Code? code, num value)? approximately,
+    TResult? Function(bool missing)? missing,
   }) {
-    return missing?.call();
+    return missing?.call(this.missing);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? equal,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? notEqual,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterThan,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? lessThan,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        greaterOrEqual,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        lessOrEqual,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        startsAfter,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)? endsBefore,
-    TResult Function(FhirUri? system, Code? code, FhirNumber value)?
-        approximately,
-    TResult Function()? missing,
+    TResult Function(FhirUri? system, Code? code, num value)? equal,
+    TResult Function(FhirUri? system, Code? code, num value)? notEqual,
+    TResult Function(FhirUri? system, Code? code, num value)? greaterThan,
+    TResult Function(FhirUri? system, Code? code, num value)? lessThan,
+    TResult Function(FhirUri? system, Code? code, num value)? greaterOrEqual,
+    TResult Function(FhirUri? system, Code? code, num value)? lessOrEqual,
+    TResult Function(FhirUri? system, Code? code, num value)? startsAfter,
+    TResult Function(FhirUri? system, Code? code, num value)? endsBefore,
+    TResult Function(FhirUri? system, Code? code, num value)? approximately,
+    TResult Function(bool missing)? missing,
     required TResult orElse(),
   }) {
     if (missing != null) {
-      return missing();
+      return missing(this.missing);
     }
     return orElse();
   }
@@ -2433,9 +2513,25 @@ class _$_SearchParamQuantityMissing extends _SearchParamQuantityMissing {
     }
     return orElse();
   }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_SearchParamQuantityMissingToJson(
+      this,
+    );
+  }
 }
 
 abstract class _SearchParamQuantityMissing extends SearchParamQuantity {
-  const factory _SearchParamQuantityMissing() = _$_SearchParamQuantityMissing;
+  const factory _SearchParamQuantityMissing(final bool missing) =
+      _$_SearchParamQuantityMissing;
   const _SearchParamQuantityMissing._() : super._();
+
+  factory _SearchParamQuantityMissing.fromJson(Map<String, dynamic> json) =
+      _$_SearchParamQuantityMissing.fromJson;
+
+  bool get missing;
+  @JsonKey(ignore: true)
+  _$$_SearchParamQuantityMissingCopyWith<_$_SearchParamQuantityMissing>
+      get copyWith => throw _privateConstructorUsedError;
 }
