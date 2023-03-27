@@ -4,7 +4,6 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'search_param.dart';
 
 part 'search_param_quantity.freezed.dart';
-part 'search_param_quantity.g.dart';
 
 @freezed
 class SearchParamQuantity with SearchParam, _$SearchParamQuantity {
@@ -110,10 +109,6 @@ class SearchParamQuantity with SearchParam, _$SearchParamQuantity {
       );
   const factory SearchParamQuantity.missing(bool missing) =
       _SearchParamQuantityMissing;
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SearchParamQuantity.fromJson(Map<String, dynamic> json) =>
-      _$SearchParamQuantityFromJson(json);
 
   String systemOrCode(FhirUri? system, Code? code) => system == null
       ? code == null

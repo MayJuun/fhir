@@ -64,41 +64,68 @@ Future<void> main() async {
     }
   }
 
-  /// import and whatnot at the top of our file
-  var fileString =
-      '// ignore_for_file: invalid_annotation_target, camel_case_types\n\n\n';
-  fileString += "import 'package:freezed_annotation/freezed_annotation.dart';";
-  fileString += "\nimport 'search_params.dart';\n\n";
-  fileString += "part 'resource_search_params.freezed.dart';\n";
-  fileString += "part 'resource_search_params.g.dart';\n\n";
+  final fileMap = <String, String>{};
+  for (final key in secondaryCategory.keys) {
+    /// import and whatnot at the top of our file
+    fileMap[key] =
+        '// ignore_for_file: invalid_annotation_target, camel_case_types\n\n\n';
+    fileMap[key] = fileMap[key]! +
+        "import 'package:freezed_annotation/freezed_annotation.dart';";
+    fileMap[key] = fileMap[key]! + "\nimport '../../search_params.dart';\n\n";
+    fileMap[key] =
+        fileMap[key]! + "part '${key}_search_params.freezed.dart';\n";
+  }
 
   /// go through the param map and add the text for each class
   paramMap.forEach((key, value) {
     if (key != 'Resource' && key != 'DomainResource') {
       final tempKey = '${key}SearchParams';
-      fileString += '@freezed\nclass $tempKey with _\$$tempKey{\n';
-      fileString += 'const $tempKey._();\nconst factory $tempKey({';
+      print(key);
+      final index =
+          primaryCategory.keys.toList().indexWhere((element) => element == key);
+      final fileName = primaryCategory.values.elementAt(index);
+      fileMap[fileName] =
+          fileMap[fileName]! + '@freezed\nclass $tempKey with _\$$tempKey{\n';
+      fileMap[fileName] =
+          fileMap[fileName]! + 'const $tempKey._();\nconst factory $tempKey({';
+      final fieldCodeList = <String>[];
+      final trueCodeList = <String>[];
       for (var element in value) {
-        fileString += '$element,\n';
+        fileMap[fileName] = fileMap[fileName]! + '$element,\n';
+        fieldCodeList.add(element.code);
+        trueCodeList.add(element.originalCode);
       }
-      fileString += '}) = _$tempKey;\n\n';
+      fileMap[fileName] = fileMap[fileName]! + '}) = _$tempKey;\n\n';
 
-      fileString +=
+      fileMap[fileName] = fileMap[fileName]! +
           '/// Factory constructor, accepts [Map<String, dynamic>] as an argument\n';
-      fileString +=
-          'factory $tempKey.fromJson(Map<String, dynamic> json) => _\$${tempKey}FromJson(json);\n}\n\n';
+
+      fileMap[fileName] = fileMap[fileName]! +
+          'List<String> toRequest() {\nfinal returnStrings = <String>[];';
+
+      for (var i = 0; i < fieldCodeList.length; i++) {
+        fileMap[fileName] =
+            fileMap[fileName]! + 'if(${fieldCodeList[i]}.isNotEmpty){\n';
+        fileMap[fileName] = fileMap[fileName]! +
+            "${fieldCodeList[i]}.forEach((element) => returnStrings.add('${trueCodeList[i]}\${element.toRequest()}'));}";
+      }
+      fileMap[fileName] = fileMap[fileName]! + 'return returnStrings; }\n}\n\n';
     }
   });
 
   /// Some strings need replacement
   for (final key in replaceWith.keys) {
-    fileString = fileString.replaceAll(key, replaceWith[key]!);
+    for (final k in fileMap.keys) {
+      fileMap[k] = fileMap[k]!.replaceAll(key, replaceWith[key]!);
+    }
   }
 
   /// Would like to cleanup some of the comments, although this doesn't work
   /// currently, it doesn't effect functionality
   for (final key in replaceWithRegex.keys) {
-    fileString = fileString.replaceAll(RegExp(key), replaceWithRegex[key]!);
+    for (final k in fileMap.keys) {
+      fileMap[k] = fileMap[k]!.replaceAll(key, replaceWith[key]!);
+    }
   }
 
   /// Create the csv entries for a sql table to easily find search terms when
@@ -125,38 +152,41 @@ Future<void> main() async {
 
   await File('sqlcsv.csv').writeAsString(sqlStringCsv);
   // await File('searchParamResources.txt').writeAsString(fileString);
-  // await File('resource_search_params.dart').writeAsString(fileString);
+  for (final key in fileMap.keys) {
+    await File('resources/${secondaryCategory[key]}/$key.dart')
+        .writeAsString(fileMap[key]!);
+  }
 }
 
 class ParameterGenerator {
   ParameterGenerator(this.resourceString, SearchParameter searchParameter) {
-    final tempCode = searchParameter.code;
+    originalCode = searchParameter.code.toString();
     type = '@Default([]) ';
-    if (tempCode.toString().contains('-')) {
-      type += " @JsonKey(name: '$tempCode') ";
+    if (originalCode.toString().contains('-')) {
+      type += " @JsonKey(name: '$originalCode') ";
       type += '${getListTypeFromType(searchParameter.type!)} ';
-      final valueList = tempCode.toString().split('-');
+      final valueList = originalCode.toString().split('-');
       code = valueList.removeAt(0);
       for (final val in valueList) {
         code += '${val.substring(0, 1).toUpperCase()}${val.substring(1)}';
       }
-    } else if (tempCode.toString().startsWith('_')) {
-      type += " @JsonKey(name: '$tempCode') ";
+    } else if (originalCode.toString().startsWith('_')) {
+      type += " @JsonKey(name: '$originalCode') ";
       type += '${getListTypeFromType(searchParameter.type!)} ';
       if (searchParameter.base != null &&
           searchParameter.base!.length == 1 &&
           searchParameter.base!.first.toString() == 'Resource') {
         code =
-            'resource${tempCode.toString().substring(1, 2).toUpperCase()}${tempCode.toString().substring(2)}';
+            'resource${originalCode.toString().substring(1, 2).toUpperCase()}${originalCode.toString().substring(2)}';
       } else {
-        code = tempCode.toString().substring(1);
+        code = originalCode.toString().substring(1);
       }
-    } else if (reserved.contains(tempCode.toString())) {
-      type += " @JsonKey(name: '$tempCode') ";
+    } else if (reserved.contains(originalCode.toString())) {
+      type += " @JsonKey(name: '$originalCode') ";
       type += '${getListTypeFromType(searchParameter.type!)} ';
-      code = '${tempCode}_';
+      code = '${originalCode}_';
     } else {
-      code = tempCode.toString();
+      code = originalCode.toString();
       type += getListTypeFromType(searchParameter.type!);
     }
     comment = '/// [$code] ${searchParameter.description}';
@@ -170,6 +200,7 @@ class ParameterGenerator {
   late String comment;
   late String type;
   late String code;
+  late String originalCode;
 }
 
 String getListTypeFromType(Code type) {
@@ -339,3 +370,174 @@ Requires the near-distance parameter to be provided also''': '''
 /// Requires the near-distance parameter to be provided also'''
 };
 const replaceWithRegex = {};
+
+const primaryCategory = {
+  'CapabilityStatement': 'conformance',
+  'StructureDefinition': 'conformance',
+  'ImplementationGuide': 'conformance',
+  'SearchParameter': 'conformance',
+  'MessageDefinition': 'conformance',
+  'OperationDefinition': 'conformance',
+  'CompartmentDefinition': 'conformance',
+  'StructureMap': 'conformance',
+  'GraphDefinition': 'conformance',
+  'ExampleScenario': 'conformance',
+  'CodeSystem': 'terminology',
+  'ValueSet': 'terminology',
+  'ConceptMap': 'terminology',
+  'NamingSystem': 'terminology',
+  'TerminologyCapabilities': 'terminology',
+  'Provenance': 'security',
+  'AuditEvent': 'security',
+  'Consent': 'security',
+  'Composition': 'documents',
+  'DocumentManifest': 'documents',
+  'DocumentReference': 'documents',
+  'CatalogEntry': 'documents',
+  'Basic': 'other',
+  'Binary': 'other',
+  'Bundle': 'other',
+  'Linkage': 'other',
+  'MessageHeader': 'other',
+  'OperationOutcome': 'other',
+  'Parameters': 'other',
+  'Subscription': 'other',
+  'SubscriptionStatus': 'other',
+  'SubscriptionTopic': 'other',
+  'Patient': 'individuals',
+  'Practitioner': 'individuals',
+  'PractitionerRole': 'individuals',
+  'RelatedPerson': 'individuals',
+  'Person': 'individuals',
+  'Group': 'individuals',
+  'Organization': 'entities1',
+  'OrganizationAffiliation': 'entities1',
+  'HealthcareService': 'entities1',
+  'Endpoint': 'entities1',
+  'Location': 'entities1',
+  'Substance': 'entities2',
+  'BiologicallyDerivedProduct': 'entities2',
+  'Device': 'entities2',
+  'DeviceMetric': 'entities2',
+  'NutritionProduct': 'entities2',
+  'Task': 'workflow',
+  'Appointment': 'workflow',
+  'AppointmentResponse': 'workflow',
+  'Schedule': 'workflow',
+  'Slot': 'workflow',
+  'VerificationResult': 'workflow',
+  'Encounter': 'management',
+  'EpisodeOfCare': 'management',
+  'Flag': 'management',
+  'List': 'management',
+  'Library': 'management',
+  'AllergyIntolerance': 'summary',
+  'AdverseEvent': 'summary',
+  'Condition': 'summary',
+  'Procedure': 'summary',
+  'FamilyMemberHistory': 'summary',
+  'ClinicalImpression': 'summary',
+  'DetectedIssue': 'summary',
+  'Observation': 'diagnostics',
+  'Media': 'diagnostics',
+  'DiagnosticReport': 'diagnostics',
+  'Specimen': 'diagnostics',
+  'BodyStructure': 'diagnostics',
+  'ImagingStudy': 'diagnostics',
+  'QuestionnaireResponse': 'diagnostics',
+  'MolecularSequence': 'diagnostics',
+  'MedicationRequest': 'medications',
+  'MedicationAdministration': 'medications',
+  'MedicationDispense': 'medications',
+  'MedicationStatement': 'medications',
+  'Medication': 'medications',
+  'MedicationKnowledge': 'medications',
+  'Immunization': 'medications',
+  'ImmunizationEvaluation': 'medications',
+  'ImmunizationRecommendation': 'medications',
+  'CarePlan': 'care_provision',
+  'CareTeam': 'care_provision',
+  'Goal': 'care_provision',
+  'ServiceRequest': 'care_provision',
+  'NutritionOrder': 'care_provision',
+  'VisionPrescription': 'care_provision',
+  'RiskAssessment': 'care_provision',
+  'RequestGroup': 'care_provision',
+  'Communication': 'request_and_response',
+  'CommunicationRequest': 'request_and_response',
+  'DeviceRequest': 'request_and_response',
+  'DeviceUseStatement': 'request_and_response',
+  'GuidanceResponse': 'request_and_response',
+  'SupplyRequest': 'request_and_response',
+  'SupplyDelivery': 'request_and_response',
+  'Coverage': 'support',
+  'CoverageEligibilityRequest': 'support',
+  'CoverageEligibilityResponse': 'support',
+  'EnrollmentRequest': 'support',
+  'EnrollmentResponse': 'support',
+  'Claim': 'billing',
+  'ClaimResponse': 'billing',
+  'Invoice': 'billing',
+  'PaymentNotice': 'payment',
+  'PaymentReconciliation': 'payment',
+  'Account': 'general',
+  'ChargeItem': 'general',
+  'ChargeItemDefinition': 'general',
+  'Contract': 'general',
+  'ExplanationOfBenefit': 'general',
+  'InsurancePlan': 'general',
+  'ResearchStudy': 'public_health_and_research',
+  'ResearchSubject': 'public_health_and_research',
+  'ResearchDefinition': 'public_health_and_research',
+  'ResearchElementDefinition': 'public_health_and_research',
+  'ActivityDefinition': 'definitional_artifacts',
+  'DeviceDefinition': 'definitional_artifacts',
+  'EventDefinition': 'definitional_artifacts',
+  'ObservationDefinition': 'definitional_artifacts',
+  'PlanDefinition': 'definitional_artifacts',
+  'Questionnaire': 'definitional_artifacts',
+  'SpecimenDefinition': 'definitional_artifacts',
+  'Citation': 'evidence_based_medicine',
+  'Evidence': 'evidence_based_medicine',
+  'EvidenceReport': 'evidence_based_medicine',
+  'EvidenceVariable': 'evidence_based_medicine',
+  'Measure': 'quality_reporting_and_testing',
+  'MeasureReport': 'quality_reporting_and_testing',
+  'TestScript': 'quality_reporting_and_testing',
+  'TestReport': 'quality_reporting_and_testing',
+  'MedicinalProductDefinition': 'medication_definition',
+  'PackagedProductDefinition': 'medication_definition',
+  'AdministrableProductDefinition': 'medication_definition',
+  'ManufacturedItemDefinition': 'medication_definition',
+  'Ingredient': 'medication_definition',
+  'ClinicalUseDefinition': 'medication_definition',
+  'RegulatedAuthorization': 'medication_definition',
+  'SubstanceDefinition': 'medication_definition',
+};
+
+const secondaryCategory = {
+  'conformance': 'foundation',
+  'terminology': 'foundation',
+  'security': 'foundation',
+  'documents': 'foundation',
+  'other': 'foundation',
+  'individuals': 'base',
+  'entities1': 'base',
+  'entities2': 'base',
+  'workflow': 'base',
+  'management': 'base',
+  'summary': 'clinical',
+  'diagnostics': 'clinical',
+  'medications': 'clinical',
+  'care_provision': 'clinical',
+  'request_and_response': 'clinical',
+  'support': 'financial',
+  'billing': 'financial',
+  'payment': 'financial',
+  'general': 'financial',
+  'public_health_and_research': 'specialized',
+  'definitional_artifacts': 'specialized',
+  'evidence_based_medicine': 'specialized',
+  'quality_reporting_and_testing': 'specialized',
+  'medication_definition': 'specialized',
+};

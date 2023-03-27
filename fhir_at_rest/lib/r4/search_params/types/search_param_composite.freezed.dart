@@ -14,10 +14,6 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-SearchParamComposite _$SearchParamCompositeFromJson(Map<String, dynamic> json) {
-  return _SearchParamCompositeMissing.fromJson(json);
-}
-
 /// @nodoc
 mixin _$SearchParamComposite {
   bool get missing => throw _privateConstructorUsedError;
@@ -53,7 +49,7 @@ mixin _$SearchParamComposite {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $SearchParamCompositeCopyWith<SearchParamComposite> get copyWith =>
       throw _privateConstructorUsedError;
@@ -130,12 +126,9 @@ class __$$_SearchParamCompositeMissingCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
 class _$_SearchParamCompositeMissing extends _SearchParamCompositeMissing {
   const _$_SearchParamCompositeMissing(this.missing) : super._();
-
-  factory _$_SearchParamCompositeMissing.fromJson(Map<String, dynamic> json) =>
-      _$$_SearchParamCompositeMissingFromJson(json);
 
   @override
   final bool missing;
@@ -153,7 +146,6 @@ class _$_SearchParamCompositeMissing extends _SearchParamCompositeMissing {
             (identical(other.missing, missing) || other.missing == missing));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, missing);
 
@@ -219,22 +211,12 @@ class _$_SearchParamCompositeMissing extends _SearchParamCompositeMissing {
     }
     return orElse();
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_SearchParamCompositeMissingToJson(
-      this,
-    );
-  }
 }
 
 abstract class _SearchParamCompositeMissing extends SearchParamComposite {
   const factory _SearchParamCompositeMissing(final bool missing) =
       _$_SearchParamCompositeMissing;
   const _SearchParamCompositeMissing._() : super._();
-
-  factory _SearchParamCompositeMissing.fromJson(Map<String, dynamic> json) =
-      _$_SearchParamCompositeMissing.fromJson;
 
   @override
   bool get missing;

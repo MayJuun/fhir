@@ -14,33 +14,6 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-SearchParamToken _$SearchParamTokenFromJson(Map<String, dynamic> json) {
-  switch (json['runtimeType']) {
-    case 'equal':
-      return _SearchParamTokenEqual.fromJson(json);
-    case 'text':
-      return _SearchParamTokenText.fromJson(json);
-    case 'not':
-      return _SearchParamTokenNot.fromJson(json);
-    case 'above':
-      return _SearchParamTokenAbove.fromJson(json);
-    case 'below':
-      return _SearchParamTokenBelow.fromJson(json);
-    case 'in_':
-      return _SearchParamTokenIn.fromJson(json);
-    case 'notIn':
-      return _SearchParamTokenNotIn.fromJson(json);
-    case 'ofType':
-      return _SearchParamTokenOfType.fromJson(json);
-    case 'missing':
-      return _SearchParamTokenMissing.fromJson(json);
-
-    default:
-      throw CheckedFromJsonException(json, 'runtimeType', 'SearchParamToken',
-          'Invalid union type "${json['runtimeType']}"!');
-  }
-}
-
 /// @nodoc
 mixin _$SearchParamToken {
   @optionalTypeArgs
@@ -123,7 +96,6 @@ mixin _$SearchParamToken {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -181,22 +153,14 @@ class __$$_SearchParamTokenEqualCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$_SearchParamTokenEqual extends _SearchParamTokenEqual {
-  const _$_SearchParamTokenEqual({this.system, this.code, final String? $type})
-      : $type = $type ?? 'equal',
-        super._();
 
-  factory _$_SearchParamTokenEqual.fromJson(Map<String, dynamic> json) =>
-      _$$_SearchParamTokenEqualFromJson(json);
+class _$_SearchParamTokenEqual extends _SearchParamTokenEqual {
+  const _$_SearchParamTokenEqual({this.system, this.code}) : super._();
 
   @override
   final FhirUri? system;
   @override
   final Code? code;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
 
   @override
   String toString() {
@@ -212,7 +176,6 @@ class _$_SearchParamTokenEqual extends _SearchParamTokenEqual {
             (identical(other.code, code) || other.code == code));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, system, code);
 
@@ -326,22 +289,12 @@ class _$_SearchParamTokenEqual extends _SearchParamTokenEqual {
     }
     return orElse();
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_SearchParamTokenEqualToJson(
-      this,
-    );
-  }
 }
 
 abstract class _SearchParamTokenEqual extends SearchParamToken {
   const factory _SearchParamTokenEqual(
       {final FhirUri? system, final Code? code}) = _$_SearchParamTokenEqual;
   const _SearchParamTokenEqual._() : super._();
-
-  factory _SearchParamTokenEqual.fromJson(Map<String, dynamic> json) =
-      _$_SearchParamTokenEqual.fromJson;
 
   FhirUri? get system;
   Code? get code;
@@ -387,22 +340,14 @@ class __$$_SearchParamTokenTextCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$_SearchParamTokenText extends _SearchParamTokenText {
-  const _$_SearchParamTokenText({this.system, this.code, final String? $type})
-      : $type = $type ?? 'text',
-        super._();
 
-  factory _$_SearchParamTokenText.fromJson(Map<String, dynamic> json) =>
-      _$$_SearchParamTokenTextFromJson(json);
+class _$_SearchParamTokenText extends _SearchParamTokenText {
+  const _$_SearchParamTokenText({this.system, this.code}) : super._();
 
   @override
   final FhirUri? system;
   @override
   final Code? code;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
 
   @override
   String toString() {
@@ -418,7 +363,6 @@ class _$_SearchParamTokenText extends _SearchParamTokenText {
             (identical(other.code, code) || other.code == code));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, system, code);
 
@@ -532,22 +476,12 @@ class _$_SearchParamTokenText extends _SearchParamTokenText {
     }
     return orElse();
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_SearchParamTokenTextToJson(
-      this,
-    );
-  }
 }
 
 abstract class _SearchParamTokenText extends SearchParamToken {
   const factory _SearchParamTokenText(
       {final FhirUri? system, final Code? code}) = _$_SearchParamTokenText;
   const _SearchParamTokenText._() : super._();
-
-  factory _SearchParamTokenText.fromJson(Map<String, dynamic> json) =
-      _$_SearchParamTokenText.fromJson;
 
   FhirUri? get system;
   Code? get code;
@@ -593,22 +527,14 @@ class __$$_SearchParamTokenNotCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$_SearchParamTokenNot extends _SearchParamTokenNot {
-  const _$_SearchParamTokenNot({this.system, this.code, final String? $type})
-      : $type = $type ?? 'not',
-        super._();
 
-  factory _$_SearchParamTokenNot.fromJson(Map<String, dynamic> json) =>
-      _$$_SearchParamTokenNotFromJson(json);
+class _$_SearchParamTokenNot extends _SearchParamTokenNot {
+  const _$_SearchParamTokenNot({this.system, this.code}) : super._();
 
   @override
   final FhirUri? system;
   @override
   final Code? code;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
 
   @override
   String toString() {
@@ -624,7 +550,6 @@ class _$_SearchParamTokenNot extends _SearchParamTokenNot {
             (identical(other.code, code) || other.code == code));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, system, code);
 
@@ -738,22 +663,12 @@ class _$_SearchParamTokenNot extends _SearchParamTokenNot {
     }
     return orElse();
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_SearchParamTokenNotToJson(
-      this,
-    );
-  }
 }
 
 abstract class _SearchParamTokenNot extends SearchParamToken {
   const factory _SearchParamTokenNot(
       {final FhirUri? system, final Code? code}) = _$_SearchParamTokenNot;
   const _SearchParamTokenNot._() : super._();
-
-  factory _SearchParamTokenNot.fromJson(Map<String, dynamic> json) =
-      _$_SearchParamTokenNot.fromJson;
 
   FhirUri? get system;
   Code? get code;
@@ -799,22 +714,14 @@ class __$$_SearchParamTokenAboveCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$_SearchParamTokenAbove extends _SearchParamTokenAbove {
-  const _$_SearchParamTokenAbove({this.system, this.code, final String? $type})
-      : $type = $type ?? 'above',
-        super._();
 
-  factory _$_SearchParamTokenAbove.fromJson(Map<String, dynamic> json) =>
-      _$$_SearchParamTokenAboveFromJson(json);
+class _$_SearchParamTokenAbove extends _SearchParamTokenAbove {
+  const _$_SearchParamTokenAbove({this.system, this.code}) : super._();
 
   @override
   final FhirUri? system;
   @override
   final Code? code;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
 
   @override
   String toString() {
@@ -830,7 +737,6 @@ class _$_SearchParamTokenAbove extends _SearchParamTokenAbove {
             (identical(other.code, code) || other.code == code));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, system, code);
 
@@ -944,22 +850,12 @@ class _$_SearchParamTokenAbove extends _SearchParamTokenAbove {
     }
     return orElse();
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_SearchParamTokenAboveToJson(
-      this,
-    );
-  }
 }
 
 abstract class _SearchParamTokenAbove extends SearchParamToken {
   const factory _SearchParamTokenAbove(
       {final FhirUri? system, final Code? code}) = _$_SearchParamTokenAbove;
   const _SearchParamTokenAbove._() : super._();
-
-  factory _SearchParamTokenAbove.fromJson(Map<String, dynamic> json) =
-      _$_SearchParamTokenAbove.fromJson;
 
   FhirUri? get system;
   Code? get code;
@@ -1005,22 +901,14 @@ class __$$_SearchParamTokenBelowCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$_SearchParamTokenBelow extends _SearchParamTokenBelow {
-  const _$_SearchParamTokenBelow({this.system, this.code, final String? $type})
-      : $type = $type ?? 'below',
-        super._();
 
-  factory _$_SearchParamTokenBelow.fromJson(Map<String, dynamic> json) =>
-      _$$_SearchParamTokenBelowFromJson(json);
+class _$_SearchParamTokenBelow extends _SearchParamTokenBelow {
+  const _$_SearchParamTokenBelow({this.system, this.code}) : super._();
 
   @override
   final FhirUri? system;
   @override
   final Code? code;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
 
   @override
   String toString() {
@@ -1036,7 +924,6 @@ class _$_SearchParamTokenBelow extends _SearchParamTokenBelow {
             (identical(other.code, code) || other.code == code));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, system, code);
 
@@ -1150,22 +1037,12 @@ class _$_SearchParamTokenBelow extends _SearchParamTokenBelow {
     }
     return orElse();
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_SearchParamTokenBelowToJson(
-      this,
-    );
-  }
 }
 
 abstract class _SearchParamTokenBelow extends SearchParamToken {
   const factory _SearchParamTokenBelow(
       {final FhirUri? system, final Code? code}) = _$_SearchParamTokenBelow;
   const _SearchParamTokenBelow._() : super._();
-
-  factory _SearchParamTokenBelow.fromJson(Map<String, dynamic> json) =
-      _$_SearchParamTokenBelow.fromJson;
 
   FhirUri? get system;
   Code? get code;
@@ -1211,22 +1088,14 @@ class __$$_SearchParamTokenInCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$_SearchParamTokenIn extends _SearchParamTokenIn {
-  const _$_SearchParamTokenIn({this.system, this.code, final String? $type})
-      : $type = $type ?? 'in_',
-        super._();
 
-  factory _$_SearchParamTokenIn.fromJson(Map<String, dynamic> json) =>
-      _$$_SearchParamTokenInFromJson(json);
+class _$_SearchParamTokenIn extends _SearchParamTokenIn {
+  const _$_SearchParamTokenIn({this.system, this.code}) : super._();
 
   @override
   final FhirUri? system;
   @override
   final Code? code;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
 
   @override
   String toString() {
@@ -1242,7 +1111,6 @@ class _$_SearchParamTokenIn extends _SearchParamTokenIn {
             (identical(other.code, code) || other.code == code));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, system, code);
 
@@ -1356,22 +1224,12 @@ class _$_SearchParamTokenIn extends _SearchParamTokenIn {
     }
     return orElse();
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_SearchParamTokenInToJson(
-      this,
-    );
-  }
 }
 
 abstract class _SearchParamTokenIn extends SearchParamToken {
   const factory _SearchParamTokenIn({final FhirUri? system, final Code? code}) =
       _$_SearchParamTokenIn;
   const _SearchParamTokenIn._() : super._();
-
-  factory _SearchParamTokenIn.fromJson(Map<String, dynamic> json) =
-      _$_SearchParamTokenIn.fromJson;
 
   FhirUri? get system;
   Code? get code;
@@ -1417,22 +1275,14 @@ class __$$_SearchParamTokenNotInCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$_SearchParamTokenNotIn extends _SearchParamTokenNotIn {
-  const _$_SearchParamTokenNotIn({this.system, this.code, final String? $type})
-      : $type = $type ?? 'notIn',
-        super._();
 
-  factory _$_SearchParamTokenNotIn.fromJson(Map<String, dynamic> json) =>
-      _$$_SearchParamTokenNotInFromJson(json);
+class _$_SearchParamTokenNotIn extends _SearchParamTokenNotIn {
+  const _$_SearchParamTokenNotIn({this.system, this.code}) : super._();
 
   @override
   final FhirUri? system;
   @override
   final Code? code;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
 
   @override
   String toString() {
@@ -1448,7 +1298,6 @@ class _$_SearchParamTokenNotIn extends _SearchParamTokenNotIn {
             (identical(other.code, code) || other.code == code));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, system, code);
 
@@ -1562,22 +1411,12 @@ class _$_SearchParamTokenNotIn extends _SearchParamTokenNotIn {
     }
     return orElse();
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_SearchParamTokenNotInToJson(
-      this,
-    );
-  }
 }
 
 abstract class _SearchParamTokenNotIn extends SearchParamToken {
   const factory _SearchParamTokenNotIn(
       {final FhirUri? system, final Code? code}) = _$_SearchParamTokenNotIn;
   const _SearchParamTokenNotIn._() : super._();
-
-  factory _SearchParamTokenNotIn.fromJson(Map<String, dynamic> json) =
-      _$_SearchParamTokenNotIn.fromJson;
 
   FhirUri? get system;
   Code? get code;
@@ -1623,22 +1462,14 @@ class __$$_SearchParamTokenOfTypeCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$_SearchParamTokenOfType extends _SearchParamTokenOfType {
-  const _$_SearchParamTokenOfType({this.system, this.code, final String? $type})
-      : $type = $type ?? 'ofType',
-        super._();
 
-  factory _$_SearchParamTokenOfType.fromJson(Map<String, dynamic> json) =>
-      _$$_SearchParamTokenOfTypeFromJson(json);
+class _$_SearchParamTokenOfType extends _SearchParamTokenOfType {
+  const _$_SearchParamTokenOfType({this.system, this.code}) : super._();
 
   @override
   final FhirUri? system;
   @override
   final Code? code;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
 
   @override
   String toString() {
@@ -1654,7 +1485,6 @@ class _$_SearchParamTokenOfType extends _SearchParamTokenOfType {
             (identical(other.code, code) || other.code == code));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, system, code);
 
@@ -1768,22 +1598,12 @@ class _$_SearchParamTokenOfType extends _SearchParamTokenOfType {
     }
     return orElse();
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_SearchParamTokenOfTypeToJson(
-      this,
-    );
-  }
 }
 
 abstract class _SearchParamTokenOfType extends SearchParamToken {
   const factory _SearchParamTokenOfType(
       {final FhirUri? system, final Code? code}) = _$_SearchParamTokenOfType;
   const _SearchParamTokenOfType._() : super._();
-
-  factory _SearchParamTokenOfType.fromJson(Map<String, dynamic> json) =
-      _$_SearchParamTokenOfType.fromJson;
 
   FhirUri? get system;
   Code? get code;
@@ -1824,20 +1644,12 @@ class __$$_SearchParamTokenMissingCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$_SearchParamTokenMissing extends _SearchParamTokenMissing {
-  const _$_SearchParamTokenMissing(this.missing, {final String? $type})
-      : $type = $type ?? 'missing',
-        super._();
 
-  factory _$_SearchParamTokenMissing.fromJson(Map<String, dynamic> json) =>
-      _$$_SearchParamTokenMissingFromJson(json);
+class _$_SearchParamTokenMissing extends _SearchParamTokenMissing {
+  const _$_SearchParamTokenMissing(this.missing) : super._();
 
   @override
   final bool missing;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
 
   @override
   String toString() {
@@ -1852,7 +1664,6 @@ class _$_SearchParamTokenMissing extends _SearchParamTokenMissing {
             (identical(other.missing, missing) || other.missing == missing));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, missing);
 
@@ -1967,22 +1778,12 @@ class _$_SearchParamTokenMissing extends _SearchParamTokenMissing {
     }
     return orElse();
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_SearchParamTokenMissingToJson(
-      this,
-    );
-  }
 }
 
 abstract class _SearchParamTokenMissing extends SearchParamToken {
   const factory _SearchParamTokenMissing(final bool missing) =
       _$_SearchParamTokenMissing;
   const _SearchParamTokenMissing._() : super._();
-
-  factory _SearchParamTokenMissing.fromJson(Map<String, dynamic> json) =
-      _$_SearchParamTokenMissing.fromJson;
 
   bool get missing;
   @JsonKey(ignore: true)

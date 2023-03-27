@@ -14,10 +14,6 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-SearchParamSpecial _$SearchParamSpecialFromJson(Map<String, dynamic> json) {
-  return _SearchParamSpecialMissing.fromJson(json);
-}
-
 /// @nodoc
 mixin _$SearchParamSpecial {
   bool get missing => throw _privateConstructorUsedError;
@@ -53,7 +49,7 @@ mixin _$SearchParamSpecial {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $SearchParamSpecialCopyWith<SearchParamSpecial> get copyWith =>
       throw _privateConstructorUsedError;
@@ -128,12 +124,9 @@ class __$$_SearchParamSpecialMissingCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
 class _$_SearchParamSpecialMissing extends _SearchParamSpecialMissing {
   const _$_SearchParamSpecialMissing(this.missing) : super._();
-
-  factory _$_SearchParamSpecialMissing.fromJson(Map<String, dynamic> json) =>
-      _$$_SearchParamSpecialMissingFromJson(json);
 
   @override
   final bool missing;
@@ -151,7 +144,6 @@ class _$_SearchParamSpecialMissing extends _SearchParamSpecialMissing {
             (identical(other.missing, missing) || other.missing == missing));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, missing);
 
@@ -217,22 +209,12 @@ class _$_SearchParamSpecialMissing extends _SearchParamSpecialMissing {
     }
     return orElse();
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_SearchParamSpecialMissingToJson(
-      this,
-    );
-  }
 }
 
 abstract class _SearchParamSpecialMissing extends SearchParamSpecial {
   const factory _SearchParamSpecialMissing(final bool missing) =
       _$_SearchParamSpecialMissing;
   const _SearchParamSpecialMissing._() : super._();
-
-  factory _SearchParamSpecialMissing.fromJson(Map<String, dynamic> json) =
-      _$_SearchParamSpecialMissing.fromJson;
 
   @override
   bool get missing;

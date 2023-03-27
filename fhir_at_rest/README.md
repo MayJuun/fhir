@@ -579,4 +579,6 @@ GET http://hapi.fhir.org/baseR4/Observation?_format%3D$mimeType%26subject%3DPati
 
 As I've been working on SQL queries, I'm trying to align them with RESTful calls, and so I've gone back to trying to create a more structured way of creating them for this package. They are still incomplete however. Also, I'm not sure I'm ever going to attempt chaining and reverse chaining, so I will always leave the ability to pass in specific parameters.
 
+NOTE: the toJson() method for searchParams is not standard. Because you're usually just going to use these for requests and not trying to turn them into JSON, the toJson() method is used as part of the toRequest() method, so be aware that it will format the Json incorrectly if for some reason you're actually trying to do that.
+
 FHIR® is a registered trademark of Health Level Seven International (HL7) and its use does not constitute an endorsement of products by HL7®

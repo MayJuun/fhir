@@ -4,7 +4,6 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'search_params.dart';
 
 part 'resource_search_params.freezed.dart';
-part 'resource_search_params.g.dart';
 
 @freezed
 class AccountSearchParams with _$AccountSearchParams {
@@ -85,8 +84,94 @@ class AccountSearchParams with _$AccountSearchParams {
   }) = _AccountSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory AccountSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$AccountSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (owner.isNotEmpty) {
+      owner.forEach(
+          (element) => returnStrings.add('owner${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (period.isNotEmpty) {
+      period.forEach(
+          (element) => returnStrings.add('period${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    if (type.isNotEmpty) {
+      type.forEach(
+          (element) => returnStrings.add('type${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -224,8 +309,149 @@ class ActivityDefinitionSearchParams with _$ActivityDefinitionSearchParams {
   }) = _ActivityDefinitionSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ActivityDefinitionSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$ActivityDefinitionSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (composedOf.isNotEmpty) {
+      composedOf.forEach(
+          (element) => returnStrings.add('composed-of${element.toRequest()}'));
+    }
+    if (context.isNotEmpty) {
+      context.forEach(
+          (element) => returnStrings.add('context${element.toRequest()}'));
+    }
+    if (contextQuantity.isNotEmpty) {
+      contextQuantity.forEach((element) =>
+          returnStrings.add('context-quantity${element.toRequest()}'));
+    }
+    if (contextType.isNotEmpty) {
+      contextType.forEach(
+          (element) => returnStrings.add('context-type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (dependsOn.isNotEmpty) {
+      dependsOn.forEach(
+          (element) => returnStrings.add('depends-on${element.toRequest()}'));
+    }
+    if (derivedFrom.isNotEmpty) {
+      derivedFrom.forEach(
+          (element) => returnStrings.add('derived-from${element.toRequest()}'));
+    }
+    if (description.isNotEmpty) {
+      description.forEach(
+          (element) => returnStrings.add('description${element.toRequest()}'));
+    }
+    if (effective.isNotEmpty) {
+      effective.forEach(
+          (element) => returnStrings.add('effective${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (jurisdiction.isNotEmpty) {
+      jurisdiction.forEach(
+          (element) => returnStrings.add('jurisdiction${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (predecessor.isNotEmpty) {
+      predecessor.forEach(
+          (element) => returnStrings.add('predecessor${element.toRequest()}'));
+    }
+    if (publisher.isNotEmpty) {
+      publisher.forEach(
+          (element) => returnStrings.add('publisher${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (successor.isNotEmpty) {
+      successor.forEach(
+          (element) => returnStrings.add('successor${element.toRequest()}'));
+    }
+    if (title.isNotEmpty) {
+      title.forEach(
+          (element) => returnStrings.add('title${element.toRequest()}'));
+    }
+    if (topic.isNotEmpty) {
+      topic.forEach(
+          (element) => returnStrings.add('topic${element.toRequest()}'));
+    }
+    if (url.isNotEmpty) {
+      url.forEach((element) => returnStrings.add('url${element.toRequest()}'));
+    }
+    if (version.isNotEmpty) {
+      version.forEach(
+          (element) => returnStrings.add('version${element.toRequest()}'));
+    }
+    if (contextTypeQuantity.isNotEmpty) {
+      contextTypeQuantity.forEach((element) =>
+          returnStrings.add('context-type-quantity${element.toRequest()}'));
+    }
+    if (contextTypeValue.isNotEmpty) {
+      contextTypeValue.forEach((element) =>
+          returnStrings.add('context-type-value${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -312,9 +538,94 @@ class AdministrableProductDefinitionSearchParams
   }) = _AdministrableProductDefinitionSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory AdministrableProductDefinitionSearchParams.fromJson(
-          Map<String, dynamic> json) =>
-      _$AdministrableProductDefinitionSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (device.isNotEmpty) {
+      device.forEach(
+          (element) => returnStrings.add('device${element.toRequest()}'));
+    }
+    if (doseForm.isNotEmpty) {
+      doseForm.forEach(
+          (element) => returnStrings.add('dose-form${element.toRequest()}'));
+    }
+    if (formOf.isNotEmpty) {
+      formOf.forEach(
+          (element) => returnStrings.add('form-of${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (ingredient.isNotEmpty) {
+      ingredient.forEach(
+          (element) => returnStrings.add('ingredient${element.toRequest()}'));
+    }
+    if (manufacturedItem.isNotEmpty) {
+      manufacturedItem.forEach((element) =>
+          returnStrings.add('manufactured-item${element.toRequest()}'));
+    }
+    if (route.isNotEmpty) {
+      route.forEach(
+          (element) => returnStrings.add('route${element.toRequest()}'));
+    }
+    if (targetSpecies.isNotEmpty) {
+      targetSpecies.forEach((element) =>
+          returnStrings.add('target-species${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -408,8 +719,110 @@ class AdverseEventSearchParams with _$AdverseEventSearchParams {
   }) = _AdverseEventSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory AdverseEventSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$AdverseEventSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (actuality.isNotEmpty) {
+      actuality.forEach(
+          (element) => returnStrings.add('actuality${element.toRequest()}'));
+    }
+    if (category.isNotEmpty) {
+      category.forEach(
+          (element) => returnStrings.add('category${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (event.isNotEmpty) {
+      event.forEach(
+          (element) => returnStrings.add('event${element.toRequest()}'));
+    }
+    if (location.isNotEmpty) {
+      location.forEach(
+          (element) => returnStrings.add('location${element.toRequest()}'));
+    }
+    if (recorder.isNotEmpty) {
+      recorder.forEach(
+          (element) => returnStrings.add('recorder${element.toRequest()}'));
+    }
+    if (resultingcondition.isNotEmpty) {
+      resultingcondition.forEach((element) =>
+          returnStrings.add('resultingcondition${element.toRequest()}'));
+    }
+    if (seriousness.isNotEmpty) {
+      seriousness.forEach(
+          (element) => returnStrings.add('seriousness${element.toRequest()}'));
+    }
+    if (severity.isNotEmpty) {
+      severity.forEach(
+          (element) => returnStrings.add('severity${element.toRequest()}'));
+    }
+    if (study.isNotEmpty) {
+      study.forEach(
+          (element) => returnStrings.add('study${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    if (substance.isNotEmpty) {
+      substance.forEach(
+          (element) => returnStrings.add('substance${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -628,8 +1041,126 @@ class AllergyIntoleranceSearchParams with _$AllergyIntoleranceSearchParams {
   }) = _AllergyIntoleranceSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory AllergyIntoleranceSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$AllergyIntoleranceSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (asserter.isNotEmpty) {
+      asserter.forEach(
+          (element) => returnStrings.add('asserter${element.toRequest()}'));
+    }
+    if (category.isNotEmpty) {
+      category.forEach(
+          (element) => returnStrings.add('category${element.toRequest()}'));
+    }
+    if (clinicalStatus.isNotEmpty) {
+      clinicalStatus.forEach((element) =>
+          returnStrings.add('clinical-status${element.toRequest()}'));
+    }
+    if (code.isNotEmpty) {
+      code.forEach(
+          (element) => returnStrings.add('code${element.toRequest()}'));
+    }
+    if (criticality.isNotEmpty) {
+      criticality.forEach(
+          (element) => returnStrings.add('criticality${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (lastDate.isNotEmpty) {
+      lastDate.forEach(
+          (element) => returnStrings.add('last-date${element.toRequest()}'));
+    }
+    if (manifestation.isNotEmpty) {
+      manifestation.forEach((element) =>
+          returnStrings.add('manifestation${element.toRequest()}'));
+    }
+    if (onset.isNotEmpty) {
+      onset.forEach(
+          (element) => returnStrings.add('onset${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (recorder.isNotEmpty) {
+      recorder.forEach(
+          (element) => returnStrings.add('recorder${element.toRequest()}'));
+    }
+    if (route.isNotEmpty) {
+      route.forEach(
+          (element) => returnStrings.add('route${element.toRequest()}'));
+    }
+    if (severity.isNotEmpty) {
+      severity.forEach(
+          (element) => returnStrings.add('severity${element.toRequest()}'));
+    }
+    if (type.isNotEmpty) {
+      type.forEach(
+          (element) => returnStrings.add('type${element.toRequest()}'));
+    }
+    if (verificationStatus.isNotEmpty) {
+      verificationStatus.forEach((element) =>
+          returnStrings.add('verification-status${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -846,8 +1377,146 @@ class ConditionSearchParams with _$ConditionSearchParams {
   }) = _ConditionSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConditionSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$ConditionSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (code.isNotEmpty) {
+      code.forEach(
+          (element) => returnStrings.add('code${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (abatementAge.isNotEmpty) {
+      abatementAge.forEach((element) =>
+          returnStrings.add('abatement-age${element.toRequest()}'));
+    }
+    if (abatementDate.isNotEmpty) {
+      abatementDate.forEach((element) =>
+          returnStrings.add('abatement-date${element.toRequest()}'));
+    }
+    if (abatementString.isNotEmpty) {
+      abatementString.forEach((element) =>
+          returnStrings.add('abatement-string${element.toRequest()}'));
+    }
+    if (asserter.isNotEmpty) {
+      asserter.forEach(
+          (element) => returnStrings.add('asserter${element.toRequest()}'));
+    }
+    if (bodySite.isNotEmpty) {
+      bodySite.forEach(
+          (element) => returnStrings.add('body-site${element.toRequest()}'));
+    }
+    if (category.isNotEmpty) {
+      category.forEach(
+          (element) => returnStrings.add('category${element.toRequest()}'));
+    }
+    if (clinicalStatus.isNotEmpty) {
+      clinicalStatus.forEach((element) =>
+          returnStrings.add('clinical-status${element.toRequest()}'));
+    }
+    if (encounter.isNotEmpty) {
+      encounter.forEach(
+          (element) => returnStrings.add('encounter${element.toRequest()}'));
+    }
+    if (evidence.isNotEmpty) {
+      evidence.forEach(
+          (element) => returnStrings.add('evidence${element.toRequest()}'));
+    }
+    if (evidenceDetail.isNotEmpty) {
+      evidenceDetail.forEach((element) =>
+          returnStrings.add('evidence-detail${element.toRequest()}'));
+    }
+    if (onsetAge.isNotEmpty) {
+      onsetAge.forEach(
+          (element) => returnStrings.add('onset-age${element.toRequest()}'));
+    }
+    if (onsetDate.isNotEmpty) {
+      onsetDate.forEach(
+          (element) => returnStrings.add('onset-date${element.toRequest()}'));
+    }
+    if (onsetInfo.isNotEmpty) {
+      onsetInfo.forEach(
+          (element) => returnStrings.add('onset-info${element.toRequest()}'));
+    }
+    if (recordedDate.isNotEmpty) {
+      recordedDate.forEach((element) =>
+          returnStrings.add('recorded-date${element.toRequest()}'));
+    }
+    if (severity.isNotEmpty) {
+      severity.forEach(
+          (element) => returnStrings.add('severity${element.toRequest()}'));
+    }
+    if (stage.isNotEmpty) {
+      stage.forEach(
+          (element) => returnStrings.add('stage${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    if (verificationStatus.isNotEmpty) {
+      verificationStatus.forEach((element) =>
+          returnStrings.add('verification-status${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -1063,8 +1732,134 @@ class DeviceRequestSearchParams with _$DeviceRequestSearchParams {
   }) = _DeviceRequestSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DeviceRequestSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$DeviceRequestSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (code.isNotEmpty) {
+      code.forEach(
+          (element) => returnStrings.add('code${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (encounter.isNotEmpty) {
+      encounter.forEach(
+          (element) => returnStrings.add('encounter${element.toRequest()}'));
+    }
+    if (authoredOn.isNotEmpty) {
+      authoredOn.forEach(
+          (element) => returnStrings.add('authored-on${element.toRequest()}'));
+    }
+    if (basedOn.isNotEmpty) {
+      basedOn.forEach(
+          (element) => returnStrings.add('based-on${element.toRequest()}'));
+    }
+    if (device.isNotEmpty) {
+      device.forEach(
+          (element) => returnStrings.add('device${element.toRequest()}'));
+    }
+    if (eventDate.isNotEmpty) {
+      eventDate.forEach(
+          (element) => returnStrings.add('event-date${element.toRequest()}'));
+    }
+    if (groupIdentifier.isNotEmpty) {
+      groupIdentifier.forEach((element) =>
+          returnStrings.add('group-identifier${element.toRequest()}'));
+    }
+    if (instantiatesCanonical.isNotEmpty) {
+      instantiatesCanonical.forEach((element) =>
+          returnStrings.add('instantiates-canonical${element.toRequest()}'));
+    }
+    if (instantiatesUri.isNotEmpty) {
+      instantiatesUri.forEach((element) =>
+          returnStrings.add('instantiates-uri${element.toRequest()}'));
+    }
+    if (insurance.isNotEmpty) {
+      insurance.forEach(
+          (element) => returnStrings.add('insurance${element.toRequest()}'));
+    }
+    if (intent.isNotEmpty) {
+      intent.forEach(
+          (element) => returnStrings.add('intent${element.toRequest()}'));
+    }
+    if (performer.isNotEmpty) {
+      performer.forEach(
+          (element) => returnStrings.add('performer${element.toRequest()}'));
+    }
+    if (priorRequest.isNotEmpty) {
+      priorRequest.forEach((element) =>
+          returnStrings.add('prior-request${element.toRequest()}'));
+    }
+    if (requester.isNotEmpty) {
+      requester.forEach(
+          (element) => returnStrings.add('requester${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -1287,8 +2082,126 @@ class DiagnosticReportSearchParams with _$DiagnosticReportSearchParams {
   }) = _DiagnosticReportSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DiagnosticReportSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$DiagnosticReportSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (code.isNotEmpty) {
+      code.forEach(
+          (element) => returnStrings.add('code${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (encounter.isNotEmpty) {
+      encounter.forEach(
+          (element) => returnStrings.add('encounter${element.toRequest()}'));
+    }
+    if (basedOn.isNotEmpty) {
+      basedOn.forEach(
+          (element) => returnStrings.add('based-on${element.toRequest()}'));
+    }
+    if (category.isNotEmpty) {
+      category.forEach(
+          (element) => returnStrings.add('category${element.toRequest()}'));
+    }
+    if (conclusion.isNotEmpty) {
+      conclusion.forEach(
+          (element) => returnStrings.add('conclusion${element.toRequest()}'));
+    }
+    if (issued.isNotEmpty) {
+      issued.forEach(
+          (element) => returnStrings.add('issued${element.toRequest()}'));
+    }
+    if (media.isNotEmpty) {
+      media.forEach(
+          (element) => returnStrings.add('media${element.toRequest()}'));
+    }
+    if (performer.isNotEmpty) {
+      performer.forEach(
+          (element) => returnStrings.add('performer${element.toRequest()}'));
+    }
+    if (result.isNotEmpty) {
+      result.forEach(
+          (element) => returnStrings.add('result${element.toRequest()}'));
+    }
+    if (resultsInterpreter.isNotEmpty) {
+      resultsInterpreter.forEach((element) =>
+          returnStrings.add('results-interpreter${element.toRequest()}'));
+    }
+    if (specimen.isNotEmpty) {
+      specimen.forEach(
+          (element) => returnStrings.add('specimen${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -1478,8 +2391,97 @@ class FamilyMemberHistorySearchParams with _$FamilyMemberHistorySearchParams {
   }) = _FamilyMemberHistorySearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory FamilyMemberHistorySearchParams.fromJson(Map<String, dynamic> json) =>
-      _$FamilyMemberHistorySearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (code.isNotEmpty) {
+      code.forEach(
+          (element) => returnStrings.add('code${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (instantiatesCanonical.isNotEmpty) {
+      instantiatesCanonical.forEach((element) =>
+          returnStrings.add('instantiates-canonical${element.toRequest()}'));
+    }
+    if (instantiatesUri.isNotEmpty) {
+      instantiatesUri.forEach((element) =>
+          returnStrings.add('instantiates-uri${element.toRequest()}'));
+    }
+    if (relationship.isNotEmpty) {
+      relationship.forEach(
+          (element) => returnStrings.add('relationship${element.toRequest()}'));
+    }
+    if (sex.isNotEmpty) {
+      sex.forEach((element) => returnStrings.add('sex${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -1690,8 +2692,110 @@ class ListSearchParams with _$ListSearchParams {
   }) = _ListSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ListSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$ListSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (code.isNotEmpty) {
+      code.forEach(
+          (element) => returnStrings.add('code${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (encounter.isNotEmpty) {
+      encounter.forEach(
+          (element) => returnStrings.add('encounter${element.toRequest()}'));
+    }
+    if (emptyReason.isNotEmpty) {
+      emptyReason.forEach(
+          (element) => returnStrings.add('empty-reason${element.toRequest()}'));
+    }
+    if (item.isNotEmpty) {
+      item.forEach(
+          (element) => returnStrings.add('item${element.toRequest()}'));
+    }
+    if (notes.isNotEmpty) {
+      notes.forEach(
+          (element) => returnStrings.add('notes${element.toRequest()}'));
+    }
+    if (source.isNotEmpty) {
+      source.forEach(
+          (element) => returnStrings.add('source${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    if (title.isNotEmpty) {
+      title.forEach(
+          (element) => returnStrings.add('title${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -1796,8 +2900,98 @@ class MedicationSearchParams with _$MedicationSearchParams {
   }) = _MedicationSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$MedicationSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (code.isNotEmpty) {
+      code.forEach(
+          (element) => returnStrings.add('code${element.toRequest()}'));
+    }
+    if (expirationDate.isNotEmpty) {
+      expirationDate.forEach((element) =>
+          returnStrings.add('expiration-date${element.toRequest()}'));
+    }
+    if (form.isNotEmpty) {
+      form.forEach(
+          (element) => returnStrings.add('form${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (ingredient.isNotEmpty) {
+      ingredient.forEach(
+          (element) => returnStrings.add('ingredient${element.toRequest()}'));
+    }
+    if (ingredientCode.isNotEmpty) {
+      ingredientCode.forEach((element) =>
+          returnStrings.add('ingredient-code${element.toRequest()}'));
+    }
+    if (lotNumber.isNotEmpty) {
+      lotNumber.forEach(
+          (element) => returnStrings.add('lot-number${element.toRequest()}'));
+    }
+    if (manufacturer.isNotEmpty) {
+      manufacturer.forEach(
+          (element) => returnStrings.add('manufacturer${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -1995,9 +3189,114 @@ class MedicationAdministrationSearchParams
   }) = _MedicationAdministrationSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationAdministrationSearchParams.fromJson(
-          Map<String, dynamic> json) =>
-      _$MedicationAdministrationSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (code.isNotEmpty) {
+      code.forEach(
+          (element) => returnStrings.add('code${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (context.isNotEmpty) {
+      context.forEach(
+          (element) => returnStrings.add('context${element.toRequest()}'));
+    }
+    if (device.isNotEmpty) {
+      device.forEach(
+          (element) => returnStrings.add('device${element.toRequest()}'));
+    }
+    if (effectiveTime.isNotEmpty) {
+      effectiveTime.forEach((element) =>
+          returnStrings.add('effective-time${element.toRequest()}'));
+    }
+    if (medication.isNotEmpty) {
+      medication.forEach(
+          (element) => returnStrings.add('medication${element.toRequest()}'));
+    }
+    if (performer.isNotEmpty) {
+      performer.forEach(
+          (element) => returnStrings.add('performer${element.toRequest()}'));
+    }
+    if (reasonGiven.isNotEmpty) {
+      reasonGiven.forEach(
+          (element) => returnStrings.add('reason-given${element.toRequest()}'));
+    }
+    if (reasonNotGiven.isNotEmpty) {
+      reasonNotGiven.forEach((element) =>
+          returnStrings.add('reason-not-given${element.toRequest()}'));
+    }
+    if (request.isNotEmpty) {
+      request.forEach(
+          (element) => returnStrings.add('request${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -2197,8 +3496,122 @@ class MedicationDispenseSearchParams with _$MedicationDispenseSearchParams {
   }) = _MedicationDispenseSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationDispenseSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$MedicationDispenseSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (code.isNotEmpty) {
+      code.forEach(
+          (element) => returnStrings.add('code${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (medication.isNotEmpty) {
+      medication.forEach(
+          (element) => returnStrings.add('medication${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (context.isNotEmpty) {
+      context.forEach(
+          (element) => returnStrings.add('context${element.toRequest()}'));
+    }
+    if (destination.isNotEmpty) {
+      destination.forEach(
+          (element) => returnStrings.add('destination${element.toRequest()}'));
+    }
+    if (performer.isNotEmpty) {
+      performer.forEach(
+          (element) => returnStrings.add('performer${element.toRequest()}'));
+    }
+    if (prescription.isNotEmpty) {
+      prescription.forEach(
+          (element) => returnStrings.add('prescription${element.toRequest()}'));
+    }
+    if (receiver.isNotEmpty) {
+      receiver.forEach(
+          (element) => returnStrings.add('receiver${element.toRequest()}'));
+    }
+    if (responsibleparty.isNotEmpty) {
+      responsibleparty.forEach((element) =>
+          returnStrings.add('responsibleparty${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    if (type.isNotEmpty) {
+      type.forEach(
+          (element) => returnStrings.add('type${element.toRequest()}'));
+    }
+    if (whenhandedover.isNotEmpty) {
+      whenhandedover.forEach((element) =>
+          returnStrings.add('whenhandedover${element.toRequest()}'));
+    }
+    if (whenprepared.isNotEmpty) {
+      whenprepared.forEach(
+          (element) => returnStrings.add('whenprepared${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -2410,8 +3823,126 @@ class MedicationRequestSearchParams with _$MedicationRequestSearchParams {
   }) = _MedicationRequestSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationRequestSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$MedicationRequestSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (code.isNotEmpty) {
+      code.forEach(
+          (element) => returnStrings.add('code${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (medication.isNotEmpty) {
+      medication.forEach(
+          (element) => returnStrings.add('medication${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (authoredon.isNotEmpty) {
+      authoredon.forEach(
+          (element) => returnStrings.add('authoredon${element.toRequest()}'));
+    }
+    if (category.isNotEmpty) {
+      category.forEach(
+          (element) => returnStrings.add('category${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (encounter.isNotEmpty) {
+      encounter.forEach(
+          (element) => returnStrings.add('encounter${element.toRequest()}'));
+    }
+    if (intendedDispenser.isNotEmpty) {
+      intendedDispenser.forEach((element) =>
+          returnStrings.add('intended-dispenser${element.toRequest()}'));
+    }
+    if (intendedPerformer.isNotEmpty) {
+      intendedPerformer.forEach((element) =>
+          returnStrings.add('intended-performer${element.toRequest()}'));
+    }
+    if (intendedPerformertype.isNotEmpty) {
+      intendedPerformertype.forEach((element) =>
+          returnStrings.add('intended-performertype${element.toRequest()}'));
+    }
+    if (intent.isNotEmpty) {
+      intent.forEach(
+          (element) => returnStrings.add('intent${element.toRequest()}'));
+    }
+    if (priority.isNotEmpty) {
+      priority.forEach(
+          (element) => returnStrings.add('priority${element.toRequest()}'));
+    }
+    if (requester.isNotEmpty) {
+      requester.forEach(
+          (element) => returnStrings.add('requester${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -2596,8 +4127,106 @@ class MedicationStatementSearchParams with _$MedicationStatementSearchParams {
   }) = _MedicationStatementSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationStatementSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$MedicationStatementSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (code.isNotEmpty) {
+      code.forEach(
+          (element) => returnStrings.add('code${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (medication.isNotEmpty) {
+      medication.forEach(
+          (element) => returnStrings.add('medication${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (category.isNotEmpty) {
+      category.forEach(
+          (element) => returnStrings.add('category${element.toRequest()}'));
+    }
+    if (context.isNotEmpty) {
+      context.forEach(
+          (element) => returnStrings.add('context${element.toRequest()}'));
+    }
+    if (effective.isNotEmpty) {
+      effective.forEach(
+          (element) => returnStrings.add('effective${element.toRequest()}'));
+    }
+    if (partOf.isNotEmpty) {
+      partOf.forEach(
+          (element) => returnStrings.add('part-of${element.toRequest()}'));
+    }
+    if (source.isNotEmpty) {
+      source.forEach(
+          (element) => returnStrings.add('source${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -2926,8 +4555,214 @@ class ObservationSearchParams with _$ObservationSearchParams {
   }) = _ObservationSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ObservationSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$ObservationSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (code.isNotEmpty) {
+      code.forEach(
+          (element) => returnStrings.add('code${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (encounter.isNotEmpty) {
+      encounter.forEach(
+          (element) => returnStrings.add('encounter${element.toRequest()}'));
+    }
+    if (basedOn.isNotEmpty) {
+      basedOn.forEach(
+          (element) => returnStrings.add('based-on${element.toRequest()}'));
+    }
+    if (category.isNotEmpty) {
+      category.forEach(
+          (element) => returnStrings.add('category${element.toRequest()}'));
+    }
+    if (comboCode.isNotEmpty) {
+      comboCode.forEach(
+          (element) => returnStrings.add('combo-code${element.toRequest()}'));
+    }
+    if (comboDataAbsentReason.isNotEmpty) {
+      comboDataAbsentReason.forEach((element) =>
+          returnStrings.add('combo-data-absent-reason${element.toRequest()}'));
+    }
+    if (comboValueConcept.isNotEmpty) {
+      comboValueConcept.forEach((element) =>
+          returnStrings.add('combo-value-concept${element.toRequest()}'));
+    }
+    if (comboValueQuantity.isNotEmpty) {
+      comboValueQuantity.forEach((element) =>
+          returnStrings.add('combo-value-quantity${element.toRequest()}'));
+    }
+    if (componentCode.isNotEmpty) {
+      componentCode.forEach((element) =>
+          returnStrings.add('component-code${element.toRequest()}'));
+    }
+    if (componentDataAbsentReason.isNotEmpty) {
+      componentDataAbsentReason.forEach((element) => returnStrings
+          .add('component-data-absent-reason${element.toRequest()}'));
+    }
+    if (componentValueConcept.isNotEmpty) {
+      componentValueConcept.forEach((element) =>
+          returnStrings.add('component-value-concept${element.toRequest()}'));
+    }
+    if (componentValueQuantity.isNotEmpty) {
+      componentValueQuantity.forEach((element) =>
+          returnStrings.add('component-value-quantity${element.toRequest()}'));
+    }
+    if (dataAbsentReason.isNotEmpty) {
+      dataAbsentReason.forEach((element) =>
+          returnStrings.add('data-absent-reason${element.toRequest()}'));
+    }
+    if (derivedFrom.isNotEmpty) {
+      derivedFrom.forEach(
+          (element) => returnStrings.add('derived-from${element.toRequest()}'));
+    }
+    if (device.isNotEmpty) {
+      device.forEach(
+          (element) => returnStrings.add('device${element.toRequest()}'));
+    }
+    if (focus.isNotEmpty) {
+      focus.forEach(
+          (element) => returnStrings.add('focus${element.toRequest()}'));
+    }
+    if (hasMember.isNotEmpty) {
+      hasMember.forEach(
+          (element) => returnStrings.add('has-member${element.toRequest()}'));
+    }
+    if (method.isNotEmpty) {
+      method.forEach(
+          (element) => returnStrings.add('method${element.toRequest()}'));
+    }
+    if (partOf.isNotEmpty) {
+      partOf.forEach(
+          (element) => returnStrings.add('part-of${element.toRequest()}'));
+    }
+    if (performer.isNotEmpty) {
+      performer.forEach(
+          (element) => returnStrings.add('performer${element.toRequest()}'));
+    }
+    if (specimen.isNotEmpty) {
+      specimen.forEach(
+          (element) => returnStrings.add('specimen${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    if (valueConcept.isNotEmpty) {
+      valueConcept.forEach((element) =>
+          returnStrings.add('value-concept${element.toRequest()}'));
+    }
+    if (valueDate.isNotEmpty) {
+      valueDate.forEach(
+          (element) => returnStrings.add('value-date${element.toRequest()}'));
+    }
+    if (valueQuantity.isNotEmpty) {
+      valueQuantity.forEach((element) =>
+          returnStrings.add('value-quantity${element.toRequest()}'));
+    }
+    if (valueString.isNotEmpty) {
+      valueString.forEach(
+          (element) => returnStrings.add('value-string${element.toRequest()}'));
+    }
+    if (codeValueConcept.isNotEmpty) {
+      codeValueConcept.forEach((element) =>
+          returnStrings.add('code-value-concept${element.toRequest()}'));
+    }
+    if (codeValueDate.isNotEmpty) {
+      codeValueDate.forEach((element) =>
+          returnStrings.add('code-value-date${element.toRequest()}'));
+    }
+    if (codeValueQuantity.isNotEmpty) {
+      codeValueQuantity.forEach((element) =>
+          returnStrings.add('code-value-quantity${element.toRequest()}'));
+    }
+    if (codeValueString.isNotEmpty) {
+      codeValueString.forEach((element) =>
+          returnStrings.add('code-value-string${element.toRequest()}'));
+    }
+    if (comboCodeValueConcept.isNotEmpty) {
+      comboCodeValueConcept.forEach((element) =>
+          returnStrings.add('combo-code-value-concept${element.toRequest()}'));
+    }
+    if (comboCodeValueQuantity.isNotEmpty) {
+      comboCodeValueQuantity.forEach((element) =>
+          returnStrings.add('combo-code-value-quantity${element.toRequest()}'));
+    }
+    if (componentCodeValueConcept.isNotEmpty) {
+      componentCodeValueConcept.forEach((element) => returnStrings
+          .add('component-code-value-concept${element.toRequest()}'));
+    }
+    if (componentCodeValueQuantity.isNotEmpty) {
+      componentCodeValueQuantity.forEach((element) => returnStrings
+          .add('component-code-value-quantity${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -3156,8 +4991,126 @@ class ProcedureSearchParams with _$ProcedureSearchParams {
   }) = _ProcedureSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ProcedureSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$ProcedureSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (code.isNotEmpty) {
+      code.forEach(
+          (element) => returnStrings.add('code${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (encounter.isNotEmpty) {
+      encounter.forEach(
+          (element) => returnStrings.add('encounter${element.toRequest()}'));
+    }
+    if (basedOn.isNotEmpty) {
+      basedOn.forEach(
+          (element) => returnStrings.add('based-on${element.toRequest()}'));
+    }
+    if (category.isNotEmpty) {
+      category.forEach(
+          (element) => returnStrings.add('category${element.toRequest()}'));
+    }
+    if (instantiatesCanonical.isNotEmpty) {
+      instantiatesCanonical.forEach((element) =>
+          returnStrings.add('instantiates-canonical${element.toRequest()}'));
+    }
+    if (instantiatesUri.isNotEmpty) {
+      instantiatesUri.forEach((element) =>
+          returnStrings.add('instantiates-uri${element.toRequest()}'));
+    }
+    if (location.isNotEmpty) {
+      location.forEach(
+          (element) => returnStrings.add('location${element.toRequest()}'));
+    }
+    if (partOf.isNotEmpty) {
+      partOf.forEach(
+          (element) => returnStrings.add('part-of${element.toRequest()}'));
+    }
+    if (performer.isNotEmpty) {
+      performer.forEach(
+          (element) => returnStrings.add('performer${element.toRequest()}'));
+    }
+    if (reasonCode.isNotEmpty) {
+      reasonCode.forEach(
+          (element) => returnStrings.add('reason-code${element.toRequest()}'));
+    }
+    if (reasonReference.isNotEmpty) {
+      reasonReference.forEach((element) =>
+          returnStrings.add('reason-reference${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -3380,8 +5333,146 @@ class ServiceRequestSearchParams with _$ServiceRequestSearchParams {
   }) = _ServiceRequestSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ServiceRequestSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$ServiceRequestSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (code.isNotEmpty) {
+      code.forEach(
+          (element) => returnStrings.add('code${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (encounter.isNotEmpty) {
+      encounter.forEach(
+          (element) => returnStrings.add('encounter${element.toRequest()}'));
+    }
+    if (authored.isNotEmpty) {
+      authored.forEach(
+          (element) => returnStrings.add('authored${element.toRequest()}'));
+    }
+    if (basedOn.isNotEmpty) {
+      basedOn.forEach(
+          (element) => returnStrings.add('based-on${element.toRequest()}'));
+    }
+    if (bodySite.isNotEmpty) {
+      bodySite.forEach(
+          (element) => returnStrings.add('body-site${element.toRequest()}'));
+    }
+    if (category.isNotEmpty) {
+      category.forEach(
+          (element) => returnStrings.add('category${element.toRequest()}'));
+    }
+    if (instantiatesCanonical.isNotEmpty) {
+      instantiatesCanonical.forEach((element) =>
+          returnStrings.add('instantiates-canonical${element.toRequest()}'));
+    }
+    if (instantiatesUri.isNotEmpty) {
+      instantiatesUri.forEach((element) =>
+          returnStrings.add('instantiates-uri${element.toRequest()}'));
+    }
+    if (intent.isNotEmpty) {
+      intent.forEach(
+          (element) => returnStrings.add('intent${element.toRequest()}'));
+    }
+    if (occurrence.isNotEmpty) {
+      occurrence.forEach(
+          (element) => returnStrings.add('occurrence${element.toRequest()}'));
+    }
+    if (performer.isNotEmpty) {
+      performer.forEach(
+          (element) => returnStrings.add('performer${element.toRequest()}'));
+    }
+    if (performerType.isNotEmpty) {
+      performerType.forEach((element) =>
+          returnStrings.add('performer-type${element.toRequest()}'));
+    }
+    if (priority.isNotEmpty) {
+      priority.forEach(
+          (element) => returnStrings.add('priority${element.toRequest()}'));
+    }
+    if (replaces.isNotEmpty) {
+      replaces.forEach(
+          (element) => returnStrings.add('replaces${element.toRequest()}'));
+    }
+    if (requester.isNotEmpty) {
+      requester.forEach(
+          (element) => returnStrings.add('requester${element.toRequest()}'));
+    }
+    if (requisition.isNotEmpty) {
+      requisition.forEach(
+          (element) => returnStrings.add('requisition${element.toRequest()}'));
+    }
+    if (specimen.isNotEmpty) {
+      specimen.forEach(
+          (element) => returnStrings.add('specimen${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -3596,8 +5687,142 @@ class CarePlanSearchParams with _$CarePlanSearchParams {
   }) = _CarePlanSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CarePlanSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$CarePlanSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (activityCode.isNotEmpty) {
+      activityCode.forEach((element) =>
+          returnStrings.add('activity-code${element.toRequest()}'));
+    }
+    if (activityDate.isNotEmpty) {
+      activityDate.forEach((element) =>
+          returnStrings.add('activity-date${element.toRequest()}'));
+    }
+    if (activityReference.isNotEmpty) {
+      activityReference.forEach((element) =>
+          returnStrings.add('activity-reference${element.toRequest()}'));
+    }
+    if (basedOn.isNotEmpty) {
+      basedOn.forEach(
+          (element) => returnStrings.add('based-on${element.toRequest()}'));
+    }
+    if (careTeam.isNotEmpty) {
+      careTeam.forEach(
+          (element) => returnStrings.add('care-team${element.toRequest()}'));
+    }
+    if (category.isNotEmpty) {
+      category.forEach(
+          (element) => returnStrings.add('category${element.toRequest()}'));
+    }
+    if (condition.isNotEmpty) {
+      condition.forEach(
+          (element) => returnStrings.add('condition${element.toRequest()}'));
+    }
+    if (encounter.isNotEmpty) {
+      encounter.forEach(
+          (element) => returnStrings.add('encounter${element.toRequest()}'));
+    }
+    if (goal.isNotEmpty) {
+      goal.forEach(
+          (element) => returnStrings.add('goal${element.toRequest()}'));
+    }
+    if (instantiatesCanonical.isNotEmpty) {
+      instantiatesCanonical.forEach((element) =>
+          returnStrings.add('instantiates-canonical${element.toRequest()}'));
+    }
+    if (instantiatesUri.isNotEmpty) {
+      instantiatesUri.forEach((element) =>
+          returnStrings.add('instantiates-uri${element.toRequest()}'));
+    }
+    if (intent.isNotEmpty) {
+      intent.forEach(
+          (element) => returnStrings.add('intent${element.toRequest()}'));
+    }
+    if (partOf.isNotEmpty) {
+      partOf.forEach(
+          (element) => returnStrings.add('part-of${element.toRequest()}'));
+    }
+    if (performer.isNotEmpty) {
+      performer.forEach(
+          (element) => returnStrings.add('performer${element.toRequest()}'));
+    }
+    if (replaces.isNotEmpty) {
+      replaces.forEach(
+          (element) => returnStrings.add('replaces${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -3764,8 +5989,94 @@ class CareTeamSearchParams with _$CareTeamSearchParams {
   }) = _CareTeamSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CareTeamSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$CareTeamSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (category.isNotEmpty) {
+      category.forEach(
+          (element) => returnStrings.add('category${element.toRequest()}'));
+    }
+    if (encounter.isNotEmpty) {
+      encounter.forEach(
+          (element) => returnStrings.add('encounter${element.toRequest()}'));
+    }
+    if (participant.isNotEmpty) {
+      participant.forEach(
+          (element) => returnStrings.add('participant${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -3921,8 +6232,114 @@ class ClinicalImpressionSearchParams with _$ClinicalImpressionSearchParams {
   }) = _ClinicalImpressionSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClinicalImpressionSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$ClinicalImpressionSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (assessor.isNotEmpty) {
+      assessor.forEach(
+          (element) => returnStrings.add('assessor${element.toRequest()}'));
+    }
+    if (encounter.isNotEmpty) {
+      encounter.forEach(
+          (element) => returnStrings.add('encounter${element.toRequest()}'));
+    }
+    if (findingCode.isNotEmpty) {
+      findingCode.forEach(
+          (element) => returnStrings.add('finding-code${element.toRequest()}'));
+    }
+    if (findingRef.isNotEmpty) {
+      findingRef.forEach(
+          (element) => returnStrings.add('finding-ref${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (investigation.isNotEmpty) {
+      investigation.forEach((element) =>
+          returnStrings.add('investigation${element.toRequest()}'));
+    }
+    if (previous.isNotEmpty) {
+      previous.forEach(
+          (element) => returnStrings.add('previous${element.toRequest()}'));
+    }
+    if (problem.isNotEmpty) {
+      problem.forEach(
+          (element) => returnStrings.add('problem${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    if (supportingInfo.isNotEmpty) {
+      supportingInfo.forEach((element) =>
+          returnStrings.add('supporting-info${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -4143,8 +6560,134 @@ class CompositionSearchParams with _$CompositionSearchParams {
   }) = _CompositionSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CompositionSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$CompositionSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (type.isNotEmpty) {
+      type.forEach(
+          (element) => returnStrings.add('type${element.toRequest()}'));
+    }
+    if (attester.isNotEmpty) {
+      attester.forEach(
+          (element) => returnStrings.add('attester${element.toRequest()}'));
+    }
+    if (author.isNotEmpty) {
+      author.forEach(
+          (element) => returnStrings.add('author${element.toRequest()}'));
+    }
+    if (category.isNotEmpty) {
+      category.forEach(
+          (element) => returnStrings.add('category${element.toRequest()}'));
+    }
+    if (confidentiality.isNotEmpty) {
+      confidentiality.forEach((element) =>
+          returnStrings.add('confidentiality${element.toRequest()}'));
+    }
+    if (context.isNotEmpty) {
+      context.forEach(
+          (element) => returnStrings.add('context${element.toRequest()}'));
+    }
+    if (encounter.isNotEmpty) {
+      encounter.forEach(
+          (element) => returnStrings.add('encounter${element.toRequest()}'));
+    }
+    if (entry.isNotEmpty) {
+      entry.forEach(
+          (element) => returnStrings.add('entry${element.toRequest()}'));
+    }
+    if (period.isNotEmpty) {
+      period.forEach(
+          (element) => returnStrings.add('period${element.toRequest()}'));
+    }
+    if (relatedId.isNotEmpty) {
+      relatedId.forEach(
+          (element) => returnStrings.add('related-id${element.toRequest()}'));
+    }
+    if (relatedRef.isNotEmpty) {
+      relatedRef.forEach(
+          (element) => returnStrings.add('related-ref${element.toRequest()}'));
+    }
+    if (section.isNotEmpty) {
+      section.forEach(
+          (element) => returnStrings.add('section${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    if (title.isNotEmpty) {
+      title.forEach(
+          (element) => returnStrings.add('title${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -4336,8 +6879,122 @@ class ConsentSearchParams with _$ConsentSearchParams {
   }) = _ConsentSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConsentSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$ConsentSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (action.isNotEmpty) {
+      action.forEach(
+          (element) => returnStrings.add('action${element.toRequest()}'));
+    }
+    if (actor.isNotEmpty) {
+      actor.forEach(
+          (element) => returnStrings.add('actor${element.toRequest()}'));
+    }
+    if (category.isNotEmpty) {
+      category.forEach(
+          (element) => returnStrings.add('category${element.toRequest()}'));
+    }
+    if (consentor.isNotEmpty) {
+      consentor.forEach(
+          (element) => returnStrings.add('consentor${element.toRequest()}'));
+    }
+    if (data.isNotEmpty) {
+      data.forEach(
+          (element) => returnStrings.add('data${element.toRequest()}'));
+    }
+    if (organization.isNotEmpty) {
+      organization.forEach(
+          (element) => returnStrings.add('organization${element.toRequest()}'));
+    }
+    if (period.isNotEmpty) {
+      period.forEach(
+          (element) => returnStrings.add('period${element.toRequest()}'));
+    }
+    if (purpose.isNotEmpty) {
+      purpose.forEach(
+          (element) => returnStrings.add('purpose${element.toRequest()}'));
+    }
+    if (scope.isNotEmpty) {
+      scope.forEach(
+          (element) => returnStrings.add('scope${element.toRequest()}'));
+    }
+    if (securityLabel.isNotEmpty) {
+      securityLabel.forEach((element) =>
+          returnStrings.add('security-label${element.toRequest()}'));
+    }
+    if (sourceReference.isNotEmpty) {
+      sourceReference.forEach((element) =>
+          returnStrings.add('source-reference${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -4571,8 +7228,154 @@ class EncounterSearchParams with _$EncounterSearchParams {
   }) = _EncounterSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EncounterSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$EncounterSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (type.isNotEmpty) {
+      type.forEach(
+          (element) => returnStrings.add('type${element.toRequest()}'));
+    }
+    if (account.isNotEmpty) {
+      account.forEach(
+          (element) => returnStrings.add('account${element.toRequest()}'));
+    }
+    if (appointment.isNotEmpty) {
+      appointment.forEach(
+          (element) => returnStrings.add('appointment${element.toRequest()}'));
+    }
+    if (basedOn.isNotEmpty) {
+      basedOn.forEach(
+          (element) => returnStrings.add('based-on${element.toRequest()}'));
+    }
+    if (class_.isNotEmpty) {
+      class_.forEach(
+          (element) => returnStrings.add('class${element.toRequest()}'));
+    }
+    if (diagnosis.isNotEmpty) {
+      diagnosis.forEach(
+          (element) => returnStrings.add('diagnosis${element.toRequest()}'));
+    }
+    if (episodeOfCare.isNotEmpty) {
+      episodeOfCare.forEach((element) =>
+          returnStrings.add('episode-of-care${element.toRequest()}'));
+    }
+    if (length.isNotEmpty) {
+      length.forEach(
+          (element) => returnStrings.add('length${element.toRequest()}'));
+    }
+    if (location.isNotEmpty) {
+      location.forEach(
+          (element) => returnStrings.add('location${element.toRequest()}'));
+    }
+    if (locationPeriod.isNotEmpty) {
+      locationPeriod.forEach((element) =>
+          returnStrings.add('location-period${element.toRequest()}'));
+    }
+    if (partOf.isNotEmpty) {
+      partOf.forEach(
+          (element) => returnStrings.add('part-of${element.toRequest()}'));
+    }
+    if (participant.isNotEmpty) {
+      participant.forEach(
+          (element) => returnStrings.add('participant${element.toRequest()}'));
+    }
+    if (participantType.isNotEmpty) {
+      participantType.forEach((element) =>
+          returnStrings.add('participant-type${element.toRequest()}'));
+    }
+    if (practitioner.isNotEmpty) {
+      practitioner.forEach(
+          (element) => returnStrings.add('practitioner${element.toRequest()}'));
+    }
+    if (reasonCode.isNotEmpty) {
+      reasonCode.forEach(
+          (element) => returnStrings.add('reason-code${element.toRequest()}'));
+    }
+    if (reasonReference.isNotEmpty) {
+      reasonReference.forEach((element) =>
+          returnStrings.add('reason-reference${element.toRequest()}'));
+    }
+    if (serviceProvider.isNotEmpty) {
+      serviceProvider.forEach((element) =>
+          returnStrings.add('service-provider${element.toRequest()}'));
+    }
+    if (specialArrangement.isNotEmpty) {
+      specialArrangement.forEach((element) =>
+          returnStrings.add('special-arrangement${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -4754,8 +7557,98 @@ class EpisodeOfCareSearchParams with _$EpisodeOfCareSearchParams {
   }) = _EpisodeOfCareSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EpisodeOfCareSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$EpisodeOfCareSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (type.isNotEmpty) {
+      type.forEach(
+          (element) => returnStrings.add('type${element.toRequest()}'));
+    }
+    if (careManager.isNotEmpty) {
+      careManager.forEach(
+          (element) => returnStrings.add('care-manager${element.toRequest()}'));
+    }
+    if (condition.isNotEmpty) {
+      condition.forEach(
+          (element) => returnStrings.add('condition${element.toRequest()}'));
+    }
+    if (incomingReferral.isNotEmpty) {
+      incomingReferral.forEach((element) =>
+          returnStrings.add('incoming-referral${element.toRequest()}'));
+    }
+    if (organization.isNotEmpty) {
+      organization.forEach(
+          (element) => returnStrings.add('organization${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -4898,8 +7791,86 @@ class FlagSearchParams with _$FlagSearchParams {
   }) = _FlagSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory FlagSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$FlagSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (encounter.isNotEmpty) {
+      encounter.forEach(
+          (element) => returnStrings.add('encounter${element.toRequest()}'));
+    }
+    if (author.isNotEmpty) {
+      author.forEach(
+          (element) => returnStrings.add('author${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -5102,8 +8073,126 @@ class ImmunizationSearchParams with _$ImmunizationSearchParams {
   }) = _ImmunizationSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImmunizationSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$ImmunizationSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (location.isNotEmpty) {
+      location.forEach(
+          (element) => returnStrings.add('location${element.toRequest()}'));
+    }
+    if (lotNumber.isNotEmpty) {
+      lotNumber.forEach(
+          (element) => returnStrings.add('lot-number${element.toRequest()}'));
+    }
+    if (manufacturer.isNotEmpty) {
+      manufacturer.forEach(
+          (element) => returnStrings.add('manufacturer${element.toRequest()}'));
+    }
+    if (performer.isNotEmpty) {
+      performer.forEach(
+          (element) => returnStrings.add('performer${element.toRequest()}'));
+    }
+    if (reaction.isNotEmpty) {
+      reaction.forEach(
+          (element) => returnStrings.add('reaction${element.toRequest()}'));
+    }
+    if (reactionDate.isNotEmpty) {
+      reactionDate.forEach((element) =>
+          returnStrings.add('reaction-date${element.toRequest()}'));
+    }
+    if (reasonCode.isNotEmpty) {
+      reasonCode.forEach(
+          (element) => returnStrings.add('reason-code${element.toRequest()}'));
+    }
+    if (reasonReference.isNotEmpty) {
+      reasonReference.forEach((element) =>
+          returnStrings.add('reason-reference${element.toRequest()}'));
+    }
+    if (series.isNotEmpty) {
+      series.forEach(
+          (element) => returnStrings.add('series${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (statusReason.isNotEmpty) {
+      statusReason.forEach((element) =>
+          returnStrings.add('status-reason${element.toRequest()}'));
+    }
+    if (targetDisease.isNotEmpty) {
+      targetDisease.forEach((element) =>
+          returnStrings.add('target-disease${element.toRequest()}'));
+    }
+    if (vaccineCode.isNotEmpty) {
+      vaccineCode.forEach(
+          (element) => returnStrings.add('vaccine-code${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -5290,8 +8379,102 @@ class RiskAssessmentSearchParams with _$RiskAssessmentSearchParams {
   }) = _RiskAssessmentSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory RiskAssessmentSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$RiskAssessmentSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (encounter.isNotEmpty) {
+      encounter.forEach(
+          (element) => returnStrings.add('encounter${element.toRequest()}'));
+    }
+    if (condition.isNotEmpty) {
+      condition.forEach(
+          (element) => returnStrings.add('condition${element.toRequest()}'));
+    }
+    if (method.isNotEmpty) {
+      method.forEach(
+          (element) => returnStrings.add('method${element.toRequest()}'));
+    }
+    if (performer.isNotEmpty) {
+      performer.forEach(
+          (element) => returnStrings.add('performer${element.toRequest()}'));
+    }
+    if (probability.isNotEmpty) {
+      probability.forEach(
+          (element) => returnStrings.add('probability${element.toRequest()}'));
+    }
+    if (risk.isNotEmpty) {
+      risk.forEach(
+          (element) => returnStrings.add('risk${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -5421,8 +8604,90 @@ class SupplyRequestSearchParams with _$SupplyRequestSearchParams {
   }) = _SupplyRequestSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SupplyRequestSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$SupplyRequestSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (category.isNotEmpty) {
+      category.forEach(
+          (element) => returnStrings.add('category${element.toRequest()}'));
+    }
+    if (requester.isNotEmpty) {
+      requester.forEach(
+          (element) => returnStrings.add('requester${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    if (supplier.isNotEmpty) {
+      supplier.forEach(
+          (element) => returnStrings.add('supplier${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -5564,8 +8829,86 @@ class DetectedIssueSearchParams with _$DetectedIssueSearchParams {
   }) = _DetectedIssueSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DetectedIssueSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$DetectedIssueSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (author.isNotEmpty) {
+      author.forEach(
+          (element) => returnStrings.add('author${element.toRequest()}'));
+    }
+    if (code.isNotEmpty) {
+      code.forEach(
+          (element) => returnStrings.add('code${element.toRequest()}'));
+    }
+    if (identified.isNotEmpty) {
+      identified.forEach(
+          (element) => returnStrings.add('identified${element.toRequest()}'));
+    }
+    if (implicated.isNotEmpty) {
+      implicated.forEach(
+          (element) => returnStrings.add('implicated${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -5738,8 +9081,114 @@ class DocumentManifestSearchParams with _$DocumentManifestSearchParams {
   }) = _DocumentManifestSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DocumentManifestSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$DocumentManifestSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (type.isNotEmpty) {
+      type.forEach(
+          (element) => returnStrings.add('type${element.toRequest()}'));
+    }
+    if (author.isNotEmpty) {
+      author.forEach(
+          (element) => returnStrings.add('author${element.toRequest()}'));
+    }
+    if (created.isNotEmpty) {
+      created.forEach(
+          (element) => returnStrings.add('created${element.toRequest()}'));
+    }
+    if (description.isNotEmpty) {
+      description.forEach(
+          (element) => returnStrings.add('description${element.toRequest()}'));
+    }
+    if (item.isNotEmpty) {
+      item.forEach(
+          (element) => returnStrings.add('item${element.toRequest()}'));
+    }
+    if (recipient.isNotEmpty) {
+      recipient.forEach(
+          (element) => returnStrings.add('recipient${element.toRequest()}'));
+    }
+    if (relatedId.isNotEmpty) {
+      relatedId.forEach(
+          (element) => returnStrings.add('related-id${element.toRequest()}'));
+    }
+    if (relatedRef.isNotEmpty) {
+      relatedRef.forEach(
+          (element) => returnStrings.add('related-ref${element.toRequest()}'));
+    }
+    if (source.isNotEmpty) {
+      source.forEach(
+          (element) => returnStrings.add('source${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -5962,8 +9411,162 @@ class DocumentReferenceSearchParams with _$DocumentReferenceSearchParams {
   }) = _DocumentReferenceSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DocumentReferenceSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$DocumentReferenceSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (type.isNotEmpty) {
+      type.forEach(
+          (element) => returnStrings.add('type${element.toRequest()}'));
+    }
+    if (encounter.isNotEmpty) {
+      encounter.forEach(
+          (element) => returnStrings.add('encounter${element.toRequest()}'));
+    }
+    if (authenticator.isNotEmpty) {
+      authenticator.forEach((element) =>
+          returnStrings.add('authenticator${element.toRequest()}'));
+    }
+    if (author.isNotEmpty) {
+      author.forEach(
+          (element) => returnStrings.add('author${element.toRequest()}'));
+    }
+    if (category.isNotEmpty) {
+      category.forEach(
+          (element) => returnStrings.add('category${element.toRequest()}'));
+    }
+    if (contenttype.isNotEmpty) {
+      contenttype.forEach(
+          (element) => returnStrings.add('contenttype${element.toRequest()}'));
+    }
+    if (custodian.isNotEmpty) {
+      custodian.forEach(
+          (element) => returnStrings.add('custodian${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (description.isNotEmpty) {
+      description.forEach(
+          (element) => returnStrings.add('description${element.toRequest()}'));
+    }
+    if (event.isNotEmpty) {
+      event.forEach(
+          (element) => returnStrings.add('event${element.toRequest()}'));
+    }
+    if (facility.isNotEmpty) {
+      facility.forEach(
+          (element) => returnStrings.add('facility${element.toRequest()}'));
+    }
+    if (format.isNotEmpty) {
+      format.forEach(
+          (element) => returnStrings.add('format${element.toRequest()}'));
+    }
+    if (language.isNotEmpty) {
+      language.forEach(
+          (element) => returnStrings.add('language${element.toRequest()}'));
+    }
+    if (location.isNotEmpty) {
+      location.forEach(
+          (element) => returnStrings.add('location${element.toRequest()}'));
+    }
+    if (period.isNotEmpty) {
+      period.forEach(
+          (element) => returnStrings.add('period${element.toRequest()}'));
+    }
+    if (related.isNotEmpty) {
+      related.forEach(
+          (element) => returnStrings.add('related${element.toRequest()}'));
+    }
+    if (relatesto.isNotEmpty) {
+      relatesto.forEach(
+          (element) => returnStrings.add('relatesto${element.toRequest()}'));
+    }
+    if (relation.isNotEmpty) {
+      relation.forEach(
+          (element) => returnStrings.add('relation${element.toRequest()}'));
+    }
+    if (securityLabel.isNotEmpty) {
+      securityLabel.forEach((element) =>
+          returnStrings.add('security-label${element.toRequest()}'));
+    }
+    if (setting.isNotEmpty) {
+      setting.forEach(
+          (element) => returnStrings.add('setting${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    if (relationship.isNotEmpty) {
+      relationship.forEach(
+          (element) => returnStrings.add('relationship${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -6115,8 +9718,94 @@ class GoalSearchParams with _$GoalSearchParams {
   }) = _GoalSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory GoalSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$GoalSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (achievementStatus.isNotEmpty) {
+      achievementStatus.forEach((element) =>
+          returnStrings.add('achievement-status${element.toRequest()}'));
+    }
+    if (category.isNotEmpty) {
+      category.forEach(
+          (element) => returnStrings.add('category${element.toRequest()}'));
+    }
+    if (lifecycleStatus.isNotEmpty) {
+      lifecycleStatus.forEach((element) =>
+          returnStrings.add('lifecycle-status${element.toRequest()}'));
+    }
+    if (startDate.isNotEmpty) {
+      startDate.forEach(
+          (element) => returnStrings.add('start-date${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    if (targetDate.isNotEmpty) {
+      targetDate.forEach(
+          (element) => returnStrings.add('target-date${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -6293,8 +9982,130 @@ class ImagingStudySearchParams with _$ImagingStudySearchParams {
   }) = _ImagingStudySearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImagingStudySearchParams.fromJson(Map<String, dynamic> json) =>
-      _$ImagingStudySearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (basedon.isNotEmpty) {
+      basedon.forEach(
+          (element) => returnStrings.add('basedon${element.toRequest()}'));
+    }
+    if (bodysite.isNotEmpty) {
+      bodysite.forEach(
+          (element) => returnStrings.add('bodysite${element.toRequest()}'));
+    }
+    if (dicomClass.isNotEmpty) {
+      dicomClass.forEach(
+          (element) => returnStrings.add('dicom-class${element.toRequest()}'));
+    }
+    if (encounter.isNotEmpty) {
+      encounter.forEach(
+          (element) => returnStrings.add('encounter${element.toRequest()}'));
+    }
+    if (endpoint.isNotEmpty) {
+      endpoint.forEach(
+          (element) => returnStrings.add('endpoint${element.toRequest()}'));
+    }
+    if (instance.isNotEmpty) {
+      instance.forEach(
+          (element) => returnStrings.add('instance${element.toRequest()}'));
+    }
+    if (interpreter.isNotEmpty) {
+      interpreter.forEach(
+          (element) => returnStrings.add('interpreter${element.toRequest()}'));
+    }
+    if (modality.isNotEmpty) {
+      modality.forEach(
+          (element) => returnStrings.add('modality${element.toRequest()}'));
+    }
+    if (performer.isNotEmpty) {
+      performer.forEach(
+          (element) => returnStrings.add('performer${element.toRequest()}'));
+    }
+    if (reason.isNotEmpty) {
+      reason.forEach(
+          (element) => returnStrings.add('reason${element.toRequest()}'));
+    }
+    if (referrer.isNotEmpty) {
+      referrer.forEach(
+          (element) => returnStrings.add('referrer${element.toRequest()}'));
+    }
+    if (series.isNotEmpty) {
+      series.forEach(
+          (element) => returnStrings.add('series${element.toRequest()}'));
+    }
+    if (started.isNotEmpty) {
+      started.forEach(
+          (element) => returnStrings.add('started${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -6472,8 +10283,110 @@ class NutritionOrderSearchParams with _$NutritionOrderSearchParams {
   }) = _NutritionOrderSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory NutritionOrderSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$NutritionOrderSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (encounter.isNotEmpty) {
+      encounter.forEach(
+          (element) => returnStrings.add('encounter${element.toRequest()}'));
+    }
+    if (additive.isNotEmpty) {
+      additive.forEach(
+          (element) => returnStrings.add('additive${element.toRequest()}'));
+    }
+    if (datetime.isNotEmpty) {
+      datetime.forEach(
+          (element) => returnStrings.add('datetime${element.toRequest()}'));
+    }
+    if (formula.isNotEmpty) {
+      formula.forEach(
+          (element) => returnStrings.add('formula${element.toRequest()}'));
+    }
+    if (instantiatesCanonical.isNotEmpty) {
+      instantiatesCanonical.forEach((element) =>
+          returnStrings.add('instantiates-canonical${element.toRequest()}'));
+    }
+    if (instantiatesUri.isNotEmpty) {
+      instantiatesUri.forEach((element) =>
+          returnStrings.add('instantiates-uri${element.toRequest()}'));
+    }
+    if (oraldiet.isNotEmpty) {
+      oraldiet.forEach(
+          (element) => returnStrings.add('oraldiet${element.toRequest()}'));
+    }
+    if (provider.isNotEmpty) {
+      provider.forEach(
+          (element) => returnStrings.add('provider${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (supplement.isNotEmpty) {
+      supplement.forEach(
+          (element) => returnStrings.add('supplement${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -6612,8 +10525,82 @@ class SupplyDeliverySearchParams with _$SupplyDeliverySearchParams {
   }) = _SupplyDeliverySearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SupplyDeliverySearchParams.fromJson(Map<String, dynamic> json) =>
-      _$SupplyDeliverySearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (receiver.isNotEmpty) {
+      receiver.forEach(
+          (element) => returnStrings.add('receiver${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (supplier.isNotEmpty) {
+      supplier.forEach(
+          (element) => returnStrings.add('supplier${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -6769,8 +10756,86 @@ class VisionPrescriptionSearchParams with _$VisionPrescriptionSearchParams {
   }) = _VisionPrescriptionSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory VisionPrescriptionSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$VisionPrescriptionSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (encounter.isNotEmpty) {
+      encounter.forEach(
+          (element) => returnStrings.add('encounter${element.toRequest()}'));
+    }
+    if (datewritten.isNotEmpty) {
+      datewritten.forEach(
+          (element) => returnStrings.add('datewritten${element.toRequest()}'));
+    }
+    if (prescriber.isNotEmpty) {
+      prescriber.forEach(
+          (element) => returnStrings.add('prescriber${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -6874,8 +10939,78 @@ class DeviceUseStatementSearchParams with _$DeviceUseStatementSearchParams {
   }) = _DeviceUseStatementSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DeviceUseStatementSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$DeviceUseStatementSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (device.isNotEmpty) {
+      device.forEach(
+          (element) => returnStrings.add('device${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -6998,8 +11133,130 @@ class AppointmentSearchParams with _$AppointmentSearchParams {
   }) = _AppointmentSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory AppointmentSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$AppointmentSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (actor.isNotEmpty) {
+      actor.forEach(
+          (element) => returnStrings.add('actor${element.toRequest()}'));
+    }
+    if (appointmentType.isNotEmpty) {
+      appointmentType.forEach((element) =>
+          returnStrings.add('appointment-type${element.toRequest()}'));
+    }
+    if (basedOn.isNotEmpty) {
+      basedOn.forEach(
+          (element) => returnStrings.add('based-on${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (location.isNotEmpty) {
+      location.forEach(
+          (element) => returnStrings.add('location${element.toRequest()}'));
+    }
+    if (partStatus.isNotEmpty) {
+      partStatus.forEach(
+          (element) => returnStrings.add('part-status${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (practitioner.isNotEmpty) {
+      practitioner.forEach(
+          (element) => returnStrings.add('practitioner${element.toRequest()}'));
+    }
+    if (reasonCode.isNotEmpty) {
+      reasonCode.forEach(
+          (element) => returnStrings.add('reason-code${element.toRequest()}'));
+    }
+    if (reasonReference.isNotEmpty) {
+      reasonReference.forEach((element) =>
+          returnStrings.add('reason-reference${element.toRequest()}'));
+    }
+    if (serviceCategory.isNotEmpty) {
+      serviceCategory.forEach((element) =>
+          returnStrings.add('service-category${element.toRequest()}'));
+    }
+    if (serviceType.isNotEmpty) {
+      serviceType.forEach(
+          (element) => returnStrings.add('service-type${element.toRequest()}'));
+    }
+    if (slot.isNotEmpty) {
+      slot.forEach(
+          (element) => returnStrings.add('slot${element.toRequest()}'));
+    }
+    if (specialty.isNotEmpty) {
+      specialty.forEach(
+          (element) => returnStrings.add('specialty${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (supportingInfo.isNotEmpty) {
+      supportingInfo.forEach((element) =>
+          returnStrings.add('supporting-info${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -7080,8 +11337,90 @@ class AppointmentResponseSearchParams with _$AppointmentResponseSearchParams {
   }) = _AppointmentResponseSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory AppointmentResponseSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$AppointmentResponseSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (actor.isNotEmpty) {
+      actor.forEach(
+          (element) => returnStrings.add('actor${element.toRequest()}'));
+    }
+    if (appointment.isNotEmpty) {
+      appointment.forEach(
+          (element) => returnStrings.add('appointment${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (location.isNotEmpty) {
+      location.forEach(
+          (element) => returnStrings.add('location${element.toRequest()}'));
+    }
+    if (partStatus.isNotEmpty) {
+      partStatus.forEach(
+          (element) => returnStrings.add('part-status${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (practitioner.isNotEmpty) {
+      practitioner.forEach(
+          (element) => returnStrings.add('practitioner${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -7199,8 +11538,134 @@ class AuditEventSearchParams with _$AuditEventSearchParams {
   }) = _AuditEventSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory AuditEventSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$AuditEventSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (action.isNotEmpty) {
+      action.forEach(
+          (element) => returnStrings.add('action${element.toRequest()}'));
+    }
+    if (address.isNotEmpty) {
+      address.forEach(
+          (element) => returnStrings.add('address${element.toRequest()}'));
+    }
+    if (agent.isNotEmpty) {
+      agent.forEach(
+          (element) => returnStrings.add('agent${element.toRequest()}'));
+    }
+    if (agentName.isNotEmpty) {
+      agentName.forEach(
+          (element) => returnStrings.add('agent-name${element.toRequest()}'));
+    }
+    if (agentRole.isNotEmpty) {
+      agentRole.forEach(
+          (element) => returnStrings.add('agent-role${element.toRequest()}'));
+    }
+    if (altid.isNotEmpty) {
+      altid.forEach(
+          (element) => returnStrings.add('altid${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (entity.isNotEmpty) {
+      entity.forEach(
+          (element) => returnStrings.add('entity${element.toRequest()}'));
+    }
+    if (entityName.isNotEmpty) {
+      entityName.forEach(
+          (element) => returnStrings.add('entity-name${element.toRequest()}'));
+    }
+    if (entityRole.isNotEmpty) {
+      entityRole.forEach(
+          (element) => returnStrings.add('entity-role${element.toRequest()}'));
+    }
+    if (entityType.isNotEmpty) {
+      entityType.forEach(
+          (element) => returnStrings.add('entity-type${element.toRequest()}'));
+    }
+    if (outcome.isNotEmpty) {
+      outcome.forEach(
+          (element) => returnStrings.add('outcome${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (policy.isNotEmpty) {
+      policy.forEach(
+          (element) => returnStrings.add('policy${element.toRequest()}'));
+    }
+    if (site.isNotEmpty) {
+      site.forEach(
+          (element) => returnStrings.add('site${element.toRequest()}'));
+    }
+    if (source.isNotEmpty) {
+      source.forEach(
+          (element) => returnStrings.add('source${element.toRequest()}'));
+    }
+    if (subtype.isNotEmpty) {
+      subtype.forEach(
+          (element) => returnStrings.add('subtype${element.toRequest()}'));
+    }
+    if (type.isNotEmpty) {
+      type.forEach(
+          (element) => returnStrings.add('type${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -7276,8 +11741,86 @@ class BasicSearchParams with _$BasicSearchParams {
   }) = _BasicSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory BasicSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$BasicSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (author.isNotEmpty) {
+      author.forEach(
+          (element) => returnStrings.add('author${element.toRequest()}'));
+    }
+    if (code.isNotEmpty) {
+      code.forEach(
+          (element) => returnStrings.add('code${element.toRequest()}'));
+    }
+    if (created.isNotEmpty) {
+      created.forEach(
+          (element) => returnStrings.add('created${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -7347,8 +11890,78 @@ class BodyStructureSearchParams with _$BodyStructureSearchParams {
   }) = _BodyStructureSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory BodyStructureSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$BodyStructureSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (location.isNotEmpty) {
+      location.forEach(
+          (element) => returnStrings.add('location${element.toRequest()}'));
+    }
+    if (morphology.isNotEmpty) {
+      morphology.forEach(
+          (element) => returnStrings.add('morphology${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -7421,8 +12034,82 @@ class BundleSearchParams with _$BundleSearchParams {
   }) = _BundleSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory BundleSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$BundleSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (composition.isNotEmpty) {
+      composition.forEach(
+          (element) => returnStrings.add('composition${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (message.isNotEmpty) {
+      message.forEach(
+          (element) => returnStrings.add('message${element.toRequest()}'));
+    }
+    if (timestamp.isNotEmpty) {
+      timestamp.forEach(
+          (element) => returnStrings.add('timestamp${element.toRequest()}'));
+    }
+    if (type.isNotEmpty) {
+      type.forEach(
+          (element) => returnStrings.add('type${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -7780,8 +12467,153 @@ class CapabilityStatementSearchParams with _$CapabilityStatementSearchParams {
   }) = _CapabilityStatementSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CapabilityStatementSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$CapabilityStatementSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (context.isNotEmpty) {
+      context.forEach(
+          (element) => returnStrings.add('context${element.toRequest()}'));
+    }
+    if (contextQuantity.isNotEmpty) {
+      contextQuantity.forEach((element) =>
+          returnStrings.add('context-quantity${element.toRequest()}'));
+    }
+    if (contextType.isNotEmpty) {
+      contextType.forEach(
+          (element) => returnStrings.add('context-type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (description.isNotEmpty) {
+      description.forEach(
+          (element) => returnStrings.add('description${element.toRequest()}'));
+    }
+    if (fhirversion.isNotEmpty) {
+      fhirversion.forEach(
+          (element) => returnStrings.add('fhirversion${element.toRequest()}'));
+    }
+    if (format.isNotEmpty) {
+      format.forEach(
+          (element) => returnStrings.add('format${element.toRequest()}'));
+    }
+    if (guide.isNotEmpty) {
+      guide.forEach(
+          (element) => returnStrings.add('guide${element.toRequest()}'));
+    }
+    if (jurisdiction.isNotEmpty) {
+      jurisdiction.forEach(
+          (element) => returnStrings.add('jurisdiction${element.toRequest()}'));
+    }
+    if (mode.isNotEmpty) {
+      mode.forEach(
+          (element) => returnStrings.add('mode${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (publisher.isNotEmpty) {
+      publisher.forEach(
+          (element) => returnStrings.add('publisher${element.toRequest()}'));
+    }
+    if (resource.isNotEmpty) {
+      resource.forEach(
+          (element) => returnStrings.add('resource${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach((element) =>
+          returnStrings.add('resource-profile${element.toRequest()}'));
+    }
+    if (securityService.isNotEmpty) {
+      securityService.forEach((element) =>
+          returnStrings.add('security-service${element.toRequest()}'));
+    }
+    if (software.isNotEmpty) {
+      software.forEach(
+          (element) => returnStrings.add('software${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (supportedProfile.isNotEmpty) {
+      supportedProfile.forEach((element) =>
+          returnStrings.add('supported-profile${element.toRequest()}'));
+    }
+    if (title.isNotEmpty) {
+      title.forEach(
+          (element) => returnStrings.add('title${element.toRequest()}'));
+    }
+    if (url.isNotEmpty) {
+      url.forEach((element) => returnStrings.add('url${element.toRequest()}'));
+    }
+    if (version.isNotEmpty) {
+      version.forEach(
+          (element) => returnStrings.add('version${element.toRequest()}'));
+    }
+    if (contextTypeQuantity.isNotEmpty) {
+      contextTypeQuantity.forEach((element) =>
+          returnStrings.add('context-type-quantity${element.toRequest()}'));
+    }
+    if (contextTypeValue.isNotEmpty) {
+      contextTypeValue.forEach((element) =>
+          returnStrings.add('context-type-value${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -8134,8 +12966,141 @@ class CodeSystemSearchParams with _$CodeSystemSearchParams {
   }) = _CodeSystemSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CodeSystemSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$CodeSystemSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (context.isNotEmpty) {
+      context.forEach(
+          (element) => returnStrings.add('context${element.toRequest()}'));
+    }
+    if (contextQuantity.isNotEmpty) {
+      contextQuantity.forEach((element) =>
+          returnStrings.add('context-quantity${element.toRequest()}'));
+    }
+    if (contextType.isNotEmpty) {
+      contextType.forEach(
+          (element) => returnStrings.add('context-type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (description.isNotEmpty) {
+      description.forEach(
+          (element) => returnStrings.add('description${element.toRequest()}'));
+    }
+    if (jurisdiction.isNotEmpty) {
+      jurisdiction.forEach(
+          (element) => returnStrings.add('jurisdiction${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (publisher.isNotEmpty) {
+      publisher.forEach(
+          (element) => returnStrings.add('publisher${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (title.isNotEmpty) {
+      title.forEach(
+          (element) => returnStrings.add('title${element.toRequest()}'));
+    }
+    if (url.isNotEmpty) {
+      url.forEach((element) => returnStrings.add('url${element.toRequest()}'));
+    }
+    if (version.isNotEmpty) {
+      version.forEach(
+          (element) => returnStrings.add('version${element.toRequest()}'));
+    }
+    if (contextTypeQuantity.isNotEmpty) {
+      contextTypeQuantity.forEach((element) =>
+          returnStrings.add('context-type-quantity${element.toRequest()}'));
+    }
+    if (contextTypeValue.isNotEmpty) {
+      contextTypeValue.forEach((element) =>
+          returnStrings.add('context-type-value${element.toRequest()}'));
+    }
+    if (code.isNotEmpty) {
+      code.forEach(
+          (element) => returnStrings.add('code${element.toRequest()}'));
+    }
+    if (contentMode.isNotEmpty) {
+      contentMode.forEach(
+          (element) => returnStrings.add('content-mode${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (language.isNotEmpty) {
+      language.forEach(
+          (element) => returnStrings.add('language${element.toRequest()}'));
+    }
+    if (supplements.isNotEmpty) {
+      supplements.forEach(
+          (element) => returnStrings.add('supplements${element.toRequest()}'));
+    }
+    if (system.isNotEmpty) {
+      system.forEach(
+          (element) => returnStrings.add('system${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -8434,9 +13399,117 @@ class CompartmentDefinitionSearchParams
   }) = _CompartmentDefinitionSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CompartmentDefinitionSearchParams.fromJson(
-          Map<String, dynamic> json) =>
-      _$CompartmentDefinitionSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (context.isNotEmpty) {
+      context.forEach(
+          (element) => returnStrings.add('context${element.toRequest()}'));
+    }
+    if (contextQuantity.isNotEmpty) {
+      contextQuantity.forEach((element) =>
+          returnStrings.add('context-quantity${element.toRequest()}'));
+    }
+    if (contextType.isNotEmpty) {
+      contextType.forEach(
+          (element) => returnStrings.add('context-type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (description.isNotEmpty) {
+      description.forEach(
+          (element) => returnStrings.add('description${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (publisher.isNotEmpty) {
+      publisher.forEach(
+          (element) => returnStrings.add('publisher${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (url.isNotEmpty) {
+      url.forEach((element) => returnStrings.add('url${element.toRequest()}'));
+    }
+    if (version.isNotEmpty) {
+      version.forEach(
+          (element) => returnStrings.add('version${element.toRequest()}'));
+    }
+    if (contextTypeQuantity.isNotEmpty) {
+      contextTypeQuantity.forEach((element) =>
+          returnStrings.add('context-type-quantity${element.toRequest()}'));
+    }
+    if (contextTypeValue.isNotEmpty) {
+      contextTypeValue.forEach((element) =>
+          returnStrings.add('context-type-value${element.toRequest()}'));
+    }
+    if (code.isNotEmpty) {
+      code.forEach(
+          (element) => returnStrings.add('code${element.toRequest()}'));
+    }
+    if (resource.isNotEmpty) {
+      resource.forEach(
+          (element) => returnStrings.add('resource${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -8817,8 +13890,165 @@ class ConceptMapSearchParams with _$ConceptMapSearchParams {
   }) = _ConceptMapSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConceptMapSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$ConceptMapSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (context.isNotEmpty) {
+      context.forEach(
+          (element) => returnStrings.add('context${element.toRequest()}'));
+    }
+    if (contextQuantity.isNotEmpty) {
+      contextQuantity.forEach((element) =>
+          returnStrings.add('context-quantity${element.toRequest()}'));
+    }
+    if (contextType.isNotEmpty) {
+      contextType.forEach(
+          (element) => returnStrings.add('context-type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (description.isNotEmpty) {
+      description.forEach(
+          (element) => returnStrings.add('description${element.toRequest()}'));
+    }
+    if (jurisdiction.isNotEmpty) {
+      jurisdiction.forEach(
+          (element) => returnStrings.add('jurisdiction${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (publisher.isNotEmpty) {
+      publisher.forEach(
+          (element) => returnStrings.add('publisher${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (title.isNotEmpty) {
+      title.forEach(
+          (element) => returnStrings.add('title${element.toRequest()}'));
+    }
+    if (url.isNotEmpty) {
+      url.forEach((element) => returnStrings.add('url${element.toRequest()}'));
+    }
+    if (version.isNotEmpty) {
+      version.forEach(
+          (element) => returnStrings.add('version${element.toRequest()}'));
+    }
+    if (contextTypeQuantity.isNotEmpty) {
+      contextTypeQuantity.forEach((element) =>
+          returnStrings.add('context-type-quantity${element.toRequest()}'));
+    }
+    if (contextTypeValue.isNotEmpty) {
+      contextTypeValue.forEach((element) =>
+          returnStrings.add('context-type-value${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (dependson.isNotEmpty) {
+      dependson.forEach(
+          (element) => returnStrings.add('dependson${element.toRequest()}'));
+    }
+    if (other.isNotEmpty) {
+      other.forEach(
+          (element) => returnStrings.add('other${element.toRequest()}'));
+    }
+    if (product.isNotEmpty) {
+      product.forEach(
+          (element) => returnStrings.add('product${element.toRequest()}'));
+    }
+    if (source.isNotEmpty) {
+      source.forEach(
+          (element) => returnStrings.add('source${element.toRequest()}'));
+    }
+    if (sourceCode.isNotEmpty) {
+      sourceCode.forEach(
+          (element) => returnStrings.add('source-code${element.toRequest()}'));
+    }
+    if (sourceSystem.isNotEmpty) {
+      sourceSystem.forEach((element) =>
+          returnStrings.add('source-system${element.toRequest()}'));
+    }
+    if (sourceUri.isNotEmpty) {
+      sourceUri.forEach(
+          (element) => returnStrings.add('source-uri${element.toRequest()}'));
+    }
+    if (target.isNotEmpty) {
+      target.forEach(
+          (element) => returnStrings.add('target${element.toRequest()}'));
+    }
+    if (targetCode.isNotEmpty) {
+      targetCode.forEach(
+          (element) => returnStrings.add('target-code${element.toRequest()}'));
+    }
+    if (targetSystem.isNotEmpty) {
+      targetSystem.forEach((element) =>
+          returnStrings.add('target-system${element.toRequest()}'));
+    }
+    if (targetUri.isNotEmpty) {
+      targetUri.forEach(
+          (element) => returnStrings.add('target-uri${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -9131,8 +14361,117 @@ class GraphDefinitionSearchParams with _$GraphDefinitionSearchParams {
   }) = _GraphDefinitionSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory GraphDefinitionSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$GraphDefinitionSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (context.isNotEmpty) {
+      context.forEach(
+          (element) => returnStrings.add('context${element.toRequest()}'));
+    }
+    if (contextQuantity.isNotEmpty) {
+      contextQuantity.forEach((element) =>
+          returnStrings.add('context-quantity${element.toRequest()}'));
+    }
+    if (contextType.isNotEmpty) {
+      contextType.forEach(
+          (element) => returnStrings.add('context-type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (description.isNotEmpty) {
+      description.forEach(
+          (element) => returnStrings.add('description${element.toRequest()}'));
+    }
+    if (jurisdiction.isNotEmpty) {
+      jurisdiction.forEach(
+          (element) => returnStrings.add('jurisdiction${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (publisher.isNotEmpty) {
+      publisher.forEach(
+          (element) => returnStrings.add('publisher${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (url.isNotEmpty) {
+      url.forEach((element) => returnStrings.add('url${element.toRequest()}'));
+    }
+    if (version.isNotEmpty) {
+      version.forEach(
+          (element) => returnStrings.add('version${element.toRequest()}'));
+    }
+    if (contextTypeQuantity.isNotEmpty) {
+      contextTypeQuantity.forEach((element) =>
+          returnStrings.add('context-type-quantity${element.toRequest()}'));
+    }
+    if (contextTypeValue.isNotEmpty) {
+      contextTypeValue.forEach((element) =>
+          returnStrings.add('context-type-value${element.toRequest()}'));
+    }
+    if (start.isNotEmpty) {
+      start.forEach(
+          (element) => returnStrings.add('start${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -9471,8 +14810,133 @@ class ImplementationGuideSearchParams with _$ImplementationGuideSearchParams {
   }) = _ImplementationGuideSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImplementationGuideSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$ImplementationGuideSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (context.isNotEmpty) {
+      context.forEach(
+          (element) => returnStrings.add('context${element.toRequest()}'));
+    }
+    if (contextQuantity.isNotEmpty) {
+      contextQuantity.forEach((element) =>
+          returnStrings.add('context-quantity${element.toRequest()}'));
+    }
+    if (contextType.isNotEmpty) {
+      contextType.forEach(
+          (element) => returnStrings.add('context-type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (description.isNotEmpty) {
+      description.forEach(
+          (element) => returnStrings.add('description${element.toRequest()}'));
+    }
+    if (jurisdiction.isNotEmpty) {
+      jurisdiction.forEach(
+          (element) => returnStrings.add('jurisdiction${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (publisher.isNotEmpty) {
+      publisher.forEach(
+          (element) => returnStrings.add('publisher${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (title.isNotEmpty) {
+      title.forEach(
+          (element) => returnStrings.add('title${element.toRequest()}'));
+    }
+    if (url.isNotEmpty) {
+      url.forEach((element) => returnStrings.add('url${element.toRequest()}'));
+    }
+    if (version.isNotEmpty) {
+      version.forEach(
+          (element) => returnStrings.add('version${element.toRequest()}'));
+    }
+    if (contextTypeQuantity.isNotEmpty) {
+      contextTypeQuantity.forEach((element) =>
+          returnStrings.add('context-type-quantity${element.toRequest()}'));
+    }
+    if (contextTypeValue.isNotEmpty) {
+      contextTypeValue.forEach((element) =>
+          returnStrings.add('context-type-value${element.toRequest()}'));
+    }
+    if (dependsOn.isNotEmpty) {
+      dependsOn.forEach(
+          (element) => returnStrings.add('depends-on${element.toRequest()}'));
+    }
+    if (experimental.isNotEmpty) {
+      experimental.forEach(
+          (element) => returnStrings.add('experimental${element.toRequest()}'));
+    }
+    if (global.isNotEmpty) {
+      global.forEach(
+          (element) => returnStrings.add('global${element.toRequest()}'));
+    }
+    if (resource.isNotEmpty) {
+      resource.forEach(
+          (element) => returnStrings.add('resource${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -9820,8 +15284,137 @@ class MessageDefinitionSearchParams with _$MessageDefinitionSearchParams {
   }) = _MessageDefinitionSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MessageDefinitionSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$MessageDefinitionSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (context.isNotEmpty) {
+      context.forEach(
+          (element) => returnStrings.add('context${element.toRequest()}'));
+    }
+    if (contextQuantity.isNotEmpty) {
+      contextQuantity.forEach((element) =>
+          returnStrings.add('context-quantity${element.toRequest()}'));
+    }
+    if (contextType.isNotEmpty) {
+      contextType.forEach(
+          (element) => returnStrings.add('context-type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (description.isNotEmpty) {
+      description.forEach(
+          (element) => returnStrings.add('description${element.toRequest()}'));
+    }
+    if (jurisdiction.isNotEmpty) {
+      jurisdiction.forEach(
+          (element) => returnStrings.add('jurisdiction${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (publisher.isNotEmpty) {
+      publisher.forEach(
+          (element) => returnStrings.add('publisher${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (title.isNotEmpty) {
+      title.forEach(
+          (element) => returnStrings.add('title${element.toRequest()}'));
+    }
+    if (url.isNotEmpty) {
+      url.forEach((element) => returnStrings.add('url${element.toRequest()}'));
+    }
+    if (version.isNotEmpty) {
+      version.forEach(
+          (element) => returnStrings.add('version${element.toRequest()}'));
+    }
+    if (contextTypeQuantity.isNotEmpty) {
+      contextTypeQuantity.forEach((element) =>
+          returnStrings.add('context-type-quantity${element.toRequest()}'));
+    }
+    if (contextTypeValue.isNotEmpty) {
+      contextTypeValue.forEach((element) =>
+          returnStrings.add('context-type-value${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (category.isNotEmpty) {
+      category.forEach(
+          (element) => returnStrings.add('category${element.toRequest()}'));
+    }
+    if (event.isNotEmpty) {
+      event.forEach(
+          (element) => returnStrings.add('event${element.toRequest()}'));
+    }
+    if (focus.isNotEmpty) {
+      focus.forEach(
+          (element) => returnStrings.add('focus${element.toRequest()}'));
+    }
+    if (parent.isNotEmpty) {
+      parent.forEach(
+          (element) => returnStrings.add('parent${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -10119,8 +15712,138 @@ class NamingSystemSearchParams with _$NamingSystemSearchParams {
   }) = _NamingSystemSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory NamingSystemSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$NamingSystemSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (context.isNotEmpty) {
+      context.forEach(
+          (element) => returnStrings.add('context${element.toRequest()}'));
+    }
+    if (contextQuantity.isNotEmpty) {
+      contextQuantity.forEach((element) =>
+          returnStrings.add('context-quantity${element.toRequest()}'));
+    }
+    if (contextType.isNotEmpty) {
+      contextType.forEach(
+          (element) => returnStrings.add('context-type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (description.isNotEmpty) {
+      description.forEach(
+          (element) => returnStrings.add('description${element.toRequest()}'));
+    }
+    if (jurisdiction.isNotEmpty) {
+      jurisdiction.forEach(
+          (element) => returnStrings.add('jurisdiction${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (publisher.isNotEmpty) {
+      publisher.forEach(
+          (element) => returnStrings.add('publisher${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (contextTypeQuantity.isNotEmpty) {
+      contextTypeQuantity.forEach((element) =>
+          returnStrings.add('context-type-quantity${element.toRequest()}'));
+    }
+    if (contextTypeValue.isNotEmpty) {
+      contextTypeValue.forEach((element) =>
+          returnStrings.add('context-type-value${element.toRequest()}'));
+    }
+    if (contact.isNotEmpty) {
+      contact.forEach(
+          (element) => returnStrings.add('contact${element.toRequest()}'));
+    }
+    if (idType.isNotEmpty) {
+      idType.forEach(
+          (element) => returnStrings.add('id-type${element.toRequest()}'));
+    }
+    if (kind.isNotEmpty) {
+      kind.forEach(
+          (element) => returnStrings.add('kind${element.toRequest()}'));
+    }
+    if (period.isNotEmpty) {
+      period.forEach(
+          (element) => returnStrings.add('period${element.toRequest()}'));
+    }
+    if (responsible.isNotEmpty) {
+      responsible.forEach(
+          (element) => returnStrings.add('responsible${element.toRequest()}'));
+    }
+    if (telecom.isNotEmpty) {
+      telecom.forEach(
+          (element) => returnStrings.add('telecom${element.toRequest()}'));
+    }
+    if (type.isNotEmpty) {
+      type.forEach(
+          (element) => returnStrings.add('type${element.toRequest()}'));
+    }
+    if (value.isNotEmpty) {
+      value.forEach(
+          (element) => returnStrings.add('value${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -10473,8 +16196,149 @@ class OperationDefinitionSearchParams with _$OperationDefinitionSearchParams {
   }) = _OperationDefinitionSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory OperationDefinitionSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$OperationDefinitionSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (context.isNotEmpty) {
+      context.forEach(
+          (element) => returnStrings.add('context${element.toRequest()}'));
+    }
+    if (contextQuantity.isNotEmpty) {
+      contextQuantity.forEach((element) =>
+          returnStrings.add('context-quantity${element.toRequest()}'));
+    }
+    if (contextType.isNotEmpty) {
+      contextType.forEach(
+          (element) => returnStrings.add('context-type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (description.isNotEmpty) {
+      description.forEach(
+          (element) => returnStrings.add('description${element.toRequest()}'));
+    }
+    if (jurisdiction.isNotEmpty) {
+      jurisdiction.forEach(
+          (element) => returnStrings.add('jurisdiction${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (publisher.isNotEmpty) {
+      publisher.forEach(
+          (element) => returnStrings.add('publisher${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (title.isNotEmpty) {
+      title.forEach(
+          (element) => returnStrings.add('title${element.toRequest()}'));
+    }
+    if (url.isNotEmpty) {
+      url.forEach((element) => returnStrings.add('url${element.toRequest()}'));
+    }
+    if (version.isNotEmpty) {
+      version.forEach(
+          (element) => returnStrings.add('version${element.toRequest()}'));
+    }
+    if (contextTypeQuantity.isNotEmpty) {
+      contextTypeQuantity.forEach((element) =>
+          returnStrings.add('context-type-quantity${element.toRequest()}'));
+    }
+    if (contextTypeValue.isNotEmpty) {
+      contextTypeValue.forEach((element) =>
+          returnStrings.add('context-type-value${element.toRequest()}'));
+    }
+    if (base.isNotEmpty) {
+      base.forEach(
+          (element) => returnStrings.add('base${element.toRequest()}'));
+    }
+    if (code.isNotEmpty) {
+      code.forEach(
+          (element) => returnStrings.add('code${element.toRequest()}'));
+    }
+    if (inputProfile.isNotEmpty) {
+      inputProfile.forEach((element) =>
+          returnStrings.add('input-profile${element.toRequest()}'));
+    }
+    if (instance.isNotEmpty) {
+      instance.forEach(
+          (element) => returnStrings.add('instance${element.toRequest()}'));
+    }
+    if (kind.isNotEmpty) {
+      kind.forEach(
+          (element) => returnStrings.add('kind${element.toRequest()}'));
+    }
+    if (outputProfile.isNotEmpty) {
+      outputProfile.forEach((element) =>
+          returnStrings.add('output-profile${element.toRequest()}'));
+    }
+    if (system.isNotEmpty) {
+      system.forEach(
+          (element) => returnStrings.add('system${element.toRequest()}'));
+    }
+    if (type.isNotEmpty) {
+      type.forEach(
+          (element) => returnStrings.add('type${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -10804,8 +16668,137 @@ class SearchParameterSearchParams with _$SearchParameterSearchParams {
   }) = _SearchParameterSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SearchParameterSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$SearchParameterSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (context.isNotEmpty) {
+      context.forEach(
+          (element) => returnStrings.add('context${element.toRequest()}'));
+    }
+    if (contextQuantity.isNotEmpty) {
+      contextQuantity.forEach((element) =>
+          returnStrings.add('context-quantity${element.toRequest()}'));
+    }
+    if (contextType.isNotEmpty) {
+      contextType.forEach(
+          (element) => returnStrings.add('context-type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (description.isNotEmpty) {
+      description.forEach(
+          (element) => returnStrings.add('description${element.toRequest()}'));
+    }
+    if (jurisdiction.isNotEmpty) {
+      jurisdiction.forEach(
+          (element) => returnStrings.add('jurisdiction${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (publisher.isNotEmpty) {
+      publisher.forEach(
+          (element) => returnStrings.add('publisher${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (url.isNotEmpty) {
+      url.forEach((element) => returnStrings.add('url${element.toRequest()}'));
+    }
+    if (version.isNotEmpty) {
+      version.forEach(
+          (element) => returnStrings.add('version${element.toRequest()}'));
+    }
+    if (contextTypeQuantity.isNotEmpty) {
+      contextTypeQuantity.forEach((element) =>
+          returnStrings.add('context-type-quantity${element.toRequest()}'));
+    }
+    if (contextTypeValue.isNotEmpty) {
+      contextTypeValue.forEach((element) =>
+          returnStrings.add('context-type-value${element.toRequest()}'));
+    }
+    if (base.isNotEmpty) {
+      base.forEach(
+          (element) => returnStrings.add('base${element.toRequest()}'));
+    }
+    if (code.isNotEmpty) {
+      code.forEach(
+          (element) => returnStrings.add('code${element.toRequest()}'));
+    }
+    if (component.isNotEmpty) {
+      component.forEach(
+          (element) => returnStrings.add('component${element.toRequest()}'));
+    }
+    if (derivedFrom.isNotEmpty) {
+      derivedFrom.forEach(
+          (element) => returnStrings.add('derived-from${element.toRequest()}'));
+    }
+    if (target.isNotEmpty) {
+      target.forEach(
+          (element) => returnStrings.add('target${element.toRequest()}'));
+    }
+    if (type.isNotEmpty) {
+      type.forEach(
+          (element) => returnStrings.add('type${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -11176,8 +17169,165 @@ class StructureDefinitionSearchParams with _$StructureDefinitionSearchParams {
   }) = _StructureDefinitionSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory StructureDefinitionSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$StructureDefinitionSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (context.isNotEmpty) {
+      context.forEach(
+          (element) => returnStrings.add('context${element.toRequest()}'));
+    }
+    if (contextQuantity.isNotEmpty) {
+      contextQuantity.forEach((element) =>
+          returnStrings.add('context-quantity${element.toRequest()}'));
+    }
+    if (contextType.isNotEmpty) {
+      contextType.forEach(
+          (element) => returnStrings.add('context-type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (description.isNotEmpty) {
+      description.forEach(
+          (element) => returnStrings.add('description${element.toRequest()}'));
+    }
+    if (jurisdiction.isNotEmpty) {
+      jurisdiction.forEach(
+          (element) => returnStrings.add('jurisdiction${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (publisher.isNotEmpty) {
+      publisher.forEach(
+          (element) => returnStrings.add('publisher${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (title.isNotEmpty) {
+      title.forEach(
+          (element) => returnStrings.add('title${element.toRequest()}'));
+    }
+    if (url.isNotEmpty) {
+      url.forEach((element) => returnStrings.add('url${element.toRequest()}'));
+    }
+    if (version.isNotEmpty) {
+      version.forEach(
+          (element) => returnStrings.add('version${element.toRequest()}'));
+    }
+    if (contextTypeQuantity.isNotEmpty) {
+      contextTypeQuantity.forEach((element) =>
+          returnStrings.add('context-type-quantity${element.toRequest()}'));
+    }
+    if (contextTypeValue.isNotEmpty) {
+      contextTypeValue.forEach((element) =>
+          returnStrings.add('context-type-value${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (abstract_.isNotEmpty) {
+      abstract_.forEach(
+          (element) => returnStrings.add('abstract${element.toRequest()}'));
+    }
+    if (base.isNotEmpty) {
+      base.forEach(
+          (element) => returnStrings.add('base${element.toRequest()}'));
+    }
+    if (basePath.isNotEmpty) {
+      basePath.forEach(
+          (element) => returnStrings.add('base-path${element.toRequest()}'));
+    }
+    if (derivation.isNotEmpty) {
+      derivation.forEach(
+          (element) => returnStrings.add('derivation${element.toRequest()}'));
+    }
+    if (experimental.isNotEmpty) {
+      experimental.forEach(
+          (element) => returnStrings.add('experimental${element.toRequest()}'));
+    }
+    if (extContext.isNotEmpty) {
+      extContext.forEach(
+          (element) => returnStrings.add('ext-context${element.toRequest()}'));
+    }
+    if (keyword.isNotEmpty) {
+      keyword.forEach(
+          (element) => returnStrings.add('keyword${element.toRequest()}'));
+    }
+    if (kind.isNotEmpty) {
+      kind.forEach(
+          (element) => returnStrings.add('kind${element.toRequest()}'));
+    }
+    if (path.isNotEmpty) {
+      path.forEach(
+          (element) => returnStrings.add('path${element.toRequest()}'));
+    }
+    if (type.isNotEmpty) {
+      type.forEach(
+          (element) => returnStrings.add('type${element.toRequest()}'));
+    }
+    if (valueset.isNotEmpty) {
+      valueset.forEach(
+          (element) => returnStrings.add('valueset${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -11513,8 +17663,121 @@ class StructureMapSearchParams with _$StructureMapSearchParams {
   }) = _StructureMapSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory StructureMapSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$StructureMapSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (context.isNotEmpty) {
+      context.forEach(
+          (element) => returnStrings.add('context${element.toRequest()}'));
+    }
+    if (contextQuantity.isNotEmpty) {
+      contextQuantity.forEach((element) =>
+          returnStrings.add('context-quantity${element.toRequest()}'));
+    }
+    if (contextType.isNotEmpty) {
+      contextType.forEach(
+          (element) => returnStrings.add('context-type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (description.isNotEmpty) {
+      description.forEach(
+          (element) => returnStrings.add('description${element.toRequest()}'));
+    }
+    if (jurisdiction.isNotEmpty) {
+      jurisdiction.forEach(
+          (element) => returnStrings.add('jurisdiction${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (publisher.isNotEmpty) {
+      publisher.forEach(
+          (element) => returnStrings.add('publisher${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (title.isNotEmpty) {
+      title.forEach(
+          (element) => returnStrings.add('title${element.toRequest()}'));
+    }
+    if (url.isNotEmpty) {
+      url.forEach((element) => returnStrings.add('url${element.toRequest()}'));
+    }
+    if (version.isNotEmpty) {
+      version.forEach(
+          (element) => returnStrings.add('version${element.toRequest()}'));
+    }
+    if (contextTypeQuantity.isNotEmpty) {
+      contextTypeQuantity.forEach((element) =>
+          returnStrings.add('context-type-quantity${element.toRequest()}'));
+    }
+    if (contextTypeValue.isNotEmpty) {
+      contextTypeValue.forEach((element) =>
+          returnStrings.add('context-type-value${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -11840,9 +18103,117 @@ class TerminologyCapabilitiesSearchParams
   }) = _TerminologyCapabilitiesSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TerminologyCapabilitiesSearchParams.fromJson(
-          Map<String, dynamic> json) =>
-      _$TerminologyCapabilitiesSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (context.isNotEmpty) {
+      context.forEach(
+          (element) => returnStrings.add('context${element.toRequest()}'));
+    }
+    if (contextQuantity.isNotEmpty) {
+      contextQuantity.forEach((element) =>
+          returnStrings.add('context-quantity${element.toRequest()}'));
+    }
+    if (contextType.isNotEmpty) {
+      contextType.forEach(
+          (element) => returnStrings.add('context-type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (description.isNotEmpty) {
+      description.forEach(
+          (element) => returnStrings.add('description${element.toRequest()}'));
+    }
+    if (jurisdiction.isNotEmpty) {
+      jurisdiction.forEach(
+          (element) => returnStrings.add('jurisdiction${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (publisher.isNotEmpty) {
+      publisher.forEach(
+          (element) => returnStrings.add('publisher${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (title.isNotEmpty) {
+      title.forEach(
+          (element) => returnStrings.add('title${element.toRequest()}'));
+    }
+    if (url.isNotEmpty) {
+      url.forEach((element) => returnStrings.add('url${element.toRequest()}'));
+    }
+    if (version.isNotEmpty) {
+      version.forEach(
+          (element) => returnStrings.add('version${element.toRequest()}'));
+    }
+    if (contextTypeQuantity.isNotEmpty) {
+      contextTypeQuantity.forEach((element) =>
+          returnStrings.add('context-type-quantity${element.toRequest()}'));
+    }
+    if (contextTypeValue.isNotEmpty) {
+      contextTypeValue.forEach((element) =>
+          returnStrings.add('context-type-value${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -12187,8 +18558,133 @@ class ValueSetSearchParams with _$ValueSetSearchParams {
   }) = _ValueSetSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSetSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$ValueSetSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (context.isNotEmpty) {
+      context.forEach(
+          (element) => returnStrings.add('context${element.toRequest()}'));
+    }
+    if (contextQuantity.isNotEmpty) {
+      contextQuantity.forEach((element) =>
+          returnStrings.add('context-quantity${element.toRequest()}'));
+    }
+    if (contextType.isNotEmpty) {
+      contextType.forEach(
+          (element) => returnStrings.add('context-type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (description.isNotEmpty) {
+      description.forEach(
+          (element) => returnStrings.add('description${element.toRequest()}'));
+    }
+    if (jurisdiction.isNotEmpty) {
+      jurisdiction.forEach(
+          (element) => returnStrings.add('jurisdiction${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (publisher.isNotEmpty) {
+      publisher.forEach(
+          (element) => returnStrings.add('publisher${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (title.isNotEmpty) {
+      title.forEach(
+          (element) => returnStrings.add('title${element.toRequest()}'));
+    }
+    if (url.isNotEmpty) {
+      url.forEach((element) => returnStrings.add('url${element.toRequest()}'));
+    }
+    if (version.isNotEmpty) {
+      version.forEach(
+          (element) => returnStrings.add('version${element.toRequest()}'));
+    }
+    if (contextTypeQuantity.isNotEmpty) {
+      contextTypeQuantity.forEach((element) =>
+          returnStrings.add('context-type-quantity${element.toRequest()}'));
+    }
+    if (contextTypeValue.isNotEmpty) {
+      contextTypeValue.forEach((element) =>
+          returnStrings.add('context-type-value${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (code.isNotEmpty) {
+      code.forEach(
+          (element) => returnStrings.add('code${element.toRequest()}'));
+    }
+    if (expansion.isNotEmpty) {
+      expansion.forEach(
+          (element) => returnStrings.add('expansion${element.toRequest()}'));
+    }
+    if (reference.isNotEmpty) {
+      reference.forEach(
+          (element) => returnStrings.add('reference${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -12311,8 +18807,130 @@ class ChargeItemSearchParams with _$ChargeItemSearchParams {
   }) = _ChargeItemSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ChargeItemSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$ChargeItemSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (account.isNotEmpty) {
+      account.forEach(
+          (element) => returnStrings.add('account${element.toRequest()}'));
+    }
+    if (code.isNotEmpty) {
+      code.forEach(
+          (element) => returnStrings.add('code${element.toRequest()}'));
+    }
+    if (context.isNotEmpty) {
+      context.forEach(
+          (element) => returnStrings.add('context${element.toRequest()}'));
+    }
+    if (enteredDate.isNotEmpty) {
+      enteredDate.forEach(
+          (element) => returnStrings.add('entered-date${element.toRequest()}'));
+    }
+    if (enterer.isNotEmpty) {
+      enterer.forEach(
+          (element) => returnStrings.add('enterer${element.toRequest()}'));
+    }
+    if (factorOverride.isNotEmpty) {
+      factorOverride.forEach((element) =>
+          returnStrings.add('factor-override${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (occurrence.isNotEmpty) {
+      occurrence.forEach(
+          (element) => returnStrings.add('occurrence${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (performerActor.isNotEmpty) {
+      performerActor.forEach((element) =>
+          returnStrings.add('performer-actor${element.toRequest()}'));
+    }
+    if (performerFunction.isNotEmpty) {
+      performerFunction.forEach((element) =>
+          returnStrings.add('performer-function${element.toRequest()}'));
+    }
+    if (performingOrganization.isNotEmpty) {
+      performingOrganization.forEach((element) =>
+          returnStrings.add('performing-organization${element.toRequest()}'));
+    }
+    if (priceOverride.isNotEmpty) {
+      priceOverride.forEach((element) =>
+          returnStrings.add('price-override${element.toRequest()}'));
+    }
+    if (quantity.isNotEmpty) {
+      quantity.forEach(
+          (element) => returnStrings.add('quantity${element.toRequest()}'));
+    }
+    if (requestingOrganization.isNotEmpty) {
+      requestingOrganization.forEach((element) =>
+          returnStrings.add('requesting-organization${element.toRequest()}'));
+    }
+    if (service.isNotEmpty) {
+      service.forEach(
+          (element) => returnStrings.add('service${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -12423,9 +19041,121 @@ class ChargeItemDefinitionSearchParams with _$ChargeItemDefinitionSearchParams {
   }) = _ChargeItemDefinitionSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ChargeItemDefinitionSearchParams.fromJson(
-          Map<String, dynamic> json) =>
-      _$ChargeItemDefinitionSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (context.isNotEmpty) {
+      context.forEach(
+          (element) => returnStrings.add('context${element.toRequest()}'));
+    }
+    if (contextQuantity.isNotEmpty) {
+      contextQuantity.forEach((element) =>
+          returnStrings.add('context-quantity${element.toRequest()}'));
+    }
+    if (contextType.isNotEmpty) {
+      contextType.forEach(
+          (element) => returnStrings.add('context-type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (description.isNotEmpty) {
+      description.forEach(
+          (element) => returnStrings.add('description${element.toRequest()}'));
+    }
+    if (effective.isNotEmpty) {
+      effective.forEach(
+          (element) => returnStrings.add('effective${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (jurisdiction.isNotEmpty) {
+      jurisdiction.forEach(
+          (element) => returnStrings.add('jurisdiction${element.toRequest()}'));
+    }
+    if (publisher.isNotEmpty) {
+      publisher.forEach(
+          (element) => returnStrings.add('publisher${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (title.isNotEmpty) {
+      title.forEach(
+          (element) => returnStrings.add('title${element.toRequest()}'));
+    }
+    if (url.isNotEmpty) {
+      url.forEach((element) => returnStrings.add('url${element.toRequest()}'));
+    }
+    if (version.isNotEmpty) {
+      version.forEach(
+          (element) => returnStrings.add('version${element.toRequest()}'));
+    }
+    if (contextTypeQuantity.isNotEmpty) {
+      contextTypeQuantity.forEach((element) =>
+          returnStrings.add('context-type-quantity${element.toRequest()}'));
+    }
+    if (contextTypeValue.isNotEmpty) {
+      contextTypeValue.forEach((element) =>
+          returnStrings.add('context-type-value${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -12539,8 +19269,125 @@ class CitationSearchParams with _$CitationSearchParams {
   }) = _CitationSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$CitationSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (context.isNotEmpty) {
+      context.forEach(
+          (element) => returnStrings.add('context${element.toRequest()}'));
+    }
+    if (contextQuantity.isNotEmpty) {
+      contextQuantity.forEach((element) =>
+          returnStrings.add('context-quantity${element.toRequest()}'));
+    }
+    if (contextType.isNotEmpty) {
+      contextType.forEach(
+          (element) => returnStrings.add('context-type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (description.isNotEmpty) {
+      description.forEach(
+          (element) => returnStrings.add('description${element.toRequest()}'));
+    }
+    if (effective.isNotEmpty) {
+      effective.forEach(
+          (element) => returnStrings.add('effective${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (jurisdiction.isNotEmpty) {
+      jurisdiction.forEach(
+          (element) => returnStrings.add('jurisdiction${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (publisher.isNotEmpty) {
+      publisher.forEach(
+          (element) => returnStrings.add('publisher${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (title.isNotEmpty) {
+      title.forEach(
+          (element) => returnStrings.add('title${element.toRequest()}'));
+    }
+    if (url.isNotEmpty) {
+      url.forEach((element) => returnStrings.add('url${element.toRequest()}'));
+    }
+    if (version.isNotEmpty) {
+      version.forEach(
+          (element) => returnStrings.add('version${element.toRequest()}'));
+    }
+    if (contextTypeQuantity.isNotEmpty) {
+      contextTypeQuantity.forEach((element) =>
+          returnStrings.add('context-type-quantity${element.toRequest()}'));
+    }
+    if (contextTypeValue.isNotEmpty) {
+      contextTypeValue.forEach((element) =>
+          returnStrings.add('context-type-value${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -12657,8 +19504,129 @@ class ClaimSearchParams with _$ClaimSearchParams {
   }) = _ClaimSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClaimSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$ClaimSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (careTeam.isNotEmpty) {
+      careTeam.forEach(
+          (element) => returnStrings.add('care-team${element.toRequest()}'));
+    }
+    if (created.isNotEmpty) {
+      created.forEach(
+          (element) => returnStrings.add('created${element.toRequest()}'));
+    }
+    if (detailUdi.isNotEmpty) {
+      detailUdi.forEach(
+          (element) => returnStrings.add('detail-udi${element.toRequest()}'));
+    }
+    if (encounter.isNotEmpty) {
+      encounter.forEach(
+          (element) => returnStrings.add('encounter${element.toRequest()}'));
+    }
+    if (enterer.isNotEmpty) {
+      enterer.forEach(
+          (element) => returnStrings.add('enterer${element.toRequest()}'));
+    }
+    if (facility.isNotEmpty) {
+      facility.forEach(
+          (element) => returnStrings.add('facility${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (insurer.isNotEmpty) {
+      insurer.forEach(
+          (element) => returnStrings.add('insurer${element.toRequest()}'));
+    }
+    if (itemUdi.isNotEmpty) {
+      itemUdi.forEach(
+          (element) => returnStrings.add('item-udi${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (payee.isNotEmpty) {
+      payee.forEach(
+          (element) => returnStrings.add('payee${element.toRequest()}'));
+    }
+    if (priority.isNotEmpty) {
+      priority.forEach(
+          (element) => returnStrings.add('priority${element.toRequest()}'));
+    }
+    if (procedureUdi.isNotEmpty) {
+      procedureUdi.forEach((element) =>
+          returnStrings.add('procedure-udi${element.toRequest()}'));
+    }
+    if (provider.isNotEmpty) {
+      provider.forEach(
+          (element) => returnStrings.add('provider${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (subdetailUdi.isNotEmpty) {
+      subdetailUdi.forEach((element) =>
+          returnStrings.add('subdetail-udi${element.toRequest()}'));
+    }
+    if (use.isNotEmpty) {
+      use.forEach((element) => returnStrings.add('use${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -12751,8 +19719,105 @@ class ClaimResponseSearchParams with _$ClaimResponseSearchParams {
   }) = _ClaimResponseSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClaimResponseSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$ClaimResponseSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (created.isNotEmpty) {
+      created.forEach(
+          (element) => returnStrings.add('created${element.toRequest()}'));
+    }
+    if (disposition.isNotEmpty) {
+      disposition.forEach(
+          (element) => returnStrings.add('disposition${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (insurer.isNotEmpty) {
+      insurer.forEach(
+          (element) => returnStrings.add('insurer${element.toRequest()}'));
+    }
+    if (outcome.isNotEmpty) {
+      outcome.forEach(
+          (element) => returnStrings.add('outcome${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (paymentDate.isNotEmpty) {
+      paymentDate.forEach(
+          (element) => returnStrings.add('payment-date${element.toRequest()}'));
+    }
+    if (request.isNotEmpty) {
+      request.forEach(
+          (element) => returnStrings.add('request${element.toRequest()}'));
+    }
+    if (requestor.isNotEmpty) {
+      requestor.forEach(
+          (element) => returnStrings.add('requestor${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (use.isNotEmpty) {
+      use.forEach((element) => returnStrings.add('use${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -12850,9 +19915,106 @@ class ClinicalUseDefinitionSearchParams
   }) = _ClinicalUseDefinitionSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClinicalUseDefinitionSearchParams.fromJson(
-          Map<String, dynamic> json) =>
-      _$ClinicalUseDefinitionSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (contraindication.isNotEmpty) {
+      contraindication.forEach((element) =>
+          returnStrings.add('contraindication${element.toRequest()}'));
+    }
+    if (contraindicationReference.isNotEmpty) {
+      contraindicationReference.forEach((element) => returnStrings
+          .add('contraindication-reference${element.toRequest()}'));
+    }
+    if (effect.isNotEmpty) {
+      effect.forEach(
+          (element) => returnStrings.add('effect${element.toRequest()}'));
+    }
+    if (effectReference.isNotEmpty) {
+      effectReference.forEach((element) =>
+          returnStrings.add('effect-reference${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (indication.isNotEmpty) {
+      indication.forEach(
+          (element) => returnStrings.add('indication${element.toRequest()}'));
+    }
+    if (indicationReference.isNotEmpty) {
+      indicationReference.forEach((element) =>
+          returnStrings.add('indication-reference${element.toRequest()}'));
+    }
+    if (interaction.isNotEmpty) {
+      interaction.forEach(
+          (element) => returnStrings.add('interaction${element.toRequest()}'));
+    }
+    if (product.isNotEmpty) {
+      product.forEach(
+          (element) => returnStrings.add('product${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    if (type.isNotEmpty) {
+      type.forEach(
+          (element) => returnStrings.add('type${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -12959,8 +20121,122 @@ class CommunicationSearchParams with _$CommunicationSearchParams {
   }) = _CommunicationSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CommunicationSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$CommunicationSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (basedOn.isNotEmpty) {
+      basedOn.forEach(
+          (element) => returnStrings.add('based-on${element.toRequest()}'));
+    }
+    if (category.isNotEmpty) {
+      category.forEach(
+          (element) => returnStrings.add('category${element.toRequest()}'));
+    }
+    if (encounter.isNotEmpty) {
+      encounter.forEach(
+          (element) => returnStrings.add('encounter${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (instantiatesCanonical.isNotEmpty) {
+      instantiatesCanonical.forEach((element) =>
+          returnStrings.add('instantiates-canonical${element.toRequest()}'));
+    }
+    if (instantiatesUri.isNotEmpty) {
+      instantiatesUri.forEach((element) =>
+          returnStrings.add('instantiates-uri${element.toRequest()}'));
+    }
+    if (medium.isNotEmpty) {
+      medium.forEach(
+          (element) => returnStrings.add('medium${element.toRequest()}'));
+    }
+    if (partOf.isNotEmpty) {
+      partOf.forEach(
+          (element) => returnStrings.add('part-of${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (received.isNotEmpty) {
+      received.forEach(
+          (element) => returnStrings.add('received${element.toRequest()}'));
+    }
+    if (recipient.isNotEmpty) {
+      recipient.forEach(
+          (element) => returnStrings.add('recipient${element.toRequest()}'));
+    }
+    if (sender.isNotEmpty) {
+      sender.forEach(
+          (element) => returnStrings.add('sender${element.toRequest()}'));
+    }
+    if (sent.isNotEmpty) {
+      sent.forEach(
+          (element) => returnStrings.add('sent${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -13068,9 +20344,126 @@ class CommunicationRequestSearchParams with _$CommunicationRequestSearchParams {
   }) = _CommunicationRequestSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CommunicationRequestSearchParams.fromJson(
-          Map<String, dynamic> json) =>
-      _$CommunicationRequestSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (authored.isNotEmpty) {
+      authored.forEach(
+          (element) => returnStrings.add('authored${element.toRequest()}'));
+    }
+    if (basedOn.isNotEmpty) {
+      basedOn.forEach(
+          (element) => returnStrings.add('based-on${element.toRequest()}'));
+    }
+    if (category.isNotEmpty) {
+      category.forEach(
+          (element) => returnStrings.add('category${element.toRequest()}'));
+    }
+    if (encounter.isNotEmpty) {
+      encounter.forEach(
+          (element) => returnStrings.add('encounter${element.toRequest()}'));
+    }
+    if (groupIdentifier.isNotEmpty) {
+      groupIdentifier.forEach((element) =>
+          returnStrings.add('group-identifier${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (medium.isNotEmpty) {
+      medium.forEach(
+          (element) => returnStrings.add('medium${element.toRequest()}'));
+    }
+    if (occurrence.isNotEmpty) {
+      occurrence.forEach(
+          (element) => returnStrings.add('occurrence${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (priority.isNotEmpty) {
+      priority.forEach(
+          (element) => returnStrings.add('priority${element.toRequest()}'));
+    }
+    if (recipient.isNotEmpty) {
+      recipient.forEach(
+          (element) => returnStrings.add('recipient${element.toRequest()}'));
+    }
+    if (replaces.isNotEmpty) {
+      replaces.forEach(
+          (element) => returnStrings.add('replaces${element.toRequest()}'));
+    }
+    if (requester.isNotEmpty) {
+      requester.forEach(
+          (element) => returnStrings.add('requester${element.toRequest()}'));
+    }
+    if (sender.isNotEmpty) {
+      sender.forEach(
+          (element) => returnStrings.add('sender${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -13158,8 +20551,101 @@ class ContractSearchParams with _$ContractSearchParams {
   }) = _ContractSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ContractSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$ContractSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (authority.isNotEmpty) {
+      authority.forEach(
+          (element) => returnStrings.add('authority${element.toRequest()}'));
+    }
+    if (domain.isNotEmpty) {
+      domain.forEach(
+          (element) => returnStrings.add('domain${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (instantiates.isNotEmpty) {
+      instantiates.forEach(
+          (element) => returnStrings.add('instantiates${element.toRequest()}'));
+    }
+    if (issued.isNotEmpty) {
+      issued.forEach(
+          (element) => returnStrings.add('issued${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (signer.isNotEmpty) {
+      signer.forEach(
+          (element) => returnStrings.add('signer${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    if (url.isNotEmpty) {
+      url.forEach((element) => returnStrings.add('url${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -13254,8 +20740,106 @@ class CoverageSearchParams with _$CoverageSearchParams {
   }) = _CoverageSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CoverageSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$CoverageSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (beneficiary.isNotEmpty) {
+      beneficiary.forEach(
+          (element) => returnStrings.add('beneficiary${element.toRequest()}'));
+    }
+    if (classType.isNotEmpty) {
+      classType.forEach(
+          (element) => returnStrings.add('class-type${element.toRequest()}'));
+    }
+    if (classValue.isNotEmpty) {
+      classValue.forEach(
+          (element) => returnStrings.add('class-value${element.toRequest()}'));
+    }
+    if (dependent.isNotEmpty) {
+      dependent.forEach(
+          (element) => returnStrings.add('dependent${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (payor.isNotEmpty) {
+      payor.forEach(
+          (element) => returnStrings.add('payor${element.toRequest()}'));
+    }
+    if (policyHolder.isNotEmpty) {
+      policyHolder.forEach((element) =>
+          returnStrings.add('policy-holder${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (subscriber.isNotEmpty) {
+      subscriber.forEach(
+          (element) => returnStrings.add('subscriber${element.toRequest()}'));
+    }
+    if (type.isNotEmpty) {
+      type.forEach(
+          (element) => returnStrings.add('type${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -13335,9 +20919,90 @@ class CoverageEligibilityRequestSearchParams
   }) = _CoverageEligibilityRequestSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CoverageEligibilityRequestSearchParams.fromJson(
-          Map<String, dynamic> json) =>
-      _$CoverageEligibilityRequestSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (created.isNotEmpty) {
+      created.forEach(
+          (element) => returnStrings.add('created${element.toRequest()}'));
+    }
+    if (enterer.isNotEmpty) {
+      enterer.forEach(
+          (element) => returnStrings.add('enterer${element.toRequest()}'));
+    }
+    if (facility.isNotEmpty) {
+      facility.forEach(
+          (element) => returnStrings.add('facility${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (provider.isNotEmpty) {
+      provider.forEach(
+          (element) => returnStrings.add('provider${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -13423,9 +21088,98 @@ class CoverageEligibilityResponseSearchParams
   }) = _CoverageEligibilityResponseSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CoverageEligibilityResponseSearchParams.fromJson(
-          Map<String, dynamic> json) =>
-      _$CoverageEligibilityResponseSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (created.isNotEmpty) {
+      created.forEach(
+          (element) => returnStrings.add('created${element.toRequest()}'));
+    }
+    if (disposition.isNotEmpty) {
+      disposition.forEach(
+          (element) => returnStrings.add('disposition${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (insurer.isNotEmpty) {
+      insurer.forEach(
+          (element) => returnStrings.add('insurer${element.toRequest()}'));
+    }
+    if (outcome.isNotEmpty) {
+      outcome.forEach(
+          (element) => returnStrings.add('outcome${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (request.isNotEmpty) {
+      request.forEach(
+          (element) => returnStrings.add('request${element.toRequest()}'));
+    }
+    if (requestor.isNotEmpty) {
+      requestor.forEach(
+          (element) => returnStrings.add('requestor${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -13523,8 +21277,109 @@ class DeviceSearchParams with _$DeviceSearchParams {
   }) = _DeviceSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DeviceSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$DeviceSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (deviceName.isNotEmpty) {
+      deviceName.forEach(
+          (element) => returnStrings.add('device-name${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (location.isNotEmpty) {
+      location.forEach(
+          (element) => returnStrings.add('location${element.toRequest()}'));
+    }
+    if (manufacturer.isNotEmpty) {
+      manufacturer.forEach(
+          (element) => returnStrings.add('manufacturer${element.toRequest()}'));
+    }
+    if (model.isNotEmpty) {
+      model.forEach(
+          (element) => returnStrings.add('model${element.toRequest()}'));
+    }
+    if (organization.isNotEmpty) {
+      organization.forEach(
+          (element) => returnStrings.add('organization${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (type.isNotEmpty) {
+      type.forEach(
+          (element) => returnStrings.add('type${element.toRequest()}'));
+    }
+    if (udiCarrier.isNotEmpty) {
+      udiCarrier.forEach(
+          (element) => returnStrings.add('udi-carrier${element.toRequest()}'));
+    }
+    if (udiDi.isNotEmpty) {
+      udiDi.forEach(
+          (element) => returnStrings.add('udi-di${element.toRequest()}'));
+    }
+    if (url.isNotEmpty) {
+      url.forEach((element) => returnStrings.add('url${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -13591,8 +21446,74 @@ class DeviceDefinitionSearchParams with _$DeviceDefinitionSearchParams {
   }) = _DeviceDefinitionSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DeviceDefinitionSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$DeviceDefinitionSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (parent.isNotEmpty) {
+      parent.forEach(
+          (element) => returnStrings.add('parent${element.toRequest()}'));
+    }
+    if (type.isNotEmpty) {
+      type.forEach(
+          (element) => returnStrings.add('type${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -13665,8 +21586,82 @@ class DeviceMetricSearchParams with _$DeviceMetricSearchParams {
   }) = _DeviceMetricSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DeviceMetricSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$DeviceMetricSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (category.isNotEmpty) {
+      category.forEach(
+          (element) => returnStrings.add('category${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (parent.isNotEmpty) {
+      parent.forEach(
+          (element) => returnStrings.add('parent${element.toRequest()}'));
+    }
+    if (source.isNotEmpty) {
+      source.forEach(
+          (element) => returnStrings.add('source${element.toRequest()}'));
+    }
+    if (type.isNotEmpty) {
+      type.forEach(
+          (element) => returnStrings.add('type${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -13746,8 +21741,86 @@ class EndpointSearchParams with _$EndpointSearchParams {
   }) = _EndpointSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EndpointSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$EndpointSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (connectionType.isNotEmpty) {
+      connectionType.forEach((element) =>
+          returnStrings.add('connection-type${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (organization.isNotEmpty) {
+      organization.forEach(
+          (element) => returnStrings.add('organization${element.toRequest()}'));
+    }
+    if (payloadType.isNotEmpty) {
+      payloadType.forEach(
+          (element) => returnStrings.add('payload-type${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -13817,8 +21890,78 @@ class EnrollmentRequestSearchParams with _$EnrollmentRequestSearchParams {
   }) = _EnrollmentRequestSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EnrollmentRequestSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$EnrollmentRequestSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -13885,8 +22028,74 @@ class EnrollmentResponseSearchParams with _$EnrollmentResponseSearchParams {
   }) = _EnrollmentResponseSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EnrollmentResponseSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$EnrollmentResponseSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (request.isNotEmpty) {
+      request.forEach(
+          (element) => returnStrings.add('request${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -14024,8 +22233,149 @@ class EventDefinitionSearchParams with _$EventDefinitionSearchParams {
   }) = _EventDefinitionSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EventDefinitionSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$EventDefinitionSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (composedOf.isNotEmpty) {
+      composedOf.forEach(
+          (element) => returnStrings.add('composed-of${element.toRequest()}'));
+    }
+    if (context.isNotEmpty) {
+      context.forEach(
+          (element) => returnStrings.add('context${element.toRequest()}'));
+    }
+    if (contextQuantity.isNotEmpty) {
+      contextQuantity.forEach((element) =>
+          returnStrings.add('context-quantity${element.toRequest()}'));
+    }
+    if (contextType.isNotEmpty) {
+      contextType.forEach(
+          (element) => returnStrings.add('context-type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (dependsOn.isNotEmpty) {
+      dependsOn.forEach(
+          (element) => returnStrings.add('depends-on${element.toRequest()}'));
+    }
+    if (derivedFrom.isNotEmpty) {
+      derivedFrom.forEach(
+          (element) => returnStrings.add('derived-from${element.toRequest()}'));
+    }
+    if (description.isNotEmpty) {
+      description.forEach(
+          (element) => returnStrings.add('description${element.toRequest()}'));
+    }
+    if (effective.isNotEmpty) {
+      effective.forEach(
+          (element) => returnStrings.add('effective${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (jurisdiction.isNotEmpty) {
+      jurisdiction.forEach(
+          (element) => returnStrings.add('jurisdiction${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (predecessor.isNotEmpty) {
+      predecessor.forEach(
+          (element) => returnStrings.add('predecessor${element.toRequest()}'));
+    }
+    if (publisher.isNotEmpty) {
+      publisher.forEach(
+          (element) => returnStrings.add('publisher${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (successor.isNotEmpty) {
+      successor.forEach(
+          (element) => returnStrings.add('successor${element.toRequest()}'));
+    }
+    if (title.isNotEmpty) {
+      title.forEach(
+          (element) => returnStrings.add('title${element.toRequest()}'));
+    }
+    if (topic.isNotEmpty) {
+      topic.forEach(
+          (element) => returnStrings.add('topic${element.toRequest()}'));
+    }
+    if (url.isNotEmpty) {
+      url.forEach((element) => returnStrings.add('url${element.toRequest()}'));
+    }
+    if (version.isNotEmpty) {
+      version.forEach(
+          (element) => returnStrings.add('version${element.toRequest()}'));
+    }
+    if (contextTypeQuantity.isNotEmpty) {
+      contextTypeQuantity.forEach((element) =>
+          returnStrings.add('context-type-quantity${element.toRequest()}'));
+    }
+    if (contextTypeValue.isNotEmpty) {
+      contextTypeValue.forEach((element) =>
+          returnStrings.add('context-type-value${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -14130,8 +22480,113 @@ class EvidenceSearchParams with _$EvidenceSearchParams {
   }) = _EvidenceSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$EvidenceSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (context.isNotEmpty) {
+      context.forEach(
+          (element) => returnStrings.add('context${element.toRequest()}'));
+    }
+    if (contextQuantity.isNotEmpty) {
+      contextQuantity.forEach((element) =>
+          returnStrings.add('context-quantity${element.toRequest()}'));
+    }
+    if (contextType.isNotEmpty) {
+      contextType.forEach(
+          (element) => returnStrings.add('context-type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (description.isNotEmpty) {
+      description.forEach(
+          (element) => returnStrings.add('description${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (publisher.isNotEmpty) {
+      publisher.forEach(
+          (element) => returnStrings.add('publisher${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (title.isNotEmpty) {
+      title.forEach(
+          (element) => returnStrings.add('title${element.toRequest()}'));
+    }
+    if (url.isNotEmpty) {
+      url.forEach((element) => returnStrings.add('url${element.toRequest()}'));
+    }
+    if (version.isNotEmpty) {
+      version.forEach(
+          (element) => returnStrings.add('version${element.toRequest()}'));
+    }
+    if (contextTypeQuantity.isNotEmpty) {
+      contextTypeQuantity.forEach((element) =>
+          returnStrings.add('context-type-quantity${element.toRequest()}'));
+    }
+    if (contextTypeValue.isNotEmpty) {
+      contextTypeValue.forEach((element) =>
+          returnStrings.add('context-type-value${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -14224,8 +22679,97 @@ class EvidenceReportSearchParams with _$EvidenceReportSearchParams {
   }) = _EvidenceReportSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceReportSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$EvidenceReportSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (context.isNotEmpty) {
+      context.forEach(
+          (element) => returnStrings.add('context${element.toRequest()}'));
+    }
+    if (contextQuantity.isNotEmpty) {
+      contextQuantity.forEach((element) =>
+          returnStrings.add('context-quantity${element.toRequest()}'));
+    }
+    if (contextType.isNotEmpty) {
+      contextType.forEach(
+          (element) => returnStrings.add('context-type${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (publisher.isNotEmpty) {
+      publisher.forEach(
+          (element) => returnStrings.add('publisher${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (url.isNotEmpty) {
+      url.forEach((element) => returnStrings.add('url${element.toRequest()}'));
+    }
+    if (contextTypeQuantity.isNotEmpty) {
+      contextTypeQuantity.forEach((element) =>
+          returnStrings.add('context-type-quantity${element.toRequest()}'));
+    }
+    if (contextTypeValue.isNotEmpty) {
+      contextTypeValue.forEach((element) =>
+          returnStrings.add('context-type-value${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -14333,8 +22877,117 @@ class EvidenceVariableSearchParams with _$EvidenceVariableSearchParams {
   }) = _EvidenceVariableSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceVariableSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$EvidenceVariableSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (context.isNotEmpty) {
+      context.forEach(
+          (element) => returnStrings.add('context${element.toRequest()}'));
+    }
+    if (contextQuantity.isNotEmpty) {
+      contextQuantity.forEach((element) =>
+          returnStrings.add('context-quantity${element.toRequest()}'));
+    }
+    if (contextType.isNotEmpty) {
+      contextType.forEach(
+          (element) => returnStrings.add('context-type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (description.isNotEmpty) {
+      description.forEach(
+          (element) => returnStrings.add('description${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (publisher.isNotEmpty) {
+      publisher.forEach(
+          (element) => returnStrings.add('publisher${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (title.isNotEmpty) {
+      title.forEach(
+          (element) => returnStrings.add('title${element.toRequest()}'));
+    }
+    if (url.isNotEmpty) {
+      url.forEach((element) => returnStrings.add('url${element.toRequest()}'));
+    }
+    if (version.isNotEmpty) {
+      version.forEach(
+          (element) => returnStrings.add('version${element.toRequest()}'));
+    }
+    if (contextTypeQuantity.isNotEmpty) {
+      contextTypeQuantity.forEach((element) =>
+          returnStrings.add('context-type-quantity${element.toRequest()}'));
+    }
+    if (contextTypeValue.isNotEmpty) {
+      contextTypeValue.forEach((element) =>
+          returnStrings.add('context-type-value${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -14439,8 +23092,113 @@ class ExampleScenarioSearchParams with _$ExampleScenarioSearchParams {
   }) = _ExampleScenarioSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ExampleScenarioSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$ExampleScenarioSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (context.isNotEmpty) {
+      context.forEach(
+          (element) => returnStrings.add('context${element.toRequest()}'));
+    }
+    if (contextQuantity.isNotEmpty) {
+      contextQuantity.forEach((element) =>
+          returnStrings.add('context-quantity${element.toRequest()}'));
+    }
+    if (contextType.isNotEmpty) {
+      contextType.forEach(
+          (element) => returnStrings.add('context-type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (jurisdiction.isNotEmpty) {
+      jurisdiction.forEach(
+          (element) => returnStrings.add('jurisdiction${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (publisher.isNotEmpty) {
+      publisher.forEach(
+          (element) => returnStrings.add('publisher${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (url.isNotEmpty) {
+      url.forEach((element) => returnStrings.add('url${element.toRequest()}'));
+    }
+    if (version.isNotEmpty) {
+      version.forEach(
+          (element) => returnStrings.add('version${element.toRequest()}'));
+    }
+    if (contextTypeQuantity.isNotEmpty) {
+      contextTypeQuantity.forEach((element) =>
+          returnStrings.add('context-type-quantity${element.toRequest()}'));
+    }
+    if (contextTypeValue.isNotEmpty) {
+      contextTypeValue.forEach((element) =>
+          returnStrings.add('context-type-value${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -14557,9 +23315,130 @@ class ExplanationOfBenefitSearchParams with _$ExplanationOfBenefitSearchParams {
   }) = _ExplanationOfBenefitSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ExplanationOfBenefitSearchParams.fromJson(
-          Map<String, dynamic> json) =>
-      _$ExplanationOfBenefitSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (careTeam.isNotEmpty) {
+      careTeam.forEach(
+          (element) => returnStrings.add('care-team${element.toRequest()}'));
+    }
+    if (claim.isNotEmpty) {
+      claim.forEach(
+          (element) => returnStrings.add('claim${element.toRequest()}'));
+    }
+    if (coverage.isNotEmpty) {
+      coverage.forEach(
+          (element) => returnStrings.add('coverage${element.toRequest()}'));
+    }
+    if (created.isNotEmpty) {
+      created.forEach(
+          (element) => returnStrings.add('created${element.toRequest()}'));
+    }
+    if (detailUdi.isNotEmpty) {
+      detailUdi.forEach(
+          (element) => returnStrings.add('detail-udi${element.toRequest()}'));
+    }
+    if (disposition.isNotEmpty) {
+      disposition.forEach(
+          (element) => returnStrings.add('disposition${element.toRequest()}'));
+    }
+    if (encounter.isNotEmpty) {
+      encounter.forEach(
+          (element) => returnStrings.add('encounter${element.toRequest()}'));
+    }
+    if (enterer.isNotEmpty) {
+      enterer.forEach(
+          (element) => returnStrings.add('enterer${element.toRequest()}'));
+    }
+    if (facility.isNotEmpty) {
+      facility.forEach(
+          (element) => returnStrings.add('facility${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (itemUdi.isNotEmpty) {
+      itemUdi.forEach(
+          (element) => returnStrings.add('item-udi${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (payee.isNotEmpty) {
+      payee.forEach(
+          (element) => returnStrings.add('payee${element.toRequest()}'));
+    }
+    if (procedureUdi.isNotEmpty) {
+      procedureUdi.forEach((element) =>
+          returnStrings.add('procedure-udi${element.toRequest()}'));
+    }
+    if (provider.isNotEmpty) {
+      provider.forEach(
+          (element) => returnStrings.add('provider${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (subdetailUdi.isNotEmpty) {
+      subdetailUdi.forEach((element) =>
+          returnStrings.add('subdetail-udi${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -14651,8 +23530,102 @@ class GroupSearchParams with _$GroupSearchParams {
   }) = _GroupSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory GroupSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$GroupSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (actual.isNotEmpty) {
+      actual.forEach(
+          (element) => returnStrings.add('actual${element.toRequest()}'));
+    }
+    if (characteristic.isNotEmpty) {
+      characteristic.forEach((element) =>
+          returnStrings.add('characteristic${element.toRequest()}'));
+    }
+    if (code.isNotEmpty) {
+      code.forEach(
+          (element) => returnStrings.add('code${element.toRequest()}'));
+    }
+    if (exclude.isNotEmpty) {
+      exclude.forEach(
+          (element) => returnStrings.add('exclude${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (managingEntity.isNotEmpty) {
+      managingEntity.forEach((element) =>
+          returnStrings.add('managing-entity${element.toRequest()}'));
+    }
+    if (member.isNotEmpty) {
+      member.forEach(
+          (element) => returnStrings.add('member${element.toRequest()}'));
+    }
+    if (type.isNotEmpty) {
+      type.forEach(
+          (element) => returnStrings.add('type${element.toRequest()}'));
+    }
+    if (value.isNotEmpty) {
+      value.forEach(
+          (element) => returnStrings.add('value${element.toRequest()}'));
+    }
+    if (characteristicValue.isNotEmpty) {
+      characteristicValue.forEach((element) =>
+          returnStrings.add('characteristic-value${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -14722,8 +23695,78 @@ class GuidanceResponseSearchParams with _$GuidanceResponseSearchParams {
   }) = _GuidanceResponseSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory GuidanceResponseSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$GuidanceResponseSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (request.isNotEmpty) {
+      request.forEach(
+          (element) => returnStrings.add('request${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -14823,8 +23866,110 @@ class HealthcareServiceSearchParams with _$HealthcareServiceSearchParams {
   }) = _HealthcareServiceSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory HealthcareServiceSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$HealthcareServiceSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (active.isNotEmpty) {
+      active.forEach(
+          (element) => returnStrings.add('active${element.toRequest()}'));
+    }
+    if (characteristic.isNotEmpty) {
+      characteristic.forEach((element) =>
+          returnStrings.add('characteristic${element.toRequest()}'));
+    }
+    if (coverageArea.isNotEmpty) {
+      coverageArea.forEach((element) =>
+          returnStrings.add('coverage-area${element.toRequest()}'));
+    }
+    if (endpoint.isNotEmpty) {
+      endpoint.forEach(
+          (element) => returnStrings.add('endpoint${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (location.isNotEmpty) {
+      location.forEach(
+          (element) => returnStrings.add('location${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (organization.isNotEmpty) {
+      organization.forEach(
+          (element) => returnStrings.add('organization${element.toRequest()}'));
+    }
+    if (program.isNotEmpty) {
+      program.forEach(
+          (element) => returnStrings.add('program${element.toRequest()}'));
+    }
+    if (serviceCategory.isNotEmpty) {
+      serviceCategory.forEach((element) =>
+          returnStrings.add('service-category${element.toRequest()}'));
+    }
+    if (serviceType.isNotEmpty) {
+      serviceType.forEach(
+          (element) => returnStrings.add('service-type${element.toRequest()}'));
+    }
+    if (specialty.isNotEmpty) {
+      specialty.forEach(
+          (element) => returnStrings.add('specialty${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -14910,9 +24055,90 @@ class ImmunizationEvaluationSearchParams
   }) = _ImmunizationEvaluationSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImmunizationEvaluationSearchParams.fromJson(
-          Map<String, dynamic> json) =>
-      _$ImmunizationEvaluationSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (doseStatus.isNotEmpty) {
+      doseStatus.forEach(
+          (element) => returnStrings.add('dose-status${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (immunizationEvent.isNotEmpty) {
+      immunizationEvent.forEach((element) =>
+          returnStrings.add('immunization-event${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (targetDisease.isNotEmpty) {
+      targetDisease.forEach((element) =>
+          returnStrings.add('target-disease${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -14999,9 +24225,94 @@ class ImmunizationRecommendationSearchParams
   }) = _ImmunizationRecommendationSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImmunizationRecommendationSearchParams.fromJson(
-          Map<String, dynamic> json) =>
-      _$ImmunizationRecommendationSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (information.isNotEmpty) {
+      information.forEach(
+          (element) => returnStrings.add('information${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (support.isNotEmpty) {
+      support.forEach(
+          (element) => returnStrings.add('support${element.toRequest()}'));
+    }
+    if (targetDisease.isNotEmpty) {
+      targetDisease.forEach((element) =>
+          returnStrings.add('target-disease${element.toRequest()}'));
+    }
+    if (vaccineType.isNotEmpty) {
+      vaccineType.forEach(
+          (element) => returnStrings.add('vaccine-type${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -15087,8 +24398,93 @@ class IngredientSearchParams with _$IngredientSearchParams {
   }) = _IngredientSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory IngredientSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$IngredientSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (for_.isNotEmpty) {
+      for_.forEach((element) => returnStrings.add('for${element.toRequest()}'));
+    }
+    if (function_.isNotEmpty) {
+      function_.forEach(
+          (element) => returnStrings.add('function${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (manufacturer.isNotEmpty) {
+      manufacturer.forEach(
+          (element) => returnStrings.add('manufacturer${element.toRequest()}'));
+    }
+    if (role.isNotEmpty) {
+      role.forEach(
+          (element) => returnStrings.add('role${element.toRequest()}'));
+    }
+    if (substance.isNotEmpty) {
+      substance.forEach(
+          (element) => returnStrings.add('substance${element.toRequest()}'));
+    }
+    if (substanceCode.isNotEmpty) {
+      substanceCode.forEach((element) =>
+          returnStrings.add('substance-code${element.toRequest()}'));
+    }
+    if (substanceDefinition.isNotEmpty) {
+      substanceDefinition.forEach((element) =>
+          returnStrings.add('substance-definition${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -15200,8 +24596,118 @@ class InsurancePlanSearchParams with _$InsurancePlanSearchParams {
   }) = _InsurancePlanSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory InsurancePlanSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$InsurancePlanSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (address.isNotEmpty) {
+      address.forEach(
+          (element) => returnStrings.add('address${element.toRequest()}'));
+    }
+    if (addressCity.isNotEmpty) {
+      addressCity.forEach(
+          (element) => returnStrings.add('address-city${element.toRequest()}'));
+    }
+    if (addressCountry.isNotEmpty) {
+      addressCountry.forEach((element) =>
+          returnStrings.add('address-country${element.toRequest()}'));
+    }
+    if (addressPostalcode.isNotEmpty) {
+      addressPostalcode.forEach((element) =>
+          returnStrings.add('address-postalcode${element.toRequest()}'));
+    }
+    if (addressState.isNotEmpty) {
+      addressState.forEach((element) =>
+          returnStrings.add('address-state${element.toRequest()}'));
+    }
+    if (addressUse.isNotEmpty) {
+      addressUse.forEach(
+          (element) => returnStrings.add('address-use${element.toRequest()}'));
+    }
+    if (administeredBy.isNotEmpty) {
+      administeredBy.forEach((element) =>
+          returnStrings.add('administered-by${element.toRequest()}'));
+    }
+    if (endpoint.isNotEmpty) {
+      endpoint.forEach(
+          (element) => returnStrings.add('endpoint${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (ownedBy.isNotEmpty) {
+      ownedBy.forEach(
+          (element) => returnStrings.add('owned-by${element.toRequest()}'));
+    }
+    if (phonetic.isNotEmpty) {
+      phonetic.forEach(
+          (element) => returnStrings.add('phonetic${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (type.isNotEmpty) {
+      type.forEach(
+          (element) => returnStrings.add('type${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -15300,8 +24806,114 @@ class InvoiceSearchParams with _$InvoiceSearchParams {
   }) = _InvoiceSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory InvoiceSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$InvoiceSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (account.isNotEmpty) {
+      account.forEach(
+          (element) => returnStrings.add('account${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (issuer.isNotEmpty) {
+      issuer.forEach(
+          (element) => returnStrings.add('issuer${element.toRequest()}'));
+    }
+    if (participant.isNotEmpty) {
+      participant.forEach(
+          (element) => returnStrings.add('participant${element.toRequest()}'));
+    }
+    if (participantRole.isNotEmpty) {
+      participantRole.forEach((element) =>
+          returnStrings.add('participant-role${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (recipient.isNotEmpty) {
+      recipient.forEach(
+          (element) => returnStrings.add('recipient${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    if (totalgross.isNotEmpty) {
+      totalgross.forEach(
+          (element) => returnStrings.add('totalgross${element.toRequest()}'));
+    }
+    if (totalnet.isNotEmpty) {
+      totalnet.forEach(
+          (element) => returnStrings.add('totalnet${element.toRequest()}'));
+    }
+    if (type.isNotEmpty) {
+      type.forEach(
+          (element) => returnStrings.add('type${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -15447,8 +25059,157 @@ class LibrarySearchParams with _$LibrarySearchParams {
   }) = _LibrarySearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory LibrarySearchParams.fromJson(Map<String, dynamic> json) =>
-      _$LibrarySearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (composedOf.isNotEmpty) {
+      composedOf.forEach(
+          (element) => returnStrings.add('composed-of${element.toRequest()}'));
+    }
+    if (contentType.isNotEmpty) {
+      contentType.forEach(
+          (element) => returnStrings.add('content-type${element.toRequest()}'));
+    }
+    if (context.isNotEmpty) {
+      context.forEach(
+          (element) => returnStrings.add('context${element.toRequest()}'));
+    }
+    if (contextQuantity.isNotEmpty) {
+      contextQuantity.forEach((element) =>
+          returnStrings.add('context-quantity${element.toRequest()}'));
+    }
+    if (contextType.isNotEmpty) {
+      contextType.forEach(
+          (element) => returnStrings.add('context-type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (dependsOn.isNotEmpty) {
+      dependsOn.forEach(
+          (element) => returnStrings.add('depends-on${element.toRequest()}'));
+    }
+    if (derivedFrom.isNotEmpty) {
+      derivedFrom.forEach(
+          (element) => returnStrings.add('derived-from${element.toRequest()}'));
+    }
+    if (description.isNotEmpty) {
+      description.forEach(
+          (element) => returnStrings.add('description${element.toRequest()}'));
+    }
+    if (effective.isNotEmpty) {
+      effective.forEach(
+          (element) => returnStrings.add('effective${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (jurisdiction.isNotEmpty) {
+      jurisdiction.forEach(
+          (element) => returnStrings.add('jurisdiction${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (predecessor.isNotEmpty) {
+      predecessor.forEach(
+          (element) => returnStrings.add('predecessor${element.toRequest()}'));
+    }
+    if (publisher.isNotEmpty) {
+      publisher.forEach(
+          (element) => returnStrings.add('publisher${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (successor.isNotEmpty) {
+      successor.forEach(
+          (element) => returnStrings.add('successor${element.toRequest()}'));
+    }
+    if (title.isNotEmpty) {
+      title.forEach(
+          (element) => returnStrings.add('title${element.toRequest()}'));
+    }
+    if (topic.isNotEmpty) {
+      topic.forEach(
+          (element) => returnStrings.add('topic${element.toRequest()}'));
+    }
+    if (type.isNotEmpty) {
+      type.forEach(
+          (element) => returnStrings.add('type${element.toRequest()}'));
+    }
+    if (url.isNotEmpty) {
+      url.forEach((element) => returnStrings.add('url${element.toRequest()}'));
+    }
+    if (version.isNotEmpty) {
+      version.forEach(
+          (element) => returnStrings.add('version${element.toRequest()}'));
+    }
+    if (contextTypeQuantity.isNotEmpty) {
+      contextTypeQuantity.forEach((element) =>
+          returnStrings.add('context-type-quantity${element.toRequest()}'));
+    }
+    if (contextTypeValue.isNotEmpty) {
+      contextTypeValue.forEach((element) =>
+          returnStrings.add('context-type-value${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -15515,8 +25276,74 @@ class LinkageSearchParams with _$LinkageSearchParams {
   }) = _LinkageSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory LinkageSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$LinkageSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (author.isNotEmpty) {
+      author.forEach(
+          (element) => returnStrings.add('author${element.toRequest()}'));
+    }
+    if (item.isNotEmpty) {
+      item.forEach(
+          (element) => returnStrings.add('item${element.toRequest()}'));
+    }
+    if (source.isNotEmpty) {
+      source.forEach(
+          (element) => returnStrings.add('source${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -15639,8 +25466,122 @@ class LocationSearchParams with _$LocationSearchParams {
   }) = _LocationSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory LocationSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$LocationSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (address.isNotEmpty) {
+      address.forEach(
+          (element) => returnStrings.add('address${element.toRequest()}'));
+    }
+    if (addressCity.isNotEmpty) {
+      addressCity.forEach(
+          (element) => returnStrings.add('address-city${element.toRequest()}'));
+    }
+    if (addressCountry.isNotEmpty) {
+      addressCountry.forEach((element) =>
+          returnStrings.add('address-country${element.toRequest()}'));
+    }
+    if (addressPostalcode.isNotEmpty) {
+      addressPostalcode.forEach((element) =>
+          returnStrings.add('address-postalcode${element.toRequest()}'));
+    }
+    if (addressState.isNotEmpty) {
+      addressState.forEach((element) =>
+          returnStrings.add('address-state${element.toRequest()}'));
+    }
+    if (addressUse.isNotEmpty) {
+      addressUse.forEach(
+          (element) => returnStrings.add('address-use${element.toRequest()}'));
+    }
+    if (endpoint.isNotEmpty) {
+      endpoint.forEach(
+          (element) => returnStrings.add('endpoint${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (near.isNotEmpty) {
+      near.forEach(
+          (element) => returnStrings.add('near${element.toRequest()}'));
+    }
+    if (operationalStatus.isNotEmpty) {
+      operationalStatus.forEach((element) =>
+          returnStrings.add('operational-status${element.toRequest()}'));
+    }
+    if (organization.isNotEmpty) {
+      organization.forEach(
+          (element) => returnStrings.add('organization${element.toRequest()}'));
+    }
+    if (partof.isNotEmpty) {
+      partof.forEach(
+          (element) => returnStrings.add('partof${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (type.isNotEmpty) {
+      type.forEach(
+          (element) => returnStrings.add('type${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -15708,9 +25649,74 @@ class ManufacturedItemDefinitionSearchParams
   }) = _ManufacturedItemDefinitionSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ManufacturedItemDefinitionSearchParams.fromJson(
-          Map<String, dynamic> json) =>
-      _$ManufacturedItemDefinitionSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (doseForm.isNotEmpty) {
+      doseForm.forEach(
+          (element) => returnStrings.add('dose-form${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (ingredient.isNotEmpty) {
+      ingredient.forEach(
+          (element) => returnStrings.add('ingredient${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -15848,8 +25854,149 @@ class MeasureSearchParams with _$MeasureSearchParams {
   }) = _MeasureSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MeasureSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$MeasureSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (composedOf.isNotEmpty) {
+      composedOf.forEach(
+          (element) => returnStrings.add('composed-of${element.toRequest()}'));
+    }
+    if (context.isNotEmpty) {
+      context.forEach(
+          (element) => returnStrings.add('context${element.toRequest()}'));
+    }
+    if (contextQuantity.isNotEmpty) {
+      contextQuantity.forEach((element) =>
+          returnStrings.add('context-quantity${element.toRequest()}'));
+    }
+    if (contextType.isNotEmpty) {
+      contextType.forEach(
+          (element) => returnStrings.add('context-type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (dependsOn.isNotEmpty) {
+      dependsOn.forEach(
+          (element) => returnStrings.add('depends-on${element.toRequest()}'));
+    }
+    if (derivedFrom.isNotEmpty) {
+      derivedFrom.forEach(
+          (element) => returnStrings.add('derived-from${element.toRequest()}'));
+    }
+    if (description.isNotEmpty) {
+      description.forEach(
+          (element) => returnStrings.add('description${element.toRequest()}'));
+    }
+    if (effective.isNotEmpty) {
+      effective.forEach(
+          (element) => returnStrings.add('effective${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (jurisdiction.isNotEmpty) {
+      jurisdiction.forEach(
+          (element) => returnStrings.add('jurisdiction${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (predecessor.isNotEmpty) {
+      predecessor.forEach(
+          (element) => returnStrings.add('predecessor${element.toRequest()}'));
+    }
+    if (publisher.isNotEmpty) {
+      publisher.forEach(
+          (element) => returnStrings.add('publisher${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (successor.isNotEmpty) {
+      successor.forEach(
+          (element) => returnStrings.add('successor${element.toRequest()}'));
+    }
+    if (title.isNotEmpty) {
+      title.forEach(
+          (element) => returnStrings.add('title${element.toRequest()}'));
+    }
+    if (topic.isNotEmpty) {
+      topic.forEach(
+          (element) => returnStrings.add('topic${element.toRequest()}'));
+    }
+    if (url.isNotEmpty) {
+      url.forEach((element) => returnStrings.add('url${element.toRequest()}'));
+    }
+    if (version.isNotEmpty) {
+      version.forEach(
+          (element) => returnStrings.add('version${element.toRequest()}'));
+    }
+    if (contextTypeQuantity.isNotEmpty) {
+      contextTypeQuantity.forEach((element) =>
+          returnStrings.add('context-type-quantity${element.toRequest()}'));
+    }
+    if (contextTypeValue.isNotEmpty) {
+      contextTypeValue.forEach((element) =>
+          returnStrings.add('context-type-value${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -15936,8 +26083,98 @@ class MeasureReportSearchParams with _$MeasureReportSearchParams {
   }) = _MeasureReportSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MeasureReportSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$MeasureReportSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (evaluatedResource.isNotEmpty) {
+      evaluatedResource.forEach((element) =>
+          returnStrings.add('evaluated-resource${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (measure.isNotEmpty) {
+      measure.forEach(
+          (element) => returnStrings.add('measure${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (period.isNotEmpty) {
+      period.forEach(
+          (element) => returnStrings.add('period${element.toRequest()}'));
+    }
+    if (reporter.isNotEmpty) {
+      reporter.forEach(
+          (element) => returnStrings.add('reporter${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -16036,8 +26273,114 @@ class MediaSearchParams with _$MediaSearchParams {
   }) = _MediaSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MediaSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$MediaSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (basedOn.isNotEmpty) {
+      basedOn.forEach(
+          (element) => returnStrings.add('based-on${element.toRequest()}'));
+    }
+    if (created.isNotEmpty) {
+      created.forEach(
+          (element) => returnStrings.add('created${element.toRequest()}'));
+    }
+    if (device.isNotEmpty) {
+      device.forEach(
+          (element) => returnStrings.add('device${element.toRequest()}'));
+    }
+    if (encounter.isNotEmpty) {
+      encounter.forEach(
+          (element) => returnStrings.add('encounter${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (modality.isNotEmpty) {
+      modality.forEach(
+          (element) => returnStrings.add('modality${element.toRequest()}'));
+    }
+    if (operator_.isNotEmpty) {
+      operator_.forEach(
+          (element) => returnStrings.add('operator${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (site.isNotEmpty) {
+      site.forEach(
+          (element) => returnStrings.add('site${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    if (type.isNotEmpty) {
+      type.forEach(
+          (element) => returnStrings.add('type${element.toRequest()}'));
+    }
+    if (view.isNotEmpty) {
+      view.forEach(
+          (element) => returnStrings.add('view${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -16146,8 +26489,114 @@ class MedicationKnowledgeSearchParams with _$MedicationKnowledgeSearchParams {
   }) = _MedicationKnowledgeSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicationKnowledgeSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$MedicationKnowledgeSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (classification.isNotEmpty) {
+      classification.forEach((element) =>
+          returnStrings.add('classification${element.toRequest()}'));
+    }
+    if (classificationType.isNotEmpty) {
+      classificationType.forEach((element) =>
+          returnStrings.add('classification-type${element.toRequest()}'));
+    }
+    if (code.isNotEmpty) {
+      code.forEach(
+          (element) => returnStrings.add('code${element.toRequest()}'));
+    }
+    if (doseform.isNotEmpty) {
+      doseform.forEach(
+          (element) => returnStrings.add('doseform${element.toRequest()}'));
+    }
+    if (ingredient.isNotEmpty) {
+      ingredient.forEach(
+          (element) => returnStrings.add('ingredient${element.toRequest()}'));
+    }
+    if (ingredientCode.isNotEmpty) {
+      ingredientCode.forEach((element) =>
+          returnStrings.add('ingredient-code${element.toRequest()}'));
+    }
+    if (manufacturer.isNotEmpty) {
+      manufacturer.forEach(
+          (element) => returnStrings.add('manufacturer${element.toRequest()}'));
+    }
+    if (monitoringProgramName.isNotEmpty) {
+      monitoringProgramName.forEach((element) =>
+          returnStrings.add('monitoring-program-name${element.toRequest()}'));
+    }
+    if (monitoringProgramType.isNotEmpty) {
+      monitoringProgramType.forEach((element) =>
+          returnStrings.add('monitoring-program-type${element.toRequest()}'));
+    }
+    if (monograph.isNotEmpty) {
+      monograph.forEach(
+          (element) => returnStrings.add('monograph${element.toRequest()}'));
+    }
+    if (monographType.isNotEmpty) {
+      monographType.forEach((element) =>
+          returnStrings.add('monograph-type${element.toRequest()}'));
+    }
+    if (sourceCost.isNotEmpty) {
+      sourceCost.forEach(
+          (element) => returnStrings.add('source-cost${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -16250,9 +26699,110 @@ class MedicinalProductDefinitionSearchParams
   }) = _MedicinalProductDefinitionSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicinalProductDefinitionSearchParams.fromJson(
-          Map<String, dynamic> json) =>
-      _$MedicinalProductDefinitionSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (characteristic.isNotEmpty) {
+      characteristic.forEach((element) =>
+          returnStrings.add('characteristic${element.toRequest()}'));
+    }
+    if (characteristicType.isNotEmpty) {
+      characteristicType.forEach((element) =>
+          returnStrings.add('characteristic-type${element.toRequest()}'));
+    }
+    if (contact.isNotEmpty) {
+      contact.forEach(
+          (element) => returnStrings.add('contact${element.toRequest()}'));
+    }
+    if (domain.isNotEmpty) {
+      domain.forEach(
+          (element) => returnStrings.add('domain${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (ingredient.isNotEmpty) {
+      ingredient.forEach(
+          (element) => returnStrings.add('ingredient${element.toRequest()}'));
+    }
+    if (masterFile.isNotEmpty) {
+      masterFile.forEach(
+          (element) => returnStrings.add('master-file${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (nameLanguage.isNotEmpty) {
+      nameLanguage.forEach((element) =>
+          returnStrings.add('name-language${element.toRequest()}'));
+    }
+    if (productClassification.isNotEmpty) {
+      productClassification.forEach((element) =>
+          returnStrings.add('product-classification${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (type.isNotEmpty) {
+      type.forEach(
+          (element) => returnStrings.add('type${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -16356,8 +26906,118 @@ class MessageHeaderSearchParams with _$MessageHeaderSearchParams {
   }) = _MessageHeaderSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MessageHeaderSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$MessageHeaderSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (author.isNotEmpty) {
+      author.forEach(
+          (element) => returnStrings.add('author${element.toRequest()}'));
+    }
+    if (code.isNotEmpty) {
+      code.forEach(
+          (element) => returnStrings.add('code${element.toRequest()}'));
+    }
+    if (destination.isNotEmpty) {
+      destination.forEach(
+          (element) => returnStrings.add('destination${element.toRequest()}'));
+    }
+    if (destinationUri.isNotEmpty) {
+      destinationUri.forEach((element) =>
+          returnStrings.add('destination-uri${element.toRequest()}'));
+    }
+    if (enterer.isNotEmpty) {
+      enterer.forEach(
+          (element) => returnStrings.add('enterer${element.toRequest()}'));
+    }
+    if (event.isNotEmpty) {
+      event.forEach(
+          (element) => returnStrings.add('event${element.toRequest()}'));
+    }
+    if (focus.isNotEmpty) {
+      focus.forEach(
+          (element) => returnStrings.add('focus${element.toRequest()}'));
+    }
+    if (receiver.isNotEmpty) {
+      receiver.forEach(
+          (element) => returnStrings.add('receiver${element.toRequest()}'));
+    }
+    if (responseId.isNotEmpty) {
+      responseId.forEach(
+          (element) => returnStrings.add('response-id${element.toRequest()}'));
+    }
+    if (responsible.isNotEmpty) {
+      responsible.forEach(
+          (element) => returnStrings.add('responsible${element.toRequest()}'));
+    }
+    if (sender.isNotEmpty) {
+      sender.forEach(
+          (element) => returnStrings.add('sender${element.toRequest()}'));
+    }
+    if (source.isNotEmpty) {
+      source.forEach(
+          (element) => returnStrings.add('source${element.toRequest()}'));
+    }
+    if (sourceUri.isNotEmpty) {
+      sourceUri.forEach(
+          (element) => returnStrings.add('source-uri${element.toRequest()}'));
+    }
+    if (target.isNotEmpty) {
+      target.forEach(
+          (element) => returnStrings.add('target${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -16468,8 +27128,114 @@ class MolecularSequenceSearchParams with _$MolecularSequenceSearchParams {
   }) = _MolecularSequenceSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MolecularSequenceSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$MolecularSequenceSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (chromosome.isNotEmpty) {
+      chromosome.forEach(
+          (element) => returnStrings.add('chromosome${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (referenceseqid.isNotEmpty) {
+      referenceseqid.forEach((element) =>
+          returnStrings.add('referenceseqid${element.toRequest()}'));
+    }
+    if (type.isNotEmpty) {
+      type.forEach(
+          (element) => returnStrings.add('type${element.toRequest()}'));
+    }
+    if (variantEnd.isNotEmpty) {
+      variantEnd.forEach(
+          (element) => returnStrings.add('variant-end${element.toRequest()}'));
+    }
+    if (variantStart.isNotEmpty) {
+      variantStart.forEach((element) =>
+          returnStrings.add('variant-start${element.toRequest()}'));
+    }
+    if (windowEnd.isNotEmpty) {
+      windowEnd.forEach(
+          (element) => returnStrings.add('window-end${element.toRequest()}'));
+    }
+    if (windowStart.isNotEmpty) {
+      windowStart.forEach(
+          (element) => returnStrings.add('window-start${element.toRequest()}'));
+    }
+    if (chromosomeVariantCoordinate.isNotEmpty) {
+      chromosomeVariantCoordinate.forEach((element) => returnStrings
+          .add('chromosome-variant-coordinate${element.toRequest()}'));
+    }
+    if (chromosomeWindowCoordinate.isNotEmpty) {
+      chromosomeWindowCoordinate.forEach((element) => returnStrings
+          .add('chromosome-window-coordinate${element.toRequest()}'));
+    }
+    if (referenceseqidVariantCoordinate.isNotEmpty) {
+      referenceseqidVariantCoordinate.forEach((element) => returnStrings
+          .add('referenceseqid-variant-coordinate${element.toRequest()}'));
+    }
+    if (referenceseqidWindowCoordinate.isNotEmpty) {
+      referenceseqidWindowCoordinate.forEach((element) => returnStrings
+          .add('referenceseqid-window-coordinate${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -16533,8 +27299,70 @@ class NutritionProductSearchParams with _$NutritionProductSearchParams {
   }) = _NutritionProductSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory NutritionProductSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$NutritionProductSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -16641,8 +27469,114 @@ class OrganizationSearchParams with _$OrganizationSearchParams {
   }) = _OrganizationSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory OrganizationSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$OrganizationSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (active.isNotEmpty) {
+      active.forEach(
+          (element) => returnStrings.add('active${element.toRequest()}'));
+    }
+    if (address.isNotEmpty) {
+      address.forEach(
+          (element) => returnStrings.add('address${element.toRequest()}'));
+    }
+    if (addressCity.isNotEmpty) {
+      addressCity.forEach(
+          (element) => returnStrings.add('address-city${element.toRequest()}'));
+    }
+    if (addressCountry.isNotEmpty) {
+      addressCountry.forEach((element) =>
+          returnStrings.add('address-country${element.toRequest()}'));
+    }
+    if (addressPostalcode.isNotEmpty) {
+      addressPostalcode.forEach((element) =>
+          returnStrings.add('address-postalcode${element.toRequest()}'));
+    }
+    if (addressState.isNotEmpty) {
+      addressState.forEach((element) =>
+          returnStrings.add('address-state${element.toRequest()}'));
+    }
+    if (addressUse.isNotEmpty) {
+      addressUse.forEach(
+          (element) => returnStrings.add('address-use${element.toRequest()}'));
+    }
+    if (endpoint.isNotEmpty) {
+      endpoint.forEach(
+          (element) => returnStrings.add('endpoint${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (partof.isNotEmpty) {
+      partof.forEach(
+          (element) => returnStrings.add('partof${element.toRequest()}'));
+    }
+    if (phonetic.isNotEmpty) {
+      phonetic.forEach(
+          (element) => returnStrings.add('phonetic${element.toRequest()}'));
+    }
+    if (type.isNotEmpty) {
+      type.forEach(
+          (element) => returnStrings.add('type${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -16747,9 +27681,118 @@ class OrganizationAffiliationSearchParams
   }) = _OrganizationAffiliationSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory OrganizationAffiliationSearchParams.fromJson(
-          Map<String, dynamic> json) =>
-      _$OrganizationAffiliationSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (active.isNotEmpty) {
+      active.forEach(
+          (element) => returnStrings.add('active${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (email.isNotEmpty) {
+      email.forEach(
+          (element) => returnStrings.add('email${element.toRequest()}'));
+    }
+    if (endpoint.isNotEmpty) {
+      endpoint.forEach(
+          (element) => returnStrings.add('endpoint${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (location.isNotEmpty) {
+      location.forEach(
+          (element) => returnStrings.add('location${element.toRequest()}'));
+    }
+    if (network.isNotEmpty) {
+      network.forEach(
+          (element) => returnStrings.add('network${element.toRequest()}'));
+    }
+    if (participatingOrganization.isNotEmpty) {
+      participatingOrganization.forEach((element) => returnStrings
+          .add('participating-organization${element.toRequest()}'));
+    }
+    if (phone.isNotEmpty) {
+      phone.forEach(
+          (element) => returnStrings.add('phone${element.toRequest()}'));
+    }
+    if (primaryOrganization.isNotEmpty) {
+      primaryOrganization.forEach((element) =>
+          returnStrings.add('primary-organization${element.toRequest()}'));
+    }
+    if (role.isNotEmpty) {
+      role.forEach(
+          (element) => returnStrings.add('role${element.toRequest()}'));
+    }
+    if (service.isNotEmpty) {
+      service.forEach(
+          (element) => returnStrings.add('service${element.toRequest()}'));
+    }
+    if (specialty.isNotEmpty) {
+      specialty.forEach(
+          (element) => returnStrings.add('specialty${element.toRequest()}'));
+    }
+    if (telecom.isNotEmpty) {
+      telecom.forEach(
+          (element) => returnStrings.add('telecom${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -16847,9 +27890,106 @@ class PackagedProductDefinitionSearchParams
   }) = _PackagedProductDefinitionSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PackagedProductDefinitionSearchParams.fromJson(
-          Map<String, dynamic> json) =>
-      _$PackagedProductDefinitionSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (biological.isNotEmpty) {
+      biological.forEach(
+          (element) => returnStrings.add('biological${element.toRequest()}'));
+    }
+    if (containedItem.isNotEmpty) {
+      containedItem.forEach((element) =>
+          returnStrings.add('contained-item${element.toRequest()}'));
+    }
+    if (device.isNotEmpty) {
+      device.forEach(
+          (element) => returnStrings.add('device${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (manufacturedItem.isNotEmpty) {
+      manufacturedItem.forEach((element) =>
+          returnStrings.add('manufactured-item${element.toRequest()}'));
+    }
+    if (medication.isNotEmpty) {
+      medication.forEach(
+          (element) => returnStrings.add('medication${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (nutrition.isNotEmpty) {
+      nutrition.forEach(
+          (element) => returnStrings.add('nutrition${element.toRequest()}'));
+    }
+    if (package.isNotEmpty) {
+      package.forEach(
+          (element) => returnStrings.add('package${element.toRequest()}'));
+    }
+    if (packageFor.isNotEmpty) {
+      packageFor.forEach(
+          (element) => returnStrings.add('package-for${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -17070,8 +28210,154 @@ class PatientSearchParams with _$PatientSearchParams {
   }) = _PatientSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PatientSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$PatientSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (active.isNotEmpty) {
+      active.forEach(
+          (element) => returnStrings.add('active${element.toRequest()}'));
+    }
+    if (address.isNotEmpty) {
+      address.forEach(
+          (element) => returnStrings.add('address${element.toRequest()}'));
+    }
+    if (addressCity.isNotEmpty) {
+      addressCity.forEach(
+          (element) => returnStrings.add('address-city${element.toRequest()}'));
+    }
+    if (addressCountry.isNotEmpty) {
+      addressCountry.forEach((element) =>
+          returnStrings.add('address-country${element.toRequest()}'));
+    }
+    if (addressPostalcode.isNotEmpty) {
+      addressPostalcode.forEach((element) =>
+          returnStrings.add('address-postalcode${element.toRequest()}'));
+    }
+    if (addressState.isNotEmpty) {
+      addressState.forEach((element) =>
+          returnStrings.add('address-state${element.toRequest()}'));
+    }
+    if (addressUse.isNotEmpty) {
+      addressUse.forEach(
+          (element) => returnStrings.add('address-use${element.toRequest()}'));
+    }
+    if (birthdate.isNotEmpty) {
+      birthdate.forEach(
+          (element) => returnStrings.add('birthdate${element.toRequest()}'));
+    }
+    if (deathDate.isNotEmpty) {
+      deathDate.forEach(
+          (element) => returnStrings.add('death-date${element.toRequest()}'));
+    }
+    if (deceased.isNotEmpty) {
+      deceased.forEach(
+          (element) => returnStrings.add('deceased${element.toRequest()}'));
+    }
+    if (email.isNotEmpty) {
+      email.forEach(
+          (element) => returnStrings.add('email${element.toRequest()}'));
+    }
+    if (family.isNotEmpty) {
+      family.forEach(
+          (element) => returnStrings.add('family${element.toRequest()}'));
+    }
+    if (gender.isNotEmpty) {
+      gender.forEach(
+          (element) => returnStrings.add('gender${element.toRequest()}'));
+    }
+    if (generalPractitioner.isNotEmpty) {
+      generalPractitioner.forEach((element) =>
+          returnStrings.add('general-practitioner${element.toRequest()}'));
+    }
+    if (given.isNotEmpty) {
+      given.forEach(
+          (element) => returnStrings.add('given${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (language.isNotEmpty) {
+      language.forEach(
+          (element) => returnStrings.add('language${element.toRequest()}'));
+    }
+    if (link.isNotEmpty) {
+      link.forEach(
+          (element) => returnStrings.add('link${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (organization.isNotEmpty) {
+      organization.forEach(
+          (element) => returnStrings.add('organization${element.toRequest()}'));
+    }
+    if (phone.isNotEmpty) {
+      phone.forEach(
+          (element) => returnStrings.add('phone${element.toRequest()}'));
+    }
+    if (phonetic.isNotEmpty) {
+      phonetic.forEach(
+          (element) => returnStrings.add('phonetic${element.toRequest()}'));
+    }
+    if (telecom.isNotEmpty) {
+      telecom.forEach(
+          (element) => returnStrings.add('telecom${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -17270,8 +28556,138 @@ class PersonSearchParams with _$PersonSearchParams {
   }) = _PersonSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PersonSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$PersonSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (address.isNotEmpty) {
+      address.forEach(
+          (element) => returnStrings.add('address${element.toRequest()}'));
+    }
+    if (addressCity.isNotEmpty) {
+      addressCity.forEach(
+          (element) => returnStrings.add('address-city${element.toRequest()}'));
+    }
+    if (addressCountry.isNotEmpty) {
+      addressCountry.forEach((element) =>
+          returnStrings.add('address-country${element.toRequest()}'));
+    }
+    if (addressPostalcode.isNotEmpty) {
+      addressPostalcode.forEach((element) =>
+          returnStrings.add('address-postalcode${element.toRequest()}'));
+    }
+    if (addressState.isNotEmpty) {
+      addressState.forEach((element) =>
+          returnStrings.add('address-state${element.toRequest()}'));
+    }
+    if (addressUse.isNotEmpty) {
+      addressUse.forEach(
+          (element) => returnStrings.add('address-use${element.toRequest()}'));
+    }
+    if (birthdate.isNotEmpty) {
+      birthdate.forEach(
+          (element) => returnStrings.add('birthdate${element.toRequest()}'));
+    }
+    if (email.isNotEmpty) {
+      email.forEach(
+          (element) => returnStrings.add('email${element.toRequest()}'));
+    }
+    if (gender.isNotEmpty) {
+      gender.forEach(
+          (element) => returnStrings.add('gender${element.toRequest()}'));
+    }
+    if (phone.isNotEmpty) {
+      phone.forEach(
+          (element) => returnStrings.add('phone${element.toRequest()}'));
+    }
+    if (phonetic.isNotEmpty) {
+      phonetic.forEach(
+          (element) => returnStrings.add('phonetic${element.toRequest()}'));
+    }
+    if (telecom.isNotEmpty) {
+      telecom.forEach(
+          (element) => returnStrings.add('telecom${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (link.isNotEmpty) {
+      link.forEach(
+          (element) => returnStrings.add('link${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (organization.isNotEmpty) {
+      organization.forEach(
+          (element) => returnStrings.add('organization${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (practitioner.isNotEmpty) {
+      practitioner.forEach(
+          (element) => returnStrings.add('practitioner${element.toRequest()}'));
+    }
+    if (relatedperson.isNotEmpty) {
+      relatedperson.forEach((element) =>
+          returnStrings.add('relatedperson${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -17467,8 +28883,130 @@ class PractitionerSearchParams with _$PractitionerSearchParams {
   }) = _PractitionerSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PractitionerSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$PractitionerSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (address.isNotEmpty) {
+      address.forEach(
+          (element) => returnStrings.add('address${element.toRequest()}'));
+    }
+    if (addressCity.isNotEmpty) {
+      addressCity.forEach(
+          (element) => returnStrings.add('address-city${element.toRequest()}'));
+    }
+    if (addressCountry.isNotEmpty) {
+      addressCountry.forEach((element) =>
+          returnStrings.add('address-country${element.toRequest()}'));
+    }
+    if (addressPostalcode.isNotEmpty) {
+      addressPostalcode.forEach((element) =>
+          returnStrings.add('address-postalcode${element.toRequest()}'));
+    }
+    if (addressState.isNotEmpty) {
+      addressState.forEach((element) =>
+          returnStrings.add('address-state${element.toRequest()}'));
+    }
+    if (addressUse.isNotEmpty) {
+      addressUse.forEach(
+          (element) => returnStrings.add('address-use${element.toRequest()}'));
+    }
+    if (email.isNotEmpty) {
+      email.forEach(
+          (element) => returnStrings.add('email${element.toRequest()}'));
+    }
+    if (family.isNotEmpty) {
+      family.forEach(
+          (element) => returnStrings.add('family${element.toRequest()}'));
+    }
+    if (gender.isNotEmpty) {
+      gender.forEach(
+          (element) => returnStrings.add('gender${element.toRequest()}'));
+    }
+    if (given.isNotEmpty) {
+      given.forEach(
+          (element) => returnStrings.add('given${element.toRequest()}'));
+    }
+    if (phone.isNotEmpty) {
+      phone.forEach(
+          (element) => returnStrings.add('phone${element.toRequest()}'));
+    }
+    if (phonetic.isNotEmpty) {
+      phonetic.forEach(
+          (element) => returnStrings.add('phonetic${element.toRequest()}'));
+    }
+    if (telecom.isNotEmpty) {
+      telecom.forEach(
+          (element) => returnStrings.add('telecom${element.toRequest()}'));
+    }
+    if (active.isNotEmpty) {
+      active.forEach(
+          (element) => returnStrings.add('active${element.toRequest()}'));
+    }
+    if (communication.isNotEmpty) {
+      communication.forEach((element) =>
+          returnStrings.add('communication${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -17661,8 +29199,130 @@ class RelatedPersonSearchParams with _$RelatedPersonSearchParams {
   }) = _RelatedPersonSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory RelatedPersonSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$RelatedPersonSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (address.isNotEmpty) {
+      address.forEach(
+          (element) => returnStrings.add('address${element.toRequest()}'));
+    }
+    if (addressCity.isNotEmpty) {
+      addressCity.forEach(
+          (element) => returnStrings.add('address-city${element.toRequest()}'));
+    }
+    if (addressCountry.isNotEmpty) {
+      addressCountry.forEach((element) =>
+          returnStrings.add('address-country${element.toRequest()}'));
+    }
+    if (addressPostalcode.isNotEmpty) {
+      addressPostalcode.forEach((element) =>
+          returnStrings.add('address-postalcode${element.toRequest()}'));
+    }
+    if (addressState.isNotEmpty) {
+      addressState.forEach((element) =>
+          returnStrings.add('address-state${element.toRequest()}'));
+    }
+    if (addressUse.isNotEmpty) {
+      addressUse.forEach(
+          (element) => returnStrings.add('address-use${element.toRequest()}'));
+    }
+    if (birthdate.isNotEmpty) {
+      birthdate.forEach(
+          (element) => returnStrings.add('birthdate${element.toRequest()}'));
+    }
+    if (email.isNotEmpty) {
+      email.forEach(
+          (element) => returnStrings.add('email${element.toRequest()}'));
+    }
+    if (gender.isNotEmpty) {
+      gender.forEach(
+          (element) => returnStrings.add('gender${element.toRequest()}'));
+    }
+    if (phone.isNotEmpty) {
+      phone.forEach(
+          (element) => returnStrings.add('phone${element.toRequest()}'));
+    }
+    if (phonetic.isNotEmpty) {
+      phonetic.forEach(
+          (element) => returnStrings.add('phonetic${element.toRequest()}'));
+    }
+    if (telecom.isNotEmpty) {
+      telecom.forEach(
+          (element) => returnStrings.add('telecom${element.toRequest()}'));
+    }
+    if (active.isNotEmpty) {
+      active.forEach(
+          (element) => returnStrings.add('active${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (relationship.isNotEmpty) {
+      relationship.forEach(
+          (element) => returnStrings.add('relationship${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -17780,8 +29440,114 @@ class PractitionerRoleSearchParams with _$PractitionerRoleSearchParams {
   }) = _PractitionerRoleSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PractitionerRoleSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$PractitionerRoleSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (email.isNotEmpty) {
+      email.forEach(
+          (element) => returnStrings.add('email${element.toRequest()}'));
+    }
+    if (phone.isNotEmpty) {
+      phone.forEach(
+          (element) => returnStrings.add('phone${element.toRequest()}'));
+    }
+    if (telecom.isNotEmpty) {
+      telecom.forEach(
+          (element) => returnStrings.add('telecom${element.toRequest()}'));
+    }
+    if (active.isNotEmpty) {
+      active.forEach(
+          (element) => returnStrings.add('active${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (endpoint.isNotEmpty) {
+      endpoint.forEach(
+          (element) => returnStrings.add('endpoint${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (location.isNotEmpty) {
+      location.forEach(
+          (element) => returnStrings.add('location${element.toRequest()}'));
+    }
+    if (organization.isNotEmpty) {
+      organization.forEach(
+          (element) => returnStrings.add('organization${element.toRequest()}'));
+    }
+    if (practitioner.isNotEmpty) {
+      practitioner.forEach(
+          (element) => returnStrings.add('practitioner${element.toRequest()}'));
+    }
+    if (role.isNotEmpty) {
+      role.forEach(
+          (element) => returnStrings.add('role${element.toRequest()}'));
+    }
+    if (service.isNotEmpty) {
+      service.forEach(
+          (element) => returnStrings.add('service${element.toRequest()}'));
+    }
+    if (specialty.isNotEmpty) {
+      specialty.forEach(
+          (element) => returnStrings.add('specialty${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -17862,8 +29628,90 @@ class PaymentNoticeSearchParams with _$PaymentNoticeSearchParams {
   }) = _PaymentNoticeSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PaymentNoticeSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$PaymentNoticeSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (created.isNotEmpty) {
+      created.forEach(
+          (element) => returnStrings.add('created${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (paymentStatus.isNotEmpty) {
+      paymentStatus.forEach((element) =>
+          returnStrings.add('payment-status${element.toRequest()}'));
+    }
+    if (provider.isNotEmpty) {
+      provider.forEach(
+          (element) => returnStrings.add('provider${element.toRequest()}'));
+    }
+    if (request.isNotEmpty) {
+      request.forEach(
+          (element) => returnStrings.add('request${element.toRequest()}'));
+    }
+    if (response.isNotEmpty) {
+      response.forEach(
+          (element) => returnStrings.add('response${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -17948,9 +29796,94 @@ class PaymentReconciliationSearchParams
   }) = _PaymentReconciliationSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PaymentReconciliationSearchParams.fromJson(
-          Map<String, dynamic> json) =>
-      _$PaymentReconciliationSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (created.isNotEmpty) {
+      created.forEach(
+          (element) => returnStrings.add('created${element.toRequest()}'));
+    }
+    if (disposition.isNotEmpty) {
+      disposition.forEach(
+          (element) => returnStrings.add('disposition${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (outcome.isNotEmpty) {
+      outcome.forEach(
+          (element) => returnStrings.add('outcome${element.toRequest()}'));
+    }
+    if (paymentIssuer.isNotEmpty) {
+      paymentIssuer.forEach((element) =>
+          returnStrings.add('payment-issuer${element.toRequest()}'));
+    }
+    if (request.isNotEmpty) {
+      request.forEach(
+          (element) => returnStrings.add('request${element.toRequest()}'));
+    }
+    if (requestor.isNotEmpty) {
+      requestor.forEach(
+          (element) => returnStrings.add('requestor${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -18094,8 +30027,157 @@ class PlanDefinitionSearchParams with _$PlanDefinitionSearchParams {
   }) = _PlanDefinitionSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PlanDefinitionSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$PlanDefinitionSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (composedOf.isNotEmpty) {
+      composedOf.forEach(
+          (element) => returnStrings.add('composed-of${element.toRequest()}'));
+    }
+    if (context.isNotEmpty) {
+      context.forEach(
+          (element) => returnStrings.add('context${element.toRequest()}'));
+    }
+    if (contextQuantity.isNotEmpty) {
+      contextQuantity.forEach((element) =>
+          returnStrings.add('context-quantity${element.toRequest()}'));
+    }
+    if (contextType.isNotEmpty) {
+      contextType.forEach(
+          (element) => returnStrings.add('context-type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (definition.isNotEmpty) {
+      definition.forEach(
+          (element) => returnStrings.add('definition${element.toRequest()}'));
+    }
+    if (dependsOn.isNotEmpty) {
+      dependsOn.forEach(
+          (element) => returnStrings.add('depends-on${element.toRequest()}'));
+    }
+    if (derivedFrom.isNotEmpty) {
+      derivedFrom.forEach(
+          (element) => returnStrings.add('derived-from${element.toRequest()}'));
+    }
+    if (description.isNotEmpty) {
+      description.forEach(
+          (element) => returnStrings.add('description${element.toRequest()}'));
+    }
+    if (effective.isNotEmpty) {
+      effective.forEach(
+          (element) => returnStrings.add('effective${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (jurisdiction.isNotEmpty) {
+      jurisdiction.forEach(
+          (element) => returnStrings.add('jurisdiction${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (predecessor.isNotEmpty) {
+      predecessor.forEach(
+          (element) => returnStrings.add('predecessor${element.toRequest()}'));
+    }
+    if (publisher.isNotEmpty) {
+      publisher.forEach(
+          (element) => returnStrings.add('publisher${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (successor.isNotEmpty) {
+      successor.forEach(
+          (element) => returnStrings.add('successor${element.toRequest()}'));
+    }
+    if (title.isNotEmpty) {
+      title.forEach(
+          (element) => returnStrings.add('title${element.toRequest()}'));
+    }
+    if (topic.isNotEmpty) {
+      topic.forEach(
+          (element) => returnStrings.add('topic${element.toRequest()}'));
+    }
+    if (type.isNotEmpty) {
+      type.forEach(
+          (element) => returnStrings.add('type${element.toRequest()}'));
+    }
+    if (url.isNotEmpty) {
+      url.forEach((element) => returnStrings.add('url${element.toRequest()}'));
+    }
+    if (version.isNotEmpty) {
+      version.forEach(
+          (element) => returnStrings.add('version${element.toRequest()}'));
+    }
+    if (contextTypeQuantity.isNotEmpty) {
+      contextTypeQuantity.forEach((element) =>
+          returnStrings.add('context-type-quantity${element.toRequest()}'));
+    }
+    if (contextTypeValue.isNotEmpty) {
+      contextTypeValue.forEach((element) =>
+          returnStrings.add('context-type-value${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -18185,8 +30267,102 @@ class ProvenanceSearchParams with _$ProvenanceSearchParams {
   }) = _ProvenanceSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ProvenanceSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$ProvenanceSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (agent.isNotEmpty) {
+      agent.forEach(
+          (element) => returnStrings.add('agent${element.toRequest()}'));
+    }
+    if (agentRole.isNotEmpty) {
+      agentRole.forEach(
+          (element) => returnStrings.add('agent-role${element.toRequest()}'));
+    }
+    if (agentType.isNotEmpty) {
+      agentType.forEach(
+          (element) => returnStrings.add('agent-type${element.toRequest()}'));
+    }
+    if (entity.isNotEmpty) {
+      entity.forEach(
+          (element) => returnStrings.add('entity${element.toRequest()}'));
+    }
+    if (location.isNotEmpty) {
+      location.forEach(
+          (element) => returnStrings.add('location${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (recorded.isNotEmpty) {
+      recorded.forEach(
+          (element) => returnStrings.add('recorded${element.toRequest()}'));
+    }
+    if (signatureType.isNotEmpty) {
+      signatureType.forEach((element) =>
+          returnStrings.add('signature-type${element.toRequest()}'));
+    }
+    if (target.isNotEmpty) {
+      target.forEach(
+          (element) => returnStrings.add('target${element.toRequest()}'));
+    }
+    if (when.isNotEmpty) {
+      when.forEach(
+          (element) => returnStrings.add('when${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -18311,8 +30487,137 @@ class QuestionnaireSearchParams with _$QuestionnaireSearchParams {
   }) = _QuestionnaireSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory QuestionnaireSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$QuestionnaireSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (code.isNotEmpty) {
+      code.forEach(
+          (element) => returnStrings.add('code${element.toRequest()}'));
+    }
+    if (context.isNotEmpty) {
+      context.forEach(
+          (element) => returnStrings.add('context${element.toRequest()}'));
+    }
+    if (contextQuantity.isNotEmpty) {
+      contextQuantity.forEach((element) =>
+          returnStrings.add('context-quantity${element.toRequest()}'));
+    }
+    if (contextType.isNotEmpty) {
+      contextType.forEach(
+          (element) => returnStrings.add('context-type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (definition.isNotEmpty) {
+      definition.forEach(
+          (element) => returnStrings.add('definition${element.toRequest()}'));
+    }
+    if (description.isNotEmpty) {
+      description.forEach(
+          (element) => returnStrings.add('description${element.toRequest()}'));
+    }
+    if (effective.isNotEmpty) {
+      effective.forEach(
+          (element) => returnStrings.add('effective${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (jurisdiction.isNotEmpty) {
+      jurisdiction.forEach(
+          (element) => returnStrings.add('jurisdiction${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (publisher.isNotEmpty) {
+      publisher.forEach(
+          (element) => returnStrings.add('publisher${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (subjectType.isNotEmpty) {
+      subjectType.forEach(
+          (element) => returnStrings.add('subject-type${element.toRequest()}'));
+    }
+    if (title.isNotEmpty) {
+      title.forEach(
+          (element) => returnStrings.add('title${element.toRequest()}'));
+    }
+    if (url.isNotEmpty) {
+      url.forEach((element) => returnStrings.add('url${element.toRequest()}'));
+    }
+    if (version.isNotEmpty) {
+      version.forEach(
+          (element) => returnStrings.add('version${element.toRequest()}'));
+    }
+    if (contextTypeQuantity.isNotEmpty) {
+      contextTypeQuantity.forEach((element) =>
+          returnStrings.add('context-type-quantity${element.toRequest()}'));
+    }
+    if (contextTypeValue.isNotEmpty) {
+      contextTypeValue.forEach((element) =>
+          returnStrings.add('context-type-value${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -18404,9 +30709,106 @@ class QuestionnaireResponseSearchParams
   }) = _QuestionnaireResponseSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory QuestionnaireResponseSearchParams.fromJson(
-          Map<String, dynamic> json) =>
-      _$QuestionnaireResponseSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (author.isNotEmpty) {
+      author.forEach(
+          (element) => returnStrings.add('author${element.toRequest()}'));
+    }
+    if (authored.isNotEmpty) {
+      authored.forEach(
+          (element) => returnStrings.add('authored${element.toRequest()}'));
+    }
+    if (basedOn.isNotEmpty) {
+      basedOn.forEach(
+          (element) => returnStrings.add('based-on${element.toRequest()}'));
+    }
+    if (encounter.isNotEmpty) {
+      encounter.forEach(
+          (element) => returnStrings.add('encounter${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (partOf.isNotEmpty) {
+      partOf.forEach(
+          (element) => returnStrings.add('part-of${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (questionnaire.isNotEmpty) {
+      questionnaire.forEach((element) =>
+          returnStrings.add('questionnaire${element.toRequest()}'));
+    }
+    if (source.isNotEmpty) {
+      source.forEach(
+          (element) => returnStrings.add('source${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -18486,9 +30888,90 @@ class RegulatedAuthorizationSearchParams
   }) = _RegulatedAuthorizationSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory RegulatedAuthorizationSearchParams.fromJson(
-          Map<String, dynamic> json) =>
-      _$RegulatedAuthorizationSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (case_.isNotEmpty) {
+      case_.forEach(
+          (element) => returnStrings.add('case${element.toRequest()}'));
+    }
+    if (caseType.isNotEmpty) {
+      caseType.forEach(
+          (element) => returnStrings.add('case-type${element.toRequest()}'));
+    }
+    if (holder.isNotEmpty) {
+      holder.forEach(
+          (element) => returnStrings.add('holder${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (region.isNotEmpty) {
+      region.forEach(
+          (element) => returnStrings.add('region${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -18594,8 +31077,118 @@ class RequestGroupSearchParams with _$RequestGroupSearchParams {
   }) = _RequestGroupSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory RequestGroupSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$RequestGroupSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (author.isNotEmpty) {
+      author.forEach(
+          (element) => returnStrings.add('author${element.toRequest()}'));
+    }
+    if (authored.isNotEmpty) {
+      authored.forEach(
+          (element) => returnStrings.add('authored${element.toRequest()}'));
+    }
+    if (code.isNotEmpty) {
+      code.forEach(
+          (element) => returnStrings.add('code${element.toRequest()}'));
+    }
+    if (encounter.isNotEmpty) {
+      encounter.forEach(
+          (element) => returnStrings.add('encounter${element.toRequest()}'));
+    }
+    if (groupIdentifier.isNotEmpty) {
+      groupIdentifier.forEach((element) =>
+          returnStrings.add('group-identifier${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (instantiatesCanonical.isNotEmpty) {
+      instantiatesCanonical.forEach((element) =>
+          returnStrings.add('instantiates-canonical${element.toRequest()}'));
+    }
+    if (instantiatesUri.isNotEmpty) {
+      instantiatesUri.forEach((element) =>
+          returnStrings.add('instantiates-uri${element.toRequest()}'));
+    }
+    if (intent.isNotEmpty) {
+      intent.forEach(
+          (element) => returnStrings.add('intent${element.toRequest()}'));
+    }
+    if (participant.isNotEmpty) {
+      participant.forEach(
+          (element) => returnStrings.add('participant${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (priority.isNotEmpty) {
+      priority.forEach(
+          (element) => returnStrings.add('priority${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -18733,8 +31326,149 @@ class ResearchDefinitionSearchParams with _$ResearchDefinitionSearchParams {
   }) = _ResearchDefinitionSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchDefinitionSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$ResearchDefinitionSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (composedOf.isNotEmpty) {
+      composedOf.forEach(
+          (element) => returnStrings.add('composed-of${element.toRequest()}'));
+    }
+    if (context.isNotEmpty) {
+      context.forEach(
+          (element) => returnStrings.add('context${element.toRequest()}'));
+    }
+    if (contextQuantity.isNotEmpty) {
+      contextQuantity.forEach((element) =>
+          returnStrings.add('context-quantity${element.toRequest()}'));
+    }
+    if (contextType.isNotEmpty) {
+      contextType.forEach(
+          (element) => returnStrings.add('context-type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (dependsOn.isNotEmpty) {
+      dependsOn.forEach(
+          (element) => returnStrings.add('depends-on${element.toRequest()}'));
+    }
+    if (derivedFrom.isNotEmpty) {
+      derivedFrom.forEach(
+          (element) => returnStrings.add('derived-from${element.toRequest()}'));
+    }
+    if (description.isNotEmpty) {
+      description.forEach(
+          (element) => returnStrings.add('description${element.toRequest()}'));
+    }
+    if (effective.isNotEmpty) {
+      effective.forEach(
+          (element) => returnStrings.add('effective${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (jurisdiction.isNotEmpty) {
+      jurisdiction.forEach(
+          (element) => returnStrings.add('jurisdiction${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (predecessor.isNotEmpty) {
+      predecessor.forEach(
+          (element) => returnStrings.add('predecessor${element.toRequest()}'));
+    }
+    if (publisher.isNotEmpty) {
+      publisher.forEach(
+          (element) => returnStrings.add('publisher${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (successor.isNotEmpty) {
+      successor.forEach(
+          (element) => returnStrings.add('successor${element.toRequest()}'));
+    }
+    if (title.isNotEmpty) {
+      title.forEach(
+          (element) => returnStrings.add('title${element.toRequest()}'));
+    }
+    if (topic.isNotEmpty) {
+      topic.forEach(
+          (element) => returnStrings.add('topic${element.toRequest()}'));
+    }
+    if (url.isNotEmpty) {
+      url.forEach((element) => returnStrings.add('url${element.toRequest()}'));
+    }
+    if (version.isNotEmpty) {
+      version.forEach(
+          (element) => returnStrings.add('version${element.toRequest()}'));
+    }
+    if (contextTypeQuantity.isNotEmpty) {
+      contextTypeQuantity.forEach((element) =>
+          returnStrings.add('context-type-quantity${element.toRequest()}'));
+    }
+    if (contextTypeValue.isNotEmpty) {
+      contextTypeValue.forEach((element) =>
+          returnStrings.add('context-type-value${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -18873,9 +31607,149 @@ class ResearchElementDefinitionSearchParams
   }) = _ResearchElementDefinitionSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchElementDefinitionSearchParams.fromJson(
-          Map<String, dynamic> json) =>
-      _$ResearchElementDefinitionSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (composedOf.isNotEmpty) {
+      composedOf.forEach(
+          (element) => returnStrings.add('composed-of${element.toRequest()}'));
+    }
+    if (context.isNotEmpty) {
+      context.forEach(
+          (element) => returnStrings.add('context${element.toRequest()}'));
+    }
+    if (contextQuantity.isNotEmpty) {
+      contextQuantity.forEach((element) =>
+          returnStrings.add('context-quantity${element.toRequest()}'));
+    }
+    if (contextType.isNotEmpty) {
+      contextType.forEach(
+          (element) => returnStrings.add('context-type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (dependsOn.isNotEmpty) {
+      dependsOn.forEach(
+          (element) => returnStrings.add('depends-on${element.toRequest()}'));
+    }
+    if (derivedFrom.isNotEmpty) {
+      derivedFrom.forEach(
+          (element) => returnStrings.add('derived-from${element.toRequest()}'));
+    }
+    if (description.isNotEmpty) {
+      description.forEach(
+          (element) => returnStrings.add('description${element.toRequest()}'));
+    }
+    if (effective.isNotEmpty) {
+      effective.forEach(
+          (element) => returnStrings.add('effective${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (jurisdiction.isNotEmpty) {
+      jurisdiction.forEach(
+          (element) => returnStrings.add('jurisdiction${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (predecessor.isNotEmpty) {
+      predecessor.forEach(
+          (element) => returnStrings.add('predecessor${element.toRequest()}'));
+    }
+    if (publisher.isNotEmpty) {
+      publisher.forEach(
+          (element) => returnStrings.add('publisher${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (successor.isNotEmpty) {
+      successor.forEach(
+          (element) => returnStrings.add('successor${element.toRequest()}'));
+    }
+    if (title.isNotEmpty) {
+      title.forEach(
+          (element) => returnStrings.add('title${element.toRequest()}'));
+    }
+    if (topic.isNotEmpty) {
+      topic.forEach(
+          (element) => returnStrings.add('topic${element.toRequest()}'));
+    }
+    if (url.isNotEmpty) {
+      url.forEach((element) => returnStrings.add('url${element.toRequest()}'));
+    }
+    if (version.isNotEmpty) {
+      version.forEach(
+          (element) => returnStrings.add('version${element.toRequest()}'));
+    }
+    if (contextTypeQuantity.isNotEmpty) {
+      contextTypeQuantity.forEach((element) =>
+          returnStrings.add('context-type-quantity${element.toRequest()}'));
+    }
+    if (contextTypeValue.isNotEmpty) {
+      contextTypeValue.forEach((element) =>
+          returnStrings.add('context-type-value${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -18972,8 +31846,114 @@ class ResearchStudySearchParams with _$ResearchStudySearchParams {
   }) = _ResearchStudySearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchStudySearchParams.fromJson(Map<String, dynamic> json) =>
-      _$ResearchStudySearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (category.isNotEmpty) {
+      category.forEach(
+          (element) => returnStrings.add('category${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (focus.isNotEmpty) {
+      focus.forEach(
+          (element) => returnStrings.add('focus${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (keyword.isNotEmpty) {
+      keyword.forEach(
+          (element) => returnStrings.add('keyword${element.toRequest()}'));
+    }
+    if (location.isNotEmpty) {
+      location.forEach(
+          (element) => returnStrings.add('location${element.toRequest()}'));
+    }
+    if (partof.isNotEmpty) {
+      partof.forEach(
+          (element) => returnStrings.add('partof${element.toRequest()}'));
+    }
+    if (principalinvestigator.isNotEmpty) {
+      principalinvestigator.forEach((element) =>
+          returnStrings.add('principalinvestigator${element.toRequest()}'));
+    }
+    if (protocol.isNotEmpty) {
+      protocol.forEach(
+          (element) => returnStrings.add('protocol${element.toRequest()}'));
+    }
+    if (site.isNotEmpty) {
+      site.forEach(
+          (element) => returnStrings.add('site${element.toRequest()}'));
+    }
+    if (sponsor.isNotEmpty) {
+      sponsor.forEach(
+          (element) => returnStrings.add('sponsor${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (title.isNotEmpty) {
+      title.forEach(
+          (element) => returnStrings.add('title${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -19049,8 +32029,86 @@ class ResearchSubjectSearchParams with _$ResearchSubjectSearchParams {
   }) = _ResearchSubjectSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchSubjectSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$ResearchSubjectSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (individual.isNotEmpty) {
+      individual.forEach(
+          (element) => returnStrings.add('individual${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (study.isNotEmpty) {
+      study.forEach(
+          (element) => returnStrings.add('study${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -19133,8 +32191,90 @@ class ScheduleSearchParams with _$ScheduleSearchParams {
   }) = _ScheduleSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ScheduleSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$ScheduleSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (active.isNotEmpty) {
+      active.forEach(
+          (element) => returnStrings.add('active${element.toRequest()}'));
+    }
+    if (actor.isNotEmpty) {
+      actor.forEach(
+          (element) => returnStrings.add('actor${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (serviceCategory.isNotEmpty) {
+      serviceCategory.forEach((element) =>
+          returnStrings.add('service-category${element.toRequest()}'));
+    }
+    if (serviceType.isNotEmpty) {
+      serviceType.forEach(
+          (element) => returnStrings.add('service-type${element.toRequest()}'));
+    }
+    if (specialty.isNotEmpty) {
+      specialty.forEach(
+          (element) => returnStrings.add('specialty${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -19222,8 +32362,94 @@ class SlotSearchParams with _$SlotSearchParams {
   }) = _SlotSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SlotSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$SlotSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (appointmentType.isNotEmpty) {
+      appointmentType.forEach((element) =>
+          returnStrings.add('appointment-type${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (schedule.isNotEmpty) {
+      schedule.forEach(
+          (element) => returnStrings.add('schedule${element.toRequest()}'));
+    }
+    if (serviceCategory.isNotEmpty) {
+      serviceCategory.forEach((element) =>
+          returnStrings.add('service-category${element.toRequest()}'));
+    }
+    if (serviceType.isNotEmpty) {
+      serviceType.forEach(
+          (element) => returnStrings.add('service-type${element.toRequest()}'));
+    }
+    if (specialty.isNotEmpty) {
+      specialty.forEach(
+          (element) => returnStrings.add('specialty${element.toRequest()}'));
+    }
+    if (start.isNotEmpty) {
+      start.forEach(
+          (element) => returnStrings.add('start${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -19319,8 +32545,110 @@ class SpecimenSearchParams with _$SpecimenSearchParams {
   }) = _SpecimenSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SpecimenSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$SpecimenSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (accession.isNotEmpty) {
+      accession.forEach(
+          (element) => returnStrings.add('accession${element.toRequest()}'));
+    }
+    if (bodysite.isNotEmpty) {
+      bodysite.forEach(
+          (element) => returnStrings.add('bodysite${element.toRequest()}'));
+    }
+    if (collected.isNotEmpty) {
+      collected.forEach(
+          (element) => returnStrings.add('collected${element.toRequest()}'));
+    }
+    if (collector.isNotEmpty) {
+      collector.forEach(
+          (element) => returnStrings.add('collector${element.toRequest()}'));
+    }
+    if (container.isNotEmpty) {
+      container.forEach(
+          (element) => returnStrings.add('container${element.toRequest()}'));
+    }
+    if (containerId.isNotEmpty) {
+      containerId.forEach(
+          (element) => returnStrings.add('container-id${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (parent.isNotEmpty) {
+      parent.forEach(
+          (element) => returnStrings.add('parent${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    if (type.isNotEmpty) {
+      type.forEach(
+          (element) => returnStrings.add('type${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -19387,8 +32715,74 @@ class SpecimenDefinitionSearchParams with _$SpecimenDefinitionSearchParams {
   }) = _SpecimenDefinitionSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SpecimenDefinitionSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$SpecimenDefinitionSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (container.isNotEmpty) {
+      container.forEach(
+          (element) => returnStrings.add('container${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (type.isNotEmpty) {
+      type.forEach(
+          (element) => returnStrings.add('type${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -19464,8 +32858,85 @@ class SubscriptionSearchParams with _$SubscriptionSearchParams {
   }) = _SubscriptionSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SubscriptionSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$SubscriptionSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (contact.isNotEmpty) {
+      contact.forEach(
+          (element) => returnStrings.add('contact${element.toRequest()}'));
+    }
+    if (criteria.isNotEmpty) {
+      criteria.forEach(
+          (element) => returnStrings.add('criteria${element.toRequest()}'));
+    }
+    if (payload.isNotEmpty) {
+      payload.forEach(
+          (element) => returnStrings.add('payload${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (type.isNotEmpty) {
+      type.forEach(
+          (element) => returnStrings.add('type${element.toRequest()}'));
+    }
+    if (url.isNotEmpty) {
+      url.forEach((element) => returnStrings.add('url${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -19554,8 +33025,97 @@ class SubscriptionTopicSearchParams with _$SubscriptionTopicSearchParams {
   }) = _SubscriptionTopicSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SubscriptionTopicSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$SubscriptionTopicSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (derivedOrSelf.isNotEmpty) {
+      derivedOrSelf.forEach((element) =>
+          returnStrings.add('derived-or-self${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (resource.isNotEmpty) {
+      resource.forEach(
+          (element) => returnStrings.add('resource${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (title.isNotEmpty) {
+      title.forEach(
+          (element) => returnStrings.add('title${element.toRequest()}'));
+    }
+    if (triggerDescription.isNotEmpty) {
+      triggerDescription.forEach((element) =>
+          returnStrings.add('trigger-description${element.toRequest()}'));
+    }
+    if (url.isNotEmpty) {
+      url.forEach((element) => returnStrings.add('url${element.toRequest()}'));
+    }
+    if (version.isNotEmpty) {
+      version.forEach(
+          (element) => returnStrings.add('version${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -19641,8 +33201,94 @@ class SubstanceSearchParams with _$SubstanceSearchParams {
   }) = _SubstanceSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SubstanceSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$SubstanceSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (category.isNotEmpty) {
+      category.forEach(
+          (element) => returnStrings.add('category${element.toRequest()}'));
+    }
+    if (code.isNotEmpty) {
+      code.forEach(
+          (element) => returnStrings.add('code${element.toRequest()}'));
+    }
+    if (containerIdentifier.isNotEmpty) {
+      containerIdentifier.forEach((element) =>
+          returnStrings.add('container-identifier${element.toRequest()}'));
+    }
+    if (expiry.isNotEmpty) {
+      expiry.forEach(
+          (element) => returnStrings.add('expiry${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (quantity.isNotEmpty) {
+      quantity.forEach(
+          (element) => returnStrings.add('quantity${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (substanceReference.isNotEmpty) {
+      substanceReference.forEach((element) =>
+          returnStrings.add('substance-reference${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -19715,8 +33361,82 @@ class SubstanceDefinitionSearchParams with _$SubstanceDefinitionSearchParams {
   }) = _SubstanceDefinitionSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SubstanceDefinitionSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$SubstanceDefinitionSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (classification.isNotEmpty) {
+      classification.forEach((element) =>
+          returnStrings.add('classification${element.toRequest()}'));
+    }
+    if (code.isNotEmpty) {
+      code.forEach(
+          (element) => returnStrings.add('code${element.toRequest()}'));
+    }
+    if (domain.isNotEmpty) {
+      domain.forEach(
+          (element) => returnStrings.add('domain${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -19835,8 +33555,138 @@ class TaskSearchParams with _$TaskSearchParams {
   }) = _TaskSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TaskSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$TaskSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (authoredOn.isNotEmpty) {
+      authoredOn.forEach(
+          (element) => returnStrings.add('authored-on${element.toRequest()}'));
+    }
+    if (basedOn.isNotEmpty) {
+      basedOn.forEach(
+          (element) => returnStrings.add('based-on${element.toRequest()}'));
+    }
+    if (businessStatus.isNotEmpty) {
+      businessStatus.forEach((element) =>
+          returnStrings.add('business-status${element.toRequest()}'));
+    }
+    if (code.isNotEmpty) {
+      code.forEach(
+          (element) => returnStrings.add('code${element.toRequest()}'));
+    }
+    if (encounter.isNotEmpty) {
+      encounter.forEach(
+          (element) => returnStrings.add('encounter${element.toRequest()}'));
+    }
+    if (focus.isNotEmpty) {
+      focus.forEach(
+          (element) => returnStrings.add('focus${element.toRequest()}'));
+    }
+    if (groupIdentifier.isNotEmpty) {
+      groupIdentifier.forEach((element) =>
+          returnStrings.add('group-identifier${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (intent.isNotEmpty) {
+      intent.forEach(
+          (element) => returnStrings.add('intent${element.toRequest()}'));
+    }
+    if (modified.isNotEmpty) {
+      modified.forEach(
+          (element) => returnStrings.add('modified${element.toRequest()}'));
+    }
+    if (owner.isNotEmpty) {
+      owner.forEach(
+          (element) => returnStrings.add('owner${element.toRequest()}'));
+    }
+    if (partOf.isNotEmpty) {
+      partOf.forEach(
+          (element) => returnStrings.add('part-of${element.toRequest()}'));
+    }
+    if (patient.isNotEmpty) {
+      patient.forEach(
+          (element) => returnStrings.add('patient${element.toRequest()}'));
+    }
+    if (performer.isNotEmpty) {
+      performer.forEach(
+          (element) => returnStrings.add('performer${element.toRequest()}'));
+    }
+    if (period.isNotEmpty) {
+      period.forEach(
+          (element) => returnStrings.add('period${element.toRequest()}'));
+    }
+    if (priority.isNotEmpty) {
+      priority.forEach(
+          (element) => returnStrings.add('priority${element.toRequest()}'));
+    }
+    if (requester.isNotEmpty) {
+      requester.forEach(
+          (element) => returnStrings.add('requester${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (subject.isNotEmpty) {
+      subject.forEach(
+          (element) => returnStrings.add('subject${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -19912,8 +33762,86 @@ class TestReportSearchParams with _$TestReportSearchParams {
   }) = _TestReportSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TestReportSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$TestReportSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (issued.isNotEmpty) {
+      issued.forEach(
+          (element) => returnStrings.add('issued${element.toRequest()}'));
+    }
+    if (participant.isNotEmpty) {
+      participant.forEach(
+          (element) => returnStrings.add('participant${element.toRequest()}'));
+    }
+    if (result.isNotEmpty) {
+      result.forEach(
+          (element) => returnStrings.add('result${element.toRequest()}'));
+    }
+    if (tester.isNotEmpty) {
+      tester.forEach(
+          (element) => returnStrings.add('tester${element.toRequest()}'));
+    }
+    if (testscript.isNotEmpty) {
+      testscript.forEach(
+          (element) => returnStrings.add('testscript${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -20029,8 +33957,125 @@ class TestScriptSearchParams with _$TestScriptSearchParams {
   }) = _TestScriptSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TestScriptSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$TestScriptSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (context.isNotEmpty) {
+      context.forEach(
+          (element) => returnStrings.add('context${element.toRequest()}'));
+    }
+    if (contextQuantity.isNotEmpty) {
+      contextQuantity.forEach((element) =>
+          returnStrings.add('context-quantity${element.toRequest()}'));
+    }
+    if (contextType.isNotEmpty) {
+      contextType.forEach(
+          (element) => returnStrings.add('context-type${element.toRequest()}'));
+    }
+    if (date.isNotEmpty) {
+      date.forEach(
+          (element) => returnStrings.add('date${element.toRequest()}'));
+    }
+    if (description.isNotEmpty) {
+      description.forEach(
+          (element) => returnStrings.add('description${element.toRequest()}'));
+    }
+    if (identifier.isNotEmpty) {
+      identifier.forEach(
+          (element) => returnStrings.add('identifier${element.toRequest()}'));
+    }
+    if (jurisdiction.isNotEmpty) {
+      jurisdiction.forEach(
+          (element) => returnStrings.add('jurisdiction${element.toRequest()}'));
+    }
+    if (name.isNotEmpty) {
+      name.forEach(
+          (element) => returnStrings.add('name${element.toRequest()}'));
+    }
+    if (publisher.isNotEmpty) {
+      publisher.forEach(
+          (element) => returnStrings.add('publisher${element.toRequest()}'));
+    }
+    if (status.isNotEmpty) {
+      status.forEach(
+          (element) => returnStrings.add('status${element.toRequest()}'));
+    }
+    if (testscriptCapability.isNotEmpty) {
+      testscriptCapability.forEach((element) =>
+          returnStrings.add('testscript-capability${element.toRequest()}'));
+    }
+    if (title.isNotEmpty) {
+      title.forEach(
+          (element) => returnStrings.add('title${element.toRequest()}'));
+    }
+    if (url.isNotEmpty) {
+      url.forEach((element) => returnStrings.add('url${element.toRequest()}'));
+    }
+    if (version.isNotEmpty) {
+      version.forEach(
+          (element) => returnStrings.add('version${element.toRequest()}'));
+    }
+    if (contextTypeQuantity.isNotEmpty) {
+      contextTypeQuantity.forEach((element) =>
+          returnStrings.add('context-type-quantity${element.toRequest()}'));
+    }
+    if (contextTypeValue.isNotEmpty) {
+      contextTypeValue.forEach((element) =>
+          returnStrings.add('context-type-value${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }
 
 @freezed
@@ -20091,6 +34136,64 @@ class VerificationResultSearchParams with _$VerificationResultSearchParams {
   }) = _VerificationResultSearchParams;
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory VerificationResultSearchParams.fromJson(Map<String, dynamic> json) =>
-      _$VerificationResultSearchParamsFromJson(json);
+  List<String> toRequest() {
+    final returnStrings = <String>[];
+    if (resourceContent.isNotEmpty) {
+      resourceContent.forEach(
+          (element) => returnStrings.add('_content${element.toRequest()}'));
+    }
+    if (resourceFilter.isNotEmpty) {
+      resourceFilter.forEach(
+          (element) => returnStrings.add('_filter${element.toRequest()}'));
+    }
+    if (resourceHas.isNotEmpty) {
+      resourceHas.forEach(
+          (element) => returnStrings.add('_has${element.toRequest()}'));
+    }
+    if (resourceId.isNotEmpty) {
+      resourceId
+          .forEach((element) => returnStrings.add('_id${element.toRequest()}'));
+    }
+    if (resourceLastUpdated.isNotEmpty) {
+      resourceLastUpdated.forEach(
+          (element) => returnStrings.add('_lastUpdated${element.toRequest()}'));
+    }
+    if (resourceList.isNotEmpty) {
+      resourceList.forEach(
+          (element) => returnStrings.add('_list${element.toRequest()}'));
+    }
+    if (resourceProfile.isNotEmpty) {
+      resourceProfile.forEach(
+          (element) => returnStrings.add('_profile${element.toRequest()}'));
+    }
+    if (resourceQuery.isNotEmpty) {
+      resourceQuery.forEach(
+          (element) => returnStrings.add('_query${element.toRequest()}'));
+    }
+    if (resourceSecurity.isNotEmpty) {
+      resourceSecurity.forEach(
+          (element) => returnStrings.add('_security${element.toRequest()}'));
+    }
+    if (resourceSource.isNotEmpty) {
+      resourceSource.forEach(
+          (element) => returnStrings.add('_source${element.toRequest()}'));
+    }
+    if (resourceTag.isNotEmpty) {
+      resourceTag.forEach(
+          (element) => returnStrings.add('_tag${element.toRequest()}'));
+    }
+    if (resourceText.isNotEmpty) {
+      resourceText.forEach(
+          (element) => returnStrings.add('_text${element.toRequest()}'));
+    }
+    if (resourceType.isNotEmpty) {
+      resourceType.forEach(
+          (element) => returnStrings.add('_type${element.toRequest()}'));
+    }
+    if (target.isNotEmpty) {
+      target.forEach(
+          (element) => returnStrings.add('target${element.toRequest()}'));
+    }
+    return returnStrings;
+  }
 }

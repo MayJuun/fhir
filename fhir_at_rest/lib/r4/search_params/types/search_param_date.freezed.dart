@@ -14,35 +14,6 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-SearchParamDate _$SearchParamDateFromJson(Map<String, dynamic> json) {
-  switch (json['runtimeType']) {
-    case 'equal':
-      return _SearchParamDateEqual.fromJson(json);
-    case 'notEqual':
-      return _SearchParamDateNotEqual.fromJson(json);
-    case 'greaterThan':
-      return _SearchParamDateGreaterThan.fromJson(json);
-    case 'lessThan':
-      return _SearchParamDateLessThan.fromJson(json);
-    case 'greaterOrEqual':
-      return _SearchParamDateGreaterOrEqual.fromJson(json);
-    case 'lessOrEqual':
-      return _SearchParamDateLessOrEqual.fromJson(json);
-    case 'startsAfter':
-      return _SearchParamDateStartsAfter.fromJson(json);
-    case 'endsBefore':
-      return _SearchParamDateEndsBefore.fromJson(json);
-    case 'approximately':
-      return _SearchParamDateApproximately.fromJson(json);
-    case 'missing':
-      return _SearchParamDateMissing.fromJson(json);
-
-    default:
-      throw CheckedFromJsonException(json, 'runtimeType', 'SearchParamDate',
-          'Invalid union type "${json['runtimeType']}"!');
-  }
-}
-
 /// @nodoc
 mixin _$SearchParamDate {
   @optionalTypeArgs
@@ -133,7 +104,6 @@ mixin _$SearchParamDate {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -186,20 +156,12 @@ class __$$_SearchParamDateEqualCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$_SearchParamDateEqual extends _SearchParamDateEqual {
-  const _$_SearchParamDateEqual({required this.date, final String? $type})
-      : $type = $type ?? 'equal',
-        super._();
 
-  factory _$_SearchParamDateEqual.fromJson(Map<String, dynamic> json) =>
-      _$$_SearchParamDateEqualFromJson(json);
+class _$_SearchParamDateEqual extends _SearchParamDateEqual {
+  const _$_SearchParamDateEqual({required this.date}) : super._();
 
   @override
   final String date;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
 
   @override
   String toString() {
@@ -214,7 +176,6 @@ class _$_SearchParamDateEqual extends _SearchParamDateEqual {
             (identical(other.date, date) || other.date == date));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, date);
 
@@ -336,22 +297,12 @@ class _$_SearchParamDateEqual extends _SearchParamDateEqual {
     }
     return orElse();
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_SearchParamDateEqualToJson(
-      this,
-    );
-  }
 }
 
 abstract class _SearchParamDateEqual extends SearchParamDate {
   const factory _SearchParamDateEqual({required final String date}) =
       _$_SearchParamDateEqual;
   const _SearchParamDateEqual._() : super._();
-
-  factory _SearchParamDateEqual.fromJson(Map<String, dynamic> json) =
-      _$_SearchParamDateEqual.fromJson;
 
   String get date;
   @JsonKey(ignore: true)
@@ -391,20 +342,12 @@ class __$$_SearchParamDateNotEqualCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$_SearchParamDateNotEqual extends _SearchParamDateNotEqual {
-  const _$_SearchParamDateNotEqual({required this.date, final String? $type})
-      : $type = $type ?? 'notEqual',
-        super._();
 
-  factory _$_SearchParamDateNotEqual.fromJson(Map<String, dynamic> json) =>
-      _$$_SearchParamDateNotEqualFromJson(json);
+class _$_SearchParamDateNotEqual extends _SearchParamDateNotEqual {
+  const _$_SearchParamDateNotEqual({required this.date}) : super._();
 
   @override
   final String date;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
 
   @override
   String toString() {
@@ -419,7 +362,6 @@ class _$_SearchParamDateNotEqual extends _SearchParamDateNotEqual {
             (identical(other.date, date) || other.date == date));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, date);
 
@@ -542,22 +484,12 @@ class _$_SearchParamDateNotEqual extends _SearchParamDateNotEqual {
     }
     return orElse();
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_SearchParamDateNotEqualToJson(
-      this,
-    );
-  }
 }
 
 abstract class _SearchParamDateNotEqual extends SearchParamDate {
   const factory _SearchParamDateNotEqual({required final String date}) =
       _$_SearchParamDateNotEqual;
   const _SearchParamDateNotEqual._() : super._();
-
-  factory _SearchParamDateNotEqual.fromJson(Map<String, dynamic> json) =
-      _$_SearchParamDateNotEqual.fromJson;
 
   String get date;
   @JsonKey(ignore: true)
@@ -599,20 +531,12 @@ class __$$_SearchParamDateGreaterThanCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$_SearchParamDateGreaterThan extends _SearchParamDateGreaterThan {
-  const _$_SearchParamDateGreaterThan({required this.date, final String? $type})
-      : $type = $type ?? 'greaterThan',
-        super._();
 
-  factory _$_SearchParamDateGreaterThan.fromJson(Map<String, dynamic> json) =>
-      _$$_SearchParamDateGreaterThanFromJson(json);
+class _$_SearchParamDateGreaterThan extends _SearchParamDateGreaterThan {
+  const _$_SearchParamDateGreaterThan({required this.date}) : super._();
 
   @override
   final String date;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
 
   @override
   String toString() {
@@ -627,7 +551,6 @@ class _$_SearchParamDateGreaterThan extends _SearchParamDateGreaterThan {
             (identical(other.date, date) || other.date == date));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, date);
 
@@ -749,22 +672,12 @@ class _$_SearchParamDateGreaterThan extends _SearchParamDateGreaterThan {
     }
     return orElse();
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_SearchParamDateGreaterThanToJson(
-      this,
-    );
-  }
 }
 
 abstract class _SearchParamDateGreaterThan extends SearchParamDate {
   const factory _SearchParamDateGreaterThan({required final String date}) =
       _$_SearchParamDateGreaterThan;
   const _SearchParamDateGreaterThan._() : super._();
-
-  factory _SearchParamDateGreaterThan.fromJson(Map<String, dynamic> json) =
-      _$_SearchParamDateGreaterThan.fromJson;
 
   String get date;
   @JsonKey(ignore: true)
@@ -804,20 +717,12 @@ class __$$_SearchParamDateLessThanCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$_SearchParamDateLessThan extends _SearchParamDateLessThan {
-  const _$_SearchParamDateLessThan({required this.date, final String? $type})
-      : $type = $type ?? 'lessThan',
-        super._();
 
-  factory _$_SearchParamDateLessThan.fromJson(Map<String, dynamic> json) =>
-      _$$_SearchParamDateLessThanFromJson(json);
+class _$_SearchParamDateLessThan extends _SearchParamDateLessThan {
+  const _$_SearchParamDateLessThan({required this.date}) : super._();
 
   @override
   final String date;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
 
   @override
   String toString() {
@@ -832,7 +737,6 @@ class _$_SearchParamDateLessThan extends _SearchParamDateLessThan {
             (identical(other.date, date) || other.date == date));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, date);
 
@@ -955,22 +859,12 @@ class _$_SearchParamDateLessThan extends _SearchParamDateLessThan {
     }
     return orElse();
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_SearchParamDateLessThanToJson(
-      this,
-    );
-  }
 }
 
 abstract class _SearchParamDateLessThan extends SearchParamDate {
   const factory _SearchParamDateLessThan({required final String date}) =
       _$_SearchParamDateLessThan;
   const _SearchParamDateLessThan._() : super._();
-
-  factory _SearchParamDateLessThan.fromJson(Map<String, dynamic> json) =
-      _$_SearchParamDateLessThan.fromJson;
 
   String get date;
   @JsonKey(ignore: true)
@@ -1013,22 +907,12 @@ class __$$_SearchParamDateGreaterOrEqualCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$_SearchParamDateGreaterOrEqual extends _SearchParamDateGreaterOrEqual {
-  const _$_SearchParamDateGreaterOrEqual(
-      {required this.date, final String? $type})
-      : $type = $type ?? 'greaterOrEqual',
-        super._();
 
-  factory _$_SearchParamDateGreaterOrEqual.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_SearchParamDateGreaterOrEqualFromJson(json);
+class _$_SearchParamDateGreaterOrEqual extends _SearchParamDateGreaterOrEqual {
+  const _$_SearchParamDateGreaterOrEqual({required this.date}) : super._();
 
   @override
   final String date;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
 
   @override
   String toString() {
@@ -1043,7 +927,6 @@ class _$_SearchParamDateGreaterOrEqual extends _SearchParamDateGreaterOrEqual {
             (identical(other.date, date) || other.date == date));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, date);
 
@@ -1165,22 +1048,12 @@ class _$_SearchParamDateGreaterOrEqual extends _SearchParamDateGreaterOrEqual {
     }
     return orElse();
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_SearchParamDateGreaterOrEqualToJson(
-      this,
-    );
-  }
 }
 
 abstract class _SearchParamDateGreaterOrEqual extends SearchParamDate {
   const factory _SearchParamDateGreaterOrEqual({required final String date}) =
       _$_SearchParamDateGreaterOrEqual;
   const _SearchParamDateGreaterOrEqual._() : super._();
-
-  factory _SearchParamDateGreaterOrEqual.fromJson(Map<String, dynamic> json) =
-      _$_SearchParamDateGreaterOrEqual.fromJson;
 
   String get date;
   @JsonKey(ignore: true)
@@ -1222,20 +1095,12 @@ class __$$_SearchParamDateLessOrEqualCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$_SearchParamDateLessOrEqual extends _SearchParamDateLessOrEqual {
-  const _$_SearchParamDateLessOrEqual({required this.date, final String? $type})
-      : $type = $type ?? 'lessOrEqual',
-        super._();
 
-  factory _$_SearchParamDateLessOrEqual.fromJson(Map<String, dynamic> json) =>
-      _$$_SearchParamDateLessOrEqualFromJson(json);
+class _$_SearchParamDateLessOrEqual extends _SearchParamDateLessOrEqual {
+  const _$_SearchParamDateLessOrEqual({required this.date}) : super._();
 
   @override
   final String date;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
 
   @override
   String toString() {
@@ -1250,7 +1115,6 @@ class _$_SearchParamDateLessOrEqual extends _SearchParamDateLessOrEqual {
             (identical(other.date, date) || other.date == date));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, date);
 
@@ -1372,22 +1236,12 @@ class _$_SearchParamDateLessOrEqual extends _SearchParamDateLessOrEqual {
     }
     return orElse();
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_SearchParamDateLessOrEqualToJson(
-      this,
-    );
-  }
 }
 
 abstract class _SearchParamDateLessOrEqual extends SearchParamDate {
   const factory _SearchParamDateLessOrEqual({required final String date}) =
       _$_SearchParamDateLessOrEqual;
   const _SearchParamDateLessOrEqual._() : super._();
-
-  factory _SearchParamDateLessOrEqual.fromJson(Map<String, dynamic> json) =
-      _$_SearchParamDateLessOrEqual.fromJson;
 
   String get date;
   @JsonKey(ignore: true)
@@ -1429,20 +1283,12 @@ class __$$_SearchParamDateStartsAfterCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$_SearchParamDateStartsAfter extends _SearchParamDateStartsAfter {
-  const _$_SearchParamDateStartsAfter({required this.date, final String? $type})
-      : $type = $type ?? 'startsAfter',
-        super._();
 
-  factory _$_SearchParamDateStartsAfter.fromJson(Map<String, dynamic> json) =>
-      _$$_SearchParamDateStartsAfterFromJson(json);
+class _$_SearchParamDateStartsAfter extends _SearchParamDateStartsAfter {
+  const _$_SearchParamDateStartsAfter({required this.date}) : super._();
 
   @override
   final String date;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
 
   @override
   String toString() {
@@ -1457,7 +1303,6 @@ class _$_SearchParamDateStartsAfter extends _SearchParamDateStartsAfter {
             (identical(other.date, date) || other.date == date));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, date);
 
@@ -1579,22 +1424,12 @@ class _$_SearchParamDateStartsAfter extends _SearchParamDateStartsAfter {
     }
     return orElse();
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_SearchParamDateStartsAfterToJson(
-      this,
-    );
-  }
 }
 
 abstract class _SearchParamDateStartsAfter extends SearchParamDate {
   const factory _SearchParamDateStartsAfter({required final String date}) =
       _$_SearchParamDateStartsAfter;
   const _SearchParamDateStartsAfter._() : super._();
-
-  factory _SearchParamDateStartsAfter.fromJson(Map<String, dynamic> json) =
-      _$_SearchParamDateStartsAfter.fromJson;
 
   String get date;
   @JsonKey(ignore: true)
@@ -1636,20 +1471,12 @@ class __$$_SearchParamDateEndsBeforeCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$_SearchParamDateEndsBefore extends _SearchParamDateEndsBefore {
-  const _$_SearchParamDateEndsBefore({required this.date, final String? $type})
-      : $type = $type ?? 'endsBefore',
-        super._();
 
-  factory _$_SearchParamDateEndsBefore.fromJson(Map<String, dynamic> json) =>
-      _$$_SearchParamDateEndsBeforeFromJson(json);
+class _$_SearchParamDateEndsBefore extends _SearchParamDateEndsBefore {
+  const _$_SearchParamDateEndsBefore({required this.date}) : super._();
 
   @override
   final String date;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
 
   @override
   String toString() {
@@ -1664,7 +1491,6 @@ class _$_SearchParamDateEndsBefore extends _SearchParamDateEndsBefore {
             (identical(other.date, date) || other.date == date));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, date);
 
@@ -1786,22 +1612,12 @@ class _$_SearchParamDateEndsBefore extends _SearchParamDateEndsBefore {
     }
     return orElse();
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_SearchParamDateEndsBeforeToJson(
-      this,
-    );
-  }
 }
 
 abstract class _SearchParamDateEndsBefore extends SearchParamDate {
   const factory _SearchParamDateEndsBefore({required final String date}) =
       _$_SearchParamDateEndsBefore;
   const _SearchParamDateEndsBefore._() : super._();
-
-  factory _SearchParamDateEndsBefore.fromJson(Map<String, dynamic> json) =
-      _$_SearchParamDateEndsBefore.fromJson;
 
   String get date;
   @JsonKey(ignore: true)
@@ -1843,21 +1659,12 @@ class __$$_SearchParamDateApproximatelyCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$_SearchParamDateApproximately extends _SearchParamDateApproximately {
-  const _$_SearchParamDateApproximately(
-      {required this.date, final String? $type})
-      : $type = $type ?? 'approximately',
-        super._();
 
-  factory _$_SearchParamDateApproximately.fromJson(Map<String, dynamic> json) =>
-      _$$_SearchParamDateApproximatelyFromJson(json);
+class _$_SearchParamDateApproximately extends _SearchParamDateApproximately {
+  const _$_SearchParamDateApproximately({required this.date}) : super._();
 
   @override
   final String date;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
 
   @override
   String toString() {
@@ -1872,7 +1679,6 @@ class _$_SearchParamDateApproximately extends _SearchParamDateApproximately {
             (identical(other.date, date) || other.date == date));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, date);
 
@@ -1994,22 +1800,12 @@ class _$_SearchParamDateApproximately extends _SearchParamDateApproximately {
     }
     return orElse();
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_SearchParamDateApproximatelyToJson(
-      this,
-    );
-  }
 }
 
 abstract class _SearchParamDateApproximately extends SearchParamDate {
   const factory _SearchParamDateApproximately({required final String date}) =
       _$_SearchParamDateApproximately;
   const _SearchParamDateApproximately._() : super._();
-
-  factory _SearchParamDateApproximately.fromJson(Map<String, dynamic> json) =
-      _$_SearchParamDateApproximately.fromJson;
 
   String get date;
   @JsonKey(ignore: true)
@@ -2049,20 +1845,12 @@ class __$$_SearchParamDateMissingCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$_SearchParamDateMissing extends _SearchParamDateMissing {
-  const _$_SearchParamDateMissing(this.missing, {final String? $type})
-      : $type = $type ?? 'missing',
-        super._();
 
-  factory _$_SearchParamDateMissing.fromJson(Map<String, dynamic> json) =>
-      _$$_SearchParamDateMissingFromJson(json);
+class _$_SearchParamDateMissing extends _SearchParamDateMissing {
+  const _$_SearchParamDateMissing(this.missing) : super._();
 
   @override
   final bool missing;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
 
   @override
   String toString() {
@@ -2077,7 +1865,6 @@ class _$_SearchParamDateMissing extends _SearchParamDateMissing {
             (identical(other.missing, missing) || other.missing == missing));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, missing);
 
@@ -2199,22 +1986,12 @@ class _$_SearchParamDateMissing extends _SearchParamDateMissing {
     }
     return orElse();
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_SearchParamDateMissingToJson(
-      this,
-    );
-  }
 }
 
 abstract class _SearchParamDateMissing extends SearchParamDate {
   const factory _SearchParamDateMissing(final bool missing) =
       _$_SearchParamDateMissing;
   const _SearchParamDateMissing._() : super._();
-
-  factory _SearchParamDateMissing.fromJson(Map<String, dynamic> json) =
-      _$_SearchParamDateMissing.fromJson;
 
   bool get missing;
   @JsonKey(ignore: true)

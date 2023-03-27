@@ -14,23 +14,6 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-SearchParamUri _$SearchParamUriFromJson(Map<String, dynamic> json) {
-  switch (json['runtimeType']) {
-    case 'equal':
-      return _SearchParamUriEqual.fromJson(json);
-    case 'above':
-      return _SearchParamUriAbove.fromJson(json);
-    case 'below':
-      return _SearchParamUriBelow.fromJson(json);
-    case 'missing':
-      return _SearchParamUriMissing.fromJson(json);
-
-    default:
-      throw CheckedFromJsonException(json, 'runtimeType', 'SearchParamUri',
-          'Invalid union type "${json['runtimeType']}"!');
-  }
-}
-
 /// @nodoc
 mixin _$SearchParamUri {
   @optionalTypeArgs
@@ -83,7 +66,6 @@ mixin _$SearchParamUri {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -136,20 +118,12 @@ class __$$_SearchParamUriEqualCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$_SearchParamUriEqual extends _SearchParamUriEqual {
-  const _$_SearchParamUriEqual({required this.uri, final String? $type})
-      : $type = $type ?? 'equal',
-        super._();
 
-  factory _$_SearchParamUriEqual.fromJson(Map<String, dynamic> json) =>
-      _$$_SearchParamUriEqualFromJson(json);
+class _$_SearchParamUriEqual extends _SearchParamUriEqual {
+  const _$_SearchParamUriEqual({required this.uri}) : super._();
 
   @override
   final FhirUri uri;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
 
   @override
   String toString() {
@@ -164,7 +138,6 @@ class _$_SearchParamUriEqual extends _SearchParamUriEqual {
             (identical(other.uri, uri) || other.uri == uri));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, uri);
 
@@ -248,22 +221,12 @@ class _$_SearchParamUriEqual extends _SearchParamUriEqual {
     }
     return orElse();
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_SearchParamUriEqualToJson(
-      this,
-    );
-  }
 }
 
 abstract class _SearchParamUriEqual extends SearchParamUri {
   const factory _SearchParamUriEqual({required final FhirUri uri}) =
       _$_SearchParamUriEqual;
   const _SearchParamUriEqual._() : super._();
-
-  factory _SearchParamUriEqual.fromJson(Map<String, dynamic> json) =
-      _$_SearchParamUriEqual.fromJson;
 
   FhirUri get uri;
   @JsonKey(ignore: true)
@@ -303,20 +266,12 @@ class __$$_SearchParamUriAboveCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$_SearchParamUriAbove extends _SearchParamUriAbove {
-  const _$_SearchParamUriAbove({required this.uri, final String? $type})
-      : $type = $type ?? 'above',
-        super._();
 
-  factory _$_SearchParamUriAbove.fromJson(Map<String, dynamic> json) =>
-      _$$_SearchParamUriAboveFromJson(json);
+class _$_SearchParamUriAbove extends _SearchParamUriAbove {
+  const _$_SearchParamUriAbove({required this.uri}) : super._();
 
   @override
   final FhirUri uri;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
 
   @override
   String toString() {
@@ -331,7 +286,6 @@ class _$_SearchParamUriAbove extends _SearchParamUriAbove {
             (identical(other.uri, uri) || other.uri == uri));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, uri);
 
@@ -415,22 +369,12 @@ class _$_SearchParamUriAbove extends _SearchParamUriAbove {
     }
     return orElse();
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_SearchParamUriAboveToJson(
-      this,
-    );
-  }
 }
 
 abstract class _SearchParamUriAbove extends SearchParamUri {
   const factory _SearchParamUriAbove({required final FhirUri uri}) =
       _$_SearchParamUriAbove;
   const _SearchParamUriAbove._() : super._();
-
-  factory _SearchParamUriAbove.fromJson(Map<String, dynamic> json) =
-      _$_SearchParamUriAbove.fromJson;
 
   FhirUri get uri;
   @JsonKey(ignore: true)
@@ -470,20 +414,12 @@ class __$$_SearchParamUriBelowCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$_SearchParamUriBelow extends _SearchParamUriBelow {
-  const _$_SearchParamUriBelow({required this.uri, final String? $type})
-      : $type = $type ?? 'below',
-        super._();
 
-  factory _$_SearchParamUriBelow.fromJson(Map<String, dynamic> json) =>
-      _$$_SearchParamUriBelowFromJson(json);
+class _$_SearchParamUriBelow extends _SearchParamUriBelow {
+  const _$_SearchParamUriBelow({required this.uri}) : super._();
 
   @override
   final FhirUri uri;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
 
   @override
   String toString() {
@@ -498,7 +434,6 @@ class _$_SearchParamUriBelow extends _SearchParamUriBelow {
             (identical(other.uri, uri) || other.uri == uri));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, uri);
 
@@ -582,22 +517,12 @@ class _$_SearchParamUriBelow extends _SearchParamUriBelow {
     }
     return orElse();
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_SearchParamUriBelowToJson(
-      this,
-    );
-  }
 }
 
 abstract class _SearchParamUriBelow extends SearchParamUri {
   const factory _SearchParamUriBelow({required final FhirUri uri}) =
       _$_SearchParamUriBelow;
   const _SearchParamUriBelow._() : super._();
-
-  factory _SearchParamUriBelow.fromJson(Map<String, dynamic> json) =
-      _$_SearchParamUriBelow.fromJson;
 
   FhirUri get uri;
   @JsonKey(ignore: true)
@@ -637,20 +562,12 @@ class __$$_SearchParamUriMissingCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$_SearchParamUriMissing extends _SearchParamUriMissing {
-  const _$_SearchParamUriMissing(this.missing, {final String? $type})
-      : $type = $type ?? 'missing',
-        super._();
 
-  factory _$_SearchParamUriMissing.fromJson(Map<String, dynamic> json) =>
-      _$$_SearchParamUriMissingFromJson(json);
+class _$_SearchParamUriMissing extends _SearchParamUriMissing {
+  const _$_SearchParamUriMissing(this.missing) : super._();
 
   @override
   final bool missing;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
 
   @override
   String toString() {
@@ -665,7 +582,6 @@ class _$_SearchParamUriMissing extends _SearchParamUriMissing {
             (identical(other.missing, missing) || other.missing == missing));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, missing);
 
@@ -749,22 +665,12 @@ class _$_SearchParamUriMissing extends _SearchParamUriMissing {
     }
     return orElse();
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_SearchParamUriMissingToJson(
-      this,
-    );
-  }
 }
 
 abstract class _SearchParamUriMissing extends SearchParamUri {
   const factory _SearchParamUriMissing(final bool missing) =
       _$_SearchParamUriMissing;
   const _SearchParamUriMissing._() : super._();
-
-  factory _SearchParamUriMissing.fromJson(Map<String, dynamic> json) =
-      _$_SearchParamUriMissing.fromJson;
 
   bool get missing;
   @JsonKey(ignore: true)

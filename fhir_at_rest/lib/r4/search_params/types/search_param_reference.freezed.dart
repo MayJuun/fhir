@@ -14,26 +14,6 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-SearchParamReference _$SearchParamReferenceFromJson(Map<String, dynamic> json) {
-  switch (json['runtimeType']) {
-    case 'id':
-      return _SearchParamReferenceId.fromJson(json);
-    case 'typeAndId':
-      return _SearchParamReferenceTypeAndId.fromJson(json);
-    case 'url':
-      return _SearchParamReferenceGreaterUrL.fromJson(json);
-    case 'missing':
-      return _SearchParamReferenceMissing.fromJson(json);
-
-    default:
-      throw CheckedFromJsonException(
-          json,
-          'runtimeType',
-          'SearchParamReference',
-          'Invalid union type "${json['runtimeType']}"!');
-  }
-}
-
 /// @nodoc
 mixin _$SearchParamReference {
   @optionalTypeArgs
@@ -86,7 +66,6 @@ mixin _$SearchParamReference {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -140,20 +119,12 @@ class __$$_SearchParamReferenceIdCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$_SearchParamReferenceId extends _SearchParamReferenceId {
-  const _$_SearchParamReferenceId({required this.id, final String? $type})
-      : $type = $type ?? 'id',
-        super._();
 
-  factory _$_SearchParamReferenceId.fromJson(Map<String, dynamic> json) =>
-      _$$_SearchParamReferenceIdFromJson(json);
+class _$_SearchParamReferenceId extends _SearchParamReferenceId {
+  const _$_SearchParamReferenceId({required this.id}) : super._();
 
   @override
   final String id;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
 
   @override
   String toString() {
@@ -168,7 +139,6 @@ class _$_SearchParamReferenceId extends _SearchParamReferenceId {
             (identical(other.id, id) || other.id == id));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id);
 
@@ -252,22 +222,12 @@ class _$_SearchParamReferenceId extends _SearchParamReferenceId {
     }
     return orElse();
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_SearchParamReferenceIdToJson(
-      this,
-    );
-  }
 }
 
 abstract class _SearchParamReferenceId extends SearchParamReference {
   const factory _SearchParamReferenceId({required final String id}) =
       _$_SearchParamReferenceId;
   const _SearchParamReferenceId._() : super._();
-
-  factory _SearchParamReferenceId.fromJson(Map<String, dynamic> json) =
-      _$_SearchParamReferenceId.fromJson;
 
   String get id;
   @JsonKey(ignore: true)
@@ -315,24 +275,15 @@ class __$$_SearchParamReferenceTypeAndIdCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$_SearchParamReferenceTypeAndId extends _SearchParamReferenceTypeAndId {
-  const _$_SearchParamReferenceTypeAndId(
-      {required this.type, required this.id, final String? $type})
-      : $type = $type ?? 'typeAndId',
-        super._();
 
-  factory _$_SearchParamReferenceTypeAndId.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_SearchParamReferenceTypeAndIdFromJson(json);
+class _$_SearchParamReferenceTypeAndId extends _SearchParamReferenceTypeAndId {
+  const _$_SearchParamReferenceTypeAndId({required this.type, required this.id})
+      : super._();
 
   @override
   final R4ResourceType type;
   @override
   final String id;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
 
   @override
   String toString() {
@@ -348,7 +299,6 @@ class _$_SearchParamReferenceTypeAndId extends _SearchParamReferenceTypeAndId {
             (identical(other.id, id) || other.id == id));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, type, id);
 
@@ -432,13 +382,6 @@ class _$_SearchParamReferenceTypeAndId extends _SearchParamReferenceTypeAndId {
     }
     return orElse();
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_SearchParamReferenceTypeAndIdToJson(
-      this,
-    );
-  }
 }
 
 abstract class _SearchParamReferenceTypeAndId extends SearchParamReference {
@@ -446,9 +389,6 @@ abstract class _SearchParamReferenceTypeAndId extends SearchParamReference {
       {required final R4ResourceType type,
       required final String id}) = _$_SearchParamReferenceTypeAndId;
   const _SearchParamReferenceTypeAndId._() : super._();
-
-  factory _SearchParamReferenceTypeAndId.fromJson(Map<String, dynamic> json) =
-      _$_SearchParamReferenceTypeAndId.fromJson;
 
   R4ResourceType get type;
   String get id;
@@ -492,23 +432,13 @@ class __$$_SearchParamReferenceGreaterUrLCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
 class _$_SearchParamReferenceGreaterUrL
     extends _SearchParamReferenceGreaterUrL {
-  const _$_SearchParamReferenceGreaterUrL(
-      {required this.url, final String? $type})
-      : $type = $type ?? 'url',
-        super._();
-
-  factory _$_SearchParamReferenceGreaterUrL.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_SearchParamReferenceGreaterUrLFromJson(json);
+  const _$_SearchParamReferenceGreaterUrL({required this.url}) : super._();
 
   @override
   final FhirUri url;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
 
   @override
   String toString() {
@@ -523,7 +453,6 @@ class _$_SearchParamReferenceGreaterUrL
             (identical(other.url, url) || other.url == url));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, url);
 
@@ -607,22 +536,12 @@ class _$_SearchParamReferenceGreaterUrL
     }
     return orElse();
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_SearchParamReferenceGreaterUrLToJson(
-      this,
-    );
-  }
 }
 
 abstract class _SearchParamReferenceGreaterUrL extends SearchParamReference {
   const factory _SearchParamReferenceGreaterUrL({required final FhirUri url}) =
       _$_SearchParamReferenceGreaterUrL;
   const _SearchParamReferenceGreaterUrL._() : super._();
-
-  factory _SearchParamReferenceGreaterUrL.fromJson(Map<String, dynamic> json) =
-      _$_SearchParamReferenceGreaterUrL.fromJson;
 
   FhirUri get url;
   @JsonKey(ignore: true)
@@ -665,20 +584,12 @@ class __$$_SearchParamReferenceMissingCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$_SearchParamReferenceMissing extends _SearchParamReferenceMissing {
-  const _$_SearchParamReferenceMissing(this.missing, {final String? $type})
-      : $type = $type ?? 'missing',
-        super._();
 
-  factory _$_SearchParamReferenceMissing.fromJson(Map<String, dynamic> json) =>
-      _$$_SearchParamReferenceMissingFromJson(json);
+class _$_SearchParamReferenceMissing extends _SearchParamReferenceMissing {
+  const _$_SearchParamReferenceMissing(this.missing) : super._();
 
   @override
   final bool missing;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
 
   @override
   String toString() {
@@ -693,7 +604,6 @@ class _$_SearchParamReferenceMissing extends _SearchParamReferenceMissing {
             (identical(other.missing, missing) || other.missing == missing));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, missing);
 
@@ -777,22 +687,12 @@ class _$_SearchParamReferenceMissing extends _SearchParamReferenceMissing {
     }
     return orElse();
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_SearchParamReferenceMissingToJson(
-      this,
-    );
-  }
 }
 
 abstract class _SearchParamReferenceMissing extends SearchParamReference {
   const factory _SearchParamReferenceMissing(final bool missing) =
       _$_SearchParamReferenceMissing;
   const _SearchParamReferenceMissing._() : super._();
-
-  factory _SearchParamReferenceMissing.fromJson(Map<String, dynamic> json) =
-      _$_SearchParamReferenceMissing.fromJson;
 
   bool get missing;
   @JsonKey(ignore: true)

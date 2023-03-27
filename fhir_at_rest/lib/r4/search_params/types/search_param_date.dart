@@ -3,7 +3,6 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'search_param.dart';
 
 part 'search_param_date.freezed.dart';
-part 'search_param_date.g.dart';
 
 @freezed
 class SearchParamDate with SearchParam, _$SearchParamDate {
@@ -36,10 +35,6 @@ class SearchParamDate with SearchParam, _$SearchParamDate {
     required String date,
   }) = _SearchParamDateApproximately;
   const factory SearchParamDate.missing(bool missing) = _SearchParamDateMissing;
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SearchParamDate.fromJson(Map<String, dynamic> json) =>
-      _$SearchParamDateFromJson(json);
 
   String toRequest() => map(
         equal: (value) => '=eq${value.date}',

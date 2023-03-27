@@ -3,7 +3,6 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'search_param.dart';
 
 part 'search_param_number.freezed.dart';
-part 'search_param_number.g.dart';
 
 @freezed
 class SearchParamNumber with SearchParam, _$SearchParamNumber {
@@ -37,10 +36,6 @@ class SearchParamNumber with SearchParam, _$SearchParamNumber {
   }) = _SearchParamNumberApproximately;
   const factory SearchParamNumber.missing(bool missing) =
       _SearchParamNumberMissing;
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SearchParamNumber.fromJson(Map<String, dynamic> json) =>
-      _$SearchParamNumberFromJson(json);
 
   String toRequest() => map(
         equal: (value) => '=eq${value.number}',

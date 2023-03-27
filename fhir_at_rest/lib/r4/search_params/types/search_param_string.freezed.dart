@@ -14,23 +14,6 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-SearchParamString _$SearchParamStringFromJson(Map<String, dynamic> json) {
-  switch (json['runtimeType']) {
-    case 'equal':
-      return _SearchParamStringEqual.fromJson(json);
-    case 'contains':
-      return _SearchParamStringContains.fromJson(json);
-    case 'exact':
-      return _SearchParamStringExact.fromJson(json);
-    case 'missing':
-      return _SearchParamStringMissing.fromJson(json);
-
-    default:
-      throw CheckedFromJsonException(json, 'runtimeType', 'SearchParamString',
-          'Invalid union type "${json['runtimeType']}"!');
-  }
-}
-
 /// @nodoc
 mixin _$SearchParamString {
   @optionalTypeArgs
@@ -83,7 +66,6 @@ mixin _$SearchParamString {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -136,20 +118,12 @@ class __$$_SearchParamStringEqualCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$_SearchParamStringEqual extends _SearchParamStringEqual {
-  const _$_SearchParamStringEqual({required this.string, final String? $type})
-      : $type = $type ?? 'equal',
-        super._();
 
-  factory _$_SearchParamStringEqual.fromJson(Map<String, dynamic> json) =>
-      _$$_SearchParamStringEqualFromJson(json);
+class _$_SearchParamStringEqual extends _SearchParamStringEqual {
+  const _$_SearchParamStringEqual({required this.string}) : super._();
 
   @override
   final String string;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
 
   @override
   String toString() {
@@ -164,7 +138,6 @@ class _$_SearchParamStringEqual extends _SearchParamStringEqual {
             (identical(other.string, string) || other.string == string));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, string);
 
@@ -248,22 +221,12 @@ class _$_SearchParamStringEqual extends _SearchParamStringEqual {
     }
     return orElse();
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_SearchParamStringEqualToJson(
-      this,
-    );
-  }
 }
 
 abstract class _SearchParamStringEqual extends SearchParamString {
   const factory _SearchParamStringEqual({required final String string}) =
       _$_SearchParamStringEqual;
   const _SearchParamStringEqual._() : super._();
-
-  factory _SearchParamStringEqual.fromJson(Map<String, dynamic> json) =
-      _$_SearchParamStringEqual.fromJson;
 
   String get string;
   @JsonKey(ignore: true)
@@ -305,21 +268,12 @@ class __$$_SearchParamStringContainsCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$_SearchParamStringContains extends _SearchParamStringContains {
-  const _$_SearchParamStringContains(
-      {required this.string, final String? $type})
-      : $type = $type ?? 'contains',
-        super._();
 
-  factory _$_SearchParamStringContains.fromJson(Map<String, dynamic> json) =>
-      _$$_SearchParamStringContainsFromJson(json);
+class _$_SearchParamStringContains extends _SearchParamStringContains {
+  const _$_SearchParamStringContains({required this.string}) : super._();
 
   @override
   final String string;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
 
   @override
   String toString() {
@@ -334,7 +288,6 @@ class _$_SearchParamStringContains extends _SearchParamStringContains {
             (identical(other.string, string) || other.string == string));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, string);
 
@@ -418,22 +371,12 @@ class _$_SearchParamStringContains extends _SearchParamStringContains {
     }
     return orElse();
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_SearchParamStringContainsToJson(
-      this,
-    );
-  }
 }
 
 abstract class _SearchParamStringContains extends SearchParamString {
   const factory _SearchParamStringContains({required final String string}) =
       _$_SearchParamStringContains;
   const _SearchParamStringContains._() : super._();
-
-  factory _SearchParamStringContains.fromJson(Map<String, dynamic> json) =
-      _$_SearchParamStringContains.fromJson;
 
   String get string;
   @JsonKey(ignore: true)
@@ -473,20 +416,12 @@ class __$$_SearchParamStringExactCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$_SearchParamStringExact extends _SearchParamStringExact {
-  const _$_SearchParamStringExact({required this.string, final String? $type})
-      : $type = $type ?? 'exact',
-        super._();
 
-  factory _$_SearchParamStringExact.fromJson(Map<String, dynamic> json) =>
-      _$$_SearchParamStringExactFromJson(json);
+class _$_SearchParamStringExact extends _SearchParamStringExact {
+  const _$_SearchParamStringExact({required this.string}) : super._();
 
   @override
   final String string;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
 
   @override
   String toString() {
@@ -501,7 +436,6 @@ class _$_SearchParamStringExact extends _SearchParamStringExact {
             (identical(other.string, string) || other.string == string));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, string);
 
@@ -585,22 +519,12 @@ class _$_SearchParamStringExact extends _SearchParamStringExact {
     }
     return orElse();
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_SearchParamStringExactToJson(
-      this,
-    );
-  }
 }
 
 abstract class _SearchParamStringExact extends SearchParamString {
   const factory _SearchParamStringExact({required final String string}) =
       _$_SearchParamStringExact;
   const _SearchParamStringExact._() : super._();
-
-  factory _SearchParamStringExact.fromJson(Map<String, dynamic> json) =
-      _$_SearchParamStringExact.fromJson;
 
   String get string;
   @JsonKey(ignore: true)
@@ -641,20 +565,12 @@ class __$$_SearchParamStringMissingCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$_SearchParamStringMissing extends _SearchParamStringMissing {
-  const _$_SearchParamStringMissing(this.missing, {final String? $type})
-      : $type = $type ?? 'missing',
-        super._();
 
-  factory _$_SearchParamStringMissing.fromJson(Map<String, dynamic> json) =>
-      _$$_SearchParamStringMissingFromJson(json);
+class _$_SearchParamStringMissing extends _SearchParamStringMissing {
+  const _$_SearchParamStringMissing(this.missing) : super._();
 
   @override
   final bool missing;
-
-  @JsonKey(name: 'runtimeType')
-  final String $type;
 
   @override
   String toString() {
@@ -669,7 +585,6 @@ class _$_SearchParamStringMissing extends _SearchParamStringMissing {
             (identical(other.missing, missing) || other.missing == missing));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, missing);
 
@@ -753,22 +668,12 @@ class _$_SearchParamStringMissing extends _SearchParamStringMissing {
     }
     return orElse();
   }
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_SearchParamStringMissingToJson(
-      this,
-    );
-  }
 }
 
 abstract class _SearchParamStringMissing extends SearchParamString {
   const factory _SearchParamStringMissing(final bool missing) =
       _$_SearchParamStringMissing;
   const _SearchParamStringMissing._() : super._();
-
-  factory _SearchParamStringMissing.fromJson(Map<String, dynamic> json) =
-      _$_SearchParamStringMissing.fromJson;
 
   bool get missing;
   @JsonKey(ignore: true)
