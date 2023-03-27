@@ -72,8 +72,7 @@ Future<void> main() async {
     fileMap[key] = fileMap[key]! +
         "import 'package:freezed_annotation/freezed_annotation.dart';";
     fileMap[key] = fileMap[key]! + "\nimport '../../search_params.dart';\n\n";
-    fileMap[key] =
-        fileMap[key]! + "part '${key}_search_params.freezed.dart';\n";
+    fileMap[key] = fileMap[key]! + "part '$key.freezed.dart';\n";
   }
 
   /// go through the param map and add the text for each class
@@ -104,10 +103,10 @@ Future<void> main() async {
           'List<String> toRequest() {\nfinal returnStrings = <String>[];';
 
       for (var i = 0; i < fieldCodeList.length; i++) {
-        fileMap[fileName] =
-            fileMap[fileName]! + 'if(${fieldCodeList[i]}.isNotEmpty){\n';
         fileMap[fileName] = fileMap[fileName]! +
-            "${fieldCodeList[i]}.forEach((element) => returnStrings.add('${trueCodeList[i]}\${element.toRequest()}'));}";
+            'if(${fieldCodeList[i] == 'experimental' ? 'this.experimental' : fieldCodeList[i]}.isNotEmpty){\n';
+        fileMap[fileName] = fileMap[fileName]! +
+            "for(final element in ${fieldCodeList[i] == 'experimental' ? 'this.experimental' : fieldCodeList[i]}){ returnStrings.add('${trueCodeList[i]}\${element.toRequest()}');}}";
       }
       fileMap[fileName] = fileMap[fileName]! + 'return returnStrings; }\n}\n\n';
     }
