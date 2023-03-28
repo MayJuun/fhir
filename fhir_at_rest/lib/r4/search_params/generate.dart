@@ -129,32 +129,38 @@ Future<void> main() async {
 
   /// Create the csv entries for a sql table to easily find search terms when
   /// I eventually get to that point
-  var sqlStringCsv = '';
+  var sqlStringCsv =
+      'INSERT INTO internalsearch(resourceType, code, type, expression)\nVALUES\n';
   for (var key in sqlMap.keys) {
     if (key != 'Resource' && key != 'DomainResource') {
       for (var resourceEntry in sqlMap['Resource']!) {
         sqlStringCsv += [
-          key,
-          resourceEntry.code,
-          resourceEntry.type,
-          resourceEntry.expression.replaceAll('Resource', key)
+          "('$key'",
+          "'${resourceEntry.code}'",
+          "'${resourceEntry.type}'",
+          "'${resourceEntry.expression.replaceAll('Resource', key)}'),"
         ].join(',');
         sqlStringCsv += '\n';
       }
       for (var entry in sqlMap[key]!) {
-        sqlStringCsv +=
-            [key, entry.code, entry.type, entry.expression].join(',');
+        sqlStringCsv += [
+          "('$key'",
+          "'${entry.code}'",
+          "'${entry.type}'",
+          "'${entry.expression.replaceAll("'", "''")}'),"
+        ].join(',');
         sqlStringCsv += '\n';
       }
     }
   }
+  sqlStringCsv = sqlStringCsv.substring(0, sqlStringCsv.length - 2);
+  sqlStringCsv += ';';
 
-  await File('sqlcsv.csv').writeAsString(sqlStringCsv);
-  // await File('searchParamResources.txt').writeAsString(fileString);
-  for (final key in fileMap.keys) {
-    await File('resources/${secondaryCategory[key]}/$key.dart')
-        .writeAsString(fileMap[key]!);
-  }
+  await File('sqlcsv.sql').writeAsString(sqlStringCsv);
+  // for (final key in fileMap.keys) {
+  //   await File('resources/${secondaryCategory[key]}/$key.dart')
+  //       .writeAsString(fileMap[key]!);
+  // }
 }
 
 class ParameterGenerator {
