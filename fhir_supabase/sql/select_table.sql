@@ -1,6 +1,6 @@
 drop function select_table;
 
-create or replace function select_table(tableName varchar)
+create or replace function select_table(tableName text)
 returns name
 language plpgsql
 as $$
