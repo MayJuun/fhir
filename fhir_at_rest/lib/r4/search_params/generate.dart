@@ -129,34 +129,51 @@ Future<void> main() async {
 
   /// Create the csv entries for a sql table to easily find search terms when
   /// I eventually get to that point
-  var sqlStringCsv =
-      'INSERT INTO internalsearch(resourceType, code, type, expression)\nVALUES\n';
+  var searchTableString = '';
+  var searchResourceString = '';
   for (var key in sqlMap.keys) {
     if (key != 'Resource' && key != 'DomainResource') {
+      searchTableString +=
+          'create table if not exists internal.${key.toLowerCase()}search (\n';
+      searchTableString += '  id text primary key,\n';
+      searchResourceString +=
+          'create or replace function internal.search_${key.toLowerCase()}()\n';
+      searchResourceString += '  returns trigger as \$\$\n';
+      searchResourceString += '  begin\n';
+      searchResourceString +=
+          '    insert into internal.${key.toLowerCase()}search\n';
+      searchResourceString += '    (\n      id,\n';
+      var values = "      jsonb_path_query(new, '\$.id')::text,\n";
       for (var resourceEntry in sqlMap['Resource']!) {
-        sqlStringCsv += [
-          "('$key'",
-          "'${resourceEntry.code}'",
-          "'${resourceEntry.type}'",
-          "'${resourceEntry.expression.replaceAll('Resource', key)}'),"
-        ].join(',');
-        sqlStringCsv += '\n';
+        searchTableString += '  "${resourceEntry.code}" jsonb,\n';
+        searchResourceString += '      "${resourceEntry.code}",\n';
+        values +=
+            "      jsonb_path_query(new, '${resourceEntry.expression.replaceFirst("Resource", '\$').replaceAll("'", "''")}'),\n";
       }
       for (var entry in sqlMap[key]!) {
-        sqlStringCsv += [
-          "('$key'",
-          "'${entry.code}'",
-          "'${entry.type}'",
-          "'${entry.expression.replaceAll("'", "''")}'),"
-        ].join(',');
-        sqlStringCsv += '\n';
+        searchTableString += '  "${entry.code}" jsonb,\n';
+        searchResourceString += '      "${entry.code}",\n';
+        values +=
+            "      jsonb_path_query(new, '${entry.expression.replaceFirst(key, '\$').replaceAll("'", "''")}'),\n";
       }
+      searchTableString =
+          searchTableString.substring(0, searchTableString.length - 2);
+      searchTableString += '\n);\n\n';
+      searchResourceString =
+          searchResourceString.substring(0, searchResourceString.length - 2);
+      searchResourceString += '\n    )\n    values\n    (\n';
+      searchResourceString += values;
+      searchResourceString =
+          searchResourceString.substring(0, searchResourceString.length - 2);
+      searchResourceString +=
+          '\n    );\n  return new;\n  end;\n\$\$ language plpgsql security definer;\n\n';
     }
   }
-  sqlStringCsv = sqlStringCsv.substring(0, sqlStringCsv.length - 2);
-  sqlStringCsv += ';';
+  searchTableString =
+      searchTableString.substring(0, searchTableString.length - 2);
 
-  await File('sqlcsv.sql').writeAsString(sqlStringCsv);
+  await File('search_resource.sql').writeAsString(searchResourceString);
+  // await File('search_tables.sql').writeAsString(searchTableString);
   // for (final key in fileMap.keys) {
   //   await File('resources/${secondaryCategory[key]}/$key.dart')
   //       .writeAsString(fileMap[key]!);
