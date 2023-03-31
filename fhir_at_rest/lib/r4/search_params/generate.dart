@@ -172,6 +172,56 @@ Future<void> main() async {
   searchTableString =
       searchTableString.substring(0, searchTableString.length - 2);
 
+  searchResourceString =
+      searchResourceString.replaceAll('.where(type=', '[*] ? (@.type = ');
+  searchResourceString =
+      searchResourceString.replaceAll('.where(system=', '[*] ? (@.system = ');
+
+  /// because I'm too lazy to try and remember regex at the moment\
+  for (final abateOrOnset in ['abatement', 'onset']) {
+    searchResourceString = searchResourceString.replaceAll(
+        '\$.$abateOrOnset.as(Age)', '\$.${abateOrOnset}Age');
+    searchResourceString = searchResourceString.replaceAll(
+        '\$.$abateOrOnset.as(dateTime)', '\$.${abateOrOnset}DateTime');
+    searchResourceString = searchResourceString.replaceAll(
+        '\$.$abateOrOnset.as(string)', '\$.${abateOrOnset}String');
+  }
+
+  for (final useContext in ['Quantity', 'CodeableConcept']) {
+    searchResourceString = searchResourceString.replaceAll(
+        '(\$.useContext.value as $useContext)',
+        '\$.useContext.value$useContext');
+    searchResourceString = searchResourceString.replaceAll(
+        '(\$.value as $useContext)', '\$.value$useContext');
+    searchResourceString = searchResourceString.replaceAll(
+        '(\$.component.value as $useContext)', '\$.component.value$useContext');
+  }
+
+  for (final code in ['Reference', 'CodeableConcept']) {
+    searchResourceString = searchResourceString.replaceAll(
+        '(\$.code as $code)', '\$.useContext.code$code');
+    searchResourceString = searchResourceString.replaceAll(
+        '(\$.medication as $code)', '\$.medication$code');
+    searchResourceString = searchResourceString.replaceAll(
+        '(\$.ingredient.item as $code)', '\$.ingredient.item$code');
+  }
+
+  searchResourceString = searchResourceString.replaceAll(
+      '(\$.occurrence as dateTime)', '\$.occurrenceDateTime');
+
+  for (final replaceString in [
+    'Patient',
+    'Practitioner',
+    'Location',
+    'RelatedPerson',
+    'Encounter',
+    'MedicinalProductDefinition'
+  ]) {
+    searchResourceString = searchResourceString.replaceAll(
+        '.where(resolve() is $replaceString)',
+        "[*] ? (@.type like ''%$replaceString%'' or @.reference like ''%$replaceString%'')");
+  }
+
   await File('search_resource.sql').writeAsString(searchResourceString);
   // await File('search_tables.sql').writeAsString(searchTableString);
   // for (final key in fileMap.keys) {
