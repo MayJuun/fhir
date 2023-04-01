@@ -1126,9 +1126,9 @@ create or replace function internal.search_observation()
       jsonb_path_query(new, '$.status'),
       jsonb_path_query(new, '$.subject'),
       jsonb_path_query(new, '$.valueCodeableConcept'),
-      jsonb_path_query(new, '($.value as dateTime)'),
+      jsonb_path_query(new, '$.valueDateTime'),
       jsonb_path_query(new, '$.valueQuantity'),
-      jsonb_path_query(new, '($.value as string)'),
+      jsonb_path_query(new, '$.valueString'),
       jsonb_path_query(new, '$'),
       jsonb_path_query(new, '$'),
       jsonb_path_query(new, '$'),
@@ -1569,8 +1569,8 @@ create or replace function internal.search_composition()
       jsonb_path_query(new, '$.encounter'),
       jsonb_path_query(new, '$.section.entry'),
       jsonb_path_query(new, '$.event.period'),
-      jsonb_path_query(new, '($.relatesTo.target as Identifier)'),
-      jsonb_path_query(new, '($.relatesTo.target as Reference)'),
+      jsonb_path_query(new, '$.relatesTo.targetIdentifier'),
+      jsonb_path_query(new, '$.relatesTo.targetReference'),
       jsonb_path_query(new, '$.section.code'),
       jsonb_path_query(new, '$.status'),
       jsonb_path_query(new, '$.subject'),
@@ -2299,9 +2299,9 @@ create or replace function internal.search_goal()
       jsonb_path_query(new, '$.achievementStatus'),
       jsonb_path_query(new, '$.category'),
       jsonb_path_query(new, '$.lifecycleStatus'),
-      jsonb_path_query(new, '($.start as date)'),
+      jsonb_path_query(new, '$.startDate'),
       jsonb_path_query(new, '$.subject'),
-      jsonb_path_query(new, '($.target.due as date)')
+      jsonb_path_query(new, '$.target.dueDate')
     );
   return new;
   end;
@@ -3277,14 +3277,14 @@ create or replace function internal.search_conceptmap()
       jsonb_path_query(new, '$.group.element.target.dependsOn.property'),
       jsonb_path_query(new, '$.group.unmapped.url'),
       jsonb_path_query(new, '$.group.element.target.product.property'),
-      jsonb_path_query(new, '($.source as canonical)'),
+      jsonb_path_query(new, '$.sourceCanonical'),
       jsonb_path_query(new, '$.group.element.code'),
       jsonb_path_query(new, '$.group.source'),
-      jsonb_path_query(new, '($.source as uri)'),
-      jsonb_path_query(new, '($.target as canonical)'),
+      jsonb_path_query(new, '$.sourceUri'),
+      jsonb_path_query(new, '$.targetCanonical'),
       jsonb_path_query(new, '$.group.element.target.code'),
       jsonb_path_query(new, '$.group.target'),
-      jsonb_path_query(new, '($.target as uri)')
+      jsonb_path_query(new, '$.targetUri')
     );
   return new;
   end;
@@ -7128,8 +7128,8 @@ create or replace function internal.search_patient()
       jsonb_path_query(new, '$.address.state'),
       jsonb_path_query(new, '$.address.use'),
       jsonb_path_query(new, '$.birthDate'),
-      jsonb_path_query(new, '($.deceased as dateTime)'),
-      jsonb_path_query(new, '$.deceased.exists() and Patient.deceased != false'),
+      jsonb_path_query(new, '$.deceaseddateTime'),
+      jsonb_path_query(new, '$.deceasedDateTime ? (exists) or $.deceasedBoolean ? (@ != false)'),
       jsonb_path_query(new, '$.telecom[*] ? (@.system = ''email'')'),
       jsonb_path_query(new, '$.name.family'),
       jsonb_path_query(new, '$.gender'),

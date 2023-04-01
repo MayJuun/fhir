@@ -197,6 +197,12 @@ Future<void> main() async {
         '(\$.component.value as $useContext)', '\$.component.value$useContext');
   }
 
+  for (final useContext in ['dateTime', 'string']) {
+    searchResourceString = searchResourceString.replaceAll(
+        '(\$.value as $useContext)',
+        '\$.value${useContext.substring(0, 1).toUpperCase() + useContext.substring(1)}');
+  }
+
   for (final code in ['Reference', 'CodeableConcept']) {
     searchResourceString = searchResourceString.replaceAll(
         '(\$.code as $code)', '\$.useContext.code$code');
@@ -206,8 +212,39 @@ Future<void> main() async {
         '(\$.ingredient.item as $code)', '\$.ingredient.item$code');
   }
 
+  for (final code in ['Identifier', 'Reference']) {
+    searchResourceString = searchResourceString.replaceAll(
+        '(\$.relatesTo.target as $code)', '\$.relatesTo.target$code');
+  }
+
+  for (final field in ['source', 'target']) {
+    for (final code in ['canonical', 'uri']) {
+      searchResourceString = searchResourceString.replaceAll(
+          '(\$.$field as $code)',
+          '\$.$field${code.substring(0, 1).toUpperCase() + code.substring(1)}');
+    }
+  }
+
   searchResourceString = searchResourceString.replaceAll(
       '(\$.occurrence as dateTime)', '\$.occurrenceDateTime');
+
+  searchResourceString =
+      searchResourceString.replaceAll('(\$.start as date)', '\$.startDate');
+
+  searchResourceString = searchResourceString.replaceAll(
+      '(\$.target.due as date)', '\$.target.dueDate');
+
+  searchResourceString = searchResourceString.replaceAll(
+      '(\$characteristic.value as CodeableConcept)',
+      '\$.characteristic.valueCodeableConcept');
+
+  searchResourceString = searchResourceString.replaceAll(
+      '(\$.deceased as dateTime)', '\$.deceaseddateTime');
+
+  /// TODO(Dokotela): check this formatting
+  searchResourceString = searchResourceString.replaceAll(
+      '\$.deceased.exists() and Patient.deceased != false',
+      '\$.deceasedDateTime ? (exists) or \$.deceasedBoolean ? (@ != false)');
 
   for (final replaceString in [
     'Patient',
