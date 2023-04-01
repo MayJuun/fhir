@@ -5658,7 +5658,7 @@ create or replace function internal.search_group()
       jsonb_path_query(new, '$.managingEntity'),
       jsonb_path_query(new, '$.member.entity'),
       jsonb_path_query(new, '$.type'),
-      jsonb_path_query(new, '($.characteristic.value as CodeableConcept)'),
+      jsonb_path_query(new, '$.characteristic.valueCodeableConcept'),
       jsonb_path_query(new, '$.characteristic')
     );
   return new;
@@ -7128,7 +7128,7 @@ create or replace function internal.search_patient()
       jsonb_path_query(new, '$.address.state'),
       jsonb_path_query(new, '$.address.use'),
       jsonb_path_query(new, '$.birthDate'),
-      jsonb_path_query(new, '$.deceaseddateTime'),
+      jsonb_path_query(new, '$.deceasedDateTime'),
       jsonb_path_query(new, '$.deceasedDateTime ? (exists) or $.deceasedBoolean ? (@ != false)'),
       jsonb_path_query(new, '$.telecom[*] ? (@.system = ''email'')'),
       jsonb_path_query(new, '$.name.family'),
@@ -7700,7 +7700,7 @@ create or replace function internal.search_provenance()
       jsonb_path_query(new, '$.recorded'),
       jsonb_path_query(new, '$.signature.type'),
       jsonb_path_query(new, '$.target'),
-      jsonb_path_query(new, '($.occurred as dateTime)')
+      jsonb_path_query(new, '$.occurredDateTime')
     );
   return new;
   end;
@@ -8649,7 +8649,7 @@ create or replace function internal.search_substance()
       jsonb_path_query(new, '$.identifier'),
       jsonb_path_query(new, '$.instance.quantity'),
       jsonb_path_query(new, '$.status'),
-      jsonb_path_query(new, '($.ingredient.substance as Reference)')
+      jsonb_path_query(new, '$.ingredient.substanceReference')
     );
   return new;
   end;

@@ -235,11 +235,18 @@ Future<void> main() async {
       '(\$.target.due as date)', '\$.target.dueDate');
 
   searchResourceString = searchResourceString.replaceAll(
-      '(\$characteristic.value as CodeableConcept)',
+      '(\$.characteristic.value as CodeableConcept)',
       '\$.characteristic.valueCodeableConcept');
 
   searchResourceString = searchResourceString.replaceAll(
-      '(\$.deceased as dateTime)', '\$.deceaseddateTime');
+      '(\$.deceased as dateTime)', '\$.deceasedDateTime');
+
+  searchResourceString = searchResourceString.replaceAll(
+      '(\$.occurred as dateTime)', '\$.occurredDateTime');
+
+  searchResourceString = searchResourceString.replaceAll(
+      '(\$.ingredient.substance as Reference)',
+      '\$.ingredient.substanceReference');
 
   /// TODO(Dokotela): check this formatting
   searchResourceString = searchResourceString.replaceAll(
