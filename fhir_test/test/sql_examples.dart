@@ -9,6 +9,7 @@ Future<void> main() async {
   var postgresString = '';
   var i = 0;
   final resourceTypes = <String, List<String>>{};
+  final resourcePaths = [];
   for (var file in fileList) {
     final resource =
         Resource.fromJson(jsonDecode(await File(file).readAsString()));
@@ -17,18 +18,27 @@ Future<void> main() async {
     }
     if (resourceTypes[resource.resourceTypeString]!.length / 4 < 20) {
       if (i < 1 &&
-          resource.toString().length < 3000 &&
+          resource.toString().length < 5000 &&
           !jsonEncode(resource.toJson()).toString().contains("'") &&
           !jsonEncode(resource.toJson())
               .toString()
               .toLowerCase()
               .contains("nutritionproduct")) {
-        resourceTypes[resource.resourceTypeString]!.addAll([
-          'INSERT INTO public.${resource.resourceTypeString}(resource)',
-          "VALUES('${jsonEncode(resource.toJson())}')",
-          'ON CONFLICT(id) DO UPDATE SET resource=EXCLUDED.resource',
-          'WHERE public.${resource.resourceTypeString}.id=EXCLUDED.id;'
-        ]);
+        Resource? newResource;
+        if (resource.id == null || resource.id == '') {
+          newResource = resource.newId();
+        } else {
+          newResource = resource;
+        }
+        if (!resourcePaths.contains(resource.path)) {
+          resourcePaths.add(resource.path);
+          resourceTypes[resource.resourceTypeString]!.addAll([
+            'INSERT INTO public.${resource.resourceTypeString}(resource)',
+            "VALUES('${jsonEncode(resource.toJson())}')",
+            'ON CONFLICT(id) DO UPDATE SET resource=EXCLUDED.resource',
+            'WHERE public.${resource.resourceTypeString}.id=EXCLUDED.id;'
+          ]);
+        }
       }
     }
   }

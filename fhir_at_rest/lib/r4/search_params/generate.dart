@@ -143,18 +143,18 @@ Future<void> main() async {
       searchResourceString +=
           '    insert into internal.${key.toLowerCase()}search\n';
       searchResourceString += '    (\n      id,\n';
-      var values = "      jsonb_path_query(new, '\$.id')::text,\n";
+      var values = "      jsonb_path_query(new.resource, '\$.id')::text,\n";
       for (var resourceEntry in sqlMap['Resource']!) {
         searchTableString += '  "${resourceEntry.code}" jsonb,\n';
         searchResourceString += '      "${resourceEntry.code}",\n';
         values +=
-            "      jsonb_path_query(new, '${resourceEntry.expression.replaceFirst("Resource", '\$').replaceAll("'", "''")}'),\n";
+            "      jsonb_path_query(new.resource, '${resourceEntry.expression.replaceFirst("Resource", '\$').replaceAll("'", "''")}'),\n";
       }
       for (var entry in sqlMap[key]!) {
         searchTableString += '  "${entry.code}" jsonb,\n';
         searchResourceString += '      "${entry.code}",\n';
         values +=
-            "      jsonb_path_query(new, '${entry.expression.replaceFirst(key, '\$').replaceAll("'", "''")}'),\n";
+            "      jsonb_path_query(new.resource, '${entry.expression.replaceFirst(key, '\$').replaceAll("'", "''")}'),\n";
       }
       searchTableString =
           searchTableString.substring(0, searchTableString.length - 2);
@@ -172,35 +172,44 @@ Future<void> main() async {
   searchTableString =
       searchTableString.substring(0, searchTableString.length - 2);
 
-  searchResourceString =
-      searchResourceString.replaceAll('.where(type=', '[*] ? (@.type = ');
-  searchResourceString =
-      searchResourceString.replaceAll('.where(system=', '[*] ? (@.system = ');
+  searchResourceString = cleanSearchResourceString(searchResourceString);
 
-  /// because I'm too lazy to try and remember regex at the moment\
-  for (final abateOrOnset in ['abatement', 'onset']) {
-    searchResourceString = searchResourceString.replaceAll(
-        '\$.$abateOrOnset.as(Age)', '\$.${abateOrOnset}Age');
-    searchResourceString = searchResourceString.replaceAll(
-        '\$.$abateOrOnset.as(dateTime)', '\$.${abateOrOnset}DateTime');
-    searchResourceString = searchResourceString.replaceAll(
-        '\$.$abateOrOnset.as(string)', '\$.${abateOrOnset}String');
+  await File('search_resource.sql').writeAsString(searchResourceString);
+  // await File('search_tables.sql').writeAsString(searchTableString);
+  // for (final key in fileMap.keys) {
+  //   await File('resources/${secondaryCategory[key]}/$key.dart')
+  //       .writeAsString(fileMap[key]!);
+  // }
+}
+
+String cleanSearchResourceString(String searchResourceString) {
+  for (final code in ['type', 'system']) {
+    searchResourceString =
+        searchResourceString.replaceAll('.where($code=', '[*] ? (@.$code = ');
   }
 
-  for (final useContext in ['Quantity', 'CodeableConcept']) {
-    searchResourceString = searchResourceString.replaceAll(
-        '(\$.useContext.value as $useContext)',
-        '\$.useContext.value$useContext');
-    searchResourceString = searchResourceString.replaceAll(
-        '(\$.value as $useContext)', '\$.value$useContext');
-    searchResourceString = searchResourceString.replaceAll(
-        '(\$.component.value as $useContext)', '\$.component.value$useContext');
+  /// because I'm too lazy to try and remember regex at the moment
+  for (final code in ['abatement', 'onset']) {
+    for (final type in ['Age', 'dateTime', 'string']) {
+      searchResourceString = searchResourceString.replaceAll(
+          '\$.$code.as($type)',
+          '\$.${code}${type.substring(0, 1).toUpperCase() + type.substring(1)}');
+    }
   }
 
-  for (final useContext in ['dateTime', 'string']) {
+  for (final code in ['Quantity', 'CodeableConcept']) {
     searchResourceString = searchResourceString.replaceAll(
-        '(\$.value as $useContext)',
-        '\$.value${useContext.substring(0, 1).toUpperCase() + useContext.substring(1)}');
+        '(\$.useContext.value as $code)', '\$.useContext.value$code');
+    searchResourceString =
+        searchResourceString.replaceAll('(\$.value as $code)', '\$.value$code');
+    searchResourceString = searchResourceString.replaceAll(
+        '(\$.component.value as $code)', '\$.component.value$code');
+  }
+
+  for (final code in ['dateTime', 'string']) {
+    searchResourceString = searchResourceString.replaceAll(
+        '(\$.value as $code)',
+        '\$.value${code.substring(0, 1).toUpperCase() + code.substring(1)}');
   }
 
   for (final code in ['Reference', 'CodeableConcept']) {
@@ -263,15 +272,10 @@ Future<void> main() async {
   ]) {
     searchResourceString = searchResourceString.replaceAll(
         '.where(resolve() is $replaceString)',
-        "[*] ? (@.type like ''%$replaceString%'' or @.reference like ''%$replaceString%'')");
+        '[*] ? (@.type like_regex "^.*$replaceString.*") ? (@.reference like_regex "^.*$replaceString.*")');
   }
 
-  await File('search_resource.sql').writeAsString(searchResourceString);
-  // await File('search_tables.sql').writeAsString(searchTableString);
-  // for (final key in fileMap.keys) {
-  //   await File('resources/${secondaryCategory[key]}/$key.dart')
-  //       .writeAsString(fileMap[key]!);
-  // }
+  return searchResourceString;
 }
 
 class ParameterGenerator {
