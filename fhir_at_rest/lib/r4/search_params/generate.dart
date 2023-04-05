@@ -134,39 +134,49 @@ Future<void> main() async {
   for (var key in sqlMap.keys) {
     if (key != 'Resource' && key != 'DomainResource') {
       searchTableString +=
-          'create table if not exists internal.${key.toLowerCase()}search (\n';
+          'create table if not exists internal.${key.toLowerCase()} (\n';
       searchTableString += '  id text primary key,\n';
+      searchTableString += '  versionid int not null,\n';
+      searchTableString +=
+          "  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,\n";
+      searchTableString += '  resource jsonb not null,\n';
       searchResourceString +=
-          'create or replace function internal.search_${key.toLowerCase()}()\n';
+          '  create or replace function internal.search_${key.toLowerCase()}(public.${key.toLowerCase()} new)\n';
       searchResourceString += '  returns trigger as \$\$\n';
       searchResourceString += '  begin\n';
-      searchResourceString +=
-          '    insert into internal.${key.toLowerCase()}search\n';
-      searchResourceString += '    (\n      id,\n';
-      var values = "      jsonb_path_query(new.resource, '\$.id')::text,\n";
+      // searchResourceString +=
+      //     '    insert into internal.${key.toLowerCase()}search\n';
+      // searchResourceString += '    (\n      id,\n';
+      // var values = "      jsonb_path_query(new.resource, '\$.id')::text,\n";
       for (var resourceEntry in sqlMap['Resource']!) {
         searchTableString += '  "${resourceEntry.code}" jsonb,\n';
-        searchResourceString += '      "${resourceEntry.code}",\n';
-        values +=
-            "      jsonb_path_query(new.resource, '${resourceEntry.expression.replaceFirst("Resource", '\$').replaceAll("'", "''")}'),\n";
+        // searchResourceString += '      "${resourceEntry.code}",\n';
+        // searchResourceString +=
+        //     "      new.${resourceEntry.code} := '${resourceEntry.expression.replaceFirst(key, '\$').replaceAll("'", "''")}';\n";
+        searchResourceString +=
+            "      new.\"${resourceEntry.code}\" := jsonb_path_query(new.resource, '${resourceEntry.expression.replaceFirst("Resource", '\$').replaceAll("'", "''")}'),\n";
       }
       for (var entry in sqlMap[key]!) {
         searchTableString += '  "${entry.code}" jsonb,\n';
-        searchResourceString += '      "${entry.code}",\n';
-        values +=
-            "      jsonb_path_query(new.resource, '${entry.expression.replaceFirst(key, '\$').replaceAll("'", "''")}'),\n";
+        // searchResourceString += '      "${entry.code}",\n';
+        searchResourceString +=
+            "      new.\"${entry.code}\" := jsonb_path_query(new.resource, '${entry.expression.replaceFirst(key, '\$').replaceAll("'", "''")}'),\n";
+        // values +=
+        //     "      jsonb_path_query(new.resource, '${entry.expression.replaceFirst(key, '\$').replaceAll("'", "''")}'),\n";
       }
       searchTableString =
           searchTableString.substring(0, searchTableString.length - 2);
       searchTableString += '\n);\n\n';
-      searchResourceString =
-          searchResourceString.substring(0, searchResourceString.length - 2);
-      searchResourceString += '\n    )\n    values\n    (\n';
-      searchResourceString += values;
-      searchResourceString =
-          searchResourceString.substring(0, searchResourceString.length - 2);
+      // searchResourceString =
+      //     searchResourceString.substring(0, searchResourceString.length - 2);
+      // searchResourceString += '\n    )\n    values\n    (\n';
+      // searchResourceString += values;
+      // searchResourceString =
+      //     searchResourceString.substring(0, searchResourceString.length - 2);
       searchResourceString +=
-          '\n    );\n  return new;\n  end;\n\$\$ language plpgsql security definer;\n\n';
+          // '\n    );\n  return new;\n  end;\n\$\$ language plpgsql security definer;\n\n';
+
+          '  return new;\n  end;\n\$\$ language plpgsql security definer;\n\n';
     }
   }
   searchTableString =
@@ -175,7 +185,7 @@ Future<void> main() async {
   searchResourceString = cleanSearchResourceString(searchResourceString);
 
   await File('search_resource.sql').writeAsString(searchResourceString);
-  // await File('search_tables.sql').writeAsString(searchTableString);
+  await File('search_tables.sql').writeAsString(searchTableString);
   // for (final key in fileMap.keys) {
   //   await File('resources/${secondaryCategory[key]}/$key.dart')
   //       .writeAsString(fileMap[key]!);

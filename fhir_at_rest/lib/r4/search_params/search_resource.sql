@@ -1,8955 +1,4410 @@
-create or replace function internal.search_account()
-  returns trigger as $$
-  begin
-    insert into internal.accountsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "identifier",
-      "name",
-      "owner",
-      "patient",
-      "period",
-      "status",
-      "subject",
-      "type"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.owner'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.servicePeriod'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.subject'),
-      jsonb_path_query(new.resource, '$.type')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_activitydefinition()
-  returns trigger as $$
-  begin
-    insert into internal.activitydefinitionsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "composed-of",
-      "context",
-      "context-quantity",
-      "context-type",
-      "date",
-      "depends-on",
-      "derived-from",
-      "description",
-      "effective",
-      "identifier",
-      "jurisdiction",
-      "name",
-      "predecessor",
-      "publisher",
-      "status",
-      "successor",
-      "title",
-      "topic",
-      "url",
-      "version",
-      "context-type-quantity",
-      "context-type-value"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''composed-of'').resource'),
-      jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
-      jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
-      jsonb_path_query(new.resource, '$.useContext.code'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''depends-on'').resource'),
-      jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''derived-from'').resource'),
-      jsonb_path_query(new.resource, '$.description'),
-      jsonb_path_query(new.resource, '$.effectivePeriod'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.jurisdiction'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''predecessor'').resource'),
-      jsonb_path_query(new.resource, '$.publisher'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''successor'').resource'),
-      jsonb_path_query(new.resource, '$.title'),
-      jsonb_path_query(new.resource, '$.topic'),
-      jsonb_path_query(new.resource, '$.url'),
-      jsonb_path_query(new.resource, '$.version'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.useContext')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_administrableproductdefinition()
-  returns trigger as $$
-  begin
-    insert into internal.administrableproductdefinitionsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "device",
-      "dose-form",
-      "form-of",
-      "identifier",
-      "ingredient",
-      "manufactured-item",
-      "route",
-      "target-species"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.device'),
-      jsonb_path_query(new.resource, '$.administrableDoseForm'),
-      jsonb_path_query(new.resource, '$.formOf'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.ingredient'),
-      jsonb_path_query(new.resource, '$.producedFrom'),
-      jsonb_path_query(new.resource, '$.routeOfAdministration.code'),
-      jsonb_path_query(new.resource, '$.routeOfAdministration.targetSpecies.code')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_adverseevent()
-  returns trigger as $$
-  begin
-    insert into internal.adverseeventsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "actuality",
-      "category",
-      "date",
-      "event",
-      "location",
-      "recorder",
-      "resultingcondition",
-      "seriousness",
-      "severity",
-      "study",
-      "subject",
-      "substance"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.actuality'),
-      jsonb_path_query(new.resource, '$.category'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.event'),
-      jsonb_path_query(new.resource, '$.location'),
-      jsonb_path_query(new.resource, '$.recorder'),
-      jsonb_path_query(new.resource, '$.resultingCondition'),
-      jsonb_path_query(new.resource, '$.seriousness'),
-      jsonb_path_query(new.resource, '$.severity'),
-      jsonb_path_query(new.resource, '$.study'),
-      jsonb_path_query(new.resource, '$.subject'),
-      jsonb_path_query(new.resource, '$.suspectEntity.instance')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_allergyintolerance()
-  returns trigger as $$
-  begin
-    insert into internal.allergyintolerancesearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "asserter",
-      "category",
-      "clinical-status",
-      "code",
-      "criticality",
-      "date",
-      "identifier",
-      "last-date",
-      "manifestation",
-      "onset",
-      "patient",
-      "recorder",
-      "route",
-      "severity",
-      "type",
-      "verification-status"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.asserter'),
-      jsonb_path_query(new.resource, '$.category'),
-      jsonb_path_query(new.resource, '$.clinicalStatus'),
-      jsonb_path_query(new.resource, '$.code'),
-      jsonb_path_query(new.resource, '$.criticality'),
-      jsonb_path_query(new.resource, '$.recordedDate'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.lastOccurrence'),
-      jsonb_path_query(new.resource, '$.reaction.manifestation'),
-      jsonb_path_query(new.resource, '$.reaction.onset'),
-      jsonb_path_query(new.resource, '$.patient'),
-      jsonb_path_query(new.resource, '$.recorder'),
-      jsonb_path_query(new.resource, '$.reaction.exposureRoute'),
-      jsonb_path_query(new.resource, '$.reaction.severity'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.verificationStatus')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_condition()
-  returns trigger as $$
-  begin
-    insert into internal.conditionsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "code",
-      "identifier",
-      "patient",
-      "abatement-age",
-      "abatement-date",
-      "abatement-string",
-      "asserter",
-      "body-site",
-      "category",
-      "clinical-status",
-      "encounter",
-      "evidence",
-      "evidence-detail",
-      "onset-age",
-      "onset-date",
-      "onset-info",
-      "recorded-date",
-      "severity",
-      "stage",
-      "subject",
-      "verification-status"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.code'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.abatementAge'),
-      jsonb_path_query(new.resource, '$.abatementDateTime'),
-      jsonb_path_query(new.resource, '$.abatementString'),
-      jsonb_path_query(new.resource, '$.asserter'),
-      jsonb_path_query(new.resource, '$.bodySite'),
-      jsonb_path_query(new.resource, '$.category'),
-      jsonb_path_query(new.resource, '$.clinicalStatus'),
-      jsonb_path_query(new.resource, '$.encounter'),
-      jsonb_path_query(new.resource, '$.evidence.code'),
-      jsonb_path_query(new.resource, '$.evidence.detail'),
-      jsonb_path_query(new.resource, '$.onsetAge'),
-      jsonb_path_query(new.resource, '$.onsetDateTime'),
-      jsonb_path_query(new.resource, '$.onsetString'),
-      jsonb_path_query(new.resource, '$.recordedDate'),
-      jsonb_path_query(new.resource, '$.severity'),
-      jsonb_path_query(new.resource, '$.stage.summary'),
-      jsonb_path_query(new.resource, '$.subject'),
-      jsonb_path_query(new.resource, '$.verificationStatus')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_devicerequest()
-  returns trigger as $$
-  begin
-    insert into internal.devicerequestsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "code",
-      "identifier",
-      "patient",
-      "encounter",
-      "authored-on",
-      "based-on",
-      "device",
-      "event-date",
-      "group-identifier",
-      "instantiates-canonical",
-      "instantiates-uri",
-      "insurance",
-      "intent",
-      "performer",
-      "prior-request",
-      "requester",
-      "status",
-      "subject"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.useContext.codeCodeableConcept'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.encounter'),
-      jsonb_path_query(new.resource, '$.authoredOn'),
-      jsonb_path_query(new.resource, '$.basedOn'),
-      jsonb_path_query(new.resource, '$.useContext.codeReference'),
-      jsonb_path_query(new.resource, '$.occurrenceDateTime'),
-      jsonb_path_query(new.resource, '$.groupIdentifier'),
-      jsonb_path_query(new.resource, '$.instantiatesCanonical'),
-      jsonb_path_query(new.resource, '$.instantiatesUri'),
-      jsonb_path_query(new.resource, '$.insurance'),
-      jsonb_path_query(new.resource, '$.intent'),
-      jsonb_path_query(new.resource, '$.performer'),
-      jsonb_path_query(new.resource, '$.priorRequest'),
-      jsonb_path_query(new.resource, '$.requester'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.subject')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_diagnosticreport()
-  returns trigger as $$
-  begin
-    insert into internal.diagnosticreportsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "code",
-      "date",
-      "identifier",
-      "patient",
-      "encounter",
-      "based-on",
-      "category",
-      "conclusion",
-      "issued",
-      "media",
-      "performer",
-      "result",
-      "results-interpreter",
-      "specimen",
-      "status",
-      "subject"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.code'),
-      jsonb_path_query(new.resource, '$.effective'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.encounter'),
-      jsonb_path_query(new.resource, '$.basedOn'),
-      jsonb_path_query(new.resource, '$.category'),
-      jsonb_path_query(new.resource, '$.conclusionCode'),
-      jsonb_path_query(new.resource, '$.issued'),
-      jsonb_path_query(new.resource, '$.media.link'),
-      jsonb_path_query(new.resource, '$.performer'),
-      jsonb_path_query(new.resource, '$.result'),
-      jsonb_path_query(new.resource, '$.resultsInterpreter'),
-      jsonb_path_query(new.resource, '$.specimen'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.subject')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_familymemberhistory()
-  returns trigger as $$
-  begin
-    insert into internal.familymemberhistorysearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "code",
-      "date",
-      "identifier",
-      "patient",
-      "instantiates-canonical",
-      "instantiates-uri",
-      "relationship",
-      "sex",
-      "status"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.condition.code'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.patient'),
-      jsonb_path_query(new.resource, '$.instantiatesCanonical'),
-      jsonb_path_query(new.resource, '$.instantiatesUri'),
-      jsonb_path_query(new.resource, '$.relationship'),
-      jsonb_path_query(new.resource, '$.sex'),
-      jsonb_path_query(new.resource, '$.status')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_list()
-  returns trigger as $$
-  begin
-    insert into internal.listsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "code",
-      "date",
-      "identifier",
-      "patient",
-      "encounter",
-      "empty-reason",
-      "item",
-      "notes",
-      "source",
-      "status",
-      "subject",
-      "title"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.code'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.encounter'),
-      jsonb_path_query(new.resource, '$.emptyReason'),
-      jsonb_path_query(new.resource, '$.entry.item'),
-      jsonb_path_query(new.resource, '$.note.text'),
-      jsonb_path_query(new.resource, '$.source'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.subject'),
-      jsonb_path_query(new.resource, '$.title')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_medication()
-  returns trigger as $$
-  begin
-    insert into internal.medicationsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "code",
-      "expiration-date",
-      "form",
-      "identifier",
-      "ingredient",
-      "ingredient-code",
-      "lot-number",
-      "manufacturer",
-      "status"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.code'),
-      jsonb_path_query(new.resource, '$.batch.expirationDate'),
-      jsonb_path_query(new.resource, '$.form'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.ingredient.itemReference'),
-      jsonb_path_query(new.resource, '$.ingredient.itemCodeableConcept'),
-      jsonb_path_query(new.resource, '$.batch.lotNumber'),
-      jsonb_path_query(new.resource, '$.manufacturer'),
-      jsonb_path_query(new.resource, '$.status')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_medicationadministration()
-  returns trigger as $$
-  begin
-    insert into internal.medicationadministrationsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "code",
-      "identifier",
-      "patient",
-      "context",
-      "device",
-      "effective-time",
-      "medication",
-      "performer",
-      "reason-given",
-      "reason-not-given",
-      "request",
-      "status",
-      "subject"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.medicationCodeableConcept'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.context'),
-      jsonb_path_query(new.resource, '$.device'),
-      jsonb_path_query(new.resource, '$.effective'),
-      jsonb_path_query(new.resource, '$.medicationReference'),
-      jsonb_path_query(new.resource, '$.performer.actor'),
-      jsonb_path_query(new.resource, '$.reasonCode'),
-      jsonb_path_query(new.resource, '$.statusReason'),
-      jsonb_path_query(new.resource, '$.request'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.subject')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_medicationdispense()
-  returns trigger as $$
-  begin
-    insert into internal.medicationdispensesearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "code",
-      "identifier",
-      "patient",
-      "medication",
-      "status",
-      "context",
-      "destination",
-      "performer",
-      "prescription",
-      "receiver",
-      "responsibleparty",
-      "subject",
-      "type",
-      "whenhandedover",
-      "whenprepared"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.medicationCodeableConcept'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.medicationReference'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.context'),
-      jsonb_path_query(new.resource, '$.destination'),
-      jsonb_path_query(new.resource, '$.performer.actor'),
-      jsonb_path_query(new.resource, '$.authorizingPrescription'),
-      jsonb_path_query(new.resource, '$.receiver'),
-      jsonb_path_query(new.resource, '$.substitution.responsibleParty'),
-      jsonb_path_query(new.resource, '$.subject'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.whenHandedOver'),
-      jsonb_path_query(new.resource, '$.whenPrepared')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_medicationrequest()
-  returns trigger as $$
-  begin
-    insert into internal.medicationrequestsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "code",
-      "identifier",
-      "patient",
-      "medication",
-      "status",
-      "authoredon",
-      "category",
-      "date",
-      "encounter",
-      "intended-dispenser",
-      "intended-performer",
-      "intended-performertype",
-      "intent",
-      "priority",
-      "requester",
-      "subject"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.medicationCodeableConcept'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.medicationReference'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.authoredOn'),
-      jsonb_path_query(new.resource, '$.category'),
-      jsonb_path_query(new.resource, '$.dosageInstruction.timing.event'),
-      jsonb_path_query(new.resource, '$.encounter'),
-      jsonb_path_query(new.resource, '$.dispenseRequest.performer'),
-      jsonb_path_query(new.resource, '$.performer'),
-      jsonb_path_query(new.resource, '$.performerType'),
-      jsonb_path_query(new.resource, '$.intent'),
-      jsonb_path_query(new.resource, '$.priority'),
-      jsonb_path_query(new.resource, '$.requester'),
-      jsonb_path_query(new.resource, '$.subject')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_medicationstatement()
-  returns trigger as $$
-  begin
-    insert into internal.medicationstatementsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "code",
-      "identifier",
-      "patient",
-      "medication",
-      "status",
-      "category",
-      "context",
-      "effective",
-      "part-of",
-      "source",
-      "subject"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.medicationCodeableConcept'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.medicationReference'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.category'),
-      jsonb_path_query(new.resource, '$.context'),
-      jsonb_path_query(new.resource, '$.effective'),
-      jsonb_path_query(new.resource, '$.partOf'),
-      jsonb_path_query(new.resource, '$.informationSource'),
-      jsonb_path_query(new.resource, '$.subject')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_observation()
-  returns trigger as $$
-  begin
-    insert into internal.observationsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "code",
-      "date",
-      "identifier",
-      "patient",
-      "encounter",
-      "based-on",
-      "category",
-      "combo-code",
-      "combo-data-absent-reason",
-      "combo-value-concept",
-      "combo-value-quantity",
-      "component-code",
-      "component-data-absent-reason",
-      "component-value-concept",
-      "component-value-quantity",
-      "data-absent-reason",
-      "derived-from",
-      "device",
-      "focus",
-      "has-member",
-      "method",
-      "part-of",
-      "performer",
-      "specimen",
-      "status",
-      "subject",
-      "value-concept",
-      "value-date",
-      "value-quantity",
-      "value-string",
-      "code-value-concept",
-      "code-value-date",
-      "code-value-quantity",
-      "code-value-string",
-      "combo-code-value-concept",
-      "combo-code-value-quantity",
-      "component-code-value-concept",
-      "component-code-value-quantity"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.code'),
-      jsonb_path_query(new.resource, '$.effective'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.encounter'),
-      jsonb_path_query(new.resource, '$.basedOn'),
-      jsonb_path_query(new.resource, '$.category'),
-      jsonb_path_query(new.resource, '$.code'),
-      jsonb_path_query(new.resource, '$.dataAbsentReason'),
-      jsonb_path_query(new.resource, '$.valueCodeableConcept'),
-      jsonb_path_query(new.resource, '$.valueQuantity'),
-      jsonb_path_query(new.resource, '$.component.code'),
-      jsonb_path_query(new.resource, '$.component.dataAbsentReason'),
-      jsonb_path_query(new.resource, '$.component.valueCodeableConcept'),
-      jsonb_path_query(new.resource, '$.component.valueQuantity'),
-      jsonb_path_query(new.resource, '$.dataAbsentReason'),
-      jsonb_path_query(new.resource, '$.derivedFrom'),
-      jsonb_path_query(new.resource, '$.device'),
-      jsonb_path_query(new.resource, '$.focus'),
-      jsonb_path_query(new.resource, '$.hasMember'),
-      jsonb_path_query(new.resource, '$.method'),
-      jsonb_path_query(new.resource, '$.partOf'),
-      jsonb_path_query(new.resource, '$.performer'),
-      jsonb_path_query(new.resource, '$.specimen'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.subject'),
-      jsonb_path_query(new.resource, '$.valueCodeableConcept'),
-      jsonb_path_query(new.resource, '$.valueDateTime'),
-      jsonb_path_query(new.resource, '$.valueQuantity'),
-      jsonb_path_query(new.resource, '$.valueString'),
-      jsonb_path_query(new.resource, '$'),
-      jsonb_path_query(new.resource, '$'),
-      jsonb_path_query(new.resource, '$'),
-      jsonb_path_query(new.resource, '$'),
-      jsonb_path_query(new.resource, '$'),
-      jsonb_path_query(new.resource, '$'),
-      jsonb_path_query(new.resource, '$.component'),
-      jsonb_path_query(new.resource, '$.component')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_procedure()
-  returns trigger as $$
-  begin
-    insert into internal.proceduresearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "code",
-      "date",
-      "identifier",
-      "patient",
-      "encounter",
-      "based-on",
-      "category",
-      "instantiates-canonical",
-      "instantiates-uri",
-      "location",
-      "part-of",
-      "performer",
-      "reason-code",
-      "reason-reference",
-      "status",
-      "subject"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.code'),
-      jsonb_path_query(new.resource, '$.performed'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.encounter'),
-      jsonb_path_query(new.resource, '$.basedOn'),
-      jsonb_path_query(new.resource, '$.category'),
-      jsonb_path_query(new.resource, '$.instantiatesCanonical'),
-      jsonb_path_query(new.resource, '$.instantiatesUri'),
-      jsonb_path_query(new.resource, '$.location'),
-      jsonb_path_query(new.resource, '$.partOf'),
-      jsonb_path_query(new.resource, '$.performer.actor'),
-      jsonb_path_query(new.resource, '$.reasonCode'),
-      jsonb_path_query(new.resource, '$.reasonReference'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.subject')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_servicerequest()
-  returns trigger as $$
-  begin
-    insert into internal.servicerequestsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "code",
-      "identifier",
-      "patient",
-      "encounter",
-      "authored",
-      "based-on",
-      "body-site",
-      "category",
-      "instantiates-canonical",
-      "instantiates-uri",
-      "intent",
-      "occurrence",
-      "performer",
-      "performer-type",
-      "priority",
-      "replaces",
-      "requester",
-      "requisition",
-      "specimen",
-      "status",
-      "subject"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.code'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.encounter'),
-      jsonb_path_query(new.resource, '$.authoredOn'),
-      jsonb_path_query(new.resource, '$.basedOn'),
-      jsonb_path_query(new.resource, '$.bodySite'),
-      jsonb_path_query(new.resource, '$.category'),
-      jsonb_path_query(new.resource, '$.instantiatesCanonical'),
-      jsonb_path_query(new.resource, '$.instantiatesUri'),
-      jsonb_path_query(new.resource, '$.intent'),
-      jsonb_path_query(new.resource, '$.occurrence'),
-      jsonb_path_query(new.resource, '$.performer'),
-      jsonb_path_query(new.resource, '$.performerType'),
-      jsonb_path_query(new.resource, '$.priority'),
-      jsonb_path_query(new.resource, '$.replaces'),
-      jsonb_path_query(new.resource, '$.requester'),
-      jsonb_path_query(new.resource, '$.requisition'),
-      jsonb_path_query(new.resource, '$.specimen'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.subject')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_careplan()
-  returns trigger as $$
-  begin
-    insert into internal.careplansearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "date",
-      "identifier",
-      "patient",
-      "activity-code",
-      "activity-date",
-      "activity-reference",
-      "based-on",
-      "care-team",
-      "category",
-      "condition",
-      "encounter",
-      "goal",
-      "instantiates-canonical",
-      "instantiates-uri",
-      "intent",
-      "part-of",
-      "performer",
-      "replaces",
-      "status",
-      "subject"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.period'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.activity.detail.code'),
-      jsonb_path_query(new.resource, '$.activity.detail.scheduled'),
-      jsonb_path_query(new.resource, '$.activity.reference'),
-      jsonb_path_query(new.resource, '$.basedOn'),
-      jsonb_path_query(new.resource, '$.careTeam'),
-      jsonb_path_query(new.resource, '$.category'),
-      jsonb_path_query(new.resource, '$.addresses'),
-      jsonb_path_query(new.resource, '$.encounter'),
-      jsonb_path_query(new.resource, '$.goal'),
-      jsonb_path_query(new.resource, '$.instantiatesCanonical'),
-      jsonb_path_query(new.resource, '$.instantiatesUri'),
-      jsonb_path_query(new.resource, '$.intent'),
-      jsonb_path_query(new.resource, '$.partOf'),
-      jsonb_path_query(new.resource, '$.activity.detail.performer'),
-      jsonb_path_query(new.resource, '$.replaces'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.subject')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_careteam()
-  returns trigger as $$
-  begin
-    insert into internal.careteamsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "date",
-      "identifier",
-      "patient",
-      "category",
-      "encounter",
-      "participant",
-      "status",
-      "subject"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.period'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.category'),
-      jsonb_path_query(new.resource, '$.encounter'),
-      jsonb_path_query(new.resource, '$.participant.member'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.subject')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_clinicalimpression()
-  returns trigger as $$
-  begin
-    insert into internal.clinicalimpressionsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "date",
-      "patient",
-      "assessor",
-      "encounter",
-      "finding-code",
-      "finding-ref",
-      "identifier",
-      "investigation",
-      "previous",
-      "problem",
-      "status",
-      "subject",
-      "supporting-info"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.assessor'),
-      jsonb_path_query(new.resource, '$.encounter'),
-      jsonb_path_query(new.resource, '$.finding.itemCodeableConcept'),
-      jsonb_path_query(new.resource, '$.finding.itemReference'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.investigation.item'),
-      jsonb_path_query(new.resource, '$.previous'),
-      jsonb_path_query(new.resource, '$.problem'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.subject'),
-      jsonb_path_query(new.resource, '$.supportingInfo')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_composition()
-  returns trigger as $$
-  begin
-    insert into internal.compositionsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "date",
-      "identifier",
-      "patient",
-      "type",
-      "attester",
-      "author",
-      "category",
-      "confidentiality",
-      "context",
-      "encounter",
-      "entry",
-      "period",
-      "related-id",
-      "related-ref",
-      "section",
-      "status",
-      "subject",
-      "title"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.attester.party'),
-      jsonb_path_query(new.resource, '$.author'),
-      jsonb_path_query(new.resource, '$.category'),
-      jsonb_path_query(new.resource, '$.confidentiality'),
-      jsonb_path_query(new.resource, '$.event.code'),
-      jsonb_path_query(new.resource, '$.encounter'),
-      jsonb_path_query(new.resource, '$.section.entry'),
-      jsonb_path_query(new.resource, '$.event.period'),
-      jsonb_path_query(new.resource, '$.relatesTo.targetIdentifier'),
-      jsonb_path_query(new.resource, '$.relatesTo.targetReference'),
-      jsonb_path_query(new.resource, '$.section.code'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.subject'),
-      jsonb_path_query(new.resource, '$.title')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_consent()
-  returns trigger as $$
-  begin
-    insert into internal.consentsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "date",
-      "identifier",
-      "patient",
-      "action",
-      "actor",
-      "category",
-      "consentor",
-      "data",
-      "organization",
-      "period",
-      "purpose",
-      "scope",
-      "security-label",
-      "source-reference",
-      "status"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.dateTime'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.patient'),
-      jsonb_path_query(new.resource, '$.provision.action'),
-      jsonb_path_query(new.resource, '$.provision.actor.reference'),
-      jsonb_path_query(new.resource, '$.category'),
-      jsonb_path_query(new.resource, '$.performer'),
-      jsonb_path_query(new.resource, '$.provision.data.reference'),
-      jsonb_path_query(new.resource, '$.organization'),
-      jsonb_path_query(new.resource, '$.provision.period'),
-      jsonb_path_query(new.resource, '$.provision.purpose'),
-      jsonb_path_query(new.resource, '$.scope'),
-      jsonb_path_query(new.resource, '$.provision.securityLabel'),
-      jsonb_path_query(new.resource, '$.source'),
-      jsonb_path_query(new.resource, '$.status')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_encounter()
-  returns trigger as $$
-  begin
-    insert into internal.encountersearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "date",
-      "identifier",
-      "patient",
-      "type",
-      "account",
-      "appointment",
-      "based-on",
-      "class",
-      "diagnosis",
-      "episode-of-care",
-      "length",
-      "location",
-      "location-period",
-      "part-of",
-      "participant",
-      "participant-type",
-      "practitioner",
-      "reason-code",
-      "reason-reference",
-      "service-provider",
-      "special-arrangement",
-      "status",
-      "subject"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.period'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.account'),
-      jsonb_path_query(new.resource, '$.appointment'),
-      jsonb_path_query(new.resource, '$.basedOn'),
-      jsonb_path_query(new.resource, '$.class'),
-      jsonb_path_query(new.resource, '$.diagnosis.condition'),
-      jsonb_path_query(new.resource, '$.episodeOfCare'),
-      jsonb_path_query(new.resource, '$.length'),
-      jsonb_path_query(new.resource, '$.location.location'),
-      jsonb_path_query(new.resource, '$.location.period'),
-      jsonb_path_query(new.resource, '$.partOf'),
-      jsonb_path_query(new.resource, '$.participant.individual'),
-      jsonb_path_query(new.resource, '$.participant.type'),
-      jsonb_path_query(new.resource, '$.participant.individual[*] ? (@.type like_regex "^.*Practitioner.*") ? (@.reference like_regex "^.*Practitioner.*")'),
-      jsonb_path_query(new.resource, '$.reasonCode'),
-      jsonb_path_query(new.resource, '$.reasonReference'),
-      jsonb_path_query(new.resource, '$.serviceProvider'),
-      jsonb_path_query(new.resource, '$.hospitalization.specialArrangement'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.subject')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_episodeofcare()
-  returns trigger as $$
-  begin
-    insert into internal.episodeofcaresearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "date",
-      "identifier",
-      "patient",
-      "type",
-      "care-manager",
-      "condition",
-      "incoming-referral",
-      "organization",
-      "status"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.period'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.patient'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.careManager[*] ? (@.type like_regex "^.*Practitioner.*") ? (@.reference like_regex "^.*Practitioner.*")'),
-      jsonb_path_query(new.resource, '$.diagnosis.condition'),
-      jsonb_path_query(new.resource, '$.referralRequest'),
-      jsonb_path_query(new.resource, '$.managingOrganization'),
-      jsonb_path_query(new.resource, '$.status')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_flag()
-  returns trigger as $$
-  begin
-    insert into internal.flagsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "date",
-      "patient",
-      "encounter",
-      "author",
-      "identifier",
-      "subject"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.period'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.encounter'),
-      jsonb_path_query(new.resource, '$.author'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.subject')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_immunization()
-  returns trigger as $$
-  begin
-    insert into internal.immunizationsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "date",
-      "identifier",
-      "patient",
-      "location",
-      "lot-number",
-      "manufacturer",
-      "performer",
-      "reaction",
-      "reaction-date",
-      "reason-code",
-      "reason-reference",
-      "series",
-      "status",
-      "status-reason",
-      "target-disease",
-      "vaccine-code"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.occurrenceDateTime'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.patient'),
-      jsonb_path_query(new.resource, '$.location'),
-      jsonb_path_query(new.resource, '$.lotNumber'),
-      jsonb_path_query(new.resource, '$.manufacturer'),
-      jsonb_path_query(new.resource, '$.performer.actor'),
-      jsonb_path_query(new.resource, '$.reaction.detail'),
-      jsonb_path_query(new.resource, '$.reaction.date'),
-      jsonb_path_query(new.resource, '$.reasonCode'),
-      jsonb_path_query(new.resource, '$.reasonReference'),
-      jsonb_path_query(new.resource, '$.protocolApplied.series'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.statusReason'),
-      jsonb_path_query(new.resource, '$.protocolApplied.targetDisease'),
-      jsonb_path_query(new.resource, '$.vaccineCode')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_riskassessment()
-  returns trigger as $$
-  begin
-    insert into internal.riskassessmentsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "date",
-      "identifier",
-      "patient",
-      "encounter",
-      "condition",
-      "method",
-      "performer",
-      "probability",
-      "risk",
-      "subject"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.occurrenceDateTime'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.encounter'),
-      jsonb_path_query(new.resource, '$.condition'),
-      jsonb_path_query(new.resource, '$.method'),
-      jsonb_path_query(new.resource, '$.performer'),
-      jsonb_path_query(new.resource, '$.prediction.probability'),
-      jsonb_path_query(new.resource, '$.prediction.qualitativeRisk'),
-      jsonb_path_query(new.resource, '$.subject')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_supplyrequest()
-  returns trigger as $$
-  begin
-    insert into internal.supplyrequestsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "date",
-      "identifier",
-      "category",
-      "requester",
-      "status",
-      "subject",
-      "supplier"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.authoredOn'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.category'),
-      jsonb_path_query(new.resource, '$.requester'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.deliverTo'),
-      jsonb_path_query(new.resource, '$.supplier')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_detectedissue()
-  returns trigger as $$
-  begin
-    insert into internal.detectedissuesearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "identifier",
-      "patient",
-      "author",
-      "code",
-      "identified",
-      "implicated"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.patient'),
-      jsonb_path_query(new.resource, '$.author'),
-      jsonb_path_query(new.resource, '$.code'),
-      jsonb_path_query(new.resource, '$.identified'),
-      jsonb_path_query(new.resource, '$.implicated')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_documentmanifest()
-  returns trigger as $$
-  begin
-    insert into internal.documentmanifestsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "identifier",
-      "patient",
-      "type",
-      "author",
-      "created",
-      "description",
-      "item",
-      "recipient",
-      "related-id",
-      "related-ref",
-      "source",
-      "status",
-      "subject"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.masterIdentifier'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.author'),
-      jsonb_path_query(new.resource, '$.created'),
-      jsonb_path_query(new.resource, '$.description'),
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.recipient'),
-      jsonb_path_query(new.resource, '$.related.identifier'),
-      jsonb_path_query(new.resource, '$.related.ref'),
-      jsonb_path_query(new.resource, '$.source'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.subject')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_documentreference()
-  returns trigger as $$
-  begin
-    insert into internal.documentreferencesearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "identifier",
-      "patient",
-      "type",
-      "encounter",
-      "authenticator",
-      "author",
-      "category",
-      "contenttype",
-      "custodian",
-      "date",
-      "description",
-      "event",
-      "facility",
-      "format",
-      "language",
-      "location",
-      "period",
-      "related",
-      "relatesto",
-      "relation",
-      "security-label",
-      "setting",
-      "status",
-      "subject",
-      "relationship"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.masterIdentifier'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.context.encounter[*] ? (@.type like_regex "^.*Encounter.*") ? (@.reference like_regex "^.*Encounter.*")'),
-      jsonb_path_query(new.resource, '$.authenticator'),
-      jsonb_path_query(new.resource, '$.author'),
-      jsonb_path_query(new.resource, '$.category'),
-      jsonb_path_query(new.resource, '$.content.attachment.contentType'),
-      jsonb_path_query(new.resource, '$.custodian'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.description'),
-      jsonb_path_query(new.resource, '$.context.event'),
-      jsonb_path_query(new.resource, '$.context.facilityType'),
-      jsonb_path_query(new.resource, '$.content.format'),
-      jsonb_path_query(new.resource, '$.content.attachment.language'),
-      jsonb_path_query(new.resource, '$.content.attachment.url'),
-      jsonb_path_query(new.resource, '$.context.period'),
-      jsonb_path_query(new.resource, '$.context.related'),
-      jsonb_path_query(new.resource, '$.relatesTo.target'),
-      jsonb_path_query(new.resource, '$.relatesTo.code'),
-      jsonb_path_query(new.resource, '$.securityLabel'),
-      jsonb_path_query(new.resource, '$.context.practiceSetting'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.subject'),
-      jsonb_path_query(new.resource, '$.relatesTo')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_goal()
-  returns trigger as $$
-  begin
-    insert into internal.goalsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "identifier",
-      "patient",
-      "achievement-status",
-      "category",
-      "lifecycle-status",
-      "start-date",
-      "subject",
-      "target-date"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.achievementStatus'),
-      jsonb_path_query(new.resource, '$.category'),
-      jsonb_path_query(new.resource, '$.lifecycleStatus'),
-      jsonb_path_query(new.resource, '$.startDate'),
-      jsonb_path_query(new.resource, '$.subject'),
-      jsonb_path_query(new.resource, '$.target.dueDate')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_imagingstudy()
-  returns trigger as $$
-  begin
-    insert into internal.imagingstudysearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "identifier",
-      "patient",
-      "basedon",
-      "bodysite",
-      "dicom-class",
-      "encounter",
-      "endpoint",
-      "instance",
-      "interpreter",
-      "modality",
-      "performer",
-      "reason",
-      "referrer",
-      "series",
-      "started",
-      "status",
-      "subject"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.basedOn'),
-      jsonb_path_query(new.resource, '$.series.bodySite'),
-      jsonb_path_query(new.resource, '$.series.instance.sopClass'),
-      jsonb_path_query(new.resource, '$.encounter'),
-      jsonb_path_query(new.resource, '$.endpoint'),
-      jsonb_path_query(new.resource, '$.series.instance.uid'),
-      jsonb_path_query(new.resource, '$.interpreter'),
-      jsonb_path_query(new.resource, '$.series.modality'),
-      jsonb_path_query(new.resource, '$.series.performer.actor'),
-      jsonb_path_query(new.resource, '$.reasonCode'),
-      jsonb_path_query(new.resource, '$.referrer'),
-      jsonb_path_query(new.resource, '$.series.uid'),
-      jsonb_path_query(new.resource, '$.started'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.subject')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_nutritionorder()
-  returns trigger as $$
-  begin
-    insert into internal.nutritionordersearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "identifier",
-      "patient",
-      "encounter",
-      "additive",
-      "datetime",
-      "formula",
-      "instantiates-canonical",
-      "instantiates-uri",
-      "oraldiet",
-      "provider",
-      "status",
-      "supplement"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.patient'),
-      jsonb_path_query(new.resource, '$.encounter'),
-      jsonb_path_query(new.resource, '$.enteralFormula.additiveType'),
-      jsonb_path_query(new.resource, '$.dateTime'),
-      jsonb_path_query(new.resource, '$.enteralFormula.baseFormulaType'),
-      jsonb_path_query(new.resource, '$.instantiatesCanonical'),
-      jsonb_path_query(new.resource, '$.instantiatesUri'),
-      jsonb_path_query(new.resource, '$.oralDiet.type'),
-      jsonb_path_query(new.resource, '$.orderer'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.supplement.type')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_supplydelivery()
-  returns trigger as $$
-  begin
-    insert into internal.supplydeliverysearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "identifier",
-      "patient",
-      "receiver",
-      "status",
-      "supplier"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.patient'),
-      jsonb_path_query(new.resource, '$.receiver'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.supplier')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_visionprescription()
-  returns trigger as $$
-  begin
-    insert into internal.visionprescriptionsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "identifier",
-      "patient",
-      "encounter",
-      "datewritten",
-      "prescriber",
-      "status"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.patient'),
-      jsonb_path_query(new.resource, '$.encounter'),
-      jsonb_path_query(new.resource, '$.dateWritten'),
-      jsonb_path_query(new.resource, '$.prescriber'),
-      jsonb_path_query(new.resource, '$.status')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_deviceusestatement()
-  returns trigger as $$
-  begin
-    insert into internal.deviceusestatementsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "patient",
-      "device",
-      "identifier",
-      "subject"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.device'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.subject')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_appointment()
-  returns trigger as $$
-  begin
-    insert into internal.appointmentsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "actor",
-      "appointment-type",
-      "based-on",
-      "date",
-      "identifier",
-      "location",
-      "part-status",
-      "patient",
-      "practitioner",
-      "reason-code",
-      "reason-reference",
-      "service-category",
-      "service-type",
-      "slot",
-      "specialty",
-      "status",
-      "supporting-info"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.participant.actor'),
-      jsonb_path_query(new.resource, '$.appointmentType'),
-      jsonb_path_query(new.resource, '$.basedOn'),
-      jsonb_path_query(new.resource, '$.start'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.participant.actor[*] ? (@.type like_regex "^.*Location.*") ? (@.reference like_regex "^.*Location.*")'),
-      jsonb_path_query(new.resource, '$.participant.status'),
-      jsonb_path_query(new.resource, '$.participant.actor[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.participant.actor[*] ? (@.type like_regex "^.*Practitioner.*") ? (@.reference like_regex "^.*Practitioner.*")'),
-      jsonb_path_query(new.resource, '$.reasonCode'),
-      jsonb_path_query(new.resource, '$.reasonReference'),
-      jsonb_path_query(new.resource, '$.serviceCategory'),
-      jsonb_path_query(new.resource, '$.serviceType'),
-      jsonb_path_query(new.resource, '$.slot'),
-      jsonb_path_query(new.resource, '$.specialty'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.supportingInformation')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_appointmentresponse()
-  returns trigger as $$
-  begin
-    insert into internal.appointmentresponsesearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "actor",
-      "appointment",
-      "identifier",
-      "location",
-      "part-status",
-      "patient",
-      "practitioner"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.actor'),
-      jsonb_path_query(new.resource, '$.appointment'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.actor[*] ? (@.type like_regex "^.*Location.*") ? (@.reference like_regex "^.*Location.*")'),
-      jsonb_path_query(new.resource, '$.participantStatus'),
-      jsonb_path_query(new.resource, '$.actor[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.actor[*] ? (@.type like_regex "^.*Practitioner.*") ? (@.reference like_regex "^.*Practitioner.*")')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_auditevent()
-  returns trigger as $$
-  begin
-    insert into internal.auditeventsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "action",
-      "address",
-      "agent",
-      "agent-name",
-      "agent-role",
-      "altid",
-      "date",
-      "entity",
-      "entity-name",
-      "entity-role",
-      "entity-type",
-      "outcome",
-      "patient",
-      "policy",
-      "site",
-      "source",
-      "subtype",
-      "type"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.action'),
-      jsonb_path_query(new.resource, '$.agent.network.address'),
-      jsonb_path_query(new.resource, '$.agent.who'),
-      jsonb_path_query(new.resource, '$.agent.name'),
-      jsonb_path_query(new.resource, '$.agent.role'),
-      jsonb_path_query(new.resource, '$.agent.altId'),
-      jsonb_path_query(new.resource, '$.recorded'),
-      jsonb_path_query(new.resource, '$.entity.what'),
-      jsonb_path_query(new.resource, '$.entity.name'),
-      jsonb_path_query(new.resource, '$.entity.role'),
-      jsonb_path_query(new.resource, '$.entity.type'),
-      jsonb_path_query(new.resource, '$.outcome'),
-      jsonb_path_query(new.resource, '$.agent.who[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.agent.policy'),
-      jsonb_path_query(new.resource, '$.source.site'),
-      jsonb_path_query(new.resource, '$.source.observer'),
-      jsonb_path_query(new.resource, '$.subtype'),
-      jsonb_path_query(new.resource, '$.type')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_basic()
-  returns trigger as $$
-  begin
-    insert into internal.basicsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "author",
-      "code",
-      "created",
-      "identifier",
-      "patient",
-      "subject"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.author'),
-      jsonb_path_query(new.resource, '$.code'),
-      jsonb_path_query(new.resource, '$.created'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.subject')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_bodystructure()
-  returns trigger as $$
-  begin
-    insert into internal.bodystructuresearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "identifier",
-      "location",
-      "morphology",
-      "patient"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.location'),
-      jsonb_path_query(new.resource, '$.morphology'),
-      jsonb_path_query(new.resource, '$.patient')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_bundle()
-  returns trigger as $$
-  begin
-    insert into internal.bundlesearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "composition",
-      "identifier",
-      "message",
-      "timestamp",
-      "type"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.entry[0].resource'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.entry[0].resource'),
-      jsonb_path_query(new.resource, '$.timestamp'),
-      jsonb_path_query(new.resource, '$.type')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_capabilitystatement()
-  returns trigger as $$
-  begin
-    insert into internal.capabilitystatementsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "context",
-      "context-quantity",
-      "context-type",
-      "date",
-      "description",
-      "fhirversion",
-      "format",
-      "guide",
-      "jurisdiction",
-      "mode",
-      "name",
-      "publisher",
-      "resource",
-      "resource-profile",
-      "security-service",
-      "software",
-      "status",
-      "supported-profile",
-      "title",
-      "url",
-      "version",
-      "context-type-quantity",
-      "context-type-value"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
-      jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
-      jsonb_path_query(new.resource, '$.useContext.code'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.description'),
-      jsonb_path_query(new.resource, '$.version'),
-      jsonb_path_query(new.resource, '$.format'),
-      jsonb_path_query(new.resource, '$.implementationGuide'),
-      jsonb_path_query(new.resource, '$.jurisdiction'),
-      jsonb_path_query(new.resource, '$.rest.mode'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.publisher'),
-      jsonb_path_query(new.resource, '$.rest.resource.type'),
-      jsonb_path_query(new.resource, '$.rest.resource.profile'),
-      jsonb_path_query(new.resource, '$.rest.security.service'),
-      jsonb_path_query(new.resource, '$.software.name'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.rest.resource.supportedProfile'),
-      jsonb_path_query(new.resource, '$.title'),
-      jsonb_path_query(new.resource, '$.url'),
-      jsonb_path_query(new.resource, '$.version'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.useContext')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_codesystem()
-  returns trigger as $$
-  begin
-    insert into internal.codesystemsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "context",
-      "context-quantity",
-      "context-type",
-      "date",
-      "description",
-      "jurisdiction",
-      "name",
-      "publisher",
-      "status",
-      "title",
-      "url",
-      "version",
-      "context-type-quantity",
-      "context-type-value",
-      "code",
-      "content-mode",
-      "identifier",
-      "language",
-      "supplements",
-      "system"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
-      jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
-      jsonb_path_query(new.resource, '$.useContext.code'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.description'),
-      jsonb_path_query(new.resource, '$.jurisdiction'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.publisher'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.title'),
-      jsonb_path_query(new.resource, '$.url'),
-      jsonb_path_query(new.resource, '$.version'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.concept.code'),
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.concept.designation.language'),
-      jsonb_path_query(new.resource, '$.supplements'),
-      jsonb_path_query(new.resource, '$.url')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_compartmentdefinition()
-  returns trigger as $$
-  begin
-    insert into internal.compartmentdefinitionsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "context",
-      "context-quantity",
-      "context-type",
-      "date",
-      "description",
-      "name",
-      "publisher",
-      "status",
-      "url",
-      "version",
-      "context-type-quantity",
-      "context-type-value",
-      "code",
-      "resource"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
-      jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
-      jsonb_path_query(new.resource, '$.useContext.code'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.description'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.publisher'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.url'),
-      jsonb_path_query(new.resource, '$.version'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.code'),
-      jsonb_path_query(new.resource, '$.resource.code')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_conceptmap()
-  returns trigger as $$
-  begin
-    insert into internal.conceptmapsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "context",
-      "context-quantity",
-      "context-type",
-      "date",
-      "description",
-      "jurisdiction",
-      "name",
-      "publisher",
-      "status",
-      "title",
-      "url",
-      "version",
-      "context-type-quantity",
-      "context-type-value",
-      "identifier",
-      "dependson",
-      "other",
-      "product",
-      "source",
-      "source-code",
-      "source-system",
-      "source-uri",
-      "target",
-      "target-code",
-      "target-system",
-      "target-uri"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
-      jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
-      jsonb_path_query(new.resource, '$.useContext.code'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.description'),
-      jsonb_path_query(new.resource, '$.jurisdiction'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.publisher'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.title'),
-      jsonb_path_query(new.resource, '$.url'),
-      jsonb_path_query(new.resource, '$.version'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.group.element.target.dependsOn.property'),
-      jsonb_path_query(new.resource, '$.group.unmapped.url'),
-      jsonb_path_query(new.resource, '$.group.element.target.product.property'),
-      jsonb_path_query(new.resource, '$.sourceCanonical'),
-      jsonb_path_query(new.resource, '$.group.element.code'),
-      jsonb_path_query(new.resource, '$.group.source'),
-      jsonb_path_query(new.resource, '$.sourceUri'),
-      jsonb_path_query(new.resource, '$.targetCanonical'),
-      jsonb_path_query(new.resource, '$.group.element.target.code'),
-      jsonb_path_query(new.resource, '$.group.target'),
-      jsonb_path_query(new.resource, '$.targetUri')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_graphdefinition()
-  returns trigger as $$
-  begin
-    insert into internal.graphdefinitionsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "context",
-      "context-quantity",
-      "context-type",
-      "date",
-      "description",
-      "jurisdiction",
-      "name",
-      "publisher",
-      "status",
-      "url",
-      "version",
-      "context-type-quantity",
-      "context-type-value",
-      "start"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
-      jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
-      jsonb_path_query(new.resource, '$.useContext.code'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.description'),
-      jsonb_path_query(new.resource, '$.jurisdiction'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.publisher'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.url'),
-      jsonb_path_query(new.resource, '$.version'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.start')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_implementationguide()
-  returns trigger as $$
-  begin
-    insert into internal.implementationguidesearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "context",
-      "context-quantity",
-      "context-type",
-      "date",
-      "description",
-      "jurisdiction",
-      "name",
-      "publisher",
-      "status",
-      "title",
-      "url",
-      "version",
-      "context-type-quantity",
-      "context-type-value",
-      "depends-on",
-      "experimental",
-      "global",
-      "resource"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
-      jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
-      jsonb_path_query(new.resource, '$.useContext.code'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.description'),
-      jsonb_path_query(new.resource, '$.jurisdiction'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.publisher'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.title'),
-      jsonb_path_query(new.resource, '$.url'),
-      jsonb_path_query(new.resource, '$.version'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.dependsOn.uri'),
-      jsonb_path_query(new.resource, '$.experimental'),
-      jsonb_path_query(new.resource, '$.global.profile'),
-      jsonb_path_query(new.resource, '$.definition.resource.reference')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_messagedefinition()
-  returns trigger as $$
-  begin
-    insert into internal.messagedefinitionsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "context",
-      "context-quantity",
-      "context-type",
-      "date",
-      "description",
-      "jurisdiction",
-      "name",
-      "publisher",
-      "status",
-      "title",
-      "url",
-      "version",
-      "context-type-quantity",
-      "context-type-value",
-      "identifier",
-      "category",
-      "event",
-      "focus",
-      "parent"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
-      jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
-      jsonb_path_query(new.resource, '$.useContext.code'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.description'),
-      jsonb_path_query(new.resource, '$.jurisdiction'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.publisher'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.title'),
-      jsonb_path_query(new.resource, '$.url'),
-      jsonb_path_query(new.resource, '$.version'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.category'),
-      jsonb_path_query(new.resource, '$.event'),
-      jsonb_path_query(new.resource, '$.focus.code'),
-      jsonb_path_query(new.resource, '$.parent')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_namingsystem()
-  returns trigger as $$
-  begin
-    insert into internal.namingsystemsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "context",
-      "context-quantity",
-      "context-type",
-      "date",
-      "description",
-      "jurisdiction",
-      "name",
-      "publisher",
-      "status",
-      "context-type-quantity",
-      "context-type-value",
-      "contact",
-      "id-type",
-      "kind",
-      "period",
-      "responsible",
-      "telecom",
-      "type",
-      "value"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
-      jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
-      jsonb_path_query(new.resource, '$.useContext.code'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.description'),
-      jsonb_path_query(new.resource, '$.jurisdiction'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.publisher'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.contact.name'),
-      jsonb_path_query(new.resource, '$.uniqueId.type'),
-      jsonb_path_query(new.resource, '$.kind'),
-      jsonb_path_query(new.resource, '$.uniqueId.period'),
-      jsonb_path_query(new.resource, '$.responsible'),
-      jsonb_path_query(new.resource, '$.contact.telecom'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.uniqueId.value')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_operationdefinition()
-  returns trigger as $$
-  begin
-    insert into internal.operationdefinitionsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "context",
-      "context-quantity",
-      "context-type",
-      "date",
-      "description",
-      "jurisdiction",
-      "name",
-      "publisher",
-      "status",
-      "title",
-      "url",
-      "version",
-      "context-type-quantity",
-      "context-type-value",
-      "base",
-      "code",
-      "input-profile",
-      "instance",
-      "kind",
-      "output-profile",
-      "system",
-      "type"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
-      jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
-      jsonb_path_query(new.resource, '$.useContext.code'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.description'),
-      jsonb_path_query(new.resource, '$.jurisdiction'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.publisher'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.title'),
-      jsonb_path_query(new.resource, '$.url'),
-      jsonb_path_query(new.resource, '$.version'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.base'),
-      jsonb_path_query(new.resource, '$.code'),
-      jsonb_path_query(new.resource, '$.inputProfile'),
-      jsonb_path_query(new.resource, '$.instance'),
-      jsonb_path_query(new.resource, '$.kind'),
-      jsonb_path_query(new.resource, '$.outputProfile'),
-      jsonb_path_query(new.resource, '$.system'),
-      jsonb_path_query(new.resource, '$.type')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_searchparameter()
-  returns trigger as $$
-  begin
-    insert into internal.searchparametersearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "context",
-      "context-quantity",
-      "context-type",
-      "date",
-      "description",
-      "jurisdiction",
-      "name",
-      "publisher",
-      "status",
-      "url",
-      "version",
-      "context-type-quantity",
-      "context-type-value",
-      "base",
-      "code",
-      "component",
-      "derived-from",
-      "target",
-      "type"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
-      jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
-      jsonb_path_query(new.resource, '$.useContext.code'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.description'),
-      jsonb_path_query(new.resource, '$.jurisdiction'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.publisher'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.url'),
-      jsonb_path_query(new.resource, '$.version'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.base'),
-      jsonb_path_query(new.resource, '$.code'),
-      jsonb_path_query(new.resource, '$.component.definition'),
-      jsonb_path_query(new.resource, '$.derivedFrom'),
-      jsonb_path_query(new.resource, '$.target'),
-      jsonb_path_query(new.resource, '$.type')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_structuredefinition()
-  returns trigger as $$
-  begin
-    insert into internal.structuredefinitionsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "context",
-      "context-quantity",
-      "context-type",
-      "date",
-      "description",
-      "jurisdiction",
-      "name",
-      "publisher",
-      "status",
-      "title",
-      "url",
-      "version",
-      "context-type-quantity",
-      "context-type-value",
-      "identifier",
-      "abstract",
-      "base",
-      "base-path",
-      "derivation",
-      "experimental",
-      "ext-context",
-      "keyword",
-      "kind",
-      "path",
-      "type",
-      "valueset"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
-      jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
-      jsonb_path_query(new.resource, '$.useContext.code'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.description'),
-      jsonb_path_query(new.resource, '$.jurisdiction'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.publisher'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.title'),
-      jsonb_path_query(new.resource, '$.url'),
-      jsonb_path_query(new.resource, '$.version'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.abstract'),
-      jsonb_path_query(new.resource, '$.baseDefinition'),
-      jsonb_path_query(new.resource, '$.snapshot.element.base.path'),
-      jsonb_path_query(new.resource, '$.derivation'),
-      jsonb_path_query(new.resource, '$.experimental'),
-      jsonb_path_query(new.resource, '$.context.type'),
-      jsonb_path_query(new.resource, '$.keyword'),
-      jsonb_path_query(new.resource, '$.kind'),
-      jsonb_path_query(new.resource, '$.snapshot.element.path'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.snapshot.element.binding.valueSet')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_structuremap()
-  returns trigger as $$
-  begin
-    insert into internal.structuremapsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "context",
-      "context-quantity",
-      "context-type",
-      "date",
-      "description",
-      "jurisdiction",
-      "name",
-      "publisher",
-      "status",
-      "title",
-      "url",
-      "version",
-      "context-type-quantity",
-      "context-type-value",
-      "identifier"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
-      jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
-      jsonb_path_query(new.resource, '$.useContext.code'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.description'),
-      jsonb_path_query(new.resource, '$.jurisdiction'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.publisher'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.title'),
-      jsonb_path_query(new.resource, '$.url'),
-      jsonb_path_query(new.resource, '$.version'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.identifier')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_terminologycapabilities()
-  returns trigger as $$
-  begin
-    insert into internal.terminologycapabilitiessearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "context",
-      "context-quantity",
-      "context-type",
-      "date",
-      "description",
-      "jurisdiction",
-      "name",
-      "publisher",
-      "status",
-      "title",
-      "url",
-      "version",
-      "context-type-quantity",
-      "context-type-value"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
-      jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
-      jsonb_path_query(new.resource, '$.useContext.code'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.description'),
-      jsonb_path_query(new.resource, '$.jurisdiction'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.publisher'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.title'),
-      jsonb_path_query(new.resource, '$.url'),
-      jsonb_path_query(new.resource, '$.version'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.useContext')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_valueset()
-  returns trigger as $$
-  begin
-    insert into internal.valuesetsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "context",
-      "context-quantity",
-      "context-type",
-      "date",
-      "description",
-      "jurisdiction",
-      "name",
-      "publisher",
-      "status",
-      "title",
-      "url",
-      "version",
-      "context-type-quantity",
-      "context-type-value",
-      "identifier",
-      "code",
-      "expansion",
-      "reference"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
-      jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
-      jsonb_path_query(new.resource, '$.useContext.code'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.description'),
-      jsonb_path_query(new.resource, '$.jurisdiction'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.publisher'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.title'),
-      jsonb_path_query(new.resource, '$.url'),
-      jsonb_path_query(new.resource, '$.version'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.expansion.contains.code'),
-      jsonb_path_query(new.resource, '$.expansion.identifier'),
-      jsonb_path_query(new.resource, '$.compose.include.system')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_chargeitem()
-  returns trigger as $$
-  begin
-    insert into internal.chargeitemsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "account",
-      "code",
-      "context",
-      "entered-date",
-      "enterer",
-      "factor-override",
-      "identifier",
-      "occurrence",
-      "patient",
-      "performer-actor",
-      "performer-function",
-      "performing-organization",
-      "price-override",
-      "quantity",
-      "requesting-organization",
-      "service",
-      "subject"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.account'),
-      jsonb_path_query(new.resource, '$.code'),
-      jsonb_path_query(new.resource, '$.context'),
-      jsonb_path_query(new.resource, '$.enteredDate'),
-      jsonb_path_query(new.resource, '$.enterer'),
-      jsonb_path_query(new.resource, '$.factorOverride'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.occurrence'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.performer.actor'),
-      jsonb_path_query(new.resource, '$.performer.function'),
-      jsonb_path_query(new.resource, '$.performingOrganization'),
-      jsonb_path_query(new.resource, '$.priceOverride'),
-      jsonb_path_query(new.resource, '$.quantity'),
-      jsonb_path_query(new.resource, '$.requestingOrganization'),
-      jsonb_path_query(new.resource, '$.service'),
-      jsonb_path_query(new.resource, '$.subject')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_chargeitemdefinition()
-  returns trigger as $$
-  begin
-    insert into internal.chargeitemdefinitionsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "context",
-      "context-quantity",
-      "context-type",
-      "date",
-      "description",
-      "effective",
-      "identifier",
-      "jurisdiction",
-      "publisher",
-      "status",
-      "title",
-      "url",
-      "version",
-      "context-type-quantity",
-      "context-type-value"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
-      jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
-      jsonb_path_query(new.resource, '$.useContext.code'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.description'),
-      jsonb_path_query(new.resource, '$.effectivePeriod'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.jurisdiction'),
-      jsonb_path_query(new.resource, '$.publisher'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.title'),
-      jsonb_path_query(new.resource, '$.url'),
-      jsonb_path_query(new.resource, '$.version'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.useContext')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_citation()
-  returns trigger as $$
-  begin
-    insert into internal.citationsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "context",
-      "context-quantity",
-      "context-type",
-      "date",
-      "description",
-      "effective",
-      "identifier",
-      "jurisdiction",
-      "name",
-      "publisher",
-      "status",
-      "title",
-      "url",
-      "version",
-      "context-type-quantity",
-      "context-type-value"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
-      jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
-      jsonb_path_query(new.resource, '$.useContext.code'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.description'),
-      jsonb_path_query(new.resource, '$.effectivePeriod'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.jurisdiction'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.publisher'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.title'),
-      jsonb_path_query(new.resource, '$.url'),
-      jsonb_path_query(new.resource, '$.version'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.useContext')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_claim()
-  returns trigger as $$
-  begin
-    insert into internal.claimsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "care-team",
-      "created",
-      "detail-udi",
-      "encounter",
-      "enterer",
-      "facility",
-      "identifier",
-      "insurer",
-      "item-udi",
-      "patient",
-      "payee",
-      "priority",
-      "procedure-udi",
-      "provider",
-      "status",
-      "subdetail-udi",
-      "use"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.careTeam.provider'),
-      jsonb_path_query(new.resource, '$.created'),
-      jsonb_path_query(new.resource, '$.item.detail.udi'),
-      jsonb_path_query(new.resource, '$.item.encounter'),
-      jsonb_path_query(new.resource, '$.enterer'),
-      jsonb_path_query(new.resource, '$.facility'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.insurer'),
-      jsonb_path_query(new.resource, '$.item.udi'),
-      jsonb_path_query(new.resource, '$.patient'),
-      jsonb_path_query(new.resource, '$.payee.party'),
-      jsonb_path_query(new.resource, '$.priority'),
-      jsonb_path_query(new.resource, '$.procedure.udi'),
-      jsonb_path_query(new.resource, '$.provider'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.item.detail.subDetail.udi'),
-      jsonb_path_query(new.resource, '$.use')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_claimresponse()
-  returns trigger as $$
-  begin
-    insert into internal.claimresponsesearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "created",
-      "disposition",
-      "identifier",
-      "insurer",
-      "outcome",
-      "patient",
-      "payment-date",
-      "request",
-      "requestor",
-      "status",
-      "use"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.created'),
-      jsonb_path_query(new.resource, '$.disposition'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.insurer'),
-      jsonb_path_query(new.resource, '$.outcome'),
-      jsonb_path_query(new.resource, '$.patient'),
-      jsonb_path_query(new.resource, '$.payment.date'),
-      jsonb_path_query(new.resource, '$.request'),
-      jsonb_path_query(new.resource, '$.requestor'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.use')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_clinicalusedefinition()
-  returns trigger as $$
-  begin
-    insert into internal.clinicalusedefinitionsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "contraindication",
-      "contraindication-reference",
-      "effect",
-      "effect-reference",
-      "identifier",
-      "indication",
-      "indication-reference",
-      "interaction",
-      "product",
-      "subject",
-      "type"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.contraindication.diseaseSymptomProcedure'),
-      jsonb_path_query(new.resource, '$.contraindication.diseaseSymptomProcedure'),
-      jsonb_path_query(new.resource, '$.undesirableEffect.symptomConditionEffect'),
-      jsonb_path_query(new.resource, '$.undesirableEffect.symptomConditionEffect'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.indication.diseaseSymptomProcedure'),
-      jsonb_path_query(new.resource, '$.indication.diseaseSymptomProcedure'),
-      jsonb_path_query(new.resource, '$.interaction.type'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*MedicinalProductDefinition.*") ? (@.reference like_regex "^.*MedicinalProductDefinition.*")'),
-      jsonb_path_query(new.resource, '$.subject'),
-      jsonb_path_query(new.resource, '$.type')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_communication()
-  returns trigger as $$
-  begin
-    insert into internal.communicationsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "based-on",
-      "category",
-      "encounter",
-      "identifier",
-      "instantiates-canonical",
-      "instantiates-uri",
-      "medium",
-      "part-of",
-      "patient",
-      "received",
-      "recipient",
-      "sender",
-      "sent",
-      "status",
-      "subject"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.basedOn'),
-      jsonb_path_query(new.resource, '$.category'),
-      jsonb_path_query(new.resource, '$.encounter'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.instantiatesCanonical'),
-      jsonb_path_query(new.resource, '$.instantiatesUri'),
-      jsonb_path_query(new.resource, '$.medium'),
-      jsonb_path_query(new.resource, '$.partOf'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.received'),
-      jsonb_path_query(new.resource, '$.recipient'),
-      jsonb_path_query(new.resource, '$.sender'),
-      jsonb_path_query(new.resource, '$.sent'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.subject')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_communicationrequest()
-  returns trigger as $$
-  begin
-    insert into internal.communicationrequestsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "authored",
-      "based-on",
-      "category",
-      "encounter",
-      "group-identifier",
-      "identifier",
-      "medium",
-      "occurrence",
-      "patient",
-      "priority",
-      "recipient",
-      "replaces",
-      "requester",
-      "sender",
-      "status",
-      "subject"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.authoredOn'),
-      jsonb_path_query(new.resource, '$.basedOn'),
-      jsonb_path_query(new.resource, '$.category'),
-      jsonb_path_query(new.resource, '$.encounter'),
-      jsonb_path_query(new.resource, '$.groupIdentifier'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.medium'),
-      jsonb_path_query(new.resource, '$.occurrenceDateTime'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.priority'),
-      jsonb_path_query(new.resource, '$.recipient'),
-      jsonb_path_query(new.resource, '$.replaces'),
-      jsonb_path_query(new.resource, '$.requester'),
-      jsonb_path_query(new.resource, '$.sender'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.subject')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_contract()
-  returns trigger as $$
-  begin
-    insert into internal.contractsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "authority",
-      "domain",
-      "identifier",
-      "instantiates",
-      "issued",
-      "patient",
-      "signer",
-      "status",
-      "subject",
-      "url"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.authority'),
-      jsonb_path_query(new.resource, '$.domain'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.instantiatesUri'),
-      jsonb_path_query(new.resource, '$.issued'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.signer.party'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.subject'),
-      jsonb_path_query(new.resource, '$.url')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_coverage()
-  returns trigger as $$
-  begin
-    insert into internal.coveragesearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "beneficiary",
-      "class-type",
-      "class-value",
-      "dependent",
-      "identifier",
-      "patient",
-      "payor",
-      "policy-holder",
-      "status",
-      "subscriber",
-      "type"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.beneficiary'),
-      jsonb_path_query(new.resource, '$.class.type'),
-      jsonb_path_query(new.resource, '$.class.value'),
-      jsonb_path_query(new.resource, '$.dependent'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.beneficiary'),
-      jsonb_path_query(new.resource, '$.payor'),
-      jsonb_path_query(new.resource, '$.policyHolder'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.subscriber'),
-      jsonb_path_query(new.resource, '$.type')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_coverageeligibilityrequest()
-  returns trigger as $$
-  begin
-    insert into internal.coverageeligibilityrequestsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "created",
-      "enterer",
-      "facility",
-      "identifier",
-      "patient",
-      "provider",
-      "status"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.created'),
-      jsonb_path_query(new.resource, '$.enterer'),
-      jsonb_path_query(new.resource, '$.facility'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.patient'),
-      jsonb_path_query(new.resource, '$.provider'),
-      jsonb_path_query(new.resource, '$.status')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_coverageeligibilityresponse()
-  returns trigger as $$
-  begin
-    insert into internal.coverageeligibilityresponsesearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "created",
-      "disposition",
-      "identifier",
-      "insurer",
-      "outcome",
-      "patient",
-      "request",
-      "requestor",
-      "status"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.created'),
-      jsonb_path_query(new.resource, '$.disposition'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.insurer'),
-      jsonb_path_query(new.resource, '$.outcome'),
-      jsonb_path_query(new.resource, '$.patient'),
-      jsonb_path_query(new.resource, '$.request'),
-      jsonb_path_query(new.resource, '$.requestor'),
-      jsonb_path_query(new.resource, '$.status')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_device()
-  returns trigger as $$
-  begin
-    insert into internal.devicesearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "device-name",
-      "identifier",
-      "location",
-      "manufacturer",
-      "model",
-      "organization",
-      "patient",
-      "status",
-      "type",
-      "udi-carrier",
-      "udi-di",
-      "url"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.deviceName.name'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.location'),
-      jsonb_path_query(new.resource, '$.manufacturer'),
-      jsonb_path_query(new.resource, '$.modelNumber'),
-      jsonb_path_query(new.resource, '$.owner'),
-      jsonb_path_query(new.resource, '$.patient'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.udiCarrier.carrierHRF'),
-      jsonb_path_query(new.resource, '$.udiCarrier.deviceIdentifier'),
-      jsonb_path_query(new.resource, '$.url')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_devicedefinition()
-  returns trigger as $$
-  begin
-    insert into internal.devicedefinitionsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "identifier",
-      "parent",
-      "type"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.parentDevice'),
-      jsonb_path_query(new.resource, '$.type')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_devicemetric()
-  returns trigger as $$
-  begin
-    insert into internal.devicemetricsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "category",
-      "identifier",
-      "parent",
-      "source",
-      "type"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.category'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.parent'),
-      jsonb_path_query(new.resource, '$.source'),
-      jsonb_path_query(new.resource, '$.type')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_endpoint()
-  returns trigger as $$
-  begin
-    insert into internal.endpointsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "connection-type",
-      "identifier",
-      "name",
-      "organization",
-      "payload-type",
-      "status"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.connectionType'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.managingOrganization'),
-      jsonb_path_query(new.resource, '$.payloadType'),
-      jsonb_path_query(new.resource, '$.status')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_enrollmentrequest()
-  returns trigger as $$
-  begin
-    insert into internal.enrollmentrequestsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "identifier",
-      "patient",
-      "status",
-      "subject"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.candidate'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.candidate')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_enrollmentresponse()
-  returns trigger as $$
-  begin
-    insert into internal.enrollmentresponsesearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "identifier",
-      "request",
-      "status"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.request'),
-      jsonb_path_query(new.resource, '$.status')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_eventdefinition()
-  returns trigger as $$
-  begin
-    insert into internal.eventdefinitionsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "composed-of",
-      "context",
-      "context-quantity",
-      "context-type",
-      "date",
-      "depends-on",
-      "derived-from",
-      "description",
-      "effective",
-      "identifier",
-      "jurisdiction",
-      "name",
-      "predecessor",
-      "publisher",
-      "status",
-      "successor",
-      "title",
-      "topic",
-      "url",
-      "version",
-      "context-type-quantity",
-      "context-type-value"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''composed-of'').resource'),
-      jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
-      jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
-      jsonb_path_query(new.resource, '$.useContext.code'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''depends-on'').resource'),
-      jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''derived-from'').resource'),
-      jsonb_path_query(new.resource, '$.description'),
-      jsonb_path_query(new.resource, '$.effectivePeriod'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.jurisdiction'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''predecessor'').resource'),
-      jsonb_path_query(new.resource, '$.publisher'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''successor'').resource'),
-      jsonb_path_query(new.resource, '$.title'),
-      jsonb_path_query(new.resource, '$.topic'),
-      jsonb_path_query(new.resource, '$.url'),
-      jsonb_path_query(new.resource, '$.version'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.useContext')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_evidence()
-  returns trigger as $$
-  begin
-    insert into internal.evidencesearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "context",
-      "context-quantity",
-      "context-type",
-      "date",
-      "description",
-      "identifier",
-      "publisher",
-      "status",
-      "title",
-      "url",
-      "version",
-      "context-type-quantity",
-      "context-type-value"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
-      jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
-      jsonb_path_query(new.resource, '$.useContext.code'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.description'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.publisher'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.title'),
-      jsonb_path_query(new.resource, '$.url'),
-      jsonb_path_query(new.resource, '$.version'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.useContext')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_evidencereport()
-  returns trigger as $$
-  begin
-    insert into internal.evidencereportsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "context",
-      "context-quantity",
-      "context-type",
-      "identifier",
-      "publisher",
-      "status",
-      "url",
-      "context-type-quantity",
-      "context-type-value"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
-      jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
-      jsonb_path_query(new.resource, '$.useContext.code'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.publisher'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.url'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.useContext')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_evidencevariable()
-  returns trigger as $$
-  begin
-    insert into internal.evidencevariablesearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "context",
-      "context-quantity",
-      "context-type",
-      "date",
-      "description",
-      "identifier",
-      "name",
-      "publisher",
-      "status",
-      "title",
-      "url",
-      "version",
-      "context-type-quantity",
-      "context-type-value"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
-      jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
-      jsonb_path_query(new.resource, '$.useContext.code'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.description'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.publisher'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.title'),
-      jsonb_path_query(new.resource, '$.url'),
-      jsonb_path_query(new.resource, '$.version'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.useContext')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_examplescenario()
-  returns trigger as $$
-  begin
-    insert into internal.examplescenariosearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "context",
-      "context-quantity",
-      "context-type",
-      "date",
-      "identifier",
-      "jurisdiction",
-      "name",
-      "publisher",
-      "status",
-      "url",
-      "version",
-      "context-type-quantity",
-      "context-type-value"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
-      jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
-      jsonb_path_query(new.resource, '$.useContext.code'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.jurisdiction'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.publisher'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.url'),
-      jsonb_path_query(new.resource, '$.version'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.useContext')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_explanationofbenefit()
-  returns trigger as $$
-  begin
-    insert into internal.explanationofbenefitsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "care-team",
-      "claim",
-      "coverage",
-      "created",
-      "detail-udi",
-      "disposition",
-      "encounter",
-      "enterer",
-      "facility",
-      "identifier",
-      "item-udi",
-      "patient",
-      "payee",
-      "procedure-udi",
-      "provider",
-      "status",
-      "subdetail-udi"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.careTeam.provider'),
-      jsonb_path_query(new.resource, '$.claim'),
-      jsonb_path_query(new.resource, '$.insurance.coverage'),
-      jsonb_path_query(new.resource, '$.created'),
-      jsonb_path_query(new.resource, '$.item.detail.udi'),
-      jsonb_path_query(new.resource, '$.disposition'),
-      jsonb_path_query(new.resource, '$.item.encounter'),
-      jsonb_path_query(new.resource, '$.enterer'),
-      jsonb_path_query(new.resource, '$.facility'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.item.udi'),
-      jsonb_path_query(new.resource, '$.patient'),
-      jsonb_path_query(new.resource, '$.payee.party'),
-      jsonb_path_query(new.resource, '$.procedure.udi'),
-      jsonb_path_query(new.resource, '$.provider'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.item.detail.subDetail.udi')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_group()
-  returns trigger as $$
-  begin
-    insert into internal.groupsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "actual",
-      "characteristic",
-      "code",
-      "exclude",
-      "identifier",
-      "managing-entity",
-      "member",
-      "type",
-      "value",
-      "characteristic-value"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.actual'),
-      jsonb_path_query(new.resource, '$.characteristic.code'),
-      jsonb_path_query(new.resource, '$.code'),
-      jsonb_path_query(new.resource, '$.characteristic.exclude'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.managingEntity'),
-      jsonb_path_query(new.resource, '$.member.entity'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.characteristic.valueCodeableConcept'),
-      jsonb_path_query(new.resource, '$.characteristic')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_guidanceresponse()
-  returns trigger as $$
-  begin
-    insert into internal.guidanceresponsesearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "identifier",
-      "patient",
-      "request",
-      "subject"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.requestIdentifier'),
-      jsonb_path_query(new.resource, '$.subject')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_healthcareservice()
-  returns trigger as $$
-  begin
-    insert into internal.healthcareservicesearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "active",
-      "characteristic",
-      "coverage-area",
-      "endpoint",
-      "identifier",
-      "location",
-      "name",
-      "organization",
-      "program",
-      "service-category",
-      "service-type",
-      "specialty"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.active'),
-      jsonb_path_query(new.resource, '$.characteristic'),
-      jsonb_path_query(new.resource, '$.coverageArea'),
-      jsonb_path_query(new.resource, '$.endpoint'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.location'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.providedBy'),
-      jsonb_path_query(new.resource, '$.program'),
-      jsonb_path_query(new.resource, '$.category'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.specialty')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_immunizationevaluation()
-  returns trigger as $$
-  begin
-    insert into internal.immunizationevaluationsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "date",
-      "dose-status",
-      "identifier",
-      "immunization-event",
-      "patient",
-      "status",
-      "target-disease"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.doseStatus'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.immunizationEvent'),
-      jsonb_path_query(new.resource, '$.patient'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.targetDisease')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_immunizationrecommendation()
-  returns trigger as $$
-  begin
-    insert into internal.immunizationrecommendationsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "date",
-      "identifier",
-      "information",
-      "patient",
-      "status",
-      "support",
-      "target-disease",
-      "vaccine-type"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.recommendation.supportingPatientInformation'),
-      jsonb_path_query(new.resource, '$.patient'),
-      jsonb_path_query(new.resource, '$.recommendation.forecastStatus'),
-      jsonb_path_query(new.resource, '$.recommendation.supportingImmunization'),
-      jsonb_path_query(new.resource, '$.recommendation.targetDisease'),
-      jsonb_path_query(new.resource, '$.recommendation.vaccineCode')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_ingredient()
-  returns trigger as $$
-  begin
-    insert into internal.ingredientsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "for",
-      "function",
-      "identifier",
-      "manufacturer",
-      "role",
-      "substance",
-      "substance-code",
-      "substance-definition"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.for'),
-      jsonb_path_query(new.resource, '$.function'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.manufacturer'),
-      jsonb_path_query(new.resource, '$.role'),
-      jsonb_path_query(new.resource, '$.substance.code.reference'),
-      jsonb_path_query(new.resource, '$.substance.code.concept'),
-      jsonb_path_query(new.resource, '$.substance.code.reference')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_insuranceplan()
-  returns trigger as $$
-  begin
-    insert into internal.insuranceplansearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "address",
-      "address-city",
-      "address-country",
-      "address-postalcode",
-      "address-state",
-      "address-use",
-      "administered-by",
-      "endpoint",
-      "identifier",
-      "name",
-      "owned-by",
-      "phonetic",
-      "status",
-      "type"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.contact.address'),
-      jsonb_path_query(new.resource, '$.contact.address.city'),
-      jsonb_path_query(new.resource, '$.contact.address.country'),
-      jsonb_path_query(new.resource, '$.contact.address.postalCode'),
-      jsonb_path_query(new.resource, '$.contact.address.state'),
-      jsonb_path_query(new.resource, '$.contact.address.use'),
-      jsonb_path_query(new.resource, '$.administeredBy'),
-      jsonb_path_query(new.resource, '$.endpoint'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, 'name | alias'),
-      jsonb_path_query(new.resource, '$.ownedBy'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.type')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_invoice()
-  returns trigger as $$
-  begin
-    insert into internal.invoicesearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "account",
-      "date",
-      "identifier",
-      "issuer",
-      "participant",
-      "participant-role",
-      "patient",
-      "recipient",
-      "status",
-      "subject",
-      "totalgross",
-      "totalnet",
-      "type"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.account'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.issuer'),
-      jsonb_path_query(new.resource, '$.participant.actor'),
-      jsonb_path_query(new.resource, '$.participant.role'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.recipient'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.subject'),
-      jsonb_path_query(new.resource, '$.totalGross'),
-      jsonb_path_query(new.resource, '$.totalNet'),
-      jsonb_path_query(new.resource, '$.type')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_library()
-  returns trigger as $$
-  begin
-    insert into internal.librarysearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "composed-of",
-      "content-type",
-      "context",
-      "context-quantity",
-      "context-type",
-      "date",
-      "depends-on",
-      "derived-from",
-      "description",
-      "effective",
-      "identifier",
-      "jurisdiction",
-      "name",
-      "predecessor",
-      "publisher",
-      "status",
-      "successor",
-      "title",
-      "topic",
-      "type",
-      "url",
-      "version",
-      "context-type-quantity",
-      "context-type-value"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''composed-of'').resource'),
-      jsonb_path_query(new.resource, '$.content.contentType'),
-      jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
-      jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
-      jsonb_path_query(new.resource, '$.useContext.code'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''depends-on'').resource'),
-      jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''derived-from'').resource'),
-      jsonb_path_query(new.resource, '$.description'),
-      jsonb_path_query(new.resource, '$.effectivePeriod'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.jurisdiction'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''predecessor'').resource'),
-      jsonb_path_query(new.resource, '$.publisher'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''successor'').resource'),
-      jsonb_path_query(new.resource, '$.title'),
-      jsonb_path_query(new.resource, '$.topic'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.url'),
-      jsonb_path_query(new.resource, '$.version'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.useContext')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_linkage()
-  returns trigger as $$
-  begin
-    insert into internal.linkagesearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "author",
-      "item",
-      "source"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.author'),
-      jsonb_path_query(new.resource, '$.item.resource'),
-      jsonb_path_query(new.resource, '$.item.resource')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_location()
-  returns trigger as $$
-  begin
-    insert into internal.locationsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "address",
-      "address-city",
-      "address-country",
-      "address-postalcode",
-      "address-state",
-      "address-use",
-      "endpoint",
-      "identifier",
-      "name",
-      "near",
-      "operational-status",
-      "organization",
-      "partof",
-      "status",
-      "type"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.address'),
-      jsonb_path_query(new.resource, '$.address.city'),
-      jsonb_path_query(new.resource, '$.address.country'),
-      jsonb_path_query(new.resource, '$.address.postalCode'),
-      jsonb_path_query(new.resource, '$.address.state'),
-      jsonb_path_query(new.resource, '$.address.use'),
-      jsonb_path_query(new.resource, '$.endpoint'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.position'),
-      jsonb_path_query(new.resource, '$.operationalStatus'),
-      jsonb_path_query(new.resource, '$.managingOrganization'),
-      jsonb_path_query(new.resource, '$.partOf'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.type')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_manufactureditemdefinition()
-  returns trigger as $$
-  begin
-    insert into internal.manufactureditemdefinitionsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "dose-form",
-      "identifier",
-      "ingredient"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.manufacturedDoseForm'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.ingredient')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_measure()
-  returns trigger as $$
-  begin
-    insert into internal.measuresearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "composed-of",
-      "context",
-      "context-quantity",
-      "context-type",
-      "date",
-      "depends-on",
-      "derived-from",
-      "description",
-      "effective",
-      "identifier",
-      "jurisdiction",
-      "name",
-      "predecessor",
-      "publisher",
-      "status",
-      "successor",
-      "title",
-      "topic",
-      "url",
-      "version",
-      "context-type-quantity",
-      "context-type-value"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''composed-of'').resource'),
-      jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
-      jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
-      jsonb_path_query(new.resource, '$.useContext.code'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''depends-on'').resource'),
-      jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''derived-from'').resource'),
-      jsonb_path_query(new.resource, '$.description'),
-      jsonb_path_query(new.resource, '$.effectivePeriod'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.jurisdiction'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''predecessor'').resource'),
-      jsonb_path_query(new.resource, '$.publisher'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''successor'').resource'),
-      jsonb_path_query(new.resource, '$.title'),
-      jsonb_path_query(new.resource, '$.topic'),
-      jsonb_path_query(new.resource, '$.url'),
-      jsonb_path_query(new.resource, '$.version'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.useContext')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_measurereport()
-  returns trigger as $$
-  begin
-    insert into internal.measurereportsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "date",
-      "evaluated-resource",
-      "identifier",
-      "measure",
-      "patient",
-      "period",
-      "reporter",
-      "status",
-      "subject"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.evaluatedResource'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.measure'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.period'),
-      jsonb_path_query(new.resource, '$.reporter'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.subject')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_media()
-  returns trigger as $$
-  begin
-    insert into internal.mediasearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "based-on",
-      "created",
-      "device",
-      "encounter",
-      "identifier",
-      "modality",
-      "operator",
-      "patient",
-      "site",
-      "status",
-      "subject",
-      "type",
-      "view"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.basedOn'),
-      jsonb_path_query(new.resource, '$.created'),
-      jsonb_path_query(new.resource, '$.device'),
-      jsonb_path_query(new.resource, '$.encounter'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.modality'),
-      jsonb_path_query(new.resource, '$.operator'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.bodySite'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.subject'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.view')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_medicationknowledge()
-  returns trigger as $$
-  begin
-    insert into internal.medicationknowledgesearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "classification",
-      "classification-type",
-      "code",
-      "doseform",
-      "ingredient",
-      "ingredient-code",
-      "manufacturer",
-      "monitoring-program-name",
-      "monitoring-program-type",
-      "monograph",
-      "monograph-type",
-      "source-cost",
-      "status"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.medicineClassification.classification'),
-      jsonb_path_query(new.resource, '$.medicineClassification.type'),
-      jsonb_path_query(new.resource, '$.code'),
-      jsonb_path_query(new.resource, '$.doseForm'),
-      jsonb_path_query(new.resource, '$.ingredient.itemReference'),
-      jsonb_path_query(new.resource, '$.ingredient.itemCodeableConcept'),
-      jsonb_path_query(new.resource, '$.manufacturer'),
-      jsonb_path_query(new.resource, '$.monitoringProgram.name'),
-      jsonb_path_query(new.resource, '$.monitoringProgram.type'),
-      jsonb_path_query(new.resource, '$.monograph.source'),
-      jsonb_path_query(new.resource, '$.monograph.type'),
-      jsonb_path_query(new.resource, '$.cost.source'),
-      jsonb_path_query(new.resource, '$.status')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_medicinalproductdefinition()
-  returns trigger as $$
-  begin
-    insert into internal.medicinalproductdefinitionsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "characteristic",
-      "characteristic-type",
-      "contact",
-      "domain",
-      "identifier",
-      "ingredient",
-      "master-file",
-      "name",
-      "name-language",
-      "product-classification",
-      "status",
-      "type"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.characteristic.value'),
-      jsonb_path_query(new.resource, '$.characteristic.type'),
-      jsonb_path_query(new.resource, '$.contact.contact'),
-      jsonb_path_query(new.resource, '$.domain'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.ingredient'),
-      jsonb_path_query(new.resource, '$.masterFile'),
-      jsonb_path_query(new.resource, '$.name.productName'),
-      jsonb_path_query(new.resource, '$.name.countryLanguage.language'),
-      jsonb_path_query(new.resource, '$.classification'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.type')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_messageheader()
-  returns trigger as $$
-  begin
-    insert into internal.messageheadersearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "author",
-      "code",
-      "destination",
-      "destination-uri",
-      "enterer",
-      "event",
-      "focus",
-      "receiver",
-      "response-id",
-      "responsible",
-      "sender",
-      "source",
-      "source-uri",
-      "target"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.author'),
-      jsonb_path_query(new.resource, '$.response.code'),
-      jsonb_path_query(new.resource, '$.destination.name'),
-      jsonb_path_query(new.resource, '$.destination.endpoint'),
-      jsonb_path_query(new.resource, '$.enterer'),
-      jsonb_path_query(new.resource, '$.event'),
-      jsonb_path_query(new.resource, '$.focus'),
-      jsonb_path_query(new.resource, '$.destination.receiver'),
-      jsonb_path_query(new.resource, '$.response.identifier'),
-      jsonb_path_query(new.resource, '$.responsible'),
-      jsonb_path_query(new.resource, '$.sender'),
-      jsonb_path_query(new.resource, '$.source.name'),
-      jsonb_path_query(new.resource, '$.source.endpoint'),
-      jsonb_path_query(new.resource, '$.destination.target')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_molecularsequence()
-  returns trigger as $$
-  begin
-    insert into internal.molecularsequencesearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "chromosome",
-      "identifier",
-      "patient",
-      "referenceseqid",
-      "type",
-      "variant-end",
-      "variant-start",
-      "window-end",
-      "window-start",
-      "chromosome-variant-coordinate",
-      "chromosome-window-coordinate",
-      "referenceseqid-variant-coordinate",
-      "referenceseqid-window-coordinate"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.referenceSeq.chromosome'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.patient'),
-      jsonb_path_query(new.resource, '$.referenceSeq.referenceSeqId'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.variant.end'),
-      jsonb_path_query(new.resource, '$.variant.start'),
-      jsonb_path_query(new.resource, '$.referenceSeq.windowEnd'),
-      jsonb_path_query(new.resource, '$.referenceSeq.windowStart'),
-      jsonb_path_query(new.resource, '$.variant'),
-      jsonb_path_query(new.resource, '$.referenceSeq'),
-      jsonb_path_query(new.resource, '$.variant'),
-      jsonb_path_query(new.resource, '$.referenceSeq')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_nutritionproduct()
-  returns trigger as $$
-  begin
-    insert into internal.nutritionproductsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "identifier",
-      "status"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.instance.identifier'),
-      jsonb_path_query(new.resource, '$.status')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_organization()
-  returns trigger as $$
-  begin
-    insert into internal.organizationsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "active",
-      "address",
-      "address-city",
-      "address-country",
-      "address-postalcode",
-      "address-state",
-      "address-use",
-      "endpoint",
-      "identifier",
-      "name",
-      "partof",
-      "phonetic",
-      "type"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.active'),
-      jsonb_path_query(new.resource, '$.address'),
-      jsonb_path_query(new.resource, '$.address.city'),
-      jsonb_path_query(new.resource, '$.address.country'),
-      jsonb_path_query(new.resource, '$.address.postalCode'),
-      jsonb_path_query(new.resource, '$.address.state'),
-      jsonb_path_query(new.resource, '$.address.use'),
-      jsonb_path_query(new.resource, '$.endpoint'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.partOf'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.type')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_organizationaffiliation()
-  returns trigger as $$
-  begin
-    insert into internal.organizationaffiliationsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "active",
-      "date",
-      "email",
-      "endpoint",
-      "identifier",
-      "location",
-      "network",
-      "participating-organization",
-      "phone",
-      "primary-organization",
-      "role",
-      "service",
-      "specialty",
-      "telecom"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.active'),
-      jsonb_path_query(new.resource, '$.period'),
-      jsonb_path_query(new.resource, '$.telecom[*] ? (@.system = ''email'')'),
-      jsonb_path_query(new.resource, '$.endpoint'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.location'),
-      jsonb_path_query(new.resource, '$.network'),
-      jsonb_path_query(new.resource, '$.participatingOrganization'),
-      jsonb_path_query(new.resource, '$.telecom[*] ? (@.system = ''phone'')'),
-      jsonb_path_query(new.resource, '$.organization'),
-      jsonb_path_query(new.resource, '$.code'),
-      jsonb_path_query(new.resource, '$.healthcareService'),
-      jsonb_path_query(new.resource, '$.specialty'),
-      jsonb_path_query(new.resource, '$.telecom')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_packagedproductdefinition()
-  returns trigger as $$
-  begin
-    insert into internal.packagedproductdefinitionsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "biological",
-      "contained-item",
-      "device",
-      "identifier",
-      "manufactured-item",
-      "medication",
-      "name",
-      "nutrition",
-      "package",
-      "package-for",
-      "status"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.package.containedItem.item.reference'),
-      jsonb_path_query(new.resource, '$.package.containedItem.item.reference'),
-      jsonb_path_query(new.resource, '$.package.containedItem.item.reference'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.package.containedItem.item.reference'),
-      jsonb_path_query(new.resource, '$.package.containedItem.item.reference'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.package.containedItem.item.reference'),
-      jsonb_path_query(new.resource, '$.package.containedItem.item.reference'),
-      jsonb_path_query(new.resource, '$.packageFor'),
-      jsonb_path_query(new.resource, '$.status')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_patient()
-  returns trigger as $$
-  begin
-    insert into internal.patientsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "active",
-      "address",
-      "address-city",
-      "address-country",
-      "address-postalcode",
-      "address-state",
-      "address-use",
-      "birthdate",
-      "death-date",
-      "deceased",
-      "email",
-      "family",
-      "gender",
-      "general-practitioner",
-      "given",
-      "identifier",
-      "language",
-      "link",
-      "name",
-      "organization",
-      "phone",
-      "phonetic",
-      "telecom"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.active'),
-      jsonb_path_query(new.resource, '$.address'),
-      jsonb_path_query(new.resource, '$.address.city'),
-      jsonb_path_query(new.resource, '$.address.country'),
-      jsonb_path_query(new.resource, '$.address.postalCode'),
-      jsonb_path_query(new.resource, '$.address.state'),
-      jsonb_path_query(new.resource, '$.address.use'),
-      jsonb_path_query(new.resource, '$.birthDate'),
-      jsonb_path_query(new.resource, '$.deceasedDateTime'),
-      jsonb_path_query(new.resource, '$.deceasedDateTime ? (exists) or $.deceasedBoolean ? (@ != false)'),
-      jsonb_path_query(new.resource, '$.telecom[*] ? (@.system = ''email'')'),
-      jsonb_path_query(new.resource, '$.name.family'),
-      jsonb_path_query(new.resource, '$.gender'),
-      jsonb_path_query(new.resource, '$.generalPractitioner'),
-      jsonb_path_query(new.resource, '$.name.given'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.communication.language'),
-      jsonb_path_query(new.resource, '$.link.other'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.managingOrganization'),
-      jsonb_path_query(new.resource, '$.telecom[*] ? (@.system = ''phone'')'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.telecom')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_person()
-  returns trigger as $$
-  begin
-    insert into internal.personsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "address",
-      "address-city",
-      "address-country",
-      "address-postalcode",
-      "address-state",
-      "address-use",
-      "birthdate",
-      "email",
-      "gender",
-      "phone",
-      "phonetic",
-      "telecom",
-      "identifier",
-      "link",
-      "name",
-      "organization",
-      "patient",
-      "practitioner",
-      "relatedperson"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.address'),
-      jsonb_path_query(new.resource, '$.address.city'),
-      jsonb_path_query(new.resource, '$.address.country'),
-      jsonb_path_query(new.resource, '$.address.postalCode'),
-      jsonb_path_query(new.resource, '$.address.state'),
-      jsonb_path_query(new.resource, '$.address.use'),
-      jsonb_path_query(new.resource, '$.birthDate'),
-      jsonb_path_query(new.resource, '$.telecom[*] ? (@.system = ''email'')'),
-      jsonb_path_query(new.resource, '$.gender'),
-      jsonb_path_query(new.resource, '$.telecom[*] ? (@.system = ''phone'')'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.telecom'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.link.target'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.managingOrganization'),
-      jsonb_path_query(new.resource, '$.link.target[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.link.target[*] ? (@.type like_regex "^.*Practitioner.*") ? (@.reference like_regex "^.*Practitioner.*")'),
-      jsonb_path_query(new.resource, '$.link.target[*] ? (@.type like_regex "^.*RelatedPerson.*") ? (@.reference like_regex "^.*RelatedPerson.*")')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_practitioner()
-  returns trigger as $$
-  begin
-    insert into internal.practitionersearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "address",
-      "address-city",
-      "address-country",
-      "address-postalcode",
-      "address-state",
-      "address-use",
-      "email",
-      "family",
-      "gender",
-      "given",
-      "phone",
-      "phonetic",
-      "telecom",
-      "active",
-      "communication",
-      "identifier",
-      "name"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.address'),
-      jsonb_path_query(new.resource, '$.address.city'),
-      jsonb_path_query(new.resource, '$.address.country'),
-      jsonb_path_query(new.resource, '$.address.postalCode'),
-      jsonb_path_query(new.resource, '$.address.state'),
-      jsonb_path_query(new.resource, '$.address.use'),
-      jsonb_path_query(new.resource, '$.telecom[*] ? (@.system = ''email'')'),
-      jsonb_path_query(new.resource, '$.name.family'),
-      jsonb_path_query(new.resource, '$.gender'),
-      jsonb_path_query(new.resource, '$.name.given'),
-      jsonb_path_query(new.resource, '$.telecom[*] ? (@.system = ''phone'')'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.telecom'),
-      jsonb_path_query(new.resource, '$.active'),
-      jsonb_path_query(new.resource, '$.communication'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.name')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_relatedperson()
-  returns trigger as $$
-  begin
-    insert into internal.relatedpersonsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "address",
-      "address-city",
-      "address-country",
-      "address-postalcode",
-      "address-state",
-      "address-use",
-      "birthdate",
-      "email",
-      "gender",
-      "phone",
-      "phonetic",
-      "telecom",
-      "active",
-      "identifier",
-      "name",
-      "patient",
-      "relationship"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.address'),
-      jsonb_path_query(new.resource, '$.address.city'),
-      jsonb_path_query(new.resource, '$.address.country'),
-      jsonb_path_query(new.resource, '$.address.postalCode'),
-      jsonb_path_query(new.resource, '$.address.state'),
-      jsonb_path_query(new.resource, '$.address.use'),
-      jsonb_path_query(new.resource, '$.birthDate'),
-      jsonb_path_query(new.resource, '$.telecom[*] ? (@.system = ''email'')'),
-      jsonb_path_query(new.resource, '$.gender'),
-      jsonb_path_query(new.resource, '$.telecom[*] ? (@.system = ''phone'')'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.telecom'),
-      jsonb_path_query(new.resource, '$.active'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.patient'),
-      jsonb_path_query(new.resource, '$.relationship')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_practitionerrole()
-  returns trigger as $$
-  begin
-    insert into internal.practitionerrolesearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "email",
-      "phone",
-      "telecom",
-      "active",
-      "date",
-      "endpoint",
-      "identifier",
-      "location",
-      "organization",
-      "practitioner",
-      "role",
-      "service",
-      "specialty"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.telecom[*] ? (@.system = ''email'')'),
-      jsonb_path_query(new.resource, '$.telecom[*] ? (@.system = ''phone'')'),
-      jsonb_path_query(new.resource, '$.telecom'),
-      jsonb_path_query(new.resource, '$.active'),
-      jsonb_path_query(new.resource, '$.period'),
-      jsonb_path_query(new.resource, '$.endpoint'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.location'),
-      jsonb_path_query(new.resource, '$.organization'),
-      jsonb_path_query(new.resource, '$.practitioner'),
-      jsonb_path_query(new.resource, '$.code'),
-      jsonb_path_query(new.resource, '$.healthcareService'),
-      jsonb_path_query(new.resource, '$.specialty')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_paymentnotice()
-  returns trigger as $$
-  begin
-    insert into internal.paymentnoticesearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "created",
-      "identifier",
-      "payment-status",
-      "provider",
-      "request",
-      "response",
-      "status"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.created'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.paymentStatus'),
-      jsonb_path_query(new.resource, '$.provider'),
-      jsonb_path_query(new.resource, '$.request'),
-      jsonb_path_query(new.resource, '$.response'),
-      jsonb_path_query(new.resource, '$.status')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_paymentreconciliation()
-  returns trigger as $$
-  begin
-    insert into internal.paymentreconciliationsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "created",
-      "disposition",
-      "identifier",
-      "outcome",
-      "payment-issuer",
-      "request",
-      "requestor",
-      "status"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.created'),
-      jsonb_path_query(new.resource, '$.disposition'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.outcome'),
-      jsonb_path_query(new.resource, '$.paymentIssuer'),
-      jsonb_path_query(new.resource, '$.request'),
-      jsonb_path_query(new.resource, '$.requestor'),
-      jsonb_path_query(new.resource, '$.status')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_plandefinition()
-  returns trigger as $$
-  begin
-    insert into internal.plandefinitionsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "composed-of",
-      "context",
-      "context-quantity",
-      "context-type",
-      "date",
-      "definition",
-      "depends-on",
-      "derived-from",
-      "description",
-      "effective",
-      "identifier",
-      "jurisdiction",
-      "name",
-      "predecessor",
-      "publisher",
-      "status",
-      "successor",
-      "title",
-      "topic",
-      "type",
-      "url",
-      "version",
-      "context-type-quantity",
-      "context-type-value"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''composed-of'').resource'),
-      jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
-      jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
-      jsonb_path_query(new.resource, '$.useContext.code'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.action.definition'),
-      jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''depends-on'').resource'),
-      jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''derived-from'').resource'),
-      jsonb_path_query(new.resource, '$.description'),
-      jsonb_path_query(new.resource, '$.effectivePeriod'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.jurisdiction'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''predecessor'').resource'),
-      jsonb_path_query(new.resource, '$.publisher'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''successor'').resource'),
-      jsonb_path_query(new.resource, '$.title'),
-      jsonb_path_query(new.resource, '$.topic'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.url'),
-      jsonb_path_query(new.resource, '$.version'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.useContext')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_provenance()
-  returns trigger as $$
-  begin
-    insert into internal.provenancesearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "agent",
-      "agent-role",
-      "agent-type",
-      "entity",
-      "location",
-      "patient",
-      "recorded",
-      "signature-type",
-      "target",
-      "when"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.agent.who'),
-      jsonb_path_query(new.resource, '$.agent.role'),
-      jsonb_path_query(new.resource, '$.agent.type'),
-      jsonb_path_query(new.resource, '$.entity.what'),
-      jsonb_path_query(new.resource, '$.location'),
-      jsonb_path_query(new.resource, '$.target[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.recorded'),
-      jsonb_path_query(new.resource, '$.signature.type'),
-      jsonb_path_query(new.resource, '$.target'),
-      jsonb_path_query(new.resource, '$.occurredDateTime')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_questionnaire()
-  returns trigger as $$
-  begin
-    insert into internal.questionnairesearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "code",
-      "context",
-      "context-quantity",
-      "context-type",
-      "date",
-      "definition",
-      "description",
-      "effective",
-      "identifier",
-      "jurisdiction",
-      "name",
-      "publisher",
-      "status",
-      "subject-type",
-      "title",
-      "url",
-      "version",
-      "context-type-quantity",
-      "context-type-value"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.item.code'),
-      jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
-      jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
-      jsonb_path_query(new.resource, '$.useContext.code'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.item.definition'),
-      jsonb_path_query(new.resource, '$.description'),
-      jsonb_path_query(new.resource, '$.effectivePeriod'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.jurisdiction'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.publisher'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.subjectType'),
-      jsonb_path_query(new.resource, '$.title'),
-      jsonb_path_query(new.resource, '$.url'),
-      jsonb_path_query(new.resource, '$.version'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.useContext')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_questionnaireresponse()
-  returns trigger as $$
-  begin
-    insert into internal.questionnaireresponsesearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "author",
-      "authored",
-      "based-on",
-      "encounter",
-      "identifier",
-      "part-of",
-      "patient",
-      "questionnaire",
-      "source",
-      "status",
-      "subject"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.author'),
-      jsonb_path_query(new.resource, '$.authored'),
-      jsonb_path_query(new.resource, '$.basedOn'),
-      jsonb_path_query(new.resource, '$.encounter'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.partOf'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.questionnaire'),
-      jsonb_path_query(new.resource, '$.source'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.subject')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_regulatedauthorization()
-  returns trigger as $$
-  begin
-    insert into internal.regulatedauthorizationsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "case",
-      "case-type",
-      "holder",
-      "identifier",
-      "region",
-      "status",
-      "subject"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.case.identifier'),
-      jsonb_path_query(new.resource, '$.case.type'),
-      jsonb_path_query(new.resource, '$.holder'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.region'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.subject')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_requestgroup()
-  returns trigger as $$
-  begin
-    insert into internal.requestgroupsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "author",
-      "authored",
-      "code",
-      "encounter",
-      "group-identifier",
-      "identifier",
-      "instantiates-canonical",
-      "instantiates-uri",
-      "intent",
-      "participant",
-      "patient",
-      "priority",
-      "status",
-      "subject"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.author'),
-      jsonb_path_query(new.resource, '$.authoredOn'),
-      jsonb_path_query(new.resource, '$.code'),
-      jsonb_path_query(new.resource, '$.encounter'),
-      jsonb_path_query(new.resource, '$.groupIdentifier'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.instantiatesCanonical'),
-      jsonb_path_query(new.resource, '$.instantiatesUri'),
-      jsonb_path_query(new.resource, '$.intent'),
-      jsonb_path_query(new.resource, '$.action.participant'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.priority'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.subject')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_researchdefinition()
-  returns trigger as $$
-  begin
-    insert into internal.researchdefinitionsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "composed-of",
-      "context",
-      "context-quantity",
-      "context-type",
-      "date",
-      "depends-on",
-      "derived-from",
-      "description",
-      "effective",
-      "identifier",
-      "jurisdiction",
-      "name",
-      "predecessor",
-      "publisher",
-      "status",
-      "successor",
-      "title",
-      "topic",
-      "url",
-      "version",
-      "context-type-quantity",
-      "context-type-value"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''composed-of'').resource'),
-      jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
-      jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
-      jsonb_path_query(new.resource, '$.useContext.code'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''depends-on'').resource'),
-      jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''derived-from'').resource'),
-      jsonb_path_query(new.resource, '$.description'),
-      jsonb_path_query(new.resource, '$.effectivePeriod'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.jurisdiction'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''predecessor'').resource'),
-      jsonb_path_query(new.resource, '$.publisher'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''successor'').resource'),
-      jsonb_path_query(new.resource, '$.title'),
-      jsonb_path_query(new.resource, '$.topic'),
-      jsonb_path_query(new.resource, '$.url'),
-      jsonb_path_query(new.resource, '$.version'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.useContext')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_researchelementdefinition()
-  returns trigger as $$
-  begin
-    insert into internal.researchelementdefinitionsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "composed-of",
-      "context",
-      "context-quantity",
-      "context-type",
-      "date",
-      "depends-on",
-      "derived-from",
-      "description",
-      "effective",
-      "identifier",
-      "jurisdiction",
-      "name",
-      "predecessor",
-      "publisher",
-      "status",
-      "successor",
-      "title",
-      "topic",
-      "url",
-      "version",
-      "context-type-quantity",
-      "context-type-value"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''composed-of'').resource'),
-      jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
-      jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
-      jsonb_path_query(new.resource, '$.useContext.code'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''depends-on'').resource'),
-      jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''derived-from'').resource'),
-      jsonb_path_query(new.resource, '$.description'),
-      jsonb_path_query(new.resource, '$.effectivePeriod'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.jurisdiction'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''predecessor'').resource'),
-      jsonb_path_query(new.resource, '$.publisher'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''successor'').resource'),
-      jsonb_path_query(new.resource, '$.title'),
-      jsonb_path_query(new.resource, '$.topic'),
-      jsonb_path_query(new.resource, '$.url'),
-      jsonb_path_query(new.resource, '$.version'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.useContext')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_researchstudy()
-  returns trigger as $$
-  begin
-    insert into internal.researchstudysearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "category",
-      "date",
-      "focus",
-      "identifier",
-      "keyword",
-      "location",
-      "partof",
-      "principalinvestigator",
-      "protocol",
-      "site",
-      "sponsor",
-      "status",
-      "title"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.category'),
-      jsonb_path_query(new.resource, '$.period'),
-      jsonb_path_query(new.resource, '$.focus'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.keyword'),
-      jsonb_path_query(new.resource, '$.location'),
-      jsonb_path_query(new.resource, '$.partOf'),
-      jsonb_path_query(new.resource, '$.principalInvestigator'),
-      jsonb_path_query(new.resource, '$.protocol'),
-      jsonb_path_query(new.resource, '$.site'),
-      jsonb_path_query(new.resource, '$.sponsor'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.title')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_researchsubject()
-  returns trigger as $$
-  begin
-    insert into internal.researchsubjectsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "date",
-      "identifier",
-      "individual",
-      "patient",
-      "status",
-      "study"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.period'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.individual'),
-      jsonb_path_query(new.resource, '$.individual'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.study')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_schedule()
-  returns trigger as $$
-  begin
-    insert into internal.schedulesearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "active",
-      "actor",
-      "date",
-      "identifier",
-      "service-category",
-      "service-type",
-      "specialty"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.active'),
-      jsonb_path_query(new.resource, '$.actor'),
-      jsonb_path_query(new.resource, '$.planningHorizon'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.serviceCategory'),
-      jsonb_path_query(new.resource, '$.serviceType'),
-      jsonb_path_query(new.resource, '$.specialty')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_slot()
-  returns trigger as $$
-  begin
-    insert into internal.slotsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "appointment-type",
-      "identifier",
-      "schedule",
-      "service-category",
-      "service-type",
-      "specialty",
-      "start",
-      "status"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.appointmentType'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.schedule'),
-      jsonb_path_query(new.resource, '$.serviceCategory'),
-      jsonb_path_query(new.resource, '$.serviceType'),
-      jsonb_path_query(new.resource, '$.specialty'),
-      jsonb_path_query(new.resource, '$.start'),
-      jsonb_path_query(new.resource, '$.status')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_specimen()
-  returns trigger as $$
-  begin
-    insert into internal.specimensearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "accession",
-      "bodysite",
-      "collected",
-      "collector",
-      "container",
-      "container-id",
-      "identifier",
-      "parent",
-      "patient",
-      "status",
-      "subject",
-      "type"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.accessionIdentifier'),
-      jsonb_path_query(new.resource, '$.collection.bodySite'),
-      jsonb_path_query(new.resource, '$.collection.collected'),
-      jsonb_path_query(new.resource, '$.collection.collector'),
-      jsonb_path_query(new.resource, '$.container.type'),
-      jsonb_path_query(new.resource, '$.container.identifier'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.parent'),
-      jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.subject'),
-      jsonb_path_query(new.resource, '$.type')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_specimendefinition()
-  returns trigger as $$
-  begin
-    insert into internal.specimendefinitionsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "container",
-      "identifier",
-      "type"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.typeTested.container.type'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.typeCollected')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_subscription()
-  returns trigger as $$
-  begin
-    insert into internal.subscriptionsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "contact",
-      "criteria",
-      "payload",
-      "status",
-      "type",
-      "url"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.contact'),
-      jsonb_path_query(new.resource, '$.criteria'),
-      jsonb_path_query(new.resource, '$.channel.payload'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.channel.type'),
-      jsonb_path_query(new.resource, '$.channel.endpoint')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_subscriptiontopic()
-  returns trigger as $$
-  begin
-    insert into internal.subscriptiontopicsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "date",
-      "derived-or-self",
-      "identifier",
-      "resource",
-      "status",
-      "title",
-      "trigger-description",
-      "url",
-      "version"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.url'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.resourceTrigger.resource'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.title'),
-      jsonb_path_query(new.resource, '$.resourceTrigger.description'),
-      jsonb_path_query(new.resource, '$.url'),
-      jsonb_path_query(new.resource, '$.version')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_substance()
-  returns trigger as $$
-  begin
-    insert into internal.substancesearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "category",
-      "code",
-      "container-identifier",
-      "expiry",
-      "identifier",
-      "quantity",
-      "status",
-      "substance-reference"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.category'),
-      jsonb_path_query(new.resource, '$.code'),
-      jsonb_path_query(new.resource, '$.instance.identifier'),
-      jsonb_path_query(new.resource, '$.instance.expiry'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.instance.quantity'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.ingredient.substanceReference')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_substancedefinition()
-  returns trigger as $$
-  begin
-    insert into internal.substancedefinitionsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "classification",
-      "code",
-      "domain",
-      "identifier",
-      "name"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.classification'),
-      jsonb_path_query(new.resource, '$.code.code'),
-      jsonb_path_query(new.resource, '$.domain'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.name.name')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_task()
-  returns trigger as $$
-  begin
-    insert into internal.tasksearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "authored-on",
-      "based-on",
-      "business-status",
-      "code",
-      "encounter",
-      "focus",
-      "group-identifier",
-      "identifier",
-      "intent",
-      "modified",
-      "owner",
-      "part-of",
-      "patient",
-      "performer",
-      "period",
-      "priority",
-      "requester",
-      "status",
-      "subject"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.authoredOn'),
-      jsonb_path_query(new.resource, '$.basedOn'),
-      jsonb_path_query(new.resource, '$.businessStatus'),
-      jsonb_path_query(new.resource, '$.code'),
-      jsonb_path_query(new.resource, '$.encounter'),
-      jsonb_path_query(new.resource, '$.focus'),
-      jsonb_path_query(new.resource, '$.groupIdentifier'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.intent'),
-      jsonb_path_query(new.resource, '$.lastModified'),
-      jsonb_path_query(new.resource, '$.owner'),
-      jsonb_path_query(new.resource, '$.partOf'),
-      jsonb_path_query(new.resource, '$.for[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
-      jsonb_path_query(new.resource, '$.performerType'),
-      jsonb_path_query(new.resource, '$.executionPeriod'),
-      jsonb_path_query(new.resource, '$.priority'),
-      jsonb_path_query(new.resource, '$.requester'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.for')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_testreport()
-  returns trigger as $$
-  begin
-    insert into internal.testreportsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "identifier",
-      "issued",
-      "participant",
-      "result",
-      "tester",
-      "testscript"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.issued'),
-      jsonb_path_query(new.resource, '$.participant.uri'),
-      jsonb_path_query(new.resource, '$.result'),
-      jsonb_path_query(new.resource, '$.tester'),
-      jsonb_path_query(new.resource, '$.testScript')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_testscript()
-  returns trigger as $$
-  begin
-    insert into internal.testscriptsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "context",
-      "context-quantity",
-      "context-type",
-      "date",
-      "description",
-      "identifier",
-      "jurisdiction",
-      "name",
-      "publisher",
-      "status",
-      "testscript-capability",
-      "title",
-      "url",
-      "version",
-      "context-type-quantity",
-      "context-type-value"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
-      jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
-      jsonb_path_query(new.resource, '$.useContext.code'),
-      jsonb_path_query(new.resource, '$.date'),
-      jsonb_path_query(new.resource, '$.description'),
-      jsonb_path_query(new.resource, '$.identifier'),
-      jsonb_path_query(new.resource, '$.jurisdiction'),
-      jsonb_path_query(new.resource, '$.name'),
-      jsonb_path_query(new.resource, '$.publisher'),
-      jsonb_path_query(new.resource, '$.status'),
-      jsonb_path_query(new.resource, '$.metadata.capability.description'),
-      jsonb_path_query(new.resource, '$.title'),
-      jsonb_path_query(new.resource, '$.url'),
-      jsonb_path_query(new.resource, '$.version'),
-      jsonb_path_query(new.resource, '$.useContext'),
-      jsonb_path_query(new.resource, '$.useContext')
-    );
-  return new;
-  end;
-$$ language plpgsql security definer;
-
-create or replace function internal.search_verificationresult()
-  returns trigger as $$
-  begin
-    insert into internal.verificationresultsearch
-    (
-      id,
-      "_content",
-      "_filter",
-      "_has",
-      "_id",
-      "_lastUpdated",
-      "_list",
-      "_profile",
-      "_query",
-      "_security",
-      "_source",
-      "_tag",
-      "_text",
-      "_type",
-      "target"
-    )
-    values
-    (
-      jsonb_path_query(new.resource, '$.id')::text,
-      jsonb_path_query(new.resource, '$.content'),
-      jsonb_path_query(new.resource, '$.filter'),
-      jsonb_path_query(new.resource, '$.has'),
-      jsonb_path_query(new.resource, '$.id'),
-      jsonb_path_query(new.resource, '$.meta.lastUpdated'),
-      jsonb_path_query(new.resource, '$.list'),
-      jsonb_path_query(new.resource, '$.meta.profile'),
-      jsonb_path_query(new.resource, '$.query'),
-      jsonb_path_query(new.resource, '$.meta.security'),
-      jsonb_path_query(new.resource, '$.meta.source'),
-      jsonb_path_query(new.resource, '$.meta.tag'),
-      jsonb_path_query(new.resource, '$.text'),
-      jsonb_path_query(new.resource, '$.type'),
-      jsonb_path_query(new.resource, '$.target')
-    );
+  create or replace function internal.search_account(public.account  new)
+  returns public.account as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."name" := jsonb_path_query(new.resource, '$.name'),
+      new."owner" := jsonb_path_query(new.resource, '$.owner'),
+      new."patient" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."period" := jsonb_path_query(new.resource, '$.servicePeriod'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+      new."type" := jsonb_path_query(new.resource, '$.type'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_activitydefinition(public.activitydefinition  new)
+  returns public.activitydefinition as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."composed-of" := jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''composed-of'').resource'),
+      new."context" := jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
+      new."context-quantity" := jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
+      new."context-type" := jsonb_path_query(new.resource, '$.useContext.code'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."depends-on" := jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''depends-on'').resource'),
+      new."derived-from" := jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''derived-from'').resource'),
+      new."description" := jsonb_path_query(new.resource, '$.description'),
+      new."effective" := jsonb_path_query(new.resource, '$.effectivePeriod'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."jurisdiction" := jsonb_path_query(new.resource, '$.jurisdiction'),
+      new."name" := jsonb_path_query(new.resource, '$.name'),
+      new."predecessor" := jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''predecessor'').resource'),
+      new."publisher" := jsonb_path_query(new.resource, '$.publisher'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."successor" := jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''successor'').resource'),
+      new."title" := jsonb_path_query(new.resource, '$.title'),
+      new."topic" := jsonb_path_query(new.resource, '$.topic'),
+      new."url" := jsonb_path_query(new.resource, '$.url'),
+      new."version" := jsonb_path_query(new.resource, '$.version'),
+      new."context-type-quantity" := jsonb_path_query(new.resource, '$.useContext'),
+      new."context-type-value" := jsonb_path_query(new.resource, '$.useContext'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_administrableproductdefinition(public.administrableproductdefinition  new)
+  returns public.administrableproductdefinition as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."device" := jsonb_path_query(new.resource, '$.device'),
+      new."dose-form" := jsonb_path_query(new.resource, '$.administrableDoseForm'),
+      new."form-of" := jsonb_path_query(new.resource, '$.formOf'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."ingredient" := jsonb_path_query(new.resource, '$.ingredient'),
+      new."manufactured-item" := jsonb_path_query(new.resource, '$.producedFrom'),
+      new."route" := jsonb_path_query(new.resource, '$.routeOfAdministration.code'),
+      new."target-species" := jsonb_path_query(new.resource, '$.routeOfAdministration.targetSpecies.code'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_adverseevent(public.adverseevent  new)
+  returns public.adverseevent as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."actuality" := jsonb_path_query(new.resource, '$.actuality'),
+      new."category" := jsonb_path_query(new.resource, '$.category'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."event" := jsonb_path_query(new.resource, '$.event'),
+      new."location" := jsonb_path_query(new.resource, '$.location'),
+      new."recorder" := jsonb_path_query(new.resource, '$.recorder'),
+      new."resultingcondition" := jsonb_path_query(new.resource, '$.resultingCondition'),
+      new."seriousness" := jsonb_path_query(new.resource, '$.seriousness'),
+      new."severity" := jsonb_path_query(new.resource, '$.severity'),
+      new."study" := jsonb_path_query(new.resource, '$.study'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+      new."substance" := jsonb_path_query(new.resource, '$.suspectEntity.instance'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_allergyintolerance(public.allergyintolerance  new)
+  returns public.allergyintolerance as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."asserter" := jsonb_path_query(new.resource, '$.asserter'),
+      new."category" := jsonb_path_query(new.resource, '$.category'),
+      new."clinical-status" := jsonb_path_query(new.resource, '$.clinicalStatus'),
+      new."code" := jsonb_path_query(new.resource, '$.code'),
+      new."criticality" := jsonb_path_query(new.resource, '$.criticality'),
+      new."date" := jsonb_path_query(new.resource, '$.recordedDate'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."last-date" := jsonb_path_query(new.resource, '$.lastOccurrence'),
+      new."manifestation" := jsonb_path_query(new.resource, '$.reaction.manifestation'),
+      new."onset" := jsonb_path_query(new.resource, '$.reaction.onset'),
+      new."patient" := jsonb_path_query(new.resource, '$.patient'),
+      new."recorder" := jsonb_path_query(new.resource, '$.recorder'),
+      new."route" := jsonb_path_query(new.resource, '$.reaction.exposureRoute'),
+      new."severity" := jsonb_path_query(new.resource, '$.reaction.severity'),
+      new."type" := jsonb_path_query(new.resource, '$.type'),
+      new."verification-status" := jsonb_path_query(new.resource, '$.verificationStatus'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_condition(public.condition  new)
+  returns public.condition as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."code" := jsonb_path_query(new.resource, '$.code'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."patient" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."abatement-age" := jsonb_path_query(new.resource, '$.abatementAge'),
+      new."abatement-date" := jsonb_path_query(new.resource, '$.abatementDateTime'),
+      new."abatement-string" := jsonb_path_query(new.resource, '$.abatementString'),
+      new."asserter" := jsonb_path_query(new.resource, '$.asserter'),
+      new."body-site" := jsonb_path_query(new.resource, '$.bodySite'),
+      new."category" := jsonb_path_query(new.resource, '$.category'),
+      new."clinical-status" := jsonb_path_query(new.resource, '$.clinicalStatus'),
+      new."encounter" := jsonb_path_query(new.resource, '$.encounter'),
+      new."evidence" := jsonb_path_query(new.resource, '$.evidence.code'),
+      new."evidence-detail" := jsonb_path_query(new.resource, '$.evidence.detail'),
+      new."onset-age" := jsonb_path_query(new.resource, '$.onsetAge'),
+      new."onset-date" := jsonb_path_query(new.resource, '$.onsetDateTime'),
+      new."onset-info" := jsonb_path_query(new.resource, '$.onsetString'),
+      new."recorded-date" := jsonb_path_query(new.resource, '$.recordedDate'),
+      new."severity" := jsonb_path_query(new.resource, '$.severity'),
+      new."stage" := jsonb_path_query(new.resource, '$.stage.summary'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+      new."verification-status" := jsonb_path_query(new.resource, '$.verificationStatus'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_devicerequest(public.devicerequest  new)
+  returns public.devicerequest as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."code" := jsonb_path_query(new.resource, '$.useContext.codeCodeableConcept'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."patient" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."encounter" := jsonb_path_query(new.resource, '$.encounter'),
+      new."authored-on" := jsonb_path_query(new.resource, '$.authoredOn'),
+      new."based-on" := jsonb_path_query(new.resource, '$.basedOn'),
+      new."device" := jsonb_path_query(new.resource, '$.useContext.codeReference'),
+      new."event-date" := jsonb_path_query(new.resource, '$.occurrenceDateTime'),
+      new."group-identifier" := jsonb_path_query(new.resource, '$.groupIdentifier'),
+      new."instantiates-canonical" := jsonb_path_query(new.resource, '$.instantiatesCanonical'),
+      new."instantiates-uri" := jsonb_path_query(new.resource, '$.instantiatesUri'),
+      new."insurance" := jsonb_path_query(new.resource, '$.insurance'),
+      new."intent" := jsonb_path_query(new.resource, '$.intent'),
+      new."performer" := jsonb_path_query(new.resource, '$.performer'),
+      new."prior-request" := jsonb_path_query(new.resource, '$.priorRequest'),
+      new."requester" := jsonb_path_query(new.resource, '$.requester'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_diagnosticreport(public.diagnosticreport  new)
+  returns public.diagnosticreport as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."code" := jsonb_path_query(new.resource, '$.code'),
+      new."date" := jsonb_path_query(new.resource, '$.effective'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."patient" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."encounter" := jsonb_path_query(new.resource, '$.encounter'),
+      new."based-on" := jsonb_path_query(new.resource, '$.basedOn'),
+      new."category" := jsonb_path_query(new.resource, '$.category'),
+      new."conclusion" := jsonb_path_query(new.resource, '$.conclusionCode'),
+      new."issued" := jsonb_path_query(new.resource, '$.issued'),
+      new."media" := jsonb_path_query(new.resource, '$.media.link'),
+      new."performer" := jsonb_path_query(new.resource, '$.performer'),
+      new."result" := jsonb_path_query(new.resource, '$.result'),
+      new."results-interpreter" := jsonb_path_query(new.resource, '$.resultsInterpreter'),
+      new."specimen" := jsonb_path_query(new.resource, '$.specimen'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_familymemberhistory(public.familymemberhistory  new)
+  returns public.familymemberhistory as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."code" := jsonb_path_query(new.resource, '$.condition.code'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."patient" := jsonb_path_query(new.resource, '$.patient'),
+      new."instantiates-canonical" := jsonb_path_query(new.resource, '$.instantiatesCanonical'),
+      new."instantiates-uri" := jsonb_path_query(new.resource, '$.instantiatesUri'),
+      new."relationship" := jsonb_path_query(new.resource, '$.relationship'),
+      new."sex" := jsonb_path_query(new.resource, '$.sex'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_list(public.list  new)
+  returns public.list as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."code" := jsonb_path_query(new.resource, '$.code'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."patient" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."encounter" := jsonb_path_query(new.resource, '$.encounter'),
+      new."empty-reason" := jsonb_path_query(new.resource, '$.emptyReason'),
+      new."item" := jsonb_path_query(new.resource, '$.entry.item'),
+      new."notes" := jsonb_path_query(new.resource, '$.note.text'),
+      new."source" := jsonb_path_query(new.resource, '$.source'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+      new."title" := jsonb_path_query(new.resource, '$.title'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_medication(public.medication  new)
+  returns public.medication as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."code" := jsonb_path_query(new.resource, '$.code'),
+      new."expiration-date" := jsonb_path_query(new.resource, '$.batch.expirationDate'),
+      new."form" := jsonb_path_query(new.resource, '$.form'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."ingredient" := jsonb_path_query(new.resource, '$.ingredient.itemReference'),
+      new."ingredient-code" := jsonb_path_query(new.resource, '$.ingredient.itemCodeableConcept'),
+      new."lot-number" := jsonb_path_query(new.resource, '$.batch.lotNumber'),
+      new."manufacturer" := jsonb_path_query(new.resource, '$.manufacturer'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_medicationadministration(public.medicationadministration  new)
+  returns public.medicationadministration as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."code" := jsonb_path_query(new.resource, '$.medicationCodeableConcept'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."patient" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."context" := jsonb_path_query(new.resource, '$.context'),
+      new."device" := jsonb_path_query(new.resource, '$.device'),
+      new."effective-time" := jsonb_path_query(new.resource, '$.effective'),
+      new."medication" := jsonb_path_query(new.resource, '$.medicationReference'),
+      new."performer" := jsonb_path_query(new.resource, '$.performer.actor'),
+      new."reason-given" := jsonb_path_query(new.resource, '$.reasonCode'),
+      new."reason-not-given" := jsonb_path_query(new.resource, '$.statusReason'),
+      new."request" := jsonb_path_query(new.resource, '$.request'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_medicationdispense(public.medicationdispense  new)
+  returns public.medicationdispense as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."code" := jsonb_path_query(new.resource, '$.medicationCodeableConcept'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."patient" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."medication" := jsonb_path_query(new.resource, '$.medicationReference'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."context" := jsonb_path_query(new.resource, '$.context'),
+      new."destination" := jsonb_path_query(new.resource, '$.destination'),
+      new."performer" := jsonb_path_query(new.resource, '$.performer.actor'),
+      new."prescription" := jsonb_path_query(new.resource, '$.authorizingPrescription'),
+      new."receiver" := jsonb_path_query(new.resource, '$.receiver'),
+      new."responsibleparty" := jsonb_path_query(new.resource, '$.substitution.responsibleParty'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+      new."type" := jsonb_path_query(new.resource, '$.type'),
+      new."whenhandedover" := jsonb_path_query(new.resource, '$.whenHandedOver'),
+      new."whenprepared" := jsonb_path_query(new.resource, '$.whenPrepared'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_medicationrequest(public.medicationrequest  new)
+  returns public.medicationrequest as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."code" := jsonb_path_query(new.resource, '$.medicationCodeableConcept'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."patient" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."medication" := jsonb_path_query(new.resource, '$.medicationReference'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."authoredon" := jsonb_path_query(new.resource, '$.authoredOn'),
+      new."category" := jsonb_path_query(new.resource, '$.category'),
+      new."date" := jsonb_path_query(new.resource, '$.dosageInstruction.timing.event'),
+      new."encounter" := jsonb_path_query(new.resource, '$.encounter'),
+      new."intended-dispenser" := jsonb_path_query(new.resource, '$.dispenseRequest.performer'),
+      new."intended-performer" := jsonb_path_query(new.resource, '$.performer'),
+      new."intended-performertype" := jsonb_path_query(new.resource, '$.performerType'),
+      new."intent" := jsonb_path_query(new.resource, '$.intent'),
+      new."priority" := jsonb_path_query(new.resource, '$.priority'),
+      new."requester" := jsonb_path_query(new.resource, '$.requester'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_medicationstatement(public.medicationstatement  new)
+  returns public.medicationstatement as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."code" := jsonb_path_query(new.resource, '$.medicationCodeableConcept'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."patient" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."medication" := jsonb_path_query(new.resource, '$.medicationReference'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."category" := jsonb_path_query(new.resource, '$.category'),
+      new."context" := jsonb_path_query(new.resource, '$.context'),
+      new."effective" := jsonb_path_query(new.resource, '$.effective'),
+      new."part-of" := jsonb_path_query(new.resource, '$.partOf'),
+      new."source" := jsonb_path_query(new.resource, '$.informationSource'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_observation(public.observation  new)
+  returns public.observation as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."code" := jsonb_path_query(new.resource, '$.code'),
+      new."date" := jsonb_path_query(new.resource, '$.effective'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."patient" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."encounter" := jsonb_path_query(new.resource, '$.encounter'),
+      new."based-on" := jsonb_path_query(new.resource, '$.basedOn'),
+      new."category" := jsonb_path_query(new.resource, '$.category'),
+      new."combo-code" := jsonb_path_query(new.resource, '$.code'),
+      new."combo-data-absent-reason" := jsonb_path_query(new.resource, '$.dataAbsentReason'),
+      new."combo-value-concept" := jsonb_path_query(new.resource, '$.valueCodeableConcept'),
+      new."combo-value-quantity" := jsonb_path_query(new.resource, '$.valueQuantity'),
+      new."component-code" := jsonb_path_query(new.resource, '$.component.code'),
+      new."component-data-absent-reason" := jsonb_path_query(new.resource, '$.component.dataAbsentReason'),
+      new."component-value-concept" := jsonb_path_query(new.resource, '$.component.valueCodeableConcept'),
+      new."component-value-quantity" := jsonb_path_query(new.resource, '$.component.valueQuantity'),
+      new."data-absent-reason" := jsonb_path_query(new.resource, '$.dataAbsentReason'),
+      new."derived-from" := jsonb_path_query(new.resource, '$.derivedFrom'),
+      new."device" := jsonb_path_query(new.resource, '$.device'),
+      new."focus" := jsonb_path_query(new.resource, '$.focus'),
+      new."has-member" := jsonb_path_query(new.resource, '$.hasMember'),
+      new."method" := jsonb_path_query(new.resource, '$.method'),
+      new."part-of" := jsonb_path_query(new.resource, '$.partOf'),
+      new."performer" := jsonb_path_query(new.resource, '$.performer'),
+      new."specimen" := jsonb_path_query(new.resource, '$.specimen'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+      new."value-concept" := jsonb_path_query(new.resource, '$.valueCodeableConcept'),
+      new."value-date" := jsonb_path_query(new.resource, '$.valueDateTime'),
+      new."value-quantity" := jsonb_path_query(new.resource, '$.valueQuantity'),
+      new."value-string" := jsonb_path_query(new.resource, '$.valueString'),
+      new."code-value-concept" := jsonb_path_query(new.resource, '$'),
+      new."code-value-date" := jsonb_path_query(new.resource, '$'),
+      new."code-value-quantity" := jsonb_path_query(new.resource, '$'),
+      new."code-value-string" := jsonb_path_query(new.resource, '$'),
+      new."combo-code-value-concept" := jsonb_path_query(new.resource, '$'),
+      new."combo-code-value-quantity" := jsonb_path_query(new.resource, '$'),
+      new."component-code-value-concept" := jsonb_path_query(new.resource, '$.component'),
+      new."component-code-value-quantity" := jsonb_path_query(new.resource, '$.component'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_procedure(public.procedure  new)
+  returns public.procedure as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."code" := jsonb_path_query(new.resource, '$.code'),
+      new."date" := jsonb_path_query(new.resource, '$.performed'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."patient" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."encounter" := jsonb_path_query(new.resource, '$.encounter'),
+      new."based-on" := jsonb_path_query(new.resource, '$.basedOn'),
+      new."category" := jsonb_path_query(new.resource, '$.category'),
+      new."instantiates-canonical" := jsonb_path_query(new.resource, '$.instantiatesCanonical'),
+      new."instantiates-uri" := jsonb_path_query(new.resource, '$.instantiatesUri'),
+      new."location" := jsonb_path_query(new.resource, '$.location'),
+      new."part-of" := jsonb_path_query(new.resource, '$.partOf'),
+      new."performer" := jsonb_path_query(new.resource, '$.performer.actor'),
+      new."reason-code" := jsonb_path_query(new.resource, '$.reasonCode'),
+      new."reason-reference" := jsonb_path_query(new.resource, '$.reasonReference'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_servicerequest(public.servicerequest  new)
+  returns public.servicerequest as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."code" := jsonb_path_query(new.resource, '$.code'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."patient" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."encounter" := jsonb_path_query(new.resource, '$.encounter'),
+      new."authored" := jsonb_path_query(new.resource, '$.authoredOn'),
+      new."based-on" := jsonb_path_query(new.resource, '$.basedOn'),
+      new."body-site" := jsonb_path_query(new.resource, '$.bodySite'),
+      new."category" := jsonb_path_query(new.resource, '$.category'),
+      new."instantiates-canonical" := jsonb_path_query(new.resource, '$.instantiatesCanonical'),
+      new."instantiates-uri" := jsonb_path_query(new.resource, '$.instantiatesUri'),
+      new."intent" := jsonb_path_query(new.resource, '$.intent'),
+      new."occurrence" := jsonb_path_query(new.resource, '$.occurrence'),
+      new."performer" := jsonb_path_query(new.resource, '$.performer'),
+      new."performer-type" := jsonb_path_query(new.resource, '$.performerType'),
+      new."priority" := jsonb_path_query(new.resource, '$.priority'),
+      new."replaces" := jsonb_path_query(new.resource, '$.replaces'),
+      new."requester" := jsonb_path_query(new.resource, '$.requester'),
+      new."requisition" := jsonb_path_query(new.resource, '$.requisition'),
+      new."specimen" := jsonb_path_query(new.resource, '$.specimen'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_careplan(public.careplan  new)
+  returns public.careplan as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."date" := jsonb_path_query(new.resource, '$.period'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."patient" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."activity-code" := jsonb_path_query(new.resource, '$.activity.detail.code'),
+      new."activity-date" := jsonb_path_query(new.resource, '$.activity.detail.scheduled'),
+      new."activity-reference" := jsonb_path_query(new.resource, '$.activity.reference'),
+      new."based-on" := jsonb_path_query(new.resource, '$.basedOn'),
+      new."care-team" := jsonb_path_query(new.resource, '$.careTeam'),
+      new."category" := jsonb_path_query(new.resource, '$.category'),
+      new."condition" := jsonb_path_query(new.resource, '$.addresses'),
+      new."encounter" := jsonb_path_query(new.resource, '$.encounter'),
+      new."goal" := jsonb_path_query(new.resource, '$.goal'),
+      new."instantiates-canonical" := jsonb_path_query(new.resource, '$.instantiatesCanonical'),
+      new."instantiates-uri" := jsonb_path_query(new.resource, '$.instantiatesUri'),
+      new."intent" := jsonb_path_query(new.resource, '$.intent'),
+      new."part-of" := jsonb_path_query(new.resource, '$.partOf'),
+      new."performer" := jsonb_path_query(new.resource, '$.activity.detail.performer'),
+      new."replaces" := jsonb_path_query(new.resource, '$.replaces'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_careteam(public.careteam  new)
+  returns public.careteam as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."date" := jsonb_path_query(new.resource, '$.period'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."patient" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."category" := jsonb_path_query(new.resource, '$.category'),
+      new."encounter" := jsonb_path_query(new.resource, '$.encounter'),
+      new."participant" := jsonb_path_query(new.resource, '$.participant.member'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_clinicalimpression(public.clinicalimpression  new)
+  returns public.clinicalimpression as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."patient" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."assessor" := jsonb_path_query(new.resource, '$.assessor'),
+      new."encounter" := jsonb_path_query(new.resource, '$.encounter'),
+      new."finding-code" := jsonb_path_query(new.resource, '$.finding.itemCodeableConcept'),
+      new."finding-ref" := jsonb_path_query(new.resource, '$.finding.itemReference'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."investigation" := jsonb_path_query(new.resource, '$.investigation.item'),
+      new."previous" := jsonb_path_query(new.resource, '$.previous'),
+      new."problem" := jsonb_path_query(new.resource, '$.problem'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+      new."supporting-info" := jsonb_path_query(new.resource, '$.supportingInfo'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_composition(public.composition  new)
+  returns public.composition as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."patient" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."type" := jsonb_path_query(new.resource, '$.type'),
+      new."attester" := jsonb_path_query(new.resource, '$.attester.party'),
+      new."author" := jsonb_path_query(new.resource, '$.author'),
+      new."category" := jsonb_path_query(new.resource, '$.category'),
+      new."confidentiality" := jsonb_path_query(new.resource, '$.confidentiality'),
+      new."context" := jsonb_path_query(new.resource, '$.event.code'),
+      new."encounter" := jsonb_path_query(new.resource, '$.encounter'),
+      new."entry" := jsonb_path_query(new.resource, '$.section.entry'),
+      new."period" := jsonb_path_query(new.resource, '$.event.period'),
+      new."related-id" := jsonb_path_query(new.resource, '$.relatesTo.targetIdentifier'),
+      new."related-ref" := jsonb_path_query(new.resource, '$.relatesTo.targetReference'),
+      new."section" := jsonb_path_query(new.resource, '$.section.code'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+      new."title" := jsonb_path_query(new.resource, '$.title'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_consent(public.consent  new)
+  returns public.consent as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."date" := jsonb_path_query(new.resource, '$.dateTime'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."patient" := jsonb_path_query(new.resource, '$.patient'),
+      new."action" := jsonb_path_query(new.resource, '$.provision.action'),
+      new."actor" := jsonb_path_query(new.resource, '$.provision.actor.reference'),
+      new."category" := jsonb_path_query(new.resource, '$.category'),
+      new."consentor" := jsonb_path_query(new.resource, '$.performer'),
+      new."data" := jsonb_path_query(new.resource, '$.provision.data.reference'),
+      new."organization" := jsonb_path_query(new.resource, '$.organization'),
+      new."period" := jsonb_path_query(new.resource, '$.provision.period'),
+      new."purpose" := jsonb_path_query(new.resource, '$.provision.purpose'),
+      new."scope" := jsonb_path_query(new.resource, '$.scope'),
+      new."security-label" := jsonb_path_query(new.resource, '$.provision.securityLabel'),
+      new."source-reference" := jsonb_path_query(new.resource, '$.source'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_encounter(public.encounter  new)
+  returns public.encounter as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."date" := jsonb_path_query(new.resource, '$.period'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."patient" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."type" := jsonb_path_query(new.resource, '$.type'),
+      new."account" := jsonb_path_query(new.resource, '$.account'),
+      new."appointment" := jsonb_path_query(new.resource, '$.appointment'),
+      new."based-on" := jsonb_path_query(new.resource, '$.basedOn'),
+      new."class" := jsonb_path_query(new.resource, '$.class'),
+      new."diagnosis" := jsonb_path_query(new.resource, '$.diagnosis.condition'),
+      new."episode-of-care" := jsonb_path_query(new.resource, '$.episodeOfCare'),
+      new."length" := jsonb_path_query(new.resource, '$.length'),
+      new."location" := jsonb_path_query(new.resource, '$.location.location'),
+      new."location-period" := jsonb_path_query(new.resource, '$.location.period'),
+      new."part-of" := jsonb_path_query(new.resource, '$.partOf'),
+      new."participant" := jsonb_path_query(new.resource, '$.participant.individual'),
+      new."participant-type" := jsonb_path_query(new.resource, '$.participant.type'),
+      new."practitioner" := jsonb_path_query(new.resource, '$.participant.individual[*] ? (@.type like_regex "^.*Practitioner.*") ? (@.reference like_regex "^.*Practitioner.*")'),
+      new."reason-code" := jsonb_path_query(new.resource, '$.reasonCode'),
+      new."reason-reference" := jsonb_path_query(new.resource, '$.reasonReference'),
+      new."service-provider" := jsonb_path_query(new.resource, '$.serviceProvider'),
+      new."special-arrangement" := jsonb_path_query(new.resource, '$.hospitalization.specialArrangement'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_episodeofcare(public.episodeofcare  new)
+  returns public.episodeofcare as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."date" := jsonb_path_query(new.resource, '$.period'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."patient" := jsonb_path_query(new.resource, '$.patient'),
+      new."type" := jsonb_path_query(new.resource, '$.type'),
+      new."care-manager" := jsonb_path_query(new.resource, '$.careManager[*] ? (@.type like_regex "^.*Practitioner.*") ? (@.reference like_regex "^.*Practitioner.*")'),
+      new."condition" := jsonb_path_query(new.resource, '$.diagnosis.condition'),
+      new."incoming-referral" := jsonb_path_query(new.resource, '$.referralRequest'),
+      new."organization" := jsonb_path_query(new.resource, '$.managingOrganization'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_flag(public.flag  new)
+  returns public.flag as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."date" := jsonb_path_query(new.resource, '$.period'),
+      new."patient" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."encounter" := jsonb_path_query(new.resource, '$.encounter'),
+      new."author" := jsonb_path_query(new.resource, '$.author'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_immunization(public.immunization  new)
+  returns public.immunization as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."date" := jsonb_path_query(new.resource, '$.occurrenceDateTime'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."patient" := jsonb_path_query(new.resource, '$.patient'),
+      new."location" := jsonb_path_query(new.resource, '$.location'),
+      new."lot-number" := jsonb_path_query(new.resource, '$.lotNumber'),
+      new."manufacturer" := jsonb_path_query(new.resource, '$.manufacturer'),
+      new."performer" := jsonb_path_query(new.resource, '$.performer.actor'),
+      new."reaction" := jsonb_path_query(new.resource, '$.reaction.detail'),
+      new."reaction-date" := jsonb_path_query(new.resource, '$.reaction.date'),
+      new."reason-code" := jsonb_path_query(new.resource, '$.reasonCode'),
+      new."reason-reference" := jsonb_path_query(new.resource, '$.reasonReference'),
+      new."series" := jsonb_path_query(new.resource, '$.protocolApplied.series'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."status-reason" := jsonb_path_query(new.resource, '$.statusReason'),
+      new."target-disease" := jsonb_path_query(new.resource, '$.protocolApplied.targetDisease'),
+      new."vaccine-code" := jsonb_path_query(new.resource, '$.vaccineCode'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_riskassessment(public.riskassessment  new)
+  returns public.riskassessment as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."date" := jsonb_path_query(new.resource, '$.occurrenceDateTime'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."patient" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."encounter" := jsonb_path_query(new.resource, '$.encounter'),
+      new."condition" := jsonb_path_query(new.resource, '$.condition'),
+      new."method" := jsonb_path_query(new.resource, '$.method'),
+      new."performer" := jsonb_path_query(new.resource, '$.performer'),
+      new."probability" := jsonb_path_query(new.resource, '$.prediction.probability'),
+      new."risk" := jsonb_path_query(new.resource, '$.prediction.qualitativeRisk'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_supplyrequest(public.supplyrequest  new)
+  returns public.supplyrequest as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."date" := jsonb_path_query(new.resource, '$.authoredOn'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."category" := jsonb_path_query(new.resource, '$.category'),
+      new."requester" := jsonb_path_query(new.resource, '$.requester'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."subject" := jsonb_path_query(new.resource, '$.deliverTo'),
+      new."supplier" := jsonb_path_query(new.resource, '$.supplier'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_detectedissue(public.detectedissue  new)
+  returns public.detectedissue as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."patient" := jsonb_path_query(new.resource, '$.patient'),
+      new."author" := jsonb_path_query(new.resource, '$.author'),
+      new."code" := jsonb_path_query(new.resource, '$.code'),
+      new."identified" := jsonb_path_query(new.resource, '$.identified'),
+      new."implicated" := jsonb_path_query(new.resource, '$.implicated'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_documentmanifest(public.documentmanifest  new)
+  returns public.documentmanifest as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."identifier" := jsonb_path_query(new.resource, '$.masterIdentifier'),
+      new."patient" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."type" := jsonb_path_query(new.resource, '$.type'),
+      new."author" := jsonb_path_query(new.resource, '$.author'),
+      new."created" := jsonb_path_query(new.resource, '$.created'),
+      new."description" := jsonb_path_query(new.resource, '$.description'),
+      new."item" := jsonb_path_query(new.resource, '$.content'),
+      new."recipient" := jsonb_path_query(new.resource, '$.recipient'),
+      new."related-id" := jsonb_path_query(new.resource, '$.related.identifier'),
+      new."related-ref" := jsonb_path_query(new.resource, '$.related.ref'),
+      new."source" := jsonb_path_query(new.resource, '$.source'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_documentreference(public.documentreference  new)
+  returns public.documentreference as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."identifier" := jsonb_path_query(new.resource, '$.masterIdentifier'),
+      new."patient" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."type" := jsonb_path_query(new.resource, '$.type'),
+      new."encounter" := jsonb_path_query(new.resource, '$.context.encounter[*] ? (@.type like_regex "^.*Encounter.*") ? (@.reference like_regex "^.*Encounter.*")'),
+      new."authenticator" := jsonb_path_query(new.resource, '$.authenticator'),
+      new."author" := jsonb_path_query(new.resource, '$.author'),
+      new."category" := jsonb_path_query(new.resource, '$.category'),
+      new."contenttype" := jsonb_path_query(new.resource, '$.content.attachment.contentType'),
+      new."custodian" := jsonb_path_query(new.resource, '$.custodian'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."description" := jsonb_path_query(new.resource, '$.description'),
+      new."event" := jsonb_path_query(new.resource, '$.context.event'),
+      new."facility" := jsonb_path_query(new.resource, '$.context.facilityType'),
+      new."format" := jsonb_path_query(new.resource, '$.content.format'),
+      new."language" := jsonb_path_query(new.resource, '$.content.attachment.language'),
+      new."location" := jsonb_path_query(new.resource, '$.content.attachment.url'),
+      new."period" := jsonb_path_query(new.resource, '$.context.period'),
+      new."related" := jsonb_path_query(new.resource, '$.context.related'),
+      new."relatesto" := jsonb_path_query(new.resource, '$.relatesTo.target'),
+      new."relation" := jsonb_path_query(new.resource, '$.relatesTo.code'),
+      new."security-label" := jsonb_path_query(new.resource, '$.securityLabel'),
+      new."setting" := jsonb_path_query(new.resource, '$.context.practiceSetting'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+      new."relationship" := jsonb_path_query(new.resource, '$.relatesTo'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_goal(public.goal  new)
+  returns public.goal as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."patient" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."achievement-status" := jsonb_path_query(new.resource, '$.achievementStatus'),
+      new."category" := jsonb_path_query(new.resource, '$.category'),
+      new."lifecycle-status" := jsonb_path_query(new.resource, '$.lifecycleStatus'),
+      new."start-date" := jsonb_path_query(new.resource, '$.startDate'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+      new."target-date" := jsonb_path_query(new.resource, '$.target.dueDate'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_imagingstudy(public.imagingstudy  new)
+  returns public.imagingstudy as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."patient" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."basedon" := jsonb_path_query(new.resource, '$.basedOn'),
+      new."bodysite" := jsonb_path_query(new.resource, '$.series.bodySite'),
+      new."dicom-class" := jsonb_path_query(new.resource, '$.series.instance.sopClass'),
+      new."encounter" := jsonb_path_query(new.resource, '$.encounter'),
+      new."endpoint" := jsonb_path_query(new.resource, '$.endpoint'),
+      new."instance" := jsonb_path_query(new.resource, '$.series.instance.uid'),
+      new."interpreter" := jsonb_path_query(new.resource, '$.interpreter'),
+      new."modality" := jsonb_path_query(new.resource, '$.series.modality'),
+      new."performer" := jsonb_path_query(new.resource, '$.series.performer.actor'),
+      new."reason" := jsonb_path_query(new.resource, '$.reasonCode'),
+      new."referrer" := jsonb_path_query(new.resource, '$.referrer'),
+      new."series" := jsonb_path_query(new.resource, '$.series.uid'),
+      new."started" := jsonb_path_query(new.resource, '$.started'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_nutritionorder(public.nutritionorder  new)
+  returns public.nutritionorder as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."patient" := jsonb_path_query(new.resource, '$.patient'),
+      new."encounter" := jsonb_path_query(new.resource, '$.encounter'),
+      new."additive" := jsonb_path_query(new.resource, '$.enteralFormula.additiveType'),
+      new."datetime" := jsonb_path_query(new.resource, '$.dateTime'),
+      new."formula" := jsonb_path_query(new.resource, '$.enteralFormula.baseFormulaType'),
+      new."instantiates-canonical" := jsonb_path_query(new.resource, '$.instantiatesCanonical'),
+      new."instantiates-uri" := jsonb_path_query(new.resource, '$.instantiatesUri'),
+      new."oraldiet" := jsonb_path_query(new.resource, '$.oralDiet.type'),
+      new."provider" := jsonb_path_query(new.resource, '$.orderer'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."supplement" := jsonb_path_query(new.resource, '$.supplement.type'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_supplydelivery(public.supplydelivery  new)
+  returns public.supplydelivery as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."patient" := jsonb_path_query(new.resource, '$.patient'),
+      new."receiver" := jsonb_path_query(new.resource, '$.receiver'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."supplier" := jsonb_path_query(new.resource, '$.supplier'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_visionprescription(public.visionprescription  new)
+  returns public.visionprescription as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."patient" := jsonb_path_query(new.resource, '$.patient'),
+      new."encounter" := jsonb_path_query(new.resource, '$.encounter'),
+      new."datewritten" := jsonb_path_query(new.resource, '$.dateWritten'),
+      new."prescriber" := jsonb_path_query(new.resource, '$.prescriber'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_deviceusestatement(public.deviceusestatement  new)
+  returns public.deviceusestatement as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."patient" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."device" := jsonb_path_query(new.resource, '$.device'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_appointment(public.appointment  new)
+  returns public.appointment as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."actor" := jsonb_path_query(new.resource, '$.participant.actor'),
+      new."appointment-type" := jsonb_path_query(new.resource, '$.appointmentType'),
+      new."based-on" := jsonb_path_query(new.resource, '$.basedOn'),
+      new."date" := jsonb_path_query(new.resource, '$.start'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."location" := jsonb_path_query(new.resource, '$.participant.actor[*] ? (@.type like_regex "^.*Location.*") ? (@.reference like_regex "^.*Location.*")'),
+      new."part-status" := jsonb_path_query(new.resource, '$.participant.status'),
+      new."patient" := jsonb_path_query(new.resource, '$.participant.actor[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."practitioner" := jsonb_path_query(new.resource, '$.participant.actor[*] ? (@.type like_regex "^.*Practitioner.*") ? (@.reference like_regex "^.*Practitioner.*")'),
+      new."reason-code" := jsonb_path_query(new.resource, '$.reasonCode'),
+      new."reason-reference" := jsonb_path_query(new.resource, '$.reasonReference'),
+      new."service-category" := jsonb_path_query(new.resource, '$.serviceCategory'),
+      new."service-type" := jsonb_path_query(new.resource, '$.serviceType'),
+      new."slot" := jsonb_path_query(new.resource, '$.slot'),
+      new."specialty" := jsonb_path_query(new.resource, '$.specialty'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."supporting-info" := jsonb_path_query(new.resource, '$.supportingInformation'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_appointmentresponse(public.appointmentresponse  new)
+  returns public.appointmentresponse as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."actor" := jsonb_path_query(new.resource, '$.actor'),
+      new."appointment" := jsonb_path_query(new.resource, '$.appointment'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."location" := jsonb_path_query(new.resource, '$.actor[*] ? (@.type like_regex "^.*Location.*") ? (@.reference like_regex "^.*Location.*")'),
+      new."part-status" := jsonb_path_query(new.resource, '$.participantStatus'),
+      new."patient" := jsonb_path_query(new.resource, '$.actor[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."practitioner" := jsonb_path_query(new.resource, '$.actor[*] ? (@.type like_regex "^.*Practitioner.*") ? (@.reference like_regex "^.*Practitioner.*")'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_auditevent(public.auditevent  new)
+  returns public.auditevent as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."action" := jsonb_path_query(new.resource, '$.action'),
+      new."address" := jsonb_path_query(new.resource, '$.agent.network.address'),
+      new."agent" := jsonb_path_query(new.resource, '$.agent.who'),
+      new."agent-name" := jsonb_path_query(new.resource, '$.agent.name'),
+      new."agent-role" := jsonb_path_query(new.resource, '$.agent.role'),
+      new."altid" := jsonb_path_query(new.resource, '$.agent.altId'),
+      new."date" := jsonb_path_query(new.resource, '$.recorded'),
+      new."entity" := jsonb_path_query(new.resource, '$.entity.what'),
+      new."entity-name" := jsonb_path_query(new.resource, '$.entity.name'),
+      new."entity-role" := jsonb_path_query(new.resource, '$.entity.role'),
+      new."entity-type" := jsonb_path_query(new.resource, '$.entity.type'),
+      new."outcome" := jsonb_path_query(new.resource, '$.outcome'),
+      new."patient" := jsonb_path_query(new.resource, '$.agent.who[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."policy" := jsonb_path_query(new.resource, '$.agent.policy'),
+      new."site" := jsonb_path_query(new.resource, '$.source.site'),
+      new."source" := jsonb_path_query(new.resource, '$.source.observer'),
+      new."subtype" := jsonb_path_query(new.resource, '$.subtype'),
+      new."type" := jsonb_path_query(new.resource, '$.type'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_basic(public.basic  new)
+  returns public.basic as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."author" := jsonb_path_query(new.resource, '$.author'),
+      new."code" := jsonb_path_query(new.resource, '$.code'),
+      new."created" := jsonb_path_query(new.resource, '$.created'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."patient" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_bodystructure(public.bodystructure  new)
+  returns public.bodystructure as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."location" := jsonb_path_query(new.resource, '$.location'),
+      new."morphology" := jsonb_path_query(new.resource, '$.morphology'),
+      new."patient" := jsonb_path_query(new.resource, '$.patient'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_bundle(public.bundle  new)
+  returns public.bundle as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."composition" := jsonb_path_query(new.resource, '$.entry[0].resource'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."message" := jsonb_path_query(new.resource, '$.entry[0].resource'),
+      new."timestamp" := jsonb_path_query(new.resource, '$.timestamp'),
+      new."type" := jsonb_path_query(new.resource, '$.type'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_capabilitystatement(public.capabilitystatement  new)
+  returns public.capabilitystatement as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."context" := jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
+      new."context-quantity" := jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
+      new."context-type" := jsonb_path_query(new.resource, '$.useContext.code'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."description" := jsonb_path_query(new.resource, '$.description'),
+      new."fhirversion" := jsonb_path_query(new.resource, '$.version'),
+      new."format" := jsonb_path_query(new.resource, '$.format'),
+      new."guide" := jsonb_path_query(new.resource, '$.implementationGuide'),
+      new."jurisdiction" := jsonb_path_query(new.resource, '$.jurisdiction'),
+      new."mode" := jsonb_path_query(new.resource, '$.rest.mode'),
+      new."name" := jsonb_path_query(new.resource, '$.name'),
+      new."publisher" := jsonb_path_query(new.resource, '$.publisher'),
+      new."resource" := jsonb_path_query(new.resource, '$.rest.resource.type'),
+      new."resource-profile" := jsonb_path_query(new.resource, '$.rest.resource.profile'),
+      new."security-service" := jsonb_path_query(new.resource, '$.rest.security.service'),
+      new."software" := jsonb_path_query(new.resource, '$.software.name'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."supported-profile" := jsonb_path_query(new.resource, '$.rest.resource.supportedProfile'),
+      new."title" := jsonb_path_query(new.resource, '$.title'),
+      new."url" := jsonb_path_query(new.resource, '$.url'),
+      new."version" := jsonb_path_query(new.resource, '$.version'),
+      new."context-type-quantity" := jsonb_path_query(new.resource, '$.useContext'),
+      new."context-type-value" := jsonb_path_query(new.resource, '$.useContext'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_codesystem(public.codesystem  new)
+  returns public.codesystem as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."context" := jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
+      new."context-quantity" := jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
+      new."context-type" := jsonb_path_query(new.resource, '$.useContext.code'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."description" := jsonb_path_query(new.resource, '$.description'),
+      new."jurisdiction" := jsonb_path_query(new.resource, '$.jurisdiction'),
+      new."name" := jsonb_path_query(new.resource, '$.name'),
+      new."publisher" := jsonb_path_query(new.resource, '$.publisher'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."title" := jsonb_path_query(new.resource, '$.title'),
+      new."url" := jsonb_path_query(new.resource, '$.url'),
+      new."version" := jsonb_path_query(new.resource, '$.version'),
+      new."context-type-quantity" := jsonb_path_query(new.resource, '$.useContext'),
+      new."context-type-value" := jsonb_path_query(new.resource, '$.useContext'),
+      new."code" := jsonb_path_query(new.resource, '$.concept.code'),
+      new."content-mode" := jsonb_path_query(new.resource, '$.content'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."language" := jsonb_path_query(new.resource, '$.concept.designation.language'),
+      new."supplements" := jsonb_path_query(new.resource, '$.supplements'),
+      new."system" := jsonb_path_query(new.resource, '$.url'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_compartmentdefinition(public.compartmentdefinition  new)
+  returns public.compartmentdefinition as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."context" := jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
+      new."context-quantity" := jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
+      new."context-type" := jsonb_path_query(new.resource, '$.useContext.code'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."description" := jsonb_path_query(new.resource, '$.description'),
+      new."name" := jsonb_path_query(new.resource, '$.name'),
+      new."publisher" := jsonb_path_query(new.resource, '$.publisher'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."url" := jsonb_path_query(new.resource, '$.url'),
+      new."version" := jsonb_path_query(new.resource, '$.version'),
+      new."context-type-quantity" := jsonb_path_query(new.resource, '$.useContext'),
+      new."context-type-value" := jsonb_path_query(new.resource, '$.useContext'),
+      new."code" := jsonb_path_query(new.resource, '$.code'),
+      new."resource" := jsonb_path_query(new.resource, '$.resource.code'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_conceptmap(public.conceptmap  new)
+  returns public.conceptmap as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."context" := jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
+      new."context-quantity" := jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
+      new."context-type" := jsonb_path_query(new.resource, '$.useContext.code'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."description" := jsonb_path_query(new.resource, '$.description'),
+      new."jurisdiction" := jsonb_path_query(new.resource, '$.jurisdiction'),
+      new."name" := jsonb_path_query(new.resource, '$.name'),
+      new."publisher" := jsonb_path_query(new.resource, '$.publisher'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."title" := jsonb_path_query(new.resource, '$.title'),
+      new."url" := jsonb_path_query(new.resource, '$.url'),
+      new."version" := jsonb_path_query(new.resource, '$.version'),
+      new."context-type-quantity" := jsonb_path_query(new.resource, '$.useContext'),
+      new."context-type-value" := jsonb_path_query(new.resource, '$.useContext'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."dependson" := jsonb_path_query(new.resource, '$.group.element.target.dependsOn.property'),
+      new."other" := jsonb_path_query(new.resource, '$.group.unmapped.url'),
+      new."product" := jsonb_path_query(new.resource, '$.group.element.target.product.property'),
+      new."source" := jsonb_path_query(new.resource, '$.sourceCanonical'),
+      new."source-code" := jsonb_path_query(new.resource, '$.group.element.code'),
+      new."source-system" := jsonb_path_query(new.resource, '$.group.source'),
+      new."source-uri" := jsonb_path_query(new.resource, '$.sourceUri'),
+      new."target" := jsonb_path_query(new.resource, '$.targetCanonical'),
+      new."target-code" := jsonb_path_query(new.resource, '$.group.element.target.code'),
+      new."target-system" := jsonb_path_query(new.resource, '$.group.target'),
+      new."target-uri" := jsonb_path_query(new.resource, '$.targetUri'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_graphdefinition(public.graphdefinition  new)
+  returns public.graphdefinition as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."context" := jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
+      new."context-quantity" := jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
+      new."context-type" := jsonb_path_query(new.resource, '$.useContext.code'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."description" := jsonb_path_query(new.resource, '$.description'),
+      new."jurisdiction" := jsonb_path_query(new.resource, '$.jurisdiction'),
+      new."name" := jsonb_path_query(new.resource, '$.name'),
+      new."publisher" := jsonb_path_query(new.resource, '$.publisher'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."url" := jsonb_path_query(new.resource, '$.url'),
+      new."version" := jsonb_path_query(new.resource, '$.version'),
+      new."context-type-quantity" := jsonb_path_query(new.resource, '$.useContext'),
+      new."context-type-value" := jsonb_path_query(new.resource, '$.useContext'),
+      new."start" := jsonb_path_query(new.resource, '$.start'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_implementationguide(public.implementationguide  new)
+  returns public.implementationguide as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."context" := jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
+      new."context-quantity" := jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
+      new."context-type" := jsonb_path_query(new.resource, '$.useContext.code'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."description" := jsonb_path_query(new.resource, '$.description'),
+      new."jurisdiction" := jsonb_path_query(new.resource, '$.jurisdiction'),
+      new."name" := jsonb_path_query(new.resource, '$.name'),
+      new."publisher" := jsonb_path_query(new.resource, '$.publisher'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."title" := jsonb_path_query(new.resource, '$.title'),
+      new."url" := jsonb_path_query(new.resource, '$.url'),
+      new."version" := jsonb_path_query(new.resource, '$.version'),
+      new."context-type-quantity" := jsonb_path_query(new.resource, '$.useContext'),
+      new."context-type-value" := jsonb_path_query(new.resource, '$.useContext'),
+      new."depends-on" := jsonb_path_query(new.resource, '$.dependsOn.uri'),
+      new."experimental" := jsonb_path_query(new.resource, '$.experimental'),
+      new."global" := jsonb_path_query(new.resource, '$.global.profile'),
+      new."resource" := jsonb_path_query(new.resource, '$.definition.resource.reference'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_messagedefinition(public.messagedefinition  new)
+  returns public.messagedefinition as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."context" := jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
+      new."context-quantity" := jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
+      new."context-type" := jsonb_path_query(new.resource, '$.useContext.code'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."description" := jsonb_path_query(new.resource, '$.description'),
+      new."jurisdiction" := jsonb_path_query(new.resource, '$.jurisdiction'),
+      new."name" := jsonb_path_query(new.resource, '$.name'),
+      new."publisher" := jsonb_path_query(new.resource, '$.publisher'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."title" := jsonb_path_query(new.resource, '$.title'),
+      new."url" := jsonb_path_query(new.resource, '$.url'),
+      new."version" := jsonb_path_query(new.resource, '$.version'),
+      new."context-type-quantity" := jsonb_path_query(new.resource, '$.useContext'),
+      new."context-type-value" := jsonb_path_query(new.resource, '$.useContext'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."category" := jsonb_path_query(new.resource, '$.category'),
+      new."event" := jsonb_path_query(new.resource, '$.event'),
+      new."focus" := jsonb_path_query(new.resource, '$.focus.code'),
+      new."parent" := jsonb_path_query(new.resource, '$.parent'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_namingsystem(public.namingsystem  new)
+  returns public.namingsystem as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."context" := jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
+      new."context-quantity" := jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
+      new."context-type" := jsonb_path_query(new.resource, '$.useContext.code'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."description" := jsonb_path_query(new.resource, '$.description'),
+      new."jurisdiction" := jsonb_path_query(new.resource, '$.jurisdiction'),
+      new."name" := jsonb_path_query(new.resource, '$.name'),
+      new."publisher" := jsonb_path_query(new.resource, '$.publisher'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."context-type-quantity" := jsonb_path_query(new.resource, '$.useContext'),
+      new."context-type-value" := jsonb_path_query(new.resource, '$.useContext'),
+      new."contact" := jsonb_path_query(new.resource, '$.contact.name'),
+      new."id-type" := jsonb_path_query(new.resource, '$.uniqueId.type'),
+      new."kind" := jsonb_path_query(new.resource, '$.kind'),
+      new."period" := jsonb_path_query(new.resource, '$.uniqueId.period'),
+      new."responsible" := jsonb_path_query(new.resource, '$.responsible'),
+      new."telecom" := jsonb_path_query(new.resource, '$.contact.telecom'),
+      new."type" := jsonb_path_query(new.resource, '$.type'),
+      new."value" := jsonb_path_query(new.resource, '$.uniqueId.value'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_operationdefinition(public.operationdefinition  new)
+  returns public.operationdefinition as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."context" := jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
+      new."context-quantity" := jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
+      new."context-type" := jsonb_path_query(new.resource, '$.useContext.code'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."description" := jsonb_path_query(new.resource, '$.description'),
+      new."jurisdiction" := jsonb_path_query(new.resource, '$.jurisdiction'),
+      new."name" := jsonb_path_query(new.resource, '$.name'),
+      new."publisher" := jsonb_path_query(new.resource, '$.publisher'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."title" := jsonb_path_query(new.resource, '$.title'),
+      new."url" := jsonb_path_query(new.resource, '$.url'),
+      new."version" := jsonb_path_query(new.resource, '$.version'),
+      new."context-type-quantity" := jsonb_path_query(new.resource, '$.useContext'),
+      new."context-type-value" := jsonb_path_query(new.resource, '$.useContext'),
+      new."base" := jsonb_path_query(new.resource, '$.base'),
+      new."code" := jsonb_path_query(new.resource, '$.code'),
+      new."input-profile" := jsonb_path_query(new.resource, '$.inputProfile'),
+      new."instance" := jsonb_path_query(new.resource, '$.instance'),
+      new."kind" := jsonb_path_query(new.resource, '$.kind'),
+      new."output-profile" := jsonb_path_query(new.resource, '$.outputProfile'),
+      new."system" := jsonb_path_query(new.resource, '$.system'),
+      new."type" := jsonb_path_query(new.resource, '$.type'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_searchparameter(public.searchparameter  new)
+  returns public.searchparameter as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."context" := jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
+      new."context-quantity" := jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
+      new."context-type" := jsonb_path_query(new.resource, '$.useContext.code'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."description" := jsonb_path_query(new.resource, '$.description'),
+      new."jurisdiction" := jsonb_path_query(new.resource, '$.jurisdiction'),
+      new."name" := jsonb_path_query(new.resource, '$.name'),
+      new."publisher" := jsonb_path_query(new.resource, '$.publisher'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."url" := jsonb_path_query(new.resource, '$.url'),
+      new."version" := jsonb_path_query(new.resource, '$.version'),
+      new."context-type-quantity" := jsonb_path_query(new.resource, '$.useContext'),
+      new."context-type-value" := jsonb_path_query(new.resource, '$.useContext'),
+      new."base" := jsonb_path_query(new.resource, '$.base'),
+      new."code" := jsonb_path_query(new.resource, '$.code'),
+      new."component" := jsonb_path_query(new.resource, '$.component.definition'),
+      new."derived-from" := jsonb_path_query(new.resource, '$.derivedFrom'),
+      new."target" := jsonb_path_query(new.resource, '$.target'),
+      new."type" := jsonb_path_query(new.resource, '$.type'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_structuredefinition(public.structuredefinition  new)
+  returns public.structuredefinition as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."context" := jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
+      new."context-quantity" := jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
+      new."context-type" := jsonb_path_query(new.resource, '$.useContext.code'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."description" := jsonb_path_query(new.resource, '$.description'),
+      new."jurisdiction" := jsonb_path_query(new.resource, '$.jurisdiction'),
+      new."name" := jsonb_path_query(new.resource, '$.name'),
+      new."publisher" := jsonb_path_query(new.resource, '$.publisher'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."title" := jsonb_path_query(new.resource, '$.title'),
+      new."url" := jsonb_path_query(new.resource, '$.url'),
+      new."version" := jsonb_path_query(new.resource, '$.version'),
+      new."context-type-quantity" := jsonb_path_query(new.resource, '$.useContext'),
+      new."context-type-value" := jsonb_path_query(new.resource, '$.useContext'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."abstract" := jsonb_path_query(new.resource, '$.abstract'),
+      new."base" := jsonb_path_query(new.resource, '$.baseDefinition'),
+      new."base-path" := jsonb_path_query(new.resource, '$.snapshot.element.base.path'),
+      new."derivation" := jsonb_path_query(new.resource, '$.derivation'),
+      new."experimental" := jsonb_path_query(new.resource, '$.experimental'),
+      new."ext-context" := jsonb_path_query(new.resource, '$.context.type'),
+      new."keyword" := jsonb_path_query(new.resource, '$.keyword'),
+      new."kind" := jsonb_path_query(new.resource, '$.kind'),
+      new."path" := jsonb_path_query(new.resource, '$.snapshot.element.path'),
+      new."type" := jsonb_path_query(new.resource, '$.type'),
+      new."valueset" := jsonb_path_query(new.resource, '$.snapshot.element.binding.valueSet'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_structuremap(public.structuremap  new)
+  returns public.structuremap as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."context" := jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
+      new."context-quantity" := jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
+      new."context-type" := jsonb_path_query(new.resource, '$.useContext.code'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."description" := jsonb_path_query(new.resource, '$.description'),
+      new."jurisdiction" := jsonb_path_query(new.resource, '$.jurisdiction'),
+      new."name" := jsonb_path_query(new.resource, '$.name'),
+      new."publisher" := jsonb_path_query(new.resource, '$.publisher'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."title" := jsonb_path_query(new.resource, '$.title'),
+      new."url" := jsonb_path_query(new.resource, '$.url'),
+      new."version" := jsonb_path_query(new.resource, '$.version'),
+      new."context-type-quantity" := jsonb_path_query(new.resource, '$.useContext'),
+      new."context-type-value" := jsonb_path_query(new.resource, '$.useContext'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_terminologycapabilities(public.terminologycapabilities  new)
+  returns public.terminologycapabilities as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."context" := jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
+      new."context-quantity" := jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
+      new."context-type" := jsonb_path_query(new.resource, '$.useContext.code'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."description" := jsonb_path_query(new.resource, '$.description'),
+      new."jurisdiction" := jsonb_path_query(new.resource, '$.jurisdiction'),
+      new."name" := jsonb_path_query(new.resource, '$.name'),
+      new."publisher" := jsonb_path_query(new.resource, '$.publisher'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."title" := jsonb_path_query(new.resource, '$.title'),
+      new."url" := jsonb_path_query(new.resource, '$.url'),
+      new."version" := jsonb_path_query(new.resource, '$.version'),
+      new."context-type-quantity" := jsonb_path_query(new.resource, '$.useContext'),
+      new."context-type-value" := jsonb_path_query(new.resource, '$.useContext'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_valueset(public.valueset  new)
+  returns public.valueset as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."context" := jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
+      new."context-quantity" := jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
+      new."context-type" := jsonb_path_query(new.resource, '$.useContext.code'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."description" := jsonb_path_query(new.resource, '$.description'),
+      new."jurisdiction" := jsonb_path_query(new.resource, '$.jurisdiction'),
+      new."name" := jsonb_path_query(new.resource, '$.name'),
+      new."publisher" := jsonb_path_query(new.resource, '$.publisher'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."title" := jsonb_path_query(new.resource, '$.title'),
+      new."url" := jsonb_path_query(new.resource, '$.url'),
+      new."version" := jsonb_path_query(new.resource, '$.version'),
+      new."context-type-quantity" := jsonb_path_query(new.resource, '$.useContext'),
+      new."context-type-value" := jsonb_path_query(new.resource, '$.useContext'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."code" := jsonb_path_query(new.resource, '$.expansion.contains.code'),
+      new."expansion" := jsonb_path_query(new.resource, '$.expansion.identifier'),
+      new."reference" := jsonb_path_query(new.resource, '$.compose.include.system'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_chargeitem(public.chargeitem  new)
+  returns public.chargeitem as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."account" := jsonb_path_query(new.resource, '$.account'),
+      new."code" := jsonb_path_query(new.resource, '$.code'),
+      new."context" := jsonb_path_query(new.resource, '$.context'),
+      new."entered-date" := jsonb_path_query(new.resource, '$.enteredDate'),
+      new."enterer" := jsonb_path_query(new.resource, '$.enterer'),
+      new."factor-override" := jsonb_path_query(new.resource, '$.factorOverride'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."occurrence" := jsonb_path_query(new.resource, '$.occurrence'),
+      new."patient" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."performer-actor" := jsonb_path_query(new.resource, '$.performer.actor'),
+      new."performer-function" := jsonb_path_query(new.resource, '$.performer.function'),
+      new."performing-organization" := jsonb_path_query(new.resource, '$.performingOrganization'),
+      new."price-override" := jsonb_path_query(new.resource, '$.priceOverride'),
+      new."quantity" := jsonb_path_query(new.resource, '$.quantity'),
+      new."requesting-organization" := jsonb_path_query(new.resource, '$.requestingOrganization'),
+      new."service" := jsonb_path_query(new.resource, '$.service'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_chargeitemdefinition(public.chargeitemdefinition  new)
+  returns public.chargeitemdefinition as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."context" := jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
+      new."context-quantity" := jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
+      new."context-type" := jsonb_path_query(new.resource, '$.useContext.code'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."description" := jsonb_path_query(new.resource, '$.description'),
+      new."effective" := jsonb_path_query(new.resource, '$.effectivePeriod'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."jurisdiction" := jsonb_path_query(new.resource, '$.jurisdiction'),
+      new."publisher" := jsonb_path_query(new.resource, '$.publisher'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."title" := jsonb_path_query(new.resource, '$.title'),
+      new."url" := jsonb_path_query(new.resource, '$.url'),
+      new."version" := jsonb_path_query(new.resource, '$.version'),
+      new."context-type-quantity" := jsonb_path_query(new.resource, '$.useContext'),
+      new."context-type-value" := jsonb_path_query(new.resource, '$.useContext'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_citation(public.citation  new)
+  returns public.citation as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."context" := jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
+      new."context-quantity" := jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
+      new."context-type" := jsonb_path_query(new.resource, '$.useContext.code'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."description" := jsonb_path_query(new.resource, '$.description'),
+      new."effective" := jsonb_path_query(new.resource, '$.effectivePeriod'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."jurisdiction" := jsonb_path_query(new.resource, '$.jurisdiction'),
+      new."name" := jsonb_path_query(new.resource, '$.name'),
+      new."publisher" := jsonb_path_query(new.resource, '$.publisher'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."title" := jsonb_path_query(new.resource, '$.title'),
+      new."url" := jsonb_path_query(new.resource, '$.url'),
+      new."version" := jsonb_path_query(new.resource, '$.version'),
+      new."context-type-quantity" := jsonb_path_query(new.resource, '$.useContext'),
+      new."context-type-value" := jsonb_path_query(new.resource, '$.useContext'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_claim(public.claim  new)
+  returns public.claim as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."care-team" := jsonb_path_query(new.resource, '$.careTeam.provider'),
+      new."created" := jsonb_path_query(new.resource, '$.created'),
+      new."detail-udi" := jsonb_path_query(new.resource, '$.item.detail.udi'),
+      new."encounter" := jsonb_path_query(new.resource, '$.item.encounter'),
+      new."enterer" := jsonb_path_query(new.resource, '$.enterer'),
+      new."facility" := jsonb_path_query(new.resource, '$.facility'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."insurer" := jsonb_path_query(new.resource, '$.insurer'),
+      new."item-udi" := jsonb_path_query(new.resource, '$.item.udi'),
+      new."patient" := jsonb_path_query(new.resource, '$.patient'),
+      new."payee" := jsonb_path_query(new.resource, '$.payee.party'),
+      new."priority" := jsonb_path_query(new.resource, '$.priority'),
+      new."procedure-udi" := jsonb_path_query(new.resource, '$.procedure.udi'),
+      new."provider" := jsonb_path_query(new.resource, '$.provider'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."subdetail-udi" := jsonb_path_query(new.resource, '$.item.detail.subDetail.udi'),
+      new."use" := jsonb_path_query(new.resource, '$.use'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_claimresponse(public.claimresponse  new)
+  returns public.claimresponse as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."created" := jsonb_path_query(new.resource, '$.created'),
+      new."disposition" := jsonb_path_query(new.resource, '$.disposition'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."insurer" := jsonb_path_query(new.resource, '$.insurer'),
+      new."outcome" := jsonb_path_query(new.resource, '$.outcome'),
+      new."patient" := jsonb_path_query(new.resource, '$.patient'),
+      new."payment-date" := jsonb_path_query(new.resource, '$.payment.date'),
+      new."request" := jsonb_path_query(new.resource, '$.request'),
+      new."requestor" := jsonb_path_query(new.resource, '$.requestor'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."use" := jsonb_path_query(new.resource, '$.use'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_clinicalusedefinition(public.clinicalusedefinition  new)
+  returns public.clinicalusedefinition as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."contraindication" := jsonb_path_query(new.resource, '$.contraindication.diseaseSymptomProcedure'),
+      new."contraindication-reference" := jsonb_path_query(new.resource, '$.contraindication.diseaseSymptomProcedure'),
+      new."effect" := jsonb_path_query(new.resource, '$.undesirableEffect.symptomConditionEffect'),
+      new."effect-reference" := jsonb_path_query(new.resource, '$.undesirableEffect.symptomConditionEffect'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."indication" := jsonb_path_query(new.resource, '$.indication.diseaseSymptomProcedure'),
+      new."indication-reference" := jsonb_path_query(new.resource, '$.indication.diseaseSymptomProcedure'),
+      new."interaction" := jsonb_path_query(new.resource, '$.interaction.type'),
+      new."product" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*MedicinalProductDefinition.*") ? (@.reference like_regex "^.*MedicinalProductDefinition.*")'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+      new."type" := jsonb_path_query(new.resource, '$.type'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_communication(public.communication  new)
+  returns public.communication as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."based-on" := jsonb_path_query(new.resource, '$.basedOn'),
+      new."category" := jsonb_path_query(new.resource, '$.category'),
+      new."encounter" := jsonb_path_query(new.resource, '$.encounter'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."instantiates-canonical" := jsonb_path_query(new.resource, '$.instantiatesCanonical'),
+      new."instantiates-uri" := jsonb_path_query(new.resource, '$.instantiatesUri'),
+      new."medium" := jsonb_path_query(new.resource, '$.medium'),
+      new."part-of" := jsonb_path_query(new.resource, '$.partOf'),
+      new."patient" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."received" := jsonb_path_query(new.resource, '$.received'),
+      new."recipient" := jsonb_path_query(new.resource, '$.recipient'),
+      new."sender" := jsonb_path_query(new.resource, '$.sender'),
+      new."sent" := jsonb_path_query(new.resource, '$.sent'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_communicationrequest(public.communicationrequest  new)
+  returns public.communicationrequest as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."authored" := jsonb_path_query(new.resource, '$.authoredOn'),
+      new."based-on" := jsonb_path_query(new.resource, '$.basedOn'),
+      new."category" := jsonb_path_query(new.resource, '$.category'),
+      new."encounter" := jsonb_path_query(new.resource, '$.encounter'),
+      new."group-identifier" := jsonb_path_query(new.resource, '$.groupIdentifier'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."medium" := jsonb_path_query(new.resource, '$.medium'),
+      new."occurrence" := jsonb_path_query(new.resource, '$.occurrenceDateTime'),
+      new."patient" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."priority" := jsonb_path_query(new.resource, '$.priority'),
+      new."recipient" := jsonb_path_query(new.resource, '$.recipient'),
+      new."replaces" := jsonb_path_query(new.resource, '$.replaces'),
+      new."requester" := jsonb_path_query(new.resource, '$.requester'),
+      new."sender" := jsonb_path_query(new.resource, '$.sender'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_contract(public.contract  new)
+  returns public.contract as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."authority" := jsonb_path_query(new.resource, '$.authority'),
+      new."domain" := jsonb_path_query(new.resource, '$.domain'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."instantiates" := jsonb_path_query(new.resource, '$.instantiatesUri'),
+      new."issued" := jsonb_path_query(new.resource, '$.issued'),
+      new."patient" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."signer" := jsonb_path_query(new.resource, '$.signer.party'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+      new."url" := jsonb_path_query(new.resource, '$.url'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_coverage(public.coverage  new)
+  returns public.coverage as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."beneficiary" := jsonb_path_query(new.resource, '$.beneficiary'),
+      new."class-type" := jsonb_path_query(new.resource, '$.class.type'),
+      new."class-value" := jsonb_path_query(new.resource, '$.class.value'),
+      new."dependent" := jsonb_path_query(new.resource, '$.dependent'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."patient" := jsonb_path_query(new.resource, '$.beneficiary'),
+      new."payor" := jsonb_path_query(new.resource, '$.payor'),
+      new."policy-holder" := jsonb_path_query(new.resource, '$.policyHolder'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."subscriber" := jsonb_path_query(new.resource, '$.subscriber'),
+      new."type" := jsonb_path_query(new.resource, '$.type'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_coverageeligibilityrequest(public.coverageeligibilityrequest  new)
+  returns public.coverageeligibilityrequest as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."created" := jsonb_path_query(new.resource, '$.created'),
+      new."enterer" := jsonb_path_query(new.resource, '$.enterer'),
+      new."facility" := jsonb_path_query(new.resource, '$.facility'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."patient" := jsonb_path_query(new.resource, '$.patient'),
+      new."provider" := jsonb_path_query(new.resource, '$.provider'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_coverageeligibilityresponse(public.coverageeligibilityresponse  new)
+  returns public.coverageeligibilityresponse as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."created" := jsonb_path_query(new.resource, '$.created'),
+      new."disposition" := jsonb_path_query(new.resource, '$.disposition'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."insurer" := jsonb_path_query(new.resource, '$.insurer'),
+      new."outcome" := jsonb_path_query(new.resource, '$.outcome'),
+      new."patient" := jsonb_path_query(new.resource, '$.patient'),
+      new."request" := jsonb_path_query(new.resource, '$.request'),
+      new."requestor" := jsonb_path_query(new.resource, '$.requestor'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_device(public.device  new)
+  returns public.device as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."device-name" := jsonb_path_query(new.resource, '$.deviceName.name'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."location" := jsonb_path_query(new.resource, '$.location'),
+      new."manufacturer" := jsonb_path_query(new.resource, '$.manufacturer'),
+      new."model" := jsonb_path_query(new.resource, '$.modelNumber'),
+      new."organization" := jsonb_path_query(new.resource, '$.owner'),
+      new."patient" := jsonb_path_query(new.resource, '$.patient'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."type" := jsonb_path_query(new.resource, '$.type'),
+      new."udi-carrier" := jsonb_path_query(new.resource, '$.udiCarrier.carrierHRF'),
+      new."udi-di" := jsonb_path_query(new.resource, '$.udiCarrier.deviceIdentifier'),
+      new."url" := jsonb_path_query(new.resource, '$.url'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_devicedefinition(public.devicedefinition  new)
+  returns public.devicedefinition as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."parent" := jsonb_path_query(new.resource, '$.parentDevice'),
+      new."type" := jsonb_path_query(new.resource, '$.type'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_devicemetric(public.devicemetric  new)
+  returns public.devicemetric as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."category" := jsonb_path_query(new.resource, '$.category'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."parent" := jsonb_path_query(new.resource, '$.parent'),
+      new."source" := jsonb_path_query(new.resource, '$.source'),
+      new."type" := jsonb_path_query(new.resource, '$.type'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_endpoint(public.endpoint  new)
+  returns public.endpoint as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."connection-type" := jsonb_path_query(new.resource, '$.connectionType'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."name" := jsonb_path_query(new.resource, '$.name'),
+      new."organization" := jsonb_path_query(new.resource, '$.managingOrganization'),
+      new."payload-type" := jsonb_path_query(new.resource, '$.payloadType'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_enrollmentrequest(public.enrollmentrequest  new)
+  returns public.enrollmentrequest as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."patient" := jsonb_path_query(new.resource, '$.candidate'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."subject" := jsonb_path_query(new.resource, '$.candidate'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_enrollmentresponse(public.enrollmentresponse  new)
+  returns public.enrollmentresponse as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."request" := jsonb_path_query(new.resource, '$.request'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_eventdefinition(public.eventdefinition  new)
+  returns public.eventdefinition as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."composed-of" := jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''composed-of'').resource'),
+      new."context" := jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
+      new."context-quantity" := jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
+      new."context-type" := jsonb_path_query(new.resource, '$.useContext.code'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."depends-on" := jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''depends-on'').resource'),
+      new."derived-from" := jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''derived-from'').resource'),
+      new."description" := jsonb_path_query(new.resource, '$.description'),
+      new."effective" := jsonb_path_query(new.resource, '$.effectivePeriod'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."jurisdiction" := jsonb_path_query(new.resource, '$.jurisdiction'),
+      new."name" := jsonb_path_query(new.resource, '$.name'),
+      new."predecessor" := jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''predecessor'').resource'),
+      new."publisher" := jsonb_path_query(new.resource, '$.publisher'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."successor" := jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''successor'').resource'),
+      new."title" := jsonb_path_query(new.resource, '$.title'),
+      new."topic" := jsonb_path_query(new.resource, '$.topic'),
+      new."url" := jsonb_path_query(new.resource, '$.url'),
+      new."version" := jsonb_path_query(new.resource, '$.version'),
+      new."context-type-quantity" := jsonb_path_query(new.resource, '$.useContext'),
+      new."context-type-value" := jsonb_path_query(new.resource, '$.useContext'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_evidence(public.evidence  new)
+  returns public.evidence as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."context" := jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
+      new."context-quantity" := jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
+      new."context-type" := jsonb_path_query(new.resource, '$.useContext.code'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."description" := jsonb_path_query(new.resource, '$.description'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."publisher" := jsonb_path_query(new.resource, '$.publisher'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."title" := jsonb_path_query(new.resource, '$.title'),
+      new."url" := jsonb_path_query(new.resource, '$.url'),
+      new."version" := jsonb_path_query(new.resource, '$.version'),
+      new."context-type-quantity" := jsonb_path_query(new.resource, '$.useContext'),
+      new."context-type-value" := jsonb_path_query(new.resource, '$.useContext'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_evidencereport(public.evidencereport  new)
+  returns public.evidencereport as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."context" := jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
+      new."context-quantity" := jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
+      new."context-type" := jsonb_path_query(new.resource, '$.useContext.code'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."publisher" := jsonb_path_query(new.resource, '$.publisher'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."url" := jsonb_path_query(new.resource, '$.url'),
+      new."context-type-quantity" := jsonb_path_query(new.resource, '$.useContext'),
+      new."context-type-value" := jsonb_path_query(new.resource, '$.useContext'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_evidencevariable(public.evidencevariable  new)
+  returns public.evidencevariable as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."context" := jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
+      new."context-quantity" := jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
+      new."context-type" := jsonb_path_query(new.resource, '$.useContext.code'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."description" := jsonb_path_query(new.resource, '$.description'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."name" := jsonb_path_query(new.resource, '$.name'),
+      new."publisher" := jsonb_path_query(new.resource, '$.publisher'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."title" := jsonb_path_query(new.resource, '$.title'),
+      new."url" := jsonb_path_query(new.resource, '$.url'),
+      new."version" := jsonb_path_query(new.resource, '$.version'),
+      new."context-type-quantity" := jsonb_path_query(new.resource, '$.useContext'),
+      new."context-type-value" := jsonb_path_query(new.resource, '$.useContext'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_examplescenario(public.examplescenario  new)
+  returns public.examplescenario as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."context" := jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
+      new."context-quantity" := jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
+      new."context-type" := jsonb_path_query(new.resource, '$.useContext.code'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."jurisdiction" := jsonb_path_query(new.resource, '$.jurisdiction'),
+      new."name" := jsonb_path_query(new.resource, '$.name'),
+      new."publisher" := jsonb_path_query(new.resource, '$.publisher'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."url" := jsonb_path_query(new.resource, '$.url'),
+      new."version" := jsonb_path_query(new.resource, '$.version'),
+      new."context-type-quantity" := jsonb_path_query(new.resource, '$.useContext'),
+      new."context-type-value" := jsonb_path_query(new.resource, '$.useContext'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_explanationofbenefit(public.explanationofbenefit  new)
+  returns public.explanationofbenefit as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."care-team" := jsonb_path_query(new.resource, '$.careTeam.provider'),
+      new."claim" := jsonb_path_query(new.resource, '$.claim'),
+      new."coverage" := jsonb_path_query(new.resource, '$.insurance.coverage'),
+      new."created" := jsonb_path_query(new.resource, '$.created'),
+      new."detail-udi" := jsonb_path_query(new.resource, '$.item.detail.udi'),
+      new."disposition" := jsonb_path_query(new.resource, '$.disposition'),
+      new."encounter" := jsonb_path_query(new.resource, '$.item.encounter'),
+      new."enterer" := jsonb_path_query(new.resource, '$.enterer'),
+      new."facility" := jsonb_path_query(new.resource, '$.facility'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."item-udi" := jsonb_path_query(new.resource, '$.item.udi'),
+      new."patient" := jsonb_path_query(new.resource, '$.patient'),
+      new."payee" := jsonb_path_query(new.resource, '$.payee.party'),
+      new."procedure-udi" := jsonb_path_query(new.resource, '$.procedure.udi'),
+      new."provider" := jsonb_path_query(new.resource, '$.provider'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."subdetail-udi" := jsonb_path_query(new.resource, '$.item.detail.subDetail.udi'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_group(public.group  new)
+  returns public.group as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."actual" := jsonb_path_query(new.resource, '$.actual'),
+      new."characteristic" := jsonb_path_query(new.resource, '$.characteristic.code'),
+      new."code" := jsonb_path_query(new.resource, '$.code'),
+      new."exclude" := jsonb_path_query(new.resource, '$.characteristic.exclude'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."managing-entity" := jsonb_path_query(new.resource, '$.managingEntity'),
+      new."member" := jsonb_path_query(new.resource, '$.member.entity'),
+      new."type" := jsonb_path_query(new.resource, '$.type'),
+      new."value" := jsonb_path_query(new.resource, '$.characteristic.valueCodeableConcept'),
+      new."characteristic-value" := jsonb_path_query(new.resource, '$.characteristic'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_guidanceresponse(public.guidanceresponse  new)
+  returns public.guidanceresponse as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."patient" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."request" := jsonb_path_query(new.resource, '$.requestIdentifier'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_healthcareservice(public.healthcareservice  new)
+  returns public.healthcareservice as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."active" := jsonb_path_query(new.resource, '$.active'),
+      new."characteristic" := jsonb_path_query(new.resource, '$.characteristic'),
+      new."coverage-area" := jsonb_path_query(new.resource, '$.coverageArea'),
+      new."endpoint" := jsonb_path_query(new.resource, '$.endpoint'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."location" := jsonb_path_query(new.resource, '$.location'),
+      new."name" := jsonb_path_query(new.resource, '$.name'),
+      new."organization" := jsonb_path_query(new.resource, '$.providedBy'),
+      new."program" := jsonb_path_query(new.resource, '$.program'),
+      new."service-category" := jsonb_path_query(new.resource, '$.category'),
+      new."service-type" := jsonb_path_query(new.resource, '$.type'),
+      new."specialty" := jsonb_path_query(new.resource, '$.specialty'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_immunizationevaluation(public.immunizationevaluation  new)
+  returns public.immunizationevaluation as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."dose-status" := jsonb_path_query(new.resource, '$.doseStatus'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."immunization-event" := jsonb_path_query(new.resource, '$.immunizationEvent'),
+      new."patient" := jsonb_path_query(new.resource, '$.patient'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."target-disease" := jsonb_path_query(new.resource, '$.targetDisease'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_immunizationrecommendation(public.immunizationrecommendation  new)
+  returns public.immunizationrecommendation as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."information" := jsonb_path_query(new.resource, '$.recommendation.supportingPatientInformation'),
+      new."patient" := jsonb_path_query(new.resource, '$.patient'),
+      new."status" := jsonb_path_query(new.resource, '$.recommendation.forecastStatus'),
+      new."support" := jsonb_path_query(new.resource, '$.recommendation.supportingImmunization'),
+      new."target-disease" := jsonb_path_query(new.resource, '$.recommendation.targetDisease'),
+      new."vaccine-type" := jsonb_path_query(new.resource, '$.recommendation.vaccineCode'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_ingredient(public.ingredient  new)
+  returns public.ingredient as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."for" := jsonb_path_query(new.resource, '$.for'),
+      new."function" := jsonb_path_query(new.resource, '$.function'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."manufacturer" := jsonb_path_query(new.resource, '$.manufacturer'),
+      new."role" := jsonb_path_query(new.resource, '$.role'),
+      new."substance" := jsonb_path_query(new.resource, '$.substance.code.reference'),
+      new."substance-code" := jsonb_path_query(new.resource, '$.substance.code.concept'),
+      new."substance-definition" := jsonb_path_query(new.resource, '$.substance.code.reference'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_insuranceplan(public.insuranceplan  new)
+  returns public.insuranceplan as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."address" := jsonb_path_query(new.resource, '$.contact.address'),
+      new."address-city" := jsonb_path_query(new.resource, '$.contact.address.city'),
+      new."address-country" := jsonb_path_query(new.resource, '$.contact.address.country'),
+      new."address-postalcode" := jsonb_path_query(new.resource, '$.contact.address.postalCode'),
+      new."address-state" := jsonb_path_query(new.resource, '$.contact.address.state'),
+      new."address-use" := jsonb_path_query(new.resource, '$.contact.address.use'),
+      new."administered-by" := jsonb_path_query(new.resource, '$.administeredBy'),
+      new."endpoint" := jsonb_path_query(new.resource, '$.endpoint'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."name" := jsonb_path_query(new.resource, 'name | alias'),
+      new."owned-by" := jsonb_path_query(new.resource, '$.ownedBy'),
+      new."phonetic" := jsonb_path_query(new.resource, '$.name'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."type" := jsonb_path_query(new.resource, '$.type'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_invoice(public.invoice  new)
+  returns public.invoice as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."account" := jsonb_path_query(new.resource, '$.account'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."issuer" := jsonb_path_query(new.resource, '$.issuer'),
+      new."participant" := jsonb_path_query(new.resource, '$.participant.actor'),
+      new."participant-role" := jsonb_path_query(new.resource, '$.participant.role'),
+      new."patient" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."recipient" := jsonb_path_query(new.resource, '$.recipient'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+      new."totalgross" := jsonb_path_query(new.resource, '$.totalGross'),
+      new."totalnet" := jsonb_path_query(new.resource, '$.totalNet'),
+      new."type" := jsonb_path_query(new.resource, '$.type'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_library(public.library  new)
+  returns public.library as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."composed-of" := jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''composed-of'').resource'),
+      new."content-type" := jsonb_path_query(new.resource, '$.content.contentType'),
+      new."context" := jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
+      new."context-quantity" := jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
+      new."context-type" := jsonb_path_query(new.resource, '$.useContext.code'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."depends-on" := jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''depends-on'').resource'),
+      new."derived-from" := jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''derived-from'').resource'),
+      new."description" := jsonb_path_query(new.resource, '$.description'),
+      new."effective" := jsonb_path_query(new.resource, '$.effectivePeriod'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."jurisdiction" := jsonb_path_query(new.resource, '$.jurisdiction'),
+      new."name" := jsonb_path_query(new.resource, '$.name'),
+      new."predecessor" := jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''predecessor'').resource'),
+      new."publisher" := jsonb_path_query(new.resource, '$.publisher'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."successor" := jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''successor'').resource'),
+      new."title" := jsonb_path_query(new.resource, '$.title'),
+      new."topic" := jsonb_path_query(new.resource, '$.topic'),
+      new."type" := jsonb_path_query(new.resource, '$.type'),
+      new."url" := jsonb_path_query(new.resource, '$.url'),
+      new."version" := jsonb_path_query(new.resource, '$.version'),
+      new."context-type-quantity" := jsonb_path_query(new.resource, '$.useContext'),
+      new."context-type-value" := jsonb_path_query(new.resource, '$.useContext'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_linkage(public.linkage  new)
+  returns public.linkage as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."author" := jsonb_path_query(new.resource, '$.author'),
+      new."item" := jsonb_path_query(new.resource, '$.item.resource'),
+      new."source" := jsonb_path_query(new.resource, '$.item.resource'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_location(public.location  new)
+  returns public.location as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."address" := jsonb_path_query(new.resource, '$.address'),
+      new."address-city" := jsonb_path_query(new.resource, '$.address.city'),
+      new."address-country" := jsonb_path_query(new.resource, '$.address.country'),
+      new."address-postalcode" := jsonb_path_query(new.resource, '$.address.postalCode'),
+      new."address-state" := jsonb_path_query(new.resource, '$.address.state'),
+      new."address-use" := jsonb_path_query(new.resource, '$.address.use'),
+      new."endpoint" := jsonb_path_query(new.resource, '$.endpoint'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."name" := jsonb_path_query(new.resource, '$.name'),
+      new."near" := jsonb_path_query(new.resource, '$.position'),
+      new."operational-status" := jsonb_path_query(new.resource, '$.operationalStatus'),
+      new."organization" := jsonb_path_query(new.resource, '$.managingOrganization'),
+      new."partof" := jsonb_path_query(new.resource, '$.partOf'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."type" := jsonb_path_query(new.resource, '$.type'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_manufactureditemdefinition(public.manufactureditemdefinition  new)
+  returns public.manufactureditemdefinition as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."dose-form" := jsonb_path_query(new.resource, '$.manufacturedDoseForm'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."ingredient" := jsonb_path_query(new.resource, '$.ingredient'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_measure(public.measure  new)
+  returns public.measure as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."composed-of" := jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''composed-of'').resource'),
+      new."context" := jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
+      new."context-quantity" := jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
+      new."context-type" := jsonb_path_query(new.resource, '$.useContext.code'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."depends-on" := jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''depends-on'').resource'),
+      new."derived-from" := jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''derived-from'').resource'),
+      new."description" := jsonb_path_query(new.resource, '$.description'),
+      new."effective" := jsonb_path_query(new.resource, '$.effectivePeriod'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."jurisdiction" := jsonb_path_query(new.resource, '$.jurisdiction'),
+      new."name" := jsonb_path_query(new.resource, '$.name'),
+      new."predecessor" := jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''predecessor'').resource'),
+      new."publisher" := jsonb_path_query(new.resource, '$.publisher'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."successor" := jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''successor'').resource'),
+      new."title" := jsonb_path_query(new.resource, '$.title'),
+      new."topic" := jsonb_path_query(new.resource, '$.topic'),
+      new."url" := jsonb_path_query(new.resource, '$.url'),
+      new."version" := jsonb_path_query(new.resource, '$.version'),
+      new."context-type-quantity" := jsonb_path_query(new.resource, '$.useContext'),
+      new."context-type-value" := jsonb_path_query(new.resource, '$.useContext'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_measurereport(public.measurereport  new)
+  returns public.measurereport as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."evaluated-resource" := jsonb_path_query(new.resource, '$.evaluatedResource'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."measure" := jsonb_path_query(new.resource, '$.measure'),
+      new."patient" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."period" := jsonb_path_query(new.resource, '$.period'),
+      new."reporter" := jsonb_path_query(new.resource, '$.reporter'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_media(public.media  new)
+  returns public.media as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."based-on" := jsonb_path_query(new.resource, '$.basedOn'),
+      new."created" := jsonb_path_query(new.resource, '$.created'),
+      new."device" := jsonb_path_query(new.resource, '$.device'),
+      new."encounter" := jsonb_path_query(new.resource, '$.encounter'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."modality" := jsonb_path_query(new.resource, '$.modality'),
+      new."operator" := jsonb_path_query(new.resource, '$.operator'),
+      new."patient" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."site" := jsonb_path_query(new.resource, '$.bodySite'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+      new."type" := jsonb_path_query(new.resource, '$.type'),
+      new."view" := jsonb_path_query(new.resource, '$.view'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_medicationknowledge(public.medicationknowledge  new)
+  returns public.medicationknowledge as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."classification" := jsonb_path_query(new.resource, '$.medicineClassification.classification'),
+      new."classification-type" := jsonb_path_query(new.resource, '$.medicineClassification.type'),
+      new."code" := jsonb_path_query(new.resource, '$.code'),
+      new."doseform" := jsonb_path_query(new.resource, '$.doseForm'),
+      new."ingredient" := jsonb_path_query(new.resource, '$.ingredient.itemReference'),
+      new."ingredient-code" := jsonb_path_query(new.resource, '$.ingredient.itemCodeableConcept'),
+      new."manufacturer" := jsonb_path_query(new.resource, '$.manufacturer'),
+      new."monitoring-program-name" := jsonb_path_query(new.resource, '$.monitoringProgram.name'),
+      new."monitoring-program-type" := jsonb_path_query(new.resource, '$.monitoringProgram.type'),
+      new."monograph" := jsonb_path_query(new.resource, '$.monograph.source'),
+      new."monograph-type" := jsonb_path_query(new.resource, '$.monograph.type'),
+      new."source-cost" := jsonb_path_query(new.resource, '$.cost.source'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_medicinalproductdefinition(public.medicinalproductdefinition  new)
+  returns public.medicinalproductdefinition as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."characteristic" := jsonb_path_query(new.resource, '$.characteristic.value'),
+      new."characteristic-type" := jsonb_path_query(new.resource, '$.characteristic.type'),
+      new."contact" := jsonb_path_query(new.resource, '$.contact.contact'),
+      new."domain" := jsonb_path_query(new.resource, '$.domain'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."ingredient" := jsonb_path_query(new.resource, '$.ingredient'),
+      new."master-file" := jsonb_path_query(new.resource, '$.masterFile'),
+      new."name" := jsonb_path_query(new.resource, '$.name.productName'),
+      new."name-language" := jsonb_path_query(new.resource, '$.name.countryLanguage.language'),
+      new."product-classification" := jsonb_path_query(new.resource, '$.classification'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."type" := jsonb_path_query(new.resource, '$.type'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_messageheader(public.messageheader  new)
+  returns public.messageheader as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."author" := jsonb_path_query(new.resource, '$.author'),
+      new."code" := jsonb_path_query(new.resource, '$.response.code'),
+      new."destination" := jsonb_path_query(new.resource, '$.destination.name'),
+      new."destination-uri" := jsonb_path_query(new.resource, '$.destination.endpoint'),
+      new."enterer" := jsonb_path_query(new.resource, '$.enterer'),
+      new."event" := jsonb_path_query(new.resource, '$.event'),
+      new."focus" := jsonb_path_query(new.resource, '$.focus'),
+      new."receiver" := jsonb_path_query(new.resource, '$.destination.receiver'),
+      new."response-id" := jsonb_path_query(new.resource, '$.response.identifier'),
+      new."responsible" := jsonb_path_query(new.resource, '$.responsible'),
+      new."sender" := jsonb_path_query(new.resource, '$.sender'),
+      new."source" := jsonb_path_query(new.resource, '$.source.name'),
+      new."source-uri" := jsonb_path_query(new.resource, '$.source.endpoint'),
+      new."target" := jsonb_path_query(new.resource, '$.destination.target'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_molecularsequence(public.molecularsequence  new)
+  returns public.molecularsequence as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."chromosome" := jsonb_path_query(new.resource, '$.referenceSeq.chromosome'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."patient" := jsonb_path_query(new.resource, '$.patient'),
+      new."referenceseqid" := jsonb_path_query(new.resource, '$.referenceSeq.referenceSeqId'),
+      new."type" := jsonb_path_query(new.resource, '$.type'),
+      new."variant-end" := jsonb_path_query(new.resource, '$.variant.end'),
+      new."variant-start" := jsonb_path_query(new.resource, '$.variant.start'),
+      new."window-end" := jsonb_path_query(new.resource, '$.referenceSeq.windowEnd'),
+      new."window-start" := jsonb_path_query(new.resource, '$.referenceSeq.windowStart'),
+      new."chromosome-variant-coordinate" := jsonb_path_query(new.resource, '$.variant'),
+      new."chromosome-window-coordinate" := jsonb_path_query(new.resource, '$.referenceSeq'),
+      new."referenceseqid-variant-coordinate" := jsonb_path_query(new.resource, '$.variant'),
+      new."referenceseqid-window-coordinate" := jsonb_path_query(new.resource, '$.referenceSeq'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_nutritionproduct(public.nutritionproduct  new)
+  returns public.nutritionproduct as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."identifier" := jsonb_path_query(new.resource, '$.instance.identifier'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_organization(public.organization  new)
+  returns public.organization as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."active" := jsonb_path_query(new.resource, '$.active'),
+      new."address" := jsonb_path_query(new.resource, '$.address'),
+      new."address-city" := jsonb_path_query(new.resource, '$.address.city'),
+      new."address-country" := jsonb_path_query(new.resource, '$.address.country'),
+      new."address-postalcode" := jsonb_path_query(new.resource, '$.address.postalCode'),
+      new."address-state" := jsonb_path_query(new.resource, '$.address.state'),
+      new."address-use" := jsonb_path_query(new.resource, '$.address.use'),
+      new."endpoint" := jsonb_path_query(new.resource, '$.endpoint'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."name" := jsonb_path_query(new.resource, '$.name'),
+      new."partof" := jsonb_path_query(new.resource, '$.partOf'),
+      new."phonetic" := jsonb_path_query(new.resource, '$.name'),
+      new."type" := jsonb_path_query(new.resource, '$.type'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_organizationaffiliation(public.organizationaffiliation  new)
+  returns public.organizationaffiliation as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."active" := jsonb_path_query(new.resource, '$.active'),
+      new."date" := jsonb_path_query(new.resource, '$.period'),
+      new."email" := jsonb_path_query(new.resource, '$.telecom[*] ? (@.system = ''email'')'),
+      new."endpoint" := jsonb_path_query(new.resource, '$.endpoint'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."location" := jsonb_path_query(new.resource, '$.location'),
+      new."network" := jsonb_path_query(new.resource, '$.network'),
+      new."participating-organization" := jsonb_path_query(new.resource, '$.participatingOrganization'),
+      new."phone" := jsonb_path_query(new.resource, '$.telecom[*] ? (@.system = ''phone'')'),
+      new."primary-organization" := jsonb_path_query(new.resource, '$.organization'),
+      new."role" := jsonb_path_query(new.resource, '$.code'),
+      new."service" := jsonb_path_query(new.resource, '$.healthcareService'),
+      new."specialty" := jsonb_path_query(new.resource, '$.specialty'),
+      new."telecom" := jsonb_path_query(new.resource, '$.telecom'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_packagedproductdefinition(public.packagedproductdefinition  new)
+  returns public.packagedproductdefinition as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."biological" := jsonb_path_query(new.resource, '$.package.containedItem.item.reference'),
+      new."contained-item" := jsonb_path_query(new.resource, '$.package.containedItem.item.reference'),
+      new."device" := jsonb_path_query(new.resource, '$.package.containedItem.item.reference'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."manufactured-item" := jsonb_path_query(new.resource, '$.package.containedItem.item.reference'),
+      new."medication" := jsonb_path_query(new.resource, '$.package.containedItem.item.reference'),
+      new."name" := jsonb_path_query(new.resource, '$.name'),
+      new."nutrition" := jsonb_path_query(new.resource, '$.package.containedItem.item.reference'),
+      new."package" := jsonb_path_query(new.resource, '$.package.containedItem.item.reference'),
+      new."package-for" := jsonb_path_query(new.resource, '$.packageFor'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_patient(public.patient  new)
+  returns public.patient as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."active" := jsonb_path_query(new.resource, '$.active'),
+      new."address" := jsonb_path_query(new.resource, '$.address'),
+      new."address-city" := jsonb_path_query(new.resource, '$.address.city'),
+      new."address-country" := jsonb_path_query(new.resource, '$.address.country'),
+      new."address-postalcode" := jsonb_path_query(new.resource, '$.address.postalCode'),
+      new."address-state" := jsonb_path_query(new.resource, '$.address.state'),
+      new."address-use" := jsonb_path_query(new.resource, '$.address.use'),
+      new."birthdate" := jsonb_path_query(new.resource, '$.birthDate'),
+      new."death-date" := jsonb_path_query(new.resource, '$.deceasedDateTime'),
+      new."deceased" := jsonb_path_query(new.resource, '$.deceasedDateTime ? (exists) or $.deceasedBoolean ? (@ != false)'),
+      new."email" := jsonb_path_query(new.resource, '$.telecom[*] ? (@.system = ''email'')'),
+      new."family" := jsonb_path_query(new.resource, '$.name.family'),
+      new."gender" := jsonb_path_query(new.resource, '$.gender'),
+      new."general-practitioner" := jsonb_path_query(new.resource, '$.generalPractitioner'),
+      new."given" := jsonb_path_query(new.resource, '$.name.given'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."language" := jsonb_path_query(new.resource, '$.communication.language'),
+      new."link" := jsonb_path_query(new.resource, '$.link.other'),
+      new."name" := jsonb_path_query(new.resource, '$.name'),
+      new."organization" := jsonb_path_query(new.resource, '$.managingOrganization'),
+      new."phone" := jsonb_path_query(new.resource, '$.telecom[*] ? (@.system = ''phone'')'),
+      new."phonetic" := jsonb_path_query(new.resource, '$.name'),
+      new."telecom" := jsonb_path_query(new.resource, '$.telecom'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_person(public.person  new)
+  returns public.person as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."address" := jsonb_path_query(new.resource, '$.address'),
+      new."address-city" := jsonb_path_query(new.resource, '$.address.city'),
+      new."address-country" := jsonb_path_query(new.resource, '$.address.country'),
+      new."address-postalcode" := jsonb_path_query(new.resource, '$.address.postalCode'),
+      new."address-state" := jsonb_path_query(new.resource, '$.address.state'),
+      new."address-use" := jsonb_path_query(new.resource, '$.address.use'),
+      new."birthdate" := jsonb_path_query(new.resource, '$.birthDate'),
+      new."email" := jsonb_path_query(new.resource, '$.telecom[*] ? (@.system = ''email'')'),
+      new."gender" := jsonb_path_query(new.resource, '$.gender'),
+      new."phone" := jsonb_path_query(new.resource, '$.telecom[*] ? (@.system = ''phone'')'),
+      new."phonetic" := jsonb_path_query(new.resource, '$.name'),
+      new."telecom" := jsonb_path_query(new.resource, '$.telecom'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."link" := jsonb_path_query(new.resource, '$.link.target'),
+      new."name" := jsonb_path_query(new.resource, '$.name'),
+      new."organization" := jsonb_path_query(new.resource, '$.managingOrganization'),
+      new."patient" := jsonb_path_query(new.resource, '$.link.target[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."practitioner" := jsonb_path_query(new.resource, '$.link.target[*] ? (@.type like_regex "^.*Practitioner.*") ? (@.reference like_regex "^.*Practitioner.*")'),
+      new."relatedperson" := jsonb_path_query(new.resource, '$.link.target[*] ? (@.type like_regex "^.*RelatedPerson.*") ? (@.reference like_regex "^.*RelatedPerson.*")'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_practitioner(public.practitioner  new)
+  returns public.practitioner as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."address" := jsonb_path_query(new.resource, '$.address'),
+      new."address-city" := jsonb_path_query(new.resource, '$.address.city'),
+      new."address-country" := jsonb_path_query(new.resource, '$.address.country'),
+      new."address-postalcode" := jsonb_path_query(new.resource, '$.address.postalCode'),
+      new."address-state" := jsonb_path_query(new.resource, '$.address.state'),
+      new."address-use" := jsonb_path_query(new.resource, '$.address.use'),
+      new."email" := jsonb_path_query(new.resource, '$.telecom[*] ? (@.system = ''email'')'),
+      new."family" := jsonb_path_query(new.resource, '$.name.family'),
+      new."gender" := jsonb_path_query(new.resource, '$.gender'),
+      new."given" := jsonb_path_query(new.resource, '$.name.given'),
+      new."phone" := jsonb_path_query(new.resource, '$.telecom[*] ? (@.system = ''phone'')'),
+      new."phonetic" := jsonb_path_query(new.resource, '$.name'),
+      new."telecom" := jsonb_path_query(new.resource, '$.telecom'),
+      new."active" := jsonb_path_query(new.resource, '$.active'),
+      new."communication" := jsonb_path_query(new.resource, '$.communication'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."name" := jsonb_path_query(new.resource, '$.name'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_relatedperson(public.relatedperson  new)
+  returns public.relatedperson as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."address" := jsonb_path_query(new.resource, '$.address'),
+      new."address-city" := jsonb_path_query(new.resource, '$.address.city'),
+      new."address-country" := jsonb_path_query(new.resource, '$.address.country'),
+      new."address-postalcode" := jsonb_path_query(new.resource, '$.address.postalCode'),
+      new."address-state" := jsonb_path_query(new.resource, '$.address.state'),
+      new."address-use" := jsonb_path_query(new.resource, '$.address.use'),
+      new."birthdate" := jsonb_path_query(new.resource, '$.birthDate'),
+      new."email" := jsonb_path_query(new.resource, '$.telecom[*] ? (@.system = ''email'')'),
+      new."gender" := jsonb_path_query(new.resource, '$.gender'),
+      new."phone" := jsonb_path_query(new.resource, '$.telecom[*] ? (@.system = ''phone'')'),
+      new."phonetic" := jsonb_path_query(new.resource, '$.name'),
+      new."telecom" := jsonb_path_query(new.resource, '$.telecom'),
+      new."active" := jsonb_path_query(new.resource, '$.active'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."name" := jsonb_path_query(new.resource, '$.name'),
+      new."patient" := jsonb_path_query(new.resource, '$.patient'),
+      new."relationship" := jsonb_path_query(new.resource, '$.relationship'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_practitionerrole(public.practitionerrole  new)
+  returns public.practitionerrole as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."email" := jsonb_path_query(new.resource, '$.telecom[*] ? (@.system = ''email'')'),
+      new."phone" := jsonb_path_query(new.resource, '$.telecom[*] ? (@.system = ''phone'')'),
+      new."telecom" := jsonb_path_query(new.resource, '$.telecom'),
+      new."active" := jsonb_path_query(new.resource, '$.active'),
+      new."date" := jsonb_path_query(new.resource, '$.period'),
+      new."endpoint" := jsonb_path_query(new.resource, '$.endpoint'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."location" := jsonb_path_query(new.resource, '$.location'),
+      new."organization" := jsonb_path_query(new.resource, '$.organization'),
+      new."practitioner" := jsonb_path_query(new.resource, '$.practitioner'),
+      new."role" := jsonb_path_query(new.resource, '$.code'),
+      new."service" := jsonb_path_query(new.resource, '$.healthcareService'),
+      new."specialty" := jsonb_path_query(new.resource, '$.specialty'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_paymentnotice(public.paymentnotice  new)
+  returns public.paymentnotice as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."created" := jsonb_path_query(new.resource, '$.created'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."payment-status" := jsonb_path_query(new.resource, '$.paymentStatus'),
+      new."provider" := jsonb_path_query(new.resource, '$.provider'),
+      new."request" := jsonb_path_query(new.resource, '$.request'),
+      new."response" := jsonb_path_query(new.resource, '$.response'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_paymentreconciliation(public.paymentreconciliation  new)
+  returns public.paymentreconciliation as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."created" := jsonb_path_query(new.resource, '$.created'),
+      new."disposition" := jsonb_path_query(new.resource, '$.disposition'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."outcome" := jsonb_path_query(new.resource, '$.outcome'),
+      new."payment-issuer" := jsonb_path_query(new.resource, '$.paymentIssuer'),
+      new."request" := jsonb_path_query(new.resource, '$.request'),
+      new."requestor" := jsonb_path_query(new.resource, '$.requestor'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_plandefinition(public.plandefinition  new)
+  returns public.plandefinition as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."composed-of" := jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''composed-of'').resource'),
+      new."context" := jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
+      new."context-quantity" := jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
+      new."context-type" := jsonb_path_query(new.resource, '$.useContext.code'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."definition" := jsonb_path_query(new.resource, '$.action.definition'),
+      new."depends-on" := jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''depends-on'').resource'),
+      new."derived-from" := jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''derived-from'').resource'),
+      new."description" := jsonb_path_query(new.resource, '$.description'),
+      new."effective" := jsonb_path_query(new.resource, '$.effectivePeriod'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."jurisdiction" := jsonb_path_query(new.resource, '$.jurisdiction'),
+      new."name" := jsonb_path_query(new.resource, '$.name'),
+      new."predecessor" := jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''predecessor'').resource'),
+      new."publisher" := jsonb_path_query(new.resource, '$.publisher'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."successor" := jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''successor'').resource'),
+      new."title" := jsonb_path_query(new.resource, '$.title'),
+      new."topic" := jsonb_path_query(new.resource, '$.topic'),
+      new."type" := jsonb_path_query(new.resource, '$.type'),
+      new."url" := jsonb_path_query(new.resource, '$.url'),
+      new."version" := jsonb_path_query(new.resource, '$.version'),
+      new."context-type-quantity" := jsonb_path_query(new.resource, '$.useContext'),
+      new."context-type-value" := jsonb_path_query(new.resource, '$.useContext'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_provenance(public.provenance  new)
+  returns public.provenance as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."agent" := jsonb_path_query(new.resource, '$.agent.who'),
+      new."agent-role" := jsonb_path_query(new.resource, '$.agent.role'),
+      new."agent-type" := jsonb_path_query(new.resource, '$.agent.type'),
+      new."entity" := jsonb_path_query(new.resource, '$.entity.what'),
+      new."location" := jsonb_path_query(new.resource, '$.location'),
+      new."patient" := jsonb_path_query(new.resource, '$.target[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."recorded" := jsonb_path_query(new.resource, '$.recorded'),
+      new."signature-type" := jsonb_path_query(new.resource, '$.signature.type'),
+      new."target" := jsonb_path_query(new.resource, '$.target'),
+      new."when" := jsonb_path_query(new.resource, '$.occurredDateTime'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_questionnaire(public.questionnaire  new)
+  returns public.questionnaire as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."code" := jsonb_path_query(new.resource, '$.item.code'),
+      new."context" := jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
+      new."context-quantity" := jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
+      new."context-type" := jsonb_path_query(new.resource, '$.useContext.code'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."definition" := jsonb_path_query(new.resource, '$.item.definition'),
+      new."description" := jsonb_path_query(new.resource, '$.description'),
+      new."effective" := jsonb_path_query(new.resource, '$.effectivePeriod'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."jurisdiction" := jsonb_path_query(new.resource, '$.jurisdiction'),
+      new."name" := jsonb_path_query(new.resource, '$.name'),
+      new."publisher" := jsonb_path_query(new.resource, '$.publisher'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."subject-type" := jsonb_path_query(new.resource, '$.subjectType'),
+      new."title" := jsonb_path_query(new.resource, '$.title'),
+      new."url" := jsonb_path_query(new.resource, '$.url'),
+      new."version" := jsonb_path_query(new.resource, '$.version'),
+      new."context-type-quantity" := jsonb_path_query(new.resource, '$.useContext'),
+      new."context-type-value" := jsonb_path_query(new.resource, '$.useContext'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_questionnaireresponse(public.questionnaireresponse  new)
+  returns public.questionnaireresponse as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."author" := jsonb_path_query(new.resource, '$.author'),
+      new."authored" := jsonb_path_query(new.resource, '$.authored'),
+      new."based-on" := jsonb_path_query(new.resource, '$.basedOn'),
+      new."encounter" := jsonb_path_query(new.resource, '$.encounter'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."part-of" := jsonb_path_query(new.resource, '$.partOf'),
+      new."patient" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."questionnaire" := jsonb_path_query(new.resource, '$.questionnaire'),
+      new."source" := jsonb_path_query(new.resource, '$.source'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_regulatedauthorization(public.regulatedauthorization  new)
+  returns public.regulatedauthorization as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."case" := jsonb_path_query(new.resource, '$.case.identifier'),
+      new."case-type" := jsonb_path_query(new.resource, '$.case.type'),
+      new."holder" := jsonb_path_query(new.resource, '$.holder'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."region" := jsonb_path_query(new.resource, '$.region'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_requestgroup(public.requestgroup  new)
+  returns public.requestgroup as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."author" := jsonb_path_query(new.resource, '$.author'),
+      new."authored" := jsonb_path_query(new.resource, '$.authoredOn'),
+      new."code" := jsonb_path_query(new.resource, '$.code'),
+      new."encounter" := jsonb_path_query(new.resource, '$.encounter'),
+      new."group-identifier" := jsonb_path_query(new.resource, '$.groupIdentifier'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."instantiates-canonical" := jsonb_path_query(new.resource, '$.instantiatesCanonical'),
+      new."instantiates-uri" := jsonb_path_query(new.resource, '$.instantiatesUri'),
+      new."intent" := jsonb_path_query(new.resource, '$.intent'),
+      new."participant" := jsonb_path_query(new.resource, '$.action.participant'),
+      new."patient" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."priority" := jsonb_path_query(new.resource, '$.priority'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_researchdefinition(public.researchdefinition  new)
+  returns public.researchdefinition as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."composed-of" := jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''composed-of'').resource'),
+      new."context" := jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
+      new."context-quantity" := jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
+      new."context-type" := jsonb_path_query(new.resource, '$.useContext.code'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."depends-on" := jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''depends-on'').resource'),
+      new."derived-from" := jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''derived-from'').resource'),
+      new."description" := jsonb_path_query(new.resource, '$.description'),
+      new."effective" := jsonb_path_query(new.resource, '$.effectivePeriod'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."jurisdiction" := jsonb_path_query(new.resource, '$.jurisdiction'),
+      new."name" := jsonb_path_query(new.resource, '$.name'),
+      new."predecessor" := jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''predecessor'').resource'),
+      new."publisher" := jsonb_path_query(new.resource, '$.publisher'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."successor" := jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''successor'').resource'),
+      new."title" := jsonb_path_query(new.resource, '$.title'),
+      new."topic" := jsonb_path_query(new.resource, '$.topic'),
+      new."url" := jsonb_path_query(new.resource, '$.url'),
+      new."version" := jsonb_path_query(new.resource, '$.version'),
+      new."context-type-quantity" := jsonb_path_query(new.resource, '$.useContext'),
+      new."context-type-value" := jsonb_path_query(new.resource, '$.useContext'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_researchelementdefinition(public.researchelementdefinition  new)
+  returns public.researchelementdefinition as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."composed-of" := jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''composed-of'').resource'),
+      new."context" := jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
+      new."context-quantity" := jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
+      new."context-type" := jsonb_path_query(new.resource, '$.useContext.code'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."depends-on" := jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''depends-on'').resource'),
+      new."derived-from" := jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''derived-from'').resource'),
+      new."description" := jsonb_path_query(new.resource, '$.description'),
+      new."effective" := jsonb_path_query(new.resource, '$.effectivePeriod'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."jurisdiction" := jsonb_path_query(new.resource, '$.jurisdiction'),
+      new."name" := jsonb_path_query(new.resource, '$.name'),
+      new."predecessor" := jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''predecessor'').resource'),
+      new."publisher" := jsonb_path_query(new.resource, '$.publisher'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."successor" := jsonb_path_query(new.resource, '$.relatedArtifact[*] ? (@.type = ''successor'').resource'),
+      new."title" := jsonb_path_query(new.resource, '$.title'),
+      new."topic" := jsonb_path_query(new.resource, '$.topic'),
+      new."url" := jsonb_path_query(new.resource, '$.url'),
+      new."version" := jsonb_path_query(new.resource, '$.version'),
+      new."context-type-quantity" := jsonb_path_query(new.resource, '$.useContext'),
+      new."context-type-value" := jsonb_path_query(new.resource, '$.useContext'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_researchstudy(public.researchstudy  new)
+  returns public.researchstudy as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."category" := jsonb_path_query(new.resource, '$.category'),
+      new."date" := jsonb_path_query(new.resource, '$.period'),
+      new."focus" := jsonb_path_query(new.resource, '$.focus'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."keyword" := jsonb_path_query(new.resource, '$.keyword'),
+      new."location" := jsonb_path_query(new.resource, '$.location'),
+      new."partof" := jsonb_path_query(new.resource, '$.partOf'),
+      new."principalinvestigator" := jsonb_path_query(new.resource, '$.principalInvestigator'),
+      new."protocol" := jsonb_path_query(new.resource, '$.protocol'),
+      new."site" := jsonb_path_query(new.resource, '$.site'),
+      new."sponsor" := jsonb_path_query(new.resource, '$.sponsor'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."title" := jsonb_path_query(new.resource, '$.title'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_researchsubject(public.researchsubject  new)
+  returns public.researchsubject as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."date" := jsonb_path_query(new.resource, '$.period'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."individual" := jsonb_path_query(new.resource, '$.individual'),
+      new."patient" := jsonb_path_query(new.resource, '$.individual'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."study" := jsonb_path_query(new.resource, '$.study'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_schedule(public.schedule  new)
+  returns public.schedule as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."active" := jsonb_path_query(new.resource, '$.active'),
+      new."actor" := jsonb_path_query(new.resource, '$.actor'),
+      new."date" := jsonb_path_query(new.resource, '$.planningHorizon'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."service-category" := jsonb_path_query(new.resource, '$.serviceCategory'),
+      new."service-type" := jsonb_path_query(new.resource, '$.serviceType'),
+      new."specialty" := jsonb_path_query(new.resource, '$.specialty'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_slot(public.slot  new)
+  returns public.slot as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."appointment-type" := jsonb_path_query(new.resource, '$.appointmentType'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."schedule" := jsonb_path_query(new.resource, '$.schedule'),
+      new."service-category" := jsonb_path_query(new.resource, '$.serviceCategory'),
+      new."service-type" := jsonb_path_query(new.resource, '$.serviceType'),
+      new."specialty" := jsonb_path_query(new.resource, '$.specialty'),
+      new."start" := jsonb_path_query(new.resource, '$.start'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_specimen(public.specimen  new)
+  returns public.specimen as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."accession" := jsonb_path_query(new.resource, '$.accessionIdentifier'),
+      new."bodysite" := jsonb_path_query(new.resource, '$.collection.bodySite'),
+      new."collected" := jsonb_path_query(new.resource, '$.collection.collected'),
+      new."collector" := jsonb_path_query(new.resource, '$.collection.collector'),
+      new."container" := jsonb_path_query(new.resource, '$.container.type'),
+      new."container-id" := jsonb_path_query(new.resource, '$.container.identifier'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."parent" := jsonb_path_query(new.resource, '$.parent'),
+      new."patient" := jsonb_path_query(new.resource, '$.subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."subject" := jsonb_path_query(new.resource, '$.subject'),
+      new."type" := jsonb_path_query(new.resource, '$.type'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_specimendefinition(public.specimendefinition  new)
+  returns public.specimendefinition as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."container" := jsonb_path_query(new.resource, '$.typeTested.container.type'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."type" := jsonb_path_query(new.resource, '$.typeCollected'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_subscription(public.subscription  new)
+  returns public.subscription as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."contact" := jsonb_path_query(new.resource, '$.contact'),
+      new."criteria" := jsonb_path_query(new.resource, '$.criteria'),
+      new."payload" := jsonb_path_query(new.resource, '$.channel.payload'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."type" := jsonb_path_query(new.resource, '$.channel.type'),
+      new."url" := jsonb_path_query(new.resource, '$.channel.endpoint'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_subscriptiontopic(public.subscriptiontopic  new)
+  returns public.subscriptiontopic as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."derived-or-self" := jsonb_path_query(new.resource, '$.url'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."resource" := jsonb_path_query(new.resource, '$.resourceTrigger.resource'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."title" := jsonb_path_query(new.resource, '$.title'),
+      new."trigger-description" := jsonb_path_query(new.resource, '$.resourceTrigger.description'),
+      new."url" := jsonb_path_query(new.resource, '$.url'),
+      new."version" := jsonb_path_query(new.resource, '$.version'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_substance(public.substance  new)
+  returns public.substance as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."category" := jsonb_path_query(new.resource, '$.category'),
+      new."code" := jsonb_path_query(new.resource, '$.code'),
+      new."container-identifier" := jsonb_path_query(new.resource, '$.instance.identifier'),
+      new."expiry" := jsonb_path_query(new.resource, '$.instance.expiry'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."quantity" := jsonb_path_query(new.resource, '$.instance.quantity'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."substance-reference" := jsonb_path_query(new.resource, '$.ingredient.substanceReference'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_substancedefinition(public.substancedefinition  new)
+  returns public.substancedefinition as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."classification" := jsonb_path_query(new.resource, '$.classification'),
+      new."code" := jsonb_path_query(new.resource, '$.code.code'),
+      new."domain" := jsonb_path_query(new.resource, '$.domain'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."name" := jsonb_path_query(new.resource, '$.name.name'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_task(public.task  new)
+  returns public.task as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."authored-on" := jsonb_path_query(new.resource, '$.authoredOn'),
+      new."based-on" := jsonb_path_query(new.resource, '$.basedOn'),
+      new."business-status" := jsonb_path_query(new.resource, '$.businessStatus'),
+      new."code" := jsonb_path_query(new.resource, '$.code'),
+      new."encounter" := jsonb_path_query(new.resource, '$.encounter'),
+      new."focus" := jsonb_path_query(new.resource, '$.focus'),
+      new."group-identifier" := jsonb_path_query(new.resource, '$.groupIdentifier'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."intent" := jsonb_path_query(new.resource, '$.intent'),
+      new."modified" := jsonb_path_query(new.resource, '$.lastModified'),
+      new."owner" := jsonb_path_query(new.resource, '$.owner'),
+      new."part-of" := jsonb_path_query(new.resource, '$.partOf'),
+      new."patient" := jsonb_path_query(new.resource, '$.for[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")'),
+      new."performer" := jsonb_path_query(new.resource, '$.performerType'),
+      new."period" := jsonb_path_query(new.resource, '$.executionPeriod'),
+      new."priority" := jsonb_path_query(new.resource, '$.priority'),
+      new."requester" := jsonb_path_query(new.resource, '$.requester'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."subject" := jsonb_path_query(new.resource, '$.for'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_testreport(public.testreport  new)
+  returns public.testreport as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."issued" := jsonb_path_query(new.resource, '$.issued'),
+      new."participant" := jsonb_path_query(new.resource, '$.participant.uri'),
+      new."result" := jsonb_path_query(new.resource, '$.result'),
+      new."tester" := jsonb_path_query(new.resource, '$.tester'),
+      new."testscript" := jsonb_path_query(new.resource, '$.testScript'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_testscript(public.testscript  new)
+  returns public.testscript as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."context" := jsonb_path_query(new.resource, '$.useContext.valueCodeableConcept'),
+      new."context-quantity" := jsonb_path_query(new.resource, '$.useContext.valueQuantity'),
+      new."context-type" := jsonb_path_query(new.resource, '$.useContext.code'),
+      new."date" := jsonb_path_query(new.resource, '$.date'),
+      new."description" := jsonb_path_query(new.resource, '$.description'),
+      new."identifier" := jsonb_path_query(new.resource, '$.identifier'),
+      new."jurisdiction" := jsonb_path_query(new.resource, '$.jurisdiction'),
+      new."name" := jsonb_path_query(new.resource, '$.name'),
+      new."publisher" := jsonb_path_query(new.resource, '$.publisher'),
+      new."status" := jsonb_path_query(new.resource, '$.status'),
+      new."testscript-capability" := jsonb_path_query(new.resource, '$.metadata.capability.description'),
+      new."title" := jsonb_path_query(new.resource, '$.title'),
+      new."url" := jsonb_path_query(new.resource, '$.url'),
+      new."version" := jsonb_path_query(new.resource, '$.version'),
+      new."context-type-quantity" := jsonb_path_query(new.resource, '$.useContext'),
+      new."context-type-value" := jsonb_path_query(new.resource, '$.useContext'),
+  return new;
+  end;
+$$ language plpgsql security definer;
+
+  create or replace function internal.search_verificationresult(public.verificationresult  new)
+  returns public.verificationresult as $$
+  begin
+      new."_content" := jsonb_path_query(new.resource, '$.content'),
+      new."_filter" := jsonb_path_query(new.resource, '$.filter'),
+      new."_has" := jsonb_path_query(new.resource, '$.has'),
+      new."_id" := jsonb_path_query(new.resource, '$.id'),
+      new."_lastUpdated" := jsonb_path_query(new.resource, '$.meta.lastUpdated'),
+      new."_list" := jsonb_path_query(new.resource, '$.list'),
+      new."_profile" := jsonb_path_query(new.resource, '$.meta.profile'),
+      new."_query" := jsonb_path_query(new.resource, '$.query'),
+      new."_security" := jsonb_path_query(new.resource, '$.meta.security'),
+      new."_source" := jsonb_path_query(new.resource, '$.meta.source'),
+      new."_tag" := jsonb_path_query(new.resource, '$.meta.tag'),
+      new."_text" := jsonb_path_query(new.resource, '$.text'),
+      new."_type" := jsonb_path_query(new.resource, '$.type'),
+      new."target" := jsonb_path_query(new.resource, '$.target'),
   return new;
   end;
 $$ language plpgsql security definer;

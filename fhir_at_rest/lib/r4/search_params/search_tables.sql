@@ -1,5 +1,8 @@
-create table if not exists internal.accountsearch (
+create table if not exists internal.account (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -23,8 +26,11 @@ create table if not exists internal.accountsearch (
   "type" jsonb
 );
 
-create table if not exists internal.activitydefinitionsearch (
+create table if not exists internal.activitydefinition (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -62,8 +68,11 @@ create table if not exists internal.activitydefinitionsearch (
   "context-type-value" jsonb
 );
 
-create table if not exists internal.administrableproductdefinitionsearch (
+create table if not exists internal.administrableproductdefinition (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -87,8 +96,11 @@ create table if not exists internal.administrableproductdefinitionsearch (
   "target-species" jsonb
 );
 
-create table if not exists internal.adverseeventsearch (
+create table if not exists internal.adverseevent (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -116,8 +128,11 @@ create table if not exists internal.adverseeventsearch (
   "substance" jsonb
 );
 
-create table if not exists internal.allergyintolerancesearch (
+create table if not exists internal.allergyintolerance (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -149,8 +164,11 @@ create table if not exists internal.allergyintolerancesearch (
   "verification-status" jsonb
 );
 
-create table if not exists internal.conditionsearch (
+create table if not exists internal.condition (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -187,8 +205,11 @@ create table if not exists internal.conditionsearch (
   "verification-status" jsonb
 );
 
-create table if not exists internal.devicerequestsearch (
+create table if not exists internal.devicerequest (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -222,8 +243,11 @@ create table if not exists internal.devicerequestsearch (
   "subject" jsonb
 );
 
-create table if not exists internal.diagnosticreportsearch (
+create table if not exists internal.diagnosticreport (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -255,8 +279,11 @@ create table if not exists internal.diagnosticreportsearch (
   "subject" jsonb
 );
 
-create table if not exists internal.familymemberhistorysearch (
+create table if not exists internal.familymemberhistory (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -281,8 +308,11 @@ create table if not exists internal.familymemberhistorysearch (
   "status" jsonb
 );
 
-create table if not exists internal.listsearch (
+create table if not exists internal.list (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -310,8 +340,11 @@ create table if not exists internal.listsearch (
   "title" jsonb
 );
 
-create table if not exists internal.medicationsearch (
+create table if not exists internal.medication (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -336,8 +369,11 @@ create table if not exists internal.medicationsearch (
   "status" jsonb
 );
 
-create table if not exists internal.medicationadministrationsearch (
+create table if not exists internal.medicationadministration (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -366,8 +402,11 @@ create table if not exists internal.medicationadministrationsearch (
   "subject" jsonb
 );
 
-create table if not exists internal.medicationdispensesearch (
+create table if not exists internal.medicationdispense (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -398,8 +437,11 @@ create table if not exists internal.medicationdispensesearch (
   "whenprepared" jsonb
 );
 
-create table if not exists internal.medicationrequestsearch (
+create table if not exists internal.medicationrequest (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -431,8 +473,11 @@ create table if not exists internal.medicationrequestsearch (
   "subject" jsonb
 );
 
-create table if not exists internal.medicationstatementsearch (
+create table if not exists internal.medicationstatement (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -459,8 +504,11 @@ create table if not exists internal.medicationstatementsearch (
   "subject" jsonb
 );
 
-create table if not exists internal.observationsearch (
+create table if not exists internal.observation (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -514,8 +562,11 @@ create table if not exists internal.observationsearch (
   "component-code-value-quantity" jsonb
 );
 
-create table if not exists internal.proceduresearch (
+create table if not exists internal.procedure (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -547,8 +598,11 @@ create table if not exists internal.proceduresearch (
   "subject" jsonb
 );
 
-create table if not exists internal.servicerequestsearch (
+create table if not exists internal.servicerequest (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -585,8 +639,11 @@ create table if not exists internal.servicerequestsearch (
   "subject" jsonb
 );
 
-create table if not exists internal.careplansearch (
+create table if not exists internal.careplan (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -622,8 +679,11 @@ create table if not exists internal.careplansearch (
   "subject" jsonb
 );
 
-create table if not exists internal.careteamsearch (
+create table if not exists internal.careteam (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -647,8 +707,11 @@ create table if not exists internal.careteamsearch (
   "subject" jsonb
 );
 
-create table if not exists internal.clinicalimpressionsearch (
+create table if not exists internal.clinicalimpression (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -677,8 +740,11 @@ create table if not exists internal.clinicalimpressionsearch (
   "supporting-info" jsonb
 );
 
-create table if not exists internal.compositionsearch (
+create table if not exists internal.composition (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -712,8 +778,11 @@ create table if not exists internal.compositionsearch (
   "title" jsonb
 );
 
-create table if not exists internal.consentsearch (
+create table if not exists internal.consent (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -744,8 +813,11 @@ create table if not exists internal.consentsearch (
   "status" jsonb
 );
 
-create table if not exists internal.encountersearch (
+create table if not exists internal.encounter (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -784,8 +856,11 @@ create table if not exists internal.encountersearch (
   "subject" jsonb
 );
 
-create table if not exists internal.episodeofcaresearch (
+create table if not exists internal.episodeofcare (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -810,8 +885,11 @@ create table if not exists internal.episodeofcaresearch (
   "status" jsonb
 );
 
-create table if not exists internal.flagsearch (
+create table if not exists internal.flag (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -833,8 +911,11 @@ create table if not exists internal.flagsearch (
   "subject" jsonb
 );
 
-create table if not exists internal.immunizationsearch (
+create table if not exists internal.immunization (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -866,8 +947,11 @@ create table if not exists internal.immunizationsearch (
   "vaccine-code" jsonb
 );
 
-create table if not exists internal.riskassessmentsearch (
+create table if not exists internal.riskassessment (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -893,8 +977,11 @@ create table if not exists internal.riskassessmentsearch (
   "subject" jsonb
 );
 
-create table if not exists internal.supplyrequestsearch (
+create table if not exists internal.supplyrequest (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -917,8 +1004,11 @@ create table if not exists internal.supplyrequestsearch (
   "supplier" jsonb
 );
 
-create table if not exists internal.detectedissuesearch (
+create table if not exists internal.detectedissue (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -940,8 +1030,11 @@ create table if not exists internal.detectedissuesearch (
   "implicated" jsonb
 );
 
-create table if not exists internal.documentmanifestsearch (
+create table if not exists internal.documentmanifest (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -970,8 +1063,11 @@ create table if not exists internal.documentmanifestsearch (
   "subject" jsonb
 );
 
-create table if not exists internal.documentreferencesearch (
+create table if not exists internal.documentreference (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -1012,8 +1108,11 @@ create table if not exists internal.documentreferencesearch (
   "relationship" jsonb
 );
 
-create table if not exists internal.goalsearch (
+create table if not exists internal.goal (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -1037,8 +1136,11 @@ create table if not exists internal.goalsearch (
   "target-date" jsonb
 );
 
-create table if not exists internal.imagingstudysearch (
+create table if not exists internal.imagingstudy (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -1071,8 +1173,11 @@ create table if not exists internal.imagingstudysearch (
   "subject" jsonb
 );
 
-create table if not exists internal.nutritionordersearch (
+create table if not exists internal.nutritionorder (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -1100,8 +1205,11 @@ create table if not exists internal.nutritionordersearch (
   "supplement" jsonb
 );
 
-create table if not exists internal.supplydeliverysearch (
+create table if not exists internal.supplydelivery (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -1122,8 +1230,11 @@ create table if not exists internal.supplydeliverysearch (
   "supplier" jsonb
 );
 
-create table if not exists internal.visionprescriptionsearch (
+create table if not exists internal.visionprescription (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -1145,8 +1256,11 @@ create table if not exists internal.visionprescriptionsearch (
   "status" jsonb
 );
 
-create table if not exists internal.deviceusestatementsearch (
+create table if not exists internal.deviceusestatement (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -1166,8 +1280,11 @@ create table if not exists internal.deviceusestatementsearch (
   "subject" jsonb
 );
 
-create table if not exists internal.appointmentsearch (
+create table if not exists internal.appointment (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -1200,8 +1317,11 @@ create table if not exists internal.appointmentsearch (
   "supporting-info" jsonb
 );
 
-create table if not exists internal.appointmentresponsesearch (
+create table if not exists internal.appointmentresponse (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -1224,8 +1344,11 @@ create table if not exists internal.appointmentresponsesearch (
   "practitioner" jsonb
 );
 
-create table if not exists internal.auditeventsearch (
+create table if not exists internal.auditevent (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -1259,8 +1382,11 @@ create table if not exists internal.auditeventsearch (
   "type" jsonb
 );
 
-create table if not exists internal.basicsearch (
+create table if not exists internal.basic (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -1282,8 +1408,11 @@ create table if not exists internal.basicsearch (
   "subject" jsonb
 );
 
-create table if not exists internal.bodystructuresearch (
+create table if not exists internal.bodystructure (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -1303,8 +1432,11 @@ create table if not exists internal.bodystructuresearch (
   "patient" jsonb
 );
 
-create table if not exists internal.bundlesearch (
+create table if not exists internal.bundle (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -1325,8 +1457,11 @@ create table if not exists internal.bundlesearch (
   "type" jsonb
 );
 
-create table if not exists internal.capabilitystatementsearch (
+create table if not exists internal.capabilitystatement (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -1365,8 +1500,11 @@ create table if not exists internal.capabilitystatementsearch (
   "context-type-value" jsonb
 );
 
-create table if not exists internal.codesystemsearch (
+create table if not exists internal.codesystem (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -1402,8 +1540,11 @@ create table if not exists internal.codesystemsearch (
   "system" jsonb
 );
 
-create table if not exists internal.compartmentdefinitionsearch (
+create table if not exists internal.compartmentdefinition (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -1433,8 +1574,11 @@ create table if not exists internal.compartmentdefinitionsearch (
   "resource" jsonb
 );
 
-create table if not exists internal.conceptmapsearch (
+create table if not exists internal.conceptmap (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -1476,8 +1620,11 @@ create table if not exists internal.conceptmapsearch (
   "target-uri" jsonb
 );
 
-create table if not exists internal.graphdefinitionsearch (
+create table if not exists internal.graphdefinition (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -1507,8 +1654,11 @@ create table if not exists internal.graphdefinitionsearch (
   "start" jsonb
 );
 
-create table if not exists internal.implementationguidesearch (
+create table if not exists internal.implementationguide (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -1542,8 +1692,11 @@ create table if not exists internal.implementationguidesearch (
   "resource" jsonb
 );
 
-create table if not exists internal.messagedefinitionsearch (
+create table if not exists internal.messagedefinition (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -1578,8 +1731,11 @@ create table if not exists internal.messagedefinitionsearch (
   "parent" jsonb
 );
 
-create table if not exists internal.namingsystemsearch (
+create table if not exists internal.namingsystem (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -1614,8 +1770,11 @@ create table if not exists internal.namingsystemsearch (
   "value" jsonb
 );
 
-create table if not exists internal.operationdefinitionsearch (
+create table if not exists internal.operationdefinition (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -1653,8 +1812,11 @@ create table if not exists internal.operationdefinitionsearch (
   "type" jsonb
 );
 
-create table if not exists internal.searchparametersearch (
+create table if not exists internal.searchparameter (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -1689,8 +1851,11 @@ create table if not exists internal.searchparametersearch (
   "type" jsonb
 );
 
-create table if not exists internal.structuredefinitionsearch (
+create table if not exists internal.structuredefinition (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -1732,8 +1897,11 @@ create table if not exists internal.structuredefinitionsearch (
   "valueset" jsonb
 );
 
-create table if not exists internal.structuremapsearch (
+create table if not exists internal.structuremap (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -1764,8 +1932,11 @@ create table if not exists internal.structuremapsearch (
   "identifier" jsonb
 );
 
-create table if not exists internal.terminologycapabilitiessearch (
+create table if not exists internal.terminologycapabilities (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -1795,8 +1966,11 @@ create table if not exists internal.terminologycapabilitiessearch (
   "context-type-value" jsonb
 );
 
-create table if not exists internal.valuesetsearch (
+create table if not exists internal.valueset (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -1830,8 +2004,11 @@ create table if not exists internal.valuesetsearch (
   "reference" jsonb
 );
 
-create table if not exists internal.chargeitemsearch (
+create table if not exists internal.chargeitem (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -1864,8 +2041,11 @@ create table if not exists internal.chargeitemsearch (
   "subject" jsonb
 );
 
-create table if not exists internal.chargeitemdefinitionsearch (
+create table if not exists internal.chargeitemdefinition (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -1896,8 +2076,11 @@ create table if not exists internal.chargeitemdefinitionsearch (
   "context-type-value" jsonb
 );
 
-create table if not exists internal.citationsearch (
+create table if not exists internal.citation (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -1929,8 +2112,11 @@ create table if not exists internal.citationsearch (
   "context-type-value" jsonb
 );
 
-create table if not exists internal.claimsearch (
+create table if not exists internal.claim (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -1963,8 +2149,11 @@ create table if not exists internal.claimsearch (
   "use" jsonb
 );
 
-create table if not exists internal.claimresponsesearch (
+create table if not exists internal.claimresponse (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -1991,8 +2180,11 @@ create table if not exists internal.claimresponsesearch (
   "use" jsonb
 );
 
-create table if not exists internal.clinicalusedefinitionsearch (
+create table if not exists internal.clinicalusedefinition (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -2019,8 +2211,11 @@ create table if not exists internal.clinicalusedefinitionsearch (
   "type" jsonb
 );
 
-create table if not exists internal.communicationsearch (
+create table if not exists internal.communication (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -2051,8 +2246,11 @@ create table if not exists internal.communicationsearch (
   "subject" jsonb
 );
 
-create table if not exists internal.communicationrequestsearch (
+create table if not exists internal.communicationrequest (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -2084,8 +2282,11 @@ create table if not exists internal.communicationrequestsearch (
   "subject" jsonb
 );
 
-create table if not exists internal.contractsearch (
+create table if not exists internal.contract (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -2111,8 +2312,11 @@ create table if not exists internal.contractsearch (
   "url" jsonb
 );
 
-create table if not exists internal.coveragesearch (
+create table if not exists internal.coverage (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -2139,8 +2343,11 @@ create table if not exists internal.coveragesearch (
   "type" jsonb
 );
 
-create table if not exists internal.coverageeligibilityrequestsearch (
+create table if not exists internal.coverageeligibilityrequest (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -2163,8 +2370,11 @@ create table if not exists internal.coverageeligibilityrequestsearch (
   "status" jsonb
 );
 
-create table if not exists internal.coverageeligibilityresponsesearch (
+create table if not exists internal.coverageeligibilityresponse (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -2189,8 +2399,11 @@ create table if not exists internal.coverageeligibilityresponsesearch (
   "status" jsonb
 );
 
-create table if not exists internal.devicesearch (
+create table if not exists internal.device (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -2218,8 +2431,11 @@ create table if not exists internal.devicesearch (
   "url" jsonb
 );
 
-create table if not exists internal.devicedefinitionsearch (
+create table if not exists internal.devicedefinition (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -2238,8 +2454,11 @@ create table if not exists internal.devicedefinitionsearch (
   "type" jsonb
 );
 
-create table if not exists internal.devicemetricsearch (
+create table if not exists internal.devicemetric (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -2260,8 +2479,11 @@ create table if not exists internal.devicemetricsearch (
   "type" jsonb
 );
 
-create table if not exists internal.endpointsearch (
+create table if not exists internal.endpoint (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -2283,8 +2505,11 @@ create table if not exists internal.endpointsearch (
   "status" jsonb
 );
 
-create table if not exists internal.enrollmentrequestsearch (
+create table if not exists internal.enrollmentrequest (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -2304,8 +2529,11 @@ create table if not exists internal.enrollmentrequestsearch (
   "subject" jsonb
 );
 
-create table if not exists internal.enrollmentresponsesearch (
+create table if not exists internal.enrollmentresponse (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -2324,8 +2552,11 @@ create table if not exists internal.enrollmentresponsesearch (
   "status" jsonb
 );
 
-create table if not exists internal.eventdefinitionsearch (
+create table if not exists internal.eventdefinition (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -2363,8 +2594,11 @@ create table if not exists internal.eventdefinitionsearch (
   "context-type-value" jsonb
 );
 
-create table if not exists internal.evidencesearch (
+create table if not exists internal.evidence (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -2393,8 +2627,11 @@ create table if not exists internal.evidencesearch (
   "context-type-value" jsonb
 );
 
-create table if not exists internal.evidencereportsearch (
+create table if not exists internal.evidencereport (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -2419,8 +2656,11 @@ create table if not exists internal.evidencereportsearch (
   "context-type-value" jsonb
 );
 
-create table if not exists internal.evidencevariablesearch (
+create table if not exists internal.evidencevariable (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -2450,8 +2690,11 @@ create table if not exists internal.evidencevariablesearch (
   "context-type-value" jsonb
 );
 
-create table if not exists internal.examplescenariosearch (
+create table if not exists internal.examplescenario (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -2480,8 +2723,11 @@ create table if not exists internal.examplescenariosearch (
   "context-type-value" jsonb
 );
 
-create table if not exists internal.explanationofbenefitsearch (
+create table if not exists internal.explanationofbenefit (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -2514,8 +2760,11 @@ create table if not exists internal.explanationofbenefitsearch (
   "subdetail-udi" jsonb
 );
 
-create table if not exists internal.groupsearch (
+create table if not exists internal.group (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -2541,8 +2790,11 @@ create table if not exists internal.groupsearch (
   "characteristic-value" jsonb
 );
 
-create table if not exists internal.guidanceresponsesearch (
+create table if not exists internal.guidanceresponse (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -2562,8 +2814,11 @@ create table if not exists internal.guidanceresponsesearch (
   "subject" jsonb
 );
 
-create table if not exists internal.healthcareservicesearch (
+create table if not exists internal.healthcareservice (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -2591,8 +2846,11 @@ create table if not exists internal.healthcareservicesearch (
   "specialty" jsonb
 );
 
-create table if not exists internal.immunizationevaluationsearch (
+create table if not exists internal.immunizationevaluation (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -2615,8 +2873,11 @@ create table if not exists internal.immunizationevaluationsearch (
   "target-disease" jsonb
 );
 
-create table if not exists internal.immunizationrecommendationsearch (
+create table if not exists internal.immunizationrecommendation (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -2640,8 +2901,11 @@ create table if not exists internal.immunizationrecommendationsearch (
   "vaccine-type" jsonb
 );
 
-create table if not exists internal.ingredientsearch (
+create table if not exists internal.ingredient (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -2665,8 +2929,11 @@ create table if not exists internal.ingredientsearch (
   "substance-definition" jsonb
 );
 
-create table if not exists internal.insuranceplansearch (
+create table if not exists internal.insuranceplan (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -2696,8 +2963,11 @@ create table if not exists internal.insuranceplansearch (
   "type" jsonb
 );
 
-create table if not exists internal.invoicesearch (
+create table if not exists internal.invoice (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -2726,8 +2996,11 @@ create table if not exists internal.invoicesearch (
   "type" jsonb
 );
 
-create table if not exists internal.librarysearch (
+create table if not exists internal.library (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -2767,8 +3040,11 @@ create table if not exists internal.librarysearch (
   "context-type-value" jsonb
 );
 
-create table if not exists internal.linkagesearch (
+create table if not exists internal.linkage (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -2787,8 +3063,11 @@ create table if not exists internal.linkagesearch (
   "source" jsonb
 );
 
-create table if not exists internal.locationsearch (
+create table if not exists internal.location (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -2819,8 +3098,11 @@ create table if not exists internal.locationsearch (
   "type" jsonb
 );
 
-create table if not exists internal.manufactureditemdefinitionsearch (
+create table if not exists internal.manufactureditemdefinition (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -2839,8 +3121,11 @@ create table if not exists internal.manufactureditemdefinitionsearch (
   "ingredient" jsonb
 );
 
-create table if not exists internal.measuresearch (
+create table if not exists internal.measure (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -2878,8 +3163,11 @@ create table if not exists internal.measuresearch (
   "context-type-value" jsonb
 );
 
-create table if not exists internal.measurereportsearch (
+create table if not exists internal.measurereport (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -2904,8 +3192,11 @@ create table if not exists internal.measurereportsearch (
   "subject" jsonb
 );
 
-create table if not exists internal.mediasearch (
+create table if not exists internal.media (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -2934,8 +3225,11 @@ create table if not exists internal.mediasearch (
   "view" jsonb
 );
 
-create table if not exists internal.medicationknowledgesearch (
+create table if not exists internal.medicationknowledge (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -2964,8 +3258,11 @@ create table if not exists internal.medicationknowledgesearch (
   "status" jsonb
 );
 
-create table if not exists internal.medicinalproductdefinitionsearch (
+create table if not exists internal.medicinalproductdefinition (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -2993,8 +3290,11 @@ create table if not exists internal.medicinalproductdefinitionsearch (
   "type" jsonb
 );
 
-create table if not exists internal.messageheadersearch (
+create table if not exists internal.messageheader (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -3024,8 +3324,11 @@ create table if not exists internal.messageheadersearch (
   "target" jsonb
 );
 
-create table if not exists internal.molecularsequencesearch (
+create table if not exists internal.molecularsequence (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -3054,8 +3357,11 @@ create table if not exists internal.molecularsequencesearch (
   "referenceseqid-window-coordinate" jsonb
 );
 
-create table if not exists internal.nutritionproductsearch (
+create table if not exists internal.nutritionproduct (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -3073,8 +3379,11 @@ create table if not exists internal.nutritionproductsearch (
   "status" jsonb
 );
 
-create table if not exists internal.organizationsearch (
+create table if not exists internal.organization (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -3103,8 +3412,11 @@ create table if not exists internal.organizationsearch (
   "type" jsonb
 );
 
-create table if not exists internal.organizationaffiliationsearch (
+create table if not exists internal.organizationaffiliation (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -3134,8 +3446,11 @@ create table if not exists internal.organizationaffiliationsearch (
   "telecom" jsonb
 );
 
-create table if not exists internal.packagedproductdefinitionsearch (
+create table if not exists internal.packagedproductdefinition (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -3162,8 +3477,11 @@ create table if not exists internal.packagedproductdefinitionsearch (
   "status" jsonb
 );
 
-create table if not exists internal.patientsearch (
+create table if not exists internal.patient (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -3202,8 +3520,11 @@ create table if not exists internal.patientsearch (
   "telecom" jsonb
 );
 
-create table if not exists internal.personsearch (
+create table if not exists internal.person (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -3238,8 +3559,11 @@ create table if not exists internal.personsearch (
   "relatedperson" jsonb
 );
 
-create table if not exists internal.practitionersearch (
+create table if not exists internal.practitioner (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -3272,8 +3596,11 @@ create table if not exists internal.practitionersearch (
   "name" jsonb
 );
 
-create table if not exists internal.relatedpersonsearch (
+create table if not exists internal.relatedperson (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -3306,8 +3633,11 @@ create table if not exists internal.relatedpersonsearch (
   "relationship" jsonb
 );
 
-create table if not exists internal.practitionerrolesearch (
+create table if not exists internal.practitionerrole (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -3336,8 +3666,11 @@ create table if not exists internal.practitionerrolesearch (
   "specialty" jsonb
 );
 
-create table if not exists internal.paymentnoticesearch (
+create table if not exists internal.paymentnotice (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -3360,8 +3693,11 @@ create table if not exists internal.paymentnoticesearch (
   "status" jsonb
 );
 
-create table if not exists internal.paymentreconciliationsearch (
+create table if not exists internal.paymentreconciliation (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -3385,8 +3721,11 @@ create table if not exists internal.paymentreconciliationsearch (
   "status" jsonb
 );
 
-create table if not exists internal.plandefinitionsearch (
+create table if not exists internal.plandefinition (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -3426,8 +3765,11 @@ create table if not exists internal.plandefinitionsearch (
   "context-type-value" jsonb
 );
 
-create table if not exists internal.provenancesearch (
+create table if not exists internal.provenance (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -3453,8 +3795,11 @@ create table if not exists internal.provenancesearch (
   "when" jsonb
 );
 
-create table if not exists internal.questionnairesearch (
+create table if not exists internal.questionnaire (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -3489,8 +3834,11 @@ create table if not exists internal.questionnairesearch (
   "context-type-value" jsonb
 );
 
-create table if not exists internal.questionnaireresponsesearch (
+create table if not exists internal.questionnaireresponse (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -3517,8 +3865,11 @@ create table if not exists internal.questionnaireresponsesearch (
   "subject" jsonb
 );
 
-create table if not exists internal.regulatedauthorizationsearch (
+create table if not exists internal.regulatedauthorization (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -3541,8 +3892,11 @@ create table if not exists internal.regulatedauthorizationsearch (
   "subject" jsonb
 );
 
-create table if not exists internal.requestgroupsearch (
+create table if not exists internal.requestgroup (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -3572,8 +3926,11 @@ create table if not exists internal.requestgroupsearch (
   "subject" jsonb
 );
 
-create table if not exists internal.researchdefinitionsearch (
+create table if not exists internal.researchdefinition (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -3611,8 +3968,11 @@ create table if not exists internal.researchdefinitionsearch (
   "context-type-value" jsonb
 );
 
-create table if not exists internal.researchelementdefinitionsearch (
+create table if not exists internal.researchelementdefinition (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -3650,8 +4010,11 @@ create table if not exists internal.researchelementdefinitionsearch (
   "context-type-value" jsonb
 );
 
-create table if not exists internal.researchstudysearch (
+create table if not exists internal.researchstudy (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -3680,8 +4043,11 @@ create table if not exists internal.researchstudysearch (
   "title" jsonb
 );
 
-create table if not exists internal.researchsubjectsearch (
+create table if not exists internal.researchsubject (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -3703,8 +4069,11 @@ create table if not exists internal.researchsubjectsearch (
   "study" jsonb
 );
 
-create table if not exists internal.schedulesearch (
+create table if not exists internal.schedule (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -3727,8 +4096,11 @@ create table if not exists internal.schedulesearch (
   "specialty" jsonb
 );
 
-create table if not exists internal.slotsearch (
+create table if not exists internal.slot (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -3752,8 +4124,11 @@ create table if not exists internal.slotsearch (
   "status" jsonb
 );
 
-create table if not exists internal.specimensearch (
+create table if not exists internal.specimen (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -3781,8 +4156,11 @@ create table if not exists internal.specimensearch (
   "type" jsonb
 );
 
-create table if not exists internal.specimendefinitionsearch (
+create table if not exists internal.specimendefinition (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -3801,8 +4179,11 @@ create table if not exists internal.specimendefinitionsearch (
   "type" jsonb
 );
 
-create table if not exists internal.subscriptionsearch (
+create table if not exists internal.subscription (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -3824,8 +4205,11 @@ create table if not exists internal.subscriptionsearch (
   "url" jsonb
 );
 
-create table if not exists internal.subscriptiontopicsearch (
+create table if not exists internal.subscriptiontopic (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -3850,8 +4234,11 @@ create table if not exists internal.subscriptiontopicsearch (
   "version" jsonb
 );
 
-create table if not exists internal.substancesearch (
+create table if not exists internal.substance (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -3875,8 +4262,11 @@ create table if not exists internal.substancesearch (
   "substance-reference" jsonb
 );
 
-create table if not exists internal.substancedefinitionsearch (
+create table if not exists internal.substancedefinition (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -3897,8 +4287,11 @@ create table if not exists internal.substancedefinitionsearch (
   "name" jsonb
 );
 
-create table if not exists internal.tasksearch (
+create table if not exists internal.task (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -3933,8 +4326,11 @@ create table if not exists internal.tasksearch (
   "subject" jsonb
 );
 
-create table if not exists internal.testreportsearch (
+create table if not exists internal.testreport (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -3956,8 +4352,11 @@ create table if not exists internal.testreportsearch (
   "testscript" jsonb
 );
 
-create table if not exists internal.testscriptsearch (
+create table if not exists internal.testscript (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
@@ -3989,8 +4388,11 @@ create table if not exists internal.testscriptsearch (
   "context-type-value" jsonb
 );
 
-create table if not exists internal.verificationresultsearch (
+create table if not exists internal.verificationresult (
   id text primary key,
+  versionid int not null,
+  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,
+  resource jsonb not null,
   "_content" jsonb,
   "_filter" jsonb,
   "_has" jsonb,
