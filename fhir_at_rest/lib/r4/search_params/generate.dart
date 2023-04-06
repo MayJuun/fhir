@@ -141,41 +141,46 @@ Future<void> main() async {
           "  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,\n";
       searchTableString += '  resource jsonb not null,\n';
       searchResourceString +=
-          '  create or replace function internal.search_${key.toLowerCase()}(public.${key.toLowerCase()} new)\n';
+          'create or replace function public.new_${key.toLowerCase()}()\n';
       searchResourceString += '  returns trigger as \$\$\n';
+      searchResourceString += '  declare\n  resourceid text;\n';
       searchResourceString += '  begin\n';
-      // searchResourceString +=
-      //     '    insert into internal.${key.toLowerCase()}search\n';
-      // searchResourceString += '    (\n      id,\n';
-      // var values = "      jsonb_path_query(new.resource, '\$.id')::text,\n";
+      searchResourceString += addIdAndVersionId;
+
       for (var resourceEntry in sqlMap['Resource']!) {
         searchTableString += '  "${resourceEntry.code}" jsonb,\n';
-        // searchResourceString += '      "${resourceEntry.code}",\n';
-        // searchResourceString +=
-        //     "      new.${resourceEntry.code} := '${resourceEntry.expression.replaceFirst(key, '\$').replaceAll("'", "''")}';\n";
+        String? path =
+            '${resourceEntry.expression.replaceFirst("Resource", '\$').replaceAll("'", "''")}';
         searchResourceString +=
-            "      new.\"${resourceEntry.code}\" := jsonb_path_query(new.resource, '${resourceEntry.expression.replaceFirst("Resource", '\$').replaceAll("'", "''")}'),\n";
+            "      new.\"${resourceEntry.code}\" := jsonb_path_query(new.resource, '$path')";
+        path = path.replaceAll('\$.', '');
+        final field = walkTypePath(key, path);
+        if (field != null) {
+          searchResourceString +=
+              '::${fhirToPostgresType(field.type)}${field.isList ? "[]" : ""}';
+        }
+        searchResourceString += ';\n';
       }
       for (var entry in sqlMap[key]!) {
         searchTableString += '  "${entry.code}" jsonb,\n';
-        // searchResourceString += '      "${entry.code}",\n';
+        // searchResourceString +=
+        //     "      new.\"${entry.code}\" := jsonb_path_query(new.resource, '$');\n";
+        String? path =
+            '${entry.expression.replaceFirst(key, '\$').replaceAll("'", "''")}';
         searchResourceString +=
-            "      new.\"${entry.code}\" := jsonb_path_query(new.resource, '${entry.expression.replaceFirst(key, '\$').replaceAll("'", "''")}'),\n";
-        // values +=
-        //     "      jsonb_path_query(new.resource, '${entry.expression.replaceFirst(key, '\$').replaceAll("'", "''")}'),\n";
+            "      new.\"${entry.code}\" := jsonb_path_query(new.resource, '$path')";
+        path = path.replaceAll('\$.', '');
+        final field = walkTypePath(key, path);
+        if (field != null) {
+          searchResourceString +=
+              '::${fhirToPostgresType(field.type)}${field.isList ? "[]" : ""}';
+        }
+        searchResourceString += ';\n';
       }
       searchTableString =
           searchTableString.substring(0, searchTableString.length - 2);
       searchTableString += '\n);\n\n';
-      // searchResourceString =
-      //     searchResourceString.substring(0, searchResourceString.length - 2);
-      // searchResourceString += '\n    )\n    values\n    (\n';
-      // searchResourceString += values;
-      // searchResourceString =
-      //     searchResourceString.substring(0, searchResourceString.length - 2);
       searchResourceString +=
-          // '\n    );\n  return new;\n  end;\n\$\$ language plpgsql security definer;\n\n';
-
           '  return new;\n  end;\n\$\$ language plpgsql security definer;\n\n';
     }
   }
@@ -192,6 +197,75 @@ Future<void> main() async {
   // }
 }
 
+const addIdAndVersionId = '''
+    -- check if the resource that is being uploaded has an id
+    resourceid := new.resource->>'id';
+    -- if the resourceid is null (so we have to assume this is a new resource)
+    if resourceid is null then
+      -- we generate a new id
+      resourceid := gen_random_uuid();
+    end if;
+    -- assign that id to the resource
+    new.id := resourceid;
+    -- we set the versionid at 1
+    new.versionid = 1;
+    -- then we ensure the json of the resource agrees
+    new.resource := new.resource::jsonb || 
+      json_build_object(
+        'id',resourceid::text,
+        'meta', json_build_object(
+          'versionId','1',
+            -- record this moment as the moment of updating
+          'lastuUdated',to_json(now())::jsonb
+        )::jsonb
+      )::jsonb;
+      ''';
+
+String fhirToPostgresType(String type) {
+  switch (type) {
+    case 'String':
+      return 'text';
+    case 'Instant':
+      return 'timestamp';
+    case 'FhirDateTime':
+      return 'timestamp';
+    case 'Markdown':
+      return 'jsonb';
+    case 'Canonical':
+      return 'text';
+    case 'Coding':
+      return 'jsonb';
+    case 'FhirUri':
+      return 'text';
+    case 'Narrative':
+      return 'jsonb';
+    case 'CodeableConcept':
+      return 'jsonb';
+    case 'Identifier':
+      return 'jsonb';
+    case 'Reference':
+      return 'jsonb';
+    case 'Period':
+      return 'jsonb';
+    case 'Code':
+      return 'jsonb';
+    case 'Quantity':
+      return 'jsonb';
+    case 'HumanName':
+      return 'jsonb';
+    case 'Boolean':
+      return 'boolean';
+    case 'ContactPoint':
+      return 'jsonb';
+    case 'Address':
+      return 'jsonb';
+    case 'FhirUrl':
+      return 'text';
+    default:
+      return type;
+  }
+}
+
 String cleanSearchResourceString(String searchResourceString) {
   for (final code in ['type', 'system']) {
     searchResourceString =
@@ -203,7 +277,7 @@ String cleanSearchResourceString(String searchResourceString) {
     for (final type in ['Age', 'dateTime', 'string']) {
       searchResourceString = searchResourceString.replaceAll(
           '\$.$code.as($type)',
-          '\$.${code}${type.substring(0, 1).toUpperCase() + type.substring(1)}');
+          '\$.$code${type.substring(0, 1).toUpperCase() + type.substring(1)}');
     }
   }
 
@@ -285,7 +359,33 @@ String cleanSearchResourceString(String searchResourceString) {
         '[*] ? (@.type like_regex "^.*$replaceString.*") ? (@.reference like_regex "^.*$replaceString.*")');
   }
 
+  searchResourceString = searchResourceString.replaceAll(
+      '''            new."_content" := jsonb_path_query(new.resource, '\$.content');''',
+      '''      new."_content" := jsonb_path_query(new.resource, '\$.content');''');
+
   return searchResourceString;
+}
+
+FhirField? walkTypePath(
+  String? type,
+  String expression, {
+  bool? isList = false,
+}) {
+  final expressionList = expression.split('.');
+  if (type == null) {
+    return null;
+  } else if (expressionList.length == 1) {
+    final field = fhirFieldMap[type]?[expressionList.first];
+    return field == null
+        ? null
+        : FhirField((isList ?? false) || field.isList, field.type);
+  } else {
+    return walkTypePath(
+      fhirFieldMap[type]?[expressionList.first]?.type,
+      expressionList.sublist(1).join('.'),
+      isList: fhirFieldMap[type]?[expressionList.first]?.isList,
+    );
+  }
 }
 
 class ParameterGenerator {
