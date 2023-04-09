@@ -134,7 +134,7 @@ Future<void> main() async {
   for (var key in sqlMap.keys) {
     if (key != 'Resource' && key != 'DomainResource') {
       searchTableString +=
-          'create table if not exists internal.${key.toLowerCase()} (\n';
+          'create table if not exists public.${key.toLowerCase()} (\n';
       searchTableString += '  id text primary key,\n';
       searchTableString += '  versionid int not null,\n';
       searchTableString +=
@@ -154,10 +154,9 @@ Future<void> main() async {
         searchResourceString +=
             "      new.\"${resourceEntry.code}\" := jsonb_path_query(new.resource, '$path')";
         path = path.replaceAll('\$.', '');
-        final field = walkTypePath(key, path);
+        final field = walkTypePath(key, path, path);
         if (field != null) {
-          searchResourceString +=
-              '::${fhirToPostgresType(field.type)}${field.isList ? "[]" : ""}';
+          searchResourceString += '::${field.type}${field.isList ? "[]" : ""}';
         }
         searchResourceString += ';\n';
       }
@@ -170,10 +169,9 @@ Future<void> main() async {
         searchResourceString +=
             "      new.\"${entry.code}\" := jsonb_path_query(new.resource, '$path')";
         path = path.replaceAll('\$.', '');
-        final field = walkTypePath(key, path);
+        final field = walkTypePath(key, path, path);
         if (field != null) {
-          searchResourceString +=
-              '::${fhirToPostgresType(field.type)}${field.isList ? "[]" : ""}';
+          searchResourceString += '::${field.type}${field.isList ? "[]" : ""}';
         }
         searchResourceString += ';\n';
       }
@@ -261,6 +259,8 @@ String fhirToPostgresType(String type) {
       return 'jsonb';
     case 'FhirUrl':
       return 'text';
+    case 'Resource':
+      return 'jsonb';
     default:
       return type;
   }
@@ -368,14 +368,45 @@ String cleanSearchResourceString(String searchResourceString) {
 
 FhirField? walkTypePath(
   String? type,
-  String expression, {
+  String expression,
+  String oldExpression, {
   bool? isList = false,
 }) {
+  if (expression.toLowerCase().contains('(usecontext')) {
+    expression = expression
+        .replaceAll('(', '')
+        .replaceAll(')', '')
+        .replaceAll(' as ', '');
+  }
+  if (expression.startsWith('(') &&
+      (expression.endsWith(' as Reference)') ||
+          expression.endsWith('as CodeableConcept)') ||
+          expression.endsWith('as Quantity)') ||
+          expression.endsWith('as Identifier)'))) {
+    expression = expression.replaceAll('(', '').replaceAll(')', '');
+    for (var code in [
+      'Reference',
+      'CodeableConcept',
+      'Quantity',
+      'Identifier'
+    ]) {
+      expression = expression.replaceAll(' as $code', code);
+    }
+  }
   final expressionList = expression.split('.');
   if (type == null) {
+    if (oldExpression.endsWith('.resource')) {
+      return const FhirField(true, 'Resource');
+    }
+    print('Type is null: $oldExpression $expression $expressionList');
     return null;
   } else if (expressionList.length == 1) {
     final field = fhirFieldMap[type]?[expressionList.first];
+    if (field == null &&
+        ['content', 'filter', 'has', 'list', 'query', 'type']
+            .contains(expression)) {
+      return const FhirField(false, 'Special');
+    }
     return field == null
         ? null
         : FhirField((isList ?? false) || field.isList, field.type);
@@ -383,6 +414,7 @@ FhirField? walkTypePath(
     return walkTypePath(
       fhirFieldMap[type]?[expressionList.first]?.type,
       expressionList.sublist(1).join('.'),
+      expression,
       isList: fhirFieldMap[type]?[expressionList.first]?.isList,
     );
   }

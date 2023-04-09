@@ -26,6 +26,180 @@ create table if not exists internal.account (
   "type" jsonb
 );
 
+create table if not exists public.accountString (
+  constraint resourceId 
+    foreign key (id)
+      references internal.account (id) not null,
+  searchParam text not null,
+  index int not null,
+  value text not null
+);
+
+create table if not exists public.accountInstant (
+  constraint resourceId 
+    foreign key (id)
+      references internal.account (id) not null,
+  searchParam text not null,
+  index int not null,
+  value timestamp with time zone default not null
+);
+
+create table if not exists public.accountDate (
+  constraint resourceId 
+    foreign key (id)
+      references internal.account (id) not null,
+  searchParam text not null,
+  index int not null,
+  value text not null
+);
+
+create table if not exists public.accountMarkdown (
+  constraint resourceId 
+    foreign key (id)
+      references internal.account (id) not null,
+  searchParam text not null,
+  index int not null,
+  value text not null
+);
+
+create table if not exists public.accountUri (
+  constraint resourceId 
+    foreign key (id)
+      references internal.account (id) not null,
+  searchParam text not null,
+  index int not null,
+  value text not null
+);
+
+create table if not exists public.accountCoding (
+  constraint resourceId 
+    foreign key (id)
+      references internal.account (id) not null,
+  searchParam text not null,
+  index int not null,
+  value jsonb not null,
+  system text,
+  code text,
+);
+
+create table if not exists public.accountNarrative (
+  constraint resourceId 
+    foreign key (id)
+      references internal.account (id) not null,
+  searchParam text not null,
+  index int not null,
+  value jsonb not null,
+  div text
+);
+
+create table if not exists public.accountCodeableConcept (
+  constraint resourceId 
+    foreign key (id)
+      references internal.account (id) not null,
+  searchParam text not null,
+  index int not null,
+  value jsonb not null,
+  codingIndex int,
+  system text,
+  code text,
+);
+
+create table if not exists public.accountIdentifier (
+  constraint resourceId 
+    foreign key (id)
+      references internal.account (id) not null,
+  searchParam text not null,
+  index int not null,
+  value jsonb not null,
+  codingIndex int,
+  system text,
+);
+
+create table if not exists public.accountReference (
+  constraint resourceId 
+    foreign key (id)
+      references internal.account (id) not null,
+  searchParam text not null,
+  index int not null,
+  value jsonb not null,
+  reference text,
+  type text,
+);
+
+create table if not exists public.accountPeriod (
+  constraint resourceId 
+    foreign key (id)
+      references internal.account (id) not null,
+  searchParam text not null,
+  index int not null,
+  value jsonb not null,
+  start text,
+  end text,
+);
+
+create table if not exists public.accountCode (
+  constraint resourceId 
+    foreign key (id)
+      references internal.account (id) not null,
+  searchParam text not null,
+  index int not null,
+  value text not null
+);
+
+create table if not exists public.accountResource (
+  constraint resourceId 
+    foreign key (id)
+      references internal.account (id) not null,
+  searchParam text not null,
+  index int not null,
+  value jsonb not null
+);
+
+create table if not exists public.accountQuantity (
+  constraint resourceId 
+    foreign key (id)
+      references internal.account (id) not null,
+  searchParam text not null,
+  index int not null,
+  value jsonb not null,
+  quantity number,
+  system text,
+  code text
+);
+
+create table if not exists public.accountHumanName (
+  constraint resourceId 
+    foreign key (id)
+      references internal.account (id) not null,
+  searchParam text not null,
+  index int not null,
+  value text not null,
+  family text,
+  given text,
+  prefix text,
+  suffix text,
+  text text
+);
+
+create table if not exists public.accountBoolean (
+  constraint resourceId 
+    foreign key (id)
+      references internal.account (id) not null,
+  searchParam text not null,
+  index int not null,
+  value boolean not null
+);
+
+
+
+    case 'ContactPoint':
+      return 'jsonb';
+    case 'Address':
+      return 'jsonb';
+
+
+
+
 create table if not exists internal.activitydefinition (
   id text primary key,
   versionid int not null,
