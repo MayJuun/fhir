@@ -187,4 +187,13 @@ create table if not exists public.${table}Address (
   postcode text,
   state text,
   use text
+);
+
+create table if not exists public.${table}number(
+  constraint resourceid 
+    foreign key (id)
+      references internal.observation (id) not null,
+  searchparam text not null,
+  index int not null,
+  value number not null
 );''';

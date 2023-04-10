@@ -16,7 +16,8 @@ dependencies:
     sdk: flutter
   flutter_web_plugins:
     sdk: flutter
-  google_sign_in: ^6.0.2
+  google_sign_in: ^6.1.0
+  http: ^0.13.5
   
 dev_dependencies:
   flutter_test:

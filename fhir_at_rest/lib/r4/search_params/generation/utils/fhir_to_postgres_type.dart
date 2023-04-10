@@ -44,3 +44,26 @@ String fhirToPostgresType(String type) {
       return type;
   }
 }
+
+bool shouldBeInOtherTable(String type) => [
+      'String',
+      'Instant',
+      'FhirDateTime',
+      'Markdown',
+      'Canonical',
+      'Coding',
+      'FhirUri',
+      'Narrative',
+      'CodeableConcept',
+      'Identifier',
+      'Reference',
+      'Period',
+      'Code',
+      'Quantity',
+      'HumanName',
+      'Boolean',
+      'ContactPoint',
+      'Address',
+      'FhirUrl',
+      'Resource',
+    ].contains(type);

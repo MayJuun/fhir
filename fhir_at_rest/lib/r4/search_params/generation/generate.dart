@@ -1,5 +1,5 @@
 import 'dart:io';
-import 'package:fhir/r4.dart';
+import 'package:fhir/r4.dart' as r4;
 import 'parameter_generator.dart';
 import 'search_parameters_bundle.dart';
 import 'sql_row.dart';
@@ -13,11 +13,11 @@ Future<void> main() async {
   final sqlMap = <String, List<SqlRow>>{};
 
   /// Look through each entry in the Search Param Bundle
-  for (final entry in searchParameterBundle.entry ?? <BundleEntry>[]) {
+  for (final entry in searchParameterBundle.entry ?? <r4.BundleEntry>[]) {
     /// For each entry that's a SearchParameter
-    if (entry.resource != null && entry.resource is SearchParameter) {
+    if (entry.resource != null && entry.resource is r4.SearchParameter) {
       /// Pull it out
-      final resource = entry.resource as SearchParameter;
+      final resource = entry.resource as r4.SearchParameter;
 
       /// If for some reason there's no base in the resource, print out a message
       if ((resource.base?.length ?? 0) < 1) {
@@ -82,7 +82,6 @@ Future<void> main() async {
   paramMap.forEach((key, value) {
     if (key != 'Resource' && key != 'DomainResource') {
       final tempKey = '${key}SearchParams';
-      print(key);
       final index =
           primaryCategory.keys.toList().indexWhere((element) => element == key);
       final fileName = primaryCategory.values.elementAt(index);
@@ -137,7 +136,7 @@ Future<void> main() async {
   for (var key in sqlMap.keys) {
     if (key != 'Resource' && key != 'DomainResource') {
       searchTableString +=
-          'create table if not exists public.${key.toLowerCase()} (\n';
+          '\n\ncreate table if not exists public.${key.toLowerCase()} (\n';
       searchTableString += '  id text primary key,\n';
       searchTableString += '  versionid int not null,\n';
       searchTableString +=
@@ -151,28 +150,65 @@ Future<void> main() async {
       searchResourceString += addIdAndVersionId;
 
       for (var resourceEntry in sqlMap['Resource']!) {
-        searchTableString += '  "${resourceEntry.code}" jsonb,\n';
-        String? path =
-            '${resourceEntry.expression.replaceFirst("Resource", '\$').replaceAll("'", "''")}';
-        searchResourceString +=
-            "      new.\"${resourceEntry.code}\" := jsonb_path_query(new.resource, '$path')";
-        path = path.replaceAll('\$.', '');
-        final field = walkTypePath(key, path, path);
-        if (field != null) {
-          searchResourceString += '::${field.type}${field.isList ? "[]" : ""}';
+        final String path =
+            '${resourceEntry.expression.replaceFirst("Resource", '\$').replaceAll("'", "''")}'
+                .replaceAll('\$.', '')
+                .replaceAll('List.', 'List_.');
+
+        final field =
+            walkTypePath(key.replaceAll('List', 'List_'), path, '$key.$path');
+        // if (definedStrings(field)) {
+        //   searchTableString +=
+        //       '  "${resourceEntry.code}" ::${field?.type}${(field?.isList ?? false) ? "[]" : ""},\n';
+        // }
+        if (field != null && path != 'content' && path != '_id') {
+          if (field.type.toLowerCase().contains('instant')) {
+            searchResourceString +=
+                '      insert into public.${key}instant values\n';
+            searchResourceString += '         (\n';
+            searchResourceString += '           new.id,\n';
+            searchResourceString += '           "${resourceEntry.code}",\n';
+            searchResourceString += '           0,\n';
+            searchResourceString +=
+                "           jsonb_path_query(new.resource, '$path')\n";
+            searchResourceString += '         );\n\n';
+          } else {
+            searchResourceString +=
+                "      new.\"${resourceEntry.code}\" := jsonb_path_query(new.resource, '$path')";
+            searchResourceString +=
+                '::${field.type}${field.isList ? "[]" : ""}';
+            searchResourceString += ';\n';
+          }
         }
-        searchResourceString += ';\n';
       }
       for (var entry in sqlMap[key]!) {
-        searchTableString += '  "${entry.code}" jsonb,\n';
-        String? path =
-            '${entry.expression.replaceFirst(key, '\$').replaceAll("'", "''")}';
-        searchResourceString +=
-            "      new.\"${entry.code}\" := jsonb_path_query(new.resource, '$path')";
-        path = path.replaceAll('\$.', '');
-        final field = walkTypePath(key, path, path);
-        if (field != null) {
-          searchResourceString += '::${field.type}${field.isList ? "[]" : ""}';
+        final String path =
+            '${entry.expression.replaceFirst("$key", '\$').replaceAll("'", "''")}'
+                .replaceAll('\$.', '')
+                .replaceAll('List.', 'List_.');
+        final field =
+            walkTypePath(key.replaceAll('List', 'List_'), path, '$key.$path');
+        // if (definedStrings(field)) {
+        //   searchTableString +=
+        //       '  "${entry.code}" ::${field?.type}${(field?.isList ?? false) ? "[]" : ""},\n';
+        // }
+        if (field != null && path != 'content' && path != '_id') {
+          if (field.type.toLowerCase().contains('instant')) {
+            searchResourceString +=
+                '      insert into public.${key}instant values\n';
+            searchResourceString += '         (\n';
+            searchResourceString += '           new.id,\n';
+            searchResourceString += '           "${entry.code}",\n';
+            searchResourceString += '           0,\n';
+            searchResourceString +=
+                "           jsonb_path_query(new.resource, '$path')\n";
+            searchResourceString += '         );\n\n';
+          } else {
+            searchResourceString +=
+                "      new.\"${entry.code}\" := jsonb_path_query(new.resource, '$path')";
+            searchResourceString +=
+                '::${field.type}${field.isList ? "[]" : ""}';
+          }
         }
         searchResourceString += ';\n';
       }
@@ -186,6 +222,7 @@ Future<void> main() async {
   }
   searchTableString =
       searchTableString.substring(0, searchTableString.length - 2);
+  searchTableString = searchTableString.toLowerCase();
 
   searchResourceString = cleanSearchResourceString(searchResourceString);
 
@@ -196,6 +233,37 @@ Future<void> main() async {
   //       .writeAsString(fileMap[key]!);
   // }
 }
+
+bool definedStrings(FhirField? field) =>
+    field?.type != 'String' &&
+    field?.type != 'Instant' &&
+    field?.type != 'Canonical' &&
+    field?.type != 'Coding' &&
+    field?.type != 'FhirUri' &&
+    field?.type != 'Narrative' &&
+    field?.type != 'CodeableConcept' &&
+    field?.type != 'Identifier' &&
+    field?.type != 'Reference' &&
+    field?.type != 'Period' &&
+    field?.type != 'Resource' &&
+    field?.type != 'Quantity' &&
+    field?.type != 'FhirDateTime' &&
+    field?.type != 'Markdown' &&
+    field?.type != 'Code' &&
+    field?.type != 'Date' &&
+    field?.type != 'ContactPoint' &&
+    field?.type != 'FhirUrl' &&
+    field?.type != 'FhirDuration' &&
+    field?.type != 'Number' &&
+    field?.type != 'Decimal' &&
+    field?.type != 'Boolean' &&
+    field?.type != 'Money' &&
+    field?.type != 'CodeableReference' &&
+    field?.type != 'UsageContext' &&
+    field?.type != 'HumanName' &&
+    field?.type != 'Address' &&
+    field?.type != 'Integer' &&
+    !(field?.type.toLowerCase().contains('molecularsequence') ?? true);
 
 const replaceWith = {
   '\n\n*': '\n*',

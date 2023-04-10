@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'gcp_proxy.dart';
 import 'gcs_request.dart';
 import 'hapi_request.dart';
 import 'meld_request.dart';
@@ -44,6 +45,22 @@ class MyApp extends StatelessWidget {
                     ),
                     child: Image.asset('assets/gcp.png'),
                     onPressed: () async => await gcsRequest()),
+                ElevatedButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.white),
+                      side: MaterialStateProperty.all(
+                          const BorderSide(color: Colors.black)),
+                    ),
+                    child: Column(
+                      children: [
+                        Image.asset('assets/gcp.png'),
+                        Text(
+                          'Google Proxy',
+                          style: TextStyle(color: Colors.black),
+                        ),
+                      ],
+                    ),
+                    onPressed: () async => await gcpProxyRequest()),
               ],
             ),
           ),
