@@ -177,7 +177,7 @@ Future<void> main() async {
                 "      new.\"${resourceEntry.code}\" := jsonb_path_query(new.resource, '$path')";
             searchResourceString +=
                 '::${field.type}${field.isList ? "[]" : ""}';
-            searchResourceString += ';\n';
+            // searchResourceString += ';\n';
           }
         }
       }
