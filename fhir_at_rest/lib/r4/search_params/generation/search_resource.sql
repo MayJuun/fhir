@@ -24,7 +24,10 @@ create or replace function public.new_account()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Accountinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Accountinstant values
          (
            new.id,
            "_lastUpdated",
@@ -32,7 +35,15 @@ create or replace function public.new_account()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept      new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept;
+      new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."name" := jsonb_path_query(new.resource, 'name')::String;
       new."owner" := jsonb_path_query(new.resource, 'owner')::Reference;
       new."patient" := jsonb_path_query(new.resource, 'subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")')::Reference[];
@@ -70,7 +81,10 @@ create or replace function public.new_activitydefinition()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.ActivityDefinitioninstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.ActivityDefinitioninstant values
          (
            new.id,
            "_lastUpdated",
@@ -78,7 +92,15 @@ create or replace function public.new_activitydefinition()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."composed-of" := jsonb_path_query(new.resource, 'relatedArtifact[*] ? (@.type = ''composed-of'').resource')::Resource[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."composed-of" := jsonb_path_query(new.resource, 'relatedArtifact[*] ? (@.type = ''composed-of'').resource')::Resource[];
       new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
       new."context-quantity" := jsonb_path_query(new.resource, '(useContext.value as Quantity)')::Quantity[];
       new."context-type" := jsonb_path_query(new.resource, 'useContext.code')::Coding[];
@@ -130,7 +152,10 @@ create or replace function public.new_administrableproductdefinition()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.AdministrableProductDefinitioninstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.AdministrableProductDefinitioninstant values
          (
            new.id,
            "_lastUpdated",
@@ -138,7 +163,15 @@ create or replace function public.new_administrableproductdefinition()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."device" := jsonb_path_query(new.resource, 'device')::Reference;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."device" := jsonb_path_query(new.resource, 'device')::Reference;
       new."dose-form" := jsonb_path_query(new.resource, 'administrableDoseForm')::CodeableConcept;
       new."form-of" := jsonb_path_query(new.resource, 'formOf')::Reference[];
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
@@ -176,7 +209,10 @@ create or replace function public.new_adverseevent()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.AdverseEventinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.AdverseEventinstant values
          (
            new.id,
            "_lastUpdated",
@@ -184,7 +220,15 @@ create or replace function public.new_adverseevent()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."actuality" := jsonb_path_query(new.resource, 'actuality')::Code;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."actuality" := jsonb_path_query(new.resource, 'actuality')::Code;
       new."category" := jsonb_path_query(new.resource, 'category')::CodeableConcept[];
       new."date" := jsonb_path_query(new.resource, 'date')::FhirDateTime;
       new."event" := jsonb_path_query(new.resource, 'event')::CodeableConcept;
@@ -226,7 +270,10 @@ create or replace function public.new_allergyintolerance()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.AllergyIntoleranceinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.AllergyIntoleranceinstant values
          (
            new.id,
            "_lastUpdated",
@@ -234,7 +281,15 @@ create or replace function public.new_allergyintolerance()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Code      new."asserter" := jsonb_path_query(new.resource, 'asserter')::Reference;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Code;
+      new."asserter" := jsonb_path_query(new.resource, 'asserter')::Reference;
       new."category" := jsonb_path_query(new.resource, 'category')::Code[];
       new."clinical-status" := jsonb_path_query(new.resource, 'clinicalStatus')::CodeableConcept;
       new."code" := jsonb_path_query(new.resource, 'code')::CodeableConcept;
@@ -280,7 +335,10 @@ create or replace function public.new_condition()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Conditioninstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Conditioninstant values
          (
            new.id,
            "_lastUpdated",
@@ -288,7 +346,15 @@ create or replace function public.new_condition()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."code" := jsonb_path_query(new.resource, 'code')::CodeableConcept;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."code" := jsonb_path_query(new.resource, 'code')::CodeableConcept;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."patient" := jsonb_path_query(new.resource, 'subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")')::Reference;
       new."abatement-age" := jsonb_path_query(new.resource, 'abatement.as(Age)')::Quantity;
@@ -339,7 +405,10 @@ create or replace function public.new_devicerequest()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.DeviceRequestinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.DeviceRequestinstant values
          (
            new.id,
            "_lastUpdated",
@@ -347,7 +416,15 @@ create or replace function public.new_devicerequest()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."code" := jsonb_path_query(new.resource, '(code as CodeableConcept)')::CodeableConcept;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."code" := jsonb_path_query(new.resource, '(code as CodeableConcept)')::CodeableConcept;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."patient" := jsonb_path_query(new.resource, 'subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")')::Reference;
       new."encounter" := jsonb_path_query(new.resource, 'encounter')::Reference;
@@ -395,7 +472,10 @@ create or replace function public.new_diagnosticreport()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.DiagnosticReportinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.DiagnosticReportinstant values
          (
            new.id,
            "_lastUpdated",
@@ -403,7 +483,15 @@ create or replace function public.new_diagnosticreport()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."code" := jsonb_path_query(new.resource, 'code')::CodeableConcept;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."code" := jsonb_path_query(new.resource, 'code')::CodeableConcept;
       new."date" := jsonb_path_query(new.resource, 'effective')::Date;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."patient" := jsonb_path_query(new.resource, 'subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")')::Reference;
@@ -457,7 +545,10 @@ create or replace function public.new_familymemberhistory()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.FamilyMemberHistoryinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.FamilyMemberHistoryinstant values
          (
            new.id,
            "_lastUpdated",
@@ -465,7 +556,15 @@ create or replace function public.new_familymemberhistory()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."code" := jsonb_path_query(new.resource, 'condition.code')::CodeableConcept[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."code" := jsonb_path_query(new.resource, 'condition.code')::CodeableConcept[];
       new."date" := jsonb_path_query(new.resource, 'date')::FhirDateTime;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."patient" := jsonb_path_query(new.resource, 'patient')::Reference;
@@ -504,7 +603,10 @@ create or replace function public.new_list()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Listinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Listinstant values
          (
            new.id,
            "_lastUpdated",
@@ -512,7 +614,15 @@ create or replace function public.new_list()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."code" := jsonb_path_query(new.resource, 'code')::CodeableConcept;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."code" := jsonb_path_query(new.resource, 'code')::CodeableConcept;
       new."date" := jsonb_path_query(new.resource, 'date')::FhirDateTime;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."patient" := jsonb_path_query(new.resource, 'subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")')::Reference;
@@ -554,7 +664,10 @@ create or replace function public.new_medication()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Medicationinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Medicationinstant values
          (
            new.id,
            "_lastUpdated",
@@ -562,7 +675,15 @@ create or replace function public.new_medication()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."code" := jsonb_path_query(new.resource, 'code')::CodeableConcept;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."code" := jsonb_path_query(new.resource, 'code')::CodeableConcept;
       new."expiration-date" := jsonb_path_query(new.resource, 'batch.expirationDate')::FhirDateTime;
       new."form" := jsonb_path_query(new.resource, 'form')::CodeableConcept;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
@@ -601,7 +722,10 @@ create or replace function public.new_medicationadministration()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.MedicationAdministrationinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.MedicationAdministrationinstant values
          (
            new.id,
            "_lastUpdated",
@@ -609,7 +733,15 @@ create or replace function public.new_medicationadministration()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."code" := jsonb_path_query(new.resource, '(medication as CodeableConcept)')::CodeableConcept;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."code" := jsonb_path_query(new.resource, '(medication as CodeableConcept)')::CodeableConcept;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."patient" := jsonb_path_query(new.resource, 'subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")')::Reference;
       new."context" := jsonb_path_query(new.resource, 'context')::Reference;
@@ -652,7 +784,10 @@ create or replace function public.new_medicationdispense()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.MedicationDispenseinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.MedicationDispenseinstant values
          (
            new.id,
            "_lastUpdated",
@@ -660,7 +795,15 @@ create or replace function public.new_medicationdispense()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept      new."code" := jsonb_path_query(new.resource, '(medication as CodeableConcept)')::CodeableConcept;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept;
+      new."code" := jsonb_path_query(new.resource, '(medication as CodeableConcept)')::CodeableConcept;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."patient" := jsonb_path_query(new.resource, 'subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")')::Reference;
       new."medication" := jsonb_path_query(new.resource, '(medication as Reference)')::Reference;
@@ -705,7 +848,10 @@ create or replace function public.new_medicationrequest()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.MedicationRequestinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.MedicationRequestinstant values
          (
            new.id,
            "_lastUpdated",
@@ -713,7 +859,15 @@ create or replace function public.new_medicationrequest()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."code" := jsonb_path_query(new.resource, '(medication as CodeableConcept)')::CodeableConcept;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."code" := jsonb_path_query(new.resource, '(medication as CodeableConcept)')::CodeableConcept;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."patient" := jsonb_path_query(new.resource, 'subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")')::Reference;
       new."medication" := jsonb_path_query(new.resource, '(medication as Reference)')::Reference;
@@ -759,7 +913,10 @@ create or replace function public.new_medicationstatement()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.MedicationStatementinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.MedicationStatementinstant values
          (
            new.id,
            "_lastUpdated",
@@ -767,7 +924,15 @@ create or replace function public.new_medicationstatement()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."code" := jsonb_path_query(new.resource, '(medication as CodeableConcept)')::CodeableConcept;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."code" := jsonb_path_query(new.resource, '(medication as CodeableConcept)')::CodeableConcept;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."patient" := jsonb_path_query(new.resource, 'subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")')::Reference;
       new."medication" := jsonb_path_query(new.resource, '(medication as Reference)')::Reference;
@@ -808,7 +973,10 @@ create or replace function public.new_observation()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Observationinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Observationinstant values
          (
            new.id,
            "_lastUpdated",
@@ -816,7 +984,15 @@ create or replace function public.new_observation()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."code" := jsonb_path_query(new.resource, 'code')::CodeableConcept;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."code" := jsonb_path_query(new.resource, 'code')::CodeableConcept;
       new."date" := jsonb_path_query(new.resource, 'effective')::Date;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."patient" := jsonb_path_query(new.resource, 'subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")')::Reference;
@@ -884,7 +1060,10 @@ create or replace function public.new_procedure()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Procedureinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Procedureinstant values
          (
            new.id,
            "_lastUpdated",
@@ -892,7 +1071,15 @@ create or replace function public.new_procedure()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."code" := jsonb_path_query(new.resource, 'code')::CodeableConcept;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."code" := jsonb_path_query(new.resource, 'code')::CodeableConcept;
       new."date" := jsonb_path_query(new.resource, 'performed')::Date;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."patient" := jsonb_path_query(new.resource, 'subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")')::Reference;
@@ -938,7 +1125,10 @@ create or replace function public.new_servicerequest()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.ServiceRequestinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.ServiceRequestinstant values
          (
            new.id,
            "_lastUpdated",
@@ -946,7 +1136,15 @@ create or replace function public.new_servicerequest()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."code" := jsonb_path_query(new.resource, 'code')::CodeableConcept;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."code" := jsonb_path_query(new.resource, 'code')::CodeableConcept;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."patient" := jsonb_path_query(new.resource, 'subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")')::Reference;
       new."encounter" := jsonb_path_query(new.resource, 'encounter')::Reference;
@@ -997,7 +1195,10 @@ create or replace function public.new_careplan()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.CarePlaninstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.CarePlaninstant values
          (
            new.id,
            "_lastUpdated",
@@ -1005,7 +1206,15 @@ create or replace function public.new_careplan()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."date" := jsonb_path_query(new.resource, 'period')::Period;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."date" := jsonb_path_query(new.resource, 'period')::Period;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."patient" := jsonb_path_query(new.resource, 'subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")')::Reference;
       new."activity-code" := jsonb_path_query(new.resource, 'activity.detail.code')::CodeableConcept;
@@ -1055,7 +1264,10 @@ create or replace function public.new_careteam()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.CareTeaminstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.CareTeaminstant values
          (
            new.id,
            "_lastUpdated",
@@ -1063,7 +1275,15 @@ create or replace function public.new_careteam()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."date" := jsonb_path_query(new.resource, 'period')::Period;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."date" := jsonb_path_query(new.resource, 'period')::Period;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."patient" := jsonb_path_query(new.resource, 'subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")')::Reference;
       new."category" := jsonb_path_query(new.resource, 'category')::CodeableConcept[];
@@ -1101,7 +1321,10 @@ create or replace function public.new_clinicalimpression()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.ClinicalImpressioninstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.ClinicalImpressioninstant values
          (
            new.id,
            "_lastUpdated",
@@ -1109,7 +1332,15 @@ create or replace function public.new_clinicalimpression()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."date" := jsonb_path_query(new.resource, 'date')::FhirDateTime;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."date" := jsonb_path_query(new.resource, 'date')::FhirDateTime;
       new."patient" := jsonb_path_query(new.resource, 'subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")')::Reference;
       new."assessor" := jsonb_path_query(new.resource, 'assessor')::Reference;
       new."encounter" := jsonb_path_query(new.resource, 'encounter')::Reference;
@@ -1152,7 +1383,10 @@ create or replace function public.new_composition()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Compositioninstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Compositioninstant values
          (
            new.id,
            "_lastUpdated",
@@ -1160,7 +1394,15 @@ create or replace function public.new_composition()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept      new."date" := jsonb_path_query(new.resource, 'date')::FhirDateTime;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept;
+      new."date" := jsonb_path_query(new.resource, 'date')::FhirDateTime;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier;
       new."patient" := jsonb_path_query(new.resource, 'subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")')::Reference;
       new."type" := jsonb_path_query(new.resource, 'type')::CodeableConcept;
@@ -1208,7 +1450,10 @@ create or replace function public.new_consent()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Consentinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Consentinstant values
          (
            new.id,
            "_lastUpdated",
@@ -1216,7 +1461,15 @@ create or replace function public.new_consent()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."date" := jsonb_path_query(new.resource, 'dateTime')::FhirDateTime;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."date" := jsonb_path_query(new.resource, 'dateTime')::FhirDateTime;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."patient" := jsonb_path_query(new.resource, 'patient')::Reference;
       new."action" := jsonb_path_query(new.resource, 'provision.action')::CodeableConcept[];
@@ -1261,7 +1514,10 @@ create or replace function public.new_encounter()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Encounterinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Encounterinstant values
          (
            new.id,
            "_lastUpdated",
@@ -1269,7 +1525,15 @@ create or replace function public.new_encounter()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept[]      new."date" := jsonb_path_query(new.resource, 'period')::Period;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept[];
+      new."date" := jsonb_path_query(new.resource, 'period')::Period;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."patient" := jsonb_path_query(new.resource, 'subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")')::Reference;
       new."type" := jsonb_path_query(new.resource, 'type')::CodeableConcept[];
@@ -1322,7 +1586,10 @@ create or replace function public.new_episodeofcare()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.EpisodeOfCareinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.EpisodeOfCareinstant values
          (
            new.id,
            "_lastUpdated",
@@ -1330,7 +1597,15 @@ create or replace function public.new_episodeofcare()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept[]      new."date" := jsonb_path_query(new.resource, 'period')::Period;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept[];
+      new."date" := jsonb_path_query(new.resource, 'period')::Period;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."patient" := jsonb_path_query(new.resource, 'patient')::Reference;
       new."type" := jsonb_path_query(new.resource, 'type')::CodeableConcept[];
@@ -1369,7 +1644,10 @@ create or replace function public.new_flag()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Flaginstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Flaginstant values
          (
            new.id,
            "_lastUpdated",
@@ -1377,7 +1655,15 @@ create or replace function public.new_flag()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."date" := jsonb_path_query(new.resource, 'period')::Period;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."date" := jsonb_path_query(new.resource, 'period')::Period;
       new."patient" := jsonb_path_query(new.resource, 'subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")')::Reference;
       new."encounter" := jsonb_path_query(new.resource, 'encounter')::Reference;
       new."author" := jsonb_path_query(new.resource, 'author')::Reference;
@@ -1413,7 +1699,10 @@ create or replace function public.new_immunization()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Immunizationinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Immunizationinstant values
          (
            new.id,
            "_lastUpdated",
@@ -1421,7 +1710,15 @@ create or replace function public.new_immunization()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."date" := jsonb_path_query(new.resource, '(occurrence as dateTime)')::FhirDateTime;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."date" := jsonb_path_query(new.resource, '(occurrence as dateTime)')::FhirDateTime;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."patient" := jsonb_path_query(new.resource, 'patient')::Reference;
       new."location" := jsonb_path_query(new.resource, 'location')::Reference;
@@ -1467,7 +1764,10 @@ create or replace function public.new_riskassessment()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.RiskAssessmentinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.RiskAssessmentinstant values
          (
            new.id,
            "_lastUpdated",
@@ -1475,7 +1775,15 @@ create or replace function public.new_riskassessment()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."date" := jsonb_path_query(new.resource, '(occurrence as dateTime)')::FhirDateTime;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."date" := jsonb_path_query(new.resource, '(occurrence as dateTime)')::FhirDateTime;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."patient" := jsonb_path_query(new.resource, 'subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")')::Reference;
       new."encounter" := jsonb_path_query(new.resource, 'encounter')::Reference;
@@ -1515,7 +1823,10 @@ create or replace function public.new_supplyrequest()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.SupplyRequestinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.SupplyRequestinstant values
          (
            new.id,
            "_lastUpdated",
@@ -1523,7 +1834,15 @@ create or replace function public.new_supplyrequest()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."date" := jsonb_path_query(new.resource, 'authoredOn')::FhirDateTime;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."date" := jsonb_path_query(new.resource, 'authoredOn')::FhirDateTime;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."category" := jsonb_path_query(new.resource, 'category')::CodeableConcept;
       new."requester" := jsonb_path_query(new.resource, 'requester')::Reference;
@@ -1560,7 +1879,10 @@ create or replace function public.new_detectedissue()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.DetectedIssueinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.DetectedIssueinstant values
          (
            new.id,
            "_lastUpdated",
@@ -1568,7 +1890,15 @@ create or replace function public.new_detectedissue()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."patient" := jsonb_path_query(new.resource, 'patient')::Reference;
       new."author" := jsonb_path_query(new.resource, 'author')::Reference;
       new."code" := jsonb_path_query(new.resource, 'code')::CodeableConcept;
@@ -1604,7 +1934,10 @@ create or replace function public.new_documentmanifest()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.DocumentManifestinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.DocumentManifestinstant values
          (
            new.id,
            "_lastUpdated",
@@ -1612,7 +1945,15 @@ create or replace function public.new_documentmanifest()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept      new."identifier" := jsonb_path_query(new.resource, 'masterIdentifier')::Identifier;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept;
+      new."identifier" := jsonb_path_query(new.resource, 'masterIdentifier')::Identifier;
       new."patient" := jsonb_path_query(new.resource, 'subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")')::Reference;
       new."type" := jsonb_path_query(new.resource, 'type')::CodeableConcept;
       new."author" := jsonb_path_query(new.resource, 'author')::Reference[];
@@ -1655,7 +1996,10 @@ create or replace function public.new_documentreference()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.DocumentReferenceinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.DocumentReferenceinstant values
          (
            new.id,
            "_lastUpdated",
@@ -1663,7 +2007,15 @@ create or replace function public.new_documentreference()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept      new."identifier" := jsonb_path_query(new.resource, 'masterIdentifier')::Identifier;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept;
+      new."identifier" := jsonb_path_query(new.resource, 'masterIdentifier')::Identifier;
       new."patient" := jsonb_path_query(new.resource, 'subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")')::Reference;
       new."type" := jsonb_path_query(new.resource, 'type')::CodeableConcept;
       new."encounter" := jsonb_path_query(new.resource, 'context.encounter[*] ? (@.type like_regex "^.*Encounter.*") ? (@.reference like_regex "^.*Encounter.*")')::Reference[];
@@ -1726,7 +2078,10 @@ create or replace function public.new_goal()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Goalinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Goalinstant values
          (
            new.id,
            "_lastUpdated",
@@ -1734,7 +2089,15 @@ create or replace function public.new_goal()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."patient" := jsonb_path_query(new.resource, 'subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")')::Reference;
       new."achievement-status" := jsonb_path_query(new.resource, 'achievementStatus')::CodeableConcept;
       new."category" := jsonb_path_query(new.resource, 'category')::CodeableConcept[];
@@ -1772,7 +2135,10 @@ create or replace function public.new_imagingstudy()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.ImagingStudyinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.ImagingStudyinstant values
          (
            new.id,
            "_lastUpdated",
@@ -1780,7 +2146,15 @@ create or replace function public.new_imagingstudy()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."patient" := jsonb_path_query(new.resource, 'subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")')::Reference;
       new."basedon" := jsonb_path_query(new.resource, 'basedOn')::Reference[];
       new."bodysite" := jsonb_path_query(new.resource, 'series.bodySite')::Coding[];
@@ -1827,7 +2201,10 @@ create or replace function public.new_nutritionorder()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.NutritionOrderinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.NutritionOrderinstant values
          (
            new.id,
            "_lastUpdated",
@@ -1835,7 +2212,15 @@ create or replace function public.new_nutritionorder()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."patient" := jsonb_path_query(new.resource, 'patient')::Reference;
       new."encounter" := jsonb_path_query(new.resource, 'encounter')::Reference;
       new."additive" := jsonb_path_query(new.resource, 'enteralFormula.additiveType')::CodeableConcept;
@@ -1877,7 +2262,10 @@ create or replace function public.new_supplydelivery()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.SupplyDeliveryinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.SupplyDeliveryinstant values
          (
            new.id,
            "_lastUpdated",
@@ -1885,7 +2273,15 @@ create or replace function public.new_supplydelivery()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept      new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept;
+      new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."patient" := jsonb_path_query(new.resource, 'patient')::Reference;
       new."receiver" := jsonb_path_query(new.resource, 'receiver')::Reference[];
       new."status" := jsonb_path_query(new.resource, 'status')::Code;
@@ -1920,7 +2316,10 @@ create or replace function public.new_visionprescription()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.VisionPrescriptioninstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.VisionPrescriptioninstant values
          (
            new.id,
            "_lastUpdated",
@@ -1928,7 +2327,15 @@ create or replace function public.new_visionprescription()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."patient" := jsonb_path_query(new.resource, 'patient')::Reference;
       new."encounter" := jsonb_path_query(new.resource, 'encounter')::Reference;
       new."datewritten" := jsonb_path_query(new.resource, 'dateWritten')::FhirDateTime;
@@ -1964,7 +2371,10 @@ create or replace function public.new_deviceusestatement()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.DeviceUseStatementinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.DeviceUseStatementinstant values
          (
            new.id,
            "_lastUpdated",
@@ -1972,7 +2382,15 @@ create or replace function public.new_deviceusestatement()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."patient" := jsonb_path_query(new.resource, 'subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")')::Reference;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."patient" := jsonb_path_query(new.resource, 'subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")')::Reference;
       new."device" := jsonb_path_query(new.resource, 'device')::Reference;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."subject" := jsonb_path_query(new.resource, 'subject')::Reference;
@@ -2006,7 +2424,10 @@ create or replace function public.new_appointment()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Appointmentinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Appointmentinstant values
          (
            new.id,
            "_lastUpdated",
@@ -2014,7 +2435,15 @@ create or replace function public.new_appointment()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."actor" := jsonb_path_query(new.resource, 'participant.actor')::Reference[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."actor" := jsonb_path_query(new.resource, 'participant.actor')::Reference[];
       new."appointment-type" := jsonb_path_query(new.resource, 'appointmentType')::CodeableConcept;
       new."based-on" := jsonb_path_query(new.resource, 'basedOn')::Reference[];
       insert into public.Appointmentinstant values
@@ -2069,7 +2498,10 @@ create or replace function public.new_appointmentresponse()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.AppointmentResponseinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.AppointmentResponseinstant values
          (
            new.id,
            "_lastUpdated",
@@ -2077,7 +2509,15 @@ create or replace function public.new_appointmentresponse()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."actor" := jsonb_path_query(new.resource, 'actor')::Reference;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."actor" := jsonb_path_query(new.resource, 'actor')::Reference;
       new."appointment" := jsonb_path_query(new.resource, 'appointment')::Reference;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."location" := jsonb_path_query(new.resource, 'actor[*] ? (@.type like_regex "^.*Location.*") ? (@.reference like_regex "^.*Location.*")')::Reference;
@@ -2114,7 +2554,10 @@ create or replace function public.new_auditevent()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.AuditEventinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.AuditEventinstant values
          (
            new.id,
            "_lastUpdated",
@@ -2122,7 +2565,15 @@ create or replace function public.new_auditevent()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Coding      new."action" := jsonb_path_query(new.resource, 'action')::Code;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Coding;
+      new."action" := jsonb_path_query(new.resource, 'action')::Code;
       new."address" := jsonb_path_query(new.resource, 'agent.network.address')::String;
       new."agent" := jsonb_path_query(new.resource, 'agent.who')::Reference[];
       new."agent-name" := jsonb_path_query(new.resource, 'agent.name')::String[];
@@ -2178,7 +2629,10 @@ create or replace function public.new_basic()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Basicinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Basicinstant values
          (
            new.id,
            "_lastUpdated",
@@ -2186,7 +2640,15 @@ create or replace function public.new_basic()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."author" := jsonb_path_query(new.resource, 'author')::Reference;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."author" := jsonb_path_query(new.resource, 'author')::Reference;
       new."code" := jsonb_path_query(new.resource, 'code')::CodeableConcept;
       new."created" := jsonb_path_query(new.resource, 'created')::Date;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
@@ -2222,7 +2684,10 @@ create or replace function public.new_bodystructure()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.BodyStructureinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.BodyStructureinstant values
          (
            new.id,
            "_lastUpdated",
@@ -2230,7 +2695,15 @@ create or replace function public.new_bodystructure()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."location" := jsonb_path_query(new.resource, 'location')::CodeableConcept;
       new."morphology" := jsonb_path_query(new.resource, 'morphology')::CodeableConcept;
       new."patient" := jsonb_path_query(new.resource, 'patient')::Reference;
@@ -2264,7 +2737,10 @@ create or replace function public.new_bundle()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Bundleinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Bundleinstant values
          (
            new.id,
            "_lastUpdated",
@@ -2272,7 +2748,15 @@ create or replace function public.new_bundle()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Code      new."composition" := jsonb_path_query(new.resource, 'entry[0].resource')::Resource[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Code;
+      new."composition" := jsonb_path_query(new.resource, 'entry[0].resource')::Resource[];
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier;
       new."message" := jsonb_path_query(new.resource, 'entry[0].resource')::Resource[];
       insert into public.Bundleinstant values
@@ -2315,7 +2799,10 @@ create or replace function public.new_capabilitystatement()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.CapabilityStatementinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.CapabilityStatementinstant values
          (
            new.id,
            "_lastUpdated",
@@ -2323,7 +2810,15 @@ create or replace function public.new_capabilitystatement()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
       new."context-quantity" := jsonb_path_query(new.resource, '(useContext.value as Quantity)')::Quantity[];
       new."context-type" := jsonb_path_query(new.resource, 'useContext.code')::Coding[];
       new."date" := jsonb_path_query(new.resource, 'date')::FhirDateTime;
@@ -2376,7 +2871,10 @@ create or replace function public.new_codesystem()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::CodeSystemFilter[]      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.CodeSysteminstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::CodeSystemFilter[];
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.CodeSysteminstant values
          (
            new.id,
            "_lastUpdated",
@@ -2384,7 +2882,15 @@ create or replace function public.new_codesystem()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
       new."context-quantity" := jsonb_path_query(new.resource, '(useContext.value as Quantity)')::Quantity[];
       new."context-type" := jsonb_path_query(new.resource, 'useContext.code')::Coding[];
       new."date" := jsonb_path_query(new.resource, 'date')::FhirDateTime;
@@ -2434,7 +2940,10 @@ create or replace function public.new_compartmentdefinition()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.CompartmentDefinitioninstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.CompartmentDefinitioninstant values
          (
            new.id,
            "_lastUpdated",
@@ -2442,7 +2951,15 @@ create or replace function public.new_compartmentdefinition()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
       new."context-quantity" := jsonb_path_query(new.resource, '(useContext.value as Quantity)')::Quantity[];
       new."context-type" := jsonb_path_query(new.resource, 'useContext.code')::Coding[];
       new."date" := jsonb_path_query(new.resource, 'date')::FhirDateTime;
@@ -2486,7 +3003,10 @@ create or replace function public.new_conceptmap()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.ConceptMapinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.ConceptMapinstant values
          (
            new.id,
            "_lastUpdated",
@@ -2494,7 +3014,15 @@ create or replace function public.new_conceptmap()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
       new."context-quantity" := jsonb_path_query(new.resource, '(useContext.value as Quantity)')::Quantity[];
       new."context-type" := jsonb_path_query(new.resource, 'useContext.code')::Coding[];
       new."date" := jsonb_path_query(new.resource, 'date')::FhirDateTime;
@@ -2550,7 +3078,10 @@ create or replace function public.new_graphdefinition()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.GraphDefinitioninstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.GraphDefinitioninstant values
          (
            new.id,
            "_lastUpdated",
@@ -2558,7 +3089,15 @@ create or replace function public.new_graphdefinition()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
       new."context-quantity" := jsonb_path_query(new.resource, '(useContext.value as Quantity)')::Quantity[];
       new."context-type" := jsonb_path_query(new.resource, 'useContext.code')::Coding[];
       new."date" := jsonb_path_query(new.resource, 'date')::FhirDateTime;
@@ -2602,7 +3141,10 @@ create or replace function public.new_implementationguide()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.ImplementationGuideinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.ImplementationGuideinstant values
          (
            new.id,
            "_lastUpdated",
@@ -2610,7 +3152,15 @@ create or replace function public.new_implementationguide()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
       new."context-quantity" := jsonb_path_query(new.resource, '(useContext.value as Quantity)')::Quantity[];
       new."context-type" := jsonb_path_query(new.resource, 'useContext.code')::Coding[];
       new."date" := jsonb_path_query(new.resource, 'date')::FhirDateTime;
@@ -2658,7 +3208,10 @@ create or replace function public.new_messagedefinition()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.MessageDefinitioninstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.MessageDefinitioninstant values
          (
            new.id,
            "_lastUpdated",
@@ -2666,7 +3219,15 @@ create or replace function public.new_messagedefinition()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
       new."context-quantity" := jsonb_path_query(new.resource, '(useContext.value as Quantity)')::Quantity[];
       new."context-type" := jsonb_path_query(new.resource, 'useContext.code')::Coding[];
       new."date" := jsonb_path_query(new.resource, 'date')::FhirDateTime;
@@ -2715,7 +3276,10 @@ create or replace function public.new_namingsystem()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.NamingSysteminstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.NamingSysteminstant values
          (
            new.id,
            "_lastUpdated",
@@ -2723,7 +3287,15 @@ create or replace function public.new_namingsystem()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept;
+      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
       new."context-quantity" := jsonb_path_query(new.resource, '(useContext.value as Quantity)')::Quantity[];
       new."context-type" := jsonb_path_query(new.resource, 'useContext.code')::Coding[];
       new."date" := jsonb_path_query(new.resource, 'date')::FhirDateTime;
@@ -2772,7 +3344,10 @@ create or replace function public.new_operationdefinition()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.OperationDefinitioninstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.OperationDefinitioninstant values
          (
            new.id,
            "_lastUpdated",
@@ -2780,7 +3355,15 @@ create or replace function public.new_operationdefinition()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Boolean      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Boolean;
+      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
       new."context-quantity" := jsonb_path_query(new.resource, '(useContext.value as Quantity)')::Quantity[];
       new."context-type" := jsonb_path_query(new.resource, 'useContext.code')::Coding[];
       new."date" := jsonb_path_query(new.resource, 'date')::FhirDateTime;
@@ -2832,7 +3415,10 @@ create or replace function public.new_searchparameter()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.SearchParameterinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.SearchParameterinstant values
          (
            new.id,
            "_lastUpdated",
@@ -2840,7 +3426,15 @@ create or replace function public.new_searchparameter()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Code      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Code;
+      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
       new."context-quantity" := jsonb_path_query(new.resource, '(useContext.value as Quantity)')::Quantity[];
       new."context-type" := jsonb_path_query(new.resource, 'useContext.code')::Coding[];
       new."date" := jsonb_path_query(new.resource, 'date')::FhirDateTime;
@@ -2889,7 +3483,10 @@ create or replace function public.new_structuredefinition()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.StructureDefinitioninstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.StructureDefinitioninstant values
          (
            new.id,
            "_lastUpdated",
@@ -2897,7 +3494,15 @@ create or replace function public.new_structuredefinition()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::FhirUri      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::FhirUri;
+      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
       new."context-quantity" := jsonb_path_query(new.resource, '(useContext.value as Quantity)')::Quantity[];
       new."context-type" := jsonb_path_query(new.resource, 'useContext.code')::Coding[];
       new."date" := jsonb_path_query(new.resource, 'date')::FhirDateTime;
@@ -2953,7 +3558,10 @@ create or replace function public.new_structuremap()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.StructureMapinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.StructureMapinstant values
          (
            new.id,
            "_lastUpdated",
@@ -2961,7 +3569,15 @@ create or replace function public.new_structuremap()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
       new."context-quantity" := jsonb_path_query(new.resource, '(useContext.value as Quantity)')::Quantity[];
       new."context-type" := jsonb_path_query(new.resource, 'useContext.code')::Coding[];
       new."date" := jsonb_path_query(new.resource, 'date')::FhirDateTime;
@@ -3006,7 +3622,10 @@ create or replace function public.new_terminologycapabilities()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.TerminologyCapabilitiesinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.TerminologyCapabilitiesinstant values
          (
            new.id,
            "_lastUpdated",
@@ -3014,7 +3633,15 @@ create or replace function public.new_terminologycapabilities()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
       new."context-quantity" := jsonb_path_query(new.resource, '(useContext.value as Quantity)')::Quantity[];
       new."context-type" := jsonb_path_query(new.resource, 'useContext.code')::Coding[];
       new."date" := jsonb_path_query(new.resource, 'date')::FhirDateTime;
@@ -3058,7 +3685,10 @@ create or replace function public.new_valueset()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.ValueSetinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.ValueSetinstant values
          (
            new.id,
            "_lastUpdated",
@@ -3066,7 +3696,15 @@ create or replace function public.new_valueset()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
       new."context-quantity" := jsonb_path_query(new.resource, '(useContext.value as Quantity)')::Quantity[];
       new."context-type" := jsonb_path_query(new.resource, 'useContext.code')::Coding[];
       new."date" := jsonb_path_query(new.resource, 'date')::FhirDateTime;
@@ -3114,7 +3752,10 @@ create or replace function public.new_chargeitem()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.ChargeIteminstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.ChargeIteminstant values
          (
            new.id,
            "_lastUpdated",
@@ -3122,7 +3763,15 @@ create or replace function public.new_chargeitem()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."account" := jsonb_path_query(new.resource, 'account')::Reference[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."account" := jsonb_path_query(new.resource, 'account')::Reference[];
       new."code" := jsonb_path_query(new.resource, 'code')::CodeableConcept;
       new."context" := jsonb_path_query(new.resource, 'context')::Reference;
       new."entered-date" := jsonb_path_query(new.resource, 'enteredDate')::FhirDateTime;
@@ -3169,7 +3818,10 @@ create or replace function public.new_chargeitemdefinition()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.ChargeItemDefinitioninstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.ChargeItemDefinitioninstant values
          (
            new.id,
            "_lastUpdated",
@@ -3177,7 +3829,15 @@ create or replace function public.new_chargeitemdefinition()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
       new."context-quantity" := jsonb_path_query(new.resource, '(useContext.value as Quantity)')::Quantity[];
       new."context-type" := jsonb_path_query(new.resource, 'useContext.code')::Coding[];
       new."date" := jsonb_path_query(new.resource, 'date')::FhirDateTime;
@@ -3222,7 +3882,10 @@ create or replace function public.new_citation()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Citationinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Citationinstant values
          (
            new.id,
            "_lastUpdated",
@@ -3230,7 +3893,15 @@ create or replace function public.new_citation()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
       new."context-quantity" := jsonb_path_query(new.resource, '(useContext.value as Quantity)')::Quantity[];
       new."context-type" := jsonb_path_query(new.resource, 'useContext.code')::Coding[];
       new."date" := jsonb_path_query(new.resource, 'date')::FhirDateTime;
@@ -3276,7 +3947,10 @@ create or replace function public.new_claim()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Claiminstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Claiminstant values
          (
            new.id,
            "_lastUpdated",
@@ -3284,7 +3958,15 @@ create or replace function public.new_claim()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept      new."care-team" := jsonb_path_query(new.resource, 'careTeam.provider')::Reference[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept;
+      new."care-team" := jsonb_path_query(new.resource, 'careTeam.provider')::Reference[];
       new."created" := jsonb_path_query(new.resource, 'created')::FhirDateTime;
       new."detail-udi" := jsonb_path_query(new.resource, 'item.detail.udi')::Reference[];
       new."encounter" := jsonb_path_query(new.resource, 'item.encounter')::Reference[];
@@ -3331,7 +4013,10 @@ create or replace function public.new_claimresponse()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.ClaimResponseinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.ClaimResponseinstant values
          (
            new.id,
            "_lastUpdated",
@@ -3339,7 +4024,15 @@ create or replace function public.new_claimresponse()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept      new."created" := jsonb_path_query(new.resource, 'created')::FhirDateTime;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept;
+      new."created" := jsonb_path_query(new.resource, 'created')::FhirDateTime;
       new."disposition" := jsonb_path_query(new.resource, 'disposition')::String;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."insurer" := jsonb_path_query(new.resource, 'insurer')::Reference;
@@ -3380,7 +4073,10 @@ create or replace function public.new_clinicalusedefinition()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.ClinicalUseDefinitioninstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.ClinicalUseDefinitioninstant values
          (
            new.id,
            "_lastUpdated",
@@ -3388,7 +4084,15 @@ create or replace function public.new_clinicalusedefinition()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Code      new."contraindication" := jsonb_path_query(new.resource, 'contraindication.diseaseSymptomProcedure')::CodeableReference;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Code;
+      new."contraindication" := jsonb_path_query(new.resource, 'contraindication.diseaseSymptomProcedure')::CodeableReference;
       new."contraindication-reference" := jsonb_path_query(new.resource, 'contraindication.diseaseSymptomProcedure')::CodeableReference;
       new."effect" := jsonb_path_query(new.resource, 'undesirableEffect.symptomConditionEffect')::CodeableReference;
       new."effect-reference" := jsonb_path_query(new.resource, 'undesirableEffect.symptomConditionEffect')::CodeableReference;
@@ -3429,7 +4133,10 @@ create or replace function public.new_communication()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Communicationinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Communicationinstant values
          (
            new.id,
            "_lastUpdated",
@@ -3437,7 +4144,15 @@ create or replace function public.new_communication()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."based-on" := jsonb_path_query(new.resource, 'basedOn')::Reference[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."based-on" := jsonb_path_query(new.resource, 'basedOn')::Reference[];
       new."category" := jsonb_path_query(new.resource, 'category')::CodeableConcept[];
       new."encounter" := jsonb_path_query(new.resource, 'encounter')::Reference;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
@@ -3482,7 +4197,10 @@ create or replace function public.new_communicationrequest()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.CommunicationRequestinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.CommunicationRequestinstant values
          (
            new.id,
            "_lastUpdated",
@@ -3490,7 +4208,15 @@ create or replace function public.new_communicationrequest()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."authored" := jsonb_path_query(new.resource, 'authoredOn')::FhirDateTime;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."authored" := jsonb_path_query(new.resource, 'authoredOn')::FhirDateTime;
       new."based-on" := jsonb_path_query(new.resource, 'basedOn')::Reference[];
       new."category" := jsonb_path_query(new.resource, 'category')::CodeableConcept[];
       new."encounter" := jsonb_path_query(new.resource, 'encounter')::Reference;
@@ -3536,7 +4262,10 @@ create or replace function public.new_contract()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Contractinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Contractinstant values
          (
            new.id,
            "_lastUpdated",
@@ -3544,7 +4273,15 @@ create or replace function public.new_contract()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept      new."authority" := jsonb_path_query(new.resource, 'authority')::Reference[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept;
+      new."authority" := jsonb_path_query(new.resource, 'authority')::Reference[];
       new."domain" := jsonb_path_query(new.resource, 'domain')::Reference[];
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."instantiates" := jsonb_path_query(new.resource, 'instantiatesUri')::FhirUri;
@@ -3584,7 +4321,10 @@ create or replace function public.new_coverage()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Coverageinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Coverageinstant values
          (
            new.id,
            "_lastUpdated",
@@ -3592,7 +4332,15 @@ create or replace function public.new_coverage()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept      new."beneficiary" := jsonb_path_query(new.resource, 'beneficiary')::Reference;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept;
+      new."beneficiary" := jsonb_path_query(new.resource, 'beneficiary')::Reference;
       new."class-type" := jsonb_path_query(new.resource, 'class.type')::CodeableConcept[];
       new."class-value" := jsonb_path_query(new.resource, 'class.value')::String[];
       new."dependent" := jsonb_path_query(new.resource, 'dependent')::String;
@@ -3633,7 +4381,10 @@ create or replace function public.new_coverageeligibilityrequest()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.CoverageEligibilityRequestinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.CoverageEligibilityRequestinstant values
          (
            new.id,
            "_lastUpdated",
@@ -3641,7 +4392,15 @@ create or replace function public.new_coverageeligibilityrequest()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."created" := jsonb_path_query(new.resource, 'created')::FhirDateTime;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."created" := jsonb_path_query(new.resource, 'created')::FhirDateTime;
       new."enterer" := jsonb_path_query(new.resource, 'enterer')::Reference;
       new."facility" := jsonb_path_query(new.resource, 'facility')::Reference;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
@@ -3678,7 +4437,10 @@ create or replace function public.new_coverageeligibilityresponse()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.CoverageEligibilityResponseinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.CoverageEligibilityResponseinstant values
          (
            new.id,
            "_lastUpdated",
@@ -3686,7 +4448,15 @@ create or replace function public.new_coverageeligibilityresponse()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."created" := jsonb_path_query(new.resource, 'created')::FhirDateTime;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."created" := jsonb_path_query(new.resource, 'created')::FhirDateTime;
       new."disposition" := jsonb_path_query(new.resource, 'disposition')::String;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."insurer" := jsonb_path_query(new.resource, 'insurer')::Reference;
@@ -3725,7 +4495,10 @@ create or replace function public.new_device()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Deviceinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Deviceinstant values
          (
            new.id,
            "_lastUpdated",
@@ -3733,7 +4506,15 @@ create or replace function public.new_device()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept      new."device-name" := jsonb_path_query(new.resource, 'deviceName.name')::String[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept;
+      new."device-name" := jsonb_path_query(new.resource, 'deviceName.name')::String[];
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."location" := jsonb_path_query(new.resource, 'location')::Reference;
       new."manufacturer" := jsonb_path_query(new.resource, 'manufacturer')::String;
@@ -3775,7 +4556,10 @@ create or replace function public.new_devicedefinition()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.DeviceDefinitioninstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.DeviceDefinitioninstant values
          (
            new.id,
            "_lastUpdated",
@@ -3783,7 +4567,15 @@ create or replace function public.new_devicedefinition()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept      new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept;
+      new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."parent" := jsonb_path_query(new.resource, 'parentDevice')::Reference;
       new."type" := jsonb_path_query(new.resource, 'type')::CodeableConcept;
   return new;
@@ -3816,7 +4608,10 @@ create or replace function public.new_devicemetric()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.DeviceMetricinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.DeviceMetricinstant values
          (
            new.id,
            "_lastUpdated",
@@ -3824,7 +4619,15 @@ create or replace function public.new_devicemetric()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept      new."category" := jsonb_path_query(new.resource, 'category')::Code;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept;
+      new."category" := jsonb_path_query(new.resource, 'category')::Code;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."parent" := jsonb_path_query(new.resource, 'parent')::Reference;
       new."source" := jsonb_path_query(new.resource, 'source')::Reference;
@@ -3859,7 +4662,10 @@ create or replace function public.new_endpoint()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Endpointinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Endpointinstant values
          (
            new.id,
            "_lastUpdated",
@@ -3867,7 +4673,15 @@ create or replace function public.new_endpoint()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."connection-type" := jsonb_path_query(new.resource, 'connectionType')::Coding;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."connection-type" := jsonb_path_query(new.resource, 'connectionType')::Coding;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."name" := jsonb_path_query(new.resource, 'name')::String;
       new."organization" := jsonb_path_query(new.resource, 'managingOrganization')::Reference;
@@ -3903,7 +4717,10 @@ create or replace function public.new_enrollmentrequest()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.EnrollmentRequestinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.EnrollmentRequestinstant values
          (
            new.id,
            "_lastUpdated",
@@ -3911,7 +4728,15 @@ create or replace function public.new_enrollmentrequest()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."patient" := jsonb_path_query(new.resource, 'candidate')::Reference;
       new."status" := jsonb_path_query(new.resource, 'status')::Code;
       new."subject" := jsonb_path_query(new.resource, 'candidate')::Reference;
@@ -3945,7 +4770,10 @@ create or replace function public.new_enrollmentresponse()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.EnrollmentResponseinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.EnrollmentResponseinstant values
          (
            new.id,
            "_lastUpdated",
@@ -3953,7 +4781,15 @@ create or replace function public.new_enrollmentresponse()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."request" := jsonb_path_query(new.resource, 'request')::Reference;
       new."status" := jsonb_path_query(new.resource, 'status')::Code;
   return new;
@@ -3986,7 +4822,10 @@ create or replace function public.new_eventdefinition()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.EventDefinitioninstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.EventDefinitioninstant values
          (
            new.id,
            "_lastUpdated",
@@ -3994,7 +4833,15 @@ create or replace function public.new_eventdefinition()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."composed-of" := jsonb_path_query(new.resource, 'relatedArtifact[*] ? (@.type = ''composed-of'').resource')::Resource[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."composed-of" := jsonb_path_query(new.resource, 'relatedArtifact[*] ? (@.type = ''composed-of'').resource')::Resource[];
       new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
       new."context-quantity" := jsonb_path_query(new.resource, '(useContext.value as Quantity)')::Quantity[];
       new."context-type" := jsonb_path_query(new.resource, 'useContext.code')::Coding[];
@@ -4046,7 +4893,10 @@ create or replace function public.new_evidence()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Evidenceinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Evidenceinstant values
          (
            new.id,
            "_lastUpdated",
@@ -4054,7 +4904,15 @@ create or replace function public.new_evidence()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
       new."context-quantity" := jsonb_path_query(new.resource, '(useContext.value as Quantity)')::Quantity[];
       new."context-type" := jsonb_path_query(new.resource, 'useContext.code')::Coding[];
       new."date" := jsonb_path_query(new.resource, 'date')::FhirDateTime;
@@ -4097,7 +4955,10 @@ create or replace function public.new_evidencereport()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.EvidenceReportinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.EvidenceReportinstant values
          (
            new.id,
            "_lastUpdated",
@@ -4105,7 +4966,15 @@ create or replace function public.new_evidencereport()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept;
+      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
       new."context-quantity" := jsonb_path_query(new.resource, '(useContext.value as Quantity)')::Quantity[];
       new."context-type" := jsonb_path_query(new.resource, 'useContext.code')::Coding[];
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
@@ -4144,7 +5013,10 @@ create or replace function public.new_evidencevariable()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.EvidenceVariableinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.EvidenceVariableinstant values
          (
            new.id,
            "_lastUpdated",
@@ -4152,7 +5024,15 @@ create or replace function public.new_evidencevariable()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
       new."context-quantity" := jsonb_path_query(new.resource, '(useContext.value as Quantity)')::Quantity[];
       new."context-type" := jsonb_path_query(new.resource, 'useContext.code')::Coding[];
       new."date" := jsonb_path_query(new.resource, 'date')::FhirDateTime;
@@ -4196,7 +5076,10 @@ create or replace function public.new_examplescenario()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.ExampleScenarioinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.ExampleScenarioinstant values
          (
            new.id,
            "_lastUpdated",
@@ -4204,7 +5087,15 @@ create or replace function public.new_examplescenario()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
       new."context-quantity" := jsonb_path_query(new.resource, '(useContext.value as Quantity)')::Quantity[];
       new."context-type" := jsonb_path_query(new.resource, 'useContext.code')::Coding[];
       new."date" := jsonb_path_query(new.resource, 'date')::FhirDateTime;
@@ -4247,7 +5138,10 @@ create or replace function public.new_explanationofbenefit()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.ExplanationOfBenefitinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.ExplanationOfBenefitinstant values
          (
            new.id,
            "_lastUpdated",
@@ -4255,7 +5149,15 @@ create or replace function public.new_explanationofbenefit()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept      new."care-team" := jsonb_path_query(new.resource, 'careTeam.provider')::Reference[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept;
+      new."care-team" := jsonb_path_query(new.resource, 'careTeam.provider')::Reference[];
       new."claim" := jsonb_path_query(new.resource, 'claim')::Reference;
       new."coverage" := jsonb_path_query(new.resource, 'insurance.coverage')::Reference[];
       new."created" := jsonb_path_query(new.resource, 'created')::FhirDateTime;
@@ -4302,7 +5204,10 @@ create or replace function public.new_group()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Groupinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Groupinstant values
          (
            new.id,
            "_lastUpdated",
@@ -4310,7 +5215,15 @@ create or replace function public.new_group()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Code      new."actual" := jsonb_path_query(new.resource, 'actual')::Boolean;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Code;
+      new."actual" := jsonb_path_query(new.resource, 'actual')::Boolean;
       new."characteristic" := jsonb_path_query(new.resource, 'characteristic.code')::CodeableConcept[];
       new."code" := jsonb_path_query(new.resource, 'code')::CodeableConcept;
       new."exclude" := jsonb_path_query(new.resource, 'characteristic.exclude')::Boolean[];
@@ -4350,7 +5263,10 @@ create or replace function public.new_guidanceresponse()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.GuidanceResponseinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.GuidanceResponseinstant values
          (
            new.id,
            "_lastUpdated",
@@ -4358,7 +5274,15 @@ create or replace function public.new_guidanceresponse()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."patient" := jsonb_path_query(new.resource, 'subject[*] ? (@.type like_regex "^.*Patient.*") ? (@.reference like_regex "^.*Patient.*")')::Reference;
       new."request" := jsonb_path_query(new.resource, 'requestIdentifier')::Identifier;
       new."subject" := jsonb_path_query(new.resource, 'subject')::Reference;
@@ -4392,7 +5316,10 @@ create or replace function public.new_healthcareservice()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.HealthcareServiceinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.HealthcareServiceinstant values
          (
            new.id,
            "_lastUpdated",
@@ -4400,7 +5327,15 @@ create or replace function public.new_healthcareservice()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept[]      new."active" := jsonb_path_query(new.resource, 'active')::Boolean;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept[];
+      new."active" := jsonb_path_query(new.resource, 'active')::Boolean;
       new."characteristic" := jsonb_path_query(new.resource, 'characteristic')::CodeableConcept[];
       new."coverage-area" := jsonb_path_query(new.resource, 'coverageArea')::Reference[];
       new."endpoint" := jsonb_path_query(new.resource, 'endpoint')::Reference[];
@@ -4442,7 +5377,10 @@ create or replace function public.new_immunizationevaluation()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.ImmunizationEvaluationinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.ImmunizationEvaluationinstant values
          (
            new.id,
            "_lastUpdated",
@@ -4450,7 +5388,15 @@ create or replace function public.new_immunizationevaluation()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."date" := jsonb_path_query(new.resource, 'date')::FhirDateTime;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."date" := jsonb_path_query(new.resource, 'date')::FhirDateTime;
       new."dose-status" := jsonb_path_query(new.resource, 'doseStatus')::CodeableConcept;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."immunization-event" := jsonb_path_query(new.resource, 'immunizationEvent')::Reference;
@@ -4487,7 +5433,10 @@ create or replace function public.new_immunizationrecommendation()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.ImmunizationRecommendationinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.ImmunizationRecommendationinstant values
          (
            new.id,
            "_lastUpdated",
@@ -4495,7 +5444,15 @@ create or replace function public.new_immunizationrecommendation()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."date" := jsonb_path_query(new.resource, 'date')::FhirDateTime;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."date" := jsonb_path_query(new.resource, 'date')::FhirDateTime;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."information" := jsonb_path_query(new.resource, 'recommendation.supportingPatientInformation')::Reference[];
       new."patient" := jsonb_path_query(new.resource, 'patient')::Reference;
@@ -4533,7 +5490,10 @@ create or replace function public.new_ingredient()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Ingredientinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Ingredientinstant values
          (
            new.id,
            "_lastUpdated",
@@ -4541,7 +5501,15 @@ create or replace function public.new_ingredient()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."for" := jsonb_path_query(new.resource, 'for')::Reference[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."for" := jsonb_path_query(new.resource, 'for')::Reference[];
       new."function" := jsonb_path_query(new.resource, 'function')::CodeableConcept[];
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier;
       new."manufacturer" := jsonb_path_query(new.resource, 'manufacturer')::IngredientManufacturer[];
@@ -4579,7 +5547,10 @@ create or replace function public.new_insuranceplan()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.InsurancePlaninstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.InsurancePlaninstant values
          (
            new.id,
            "_lastUpdated",
@@ -4587,7 +5558,15 @@ create or replace function public.new_insuranceplan()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept[]      new."address" := jsonb_path_query(new.resource, 'contact.address')::Address[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept[];
+      new."address" := jsonb_path_query(new.resource, 'contact.address')::Address[];
       new."address-city" := jsonb_path_query(new.resource, 'contact.address.city')::String;
       new."address-country" := jsonb_path_query(new.resource, 'contact.address.country')::String;
       new."address-postalcode" := jsonb_path_query(new.resource, 'contact.address.postalCode')::String;
@@ -4631,7 +5610,10 @@ create or replace function public.new_invoice()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Invoiceinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Invoiceinstant values
          (
            new.id,
            "_lastUpdated",
@@ -4639,7 +5621,15 @@ create or replace function public.new_invoice()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept      new."account" := jsonb_path_query(new.resource, 'account')::Reference;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept;
+      new."account" := jsonb_path_query(new.resource, 'account')::Reference;
       new."date" := jsonb_path_query(new.resource, 'date')::FhirDateTime;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."issuer" := jsonb_path_query(new.resource, 'issuer')::Reference;
@@ -4682,7 +5672,10 @@ create or replace function public.new_library()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Libraryinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Libraryinstant values
          (
            new.id,
            "_lastUpdated",
@@ -4690,7 +5683,15 @@ create or replace function public.new_library()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept      new."composed-of" := jsonb_path_query(new.resource, 'relatedArtifact[*] ? (@.type = ''composed-of'').resource')::Resource[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept;
+      new."composed-of" := jsonb_path_query(new.resource, 'relatedArtifact[*] ? (@.type = ''composed-of'').resource')::Resource[];
       new."content-type" := jsonb_path_query(new.resource, 'content.contentType')::Code[];
       new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
       new."context-quantity" := jsonb_path_query(new.resource, '(useContext.value as Quantity)')::Quantity[];
@@ -4744,7 +5745,10 @@ create or replace function public.new_linkage()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Linkageinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Linkageinstant values
          (
            new.id,
            "_lastUpdated",
@@ -4752,7 +5756,15 @@ create or replace function public.new_linkage()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."author" := jsonb_path_query(new.resource, 'author')::Reference;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."author" := jsonb_path_query(new.resource, 'author')::Reference;
       new."item" := jsonb_path_query(new.resource, 'item.resource')::Reference[];
       new."source" := jsonb_path_query(new.resource, 'item.resource')::Reference[];
   return new;
@@ -4785,7 +5797,10 @@ create or replace function public.new_location()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Locationinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Locationinstant values
          (
            new.id,
            "_lastUpdated",
@@ -4793,7 +5808,15 @@ create or replace function public.new_location()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept[]      new."address" := jsonb_path_query(new.resource, 'address')::Address;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept[];
+      new."address" := jsonb_path_query(new.resource, 'address')::Address;
       new."address-city" := jsonb_path_query(new.resource, 'address.city')::String;
       new."address-country" := jsonb_path_query(new.resource, 'address.country')::String;
       new."address-postalcode" := jsonb_path_query(new.resource, 'address.postalCode')::String;
@@ -4838,7 +5861,10 @@ create or replace function public.new_manufactureditemdefinition()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.ManufacturedItemDefinitioninstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.ManufacturedItemDefinitioninstant values
          (
            new.id,
            "_lastUpdated",
@@ -4846,7 +5872,15 @@ create or replace function public.new_manufactureditemdefinition()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."dose-form" := jsonb_path_query(new.resource, 'manufacturedDoseForm')::CodeableConcept;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."dose-form" := jsonb_path_query(new.resource, 'manufacturedDoseForm')::CodeableConcept;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."ingredient" := jsonb_path_query(new.resource, 'ingredient')::CodeableConcept[];
   return new;
@@ -4879,7 +5913,10 @@ create or replace function public.new_measure()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Measureinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Measureinstant values
          (
            new.id,
            "_lastUpdated",
@@ -4887,7 +5924,15 @@ create or replace function public.new_measure()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept[]      new."composed-of" := jsonb_path_query(new.resource, 'relatedArtifact[*] ? (@.type = ''composed-of'').resource')::Resource[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept[];
+      new."composed-of" := jsonb_path_query(new.resource, 'relatedArtifact[*] ? (@.type = ''composed-of'').resource')::Resource[];
       new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
       new."context-quantity" := jsonb_path_query(new.resource, '(useContext.value as Quantity)')::Quantity[];
       new."context-type" := jsonb_path_query(new.resource, 'useContext.code')::Coding[];
@@ -4939,7 +5984,10 @@ create or replace function public.new_measurereport()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.MeasureReportinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.MeasureReportinstant values
          (
            new.id,
            "_lastUpdated",
@@ -4947,7 +5995,15 @@ create or replace function public.new_measurereport()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Code      new."date" := jsonb_path_query(new.resource, 'date')::FhirDateTime;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Code;
+      new."date" := jsonb_path_query(new.resource, 'date')::FhirDateTime;
       new."evaluated-resource" := jsonb_path_query(new.resource, 'evaluatedResource')::Reference[];
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."measure" := jsonb_path_query(new.resource, 'measure')::Canonical;
@@ -4986,7 +6042,10 @@ create or replace function public.new_media()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Mediainstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Mediainstant values
          (
            new.id,
            "_lastUpdated",
@@ -4994,7 +6053,15 @@ create or replace function public.new_media()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept      new."based-on" := jsonb_path_query(new.resource, 'basedOn')::Reference[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept;
+      new."based-on" := jsonb_path_query(new.resource, 'basedOn')::Reference[];
       new."created" := jsonb_path_query(new.resource, 'created')::Date;
       new."device" := jsonb_path_query(new.resource, 'device')::Reference;
       new."encounter" := jsonb_path_query(new.resource, 'encounter')::Reference;
@@ -5037,7 +6104,10 @@ create or replace function public.new_medicationknowledge()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.MedicationKnowledgeinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.MedicationKnowledgeinstant values
          (
            new.id,
            "_lastUpdated",
@@ -5045,7 +6115,15 @@ create or replace function public.new_medicationknowledge()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."classification" := jsonb_path_query(new.resource, 'medicineClassification.classification')::CodeableConcept[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."classification" := jsonb_path_query(new.resource, 'medicineClassification.classification')::CodeableConcept[];
       new."classification-type" := jsonb_path_query(new.resource, 'medicineClassification.type')::CodeableConcept[];
       new."code" := jsonb_path_query(new.resource, 'code')::CodeableConcept;
       new."doseform" := jsonb_path_query(new.resource, 'doseForm')::CodeableConcept;
@@ -5088,7 +6166,10 @@ create or replace function public.new_medicinalproductdefinition()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.MedicinalProductDefinitioninstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.MedicinalProductDefinitioninstant values
          (
            new.id,
            "_lastUpdated",
@@ -5096,7 +6177,15 @@ create or replace function public.new_medicinalproductdefinition()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept      new."characteristic" := jsonb_path_query(new.resource, 'characteristic.value')::Coding[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept;
+      new."characteristic" := jsonb_path_query(new.resource, 'characteristic.value')::Coding[];
       new."characteristic-type" := jsonb_path_query(new.resource, 'characteristic.type')::CodeableConcept[];
       new."contact" := jsonb_path_query(new.resource, 'contact.contact')::Reference[];
       new."domain" := jsonb_path_query(new.resource, 'domain')::CodeableConcept;
@@ -5138,7 +6227,10 @@ create or replace function public.new_messageheader()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.MessageHeaderinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.MessageHeaderinstant values
          (
            new.id,
            "_lastUpdated",
@@ -5146,7 +6238,15 @@ create or replace function public.new_messageheader()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."author" := jsonb_path_query(new.resource, 'author')::Reference;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."author" := jsonb_path_query(new.resource, 'author')::Reference;
       new."code" := jsonb_path_query(new.resource, 'response.code')::Code;
       new."destination" := jsonb_path_query(new.resource, 'destination.name')::String[];
       new."destination-uri" := jsonb_path_query(new.resource, 'destination.endpoint')::FhirUrl[];
@@ -5190,7 +6290,10 @@ create or replace function public.new_molecularsequence()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.MolecularSequenceinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.MolecularSequenceinstant values
          (
            new.id,
            "_lastUpdated",
@@ -5198,7 +6301,15 @@ create or replace function public.new_molecularsequence()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Code      new."chromosome" := jsonb_path_query(new.resource, 'referenceSeq.chromosome')::CodeableConcept;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Code;
+      new."chromosome" := jsonb_path_query(new.resource, 'referenceSeq.chromosome')::CodeableConcept;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."patient" := jsonb_path_query(new.resource, 'patient')::Reference;
       new."referenceseqid" := jsonb_path_query(new.resource, 'referenceSeq.referenceSeqId')::CodeableConcept;
@@ -5241,7 +6352,10 @@ create or replace function public.new_nutritionproduct()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.NutritionProductinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.NutritionProductinstant values
          (
            new.id,
            "_lastUpdated",
@@ -5249,7 +6363,15 @@ create or replace function public.new_nutritionproduct()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."identifier" := jsonb_path_query(new.resource, 'instance.identifier')::Identifier[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."identifier" := jsonb_path_query(new.resource, 'instance.identifier')::Identifier[];
       new."status" := jsonb_path_query(new.resource, 'status')::Code;
   return new;
   end;
@@ -5281,7 +6403,10 @@ create or replace function public.new_organization()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Organizationinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Organizationinstant values
          (
            new.id,
            "_lastUpdated",
@@ -5289,7 +6414,15 @@ create or replace function public.new_organization()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept[]      new."active" := jsonb_path_query(new.resource, 'active')::Boolean;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept[];
+      new."active" := jsonb_path_query(new.resource, 'active')::Boolean;
       new."address" := jsonb_path_query(new.resource, 'address')::Address[];
       new."address-city" := jsonb_path_query(new.resource, 'address.city')::String[];
       new."address-country" := jsonb_path_query(new.resource, 'address.country')::String[];
@@ -5332,7 +6465,10 @@ create or replace function public.new_organizationaffiliation()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.OrganizationAffiliationinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.OrganizationAffiliationinstant values
          (
            new.id,
            "_lastUpdated",
@@ -5340,7 +6476,15 @@ create or replace function public.new_organizationaffiliation()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."active" := jsonb_path_query(new.resource, 'active')::Boolean;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."active" := jsonb_path_query(new.resource, 'active')::Boolean;
       new."date" := jsonb_path_query(new.resource, 'period')::Period;
       new."email" := jsonb_path_query(new.resource, 'telecom[*] ? (@.system = ''email'')')::ContactPoint[];
       new."endpoint" := jsonb_path_query(new.resource, 'endpoint')::Reference[];
@@ -5384,7 +6528,10 @@ create or replace function public.new_packagedproductdefinition()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.PackagedProductDefinitioninstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.PackagedProductDefinitioninstant values
          (
            new.id,
            "_lastUpdated",
@@ -5392,7 +6539,15 @@ create or replace function public.new_packagedproductdefinition()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept      new."biological" := jsonb_path_query(new.resource, 'package.containedItem.item.reference')::Reference;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept;
+      new."biological" := jsonb_path_query(new.resource, 'package.containedItem.item.reference')::Reference;
       new."contained-item" := jsonb_path_query(new.resource, 'package.containedItem.item.reference')::Reference;
       new."device" := jsonb_path_query(new.resource, 'package.containedItem.item.reference')::Reference;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
@@ -5433,7 +6588,10 @@ create or replace function public.new_patient()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Patientinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Patientinstant values
          (
            new.id,
            "_lastUpdated",
@@ -5441,7 +6599,15 @@ create or replace function public.new_patient()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."active" := jsonb_path_query(new.resource, 'active')::Boolean;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."active" := jsonb_path_query(new.resource, 'active')::Boolean;
       new."address" := jsonb_path_query(new.resource, 'address')::Address[];
       new."address-city" := jsonb_path_query(new.resource, 'address.city')::String[];
       new."address-country" := jsonb_path_query(new.resource, 'address.country')::String[];
@@ -5494,7 +6660,10 @@ create or replace function public.new_person()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Personinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Personinstant values
          (
            new.id,
            "_lastUpdated",
@@ -5502,7 +6671,15 @@ create or replace function public.new_person()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."address" := jsonb_path_query(new.resource, 'address')::Address[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."address" := jsonb_path_query(new.resource, 'address')::Address[];
       new."address-city" := jsonb_path_query(new.resource, 'address.city')::String[];
       new."address-country" := jsonb_path_query(new.resource, 'address.country')::String[];
       new."address-postalcode" := jsonb_path_query(new.resource, 'address.postalCode')::String[];
@@ -5551,7 +6728,10 @@ create or replace function public.new_practitioner()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Practitionerinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Practitionerinstant values
          (
            new.id,
            "_lastUpdated",
@@ -5559,7 +6739,15 @@ create or replace function public.new_practitioner()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."address" := jsonb_path_query(new.resource, 'address')::Address[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."address" := jsonb_path_query(new.resource, 'address')::Address[];
       new."address-city" := jsonb_path_query(new.resource, 'address.city')::String[];
       new."address-country" := jsonb_path_query(new.resource, 'address.country')::String[];
       new."address-postalcode" := jsonb_path_query(new.resource, 'address.postalCode')::String[];
@@ -5606,7 +6794,10 @@ create or replace function public.new_relatedperson()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.RelatedPersoninstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.RelatedPersoninstant values
          (
            new.id,
            "_lastUpdated",
@@ -5614,7 +6805,15 @@ create or replace function public.new_relatedperson()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."address" := jsonb_path_query(new.resource, 'address')::Address[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."address" := jsonb_path_query(new.resource, 'address')::Address[];
       new."address-city" := jsonb_path_query(new.resource, 'address.city')::String[];
       new."address-country" := jsonb_path_query(new.resource, 'address.country')::String[];
       new."address-postalcode" := jsonb_path_query(new.resource, 'address.postalCode')::String[];
@@ -5661,7 +6860,10 @@ create or replace function public.new_practitionerrole()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.PractitionerRoleinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.PractitionerRoleinstant values
          (
            new.id,
            "_lastUpdated",
@@ -5669,7 +6871,15 @@ create or replace function public.new_practitionerrole()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."email" := jsonb_path_query(new.resource, 'telecom[*] ? (@.system = ''email'')')::ContactPoint[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."email" := jsonb_path_query(new.resource, 'telecom[*] ? (@.system = ''email'')')::ContactPoint[];
       new."phone" := jsonb_path_query(new.resource, 'telecom[*] ? (@.system = ''phone'')')::ContactPoint[];
       new."telecom" := jsonb_path_query(new.resource, 'telecom')::ContactPoint[];
       new."active" := jsonb_path_query(new.resource, 'active')::Boolean;
@@ -5712,7 +6922,10 @@ create or replace function public.new_paymentnotice()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.PaymentNoticeinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.PaymentNoticeinstant values
          (
            new.id,
            "_lastUpdated",
@@ -5720,7 +6933,15 @@ create or replace function public.new_paymentnotice()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."created" := jsonb_path_query(new.resource, 'created')::FhirDateTime;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."created" := jsonb_path_query(new.resource, 'created')::FhirDateTime;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."payment-status" := jsonb_path_query(new.resource, 'paymentStatus')::CodeableConcept;
       new."provider" := jsonb_path_query(new.resource, 'provider')::Reference;
@@ -5757,7 +6978,10 @@ create or replace function public.new_paymentreconciliation()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.PaymentReconciliationinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.PaymentReconciliationinstant values
          (
            new.id,
            "_lastUpdated",
@@ -5765,7 +6989,15 @@ create or replace function public.new_paymentreconciliation()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."created" := jsonb_path_query(new.resource, 'created')::FhirDateTime;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."created" := jsonb_path_query(new.resource, 'created')::FhirDateTime;
       new."disposition" := jsonb_path_query(new.resource, 'disposition')::String;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."outcome" := jsonb_path_query(new.resource, 'outcome')::Code;
@@ -5803,7 +7035,10 @@ create or replace function public.new_plandefinition()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.PlanDefinitioninstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.PlanDefinitioninstant values
          (
            new.id,
            "_lastUpdated",
@@ -5811,7 +7046,15 @@ create or replace function public.new_plandefinition()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept      new."composed-of" := jsonb_path_query(new.resource, 'relatedArtifact[*] ? (@.type = ''composed-of'').resource')::Resource[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept;
+      new."composed-of" := jsonb_path_query(new.resource, 'relatedArtifact[*] ? (@.type = ''composed-of'').resource')::Resource[];
       new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
       new."context-quantity" := jsonb_path_query(new.resource, '(useContext.value as Quantity)')::Quantity[];
       new."context-type" := jsonb_path_query(new.resource, 'useContext.code')::Coding[];
@@ -5865,7 +7108,10 @@ create or replace function public.new_provenance()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Provenanceinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Provenanceinstant values
          (
            new.id,
            "_lastUpdated",
@@ -5873,7 +7119,15 @@ create or replace function public.new_provenance()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."agent" := jsonb_path_query(new.resource, 'agent.who')::Reference[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."agent" := jsonb_path_query(new.resource, 'agent.who')::Reference[];
       new."agent-role" := jsonb_path_query(new.resource, 'agent.role')::CodeableConcept[];
       new."agent-type" := jsonb_path_query(new.resource, 'agent.type')::CodeableConcept[];
       new."entity" := jsonb_path_query(new.resource, 'entity.what')::Reference[];
@@ -5921,7 +7175,10 @@ create or replace function public.new_questionnaire()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Questionnaireinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Questionnaireinstant values
          (
            new.id,
            "_lastUpdated",
@@ -5929,7 +7186,15 @@ create or replace function public.new_questionnaire()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."code" := jsonb_path_query(new.resource, 'item.code')::Coding[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."code" := jsonb_path_query(new.resource, 'item.code')::Coding[];
       new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
       new."context-quantity" := jsonb_path_query(new.resource, '(useContext.value as Quantity)')::Quantity[];
       new."context-type" := jsonb_path_query(new.resource, 'useContext.code')::Coding[];
@@ -5978,7 +7243,10 @@ create or replace function public.new_questionnaireresponse()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.QuestionnaireResponseinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.QuestionnaireResponseinstant values
          (
            new.id,
            "_lastUpdated",
@@ -5986,7 +7254,15 @@ create or replace function public.new_questionnaireresponse()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."author" := jsonb_path_query(new.resource, 'author')::Reference;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."author" := jsonb_path_query(new.resource, 'author')::Reference;
       new."authored" := jsonb_path_query(new.resource, 'authored')::FhirDateTime;
       new."based-on" := jsonb_path_query(new.resource, 'basedOn')::Reference[];
       new."encounter" := jsonb_path_query(new.resource, 'encounter')::Reference;
@@ -6027,7 +7303,10 @@ create or replace function public.new_regulatedauthorization()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.RegulatedAuthorizationinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.RegulatedAuthorizationinstant values
          (
            new.id,
            "_lastUpdated",
@@ -6035,7 +7314,15 @@ create or replace function public.new_regulatedauthorization()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept      new."case" := jsonb_path_query(new.resource, 'case.identifier')::Identifier;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept;
+      new."case" := jsonb_path_query(new.resource, 'case.identifier')::Identifier;
       new."case-type" := jsonb_path_query(new.resource, 'case.type')::CodeableConcept;
       new."holder" := jsonb_path_query(new.resource, 'holder')::Reference;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
@@ -6072,7 +7359,10 @@ create or replace function public.new_requestgroup()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.RequestGroupinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.RequestGroupinstant values
          (
            new.id,
            "_lastUpdated",
@@ -6080,7 +7370,15 @@ create or replace function public.new_requestgroup()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."author" := jsonb_path_query(new.resource, 'author')::Reference;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."author" := jsonb_path_query(new.resource, 'author')::Reference;
       new."authored" := jsonb_path_query(new.resource, 'authoredOn')::FhirDateTime;
       new."code" := jsonb_path_query(new.resource, 'code')::CodeableConcept;
       new."encounter" := jsonb_path_query(new.resource, 'encounter')::Reference;
@@ -6124,7 +7422,10 @@ create or replace function public.new_researchdefinition()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.ResearchDefinitioninstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.ResearchDefinitioninstant values
          (
            new.id,
            "_lastUpdated",
@@ -6132,7 +7433,15 @@ create or replace function public.new_researchdefinition()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."composed-of" := jsonb_path_query(new.resource, 'relatedArtifact[*] ? (@.type = ''composed-of'').resource')::Resource[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."composed-of" := jsonb_path_query(new.resource, 'relatedArtifact[*] ? (@.type = ''composed-of'').resource')::Resource[];
       new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
       new."context-quantity" := jsonb_path_query(new.resource, '(useContext.value as Quantity)')::Quantity[];
       new."context-type" := jsonb_path_query(new.resource, 'useContext.code')::Coding[];
@@ -6184,7 +7493,10 @@ create or replace function public.new_researchelementdefinition()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.ResearchElementDefinitioninstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.ResearchElementDefinitioninstant values
          (
            new.id,
            "_lastUpdated",
@@ -6192,7 +7504,15 @@ create or replace function public.new_researchelementdefinition()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Code      new."composed-of" := jsonb_path_query(new.resource, 'relatedArtifact[*] ? (@.type = ''composed-of'').resource')::Resource[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Code;
+      new."composed-of" := jsonb_path_query(new.resource, 'relatedArtifact[*] ? (@.type = ''composed-of'').resource')::Resource[];
       new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
       new."context-quantity" := jsonb_path_query(new.resource, '(useContext.value as Quantity)')::Quantity[];
       new."context-type" := jsonb_path_query(new.resource, 'useContext.code')::Coding[];
@@ -6244,7 +7564,10 @@ create or replace function public.new_researchstudy()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.ResearchStudyinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.ResearchStudyinstant values
          (
            new.id,
            "_lastUpdated",
@@ -6252,7 +7575,15 @@ create or replace function public.new_researchstudy()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."category" := jsonb_path_query(new.resource, 'category')::CodeableConcept[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."category" := jsonb_path_query(new.resource, 'category')::CodeableConcept[];
       new."date" := jsonb_path_query(new.resource, 'period')::Period;
       new."focus" := jsonb_path_query(new.resource, 'focus')::CodeableConcept[];
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
@@ -6295,7 +7626,10 @@ create or replace function public.new_researchsubject()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.ResearchSubjectinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.ResearchSubjectinstant values
          (
            new.id,
            "_lastUpdated",
@@ -6303,7 +7637,15 @@ create or replace function public.new_researchsubject()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."date" := jsonb_path_query(new.resource, 'period')::Period;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."date" := jsonb_path_query(new.resource, 'period')::Period;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."individual" := jsonb_path_query(new.resource, 'individual')::Reference;
       new."patient" := jsonb_path_query(new.resource, 'individual')::Reference;
@@ -6339,7 +7681,10 @@ create or replace function public.new_schedule()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Scheduleinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Scheduleinstant values
          (
            new.id,
            "_lastUpdated",
@@ -6347,7 +7692,15 @@ create or replace function public.new_schedule()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."active" := jsonb_path_query(new.resource, 'active')::Boolean;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."active" := jsonb_path_query(new.resource, 'active')::Boolean;
       new."actor" := jsonb_path_query(new.resource, 'actor')::Reference[];
       new."date" := jsonb_path_query(new.resource, 'planningHorizon')::Period;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
@@ -6384,7 +7737,10 @@ create or replace function public.new_slot()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Slotinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Slotinstant values
          (
            new.id,
            "_lastUpdated",
@@ -6392,7 +7748,15 @@ create or replace function public.new_slot()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."appointment-type" := jsonb_path_query(new.resource, 'appointmentType')::CodeableConcept;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."appointment-type" := jsonb_path_query(new.resource, 'appointmentType')::CodeableConcept;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."schedule" := jsonb_path_query(new.resource, 'schedule')::Reference;
       new."service-category" := jsonb_path_query(new.resource, 'serviceCategory')::CodeableConcept[];
@@ -6438,7 +7802,10 @@ create or replace function public.new_specimen()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Specimeninstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Specimeninstant values
          (
            new.id,
            "_lastUpdated",
@@ -6446,7 +7813,15 @@ create or replace function public.new_specimen()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept      new."accession" := jsonb_path_query(new.resource, 'accessionIdentifier')::Identifier;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::CodeableConcept;
+      new."accession" := jsonb_path_query(new.resource, 'accessionIdentifier')::Identifier;
       new."bodysite" := jsonb_path_query(new.resource, 'collection.bodySite')::CodeableConcept;
       new."collected" := jsonb_path_query(new.resource, 'collection.collected')::Date;
       new."collector" := jsonb_path_query(new.resource, 'collection.collector')::Reference;
@@ -6488,7 +7863,10 @@ create or replace function public.new_specimendefinition()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.SpecimenDefinitioninstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.SpecimenDefinitioninstant values
          (
            new.id,
            "_lastUpdated",
@@ -6496,7 +7874,15 @@ create or replace function public.new_specimendefinition()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."container" := jsonb_path_query(new.resource, 'typeTested.container.type')::CodeableConcept;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."container" := jsonb_path_query(new.resource, 'typeTested.container.type')::CodeableConcept;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier;
       new."type" := jsonb_path_query(new.resource, 'typeCollected')::CodeableConcept;
   return new;
@@ -6529,7 +7915,10 @@ create or replace function public.new_subscription()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Subscriptioninstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Subscriptioninstant values
          (
            new.id,
            "_lastUpdated",
@@ -6537,7 +7926,15 @@ create or replace function public.new_subscription()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."contact" := jsonb_path_query(new.resource, 'contact')::ContactPoint[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."contact" := jsonb_path_query(new.resource, 'contact')::ContactPoint[];
       new."criteria" := jsonb_path_query(new.resource, 'criteria')::String;
       new."payload" := jsonb_path_query(new.resource, 'channel.payload')::Code;
       new."status" := jsonb_path_query(new.resource, 'status')::Code;
@@ -6573,7 +7970,10 @@ create or replace function public.new_subscriptiontopic()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.SubscriptionTopicinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.SubscriptionTopicinstant values
          (
            new.id,
            "_lastUpdated",
@@ -6581,7 +7981,15 @@ create or replace function public.new_subscriptiontopic()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."date" := jsonb_path_query(new.resource, 'date')::FhirDateTime;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."date" := jsonb_path_query(new.resource, 'date')::FhirDateTime;
       new."derived-or-self" := jsonb_path_query(new.resource, 'url')::FhirUri;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
       new."resource" := jsonb_path_query(new.resource, 'resourceTrigger.resource')::FhirUri[];
@@ -6620,7 +8028,10 @@ create or replace function public.new_substance()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Substanceinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Substanceinstant values
          (
            new.id,
            "_lastUpdated",
@@ -6628,7 +8039,15 @@ create or replace function public.new_substance()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."category" := jsonb_path_query(new.resource, 'category')::CodeableConcept[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."category" := jsonb_path_query(new.resource, 'category')::CodeableConcept[];
       new."code" := jsonb_path_query(new.resource, 'code')::CodeableConcept;
       new."container-identifier" := jsonb_path_query(new.resource, 'instance.identifier')::Identifier[];
       new."expiry" := jsonb_path_query(new.resource, 'instance.expiry')::FhirDateTime[];
@@ -6666,7 +8085,10 @@ create or replace function public.new_substancedefinition()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.SubstanceDefinitioninstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.SubstanceDefinitioninstant values
          (
            new.id,
            "_lastUpdated",
@@ -6674,7 +8096,15 @@ create or replace function public.new_substancedefinition()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."classification" := jsonb_path_query(new.resource, 'classification')::CodeableConcept[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."classification" := jsonb_path_query(new.resource, 'classification')::CodeableConcept[];
       new."code" := jsonb_path_query(new.resource, 'code.code')::CodeableConcept[];
       new."domain" := jsonb_path_query(new.resource, 'domain')::CodeableConcept;
       new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier[];
@@ -6709,7 +8139,10 @@ create or replace function public.new_task()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.Taskinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.Taskinstant values
          (
            new.id,
            "_lastUpdated",
@@ -6717,7 +8150,15 @@ create or replace function public.new_task()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."authored-on" := jsonb_path_query(new.resource, 'authoredOn')::FhirDateTime;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."authored-on" := jsonb_path_query(new.resource, 'authoredOn')::FhirDateTime;
       new."based-on" := jsonb_path_query(new.resource, 'basedOn')::Reference[];
       new."business-status" := jsonb_path_query(new.resource, 'businessStatus')::CodeableConcept;
       new."code" := jsonb_path_query(new.resource, 'code')::CodeableConcept;
@@ -6766,7 +8207,10 @@ create or replace function public.new_testreport()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.TestReportinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.TestReportinstant values
          (
            new.id,
            "_lastUpdated",
@@ -6774,7 +8218,15 @@ create or replace function public.new_testreport()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier;
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."identifier" := jsonb_path_query(new.resource, 'identifier')::Identifier;
       new."issued" := jsonb_path_query(new.resource, 'issued')::FhirDateTime;
       new."participant" := jsonb_path_query(new.resource, 'participant.uri')::FhirUri[];
       new."result" := jsonb_path_query(new.resource, 'result')::Code;
@@ -6810,7 +8262,10 @@ create or replace function public.new_testscript()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.TestScriptinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.TestScriptinstant values
          (
            new.id,
            "_lastUpdated",
@@ -6818,7 +8273,15 @@ create or replace function public.new_testscript()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."context" := jsonb_path_query(new.resource, '(useContext.value as CodeableConcept)')::CodeableConcept[];
       new."context-quantity" := jsonb_path_query(new.resource, '(useContext.value as Quantity)')::Quantity[];
       new."context-type" := jsonb_path_query(new.resource, 'useContext.code')::Coding[];
       new."date" := jsonb_path_query(new.resource, 'date')::FhirDateTime;
@@ -6864,7 +8327,10 @@ create or replace function public.new_verificationresult()
           'lastuUdated',to_json(now())::jsonb
         )::jsonb
       )::jsonb;
-            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special      new."_has" := jsonb_path_query(new.resource, 'has')::Special      new."_id" := jsonb_path_query(new.resource, 'id')::String      insert into public.VerificationResultinstant values
+            new."_filter" := jsonb_path_query(new.resource, 'filter')::Special;
+      new."_has" := jsonb_path_query(new.resource, 'has')::Special;
+      new."_id" := jsonb_path_query(new.resource, 'id')::String;
+      insert into public.VerificationResultinstant values
          (
            new.id,
            "_lastUpdated",
@@ -6872,7 +8338,15 @@ create or replace function public.new_verificationresult()
            jsonb_path_query(new.resource, 'meta.lastUpdated')
          );
 
-      new."_list" := jsonb_path_query(new.resource, 'list')::Special      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[]      new."_query" := jsonb_path_query(new.resource, 'query')::Special      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[]      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[]      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative      new."_type" := jsonb_path_query(new.resource, 'type')::Special      new."target" := jsonb_path_query(new.resource, 'target')::Reference[];
+      new."_list" := jsonb_path_query(new.resource, 'list')::Special;
+      new."_profile" := jsonb_path_query(new.resource, 'meta.profile')::Canonical[];
+      new."_query" := jsonb_path_query(new.resource, 'query')::Special;
+      new."_security" := jsonb_path_query(new.resource, 'meta.security')::Coding[];
+      new."_source" := jsonb_path_query(new.resource, 'meta.source')::FhirUri;
+      new."_tag" := jsonb_path_query(new.resource, 'meta.tag')::Coding[];
+      new."_text" := jsonb_path_query(new.resource, 'text')::Narrative;
+      new."_type" := jsonb_path_query(new.resource, 'type')::Special;
+      new."target" := jsonb_path_query(new.resource, 'target')::Reference[];
   return new;
   end;
 $$ language plpgsql security definer;
