@@ -119,8 +119,6 @@ FhirField? walkTypePath(
       }
     } else {
       if (field.type.toLowerCase().contains('observationcomponent')) {
-        print(
-            'Observation Component: $oldExpression $expression $expressionList');
         return FhirField((isList ?? false) || field.isList, 'Composite');
       } else {
         return FhirField((isList ?? false) || field.isList, field.type);

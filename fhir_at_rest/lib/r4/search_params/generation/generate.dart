@@ -149,69 +149,10 @@ Future<void> main() async {
       searchResourceString += '  begin\n';
       searchResourceString += addIdAndVersionId;
 
-      for (var resourceEntry in sqlMap['Resource']!) {
-        final String path =
-            '${resourceEntry.expression.replaceFirst("Resource", '\$').replaceAll("'", "''")}'
-                .replaceAll('\$.', '')
-                .replaceAll('List.', 'List_.');
-
-        final field =
-            walkTypePath(key.replaceAll('List', 'List_'), path, '$key.$path');
-        // if (definedStrings(field)) {
-        //   searchTableString +=
-        //       '  "${resourceEntry.code}" ::${field?.type}${(field?.isList ?? false) ? "[]" : ""},\n';
-        // }
-        if (field != null && path != 'content' && path != '_id') {
-          if (field.type.toLowerCase().contains('instant')) {
-            searchResourceString +=
-                '      insert into public.${key}instant values\n';
-            searchResourceString += '         (\n';
-            searchResourceString += '           new.id,\n';
-            searchResourceString += '           "${resourceEntry.code}",\n';
-            searchResourceString += '           0,\n';
-            searchResourceString +=
-                "           jsonb_path_query(new.resource, '$path')\n";
-            searchResourceString += '         );\n\n';
-          } else {
-            searchResourceString +=
-                "      new.\"${resourceEntry.code}\" := jsonb_path_query(new.resource, '$path')";
-            searchResourceString +=
-                '::${field.type}${field.isList ? "[]" : ""}';
-            searchResourceString += ';\n';
-          }
-        }
-      }
-      for (var entry in sqlMap[key]!) {
-        final String path =
-            '${entry.expression.replaceFirst("$key", '\$').replaceAll("'", "''")}'
-                .replaceAll('\$.', '')
-                .replaceAll('List.', 'List_.');
-        final field =
-            walkTypePath(key.replaceAll('List', 'List_'), path, '$key.$path');
-        // if (definedStrings(field)) {
-        //   searchTableString +=
-        //       '  "${entry.code}" ::${field?.type}${(field?.isList ?? false) ? "[]" : ""},\n';
-        // }
-        if (field != null && path != 'content' && path != '_id') {
-          if (field.type.toLowerCase().contains('instant')) {
-            searchResourceString +=
-                '      insert into public.${key}instant values\n';
-            searchResourceString += '         (\n';
-            searchResourceString += '           new.id,\n';
-            searchResourceString += '           "${entry.code}",\n';
-            searchResourceString += '           0,\n';
-            searchResourceString +=
-                "           jsonb_path_query(new.resource, '$path')\n";
-            searchResourceString += '         );\n\n';
-          } else {
-            searchResourceString +=
-                "      new.\"${entry.code}\" := jsonb_path_query(new.resource, '$path')";
-            searchResourceString +=
-                '::${field.type}${field.isList ? "[]" : ""}';
-          }
-        }
-        searchResourceString += ';\n';
-      }
+      searchResourceString =
+          applySqlRows(sqlMap['Resource']!, searchResourceString, key);
+      searchResourceString =
+          applySqlRows(sqlMap[key]!, searchResourceString, key);
       searchTableString =
           searchTableString.substring(0, searchTableString.length - 2);
       searchTableString += '\n);\n\n';
@@ -232,6 +173,115 @@ Future<void> main() async {
   //   await File('resources/${secondaryCategory[key]}/$key.dart')
   //       .writeAsString(fileMap[key]!);
   // }
+}
+
+String applySqlRows(
+  List<SqlRow> sqlKeys,
+  String searchResourceString,
+  String key,
+) {
+  for (var resourceEntry in sqlKeys) {
+    final String path =
+        '${resourceEntry.expression.replaceFirst("Resource", '\$').replaceFirst(key, '\$').replaceAll("'", "''")}'
+            .replaceAll('\$.', '')
+            .replaceAll('List.', 'List_.');
+    final field =
+        walkTypePath(key.replaceAll('List', 'List_'), path, '$key.$path');
+    if (field != null && path != 'content' && resourceEntry.code != '_id') {
+      if (field.type.toLowerCase().contains('instant')) {
+        searchResourceString +=
+            '      insert into public.${key}instant values\n';
+        searchResourceString += '      (\n';
+        searchResourceString += '        new.id,\n';
+        searchResourceString += '        "${resourceEntry.code},"\n';
+        searchResourceString += '        0,\n';
+        searchResourceString +=
+            "        jsonb_path_query(new.resource, '$path')::timestamp with time zone default,\n";
+        searchResourceString += '      );\n';
+      } else if (field.type.toLowerCase().contains('uri') ||
+          field.type.toLowerCase().contains('url') ||
+          field.type.toLowerCase().contains('canonical')) {
+        searchResourceString += '      insert into public.${key}uri values\n';
+        searchResourceString += '      (\n';
+        searchResourceString += '        new.id,\n';
+        searchResourceString += '        "${resourceEntry.code},"\n';
+        searchResourceString += '        0,\n';
+        searchResourceString +=
+            "        jsonb_path_query(new.resource, '$path')::text,\n";
+        searchResourceString += '      );\n';
+      } else if (field.type.toLowerCase().contains('narrative') ||
+          field.type.toLowerCase().contains('string')) {
+        searchResourceString +=
+            '      insert into public.${key}string values\n';
+        searchResourceString += '      (\n';
+        searchResourceString += '        new.id,\n';
+        searchResourceString += '        "${resourceEntry.code},"\n';
+        searchResourceString += '        0,\n';
+        searchResourceString +=
+            "        jsonb_path_query(new.resource, '$path')::text,\n";
+        searchResourceString += '      );\n';
+      } else if (field.type.toLowerCase().contains('code')) {
+        searchResourceString += '      insert into public.${key}coding\n';
+        searchResourceString +=
+            '      (resourceId, searchParam, index, value, code) values\n';
+        searchResourceString += '        (\n';
+        searchResourceString += '          new.id,\n';
+        searchResourceString += '          "${resourceEntry.code},"\n';
+        searchResourceString += '          0,\n';
+        searchResourceString +=
+            "          jsonb_path_query(new.resource, '$path')::jsonb,\n";
+        searchResourceString +=
+            "          jsonb_path_query(new.resource, '$path')::text,\n";
+        searchResourceString += '        );\n';
+      } else if (field.type.toLowerCase().contains('coding')) {
+        searchResourceString +=
+            '      insert into public.${key}coding values\n';
+        searchResourceString += '        (\n';
+        searchResourceString += '          new.id,\n';
+        searchResourceString += '          "${resourceEntry.code},"\n';
+        searchResourceString += '          0,\n';
+        searchResourceString +=
+            "          jsonb_path_query(new.resource, '$path')::jsonb,\n";
+        searchResourceString +=
+            "          jsonb_path_query(new.resource, '$path.system')::text,\n";
+        searchResourceString +=
+            "          jsonb_path_query(new.resource, '$path.code')::text,\n";
+        searchResourceString +=
+            "          jsonb_path_query(new.resource, '$path.display')::text,\n";
+
+        searchResourceString += '        );\n';
+      } else if (field.type.toLowerCase().contains('identifier')) {
+        searchResourceString +=
+            '      insert into public.${key}identifier values\n';
+        searchResourceString += '        (\n';
+        searchResourceString += '          new.id,\n';
+        searchResourceString += '          "${resourceEntry.code},"\n';
+        searchResourceString += '          0,\n';
+        searchResourceString +=
+            "          jsonb_path_query(new.resource, '$path')::jsonb,\n";
+        searchResourceString +=
+            "          jsonb_path_query(new.resource, '$path.system')::text,\n";
+        searchResourceString +=
+            "          jsonb_path_query(new.resource, '$path.value')::text,\n";
+        searchResourceString +=
+            "          jsonb_path_query(new.resource, '$path.type.text')::text,\n";
+        searchResourceString += '          0,\n';
+        searchResourceString +=
+            "          jsonb_path_query(new.resource, '$path.type.coding.system')::text,\n";
+        searchResourceString +=
+            "          jsonb_path_query(new.resource, '$path.type.coding.code')::text,\n";
+        searchResourceString +=
+            "          jsonb_path_query(new.resource, '$path.type.coding.display')::text,\n";
+        searchResourceString += '        );\n';
+      } else {
+        searchResourceString +=
+            "      new.\"${resourceEntry.code}\" := jsonb_path_query(new.resource, '$path')";
+        searchResourceString += '::${field.type}${field.isList ? "[]" : ""}';
+        searchResourceString += ';\n';
+      }
+    }
+  }
+  return searchResourceString;
 }
 
 bool definedStrings(FhirField? field) =>

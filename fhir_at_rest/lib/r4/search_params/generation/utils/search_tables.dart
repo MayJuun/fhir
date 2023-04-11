@@ -1,4 +1,20 @@
 String searchTables(String table) => '''
+create table if not exists public.${table}Identifier (
+  constraint resourceId 
+    foreign key (id)
+      references internal.$table (id) not null,
+  searchParam text not null,
+  index int not null,
+  value jsonb not null,
+  system text,
+  value text,
+  typeText text,
+  codingIndex int,
+  codingSystem text,
+  codingCode text,
+  codingDisplay text
+);
+
 create table if not exists public.${table}String (
   constraint resourceId 
     foreign key (id)
@@ -15,24 +31,6 @@ create table if not exists public.${table}Instant (
   searchParam text not null,
   index int not null,
   value timestamp with time zone default not null
-);
-
-create table if not exists public.${table}Date (
-  constraint resourceId 
-    foreign key (id)
-      references internal.$table (id) not null,
-  searchParam text not null,
-  index int not null,
-  value text not null
-);
-
-create table if not exists public.${table}Markdown (
-  constraint resourceId 
-    foreign key (id)
-      references internal.$table (id) not null,
-  searchParam text not null,
-  index int not null,
-  value text not null
 );
 
 create table if not exists public.${table}Uri (
@@ -53,6 +51,32 @@ create table if not exists public.${table}Coding (
   value jsonb not null,
   system text,
   code text,
+  display text
+);
+
+''';
+
+String otherTables(String table) => '''
+
+
+
+
+create table if not exists public.${table}Date (
+  constraint resourceId 
+    foreign key (id)
+      references internal.$table (id) not null,
+  searchParam text not null,
+  index int not null,
+  value text not null
+);
+
+create table if not exists public.${table}Markdown (
+  constraint resourceId 
+    foreign key (id)
+      references internal.$table (id) not null,
+  searchParam text not null,
+  index int not null,
+  value text not null
 );
 
 create table if not exists public.${table}Narrative (
@@ -75,17 +99,6 @@ create table if not exists public.${table}CodeableConcept (
   codingIndex int,
   system text,
   code text,
-);
-
-create table if not exists public.${table}Identifier (
-  constraint resourceId 
-    foreign key (id)
-      references internal.$table (id) not null,
-  searchParam text not null,
-  index int not null,
-  value jsonb not null,
-  codingIndex int,
-  system text,
 );
 
 create table if not exists public.${table}Reference (
