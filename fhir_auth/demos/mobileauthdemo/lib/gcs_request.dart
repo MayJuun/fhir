@@ -6,13 +6,14 @@ import 'package:google_sign_in/google_sign_in.dart';
 
 import 'api.dart';
 import 'new_patient.dart';
+import 'scopes.dart';
 
 Future gcsRequest() async {
   final _googleSignIn = GoogleSignIn(
-      // scopes: scopes ?? [],
-      // clientId: kIsWeb ? Api.gcsClientId : null,
-      // serverClientId: kIsWeb ? null : Api.gcsClientId,
-      );
+    scopes: scopes.scopesList(),
+    clientId: kIsWeb ? Api.gcsClientId : null,
+    serverClientId: kIsWeb ? null : Api.gcsClientId,
+  );
 
   await _googleSignIn.signIn();
   print('signed in');
