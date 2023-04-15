@@ -1,11 +1,13 @@
 // Dart imports:
 import 'dart:async';
 
+import 'package:fhir/r4.dart';
+
 import 'fhir_hive_db.dart';
 
-class FhirHiveProvider {
+class FhirHiveDao {
   /// Private Constructor
-  FhirHiveProvider._() {
+  FhirHiveDao._() {
     _fhirHiveDb = FhirHiveDb();
   }
 
@@ -13,19 +15,47 @@ class FhirHiveProvider {
   late FhirHiveDb _fhirHiveDb;
 
   /// Singleton Instance
-  static final FhirHiveProvider _provider = FhirHiveProvider._();
+  static final FhirHiveDao _provider = FhirHiveDao._();
 
   /// Singleton factory
-  factory FhirHiveProvider() => _provider;
+  factory FhirHiveDao() => _provider;
 
   /// Initalizes the database, configure its path, and return it
   Future<FhirHiveDb> getDatabaseInstance() async {
-    await _fhirHiveDb.initCollection();
+    await _fhirHiveDb.initDb();
     return _fhirHiveDb;
   }
 
   /// Singleton Accessor
   FhirHiveDb get instance => _fhirHiveDb;
+
+  /// Saves a [Resource] to the local Db, [password] is optional (but after set,
+  /// it must always be used everytime), will update the meta fields of the
+  /// [Resource] and adds an id if none is already given.
+  Future<Resource> save(Resource? resource) async {
+    if (resource != null) {
+      if (resource.resourceType != null) {
+        return resource.id == null
+            ? await _insert(resource)
+            : (await find(null,
+                        resourceType: resource.resourceType, id: resource.id))
+                    .isEmpty
+                ? await _insert(resource)
+                : await _update(resource);
+      } else {
+        throw const FormatException('ResourceType cannot be null');
+      }
+    } else {
+      throw const FormatException('Resource to save cannot be null');
+    }
+  }
+
+  /// function used to save a new resource in the db
+  Future<Resource> _insert(Resource resource) async {
+    final newResource = resource.updateVersion().newIdIfNoId();
+    await _fhirHiveDb.save(newResource);
+    return newResource;
+  }
 }
 
 //   /// Update old password to new

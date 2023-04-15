@@ -260,6 +260,7 @@ $ psql -U postgres -d mimiciv -f mimic-iv/buildmimic/postgres/validate.sql
 # clone one more
 $ git clone https://github.com/kind-lab/mimic-fhir.git
 $ cd mimic-fhir/sql
-$ psql -U postgres -d mimiciv -f create_fhir_jsons.sql
+# warning, this takes a looooooong time
+$ psql -U postgres -d mimiciv -f create_fhir_tables.sql
 
 ```

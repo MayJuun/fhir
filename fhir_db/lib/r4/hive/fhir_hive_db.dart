@@ -16,17 +16,6 @@ class FhirHiveDb {
     streamController = StreamController();
     await Hive.setDatabasePath();
     initialized = true;
-
-    /// Open the FHIR collection, this contains all the resourceTypes, as well
-    /// as a historical box for each type for version histories
-    await BoxCollection.open(
-        'fhir',
-        {
-          ...ResourceUtils.resourceTypeFromStringMap.keys,
-          ...ResourceUtils.resourceTypeFromStringMap.keys
-              .map((e) => '${e}History'),
-          'resourceTypes',
-        }.toSet());
     sinkDataToStream();
   }
 
@@ -39,9 +28,9 @@ class FhirHiveDb {
   /// This is to get a specific Box
   Future<Box> initAndGetBox(String resourceType, [bool history = false]) async {
     await ensureInit;
-    Box? box;
 
     /// Create box name and include if it's a history or not
+    Box? box;
     final boxName = '$resourceType{history ? "History" : ""}';
     if (!Hive.isBoxOpen(boxName)) {
       box = await Hive.openBox(boxName);
@@ -56,42 +45,18 @@ class FhirHiveDb {
     streamController?.sink.add(Data(isInitialise: isInitialse, value: data));
   }
 
-  Future<bool> save(Resource resource) async {
+  Future<bool> insert(Resource resource) async {
     try {
       await ensureInit;
       if (resource.resourceTypeString != null) {
         Box box = await initAndGetBox(resource.resourceTypeString!);
-        var uuid = box.length + 1;
-        var data = person.toJson();
         box.put(uuid, data);
-
         sinkDataToStream();
       }
       return true;
     } catch (e, s) {
       log('Error: $e, Stack at time of Error: $s');
       return false;
-    }
-  }
-
-  /// Saves a [Resource] to the local Db, [password] is optional (but after set,
-  /// it must always be used everytime), will update the meta fields of the
-  /// [Resource] and adds an id if none is already given.
-  Future<Resource> save(Resource? resource) async {
-    if (resource != null) {
-      if (resource.resourceType != null) {
-        return resource.id == null
-            ? await _insert(resource)
-            : (await find(null,
-                        resourceType: resource.resourceType, id: resource.id))
-                    .isEmpty
-                ? await _insert(resource)
-                : await _update(resource);
-      } else {
-        throw const FormatException('ResourceType cannot be null');
-      }
-    } else {
-      throw const FormatException('Resource to save cannot be null');
     }
   }
 
