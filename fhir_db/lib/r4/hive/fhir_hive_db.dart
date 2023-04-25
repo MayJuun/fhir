@@ -26,31 +26,32 @@ class FhirHiveDb {
   }
 
   /// This is to get a specific Box
-  Future<Box> initAndGetBox(String resourceType, [bool history = false]) async {
+  Future<Box<Map<String, dynamic>>> initAndGetBox(String resourceType,
+      [bool history = false]) async {
     await ensureInit;
 
     /// Create box name and include if it's a history or not
-    Box? box;
-    final boxName = '$resourceType{history ? "History" : ""}';
-    if (!Hive.isBoxOpen(boxName)) {
-      box = await Hive.openBox(boxName);
+    Box<Map<String, dynamic>>? box;
+    final resourceType = '$resourceType{history ? "History" : ""}';
+    if (!Hive.isBoxOpen(resourceType)) {
+      box = await Hive.openBox(resourceType);
     } else {
-      box = Hive.box(boxName);
+      box = Hive.box(resourceType);
     }
     return box;
   }
 
   sinkDataToStream() async {
-    List<dynamic> data = await read(boxName);
-    streamController?.sink.add(Data(isInitialise: isInitialse, value: data));
+    List<dynamic> data = await read(resourceType);
+    streamController?.sink.add(Data(isInitialise: initialized, value: data));
   }
 
-  Future<bool> insert(Resource resource) async {
+  Future<bool> save(Resource resource) async {
     try {
       await ensureInit;
-      if (resource.resourceTypeString != null) {
+      if (resource.resourceTypeString != null && resource.id != null) {
         Box box = await initAndGetBox(resource.resourceTypeString!);
-        box.put(uuid, data);
+        box.put(resource.id, resource.toJson());
         sinkDataToStream();
       }
       return true;
@@ -60,37 +61,64 @@ class FhirHiveDb {
     }
   }
 
-  /// function used to save a new resource in the db
-  Future<Resource> _insert(Resource resource) async {
-    final newResource = resource.updateVersion().newIdIfNoId();
-    final box = await initAndGetBox(resource.resourceTypeString!);
-    await box.put(resource.id.toString(), newResource.toJson());
-    return newResource;
+  Future<bool> saveHistory(Resource resource) async {
+    try {
+      await ensureInit;
+      if (resource.resourceTypeString != null && resource.id != null) {
+        Box box = await initAndGetBox(resource.resourceTypeString!, true);
+        box.put(
+            '${resource.id}/${resource.meta?.versionId}', resource.toJson());
+        sinkDataToStream();
+      }
+      return true;
+    } catch (e, s) {
+      log('Error: $e, Stack at time of Error: $s');
+      return false;
+    }
   }
 
   void delete(key) async {
-    Box box = await initialiseBoxAndGetBox(boxName);
+    Box box = await initAndGetBox(resourceType);
     await box.delete(key);
     sinkDataToStream();
   }
 
-  Future<List<dynamic>> read(String boxName) async {
-    if (!isInitialse) {
-      await databaseInit();
+  Future<Map<String, dynamic>?> read(String resourceType, String id) async {
+    if (!initialized) {
+      await initDb();
     }
-    Box box = await initialiseBoxAndGetBox(boxName);
-    var boxData = box.toMap();
-    return boxData.entries
-        .map((MapEntry mapEntry) => {mapEntry.key: mapEntry.value})
-        .toList();
+    Box<Map<String, dynamic>> box = await initAndGetBox(resourceType);
+    var boxData = box.get(id);
+    return boxData;
+  }
+
+  Future<Iterable<Map<String, dynamic>>> readAll(String resourceType) async {
+    if (!initialized) {
+      await initDb();
+    }
+    Box<Map<String, dynamic>> box = await initAndGetBox(resourceType);
+    return box.values;
   }
 
   void clear() async {
-    if (!isInitialse) {
-      Box box = await initialiseBoxAndGetBox(boxName);
+    if (!initialized) {
+      Box box = await initAndGetBox(resourceType);
       streamController?.close();
       box.clear();
     }
+  }
+
+  Future<List<Resource>> search(
+    String resourceType,
+    bool Function(Map<String, dynamic>) finder,
+  ) async {
+    if (!initialized) {
+      await initDb();
+    }
+    Box<Map<String, dynamic>> box = await initAndGetBox(resourceType);
+    var boxData = box.toMap();
+    boxData.removeWhere((key, value) => !finder(value));
+    return boxData.values.map((e) => Resource.fromJson(e)).toList();
   }
 }
 

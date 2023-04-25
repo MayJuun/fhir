@@ -90,47 +90,45 @@ class ResourceDao {
     await _resourceStore
         .record(newResource.id.toString())
         .put(await _db(password), newResource.toJson());
-
     return newResource;
   }
 
   /// functions used to update a resource who has already been saved into the
   /// db, will also save the old version
   Future<Resource> _update(String? password, Resource resource) async {
-    final String id = resource.id.toString();
-    final dbResource = await _resourceStore.record(id).get(await _db(password));
-    if (dbResource == null) {
-      return _insert(password, resource);
-    } else {
-      final oldResource = Resource.fromJson(dbResource);
-      final historyId =
-          '${ResourceUtils.resourceTypeToStringMap[oldResource.resourceType]}'
-          '/${resource.id}/_history/${oldResource.meta?.versionId}';
-      await _history
-          .record(historyId)
-          .put(await _db(password), oldResource.toJson());
-
-      Resource newResource;
-
-      switch (databaseMode) {
-        case mode.DatabaseMode.PERSISTENCE_DB:
-          newResource = oldResource.meta == null
-              ? resource.updateVersion().newIdIfNoId()
-              : oldResource.meta == null
-                  ? resource.updateVersion().newIdIfNoId()
-                  : resource
-                      .updateVersion(oldMeta: oldResource.meta)
-                      .newIdIfNoId();
-          break;
-        case mode.DatabaseMode.CACHE_DB:
-          newResource = resource;
-          break;
+    if (resource.resourceTypeString != null) {
+      if (resource.id != null) {
+        final dbResource =
+            await _resourceStore.record(resource.id!).get(await _db(password));
+        if (dbResource != null) {
+          final oldResource = Resource.fromJson(dbResource);
+          final historyId =
+              '${ResourceUtils.resourceTypeToStringMap[oldResource.resourceType]}'
+              '/${resource.id}/_history/${oldResource.meta?.versionId}';
+          await _history
+              .record(historyId)
+              .put(await _db(password), oldResource.toJson());
+          Resource newResource;
+          switch (databaseMode) {
+            case mode.DatabaseMode.PERSISTENCE_DB:
+              newResource = resource.updateVersion(oldMeta: oldResource.meta);
+              break;
+            case mode.DatabaseMode.CACHE_DB:
+              newResource = resource;
+              break;
+          }
+          await _resourceStore
+              .record(resource.id!)
+              .put(await _db(password), newResource.toJson(), merge: true);
+          return newResource;
+        } else {
+          return _insert(password, resource);
+        }
+      } else {
+        return _insert(password, resource);
       }
-
-      await _resourceStore
-          .record(id)
-          .put(await _db(password), newResource.toJson(), merge: true);
-      return newResource;
+    } else {
+      throw const FormatException('Resource passed must have a resourceType');
     }
   }
 

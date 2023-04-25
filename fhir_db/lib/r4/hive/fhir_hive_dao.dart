@@ -56,103 +56,121 @@ class FhirHiveDao {
     await _fhirHiveDb.save(newResource);
     return newResource;
   }
+
+  /// functions used to update a resource which has already been saved into the
+  /// db, will also save the old version
+  Future<Resource> _update(Resource resource) async {
+    if (resource.resourceTypeString != null) {
+      if (resource.id != null) {
+        final dbResource =
+            await _fhirHiveDb.read(resource.resourceTypeString!, resource.id!);
+        if (dbResource != null) {
+          final oldResource = Resource.fromJson(dbResource);
+          await _fhirHiveDb.saveHistory(oldResource);
+          final newResource = resource.updateVersion(oldMeta: oldResource.meta);
+
+          await _fhirHiveDb.save(newResource);
+          return newResource;
+        } else {
+          return await _insert(resource);
+        }
+      } else {
+        return await _insert(resource);
+      }
+    } else {
+      throw const FormatException('Resource passed must have a resourceType');
+    }
+  }
+
+  /// searches for a specific [Resource]. That resource can be defined by
+  /// passing a full [Resource] object, you may pass a [resourceType] and [id]
+  /// or you can pass a search [field] - since we are dealing with maps, this
+  /// should be a list of strings or integers, and this function will walk
+  /// through them:
+  ///
+  /// field = ['name', 'given', 2]
+  /// newValue = resource['name'];
+  /// newValue = newValue['given'];
+  /// newValue = newValue[2];
+  ///
+  Future<List<Resource>> find(
+    String? password, {
+    Resource? resource,
+    R4ResourceType? resourceType,
+    String? id,
+    List? field,
+    String? value,
+  }) async {
+    if ((resource != null && resource.resourceType != null) ||
+        (resourceType != null && id != null) ||
+        (resourceType != null && field != null && value != null)) {
+      bool Function(Map<String, dynamic>) finder;
+      if (resource != null) {
+        finder = (Map<String, dynamic> resourceMap) =>
+            resourceMap['id'] == resource.id;
+      } else if (resourceType != null && id != null) {
+        finder = (Map<String, dynamic> resourceMap) => resourceMap['id'] == id;
+      } else {
+        finder = (Map<String, dynamic> resourceMap) {
+          var result = resourceMap;
+          for (final key in field!) {
+            result = result[key];
+          }
+          return result.toString() == value;
+        };
+      }
+      return await _search(
+        ResourceUtils
+            .resourceTypeToStringMap[resource?.resourceType ?? resourceType]!,
+        finder,
+      );
+    } else {
+      throw const FormatException('Must have either: '
+          '\n1) a resource with a resourceType'
+          '\n2) a resourceType and an Id'
+          '\n3) a resourceType, a specific field, and the value of interest');
+    }
+  }
+
+  /// returns all resources of a specific type
+  Future<List<Resource>> getResourceType({
+    List<R4ResourceType>? resourceTypes,
+    List<String>? resourceTypeStrings,
+    Resource? resource,
+  }) async {
+    final typeList = <R4ResourceType>{};
+    if (resource?.resourceType != null) {
+      typeList.add(resource!.resourceType!);
+    }
+    if (resourceTypes != null) {
+      if (resourceTypes.isNotEmpty) {
+        typeList.addAll(resourceTypes);
+      }
+    }
+    if (resourceTypeStrings != null) {
+      for (final type in resourceTypeStrings) {
+        if (ResourceUtils.resourceTypeFromStringMap[type] != null) {
+          typeList.add(ResourceUtils.resourceTypeFromStringMap[type]!);
+        }
+      }
+    }
+
+    final List<Resource> resourceList = [];
+    for (final type in typeList) {
+      if (ResourceUtils.resourceTypeToStringMap[type] != null) {
+        final newResources = await _fhirHiveDb
+            .readAll(ResourceUtils.resourceTypeToStringMap[type]!);
+        resourceList.addAll(newResources.map((e) => Resource.fromJson(e)));
+      }
+    }
+    return resourceList;
+  }
+
+  /// ultimate search function, must pass in finder
+  Future<List<Resource>> _search(
+    String resourceType,
+    bool Function(Map<String, dynamic>) finder,
+  ) async {
+    return await _fhirHiveDb.search(resourceType, finder);
+  }
 }
-
-//   /// Update old password to new
-//   Future updatePassword(String? oldPw, String? newPw) async =>
-//       await _updatePw(oldPw, newPw);
-
-//   /// Database object accessor
-//   Future<Database> database(String? pw) async {
-//     /// If completer is null, database isn't opened, just instantiated
-//     if (_dbOpenCompleter == null) {
-//       _dbOpenCompleter = Completer();
-
-//       /// This will also complete the db instance
-//       _openDatabase(pw);
-//     }
-
-//     /// If db is open, the future happens instantly, otherwise, it will wait
-//     /// for complete to be called below
-//     return _dbOpenCompleter!.future;
-//   }
-
-//   Future<void> deleteDatabase(String password) async {
-//     var db = await _getDb('fhir.db', password);
-//     await db.close();
-
-//     final appDocDir = await getApplicationDocumentsDirectory();
-//     await File(join(appDocDir.path, 'fhir.db')).delete();
-
-//     // Setting the completer to null will lead to
-//     // creating a new database the next time we try to access it.
-//     _dbOpenCompleter = null;
-//   }
-
-//   Future _openDatabase(String? pw) async {
-//     /// Get the actual db
-//     final database = await _getDb('fhir.db', pw);
-
-//     /// Complete!
-//     _dbOpenCompleter!.complete(database);
-//   }
-
-//   Future<Database> _getDb(String path, String? pw) async {
-//     /// Platform-specific directory
-//     final appDocDir = await getApplicationDocumentsDirectory();
-
-//     /// Db path
-//     final dbPath = join(appDocDir.path, path);
-
-//     /// check if there is a codec and pw
-//     final codec = pw == null ? null : _codec(pw);
-
-//     /// if there is, use it to open the Db
-//     return codec == null
-//         ? await _dbFactory.openDatabase(dbPath)
-//         : await _dbFactory.openDatabase(dbPath, codec: codec);
-//   }
-
-//   /// This is just for getting the codec
-//   SembastCodec? _codec(String? pw) =>
-//       pw == null || pw == '' ? null : getEncryptSembastCodecAES(password: pw);
-//   // getEncryptSembastCodecSalsa20(password: pw);
-
-//   Future _updatePw(String? oldPw, String? newPw) async {
-//     /// Platform-specific directory
-//     final appDocDir = await getApplicationDocumentsDirectory();
-
-//     /// Get the old Db
-//     var db = await _getDb('fhir.db', oldPw);
-
-//     /// Create the map of the old Db
-//     final exportMap = await exportDatabase(db);
-
-//     /// Close old Db
-//     await db.close();
-
-//     /// Create a copy of the old db - in case something messes up while we're
-//     /// changing to the new password
-//     await File(join(appDocDir.path, 'fhir.db'))
-//         .copy(join(appDocDir.path, 'old_fhir.db'));
-
-//     /// Get the path to the original Db
-//     final dbPath = join(appDocDir.path, 'fhir.db');
-
-//     /// Create the new Db with the new pw and codec
-//     db = await importDatabase(
-//       exportMap,
-//       _dbFactory,
-//       dbPath,
-//       codec: _codec(newPw),
-//     );
-
-//     /// Delete the old Db after the Db has successfully updated
-//     await File(join(appDocDir.path, 'old_fhir.db')).delete();
-
-//     /// Clearing the completer, reinstantiating it, and complete the Db
-//     _dbOpenCompleter = null;
-//     _dbOpenCompleter = Completer();
-//     _dbOpenCompleter!.complete(db);
-//   }
-// }
