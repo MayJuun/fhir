@@ -24,7 +24,7 @@ part 'resource_types_enum.dart';
 /// in this class is only used if the resourceType is not previously known
 @JsonSerializable()
 class Resource {
-  Id? id;
+  FhirId? id;
   Stu3ResourceType? resourceType;
   Meta? meta;
   FhirUri? implicitRules;
@@ -64,7 +64,7 @@ class Resource {
               ' it is neither a yaml string nor a yaml map.');
 
   static Resource copyWith({
-    Id? id,
+    FhirId? id,
     Stu3ResourceType? resourceType,
     Meta? meta,
     FhirUri? implicitRules,

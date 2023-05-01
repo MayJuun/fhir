@@ -10097,7 +10097,7 @@ mixin _$TaskInput {
   Element? get valueDecimalElement => throw _privateConstructorUsedError;
 
   /// [valueId] The value of the input parameter as a basic type.
-  Id? get valueId => throw _privateConstructorUsedError;
+  FhirId? get valueId => throw _privateConstructorUsedError;
 
   /// [valueIdElement] Extensions for valueId
   @JsonKey(name: '_valueId')
@@ -10310,7 +10310,7 @@ abstract class $TaskInputCopyWith<$Res> {
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
       Instant? valueInstant,
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
@@ -10582,7 +10582,7 @@ class _$TaskInputCopyWithImpl<$Res, $Val extends TaskInput>
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -11442,7 +11442,7 @@ abstract class _$$_TaskInputCopyWith<$Res> implements $TaskInputCopyWith<$Res> {
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
       Instant? valueInstant,
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
@@ -11763,7 +11763,7 @@ class __$$_TaskInputCopyWithImpl<$Res>
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -12205,7 +12205,7 @@ class _$_TaskInput extends _TaskInput {
 
   /// [valueId] The value of the input parameter as a basic type.
   @override
-  final Id? valueId;
+  final FhirId? valueId;
 
   /// [valueIdElement] Extensions for valueId
   @override
@@ -12675,7 +12675,7 @@ abstract class _TaskInput extends TaskInput {
       final Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal')
           final Element? valueDecimalElement,
-      final Id? valueId,
+      final FhirId? valueId,
       @JsonKey(name: '_valueId')
           final Element? valueIdElement,
       final Instant? valueInstant,
@@ -12849,7 +12849,7 @@ abstract class _TaskInput extends TaskInput {
   @override
 
   /// [valueId] The value of the input parameter as a basic type.
-  Id? get valueId;
+  FhirId? get valueId;
   @override
 
   /// [valueIdElement] Extensions for valueId
@@ -13174,7 +13174,7 @@ mixin _$TaskOutput {
   Element? get valueDecimalElement => throw _privateConstructorUsedError;
 
   /// [valueId] The value of the Output parameter as a basic type.
-  Id? get valueId => throw _privateConstructorUsedError;
+  FhirId? get valueId => throw _privateConstructorUsedError;
 
   /// [valueIdElement] Extensions for valueId
   @JsonKey(name: '_valueId')
@@ -13388,7 +13388,7 @@ abstract class $TaskOutputCopyWith<$Res> {
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
       Instant? valueInstant,
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
@@ -13660,7 +13660,7 @@ class _$TaskOutputCopyWithImpl<$Res, $Val extends TaskOutput>
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -14521,7 +14521,7 @@ abstract class _$$_TaskOutputCopyWith<$Res>
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
       Instant? valueInstant,
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
@@ -14842,7 +14842,7 @@ class __$$_TaskOutputCopyWithImpl<$Res>
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -15283,7 +15283,7 @@ class _$_TaskOutput extends _TaskOutput {
 
   /// [valueId] The value of the Output parameter as a basic type.
   @override
-  final Id? valueId;
+  final FhirId? valueId;
 
   /// [valueIdElement] Extensions for valueId
   @override
@@ -15753,7 +15753,7 @@ abstract class _TaskOutput extends TaskOutput {
       final Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal')
           final Element? valueDecimalElement,
-      final Id? valueId,
+      final FhirId? valueId,
       @JsonKey(name: '_valueId')
           final Element? valueIdElement,
       final Instant? valueInstant,
@@ -15926,7 +15926,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
 
   /// [valueId] The value of the Output parameter as a basic type.
-  Id? get valueId;
+  FhirId? get valueId;
   @override
 
   /// [valueIdElement] Extensions for valueId

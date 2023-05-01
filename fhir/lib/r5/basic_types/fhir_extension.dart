@@ -323,7 +323,7 @@ class FhirExtension with _$FhirExtension {
 
     /// [valueId] Value of extension - must be one of a constrained set of the
     ///  data types (see [Extensibility](extensibility.html) for a list).
-    Id? valueId,
+    FhirId? valueId,
 
     /// [valueIdElement] Extensions for valueId
     @JsonKey(name: '_valueId') Element? valueIdElement,

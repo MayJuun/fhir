@@ -362,7 +362,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -1120,7 +1120,7 @@ class ActorDefinition with Resource, _$ActorDefinition {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -1562,7 +1562,7 @@ class ConditionDefinition with Resource, _$ConditionDefinition {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -2529,7 +2529,7 @@ class DeviceDefinition with Resource, _$DeviceDefinition {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -4779,7 +4779,7 @@ class EventDefinition with Resource, _$EventDefinition {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -5174,7 +5174,7 @@ class ExampleScenario with Resource, _$ExampleScenario {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -6757,7 +6757,7 @@ class ObservationDefinition with Resource, _$ObservationDefinition {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -7761,7 +7761,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -8908,7 +8908,7 @@ class PlanDefinitionAction with _$PlanDefinitionAction {
     List<RelatedArtifact>? documentation,
 
     /// [goalId] Identifies goals that this action supports. The reference must be to a goal element defined within this plan definition. In pharmaceutical quality, a goal represents acceptance criteria (Goal) for a given action (Test), so the goalId would be the unique id of a defined goal element establishing the acceptance criteria for the action.
-    List<Id>? goalId,
+    List<FhirId>? goalId,
 
     /// [goalIdElement] ("_goalId") Extensions for goalId
     @JsonKey(name: '_goalId') List<Element>? goalIdElement,
@@ -9261,7 +9261,7 @@ class PlanDefinitionInput with _$PlanDefinitionInput {
     DataRequirement? requirement,
 
     /// [relatedData] Points to an existing input or output element that provides data to this input.
-    Id? relatedData,
+    FhirId? relatedData,
 
     /// [relatedDataElement] ("_relatedData") Extensions for relatedData
     @JsonKey(name: '_relatedData') Element? relatedDataElement,
@@ -9518,7 +9518,7 @@ class PlanDefinitionRelatedAction with _$PlanDefinitionRelatedAction {
     List<FhirExtension>? modifierExtension,
 
     /// [targetId] The element id of the target related action.
-    Id? targetId,
+    FhirId? targetId,
 
     /// [targetIdElement] ("_targetId") Extensions for targetId
     @JsonKey(name: '_targetId') Element? targetIdElement,
@@ -10073,7 +10073,7 @@ class Questionnaire with Resource, _$Questionnaire {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -11361,7 +11361,7 @@ class Requirements with Resource, _$Requirements {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -11646,7 +11646,7 @@ class RequirementsStatement with _$RequirementsStatement {
     List<FhirExtension>? modifierExtension,
 
     /// [key] Key that identifies this statement (unique within this resource).
-    Id? key,
+    FhirId? key,
 
     /// [keyElement] ("_key") Extensions for key
     @JsonKey(name: '_key') Element? keyElement,
@@ -11961,7 +11961,7 @@ class SpecimenDefinition with Resource, _$SpecimenDefinition {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not

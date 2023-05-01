@@ -19,7 +19,7 @@ class Claim with Resource, _$Claim {
     @Default(Stu3ResourceType.Claim)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Claim)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -444,13 +444,13 @@ class ClaimItem with _$ClaimItem {
   factory ClaimItem({
     Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
-    List<Id>? careTeamLinkId,
+    List<FhirId>? careTeamLinkId,
     @JsonKey(name: '_careTeamLinkId') List<Element?>? careTeamLinkIdElement,
-    List<Id>? diagnosisLinkId,
+    List<FhirId>? diagnosisLinkId,
     @JsonKey(name: '_diagnosisLinkId') List<Element?>? diagnosisLinkIdElement,
-    List<Id>? procedureLinkId,
+    List<FhirId>? procedureLinkId,
     @JsonKey(name: '_procedureLinkId') List<Element?>? procedureLinkIdElement,
-    List<Id>? informationLinkId,
+    List<FhirId>? informationLinkId,
     @JsonKey(name: '_informationLinkId')
         List<Element>? informationLinkIdElement,
     CodeableConcept? revenue,
@@ -615,7 +615,7 @@ class ClaimResponse with Resource, _$ClaimResponse {
     @Default(Stu3ResourceType.ClaimResponse)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ClaimResponse)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -685,7 +685,7 @@ class ClaimResponse with Resource, _$ClaimResponse {
 class ClaimResponseItem with _$ClaimResponseItem {
   ClaimResponseItem._();
   factory ClaimResponseItem({
-    Id? sequenceLinkId,
+    FhirId? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
     List<Decimal>? noteNumber,
     @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
@@ -770,7 +770,7 @@ class ClaimResponseAdjudication with _$ClaimResponseAdjudication {
 class ClaimResponseDetail with _$ClaimResponseDetail {
   ClaimResponseDetail._();
   factory ClaimResponseDetail({
-    Id? sequenceLinkId,
+    FhirId? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
     List<Decimal>? noteNumber,
     @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
@@ -813,7 +813,7 @@ class ClaimResponseDetail with _$ClaimResponseDetail {
 class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
   ClaimResponseSubDetail._();
   factory ClaimResponseSubDetail({
-    Id? sequenceLinkId,
+    FhirId? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
     List<Decimal>? noteNumber,
     @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
@@ -855,7 +855,7 @@ class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
 class ClaimResponseAddItem with _$ClaimResponseAddItem {
   ClaimResponseAddItem._();
   factory ClaimResponseAddItem({
-    List<Id>? sequenceLinkId,
+    List<FhirId>? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') List<Element?>? sequenceLinkIdElement,
     CodeableConcept? revenue,
     CodeableConcept? category,
@@ -948,12 +948,12 @@ class ClaimResponseDetail1 with _$ClaimResponseDetail1 {
 class ClaimResponseError with _$ClaimResponseError {
   ClaimResponseError._();
   factory ClaimResponseError({
-    Id? sequenceLinkId,
+    FhirId? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
-    Id? detailSequenceLinkId,
+    FhirId? detailSequenceLinkId,
     @JsonKey(name: '_detailSequenceLinkId')
         Element? detailSequenceLinkIdElement,
-    Id? subdetailSequenceLinkId,
+    FhirId? subdetailSequenceLinkId,
     @JsonKey(name: '_subdetailSequenceLinkId')
         Element? subdetailSequenceLinkIdElement,
     required CodeableConcept code,

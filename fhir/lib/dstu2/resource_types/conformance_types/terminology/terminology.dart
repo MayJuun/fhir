@@ -19,7 +19,7 @@ class ValueSet with Resource, _$ValueSet {
     @Default(Dstu2ResourceType.ValueSet)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ValueSet)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     @JsonKey(name: '_id') Element? idElement,
     Meta? meta,
     FhirUri? implicitRules,
@@ -95,7 +95,7 @@ class ValueSet with Resource, _$ValueSet {
 class ValueSetContact with _$ValueSetContact {
   ValueSetContact._();
   factory ValueSetContact({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -138,7 +138,7 @@ class ValueSetContact with _$ValueSetContact {
 class ValueSetCodeSystem with _$ValueSetCodeSystem {
   ValueSetCodeSystem._();
   factory ValueSetCodeSystem({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -186,7 +186,7 @@ class ValueSetCodeSystem with _$ValueSetCodeSystem {
 class ValueSetCodeSystemConcept with _$ValueSetCodeSystemConcept {
   ValueSetCodeSystemConcept._();
   factory ValueSetCodeSystemConcept({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -235,7 +235,7 @@ class ValueSetCodeSystemConcept with _$ValueSetCodeSystemConcept {
 class ValueSetConceptDesignation with _$ValueSetConceptDesignation {
   ValueSetConceptDesignation._();
   factory ValueSetConceptDesignation({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Code? language,
@@ -280,7 +280,7 @@ class ValueSetConceptDesignation with _$ValueSetConceptDesignation {
 class ValueSetCompose with _$ValueSetCompose {
   ValueSetCompose._();
   factory ValueSetCompose({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -324,7 +324,7 @@ class ValueSetCompose with _$ValueSetCompose {
 class ValueSetComposeInclude with _$ValueSetComposeInclude {
   ValueSetComposeInclude._();
   factory ValueSetComposeInclude({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -371,7 +371,7 @@ class ValueSetComposeInclude with _$ValueSetComposeInclude {
 class ValueSetIncludeConcept with _$ValueSetIncludeConcept {
   ValueSetIncludeConcept._();
   factory ValueSetIncludeConcept({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -417,7 +417,7 @@ class ValueSetIncludeConcept with _$ValueSetIncludeConcept {
 class ValueSetIncludeFilter with _$ValueSetIncludeFilter {
   ValueSetIncludeFilter._();
   factory ValueSetIncludeFilter({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -464,7 +464,7 @@ class ValueSetIncludeFilter with _$ValueSetIncludeFilter {
 class ValueSetExpansion with _$ValueSetExpansion {
   ValueSetExpansion._();
   factory ValueSetExpansion({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -515,7 +515,7 @@ class ValueSetExpansion with _$ValueSetExpansion {
 class ValueSetExpansionParameter with _$ValueSetExpansionParameter {
   ValueSetExpansionParameter._();
   factory ValueSetExpansionParameter({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -570,7 +570,7 @@ class ValueSetExpansionParameter with _$ValueSetExpansionParameter {
 class ValueSetExpansionContains with _$ValueSetExpansionContains {
   ValueSetExpansionContains._();
   factory ValueSetExpansionContains({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -625,7 +625,7 @@ class ConceptMap with Resource, _$ConceptMap {
     @Default(Dstu2ResourceType.ConceptMap)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ConceptMap)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -699,7 +699,7 @@ class ConceptMap with Resource, _$ConceptMap {
 class ConceptMapContact with _$ConceptMapContact {
   ConceptMapContact._();
   factory ConceptMapContact({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -741,7 +741,7 @@ class ConceptMapContact with _$ConceptMapContact {
 class ConceptMapElement with _$ConceptMapElement {
   ConceptMapElement._();
   factory ConceptMapElement({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     FhirUri? codeSystem,
@@ -785,7 +785,7 @@ class ConceptMapElement with _$ConceptMapElement {
 class ConceptMapElementTarget with _$ConceptMapElementTarget {
   ConceptMapElementTarget._();
   factory ConceptMapElementTarget({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     FhirUri? codeSystem,
@@ -835,7 +835,7 @@ class ConceptMapElementTarget with _$ConceptMapElementTarget {
 class ConceptMapTargetDependsOn with _$ConceptMapTargetDependsOn {
   ConceptMapTargetDependsOn._();
   factory ConceptMapTargetDependsOn({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required FhirUri element,
@@ -881,7 +881,7 @@ class NamingSystem with Resource, _$NamingSystem {
     @Default(Dstu2ResourceType.NamingSystem)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.NamingSystem)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -948,7 +948,7 @@ class NamingSystem with Resource, _$NamingSystem {
 class NamingSystemContact with _$NamingSystemContact {
   NamingSystemContact._();
   factory NamingSystemContact({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? name,
@@ -990,7 +990,7 @@ class NamingSystemContact with _$NamingSystemContact {
 class NamingSystemUniqueId with _$NamingSystemUniqueId {
   NamingSystemUniqueId._();
   factory NamingSystemUniqueId({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: UniqueIdType.unknown) required UniqueIdType type,

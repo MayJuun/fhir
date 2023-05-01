@@ -99,7 +99,7 @@ mixin _$FhirExtension {
 
   /// [valueId] Value of extension - must be one of a constrained set of the
   ///  data types (see [Extensibility](extensibility.html) for a list).
-  Id? get valueId => throw _privateConstructorUsedError;
+  FhirId? get valueId => throw _privateConstructorUsedError;
 
   /// [valueIdElement] Extensions for valueId
   @JsonKey(name: '_valueId')
@@ -362,7 +362,7 @@ abstract class $FhirExtensionCopyWith<$Res> {
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
       Instant? valueInstant,
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
@@ -637,7 +637,7 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -1519,7 +1519,7 @@ abstract class _$$_FhirExtensionCopyWith<$Res>
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
       Instant? valueInstant,
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
@@ -1844,7 +1844,7 @@ class __$$_FhirExtensionCopyWithImpl<$Res>
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -2265,7 +2265,7 @@ class _$_FhirExtension extends _FhirExtension {
   /// [valueId] Value of extension - must be one of a constrained set of the
   ///  data types (see [Extensibility](extensibility.html) for a list).
   @override
-  final Id? valueId;
+  final FhirId? valueId;
 
   /// [valueIdElement] Extensions for valueId
   @override
@@ -2787,7 +2787,7 @@ abstract class _FhirExtension extends FhirExtension {
       final Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal')
           final Element? valueDecimalElement,
-      final Id? valueId,
+      final FhirId? valueId,
       @JsonKey(name: '_valueId')
           final Element? valueIdElement,
       final Instant? valueInstant,
@@ -2959,7 +2959,7 @@ abstract class _FhirExtension extends FhirExtension {
 
   /// [valueId] Value of extension - must be one of a constrained set of the
   ///  data types (see [Extensibility](extensibility.html) for a list).
-  Id? get valueId;
+  FhirId? get valueId;
   @override
 
   /// [valueIdElement] Extensions for valueId

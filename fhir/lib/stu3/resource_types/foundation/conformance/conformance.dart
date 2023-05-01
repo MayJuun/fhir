@@ -19,7 +19,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     @Default(Stu3ResourceType.CapabilityStatement)
     @JsonKey(unknownEnumValue: Stu3ResourceType.CapabilityStatement)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -68,7 +68,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     @JsonKey(name: '_format') List<Element?>? formatElement,
     List<String>? patchFormat,
     @JsonKey(name: '_patchFormat') List<Element?>? patchFormatElement,
-    List<Id>? implementationGuide,
+    List<FhirId>? implementationGuide,
     @JsonKey(name: '_implementationGuide')
         List<Element>? implementationGuideElement,
     List<Reference>? profile,
@@ -758,7 +758,7 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
     @Default(Stu3ResourceType.CompartmentDefinition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.CompartmentDefinition)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -874,7 +874,7 @@ class DataElement with Resource, _$DataElement {
     @Default(Stu3ResourceType.DataElement)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DataElement)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -944,7 +944,7 @@ class DataElement with Resource, _$DataElement {
 class DataElementMapping with _$DataElementMapping {
   DataElementMapping._();
   factory DataElementMapping({
-    Id? identity,
+    FhirId? identity,
     @JsonKey(name: '_identity') Element? identityElement,
     String? uri,
     @JsonKey(name: '_uri') Element? uriElement,
@@ -992,7 +992,7 @@ class GraphDefinition with Resource, _$GraphDefinition {
     @Default(Stu3ResourceType.GraphDefinition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.GraphDefinition)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1201,7 +1201,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
     @Default(Stu3ResourceType.ImplementationGuide)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ImplementationGuide)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1499,7 +1499,7 @@ class MessageDefinition with Resource, _$MessageDefinition {
     @Default(Stu3ResourceType.MessageDefinition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.MessageDefinition)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1655,7 +1655,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
     @Default(Stu3ResourceType.OperationDefinition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.OperationDefinition)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1880,7 +1880,7 @@ class SearchParameter with Resource, _$SearchParameter {
     @Default(Stu3ResourceType.SearchParameter)
     @JsonKey(unknownEnumValue: Stu3ResourceType.SearchParameter)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -2011,7 +2011,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
     @Default(Stu3ResourceType.StructureDefinition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.StructureDefinition)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -2103,7 +2103,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
 class StructureDefinitionMapping with _$StructureDefinitionMapping {
   StructureDefinitionMapping._();
   factory StructureDefinitionMapping({
-    Id? identity,
+    FhirId? identity,
     @JsonKey(name: '_identity') Element? identityElement,
     String? uri,
     @JsonKey(name: '_uri') Element? uriElement,
@@ -2228,7 +2228,7 @@ class StructureMap with Resource, _$StructureMap {
     @Default(Stu3ResourceType.StructureMap)
     @JsonKey(unknownEnumValue: Stu3ResourceType.StructureMap)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -2516,11 +2516,11 @@ class StructureMapSource with _$StructureMapSource {
     @JsonKey(name: '_defaultValueTime') Element? defaultValueTimeElement,
     Code? defaultValueCode,
     @JsonKey(name: '_defaultValueCode') Element? defaultValueCodeElement,
-    Id? defaultValueOid,
+    FhirId? defaultValueOid,
     @JsonKey(name: '_defaultValueOid') Element? defaultValueOidElement,
-    Id? defaultValueUuid,
+    FhirId? defaultValueUuid,
     @JsonKey(name: '_defaultValueUuid') Element? defaultValueUuidElement,
-    Id? defaultValueId,
+    FhirId? defaultValueId,
     @JsonKey(name: '_defaultValueId') Element? defaultValueIdElement,
     Decimal? defaultValueUnsignedInt,
     @JsonKey(name: '_defaultValueUnsignedInt')
@@ -2624,7 +2624,7 @@ class StructureMapTarget with _$StructureMapTarget {
     @JsonKey(name: '_variable') Element? variableElement,
     List<StructureMapTargetListMode>? listMode,
     @JsonKey(name: '_listMode') List<Element?>? listModeElement,
-    Id? listRuleId,
+    FhirId? listRuleId,
     @JsonKey(name: '_listRuleId') Element? listRuleIdElement,
     StructureMapTargetTransform? transform,
     @JsonKey(name: '_transform') Element? transformElement,
@@ -2666,7 +2666,7 @@ class StructureMapTarget with _$StructureMapTarget {
 class StructureMapParameter with _$StructureMapParameter {
   StructureMapParameter._();
   factory StructureMapParameter({
-    Id? valueId,
+    FhirId? valueId,
     @JsonKey(name: '_valueId') Element? valueIdElement,
     String? valueString,
     @JsonKey(name: '_valueString') Element? valueStringElement,

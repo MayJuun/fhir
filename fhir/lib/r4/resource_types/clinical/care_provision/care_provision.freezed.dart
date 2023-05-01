@@ -18136,7 +18136,7 @@ mixin _$RequestGroupRelatedAction {
       throw _privateConstructorUsedError;
 
   /// [actionId] The element id of the action this is related to.
-  Id? get actionId => throw _privateConstructorUsedError;
+  FhirId? get actionId => throw _privateConstructorUsedError;
 
   /// [actionIdElement] Extensions for actionId
   @JsonKey(name: '_actionId')
@@ -18173,7 +18173,7 @@ abstract class $RequestGroupRelatedActionCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? actionId,
+      FhirId? actionId,
       @JsonKey(name: '_actionId') Element? actionIdElement,
       Code? relationship,
       @JsonKey(name: '_relationship') Element? relationshipElement,
@@ -18226,7 +18226,7 @@ class _$RequestGroupRelatedActionCopyWithImpl<$Res,
       actionId: freezed == actionId
           ? _value.actionId
           : actionId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       actionIdElement: freezed == actionIdElement
           ? _value.actionIdElement
           : actionIdElement // ignore: cast_nullable_to_non_nullable
@@ -18312,7 +18312,7 @@ abstract class _$$_RequestGroupRelatedActionCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? actionId,
+      FhirId? actionId,
       @JsonKey(name: '_actionId') Element? actionIdElement,
       Code? relationship,
       @JsonKey(name: '_relationship') Element? relationshipElement,
@@ -18368,7 +18368,7 @@ class __$$_RequestGroupRelatedActionCopyWithImpl<$Res>
       actionId: freezed == actionId
           ? _value.actionId
           : actionId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       actionIdElement: freezed == actionIdElement
           ? _value.actionIdElement
           : actionIdElement // ignore: cast_nullable_to_non_nullable
@@ -18482,7 +18482,7 @@ class _$_RequestGroupRelatedAction extends _RequestGroupRelatedAction {
 
   /// [actionId] The element id of the action this is related to.
   @override
-  final Id? actionId;
+  final FhirId? actionId;
 
   /// [actionIdElement] Extensions for actionId
   @override
@@ -18571,7 +18571,7 @@ abstract class _RequestGroupRelatedAction extends RequestGroupRelatedAction {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Id? actionId,
+      final FhirId? actionId,
       @JsonKey(name: '_actionId') final Element? actionIdElement,
       final Code? relationship,
       @JsonKey(name: '_relationship') final Element? relationshipElement,
@@ -18616,7 +18616,7 @@ abstract class _RequestGroupRelatedAction extends RequestGroupRelatedAction {
   @override
 
   /// [actionId] The element id of the action this is related to.
-  Id? get actionId;
+  FhirId? get actionId;
   @override
 
   /// [actionIdElement] Extensions for actionId

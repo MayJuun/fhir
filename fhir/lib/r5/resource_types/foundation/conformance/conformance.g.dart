@@ -13,7 +13,7 @@ _$_CapabilityStatement _$$_CapabilityStatementFromJson(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.CapabilityStatement) ??
           R5ResourceType.CapabilityStatement,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1187,7 +1187,7 @@ _$_CompartmentDefinition _$$_CompartmentDefinitionFromJson(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.CompartmentDefinition) ??
           R5ResourceType.CompartmentDefinition,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1444,7 +1444,7 @@ _$_GraphDefinition _$$_GraphDefinitionFromJson(Map<String, dynamic> json) =>
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.GraphDefinition) ??
           R5ResourceType.GraphDefinition,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1547,7 +1547,7 @@ _$_GraphDefinition _$$_GraphDefinitionFromJson(Map<String, dynamic> json) =>
       copyrightLabelElement: json['_copyrightLabel'] == null
           ? null
           : Element.fromJson(json['_copyrightLabel'] as Map<String, dynamic>),
-      start: json['start'] == null ? null : Id.fromJson(json['start']),
+      start: json['start'] == null ? null : FhirId.fromJson(json['start']),
       startElement: json['_start'] == null
           ? null
           : Element.fromJson(json['_start'] as Map<String, dynamic>),
@@ -1636,7 +1636,7 @@ _$_GraphDefinitionNode _$$_GraphDefinitionNodeFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      nodeId: json['nodeId'] == null ? null : Id.fromJson(json['nodeId']),
+      nodeId: json['nodeId'] == null ? null : FhirId.fromJson(json['nodeId']),
       nodeIdElement: json['_nodeId'] == null
           ? null
           : Element.fromJson(json['_nodeId'] as Map<String, dynamic>),
@@ -1699,7 +1699,8 @@ _$_GraphDefinitionLink _$$_GraphDefinitionLinkFromJson(
       maxElement: json['_max'] == null
           ? null
           : Element.fromJson(json['_max'] as Map<String, dynamic>),
-      sourceId: json['sourceId'] == null ? null : Id.fromJson(json['sourceId']),
+      sourceId:
+          json['sourceId'] == null ? null : FhirId.fromJson(json['sourceId']),
       sourceIdElement: json['_sourceId'] == null
           ? null
           : Element.fromJson(json['_sourceId'] as Map<String, dynamic>),
@@ -1711,7 +1712,8 @@ _$_GraphDefinitionLink _$$_GraphDefinitionLinkFromJson(
       sliceNameElement: json['_sliceName'] == null
           ? null
           : Element.fromJson(json['_sliceName'] as Map<String, dynamic>),
-      targetId: json['targetId'] == null ? null : Id.fromJson(json['targetId']),
+      targetId:
+          json['targetId'] == null ? null : FhirId.fromJson(json['targetId']),
       targetIdElement: json['_targetId'] == null
           ? null
           : Element.fromJson(json['_targetId'] as Map<String, dynamic>),
@@ -1828,7 +1830,7 @@ _$_ImplementationGuide _$$_ImplementationGuideFromJson(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.ImplementationGuide) ??
           R5ResourceType.ImplementationGuide,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1932,7 +1934,7 @@ _$_ImplementationGuide _$$_ImplementationGuideFromJson(
           ? null
           : Element.fromJson(json['_copyrightLabel'] as Map<String, dynamic>),
       packageId:
-          json['packageId'] == null ? null : Id.fromJson(json['packageId']),
+          json['packageId'] == null ? null : FhirId.fromJson(json['packageId']),
       packageIdElement: json['_packageId'] == null
           ? null
           : Element.fromJson(json['_packageId'] as Map<String, dynamic>),
@@ -2053,7 +2055,7 @@ _$_ImplementationGuideDependsOn _$$_ImplementationGuideDependsOnFromJson(
           .toList(),
       uri: Canonical.fromJson(json['uri']),
       packageId:
-          json['packageId'] == null ? null : Id.fromJson(json['packageId']),
+          json['packageId'] == null ? null : FhirId.fromJson(json['packageId']),
       packageIdElement: json['_packageId'] == null
           ? null
           : Element.fromJson(json['_packageId'] as Map<String, dynamic>),
@@ -2266,8 +2268,9 @@ _$_ImplementationGuideResource _$$_ImplementationGuideResourceFromJson(
       profile: (json['profile'] as List<dynamic>?)
           ?.map((e) => Canonical.fromJson(e))
           .toList(),
-      groupingId:
-          json['groupingId'] == null ? null : Id.fromJson(json['groupingId']),
+      groupingId: json['groupingId'] == null
+          ? null
+          : FhirId.fromJson(json['groupingId']),
       groupingIdElement: json['_groupingId'] == null
           ? null
           : Element.fromJson(json['_groupingId'] as Map<String, dynamic>),
@@ -2639,7 +2642,7 @@ _$_MessageDefinition _$$_MessageDefinitionFromJson(Map<String, dynamic> json) =>
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.MessageDefinition) ??
           R5ResourceType.MessageDefinition,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -2955,7 +2958,7 @@ _$_OperationDefinition _$$_OperationDefinitionFromJson(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.OperationDefinition) ??
           R5ResourceType.OperationDefinition,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -3447,7 +3450,7 @@ _$_SearchParameter _$$_SearchParameterFromJson(Map<String, dynamic> json) =>
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.SearchParameter) ??
           R5ResourceType.SearchParameter,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -3762,7 +3765,7 @@ _$_StructureDefinition _$$_StructureDefinitionFromJson(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.StructureDefinition) ??
           R5ResourceType.StructureDefinition,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -4012,7 +4015,8 @@ _$_StructureDefinitionMapping _$$_StructureDefinitionMappingFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      identity: json['identity'] == null ? null : Id.fromJson(json['identity']),
+      identity:
+          json['identity'] == null ? null : FhirId.fromJson(json['identity']),
       identityElement: json['_identity'] == null
           ? null
           : Element.fromJson(json['_identity'] as Map<String, dynamic>),
@@ -4172,7 +4176,7 @@ _$_StructureMap _$$_StructureMapFromJson(Map<String, dynamic> json) =>
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.StructureMap) ??
           R5ResourceType.StructureMap,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -4413,11 +4417,12 @@ _$_StructureMapGroup _$$_StructureMapGroupFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      name: json['name'] == null ? null : Id.fromJson(json['name']),
+      name: json['name'] == null ? null : FhirId.fromJson(json['name']),
       nameElement: json['_name'] == null
           ? null
           : Element.fromJson(json['_name'] as Map<String, dynamic>),
-      extends_: json['extends'] == null ? null : Id.fromJson(json['extends']),
+      extends_:
+          json['extends'] == null ? null : FhirId.fromJson(json['extends']),
       extendsElement: json['_extends'] == null
           ? null
           : Element.fromJson(json['_extends'] as Map<String, dynamic>),
@@ -4475,7 +4480,7 @@ _$_StructureMapInput _$$_StructureMapInputFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      name: json['name'] == null ? null : Id.fromJson(json['name']),
+      name: json['name'] == null ? null : FhirId.fromJson(json['name']),
       nameElement: json['_name'] == null
           ? null
           : Element.fromJson(json['_name'] as Map<String, dynamic>),
@@ -4528,7 +4533,7 @@ _$_StructureMapRule _$$_StructureMapRuleFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      name: json['name'] == null ? null : Id.fromJson(json['name']),
+      name: json['name'] == null ? null : FhirId.fromJson(json['name']),
       nameElement: json['_name'] == null
           ? null
           : Element.fromJson(json['_name'] as Map<String, dynamic>),
@@ -4587,7 +4592,8 @@ _$_StructureMapSource _$$_StructureMapSourceFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      context: json['context'] == null ? null : Id.fromJson(json['context']),
+      context:
+          json['context'] == null ? null : FhirId.fromJson(json['context']),
       contextElement: json['_context'] == null
           ? null
           : Element.fromJson(json['_context'] as Map<String, dynamic>),
@@ -4616,7 +4622,8 @@ _$_StructureMapSource _$$_StructureMapSourceFromJson(
       listModeElement: json['_listMode'] == null
           ? null
           : Element.fromJson(json['_listMode'] as Map<String, dynamic>),
-      variable: json['variable'] == null ? null : Id.fromJson(json['variable']),
+      variable:
+          json['variable'] == null ? null : FhirId.fromJson(json['variable']),
       variableElement: json['_variable'] == null
           ? null
           : Element.fromJson(json['_variable'] as Map<String, dynamic>),
@@ -4684,7 +4691,8 @@ _$_StructureMapTarget _$$_StructureMapTargetFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      context: json['context'] == null ? null : Id.fromJson(json['context']),
+      context:
+          json['context'] == null ? null : FhirId.fromJson(json['context']),
       contextElement: json['_context'] == null
           ? null
           : Element.fromJson(json['_context'] as Map<String, dynamic>),
@@ -4692,7 +4700,8 @@ _$_StructureMapTarget _$$_StructureMapTargetFromJson(
       elementElement: json['_element'] == null
           ? null
           : Element.fromJson(json['_element'] as Map<String, dynamic>),
-      variable: json['variable'] == null ? null : Id.fromJson(json['variable']),
+      variable:
+          json['variable'] == null ? null : FhirId.fromJson(json['variable']),
       variableElement: json['_variable'] == null
           ? null
           : Element.fromJson(json['_variable'] as Map<String, dynamic>),
@@ -4702,8 +4711,9 @@ _$_StructureMapTarget _$$_StructureMapTargetFromJson(
       listModeElement: (json['_listMode'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
-      listRuleId:
-          json['listRuleId'] == null ? null : Id.fromJson(json['listRuleId']),
+      listRuleId: json['listRuleId'] == null
+          ? null
+          : FhirId.fromJson(json['listRuleId']),
       listRuleIdElement: json['_listRuleId'] == null
           ? null
           : Element.fromJson(json['_listRuleId'] as Map<String, dynamic>),
@@ -4761,7 +4771,8 @@ _$_StructureMapParameter _$$_StructureMapParameterFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      valueId: json['valueId'] == null ? null : Id.fromJson(json['valueId']),
+      valueId:
+          json['valueId'] == null ? null : FhirId.fromJson(json['valueId']),
       valueIdElement: json['_valueId'] == null
           ? null
           : Element.fromJson(json['_valueId'] as Map<String, dynamic>),
@@ -4849,7 +4860,7 @@ _$_StructureMapDependent _$$_StructureMapDependentFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      name: json['name'] == null ? null : Id.fromJson(json['name']),
+      name: json['name'] == null ? null : FhirId.fromJson(json['name']),
       nameElement: json['_name'] == null
           ? null
           : Element.fromJson(json['_name'] as Map<String, dynamic>),

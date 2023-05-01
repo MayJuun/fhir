@@ -1129,7 +1129,7 @@ mixin _$Meta {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [versionId] The version specific identifier, as it appears in the version portion of the URL. This value changes when the resource is created, updated, or deleted.
-  Id? get versionId => throw _privateConstructorUsedError;
+  FhirId? get versionId => throw _privateConstructorUsedError;
 
   /// [versionIdElement] ("_versionId") Extensions for versionId
   @JsonKey(name: '_versionId')
@@ -1171,7 +1171,7 @@ abstract class $MetaCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      Id? versionId,
+      FhirId? versionId,
       @JsonKey(name: '_versionId') Element? versionIdElement,
       Instant? lastUpdated,
       @JsonKey(name: '_lastUpdated') Element? lastUpdatedElement,
@@ -1223,7 +1223,7 @@ class _$MetaCopyWithImpl<$Res, $Val extends Meta>
       versionId: freezed == versionId
           ? _value.versionId
           : versionId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       versionIdElement: freezed == versionIdElement
           ? _value.versionIdElement
           : versionIdElement // ignore: cast_nullable_to_non_nullable
@@ -1305,7 +1305,7 @@ abstract class _$$_MetaCopyWith<$Res> implements $MetaCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      Id? versionId,
+      FhirId? versionId,
       @JsonKey(name: '_versionId') Element? versionIdElement,
       Instant? lastUpdated,
       @JsonKey(name: '_lastUpdated') Element? lastUpdatedElement,
@@ -1356,7 +1356,7 @@ class __$$_MetaCopyWithImpl<$Res> extends _$MetaCopyWithImpl<$Res, _$_Meta>
       versionId: freezed == versionId
           ? _value.versionId
           : versionId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       versionIdElement: freezed == versionIdElement
           ? _value.versionIdElement
           : versionIdElement // ignore: cast_nullable_to_non_nullable
@@ -1447,7 +1447,7 @@ class _$_Meta extends _Meta {
 
   /// [versionId] The version specific identifier, as it appears in the version portion of the URL. This value changes when the resource is created, updated, or deleted.
   @override
-  final Id? versionId;
+  final FhirId? versionId;
 
   /// [versionIdElement] ("_versionId") Extensions for versionId
   @override
@@ -1574,7 +1574,7 @@ abstract class _Meta extends Meta {
   factory _Meta(
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final Id? versionId,
+      final FhirId? versionId,
       @JsonKey(name: '_versionId') final Element? versionIdElement,
       final Instant? lastUpdated,
       @JsonKey(name: '_lastUpdated') final Element? lastUpdatedElement,
@@ -1605,7 +1605,7 @@ abstract class _Meta extends Meta {
   @override
 
   /// [versionId] The version specific identifier, as it appears in the version portion of the URL. This value changes when the resource is created, updated, or deleted.
-  Id? get versionId;
+  FhirId? get versionId;
   @override
 
   /// [versionIdElement] ("_versionId") Extensions for versionId
@@ -3400,7 +3400,7 @@ mixin _$ElementDefinition {
   Element? get defaultValueDecimalElement => throw _privateConstructorUsedError;
 
   /// [defaultValueId] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
-  Id? get defaultValueId => throw _privateConstructorUsedError;
+  FhirId? get defaultValueId => throw _privateConstructorUsedError;
 
   /// [defaultValueIdElement] ("_defaultValueId") Extensions for defaultValueId
   @JsonKey(name: '_defaultValueId')
@@ -3437,7 +3437,7 @@ mixin _$ElementDefinition {
       throw _privateConstructorUsedError;
 
   /// [defaultValueOid] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
-  Id? get defaultValueOid => throw _privateConstructorUsedError;
+  FhirId? get defaultValueOid => throw _privateConstructorUsedError;
 
   /// [defaultValueOidElement] ("_defaultValueOid") Extensions for defaultValueOid
   @JsonKey(name: '_defaultValueOid')
@@ -3490,7 +3490,7 @@ mixin _$ElementDefinition {
   Element? get defaultValueUrlElement => throw _privateConstructorUsedError;
 
   /// [defaultValueUuid] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
-  Id? get defaultValueUuid => throw _privateConstructorUsedError;
+  FhirId? get defaultValueUuid => throw _privateConstructorUsedError;
 
   /// [defaultValueUuidElement] ("_defaultValueUuid") Extensions for defaultValueUuid
   @JsonKey(name: '_defaultValueUuid')
@@ -3674,7 +3674,7 @@ mixin _$ElementDefinition {
   Element? get fixedDecimalElement => throw _privateConstructorUsedError;
 
   /// [fixedId] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
-  Id? get fixedId => throw _privateConstructorUsedError;
+  FhirId? get fixedId => throw _privateConstructorUsedError;
 
   /// [fixedIdElement] ("_fixedId") Extensions for fixedId
   @JsonKey(name: '_fixedId')
@@ -3709,7 +3709,7 @@ mixin _$ElementDefinition {
   Element? get fixedMarkdownElement => throw _privateConstructorUsedError;
 
   /// [fixedOid] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
-  Id? get fixedOid => throw _privateConstructorUsedError;
+  FhirId? get fixedOid => throw _privateConstructorUsedError;
 
   /// [fixedOidElement] ("_fixedOid") Extensions for fixedOid
   @JsonKey(name: '_fixedOid')
@@ -3758,7 +3758,7 @@ mixin _$ElementDefinition {
   Element? get fixedUrlElement => throw _privateConstructorUsedError;
 
   /// [fixedUuid] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
-  Id? get fixedUuid => throw _privateConstructorUsedError;
+  FhirId? get fixedUuid => throw _privateConstructorUsedError;
 
   /// [fixedUuidElement] ("_fixedUuid") Extensions for fixedUuid
   @JsonKey(name: '_fixedUuid')
@@ -4011,7 +4011,7 @@ mixin _$ElementDefinition {
   /// 3. If an array: it must match (recursively) the pattern value
   ///
   /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
-  Id? get patternId => throw _privateConstructorUsedError;
+  FhirId? get patternId => throw _privateConstructorUsedError;
 
   /// [patternIdElement] ("_patternId") Extensions for patternId
   @JsonKey(name: '_patternId')
@@ -4101,7 +4101,7 @@ mixin _$ElementDefinition {
   /// 3. If an array: it must match (recursively) the pattern value
   ///
   /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
-  Id? get patternOid => throw _privateConstructorUsedError;
+  FhirId? get patternOid => throw _privateConstructorUsedError;
 
   /// [patternOidElement] ("_patternOid") Extensions for patternOid
   @JsonKey(name: '_patternOid')
@@ -4227,7 +4227,7 @@ mixin _$ElementDefinition {
   /// 3. If an array: it must match (recursively) the pattern value
   ///
   /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
-  Id? get patternUuid => throw _privateConstructorUsedError;
+  FhirId? get patternUuid => throw _privateConstructorUsedError;
 
   /// [patternUuidElement] ("_patternUuid") Extensions for patternUuid
   @JsonKey(name: '_patternUuid')
@@ -4860,7 +4860,7 @@ mixin _$ElementDefinition {
   Element? get maxLengthElement => throw _privateConstructorUsedError;
 
   /// [condition] A reference to an invariant that may make additional statements about the cardinality or value in the instance.
-  List<Id>? get condition => throw _privateConstructorUsedError;
+  List<FhirId>? get condition => throw _privateConstructorUsedError;
 
   /// [conditionElement] ("_condition") Extensions for condition
   @JsonKey(name: '_condition')
@@ -5000,7 +5000,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Decimal? defaultValueDecimal,
       @JsonKey(name: '_defaultValueDecimal')
           Element? defaultValueDecimalElement,
-      Id? defaultValueId,
+      FhirId? defaultValueId,
       @JsonKey(name: '_defaultValueId')
           Element? defaultValueIdElement,
       Instant? defaultValueInstant,
@@ -5015,7 +5015,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Markdown? defaultValueMarkdown,
       @JsonKey(name: '_defaultValueMarkdown')
           Element? defaultValueMarkdownElement,
-      Id? defaultValueOid,
+      FhirId? defaultValueOid,
       @JsonKey(name: '_defaultValueOid')
           Element? defaultValueOidElement,
       PositiveInt? defaultValuePositiveInt,
@@ -5036,7 +5036,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       FhirUrl? defaultValueUrl,
       @JsonKey(name: '_defaultValueUrl')
           Element? defaultValueUrlElement,
-      Id? defaultValueUuid,
+      FhirId? defaultValueUuid,
       @JsonKey(name: '_defaultValueUuid')
           Element? defaultValueUuidElement,
       Address? defaultValueAddress,
@@ -5100,7 +5100,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Decimal? fixedDecimal,
       @JsonKey(name: '_fixedDecimal')
           Element? fixedDecimalElement,
-      Id? fixedId,
+      FhirId? fixedId,
       @JsonKey(name: '_fixedId')
           Element? fixedIdElement,
       Instant? fixedInstant,
@@ -5115,7 +5115,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Markdown? fixedMarkdown,
       @JsonKey(name: '_fixedMarkdown')
           Element? fixedMarkdownElement,
-      Id? fixedOid,
+      FhirId? fixedOid,
       @JsonKey(name: '_fixedOid')
           Element? fixedOidElement,
       PositiveInt? fixedPositiveInt,
@@ -5136,7 +5136,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       FhirUrl? fixedUrl,
       @JsonKey(name: '_fixedUrl')
           Element? fixedUrlElement,
-      Id? fixedUuid,
+      FhirId? fixedUuid,
       @JsonKey(name: '_fixedUuid')
           Element? fixedUuidElement,
       Address? fixedAddress,
@@ -5194,7 +5194,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Decimal? patternDecimal,
       @JsonKey(name: '_patternDecimal')
           Element? patternDecimalElement,
-      Id? patternId,
+      FhirId? patternId,
       @JsonKey(name: '_patternId')
           Element? patternIdElement,
       Instant? patternInstant,
@@ -5209,7 +5209,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Markdown? patternMarkdown,
       @JsonKey(name: '_patternMarkdown')
           Element? patternMarkdownElement,
-      Id? patternOid,
+      FhirId? patternOid,
       @JsonKey(name: '_patternOid')
           Element? patternOidElement,
       PositiveInt? patternPositiveInt,
@@ -5230,7 +5230,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       FhirUrl? patternUrl,
       @JsonKey(name: '_patternUrl')
           Element? patternUrlElement,
-      Id? patternUuid,
+      FhirId? patternUuid,
       @JsonKey(name: '_patternUuid')
           Element? patternUuidElement,
       Address? patternAddress,
@@ -5327,7 +5327,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Integer? maxLength,
       @JsonKey(name: '_maxLength')
           Element? maxLengthElement,
-      List<Id>? condition,
+      List<FhirId>? condition,
       @JsonKey(name: '_condition')
           List<Element>? conditionElement,
       List<ElementDefinitionConstraint>? constraint,
@@ -6081,7 +6081,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       defaultValueId: freezed == defaultValueId
           ? _value.defaultValueId
           : defaultValueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       defaultValueIdElement: freezed == defaultValueIdElement
           ? _value.defaultValueIdElement
           : defaultValueIdElement // ignore: cast_nullable_to_non_nullable
@@ -6121,7 +6121,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       defaultValueOid: freezed == defaultValueOid
           ? _value.defaultValueOid
           : defaultValueOid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       defaultValueOidElement: freezed == defaultValueOidElement
           ? _value.defaultValueOidElement
           : defaultValueOidElement // ignore: cast_nullable_to_non_nullable
@@ -6177,7 +6177,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       defaultValueUuid: freezed == defaultValueUuid
           ? _value.defaultValueUuid
           : defaultValueUuid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       defaultValueUuidElement: freezed == defaultValueUuidElement
           ? _value.defaultValueUuidElement
           : defaultValueUuidElement // ignore: cast_nullable_to_non_nullable
@@ -6395,7 +6395,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       fixedId: freezed == fixedId
           ? _value.fixedId
           : fixedId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       fixedIdElement: freezed == fixedIdElement
           ? _value.fixedIdElement
           : fixedIdElement // ignore: cast_nullable_to_non_nullable
@@ -6435,7 +6435,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       fixedOid: freezed == fixedOid
           ? _value.fixedOid
           : fixedOid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       fixedOidElement: freezed == fixedOidElement
           ? _value.fixedOidElement
           : fixedOidElement // ignore: cast_nullable_to_non_nullable
@@ -6491,7 +6491,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       fixedUuid: freezed == fixedUuid
           ? _value.fixedUuid
           : fixedUuid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       fixedUuidElement: freezed == fixedUuidElement
           ? _value.fixedUuidElement
           : fixedUuidElement // ignore: cast_nullable_to_non_nullable
@@ -6691,7 +6691,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       patternId: freezed == patternId
           ? _value.patternId
           : patternId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       patternIdElement: freezed == patternIdElement
           ? _value.patternIdElement
           : patternIdElement // ignore: cast_nullable_to_non_nullable
@@ -6731,7 +6731,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       patternOid: freezed == patternOid
           ? _value.patternOid
           : patternOid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       patternOidElement: freezed == patternOidElement
           ? _value.patternOidElement
           : patternOidElement // ignore: cast_nullable_to_non_nullable
@@ -6787,7 +6787,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       patternUuid: freezed == patternUuid
           ? _value.patternUuid
           : patternUuid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       patternUuidElement: freezed == patternUuidElement
           ? _value.patternUuidElement
           : patternUuidElement // ignore: cast_nullable_to_non_nullable
@@ -7095,7 +7095,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       condition: freezed == condition
           ? _value.condition
           : condition // ignore: cast_nullable_to_non_nullable
-              as List<Id>?,
+              as List<FhirId>?,
       conditionElement: freezed == conditionElement
           ? _value.conditionElement
           : conditionElement // ignore: cast_nullable_to_non_nullable
@@ -9729,7 +9729,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Decimal? defaultValueDecimal,
       @JsonKey(name: '_defaultValueDecimal')
           Element? defaultValueDecimalElement,
-      Id? defaultValueId,
+      FhirId? defaultValueId,
       @JsonKey(name: '_defaultValueId')
           Element? defaultValueIdElement,
       Instant? defaultValueInstant,
@@ -9744,7 +9744,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Markdown? defaultValueMarkdown,
       @JsonKey(name: '_defaultValueMarkdown')
           Element? defaultValueMarkdownElement,
-      Id? defaultValueOid,
+      FhirId? defaultValueOid,
       @JsonKey(name: '_defaultValueOid')
           Element? defaultValueOidElement,
       PositiveInt? defaultValuePositiveInt,
@@ -9765,7 +9765,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       FhirUrl? defaultValueUrl,
       @JsonKey(name: '_defaultValueUrl')
           Element? defaultValueUrlElement,
-      Id? defaultValueUuid,
+      FhirId? defaultValueUuid,
       @JsonKey(name: '_defaultValueUuid')
           Element? defaultValueUuidElement,
       Address? defaultValueAddress,
@@ -9829,7 +9829,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Decimal? fixedDecimal,
       @JsonKey(name: '_fixedDecimal')
           Element? fixedDecimalElement,
-      Id? fixedId,
+      FhirId? fixedId,
       @JsonKey(name: '_fixedId')
           Element? fixedIdElement,
       Instant? fixedInstant,
@@ -9844,7 +9844,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Markdown? fixedMarkdown,
       @JsonKey(name: '_fixedMarkdown')
           Element? fixedMarkdownElement,
-      Id? fixedOid,
+      FhirId? fixedOid,
       @JsonKey(name: '_fixedOid')
           Element? fixedOidElement,
       PositiveInt? fixedPositiveInt,
@@ -9865,7 +9865,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       FhirUrl? fixedUrl,
       @JsonKey(name: '_fixedUrl')
           Element? fixedUrlElement,
-      Id? fixedUuid,
+      FhirId? fixedUuid,
       @JsonKey(name: '_fixedUuid')
           Element? fixedUuidElement,
       Address? fixedAddress,
@@ -9923,7 +9923,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Decimal? patternDecimal,
       @JsonKey(name: '_patternDecimal')
           Element? patternDecimalElement,
-      Id? patternId,
+      FhirId? patternId,
       @JsonKey(name: '_patternId')
           Element? patternIdElement,
       Instant? patternInstant,
@@ -9938,7 +9938,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Markdown? patternMarkdown,
       @JsonKey(name: '_patternMarkdown')
           Element? patternMarkdownElement,
-      Id? patternOid,
+      FhirId? patternOid,
       @JsonKey(name: '_patternOid')
           Element? patternOidElement,
       PositiveInt? patternPositiveInt,
@@ -9959,7 +9959,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       FhirUrl? patternUrl,
       @JsonKey(name: '_patternUrl')
           Element? patternUrlElement,
-      Id? patternUuid,
+      FhirId? patternUuid,
       @JsonKey(name: '_patternUuid')
           Element? patternUuidElement,
       Address? patternAddress,
@@ -10056,7 +10056,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Integer? maxLength,
       @JsonKey(name: '_maxLength')
           Element? maxLengthElement,
-      List<Id>? condition,
+      List<FhirId>? condition,
       @JsonKey(name: '_condition')
           List<Element>? conditionElement,
       List<ElementDefinitionConstraint>? constraint,
@@ -11012,7 +11012,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       defaultValueId: freezed == defaultValueId
           ? _value.defaultValueId
           : defaultValueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       defaultValueIdElement: freezed == defaultValueIdElement
           ? _value.defaultValueIdElement
           : defaultValueIdElement // ignore: cast_nullable_to_non_nullable
@@ -11052,7 +11052,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       defaultValueOid: freezed == defaultValueOid
           ? _value.defaultValueOid
           : defaultValueOid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       defaultValueOidElement: freezed == defaultValueOidElement
           ? _value.defaultValueOidElement
           : defaultValueOidElement // ignore: cast_nullable_to_non_nullable
@@ -11108,7 +11108,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       defaultValueUuid: freezed == defaultValueUuid
           ? _value.defaultValueUuid
           : defaultValueUuid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       defaultValueUuidElement: freezed == defaultValueUuidElement
           ? _value.defaultValueUuidElement
           : defaultValueUuidElement // ignore: cast_nullable_to_non_nullable
@@ -11326,7 +11326,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       fixedId: freezed == fixedId
           ? _value.fixedId
           : fixedId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       fixedIdElement: freezed == fixedIdElement
           ? _value.fixedIdElement
           : fixedIdElement // ignore: cast_nullable_to_non_nullable
@@ -11366,7 +11366,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       fixedOid: freezed == fixedOid
           ? _value.fixedOid
           : fixedOid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       fixedOidElement: freezed == fixedOidElement
           ? _value.fixedOidElement
           : fixedOidElement // ignore: cast_nullable_to_non_nullable
@@ -11422,7 +11422,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       fixedUuid: freezed == fixedUuid
           ? _value.fixedUuid
           : fixedUuid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       fixedUuidElement: freezed == fixedUuidElement
           ? _value.fixedUuidElement
           : fixedUuidElement // ignore: cast_nullable_to_non_nullable
@@ -11622,7 +11622,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       patternId: freezed == patternId
           ? _value.patternId
           : patternId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       patternIdElement: freezed == patternIdElement
           ? _value.patternIdElement
           : patternIdElement // ignore: cast_nullable_to_non_nullable
@@ -11662,7 +11662,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       patternOid: freezed == patternOid
           ? _value.patternOid
           : patternOid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       patternOidElement: freezed == patternOidElement
           ? _value.patternOidElement
           : patternOidElement // ignore: cast_nullable_to_non_nullable
@@ -11718,7 +11718,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       patternUuid: freezed == patternUuid
           ? _value.patternUuid
           : patternUuid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       patternUuidElement: freezed == patternUuidElement
           ? _value.patternUuidElement
           : patternUuidElement // ignore: cast_nullable_to_non_nullable
@@ -12026,7 +12026,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       condition: freezed == condition
           ? _value._condition
           : condition // ignore: cast_nullable_to_non_nullable
-              as List<Id>?,
+              as List<FhirId>?,
       conditionElement: freezed == conditionElement
           ? _value._conditionElement
           : conditionElement // ignore: cast_nullable_to_non_nullable
@@ -12494,7 +12494,7 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.maxLength,
       @JsonKey(name: '_maxLength')
           this.maxLengthElement,
-      final List<Id>? condition,
+      final List<FhirId>? condition,
       @JsonKey(name: '_condition')
           final List<Element>? conditionElement,
       final List<ElementDefinitionConstraint>? constraint,
@@ -12855,7 +12855,7 @@ class _$_ElementDefinition extends _ElementDefinition {
 
   /// [defaultValueId] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
   @override
-  final Id? defaultValueId;
+  final FhirId? defaultValueId;
 
   /// [defaultValueIdElement] ("_defaultValueId") Extensions for defaultValueId
   @override
@@ -12900,7 +12900,7 @@ class _$_ElementDefinition extends _ElementDefinition {
 
   /// [defaultValueOid] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
   @override
-  final Id? defaultValueOid;
+  final FhirId? defaultValueOid;
 
   /// [defaultValueOidElement] ("_defaultValueOid") Extensions for defaultValueOid
   @override
@@ -12963,7 +12963,7 @@ class _$_ElementDefinition extends _ElementDefinition {
 
   /// [defaultValueUuid] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
   @override
-  final Id? defaultValueUuid;
+  final FhirId? defaultValueUuid;
 
   /// [defaultValueUuidElement] ("_defaultValueUuid") Extensions for defaultValueUuid
   @override
@@ -13189,7 +13189,7 @@ class _$_ElementDefinition extends _ElementDefinition {
 
   /// [fixedId] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
   @override
-  final Id? fixedId;
+  final FhirId? fixedId;
 
   /// [fixedIdElement] ("_fixedId") Extensions for fixedId
   @override
@@ -13234,7 +13234,7 @@ class _$_ElementDefinition extends _ElementDefinition {
 
   /// [fixedOid] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
   @override
-  final Id? fixedOid;
+  final FhirId? fixedOid;
 
   /// [fixedOidElement] ("_fixedOid") Extensions for fixedOid
   @override
@@ -13297,7 +13297,7 @@ class _$_ElementDefinition extends _ElementDefinition {
 
   /// [fixedUuid] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
   @override
-  final Id? fixedUuid;
+  final FhirId? fixedUuid;
 
   /// [fixedUuidElement] ("_fixedUuid") Extensions for fixedUuid
   @override
@@ -13593,7 +13593,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   ///
   /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
   @override
-  final Id? patternId;
+  final FhirId? patternId;
 
   /// [patternIdElement] ("_patternId") Extensions for patternId
   @override
@@ -13693,7 +13693,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   ///
   /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
   @override
-  final Id? patternOid;
+  final FhirId? patternOid;
 
   /// [patternOidElement] ("_patternOid") Extensions for patternOid
   @override
@@ -13833,7 +13833,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   ///
   /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
   @override
-  final Id? patternUuid;
+  final FhirId? patternUuid;
 
   /// [patternUuidElement] ("_patternUuid") Extensions for patternUuid
   @override
@@ -14543,11 +14543,11 @@ class _$_ElementDefinition extends _ElementDefinition {
   final Element? maxLengthElement;
 
   /// [condition] A reference to an invariant that may make additional statements about the cardinality or value in the instance.
-  final List<Id>? _condition;
+  final List<FhirId>? _condition;
 
   /// [condition] A reference to an invariant that may make additional statements about the cardinality or value in the instance.
   @override
-  List<Id>? get condition {
+  List<FhirId>? get condition {
     final value = _condition;
     if (value == null) return null;
     if (_condition is EqualUnmodifiableListView) return _condition;
@@ -15442,7 +15442,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Decimal? defaultValueDecimal,
       @JsonKey(name: '_defaultValueDecimal')
           final Element? defaultValueDecimalElement,
-      final Id? defaultValueId,
+      final FhirId? defaultValueId,
       @JsonKey(name: '_defaultValueId')
           final Element? defaultValueIdElement,
       final Instant? defaultValueInstant,
@@ -15457,7 +15457,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Markdown? defaultValueMarkdown,
       @JsonKey(name: '_defaultValueMarkdown')
           final Element? defaultValueMarkdownElement,
-      final Id? defaultValueOid,
+      final FhirId? defaultValueOid,
       @JsonKey(name: '_defaultValueOid')
           final Element? defaultValueOidElement,
       final PositiveInt? defaultValuePositiveInt,
@@ -15478,7 +15478,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final FhirUrl? defaultValueUrl,
       @JsonKey(name: '_defaultValueUrl')
           final Element? defaultValueUrlElement,
-      final Id? defaultValueUuid,
+      final FhirId? defaultValueUuid,
       @JsonKey(name: '_defaultValueUuid')
           final Element? defaultValueUuidElement,
       final Address? defaultValueAddress,
@@ -15542,7 +15542,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Decimal? fixedDecimal,
       @JsonKey(name: '_fixedDecimal')
           final Element? fixedDecimalElement,
-      final Id? fixedId,
+      final FhirId? fixedId,
       @JsonKey(name: '_fixedId')
           final Element? fixedIdElement,
       final Instant? fixedInstant,
@@ -15557,7 +15557,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Markdown? fixedMarkdown,
       @JsonKey(name: '_fixedMarkdown')
           final Element? fixedMarkdownElement,
-      final Id? fixedOid,
+      final FhirId? fixedOid,
       @JsonKey(name: '_fixedOid')
           final Element? fixedOidElement,
       final PositiveInt? fixedPositiveInt,
@@ -15578,7 +15578,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final FhirUrl? fixedUrl,
       @JsonKey(name: '_fixedUrl')
           final Element? fixedUrlElement,
-      final Id? fixedUuid,
+      final FhirId? fixedUuid,
       @JsonKey(name: '_fixedUuid')
           final Element? fixedUuidElement,
       final Address? fixedAddress,
@@ -15636,7 +15636,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Decimal? patternDecimal,
       @JsonKey(name: '_patternDecimal')
           final Element? patternDecimalElement,
-      final Id? patternId,
+      final FhirId? patternId,
       @JsonKey(name: '_patternId')
           final Element? patternIdElement,
       final Instant? patternInstant,
@@ -15651,7 +15651,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Markdown? patternMarkdown,
       @JsonKey(name: '_patternMarkdown')
           final Element? patternMarkdownElement,
-      final Id? patternOid,
+      final FhirId? patternOid,
       @JsonKey(name: '_patternOid')
           final Element? patternOidElement,
       final PositiveInt? patternPositiveInt,
@@ -15672,7 +15672,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final FhirUrl? patternUrl,
       @JsonKey(name: '_patternUrl')
           final Element? patternUrlElement,
-      final Id? patternUuid,
+      final FhirId? patternUuid,
       @JsonKey(name: '_patternUuid')
           final Element? patternUuidElement,
       final Address? patternAddress,
@@ -15769,7 +15769,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Integer? maxLength,
       @JsonKey(name: '_maxLength')
           final Element? maxLengthElement,
-      final List<Id>? condition,
+      final List<FhirId>? condition,
       @JsonKey(name: '_condition')
           final List<Element>? conditionElement,
       final List<ElementDefinitionConstraint>? constraint,
@@ -16026,7 +16026,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @override
 
   /// [defaultValueId] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
-  Id? get defaultValueId;
+  FhirId? get defaultValueId;
   @override
 
   /// [defaultValueIdElement] ("_defaultValueId") Extensions for defaultValueId
@@ -16071,7 +16071,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @override
 
   /// [defaultValueOid] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
-  Id? get defaultValueOid;
+  FhirId? get defaultValueOid;
   @override
 
   /// [defaultValueOidElement] ("_defaultValueOid") Extensions for defaultValueOid
@@ -16134,7 +16134,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @override
 
   /// [defaultValueUuid] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
-  Id? get defaultValueUuid;
+  FhirId? get defaultValueUuid;
   @override
 
   /// [defaultValueUuidElement] ("_defaultValueUuid") Extensions for defaultValueUuid
@@ -16360,7 +16360,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @override
 
   /// [fixedId] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
-  Id? get fixedId;
+  FhirId? get fixedId;
   @override
 
   /// [fixedIdElement] ("_fixedId") Extensions for fixedId
@@ -16405,7 +16405,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @override
 
   /// [fixedOid] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
-  Id? get fixedOid;
+  FhirId? get fixedOid;
   @override
 
   /// [fixedOidElement] ("_fixedOid") Extensions for fixedOid
@@ -16468,7 +16468,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @override
 
   /// [fixedUuid] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
-  Id? get fixedUuid;
+  FhirId? get fixedUuid;
   @override
 
   /// [fixedUuidElement] ("_fixedUuid") Extensions for fixedUuid
@@ -16764,7 +16764,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// 3. If an array: it must match (recursively) the pattern value
   ///
   /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
-  Id? get patternId;
+  FhirId? get patternId;
   @override
 
   /// [patternIdElement] ("_patternId") Extensions for patternId
@@ -16864,7 +16864,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// 3. If an array: it must match (recursively) the pattern value
   ///
   /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
-  Id? get patternOid;
+  FhirId? get patternOid;
   @override
 
   /// [patternOidElement] ("_patternOid") Extensions for patternOid
@@ -17004,7 +17004,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// 3. If an array: it must match (recursively) the pattern value
   ///
   /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
-  Id? get patternUuid;
+  FhirId? get patternUuid;
   @override
 
   /// [patternUuidElement] ("_patternUuid") Extensions for patternUuid
@@ -17706,7 +17706,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   @override
 
   /// [condition] A reference to an invariant that may make additional statements about the cardinality or value in the instance.
-  List<Id>? get condition;
+  List<FhirId>? get condition;
   @override
 
   /// [conditionElement] ("_condition") Extensions for condition
@@ -20016,7 +20016,7 @@ mixin _$ElementDefinitionExample {
   Element? get valueDecimalElement => throw _privateConstructorUsedError;
 
   /// [valueId] The actual value for the element, which must be one of the types allowed for this element.
-  Id? get valueId => throw _privateConstructorUsedError;
+  FhirId? get valueId => throw _privateConstructorUsedError;
 
   /// [valueIdElement] ("_valueId") Extensions for valueId
   @JsonKey(name: '_valueId')
@@ -20051,7 +20051,7 @@ mixin _$ElementDefinitionExample {
   Element? get valueMarkdownElement => throw _privateConstructorUsedError;
 
   /// [valueOid] The actual value for the element, which must be one of the types allowed for this element.
-  Id? get valueOid => throw _privateConstructorUsedError;
+  FhirId? get valueOid => throw _privateConstructorUsedError;
 
   /// [valueOidElement] ("_valueOid") Extensions for valueOid
   @JsonKey(name: '_valueOid')
@@ -20100,7 +20100,7 @@ mixin _$ElementDefinitionExample {
   Element? get valueUrlElement => throw _privateConstructorUsedError;
 
   /// [valueUuid] The actual value for the element, which must be one of the types allowed for this element.
-  Id? get valueUuid => throw _privateConstructorUsedError;
+  FhirId? get valueUuid => throw _privateConstructorUsedError;
 
   /// [valueUuidElement] ("_valueUuid") Extensions for valueUuid
   @JsonKey(name: '_valueUuid')
@@ -20247,7 +20247,7 @@ abstract class $ElementDefinitionExampleCopyWith<$Res> {
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
       Instant? valueInstant,
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
@@ -20257,7 +20257,7 @@ abstract class $ElementDefinitionExampleCopyWith<$Res> {
       @JsonKey(name: '_valueInteger64') Element? valueInteger64Element,
       Markdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-      Id? valueOid,
+      FhirId? valueOid,
       @JsonKey(name: '_valueOid') Element? valueOidElement,
       PositiveInt? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
@@ -20271,7 +20271,7 @@ abstract class $ElementDefinitionExampleCopyWith<$Res> {
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
-      Id? valueUuid,
+      FhirId? valueUuid,
       @JsonKey(name: '_valueUuid') Element? valueUuidElement,
       Address? valueAddress,
       Age? valueAge,
@@ -20539,7 +20539,7 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res,
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -20579,7 +20579,7 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res,
       valueOid: freezed == valueOid
           ? _value.valueOid
           : valueOid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueOidElement: freezed == valueOidElement
           ? _value.valueOidElement
           : valueOidElement // ignore: cast_nullable_to_non_nullable
@@ -20635,7 +20635,7 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res,
       valueUuid: freezed == valueUuid
           ? _value.valueUuid
           : valueUuid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueUuidElement: freezed == valueUuidElement
           ? _value.valueUuidElement
           : valueUuidElement // ignore: cast_nullable_to_non_nullable
@@ -21476,7 +21476,7 @@ abstract class _$$_ElementDefinitionExampleCopyWith<$Res>
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
       Instant? valueInstant,
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
@@ -21486,7 +21486,7 @@ abstract class _$$_ElementDefinitionExampleCopyWith<$Res>
       @JsonKey(name: '_valueInteger64') Element? valueInteger64Element,
       Markdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-      Id? valueOid,
+      FhirId? valueOid,
       @JsonKey(name: '_valueOid') Element? valueOidElement,
       PositiveInt? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
@@ -21500,7 +21500,7 @@ abstract class _$$_ElementDefinitionExampleCopyWith<$Res>
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
-      Id? valueUuid,
+      FhirId? valueUuid,
       @JsonKey(name: '_valueUuid') Element? valueUuidElement,
       Address? valueAddress,
       Age? valueAge,
@@ -21821,7 +21821,7 @@ class __$$_ElementDefinitionExampleCopyWithImpl<$Res>
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -21861,7 +21861,7 @@ class __$$_ElementDefinitionExampleCopyWithImpl<$Res>
       valueOid: freezed == valueOid
           ? _value.valueOid
           : valueOid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueOidElement: freezed == valueOidElement
           ? _value.valueOidElement
           : valueOidElement // ignore: cast_nullable_to_non_nullable
@@ -21917,7 +21917,7 @@ class __$$_ElementDefinitionExampleCopyWithImpl<$Res>
       valueUuid: freezed == valueUuid
           ? _value.valueUuid
           : valueUuid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueUuidElement: freezed == valueUuidElement
           ? _value.valueUuidElement
           : valueUuidElement // ignore: cast_nullable_to_non_nullable
@@ -22291,7 +22291,7 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
 
   /// [valueId] The actual value for the element, which must be one of the types allowed for this element.
   @override
-  final Id? valueId;
+  final FhirId? valueId;
 
   /// [valueIdElement] ("_valueId") Extensions for valueId
   @override
@@ -22336,7 +22336,7 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
 
   /// [valueOid] The actual value for the element, which must be one of the types allowed for this element.
   @override
-  final Id? valueOid;
+  final FhirId? valueOid;
 
   /// [valueOidElement] ("_valueOid") Extensions for valueOid
   @override
@@ -22399,7 +22399,7 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
 
   /// [valueUuid] The actual value for the element, which must be one of the types allowed for this element.
   @override
-  final Id? valueUuid;
+  final FhirId? valueUuid;
 
   /// [valueUuidElement] ("_valueUuid") Extensions for valueUuid
   @override
@@ -22796,7 +22796,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
       final Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal')
           final Element? valueDecimalElement,
-      final Id? valueId,
+      final FhirId? valueId,
       @JsonKey(name: '_valueId')
           final Element? valueIdElement,
       final Instant? valueInstant,
@@ -22811,7 +22811,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
       final Markdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown')
           final Element? valueMarkdownElement,
-      final Id? valueOid,
+      final FhirId? valueOid,
       @JsonKey(name: '_valueOid')
           final Element? valueOidElement,
       final PositiveInt? valuePositiveInt,
@@ -22832,7 +22832,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
       final FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl')
           final Element? valueUrlElement,
-      final Id? valueUuid,
+      final FhirId? valueUuid,
       @JsonKey(name: '_valueUuid')
           final Element? valueUuidElement,
       final Address? valueAddress,
@@ -22979,7 +22979,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
   @override
 
   /// [valueId] The actual value for the element, which must be one of the types allowed for this element.
-  Id? get valueId;
+  FhirId? get valueId;
   @override
 
   /// [valueIdElement] ("_valueId") Extensions for valueId
@@ -23024,7 +23024,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
   @override
 
   /// [valueOid] The actual value for the element, which must be one of the types allowed for this element.
-  Id? get valueOid;
+  FhirId? get valueOid;
   @override
 
   /// [valueOidElement] ("_valueOid") Extensions for valueOid
@@ -23087,7 +23087,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
   @override
 
   /// [valueUuid] The actual value for the element, which must be one of the types allowed for this element.
-  Id? get valueUuid;
+  FhirId? get valueUuid;
   @override
 
   /// [valueUuidElement] ("_valueUuid") Extensions for valueUuid
@@ -23271,7 +23271,7 @@ mixin _$ElementDefinitionConstraint {
       throw _privateConstructorUsedError;
 
   /// [key] Allows identification of which elements have their cardinalities impacted by the constraint.  Will not be referenced for constraints that do not affect cardinality.
-  Id? get key => throw _privateConstructorUsedError;
+  FhirId? get key => throw _privateConstructorUsedError;
 
   /// [keyElement] ("_key") Extensions for key
   @JsonKey(name: '_key')
@@ -23334,7 +23334,7 @@ abstract class $ElementDefinitionConstraintCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? key,
+      FhirId? key,
       @JsonKey(name: '_key') Element? keyElement,
       Markdown? requirements,
       @JsonKey(name: '_requirements') Element? requirementsElement,
@@ -23403,7 +23403,7 @@ class _$ElementDefinitionConstraintCopyWithImpl<$Res,
       key: freezed == key
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       keyElement: freezed == keyElement
           ? _value.keyElement
           : keyElement // ignore: cast_nullable_to_non_nullable
@@ -23541,7 +23541,7 @@ abstract class _$$_ElementDefinitionConstraintCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? key,
+      FhirId? key,
       @JsonKey(name: '_key') Element? keyElement,
       Markdown? requirements,
       @JsonKey(name: '_requirements') Element? requirementsElement,
@@ -23615,7 +23615,7 @@ class __$$_ElementDefinitionConstraintCopyWithImpl<$Res>
       key: freezed == key
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       keyElement: freezed == keyElement
           ? _value.keyElement
           : keyElement // ignore: cast_nullable_to_non_nullable
@@ -23762,7 +23762,7 @@ class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
 
   /// [key] Allows identification of which elements have their cardinalities impacted by the constraint.  Will not be referenced for constraints that do not affect cardinality.
   @override
-  final Id? key;
+  final FhirId? key;
 
   /// [keyElement] ("_key") Extensions for key
   @override
@@ -23900,7 +23900,7 @@ abstract class _ElementDefinitionConstraint
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Id? key,
+      final FhirId? key,
       @JsonKey(name: '_key') final Element? keyElement,
       final Markdown? requirements,
       @JsonKey(name: '_requirements') final Element? requirementsElement,
@@ -23951,7 +23951,7 @@ abstract class _ElementDefinitionConstraint
   @override
 
   /// [key] Allows identification of which elements have their cardinalities impacted by the constraint.  Will not be referenced for constraints that do not affect cardinality.
-  Id? get key;
+  FhirId? get key;
   @override
 
   /// [keyElement] ("_key") Extensions for key
@@ -25971,7 +25971,7 @@ mixin _$ElementDefinitionMapping {
       throw _privateConstructorUsedError;
 
   /// [identity] An internal reference to the definition of a mapping.
-  Id? get identity => throw _privateConstructorUsedError;
+  FhirId? get identity => throw _privateConstructorUsedError;
 
   /// [identityElement] ("_identity") Extensions for identity
   @JsonKey(name: '_identity')
@@ -26014,7 +26014,7 @@ abstract class $ElementDefinitionMappingCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? identity,
+      FhirId? identity,
       @JsonKey(name: '_identity') Element? identityElement,
       Code? language,
       @JsonKey(name: '_language') Element? languageElement,
@@ -26071,7 +26071,7 @@ class _$ElementDefinitionMappingCopyWithImpl<$Res,
       identity: freezed == identity
           ? _value.identity
           : identity // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       identityElement: freezed == identityElement
           ? _value.identityElement
           : identityElement // ignore: cast_nullable_to_non_nullable
@@ -26165,7 +26165,7 @@ abstract class _$$_ElementDefinitionMappingCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? identity,
+      FhirId? identity,
       @JsonKey(name: '_identity') Element? identityElement,
       Code? language,
       @JsonKey(name: '_language') Element? languageElement,
@@ -26224,7 +26224,7 @@ class __$$_ElementDefinitionMappingCopyWithImpl<$Res>
       identity: freezed == identity
           ? _value.identity
           : identity // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       identityElement: freezed == identityElement
           ? _value.identityElement
           : identityElement // ignore: cast_nullable_to_non_nullable
@@ -26346,7 +26346,7 @@ class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
 
   /// [identity] An internal reference to the definition of a mapping.
   @override
-  final Id? identity;
+  final FhirId? identity;
 
   /// [identityElement] ("_identity") Extensions for identity
   @override
@@ -26447,7 +26447,7 @@ abstract class _ElementDefinitionMapping extends ElementDefinitionMapping {
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Id? identity,
+          final FhirId? identity,
           @JsonKey(name: '_identity') final Element? identityElement,
           final Code? language,
           @JsonKey(name: '_language') final Element? languageElement,
@@ -26494,7 +26494,7 @@ abstract class _ElementDefinitionMapping extends ElementDefinitionMapping {
   @override
 
   /// [identity] An internal reference to the definition of a mapping.
-  Id? get identity;
+  FhirId? get identity;
   @override
 
   /// [identityElement] ("_identity") Extensions for identity

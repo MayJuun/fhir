@@ -26,7 +26,7 @@ mixin _$Appointment {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -298,7 +298,7 @@ abstract class $AppointmentCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Appointment)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -452,7 +452,7 @@ class _$AppointmentCopyWithImpl<$Res, $Val extends Appointment>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -876,7 +876,7 @@ abstract class _$$_AppointmentCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Appointment)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1046,7 +1046,7 @@ class __$$_AppointmentCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -1343,7 +1343,7 @@ class _$_Appointment extends _Appointment {
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -2046,7 +2046,7 @@ abstract class _Appointment extends Appointment {
   factory _Appointment(
           {@JsonKey(unknownEnumValue: R5ResourceType.Appointment)
               final R5ResourceType resourceType,
-          final Id? id,
+          final FhirId? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -2122,7 +2122,7 @@ abstract class _Appointment extends Appointment {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -5877,7 +5877,7 @@ mixin _$AppointmentResponse {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -6050,7 +6050,7 @@ abstract class $AppointmentResponseCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.AppointmentResponse)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -6161,7 +6161,7 @@ class _$AppointmentResponseCopyWithImpl<$Res, $Val extends AppointmentResponse>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -6457,7 +6457,7 @@ abstract class _$$_AppointmentResponseCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.AppointmentResponse)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -6580,7 +6580,7 @@ class __$$_AppointmentResponseCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -6766,7 +6766,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -7146,7 +7146,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   factory _AppointmentResponse(
       {@JsonKey(unknownEnumValue: R5ResourceType.AppointmentResponse)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -7201,7 +7201,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -7403,7 +7403,7 @@ mixin _$Schedule {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -7537,7 +7537,7 @@ abstract class $ScheduleCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Schedule)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -7621,7 +7621,7 @@ class _$ScheduleCopyWithImpl<$Res, $Val extends Schedule>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -7816,7 +7816,7 @@ abstract class _$$_ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Schedule)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -7906,7 +7906,7 @@ class __$$_ScheduleCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -8050,7 +8050,7 @@ class _$_Schedule extends _Schedule {
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -8383,7 +8383,7 @@ abstract class _Schedule extends Schedule {
   factory _Schedule(
       {@JsonKey(unknownEnumValue: R5ResourceType.Schedule)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -8424,7 +8424,7 @@ abstract class _Schedule extends Schedule {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -8579,7 +8579,7 @@ mixin _$Slot {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -8725,7 +8725,7 @@ abstract class $SlotCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Slot)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -8821,7 +8821,7 @@ class _$SlotCopyWithImpl<$Res, $Val extends Slot>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -9051,7 +9051,7 @@ abstract class _$$_SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Slot)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -9153,7 +9153,7 @@ class __$$_SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res, _$_Slot>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -9318,7 +9318,7 @@ class _$_Slot extends _Slot {
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -9683,7 +9683,7 @@ abstract class _Slot extends Slot {
   factory _Slot(
       {@JsonKey(unknownEnumValue: R5ResourceType.Slot)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -9730,7 +9730,7 @@ abstract class _Slot extends Slot {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -9900,7 +9900,7 @@ mixin _$Task {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -10145,7 +10145,7 @@ abstract class $TaskCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Task)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -10308,7 +10308,7 @@ class _$TaskCopyWithImpl<$Res, $Val extends Task>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -10818,7 +10818,7 @@ abstract class _$$_TaskCopyWith<$Res> implements $TaskCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Task)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -11002,7 +11002,7 @@ class __$$_TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res, _$_Task>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -11296,7 +11296,7 @@ class _$_Task extends _Task {
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -11902,7 +11902,7 @@ abstract class _Task extends Task {
   factory _Task(
       {@JsonKey(unknownEnumValue: R5ResourceType.Task)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -11977,7 +11977,7 @@ abstract class _Task extends Task {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -12825,7 +12825,7 @@ mixin _$TaskInput {
   Element? get valueDecimalElement => throw _privateConstructorUsedError;
 
   /// [valueId] The value of the input parameter as a basic type.
-  Id? get valueId => throw _privateConstructorUsedError;
+  FhirId? get valueId => throw _privateConstructorUsedError;
 
   /// [valueIdElement] ("_valueId") Extensions for valueId
   @JsonKey(name: '_valueId')
@@ -12861,7 +12861,7 @@ mixin _$TaskInput {
   Element? get valueMarkdownElement => throw _privateConstructorUsedError;
 
   /// [valueOid] The value of the input parameter as a basic type.
-  Id? get valueOid => throw _privateConstructorUsedError;
+  FhirId? get valueOid => throw _privateConstructorUsedError;
 
   /// [valueOidElement] ("_valueOid") Extensions for valueOid
   @JsonKey(name: '_valueOid')
@@ -12912,7 +12912,7 @@ mixin _$TaskInput {
   Element? get valueUrlElement => throw _privateConstructorUsedError;
 
   /// [valueUuid] The value of the input parameter as a basic type.
-  Id? get valueUuid => throw _privateConstructorUsedError;
+  FhirId? get valueUuid => throw _privateConstructorUsedError;
 
   /// [valueUuidElement] ("_valueUuid") Extensions for valueUuid
   @JsonKey(name: '_valueUuid')
@@ -13061,7 +13061,7 @@ abstract class $TaskInputCopyWith<$Res> {
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
       Instant? valueInstant,
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
@@ -13071,7 +13071,7 @@ abstract class $TaskInputCopyWith<$Res> {
       @JsonKey(name: '_valueInteger64') Element? valueInteger64Element,
       Markdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-      Id? valueOid,
+      FhirId? valueOid,
       @JsonKey(name: '_valueOid') Element? valueOidElement,
       PositiveInt? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
@@ -13085,7 +13085,7 @@ abstract class $TaskInputCopyWith<$Res> {
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
-      Id? valueUuid,
+      FhirId? valueUuid,
       @JsonKey(name: '_valueUuid') Element? valueUuidElement,
       Address? valueAddress,
       Age? valueAge,
@@ -13347,7 +13347,7 @@ class _$TaskInputCopyWithImpl<$Res, $Val extends TaskInput>
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -13387,7 +13387,7 @@ class _$TaskInputCopyWithImpl<$Res, $Val extends TaskInput>
       valueOid: freezed == valueOid
           ? _value.valueOid
           : valueOid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueOidElement: freezed == valueOidElement
           ? _value.valueOidElement
           : valueOidElement // ignore: cast_nullable_to_non_nullable
@@ -13443,7 +13443,7 @@ class _$TaskInputCopyWithImpl<$Res, $Val extends TaskInput>
       valueUuid: freezed == valueUuid
           ? _value.valueUuid
           : valueUuid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueUuidElement: freezed == valueUuidElement
           ? _value.valueUuidElement
           : valueUuidElement // ignore: cast_nullable_to_non_nullable
@@ -14277,7 +14277,7 @@ abstract class _$$_TaskInputCopyWith<$Res> implements $TaskInputCopyWith<$Res> {
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
       Instant? valueInstant,
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
@@ -14287,7 +14287,7 @@ abstract class _$$_TaskInputCopyWith<$Res> implements $TaskInputCopyWith<$Res> {
       @JsonKey(name: '_valueInteger64') Element? valueInteger64Element,
       Markdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-      Id? valueOid,
+      FhirId? valueOid,
       @JsonKey(name: '_valueOid') Element? valueOidElement,
       PositiveInt? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
@@ -14301,7 +14301,7 @@ abstract class _$$_TaskInputCopyWith<$Res> implements $TaskInputCopyWith<$Res> {
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
-      Id? valueUuid,
+      FhirId? valueUuid,
       @JsonKey(name: '_valueUuid') Element? valueUuidElement,
       Address? valueAddress,
       Age? valueAge,
@@ -14616,7 +14616,7 @@ class __$$_TaskInputCopyWithImpl<$Res>
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -14656,7 +14656,7 @@ class __$$_TaskInputCopyWithImpl<$Res>
       valueOid: freezed == valueOid
           ? _value.valueOid
           : valueOid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueOidElement: freezed == valueOidElement
           ? _value.valueOidElement
           : valueOidElement // ignore: cast_nullable_to_non_nullable
@@ -14712,7 +14712,7 @@ class __$$_TaskInputCopyWithImpl<$Res>
       valueUuid: freezed == valueUuid
           ? _value.valueUuid
           : valueUuid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueUuidElement: freezed == valueUuidElement
           ? _value.valueUuidElement
           : valueUuidElement // ignore: cast_nullable_to_non_nullable
@@ -15087,7 +15087,7 @@ class _$_TaskInput extends _TaskInput {
 
   /// [valueId] The value of the input parameter as a basic type.
   @override
-  final Id? valueId;
+  final FhirId? valueId;
 
   /// [valueIdElement] ("_valueId") Extensions for valueId
   @override
@@ -15133,7 +15133,7 @@ class _$_TaskInput extends _TaskInput {
 
   /// [valueOid] The value of the input parameter as a basic type.
   @override
-  final Id? valueOid;
+  final FhirId? valueOid;
 
   /// [valueOidElement] ("_valueOid") Extensions for valueOid
   @override
@@ -15198,7 +15198,7 @@ class _$_TaskInput extends _TaskInput {
 
   /// [valueUuid] The value of the input parameter as a basic type.
   @override
-  final Id? valueUuid;
+  final FhirId? valueUuid;
 
   /// [valueUuidElement] ("_valueUuid") Extensions for valueUuid
   @override
@@ -15593,7 +15593,7 @@ abstract class _TaskInput extends TaskInput {
       final Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal')
           final Element? valueDecimalElement,
-      final Id? valueId,
+      final FhirId? valueId,
       @JsonKey(name: '_valueId')
           final Element? valueIdElement,
       final Instant? valueInstant,
@@ -15608,7 +15608,7 @@ abstract class _TaskInput extends TaskInput {
       final Markdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown')
           final Element? valueMarkdownElement,
-      final Id? valueOid,
+      final FhirId? valueOid,
       @JsonKey(name: '_valueOid')
           final Element? valueOidElement,
       final PositiveInt? valuePositiveInt,
@@ -15629,7 +15629,7 @@ abstract class _TaskInput extends TaskInput {
       final FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl')
           final Element? valueUrlElement,
-      final Id? valueUuid,
+      final FhirId? valueUuid,
       @JsonKey(name: '_valueUuid')
           final Element? valueUuidElement,
       final Address? valueAddress,
@@ -15776,7 +15776,7 @@ abstract class _TaskInput extends TaskInput {
   @override
 
   /// [valueId] The value of the input parameter as a basic type.
-  Id? get valueId;
+  FhirId? get valueId;
   @override
 
   /// [valueIdElement] ("_valueId") Extensions for valueId
@@ -15822,7 +15822,7 @@ abstract class _TaskInput extends TaskInput {
   @override
 
   /// [valueOid] The value of the input parameter as a basic type.
-  Id? get valueOid;
+  FhirId? get valueOid;
   @override
 
   /// [valueOidElement] ("_valueOid") Extensions for valueOid
@@ -15887,7 +15887,7 @@ abstract class _TaskInput extends TaskInput {
   @override
 
   /// [valueUuid] The value of the input parameter as a basic type.
-  Id? get valueUuid;
+  FhirId? get valueUuid;
   @override
 
   /// [valueUuidElement] ("_valueUuid") Extensions for valueUuid
@@ -16130,7 +16130,7 @@ mixin _$TaskOutput {
   Element? get valueDecimalElement => throw _privateConstructorUsedError;
 
   /// [valueId] The value of the Output parameter as a basic type.
-  Id? get valueId => throw _privateConstructorUsedError;
+  FhirId? get valueId => throw _privateConstructorUsedError;
 
   /// [valueIdElement] ("_valueId") Extensions for valueId
   @JsonKey(name: '_valueId')
@@ -16166,7 +16166,7 @@ mixin _$TaskOutput {
   Element? get valueMarkdownElement => throw _privateConstructorUsedError;
 
   /// [valueOid] The value of the Output parameter as a basic type.
-  Id? get valueOid => throw _privateConstructorUsedError;
+  FhirId? get valueOid => throw _privateConstructorUsedError;
 
   /// [valueOidElement] ("_valueOid") Extensions for valueOid
   @JsonKey(name: '_valueOid')
@@ -16217,7 +16217,7 @@ mixin _$TaskOutput {
   Element? get valueUrlElement => throw _privateConstructorUsedError;
 
   /// [valueUuid] The value of the Output parameter as a basic type.
-  Id? get valueUuid => throw _privateConstructorUsedError;
+  FhirId? get valueUuid => throw _privateConstructorUsedError;
 
   /// [valueUuidElement] ("_valueUuid") Extensions for valueUuid
   @JsonKey(name: '_valueUuid')
@@ -16370,7 +16370,7 @@ abstract class $TaskOutputCopyWith<$Res> {
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
       Instant? valueInstant,
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
@@ -16380,7 +16380,7 @@ abstract class $TaskOutputCopyWith<$Res> {
       @JsonKey(name: '_valueInteger64') Element? valueInteger64Element,
       Markdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-      Id? valueOid,
+      FhirId? valueOid,
       @JsonKey(name: '_valueOid') Element? valueOidElement,
       PositiveInt? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
@@ -16394,7 +16394,7 @@ abstract class $TaskOutputCopyWith<$Res> {
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
-      Id? valueUuid,
+      FhirId? valueUuid,
       @JsonKey(name: '_valueUuid') Element? valueUuidElement,
       Address? valueAddress,
       Age? valueAge,
@@ -16656,7 +16656,7 @@ class _$TaskOutputCopyWithImpl<$Res, $Val extends TaskOutput>
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -16696,7 +16696,7 @@ class _$TaskOutputCopyWithImpl<$Res, $Val extends TaskOutput>
       valueOid: freezed == valueOid
           ? _value.valueOid
           : valueOid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueOidElement: freezed == valueOidElement
           ? _value.valueOidElement
           : valueOidElement // ignore: cast_nullable_to_non_nullable
@@ -16752,7 +16752,7 @@ class _$TaskOutputCopyWithImpl<$Res, $Val extends TaskOutput>
       valueUuid: freezed == valueUuid
           ? _value.valueUuid
           : valueUuid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueUuidElement: freezed == valueUuidElement
           ? _value.valueUuidElement
           : valueUuidElement // ignore: cast_nullable_to_non_nullable
@@ -17587,7 +17587,7 @@ abstract class _$$_TaskOutputCopyWith<$Res>
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
       Instant? valueInstant,
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
@@ -17597,7 +17597,7 @@ abstract class _$$_TaskOutputCopyWith<$Res>
       @JsonKey(name: '_valueInteger64') Element? valueInteger64Element,
       Markdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-      Id? valueOid,
+      FhirId? valueOid,
       @JsonKey(name: '_valueOid') Element? valueOidElement,
       PositiveInt? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
@@ -17611,7 +17611,7 @@ abstract class _$$_TaskOutputCopyWith<$Res>
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
-      Id? valueUuid,
+      FhirId? valueUuid,
       @JsonKey(name: '_valueUuid') Element? valueUuidElement,
       Address? valueAddress,
       Age? valueAge,
@@ -17926,7 +17926,7 @@ class __$$_TaskOutputCopyWithImpl<$Res>
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -17966,7 +17966,7 @@ class __$$_TaskOutputCopyWithImpl<$Res>
       valueOid: freezed == valueOid
           ? _value.valueOid
           : valueOid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueOidElement: freezed == valueOidElement
           ? _value.valueOidElement
           : valueOidElement // ignore: cast_nullable_to_non_nullable
@@ -18022,7 +18022,7 @@ class __$$_TaskOutputCopyWithImpl<$Res>
       valueUuid: freezed == valueUuid
           ? _value.valueUuid
           : valueUuid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueUuidElement: freezed == valueUuidElement
           ? _value.valueUuidElement
           : valueUuidElement // ignore: cast_nullable_to_non_nullable
@@ -18396,7 +18396,7 @@ class _$_TaskOutput extends _TaskOutput {
 
   /// [valueId] The value of the Output parameter as a basic type.
   @override
-  final Id? valueId;
+  final FhirId? valueId;
 
   /// [valueIdElement] ("_valueId") Extensions for valueId
   @override
@@ -18442,7 +18442,7 @@ class _$_TaskOutput extends _TaskOutput {
 
   /// [valueOid] The value of the Output parameter as a basic type.
   @override
-  final Id? valueOid;
+  final FhirId? valueOid;
 
   /// [valueOidElement] ("_valueOid") Extensions for valueOid
   @override
@@ -18507,7 +18507,7 @@ class _$_TaskOutput extends _TaskOutput {
 
   /// [valueUuid] The value of the Output parameter as a basic type.
   @override
-  final Id? valueUuid;
+  final FhirId? valueUuid;
 
   /// [valueUuidElement] ("_valueUuid") Extensions for valueUuid
   @override
@@ -18905,7 +18905,7 @@ abstract class _TaskOutput extends TaskOutput {
       final Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal')
           final Element? valueDecimalElement,
-      final Id? valueId,
+      final FhirId? valueId,
       @JsonKey(name: '_valueId')
           final Element? valueIdElement,
       final Instant? valueInstant,
@@ -18920,7 +18920,7 @@ abstract class _TaskOutput extends TaskOutput {
       final Markdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown')
           final Element? valueMarkdownElement,
-      final Id? valueOid,
+      final FhirId? valueOid,
       @JsonKey(name: '_valueOid')
           final Element? valueOidElement,
       final PositiveInt? valuePositiveInt,
@@ -18941,7 +18941,7 @@ abstract class _TaskOutput extends TaskOutput {
       final FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl')
           final Element? valueUrlElement,
-      final Id? valueUuid,
+      final FhirId? valueUuid,
       @JsonKey(name: '_valueUuid')
           final Element? valueUuidElement,
       final Address? valueAddress,
@@ -19087,7 +19087,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
 
   /// [valueId] The value of the Output parameter as a basic type.
-  Id? get valueId;
+  FhirId? get valueId;
   @override
 
   /// [valueIdElement] ("_valueId") Extensions for valueId
@@ -19133,7 +19133,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
 
   /// [valueOid] The value of the Output parameter as a basic type.
-  Id? get valueOid;
+  FhirId? get valueOid;
   @override
 
   /// [valueOidElement] ("_valueOid") Extensions for valueOid
@@ -19198,7 +19198,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
 
   /// [valueUuid] The value of the Output parameter as a basic type.
-  Id? get valueUuid;
+  FhirId? get valueUuid;
   @override
 
   /// [valueUuidElement] ("_valueUuid") Extensions for valueUuid
@@ -19365,7 +19365,7 @@ mixin _$Transport {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -19617,7 +19617,7 @@ abstract class $TransportCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Transport)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -19784,7 +19784,7 @@ class _$TransportCopyWithImpl<$Res, $Val extends Transport>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -20315,7 +20315,7 @@ abstract class _$$_TransportCopyWith<$Res> implements $TransportCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Transport)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -20507,7 +20507,7 @@ class __$$_TransportCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -20806,7 +20806,7 @@ class _$_Transport extends _Transport {
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -21415,7 +21415,7 @@ abstract class _Transport extends Transport {
   factory _Transport(
       {@JsonKey(unknownEnumValue: R5ResourceType.Transport)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -21492,7 +21492,7 @@ abstract class _Transport extends Transport {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -22344,7 +22344,7 @@ mixin _$TransportInput {
   Element? get valueDecimalElement => throw _privateConstructorUsedError;
 
   /// [valueId] The value of the input parameter as a basic type.
-  Id? get valueId => throw _privateConstructorUsedError;
+  FhirId? get valueId => throw _privateConstructorUsedError;
 
   /// [valueIdElement] ("_valueId") Extensions for valueId
   @JsonKey(name: '_valueId')
@@ -22380,7 +22380,7 @@ mixin _$TransportInput {
   Element? get valueMarkdownElement => throw _privateConstructorUsedError;
 
   /// [valueOid] The value of the input parameter as a basic type.
-  Id? get valueOid => throw _privateConstructorUsedError;
+  FhirId? get valueOid => throw _privateConstructorUsedError;
 
   /// [valueOidElement] ("_valueOid") Extensions for valueOid
   @JsonKey(name: '_valueOid')
@@ -22431,7 +22431,7 @@ mixin _$TransportInput {
   Element? get valueUrlElement => throw _privateConstructorUsedError;
 
   /// [valueUuid] The value of the input parameter as a basic type.
-  Id? get valueUuid => throw _privateConstructorUsedError;
+  FhirId? get valueUuid => throw _privateConstructorUsedError;
 
   /// [valueUuidElement] ("_valueUuid") Extensions for valueUuid
   @JsonKey(name: '_valueUuid')
@@ -22581,7 +22581,7 @@ abstract class $TransportInputCopyWith<$Res> {
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
       Instant? valueInstant,
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
@@ -22591,7 +22591,7 @@ abstract class $TransportInputCopyWith<$Res> {
       @JsonKey(name: '_valueInteger64') Element? valueInteger64Element,
       Markdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-      Id? valueOid,
+      FhirId? valueOid,
       @JsonKey(name: '_valueOid') Element? valueOidElement,
       PositiveInt? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
@@ -22605,7 +22605,7 @@ abstract class $TransportInputCopyWith<$Res> {
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
-      Id? valueUuid,
+      FhirId? valueUuid,
       @JsonKey(name: '_valueUuid') Element? valueUuidElement,
       Address? valueAddress,
       Age? valueAge,
@@ -22867,7 +22867,7 @@ class _$TransportInputCopyWithImpl<$Res, $Val extends TransportInput>
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -22907,7 +22907,7 @@ class _$TransportInputCopyWithImpl<$Res, $Val extends TransportInput>
       valueOid: freezed == valueOid
           ? _value.valueOid
           : valueOid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueOidElement: freezed == valueOidElement
           ? _value.valueOidElement
           : valueOidElement // ignore: cast_nullable_to_non_nullable
@@ -22963,7 +22963,7 @@ class _$TransportInputCopyWithImpl<$Res, $Val extends TransportInput>
       valueUuid: freezed == valueUuid
           ? _value.valueUuid
           : valueUuid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueUuidElement: freezed == valueUuidElement
           ? _value.valueUuidElement
           : valueUuidElement // ignore: cast_nullable_to_non_nullable
@@ -23798,7 +23798,7 @@ abstract class _$$_TransportInputCopyWith<$Res>
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
       Instant? valueInstant,
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
@@ -23808,7 +23808,7 @@ abstract class _$$_TransportInputCopyWith<$Res>
       @JsonKey(name: '_valueInteger64') Element? valueInteger64Element,
       Markdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-      Id? valueOid,
+      FhirId? valueOid,
       @JsonKey(name: '_valueOid') Element? valueOidElement,
       PositiveInt? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
@@ -23822,7 +23822,7 @@ abstract class _$$_TransportInputCopyWith<$Res>
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
-      Id? valueUuid,
+      FhirId? valueUuid,
       @JsonKey(name: '_valueUuid') Element? valueUuidElement,
       Address? valueAddress,
       Age? valueAge,
@@ -24137,7 +24137,7 @@ class __$$_TransportInputCopyWithImpl<$Res>
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -24177,7 +24177,7 @@ class __$$_TransportInputCopyWithImpl<$Res>
       valueOid: freezed == valueOid
           ? _value.valueOid
           : valueOid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueOidElement: freezed == valueOidElement
           ? _value.valueOidElement
           : valueOidElement // ignore: cast_nullable_to_non_nullable
@@ -24233,7 +24233,7 @@ class __$$_TransportInputCopyWithImpl<$Res>
       valueUuid: freezed == valueUuid
           ? _value.valueUuid
           : valueUuid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueUuidElement: freezed == valueUuidElement
           ? _value.valueUuidElement
           : valueUuidElement // ignore: cast_nullable_to_non_nullable
@@ -24608,7 +24608,7 @@ class _$_TransportInput extends _TransportInput {
 
   /// [valueId] The value of the input parameter as a basic type.
   @override
-  final Id? valueId;
+  final FhirId? valueId;
 
   /// [valueIdElement] ("_valueId") Extensions for valueId
   @override
@@ -24654,7 +24654,7 @@ class _$_TransportInput extends _TransportInput {
 
   /// [valueOid] The value of the input parameter as a basic type.
   @override
-  final Id? valueOid;
+  final FhirId? valueOid;
 
   /// [valueOidElement] ("_valueOid") Extensions for valueOid
   @override
@@ -24719,7 +24719,7 @@ class _$_TransportInput extends _TransportInput {
 
   /// [valueUuid] The value of the input parameter as a basic type.
   @override
-  final Id? valueUuid;
+  final FhirId? valueUuid;
 
   /// [valueUuidElement] ("_valueUuid") Extensions for valueUuid
   @override
@@ -25114,7 +25114,7 @@ abstract class _TransportInput extends TransportInput {
       final Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal')
           final Element? valueDecimalElement,
-      final Id? valueId,
+      final FhirId? valueId,
       @JsonKey(name: '_valueId')
           final Element? valueIdElement,
       final Instant? valueInstant,
@@ -25129,7 +25129,7 @@ abstract class _TransportInput extends TransportInput {
       final Markdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown')
           final Element? valueMarkdownElement,
-      final Id? valueOid,
+      final FhirId? valueOid,
       @JsonKey(name: '_valueOid')
           final Element? valueOidElement,
       final PositiveInt? valuePositiveInt,
@@ -25150,7 +25150,7 @@ abstract class _TransportInput extends TransportInput {
       final FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl')
           final Element? valueUrlElement,
-      final Id? valueUuid,
+      final FhirId? valueUuid,
       @JsonKey(name: '_valueUuid')
           final Element? valueUuidElement,
       final Address? valueAddress,
@@ -25297,7 +25297,7 @@ abstract class _TransportInput extends TransportInput {
   @override
 
   /// [valueId] The value of the input parameter as a basic type.
-  Id? get valueId;
+  FhirId? get valueId;
   @override
 
   /// [valueIdElement] ("_valueId") Extensions for valueId
@@ -25343,7 +25343,7 @@ abstract class _TransportInput extends TransportInput {
   @override
 
   /// [valueOid] The value of the input parameter as a basic type.
-  Id? get valueOid;
+  FhirId? get valueOid;
   @override
 
   /// [valueOidElement] ("_valueOid") Extensions for valueOid
@@ -25408,7 +25408,7 @@ abstract class _TransportInput extends TransportInput {
   @override
 
   /// [valueUuid] The value of the input parameter as a basic type.
-  Id? get valueUuid;
+  FhirId? get valueUuid;
   @override
 
   /// [valueUuidElement] ("_valueUuid") Extensions for valueUuid
@@ -25651,7 +25651,7 @@ mixin _$TransportOutput {
   Element? get valueDecimalElement => throw _privateConstructorUsedError;
 
   /// [valueId] The value of the Output parameter as a basic type.
-  Id? get valueId => throw _privateConstructorUsedError;
+  FhirId? get valueId => throw _privateConstructorUsedError;
 
   /// [valueIdElement] ("_valueId") Extensions for valueId
   @JsonKey(name: '_valueId')
@@ -25687,7 +25687,7 @@ mixin _$TransportOutput {
   Element? get valueMarkdownElement => throw _privateConstructorUsedError;
 
   /// [valueOid] The value of the Output parameter as a basic type.
-  Id? get valueOid => throw _privateConstructorUsedError;
+  FhirId? get valueOid => throw _privateConstructorUsedError;
 
   /// [valueOidElement] ("_valueOid") Extensions for valueOid
   @JsonKey(name: '_valueOid')
@@ -25738,7 +25738,7 @@ mixin _$TransportOutput {
   Element? get valueUrlElement => throw _privateConstructorUsedError;
 
   /// [valueUuid] The value of the Output parameter as a basic type.
-  Id? get valueUuid => throw _privateConstructorUsedError;
+  FhirId? get valueUuid => throw _privateConstructorUsedError;
 
   /// [valueUuidElement] ("_valueUuid") Extensions for valueUuid
   @JsonKey(name: '_valueUuid')
@@ -25891,7 +25891,7 @@ abstract class $TransportOutputCopyWith<$Res> {
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
       Instant? valueInstant,
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
@@ -25901,7 +25901,7 @@ abstract class $TransportOutputCopyWith<$Res> {
       @JsonKey(name: '_valueInteger64') Element? valueInteger64Element,
       Markdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-      Id? valueOid,
+      FhirId? valueOid,
       @JsonKey(name: '_valueOid') Element? valueOidElement,
       PositiveInt? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
@@ -25915,7 +25915,7 @@ abstract class $TransportOutputCopyWith<$Res> {
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
-      Id? valueUuid,
+      FhirId? valueUuid,
       @JsonKey(name: '_valueUuid') Element? valueUuidElement,
       Address? valueAddress,
       Age? valueAge,
@@ -26177,7 +26177,7 @@ class _$TransportOutputCopyWithImpl<$Res, $Val extends TransportOutput>
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -26217,7 +26217,7 @@ class _$TransportOutputCopyWithImpl<$Res, $Val extends TransportOutput>
       valueOid: freezed == valueOid
           ? _value.valueOid
           : valueOid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueOidElement: freezed == valueOidElement
           ? _value.valueOidElement
           : valueOidElement // ignore: cast_nullable_to_non_nullable
@@ -26273,7 +26273,7 @@ class _$TransportOutputCopyWithImpl<$Res, $Val extends TransportOutput>
       valueUuid: freezed == valueUuid
           ? _value.valueUuid
           : valueUuid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueUuidElement: freezed == valueUuidElement
           ? _value.valueUuidElement
           : valueUuidElement // ignore: cast_nullable_to_non_nullable
@@ -27108,7 +27108,7 @@ abstract class _$$_TransportOutputCopyWith<$Res>
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
       Instant? valueInstant,
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
@@ -27118,7 +27118,7 @@ abstract class _$$_TransportOutputCopyWith<$Res>
       @JsonKey(name: '_valueInteger64') Element? valueInteger64Element,
       Markdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-      Id? valueOid,
+      FhirId? valueOid,
       @JsonKey(name: '_valueOid') Element? valueOidElement,
       PositiveInt? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
@@ -27132,7 +27132,7 @@ abstract class _$$_TransportOutputCopyWith<$Res>
       @JsonKey(name: '_valueUri') Element? valueUriElement,
       FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl') Element? valueUrlElement,
-      Id? valueUuid,
+      FhirId? valueUuid,
       @JsonKey(name: '_valueUuid') Element? valueUuidElement,
       Address? valueAddress,
       Age? valueAge,
@@ -27447,7 +27447,7 @@ class __$$_TransportOutputCopyWithImpl<$Res>
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -27487,7 +27487,7 @@ class __$$_TransportOutputCopyWithImpl<$Res>
       valueOid: freezed == valueOid
           ? _value.valueOid
           : valueOid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueOidElement: freezed == valueOidElement
           ? _value.valueOidElement
           : valueOidElement // ignore: cast_nullable_to_non_nullable
@@ -27543,7 +27543,7 @@ class __$$_TransportOutputCopyWithImpl<$Res>
       valueUuid: freezed == valueUuid
           ? _value.valueUuid
           : valueUuid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueUuidElement: freezed == valueUuidElement
           ? _value.valueUuidElement
           : valueUuidElement // ignore: cast_nullable_to_non_nullable
@@ -27917,7 +27917,7 @@ class _$_TransportOutput extends _TransportOutput {
 
   /// [valueId] The value of the Output parameter as a basic type.
   @override
-  final Id? valueId;
+  final FhirId? valueId;
 
   /// [valueIdElement] ("_valueId") Extensions for valueId
   @override
@@ -27963,7 +27963,7 @@ class _$_TransportOutput extends _TransportOutput {
 
   /// [valueOid] The value of the Output parameter as a basic type.
   @override
-  final Id? valueOid;
+  final FhirId? valueOid;
 
   /// [valueOidElement] ("_valueOid") Extensions for valueOid
   @override
@@ -28028,7 +28028,7 @@ class _$_TransportOutput extends _TransportOutput {
 
   /// [valueUuid] The value of the Output parameter as a basic type.
   @override
-  final Id? valueUuid;
+  final FhirId? valueUuid;
 
   /// [valueUuidElement] ("_valueUuid") Extensions for valueUuid
   @override
@@ -28426,7 +28426,7 @@ abstract class _TransportOutput extends TransportOutput {
       final Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal')
           final Element? valueDecimalElement,
-      final Id? valueId,
+      final FhirId? valueId,
       @JsonKey(name: '_valueId')
           final Element? valueIdElement,
       final Instant? valueInstant,
@@ -28441,7 +28441,7 @@ abstract class _TransportOutput extends TransportOutput {
       final Markdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown')
           final Element? valueMarkdownElement,
-      final Id? valueOid,
+      final FhirId? valueOid,
       @JsonKey(name: '_valueOid')
           final Element? valueOidElement,
       final PositiveInt? valuePositiveInt,
@@ -28462,7 +28462,7 @@ abstract class _TransportOutput extends TransportOutput {
       final FhirUrl? valueUrl,
       @JsonKey(name: '_valueUrl')
           final Element? valueUrlElement,
-      final Id? valueUuid,
+      final FhirId? valueUuid,
       @JsonKey(name: '_valueUuid')
           final Element? valueUuidElement,
       final Address? valueAddress,
@@ -28608,7 +28608,7 @@ abstract class _TransportOutput extends TransportOutput {
   @override
 
   /// [valueId] The value of the Output parameter as a basic type.
-  Id? get valueId;
+  FhirId? get valueId;
   @override
 
   /// [valueIdElement] ("_valueId") Extensions for valueId
@@ -28654,7 +28654,7 @@ abstract class _TransportOutput extends TransportOutput {
   @override
 
   /// [valueOid] The value of the Output parameter as a basic type.
-  Id? get valueOid;
+  FhirId? get valueOid;
   @override
 
   /// [valueOidElement] ("_valueOid") Extensions for valueOid
@@ -28719,7 +28719,7 @@ abstract class _TransportOutput extends TransportOutput {
   @override
 
   /// [valueUuid] The value of the Output parameter as a basic type.
-  Id? get valueUuid;
+  FhirId? get valueUuid;
   @override
 
   /// [valueUuidElement] ("_valueUuid") Extensions for valueUuid
@@ -28886,7 +28886,7 @@ mixin _$VerificationResult {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -29046,7 +29046,7 @@ abstract class $VerificationResultCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.VerificationResult)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -29151,7 +29151,7 @@ class _$VerificationResultCopyWithImpl<$Res, $Val extends VerificationResult>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -29436,7 +29436,7 @@ abstract class _$$_VerificationResultCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.VerificationResult)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -29552,7 +29552,7 @@ class __$$_VerificationResultCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -29734,7 +29734,7 @@ class _$_VerificationResult extends _VerificationResult {
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   ///  maintained by the infrastructure. Changes to the content might not
@@ -30133,7 +30133,7 @@ abstract class _VerificationResult extends VerificationResult {
   factory _VerificationResult(
           {@JsonKey(unknownEnumValue: R5ResourceType.VerificationResult)
               final R5ResourceType resourceType,
-          final Id? id,
+          final FhirId? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -30185,7 +30185,7 @@ abstract class _VerificationResult extends VerificationResult {
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is

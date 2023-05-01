@@ -4384,7 +4384,7 @@ class PlanDefinitionAction with _$PlanDefinitionAction {
 
     /// [goalId] Identifies goals that this action supports. The reference must
     ///  be to a goal element defined within this plan definition.
-    List<Id>? goalId,
+    List<FhirId>? goalId,
 
     /// [goalIdElement] Extensions for goalId
     @JsonKey(name: '_goalId') List<Element?>? goalIdElement,
@@ -4741,7 +4741,7 @@ class PlanDefinitionRelatedAction with _$PlanDefinitionRelatedAction {
     List<FhirExtension>? modifierExtension,
 
     /// [actionId] The element id of the related action.
-    Id? actionId,
+    FhirId? actionId,
 
     /// [actionIdElement] Extensions for actionId
     @JsonKey(name: '_actionId') Element? actionIdElement,

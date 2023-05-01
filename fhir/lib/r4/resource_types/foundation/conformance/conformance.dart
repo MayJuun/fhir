@@ -5672,7 +5672,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
     /// based tooling manages IG dependencies. This value must be globally unique,
     ///  and should be assigned with care.
     @HiveField(36)
-        Id? packageId,
+        FhirId? packageId,
 
     /// [packageIdElement] Extensions for packageId
     @JsonKey(name: '_packageId')
@@ -5834,7 +5834,7 @@ class ImplementationGuideDependsOn with _$ImplementationGuideDependsOn {
 
     /// [packageId] The NPM package name for the Implementation Guide that this
     ///  IG depends on.
-    Id? packageId,
+    FhirId? packageId,
 
     /// [packageIdElement] Extensions for packageId
     @JsonKey(name: '_packageId') Element? packageIdElement,
@@ -6378,7 +6378,7 @@ class ImplementationGuideResource with _$ImplementationGuideResource {
 
     /// [groupingId] Reference to the id of the grouping this resource appears
     ///  in.
-    Id? groupingId,
+    FhirId? groupingId,
 
     /// [groupingIdElement] Extensions for groupingId
     @JsonKey(name: '_groupingId') Element? groupingIdElement,
@@ -10385,7 +10385,7 @@ class StructureDefinitionMapping with _$StructureDefinitionMapping {
 
     /// [identity] An Internal id that is used to identify this mapping set when
     ///  specific mappings are made.
-    Id? identity,
+    FhirId? identity,
 
     /// [identityElement] Extensions for identity
     @JsonKey(name: '_identity') Element? identityElement,
@@ -11403,13 +11403,13 @@ class StructureMapGroup with _$StructureMapGroup {
     List<FhirExtension>? modifierExtension,
 
     /// [name] A unique name for the group for the convenience of human readers.
-    Id? name,
+    FhirId? name,
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
 
     /// [extends] Another group that this group adds rules to.
-    @JsonKey(name: 'extends') Id? extends_,
+    @JsonKey(name: 'extends') FhirId? extends_,
 
     /// [extendsElement] Extensions for extends
     @JsonKey(name: '_extends') Element? extendsElement,
@@ -11544,7 +11544,7 @@ class StructureMapInput with _$StructureMapInput {
     List<FhirExtension>? modifierExtension,
 
     /// [name] Name for this instance of data.
-    Id? name,
+    FhirId? name,
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
@@ -11676,7 +11676,7 @@ class StructureMapRule with _$StructureMapRule {
     List<FhirExtension>? modifierExtension,
 
     /// [name] Name of the rule for internal references.
-    Id? name,
+    FhirId? name,
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
@@ -12028,7 +12028,7 @@ class StructureMapSource with _$StructureMapSource {
     List<FhirExtension>? modifierExtension,
 
     /// [context] Type or variable this rule applies to.
-    Id? context,
+    FhirId? context,
 
     /// [contextElement] Extensions for context
     @JsonKey(name: '_context')
@@ -12117,7 +12117,7 @@ class StructureMapSource with _$StructureMapSource {
 
     /// [defaultValueId] A value to use if there is no existing value in the
     ///  source object.
-    Id? defaultValueId,
+    FhirId? defaultValueId,
 
     /// [defaultValueIdElement] Extensions for defaultValueId
     @JsonKey(name: '_defaultValueId')
@@ -12350,7 +12350,7 @@ class StructureMapSource with _$StructureMapSource {
         Element? listModeElement,
 
     /// [variable] Named context for field, if a field is specified.
-    Id? variable,
+    FhirId? variable,
 
     /// [variableElement] Extensions for variable
     @JsonKey(name: '_variable')
@@ -12503,7 +12503,7 @@ class StructureMapTarget with _$StructureMapTarget {
     List<FhirExtension>? modifierExtension,
 
     /// [context] Type or variable this rule applies to.
-    Id? context,
+    FhirId? context,
 
     /// [contextElement] Extensions for context
     @JsonKey(name: '_context') Element? contextElement,
@@ -12521,7 +12521,7 @@ class StructureMapTarget with _$StructureMapTarget {
     @JsonKey(name: '_element') Element? elementElement,
 
     /// [variable] Named context for field, if desired, and a field is specified.
-    Id? variable,
+    FhirId? variable,
 
     /// [variableElement] Extensions for variable
     @JsonKey(name: '_variable') Element? variableElement,
@@ -12533,7 +12533,7 @@ class StructureMapTarget with _$StructureMapTarget {
     @JsonKey(name: '_listMode') List<Element?>? listModeElement,
 
     /// [listRuleId] Internal rule reference for shared list items.
-    Id? listRuleId,
+    FhirId? listRuleId,
 
     /// [listRuleIdElement] Extensions for listRuleId
     @JsonKey(name: '_listRuleId') Element? listRuleIdElement,
@@ -12660,7 +12660,7 @@ class StructureMapParameter with _$StructureMapParameter {
     List<FhirExtension>? modifierExtension,
 
     /// [valueId] Parameter value - variable or literal.
-    Id? valueId,
+    FhirId? valueId,
 
     /// [valueIdElement] Extensions for valueId
     @JsonKey(name: '_valueId') Element? valueIdElement,
@@ -12790,7 +12790,7 @@ class StructureMapDependent with _$StructureMapDependent {
     List<FhirExtension>? modifierExtension,
 
     /// [name] Name of a rule or group to apply.
-    Id? name,
+    FhirId? name,
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name') Element? nameElement,

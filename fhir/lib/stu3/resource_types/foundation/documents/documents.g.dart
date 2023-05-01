@@ -12,7 +12,7 @@ _$_Composition _$$_CompositionFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Composition) ??
           Stu3ResourceType.Composition,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -67,7 +67,7 @@ _$_Composition _$$_CompositionFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
       confidentiality: json['confidentiality'] == null
           ? null
-          : Id.fromJson(json['confidentiality']),
+          : FhirId.fromJson(json['confidentiality']),
       confidentialityElement: json['_confidentiality'] == null
           ? null
           : Element.fromJson(json['_confidentiality'] as Map<String, dynamic>),
@@ -431,7 +431,7 @@ _$_DocumentManifest _$$_DocumentManifestFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.DocumentManifest) ??
           Stu3ResourceType.DocumentManifest,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -614,7 +614,7 @@ _$_DocumentReference _$$_DocumentReferenceFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.DocumentReference) ??
           Stu3ResourceType.DocumentReference,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),

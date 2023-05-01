@@ -19,7 +19,7 @@ class TestReport with Resource, _$TestReport {
     @Default(Stu3ResourceType.TestReport)
     @JsonKey(unknownEnumValue: Stu3ResourceType.TestReport)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -447,7 +447,7 @@ class TestScript with Resource, _$TestScript {
     @Default(Stu3ResourceType.TestScript)
     @JsonKey(unknownEnumValue: Stu3ResourceType.TestScript)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -794,7 +794,7 @@ class TestScriptVariable with _$TestScriptVariable {
     @JsonKey(name: '_hint') Element? hintElement,
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
-    Id? sourceId,
+    FhirId? sourceId,
     @JsonKey(name: '_sourceId') Element? sourceIdElement,
   }) = _TestScriptVariable;
 
@@ -952,7 +952,7 @@ class TestScriptRuleset with _$TestScriptRuleset {
 class TestScriptRule1 with _$TestScriptRule1 {
   TestScriptRule1._();
   factory TestScriptRule1({
-    Id? ruleId,
+    FhirId? ruleId,
     @JsonKey(name: '_ruleId') Element? ruleIdElement,
     List<TestScriptParam1>? param,
   }) = _TestScriptRule1;
@@ -1130,13 +1130,13 @@ class TestScriptOperation with _$TestScriptOperation {
     String? params,
     @JsonKey(name: '_params') Element? paramsElement,
     List<TestScriptRequestHeader>? requestHeader,
-    Id? requestId,
+    FhirId? requestId,
     @JsonKey(name: '_requestId') Element? requestIdElement,
-    Id? responseId,
+    FhirId? responseId,
     @JsonKey(name: '_responseId') Element? responseIdElement,
-    Id? sourceId,
+    FhirId? sourceId,
     @JsonKey(name: '_sourceId') Element? sourceIdElement,
-    Id? targetId,
+    FhirId? targetId,
     @JsonKey(name: '_targetId') Element? targetIdElement,
     String? url,
     @JsonKey(name: '_url') Element? urlElement,
@@ -1257,7 +1257,7 @@ class TestScriptAssert with _$TestScriptAssert {
     @JsonKey(name: '_responseCode') Element? responseCodeElement,
     TestScriptRule2? rule,
     TestScriptRuleset1? ruleset,
-    Id? sourceId,
+    FhirId? sourceId,
     @JsonKey(name: '_sourceId') Element? sourceIdElement,
     Date? validateProfileId,
     @JsonKey(name: '_validateProfileId') Element? validateProfileIdElement,
@@ -1302,7 +1302,7 @@ class TestScriptAssert with _$TestScriptAssert {
 class TestScriptRule2 with _$TestScriptRule2 {
   TestScriptRule2._();
   factory TestScriptRule2({
-    Id? ruleId,
+    FhirId? ruleId,
     @JsonKey(name: '_ruleId') Element? ruleIdElement,
     List<TestScriptParam2>? param,
   }) = _TestScriptRule2;
@@ -1383,7 +1383,7 @@ class TestScriptParam2 with _$TestScriptParam2 {
 class TestScriptRuleset1 with _$TestScriptRuleset1 {
   TestScriptRuleset1._();
   factory TestScriptRuleset1({
-    Id? rulesetId,
+    FhirId? rulesetId,
     @JsonKey(name: '_rulesetId') Element? rulesetIdElement,
     List<TestScriptRule3>? rule,
   }) = _TestScriptRuleset1;
@@ -1423,7 +1423,7 @@ class TestScriptRuleset1 with _$TestScriptRuleset1 {
 class TestScriptRule3 with _$TestScriptRule3 {
   TestScriptRule3._();
   factory TestScriptRule3({
-    Id? ruleId,
+    FhirId? ruleId,
     @JsonKey(name: '_ruleId') Element? ruleIdElement,
     List<TestScriptParam3>? param,
   }) = _TestScriptRule3;

@@ -26,7 +26,7 @@ mixin _$ActivityDefinition {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -353,7 +353,7 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ActivityDefinition)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -627,7 +627,7 @@ class _$ActivityDefinitionCopyWithImpl<$Res, $Val extends ActivityDefinition>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -1496,7 +1496,7 @@ abstract class _$$_ActivityDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ActivityDefinition)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1809,7 +1809,7 @@ class __$$_ActivityDefinitionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -2327,7 +2327,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -3166,7 +3166,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   factory _ActivityDefinition(
           {@JsonKey(unknownEnumValue: R5ResourceType.ActivityDefinition)
               final R5ResourceType resourceType,
-          final Id? id,
+          final FhirId? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -3298,7 +3298,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -4668,7 +4668,7 @@ mixin _$ActorDefinition {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -4855,7 +4855,7 @@ abstract class $ActorDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ActorDefinition)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -5018,7 +5018,7 @@ class _$ActorDefinitionCopyWithImpl<$Res, $Val extends ActorDefinition>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -5468,7 +5468,7 @@ abstract class _$$_ActorDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ActorDefinition)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -5649,7 +5649,7 @@ class __$$_ActorDefinitionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -5943,7 +5943,7 @@ class _$_ActorDefinition extends _ActorDefinition {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -6426,7 +6426,7 @@ abstract class _ActorDefinition extends ActorDefinition {
   factory _ActorDefinition(
       {@JsonKey(unknownEnumValue: R5ResourceType.ActorDefinition)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -6508,7 +6508,7 @@ abstract class _ActorDefinition extends ActorDefinition {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -6743,7 +6743,7 @@ mixin _$ConditionDefinition {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -7008,7 +7008,7 @@ abstract class $ConditionDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ConditionDefinition)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -7230,7 +7230,7 @@ class _$ConditionDefinitionCopyWithImpl<$Res, $Val extends ConditionDefinition>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -7876,7 +7876,7 @@ abstract class _$$_ConditionDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ConditionDefinition)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -8125,7 +8125,7 @@ class __$$_ConditionDefinitionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -8549,7 +8549,7 @@ class _$_ConditionDefinition extends _ConditionDefinition {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -9274,7 +9274,7 @@ abstract class _ConditionDefinition extends ConditionDefinition {
   factory _ConditionDefinition(
       {@JsonKey(unknownEnumValue: R5ResourceType.ConditionDefinition)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -9383,7 +9383,7 @@ abstract class _ConditionDefinition extends ConditionDefinition {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -11819,7 +11819,7 @@ mixin _$DeviceDefinition {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -11985,7 +11985,7 @@ abstract class $DeviceDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.DeviceDefinition)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -12112,7 +12112,7 @@ class _$DeviceDefinitionCopyWithImpl<$Res, $Val extends DeviceDefinition>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -12434,7 +12434,7 @@ abstract class _$$_DeviceDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.DeviceDefinition)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -12571,7 +12571,7 @@ class __$$_DeviceDefinitionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -12827,7 +12827,7 @@ class _$_DeviceDefinition extends _DeviceDefinition {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -13365,7 +13365,7 @@ abstract class _DeviceDefinition extends DeviceDefinition {
   factory _DeviceDefinition(
       {@JsonKey(unknownEnumValue: R5ResourceType.DeviceDefinition)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -13428,7 +13428,7 @@ abstract class _DeviceDefinition extends DeviceDefinition {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -21185,7 +21185,7 @@ mixin _$EventDefinition {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -21405,7 +21405,7 @@ abstract class $EventDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.EventDefinition)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -21594,7 +21594,7 @@ class _$EventDefinitionCopyWithImpl<$Res, $Val extends EventDefinition>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -22145,7 +22145,7 @@ abstract class _$$_EventDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.EventDefinition)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -22357,7 +22357,7 @@ class __$$_EventDefinitionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -22706,7 +22706,7 @@ class _$_EventDefinition extends _EventDefinition {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -23283,7 +23283,7 @@ abstract class _EventDefinition extends EventDefinition {
   factory _EventDefinition(
       {@JsonKey(unknownEnumValue: R5ResourceType.EventDefinition)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -23376,7 +23376,7 @@ abstract class _EventDefinition extends EventDefinition {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -23652,7 +23652,7 @@ mixin _$ExampleScenario {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -23823,7 +23823,7 @@ abstract class $ExampleScenarioCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ExampleScenario)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -23971,7 +23971,7 @@ class _$ExampleScenarioCopyWithImpl<$Res, $Val extends ExampleScenario>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -24377,7 +24377,7 @@ abstract class _$$_ExampleScenarioCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ExampleScenario)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -24541,7 +24541,7 @@ class __$$_ExampleScenarioCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -24807,7 +24807,7 @@ class _$_ExampleScenario extends _ExampleScenario {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -25252,7 +25252,7 @@ abstract class _ExampleScenario extends ExampleScenario {
   factory _ExampleScenario(
       {@JsonKey(unknownEnumValue: R5ResourceType.ExampleScenario)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -25326,7 +25326,7 @@ abstract class _ExampleScenario extends ExampleScenario {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -30706,7 +30706,7 @@ mixin _$ObservationDefinition {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -30976,7 +30976,7 @@ abstract class $ObservationDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ObservationDefinition)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -31201,7 +31201,7 @@ class _$ObservationDefinitionCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -31855,7 +31855,7 @@ abstract class _$$_ObservationDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ObservationDefinition)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -32106,7 +32106,7 @@ class __$$_ObservationDefinitionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -32537,7 +32537,7 @@ class _$_ObservationDefinition extends _ObservationDefinition {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -33297,7 +33297,7 @@ abstract class _ObservationDefinition extends ObservationDefinition {
   factory _ObservationDefinition(
           {@JsonKey(unknownEnumValue: R5ResourceType.ObservationDefinition)
               final R5ResourceType resourceType,
-          final Id? id,
+          final FhirId? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -33407,7 +33407,7 @@ abstract class _ObservationDefinition extends ObservationDefinition {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -35674,7 +35674,7 @@ mixin _$PlanDefinition {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -35925,7 +35925,7 @@ abstract class $PlanDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.PlanDefinition)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -36139,7 +36139,7 @@ class _$PlanDefinitionCopyWithImpl<$Res, $Val extends PlanDefinition>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -36775,7 +36775,7 @@ abstract class _$$_PlanDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.PlanDefinition)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -37016,7 +37016,7 @@ class __$$_PlanDefinitionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -37416,7 +37416,7 @@ class _$_PlanDefinition extends _PlanDefinition {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -38079,7 +38079,7 @@ abstract class _PlanDefinition extends PlanDefinition {
   factory _PlanDefinition(
       {@JsonKey(unknownEnumValue: R5ResourceType.PlanDefinition)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -38184,7 +38184,7 @@ abstract class _PlanDefinition extends PlanDefinition {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -40902,7 +40902,7 @@ mixin _$PlanDefinitionAction {
       throw _privateConstructorUsedError;
 
   /// [goalId] Identifies goals that this action supports. The reference must be to a goal element defined within this plan definition. In pharmaceutical quality, a goal represents acceptance criteria (Goal) for a given action (Test), so the goalId would be the unique id of a defined goal element establishing the acceptance criteria for the action.
-  List<Id>? get goalId => throw _privateConstructorUsedError;
+  List<FhirId>? get goalId => throw _privateConstructorUsedError;
 
   /// [goalIdElement] ("_goalId") Extensions for goalId
   @JsonKey(name: '_goalId')
@@ -41058,7 +41058,7 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
       CodeableConcept? code,
       List<CodeableConcept>? reason,
       List<RelatedArtifact>? documentation,
-      List<Id>? goalId,
+      List<FhirId>? goalId,
       @JsonKey(name: '_goalId')
           List<Element>? goalIdElement,
       CodeableConcept? subjectCodeableConcept,
@@ -41272,7 +41272,7 @@ class _$PlanDefinitionActionCopyWithImpl<$Res,
       goalId: freezed == goalId
           ? _value.goalId
           : goalId // ignore: cast_nullable_to_non_nullable
-              as List<Id>?,
+              as List<FhirId>?,
       goalIdElement: freezed == goalIdElement
           ? _value.goalIdElement
           : goalIdElement // ignore: cast_nullable_to_non_nullable
@@ -41724,7 +41724,7 @@ abstract class _$$_PlanDefinitionActionCopyWith<$Res>
       CodeableConcept? code,
       List<CodeableConcept>? reason,
       List<RelatedArtifact>? documentation,
-      List<Id>? goalId,
+      List<FhirId>? goalId,
       @JsonKey(name: '_goalId')
           List<Element>? goalIdElement,
       CodeableConcept? subjectCodeableConcept,
@@ -41958,7 +41958,7 @@ class __$$_PlanDefinitionActionCopyWithImpl<$Res>
       goalId: freezed == goalId
           ? _value._goalId
           : goalId // ignore: cast_nullable_to_non_nullable
-              as List<Id>?,
+              as List<FhirId>?,
       goalIdElement: freezed == goalIdElement
           ? _value._goalIdElement
           : goalIdElement // ignore: cast_nullable_to_non_nullable
@@ -42121,7 +42121,7 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
       this.code,
       final List<CodeableConcept>? reason,
       final List<RelatedArtifact>? documentation,
-      final List<Id>? goalId,
+      final List<FhirId>? goalId,
       @JsonKey(name: '_goalId') final List<Element>? goalIdElement,
       this.subjectCodeableConcept,
       this.subjectReference,
@@ -42325,11 +42325,11 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
   }
 
   /// [goalId] Identifies goals that this action supports. The reference must be to a goal element defined within this plan definition. In pharmaceutical quality, a goal represents acceptance criteria (Goal) for a given action (Test), so the goalId would be the unique id of a defined goal element establishing the acceptance criteria for the action.
-  final List<Id>? _goalId;
+  final List<FhirId>? _goalId;
 
   /// [goalId] Identifies goals that this action supports. The reference must be to a goal element defined within this plan definition. In pharmaceutical quality, a goal represents acceptance criteria (Goal) for a given action (Test), so the goalId would be the unique id of a defined goal element establishing the acceptance criteria for the action.
   @override
-  List<Id>? get goalId {
+  List<FhirId>? get goalId {
     final value = _goalId;
     if (value == null) return null;
     if (_goalId is EqualUnmodifiableListView) return _goalId;
@@ -42766,7 +42766,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
       final CodeableConcept? code,
       final List<CodeableConcept>? reason,
       final List<RelatedArtifact>? documentation,
-      final List<Id>? goalId,
+      final List<FhirId>? goalId,
       @JsonKey(name: '_goalId')
           final List<Element>? goalIdElement,
       final CodeableConcept? subjectCodeableConcept,
@@ -42914,7 +42914,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
   @override
 
   /// [goalId] Identifies goals that this action supports. The reference must be to a goal element defined within this plan definition. In pharmaceutical quality, a goal represents acceptance criteria (Goal) for a given action (Test), so the goalId would be the unique id of a defined goal element establishing the acceptance criteria for the action.
-  List<Id>? get goalId;
+  List<FhirId>? get goalId;
   @override
 
   /// [goalIdElement] ("_goalId") Extensions for goalId
@@ -43530,7 +43530,7 @@ mixin _$PlanDefinitionInput {
   DataRequirement? get requirement => throw _privateConstructorUsedError;
 
   /// [relatedData] Points to an existing input or output element that provides data to this input.
-  Id? get relatedData => throw _privateConstructorUsedError;
+  FhirId? get relatedData => throw _privateConstructorUsedError;
 
   /// [relatedDataElement] ("_relatedData") Extensions for relatedData
   @JsonKey(name: '_relatedData')
@@ -43555,7 +43555,7 @@ abstract class $PlanDefinitionInputCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
       DataRequirement? requirement,
-      Id? relatedData,
+      FhirId? relatedData,
       @JsonKey(name: '_relatedData') Element? relatedDataElement});
 
   $ElementCopyWith<$Res>? get titleElement;
@@ -43613,7 +43613,7 @@ class _$PlanDefinitionInputCopyWithImpl<$Res, $Val extends PlanDefinitionInput>
       relatedData: freezed == relatedData
           ? _value.relatedData
           : relatedData // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       relatedDataElement: freezed == relatedDataElement
           ? _value.relatedDataElement
           : relatedDataElement // ignore: cast_nullable_to_non_nullable
@@ -43673,7 +43673,7 @@ abstract class _$$_PlanDefinitionInputCopyWith<$Res>
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
       DataRequirement? requirement,
-      Id? relatedData,
+      FhirId? relatedData,
       @JsonKey(name: '_relatedData') Element? relatedDataElement});
 
   @override
@@ -43732,7 +43732,7 @@ class __$$_PlanDefinitionInputCopyWithImpl<$Res>
       relatedData: freezed == relatedData
           ? _value.relatedData
           : relatedData // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       relatedDataElement: freezed == relatedDataElement
           ? _value.relatedDataElement
           : relatedDataElement // ignore: cast_nullable_to_non_nullable
@@ -43840,7 +43840,7 @@ class _$_PlanDefinitionInput extends _PlanDefinitionInput {
 
   /// [relatedData] Points to an existing input or output element that provides data to this input.
   @override
-  final Id? relatedData;
+  final FhirId? relatedData;
 
   /// [relatedDataElement] ("_relatedData") Extensions for relatedData
   @override
@@ -43909,7 +43909,7 @@ abstract class _PlanDefinitionInput extends PlanDefinitionInput {
           final String? title,
           @JsonKey(name: '_title') final Element? titleElement,
           final DataRequirement? requirement,
-          final Id? relatedData,
+          final FhirId? relatedData,
           @JsonKey(name: '_relatedData') final Element? relatedDataElement}) =
       _$_PlanDefinitionInput;
   _PlanDefinitionInput._() : super._();
@@ -43963,7 +43963,7 @@ abstract class _PlanDefinitionInput extends PlanDefinitionInput {
   @override
 
   /// [relatedData] Points to an existing input or output element that provides data to this input.
-  Id? get relatedData;
+  FhirId? get relatedData;
   @override
 
   /// [relatedDataElement] ("_relatedData") Extensions for relatedData
@@ -44502,7 +44502,7 @@ mixin _$PlanDefinitionRelatedAction {
       throw _privateConstructorUsedError;
 
   /// [targetId] The element id of the target related action.
-  Id? get targetId => throw _privateConstructorUsedError;
+  FhirId? get targetId => throw _privateConstructorUsedError;
 
   /// [targetIdElement] ("_targetId") Extensions for targetId
   @JsonKey(name: '_targetId')
@@ -44539,7 +44539,7 @@ abstract class $PlanDefinitionRelatedActionCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? targetId,
+      FhirId? targetId,
       @JsonKey(name: '_targetId') Element? targetIdElement,
       Code? relationship,
       @JsonKey(name: '_relationship') Element? relationshipElement,
@@ -44592,7 +44592,7 @@ class _$PlanDefinitionRelatedActionCopyWithImpl<$Res,
       targetId: freezed == targetId
           ? _value.targetId
           : targetId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       targetIdElement: freezed == targetIdElement
           ? _value.targetIdElement
           : targetIdElement // ignore: cast_nullable_to_non_nullable
@@ -44678,7 +44678,7 @@ abstract class _$$_PlanDefinitionRelatedActionCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? targetId,
+      FhirId? targetId,
       @JsonKey(name: '_targetId') Element? targetIdElement,
       Code? relationship,
       @JsonKey(name: '_relationship') Element? relationshipElement,
@@ -44734,7 +44734,7 @@ class __$$_PlanDefinitionRelatedActionCopyWithImpl<$Res>
       targetId: freezed == targetId
           ? _value.targetId
           : targetId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       targetIdElement: freezed == targetIdElement
           ? _value.targetIdElement
           : targetIdElement // ignore: cast_nullable_to_non_nullable
@@ -44846,7 +44846,7 @@ class _$_PlanDefinitionRelatedAction extends _PlanDefinitionRelatedAction {
 
   /// [targetId] The element id of the target related action.
   @override
-  final Id? targetId;
+  final FhirId? targetId;
 
   /// [targetIdElement] ("_targetId") Extensions for targetId
   @override
@@ -44934,7 +44934,7 @@ abstract class _PlanDefinitionRelatedAction
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Id? targetId,
+      final FhirId? targetId,
       @JsonKey(name: '_targetId') final Element? targetIdElement,
       final Code? relationship,
       @JsonKey(name: '_relationship') final Element? relationshipElement,
@@ -44978,7 +44978,7 @@ abstract class _PlanDefinitionRelatedAction
   @override
 
   /// [targetId] The element id of the target related action.
-  Id? get targetId;
+  FhirId? get targetId;
   @override
 
   /// [targetIdElement] ("_targetId") Extensions for targetId
@@ -46050,7 +46050,7 @@ mixin _$Questionnaire {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -46262,7 +46262,7 @@ abstract class $QuestionnaireCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Questionnaire)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -46442,7 +46442,7 @@ class _$QuestionnaireCopyWithImpl<$Res, $Val extends Questionnaire>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -46936,7 +46936,7 @@ abstract class _$$_QuestionnaireCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Questionnaire)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -47135,7 +47135,7 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -47477,7 +47477,7 @@ class _$_Questionnaire extends _Questionnaire {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -48080,7 +48080,7 @@ abstract class _Questionnaire extends Questionnaire {
   factory _Questionnaire(
       {@JsonKey(unknownEnumValue: R5ResourceType.Questionnaire)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -48170,7 +48170,7 @@ abstract class _Questionnaire extends Questionnaire {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -52789,7 +52789,7 @@ mixin _$Requirements {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -52959,7 +52959,7 @@ abstract class $RequirementsCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Requirements)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -53107,7 +53107,7 @@ class _$RequirementsCopyWithImpl<$Res, $Val extends Requirements>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -53513,7 +53513,7 @@ abstract class _$$_RequirementsCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Requirements)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -53677,7 +53677,7 @@ class __$$_RequirementsCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -53943,7 +53943,7 @@ class _$_Requirements extends _Requirements {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -54390,7 +54390,7 @@ abstract class _Requirements extends Requirements {
   factory _Requirements(
       {@JsonKey(unknownEnumValue: R5ResourceType.Requirements)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -54464,7 +54464,7 @@ abstract class _Requirements extends Requirements {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -54700,7 +54700,7 @@ mixin _$RequirementsStatement {
       throw _privateConstructorUsedError;
 
   /// [key] Key that identifies this statement (unique within this resource).
-  Id? get key => throw _privateConstructorUsedError;
+  FhirId? get key => throw _privateConstructorUsedError;
 
   /// [keyElement] ("_key") Extensions for key
   @JsonKey(name: '_key')
@@ -54781,7 +54781,7 @@ abstract class $RequirementsStatementCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? key,
+      FhirId? key,
       @JsonKey(name: '_key') Element? keyElement,
       String? label,
       @JsonKey(name: '_label') Element? labelElement,
@@ -54862,7 +54862,7 @@ class _$RequirementsStatementCopyWithImpl<$Res,
       key: freezed == key
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       keyElement: freezed == keyElement
           ? _value.keyElement
           : keyElement // ignore: cast_nullable_to_non_nullable
@@ -55023,7 +55023,7 @@ abstract class _$$_RequirementsStatementCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? key,
+      FhirId? key,
       @JsonKey(name: '_key') Element? keyElement,
       String? label,
       @JsonKey(name: '_label') Element? labelElement,
@@ -55107,7 +55107,7 @@ class __$$_RequirementsStatementCopyWithImpl<$Res>
       key: freezed == key
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       keyElement: freezed == keyElement
           ? _value.keyElement
           : keyElement // ignore: cast_nullable_to_non_nullable
@@ -55291,7 +55291,7 @@ class _$_RequirementsStatement extends _RequirementsStatement {
 
   /// [key] Key that identifies this statement (unique within this resource).
   @override
-  final Id? key;
+  final FhirId? key;
 
   /// [keyElement] ("_key") Extensions for key
   @override
@@ -55539,7 +55539,7 @@ abstract class _RequirementsStatement extends RequirementsStatement {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Id? key,
+      final FhirId? key,
       @JsonKey(name: '_key') final Element? keyElement,
       final String? label,
       @JsonKey(name: '_label') final Element? labelElement,
@@ -55596,7 +55596,7 @@ abstract class _RequirementsStatement extends RequirementsStatement {
   @override
 
   /// [key] Key that identifies this statement (unique within this resource).
-  Id? get key;
+  FhirId? get key;
   @override
 
   /// [keyElement] ("_key") Extensions for key
@@ -55696,7 +55696,7 @@ mixin _$SpecimenDefinition {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -55932,7 +55932,7 @@ abstract class $SpecimenDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.SpecimenDefinition)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -56130,7 +56130,7 @@ class _$SpecimenDefinitionCopyWithImpl<$Res, $Val extends SpecimenDefinition>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -56709,7 +56709,7 @@ abstract class _$$_SpecimenDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.SpecimenDefinition)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -56931,7 +56931,7 @@ class __$$_SpecimenDefinitionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -57304,7 +57304,7 @@ class _$_SpecimenDefinition extends _SpecimenDefinition {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -57947,7 +57947,7 @@ abstract class _SpecimenDefinition extends SpecimenDefinition {
   factory _SpecimenDefinition(
           {@JsonKey(unknownEnumValue: R5ResourceType.SpecimenDefinition)
               final R5ResourceType resourceType,
-          final Id? id,
+          final FhirId? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -58045,7 +58045,7 @@ abstract class _SpecimenDefinition extends SpecimenDefinition {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is

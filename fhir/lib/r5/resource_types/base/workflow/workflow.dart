@@ -219,7 +219,7 @@ class Appointment with Resource, _$Appointment {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -1389,7 +1389,7 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -1676,7 +1676,7 @@ class Schedule with Resource, _$Schedule {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -1935,7 +1935,7 @@ class Slot with Resource, _$Slot {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -2270,7 +2270,7 @@ class Task with Resource, _$Task {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -2906,7 +2906,7 @@ class TaskInput with _$TaskInput {
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
 
     /// [valueId] The value of the input parameter as a basic type.
-    Id? valueId,
+    FhirId? valueId,
 
     /// [valueIdElement] ("_valueId") Extensions for valueId
     @JsonKey(name: '_valueId') Element? valueIdElement,
@@ -2937,7 +2937,7 @@ class TaskInput with _$TaskInput {
     @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
 
     /// [valueOid] The value of the input parameter as a basic type.
-    Id? valueOid,
+    FhirId? valueOid,
 
     /// [valueOidElement] ("_valueOid") Extensions for valueOid
     @JsonKey(name: '_valueOid') Element? valueOidElement,
@@ -2981,7 +2981,7 @@ class TaskInput with _$TaskInput {
     @JsonKey(name: '_valueUrl') Element? valueUrlElement,
 
     /// [valueUuid] The value of the input parameter as a basic type.
-    Id? valueUuid,
+    FhirId? valueUuid,
 
     /// [valueUuidElement] ("_valueUuid") Extensions for valueUuid
     @JsonKey(name: '_valueUuid') Element? valueUuidElement,
@@ -3390,7 +3390,7 @@ class TaskOutput with _$TaskOutput {
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
 
     /// [valueId] The value of the Output parameter as a basic type.
-    Id? valueId,
+    FhirId? valueId,
 
     /// [valueIdElement] ("_valueId") Extensions for valueId
     @JsonKey(name: '_valueId') Element? valueIdElement,
@@ -3421,7 +3421,7 @@ class TaskOutput with _$TaskOutput {
     @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
 
     /// [valueOid] The value of the Output parameter as a basic type.
-    Id? valueOid,
+    FhirId? valueOid,
 
     /// [valueOidElement] ("_valueOid") Extensions for valueOid
     @JsonKey(name: '_valueOid') Element? valueOidElement,
@@ -3465,7 +3465,7 @@ class TaskOutput with _$TaskOutput {
     @JsonKey(name: '_valueUrl') Element? valueUrlElement,
 
     /// [valueUuid] The value of the Output parameter as a basic type.
-    Id? valueUuid,
+    FhirId? valueUuid,
 
     /// [valueUuidElement] ("_valueUuid") Extensions for valueUuid
     @JsonKey(name: '_valueUuid') Element? valueUuidElement,
@@ -3797,7 +3797,7 @@ class Transport with Resource, _$Transport {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -4437,7 +4437,7 @@ class TransportInput with _$TransportInput {
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
 
     /// [valueId] The value of the input parameter as a basic type.
-    Id? valueId,
+    FhirId? valueId,
 
     /// [valueIdElement] ("_valueId") Extensions for valueId
     @JsonKey(name: '_valueId') Element? valueIdElement,
@@ -4468,7 +4468,7 @@ class TransportInput with _$TransportInput {
     @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
 
     /// [valueOid] The value of the input parameter as a basic type.
-    Id? valueOid,
+    FhirId? valueOid,
 
     /// [valueOidElement] ("_valueOid") Extensions for valueOid
     @JsonKey(name: '_valueOid') Element? valueOidElement,
@@ -4512,7 +4512,7 @@ class TransportInput with _$TransportInput {
     @JsonKey(name: '_valueUrl') Element? valueUrlElement,
 
     /// [valueUuid] The value of the input parameter as a basic type.
-    Id? valueUuid,
+    FhirId? valueUuid,
 
     /// [valueUuidElement] ("_valueUuid") Extensions for valueUuid
     @JsonKey(name: '_valueUuid') Element? valueUuidElement,
@@ -4921,7 +4921,7 @@ class TransportOutput with _$TransportOutput {
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
 
     /// [valueId] The value of the Output parameter as a basic type.
-    Id? valueId,
+    FhirId? valueId,
 
     /// [valueIdElement] ("_valueId") Extensions for valueId
     @JsonKey(name: '_valueId') Element? valueIdElement,
@@ -4952,7 +4952,7 @@ class TransportOutput with _$TransportOutput {
     @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
 
     /// [valueOid] The value of the Output parameter as a basic type.
-    Id? valueOid,
+    FhirId? valueOid,
 
     /// [valueOidElement] ("_valueOid") Extensions for valueOid
     @JsonKey(name: '_valueOid') Element? valueOidElement,
@@ -4996,7 +4996,7 @@ class TransportOutput with _$TransportOutput {
     @JsonKey(name: '_valueUrl') Element? valueUrlElement,
 
     /// [valueUuid] The value of the Output parameter as a basic type.
-    Id? valueUuid,
+    FhirId? valueUuid,
 
     /// [valueUuidElement] ("_valueUuid") Extensions for valueUuid
     @JsonKey(name: '_valueUuid') Element? valueUuidElement,
@@ -5262,7 +5262,7 @@ class VerificationResult with Resource, _$VerificationResult {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not

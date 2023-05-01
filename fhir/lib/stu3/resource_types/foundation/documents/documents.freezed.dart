@@ -22,7 +22,7 @@ Composition _$CompositionFromJson(Map<String, dynamic> json) {
 mixin _$Composition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -52,7 +52,7 @@ mixin _$Composition {
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
-  Id? get confidentiality => throw _privateConstructorUsedError;
+  FhirId? get confidentiality => throw _privateConstructorUsedError;
   @JsonKey(name: '_confidentiality')
   Element? get confidentialityElement => throw _privateConstructorUsedError;
   List<CompositionAttester>? get attester => throw _privateConstructorUsedError;
@@ -77,7 +77,7 @@ abstract class $CompositionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -106,7 +106,7 @@ abstract class $CompositionCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Id? confidentiality,
+      FhirId? confidentiality,
       @JsonKey(name: '_confidentiality')
           Element? confidentialityElement,
       List<CompositionAttester>? attester,
@@ -183,7 +183,7 @@ class _$CompositionCopyWithImpl<$Res, $Val extends Composition>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -271,7 +271,7 @@ class _$CompositionCopyWithImpl<$Res, $Val extends Composition>
       confidentiality: freezed == confidentiality
           ? _value.confidentiality
           : confidentiality // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       confidentialityElement: freezed == confidentialityElement
           ? _value.confidentialityElement
           : confidentialityElement // ignore: cast_nullable_to_non_nullable
@@ -471,7 +471,7 @@ abstract class _$$_CompositionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -500,7 +500,7 @@ abstract class _$$_CompositionCopyWith<$Res>
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Id? confidentiality,
+      FhirId? confidentiality,
       @JsonKey(name: '_confidentiality')
           Element? confidentialityElement,
       List<CompositionAttester>? attester,
@@ -589,7 +589,7 @@ class __$$_CompositionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -677,7 +677,7 @@ class __$$_CompositionCopyWithImpl<$Res>
       confidentiality: freezed == confidentiality
           ? _value.confidentiality
           : confidentiality // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       confidentialityElement: freezed == confidentialityElement
           ? _value.confidentialityElement
           : confidentialityElement // ignore: cast_nullable_to_non_nullable
@@ -766,7 +766,7 @@ class _$_Composition extends _Composition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -848,7 +848,7 @@ class _$_Composition extends _Composition {
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
-  final Id? confidentiality;
+  final FhirId? confidentiality;
   @override
   @JsonKey(name: '_confidentiality')
   final Element? confidentialityElement;
@@ -1007,7 +1007,7 @@ abstract class _Composition extends Composition {
   factory _Composition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1036,7 +1036,7 @@ abstract class _Composition extends Composition {
       final String? title,
       @JsonKey(name: '_title')
           final Element? titleElement,
-      final Id? confidentiality,
+      final FhirId? confidentiality,
       @JsonKey(name: '_confidentiality')
           final Element? confidentialityElement,
       final List<CompositionAttester>? attester,
@@ -1053,7 +1053,7 @@ abstract class _Composition extends Composition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -1104,7 +1104,7 @@ abstract class _Composition extends Composition {
   @JsonKey(name: '_title')
   Element? get titleElement;
   @override
-  Id? get confidentiality;
+  FhirId? get confidentiality;
   @override
   @JsonKey(name: '_confidentiality')
   Element? get confidentialityElement;
@@ -2346,7 +2346,7 @@ DocumentManifest _$DocumentManifestFromJson(Map<String, dynamic> json) {
 mixin _$DocumentManifest {
   @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -2398,7 +2398,7 @@ abstract class $DocumentManifestCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2494,7 +2494,7 @@ class _$DocumentManifestCopyWithImpl<$Res, $Val extends DocumentManifest>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -2742,7 +2742,7 @@ abstract class _$$_DocumentManifestCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2847,7 +2847,7 @@ class __$$_DocumentManifestCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -3008,7 +3008,7 @@ class _$_DocumentManifest extends _DocumentManifest {
   @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -3235,7 +3235,7 @@ abstract class _DocumentManifest extends DocumentManifest {
   factory _DocumentManifest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -3277,7 +3277,7 @@ abstract class _DocumentManifest extends DocumentManifest {
   @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -3736,7 +3736,7 @@ DocumentReference _$DocumentReferenceFromJson(Map<String, dynamic> json) {
 mixin _$DocumentReference {
   @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -3797,7 +3797,7 @@ abstract class $DocumentReferenceCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -3912,7 +3912,7 @@ class _$DocumentReferenceCopyWithImpl<$Res, $Val extends DocumentReference>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -4240,7 +4240,7 @@ abstract class _$$_DocumentReferenceCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4369,7 +4369,7 @@ class __$$_DocumentReferenceCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -4562,7 +4562,7 @@ class _$_DocumentReference extends _DocumentReference {
   @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -4822,7 +4822,7 @@ abstract class _DocumentReference extends DocumentReference {
   factory _DocumentReference(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4872,7 +4872,7 @@ abstract class _DocumentReference extends DocumentReference {
   @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override

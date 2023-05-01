@@ -5038,7 +5038,7 @@ class TestScriptVariable with _$TestScriptVariable {
 
     /// [sourceId] Fixture to evaluate the XPath/JSONPath expression or the
     ///  headerField  against within this variable.
-    Id? sourceId,
+    FhirId? sourceId,
 
     /// [sourceIdElement] Extensions for sourceId
     @JsonKey(name: '_sourceId') Element? sourceIdElement,
@@ -5496,27 +5496,27 @@ class TestScriptOperation with _$TestScriptOperation {
     List<TestScriptRequestHeader>? requestHeader,
 
     /// [requestId] The fixture id (maybe new) to map to the request.
-    Id? requestId,
+    FhirId? requestId,
 
     /// [requestIdElement] Extensions for requestId
     @JsonKey(name: '_requestId') Element? requestIdElement,
 
     /// [responseId] The fixture id (maybe new) to map to the response.
-    Id? responseId,
+    FhirId? responseId,
 
     /// [responseIdElement] Extensions for responseId
     @JsonKey(name: '_responseId') Element? responseIdElement,
 
     /// [sourceId] The id of the fixture used as the body of a PUT or POST
     ///  request.
-    Id? sourceId,
+    FhirId? sourceId,
 
     /// [sourceIdElement] Extensions for sourceId
     @JsonKey(name: '_sourceId') Element? sourceIdElement,
 
     /// [targetId] Id of fixture used for extracting the [id],  [type], and [vid]
     ///  for GET requests.
-    Id? targetId,
+    FhirId? targetId,
 
     /// [targetIdElement] Extensions for targetId
     @JsonKey(name: '_targetId') Element? targetIdElement,
@@ -5995,14 +5995,14 @@ class TestScriptAssert with _$TestScriptAssert {
 
     /// [sourceId] Fixture to evaluate the XPath/JSONPath expression or the
     ///  headerField  against.
-    Id? sourceId,
+    FhirId? sourceId,
 
     /// [sourceIdElement] Extensions for sourceId
     @JsonKey(name: '_sourceId')
         Element? sourceIdElement,
 
     /// [validateProfileId] The ID of the Profile to validate against.
-    Id? validateProfileId,
+    FhirId? validateProfileId,
 
     /// [validateProfileIdElement] Extensions for validateProfileId
     @JsonKey(name: '_validateProfileId')

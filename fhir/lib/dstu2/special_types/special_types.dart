@@ -16,10 +16,10 @@ part 'special_types.g.dart';
 class Meta with _$Meta {
   Meta._();
   factory Meta({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    Id? versionId,
+    FhirId? versionId,
     @JsonKey(name: '_versionId') Element? versionIdElement,
     Instant? lastUpdated,
     @JsonKey(name: '_lastUpdated') Element? lastUpdatedElement,
@@ -61,7 +61,7 @@ class Meta with _$Meta {
 class Reference with _$Reference {
   Reference._();
   factory Reference({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     String? reference,
@@ -105,7 +105,7 @@ class Reference with _$Reference {
 class ElementDefinition with _$ElementDefinition {
   ElementDefinition._();
   factory ElementDefinition({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     required String path,
     List<Code>? representation,
@@ -158,7 +158,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_defaultValueCode') Element? defaultValueCodeElement,
     Oid? defaultValueOid,
     @JsonKey(name: '_defaultValueOid') Element? defaultValueOidElement,
-    Id? defaultValueId,
+    FhirId? defaultValueId,
     @JsonKey(name: '_defaultValueId') Element? defaultValueIdElement,
     UnsignedInt? defaultValueUnsignedInt,
     @JsonKey(name: '_defaultValueUnsignedInt')
@@ -210,7 +210,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_fixedCode') Element? fixedCodeElement,
     Oid? fixedOid,
     @JsonKey(name: '_fixedOid') Element? fixedOidElement,
-    Id? fixedId,
+    FhirId? fixedId,
     @JsonKey(name: '_fixedId') Element? fixedIdElement,
     UnsignedInt? fixedUnsignedInt,
     @JsonKey(name: '_fixedUnsignedInt') Element? fixedUnsignedIntElement,
@@ -259,7 +259,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_patternCode') Element? patternCodeElement,
     Oid? patternOid,
     @JsonKey(name: '_patternOid') Element? patternOidElement,
-    Id? patternId,
+    FhirId? patternId,
     @JsonKey(name: '_patternId') Element? patternIdElement,
     UnsignedInt? patternUnsignedInt,
     @JsonKey(name: '_patternUnsignedInt') Element? patternUnsignedIntElement,
@@ -308,7 +308,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_exampleCode') Element? exampleCodeElement,
     Oid? exampleOid,
     @JsonKey(name: '_exampleOid') Element? exampleOidElement,
-    Id? exampleId,
+    FhirId? exampleId,
     @JsonKey(name: '_exampleId') Element? exampleIdElement,
     UnsignedInt? exampleUnsignedInt,
     @JsonKey(name: '_exampleUnsignedInt') Element? exampleUnsignedIntElement,
@@ -358,7 +358,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_minValueCode') Element? minValueCodeElement,
     Oid? minValueOid,
     @JsonKey(name: '_minValueOid') Element? minValueOidElement,
-    Id? minValueId,
+    FhirId? minValueId,
     @JsonKey(name: '_minValueId') Element? minValueIdElement,
     UnsignedInt? minValueUnsignedInt,
     @JsonKey(name: '_minValueUnsignedInt') Element? minValueUnsignedIntElement,
@@ -408,7 +408,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_maxValueCode') Element? maxValueCodeElement,
     Oid? maxValueOid,
     @JsonKey(name: '_maxValueOid') Element? maxValueOidElement,
-    Id? maxValueId,
+    FhirId? maxValueId,
     @JsonKey(name: '_maxValueId') Element? maxValueIdElement,
     UnsignedInt? maxValueUnsignedInt,
     @JsonKey(name: '_maxValueUnsignedInt') Element? maxValueUnsignedIntElement,
@@ -435,7 +435,7 @@ class ElementDefinition with _$ElementDefinition {
     Meta? maxValueMeta,
     Integer? maxLength,
     @JsonKey(name: '_maxLength') Element? maxLengthElement,
-    List<Id>? condition,
+    List<FhirId>? condition,
     @JsonKey(name: '_condition') Element? conditionElement,
     List<ElementDefinitionConstraint>? constraint,
     Boolean? mustSupport,
@@ -483,7 +483,7 @@ class ElementDefinition with _$ElementDefinition {
 class Narrative with _$Narrative {
   Narrative._();
   factory Narrative({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
@@ -527,7 +527,7 @@ class Narrative with _$Narrative {
 class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
   ElementDefinitionSlicing._();
   factory ElementDefinitionSlicing({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<String>? discriminator,
     String? description,
@@ -574,7 +574,7 @@ class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
 class ElementDefinitionBase with _$ElementDefinitionBase {
   ElementDefinitionBase._();
   factory ElementDefinitionBase({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     required String path,
     @JsonKey(name: '_path') Element? pathElement,
@@ -619,7 +619,7 @@ class ElementDefinitionBase with _$ElementDefinitionBase {
 class ElementDefinitionType with _$ElementDefinitionType {
   ElementDefinitionType._();
   factory ElementDefinitionType({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     Code? code,
     @JsonKey(name: '_code') TypeCodeExtension? codeExtension,
@@ -702,9 +702,9 @@ class TypeCodeExtension with _$TypeCodeExtension {
 class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
   ElementDefinitionConstraint._();
   factory ElementDefinitionConstraint({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    required Id key,
+    required FhirId key,
     @JsonKey(name: '_key') Element? keyElement,
     String? requirements,
     @JsonKey(name: '_requirements') Element? requirementsElement,
@@ -752,7 +752,7 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
 class ElementDefinitionBinding with _$ElementDefinitionBinding {
   ElementDefinitionBinding._();
   factory ElementDefinitionBinding({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(required: true, unknownEnumValue: ElementDefinitionBindingStrength.unknown)
         required ElementDefinitionBindingStrength strength,
@@ -798,10 +798,10 @@ class ElementDefinitionBinding with _$ElementDefinitionBinding {
 class ElementDefinitionMapping with _$ElementDefinitionMapping {
   ElementDefinitionMapping._();
   factory ElementDefinitionMapping({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    required Id identity,
+    required FhirId identity,
     @JsonKey(name: '_identity') Element? identityElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,

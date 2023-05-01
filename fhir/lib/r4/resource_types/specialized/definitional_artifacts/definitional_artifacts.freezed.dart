@@ -20454,7 +20454,7 @@ mixin _$PlanDefinitionAction {
 
   /// [goalId] Identifies goals that this action supports. The reference must
   ///  be to a goal element defined within this plan definition.
-  List<Id>? get goalId => throw _privateConstructorUsedError;
+  List<FhirId>? get goalId => throw _privateConstructorUsedError;
 
   /// [goalIdElement] Extensions for goalId
   @JsonKey(name: '_goalId')
@@ -20640,7 +20640,7 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
       List<CodeableConcept>? code,
       List<CodeableConcept>? reason,
       List<RelatedArtifact>? documentation,
-      List<Id>? goalId,
+      List<FhirId>? goalId,
       @JsonKey(name: '_goalId')
           List<Element?>? goalIdElement,
       CodeableConcept? subjectCodeableConcept,
@@ -20847,7 +20847,7 @@ class _$PlanDefinitionActionCopyWithImpl<$Res,
       goalId: freezed == goalId
           ? _value.goalId
           : goalId // ignore: cast_nullable_to_non_nullable
-              as List<Id>?,
+              as List<FhirId>?,
       goalIdElement: freezed == goalIdElement
           ? _value.goalIdElement
           : goalIdElement // ignore: cast_nullable_to_non_nullable
@@ -21280,7 +21280,7 @@ abstract class _$$_PlanDefinitionActionCopyWith<$Res>
       List<CodeableConcept>? code,
       List<CodeableConcept>? reason,
       List<RelatedArtifact>? documentation,
-      List<Id>? goalId,
+      List<FhirId>? goalId,
       @JsonKey(name: '_goalId')
           List<Element?>? goalIdElement,
       CodeableConcept? subjectCodeableConcept,
@@ -21505,7 +21505,7 @@ class __$$_PlanDefinitionActionCopyWithImpl<$Res>
       goalId: freezed == goalId
           ? _value._goalId
           : goalId // ignore: cast_nullable_to_non_nullable
-              as List<Id>?,
+              as List<FhirId>?,
       goalIdElement: freezed == goalIdElement
           ? _value._goalIdElement
           : goalIdElement // ignore: cast_nullable_to_non_nullable
@@ -21680,7 +21680,7 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
       final List<CodeableConcept>? code,
       final List<CodeableConcept>? reason,
       final List<RelatedArtifact>? documentation,
-      final List<Id>? goalId,
+      final List<FhirId>? goalId,
       @JsonKey(name: '_goalId')
           final List<Element?>? goalIdElement,
       this.subjectCodeableConcept,
@@ -21914,12 +21914,12 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
 
   /// [goalId] Identifies goals that this action supports. The reference must
   ///  be to a goal element defined within this plan definition.
-  final List<Id>? _goalId;
+  final List<FhirId>? _goalId;
 
   /// [goalId] Identifies goals that this action supports. The reference must
   ///  be to a goal element defined within this plan definition.
   @override
-  List<Id>? get goalId {
+  List<FhirId>? get goalId {
     final value = _goalId;
     if (value == null) return null;
     if (_goalId is EqualUnmodifiableListView) return _goalId;
@@ -22409,7 +22409,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
       final List<CodeableConcept>? code,
       final List<CodeableConcept>? reason,
       final List<RelatedArtifact>? documentation,
-      final List<Id>? goalId,
+      final List<FhirId>? goalId,
       @JsonKey(name: '_goalId')
           final List<Element?>? goalIdElement,
       final CodeableConcept? subjectCodeableConcept,
@@ -22562,7 +22562,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
 
   /// [goalId] Identifies goals that this action supports. The reference must
   ///  be to a goal element defined within this plan definition.
-  List<Id>? get goalId;
+  List<FhirId>? get goalId;
   @override
 
   /// [goalIdElement] Extensions for goalId
@@ -23211,7 +23211,7 @@ mixin _$PlanDefinitionRelatedAction {
       throw _privateConstructorUsedError;
 
   /// [actionId] The element id of the related action.
-  Id? get actionId => throw _privateConstructorUsedError;
+  FhirId? get actionId => throw _privateConstructorUsedError;
 
   /// [actionIdElement] Extensions for actionId
   @JsonKey(name: '_actionId')
@@ -23250,7 +23250,7 @@ abstract class $PlanDefinitionRelatedActionCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? actionId,
+      FhirId? actionId,
       @JsonKey(name: '_actionId') Element? actionIdElement,
       Code? relationship,
       @JsonKey(name: '_relationship') Element? relationshipElement,
@@ -23303,7 +23303,7 @@ class _$PlanDefinitionRelatedActionCopyWithImpl<$Res,
       actionId: freezed == actionId
           ? _value.actionId
           : actionId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       actionIdElement: freezed == actionIdElement
           ? _value.actionIdElement
           : actionIdElement // ignore: cast_nullable_to_non_nullable
@@ -23389,7 +23389,7 @@ abstract class _$$_PlanDefinitionRelatedActionCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? actionId,
+      FhirId? actionId,
       @JsonKey(name: '_actionId') Element? actionIdElement,
       Code? relationship,
       @JsonKey(name: '_relationship') Element? relationshipElement,
@@ -23445,7 +23445,7 @@ class __$$_PlanDefinitionRelatedActionCopyWithImpl<$Res>
       actionId: freezed == actionId
           ? _value.actionId
           : actionId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       actionIdElement: freezed == actionIdElement
           ? _value.actionIdElement
           : actionIdElement // ignore: cast_nullable_to_non_nullable
@@ -23559,7 +23559,7 @@ class _$_PlanDefinitionRelatedAction extends _PlanDefinitionRelatedAction {
 
   /// [actionId] The element id of the related action.
   @override
-  final Id? actionId;
+  final FhirId? actionId;
 
   /// [actionIdElement] Extensions for actionId
   @override
@@ -23649,7 +23649,7 @@ abstract class _PlanDefinitionRelatedAction
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Id? actionId,
+      final FhirId? actionId,
       @JsonKey(name: '_actionId') final Element? actionIdElement,
       final Code? relationship,
       @JsonKey(name: '_relationship') final Element? relationshipElement,
@@ -23694,7 +23694,7 @@ abstract class _PlanDefinitionRelatedAction
   @override
 
   /// [actionId] The element id of the related action.
-  Id? get actionId;
+  FhirId? get actionId;
   @override
 
   /// [actionIdElement] Extensions for actionId

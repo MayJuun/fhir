@@ -1913,8 +1913,9 @@ _$_MessageHeaderResponse _$$_MessageHeaderResponseFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      identifier:
-          json['identifier'] == null ? null : Id.fromJson(json['identifier']),
+      identifier: json['identifier'] == null
+          ? null
+          : FhirId.fromJson(json['identifier']),
       identifierElement: json['_identifier'] == null
           ? null
           : Element.fromJson(json['_identifier'] as Map<String, dynamic>),
@@ -2210,7 +2211,8 @@ _$_ParametersParameter _$$_ParametersParameterFromJson(
       valueDecimalElement: json['_valueDecimal'] == null
           ? null
           : Element.fromJson(json['_valueDecimal'] as Map<String, dynamic>),
-      valueId: json['valueId'] == null ? null : Id.fromJson(json['valueId']),
+      valueId:
+          json['valueId'] == null ? null : FhirId.fromJson(json['valueId']),
       valueIdElement: json['_valueId'] == null
           ? null
           : Element.fromJson(json['_valueId'] as Map<String, dynamic>),

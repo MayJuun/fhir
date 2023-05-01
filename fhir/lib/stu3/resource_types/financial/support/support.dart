@@ -19,7 +19,7 @@ class Coverage with Resource, _$Coverage {
     @Default(Stu3ResourceType.Coverage)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Coverage)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -149,7 +149,7 @@ class EligibilityRequest with Resource, _$EligibilityRequest {
     @Default(Stu3ResourceType.EligibilityRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityRequest)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -216,7 +216,7 @@ class EligibilityResponse with Resource, _$EligibilityResponse {
     @Default(Stu3ResourceType.EligibilityResponse)
     @JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityResponse)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -443,7 +443,7 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
     @Default(Stu3ResourceType.EnrollmentRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentRequest)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -500,7 +500,7 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
     @Default(Stu3ResourceType.EnrollmentResponse)
     @JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentResponse)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,

@@ -256,7 +256,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -2586,7 +2586,7 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -3105,7 +3105,7 @@ class GraphDefinition with Resource, _$GraphDefinition {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -3234,7 +3234,7 @@ class GraphDefinition with Resource, _$GraphDefinition {
     @JsonKey(name: '_copyrightLabel') Element? copyrightLabelElement,
 
     /// [start] The Node at which instances of this graph start. If there is no nominated start, the graph can start at any of the nodes.
-    Id? start,
+    FhirId? start,
 
     /// [startElement] ("_start") Extensions for start
     @JsonKey(name: '_start') Element? startElement,
@@ -3362,7 +3362,7 @@ class GraphDefinitionNode with _$GraphDefinitionNode {
     List<FhirExtension>? modifierExtension,
 
     /// [nodeId] Internal ID of node - target for link references.
-    Id? nodeId,
+    FhirId? nodeId,
 
     /// [nodeIdElement] ("_nodeId") Extensions for nodeId
     @JsonKey(name: '_nodeId') Element? nodeIdElement,
@@ -3537,7 +3537,7 @@ class GraphDefinitionLink with _$GraphDefinitionLink {
     @JsonKey(name: '_max') Element? maxElement,
 
     /// [sourceId] The source node for this link.
-    Id? sourceId,
+    FhirId? sourceId,
 
     /// [sourceIdElement] ("_sourceId") Extensions for sourceId
     @JsonKey(name: '_sourceId') Element? sourceIdElement,
@@ -3555,7 +3555,7 @@ class GraphDefinitionLink with _$GraphDefinitionLink {
     @JsonKey(name: '_sliceName') Element? sliceNameElement,
 
     /// [targetId] The target node for this link.
-    Id? targetId,
+    FhirId? targetId,
 
     /// [targetIdElement] ("_targetId") Extensions for targetId
     @JsonKey(name: '_targetId') Element? targetIdElement,
@@ -3971,7 +3971,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -4100,7 +4100,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
     @JsonKey(name: '_copyrightLabel') Element? copyrightLabelElement,
 
     /// [packageId] The NPM package name for this Implementation Guide, used in the NPM package distribution, which is the primary mechanism by which FHIR based tooling manages IG dependencies. This value must be globally unique, and should be assigned with care.
-    Id? packageId,
+    FhirId? packageId,
 
     /// [packageIdElement] ("_packageId") Extensions for packageId
     @JsonKey(name: '_packageId') Element? packageIdElement,
@@ -4255,7 +4255,7 @@ class ImplementationGuideDependsOn with _$ImplementationGuideDependsOn {
     required Canonical uri,
 
     /// [packageId] The NPM package name for the Implementation Guide that this IG depends on.
-    Id? packageId,
+    FhirId? packageId,
 
     /// [packageIdElement] ("_packageId") Extensions for packageId
     @JsonKey(name: '_packageId') Element? packageIdElement,
@@ -4815,7 +4815,7 @@ class ImplementationGuideResource with _$ImplementationGuideResource {
     List<Canonical>? profile,
 
     /// [groupingId] Reference to the id of the grouping this resource appears in.
-    Id? groupingId,
+    FhirId? groupingId,
 
     /// [groupingIdElement] ("_groupingId") Extensions for groupingId
     @JsonKey(name: '_groupingId') Element? groupingIdElement,
@@ -5912,7 +5912,7 @@ class MessageDefinition with Resource, _$MessageDefinition {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -6607,7 +6607,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -7659,7 +7659,7 @@ class SearchParameter with Resource, _$SearchParameter {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -8252,7 +8252,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -8555,7 +8555,7 @@ class StructureDefinitionMapping with _$StructureDefinitionMapping {
     List<FhirExtension>? modifierExtension,
 
     /// [identity] An Internal id that is used to identify this mapping set when specific mappings are made.
-    Id? identity,
+    FhirId? identity,
 
     /// [identityElement] ("_identity") Extensions for identity
     @JsonKey(name: '_identity') Element? identityElement,
@@ -9128,7 +9128,7 @@ class StructureMap with Resource, _$StructureMap {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -9514,13 +9514,13 @@ class StructureMapGroup with _$StructureMapGroup {
     List<FhirExtension>? modifierExtension,
 
     /// [name] A unique name for the group for the convenience of human readers.
-    Id? name,
+    FhirId? name,
 
     /// [nameElement] ("_name") Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
 
     /// [extends_] ("extends") Another group that this group adds rules to.
-    @JsonKey(name: 'extends') Id? extends_,
+    @JsonKey(name: 'extends') FhirId? extends_,
 
     /// [extendsElement] ("_extends") Extensions for extends
     @JsonKey(name: '_extends') Element? extendsElement,
@@ -9654,7 +9654,7 @@ class StructureMapInput with _$StructureMapInput {
     List<FhirExtension>? modifierExtension,
 
     /// [name] Name for this instance of data.
-    Id? name,
+    FhirId? name,
 
     /// [nameElement] ("_name") Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
@@ -9788,7 +9788,7 @@ class StructureMapRule with _$StructureMapRule {
     List<FhirExtension>? modifierExtension,
 
     /// [name] Name of the rule for internal references.
-    Id? name,
+    FhirId? name,
 
     /// [nameElement] ("_name") Extensions for name
     @JsonKey(name: '_name') Element? nameElement,
@@ -9958,7 +9958,7 @@ class StructureMapSource with _$StructureMapSource {
     List<FhirExtension>? modifierExtension,
 
     /// [context] Type or variable this rule applies to.
-    Id? context,
+    FhirId? context,
 
     /// [contextElement] ("_context") Extensions for context
     @JsonKey(name: '_context') Element? contextElement,
@@ -10000,7 +10000,7 @@ class StructureMapSource with _$StructureMapSource {
     @JsonKey(name: '_listMode') Element? listModeElement,
 
     /// [variable] Named context for field, if a field is specified.
-    Id? variable,
+    FhirId? variable,
 
     /// [variableElement] ("_variable") Extensions for variable
     @JsonKey(name: '_variable') Element? variableElement,
@@ -10144,7 +10144,7 @@ class StructureMapTarget with _$StructureMapTarget {
     List<FhirExtension>? modifierExtension,
 
     /// [context] Variable this rule applies to.
-    Id? context,
+    FhirId? context,
 
     /// [contextElement] ("_context") Extensions for context
     @JsonKey(name: '_context') Element? contextElement,
@@ -10156,7 +10156,7 @@ class StructureMapTarget with _$StructureMapTarget {
     @JsonKey(name: '_element') Element? elementElement,
 
     /// [variable] Named context for field, if desired, and a field is specified.
-    Id? variable,
+    FhirId? variable,
 
     /// [variableElement] ("_variable") Extensions for variable
     @JsonKey(name: '_variable') Element? variableElement,
@@ -10168,7 +10168,7 @@ class StructureMapTarget with _$StructureMapTarget {
     @JsonKey(name: '_listMode') List<Element>? listModeElement,
 
     /// [listRuleId] Internal rule reference for shared list items.
-    Id? listRuleId,
+    FhirId? listRuleId,
 
     /// [listRuleIdElement] ("_listRuleId") Extensions for listRuleId
     @JsonKey(name: '_listRuleId') Element? listRuleIdElement,
@@ -10309,7 +10309,7 @@ class StructureMapParameter with _$StructureMapParameter {
     List<FhirExtension>? modifierExtension,
 
     /// [valueId] Parameter value - variable or literal.
-    Id? valueId,
+    FhirId? valueId,
 
     /// [valueIdElement] ("_valueId") Extensions for valueId
     @JsonKey(name: '_valueId') Element? valueIdElement,
@@ -10457,7 +10457,7 @@ class StructureMapDependent with _$StructureMapDependent {
     List<FhirExtension>? modifierExtension,
 
     /// [name] Name of a rule or group to apply.
-    Id? name,
+    FhirId? name,
 
     /// [nameElement] ("_name") Extensions for name
     @JsonKey(name: '_name') Element? nameElement,

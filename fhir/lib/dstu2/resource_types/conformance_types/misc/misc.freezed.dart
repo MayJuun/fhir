@@ -22,7 +22,7 @@ ImplementationGuide _$ImplementationGuideFromJson(Map<String, dynamic> json) {
 mixin _$ImplementationGuide {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -67,7 +67,7 @@ mixin _$ImplementationGuide {
   String? get copyright => throw _privateConstructorUsedError;
   @JsonKey(name: '_copyright')
   Element? get copyrightElement => throw _privateConstructorUsedError;
-  Id? get fhirVersion => throw _privateConstructorUsedError;
+  FhirId? get fhirVersion => throw _privateConstructorUsedError;
   @JsonKey(name: '_fhirVersion')
   List<Element?>? get fhirVersionElement => throw _privateConstructorUsedError;
   List<ImplementationGuideDependency>? get dependency =>
@@ -94,7 +94,7 @@ abstract class $ImplementationGuideCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -137,7 +137,7 @@ abstract class $ImplementationGuideCopyWith<$Res> {
       String? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Id? fhirVersion,
+      FhirId? fhirVersion,
       @JsonKey(name: '_fhirVersion')
           List<Element?>? fhirVersionElement,
       List<ImplementationGuideDependency>? dependency,
@@ -222,7 +222,7 @@ class _$ImplementationGuideCopyWithImpl<$Res, $Val extends ImplementationGuide>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -342,7 +342,7 @@ class _$ImplementationGuideCopyWithImpl<$Res, $Val extends ImplementationGuide>
       fhirVersion: freezed == fhirVersion
           ? _value.fhirVersion
           : fhirVersion // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       fhirVersionElement: freezed == fhirVersionElement
           ? _value.fhirVersionElement
           : fhirVersionElement // ignore: cast_nullable_to_non_nullable
@@ -546,7 +546,7 @@ abstract class _$$_ImplementationGuideCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -589,7 +589,7 @@ abstract class _$$_ImplementationGuideCopyWith<$Res>
       String? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Id? fhirVersion,
+      FhirId? fhirVersion,
       @JsonKey(name: '_fhirVersion')
           List<Element?>? fhirVersionElement,
       List<ImplementationGuideDependency>? dependency,
@@ -686,7 +686,7 @@ class __$$_ImplementationGuideCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -806,7 +806,7 @@ class __$$_ImplementationGuideCopyWithImpl<$Res>
       fhirVersion: freezed == fhirVersion
           ? _value.fhirVersion
           : fhirVersion // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       fhirVersionElement: freezed == fhirVersionElement
           ? _value._fhirVersionElement
           : fhirVersionElement // ignore: cast_nullable_to_non_nullable
@@ -911,7 +911,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -1025,7 +1025,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
   @override
-  final Id? fhirVersion;
+  final FhirId? fhirVersion;
   final List<Element?>? _fhirVersionElement;
   @override
   @JsonKey(name: '_fhirVersion')
@@ -1217,7 +1217,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   factory _ImplementationGuide(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
           final Dstu2ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1260,7 +1260,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
       final String? copyright,
       @JsonKey(name: '_copyright')
           final Element? copyrightElement,
-      final Id? fhirVersion,
+      final FhirId? fhirVersion,
       @JsonKey(name: '_fhirVersion')
           final List<Element?>? fhirVersionElement,
       final List<ImplementationGuideDependency>? dependency,
@@ -1277,7 +1277,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -1350,7 +1350,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   @JsonKey(name: '_copyright')
   Element? get copyrightElement;
   @override
-  Id? get fhirVersion;
+  FhirId? get fhirVersion;
   @override
   @JsonKey(name: '_fhirVersion')
   List<Element?>? get fhirVersionElement;
@@ -1377,7 +1377,7 @@ ImplementationGuideContact _$ImplementationGuideContactFromJson(
 
 /// @nodoc
 mixin _$ImplementationGuideContact {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -1399,7 +1399,7 @@ abstract class $ImplementationGuideContactCopyWith<$Res> {
           ImplementationGuideContact>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? name,
@@ -1430,7 +1430,7 @@ class _$ImplementationGuideContactCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -1461,7 +1461,7 @@ abstract class _$$_ImplementationGuideContactCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? name,
@@ -1491,7 +1491,7 @@ class __$$_ImplementationGuideContactCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -1530,7 +1530,7 @@ class _$_ImplementationGuideContact extends _ImplementationGuideContact {
       _$$_ImplementationGuideContactFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -1611,7 +1611,7 @@ class _$_ImplementationGuideContact extends _ImplementationGuideContact {
 
 abstract class _ImplementationGuideContact extends ImplementationGuideContact {
   factory _ImplementationGuideContact(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? name,
@@ -1622,7 +1622,7 @@ abstract class _ImplementationGuideContact extends ImplementationGuideContact {
       _$_ImplementationGuideContact.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -1645,7 +1645,7 @@ ImplementationGuideDependency _$ImplementationGuideDependencyFromJson(
 
 /// @nodoc
 mixin _$ImplementationGuideDependency {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -1671,7 +1671,7 @@ abstract class $ImplementationGuideDependencyCopyWith<$Res> {
           ImplementationGuideDependency>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: DependencyType.unknown) DependencyType type,
@@ -1706,7 +1706,7 @@ class _$ImplementationGuideDependencyCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -1753,7 +1753,7 @@ abstract class _$$_ImplementationGuideDependencyCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: DependencyType.unknown) DependencyType type,
@@ -1788,7 +1788,7 @@ class __$$_ImplementationGuideDependencyCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -1832,7 +1832,7 @@ class _$_ImplementationGuideDependency extends _ImplementationGuideDependency {
       _$$_ImplementationGuideDependencyFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -1914,7 +1914,7 @@ class _$_ImplementationGuideDependency extends _ImplementationGuideDependency {
 abstract class _ImplementationGuideDependency
     extends ImplementationGuideDependency {
   factory _ImplementationGuideDependency(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -1929,7 +1929,7 @@ abstract class _ImplementationGuideDependency
       _$_ImplementationGuideDependency.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -1956,7 +1956,7 @@ ImplementationGuidePackage _$ImplementationGuidePackageFromJson(
 
 /// @nodoc
 mixin _$ImplementationGuidePackage {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -1981,7 +1981,7 @@ abstract class $ImplementationGuidePackageCopyWith<$Res> {
           ImplementationGuidePackage>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -2016,7 +2016,7 @@ class _$ImplementationGuidePackageCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -2051,7 +2051,7 @@ abstract class _$$_ImplementationGuidePackageCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -2085,7 +2085,7 @@ class __$$_ImplementationGuidePackageCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -2131,7 +2131,7 @@ class _$_ImplementationGuidePackage extends _ImplementationGuidePackage {
       _$$_ImplementationGuidePackageFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -2216,7 +2216,7 @@ class _$_ImplementationGuidePackage extends _ImplementationGuidePackage {
 
 abstract class _ImplementationGuidePackage extends ImplementationGuidePackage {
   factory _ImplementationGuidePackage(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2231,7 +2231,7 @@ abstract class _ImplementationGuidePackage extends ImplementationGuidePackage {
       _$_ImplementationGuidePackage.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -2257,7 +2257,7 @@ ImplementationGuideGlobal _$ImplementationGuideGlobalFromJson(
 
 /// @nodoc
 mixin _$ImplementationGuideGlobal {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -2280,7 +2280,7 @@ abstract class $ImplementationGuideGlobalCopyWith<$Res> {
       _$ImplementationGuideGlobalCopyWithImpl<$Res, ImplementationGuideGlobal>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Code type,
@@ -2316,7 +2316,7 @@ class _$ImplementationGuideGlobalCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -2371,7 +2371,7 @@ abstract class _$$_ImplementationGuideGlobalCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Code type,
@@ -2408,7 +2408,7 @@ class __$$_ImplementationGuideGlobalCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -2451,7 +2451,7 @@ class _$_ImplementationGuideGlobal extends _ImplementationGuideGlobal {
       _$$_ImplementationGuideGlobalFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -2531,7 +2531,7 @@ class _$_ImplementationGuideGlobal extends _ImplementationGuideGlobal {
 
 abstract class _ImplementationGuideGlobal extends ImplementationGuideGlobal {
   factory _ImplementationGuideGlobal(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final Code type,
@@ -2543,7 +2543,7 @@ abstract class _ImplementationGuideGlobal extends ImplementationGuideGlobal {
       _$_ImplementationGuideGlobal.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -2569,7 +2569,7 @@ ImplementationGuidePage _$ImplementationGuidePageFromJson(
 
 /// @nodoc
 mixin _$ImplementationGuidePage {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -2596,7 +2596,7 @@ abstract class $ImplementationGuidePageCopyWith<$Res> {
       _$ImplementationGuidePageCopyWithImpl<$Res, ImplementationGuidePage>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri source,
@@ -2637,7 +2637,7 @@ class _$ImplementationGuidePageCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -2687,7 +2687,7 @@ abstract class _$$_ImplementationGuidePageCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri source,
@@ -2726,7 +2726,7 @@ class __$$_ImplementationGuidePageCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -2792,7 +2792,7 @@ class _$_ImplementationGuidePage extends _ImplementationGuidePage {
       _$$_ImplementationGuidePageFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -2911,7 +2911,7 @@ class _$_ImplementationGuidePage extends _ImplementationGuidePage {
 
 abstract class _ImplementationGuidePage extends ImplementationGuidePage {
   factory _ImplementationGuidePage(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final FhirUri source,
@@ -2927,7 +2927,7 @@ abstract class _ImplementationGuidePage extends ImplementationGuidePage {
       _$_ImplementationGuidePage.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -2961,7 +2961,7 @@ ImplementationGuidePackageResource _$ImplementationGuidePackageResourceFromJson(
 
 /// @nodoc
 mixin _$ImplementationGuidePackageResource {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -2993,7 +2993,7 @@ abstract class $ImplementationGuidePackageResourceCopyWith<$Res> {
           ImplementationGuidePackageResource>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -3043,7 +3043,7 @@ class _$ImplementationGuidePackageResourceCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -3134,7 +3134,7 @@ abstract class _$$_ImplementationGuidePackageResourceCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -3186,7 +3186,7 @@ class __$$_ImplementationGuidePackageResourceCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -3256,7 +3256,7 @@ class _$_ImplementationGuidePackageResource
       _$$_ImplementationGuidePackageResourceFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -3363,7 +3363,7 @@ class _$_ImplementationGuidePackageResource
 abstract class _ImplementationGuidePackageResource
     extends ImplementationGuidePackageResource {
   factory _ImplementationGuidePackageResource(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3384,7 +3384,7 @@ abstract class _ImplementationGuidePackageResource
       _$_ImplementationGuidePackageResource.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -3423,7 +3423,7 @@ TestScript _$TestScriptFromJson(Map<String, dynamic> json) {
 mixin _$TestScript {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.TestScript)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -3491,7 +3491,7 @@ abstract class $TestScriptCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.TestScript)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -3623,7 +3623,7 @@ class _$TestScriptCopyWithImpl<$Res, $Val extends TestScript>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -3983,7 +3983,7 @@ abstract class _$$_TestScriptCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.TestScript)
           Dstu2ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4129,7 +4129,7 @@ class __$$_TestScriptCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -4361,7 +4361,7 @@ class _$_TestScript extends _TestScript {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.TestScript)
   final Dstu2ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -4666,7 +4666,7 @@ abstract class _TestScript extends TestScript {
   factory _TestScript(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.TestScript)
           final Dstu2ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4726,7 +4726,7 @@ abstract class _TestScript extends TestScript {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.TestScript)
   Dstu2ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -4827,7 +4827,7 @@ TestScriptContact _$TestScriptContactFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$TestScriptContact {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -4848,7 +4848,7 @@ abstract class $TestScriptContactCopyWith<$Res> {
       _$TestScriptContactCopyWithImpl<$Res, TestScriptContact>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? name,
@@ -4878,7 +4878,7 @@ class _$TestScriptContactCopyWithImpl<$Res, $Val extends TestScriptContact>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -4908,7 +4908,7 @@ abstract class _$$_TestScriptContactCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? name,
@@ -4936,7 +4936,7 @@ class __$$_TestScriptContactCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -4975,7 +4975,7 @@ class _$_TestScriptContact extends _TestScriptContact {
       _$$_TestScriptContactFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -5056,7 +5056,7 @@ class _$_TestScriptContact extends _TestScriptContact {
 
 abstract class _TestScriptContact extends TestScriptContact {
   factory _TestScriptContact(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? name,
@@ -5067,7 +5067,7 @@ abstract class _TestScriptContact extends TestScriptContact {
       _$_TestScriptContact.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -5089,7 +5089,7 @@ TestScriptMetadata _$TestScriptMetadataFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$TestScriptMetadata {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -5112,7 +5112,7 @@ abstract class $TestScriptMetadataCopyWith<$Res> {
       _$TestScriptMetadataCopyWithImpl<$Res, TestScriptMetadata>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<TestScriptMetadataLink>? link,
@@ -5142,7 +5142,7 @@ class _$TestScriptMetadataCopyWithImpl<$Res, $Val extends TestScriptMetadata>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -5172,7 +5172,7 @@ abstract class _$$_TestScriptMetadataCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<TestScriptMetadataLink>? link,
@@ -5200,7 +5200,7 @@ class __$$_TestScriptMetadataCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -5242,7 +5242,7 @@ class _$_TestScriptMetadata extends _TestScriptMetadata {
       _$$_TestScriptMetadataFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -5331,7 +5331,7 @@ class _$_TestScriptMetadata extends _TestScriptMetadata {
 
 abstract class _TestScriptMetadata extends TestScriptMetadata {
   factory _TestScriptMetadata(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -5345,7 +5345,7 @@ abstract class _TestScriptMetadata extends TestScriptMetadata {
       _$_TestScriptMetadata.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -5369,7 +5369,7 @@ TestScriptMetadataLink _$TestScriptMetadataLinkFromJson(
 
 /// @nodoc
 mixin _$TestScriptMetadataLink {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -5394,7 +5394,7 @@ abstract class $TestScriptMetadataLinkCopyWith<$Res> {
       _$TestScriptMetadataLinkCopyWithImpl<$Res, TestScriptMetadataLink>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri url,
@@ -5432,7 +5432,7 @@ class _$TestScriptMetadataLinkCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -5494,7 +5494,7 @@ abstract class _$$_TestScriptMetadataLinkCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri url,
@@ -5532,7 +5532,7 @@ class __$$_TestScriptMetadataLinkCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -5580,7 +5580,7 @@ class _$_TestScriptMetadataLink extends _TestScriptMetadataLink {
       _$$_TestScriptMetadataLinkFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -5667,7 +5667,7 @@ class _$_TestScriptMetadataLink extends _TestScriptMetadataLink {
 
 abstract class _TestScriptMetadataLink extends TestScriptMetadataLink {
   factory _TestScriptMetadataLink(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final FhirUri url,
@@ -5681,7 +5681,7 @@ abstract class _TestScriptMetadataLink extends TestScriptMetadataLink {
       _$_TestScriptMetadataLink.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -5710,7 +5710,7 @@ TestScriptMetadataCapability _$TestScriptMetadataCapabilityFromJson(
 
 /// @nodoc
 mixin _$TestScriptMetadataCapability {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -5748,7 +5748,7 @@ abstract class $TestScriptMetadataCapabilityCopyWith<$Res> {
           TestScriptMetadataCapability>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'required') Boolean? required_,
@@ -5803,7 +5803,7 @@ class _$TestScriptMetadataCapabilityCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -5926,7 +5926,7 @@ abstract class _$$_TestScriptMetadataCapabilityCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'required') Boolean? required_,
@@ -5985,7 +5985,7 @@ class __$$_TestScriptMetadataCapabilityCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -6070,7 +6070,7 @@ class _$_TestScriptMetadataCapability extends _TestScriptMetadataCapability {
       _$$_TestScriptMetadataCapabilityFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -6213,7 +6213,7 @@ class _$_TestScriptMetadataCapability extends _TestScriptMetadataCapability {
 abstract class _TestScriptMetadataCapability
     extends TestScriptMetadataCapability {
   factory _TestScriptMetadataCapability(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'required') final Boolean? required_,
@@ -6233,7 +6233,7 @@ abstract class _TestScriptMetadataCapability
       _$_TestScriptMetadataCapability.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -6279,7 +6279,7 @@ TestScriptFixture _$TestScriptFixtureFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$TestScriptFixture {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -6305,7 +6305,7 @@ abstract class $TestScriptFixtureCopyWith<$Res> {
       _$TestScriptFixtureCopyWithImpl<$Res, TestScriptFixture>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Boolean? autocreate,
@@ -6345,7 +6345,7 @@ class _$TestScriptFixtureCopyWithImpl<$Res, $Val extends TestScriptFixture>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -6423,7 +6423,7 @@ abstract class _$$_TestScriptFixtureCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Boolean? autocreate,
@@ -6464,7 +6464,7 @@ class __$$_TestScriptFixtureCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -6517,7 +6517,7 @@ class _$_TestScriptFixture extends _TestScriptFixture {
       _$$_TestScriptFixtureFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -6610,7 +6610,7 @@ class _$_TestScriptFixture extends _TestScriptFixture {
 
 abstract class _TestScriptFixture extends TestScriptFixture {
   factory _TestScriptFixture(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Boolean? autocreate,
@@ -6624,7 +6624,7 @@ abstract class _TestScriptFixture extends TestScriptFixture {
       _$_TestScriptFixture.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -6654,7 +6654,7 @@ TestScriptVariable _$TestScriptVariableFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$TestScriptVariable {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -6668,7 +6668,7 @@ mixin _$TestScriptVariable {
   String? get path => throw _privateConstructorUsedError;
   @JsonKey(name: '_path')
   Element? get pathElement => throw _privateConstructorUsedError;
-  Id? get sourceId => throw _privateConstructorUsedError;
+  FhirId? get sourceId => throw _privateConstructorUsedError;
   @JsonKey(name: '_sourceId')
   Element? get sourceIdElement => throw _privateConstructorUsedError;
 
@@ -6685,7 +6685,7 @@ abstract class $TestScriptVariableCopyWith<$Res> {
       _$TestScriptVariableCopyWithImpl<$Res, TestScriptVariable>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String name,
@@ -6694,7 +6694,7 @@ abstract class $TestScriptVariableCopyWith<$Res> {
       @JsonKey(name: '_headerField') Element? headerFieldElement,
       String? path,
       @JsonKey(name: '_path') Element? pathElement,
-      Id? sourceId,
+      FhirId? sourceId,
       @JsonKey(name: '_sourceId') Element? sourceIdElement});
 
   $ElementCopyWith<$Res>? get nameElement;
@@ -6732,7 +6732,7 @@ class _$TestScriptVariableCopyWithImpl<$Res, $Val extends TestScriptVariable>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -6768,7 +6768,7 @@ class _$TestScriptVariableCopyWithImpl<$Res, $Val extends TestScriptVariable>
       sourceId: freezed == sourceId
           ? _value.sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sourceIdElement: freezed == sourceIdElement
           ? _value.sourceIdElement
           : sourceIdElement // ignore: cast_nullable_to_non_nullable
@@ -6834,7 +6834,7 @@ abstract class _$$_TestScriptVariableCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String name,
@@ -6843,7 +6843,7 @@ abstract class _$$_TestScriptVariableCopyWith<$Res>
       @JsonKey(name: '_headerField') Element? headerFieldElement,
       String? path,
       @JsonKey(name: '_path') Element? pathElement,
-      Id? sourceId,
+      FhirId? sourceId,
       @JsonKey(name: '_sourceId') Element? sourceIdElement});
 
   @override
@@ -6883,7 +6883,7 @@ class __$$_TestScriptVariableCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -6919,7 +6919,7 @@ class __$$_TestScriptVariableCopyWithImpl<$Res>
       sourceId: freezed == sourceId
           ? _value.sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sourceIdElement: freezed == sourceIdElement
           ? _value.sourceIdElement
           : sourceIdElement // ignore: cast_nullable_to_non_nullable
@@ -6951,7 +6951,7 @@ class _$_TestScriptVariable extends _TestScriptVariable {
       _$$_TestScriptVariableFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -6990,7 +6990,7 @@ class _$_TestScriptVariable extends _TestScriptVariable {
   @JsonKey(name: '_path')
   final Element? pathElement;
   @override
-  final Id? sourceId;
+  final FhirId? sourceId;
   @override
   @JsonKey(name: '_sourceId')
   final Element? sourceIdElement;
@@ -7059,7 +7059,7 @@ class _$_TestScriptVariable extends _TestScriptVariable {
 
 abstract class _TestScriptVariable extends TestScriptVariable {
   factory _TestScriptVariable(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final String name,
@@ -7068,7 +7068,7 @@ abstract class _TestScriptVariable extends TestScriptVariable {
           @JsonKey(name: '_headerField') final Element? headerFieldElement,
           final String? path,
           @JsonKey(name: '_path') final Element? pathElement,
-          final Id? sourceId,
+          final FhirId? sourceId,
           @JsonKey(name: '_sourceId') final Element? sourceIdElement}) =
       _$_TestScriptVariable;
   _TestScriptVariable._() : super._();
@@ -7077,7 +7077,7 @@ abstract class _TestScriptVariable extends TestScriptVariable {
       _$_TestScriptVariable.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -7099,7 +7099,7 @@ abstract class _TestScriptVariable extends TestScriptVariable {
   @JsonKey(name: '_path')
   Element? get pathElement;
   @override
-  Id? get sourceId;
+  FhirId? get sourceId;
   @override
   @JsonKey(name: '_sourceId')
   Element? get sourceIdElement;
@@ -7115,7 +7115,7 @@ TestScriptSetup _$TestScriptSetupFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$TestScriptSetup {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -7136,7 +7136,7 @@ abstract class $TestScriptSetupCopyWith<$Res> {
       _$TestScriptSetupCopyWithImpl<$Res, TestScriptSetup>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       TestScriptMetadata? metadata,
@@ -7168,7 +7168,7 @@ class _$TestScriptSetupCopyWithImpl<$Res, $Val extends TestScriptSetup>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -7210,7 +7210,7 @@ abstract class _$$_TestScriptSetupCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       TestScriptMetadata? metadata,
@@ -7241,7 +7241,7 @@ class __$$_TestScriptSetupCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -7280,7 +7280,7 @@ class _$_TestScriptSetup extends _TestScriptSetup {
       _$$_TestScriptSetupFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -7359,7 +7359,7 @@ class _$_TestScriptSetup extends _TestScriptSetup {
 
 abstract class _TestScriptSetup extends TestScriptSetup {
   factory _TestScriptSetup(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final TestScriptMetadata? metadata,
@@ -7370,7 +7370,7 @@ abstract class _TestScriptSetup extends TestScriptSetup {
       _$_TestScriptSetup.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -7393,7 +7393,7 @@ TestScriptSetupAction _$TestScriptSetupActionFromJson(
 
 /// @nodoc
 mixin _$TestScriptSetupAction {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -7418,7 +7418,7 @@ abstract class $TestScriptSetupActionCopyWith<$Res> {
       _$TestScriptSetupActionCopyWithImpl<$Res, TestScriptSetupAction>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -7454,7 +7454,7 @@ class _$TestScriptSetupActionCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -7512,7 +7512,7 @@ abstract class _$$_TestScriptSetupActionCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -7547,7 +7547,7 @@ class __$$_TestScriptSetupActionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -7591,7 +7591,7 @@ class _$_TestScriptSetupAction extends _TestScriptSetupAction {
       _$$_TestScriptSetupActionFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -7681,7 +7681,7 @@ class _$_TestScriptSetupAction extends _TestScriptSetupAction {
 
 abstract class _TestScriptSetupAction extends TestScriptSetupAction {
   factory _TestScriptSetupAction(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
@@ -7694,7 +7694,7 @@ abstract class _TestScriptSetupAction extends TestScriptSetupAction {
       _$_TestScriptSetupAction.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -7721,7 +7721,7 @@ TestScriptActionOperation _$TestScriptActionOperationFromJson(
 
 /// @nodoc
 mixin _$TestScriptActionOperation {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -7757,13 +7757,13 @@ mixin _$TestScriptActionOperation {
   Element? get paramsElement => throw _privateConstructorUsedError;
   List<TestScriptOperationRequestHeader>? get requestHeader =>
       throw _privateConstructorUsedError;
-  Id? get responseId => throw _privateConstructorUsedError;
+  FhirId? get responseId => throw _privateConstructorUsedError;
   @JsonKey(name: '_responseId')
   Element? get responseIdElement => throw _privateConstructorUsedError;
-  Id? get sourceId => throw _privateConstructorUsedError;
+  FhirId? get sourceId => throw _privateConstructorUsedError;
   @JsonKey(name: '_sourceId')
   Element? get sourceIdElement => throw _privateConstructorUsedError;
-  Id? get targetId => throw _privateConstructorUsedError;
+  FhirId? get targetId => throw _privateConstructorUsedError;
   @JsonKey(name: '_targetId')
   Element? get targetIdElement => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
@@ -7783,7 +7783,7 @@ abstract class $TestScriptActionOperationCopyWith<$Res> {
       _$TestScriptActionOperationCopyWithImpl<$Res, TestScriptActionOperation>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -7817,13 +7817,13 @@ abstract class $TestScriptActionOperationCopyWith<$Res> {
       @JsonKey(name: '_params')
           Element? paramsElement,
       List<TestScriptOperationRequestHeader>? requestHeader,
-      Id? responseId,
+      FhirId? responseId,
       @JsonKey(name: '_responseId')
           Element? responseIdElement,
-      Id? sourceId,
+      FhirId? sourceId,
       @JsonKey(name: '_sourceId')
           Element? sourceIdElement,
-      Id? targetId,
+      FhirId? targetId,
       @JsonKey(name: '_targetId')
           Element? targetIdElement,
       String? url,
@@ -7894,7 +7894,7 @@ class _$TestScriptActionOperationCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -7982,7 +7982,7 @@ class _$TestScriptActionOperationCopyWithImpl<$Res,
       responseId: freezed == responseId
           ? _value.responseId
           : responseId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       responseIdElement: freezed == responseIdElement
           ? _value.responseIdElement
           : responseIdElement // ignore: cast_nullable_to_non_nullable
@@ -7990,7 +7990,7 @@ class _$TestScriptActionOperationCopyWithImpl<$Res,
       sourceId: freezed == sourceId
           ? _value.sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sourceIdElement: freezed == sourceIdElement
           ? _value.sourceIdElement
           : sourceIdElement // ignore: cast_nullable_to_non_nullable
@@ -7998,7 +7998,7 @@ class _$TestScriptActionOperationCopyWithImpl<$Res,
       targetId: freezed == targetId
           ? _value.targetId
           : targetId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       targetIdElement: freezed == targetIdElement
           ? _value.targetIdElement
           : targetIdElement // ignore: cast_nullable_to_non_nullable
@@ -8181,7 +8181,7 @@ abstract class _$$_TestScriptActionOperationCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -8215,13 +8215,13 @@ abstract class _$$_TestScriptActionOperationCopyWith<$Res>
       @JsonKey(name: '_params')
           Element? paramsElement,
       List<TestScriptOperationRequestHeader>? requestHeader,
-      Id? responseId,
+      FhirId? responseId,
       @JsonKey(name: '_responseId')
           Element? responseIdElement,
-      Id? sourceId,
+      FhirId? sourceId,
       @JsonKey(name: '_sourceId')
           Element? sourceIdElement,
-      Id? targetId,
+      FhirId? targetId,
       @JsonKey(name: '_targetId')
           Element? targetIdElement,
       String? url,
@@ -8304,7 +8304,7 @@ class __$$_TestScriptActionOperationCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -8392,7 +8392,7 @@ class __$$_TestScriptActionOperationCopyWithImpl<$Res>
       responseId: freezed == responseId
           ? _value.responseId
           : responseId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       responseIdElement: freezed == responseIdElement
           ? _value.responseIdElement
           : responseIdElement // ignore: cast_nullable_to_non_nullable
@@ -8400,7 +8400,7 @@ class __$$_TestScriptActionOperationCopyWithImpl<$Res>
       sourceId: freezed == sourceId
           ? _value.sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sourceIdElement: freezed == sourceIdElement
           ? _value.sourceIdElement
           : sourceIdElement // ignore: cast_nullable_to_non_nullable
@@ -8408,7 +8408,7 @@ class __$$_TestScriptActionOperationCopyWithImpl<$Res>
       targetId: freezed == targetId
           ? _value.targetId
           : targetId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       targetIdElement: freezed == targetIdElement
           ? _value.targetIdElement
           : targetIdElement // ignore: cast_nullable_to_non_nullable
@@ -8469,7 +8469,7 @@ class _$_TestScriptActionOperation extends _TestScriptActionOperation {
       _$$_TestScriptActionOperationFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -8558,17 +8558,17 @@ class _$_TestScriptActionOperation extends _TestScriptActionOperation {
   }
 
   @override
-  final Id? responseId;
+  final FhirId? responseId;
   @override
   @JsonKey(name: '_responseId')
   final Element? responseIdElement;
   @override
-  final Id? sourceId;
+  final FhirId? sourceId;
   @override
   @JsonKey(name: '_sourceId')
   final Element? sourceIdElement;
   @override
-  final Id? targetId;
+  final FhirId? targetId;
   @override
   @JsonKey(name: '_targetId')
   final Element? targetIdElement;
@@ -8698,7 +8698,7 @@ class _$_TestScriptActionOperation extends _TestScriptActionOperation {
 
 abstract class _TestScriptActionOperation extends TestScriptActionOperation {
   factory _TestScriptActionOperation(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -8732,13 +8732,13 @@ abstract class _TestScriptActionOperation extends TestScriptActionOperation {
       @JsonKey(name: '_params')
           final Element? paramsElement,
       final List<TestScriptOperationRequestHeader>? requestHeader,
-      final Id? responseId,
+      final FhirId? responseId,
       @JsonKey(name: '_responseId')
           final Element? responseIdElement,
-      final Id? sourceId,
+      final FhirId? sourceId,
       @JsonKey(name: '_sourceId')
           final Element? sourceIdElement,
-      final Id? targetId,
+      final FhirId? targetId,
       @JsonKey(name: '_targetId')
           final Element? targetIdElement,
       final String? url,
@@ -8750,7 +8750,7 @@ abstract class _TestScriptActionOperation extends TestScriptActionOperation {
       _$_TestScriptActionOperation.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -8806,17 +8806,17 @@ abstract class _TestScriptActionOperation extends TestScriptActionOperation {
   @override
   List<TestScriptOperationRequestHeader>? get requestHeader;
   @override
-  Id? get responseId;
+  FhirId? get responseId;
   @override
   @JsonKey(name: '_responseId')
   Element? get responseIdElement;
   @override
-  Id? get sourceId;
+  FhirId? get sourceId;
   @override
   @JsonKey(name: '_sourceId')
   Element? get sourceIdElement;
   @override
-  Id? get targetId;
+  FhirId? get targetId;
   @override
   @JsonKey(name: '_targetId')
   Element? get targetIdElement;
@@ -8838,7 +8838,7 @@ TestScriptOperationRequestHeader _$TestScriptOperationRequestHeaderFromJson(
 
 /// @nodoc
 mixin _$TestScriptOperationRequestHeader {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   FhirExtension? get modifierExtension => throw _privateConstructorUsedError;
@@ -8864,7 +8864,7 @@ abstract class $TestScriptOperationRequestHeaderCopyWith<$Res> {
           TestScriptOperationRequestHeader>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       FhirExtension? modifierExtension,
       String field,
@@ -8903,7 +8903,7 @@ class _$TestScriptOperationRequestHeaderCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -8978,7 +8978,7 @@ abstract class _$$_TestScriptOperationRequestHeaderCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       FhirExtension? modifierExtension,
       String field,
@@ -9019,7 +9019,7 @@ class __$$_TestScriptOperationRequestHeaderCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -9068,7 +9068,7 @@ class _$_TestScriptOperationRequestHeader
       _$$_TestScriptOperationRequestHeaderFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -9147,7 +9147,7 @@ class _$_TestScriptOperationRequestHeader
 abstract class _TestScriptOperationRequestHeader
     extends TestScriptOperationRequestHeader {
   factory _TestScriptOperationRequestHeader(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final FhirExtension? modifierExtension,
           required final String field,
@@ -9161,7 +9161,7 @@ abstract class _TestScriptOperationRequestHeader
       Map<String, dynamic> json) = _$_TestScriptOperationRequestHeader.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -9191,7 +9191,7 @@ TestScriptActionAssert _$TestScriptActionAssertFromJson(
 
 /// @nodoc
 mixin _$TestScriptActionAssert {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -9240,10 +9240,10 @@ mixin _$TestScriptActionAssert {
   String? get responseCode => throw _privateConstructorUsedError;
   @JsonKey(name: '_responseCode')
   Element? get responseCodeElement => throw _privateConstructorUsedError;
-  Id? get sourceId => throw _privateConstructorUsedError;
+  FhirId? get sourceId => throw _privateConstructorUsedError;
   @JsonKey(name: '_sourceId')
   Element? get sourceIdElement => throw _privateConstructorUsedError;
-  Id? get validateProfileId => throw _privateConstructorUsedError;
+  FhirId? get validateProfileId => throw _privateConstructorUsedError;
   @JsonKey(name: '_validateProfileId')
   Element? get validateProfileIdElement => throw _privateConstructorUsedError;
   String? get value => throw _privateConstructorUsedError;
@@ -9266,7 +9266,7 @@ abstract class $TestScriptActionAssertCopyWith<$Res> {
       _$TestScriptActionAssertCopyWithImpl<$Res, TestScriptActionAssert>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -9314,10 +9314,10 @@ abstract class $TestScriptActionAssertCopyWith<$Res> {
       String? responseCode,
       @JsonKey(name: '_responseCode')
           Element? responseCodeElement,
-      Id? sourceId,
+      FhirId? sourceId,
       @JsonKey(name: '_sourceId')
           Element? sourceIdElement,
-      Id? validateProfileId,
+      FhirId? validateProfileId,
       @JsonKey(name: '_validateProfileId')
           Element? validateProfileIdElement,
       String? value,
@@ -9403,7 +9403,7 @@ class _$TestScriptActionAssertCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -9523,7 +9523,7 @@ class _$TestScriptActionAssertCopyWithImpl<$Res,
       sourceId: freezed == sourceId
           ? _value.sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sourceIdElement: freezed == sourceIdElement
           ? _value.sourceIdElement
           : sourceIdElement // ignore: cast_nullable_to_non_nullable
@@ -9531,7 +9531,7 @@ class _$TestScriptActionAssertCopyWithImpl<$Res,
       validateProfileId: freezed == validateProfileId
           ? _value.validateProfileId
           : validateProfileId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       validateProfileIdElement: freezed == validateProfileIdElement
           ? _value.validateProfileIdElement
           : validateProfileIdElement // ignore: cast_nullable_to_non_nullable
@@ -9769,7 +9769,7 @@ abstract class _$$_TestScriptActionAssertCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -9817,10 +9817,10 @@ abstract class _$$_TestScriptActionAssertCopyWith<$Res>
       String? responseCode,
       @JsonKey(name: '_responseCode')
           Element? responseCodeElement,
-      Id? sourceId,
+      FhirId? sourceId,
       @JsonKey(name: '_sourceId')
           Element? sourceIdElement,
-      Id? validateProfileId,
+      FhirId? validateProfileId,
       @JsonKey(name: '_validateProfileId')
           Element? validateProfileIdElement,
       String? value,
@@ -9921,7 +9921,7 @@ class __$$_TestScriptActionAssertCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -10041,7 +10041,7 @@ class __$$_TestScriptActionAssertCopyWithImpl<$Res>
       sourceId: freezed == sourceId
           ? _value.sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sourceIdElement: freezed == sourceIdElement
           ? _value.sourceIdElement
           : sourceIdElement // ignore: cast_nullable_to_non_nullable
@@ -10049,7 +10049,7 @@ class __$$_TestScriptActionAssertCopyWithImpl<$Res>
       validateProfileId: freezed == validateProfileId
           ? _value.validateProfileId
           : validateProfileId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       validateProfileIdElement: freezed == validateProfileIdElement
           ? _value.validateProfileIdElement
           : validateProfileIdElement // ignore: cast_nullable_to_non_nullable
@@ -10146,7 +10146,7 @@ class _$_TestScriptActionAssert extends _TestScriptActionAssert {
       _$$_TestScriptActionAssertFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -10241,12 +10241,12 @@ class _$_TestScriptActionAssert extends _TestScriptActionAssert {
   @JsonKey(name: '_responseCode')
   final Element? responseCodeElement;
   @override
-  final Id? sourceId;
+  final FhirId? sourceId;
   @override
   @JsonKey(name: '_sourceId')
   final Element? sourceIdElement;
   @override
-  final Id? validateProfileId;
+  final FhirId? validateProfileId;
   @override
   @JsonKey(name: '_validateProfileId')
   final Element? validateProfileIdElement;
@@ -10401,7 +10401,7 @@ class _$_TestScriptActionAssert extends _TestScriptActionAssert {
 
 abstract class _TestScriptActionAssert extends TestScriptActionAssert {
   factory _TestScriptActionAssert(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -10449,10 +10449,10 @@ abstract class _TestScriptActionAssert extends TestScriptActionAssert {
       final String? responseCode,
       @JsonKey(name: '_responseCode')
           final Element? responseCodeElement,
-      final Id? sourceId,
+      final FhirId? sourceId,
       @JsonKey(name: '_sourceId')
           final Element? sourceIdElement,
-      final Id? validateProfileId,
+      final FhirId? validateProfileId,
       @JsonKey(name: '_validateProfileId')
           final Element? validateProfileIdElement,
       final String? value,
@@ -10467,7 +10467,7 @@ abstract class _TestScriptActionAssert extends TestScriptActionAssert {
       _$_TestScriptActionAssert.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -10545,12 +10545,12 @@ abstract class _TestScriptActionAssert extends TestScriptActionAssert {
   @JsonKey(name: '_responseCode')
   Element? get responseCodeElement;
   @override
-  Id? get sourceId;
+  FhirId? get sourceId;
   @override
   @JsonKey(name: '_sourceId')
   Element? get sourceIdElement;
   @override
-  Id? get validateProfileId;
+  FhirId? get validateProfileId;
   @override
   @JsonKey(name: '_validateProfileId')
   Element? get validateProfileIdElement;
@@ -10576,7 +10576,7 @@ TestScriptTest _$TestScriptTestFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$TestScriptTest {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -10603,7 +10603,7 @@ abstract class $TestScriptTestCopyWith<$Res> {
       _$TestScriptTestCopyWithImpl<$Res, TestScriptTest>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? name,
@@ -10645,7 +10645,7 @@ class _$TestScriptTestCopyWithImpl<$Res, $Val extends TestScriptTest>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -10727,7 +10727,7 @@ abstract class _$$_TestScriptTestCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? name,
@@ -10770,7 +10770,7 @@ class __$$_TestScriptTestCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -10829,7 +10829,7 @@ class _$_TestScriptTest extends _TestScriptTest {
       _$$_TestScriptTestFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -10929,7 +10929,7 @@ class _$_TestScriptTest extends _TestScriptTest {
 
 abstract class _TestScriptTest extends TestScriptTest {
   factory _TestScriptTest(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? name,
@@ -10944,7 +10944,7 @@ abstract class _TestScriptTest extends TestScriptTest {
       _$_TestScriptTest.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -10976,7 +10976,7 @@ TestScriptTeardown _$TestScriptTeardownFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$TestScriptTeardown {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -10997,7 +10997,7 @@ abstract class $TestScriptTeardownCopyWith<$Res> {
       _$TestScriptTeardownCopyWithImpl<$Res, TestScriptTeardown>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<TestScriptTeardownAction> action});
@@ -11025,7 +11025,7 @@ class _$TestScriptTeardownCopyWithImpl<$Res, $Val extends TestScriptTeardown>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -11051,7 +11051,7 @@ abstract class _$$_TestScriptTeardownCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<TestScriptTeardownAction> action});
@@ -11077,7 +11077,7 @@ class __$$_TestScriptTeardownCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -11111,7 +11111,7 @@ class _$_TestScriptTeardown extends _TestScriptTeardown {
       _$$_TestScriptTeardownFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -11186,7 +11186,7 @@ class _$_TestScriptTeardown extends _TestScriptTeardown {
 
 abstract class _TestScriptTeardown extends TestScriptTeardown {
   factory _TestScriptTeardown(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final List<TestScriptTeardownAction> action}) =
@@ -11197,7 +11197,7 @@ abstract class _TestScriptTeardown extends TestScriptTeardown {
       _$_TestScriptTeardown.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -11218,7 +11218,7 @@ TestScriptTeardownAction _$TestScriptTeardownActionFromJson(
 
 /// @nodoc
 mixin _$TestScriptTeardownAction {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -11241,7 +11241,7 @@ abstract class $TestScriptTeardownActionCopyWith<$Res> {
       _$TestScriptTeardownActionCopyWithImpl<$Res, TestScriptTeardownAction>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -11274,7 +11274,7 @@ class _$TestScriptTeardownActionCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -11317,7 +11317,7 @@ abstract class _$$_TestScriptTeardownActionCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -11349,7 +11349,7 @@ class __$$_TestScriptTeardownActionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -11388,7 +11388,7 @@ class _$_TestScriptTeardownAction extends _TestScriptTeardownAction {
       _$$_TestScriptTeardownActionFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -11473,7 +11473,7 @@ class _$_TestScriptTeardownAction extends _TestScriptTeardownAction {
 
 abstract class _TestScriptTeardownAction extends TestScriptTeardownAction {
   factory _TestScriptTeardownAction(
-          {final Id? id,
+          {final FhirId? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
@@ -11485,7 +11485,7 @@ abstract class _TestScriptTeardownAction extends TestScriptTeardownAction {
       _$_TestScriptTeardownAction.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;

@@ -19,7 +19,7 @@ class Questionnaire with Resource, _$Questionnaire {
     @Default(Dstu2ResourceType.Questionnaire)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Questionnaire)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     @JsonKey(name: '_id') Element? idElement,
     Meta? meta,
     FhirUri? implicitRules,
@@ -78,7 +78,7 @@ class Questionnaire with Resource, _$Questionnaire {
 class QuestionnaireGroup with _$QuestionnaireGroup {
   QuestionnaireGroup._();
   factory QuestionnaireGroup({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -129,7 +129,7 @@ class QuestionnaireGroup with _$QuestionnaireGroup {
 class QuestionnaireGroupQuestion with _$QuestionnaireGroupQuestion {
   QuestionnaireGroupQuestion._();
   factory QuestionnaireGroupQuestion({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -183,7 +183,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
     @Default(Dstu2ResourceType.QuestionnaireResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.QuestionnaireResponse)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     @JsonKey(name: '_id') Element? idElement,
     Meta? meta,
     FhirUri? implicitRules,
@@ -240,7 +240,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
 class QuestionnaireResponseGroup with _$QuestionnaireResponseGroup {
   QuestionnaireResponseGroup._();
   factory QuestionnaireResponseGroup({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -290,7 +290,7 @@ class QuestionnaireResponseGroupQuestion
     with _$QuestionnaireResponseGroupQuestion {
   QuestionnaireResponseGroupQuestion._();
   factory QuestionnaireResponseGroupQuestion({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -325,7 +325,7 @@ class QuestionnaireResponseQuestionAnswer
     with _$QuestionnaireResponseQuestionAnswer {
   QuestionnaireResponseQuestionAnswer._();
   factory QuestionnaireResponseQuestionAnswer({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -381,7 +381,7 @@ class Provenance with Resource, _$Provenance {
     @Default(Dstu2ResourceType.Provenance)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Provenance)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -437,7 +437,7 @@ class Provenance with Resource, _$Provenance {
 class ProvenanceAgent with _$ProvenanceAgent {
   ProvenanceAgent._();
   factory ProvenanceAgent({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -482,7 +482,7 @@ class ProvenanceAgent with _$ProvenanceAgent {
 class ProvenanceEntity with _$ProvenanceEntity {
   ProvenanceEntity._();
   factory ProvenanceEntity({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -530,7 +530,7 @@ class ProvenanceEntity with _$ProvenanceEntity {
 class ProvenanceAgentRelatedAgent with _$ProvenanceAgentRelatedAgent {
   ProvenanceAgentRelatedAgent._();
   factory ProvenanceAgentRelatedAgent({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept type,
@@ -575,7 +575,7 @@ class AuditEvent with Resource, _$AuditEvent {
     @Default(Dstu2ResourceType.AuditEvent)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.AuditEvent)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -623,7 +623,7 @@ class AuditEvent with Resource, _$AuditEvent {
 class AuditEventEvent with _$AuditEventEvent {
   AuditEventEvent._();
   factory AuditEventEvent({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Coding type,
@@ -670,7 +670,7 @@ class AuditEventEvent with _$AuditEventEvent {
 class AuditEventParticipant with _$AuditEventParticipant {
   AuditEventParticipant._();
   factory AuditEventParticipant({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? role,
@@ -722,7 +722,7 @@ class AuditEventParticipant with _$AuditEventParticipant {
 class AuditEventSource with _$AuditEventSource {
   AuditEventSource._();
   factory AuditEventSource({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? site,
@@ -766,7 +766,7 @@ class AuditEventSource with _$AuditEventSource {
 class AuditEventObject with _$AuditEventObject {
   AuditEventObject._();
   factory AuditEventObject({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
@@ -817,7 +817,7 @@ class AuditEventObject with _$AuditEventObject {
 class AuditEventParticipantNetwork with _$AuditEventParticipantNetwork {
   AuditEventParticipantNetwork._();
   factory AuditEventParticipantNetwork({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     String? address,
@@ -861,7 +861,7 @@ class AuditEventParticipantNetwork with _$AuditEventParticipantNetwork {
 class AuditEventObjectDetail with _$AuditEventObjectDetail {
   AuditEventObjectDetail._();
   factory AuditEventObjectDetail({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required String type,

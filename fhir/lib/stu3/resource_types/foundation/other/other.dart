@@ -19,7 +19,7 @@ class Basic with Resource, _$Basic {
     @Default(Stu3ResourceType.Basic)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Basic)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -70,7 +70,7 @@ class Binary with Resource, _$Binary {
     @Default(Stu3ResourceType.Binary)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Binary)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -121,7 +121,7 @@ class Bundle with Resource, _$Bundle {
     @Default(Stu3ResourceType.Bundle)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Bundle)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -441,7 +441,7 @@ class Linkage with Resource, _$Linkage {
     @Default(Stu3ResourceType.Linkage)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Linkage)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -532,7 +532,7 @@ class Media with Resource, _$Media {
     @Default(Stu3ResourceType.Media)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Media)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -559,7 +559,7 @@ class Media with Resource, _$Media {
     Reference? device,
     Decimal? height,
     @JsonKey(name: '_height') Element? heightElement,
-    Id? width,
+    FhirId? width,
     @JsonKey(name: '_width') Element? widthElement,
     Decimal? frames,
     @JsonKey(name: '_frames') Element? framesElement,
@@ -602,7 +602,7 @@ class MessageHeader with Resource, _$MessageHeader {
     @Default(Stu3ResourceType.MessageHeader)
     @JsonKey(unknownEnumValue: Stu3ResourceType.MessageHeader)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -747,7 +747,7 @@ class MessageHeaderSource with _$MessageHeaderSource {
 class MessageHeaderResponse with _$MessageHeaderResponse {
   MessageHeaderResponse._();
   factory MessageHeaderResponse({
-    Id? identifier,
+    FhirId? identifier,
     @JsonKey(name: '_identifier') Element? identifierElement,
     MessageHeaderResponseCode? code,
     @JsonKey(name: '_code') Element? codeElement,
@@ -792,7 +792,7 @@ class OperationOutcome with Resource, _$OperationOutcome {
     @Default(Stu3ResourceType.OperationOutcome)
     @JsonKey(unknownEnumValue: Stu3ResourceType.OperationOutcome)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -891,7 +891,7 @@ class Parameters with Resource, _$Parameters {
     @Default(Stu3ResourceType.Parameters)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Parameters)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -960,11 +960,11 @@ class ParametersParameter with _$ParametersParameter {
     @JsonKey(name: '_valueTime') Element? valueTimeElement,
     Code? valueCode,
     @JsonKey(name: '_valueCode') Element? valueCodeElement,
-    Id? valueOid,
+    FhirId? valueOid,
     @JsonKey(name: '_valueOid') Element? valueOidElement,
-    Id? valueUuid,
+    FhirId? valueUuid,
     @JsonKey(name: '_valueUuid') Element? valueUuidElement,
-    Id? valueId,
+    FhirId? valueId,
     @JsonKey(name: '_valueId') Element? valueIdElement,
     Decimal? valueUnsignedInt,
     @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
@@ -1050,7 +1050,7 @@ class Subscription with Resource, _$Subscription {
     @Default(Stu3ResourceType.Subscription)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Subscription)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,

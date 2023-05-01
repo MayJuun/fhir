@@ -19,7 +19,7 @@ class Account with Resource, _$Account {
     @Default(Stu3ResourceType.Account)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Account)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -162,7 +162,7 @@ class ChargeItem with Resource, _$ChargeItem {
     @Default(Stu3ResourceType.ChargeItem)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -190,7 +190,7 @@ class ChargeItem with Resource, _$ChargeItem {
     Reference? requestingOrganization,
     Quantity? quantity,
     List<CodeableConcept>? bodysite,
-    Id? factorOverride,
+    FhirId? factorOverride,
     @JsonKey(name: '_factorOverride') Element? factorOverrideElement,
     Money? priceOverride,
     String? overrideReason,
@@ -279,7 +279,7 @@ class Contract with Resource, _$Contract {
     @Default(Stu3ResourceType.Contract)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -737,7 +737,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
     @Default(Stu3ResourceType.ExplanationOfBenefit)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1378,7 +1378,7 @@ class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
 class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
   ExplanationOfBenefitAddItem._();
   factory ExplanationOfBenefitAddItem({
-    List<Id>? sequenceLinkId,
+    List<FhirId>? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') List<Element?>? sequenceLinkIdElement,
     CodeableConcept? revenue,
     CodeableConcept? category,

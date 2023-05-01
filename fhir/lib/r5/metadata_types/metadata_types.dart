@@ -2368,7 +2368,7 @@ class Expression with _$Expression {
 
     /// [name] A short name assigned to the expression to allow for multiple
     ///  reuse of the expression in the context where it is defined.
-    Id? name,
+    FhirId? name,
 
     /// [nameElement] ("_name") Extensions for name
     @JsonKey(name: '_name') Element? nameElement,

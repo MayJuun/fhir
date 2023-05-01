@@ -20,7 +20,7 @@ FhirExtension _$FhirExtensionFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$FhirExtension {
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   FhirUri get url => throw _privateConstructorUsedError;
@@ -64,7 +64,7 @@ mixin _$FhirExtension {
   Oid? get valueOid => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueOid')
   Element? get valueOidElement => throw _privateConstructorUsedError;
-  Id? get valueId => throw _privateConstructorUsedError;
+  FhirId? get valueId => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueId')
   Element? get valueIdElement => throw _privateConstructorUsedError;
   UnsignedInt? get valueUnsignedInt => throw _privateConstructorUsedError;
@@ -107,7 +107,7 @@ abstract class $FhirExtensionCopyWith<$Res> {
       _$FhirExtensionCopyWithImpl<$Res, FhirExtension>;
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       FhirUri url,
       @JsonKey(name: '_url') Element? urlElement,
@@ -136,7 +136,7 @@ abstract class $FhirExtensionCopyWith<$Res> {
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
       Oid? valueOid,
       @JsonKey(name: '_valueOid') Element? valueOidElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
       UnsignedInt? valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
@@ -267,7 +267,7 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -383,7 +383,7 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -886,7 +886,7 @@ abstract class _$$_FhirExtensionCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? id,
+      {FhirId? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       FhirUri url,
       @JsonKey(name: '_url') Element? urlElement,
@@ -915,7 +915,7 @@ abstract class _$$_FhirExtensionCopyWith<$Res>
       @JsonKey(name: '_valueCode') Element? valueCodeElement,
       Oid? valueOid,
       @JsonKey(name: '_valueOid') Element? valueOidElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
       UnsignedInt? valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
@@ -1077,7 +1077,7 @@ class __$$_FhirExtensionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
           : extension_ // ignore: cast_nullable_to_non_nullable
@@ -1193,7 +1193,7 @@ class __$$_FhirExtensionCopyWithImpl<$Res>
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -1355,7 +1355,7 @@ class _$_FhirExtension extends _FhirExtension {
       _$$_FhirExtensionFromJson(json);
 
   @override
-  final Id? id;
+  final FhirId? id;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -1444,7 +1444,7 @@ class _$_FhirExtension extends _FhirExtension {
   @JsonKey(name: '_valueOid')
   final Element? valueOidElement;
   @override
-  final Id? valueId;
+  final FhirId? valueId;
   @override
   @JsonKey(name: '_valueId')
   final Element? valueIdElement;
@@ -1671,7 +1671,7 @@ class _$_FhirExtension extends _FhirExtension {
 
 abstract class _FhirExtension extends FhirExtension {
   factory _FhirExtension(
-      {final Id? id,
+      {final FhirId? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       required final FhirUri url,
@@ -1715,7 +1715,7 @@ abstract class _FhirExtension extends FhirExtension {
       final Oid? valueOid,
       @JsonKey(name: '_valueOid')
           final Element? valueOidElement,
-      final Id? valueId,
+      final FhirId? valueId,
       @JsonKey(name: '_valueId')
           final Element? valueIdElement,
       final UnsignedInt? valueUnsignedInt,
@@ -1749,7 +1749,7 @@ abstract class _FhirExtension extends FhirExtension {
       _$_FhirExtension.fromJson;
 
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -1822,7 +1822,7 @@ abstract class _FhirExtension extends FhirExtension {
   @JsonKey(name: '_valueOid')
   Element? get valueOidElement;
   @override
-  Id? get valueId;
+  FhirId? get valueId;
   @override
   @JsonKey(name: '_valueId')
   Element? get valueIdElement;

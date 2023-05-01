@@ -5554,7 +5554,7 @@ mixin _$ImagingStudySeries {
       throw _privateConstructorUsedError;
 
   /// [uid] The DICOM Series Instance UID for the series.
-  Id? get uid => throw _privateConstructorUsedError;
+  FhirId? get uid => throw _privateConstructorUsedError;
 
   /// [uidElement] Extensions for uid
   @JsonKey(name: '_uid')
@@ -5643,7 +5643,7 @@ abstract class $ImagingStudySeriesCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? uid,
+      FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement,
       UnsignedInt? number,
       @JsonKey(name: '_number') Element? numberElement,
@@ -5721,7 +5721,7 @@ class _$ImagingStudySeriesCopyWithImpl<$Res, $Val extends ImagingStudySeries>
       uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -5894,7 +5894,7 @@ abstract class _$$_ImagingStudySeriesCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? uid,
+      FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement,
       UnsignedInt? number,
       @JsonKey(name: '_number') Element? numberElement,
@@ -5978,7 +5978,7 @@ class __$$_ImagingStudySeriesCopyWithImpl<$Res>
       uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -6151,7 +6151,7 @@ class _$_ImagingStudySeries extends _ImagingStudySeries {
 
   /// [uid] The DICOM Series Instance UID for the series.
   @override
-  final Id? uid;
+  final FhirId? uid;
 
   /// [uidElement] Extensions for uid
   @override
@@ -6373,7 +6373,7 @@ abstract class _ImagingStudySeries extends ImagingStudySeries {
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Id? uid,
+      final FhirId? uid,
       @JsonKey(name: '_uid')
           final Element? uidElement,
       final UnsignedInt? number,
@@ -6434,7 +6434,7 @@ abstract class _ImagingStudySeries extends ImagingStudySeries {
   @override
 
   /// [uid] The DICOM Series Instance UID for the series.
-  Id? get uid;
+  FhirId? get uid;
   @override
 
   /// [uidElement] Extensions for uid
@@ -6951,7 +6951,7 @@ mixin _$ImagingStudyInstance {
       throw _privateConstructorUsedError;
 
   /// [uid] The DICOM SOP Instance UID for this image or other DICOM content.
-  Id? get uid => throw _privateConstructorUsedError;
+  FhirId? get uid => throw _privateConstructorUsedError;
 
   /// [uidElement] Extensions for uid
   @JsonKey(name: '_uid')
@@ -6990,7 +6990,7 @@ abstract class $ImagingStudyInstanceCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? uid,
+      FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement,
       Coding sopClass,
       UnsignedInt? number,
@@ -7045,7 +7045,7 @@ class _$ImagingStudyInstanceCopyWithImpl<$Res,
       uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -7130,7 +7130,7 @@ abstract class _$$_ImagingStudyInstanceCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? uid,
+      FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement,
       Coding sopClass,
       UnsignedInt? number,
@@ -7186,7 +7186,7 @@ class __$$_ImagingStudyInstanceCopyWithImpl<$Res>
       uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -7305,7 +7305,7 @@ class _$_ImagingStudyInstance extends _ImagingStudyInstance {
 
   /// [uid] The DICOM SOP Instance UID for this image or other DICOM content.
   @override
-  final Id? uid;
+  final FhirId? uid;
 
   /// [uidElement] Extensions for uid
   @override
@@ -7397,7 +7397,7 @@ abstract class _ImagingStudyInstance extends ImagingStudyInstance {
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Id? uid,
+          final FhirId? uid,
           @JsonKey(name: '_uid') final Element? uidElement,
           required final Coding sopClass,
           final UnsignedInt? number,
@@ -7444,7 +7444,7 @@ abstract class _ImagingStudyInstance extends ImagingStudyInstance {
   @override
 
   /// [uid] The DICOM SOP Instance UID for this image or other DICOM content.
-  Id? get uid;
+  FhirId? get uid;
   @override
 
   /// [uidElement] Extensions for uid

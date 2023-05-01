@@ -15,7 +15,7 @@ part 'fhir_extension.g.dart';
 class FhirExtension with _$FhirExtension {
   FhirExtension._();
   factory FhirExtension({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     required FhirUri url,
     @JsonKey(name: '_url') Element? urlElement,
@@ -44,7 +44,7 @@ class FhirExtension with _$FhirExtension {
     @JsonKey(name: '_valueCode') Element? valueCodeElement,
     Oid? valueOid,
     @JsonKey(name: '_valueOid') Element? valueOidElement,
-    Id? valueId,
+    FhirId? valueId,
     @JsonKey(name: '_valueId') Element? valueIdElement,
     UnsignedInt? valueUnsignedInt,
     @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,

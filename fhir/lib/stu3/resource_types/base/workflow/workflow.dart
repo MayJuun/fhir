@@ -19,7 +19,7 @@ class Appointment with Resource, _$Appointment {
     @Default(Stu3ResourceType.Appointment)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Appointment)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -137,7 +137,7 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
     @Default(Stu3ResourceType.AppointmentResponse)
     @JsonKey(unknownEnumValue: Stu3ResourceType.AppointmentResponse)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -196,7 +196,7 @@ class ProcessRequest with Resource, _$ProcessRequest {
     @Default(Stu3ResourceType.ProcessRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ProcessRequest)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -262,7 +262,7 @@ class ProcessRequest with Resource, _$ProcessRequest {
 class ProcessRequestItem with _$ProcessRequestItem {
   ProcessRequestItem._();
   factory ProcessRequestItem({
-    Id? sequenceLinkId,
+    FhirId? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
   }) = _ProcessRequestItem;
 
@@ -304,7 +304,7 @@ class ProcessResponse with Resource, _$ProcessResponse {
     @Default(Stu3ResourceType.ProcessResponse)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ProcessResponse)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -407,7 +407,7 @@ class RequestGroup with Resource, _$RequestGroup {
     @Default(Stu3ResourceType.RequestGroup)
     @JsonKey(unknownEnumValue: Stu3ResourceType.RequestGroup)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -585,7 +585,7 @@ class RequestGroupCondition with _$RequestGroupCondition {
 class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
   RequestGroupRelatedAction._();
   factory RequestGroupRelatedAction({
-    Id? actionId,
+    FhirId? actionId,
     @JsonKey(name: '_actionId') Element? actionIdElement,
     String? relationship,
     @JsonKey(name: '_relationship') Element? relationshipElement,
@@ -631,7 +631,7 @@ class Schedule with Resource, _$Schedule {
     @Default(Stu3ResourceType.Schedule)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Schedule)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -688,7 +688,7 @@ class Slot with Resource, _$Slot {
     @Default(Stu3ResourceType.Slot)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Slot)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -749,7 +749,7 @@ class Task with Resource, _$Task {
     @Default(Stu3ResourceType.Task)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Task)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -929,11 +929,11 @@ class TaskInput with _$TaskInput {
     @JsonKey(name: '_valueTime') Element? valueTimeElement,
     Code? valueCode,
     @JsonKey(name: '_valueCode') Element? valueCodeElement,
-    Id? valueOid,
+    FhirId? valueOid,
     @JsonKey(name: '_valueOid') Element? valueOidElement,
-    Id? valueUuid,
+    FhirId? valueUuid,
     @JsonKey(name: '_valueUuid') Element? valueUuidElement,
-    Id? valueId,
+    FhirId? valueId,
     @JsonKey(name: '_valueId') Element? valueIdElement,
     Decimal? valueUnsignedInt,
     @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
@@ -1037,11 +1037,11 @@ class TaskOutput with _$TaskOutput {
     @JsonKey(name: '_valueTime') Element? valueTimeElement,
     Code? valueCode,
     @JsonKey(name: '_valueCode') Element? valueCodeElement,
-    Id? valueOid,
+    FhirId? valueOid,
     @JsonKey(name: '_valueOid') Element? valueOidElement,
-    Id? valueUuid,
+    FhirId? valueUuid,
     @JsonKey(name: '_valueUuid') Element? valueUuidElement,
-    Id? valueId,
+    FhirId? valueId,
     @JsonKey(name: '_valueId') Element? valueIdElement,
     Decimal? valueUnsignedInt,
     @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,

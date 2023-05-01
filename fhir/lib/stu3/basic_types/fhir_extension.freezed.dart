@@ -65,7 +65,7 @@ mixin _$FhirExtension {
   Uuid? get valueUuid => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueUuid')
   Element? get valueUuidElement => throw _privateConstructorUsedError;
-  Id? get valueId => throw _privateConstructorUsedError;
+  FhirId? get valueId => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueId')
   Element? get valueIdElement => throw _privateConstructorUsedError;
   UnsignedInt? get valueUnsignedInt => throw _privateConstructorUsedError;
@@ -164,7 +164,7 @@ abstract class $FhirExtensionCopyWith<$Res> {
       @JsonKey(name: '_valueOid') Element? valueOidElement,
       Uuid? valueUuid,
       @JsonKey(name: '_valueUuid') Element? valueUuidElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
       UnsignedInt? valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
@@ -477,7 +477,7 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -1348,7 +1348,7 @@ abstract class _$$_FhirExtensionCopyWith<$Res>
       @JsonKey(name: '_valueOid') Element? valueOidElement,
       Uuid? valueUuid,
       @JsonKey(name: '_valueUuid') Element? valueUuidElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
       UnsignedInt? valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
@@ -1713,7 +1713,7 @@ class __$$_FhirExtensionCopyWithImpl<$Res>
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -2058,7 +2058,7 @@ class _$_FhirExtension extends _FhirExtension {
   @JsonKey(name: '_valueUuid')
   final Element? valueUuidElement;
   @override
-  final Id? valueId;
+  final FhirId? valueId;
   @override
   @JsonKey(name: '_valueId')
   final Element? valueIdElement;
@@ -2411,7 +2411,7 @@ abstract class _FhirExtension extends FhirExtension {
       final Uuid? valueUuid,
       @JsonKey(name: '_valueUuid')
           final Element? valueUuidElement,
-      final Id? valueId,
+      final FhirId? valueId,
       @JsonKey(name: '_valueId')
           final Element? valueIdElement,
       final UnsignedInt? valueUnsignedInt,
@@ -2540,7 +2540,7 @@ abstract class _FhirExtension extends FhirExtension {
   @JsonKey(name: '_valueUuid')
   Element? get valueUuidElement;
   @override
-  Id? get valueId;
+  FhirId? get valueId;
   @override
   @JsonKey(name: '_valueId')
   Element? get valueIdElement;

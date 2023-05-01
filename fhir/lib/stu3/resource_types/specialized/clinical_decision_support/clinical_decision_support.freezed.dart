@@ -22,7 +22,7 @@ GuidanceResponse _$GuidanceResponseFromJson(Map<String, dynamic> json) {
 mixin _$GuidanceResponse {
   @JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -36,7 +36,7 @@ mixin _$GuidanceResponse {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Id? get requestId => throw _privateConstructorUsedError;
+  FhirId? get requestId => throw _privateConstructorUsedError;
   @JsonKey(name: '_requestId')
   Element? get requestIdElement => throw _privateConstructorUsedError;
   Identifier? get identifier => throw _privateConstructorUsedError;
@@ -75,7 +75,7 @@ abstract class $GuidanceResponseCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -88,7 +88,7 @@ abstract class $GuidanceResponseCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? requestId,
+      FhirId? requestId,
       @JsonKey(name: '_requestId')
           Element? requestIdElement,
       Identifier? identifier,
@@ -179,7 +179,7 @@ class _$GuidanceResponseCopyWithImpl<$Res, $Val extends GuidanceResponse>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -219,7 +219,7 @@ class _$GuidanceResponseCopyWithImpl<$Res, $Val extends GuidanceResponse>
       requestId: freezed == requestId
           ? _value.requestId
           : requestId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       requestIdElement: freezed == requestIdElement
           ? _value.requestIdElement
           : requestIdElement // ignore: cast_nullable_to_non_nullable
@@ -492,7 +492,7 @@ abstract class _$$_GuidanceResponseCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -505,7 +505,7 @@ abstract class _$$_GuidanceResponseCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? requestId,
+      FhirId? requestId,
       @JsonKey(name: '_requestId')
           Element? requestIdElement,
       Identifier? identifier,
@@ -610,7 +610,7 @@ class __$$_GuidanceResponseCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -650,7 +650,7 @@ class __$$_GuidanceResponseCopyWithImpl<$Res>
       requestId: freezed == requestId
           ? _value.requestId
           : requestId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       requestIdElement: freezed == requestIdElement
           ? _value.requestIdElement
           : requestIdElement // ignore: cast_nullable_to_non_nullable
@@ -778,7 +778,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   @JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -826,7 +826,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   }
 
   @override
-  final Id? requestId;
+  final FhirId? requestId;
   @override
   @JsonKey(name: '_requestId')
   final Element? requestIdElement;
@@ -1004,7 +1004,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   factory _GuidanceResponse(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1017,7 +1017,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Id? requestId,
+      final FhirId? requestId,
       @JsonKey(name: '_requestId')
           final Element? requestIdElement,
       final Identifier? identifier,
@@ -1047,7 +1047,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   @JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -1070,7 +1070,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  Id? get requestId;
+  FhirId? get requestId;
   @override
   @JsonKey(name: '_requestId')
   Element? get requestIdElement;

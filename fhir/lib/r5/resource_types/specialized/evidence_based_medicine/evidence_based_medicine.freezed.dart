@@ -26,7 +26,7 @@ mixin _$ArtifactAssessment {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -155,7 +155,7 @@ abstract class $ArtifactAssessmentCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ArtifactAssessment)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -272,7 +272,7 @@ class _$ArtifactAssessmentCopyWithImpl<$Res, $Val extends ArtifactAssessment>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -592,7 +592,7 @@ abstract class _$$_ArtifactAssessmentCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ArtifactAssessment)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -722,7 +722,7 @@ class __$$_ArtifactAssessmentCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -919,7 +919,7 @@ class _$_ArtifactAssessment extends _ArtifactAssessment {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -1240,7 +1240,7 @@ abstract class _ArtifactAssessment extends ArtifactAssessment {
   factory _ArtifactAssessment(
       {@JsonKey(unknownEnumValue: R5ResourceType.ArtifactAssessment)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1298,7 +1298,7 @@ abstract class _ArtifactAssessment extends ArtifactAssessment {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -2262,7 +2262,7 @@ mixin _$Citation {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -2478,7 +2478,7 @@ abstract class $CitationCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Citation)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2660,7 +2660,7 @@ class _$CitationCopyWithImpl<$Res, $Val extends Citation>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -3169,7 +3169,7 @@ abstract class _$$_CitationCopyWith<$Res> implements $CitationCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Citation)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -3371,7 +3371,7 @@ class __$$_CitationCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -3717,7 +3717,7 @@ class _$_Citation extends _Citation {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -4324,7 +4324,7 @@ abstract class _Citation extends Citation {
   factory _Citation(
       {@JsonKey(unknownEnumValue: R5ResourceType.Citation)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4413,7 +4413,7 @@ abstract class _Citation extends Citation {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -15058,7 +15058,7 @@ mixin _$Evidence {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -15289,7 +15289,7 @@ abstract class $EvidenceCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Evidence)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -15486,7 +15486,7 @@ class _$EvidenceCopyWithImpl<$Res, $Val extends Evidence>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -16051,7 +16051,7 @@ abstract class _$$_EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Evidence)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -16271,7 +16271,7 @@ class __$$_EvidenceCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -16644,7 +16644,7 @@ class _$_Evidence extends _Evidence {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -17282,7 +17282,7 @@ abstract class _Evidence extends Evidence {
   factory _Evidence(
       {@JsonKey(unknownEnumValue: R5ResourceType.Evidence)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -17378,7 +17378,7 @@ abstract class _Evidence extends Evidence {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -21968,7 +21968,7 @@ mixin _$EvidenceReport {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -22194,7 +22194,7 @@ abstract class $EvidenceReportCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -22386,7 +22386,7 @@ class _$EvidenceReportCopyWithImpl<$Res, $Val extends EvidenceReport>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -22940,7 +22940,7 @@ abstract class _$$_EvidenceReportCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -23155,7 +23155,7 @@ class __$$_EvidenceReportCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -23516,7 +23516,7 @@ class _$_EvidenceReport extends _EvidenceReport {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -24134,7 +24134,7 @@ abstract class _EvidenceReport extends EvidenceReport {
   factory _EvidenceReport(
       {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -24228,7 +24228,7 @@ abstract class _EvidenceReport extends EvidenceReport {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -27390,7 +27390,7 @@ mixin _$EvidenceVariable {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -27625,7 +27625,7 @@ abstract class $EvidenceVariableCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -27824,7 +27824,7 @@ class _$EvidenceVariableCopyWithImpl<$Res, $Val extends EvidenceVariable>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -28390,7 +28390,7 @@ abstract class _$$_EvidenceVariableCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -28612,7 +28612,7 @@ class __$$_EvidenceVariableCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -28985,7 +28985,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -29608,7 +29608,7 @@ abstract class _EvidenceVariable extends EvidenceVariable {
   factory _EvidenceVariable(
       {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -29707,7 +29707,7 @@ abstract class _EvidenceVariable extends EvidenceVariable {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -30025,7 +30025,7 @@ mixin _$EvidenceVariableCharacteristic {
       throw _privateConstructorUsedError;
 
   /// [linkId] Label used for when a characteristic refers to another characteristic.
-  Id? get linkId => throw _privateConstructorUsedError;
+  FhirId? get linkId => throw _privateConstructorUsedError;
 
   /// [linkIdElement] ("_linkId") Extensions for linkId
   @JsonKey(name: '_linkId')
@@ -30062,7 +30062,7 @@ mixin _$EvidenceVariableCharacteristic {
   Expression? get definitionExpression => throw _privateConstructorUsedError;
 
   /// [definitionId] Defines the characteristic using id.
-  Id? get definitionId => throw _privateConstructorUsedError;
+  FhirId? get definitionId => throw _privateConstructorUsedError;
 
   /// [definitionIdElement] ("_definitionId") Extensions for definitionId
   @JsonKey(name: '_definitionId')
@@ -30098,7 +30098,7 @@ abstract class $EvidenceVariableCharacteristicCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? linkId,
+      FhirId? linkId,
       @JsonKey(name: '_linkId') Element? linkIdElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
@@ -30109,7 +30109,7 @@ abstract class $EvidenceVariableCharacteristicCopyWith<$Res> {
       Canonical? definitionCanonical,
       CodeableConcept? definitionCodeableConcept,
       Expression? definitionExpression,
-      Id? definitionId,
+      FhirId? definitionId,
       @JsonKey(name: '_definitionId') Element? definitionIdElement,
       EvidenceVariableDefinitionByTypeAndValue? definitionByTypeAndValue,
       EvidenceVariableDefinitionByCombination? definitionByCombination,
@@ -30178,7 +30178,7 @@ class _$EvidenceVariableCharacteristicCopyWithImpl<$Res,
       linkId: freezed == linkId
           ? _value.linkId
           : linkId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       linkIdElement: freezed == linkIdElement
           ? _value.linkIdElement
           : linkIdElement // ignore: cast_nullable_to_non_nullable
@@ -30222,7 +30222,7 @@ class _$EvidenceVariableCharacteristicCopyWithImpl<$Res,
       definitionId: freezed == definitionId
           ? _value.definitionId
           : definitionId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       definitionIdElement: freezed == definitionIdElement
           ? _value.definitionIdElement
           : definitionIdElement // ignore: cast_nullable_to_non_nullable
@@ -30369,7 +30369,7 @@ abstract class _$$_EvidenceVariableCharacteristicCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? linkId,
+      FhirId? linkId,
       @JsonKey(name: '_linkId') Element? linkIdElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
@@ -30380,7 +30380,7 @@ abstract class _$$_EvidenceVariableCharacteristicCopyWith<$Res>
       Canonical? definitionCanonical,
       CodeableConcept? definitionCodeableConcept,
       Expression? definitionExpression,
-      Id? definitionId,
+      FhirId? definitionId,
       @JsonKey(name: '_definitionId') Element? definitionIdElement,
       EvidenceVariableDefinitionByTypeAndValue? definitionByTypeAndValue,
       EvidenceVariableDefinitionByCombination? definitionByCombination,
@@ -30457,7 +30457,7 @@ class __$$_EvidenceVariableCharacteristicCopyWithImpl<$Res>
       linkId: freezed == linkId
           ? _value.linkId
           : linkId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       linkIdElement: freezed == linkIdElement
           ? _value.linkIdElement
           : linkIdElement // ignore: cast_nullable_to_non_nullable
@@ -30501,7 +30501,7 @@ class __$$_EvidenceVariableCharacteristicCopyWithImpl<$Res>
       definitionId: freezed == definitionId
           ? _value.definitionId
           : definitionId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       definitionIdElement: freezed == definitionIdElement
           ? _value.definitionIdElement
           : definitionIdElement // ignore: cast_nullable_to_non_nullable
@@ -30623,7 +30623,7 @@ class _$_EvidenceVariableCharacteristic
 
   /// [linkId] Label used for when a characteristic refers to another characteristic.
   @override
-  final Id? linkId;
+  final FhirId? linkId;
 
   /// [linkIdElement] ("_linkId") Extensions for linkId
   @override
@@ -30679,7 +30679,7 @@ class _$_EvidenceVariableCharacteristic
 
   /// [definitionId] Defines the characteristic using id.
   @override
-  final Id? definitionId;
+  final FhirId? definitionId;
 
   /// [definitionIdElement] ("_definitionId") Extensions for definitionId
   @override
@@ -30802,7 +30802,7 @@ abstract class _EvidenceVariableCharacteristic
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Id? linkId,
+      final FhirId? linkId,
       @JsonKey(name: '_linkId') final Element? linkIdElement,
       final String? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
@@ -30813,7 +30813,7 @@ abstract class _EvidenceVariableCharacteristic
       final Canonical? definitionCanonical,
       final CodeableConcept? definitionCodeableConcept,
       final Expression? definitionExpression,
-      final Id? definitionId,
+      final FhirId? definitionId,
       @JsonKey(name: '_definitionId') final Element? definitionIdElement,
       final EvidenceVariableDefinitionByTypeAndValue? definitionByTypeAndValue,
       final EvidenceVariableDefinitionByCombination? definitionByCombination,
@@ -30857,7 +30857,7 @@ abstract class _EvidenceVariableCharacteristic
   @override
 
   /// [linkId] Label used for when a characteristic refers to another characteristic.
-  Id? get linkId;
+  FhirId? get linkId;
   @override
 
   /// [linkIdElement] ("_linkId") Extensions for linkId
@@ -30904,7 +30904,7 @@ abstract class _EvidenceVariableCharacteristic
   @override
 
   /// [definitionId] Defines the characteristic using id.
-  Id? get definitionId;
+  FhirId? get definitionId;
   @override
 
   /// [definitionIdElement] ("_definitionId") Extensions for definitionId
@@ -30994,7 +30994,7 @@ mixin _$EvidenceVariableDefinitionByTypeAndValue {
   Reference? get valueReference => throw _privateConstructorUsedError;
 
   /// [valueId] Defines the characteristic when paired with characteristic.type.
-  Id? get valueId => throw _privateConstructorUsedError;
+  FhirId? get valueId => throw _privateConstructorUsedError;
 
   /// [valueIdElement] ("_valueId") Extensions for valueId
   @JsonKey(name: '_valueId')
@@ -31031,7 +31031,7 @@ abstract class $EvidenceVariableDefinitionByTypeAndValueCopyWith<$Res> {
       Quantity? valueQuantity,
       Range? valueRange,
       Reference? valueReference,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
       CodeableConcept? offset});
 
@@ -31129,7 +31129,7 @@ class _$EvidenceVariableDefinitionByTypeAndValueCopyWithImpl<$Res,
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -31269,7 +31269,7 @@ abstract class _$$_EvidenceVariableDefinitionByTypeAndValueCopyWith<$Res>
       Quantity? valueQuantity,
       Range? valueRange,
       Reference? valueReference,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
       CodeableConcept? offset});
 
@@ -31374,7 +31374,7 @@ class __$$_EvidenceVariableDefinitionByTypeAndValueCopyWithImpl<$Res>
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -31529,7 +31529,7 @@ class _$_EvidenceVariableDefinitionByTypeAndValue
 
   /// [valueId] Defines the characteristic when paired with characteristic.type.
   @override
-  final Id? valueId;
+  final FhirId? valueId;
 
   /// [valueIdElement] ("_valueId") Extensions for valueId
   @override
@@ -31627,7 +31627,7 @@ abstract class _EvidenceVariableDefinitionByTypeAndValue
           final Quantity? valueQuantity,
           final Range? valueRange,
           final Reference? valueReference,
-          final Id? valueId,
+          final FhirId? valueId,
           @JsonKey(name: '_valueId') final Element? valueIdElement,
           final CodeableConcept? offset}) =
       _$_EvidenceVariableDefinitionByTypeAndValue;
@@ -31707,7 +31707,7 @@ abstract class _EvidenceVariableDefinitionByTypeAndValue
   @override
 
   /// [valueId] Defines the characteristic when paired with characteristic.type.
-  Id? get valueId;
+  FhirId? get valueId;
   @override
 
   /// [valueIdElement] ("_valueId") Extensions for valueId
@@ -32284,7 +32284,7 @@ mixin _$EvidenceVariableTimeFromEvent {
   Element? get eventDateTimeElement => throw _privateConstructorUsedError;
 
   /// [eventId] The event used as a base point (reference point) in time.
-  Id? get eventId => throw _privateConstructorUsedError;
+  FhirId? get eventId => throw _privateConstructorUsedError;
 
   /// [eventIdElement] ("_eventId") Extensions for eventId
   @JsonKey(name: '_eventId')
@@ -32321,7 +32321,7 @@ abstract class $EvidenceVariableTimeFromEventCopyWith<$Res> {
       Reference? eventReference,
       FhirDateTime? eventDateTime,
       @JsonKey(name: '_eventDateTime') Element? eventDateTimeElement,
-      Id? eventId,
+      FhirId? eventId,
       @JsonKey(name: '_eventId') Element? eventIdElement,
       Quantity? quantity,
       Range? range});
@@ -32408,7 +32408,7 @@ class _$EvidenceVariableTimeFromEventCopyWithImpl<$Res,
       eventId: freezed == eventId
           ? _value.eventId
           : eventId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       eventIdElement: freezed == eventIdElement
           ? _value.eventIdElement
           : eventIdElement // ignore: cast_nullable_to_non_nullable
@@ -32530,7 +32530,7 @@ abstract class _$$_EvidenceVariableTimeFromEventCopyWith<$Res>
       Reference? eventReference,
       FhirDateTime? eventDateTime,
       @JsonKey(name: '_eventDateTime') Element? eventDateTimeElement,
-      Id? eventId,
+      FhirId? eventId,
       @JsonKey(name: '_eventId') Element? eventIdElement,
       Quantity? quantity,
       Range? range});
@@ -32623,7 +32623,7 @@ class __$$_EvidenceVariableTimeFromEventCopyWithImpl<$Res>
       eventId: freezed == eventId
           ? _value.eventId
           : eventId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       eventIdElement: freezed == eventIdElement
           ? _value.eventIdElement
           : eventIdElement // ignore: cast_nullable_to_non_nullable
@@ -32773,7 +32773,7 @@ class _$_EvidenceVariableTimeFromEvent extends _EvidenceVariableTimeFromEvent {
 
   /// [eventId] The event used as a base point (reference point) in time.
   @override
-  final Id? eventId;
+  final FhirId? eventId;
 
   /// [eventIdElement] ("_eventId") Extensions for eventId
   @override
@@ -32871,7 +32871,7 @@ abstract class _EvidenceVariableTimeFromEvent
       final Reference? eventReference,
       final FhirDateTime? eventDateTime,
       @JsonKey(name: '_eventDateTime') final Element? eventDateTimeElement,
-      final Id? eventId,
+      final FhirId? eventId,
       @JsonKey(name: '_eventId') final Element? eventIdElement,
       final Quantity? quantity,
       final Range? range}) = _$_EvidenceVariableTimeFromEvent;
@@ -32943,7 +32943,7 @@ abstract class _EvidenceVariableTimeFromEvent
   @override
 
   /// [eventId] The event used as a base point (reference point) in time.
-  Id? get eventId;
+  FhirId? get eventId;
   @override
 
   /// [eventIdElement] ("_eventId") Extensions for eventId

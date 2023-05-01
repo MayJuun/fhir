@@ -9941,7 +9941,7 @@ mixin _$Expression {
 
   /// [name] A short name assigned to the expression to allow for multiple
   ///  reuse of the expression in the context where it is defined.
-  Id? get name => throw _privateConstructorUsedError;
+  FhirId? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] ("_name") Extensions for name
   @JsonKey(name: '_name')
@@ -9986,7 +9986,7 @@ abstract class $ExpressionCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Id? name,
+      FhirId? name,
       @JsonKey(name: '_name') Element? nameElement,
       Code? language,
       @JsonKey(name: '_language') Element? languageElement,
@@ -10048,7 +10048,7 @@ class _$ExpressionCopyWithImpl<$Res, $Val extends Expression>
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
@@ -10154,7 +10154,7 @@ abstract class _$$_ExpressionCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Id? name,
+      FhirId? name,
       @JsonKey(name: '_name') Element? nameElement,
       Code? language,
       @JsonKey(name: '_language') Element? languageElement,
@@ -10219,7 +10219,7 @@ class __$$_ExpressionCopyWithImpl<$Res>
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
@@ -10318,7 +10318,7 @@ class _$_Expression extends _Expression {
   /// [name] A short name assigned to the expression to allow for multiple
   ///  reuse of the expression in the context where it is defined.
   @override
-  final Id? name;
+  final FhirId? name;
 
   /// [nameElement] ("_name") Extensions for name
   @override
@@ -10424,7 +10424,7 @@ abstract class _Expression extends Expression {
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final String? description,
           @JsonKey(name: '_description') final Element? descriptionElement,
-          final Id? name,
+          final FhirId? name,
           @JsonKey(name: '_name') final Element? nameElement,
           final Code? language,
           @JsonKey(name: '_language') final Element? languageElement,
@@ -10468,7 +10468,7 @@ abstract class _Expression extends Expression {
 
   /// [name] A short name assigned to the expression to allow for multiple
   ///  reuse of the expression in the context where it is defined.
-  Id? get name;
+  FhirId? get name;
   @override
 
   /// [nameElement] ("_name") Extensions for name

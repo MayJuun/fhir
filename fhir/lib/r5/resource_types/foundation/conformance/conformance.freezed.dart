@@ -26,7 +26,7 @@ mixin _$CapabilityStatement {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -251,7 +251,7 @@ abstract class $CapabilityStatementCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.CapabilityStatement)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -438,7 +438,7 @@ class _$CapabilityStatementCopyWithImpl<$Res, $Val extends CapabilityStatement>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -954,7 +954,7 @@ abstract class _$$_CapabilityStatementCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.CapabilityStatement)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1161,7 +1161,7 @@ class __$$_CapabilityStatementCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -1516,7 +1516,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -2145,7 +2145,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   factory _CapabilityStatement(
           {@JsonKey(unknownEnumValue: R5ResourceType.CapabilityStatement)
               final R5ResourceType resourceType,
-          final Id? id,
+          final FhirId? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -2240,7 +2240,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -10078,7 +10078,7 @@ mixin _$CompartmentDefinition {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -10256,7 +10256,7 @@ abstract class $CompartmentDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.CompartmentDefinition)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -10413,7 +10413,7 @@ class _$CompartmentDefinitionCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -10851,7 +10851,7 @@ abstract class _$$_CompartmentDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.CompartmentDefinition)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -11025,7 +11025,7 @@ class __$$_CompartmentDefinitionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -11301,7 +11301,7 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -11745,7 +11745,7 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
   factory _CompartmentDefinition(
           {@JsonKey(unknownEnumValue: R5ResourceType.CompartmentDefinition)
               final R5ResourceType resourceType,
-          final Id? id,
+          final FhirId? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -11824,7 +11824,7 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -12728,7 +12728,7 @@ mixin _$GraphDefinition {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -12874,7 +12874,7 @@ mixin _$GraphDefinition {
   Element? get copyrightLabelElement => throw _privateConstructorUsedError;
 
   /// [start] The Node at which instances of this graph start. If there is no nominated start, the graph can start at any of the nodes.
-  Id? get start => throw _privateConstructorUsedError;
+  FhirId? get start => throw _privateConstructorUsedError;
 
   /// [startElement] ("_start") Extensions for start
   @JsonKey(name: '_start')
@@ -12901,7 +12901,7 @@ abstract class $GraphDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.GraphDefinition)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -12958,7 +12958,7 @@ abstract class $GraphDefinitionCopyWith<$Res> {
       String? copyrightLabel,
       @JsonKey(name: '_copyrightLabel')
           Element? copyrightLabelElement,
-      Id? start,
+      FhirId? start,
       @JsonKey(name: '_start')
           Element? startElement,
       List<GraphDefinitionNode>? node,
@@ -13053,7 +13053,7 @@ class _$GraphDefinitionCopyWithImpl<$Res, $Val extends GraphDefinition>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -13217,7 +13217,7 @@ class _$GraphDefinitionCopyWithImpl<$Res, $Val extends GraphDefinition>
       start: freezed == start
           ? _value.start
           : start // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       startElement: freezed == startElement
           ? _value.startElement
           : startElement // ignore: cast_nullable_to_non_nullable
@@ -13475,7 +13475,7 @@ abstract class _$$_GraphDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.GraphDefinition)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -13532,7 +13532,7 @@ abstract class _$$_GraphDefinitionCopyWith<$Res>
       String? copyrightLabel,
       @JsonKey(name: '_copyrightLabel')
           Element? copyrightLabelElement,
-      Id? start,
+      FhirId? start,
       @JsonKey(name: '_start')
           Element? startElement,
       List<GraphDefinitionNode>? node,
@@ -13644,7 +13644,7 @@ class __$$_GraphDefinitionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -13808,7 +13808,7 @@ class __$$_GraphDefinitionCopyWithImpl<$Res>
       start: freezed == start
           ? _value.start
           : start // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       startElement: freezed == startElement
           ? _value.startElement
           : startElement // ignore: cast_nullable_to_non_nullable
@@ -13915,7 +13915,7 @@ class _$_GraphDefinition extends _GraphDefinition {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -14164,7 +14164,7 @@ class _$_GraphDefinition extends _GraphDefinition {
 
   /// [start] The Node at which instances of this graph start. If there is no nominated start, the graph can start at any of the nodes.
   @override
-  final Id? start;
+  final FhirId? start;
 
   /// [startElement] ("_start") Extensions for start
   @override
@@ -14359,7 +14359,7 @@ abstract class _GraphDefinition extends GraphDefinition {
   factory _GraphDefinition(
       {@JsonKey(unknownEnumValue: R5ResourceType.GraphDefinition)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -14416,7 +14416,7 @@ abstract class _GraphDefinition extends GraphDefinition {
       final String? copyrightLabel,
       @JsonKey(name: '_copyrightLabel')
           final Element? copyrightLabelElement,
-      final Id? start,
+      final FhirId? start,
       @JsonKey(name: '_start')
           final Element? startElement,
       final List<GraphDefinitionNode>? node,
@@ -14435,7 +14435,7 @@ abstract class _GraphDefinition extends GraphDefinition {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -14620,7 +14620,7 @@ abstract class _GraphDefinition extends GraphDefinition {
   @override
 
   /// [start] The Node at which instances of this graph start. If there is no nominated start, the graph can start at any of the nodes.
-  Id? get start;
+  FhirId? get start;
   @override
 
   /// [startElement] ("_start") Extensions for start
@@ -14675,7 +14675,7 @@ mixin _$GraphDefinitionNode {
       throw _privateConstructorUsedError;
 
   /// [nodeId] Internal ID of node - target for link references.
-  Id? get nodeId => throw _privateConstructorUsedError;
+  FhirId? get nodeId => throw _privateConstructorUsedError;
 
   /// [nodeIdElement] ("_nodeId") Extensions for nodeId
   @JsonKey(name: '_nodeId')
@@ -14714,7 +14714,7 @@ abstract class $GraphDefinitionNodeCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? nodeId,
+      FhirId? nodeId,
       @JsonKey(name: '_nodeId') Element? nodeIdElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
@@ -14767,7 +14767,7 @@ class _$GraphDefinitionNodeCopyWithImpl<$Res, $Val extends GraphDefinitionNode>
       nodeId: freezed == nodeId
           ? _value.nodeId
           : nodeId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       nodeIdElement: freezed == nodeIdElement
           ? _value.nodeIdElement
           : nodeIdElement // ignore: cast_nullable_to_non_nullable
@@ -14844,7 +14844,7 @@ abstract class _$$_GraphDefinitionNodeCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? nodeId,
+      FhirId? nodeId,
       @JsonKey(name: '_nodeId') Element? nodeIdElement,
       String? description,
       @JsonKey(name: '_description') Element? descriptionElement,
@@ -14898,7 +14898,7 @@ class __$$_GraphDefinitionNodeCopyWithImpl<$Res>
       nodeId: freezed == nodeId
           ? _value.nodeId
           : nodeId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       nodeIdElement: freezed == nodeIdElement
           ? _value.nodeIdElement
           : nodeIdElement // ignore: cast_nullable_to_non_nullable
@@ -15015,7 +15015,7 @@ class _$_GraphDefinitionNode extends _GraphDefinitionNode {
 
   /// [nodeId] Internal ID of node - target for link references.
   @override
-  final Id? nodeId;
+  final FhirId? nodeId;
 
   /// [nodeIdElement] ("_nodeId") Extensions for nodeId
   @override
@@ -15107,7 +15107,7 @@ abstract class _GraphDefinitionNode extends GraphDefinitionNode {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Id? nodeId,
+      final FhirId? nodeId,
       @JsonKey(name: '_nodeId') final Element? nodeIdElement,
       final String? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
@@ -15152,7 +15152,7 @@ abstract class _GraphDefinitionNode extends GraphDefinitionNode {
   @override
 
   /// [nodeId] Internal ID of node - target for link references.
-  Id? get nodeId;
+  FhirId? get nodeId;
   @override
 
   /// [nodeIdElement] ("_nodeId") Extensions for nodeId
@@ -15242,7 +15242,7 @@ mixin _$GraphDefinitionLink {
   Element? get maxElement => throw _privateConstructorUsedError;
 
   /// [sourceId] The source node for this link.
-  Id? get sourceId => throw _privateConstructorUsedError;
+  FhirId? get sourceId => throw _privateConstructorUsedError;
 
   /// [sourceIdElement] ("_sourceId") Extensions for sourceId
   @JsonKey(name: '_sourceId')
@@ -15263,7 +15263,7 @@ mixin _$GraphDefinitionLink {
   Element? get sliceNameElement => throw _privateConstructorUsedError;
 
   /// [targetId] The target node for this link.
-  Id? get targetId => throw _privateConstructorUsedError;
+  FhirId? get targetId => throw _privateConstructorUsedError;
 
   /// [targetIdElement] ("_targetId") Extensions for targetId
   @JsonKey(name: '_targetId')
@@ -15302,13 +15302,13 @@ abstract class $GraphDefinitionLinkCopyWith<$Res> {
       @JsonKey(name: '_min') Element? minElement,
       String? max,
       @JsonKey(name: '_max') Element? maxElement,
-      Id? sourceId,
+      FhirId? sourceId,
       @JsonKey(name: '_sourceId') Element? sourceIdElement,
       String? path,
       @JsonKey(name: '_path') Element? pathElement,
       String? sliceName,
       @JsonKey(name: '_sliceName') Element? sliceNameElement,
-      Id? targetId,
+      FhirId? targetId,
       @JsonKey(name: '_targetId') Element? targetIdElement,
       String? params,
       @JsonKey(name: '_params') Element? paramsElement,
@@ -15398,7 +15398,7 @@ class _$GraphDefinitionLinkCopyWithImpl<$Res, $Val extends GraphDefinitionLink>
       sourceId: freezed == sourceId
           ? _value.sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sourceIdElement: freezed == sourceIdElement
           ? _value.sourceIdElement
           : sourceIdElement // ignore: cast_nullable_to_non_nullable
@@ -15422,7 +15422,7 @@ class _$GraphDefinitionLinkCopyWithImpl<$Res, $Val extends GraphDefinitionLink>
       targetId: freezed == targetId
           ? _value.targetId
           : targetId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       targetIdElement: freezed == targetIdElement
           ? _value.targetIdElement
           : targetIdElement // ignore: cast_nullable_to_non_nullable
@@ -15557,13 +15557,13 @@ abstract class _$$_GraphDefinitionLinkCopyWith<$Res>
       @JsonKey(name: '_min') Element? minElement,
       String? max,
       @JsonKey(name: '_max') Element? maxElement,
-      Id? sourceId,
+      FhirId? sourceId,
       @JsonKey(name: '_sourceId') Element? sourceIdElement,
       String? path,
       @JsonKey(name: '_path') Element? pathElement,
       String? sliceName,
       @JsonKey(name: '_sliceName') Element? sliceNameElement,
-      Id? targetId,
+      FhirId? targetId,
       @JsonKey(name: '_targetId') Element? targetIdElement,
       String? params,
       @JsonKey(name: '_params') Element? paramsElement,
@@ -15659,7 +15659,7 @@ class __$$_GraphDefinitionLinkCopyWithImpl<$Res>
       sourceId: freezed == sourceId
           ? _value.sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sourceIdElement: freezed == sourceIdElement
           ? _value.sourceIdElement
           : sourceIdElement // ignore: cast_nullable_to_non_nullable
@@ -15683,7 +15683,7 @@ class __$$_GraphDefinitionLinkCopyWithImpl<$Res>
       targetId: freezed == targetId
           ? _value.targetId
           : targetId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       targetIdElement: freezed == targetIdElement
           ? _value.targetIdElement
           : targetIdElement // ignore: cast_nullable_to_non_nullable
@@ -15830,7 +15830,7 @@ class _$_GraphDefinitionLink extends _GraphDefinitionLink {
 
   /// [sourceId] The source node for this link.
   @override
-  final Id? sourceId;
+  final FhirId? sourceId;
 
   /// [sourceIdElement] ("_sourceId") Extensions for sourceId
   @override
@@ -15857,7 +15857,7 @@ class _$_GraphDefinitionLink extends _GraphDefinitionLink {
 
   /// [targetId] The target node for this link.
   @override
-  final Id? targetId;
+  final FhirId? targetId;
 
   /// [targetIdElement] ("_targetId") Extensions for targetId
   @override
@@ -15985,13 +15985,13 @@ abstract class _GraphDefinitionLink extends GraphDefinitionLink {
           @JsonKey(name: '_min') final Element? minElement,
           final String? max,
           @JsonKey(name: '_max') final Element? maxElement,
-          final Id? sourceId,
+          final FhirId? sourceId,
           @JsonKey(name: '_sourceId') final Element? sourceIdElement,
           final String? path,
           @JsonKey(name: '_path') final Element? pathElement,
           final String? sliceName,
           @JsonKey(name: '_sliceName') final Element? sliceNameElement,
-          final Id? targetId,
+          final FhirId? targetId,
           @JsonKey(name: '_targetId') final Element? targetIdElement,
           final String? params,
           @JsonKey(name: '_params') final Element? paramsElement,
@@ -16062,7 +16062,7 @@ abstract class _GraphDefinitionLink extends GraphDefinitionLink {
   @override
 
   /// [sourceId] The source node for this link.
-  Id? get sourceId;
+  FhirId? get sourceId;
   @override
 
   /// [sourceIdElement] ("_sourceId") Extensions for sourceId
@@ -16089,7 +16089,7 @@ abstract class _GraphDefinitionLink extends GraphDefinitionLink {
   @override
 
   /// [targetId] The target node for this link.
-  Id? get targetId;
+  FhirId? get targetId;
   @override
 
   /// [targetIdElement] ("_targetId") Extensions for targetId
@@ -16799,7 +16799,7 @@ mixin _$ImplementationGuide {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -16945,7 +16945,7 @@ mixin _$ImplementationGuide {
   Element? get copyrightLabelElement => throw _privateConstructorUsedError;
 
   /// [packageId] The NPM package name for this Implementation Guide, used in the NPM package distribution, which is the primary mechanism by which FHIR based tooling manages IG dependencies. This value must be globally unique, and should be assigned with care.
-  Id? get packageId => throw _privateConstructorUsedError;
+  FhirId? get packageId => throw _privateConstructorUsedError;
 
   /// [packageIdElement] ("_packageId") Extensions for packageId
   @JsonKey(name: '_packageId')
@@ -16996,7 +16996,7 @@ abstract class $ImplementationGuideCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ImplementationGuide)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -17053,7 +17053,7 @@ abstract class $ImplementationGuideCopyWith<$Res> {
       String? copyrightLabel,
       @JsonKey(name: '_copyrightLabel')
           Element? copyrightLabelElement,
-      Id? packageId,
+      FhirId? packageId,
       @JsonKey(name: '_packageId')
           Element? packageIdElement,
       Code? license,
@@ -17165,7 +17165,7 @@ class _$ImplementationGuideCopyWithImpl<$Res, $Val extends ImplementationGuide>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -17329,7 +17329,7 @@ class _$ImplementationGuideCopyWithImpl<$Res, $Val extends ImplementationGuide>
       packageId: freezed == packageId
           ? _value.packageId
           : packageId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       packageIdElement: freezed == packageIdElement
           ? _value.packageIdElement
           : packageIdElement // ignore: cast_nullable_to_non_nullable
@@ -17649,7 +17649,7 @@ abstract class _$$_ImplementationGuideCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ImplementationGuide)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -17706,7 +17706,7 @@ abstract class _$$_ImplementationGuideCopyWith<$Res>
       String? copyrightLabel,
       @JsonKey(name: '_copyrightLabel')
           Element? copyrightLabelElement,
-      Id? packageId,
+      FhirId? packageId,
       @JsonKey(name: '_packageId')
           Element? packageIdElement,
       Code? license,
@@ -17838,7 +17838,7 @@ class __$$_ImplementationGuideCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -18002,7 +18002,7 @@ class __$$_ImplementationGuideCopyWithImpl<$Res>
       packageId: freezed == packageId
           ? _value.packageId
           : packageId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       packageIdElement: freezed == packageIdElement
           ? _value.packageIdElement
           : packageIdElement // ignore: cast_nullable_to_non_nullable
@@ -18143,7 +18143,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -18392,7 +18392,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
 
   /// [packageId] The NPM package name for this Implementation Guide, used in the NPM package distribution, which is the primary mechanism by which FHIR based tooling manages IG dependencies. This value must be globally unique, and should be assigned with care.
   @override
-  final Id? packageId;
+  final FhirId? packageId;
 
   /// [packageIdElement] ("_packageId") Extensions for packageId
   @override
@@ -18648,7 +18648,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   factory _ImplementationGuide(
       {@JsonKey(unknownEnumValue: R5ResourceType.ImplementationGuide)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -18705,7 +18705,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
       final String? copyrightLabel,
       @JsonKey(name: '_copyrightLabel')
           final Element? copyrightLabelElement,
-      final Id? packageId,
+      final FhirId? packageId,
       @JsonKey(name: '_packageId')
           final Element? packageIdElement,
       final Code? license,
@@ -18732,7 +18732,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -18917,7 +18917,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   @override
 
   /// [packageId] The NPM package name for this Implementation Guide, used in the NPM package distribution, which is the primary mechanism by which FHIR based tooling manages IG dependencies. This value must be globally unique, and should be assigned with care.
-  Id? get packageId;
+  FhirId? get packageId;
   @override
 
   /// [packageIdElement] ("_packageId") Extensions for packageId
@@ -19002,7 +19002,7 @@ mixin _$ImplementationGuideDependsOn {
   Canonical get uri => throw _privateConstructorUsedError;
 
   /// [packageId] The NPM package name for the Implementation Guide that this IG depends on.
-  Id? get packageId => throw _privateConstructorUsedError;
+  FhirId? get packageId => throw _privateConstructorUsedError;
 
   /// [packageIdElement] ("_packageId") Extensions for packageId
   @JsonKey(name: '_packageId')
@@ -19041,7 +19041,7 @@ abstract class $ImplementationGuideDependsOnCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Canonical uri,
-      Id? packageId,
+      FhirId? packageId,
       @JsonKey(name: '_packageId') Element? packageIdElement,
       String? version,
       @JsonKey(name: '_version') Element? versionElement,
@@ -19098,7 +19098,7 @@ class _$ImplementationGuideDependsOnCopyWithImpl<$Res,
       packageId: freezed == packageId
           ? _value.packageId
           : packageId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       packageIdElement: freezed == packageIdElement
           ? _value.packageIdElement
           : packageIdElement // ignore: cast_nullable_to_non_nullable
@@ -19173,7 +19173,7 @@ abstract class _$$_ImplementationGuideDependsOnCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Canonical uri,
-      Id? packageId,
+      FhirId? packageId,
       @JsonKey(name: '_packageId') Element? packageIdElement,
       String? version,
       @JsonKey(name: '_version') Element? versionElement,
@@ -19232,7 +19232,7 @@ class __$$_ImplementationGuideDependsOnCopyWithImpl<$Res>
       packageId: freezed == packageId
           ? _value.packageId
           : packageId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       packageIdElement: freezed == packageIdElement
           ? _value.packageIdElement
           : packageIdElement // ignore: cast_nullable_to_non_nullable
@@ -19349,7 +19349,7 @@ class _$_ImplementationGuideDependsOn extends _ImplementationGuideDependsOn {
 
   /// [packageId] The NPM package name for the Implementation Guide that this IG depends on.
   @override
-  final Id? packageId;
+  final FhirId? packageId;
 
   /// [packageIdElement] ("_packageId") Extensions for packageId
   @override
@@ -19439,7 +19439,7 @@ abstract class _ImplementationGuideDependsOn
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final Canonical uri,
-          final Id? packageId,
+          final FhirId? packageId,
           @JsonKey(name: '_packageId') final Element? packageIdElement,
           final String? version,
           @JsonKey(name: '_version') final Element? versionElement,
@@ -19488,7 +19488,7 @@ abstract class _ImplementationGuideDependsOn
   @override
 
   /// [packageId] The NPM package name for the Implementation Guide that this IG depends on.
-  Id? get packageId;
+  FhirId? get packageId;
   @override
 
   /// [packageIdElement] ("_packageId") Extensions for packageId
@@ -20951,7 +20951,7 @@ mixin _$ImplementationGuideResource {
   List<Canonical>? get profile => throw _privateConstructorUsedError;
 
   /// [groupingId] Reference to the id of the grouping this resource appears in.
-  Id? get groupingId => throw _privateConstructorUsedError;
+  FhirId? get groupingId => throw _privateConstructorUsedError;
 
   /// [groupingIdElement] ("_groupingId") Extensions for groupingId
   @JsonKey(name: '_groupingId')
@@ -20985,7 +20985,7 @@ abstract class $ImplementationGuideResourceCopyWith<$Res> {
       Boolean? isExample,
       @JsonKey(name: '_isExample') Element? isExampleElement,
       List<Canonical>? profile,
-      Id? groupingId,
+      FhirId? groupingId,
       @JsonKey(name: '_groupingId') Element? groupingIdElement});
 
   $ReferenceCopyWith<$Res> get reference;
@@ -21081,7 +21081,7 @@ class _$ImplementationGuideResourceCopyWithImpl<$Res,
       groupingId: freezed == groupingId
           ? _value.groupingId
           : groupingId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       groupingIdElement: freezed == groupingIdElement
           ? _value.groupingIdElement
           : groupingIdElement // ignore: cast_nullable_to_non_nullable
@@ -21169,7 +21169,7 @@ abstract class _$$_ImplementationGuideResourceCopyWith<$Res>
       Boolean? isExample,
       @JsonKey(name: '_isExample') Element? isExampleElement,
       List<Canonical>? profile,
-      Id? groupingId,
+      FhirId? groupingId,
       @JsonKey(name: '_groupingId') Element? groupingIdElement});
 
   @override
@@ -21269,7 +21269,7 @@ class __$$_ImplementationGuideResourceCopyWithImpl<$Res>
       groupingId: freezed == groupingId
           ? _value.groupingId
           : groupingId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       groupingIdElement: freezed == groupingIdElement
           ? _value.groupingIdElement
           : groupingIdElement // ignore: cast_nullable_to_non_nullable
@@ -21446,7 +21446,7 @@ class _$_ImplementationGuideResource extends _ImplementationGuideResource {
 
   /// [groupingId] Reference to the id of the grouping this resource appears in.
   @override
-  final Id? groupingId;
+  final FhirId? groupingId;
 
   /// [groupingIdElement] ("_groupingId") Extensions for groupingId
   @override
@@ -21548,7 +21548,7 @@ abstract class _ImplementationGuideResource
       @JsonKey(name: '_isExample')
           final Element? isExampleElement,
       final List<Canonical>? profile,
-      final Id? groupingId,
+      final FhirId? groupingId,
       @JsonKey(name: '_groupingId')
           final Element? groupingIdElement}) = _$_ImplementationGuideResource;
   _ImplementationGuideResource._() : super._();
@@ -21633,7 +21633,7 @@ abstract class _ImplementationGuideResource
   @override
 
   /// [groupingId] Reference to the id of the grouping this resource appears in.
-  Id? get groupingId;
+  FhirId? get groupingId;
   @override
 
   /// [groupingIdElement] ("_groupingId") Extensions for groupingId
@@ -25057,7 +25057,7 @@ mixin _$MessageDefinition {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -25260,7 +25260,7 @@ abstract class $MessageDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.MessageDefinition)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -25435,7 +25435,7 @@ class _$MessageDefinitionCopyWithImpl<$Res, $Val extends MessageDefinition>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -25929,7 +25929,7 @@ abstract class _$$_MessageDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.MessageDefinition)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -26124,7 +26124,7 @@ class __$$_MessageDefinitionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -26444,7 +26444,7 @@ class _$_MessageDefinition extends _MessageDefinition {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -26966,7 +26966,7 @@ abstract class _MessageDefinition extends MessageDefinition {
   factory _MessageDefinition(
       {@JsonKey(unknownEnumValue: R5ResourceType.MessageDefinition)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -27053,7 +27053,7 @@ abstract class _MessageDefinition extends MessageDefinition {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -28270,7 +28270,7 @@ mixin _$OperationDefinition {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -28503,7 +28503,7 @@ abstract class $OperationDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.OperationDefinition)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -28702,7 +28702,7 @@ class _$OperationDefinitionCopyWithImpl<$Res, $Val extends OperationDefinition>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -29264,7 +29264,7 @@ abstract class _$$_OperationDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.OperationDefinition)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -29486,7 +29486,7 @@ class __$$_OperationDefinitionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -29851,7 +29851,7 @@ class _$_OperationDefinition extends _OperationDefinition {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -30426,7 +30426,7 @@ abstract class _OperationDefinition extends OperationDefinition {
   factory _OperationDefinition(
           {@JsonKey(unknownEnumValue: R5ResourceType.OperationDefinition)
               final R5ResourceType resourceType,
-          final Id? id,
+          final FhirId? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -30527,7 +30527,7 @@ abstract class _OperationDefinition extends OperationDefinition {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -33303,7 +33303,7 @@ mixin _$SearchParameter {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -33554,7 +33554,7 @@ abstract class $SearchParameterCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.SearchParameter)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -33767,7 +33767,7 @@ class _$SearchParameterCopyWithImpl<$Res, $Val extends SearchParameter>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -34349,7 +34349,7 @@ abstract class _$$_SearchParameterCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.SearchParameter)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -34585,7 +34585,7 @@ class __$$_SearchParameterCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -34986,7 +34986,7 @@ class _$_SearchParameter extends _SearchParameter {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -35658,7 +35658,7 @@ abstract class _SearchParameter extends SearchParameter {
   factory _SearchParameter(
       {@JsonKey(unknownEnumValue: R5ResourceType.SearchParameter)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -35767,7 +35767,7 @@ abstract class _SearchParameter extends SearchParameter {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -36489,7 +36489,7 @@ mixin _$StructureDefinition {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -36715,7 +36715,7 @@ abstract class $StructureDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.StructureDefinition)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -36907,7 +36907,7 @@ class _$StructureDefinitionCopyWithImpl<$Res, $Val extends StructureDefinition>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -37459,7 +37459,7 @@ abstract class _$$_StructureDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.StructureDefinition)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -37674,7 +37674,7 @@ class __$$_StructureDefinitionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -38024,7 +38024,7 @@ class _$_StructureDefinition extends _StructureDefinition {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -38591,7 +38591,7 @@ abstract class _StructureDefinition extends StructureDefinition {
   factory _StructureDefinition(
           {@JsonKey(unknownEnumValue: R5ResourceType.StructureDefinition)
               final R5ResourceType resourceType,
-          final Id? id,
+          final FhirId? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -38688,7 +38688,7 @@ abstract class _StructureDefinition extends StructureDefinition {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -38991,7 +38991,7 @@ mixin _$StructureDefinitionMapping {
       throw _privateConstructorUsedError;
 
   /// [identity] An Internal id that is used to identify this mapping set when specific mappings are made.
-  Id? get identity => throw _privateConstructorUsedError;
+  FhirId? get identity => throw _privateConstructorUsedError;
 
   /// [identityElement] ("_identity") Extensions for identity
   @JsonKey(name: '_identity')
@@ -39035,7 +39035,7 @@ abstract class $StructureDefinitionMappingCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? identity,
+      FhirId? identity,
       @JsonKey(name: '_identity') Element? identityElement,
       FhirUri? uri,
       @JsonKey(name: '_uri') Element? uriElement,
@@ -39092,7 +39092,7 @@ class _$StructureDefinitionMappingCopyWithImpl<$Res,
       identity: freezed == identity
           ? _value.identity
           : identity // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       identityElement: freezed == identityElement
           ? _value.identityElement
           : identityElement // ignore: cast_nullable_to_non_nullable
@@ -39186,7 +39186,7 @@ abstract class _$$_StructureDefinitionMappingCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? identity,
+      FhirId? identity,
       @JsonKey(name: '_identity') Element? identityElement,
       FhirUri? uri,
       @JsonKey(name: '_uri') Element? uriElement,
@@ -39246,7 +39246,7 @@ class __$$_StructureDefinitionMappingCopyWithImpl<$Res>
       identity: freezed == identity
           ? _value.identity
           : identity // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       identityElement: freezed == identityElement
           ? _value.identityElement
           : identityElement // ignore: cast_nullable_to_non_nullable
@@ -39368,7 +39368,7 @@ class _$_StructureDefinitionMapping extends _StructureDefinitionMapping {
 
   /// [identity] An Internal id that is used to identify this mapping set when specific mappings are made.
   @override
-  final Id? identity;
+  final FhirId? identity;
 
   /// [identityElement] ("_identity") Extensions for identity
   @override
@@ -39468,7 +39468,7 @@ abstract class _StructureDefinitionMapping extends StructureDefinitionMapping {
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Id? identity,
+          final FhirId? identity,
           @JsonKey(name: '_identity') final Element? identityElement,
           final FhirUri? uri,
           @JsonKey(name: '_uri') final Element? uriElement,
@@ -39515,7 +39515,7 @@ abstract class _StructureDefinitionMapping extends StructureDefinitionMapping {
   @override
 
   /// [identity] An Internal id that is used to identify this mapping set when specific mappings are made.
-  Id? get identity;
+  FhirId? get identity;
   @override
 
   /// [identityElement] ("_identity") Extensions for identity
@@ -40705,7 +40705,7 @@ mixin _$StructureMap {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -40876,7 +40876,7 @@ abstract class $StructureMapCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.StructureMap)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -41025,7 +41025,7 @@ class _$StructureMapCopyWithImpl<$Res, $Val extends StructureMap>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -41431,7 +41431,7 @@ abstract class _$$_StructureMapCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.StructureMap)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -41596,7 +41596,7 @@ class __$$_StructureMapCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -41863,7 +41863,7 @@ class _$_StructureMap extends _StructureMap {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -42308,7 +42308,7 @@ abstract class _StructureMap extends StructureMap {
   factory _StructureMap(
       {@JsonKey(unknownEnumValue: R5ResourceType.StructureMap)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -42383,7 +42383,7 @@ abstract class _StructureMap extends StructureMap {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -43171,7 +43171,7 @@ mixin _$StructureMapGroup {
       throw _privateConstructorUsedError;
 
   /// [name] A unique name for the group for the convenience of human readers.
-  Id? get name => throw _privateConstructorUsedError;
+  FhirId? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] ("_name") Extensions for name
   @JsonKey(name: '_name')
@@ -43179,7 +43179,7 @@ mixin _$StructureMapGroup {
 
   /// [extends_] ("extends") Another group that this group adds rules to.
   @JsonKey(name: 'extends')
-  Id? get extends_ => throw _privateConstructorUsedError;
+  FhirId? get extends_ => throw _privateConstructorUsedError;
 
   /// [extendsElement] ("_extends") Extensions for extends
   @JsonKey(name: '_extends')
@@ -43221,9 +43221,9 @@ abstract class $StructureMapGroupCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? name,
+      FhirId? name,
       @JsonKey(name: '_name') Element? nameElement,
-      @JsonKey(name: 'extends') Id? extends_,
+      @JsonKey(name: 'extends') FhirId? extends_,
       @JsonKey(name: '_extends') Element? extendsElement,
       Code? typeMode,
       @JsonKey(name: '_typeMode') Element? typeModeElement,
@@ -43281,7 +43281,7 @@ class _$StructureMapGroupCopyWithImpl<$Res, $Val extends StructureMapGroup>
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
@@ -43289,7 +43289,7 @@ class _$StructureMapGroupCopyWithImpl<$Res, $Val extends StructureMapGroup>
       extends_: freezed == extends_
           ? _value.extends_
           : extends_ // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extendsElement: freezed == extendsElement
           ? _value.extendsElement
           : extendsElement // ignore: cast_nullable_to_non_nullable
@@ -43382,9 +43382,9 @@ abstract class _$$_StructureMapGroupCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? name,
+      FhirId? name,
       @JsonKey(name: '_name') Element? nameElement,
-      @JsonKey(name: 'extends') Id? extends_,
+      @JsonKey(name: 'extends') FhirId? extends_,
       @JsonKey(name: '_extends') Element? extendsElement,
       Code? typeMode,
       @JsonKey(name: '_typeMode') Element? typeModeElement,
@@ -43444,7 +43444,7 @@ class __$$_StructureMapGroupCopyWithImpl<$Res>
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
@@ -43452,7 +43452,7 @@ class __$$_StructureMapGroupCopyWithImpl<$Res>
       extends_: freezed == extends_
           ? _value.extends_
           : extends_ // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       extendsElement: freezed == extendsElement
           ? _value.extendsElement
           : extendsElement // ignore: cast_nullable_to_non_nullable
@@ -43578,7 +43578,7 @@ class _$_StructureMapGroup extends _StructureMapGroup {
 
   /// [name] A unique name for the group for the convenience of human readers.
   @override
-  final Id? name;
+  final FhirId? name;
 
   /// [nameElement] ("_name") Extensions for name
   @override
@@ -43588,7 +43588,7 @@ class _$_StructureMapGroup extends _StructureMapGroup {
   /// [extends_] ("extends") Another group that this group adds rules to.
   @override
   @JsonKey(name: 'extends')
-  final Id? extends_;
+  final FhirId? extends_;
 
   /// [extendsElement] ("_extends") Extensions for extends
   @override
@@ -43709,9 +43709,9 @@ abstract class _StructureMapGroup extends StructureMapGroup {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Id? name,
+      final FhirId? name,
       @JsonKey(name: '_name') final Element? nameElement,
-      @JsonKey(name: 'extends') final Id? extends_,
+      @JsonKey(name: 'extends') final FhirId? extends_,
       @JsonKey(name: '_extends') final Element? extendsElement,
       final Code? typeMode,
       @JsonKey(name: '_typeMode') final Element? typeModeElement,
@@ -43757,7 +43757,7 @@ abstract class _StructureMapGroup extends StructureMapGroup {
   @override
 
   /// [name] A unique name for the group for the convenience of human readers.
-  Id? get name;
+  FhirId? get name;
   @override
 
   /// [nameElement] ("_name") Extensions for name
@@ -43767,7 +43767,7 @@ abstract class _StructureMapGroup extends StructureMapGroup {
 
   /// [extends_] ("extends") Another group that this group adds rules to.
   @JsonKey(name: 'extends')
-  Id? get extends_;
+  FhirId? get extends_;
   @override
 
   /// [extendsElement] ("_extends") Extensions for extends
@@ -43840,7 +43840,7 @@ mixin _$StructureMapInput {
       throw _privateConstructorUsedError;
 
   /// [name] Name for this instance of data.
-  Id? get name => throw _privateConstructorUsedError;
+  FhirId? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] ("_name") Extensions for name
   @JsonKey(name: '_name')
@@ -43883,7 +43883,7 @@ abstract class $StructureMapInputCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? name,
+      FhirId? name,
       @JsonKey(name: '_name') Element? nameElement,
       String? type,
       @JsonKey(name: '_type') Element? typeElement,
@@ -43939,7 +43939,7 @@ class _$StructureMapInputCopyWithImpl<$Res, $Val extends StructureMapInput>
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
@@ -44032,7 +44032,7 @@ abstract class _$$_StructureMapInputCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? name,
+      FhirId? name,
       @JsonKey(name: '_name') Element? nameElement,
       String? type,
       @JsonKey(name: '_type') Element? typeElement,
@@ -44090,7 +44090,7 @@ class __$$_StructureMapInputCopyWithImpl<$Res>
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
@@ -44212,7 +44212,7 @@ class _$_StructureMapInput extends _StructureMapInput {
 
   /// [name] Name for this instance of data.
   @override
-  final Id? name;
+  final FhirId? name;
 
   /// [nameElement] ("_name") Extensions for name
   @override
@@ -44313,7 +44313,7 @@ abstract class _StructureMapInput extends StructureMapInput {
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Id? name,
+      final FhirId? name,
       @JsonKey(name: '_name')
           final Element? nameElement,
       final String? type,
@@ -44363,7 +44363,7 @@ abstract class _StructureMapInput extends StructureMapInput {
   @override
 
   /// [name] Name for this instance of data.
-  Id? get name;
+  FhirId? get name;
   @override
 
   /// [nameElement] ("_name") Extensions for name
@@ -44437,7 +44437,7 @@ mixin _$StructureMapRule {
       throw _privateConstructorUsedError;
 
   /// [name] Name of the rule for internal references.
-  Id? get name => throw _privateConstructorUsedError;
+  FhirId? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] ("_name") Extensions for name
   @JsonKey(name: '_name')
@@ -44479,7 +44479,7 @@ abstract class $StructureMapRuleCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? name,
+      FhirId? name,
       @JsonKey(name: '_name') Element? nameElement,
       List<StructureMapSource> source,
       List<StructureMapTarget>? target,
@@ -44533,7 +44533,7 @@ class _$StructureMapRuleCopyWithImpl<$Res, $Val extends StructureMapRule>
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
@@ -44602,7 +44602,7 @@ abstract class _$$_StructureMapRuleCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? name,
+      FhirId? name,
       @JsonKey(name: '_name') Element? nameElement,
       List<StructureMapSource> source,
       List<StructureMapTarget>? target,
@@ -44656,7 +44656,7 @@ class __$$_StructureMapRuleCopyWithImpl<$Res>
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
@@ -44782,7 +44782,7 @@ class _$_StructureMapRule extends _StructureMapRule {
 
   /// [name] Name of the rule for internal references.
   @override
-  final Id? name;
+  final FhirId? name;
 
   /// [nameElement] ("_name") Extensions for name
   @override
@@ -44913,7 +44913,7 @@ abstract class _StructureMapRule extends StructureMapRule {
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Id? name,
+      final FhirId? name,
       @JsonKey(name: '_name')
           final Element? nameElement,
       required final List<StructureMapSource> source,
@@ -44961,7 +44961,7 @@ abstract class _StructureMapRule extends StructureMapRule {
   @override
 
   /// [name] Name of the rule for internal references.
-  Id? get name;
+  FhirId? get name;
   @override
 
   /// [nameElement] ("_name") Extensions for name
@@ -45033,7 +45033,7 @@ mixin _$StructureMapSource {
       throw _privateConstructorUsedError;
 
   /// [context] Type or variable this rule applies to.
-  Id? get context => throw _privateConstructorUsedError;
+  FhirId? get context => throw _privateConstructorUsedError;
 
   /// [contextElement] ("_context") Extensions for context
   @JsonKey(name: '_context')
@@ -45082,7 +45082,7 @@ mixin _$StructureMapSource {
   Element? get listModeElement => throw _privateConstructorUsedError;
 
   /// [variable] Named context for field, if a field is specified.
-  Id? get variable => throw _privateConstructorUsedError;
+  FhirId? get variable => throw _privateConstructorUsedError;
 
   /// [variableElement] ("_variable") Extensions for variable
   @JsonKey(name: '_variable')
@@ -45125,7 +45125,7 @@ abstract class $StructureMapSourceCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? context,
+      FhirId? context,
       @JsonKey(name: '_context') Element? contextElement,
       Integer? min,
       @JsonKey(name: '_min') Element? minElement,
@@ -45139,7 +45139,7 @@ abstract class $StructureMapSourceCopyWith<$Res> {
       @JsonKey(name: '_element') Element? elementElement,
       Code? listMode,
       @JsonKey(name: '_listMode') Element? listModeElement,
-      Id? variable,
+      FhirId? variable,
       @JsonKey(name: '_variable') Element? variableElement,
       String? condition,
       @JsonKey(name: '_condition') Element? conditionElement,
@@ -45216,7 +45216,7 @@ class _$StructureMapSourceCopyWithImpl<$Res, $Val extends StructureMapSource>
       context: freezed == context
           ? _value.context
           : context // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       contextElement: freezed == contextElement
           ? _value.contextElement
           : contextElement // ignore: cast_nullable_to_non_nullable
@@ -45272,7 +45272,7 @@ class _$StructureMapSourceCopyWithImpl<$Res, $Val extends StructureMapSource>
       variable: freezed == variable
           ? _value.variable
           : variable // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       variableElement: freezed == variableElement
           ? _value.variableElement
           : variableElement // ignore: cast_nullable_to_non_nullable
@@ -45449,7 +45449,7 @@ abstract class _$$_StructureMapSourceCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? context,
+      FhirId? context,
       @JsonKey(name: '_context') Element? contextElement,
       Integer? min,
       @JsonKey(name: '_min') Element? minElement,
@@ -45463,7 +45463,7 @@ abstract class _$$_StructureMapSourceCopyWith<$Res>
       @JsonKey(name: '_element') Element? elementElement,
       Code? listMode,
       @JsonKey(name: '_listMode') Element? listModeElement,
-      Id? variable,
+      FhirId? variable,
       @JsonKey(name: '_variable') Element? variableElement,
       String? condition,
       @JsonKey(name: '_condition') Element? conditionElement,
@@ -45549,7 +45549,7 @@ class __$$_StructureMapSourceCopyWithImpl<$Res>
       context: freezed == context
           ? _value.context
           : context // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       contextElement: freezed == contextElement
           ? _value.contextElement
           : contextElement // ignore: cast_nullable_to_non_nullable
@@ -45605,7 +45605,7 @@ class __$$_StructureMapSourceCopyWithImpl<$Res>
       variable: freezed == variable
           ? _value.variable
           : variable // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       variableElement: freezed == variableElement
           ? _value.variableElement
           : variableElement // ignore: cast_nullable_to_non_nullable
@@ -45741,7 +45741,7 @@ class _$_StructureMapSource extends _StructureMapSource {
 
   /// [context] Type or variable this rule applies to.
   @override
-  final Id? context;
+  final FhirId? context;
 
   /// [contextElement] ("_context") Extensions for context
   @override
@@ -45804,7 +45804,7 @@ class _$_StructureMapSource extends _StructureMapSource {
 
   /// [variable] Named context for field, if a field is specified.
   @override
-  final Id? variable;
+  final FhirId? variable;
 
   /// [variableElement] ("_variable") Extensions for variable
   @override
@@ -45944,7 +45944,7 @@ abstract class _StructureMapSource extends StructureMapSource {
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Id? context,
+          final FhirId? context,
           @JsonKey(name: '_context') final Element? contextElement,
           final Integer? min,
           @JsonKey(name: '_min') final Element? minElement,
@@ -45958,7 +45958,7 @@ abstract class _StructureMapSource extends StructureMapSource {
           @JsonKey(name: '_element') final Element? elementElement,
           final Code? listMode,
           @JsonKey(name: '_listMode') final Element? listModeElement,
-          final Id? variable,
+          final FhirId? variable,
           @JsonKey(name: '_variable') final Element? variableElement,
           final String? condition,
           @JsonKey(name: '_condition') final Element? conditionElement,
@@ -46005,7 +46005,7 @@ abstract class _StructureMapSource extends StructureMapSource {
   @override
 
   /// [context] Type or variable this rule applies to.
-  Id? get context;
+  FhirId? get context;
   @override
 
   /// [contextElement] ("_context") Extensions for context
@@ -46068,7 +46068,7 @@ abstract class _StructureMapSource extends StructureMapSource {
   @override
 
   /// [variable] Named context for field, if a field is specified.
-  Id? get variable;
+  FhirId? get variable;
   @override
 
   /// [variableElement] ("_variable") Extensions for variable
@@ -46142,7 +46142,7 @@ mixin _$StructureMapTarget {
       throw _privateConstructorUsedError;
 
   /// [context] Variable this rule applies to.
-  Id? get context => throw _privateConstructorUsedError;
+  FhirId? get context => throw _privateConstructorUsedError;
 
   /// [contextElement] ("_context") Extensions for context
   @JsonKey(name: '_context')
@@ -46156,7 +46156,7 @@ mixin _$StructureMapTarget {
   Element? get elementElement => throw _privateConstructorUsedError;
 
   /// [variable] Named context for field, if desired, and a field is specified.
-  Id? get variable => throw _privateConstructorUsedError;
+  FhirId? get variable => throw _privateConstructorUsedError;
 
   /// [variableElement] ("_variable") Extensions for variable
   @JsonKey(name: '_variable')
@@ -46170,7 +46170,7 @@ mixin _$StructureMapTarget {
   List<Element>? get listModeElement => throw _privateConstructorUsedError;
 
   /// [listRuleId] Internal rule reference for shared list items.
-  Id? get listRuleId => throw _privateConstructorUsedError;
+  FhirId? get listRuleId => throw _privateConstructorUsedError;
 
   /// [listRuleIdElement] ("_listRuleId") Extensions for listRuleId
   @JsonKey(name: '_listRuleId')
@@ -46203,15 +46203,15 @@ abstract class $StructureMapTargetCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? context,
+      FhirId? context,
       @JsonKey(name: '_context') Element? contextElement,
       String? element,
       @JsonKey(name: '_element') Element? elementElement,
-      Id? variable,
+      FhirId? variable,
       @JsonKey(name: '_variable') Element? variableElement,
       List<Code>? listMode,
       @JsonKey(name: '_listMode') List<Element>? listModeElement,
-      Id? listRuleId,
+      FhirId? listRuleId,
       @JsonKey(name: '_listRuleId') Element? listRuleIdElement,
       Code? transform,
       @JsonKey(name: '_transform') Element? transformElement,
@@ -46270,7 +46270,7 @@ class _$StructureMapTargetCopyWithImpl<$Res, $Val extends StructureMapTarget>
       context: freezed == context
           ? _value.context
           : context // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       contextElement: freezed == contextElement
           ? _value.contextElement
           : contextElement // ignore: cast_nullable_to_non_nullable
@@ -46286,7 +46286,7 @@ class _$StructureMapTargetCopyWithImpl<$Res, $Val extends StructureMapTarget>
       variable: freezed == variable
           ? _value.variable
           : variable // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       variableElement: freezed == variableElement
           ? _value.variableElement
           : variableElement // ignore: cast_nullable_to_non_nullable
@@ -46302,7 +46302,7 @@ class _$StructureMapTargetCopyWithImpl<$Res, $Val extends StructureMapTarget>
       listRuleId: freezed == listRuleId
           ? _value.listRuleId
           : listRuleId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       listRuleIdElement: freezed == listRuleIdElement
           ? _value.listRuleIdElement
           : listRuleIdElement // ignore: cast_nullable_to_non_nullable
@@ -46395,15 +46395,15 @@ abstract class _$$_StructureMapTargetCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? context,
+      FhirId? context,
       @JsonKey(name: '_context') Element? contextElement,
       String? element,
       @JsonKey(name: '_element') Element? elementElement,
-      Id? variable,
+      FhirId? variable,
       @JsonKey(name: '_variable') Element? variableElement,
       List<Code>? listMode,
       @JsonKey(name: '_listMode') List<Element>? listModeElement,
-      Id? listRuleId,
+      FhirId? listRuleId,
       @JsonKey(name: '_listRuleId') Element? listRuleIdElement,
       Code? transform,
       @JsonKey(name: '_transform') Element? transformElement,
@@ -46465,7 +46465,7 @@ class __$$_StructureMapTargetCopyWithImpl<$Res>
       context: freezed == context
           ? _value.context
           : context // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       contextElement: freezed == contextElement
           ? _value.contextElement
           : contextElement // ignore: cast_nullable_to_non_nullable
@@ -46481,7 +46481,7 @@ class __$$_StructureMapTargetCopyWithImpl<$Res>
       variable: freezed == variable
           ? _value.variable
           : variable // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       variableElement: freezed == variableElement
           ? _value.variableElement
           : variableElement // ignore: cast_nullable_to_non_nullable
@@ -46497,7 +46497,7 @@ class __$$_StructureMapTargetCopyWithImpl<$Res>
       listRuleId: freezed == listRuleId
           ? _value.listRuleId
           : listRuleId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       listRuleIdElement: freezed == listRuleIdElement
           ? _value.listRuleIdElement
           : listRuleIdElement // ignore: cast_nullable_to_non_nullable
@@ -46615,7 +46615,7 @@ class _$_StructureMapTarget extends _StructureMapTarget {
 
   /// [context] Variable this rule applies to.
   @override
-  final Id? context;
+  final FhirId? context;
 
   /// [contextElement] ("_context") Extensions for context
   @override
@@ -46633,7 +46633,7 @@ class _$_StructureMapTarget extends _StructureMapTarget {
 
   /// [variable] Named context for field, if desired, and a field is specified.
   @override
-  final Id? variable;
+  final FhirId? variable;
 
   /// [variableElement] ("_variable") Extensions for variable
   @override
@@ -46669,7 +46669,7 @@ class _$_StructureMapTarget extends _StructureMapTarget {
 
   /// [listRuleId] Internal rule reference for shared list items.
   @override
-  final Id? listRuleId;
+  final FhirId? listRuleId;
 
   /// [listRuleIdElement] ("_listRuleId") Extensions for listRuleId
   @override
@@ -46779,15 +46779,15 @@ abstract class _StructureMapTarget extends StructureMapTarget {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Id? context,
+      final FhirId? context,
       @JsonKey(name: '_context') final Element? contextElement,
       final String? element,
       @JsonKey(name: '_element') final Element? elementElement,
-      final Id? variable,
+      final FhirId? variable,
       @JsonKey(name: '_variable') final Element? variableElement,
       final List<Code>? listMode,
       @JsonKey(name: '_listMode') final List<Element>? listModeElement,
-      final Id? listRuleId,
+      final FhirId? listRuleId,
       @JsonKey(name: '_listRuleId') final Element? listRuleIdElement,
       final Code? transform,
       @JsonKey(name: '_transform') final Element? transformElement,
@@ -46830,7 +46830,7 @@ abstract class _StructureMapTarget extends StructureMapTarget {
   @override
 
   /// [context] Variable this rule applies to.
-  Id? get context;
+  FhirId? get context;
   @override
 
   /// [contextElement] ("_context") Extensions for context
@@ -46848,7 +46848,7 @@ abstract class _StructureMapTarget extends StructureMapTarget {
   @override
 
   /// [variable] Named context for field, if desired, and a field is specified.
-  Id? get variable;
+  FhirId? get variable;
   @override
 
   /// [variableElement] ("_variable") Extensions for variable
@@ -46866,7 +46866,7 @@ abstract class _StructureMapTarget extends StructureMapTarget {
   @override
 
   /// [listRuleId] Internal rule reference for shared list items.
-  Id? get listRuleId;
+  FhirId? get listRuleId;
   @override
 
   /// [listRuleIdElement] ("_listRuleId") Extensions for listRuleId
@@ -46927,7 +46927,7 @@ mixin _$StructureMapParameter {
       throw _privateConstructorUsedError;
 
   /// [valueId] Parameter value - variable or literal.
-  Id? get valueId => throw _privateConstructorUsedError;
+  FhirId? get valueId => throw _privateConstructorUsedError;
 
   /// [valueIdElement] ("_valueId") Extensions for valueId
   @JsonKey(name: '_valueId')
@@ -46998,7 +46998,7 @@ abstract class $StructureMapParameterCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
@@ -47075,7 +47075,7 @@ class _$StructureMapParameterCopyWithImpl<$Res,
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -47248,7 +47248,7 @@ abstract class _$$_StructureMapParameterCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
       String? valueString,
       @JsonKey(name: '_valueString') Element? valueStringElement,
@@ -47330,7 +47330,7 @@ class __$$_StructureMapParameterCopyWithImpl<$Res>
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -47492,7 +47492,7 @@ class _$_StructureMapParameter extends _StructureMapParameter {
 
   /// [valueId] Parameter value - variable or literal.
   @override
-  final Id? valueId;
+  final FhirId? valueId;
 
   /// [valueIdElement] ("_valueId") Extensions for valueId
   @override
@@ -47656,7 +47656,7 @@ abstract class _StructureMapParameter extends StructureMapParameter {
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Id? valueId,
+      final FhirId? valueId,
       @JsonKey(name: '_valueId')
           final Element? valueIdElement,
       final String? valueString,
@@ -47718,7 +47718,7 @@ abstract class _StructureMapParameter extends StructureMapParameter {
   @override
 
   /// [valueId] Parameter value - variable or literal.
-  Id? get valueId;
+  FhirId? get valueId;
   @override
 
   /// [valueIdElement] ("_valueId") Extensions for valueId
@@ -47829,7 +47829,7 @@ mixin _$StructureMapDependent {
       throw _privateConstructorUsedError;
 
   /// [name] Name of a rule or group to apply.
-  Id? get name => throw _privateConstructorUsedError;
+  FhirId? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] ("_name") Extensions for name
   @JsonKey(name: '_name')
@@ -47855,7 +47855,7 @@ abstract class $StructureMapDependentCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? name,
+      FhirId? name,
       @JsonKey(name: '_name') Element? nameElement,
       List<StructureMapParameter> parameter});
 
@@ -47899,7 +47899,7 @@ class _$StructureMapDependentCopyWithImpl<$Res,
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
@@ -47936,7 +47936,7 @@ abstract class _$$_StructureMapDependentCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? name,
+      FhirId? name,
       @JsonKey(name: '_name') Element? nameElement,
       List<StructureMapParameter> parameter});
 
@@ -47978,7 +47978,7 @@ class __$$_StructureMapDependentCopyWithImpl<$Res>
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       nameElement: freezed == nameElement
           ? _value.nameElement
           : nameElement // ignore: cast_nullable_to_non_nullable
@@ -48076,7 +48076,7 @@ class _$_StructureMapDependent extends _StructureMapDependent {
 
   /// [name] Name of a rule or group to apply.
   @override
-  final Id? name;
+  final FhirId? name;
 
   /// [nameElement] ("_name") Extensions for name
   @override
@@ -48147,7 +48147,7 @@ abstract class _StructureMapDependent extends StructureMapDependent {
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Id? name,
+          final FhirId? name,
           @JsonKey(name: '_name') final Element? nameElement,
           required final List<StructureMapParameter> parameter}) =
       _$_StructureMapDependent;
@@ -48189,7 +48189,7 @@ abstract class _StructureMapDependent extends StructureMapDependent {
   @override
 
   /// [name] Name of a rule or group to apply.
-  Id? get name;
+  FhirId? get name;
   @override
 
   /// [nameElement] ("_name") Extensions for name

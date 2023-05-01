@@ -2261,7 +2261,7 @@ class TaskInput with _$TaskInput {
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
 
     /// [valueId] The value of the input parameter as a basic type.
-    Id? valueId,
+    FhirId? valueId,
 
     /// [valueIdElement] Extensions for valueId
     @JsonKey(name: '_valueId') Element? valueIdElement,
@@ -2706,7 +2706,7 @@ class TaskOutput with _$TaskOutput {
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
 
     /// [valueId] The value of the Output parameter as a basic type.
-    Id? valueId,
+    FhirId? valueId,
 
     /// [valueIdElement] Extensions for valueId
     @JsonKey(name: '_valueId') Element? valueIdElement,

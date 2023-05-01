@@ -1253,7 +1253,7 @@ class ImagingStudySeries with _$ImagingStudySeries {
     List<FhirExtension>? modifierExtension,
 
     /// [uid] The DICOM Series Instance UID for the series.
-    Id? uid,
+    FhirId? uid,
 
     /// [uidElement] Extensions for uid
     @JsonKey(name: '_uid') Element? uidElement,
@@ -1538,7 +1538,7 @@ class ImagingStudyInstance with _$ImagingStudyInstance {
     List<FhirExtension>? modifierExtension,
 
     /// [uid] The DICOM SOP Instance UID for this image or other DICOM content.
-    Id? uid,
+    FhirId? uid,
 
     /// [uidElement] Extensions for uid
     @JsonKey(name: '_uid') Element? uidElement,

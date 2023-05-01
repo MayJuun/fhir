@@ -150,7 +150,7 @@ class ArtifactAssessment with Resource, _$ArtifactAssessment {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -679,7 +679,7 @@ class Citation with Resource, _$Citation {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -3680,7 +3680,7 @@ class Evidence with Resource, _$Evidence {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -5170,7 +5170,7 @@ class EvidenceReport with Resource, _$EvidenceReport {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -6328,7 +6328,7 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -6658,7 +6658,7 @@ class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
     List<FhirExtension>? modifierExtension,
 
     /// [linkId] Label used for when a characteristic refers to another characteristic.
-    Id? linkId,
+    FhirId? linkId,
 
     /// [linkIdElement] ("_linkId") Extensions for linkId
     @JsonKey(name: '_linkId') Element? linkIdElement,
@@ -6691,7 +6691,7 @@ class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
     Expression? definitionExpression,
 
     /// [definitionId] Defines the characteristic using id.
-    Id? definitionId,
+    FhirId? definitionId,
 
     /// [definitionIdElement] ("_definitionId") Extensions for definitionId
     @JsonKey(name: '_definitionId') Element? definitionIdElement,
@@ -6860,7 +6860,7 @@ class EvidenceVariableDefinitionByTypeAndValue
     Reference? valueReference,
 
     /// [valueId] Defines the characteristic when paired with characteristic.type.
-    Id? valueId,
+    FhirId? valueId,
 
     /// [valueIdElement] ("_valueId") Extensions for valueId
     @JsonKey(name: '_valueId') Element? valueIdElement,
@@ -7140,7 +7140,7 @@ class EvidenceVariableTimeFromEvent with _$EvidenceVariableTimeFromEvent {
     @JsonKey(name: '_eventDateTime') Element? eventDateTimeElement,
 
     /// [eventId] The event used as a base point (reference point) in time.
-    Id? eventId,
+    FhirId? eventId,
 
     /// [eventIdElement] ("_eventId") Extensions for eventId
     @JsonKey(name: '_eventId') Element? eventIdElement,

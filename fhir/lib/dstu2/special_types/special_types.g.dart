@@ -7,7 +7,7 @@ part of 'special_types.dart';
 // **************************************************************************
 
 _$_Meta _$$_MetaFromJson(Map<String, dynamic> json) => _$_Meta(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -15,7 +15,7 @@ _$_Meta _$$_MetaFromJson(Map<String, dynamic> json) => _$_Meta(
           ?.map((e) => e as String)
           .toList(),
       versionId:
-          json['versionId'] == null ? null : Id.fromJson(json['versionId']),
+          json['versionId'] == null ? null : FhirId.fromJson(json['versionId']),
       versionIdElement: json['_versionId'] == null
           ? null
           : Element.fromJson(json['_versionId'] as Map<String, dynamic>),
@@ -60,7 +60,7 @@ Map<String, dynamic> _$$_MetaToJson(_$_Meta instance) {
 }
 
 _$_Reference _$$_ReferenceFromJson(Map<String, dynamic> json) => _$_Reference(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -99,7 +99,7 @@ Map<String, dynamic> _$$_ReferenceToJson(_$_Reference instance) {
 
 _$_ElementDefinition _$$_ElementDefinitionFromJson(Map<String, dynamic> json) =>
     _$_ElementDefinition(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -244,7 +244,7 @@ _$_ElementDefinition _$$_ElementDefinitionFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_defaultValueOid'] as Map<String, dynamic>),
       defaultValueId: json['defaultValueId'] == null
           ? null
-          : Id.fromJson(json['defaultValueId']),
+          : FhirId.fromJson(json['defaultValueId']),
       defaultValueIdElement: json['_defaultValueId'] == null
           ? null
           : Element.fromJson(json['_defaultValueId'] as Map<String, dynamic>),
@@ -399,7 +399,8 @@ _$_ElementDefinition _$$_ElementDefinitionFromJson(Map<String, dynamic> json) =>
       fixedOidElement: json['_fixedOid'] == null
           ? null
           : Element.fromJson(json['_fixedOid'] as Map<String, dynamic>),
-      fixedId: json['fixedId'] == null ? null : Id.fromJson(json['fixedId']),
+      fixedId:
+          json['fixedId'] == null ? null : FhirId.fromJson(json['fixedId']),
       fixedIdElement: json['_fixedId'] == null
           ? null
           : Element.fromJson(json['_fixedId'] as Map<String, dynamic>),
@@ -549,7 +550,7 @@ _$_ElementDefinition _$$_ElementDefinitionFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_patternOid'] as Map<String, dynamic>),
       patternId:
-          json['patternId'] == null ? null : Id.fromJson(json['patternId']),
+          json['patternId'] == null ? null : FhirId.fromJson(json['patternId']),
       patternIdElement: json['_patternId'] == null
           ? null
           : Element.fromJson(json['_patternId'] as Map<String, dynamic>),
@@ -704,7 +705,7 @@ _$_ElementDefinition _$$_ElementDefinitionFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_exampleOid'] as Map<String, dynamic>),
       exampleId:
-          json['exampleId'] == null ? null : Id.fromJson(json['exampleId']),
+          json['exampleId'] == null ? null : FhirId.fromJson(json['exampleId']),
       exampleIdElement: json['_exampleId'] == null
           ? null
           : Element.fromJson(json['_exampleId'] as Map<String, dynamic>),
@@ -859,8 +860,9 @@ _$_ElementDefinition _$$_ElementDefinitionFromJson(Map<String, dynamic> json) =>
       minValueOidElement: json['_minValueOid'] == null
           ? null
           : Element.fromJson(json['_minValueOid'] as Map<String, dynamic>),
-      minValueId:
-          json['minValueId'] == null ? null : Id.fromJson(json['minValueId']),
+      minValueId: json['minValueId'] == null
+          ? null
+          : FhirId.fromJson(json['minValueId']),
       minValueIdElement: json['_minValueId'] == null
           ? null
           : Element.fromJson(json['_minValueId'] as Map<String, dynamic>),
@@ -1015,8 +1017,9 @@ _$_ElementDefinition _$$_ElementDefinitionFromJson(Map<String, dynamic> json) =>
       maxValueOidElement: json['_maxValueOid'] == null
           ? null
           : Element.fromJson(json['_maxValueOid'] as Map<String, dynamic>),
-      maxValueId:
-          json['maxValueId'] == null ? null : Id.fromJson(json['maxValueId']),
+      maxValueId: json['maxValueId'] == null
+          ? null
+          : FhirId.fromJson(json['maxValueId']),
       maxValueIdElement: json['_maxValueId'] == null
           ? null
           : Element.fromJson(json['_maxValueId'] as Map<String, dynamic>),
@@ -1107,7 +1110,7 @@ _$_ElementDefinition _$$_ElementDefinitionFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_maxLength'] as Map<String, dynamic>),
       condition: (json['condition'] as List<dynamic>?)
-          ?.map((e) => Id.fromJson(e))
+          ?.map((e) => FhirId.fromJson(e))
           .toList(),
       conditionElement: json['_condition'] == null
           ? null
@@ -1536,7 +1539,7 @@ Map<String, dynamic> _$$_ElementDefinitionToJson(
 }
 
 _$_Narrative _$$_NarrativeFromJson(Map<String, dynamic> json) => _$_Narrative(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1581,7 +1584,7 @@ const _$NarrativeStatusEnumMap = {
 _$_ElementDefinitionSlicing _$$_ElementDefinitionSlicingFromJson(
         Map<String, dynamic> json) =>
     _$_ElementDefinitionSlicing(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1637,7 +1640,7 @@ const _$SlicingRulesEnumMap = {
 _$_ElementDefinitionBase _$$_ElementDefinitionBaseFromJson(
         Map<String, dynamic> json) =>
     _$_ElementDefinitionBase(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1680,7 +1683,7 @@ Map<String, dynamic> _$$_ElementDefinitionBaseToJson(
 _$_ElementDefinitionType _$$_ElementDefinitionTypeFromJson(
         Map<String, dynamic> json) =>
     _$_ElementDefinitionType(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1757,11 +1760,11 @@ Map<String, dynamic> _$$_TypeCodeExtensionToJson(
 _$_ElementDefinitionConstraint _$$_ElementDefinitionConstraintFromJson(
         Map<String, dynamic> json) =>
     _$_ElementDefinitionConstraint(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      key: Id.fromJson(json['key']),
+      key: FhirId.fromJson(json['key']),
       keyElement: json['_key'] == null
           ? null
           : Element.fromJson(json['_key'] as Map<String, dynamic>),
@@ -1823,7 +1826,7 @@ _$_ElementDefinitionBinding _$$_ElementDefinitionBindingFromJson(
     requiredKeys: const ['strength'],
   );
   return _$_ElementDefinitionBinding(
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
+    id: json['id'] == null ? null : FhirId.fromJson(json['id']),
     extension_: (json['extension'] as List<dynamic>?)
         ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
@@ -1880,14 +1883,14 @@ const _$ElementDefinitionBindingStrengthEnumMap = {
 _$_ElementDefinitionMapping _$$_ElementDefinitionMappingFromJson(
         Map<String, dynamic> json) =>
     _$_ElementDefinitionMapping(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       fhirComments: (json['fhir_comments'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
-      identity: Id.fromJson(json['identity']),
+      identity: FhirId.fromJson(json['identity']),
       identityElement: json['_identity'] == null
           ? null
           : Element.fromJson(json['_identity'] as Map<String, dynamic>),

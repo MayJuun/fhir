@@ -19,7 +19,7 @@ class BodySite with Resource, _$BodySite {
     @Default(Stu3ResourceType.BodySite)
     @JsonKey(unknownEnumValue: Stu3ResourceType.BodySite)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -75,7 +75,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
     @Default(Stu3ResourceType.DiagnosticReport)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DiagnosticReport)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -223,7 +223,7 @@ class ImagingManifest with Resource, _$ImagingManifest {
     @Default(Stu3ResourceType.ImagingManifest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ImagingManifest)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -275,7 +275,7 @@ class ImagingManifest with Resource, _$ImagingManifest {
 class ImagingManifestStudy with _$ImagingManifestStudy {
   ImagingManifestStudy._();
   factory ImagingManifestStudy({
-    Id? uid,
+    FhirId? uid,
     @JsonKey(name: '_uid') Element? uidElement,
     Reference? imagingStudy,
     List<Reference>? endpoint,
@@ -317,7 +317,7 @@ class ImagingManifestStudy with _$ImagingManifestStudy {
 class ImagingManifestSeries with _$ImagingManifestSeries {
   ImagingManifestSeries._();
   factory ImagingManifestSeries({
-    Id? uid,
+    FhirId? uid,
     @JsonKey(name: '_uid') Element? uidElement,
     List<Reference>? endpoint,
     required List<ImagingManifestInstance> instance,
@@ -360,7 +360,7 @@ class ImagingManifestInstance with _$ImagingManifestInstance {
   factory ImagingManifestInstance({
     String? sopClass,
     @JsonKey(name: '_sopClass') Element? sopClassElement,
-    Id? uid,
+    FhirId? uid,
     @JsonKey(name: '_uid') Element? uidElement,
   }) = _ImagingManifestInstance;
 
@@ -402,7 +402,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
     @Default(Stu3ResourceType.ImagingStudy)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ImagingStudy)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -412,7 +412,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    Id? uid,
+    FhirId? uid,
     @JsonKey(name: '_uid') Element? uidElement,
     Identifier? accession,
     List<Identifier>? identifier,
@@ -471,7 +471,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
 class ImagingStudySeries with _$ImagingStudySeries {
   ImagingStudySeries._();
   factory ImagingStudySeries({
-    Id? uid,
+    FhirId? uid,
     @JsonKey(name: '_uid') Element? uidElement,
     Decimal? number,
     @JsonKey(name: '_number') Element? numberElement,
@@ -526,7 +526,7 @@ class ImagingStudySeries with _$ImagingStudySeries {
 class ImagingStudyInstance with _$ImagingStudyInstance {
   ImagingStudyInstance._();
   factory ImagingStudyInstance({
-    Id? uid,
+    FhirId? uid,
     @JsonKey(name: '_uid') Element? uidElement,
     Decimal? number,
     @JsonKey(name: '_number') Element? numberElement,
@@ -574,7 +574,7 @@ class Observation with Resource, _$Observation {
     @Default(Stu3ResourceType.Observation)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Observation)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -799,7 +799,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
     @Default(Stu3ResourceType.QuestionnaireResponse)
     @JsonKey(unknownEnumValue: Stu3ResourceType.QuestionnaireResponse)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -963,7 +963,7 @@ class Sequence with Resource, _$Sequence {
     @Default(Stu3ResourceType.Sequence)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Sequence)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1238,7 +1238,7 @@ class Specimen with Resource, _$Specimen {
     @Default(Stu3ResourceType.Specimen)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Specimen)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,

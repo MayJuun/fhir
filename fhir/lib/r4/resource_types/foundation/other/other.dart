@@ -2286,7 +2286,7 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
 
     /// [identifier] The MessageHeader.id of the message to which this message is
     ///  a response.
-    Id? identifier,
+    FhirId? identifier,
 
     /// [identifierElement] Extensions for identifier
     @JsonKey(name: '_identifier') Element? identifierElement,
@@ -3053,7 +3053,7 @@ class ParametersParameter with _$ParametersParameter {
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
 
     /// [valueId] If the parameter is a data type.
-    Id? valueId,
+    FhirId? valueId,
 
     /// [valueIdElement] Extensions for valueId
     @JsonKey(name: '_valueId') Element? valueIdElement,

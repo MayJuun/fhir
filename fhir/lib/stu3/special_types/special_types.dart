@@ -98,7 +98,7 @@ class Reference with _$Reference {
 class Meta with _$Meta {
   Meta._();
   factory Meta({
-    Id? versionId,
+    FhirId? versionId,
     @JsonKey(name: '_versionId') Element? versionIdElement,
     Instant? lastUpdated,
     @JsonKey(name: '_lastUpdated') Element? lastUpdatedElement,
@@ -197,9 +197,9 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_defaultValueCode') Element? defaultValueCodeElement,
     Oid? defaultValueOid,
     @JsonKey(name: '_defaultValueOid') Element? defaultValueOidElement,
-    Id? defaultValueUuid,
+    FhirId? defaultValueUuid,
     @JsonKey(name: '_defaultValueUuid') Element? defaultValueUuidElement,
-    Id? defaultValueId,
+    FhirId? defaultValueId,
     @JsonKey(name: '_defaultValueId') Element? defaultValueIdElement,
     Decimal? defaultValueUnsignedInt,
     @JsonKey(name: '_defaultValueUnsignedInt')
@@ -274,9 +274,9 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_fixedCode') Element? fixedCodeElement,
     Oid? fixedOid,
     @JsonKey(name: '_fixedOid') Element? fixedOidElement,
-    Id? fixedUuid,
+    FhirId? fixedUuid,
     @JsonKey(name: '_fixedUuid') Element? fixedUuidElement,
-    Id? fixedId,
+    FhirId? fixedId,
     @JsonKey(name: '_fixedId') Element? fixedIdElement,
     Decimal? fixedUnsignedInt,
     @JsonKey(name: '_fixedUnsignedInt') Element? fixedUnsignedIntElement,
@@ -344,9 +344,9 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_patternCode') Element? patternCodeElement,
     Oid? patternOid,
     @JsonKey(name: '_patternOid') Element? patternOidElement,
-    Id? patternUuid,
+    FhirId? patternUuid,
     @JsonKey(name: '_patternUuid') Element? patternUuidElement,
-    Id? patternId,
+    FhirId? patternId,
     @JsonKey(name: '_patternId') Element? patternIdElement,
     Decimal? patternUnsignedInt,
     @JsonKey(name: '_patternUnsignedInt') Element? patternUnsignedIntElement,
@@ -678,9 +678,9 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
     @JsonKey(name: '_valueCode') Element? valueCodeElement,
     Oid? valueOid,
     @JsonKey(name: '_valueOid') Element? valueOidElement,
-    Id? valueUuid,
+    FhirId? valueUuid,
     @JsonKey(name: '_valueUuid') Element? valueUuidElement,
-    Id? valueId,
+    FhirId? valueId,
     @JsonKey(name: '_valueId') Element? valueIdElement,
     Decimal? valueUnsignedInt,
     @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
@@ -857,7 +857,7 @@ class ElementDefinitionBinding with _$ElementDefinitionBinding {
 class ElementDefinitionMapping with _$ElementDefinitionMapping {
   ElementDefinitionMapping._();
   factory ElementDefinitionMapping({
-    Id? identity,
+    FhirId? identity,
     @JsonKey(name: '_identity') Element? identityElement,
     String? language,
     @JsonKey(name: '_language') Element? languageElement,

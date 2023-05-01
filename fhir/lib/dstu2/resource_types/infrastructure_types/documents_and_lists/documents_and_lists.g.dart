@@ -12,7 +12,7 @@ _$_Composition _$$_CompositionFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Composition) ??
           Dstu2ResourceType.Composition,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -240,7 +240,7 @@ const _$CompositionStatusEnumMap = {
 _$_CompositionAttester _$$_CompositionAttesterFromJson(
         Map<String, dynamic> json) =>
     _$_CompositionAttester(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -295,7 +295,7 @@ const _$AttesterModeEnumMap = {
 
 _$_CompositionEvent _$$_CompositionEventFromJson(Map<String, dynamic> json) =>
     _$_CompositionEvent(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -336,7 +336,7 @@ Map<String, dynamic> _$$_CompositionEventToJson(_$_CompositionEvent instance) {
 _$_CompositionSection _$$_CompositionSectionFromJson(
         Map<String, dynamic> json) =>
     _$_CompositionSection(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -418,7 +418,7 @@ _$_DocumentManifest _$$_DocumentManifestFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.DocumentManifest) ??
           Dstu2ResourceType.DocumentManifest,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -548,7 +548,7 @@ const _$DocumentManifestStatusEnumMap = {
 _$_DocumentManifestContent _$$_DocumentManifestContentFromJson(
         Map<String, dynamic> json) =>
     _$_DocumentManifestContent(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -586,7 +586,7 @@ Map<String, dynamic> _$$_DocumentManifestContentToJson(
 _$_DocumentManifestRelated _$$_DocumentManifestRelatedFromJson(
         Map<String, dynamic> json) =>
     _$_DocumentManifestRelated(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -627,7 +627,7 @@ _$_DocumentReference _$$_DocumentReferenceFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.DocumentReference) ??
           Dstu2ResourceType.DocumentReference,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -774,7 +774,7 @@ const _$DocumentReferenceStatusEnumMap = {
 _$_DocumentReferenceRelatesTo _$$_DocumentReferenceRelatesToFromJson(
         Map<String, dynamic> json) =>
     _$_DocumentReferenceRelatesTo(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -821,7 +821,7 @@ const _$RelatesToCodeEnumMap = {
 _$_DocumentReferenceContent _$$_DocumentReferenceContentFromJson(
         Map<String, dynamic> json) =>
     _$_DocumentReferenceContent(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -858,7 +858,7 @@ Map<String, dynamic> _$$_DocumentReferenceContentToJson(
 _$_DocumentReferenceContext _$$_DocumentReferenceContextFromJson(
         Map<String, dynamic> json) =>
     _$_DocumentReferenceContext(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -920,7 +920,7 @@ Map<String, dynamic> _$$_DocumentReferenceContextToJson(
 _$_DocumentReferenceContextRelated _$$_DocumentReferenceContextRelatedFromJson(
         Map<String, dynamic> json) =>
     _$_DocumentReferenceContextRelated(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -960,7 +960,7 @@ _$_List_ _$$_List_FromJson(Map<String, dynamic> json) => _$_List_(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.List_) ??
           Dstu2ResourceType.List_,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1093,7 +1093,7 @@ const _$ListModeEnumMap = {
 };
 
 _$_ListEntry _$$_ListEntryFromJson(Map<String, dynamic> json) => _$_ListEntry(
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),

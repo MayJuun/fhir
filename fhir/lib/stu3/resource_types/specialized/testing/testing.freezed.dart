@@ -22,7 +22,7 @@ TestReport _$TestReportFromJson(Map<String, dynamic> json) {
 mixin _$TestReport {
   @JsonKey(unknownEnumValue: Stu3ResourceType.TestReport)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -77,7 +77,7 @@ abstract class $TestReportCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.TestReport)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -182,7 +182,7 @@ class _$TestReportCopyWithImpl<$Res, $Val extends TestReport>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -470,7 +470,7 @@ abstract class _$$_TestReportCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.TestReport)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -587,7 +587,7 @@ class __$$_TestReportCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -757,7 +757,7 @@ class _$_TestReport extends _TestReport {
   @JsonKey(unknownEnumValue: Stu3ResourceType.TestReport)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -975,7 +975,7 @@ abstract class _TestReport extends TestReport {
   factory _TestReport(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.TestReport)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1021,7 +1021,7 @@ abstract class _TestReport extends TestReport {
   @JsonKey(unknownEnumValue: Stu3ResourceType.TestReport)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -3123,7 +3123,7 @@ TestScript _$TestScriptFromJson(Map<String, dynamic> json) {
 mixin _$TestScript {
   @JsonKey(unknownEnumValue: Stu3ResourceType.TestScript)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -3202,7 +3202,7 @@ abstract class $TestScriptCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.TestScript)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -3355,7 +3355,7 @@ class _$TestScriptCopyWithImpl<$Res, $Val extends TestScript>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -3783,7 +3783,7 @@ abstract class _$$_TestScriptCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.TestScript)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -3953,7 +3953,7 @@ class __$$_TestScriptCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -4232,7 +4232,7 @@ class _$_TestScript extends _TestScript {
   @JsonKey(unknownEnumValue: Stu3ResourceType.TestScript)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -4614,7 +4614,7 @@ abstract class _TestScript extends TestScript {
   factory _TestScript(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.TestScript)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4684,7 +4684,7 @@ abstract class _TestScript extends TestScript {
   @JsonKey(unknownEnumValue: Stu3ResourceType.TestScript)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -6503,7 +6503,7 @@ mixin _$TestScriptVariable {
   String? get path => throw _privateConstructorUsedError;
   @JsonKey(name: '_path')
   Element? get pathElement => throw _privateConstructorUsedError;
-  Id? get sourceId => throw _privateConstructorUsedError;
+  FhirId? get sourceId => throw _privateConstructorUsedError;
   @JsonKey(name: '_sourceId')
   Element? get sourceIdElement => throw _privateConstructorUsedError;
 
@@ -6534,7 +6534,7 @@ abstract class $TestScriptVariableCopyWith<$Res> {
       @JsonKey(name: '_hint') Element? hintElement,
       String? path,
       @JsonKey(name: '_path') Element? pathElement,
-      Id? sourceId,
+      FhirId? sourceId,
       @JsonKey(name: '_sourceId') Element? sourceIdElement});
 
   $ElementCopyWith<$Res>? get nameElement;
@@ -6637,7 +6637,7 @@ class _$TestScriptVariableCopyWithImpl<$Res, $Val extends TestScriptVariable>
       sourceId: freezed == sourceId
           ? _value.sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sourceIdElement: freezed == sourceIdElement
           ? _value.sourceIdElement
           : sourceIdElement // ignore: cast_nullable_to_non_nullable
@@ -6765,7 +6765,7 @@ abstract class _$$_TestScriptVariableCopyWith<$Res>
       @JsonKey(name: '_hint') Element? hintElement,
       String? path,
       @JsonKey(name: '_path') Element? pathElement,
-      Id? sourceId,
+      FhirId? sourceId,
       @JsonKey(name: '_sourceId') Element? sourceIdElement});
 
   @override
@@ -6874,7 +6874,7 @@ class __$$_TestScriptVariableCopyWithImpl<$Res>
       sourceId: freezed == sourceId
           ? _value.sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sourceIdElement: freezed == sourceIdElement
           ? _value.sourceIdElement
           : sourceIdElement // ignore: cast_nullable_to_non_nullable
@@ -6944,7 +6944,7 @@ class _$_TestScriptVariable extends _TestScriptVariable {
   @JsonKey(name: '_path')
   final Element? pathElement;
   @override
-  final Id? sourceId;
+  final FhirId? sourceId;
   @override
   @JsonKey(name: '_sourceId')
   final Element? sourceIdElement;
@@ -7042,7 +7042,7 @@ abstract class _TestScriptVariable extends TestScriptVariable {
           @JsonKey(name: '_hint') final Element? hintElement,
           final String? path,
           @JsonKey(name: '_path') final Element? pathElement,
-          final Id? sourceId,
+          final FhirId? sourceId,
           @JsonKey(name: '_sourceId') final Element? sourceIdElement}) =
       _$_TestScriptVariable;
   _TestScriptVariable._() : super._();
@@ -7086,7 +7086,7 @@ abstract class _TestScriptVariable extends TestScriptVariable {
   @JsonKey(name: '_path')
   Element? get pathElement;
   @override
-  Id? get sourceId;
+  FhirId? get sourceId;
   @override
   @JsonKey(name: '_sourceId')
   Element? get sourceIdElement;
@@ -7705,7 +7705,7 @@ TestScriptRule1 _$TestScriptRule1FromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$TestScriptRule1 {
-  Id? get ruleId => throw _privateConstructorUsedError;
+  FhirId? get ruleId => throw _privateConstructorUsedError;
   @JsonKey(name: '_ruleId')
   Element? get ruleIdElement => throw _privateConstructorUsedError;
   List<TestScriptParam1>? get param => throw _privateConstructorUsedError;
@@ -7723,7 +7723,7 @@ abstract class $TestScriptRule1CopyWith<$Res> {
       _$TestScriptRule1CopyWithImpl<$Res, TestScriptRule1>;
   @useResult
   $Res call(
-      {Id? ruleId,
+      {FhirId? ruleId,
       @JsonKey(name: '_ruleId') Element? ruleIdElement,
       List<TestScriptParam1>? param});
 
@@ -7751,7 +7751,7 @@ class _$TestScriptRule1CopyWithImpl<$Res, $Val extends TestScriptRule1>
       ruleId: freezed == ruleId
           ? _value.ruleId
           : ruleId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       ruleIdElement: freezed == ruleIdElement
           ? _value.ruleIdElement
           : ruleIdElement // ignore: cast_nullable_to_non_nullable
@@ -7785,7 +7785,7 @@ abstract class _$$_TestScriptRule1CopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? ruleId,
+      {FhirId? ruleId,
       @JsonKey(name: '_ruleId') Element? ruleIdElement,
       List<TestScriptParam1>? param});
 
@@ -7812,7 +7812,7 @@ class __$$_TestScriptRule1CopyWithImpl<$Res>
       ruleId: freezed == ruleId
           ? _value.ruleId
           : ruleId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       ruleIdElement: freezed == ruleIdElement
           ? _value.ruleIdElement
           : ruleIdElement // ignore: cast_nullable_to_non_nullable
@@ -7839,7 +7839,7 @@ class _$_TestScriptRule1 extends _TestScriptRule1 {
       _$$_TestScriptRule1FromJson(json);
 
   @override
-  final Id? ruleId;
+  final FhirId? ruleId;
   @override
   @JsonKey(name: '_ruleId')
   final Element? ruleIdElement;
@@ -7890,7 +7890,7 @@ class _$_TestScriptRule1 extends _TestScriptRule1 {
 
 abstract class _TestScriptRule1 extends TestScriptRule1 {
   factory _TestScriptRule1(
-      {final Id? ruleId,
+      {final FhirId? ruleId,
       @JsonKey(name: '_ruleId') final Element? ruleIdElement,
       final List<TestScriptParam1>? param}) = _$_TestScriptRule1;
   _TestScriptRule1._() : super._();
@@ -7899,7 +7899,7 @@ abstract class _TestScriptRule1 extends TestScriptRule1 {
       _$_TestScriptRule1.fromJson;
 
   @override
-  Id? get ruleId;
+  FhirId? get ruleId;
   @override
   @JsonKey(name: '_ruleId')
   Element? get ruleIdElement;
@@ -8535,16 +8535,16 @@ mixin _$TestScriptOperation {
   Element? get paramsElement => throw _privateConstructorUsedError;
   List<TestScriptRequestHeader>? get requestHeader =>
       throw _privateConstructorUsedError;
-  Id? get requestId => throw _privateConstructorUsedError;
+  FhirId? get requestId => throw _privateConstructorUsedError;
   @JsonKey(name: '_requestId')
   Element? get requestIdElement => throw _privateConstructorUsedError;
-  Id? get responseId => throw _privateConstructorUsedError;
+  FhirId? get responseId => throw _privateConstructorUsedError;
   @JsonKey(name: '_responseId')
   Element? get responseIdElement => throw _privateConstructorUsedError;
-  Id? get sourceId => throw _privateConstructorUsedError;
+  FhirId? get sourceId => throw _privateConstructorUsedError;
   @JsonKey(name: '_sourceId')
   Element? get sourceIdElement => throw _privateConstructorUsedError;
-  Id? get targetId => throw _privateConstructorUsedError;
+  FhirId? get targetId => throw _privateConstructorUsedError;
   @JsonKey(name: '_targetId')
   Element? get targetIdElement => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
@@ -8584,13 +8584,13 @@ abstract class $TestScriptOperationCopyWith<$Res> {
       String? params,
       @JsonKey(name: '_params') Element? paramsElement,
       List<TestScriptRequestHeader>? requestHeader,
-      Id? requestId,
+      FhirId? requestId,
       @JsonKey(name: '_requestId') Element? requestIdElement,
-      Id? responseId,
+      FhirId? responseId,
       @JsonKey(name: '_responseId') Element? responseIdElement,
-      Id? sourceId,
+      FhirId? sourceId,
       @JsonKey(name: '_sourceId') Element? sourceIdElement,
-      Id? targetId,
+      FhirId? targetId,
       @JsonKey(name: '_targetId') Element? targetIdElement,
       String? url,
       @JsonKey(name: '_url') Element? urlElement});
@@ -8740,7 +8740,7 @@ class _$TestScriptOperationCopyWithImpl<$Res, $Val extends TestScriptOperation>
       requestId: freezed == requestId
           ? _value.requestId
           : requestId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       requestIdElement: freezed == requestIdElement
           ? _value.requestIdElement
           : requestIdElement // ignore: cast_nullable_to_non_nullable
@@ -8748,7 +8748,7 @@ class _$TestScriptOperationCopyWithImpl<$Res, $Val extends TestScriptOperation>
       responseId: freezed == responseId
           ? _value.responseId
           : responseId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       responseIdElement: freezed == responseIdElement
           ? _value.responseIdElement
           : responseIdElement // ignore: cast_nullable_to_non_nullable
@@ -8756,7 +8756,7 @@ class _$TestScriptOperationCopyWithImpl<$Res, $Val extends TestScriptOperation>
       sourceId: freezed == sourceId
           ? _value.sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sourceIdElement: freezed == sourceIdElement
           ? _value.sourceIdElement
           : sourceIdElement // ignore: cast_nullable_to_non_nullable
@@ -8764,7 +8764,7 @@ class _$TestScriptOperationCopyWithImpl<$Res, $Val extends TestScriptOperation>
       targetId: freezed == targetId
           ? _value.targetId
           : targetId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       targetIdElement: freezed == targetIdElement
           ? _value.targetIdElement
           : targetIdElement // ignore: cast_nullable_to_non_nullable
@@ -8990,13 +8990,13 @@ abstract class _$$_TestScriptOperationCopyWith<$Res>
       String? params,
       @JsonKey(name: '_params') Element? paramsElement,
       List<TestScriptRequestHeader>? requestHeader,
-      Id? requestId,
+      FhirId? requestId,
       @JsonKey(name: '_requestId') Element? requestIdElement,
-      Id? responseId,
+      FhirId? responseId,
       @JsonKey(name: '_responseId') Element? responseIdElement,
-      Id? sourceId,
+      FhirId? sourceId,
       @JsonKey(name: '_sourceId') Element? sourceIdElement,
-      Id? targetId,
+      FhirId? targetId,
       @JsonKey(name: '_targetId') Element? targetIdElement,
       String? url,
       @JsonKey(name: '_url') Element? urlElement});
@@ -9159,7 +9159,7 @@ class __$$_TestScriptOperationCopyWithImpl<$Res>
       requestId: freezed == requestId
           ? _value.requestId
           : requestId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       requestIdElement: freezed == requestIdElement
           ? _value.requestIdElement
           : requestIdElement // ignore: cast_nullable_to_non_nullable
@@ -9167,7 +9167,7 @@ class __$$_TestScriptOperationCopyWithImpl<$Res>
       responseId: freezed == responseId
           ? _value.responseId
           : responseId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       responseIdElement: freezed == responseIdElement
           ? _value.responseIdElement
           : responseIdElement // ignore: cast_nullable_to_non_nullable
@@ -9175,7 +9175,7 @@ class __$$_TestScriptOperationCopyWithImpl<$Res>
       sourceId: freezed == sourceId
           ? _value.sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sourceIdElement: freezed == sourceIdElement
           ? _value.sourceIdElement
           : sourceIdElement // ignore: cast_nullable_to_non_nullable
@@ -9183,7 +9183,7 @@ class __$$_TestScriptOperationCopyWithImpl<$Res>
       targetId: freezed == targetId
           ? _value.targetId
           : targetId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       targetIdElement: freezed == targetIdElement
           ? _value.targetIdElement
           : targetIdElement // ignore: cast_nullable_to_non_nullable
@@ -9298,22 +9298,22 @@ class _$_TestScriptOperation extends _TestScriptOperation {
   }
 
   @override
-  final Id? requestId;
+  final FhirId? requestId;
   @override
   @JsonKey(name: '_requestId')
   final Element? requestIdElement;
   @override
-  final Id? responseId;
+  final FhirId? responseId;
   @override
   @JsonKey(name: '_responseId')
   final Element? responseIdElement;
   @override
-  final Id? sourceId;
+  final FhirId? sourceId;
   @override
   @JsonKey(name: '_sourceId')
   final Element? sourceIdElement;
   @override
-  final Id? targetId;
+  final FhirId? targetId;
   @override
   @JsonKey(name: '_targetId')
   final Element? targetIdElement;
@@ -9472,16 +9472,16 @@ abstract class _TestScriptOperation extends TestScriptOperation {
       @JsonKey(name: '_params')
           final Element? paramsElement,
       final List<TestScriptRequestHeader>? requestHeader,
-      final Id? requestId,
+      final FhirId? requestId,
       @JsonKey(name: '_requestId')
           final Element? requestIdElement,
-      final Id? responseId,
+      final FhirId? responseId,
       @JsonKey(name: '_responseId')
           final Element? responseIdElement,
-      final Id? sourceId,
+      final FhirId? sourceId,
       @JsonKey(name: '_sourceId')
           final Element? sourceIdElement,
-      final Id? targetId,
+      final FhirId? targetId,
       @JsonKey(name: '_targetId')
           final Element? targetIdElement,
       final String? url,
@@ -9542,22 +9542,22 @@ abstract class _TestScriptOperation extends TestScriptOperation {
   @override
   List<TestScriptRequestHeader>? get requestHeader;
   @override
-  Id? get requestId;
+  FhirId? get requestId;
   @override
   @JsonKey(name: '_requestId')
   Element? get requestIdElement;
   @override
-  Id? get responseId;
+  FhirId? get responseId;
   @override
   @JsonKey(name: '_responseId')
   Element? get responseIdElement;
   @override
-  Id? get sourceId;
+  FhirId? get sourceId;
   @override
   @JsonKey(name: '_sourceId')
   Element? get sourceIdElement;
   @override
-  Id? get targetId;
+  FhirId? get targetId;
   @override
   @JsonKey(name: '_targetId')
   Element? get targetIdElement;
@@ -9888,7 +9888,7 @@ mixin _$TestScriptAssert {
   Element? get responseCodeElement => throw _privateConstructorUsedError;
   TestScriptRule2? get rule => throw _privateConstructorUsedError;
   TestScriptRuleset1? get ruleset => throw _privateConstructorUsedError;
-  Id? get sourceId => throw _privateConstructorUsedError;
+  FhirId? get sourceId => throw _privateConstructorUsedError;
   @JsonKey(name: '_sourceId')
   Element? get sourceIdElement => throw _privateConstructorUsedError;
   Date? get validateProfileId => throw _privateConstructorUsedError;
@@ -9971,7 +9971,7 @@ abstract class $TestScriptAssertCopyWith<$Res> {
           Element? responseCodeElement,
       TestScriptRule2? rule,
       TestScriptRuleset1? ruleset,
-      Id? sourceId,
+      FhirId? sourceId,
       @JsonKey(name: '_sourceId')
           Element? sourceIdElement,
       Date? validateProfileId,
@@ -10227,7 +10227,7 @@ class _$TestScriptAssertCopyWithImpl<$Res, $Val extends TestScriptAssert>
       sourceId: freezed == sourceId
           ? _value.sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sourceIdElement: freezed == sourceIdElement
           ? _value.sourceIdElement
           : sourceIdElement // ignore: cast_nullable_to_non_nullable
@@ -10616,7 +10616,7 @@ abstract class _$$_TestScriptAssertCopyWith<$Res>
           Element? responseCodeElement,
       TestScriptRule2? rule,
       TestScriptRuleset1? ruleset,
-      Id? sourceId,
+      FhirId? sourceId,
       @JsonKey(name: '_sourceId')
           Element? sourceIdElement,
       Date? validateProfileId,
@@ -10894,7 +10894,7 @@ class __$$_TestScriptAssertCopyWithImpl<$Res>
       sourceId: freezed == sourceId
           ? _value.sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sourceIdElement: freezed == sourceIdElement
           ? _value.sourceIdElement
           : sourceIdElement // ignore: cast_nullable_to_non_nullable
@@ -11101,7 +11101,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
   @override
   final TestScriptRuleset1? ruleset;
   @override
-  final Id? sourceId;
+  final FhirId? sourceId;
   @override
   @JsonKey(name: '_sourceId')
   final Element? sourceIdElement;
@@ -11329,7 +11329,7 @@ abstract class _TestScriptAssert extends TestScriptAssert {
           final Element? responseCodeElement,
       final TestScriptRule2? rule,
       final TestScriptRuleset1? ruleset,
-      final Id? sourceId,
+      final FhirId? sourceId,
       @JsonKey(name: '_sourceId')
           final Element? sourceIdElement,
       final Date? validateProfileId,
@@ -11442,7 +11442,7 @@ abstract class _TestScriptAssert extends TestScriptAssert {
   @override
   TestScriptRuleset1? get ruleset;
   @override
-  Id? get sourceId;
+  FhirId? get sourceId;
   @override
   @JsonKey(name: '_sourceId')
   Element? get sourceIdElement;
@@ -11473,7 +11473,7 @@ TestScriptRule2 _$TestScriptRule2FromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$TestScriptRule2 {
-  Id? get ruleId => throw _privateConstructorUsedError;
+  FhirId? get ruleId => throw _privateConstructorUsedError;
   @JsonKey(name: '_ruleId')
   Element? get ruleIdElement => throw _privateConstructorUsedError;
   List<TestScriptParam2>? get param => throw _privateConstructorUsedError;
@@ -11491,7 +11491,7 @@ abstract class $TestScriptRule2CopyWith<$Res> {
       _$TestScriptRule2CopyWithImpl<$Res, TestScriptRule2>;
   @useResult
   $Res call(
-      {Id? ruleId,
+      {FhirId? ruleId,
       @JsonKey(name: '_ruleId') Element? ruleIdElement,
       List<TestScriptParam2>? param});
 
@@ -11519,7 +11519,7 @@ class _$TestScriptRule2CopyWithImpl<$Res, $Val extends TestScriptRule2>
       ruleId: freezed == ruleId
           ? _value.ruleId
           : ruleId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       ruleIdElement: freezed == ruleIdElement
           ? _value.ruleIdElement
           : ruleIdElement // ignore: cast_nullable_to_non_nullable
@@ -11553,7 +11553,7 @@ abstract class _$$_TestScriptRule2CopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? ruleId,
+      {FhirId? ruleId,
       @JsonKey(name: '_ruleId') Element? ruleIdElement,
       List<TestScriptParam2>? param});
 
@@ -11580,7 +11580,7 @@ class __$$_TestScriptRule2CopyWithImpl<$Res>
       ruleId: freezed == ruleId
           ? _value.ruleId
           : ruleId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       ruleIdElement: freezed == ruleIdElement
           ? _value.ruleIdElement
           : ruleIdElement // ignore: cast_nullable_to_non_nullable
@@ -11607,7 +11607,7 @@ class _$_TestScriptRule2 extends _TestScriptRule2 {
       _$$_TestScriptRule2FromJson(json);
 
   @override
-  final Id? ruleId;
+  final FhirId? ruleId;
   @override
   @JsonKey(name: '_ruleId')
   final Element? ruleIdElement;
@@ -11658,7 +11658,7 @@ class _$_TestScriptRule2 extends _TestScriptRule2 {
 
 abstract class _TestScriptRule2 extends TestScriptRule2 {
   factory _TestScriptRule2(
-      {final Id? ruleId,
+      {final FhirId? ruleId,
       @JsonKey(name: '_ruleId') final Element? ruleIdElement,
       final List<TestScriptParam2>? param}) = _$_TestScriptRule2;
   _TestScriptRule2._() : super._();
@@ -11667,7 +11667,7 @@ abstract class _TestScriptRule2 extends TestScriptRule2 {
       _$_TestScriptRule2.fromJson;
 
   @override
-  Id? get ruleId;
+  FhirId? get ruleId;
   @override
   @JsonKey(name: '_ruleId')
   Element? get ruleIdElement;
@@ -11929,7 +11929,7 @@ TestScriptRuleset1 _$TestScriptRuleset1FromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$TestScriptRuleset1 {
-  Id? get rulesetId => throw _privateConstructorUsedError;
+  FhirId? get rulesetId => throw _privateConstructorUsedError;
   @JsonKey(name: '_rulesetId')
   Element? get rulesetIdElement => throw _privateConstructorUsedError;
   List<TestScriptRule3>? get rule => throw _privateConstructorUsedError;
@@ -11947,7 +11947,7 @@ abstract class $TestScriptRuleset1CopyWith<$Res> {
       _$TestScriptRuleset1CopyWithImpl<$Res, TestScriptRuleset1>;
   @useResult
   $Res call(
-      {Id? rulesetId,
+      {FhirId? rulesetId,
       @JsonKey(name: '_rulesetId') Element? rulesetIdElement,
       List<TestScriptRule3>? rule});
 
@@ -11975,7 +11975,7 @@ class _$TestScriptRuleset1CopyWithImpl<$Res, $Val extends TestScriptRuleset1>
       rulesetId: freezed == rulesetId
           ? _value.rulesetId
           : rulesetId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       rulesetIdElement: freezed == rulesetIdElement
           ? _value.rulesetIdElement
           : rulesetIdElement // ignore: cast_nullable_to_non_nullable
@@ -12009,7 +12009,7 @@ abstract class _$$_TestScriptRuleset1CopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? rulesetId,
+      {FhirId? rulesetId,
       @JsonKey(name: '_rulesetId') Element? rulesetIdElement,
       List<TestScriptRule3>? rule});
 
@@ -12036,7 +12036,7 @@ class __$$_TestScriptRuleset1CopyWithImpl<$Res>
       rulesetId: freezed == rulesetId
           ? _value.rulesetId
           : rulesetId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       rulesetIdElement: freezed == rulesetIdElement
           ? _value.rulesetIdElement
           : rulesetIdElement // ignore: cast_nullable_to_non_nullable
@@ -12063,7 +12063,7 @@ class _$_TestScriptRuleset1 extends _TestScriptRuleset1 {
       _$$_TestScriptRuleset1FromJson(json);
 
   @override
-  final Id? rulesetId;
+  final FhirId? rulesetId;
   @override
   @JsonKey(name: '_rulesetId')
   final Element? rulesetIdElement;
@@ -12116,7 +12116,7 @@ class _$_TestScriptRuleset1 extends _TestScriptRuleset1 {
 
 abstract class _TestScriptRuleset1 extends TestScriptRuleset1 {
   factory _TestScriptRuleset1(
-      {final Id? rulesetId,
+      {final FhirId? rulesetId,
       @JsonKey(name: '_rulesetId') final Element? rulesetIdElement,
       final List<TestScriptRule3>? rule}) = _$_TestScriptRuleset1;
   _TestScriptRuleset1._() : super._();
@@ -12125,7 +12125,7 @@ abstract class _TestScriptRuleset1 extends TestScriptRuleset1 {
       _$_TestScriptRuleset1.fromJson;
 
   @override
-  Id? get rulesetId;
+  FhirId? get rulesetId;
   @override
   @JsonKey(name: '_rulesetId')
   Element? get rulesetIdElement;
@@ -12143,7 +12143,7 @@ TestScriptRule3 _$TestScriptRule3FromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$TestScriptRule3 {
-  Id? get ruleId => throw _privateConstructorUsedError;
+  FhirId? get ruleId => throw _privateConstructorUsedError;
   @JsonKey(name: '_ruleId')
   Element? get ruleIdElement => throw _privateConstructorUsedError;
   List<TestScriptParam3>? get param => throw _privateConstructorUsedError;
@@ -12161,7 +12161,7 @@ abstract class $TestScriptRule3CopyWith<$Res> {
       _$TestScriptRule3CopyWithImpl<$Res, TestScriptRule3>;
   @useResult
   $Res call(
-      {Id? ruleId,
+      {FhirId? ruleId,
       @JsonKey(name: '_ruleId') Element? ruleIdElement,
       List<TestScriptParam3>? param});
 
@@ -12189,7 +12189,7 @@ class _$TestScriptRule3CopyWithImpl<$Res, $Val extends TestScriptRule3>
       ruleId: freezed == ruleId
           ? _value.ruleId
           : ruleId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       ruleIdElement: freezed == ruleIdElement
           ? _value.ruleIdElement
           : ruleIdElement // ignore: cast_nullable_to_non_nullable
@@ -12223,7 +12223,7 @@ abstract class _$$_TestScriptRule3CopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? ruleId,
+      {FhirId? ruleId,
       @JsonKey(name: '_ruleId') Element? ruleIdElement,
       List<TestScriptParam3>? param});
 
@@ -12250,7 +12250,7 @@ class __$$_TestScriptRule3CopyWithImpl<$Res>
       ruleId: freezed == ruleId
           ? _value.ruleId
           : ruleId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       ruleIdElement: freezed == ruleIdElement
           ? _value.ruleIdElement
           : ruleIdElement // ignore: cast_nullable_to_non_nullable
@@ -12277,7 +12277,7 @@ class _$_TestScriptRule3 extends _TestScriptRule3 {
       _$$_TestScriptRule3FromJson(json);
 
   @override
-  final Id? ruleId;
+  final FhirId? ruleId;
   @override
   @JsonKey(name: '_ruleId')
   final Element? ruleIdElement;
@@ -12328,7 +12328,7 @@ class _$_TestScriptRule3 extends _TestScriptRule3 {
 
 abstract class _TestScriptRule3 extends TestScriptRule3 {
   factory _TestScriptRule3(
-      {final Id? ruleId,
+      {final FhirId? ruleId,
       @JsonKey(name: '_ruleId') final Element? ruleIdElement,
       final List<TestScriptParam3>? param}) = _$_TestScriptRule3;
   _TestScriptRule3._() : super._();
@@ -12337,7 +12337,7 @@ abstract class _TestScriptRule3 extends TestScriptRule3 {
       _$_TestScriptRule3.fromJson;
 
   @override
-  Id? get ruleId;
+  FhirId? get ruleId;
   @override
   @JsonKey(name: '_ruleId')
   Element? get ruleIdElement;

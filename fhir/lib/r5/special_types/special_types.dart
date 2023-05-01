@@ -367,7 +367,7 @@ class Meta with _$Meta {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [versionId] The version specific identifier, as it appears in the version portion of the URL. This value changes when the resource is created, updated, or deleted.
-    Id? versionId,
+    FhirId? versionId,
 
     /// [versionIdElement] ("_versionId") Extensions for versionId
     @JsonKey(name: '_versionId') Element? versionIdElement,
@@ -3373,7 +3373,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_defaultValueDecimal') Element? defaultValueDecimalElement,
 
     /// [defaultValueId] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
-    Id? defaultValueId,
+    FhirId? defaultValueId,
 
     /// [defaultValueIdElement] ("_defaultValueId") Extensions for defaultValueId
     @JsonKey(name: '_defaultValueId') Element? defaultValueIdElement,
@@ -3405,7 +3405,7 @@ class ElementDefinition with _$ElementDefinition {
         Element? defaultValueMarkdownElement,
 
     /// [defaultValueOid] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
-    Id? defaultValueOid,
+    FhirId? defaultValueOid,
 
     /// [defaultValueOidElement] ("_defaultValueOid") Extensions for defaultValueOid
     @JsonKey(name: '_defaultValueOid') Element? defaultValueOidElement,
@@ -3449,7 +3449,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_defaultValueUrl') Element? defaultValueUrlElement,
 
     /// [defaultValueUuid] The value that should be used if there is no value stated in the instance (e.g. 'if not otherwise specified, the abstract is false').
-    Id? defaultValueUuid,
+    FhirId? defaultValueUuid,
 
     /// [defaultValueUuidElement] ("_defaultValueUuid") Extensions for defaultValueUuid
     @JsonKey(name: '_defaultValueUuid') Element? defaultValueUuidElement,
@@ -3611,7 +3611,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_fixedDecimal') Element? fixedDecimalElement,
 
     /// [fixedId] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
-    Id? fixedId,
+    FhirId? fixedId,
 
     /// [fixedIdElement] ("_fixedId") Extensions for fixedId
     @JsonKey(name: '_fixedId') Element? fixedIdElement,
@@ -3641,7 +3641,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_fixedMarkdown') Element? fixedMarkdownElement,
 
     /// [fixedOid] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
-    Id? fixedOid,
+    FhirId? fixedOid,
 
     /// [fixedOidElement] ("_fixedOid") Extensions for fixedOid
     @JsonKey(name: '_fixedOid') Element? fixedOidElement,
@@ -3683,7 +3683,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_fixedUrl') Element? fixedUrlElement,
 
     /// [fixedUuid] Specifies a value that SHALL be exactly the value  for this element in the instance, if present. For purposes of comparison, non-significant whitespace is ignored, and all values must be an exact match (case and accent sensitive). Missing elements/attributes must also be missing.
-    Id? fixedUuid,
+    FhirId? fixedUuid,
 
     /// [fixedUuidElement] ("_fixedUuid") Extensions for fixedUuid
     @JsonKey(name: '_fixedUuid') Element? fixedUuidElement,
@@ -3929,7 +3929,7 @@ class ElementDefinition with _$ElementDefinition {
     /// 3. If an array: it must match (recursively) the pattern value
     ///
     /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
-    Id? patternId,
+    FhirId? patternId,
 
     /// [patternIdElement] ("_patternId") Extensions for patternId
     @JsonKey(name: '_patternId') Element? patternIdElement,
@@ -4019,7 +4019,7 @@ class ElementDefinition with _$ElementDefinition {
     /// 3. If an array: it must match (recursively) the pattern value
     ///
     /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
-    Id? patternOid,
+    FhirId? patternOid,
 
     /// [patternOidElement] ("_patternOid") Extensions for patternOid
     @JsonKey(name: '_patternOid') Element? patternOidElement,
@@ -4145,7 +4145,7 @@ class ElementDefinition with _$ElementDefinition {
     /// 3. If an array: it must match (recursively) the pattern value
     ///
     /// If a pattern[x] is declared on a repeating element, the pattern applies to all repetitions.  If the desire is for a pattern to apply to only one element or a subset of elements, slicing must be used. See [Examples of Patterns](elementdefinition-examples.html#pattern-examples) for examples of pattern usage and the effect it will have.
-    Id? patternUuid,
+    FhirId? patternUuid,
 
     /// [patternUuidElement] ("_patternUuid") Extensions for patternUuid
     @JsonKey(name: '_patternUuid') Element? patternUuidElement,
@@ -4784,7 +4784,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_maxLength') Element? maxLengthElement,
 
     /// [condition] A reference to an invariant that may make additional statements about the cardinality or value in the instance.
-    List<Id>? condition,
+    List<FhirId>? condition,
 
     /// [conditionElement] ("_condition") Extensions for condition
     @JsonKey(name: '_condition') List<Element>? conditionElement,
@@ -5727,7 +5727,7 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
     @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
 
     /// [valueId] The actual value for the element, which must be one of the types allowed for this element.
-    Id? valueId,
+    FhirId? valueId,
 
     /// [valueIdElement] ("_valueId") Extensions for valueId
     @JsonKey(name: '_valueId') Element? valueIdElement,
@@ -5757,7 +5757,7 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
     @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
 
     /// [valueOid] The actual value for the element, which must be one of the types allowed for this element.
-    Id? valueOid,
+    FhirId? valueOid,
 
     /// [valueOidElement] ("_valueOid") Extensions for valueOid
     @JsonKey(name: '_valueOid') Element? valueOidElement,
@@ -5799,7 +5799,7 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
     @JsonKey(name: '_valueUrl') Element? valueUrlElement,
 
     /// [valueUuid] The actual value for the element, which must be one of the types allowed for this element.
-    Id? valueUuid,
+    FhirId? valueUuid,
 
     /// [valueUuidElement] ("_valueUuid") Extensions for valueUuid
     @JsonKey(name: '_valueUuid') Element? valueUuidElement,
@@ -6035,7 +6035,7 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
     List<FhirExtension>? modifierExtension,
 
     /// [key] Allows identification of which elements have their cardinalities impacted by the constraint.  Will not be referenced for constraints that do not affect cardinality.
-    Id? key,
+    FhirId? key,
 
     /// [keyElement] ("_key") Extensions for key
     @JsonKey(name: '_key') Element? keyElement,
@@ -6628,7 +6628,7 @@ class ElementDefinitionMapping with _$ElementDefinitionMapping {
     List<FhirExtension>? modifierExtension,
 
     /// [identity] An internal reference to the definition of a mapping.
-    Id? identity,
+    FhirId? identity,
 
     /// [identityElement] ("_identity") Extensions for identity
     @JsonKey(name: '_identity') Element? identityElement,

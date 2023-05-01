@@ -22,7 +22,7 @@ BodySite _$BodySiteFromJson(Map<String, dynamic> json) {
 mixin _$BodySite {
   @JsonKey(unknownEnumValue: Stu3ResourceType.BodySite)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -62,7 +62,7 @@ abstract class $BodySiteCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.BodySite)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -139,7 +139,7 @@ class _$BodySiteCopyWithImpl<$Res, $Val extends BodySite>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -318,7 +318,7 @@ abstract class _$$_BodySiteCopyWith<$Res> implements $BodySiteCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.BodySite)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -401,7 +401,7 @@ class __$$_BodySiteCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -523,7 +523,7 @@ class _$_BodySite extends _BodySite {
   @JsonKey(unknownEnumValue: Stu3ResourceType.BodySite)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -704,7 +704,7 @@ abstract class _BodySite extends BodySite {
   factory _BodySite(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.BodySite)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -736,7 +736,7 @@ abstract class _BodySite extends BodySite {
   @JsonKey(unknownEnumValue: Stu3ResourceType.BodySite)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -792,7 +792,7 @@ DiagnosticReport _$DiagnosticReportFromJson(Map<String, dynamic> json) {
 mixin _$DiagnosticReport {
   @JsonKey(unknownEnumValue: Stu3ResourceType.DiagnosticReport)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -850,7 +850,7 @@ abstract class $DiagnosticReportCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DiagnosticReport)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -960,7 +960,7 @@ class _$DiagnosticReportCopyWithImpl<$Res, $Val extends DiagnosticReport>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -1252,7 +1252,7 @@ abstract class _$$_DiagnosticReportCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DiagnosticReport)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1373,7 +1373,7 @@ class __$$_DiagnosticReportCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -1568,7 +1568,7 @@ class _$_DiagnosticReport extends _DiagnosticReport {
   @JsonKey(unknownEnumValue: Stu3ResourceType.DiagnosticReport)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -1859,7 +1859,7 @@ abstract class _DiagnosticReport extends DiagnosticReport {
   factory _DiagnosticReport(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DiagnosticReport)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1907,7 +1907,7 @@ abstract class _DiagnosticReport extends DiagnosticReport {
   @JsonKey(unknownEnumValue: Stu3ResourceType.DiagnosticReport)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -2397,7 +2397,7 @@ ImagingManifest _$ImagingManifestFromJson(Map<String, dynamic> json) {
 mixin _$ImagingManifest {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ImagingManifest)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -2437,7 +2437,7 @@ abstract class $ImagingManifestCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ImagingManifest)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2513,7 +2513,7 @@ class _$ImagingManifestCopyWithImpl<$Res, $Val extends ImagingManifest>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -2701,7 +2701,7 @@ abstract class _$$_ImagingManifestCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ImagingManifest)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2784,7 +2784,7 @@ class __$$_ImagingManifestCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -2899,7 +2899,7 @@ class _$_ImagingManifest extends _ImagingManifest {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ImagingManifest)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -3057,7 +3057,7 @@ abstract class _ImagingManifest extends ImagingManifest {
   factory _ImagingManifest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ImagingManifest)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -3089,7 +3089,7 @@ abstract class _ImagingManifest extends ImagingManifest {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ImagingManifest)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -3141,7 +3141,7 @@ ImagingManifestStudy _$ImagingManifestStudyFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ImagingManifestStudy {
-  Id? get uid => throw _privateConstructorUsedError;
+  FhirId? get uid => throw _privateConstructorUsedError;
   @JsonKey(name: '_uid')
   Element? get uidElement => throw _privateConstructorUsedError;
   Reference? get imagingStudy => throw _privateConstructorUsedError;
@@ -3161,7 +3161,7 @@ abstract class $ImagingManifestStudyCopyWith<$Res> {
       _$ImagingManifestStudyCopyWithImpl<$Res, ImagingManifestStudy>;
   @useResult
   $Res call(
-      {Id? uid,
+      {FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement,
       Reference? imagingStudy,
       List<Reference>? endpoint,
@@ -3195,7 +3195,7 @@ class _$ImagingManifestStudyCopyWithImpl<$Res,
       uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -3249,7 +3249,7 @@ abstract class _$$_ImagingManifestStudyCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? uid,
+      {FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement,
       Reference? imagingStudy,
       List<Reference>? endpoint,
@@ -3282,7 +3282,7 @@ class __$$_ImagingManifestStudyCopyWithImpl<$Res>
       uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -3320,7 +3320,7 @@ class _$_ImagingManifestStudy extends _ImagingManifestStudy {
       _$$_ImagingManifestStudyFromJson(json);
 
   @override
-  final Id? uid;
+  final FhirId? uid;
   @override
   @JsonKey(name: '_uid')
   final Element? uidElement;
@@ -3390,7 +3390,7 @@ class _$_ImagingManifestStudy extends _ImagingManifestStudy {
 
 abstract class _ImagingManifestStudy extends ImagingManifestStudy {
   factory _ImagingManifestStudy(
-          {final Id? uid,
+          {final FhirId? uid,
           @JsonKey(name: '_uid') final Element? uidElement,
           final Reference? imagingStudy,
           final List<Reference>? endpoint,
@@ -3402,7 +3402,7 @@ abstract class _ImagingManifestStudy extends ImagingManifestStudy {
       _$_ImagingManifestStudy.fromJson;
 
   @override
-  Id? get uid;
+  FhirId? get uid;
   @override
   @JsonKey(name: '_uid')
   Element? get uidElement;
@@ -3425,7 +3425,7 @@ ImagingManifestSeries _$ImagingManifestSeriesFromJson(
 
 /// @nodoc
 mixin _$ImagingManifestSeries {
-  Id? get uid => throw _privateConstructorUsedError;
+  FhirId? get uid => throw _privateConstructorUsedError;
   @JsonKey(name: '_uid')
   Element? get uidElement => throw _privateConstructorUsedError;
   List<Reference>? get endpoint => throw _privateConstructorUsedError;
@@ -3445,7 +3445,7 @@ abstract class $ImagingManifestSeriesCopyWith<$Res> {
       _$ImagingManifestSeriesCopyWithImpl<$Res, ImagingManifestSeries>;
   @useResult
   $Res call(
-      {Id? uid,
+      {FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement,
       List<Reference>? endpoint,
       List<ImagingManifestInstance> instance});
@@ -3476,7 +3476,7 @@ class _$ImagingManifestSeriesCopyWithImpl<$Res,
       uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -3514,7 +3514,7 @@ abstract class _$$_ImagingManifestSeriesCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? uid,
+      {FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement,
       List<Reference>? endpoint,
       List<ImagingManifestInstance> instance});
@@ -3543,7 +3543,7 @@ class __$$_ImagingManifestSeriesCopyWithImpl<$Res>
       uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -3576,7 +3576,7 @@ class _$_ImagingManifestSeries extends _ImagingManifestSeries {
       _$$_ImagingManifestSeriesFromJson(json);
 
   @override
-  final Id? uid;
+  final FhirId? uid;
   @override
   @JsonKey(name: '_uid')
   final Element? uidElement;
@@ -3641,7 +3641,7 @@ class _$_ImagingManifestSeries extends _ImagingManifestSeries {
 
 abstract class _ImagingManifestSeries extends ImagingManifestSeries {
   factory _ImagingManifestSeries(
-          {final Id? uid,
+          {final FhirId? uid,
           @JsonKey(name: '_uid') final Element? uidElement,
           final List<Reference>? endpoint,
           required final List<ImagingManifestInstance> instance}) =
@@ -3652,7 +3652,7 @@ abstract class _ImagingManifestSeries extends ImagingManifestSeries {
       _$_ImagingManifestSeries.fromJson;
 
   @override
-  Id? get uid;
+  FhirId? get uid;
   @override
   @JsonKey(name: '_uid')
   Element? get uidElement;
@@ -3676,7 +3676,7 @@ mixin _$ImagingManifestInstance {
   String? get sopClass => throw _privateConstructorUsedError;
   @JsonKey(name: '_sopClass')
   Element? get sopClassElement => throw _privateConstructorUsedError;
-  Id? get uid => throw _privateConstructorUsedError;
+  FhirId? get uid => throw _privateConstructorUsedError;
   @JsonKey(name: '_uid')
   Element? get uidElement => throw _privateConstructorUsedError;
 
@@ -3695,7 +3695,7 @@ abstract class $ImagingManifestInstanceCopyWith<$Res> {
   $Res call(
       {String? sopClass,
       @JsonKey(name: '_sopClass') Element? sopClassElement,
-      Id? uid,
+      FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement});
 
   $ElementCopyWith<$Res>? get sopClassElement;
@@ -3733,7 +3733,7 @@ class _$ImagingManifestInstanceCopyWithImpl<$Res,
       uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -3777,7 +3777,7 @@ abstract class _$$_ImagingManifestInstanceCopyWith<$Res>
   $Res call(
       {String? sopClass,
       @JsonKey(name: '_sopClass') Element? sopClassElement,
-      Id? uid,
+      FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement});
 
   @override
@@ -3815,7 +3815,7 @@ class __$$_ImagingManifestInstanceCopyWithImpl<$Res>
       uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -3843,7 +3843,7 @@ class _$_ImagingManifestInstance extends _ImagingManifestInstance {
   @JsonKey(name: '_sopClass')
   final Element? sopClassElement;
   @override
-  final Id? uid;
+  final FhirId? uid;
   @override
   @JsonKey(name: '_uid')
   final Element? uidElement;
@@ -3892,7 +3892,7 @@ abstract class _ImagingManifestInstance extends ImagingManifestInstance {
   factory _ImagingManifestInstance(
           {final String? sopClass,
           @JsonKey(name: '_sopClass') final Element? sopClassElement,
-          final Id? uid,
+          final FhirId? uid,
           @JsonKey(name: '_uid') final Element? uidElement}) =
       _$_ImagingManifestInstance;
   _ImagingManifestInstance._() : super._();
@@ -3906,7 +3906,7 @@ abstract class _ImagingManifestInstance extends ImagingManifestInstance {
   @JsonKey(name: '_sopClass')
   Element? get sopClassElement;
   @override
-  Id? get uid;
+  FhirId? get uid;
   @override
   @JsonKey(name: '_uid')
   Element? get uidElement;
@@ -3924,7 +3924,7 @@ ImagingStudy _$ImagingStudyFromJson(Map<String, dynamic> json) {
 mixin _$ImagingStudy {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ImagingStudy)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -3938,7 +3938,7 @@ mixin _$ImagingStudy {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Id? get uid => throw _privateConstructorUsedError;
+  FhirId? get uid => throw _privateConstructorUsedError;
   @JsonKey(name: '_uid')
   Element? get uidElement => throw _privateConstructorUsedError;
   Identifier? get accession => throw _privateConstructorUsedError;
@@ -3987,7 +3987,7 @@ abstract class $ImagingStudyCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ImagingStudy)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4000,7 +4000,7 @@ abstract class $ImagingStudyCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? uid,
+      FhirId? uid,
       @JsonKey(name: '_uid')
           Element? uidElement,
       Identifier? accession,
@@ -4107,7 +4107,7 @@ class _$ImagingStudyCopyWithImpl<$Res, $Val extends ImagingStudy>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -4147,7 +4147,7 @@ class _$ImagingStudyCopyWithImpl<$Res, $Val extends ImagingStudy>
       uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -4435,7 +4435,7 @@ abstract class _$$_ImagingStudyCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ImagingStudy)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4448,7 +4448,7 @@ abstract class _$$_ImagingStudyCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? uid,
+      FhirId? uid,
       @JsonKey(name: '_uid')
           Element? uidElement,
       Identifier? accession,
@@ -4568,7 +4568,7 @@ class __$$_ImagingStudyCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -4608,7 +4608,7 @@ class __$$_ImagingStudyCopyWithImpl<$Res>
       uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -4779,7 +4779,7 @@ class _$_ImagingStudy extends _ImagingStudy {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ImagingStudy)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -4827,7 +4827,7 @@ class _$_ImagingStudy extends _ImagingStudy {
   }
 
   @override
-  final Id? uid;
+  final FhirId? uid;
   @override
   @JsonKey(name: '_uid')
   final Element? uidElement;
@@ -5081,7 +5081,7 @@ abstract class _ImagingStudy extends ImagingStudy {
   factory _ImagingStudy(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ImagingStudy)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -5094,7 +5094,7 @@ abstract class _ImagingStudy extends ImagingStudy {
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Id? uid,
+      final FhirId? uid,
       @JsonKey(name: '_uid')
           final Element? uidElement,
       final Identifier? accession,
@@ -5134,7 +5134,7 @@ abstract class _ImagingStudy extends ImagingStudy {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ImagingStudy)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -5157,7 +5157,7 @@ abstract class _ImagingStudy extends ImagingStudy {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  Id? get uid;
+  FhirId? get uid;
   @override
   @JsonKey(name: '_uid')
   Element? get uidElement;
@@ -5224,7 +5224,7 @@ ImagingStudySeries _$ImagingStudySeriesFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ImagingStudySeries {
-  Id? get uid => throw _privateConstructorUsedError;
+  FhirId? get uid => throw _privateConstructorUsedError;
   @JsonKey(name: '_uid')
   Element? get uidElement => throw _privateConstructorUsedError;
   Decimal? get number => throw _privateConstructorUsedError;
@@ -5264,7 +5264,7 @@ abstract class $ImagingStudySeriesCopyWith<$Res> {
       _$ImagingStudySeriesCopyWithImpl<$Res, ImagingStudySeries>;
   @useResult
   $Res call(
-      {Id? uid,
+      {FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement,
       Decimal? number,
       @JsonKey(name: '_number') Element? numberElement,
@@ -5330,7 +5330,7 @@ class _$ImagingStudySeriesCopyWithImpl<$Res, $Val extends ImagingStudySeries>
       uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -5516,7 +5516,7 @@ abstract class _$$_ImagingStudySeriesCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? uid,
+      {FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement,
       Decimal? number,
       @JsonKey(name: '_number') Element? numberElement,
@@ -5589,7 +5589,7 @@ class __$$_ImagingStudySeriesCopyWithImpl<$Res>
       uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -5693,7 +5693,7 @@ class _$_ImagingStudySeries extends _ImagingStudySeries {
       _$$_ImagingStudySeriesFromJson(json);
 
   @override
-  final Id? uid;
+  final FhirId? uid;
   @override
   @JsonKey(name: '_uid')
   final Element? uidElement;
@@ -5842,7 +5842,7 @@ class _$_ImagingStudySeries extends _ImagingStudySeries {
 
 abstract class _ImagingStudySeries extends ImagingStudySeries {
   factory _ImagingStudySeries(
-      {final Id? uid,
+      {final FhirId? uid,
       @JsonKey(name: '_uid')
           final Element? uidElement,
       final Decimal? number,
@@ -5872,7 +5872,7 @@ abstract class _ImagingStudySeries extends ImagingStudySeries {
       _$_ImagingStudySeries.fromJson;
 
   @override
-  Id? get uid;
+  FhirId? get uid;
   @override
   @JsonKey(name: '_uid')
   Element? get uidElement;
@@ -5925,7 +5925,7 @@ ImagingStudyInstance _$ImagingStudyInstanceFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ImagingStudyInstance {
-  Id? get uid => throw _privateConstructorUsedError;
+  FhirId? get uid => throw _privateConstructorUsedError;
   @JsonKey(name: '_uid')
   Element? get uidElement => throw _privateConstructorUsedError;
   Decimal? get number => throw _privateConstructorUsedError;
@@ -5951,7 +5951,7 @@ abstract class $ImagingStudyInstanceCopyWith<$Res> {
       _$ImagingStudyInstanceCopyWithImpl<$Res, ImagingStudyInstance>;
   @useResult
   $Res call(
-      {Id? uid,
+      {FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement,
       Decimal? number,
       @JsonKey(name: '_number') Element? numberElement,
@@ -5993,7 +5993,7 @@ class _$ImagingStudyInstanceCopyWithImpl<$Res,
       uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -6083,7 +6083,7 @@ abstract class _$$_ImagingStudyInstanceCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? uid,
+      {FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement,
       Decimal? number,
       @JsonKey(name: '_number') Element? numberElement,
@@ -6126,7 +6126,7 @@ class __$$_ImagingStudyInstanceCopyWithImpl<$Res>
       uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -6177,7 +6177,7 @@ class _$_ImagingStudyInstance extends _ImagingStudyInstance {
       _$$_ImagingStudyInstanceFromJson(json);
 
   @override
-  final Id? uid;
+  final FhirId? uid;
   @override
   @JsonKey(name: '_uid')
   final Element? uidElement;
@@ -6244,7 +6244,7 @@ class _$_ImagingStudyInstance extends _ImagingStudyInstance {
 
 abstract class _ImagingStudyInstance extends ImagingStudyInstance {
   factory _ImagingStudyInstance(
-          {final Id? uid,
+          {final FhirId? uid,
           @JsonKey(name: '_uid') final Element? uidElement,
           final Decimal? number,
           @JsonKey(name: '_number') final Element? numberElement,
@@ -6259,7 +6259,7 @@ abstract class _ImagingStudyInstance extends ImagingStudyInstance {
       _$_ImagingStudyInstance.fromJson;
 
   @override
-  Id? get uid;
+  FhirId? get uid;
   @override
   @JsonKey(name: '_uid')
   Element? get uidElement;
@@ -6292,7 +6292,7 @@ Observation _$ObservationFromJson(Map<String, dynamic> json) {
 mixin _$Observation {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Observation)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -6373,7 +6373,7 @@ abstract class $ObservationCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Observation)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -6539,7 +6539,7 @@ class _$ObservationCopyWithImpl<$Res, $Val extends Observation>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -7096,7 +7096,7 @@ abstract class _$$_ObservationCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Observation)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -7289,7 +7289,7 @@ class __$$_ObservationCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -7576,7 +7576,7 @@ class _$_Observation extends _Observation {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Observation)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -7940,7 +7940,7 @@ abstract class _Observation extends Observation {
   factory _Observation(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Observation)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -8010,7 +8010,7 @@ abstract class _Observation extends Observation {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Observation)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -9423,7 +9423,7 @@ QuestionnaireResponse _$QuestionnaireResponseFromJson(
 mixin _$QuestionnaireResponse {
   @JsonKey(unknownEnumValue: Stu3ResourceType.QuestionnaireResponse)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -9469,7 +9469,7 @@ abstract class $QuestionnaireResponseCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.QuestionnaireResponse)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -9559,7 +9559,7 @@ class _$QuestionnaireResponseCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -9807,7 +9807,7 @@ abstract class _$$_QuestionnaireResponseCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.QuestionnaireResponse)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -9906,7 +9906,7 @@ class __$$_QuestionnaireResponseCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -10048,7 +10048,7 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
   @JsonKey(unknownEnumValue: Stu3ResourceType.QuestionnaireResponse)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -10245,7 +10245,7 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
   factory _QuestionnaireResponse(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.QuestionnaireResponse)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -10282,7 +10282,7 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
   @JsonKey(unknownEnumValue: Stu3ResourceType.QuestionnaireResponse)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -11569,7 +11569,7 @@ Sequence _$SequenceFromJson(Map<String, dynamic> json) {
 mixin _$Sequence {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Sequence)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -11622,7 +11622,7 @@ abstract class $SequenceCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Sequence)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -11727,7 +11727,7 @@ class _$SequenceCopyWithImpl<$Res, $Val extends Sequence>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -12022,7 +12022,7 @@ abstract class _$$_SequenceCopyWith<$Res> implements $SequenceCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Sequence)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -12139,7 +12139,7 @@ class __$$_SequenceCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -12315,7 +12315,7 @@ class _$_Sequence extends _Sequence {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Sequence)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -12562,7 +12562,7 @@ abstract class _Sequence extends Sequence {
   factory _Sequence(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Sequence)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -12606,7 +12606,7 @@ abstract class _Sequence extends Sequence {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Sequence)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -15110,7 +15110,7 @@ Specimen _$SpecimenFromJson(Map<String, dynamic> json) {
 mixin _$Specimen {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Specimen)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -15156,7 +15156,7 @@ abstract class $SpecimenCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Specimen)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -15245,7 +15245,7 @@ class _$SpecimenCopyWithImpl<$Res, $Val extends Specimen>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -15468,7 +15468,7 @@ abstract class _$$_SpecimenCopyWith<$Res> implements $SpecimenCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Specimen)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -15565,7 +15565,7 @@ class __$$_SpecimenCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -15715,7 +15715,7 @@ class _$_Specimen extends _Specimen {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Specimen)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -15942,7 +15942,7 @@ abstract class _Specimen extends Specimen {
   factory _Specimen(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Specimen)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -15979,7 +15979,7 @@ abstract class _Specimen extends Specimen {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Specimen)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override

@@ -19,7 +19,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
     @Default(Stu3ResourceType.GuidanceResponse)
     @JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -29,7 +29,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    Id? requestId,
+    FhirId? requestId,
     @JsonKey(name: '_requestId') Element? requestIdElement,
     Identifier? identifier,
     required Reference module,

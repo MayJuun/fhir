@@ -19,7 +19,7 @@ class Immunization with Resource, _$Immunization {
     @Default(Stu3ResourceType.Immunization)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Immunization)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -263,7 +263,7 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
     @Default(Stu3ResourceType.ImmunizationRecommendation)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ImmunizationRecommendation)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -415,7 +415,7 @@ class Medication with Resource, _$Medication {
     @Default(Stu3ResourceType.Medication)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Medication)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -637,7 +637,7 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
     @Default(Stu3ResourceType.MedicationAdministration)
     @JsonKey(unknownEnumValue: Stu3ResourceType.MedicationAdministration)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -784,7 +784,7 @@ class MedicationDispense with Resource, _$MedicationDispense {
     @Default(Stu3ResourceType.MedicationDispense)
     @JsonKey(unknownEnumValue: Stu3ResourceType.MedicationDispense)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -943,7 +943,7 @@ class MedicationRequest with Resource, _$MedicationRequest {
     @Default(Stu3ResourceType.MedicationRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.MedicationRequest)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1131,7 +1131,7 @@ class MedicationStatement with Resource, _$MedicationStatement {
     @Default(Stu3ResourceType.MedicationStatement)
     @JsonKey(unknownEnumValue: Stu3ResourceType.MedicationStatement)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,

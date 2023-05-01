@@ -22,7 +22,7 @@ ActivityDefinition _$ActivityDefinitionFromJson(Map<String, dynamic> json) {
 mixin _$ActivityDefinition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ActivityDefinition)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -127,7 +127,7 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ActivityDefinition)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -331,7 +331,7 @@ class _$ActivityDefinitionCopyWithImpl<$Res, $Val extends ActivityDefinition>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -960,7 +960,7 @@ abstract class _$$_ActivityDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ActivityDefinition)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1192,7 +1192,7 @@ class __$$_ActivityDefinitionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -1563,7 +1563,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ActivityDefinition)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -2041,7 +2041,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   factory _ActivityDefinition(
           {@JsonKey(unknownEnumValue: Stu3ResourceType.ActivityDefinition)
               final Stu3ResourceType resourceType,
-          final Id? id,
+          final FhirId? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -2135,7 +2135,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ActivityDefinition)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -2906,7 +2906,7 @@ PlanDefinition _$PlanDefinitionFromJson(Map<String, dynamic> json) {
 mixin _$PlanDefinition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.PlanDefinition)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -2992,7 +2992,7 @@ abstract class $PlanDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.PlanDefinition)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -3156,7 +3156,7 @@ class _$PlanDefinitionCopyWithImpl<$Res, $Val extends PlanDefinition>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -3608,7 +3608,7 @@ abstract class _$$_PlanDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.PlanDefinition)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -3790,7 +3790,7 @@ class __$$_PlanDefinitionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -4087,7 +4087,7 @@ class _$_PlanDefinition extends _PlanDefinition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.PlanDefinition)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -4481,7 +4481,7 @@ abstract class _PlanDefinition extends PlanDefinition {
   factory _PlanDefinition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.PlanDefinition)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4558,7 +4558,7 @@ abstract class _PlanDefinition extends PlanDefinition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.PlanDefinition)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -5371,7 +5371,7 @@ mixin _$PlanDefinitionAction {
   List<CodeableConcept>? get reason => throw _privateConstructorUsedError;
   List<RelatedArtifact>? get documentation =>
       throw _privateConstructorUsedError;
-  List<Id>? get goalId => throw _privateConstructorUsedError;
+  List<FhirId>? get goalId => throw _privateConstructorUsedError;
   @JsonKey(name: '_goalId')
   List<Element?>? get goalIdElement => throw _privateConstructorUsedError;
   List<TriggerDefinition>? get triggerDefinition =>
@@ -5446,7 +5446,7 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
       List<CodeableConcept>? code,
       List<CodeableConcept>? reason,
       List<RelatedArtifact>? documentation,
-      List<Id>? goalId,
+      List<FhirId>? goalId,
       @JsonKey(name: '_goalId')
           List<Element?>? goalIdElement,
       List<TriggerDefinition>? triggerDefinition,
@@ -5605,7 +5605,7 @@ class _$PlanDefinitionActionCopyWithImpl<$Res,
       goalId: freezed == goalId
           ? _value.goalId
           : goalId // ignore: cast_nullable_to_non_nullable
-              as List<Id>?,
+              as List<FhirId>?,
       goalIdElement: freezed == goalIdElement
           ? _value.goalIdElement
           : goalIdElement // ignore: cast_nullable_to_non_nullable
@@ -5950,7 +5950,7 @@ abstract class _$$_PlanDefinitionActionCopyWith<$Res>
       List<CodeableConcept>? code,
       List<CodeableConcept>? reason,
       List<RelatedArtifact>? documentation,
-      List<Id>? goalId,
+      List<FhirId>? goalId,
       @JsonKey(name: '_goalId')
           List<Element?>? goalIdElement,
       List<TriggerDefinition>? triggerDefinition,
@@ -6123,7 +6123,7 @@ class __$$_PlanDefinitionActionCopyWithImpl<$Res>
       goalId: freezed == goalId
           ? _value._goalId
           : goalId // ignore: cast_nullable_to_non_nullable
-              as List<Id>?,
+              as List<FhirId>?,
       goalIdElement: freezed == goalIdElement
           ? _value._goalIdElement
           : goalIdElement // ignore: cast_nullable_to_non_nullable
@@ -6255,7 +6255,7 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
       final List<CodeableConcept>? code,
       final List<CodeableConcept>? reason,
       final List<RelatedArtifact>? documentation,
-      final List<Id>? goalId,
+      final List<FhirId>? goalId,
       @JsonKey(name: '_goalId') final List<Element?>? goalIdElement,
       final List<TriggerDefinition>? triggerDefinition,
       final List<PlanDefinitionCondition>? condition,
@@ -6352,9 +6352,9 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Id>? _goalId;
+  final List<FhirId>? _goalId;
   @override
-  List<Id>? get goalId {
+  List<FhirId>? get goalId {
     final value = _goalId;
     if (value == null) return null;
     if (_goalId is EqualUnmodifiableListView) return _goalId;
@@ -6661,7 +6661,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
       final List<CodeableConcept>? code,
       final List<CodeableConcept>? reason,
       final List<RelatedArtifact>? documentation,
-      final List<Id>? goalId,
+      final List<FhirId>? goalId,
       @JsonKey(name: '_goalId')
           final List<Element?>? goalIdElement,
       final List<TriggerDefinition>? triggerDefinition,
@@ -6729,7 +6729,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
   @override
   List<RelatedArtifact>? get documentation;
   @override
-  List<Id>? get goalId;
+  List<FhirId>? get goalId;
   @override
   @JsonKey(name: '_goalId')
   List<Element?>? get goalIdElement;
@@ -7184,7 +7184,7 @@ PlanDefinitionRelatedAction _$PlanDefinitionRelatedActionFromJson(
 
 /// @nodoc
 mixin _$PlanDefinitionRelatedAction {
-  Id? get actionId => throw _privateConstructorUsedError;
+  FhirId? get actionId => throw _privateConstructorUsedError;
   @JsonKey(name: '_actionId')
   Element? get actionIdElement => throw _privateConstructorUsedError;
   PlanDefinitionRelatedActionRelationship? get relationship =>
@@ -7209,7 +7209,7 @@ abstract class $PlanDefinitionRelatedActionCopyWith<$Res> {
           PlanDefinitionRelatedAction>;
   @useResult
   $Res call(
-      {Id? actionId,
+      {FhirId? actionId,
       @JsonKey(name: '_actionId') Element? actionIdElement,
       PlanDefinitionRelatedActionRelationship? relationship,
       @JsonKey(name: '_relationship') Element? relationshipElement,
@@ -7247,7 +7247,7 @@ class _$PlanDefinitionRelatedActionCopyWithImpl<$Res,
       actionId: freezed == actionId
           ? _value.actionId
           : actionId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       actionIdElement: freezed == actionIdElement
           ? _value.actionIdElement
           : actionIdElement // ignore: cast_nullable_to_non_nullable
@@ -7330,7 +7330,7 @@ abstract class _$$_PlanDefinitionRelatedActionCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? actionId,
+      {FhirId? actionId,
       @JsonKey(name: '_actionId') Element? actionIdElement,
       PlanDefinitionRelatedActionRelationship? relationship,
       @JsonKey(name: '_relationship') Element? relationshipElement,
@@ -7371,7 +7371,7 @@ class __$$_PlanDefinitionRelatedActionCopyWithImpl<$Res>
       actionId: freezed == actionId
           ? _value.actionId
           : actionId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       actionIdElement: freezed == actionIdElement
           ? _value.actionIdElement
           : actionIdElement // ignore: cast_nullable_to_non_nullable
@@ -7412,7 +7412,7 @@ class _$_PlanDefinitionRelatedAction extends _PlanDefinitionRelatedAction {
       _$$_PlanDefinitionRelatedActionFromJson(json);
 
   @override
-  final Id? actionId;
+  final FhirId? actionId;
   @override
   @JsonKey(name: '_actionId')
   final Element? actionIdElement;
@@ -7473,7 +7473,7 @@ class _$_PlanDefinitionRelatedAction extends _PlanDefinitionRelatedAction {
 abstract class _PlanDefinitionRelatedAction
     extends PlanDefinitionRelatedAction {
   factory _PlanDefinitionRelatedAction(
-      {final Id? actionId,
+      {final FhirId? actionId,
       @JsonKey(name: '_actionId') final Element? actionIdElement,
       final PlanDefinitionRelatedActionRelationship? relationship,
       @JsonKey(name: '_relationship') final Element? relationshipElement,
@@ -7485,7 +7485,7 @@ abstract class _PlanDefinitionRelatedAction
       _$_PlanDefinitionRelatedAction.fromJson;
 
   @override
-  Id? get actionId;
+  FhirId? get actionId;
   @override
   @JsonKey(name: '_actionId')
   Element? get actionIdElement;
@@ -8114,7 +8114,7 @@ Questionnaire _$QuestionnaireFromJson(Map<String, dynamic> json) {
 mixin _$Questionnaire {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Questionnaire)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -8193,7 +8193,7 @@ abstract class $QuestionnaireCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Questionnaire)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -8344,7 +8344,7 @@ class _$QuestionnaireCopyWithImpl<$Res, $Val extends Questionnaire>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -8752,7 +8752,7 @@ abstract class _$$_QuestionnaireCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Questionnaire)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -8919,7 +8919,7 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -9188,7 +9188,7 @@ class _$_Questionnaire extends _Questionnaire {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Questionnaire)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -9545,7 +9545,7 @@ abstract class _Questionnaire extends Questionnaire {
   factory _Questionnaire(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Questionnaire)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -9616,7 +9616,7 @@ abstract class _Questionnaire extends Questionnaire {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Questionnaire)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -12564,7 +12564,7 @@ ServiceDefinition _$ServiceDefinitionFromJson(Map<String, dynamic> json) {
 mixin _$ServiceDefinition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ServiceDefinition)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -12649,7 +12649,7 @@ abstract class $ServiceDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ServiceDefinition)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -12810,7 +12810,7 @@ class _$ServiceDefinitionCopyWithImpl<$Res, $Val extends ServiceDefinition>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -13258,7 +13258,7 @@ abstract class _$$_ServiceDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ServiceDefinition)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -13437,7 +13437,7 @@ class __$$_ServiceDefinitionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -13727,7 +13727,7 @@ class _$_ServiceDefinition extends _ServiceDefinition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ServiceDefinition)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -14112,7 +14112,7 @@ abstract class _ServiceDefinition extends ServiceDefinition {
   factory _ServiceDefinition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ServiceDefinition)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -14187,7 +14187,7 @@ abstract class _ServiceDefinition extends ServiceDefinition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ServiceDefinition)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override

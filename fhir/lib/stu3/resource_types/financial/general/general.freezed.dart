@@ -22,7 +22,7 @@ Account _$AccountFromJson(Map<String, dynamic> json) {
 mixin _$Account {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Account)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -68,7 +68,7 @@ abstract class $AccountCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Account)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -163,7 +163,7 @@ class _$AccountCopyWithImpl<$Res, $Val extends Account>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -430,7 +430,7 @@ abstract class _$$_AccountCopyWith<$Res> implements $AccountCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Account)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -535,7 +535,7 @@ class __$$_AccountCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -688,7 +688,7 @@ class _$_Account extends _Account {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Account)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -894,7 +894,7 @@ abstract class _Account extends Account {
   factory _Account(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Account)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -933,7 +933,7 @@ abstract class _Account extends Account {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Account)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -1470,7 +1470,7 @@ ChargeItem _$ChargeItemFromJson(Map<String, dynamic> json) {
 mixin _$ChargeItem {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -1506,7 +1506,7 @@ mixin _$ChargeItem {
   Reference? get requestingOrganization => throw _privateConstructorUsedError;
   Quantity? get quantity => throw _privateConstructorUsedError;
   List<CodeableConcept>? get bodysite => throw _privateConstructorUsedError;
-  Id? get factorOverride => throw _privateConstructorUsedError;
+  FhirId? get factorOverride => throw _privateConstructorUsedError;
   @JsonKey(name: '_factorOverride')
   Element? get factorOverrideElement => throw _privateConstructorUsedError;
   Money? get priceOverride => throw _privateConstructorUsedError;
@@ -1539,7 +1539,7 @@ abstract class $ChargeItemCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1573,7 +1573,7 @@ abstract class $ChargeItemCopyWith<$Res> {
       Reference? requestingOrganization,
       Quantity? quantity,
       List<CodeableConcept>? bodysite,
-      Id? factorOverride,
+      FhirId? factorOverride,
       @JsonKey(name: '_factorOverride')
           Element? factorOverrideElement,
       Money? priceOverride,
@@ -1676,7 +1676,7 @@ class _$ChargeItemCopyWithImpl<$Res, $Val extends ChargeItem>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -1788,7 +1788,7 @@ class _$ChargeItemCopyWithImpl<$Res, $Val extends ChargeItem>
       factorOverride: freezed == factorOverride
           ? _value.factorOverride
           : factorOverride // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       factorOverrideElement: freezed == factorOverrideElement
           ? _value.factorOverrideElement
           : factorOverrideElement // ignore: cast_nullable_to_non_nullable
@@ -2084,7 +2084,7 @@ abstract class _$$_ChargeItemCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2118,7 +2118,7 @@ abstract class _$$_ChargeItemCopyWith<$Res>
       Reference? requestingOrganization,
       Quantity? quantity,
       List<CodeableConcept>? bodysite,
-      Id? factorOverride,
+      FhirId? factorOverride,
       @JsonKey(name: '_factorOverride')
           Element? factorOverrideElement,
       Money? priceOverride,
@@ -2239,7 +2239,7 @@ class __$$_ChargeItemCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -2351,7 +2351,7 @@ class __$$_ChargeItemCopyWithImpl<$Res>
       factorOverride: freezed == factorOverride
           ? _value.factorOverride
           : factorOverride // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       factorOverrideElement: freezed == factorOverrideElement
           ? _value.factorOverrideElement
           : factorOverrideElement // ignore: cast_nullable_to_non_nullable
@@ -2482,7 +2482,7 @@ class _$_ChargeItem extends _ChargeItem {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -2610,7 +2610,7 @@ class _$_ChargeItem extends _ChargeItem {
   }
 
   @override
-  final Id? factorOverride;
+  final FhirId? factorOverride;
   @override
   @JsonKey(name: '_factorOverride')
   final Element? factorOverrideElement;
@@ -2828,7 +2828,7 @@ abstract class _ChargeItem extends ChargeItem {
   factory _ChargeItem(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2862,7 +2862,7 @@ abstract class _ChargeItem extends ChargeItem {
       final Reference? requestingOrganization,
       final Quantity? quantity,
       final List<CodeableConcept>? bodysite,
-      final Id? factorOverride,
+      final FhirId? factorOverride,
       @JsonKey(name: '_factorOverride')
           final Element? factorOverrideElement,
       final Money? priceOverride,
@@ -2887,7 +2887,7 @@ abstract class _ChargeItem extends ChargeItem {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -2949,7 +2949,7 @@ abstract class _ChargeItem extends ChargeItem {
   @override
   List<CodeableConcept>? get bodysite;
   @override
-  Id? get factorOverride;
+  FhirId? get factorOverride;
   @override
   @JsonKey(name: '_factorOverride')
   Element? get factorOverrideElement;
@@ -3177,7 +3177,7 @@ Contract _$ContractFromJson(Map<String, dynamic> json) {
 mixin _$Contract {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -3235,7 +3235,7 @@ abstract class $ContractCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -3351,7 +3351,7 @@ class _$ContractCopyWithImpl<$Res, $Val extends Contract>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -3662,7 +3662,7 @@ abstract class _$$_ContractCopyWith<$Res> implements $ContractCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -3789,7 +3789,7 @@ class __$$_ContractCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -4008,7 +4008,7 @@ class _$_Contract extends _Contract {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -4358,7 +4358,7 @@ abstract class _Contract extends Contract {
   factory _Contract(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4407,7 +4407,7 @@ abstract class _Contract extends Contract {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -7303,7 +7303,7 @@ ExplanationOfBenefit _$ExplanationOfBenefitFromJson(Map<String, dynamic> json) {
 mixin _$ExplanationOfBenefit {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -7392,7 +7392,7 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -7564,7 +7564,7 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -8174,7 +8174,7 @@ abstract class _$$_ExplanationOfBenefitCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -8375,7 +8375,7 @@ class __$$_ExplanationOfBenefitCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -8677,7 +8677,7 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -9082,7 +9082,7 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
   factory _ExplanationOfBenefit(
           {@JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
               final Stu3ResourceType resourceType,
-          final Id? id,
+          final FhirId? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -9152,7 +9152,7 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -14878,7 +14878,7 @@ ExplanationOfBenefitAddItem _$ExplanationOfBenefitAddItemFromJson(
 
 /// @nodoc
 mixin _$ExplanationOfBenefitAddItem {
-  List<Id>? get sequenceLinkId => throw _privateConstructorUsedError;
+  List<FhirId>? get sequenceLinkId => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequenceLinkId')
   List<Element?>? get sequenceLinkIdElement =>
       throw _privateConstructorUsedError;
@@ -14910,7 +14910,7 @@ abstract class $ExplanationOfBenefitAddItemCopyWith<$Res> {
           ExplanationOfBenefitAddItem>;
   @useResult
   $Res call(
-      {List<Id>? sequenceLinkId,
+      {List<FhirId>? sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId') List<Element?>? sequenceLinkIdElement,
       CodeableConcept? revenue,
       CodeableConcept? category,
@@ -14958,7 +14958,7 @@ class _$ExplanationOfBenefitAddItemCopyWithImpl<$Res,
       sequenceLinkId: freezed == sequenceLinkId
           ? _value.sequenceLinkId
           : sequenceLinkId // ignore: cast_nullable_to_non_nullable
-              as List<Id>?,
+              as List<FhirId>?,
       sequenceLinkIdElement: freezed == sequenceLinkIdElement
           ? _value.sequenceLinkIdElement
           : sequenceLinkIdElement // ignore: cast_nullable_to_non_nullable
@@ -15061,7 +15061,7 @@ abstract class _$$_ExplanationOfBenefitAddItemCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {List<Id>? sequenceLinkId,
+      {List<FhirId>? sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId') List<Element?>? sequenceLinkIdElement,
       CodeableConcept? revenue,
       CodeableConcept? category,
@@ -15112,7 +15112,7 @@ class __$$_ExplanationOfBenefitAddItemCopyWithImpl<$Res>
       sequenceLinkId: freezed == sequenceLinkId
           ? _value._sequenceLinkId
           : sequenceLinkId // ignore: cast_nullable_to_non_nullable
-              as List<Id>?,
+              as List<FhirId>?,
       sequenceLinkIdElement: freezed == sequenceLinkIdElement
           ? _value._sequenceLinkIdElement
           : sequenceLinkIdElement // ignore: cast_nullable_to_non_nullable
@@ -15161,7 +15161,7 @@ class __$$_ExplanationOfBenefitAddItemCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ExplanationOfBenefitAddItem extends _ExplanationOfBenefitAddItem {
   _$_ExplanationOfBenefitAddItem(
-      {final List<Id>? sequenceLinkId,
+      {final List<FhirId>? sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId')
           final List<Element?>? sequenceLinkIdElement,
       this.revenue,
@@ -15186,9 +15186,9 @@ class _$_ExplanationOfBenefitAddItem extends _ExplanationOfBenefitAddItem {
   factory _$_ExplanationOfBenefitAddItem.fromJson(Map<String, dynamic> json) =>
       _$$_ExplanationOfBenefitAddItemFromJson(json);
 
-  final List<Id>? _sequenceLinkId;
+  final List<FhirId>? _sequenceLinkId;
   @override
-  List<Id>? get sequenceLinkId {
+  List<FhirId>? get sequenceLinkId {
     final value = _sequenceLinkId;
     if (value == null) return null;
     if (_sequenceLinkId is EqualUnmodifiableListView) return _sequenceLinkId;
@@ -15331,7 +15331,7 @@ class _$_ExplanationOfBenefitAddItem extends _ExplanationOfBenefitAddItem {
 abstract class _ExplanationOfBenefitAddItem
     extends ExplanationOfBenefitAddItem {
   factory _ExplanationOfBenefitAddItem(
-          {final List<Id>? sequenceLinkId,
+          {final List<FhirId>? sequenceLinkId,
           @JsonKey(name: '_sequenceLinkId')
               final List<Element?>? sequenceLinkIdElement,
           final CodeableConcept? revenue,
@@ -15351,7 +15351,7 @@ abstract class _ExplanationOfBenefitAddItem
       _$_ExplanationOfBenefitAddItem.fromJson;
 
   @override
-  List<Id>? get sequenceLinkId;
+  List<FhirId>? get sequenceLinkId;
   @override
   @JsonKey(name: '_sequenceLinkId')
   List<Element?>? get sequenceLinkIdElement;

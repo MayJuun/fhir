@@ -19,7 +19,7 @@ class Patient with Resource, _$Patient {
     @Default(Dstu2ResourceType.Patient)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Patient)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     @JsonKey(name: '_id') Element? idElement,
     Meta? meta,
     FhirUri? implicitRules,
@@ -92,7 +92,7 @@ class Patient with Resource, _$Patient {
 class PatientContact with _$PatientContact {
   PatientContact._();
   factory PatientContact({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? relationship,
@@ -140,7 +140,7 @@ class PatientContact with _$PatientContact {
 class PatientAnimal with _$PatientAnimal {
   PatientAnimal._();
   factory PatientAnimal({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept species,
@@ -183,7 +183,7 @@ class PatientAnimal with _$PatientAnimal {
 class PatientCommunication with _$PatientCommunication {
   PatientCommunication._();
   factory PatientCommunication({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept language,
@@ -226,7 +226,7 @@ class PatientCommunication with _$PatientCommunication {
 class PatientLink with _$PatientLink {
   PatientLink._();
   factory PatientLink({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference other,
@@ -272,7 +272,7 @@ class Practitioner with Resource, _$Practitioner {
     @Default(Dstu2ResourceType.Practitioner)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Practitioner)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -331,7 +331,7 @@ class Practitioner with Resource, _$Practitioner {
 class PractitionerPractitionerRole with _$PractitionerPractitionerRole {
   PractitionerPractitionerRole._();
   factory PractitionerPractitionerRole({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     List<FhirExtension>? modifierExtension,
@@ -378,7 +378,7 @@ class PractitionerPractitionerRole with _$PractitionerPractitionerRole {
 class PractitionerQualification with _$PractitionerQualification {
   PractitionerQualification._();
   factory PractitionerQualification({
-    Id? id,
+    FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
@@ -425,7 +425,7 @@ class RelatedPerson with Resource, _$RelatedPerson {
     @Default(Dstu2ResourceType.RelatedPerson)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.RelatedPerson)
         Dstu2ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,

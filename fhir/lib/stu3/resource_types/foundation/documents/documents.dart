@@ -19,7 +19,7 @@ class Composition with Resource, _$Composition {
     @Default(Stu3ResourceType.Composition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -41,7 +41,7 @@ class Composition with Resource, _$Composition {
     required List<Reference> author,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    Id? confidentiality,
+    FhirId? confidentiality,
     @JsonKey(name: '_confidentiality') Element? confidentialityElement,
     List<CompositionAttester>? attester,
     Reference? custodian,
@@ -255,7 +255,7 @@ class DocumentManifest with Resource, _$DocumentManifest {
     @Default(Stu3ResourceType.DocumentManifest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -396,7 +396,7 @@ class DocumentReference with Resource, _$DocumentReference {
     @Default(Stu3ResourceType.DocumentReference)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,

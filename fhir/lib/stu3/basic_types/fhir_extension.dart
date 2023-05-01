@@ -45,7 +45,7 @@ class FhirExtension with _$FhirExtension {
     @JsonKey(name: '_valueOid') Element? valueOidElement,
     Uuid? valueUuid,
     @JsonKey(name: '_valueUuid') Element? valueUuidElement,
-    Id? valueId,
+    FhirId? valueId,
     @JsonKey(name: '_valueId') Element? valueIdElement,
     UnsignedInt? valueUnsignedInt,
     @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,

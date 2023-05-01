@@ -11,7 +11,7 @@ _$_Claim _$$_ClaimFromJson(Map<String, dynamic> json) => _$_Claim(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Claim) ??
           Stu3ResourceType.Claim,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -664,28 +664,28 @@ _$_ClaimItem _$$_ClaimItemFromJson(Map<String, dynamic> json) => _$_ClaimItem(
           ? null
           : Element.fromJson(json['_sequence'] as Map<String, dynamic>),
       careTeamLinkId: (json['careTeamLinkId'] as List<dynamic>?)
-          ?.map((e) => Id.fromJson(e))
+          ?.map((e) => FhirId.fromJson(e))
           .toList(),
       careTeamLinkIdElement: (json['_careTeamLinkId'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       diagnosisLinkId: (json['diagnosisLinkId'] as List<dynamic>?)
-          ?.map((e) => Id.fromJson(e))
+          ?.map((e) => FhirId.fromJson(e))
           .toList(),
       diagnosisLinkIdElement: (json['_diagnosisLinkId'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       procedureLinkId: (json['procedureLinkId'] as List<dynamic>?)
-          ?.map((e) => Id.fromJson(e))
+          ?.map((e) => FhirId.fromJson(e))
           .toList(),
       procedureLinkIdElement: (json['_procedureLinkId'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       informationLinkId: (json['informationLinkId'] as List<dynamic>?)
-          ?.map((e) => Id.fromJson(e))
+          ?.map((e) => FhirId.fromJson(e))
           .toList(),
       informationLinkIdElement: (json['_informationLinkId'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -952,7 +952,7 @@ _$_ClaimResponse _$$_ClaimResponseFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.ClaimResponse) ??
           Stu3ResourceType.ClaimResponse,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1118,7 +1118,7 @@ _$_ClaimResponseItem _$$_ClaimResponseItemFromJson(Map<String, dynamic> json) =>
     _$_ClaimResponseItem(
       sequenceLinkId: json['sequenceLinkId'] == null
           ? null
-          : Id.fromJson(json['sequenceLinkId']),
+          : FhirId.fromJson(json['sequenceLinkId']),
       sequenceLinkIdElement: json['_sequenceLinkId'] == null
           ? null
           : Element.fromJson(json['_sequenceLinkId'] as Map<String, dynamic>),
@@ -1201,7 +1201,7 @@ _$_ClaimResponseDetail _$$_ClaimResponseDetailFromJson(
     _$_ClaimResponseDetail(
       sequenceLinkId: json['sequenceLinkId'] == null
           ? null
-          : Id.fromJson(json['sequenceLinkId']),
+          : FhirId.fromJson(json['sequenceLinkId']),
       sequenceLinkIdElement: json['_sequenceLinkId'] == null
           ? null
           : Element.fromJson(json['_sequenceLinkId'] as Map<String, dynamic>),
@@ -1250,7 +1250,7 @@ _$_ClaimResponseSubDetail _$$_ClaimResponseSubDetailFromJson(
     _$_ClaimResponseSubDetail(
       sequenceLinkId: json['sequenceLinkId'] == null
           ? null
-          : Id.fromJson(json['sequenceLinkId']),
+          : FhirId.fromJson(json['sequenceLinkId']),
       sequenceLinkIdElement: json['_sequenceLinkId'] == null
           ? null
           : Element.fromJson(json['_sequenceLinkId'] as Map<String, dynamic>),
@@ -1292,7 +1292,7 @@ _$_ClaimResponseAddItem _$$_ClaimResponseAddItemFromJson(
         Map<String, dynamic> json) =>
     _$_ClaimResponseAddItem(
       sequenceLinkId: (json['sequenceLinkId'] as List<dynamic>?)
-          ?.map((e) => Id.fromJson(e))
+          ?.map((e) => FhirId.fromJson(e))
           .toList(),
       sequenceLinkIdElement: (json['_sequenceLinkId'] as List<dynamic>?)
           ?.map((e) =>
@@ -1418,20 +1418,20 @@ _$_ClaimResponseError _$$_ClaimResponseErrorFromJson(
     _$_ClaimResponseError(
       sequenceLinkId: json['sequenceLinkId'] == null
           ? null
-          : Id.fromJson(json['sequenceLinkId']),
+          : FhirId.fromJson(json['sequenceLinkId']),
       sequenceLinkIdElement: json['_sequenceLinkId'] == null
           ? null
           : Element.fromJson(json['_sequenceLinkId'] as Map<String, dynamic>),
       detailSequenceLinkId: json['detailSequenceLinkId'] == null
           ? null
-          : Id.fromJson(json['detailSequenceLinkId']),
+          : FhirId.fromJson(json['detailSequenceLinkId']),
       detailSequenceLinkIdElement: json['_detailSequenceLinkId'] == null
           ? null
           : Element.fromJson(
               json['_detailSequenceLinkId'] as Map<String, dynamic>),
       subdetailSequenceLinkId: json['subdetailSequenceLinkId'] == null
           ? null
-          : Id.fromJson(json['subdetailSequenceLinkId']),
+          : FhirId.fromJson(json['subdetailSequenceLinkId']),
       subdetailSequenceLinkIdElement: json['_subdetailSequenceLinkId'] == null
           ? null
           : Element.fromJson(

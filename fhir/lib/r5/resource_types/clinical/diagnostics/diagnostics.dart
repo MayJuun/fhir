@@ -112,7 +112,7 @@ class BodyStructure with Resource, _$BodyStructure {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -619,7 +619,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -1134,7 +1134,7 @@ class GenomicStudy with Resource, _$GenomicStudy {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -2050,7 +2050,7 @@ class ImagingSelection with Resource, _$ImagingSelection {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -2115,7 +2115,7 @@ class ImagingSelection with Resource, _$ImagingSelection {
     required CodeableConcept code,
 
     /// [studyUid] The Study Instance UID for the DICOM Study from which the images were selected.
-    Id? studyUid,
+    FhirId? studyUid,
 
     /// [studyUidElement] ("_studyUid") Extensions for studyUid
     @JsonKey(name: '_studyUid') Element? studyUidElement,
@@ -2127,7 +2127,7 @@ class ImagingSelection with Resource, _$ImagingSelection {
     List<Reference>? endpoint,
 
     /// [seriesUid] The Series Instance UID for the DICOM Series from which the images were selected.
-    Id? seriesUid,
+    FhirId? seriesUid,
 
     /// [seriesUidElement] ("_seriesUid") Extensions for seriesUid
     @JsonKey(name: '_seriesUid') Element? seriesUidElement,
@@ -2139,7 +2139,7 @@ class ImagingSelection with Resource, _$ImagingSelection {
     @JsonKey(name: '_seriesNumber') Element? seriesNumberElement,
 
     /// [frameOfReferenceUid] The Frame of Reference UID identifying the coordinate system that conveys spatial and/or temporal information for the selected images or frames.
-    Id? frameOfReferenceUid,
+    FhirId? frameOfReferenceUid,
 
     /// [frameOfReferenceUidElement] ("_frameOfReferenceUid") Extensions for frameOfReferenceUid
     @JsonKey(name: '_frameOfReferenceUid') Element? frameOfReferenceUidElement,
@@ -2403,7 +2403,7 @@ class ImagingSelectionInstance with _$ImagingSelectionInstance {
     List<FhirExtension>? modifierExtension,
 
     /// [uid] The SOP Instance UID for the selected DICOM instance.
-    Id? uid,
+    FhirId? uid,
 
     /// [uidElement] ("_uid") Extensions for uid
     @JsonKey(name: '_uid') Element? uidElement,
@@ -2878,7 +2878,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -3142,7 +3142,7 @@ class ImagingStudySeries with _$ImagingStudySeries {
     List<FhirExtension>? modifierExtension,
 
     /// [uid] The DICOM Series Instance UID for the series.
-    Id? uid,
+    FhirId? uid,
 
     /// [uidElement] ("_uid") Extensions for uid
     @JsonKey(name: '_uid') Element? uidElement,
@@ -3430,7 +3430,7 @@ class ImagingStudyInstance with _$ImagingStudyInstance {
     List<FhirExtension>? modifierExtension,
 
     /// [uid] The DICOM SOP Instance UID for this image or other DICOM content.
-    Id? uid,
+    FhirId? uid,
 
     /// [uidElement] ("_uid") Extensions for uid
     @JsonKey(name: '_uid') Element? uidElement,
@@ -3576,7 +3576,7 @@ class MolecularSequence with Resource, _$MolecularSequence {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -4388,7 +4388,7 @@ class Observation with Resource, _$Observation {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -5216,7 +5216,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not
@@ -5812,7 +5812,7 @@ class Specimen with Resource, _$Specimen {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     /// Once assigned, this value never changes.
-    Id? id,
+    FhirId? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not

@@ -21523,7 +21523,7 @@ mixin _$TestScriptVariable {
 
   /// [sourceId] Fixture to evaluate the XPath/JSONPath expression or the
   ///  headerField  against within this variable.
-  Id? get sourceId => throw _privateConstructorUsedError;
+  FhirId? get sourceId => throw _privateConstructorUsedError;
 
   /// [sourceIdElement] Extensions for sourceId
   @JsonKey(name: '_sourceId')
@@ -21559,7 +21559,7 @@ abstract class $TestScriptVariableCopyWith<$Res> {
       @JsonKey(name: '_hint') Element? hintElement,
       String? path,
       @JsonKey(name: '_path') Element? pathElement,
-      Id? sourceId,
+      FhirId? sourceId,
       @JsonKey(name: '_sourceId') Element? sourceIdElement});
 
   $ElementCopyWith<$Res>? get nameElement;
@@ -21677,7 +21677,7 @@ class _$TestScriptVariableCopyWithImpl<$Res, $Val extends TestScriptVariable>
       sourceId: freezed == sourceId
           ? _value.sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sourceIdElement: freezed == sourceIdElement
           ? _value.sourceIdElement
           : sourceIdElement // ignore: cast_nullable_to_non_nullable
@@ -21808,7 +21808,7 @@ abstract class _$$_TestScriptVariableCopyWith<$Res>
       @JsonKey(name: '_hint') Element? hintElement,
       String? path,
       @JsonKey(name: '_path') Element? pathElement,
-      Id? sourceId,
+      FhirId? sourceId,
       @JsonKey(name: '_sourceId') Element? sourceIdElement});
 
   @override
@@ -21932,7 +21932,7 @@ class __$$_TestScriptVariableCopyWithImpl<$Res>
       sourceId: freezed == sourceId
           ? _value.sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sourceIdElement: freezed == sourceIdElement
           ? _value.sourceIdElement
           : sourceIdElement // ignore: cast_nullable_to_non_nullable
@@ -22112,7 +22112,7 @@ class _$_TestScriptVariable extends _TestScriptVariable {
   /// [sourceId] Fixture to evaluate the XPath/JSONPath expression or the
   ///  headerField  against within this variable.
   @override
-  final Id? sourceId;
+  final FhirId? sourceId;
 
   /// [sourceIdElement] Extensions for sourceId
   @override
@@ -22224,7 +22224,7 @@ abstract class _TestScriptVariable extends TestScriptVariable {
           @JsonKey(name: '_hint') final Element? hintElement,
           final String? path,
           @JsonKey(name: '_path') final Element? pathElement,
-          final Id? sourceId,
+          final FhirId? sourceId,
           @JsonKey(name: '_sourceId') final Element? sourceIdElement}) =
       _$_TestScriptVariable;
   _TestScriptVariable._() : super._();
@@ -22338,7 +22338,7 @@ abstract class _TestScriptVariable extends TestScriptVariable {
 
   /// [sourceId] Fixture to evaluate the XPath/JSONPath expression or the
   ///  headerField  against within this variable.
-  Id? get sourceId;
+  FhirId? get sourceId;
   @override
 
   /// [sourceIdElement] Extensions for sourceId
@@ -23204,14 +23204,14 @@ mixin _$TestScriptOperation {
       throw _privateConstructorUsedError;
 
   /// [requestId] The fixture id (maybe new) to map to the request.
-  Id? get requestId => throw _privateConstructorUsedError;
+  FhirId? get requestId => throw _privateConstructorUsedError;
 
   /// [requestIdElement] Extensions for requestId
   @JsonKey(name: '_requestId')
   Element? get requestIdElement => throw _privateConstructorUsedError;
 
   /// [responseId] The fixture id (maybe new) to map to the response.
-  Id? get responseId => throw _privateConstructorUsedError;
+  FhirId? get responseId => throw _privateConstructorUsedError;
 
   /// [responseIdElement] Extensions for responseId
   @JsonKey(name: '_responseId')
@@ -23219,7 +23219,7 @@ mixin _$TestScriptOperation {
 
   /// [sourceId] The id of the fixture used as the body of a PUT or POST
   ///  request.
-  Id? get sourceId => throw _privateConstructorUsedError;
+  FhirId? get sourceId => throw _privateConstructorUsedError;
 
   /// [sourceIdElement] Extensions for sourceId
   @JsonKey(name: '_sourceId')
@@ -23227,7 +23227,7 @@ mixin _$TestScriptOperation {
 
   /// [targetId] Id of fixture used for extracting the [id],  [type], and [vid]
   ///  for GET requests.
-  Id? get targetId => throw _privateConstructorUsedError;
+  FhirId? get targetId => throw _privateConstructorUsedError;
 
   /// [targetIdElement] Extensions for targetId
   @JsonKey(name: '_targetId')
@@ -23278,13 +23278,13 @@ abstract class $TestScriptOperationCopyWith<$Res> {
       String? params,
       @JsonKey(name: '_params') Element? paramsElement,
       List<TestScriptRequestHeader>? requestHeader,
-      Id? requestId,
+      FhirId? requestId,
       @JsonKey(name: '_requestId') Element? requestIdElement,
-      Id? responseId,
+      FhirId? responseId,
       @JsonKey(name: '_responseId') Element? responseIdElement,
-      Id? sourceId,
+      FhirId? sourceId,
       @JsonKey(name: '_sourceId') Element? sourceIdElement,
-      Id? targetId,
+      FhirId? targetId,
       @JsonKey(name: '_targetId') Element? targetIdElement,
       String? url,
       @JsonKey(name: '_url') Element? urlElement});
@@ -23460,7 +23460,7 @@ class _$TestScriptOperationCopyWithImpl<$Res, $Val extends TestScriptOperation>
       requestId: freezed == requestId
           ? _value.requestId
           : requestId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       requestIdElement: freezed == requestIdElement
           ? _value.requestIdElement
           : requestIdElement // ignore: cast_nullable_to_non_nullable
@@ -23468,7 +23468,7 @@ class _$TestScriptOperationCopyWithImpl<$Res, $Val extends TestScriptOperation>
       responseId: freezed == responseId
           ? _value.responseId
           : responseId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       responseIdElement: freezed == responseIdElement
           ? _value.responseIdElement
           : responseIdElement // ignore: cast_nullable_to_non_nullable
@@ -23476,7 +23476,7 @@ class _$TestScriptOperationCopyWithImpl<$Res, $Val extends TestScriptOperation>
       sourceId: freezed == sourceId
           ? _value.sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sourceIdElement: freezed == sourceIdElement
           ? _value.sourceIdElement
           : sourceIdElement // ignore: cast_nullable_to_non_nullable
@@ -23484,7 +23484,7 @@ class _$TestScriptOperationCopyWithImpl<$Res, $Val extends TestScriptOperation>
       targetId: freezed == targetId
           ? _value.targetId
           : targetId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       targetIdElement: freezed == targetIdElement
           ? _value.targetIdElement
           : targetIdElement // ignore: cast_nullable_to_non_nullable
@@ -23727,13 +23727,13 @@ abstract class _$$_TestScriptOperationCopyWith<$Res>
       String? params,
       @JsonKey(name: '_params') Element? paramsElement,
       List<TestScriptRequestHeader>? requestHeader,
-      Id? requestId,
+      FhirId? requestId,
       @JsonKey(name: '_requestId') Element? requestIdElement,
-      Id? responseId,
+      FhirId? responseId,
       @JsonKey(name: '_responseId') Element? responseIdElement,
-      Id? sourceId,
+      FhirId? sourceId,
       @JsonKey(name: '_sourceId') Element? sourceIdElement,
-      Id? targetId,
+      FhirId? targetId,
       @JsonKey(name: '_targetId') Element? targetIdElement,
       String? url,
       @JsonKey(name: '_url') Element? urlElement});
@@ -23923,7 +23923,7 @@ class __$$_TestScriptOperationCopyWithImpl<$Res>
       requestId: freezed == requestId
           ? _value.requestId
           : requestId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       requestIdElement: freezed == requestIdElement
           ? _value.requestIdElement
           : requestIdElement // ignore: cast_nullable_to_non_nullable
@@ -23931,7 +23931,7 @@ class __$$_TestScriptOperationCopyWithImpl<$Res>
       responseId: freezed == responseId
           ? _value.responseId
           : responseId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       responseIdElement: freezed == responseIdElement
           ? _value.responseIdElement
           : responseIdElement // ignore: cast_nullable_to_non_nullable
@@ -23939,7 +23939,7 @@ class __$$_TestScriptOperationCopyWithImpl<$Res>
       sourceId: freezed == sourceId
           ? _value.sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sourceIdElement: freezed == sourceIdElement
           ? _value.sourceIdElement
           : sourceIdElement // ignore: cast_nullable_to_non_nullable
@@ -23947,7 +23947,7 @@ class __$$_TestScriptOperationCopyWithImpl<$Res>
       targetId: freezed == targetId
           ? _value.targetId
           : targetId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       targetIdElement: freezed == targetIdElement
           ? _value.targetIdElement
           : targetIdElement // ignore: cast_nullable_to_non_nullable
@@ -24199,7 +24199,7 @@ class _$_TestScriptOperation extends _TestScriptOperation {
 
   /// [requestId] The fixture id (maybe new) to map to the request.
   @override
-  final Id? requestId;
+  final FhirId? requestId;
 
   /// [requestIdElement] Extensions for requestId
   @override
@@ -24208,7 +24208,7 @@ class _$_TestScriptOperation extends _TestScriptOperation {
 
   /// [responseId] The fixture id (maybe new) to map to the response.
   @override
-  final Id? responseId;
+  final FhirId? responseId;
 
   /// [responseIdElement] Extensions for responseId
   @override
@@ -24218,7 +24218,7 @@ class _$_TestScriptOperation extends _TestScriptOperation {
   /// [sourceId] The id of the fixture used as the body of a PUT or POST
   ///  request.
   @override
-  final Id? sourceId;
+  final FhirId? sourceId;
 
   /// [sourceIdElement] Extensions for sourceId
   @override
@@ -24228,7 +24228,7 @@ class _$_TestScriptOperation extends _TestScriptOperation {
   /// [targetId] Id of fixture used for extracting the [id],  [type], and [vid]
   ///  for GET requests.
   @override
-  final Id? targetId;
+  final FhirId? targetId;
 
   /// [targetIdElement] Extensions for targetId
   @override
@@ -24413,16 +24413,16 @@ abstract class _TestScriptOperation extends TestScriptOperation {
       @JsonKey(name: '_params')
           final Element? paramsElement,
       final List<TestScriptRequestHeader>? requestHeader,
-      final Id? requestId,
+      final FhirId? requestId,
       @JsonKey(name: '_requestId')
           final Element? requestIdElement,
-      final Id? responseId,
+      final FhirId? responseId,
       @JsonKey(name: '_responseId')
           final Element? responseIdElement,
-      final Id? sourceId,
+      final FhirId? sourceId,
       @JsonKey(name: '_sourceId')
           final Element? sourceIdElement,
-      final Id? targetId,
+      final FhirId? targetId,
       @JsonKey(name: '_targetId')
           final Element? targetIdElement,
       final String? url,
@@ -24577,7 +24577,7 @@ abstract class _TestScriptOperation extends TestScriptOperation {
   @override
 
   /// [requestId] The fixture id (maybe new) to map to the request.
-  Id? get requestId;
+  FhirId? get requestId;
   @override
 
   /// [requestIdElement] Extensions for requestId
@@ -24586,7 +24586,7 @@ abstract class _TestScriptOperation extends TestScriptOperation {
   @override
 
   /// [responseId] The fixture id (maybe new) to map to the response.
-  Id? get responseId;
+  FhirId? get responseId;
   @override
 
   /// [responseIdElement] Extensions for responseId
@@ -24596,7 +24596,7 @@ abstract class _TestScriptOperation extends TestScriptOperation {
 
   /// [sourceId] The id of the fixture used as the body of a PUT or POST
   ///  request.
-  Id? get sourceId;
+  FhirId? get sourceId;
   @override
 
   /// [sourceIdElement] Extensions for sourceId
@@ -24606,7 +24606,7 @@ abstract class _TestScriptOperation extends TestScriptOperation {
 
   /// [targetId] Id of fixture used for extracting the [id],  [type], and [vid]
   ///  for GET requests.
-  Id? get targetId;
+  FhirId? get targetId;
   @override
 
   /// [targetIdElement] Extensions for targetId
@@ -25265,14 +25265,14 @@ mixin _$TestScriptAssert {
 
   /// [sourceId] Fixture to evaluate the XPath/JSONPath expression or the
   ///  headerField  against.
-  Id? get sourceId => throw _privateConstructorUsedError;
+  FhirId? get sourceId => throw _privateConstructorUsedError;
 
   /// [sourceIdElement] Extensions for sourceId
   @JsonKey(name: '_sourceId')
   Element? get sourceIdElement => throw _privateConstructorUsedError;
 
   /// [validateProfileId] The ID of the Profile to validate against.
-  Id? get validateProfileId => throw _privateConstructorUsedError;
+  FhirId? get validateProfileId => throw _privateConstructorUsedError;
 
   /// [validateProfileIdElement] Extensions for validateProfileId
   @JsonKey(name: '_validateProfileId')
@@ -25365,10 +25365,10 @@ abstract class $TestScriptAssertCopyWith<$Res> {
       String? responseCode,
       @JsonKey(name: '_responseCode')
           Element? responseCodeElement,
-      Id? sourceId,
+      FhirId? sourceId,
       @JsonKey(name: '_sourceId')
           Element? sourceIdElement,
-      Id? validateProfileId,
+      FhirId? validateProfileId,
       @JsonKey(name: '_validateProfileId')
           Element? validateProfileIdElement,
       String? value,
@@ -25624,7 +25624,7 @@ class _$TestScriptAssertCopyWithImpl<$Res, $Val extends TestScriptAssert>
       sourceId: freezed == sourceId
           ? _value.sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sourceIdElement: freezed == sourceIdElement
           ? _value.sourceIdElement
           : sourceIdElement // ignore: cast_nullable_to_non_nullable
@@ -25632,7 +25632,7 @@ class _$TestScriptAssertCopyWithImpl<$Res, $Val extends TestScriptAssert>
       validateProfileId: freezed == validateProfileId
           ? _value.validateProfileId
           : validateProfileId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       validateProfileIdElement: freezed == validateProfileIdElement
           ? _value.validateProfileIdElement
           : validateProfileIdElement // ignore: cast_nullable_to_non_nullable
@@ -25991,10 +25991,10 @@ abstract class _$$_TestScriptAssertCopyWith<$Res>
       String? responseCode,
       @JsonKey(name: '_responseCode')
           Element? responseCodeElement,
-      Id? sourceId,
+      FhirId? sourceId,
       @JsonKey(name: '_sourceId')
           Element? sourceIdElement,
-      Id? validateProfileId,
+      FhirId? validateProfileId,
       @JsonKey(name: '_validateProfileId')
           Element? validateProfileIdElement,
       String? value,
@@ -26270,7 +26270,7 @@ class __$$_TestScriptAssertCopyWithImpl<$Res>
       sourceId: freezed == sourceId
           ? _value.sourceId
           : sourceId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sourceIdElement: freezed == sourceIdElement
           ? _value.sourceIdElement
           : sourceIdElement // ignore: cast_nullable_to_non_nullable
@@ -26278,7 +26278,7 @@ class __$$_TestScriptAssertCopyWithImpl<$Res>
       validateProfileId: freezed == validateProfileId
           ? _value.validateProfileId
           : validateProfileId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       validateProfileIdElement: freezed == validateProfileIdElement
           ? _value.validateProfileIdElement
           : validateProfileIdElement // ignore: cast_nullable_to_non_nullable
@@ -26637,7 +26637,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
   /// [sourceId] Fixture to evaluate the XPath/JSONPath expression or the
   ///  headerField  against.
   @override
-  final Id? sourceId;
+  final FhirId? sourceId;
 
   /// [sourceIdElement] Extensions for sourceId
   @override
@@ -26646,7 +26646,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
 
   /// [validateProfileId] The ID of the Profile to validate against.
   @override
-  final Id? validateProfileId;
+  final FhirId? validateProfileId;
 
   /// [validateProfileIdElement] Extensions for validateProfileId
   @override
@@ -26885,10 +26885,10 @@ abstract class _TestScriptAssert extends TestScriptAssert {
       final String? responseCode,
       @JsonKey(name: '_responseCode')
           final Element? responseCodeElement,
-      final Id? sourceId,
+      final FhirId? sourceId,
       @JsonKey(name: '_sourceId')
           final Element? sourceIdElement,
-      final Id? validateProfileId,
+      final FhirId? validateProfileId,
       @JsonKey(name: '_validateProfileId')
           final Element? validateProfileIdElement,
       final String? value,
@@ -27119,7 +27119,7 @@ abstract class _TestScriptAssert extends TestScriptAssert {
 
   /// [sourceId] Fixture to evaluate the XPath/JSONPath expression or the
   ///  headerField  against.
-  Id? get sourceId;
+  FhirId? get sourceId;
   @override
 
   /// [sourceIdElement] Extensions for sourceId
@@ -27128,7 +27128,7 @@ abstract class _TestScriptAssert extends TestScriptAssert {
   @override
 
   /// [validateProfileId] The ID of the Profile to validate against.
-  Id? get validateProfileId;
+  FhirId? get validateProfileId;
   @override
 
   /// [validateProfileIdElement] Extensions for validateProfileId

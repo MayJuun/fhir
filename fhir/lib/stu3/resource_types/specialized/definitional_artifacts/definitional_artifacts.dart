@@ -19,7 +19,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
     @Default(Stu3ResourceType.ActivityDefinition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ActivityDefinition)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -206,7 +206,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
     @Default(Stu3ResourceType.PlanDefinition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.PlanDefinition)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -387,7 +387,7 @@ class PlanDefinitionAction with _$PlanDefinitionAction {
     List<CodeableConcept>? code,
     List<CodeableConcept>? reason,
     List<RelatedArtifact>? documentation,
-    List<Id>? goalId,
+    List<FhirId>? goalId,
     @JsonKey(name: '_goalId') List<Element?>? goalIdElement,
     List<TriggerDefinition>? triggerDefinition,
     List<PlanDefinitionCondition>? condition,
@@ -498,7 +498,7 @@ class PlanDefinitionCondition with _$PlanDefinitionCondition {
 class PlanDefinitionRelatedAction with _$PlanDefinitionRelatedAction {
   PlanDefinitionRelatedAction._();
   factory PlanDefinitionRelatedAction({
-    Id? actionId,
+    FhirId? actionId,
     @JsonKey(name: '_actionId') Element? actionIdElement,
     PlanDefinitionRelatedActionRelationship? relationship,
     @JsonKey(name: '_relationship') Element? relationshipElement,
@@ -629,7 +629,7 @@ class Questionnaire with Resource, _$Questionnaire {
     @Default(Stu3ResourceType.Questionnaire)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Questionnaire)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -899,7 +899,7 @@ class ServiceDefinition with Resource, _$ServiceDefinition {
     @Default(Stu3ResourceType.ServiceDefinition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ServiceDefinition)
         Stu3ResourceType resourceType,
-    Id? id,
+    FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,

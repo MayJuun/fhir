@@ -387,7 +387,7 @@ class Meta with _$Meta {
     /// [versionId] The version specific identifier, as it appears in the version
     /// portion of the URL. This value changes when the resource is created,
     ///  updated, or deleted.
-    Id? versionId,
+    FhirId? versionId,
 
     /// [versionIdElement] Extensions for versionId
     @JsonKey(name: '_versionId') Element? versionIdElement,
@@ -2677,7 +2677,7 @@ class ElementDefinition with _$ElementDefinition {
     /// [defaultValueId] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
     ///  false').
-    Id? defaultValueId,
+    FhirId? defaultValueId,
 
     /// [defaultValueIdElement] Extensions for defaultValueId
     @JsonKey(name: '_defaultValueId')
@@ -3027,7 +3027,7 @@ class ElementDefinition with _$ElementDefinition {
     /// element in the instance. For purposes of comparison, non-significant
     /// whitespace is ignored, and all values must be an exact match (case and
     ///  accent sensitive). Missing elements/attributes must also be missing.
-    Id? fixedId,
+    FhirId? fixedId,
 
     /// [fixedIdElement] Extensions for fixedId
     @JsonKey(name: '_fixedId')
@@ -3495,7 +3495,7 @@ class ElementDefinition with _$ElementDefinition {
     /// 1. If primitive: it must match exactly the pattern value
     /// 2. If a complex object: it must match (recursively) the pattern value
     /// 3. If an array: it must match (recursively) the pattern value.
-    Id? patternId,
+    FhirId? patternId,
 
     /// [patternIdElement] Extensions for patternId
     @JsonKey(name: '_patternId')
@@ -4413,7 +4413,7 @@ class ElementDefinition with _$ElementDefinition {
 
     /// [condition] A reference to an invariant that may make additional
     ///  statements about the cardinality or value in the instance.
-    List<Id>? condition,
+    List<FhirId>? condition,
 
     /// [conditionElement] Extensions for condition
     @JsonKey(name: '_condition')
@@ -5399,7 +5399,7 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
 
     /// [valueId] The actual value for the element, which must be one of the
     ///  types allowed for this element.
-    Id? valueId,
+    FhirId? valueId,
 
     /// [valueIdElement] Extensions for valueId
     @JsonKey(name: '_valueId') Element? valueIdElement,
@@ -5737,7 +5737,7 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
     /// [key] Allows identification of which elements have their cardinalities
     /// impacted by the constraint.  Will not be referenced for constraints that
     ///  do not affect cardinality.
-    Id? key,
+    FhirId? key,
 
     /// [keyElement] Extensions for key
     @JsonKey(name: '_key')
@@ -6026,7 +6026,7 @@ class ElementDefinitionMapping with _$ElementDefinitionMapping {
     List<FhirExtension>? modifierExtension,
 
     /// [identity] An internal reference to the definition of a mapping.
-    Id? identity,
+    FhirId? identity,
 
     /// [identityElement] Extensions for identity
     @JsonKey(name: '_identity') Element? identityElement,

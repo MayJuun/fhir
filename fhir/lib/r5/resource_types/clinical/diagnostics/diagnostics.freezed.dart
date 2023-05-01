@@ -26,7 +26,7 @@ mixin _$BodyStructure {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -113,7 +113,7 @@ abstract class $BodyStructureCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.BodyStructure)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -192,7 +192,7 @@ class _$BodyStructureCopyWithImpl<$Res, $Val extends BodyStructure>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -376,7 +376,7 @@ abstract class _$$_BodyStructureCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.BodyStructure)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -461,7 +461,7 @@ class __$$_BodyStructureCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -593,7 +593,7 @@ class _$_BodyStructure extends _BodyStructure {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -838,7 +838,7 @@ abstract class _BodyStructure extends BodyStructure {
   factory _BodyStructure(
       {@JsonKey(unknownEnumValue: R5ResourceType.BodyStructure)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -877,7 +877,7 @@ abstract class _BodyStructure extends BodyStructure {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -1842,7 +1842,7 @@ mixin _$DiagnosticReport {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -1979,7 +1979,7 @@ abstract class $DiagnosticReportCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.DiagnosticReport)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2097,7 +2097,7 @@ class _$DiagnosticReportCopyWithImpl<$Res, $Val extends DiagnosticReport>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -2405,7 +2405,7 @@ abstract class _$$_DiagnosticReportCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.DiagnosticReport)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2534,7 +2534,7 @@ class __$$_DiagnosticReportCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -2757,7 +2757,7 @@ class _$_DiagnosticReport extends _DiagnosticReport {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -3191,7 +3191,7 @@ abstract class _DiagnosticReport extends DiagnosticReport {
   factory _DiagnosticReport(
       {@JsonKey(unknownEnumValue: R5ResourceType.DiagnosticReport)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -3248,7 +3248,7 @@ abstract class _DiagnosticReport extends DiagnosticReport {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -4217,7 +4217,7 @@ mixin _$GenomicStudy {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -4328,7 +4328,7 @@ abstract class $GenomicStudyCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.GenomicStudy)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4427,7 +4427,7 @@ class _$GenomicStudyCopyWithImpl<$Res, $Val extends GenomicStudy>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -4675,7 +4675,7 @@ abstract class _$$_GenomicStudyCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.GenomicStudy)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4783,7 +4783,7 @@ class __$$_GenomicStudyCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -4959,7 +4959,7 @@ class _$_GenomicStudy extends _GenomicStudy {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -5284,7 +5284,7 @@ abstract class _GenomicStudy extends GenomicStudy {
   factory _GenomicStudy(
       {@JsonKey(unknownEnumValue: R5ResourceType.GenomicStudy)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -5332,7 +5332,7 @@ abstract class _GenomicStudy extends GenomicStudy {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -8186,7 +8186,7 @@ mixin _$ImagingSelection {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -8258,7 +8258,7 @@ mixin _$ImagingSelection {
   CodeableConcept get code => throw _privateConstructorUsedError;
 
   /// [studyUid] The Study Instance UID for the DICOM Study from which the images were selected.
-  Id? get studyUid => throw _privateConstructorUsedError;
+  FhirId? get studyUid => throw _privateConstructorUsedError;
 
   /// [studyUidElement] ("_studyUid") Extensions for studyUid
   @JsonKey(name: '_studyUid')
@@ -8271,7 +8271,7 @@ mixin _$ImagingSelection {
   List<Reference>? get endpoint => throw _privateConstructorUsedError;
 
   /// [seriesUid] The Series Instance UID for the DICOM Series from which the images were selected.
-  Id? get seriesUid => throw _privateConstructorUsedError;
+  FhirId? get seriesUid => throw _privateConstructorUsedError;
 
   /// [seriesUidElement] ("_seriesUid") Extensions for seriesUid
   @JsonKey(name: '_seriesUid')
@@ -8285,7 +8285,7 @@ mixin _$ImagingSelection {
   Element? get seriesNumberElement => throw _privateConstructorUsedError;
 
   /// [frameOfReferenceUid] The Frame of Reference UID identifying the coordinate system that conveys spatial and/or temporal information for the selected images or frames.
-  Id? get frameOfReferenceUid => throw _privateConstructorUsedError;
+  FhirId? get frameOfReferenceUid => throw _privateConstructorUsedError;
 
   /// [frameOfReferenceUidElement] ("_frameOfReferenceUid") Extensions for frameOfReferenceUid
   @JsonKey(name: '_frameOfReferenceUid')
@@ -8320,7 +8320,7 @@ abstract class $ImagingSelectionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ImagingSelection)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -8345,18 +8345,18 @@ abstract class $ImagingSelectionCopyWith<$Res> {
       List<Reference>? basedOn,
       List<CodeableConcept>? category,
       CodeableConcept code,
-      Id? studyUid,
+      FhirId? studyUid,
       @JsonKey(name: '_studyUid')
           Element? studyUidElement,
       List<Reference>? derivedFrom,
       List<Reference>? endpoint,
-      Id? seriesUid,
+      FhirId? seriesUid,
       @JsonKey(name: '_seriesUid')
           Element? seriesUidElement,
       UnsignedInt? seriesNumber,
       @JsonKey(name: '_seriesNumber')
           Element? seriesNumberElement,
-      Id? frameOfReferenceUid,
+      FhirId? frameOfReferenceUid,
       @JsonKey(name: '_frameOfReferenceUid')
           Element? frameOfReferenceUidElement,
       CodeableReference? bodySite,
@@ -8436,7 +8436,7 @@ class _$ImagingSelectionCopyWithImpl<$Res, $Val extends ImagingSelection>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -8516,7 +8516,7 @@ class _$ImagingSelectionCopyWithImpl<$Res, $Val extends ImagingSelection>
       studyUid: freezed == studyUid
           ? _value.studyUid
           : studyUid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       studyUidElement: freezed == studyUidElement
           ? _value.studyUidElement
           : studyUidElement // ignore: cast_nullable_to_non_nullable
@@ -8532,7 +8532,7 @@ class _$ImagingSelectionCopyWithImpl<$Res, $Val extends ImagingSelection>
       seriesUid: freezed == seriesUid
           ? _value.seriesUid
           : seriesUid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       seriesUidElement: freezed == seriesUidElement
           ? _value.seriesUidElement
           : seriesUidElement // ignore: cast_nullable_to_non_nullable
@@ -8548,7 +8548,7 @@ class _$ImagingSelectionCopyWithImpl<$Res, $Val extends ImagingSelection>
       frameOfReferenceUid: freezed == frameOfReferenceUid
           ? _value.frameOfReferenceUid
           : frameOfReferenceUid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       frameOfReferenceUidElement: freezed == frameOfReferenceUidElement
           ? _value.frameOfReferenceUidElement
           : frameOfReferenceUidElement // ignore: cast_nullable_to_non_nullable
@@ -8736,7 +8736,7 @@ abstract class _$$_ImagingSelectionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ImagingSelection)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -8761,18 +8761,18 @@ abstract class _$$_ImagingSelectionCopyWith<$Res>
       List<Reference>? basedOn,
       List<CodeableConcept>? category,
       CodeableConcept code,
-      Id? studyUid,
+      FhirId? studyUid,
       @JsonKey(name: '_studyUid')
           Element? studyUidElement,
       List<Reference>? derivedFrom,
       List<Reference>? endpoint,
-      Id? seriesUid,
+      FhirId? seriesUid,
       @JsonKey(name: '_seriesUid')
           Element? seriesUidElement,
       UnsignedInt? seriesNumber,
       @JsonKey(name: '_seriesNumber')
           Element? seriesNumberElement,
-      Id? frameOfReferenceUid,
+      FhirId? frameOfReferenceUid,
       @JsonKey(name: '_frameOfReferenceUid')
           Element? frameOfReferenceUidElement,
       CodeableReference? bodySite,
@@ -8863,7 +8863,7 @@ class __$$_ImagingSelectionCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -8943,7 +8943,7 @@ class __$$_ImagingSelectionCopyWithImpl<$Res>
       studyUid: freezed == studyUid
           ? _value.studyUid
           : studyUid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       studyUidElement: freezed == studyUidElement
           ? _value.studyUidElement
           : studyUidElement // ignore: cast_nullable_to_non_nullable
@@ -8959,7 +8959,7 @@ class __$$_ImagingSelectionCopyWithImpl<$Res>
       seriesUid: freezed == seriesUid
           ? _value.seriesUid
           : seriesUid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       seriesUidElement: freezed == seriesUidElement
           ? _value.seriesUidElement
           : seriesUidElement // ignore: cast_nullable_to_non_nullable
@@ -8975,7 +8975,7 @@ class __$$_ImagingSelectionCopyWithImpl<$Res>
       frameOfReferenceUid: freezed == frameOfReferenceUid
           ? _value.frameOfReferenceUid
           : frameOfReferenceUid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       frameOfReferenceUidElement: freezed == frameOfReferenceUidElement
           ? _value.frameOfReferenceUidElement
           : frameOfReferenceUidElement // ignore: cast_nullable_to_non_nullable
@@ -9074,7 +9074,7 @@ class _$_ImagingSelection extends _ImagingSelection {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -9228,7 +9228,7 @@ class _$_ImagingSelection extends _ImagingSelection {
 
   /// [studyUid] The Study Instance UID for the DICOM Study from which the images were selected.
   @override
-  final Id? studyUid;
+  final FhirId? studyUid;
 
   /// [studyUidElement] ("_studyUid") Extensions for studyUid
   @override
@@ -9263,7 +9263,7 @@ class _$_ImagingSelection extends _ImagingSelection {
 
   /// [seriesUid] The Series Instance UID for the DICOM Series from which the images were selected.
   @override
-  final Id? seriesUid;
+  final FhirId? seriesUid;
 
   /// [seriesUidElement] ("_seriesUid") Extensions for seriesUid
   @override
@@ -9281,7 +9281,7 @@ class _$_ImagingSelection extends _ImagingSelection {
 
   /// [frameOfReferenceUid] The Frame of Reference UID identifying the coordinate system that conveys spatial and/or temporal information for the selected images or frames.
   @override
-  final Id? frameOfReferenceUid;
+  final FhirId? frameOfReferenceUid;
 
   /// [frameOfReferenceUidElement] ("_frameOfReferenceUid") Extensions for frameOfReferenceUid
   @override
@@ -9462,7 +9462,7 @@ abstract class _ImagingSelection extends ImagingSelection {
   factory _ImagingSelection(
           {@JsonKey(unknownEnumValue: R5ResourceType.ImagingSelection)
               final R5ResourceType resourceType,
-          final Id? id,
+          final FhirId? id,
           final Meta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -9487,18 +9487,18 @@ abstract class _ImagingSelection extends ImagingSelection {
           final List<Reference>? basedOn,
           final List<CodeableConcept>? category,
           required final CodeableConcept code,
-          final Id? studyUid,
+          final FhirId? studyUid,
           @JsonKey(name: '_studyUid')
               final Element? studyUidElement,
           final List<Reference>? derivedFrom,
           final List<Reference>? endpoint,
-          final Id? seriesUid,
+          final FhirId? seriesUid,
           @JsonKey(name: '_seriesUid')
               final Element? seriesUidElement,
           final UnsignedInt? seriesNumber,
           @JsonKey(name: '_seriesNumber')
               final Element? seriesNumberElement,
-          final Id? frameOfReferenceUid,
+          final FhirId? frameOfReferenceUid,
           @JsonKey(name: '_frameOfReferenceUid')
               final Element? frameOfReferenceUidElement,
           final CodeableReference? bodySite,
@@ -9520,7 +9520,7 @@ abstract class _ImagingSelection extends ImagingSelection {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -9610,7 +9610,7 @@ abstract class _ImagingSelection extends ImagingSelection {
   @override
 
   /// [studyUid] The Study Instance UID for the DICOM Study from which the images were selected.
-  Id? get studyUid;
+  FhirId? get studyUid;
   @override
 
   /// [studyUidElement] ("_studyUid") Extensions for studyUid
@@ -9627,7 +9627,7 @@ abstract class _ImagingSelection extends ImagingSelection {
   @override
 
   /// [seriesUid] The Series Instance UID for the DICOM Series from which the images were selected.
-  Id? get seriesUid;
+  FhirId? get seriesUid;
   @override
 
   /// [seriesUidElement] ("_seriesUid") Extensions for seriesUid
@@ -9645,7 +9645,7 @@ abstract class _ImagingSelection extends ImagingSelection {
   @override
 
   /// [frameOfReferenceUid] The Frame of Reference UID identifying the coordinate system that conveys spatial and/or temporal information for the selected images or frames.
-  Id? get frameOfReferenceUid;
+  FhirId? get frameOfReferenceUid;
   @override
 
   /// [frameOfReferenceUidElement] ("_frameOfReferenceUid") Extensions for frameOfReferenceUid
@@ -10101,7 +10101,7 @@ mixin _$ImagingSelectionInstance {
       throw _privateConstructorUsedError;
 
   /// [uid] The SOP Instance UID for the selected DICOM instance.
-  Id? get uid => throw _privateConstructorUsedError;
+  FhirId? get uid => throw _privateConstructorUsedError;
 
   /// [uidElement] ("_uid") Extensions for uid
   @JsonKey(name: '_uid')
@@ -10149,7 +10149,7 @@ abstract class $ImagingSelectionInstanceCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? uid,
+      FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement,
       UnsignedInt? number,
       @JsonKey(name: '_number') Element? numberElement,
@@ -10205,7 +10205,7 @@ class _$ImagingSelectionInstanceCopyWithImpl<$Res,
       uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -10287,7 +10287,7 @@ abstract class _$$_ImagingSelectionInstanceCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? uid,
+      FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement,
       UnsignedInt? number,
       @JsonKey(name: '_number') Element? numberElement,
@@ -10344,7 +10344,7 @@ class __$$_ImagingSelectionInstanceCopyWithImpl<$Res>
       uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -10469,7 +10469,7 @@ class _$_ImagingSelectionInstance extends _ImagingSelectionInstance {
 
   /// [uid] The SOP Instance UID for the selected DICOM instance.
   @override
-  final Id? uid;
+  final FhirId? uid;
 
   /// [uidElement] ("_uid") Extensions for uid
   @override
@@ -10605,7 +10605,7 @@ abstract class _ImagingSelectionInstance extends ImagingSelectionInstance {
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Id? uid,
+          final FhirId? uid,
           @JsonKey(name: '_uid') final Element? uidElement,
           final UnsignedInt? number,
           @JsonKey(name: '_number') final Element? numberElement,
@@ -10652,7 +10652,7 @@ abstract class _ImagingSelectionInstance extends ImagingSelectionInstance {
   @override
 
   /// [uid] The SOP Instance UID for the selected DICOM instance.
-  Id? get uid;
+  FhirId? get uid;
   @override
 
   /// [uidElement] ("_uid") Extensions for uid
@@ -11637,7 +11637,7 @@ mixin _$ImagingStudy {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -11764,7 +11764,7 @@ abstract class $ImagingStudyCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ImagingStudy)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -11877,7 +11877,7 @@ class _$ImagingStudyCopyWithImpl<$Res, $Val extends ImagingStudy>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -12173,7 +12173,7 @@ abstract class _$$_ImagingStudyCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ImagingStudy)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -12297,7 +12297,7 @@ class __$$_ImagingStudyCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -12502,7 +12502,7 @@ class _$_ImagingStudy extends _ImagingStudy {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -12881,7 +12881,7 @@ abstract class _ImagingStudy extends ImagingStudy {
   factory _ImagingStudy(
       {@JsonKey(unknownEnumValue: R5ResourceType.ImagingStudy)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -12936,7 +12936,7 @@ abstract class _ImagingStudy extends ImagingStudy {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -13119,7 +13119,7 @@ mixin _$ImagingStudySeries {
       throw _privateConstructorUsedError;
 
   /// [uid] The DICOM Series Instance UID for the series.
-  Id? get uid => throw _privateConstructorUsedError;
+  FhirId? get uid => throw _privateConstructorUsedError;
 
   /// [uidElement] ("_uid") Extensions for uid
   @JsonKey(name: '_uid')
@@ -13192,7 +13192,7 @@ abstract class $ImagingStudySeriesCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? uid,
+      FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement,
       UnsignedInt? number,
       @JsonKey(name: '_number') Element? numberElement,
@@ -13270,7 +13270,7 @@ class _$ImagingStudySeriesCopyWithImpl<$Res, $Val extends ImagingStudySeries>
       uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -13443,7 +13443,7 @@ abstract class _$$_ImagingStudySeriesCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? uid,
+      FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement,
       UnsignedInt? number,
       @JsonKey(name: '_number') Element? numberElement,
@@ -13527,7 +13527,7 @@ class __$$_ImagingStudySeriesCopyWithImpl<$Res>
       uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -13698,7 +13698,7 @@ class _$_ImagingStudySeries extends _ImagingStudySeries {
 
   /// [uid] The DICOM Series Instance UID for the series.
   @override
-  final Id? uid;
+  final FhirId? uid;
 
   /// [uidElement] ("_uid") Extensions for uid
   @override
@@ -13898,7 +13898,7 @@ abstract class _ImagingStudySeries extends ImagingStudySeries {
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Id? uid,
+      final FhirId? uid,
       @JsonKey(name: '_uid')
           final Element? uidElement,
       final UnsignedInt? number,
@@ -13958,7 +13958,7 @@ abstract class _ImagingStudySeries extends ImagingStudySeries {
   @override
 
   /// [uid] The DICOM Series Instance UID for the series.
-  Id? get uid;
+  FhirId? get uid;
   @override
 
   /// [uidElement] ("_uid") Extensions for uid
@@ -14454,7 +14454,7 @@ mixin _$ImagingStudyInstance {
       throw _privateConstructorUsedError;
 
   /// [uid] The DICOM SOP Instance UID for this image or other DICOM content.
-  Id? get uid => throw _privateConstructorUsedError;
+  FhirId? get uid => throw _privateConstructorUsedError;
 
   /// [uidElement] ("_uid") Extensions for uid
   @JsonKey(name: '_uid')
@@ -14493,7 +14493,7 @@ abstract class $ImagingStudyInstanceCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? uid,
+      FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement,
       Coding sopClass,
       UnsignedInt? number,
@@ -14548,7 +14548,7 @@ class _$ImagingStudyInstanceCopyWithImpl<$Res,
       uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -14633,7 +14633,7 @@ abstract class _$$_ImagingStudyInstanceCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? uid,
+      FhirId? uid,
       @JsonKey(name: '_uid') Element? uidElement,
       Coding sopClass,
       UnsignedInt? number,
@@ -14689,7 +14689,7 @@ class __$$_ImagingStudyInstanceCopyWithImpl<$Res>
       uid: freezed == uid
           ? _value.uid
           : uid // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       uidElement: freezed == uidElement
           ? _value.uidElement
           : uidElement // ignore: cast_nullable_to_non_nullable
@@ -14806,7 +14806,7 @@ class _$_ImagingStudyInstance extends _ImagingStudyInstance {
 
   /// [uid] The DICOM SOP Instance UID for this image or other DICOM content.
   @override
-  final Id? uid;
+  final FhirId? uid;
 
   /// [uidElement] ("_uid") Extensions for uid
   @override
@@ -14898,7 +14898,7 @@ abstract class _ImagingStudyInstance extends ImagingStudyInstance {
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Id? uid,
+          final FhirId? uid,
           @JsonKey(name: '_uid') final Element? uidElement,
           required final Coding sopClass,
           final UnsignedInt? number,
@@ -14944,7 +14944,7 @@ abstract class _ImagingStudyInstance extends ImagingStudyInstance {
   @override
 
   /// [uid] The DICOM SOP Instance UID for this image or other DICOM content.
-  Id? get uid;
+  FhirId? get uid;
   @override
 
   /// [uidElement] ("_uid") Extensions for uid
@@ -14990,7 +14990,7 @@ mixin _$MolecularSequence {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -15079,7 +15079,7 @@ abstract class $MolecularSequenceCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.MolecularSequence)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -15162,7 +15162,7 @@ class _$MolecularSequenceCopyWithImpl<$Res, $Val extends MolecularSequence>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -15378,7 +15378,7 @@ abstract class _$$_MolecularSequenceCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.MolecularSequence)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -15469,7 +15469,7 @@ class __$$_MolecularSequenceCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -15605,7 +15605,7 @@ class _$_MolecularSequence extends _MolecularSequence {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -15847,7 +15847,7 @@ abstract class _MolecularSequence extends MolecularSequence {
   factory _MolecularSequence(
       {@JsonKey(unknownEnumValue: R5ResourceType.MolecularSequence)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -15887,7 +15887,7 @@ abstract class _MolecularSequence extends MolecularSequence {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -18013,7 +18013,7 @@ mixin _$Observation {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -18238,7 +18238,7 @@ abstract class $ObservationCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Observation)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -18434,7 +18434,7 @@ class _$ObservationCopyWithImpl<$Res, $Val extends Observation>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -19089,7 +19089,7 @@ abstract class _$$_ObservationCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Observation)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -19316,7 +19316,7 @@ class __$$_ObservationCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -19675,7 +19675,7 @@ class _$_Observation extends _Observation {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -20278,7 +20278,7 @@ abstract class _Observation extends Observation {
   factory _Observation(
       {@JsonKey(unknownEnumValue: R5ResourceType.Observation)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -20367,7 +20367,7 @@ abstract class _Observation extends Observation {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -22898,7 +22898,7 @@ mixin _$QuestionnaireResponse {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -22997,7 +22997,7 @@ abstract class $QuestionnaireResponseCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.QuestionnaireResponse)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -23089,7 +23089,7 @@ class _$QuestionnaireResponseCopyWithImpl<$Res,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -23329,7 +23329,7 @@ abstract class _$$_QuestionnaireResponseCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.QuestionnaireResponse)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -23429,7 +23429,7 @@ class __$$_QuestionnaireResponseCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -23582,7 +23582,7 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -23853,7 +23853,7 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
   factory _QuestionnaireResponse(
       {@JsonKey(unknownEnumValue: R5ResourceType.QuestionnaireResponse)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -23897,7 +23897,7 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
@@ -25731,7 +25731,7 @@ mixin _$Specimen {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -25844,7 +25844,7 @@ abstract class $SpecimenCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Specimen)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -25945,7 +25945,7 @@ class _$SpecimenCopyWithImpl<$Res, $Val extends Specimen>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -26204,7 +26204,7 @@ abstract class _$$_SpecimenCopyWith<$Res> implements $SpecimenCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Specimen)
           R5ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -26314,7 +26314,7 @@ class __$$_SpecimenCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -26497,7 +26497,7 @@ class _$_Specimen extends _Specimen {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
   @override
-  final Id? id;
+  final FhirId? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not
@@ -26846,7 +26846,7 @@ abstract class _Specimen extends Specimen {
   factory _Specimen(
       {@JsonKey(unknownEnumValue: R5ResourceType.Specimen)
           final R5ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -26894,7 +26894,7 @@ abstract class _Specimen extends Specimen {
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   /// Once assigned, this value never changes.
-  Id? get id;
+  FhirId? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is

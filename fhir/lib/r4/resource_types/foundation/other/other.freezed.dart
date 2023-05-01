@@ -9586,7 +9586,7 @@ mixin _$MessageHeaderResponse {
 
   /// [identifier] The MessageHeader.id of the message to which this message is
   ///  a response.
-  Id? get identifier => throw _privateConstructorUsedError;
+  FhirId? get identifier => throw _privateConstructorUsedError;
 
   /// [identifierElement] Extensions for identifier
   @JsonKey(name: '_identifier')
@@ -9619,7 +9619,7 @@ abstract class $MessageHeaderResponseCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? identifier,
+      FhirId? identifier,
       @JsonKey(name: '_identifier') Element? identifierElement,
       Code? code,
       @JsonKey(name: '_code') Element? codeElement,
@@ -9669,7 +9669,7 @@ class _$MessageHeaderResponseCopyWithImpl<$Res,
       identifier: freezed == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       identifierElement: freezed == identifierElement
           ? _value.identifierElement
           : identifierElement // ignore: cast_nullable_to_non_nullable
@@ -9738,7 +9738,7 @@ abstract class _$$_MessageHeaderResponseCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Id? identifier,
+      FhirId? identifier,
       @JsonKey(name: '_identifier') Element? identifierElement,
       Code? code,
       @JsonKey(name: '_code') Element? codeElement,
@@ -9788,7 +9788,7 @@ class __$$_MessageHeaderResponseCopyWithImpl<$Res>
       identifier: freezed == identifier
           ? _value.identifier
           : identifier // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       identifierElement: freezed == identifierElement
           ? _value.identifierElement
           : identifierElement // ignore: cast_nullable_to_non_nullable
@@ -9898,7 +9898,7 @@ class _$_MessageHeaderResponse extends _MessageHeaderResponse {
   /// [identifier] The MessageHeader.id of the message to which this message is
   ///  a response.
   @override
-  final Id? identifier;
+  final FhirId? identifier;
 
   /// [identifierElement] Extensions for identifier
   @override
@@ -9977,7 +9977,7 @@ abstract class _MessageHeaderResponse extends MessageHeaderResponse {
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      final Id? identifier,
+      final FhirId? identifier,
       @JsonKey(name: '_identifier') final Element? identifierElement,
       final Code? code,
       @JsonKey(name: '_code') final Element? codeElement,
@@ -10022,7 +10022,7 @@ abstract class _MessageHeaderResponse extends MessageHeaderResponse {
 
   /// [identifier] The MessageHeader.id of the message to which this message is
   ///  a response.
-  Id? get identifier;
+  FhirId? get identifier;
   @override
 
   /// [identifierElement] Extensions for identifier
@@ -12198,7 +12198,7 @@ mixin _$ParametersParameter {
   Element? get valueDecimalElement => throw _privateConstructorUsedError;
 
   /// [valueId] If the parameter is a data type.
-  Id? get valueId => throw _privateConstructorUsedError;
+  FhirId? get valueId => throw _privateConstructorUsedError;
 
   /// [valueIdElement] Extensions for valueId
   @JsonKey(name: '_valueId')
@@ -12418,7 +12418,7 @@ abstract class $ParametersParameterCopyWith<$Res> {
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
       Instant? valueInstant,
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
@@ -12699,7 +12699,7 @@ class _$ParametersParameterCopyWithImpl<$Res, $Val extends ParametersParameter>
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -13573,7 +13573,7 @@ abstract class _$$_ParametersParameterCopyWith<$Res>
       @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-      Id? valueId,
+      FhirId? valueId,
       @JsonKey(name: '_valueId') Element? valueIdElement,
       Instant? valueInstant,
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
@@ -13903,7 +13903,7 @@ class __$$_ParametersParameterCopyWithImpl<$Res>
       valueId: freezed == valueId
           ? _value.valueId
           : valueId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       valueIdElement: freezed == valueIdElement
           ? _value.valueIdElement
           : valueIdElement // ignore: cast_nullable_to_non_nullable
@@ -14361,7 +14361,7 @@ class _$_ParametersParameter extends _ParametersParameter {
 
   /// [valueId] If the parameter is a data type.
   @override
-  final Id? valueId;
+  final FhirId? valueId;
 
   /// [valueIdElement] Extensions for valueId
   @override
@@ -14857,7 +14857,7 @@ abstract class _ParametersParameter extends ParametersParameter {
       final Decimal? valueDecimal,
       @JsonKey(name: '_valueDecimal')
           final Element? valueDecimalElement,
-      final Id? valueId,
+      final FhirId? valueId,
       @JsonKey(name: '_valueId')
           final Element? valueIdElement,
       final Instant? valueInstant,
@@ -15038,7 +15038,7 @@ abstract class _ParametersParameter extends ParametersParameter {
   @override
 
   /// [valueId] If the parameter is a data type.
-  Id? get valueId;
+  FhirId? get valueId;
   @override
 
   /// [valueIdElement] Extensions for valueId

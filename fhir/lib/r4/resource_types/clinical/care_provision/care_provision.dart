@@ -3859,7 +3859,7 @@ class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
     List<FhirExtension>? modifierExtension,
 
     /// [actionId] The element id of the action this is related to.
-    Id? actionId,
+    FhirId? actionId,
 
     /// [actionIdElement] Extensions for actionId
     @JsonKey(name: '_actionId') Element? actionIdElement,

@@ -22,7 +22,7 @@ Claim _$ClaimFromJson(Map<String, dynamic> json) {
 mixin _$Claim {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Claim)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -86,7 +86,7 @@ abstract class $ClaimCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Claim)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -229,7 +229,7 @@ class _$ClaimCopyWithImpl<$Res, $Val extends Claim>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -711,7 +711,7 @@ abstract class _$$_ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Claim)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -875,7 +875,7 @@ class __$$_ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res, _$_Claim>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -1124,7 +1124,7 @@ class _$_Claim extends _Claim {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Claim)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -1465,7 +1465,7 @@ abstract class _Claim extends Claim {
   factory _Claim(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Claim)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1522,7 +1522,7 @@ abstract class _Claim extends Claim {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Claim)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -4347,19 +4347,19 @@ mixin _$ClaimItem {
   Decimal? get sequence => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequence')
   Element? get sequenceElement => throw _privateConstructorUsedError;
-  List<Id>? get careTeamLinkId => throw _privateConstructorUsedError;
+  List<FhirId>? get careTeamLinkId => throw _privateConstructorUsedError;
   @JsonKey(name: '_careTeamLinkId')
   List<Element?>? get careTeamLinkIdElement =>
       throw _privateConstructorUsedError;
-  List<Id>? get diagnosisLinkId => throw _privateConstructorUsedError;
+  List<FhirId>? get diagnosisLinkId => throw _privateConstructorUsedError;
   @JsonKey(name: '_diagnosisLinkId')
   List<Element?>? get diagnosisLinkIdElement =>
       throw _privateConstructorUsedError;
-  List<Id>? get procedureLinkId => throw _privateConstructorUsedError;
+  List<FhirId>? get procedureLinkId => throw _privateConstructorUsedError;
   @JsonKey(name: '_procedureLinkId')
   List<Element?>? get procedureLinkIdElement =>
       throw _privateConstructorUsedError;
-  List<Id>? get informationLinkId => throw _privateConstructorUsedError;
+  List<FhirId>? get informationLinkId => throw _privateConstructorUsedError;
   @JsonKey(name: '_informationLinkId')
   List<Element>? get informationLinkIdElement =>
       throw _privateConstructorUsedError;
@@ -4403,16 +4403,16 @@ abstract class $ClaimItemCopyWith<$Res> {
       {Decimal? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
-      List<Id>? careTeamLinkId,
+      List<FhirId>? careTeamLinkId,
       @JsonKey(name: '_careTeamLinkId')
           List<Element?>? careTeamLinkIdElement,
-      List<Id>? diagnosisLinkId,
+      List<FhirId>? diagnosisLinkId,
       @JsonKey(name: '_diagnosisLinkId')
           List<Element?>? diagnosisLinkIdElement,
-      List<Id>? procedureLinkId,
+      List<FhirId>? procedureLinkId,
       @JsonKey(name: '_procedureLinkId')
           List<Element?>? procedureLinkIdElement,
-      List<Id>? informationLinkId,
+      List<FhirId>? informationLinkId,
       @JsonKey(name: '_informationLinkId')
           List<Element>? informationLinkIdElement,
       CodeableConcept? revenue,
@@ -4512,7 +4512,7 @@ class _$ClaimItemCopyWithImpl<$Res, $Val extends ClaimItem>
       careTeamLinkId: freezed == careTeamLinkId
           ? _value.careTeamLinkId
           : careTeamLinkId // ignore: cast_nullable_to_non_nullable
-              as List<Id>?,
+              as List<FhirId>?,
       careTeamLinkIdElement: freezed == careTeamLinkIdElement
           ? _value.careTeamLinkIdElement
           : careTeamLinkIdElement // ignore: cast_nullable_to_non_nullable
@@ -4520,7 +4520,7 @@ class _$ClaimItemCopyWithImpl<$Res, $Val extends ClaimItem>
       diagnosisLinkId: freezed == diagnosisLinkId
           ? _value.diagnosisLinkId
           : diagnosisLinkId // ignore: cast_nullable_to_non_nullable
-              as List<Id>?,
+              as List<FhirId>?,
       diagnosisLinkIdElement: freezed == diagnosisLinkIdElement
           ? _value.diagnosisLinkIdElement
           : diagnosisLinkIdElement // ignore: cast_nullable_to_non_nullable
@@ -4528,7 +4528,7 @@ class _$ClaimItemCopyWithImpl<$Res, $Val extends ClaimItem>
       procedureLinkId: freezed == procedureLinkId
           ? _value.procedureLinkId
           : procedureLinkId // ignore: cast_nullable_to_non_nullable
-              as List<Id>?,
+              as List<FhirId>?,
       procedureLinkIdElement: freezed == procedureLinkIdElement
           ? _value.procedureLinkIdElement
           : procedureLinkIdElement // ignore: cast_nullable_to_non_nullable
@@ -4536,7 +4536,7 @@ class _$ClaimItemCopyWithImpl<$Res, $Val extends ClaimItem>
       informationLinkId: freezed == informationLinkId
           ? _value.informationLinkId
           : informationLinkId // ignore: cast_nullable_to_non_nullable
-              as List<Id>?,
+              as List<FhirId>?,
       informationLinkIdElement: freezed == informationLinkIdElement
           ? _value.informationLinkIdElement
           : informationLinkIdElement // ignore: cast_nullable_to_non_nullable
@@ -4809,16 +4809,16 @@ abstract class _$$_ClaimItemCopyWith<$Res> implements $ClaimItemCopyWith<$Res> {
       {Decimal? sequence,
       @JsonKey(name: '_sequence')
           Element? sequenceElement,
-      List<Id>? careTeamLinkId,
+      List<FhirId>? careTeamLinkId,
       @JsonKey(name: '_careTeamLinkId')
           List<Element?>? careTeamLinkIdElement,
-      List<Id>? diagnosisLinkId,
+      List<FhirId>? diagnosisLinkId,
       @JsonKey(name: '_diagnosisLinkId')
           List<Element?>? diagnosisLinkIdElement,
-      List<Id>? procedureLinkId,
+      List<FhirId>? procedureLinkId,
       @JsonKey(name: '_procedureLinkId')
           List<Element?>? procedureLinkIdElement,
-      List<Id>? informationLinkId,
+      List<FhirId>? informationLinkId,
       @JsonKey(name: '_informationLinkId')
           List<Element>? informationLinkIdElement,
       CodeableConcept? revenue,
@@ -4930,7 +4930,7 @@ class __$$_ClaimItemCopyWithImpl<$Res>
       careTeamLinkId: freezed == careTeamLinkId
           ? _value._careTeamLinkId
           : careTeamLinkId // ignore: cast_nullable_to_non_nullable
-              as List<Id>?,
+              as List<FhirId>?,
       careTeamLinkIdElement: freezed == careTeamLinkIdElement
           ? _value._careTeamLinkIdElement
           : careTeamLinkIdElement // ignore: cast_nullable_to_non_nullable
@@ -4938,7 +4938,7 @@ class __$$_ClaimItemCopyWithImpl<$Res>
       diagnosisLinkId: freezed == diagnosisLinkId
           ? _value._diagnosisLinkId
           : diagnosisLinkId // ignore: cast_nullable_to_non_nullable
-              as List<Id>?,
+              as List<FhirId>?,
       diagnosisLinkIdElement: freezed == diagnosisLinkIdElement
           ? _value._diagnosisLinkIdElement
           : diagnosisLinkIdElement // ignore: cast_nullable_to_non_nullable
@@ -4946,7 +4946,7 @@ class __$$_ClaimItemCopyWithImpl<$Res>
       procedureLinkId: freezed == procedureLinkId
           ? _value._procedureLinkId
           : procedureLinkId // ignore: cast_nullable_to_non_nullable
-              as List<Id>?,
+              as List<FhirId>?,
       procedureLinkIdElement: freezed == procedureLinkIdElement
           ? _value._procedureLinkIdElement
           : procedureLinkIdElement // ignore: cast_nullable_to_non_nullable
@@ -4954,7 +4954,7 @@ class __$$_ClaimItemCopyWithImpl<$Res>
       informationLinkId: freezed == informationLinkId
           ? _value._informationLinkId
           : informationLinkId // ignore: cast_nullable_to_non_nullable
-              as List<Id>?,
+              as List<FhirId>?,
       informationLinkIdElement: freezed == informationLinkIdElement
           ? _value._informationLinkIdElement
           : informationLinkIdElement // ignore: cast_nullable_to_non_nullable
@@ -5054,16 +5054,16 @@ class _$_ClaimItem extends _ClaimItem {
       {this.sequence,
       @JsonKey(name: '_sequence')
           this.sequenceElement,
-      final List<Id>? careTeamLinkId,
+      final List<FhirId>? careTeamLinkId,
       @JsonKey(name: '_careTeamLinkId')
           final List<Element?>? careTeamLinkIdElement,
-      final List<Id>? diagnosisLinkId,
+      final List<FhirId>? diagnosisLinkId,
       @JsonKey(name: '_diagnosisLinkId')
           final List<Element?>? diagnosisLinkIdElement,
-      final List<Id>? procedureLinkId,
+      final List<FhirId>? procedureLinkId,
       @JsonKey(name: '_procedureLinkId')
           final List<Element?>? procedureLinkIdElement,
-      final List<Id>? informationLinkId,
+      final List<FhirId>? informationLinkId,
       @JsonKey(name: '_informationLinkId')
           final List<Element>? informationLinkIdElement,
       this.revenue,
@@ -5113,9 +5113,9 @@ class _$_ClaimItem extends _ClaimItem {
   @override
   @JsonKey(name: '_sequence')
   final Element? sequenceElement;
-  final List<Id>? _careTeamLinkId;
+  final List<FhirId>? _careTeamLinkId;
   @override
-  List<Id>? get careTeamLinkId {
+  List<FhirId>? get careTeamLinkId {
     final value = _careTeamLinkId;
     if (value == null) return null;
     if (_careTeamLinkId is EqualUnmodifiableListView) return _careTeamLinkId;
@@ -5135,9 +5135,9 @@ class _$_ClaimItem extends _ClaimItem {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Id>? _diagnosisLinkId;
+  final List<FhirId>? _diagnosisLinkId;
   @override
-  List<Id>? get diagnosisLinkId {
+  List<FhirId>? get diagnosisLinkId {
     final value = _diagnosisLinkId;
     if (value == null) return null;
     if (_diagnosisLinkId is EqualUnmodifiableListView) return _diagnosisLinkId;
@@ -5157,9 +5157,9 @@ class _$_ClaimItem extends _ClaimItem {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Id>? _procedureLinkId;
+  final List<FhirId>? _procedureLinkId;
   @override
-  List<Id>? get procedureLinkId {
+  List<FhirId>? get procedureLinkId {
     final value = _procedureLinkId;
     if (value == null) return null;
     if (_procedureLinkId is EqualUnmodifiableListView) return _procedureLinkId;
@@ -5179,9 +5179,9 @@ class _$_ClaimItem extends _ClaimItem {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Id>? _informationLinkId;
+  final List<FhirId>? _informationLinkId;
   @override
-  List<Id>? get informationLinkId {
+  List<FhirId>? get informationLinkId {
     final value = _informationLinkId;
     if (value == null) return null;
     if (_informationLinkId is EqualUnmodifiableListView)
@@ -5417,16 +5417,16 @@ abstract class _ClaimItem extends ClaimItem {
       {final Decimal? sequence,
       @JsonKey(name: '_sequence')
           final Element? sequenceElement,
-      final List<Id>? careTeamLinkId,
+      final List<FhirId>? careTeamLinkId,
       @JsonKey(name: '_careTeamLinkId')
           final List<Element?>? careTeamLinkIdElement,
-      final List<Id>? diagnosisLinkId,
+      final List<FhirId>? diagnosisLinkId,
       @JsonKey(name: '_diagnosisLinkId')
           final List<Element?>? diagnosisLinkIdElement,
-      final List<Id>? procedureLinkId,
+      final List<FhirId>? procedureLinkId,
       @JsonKey(name: '_procedureLinkId')
           final List<Element?>? procedureLinkIdElement,
-      final List<Id>? informationLinkId,
+      final List<FhirId>? informationLinkId,
       @JsonKey(name: '_informationLinkId')
           final List<Element>? informationLinkIdElement,
       final CodeableConcept? revenue,
@@ -5463,22 +5463,22 @@ abstract class _ClaimItem extends ClaimItem {
   @JsonKey(name: '_sequence')
   Element? get sequenceElement;
   @override
-  List<Id>? get careTeamLinkId;
+  List<FhirId>? get careTeamLinkId;
   @override
   @JsonKey(name: '_careTeamLinkId')
   List<Element?>? get careTeamLinkIdElement;
   @override
-  List<Id>? get diagnosisLinkId;
+  List<FhirId>? get diagnosisLinkId;
   @override
   @JsonKey(name: '_diagnosisLinkId')
   List<Element?>? get diagnosisLinkIdElement;
   @override
-  List<Id>? get procedureLinkId;
+  List<FhirId>? get procedureLinkId;
   @override
   @JsonKey(name: '_procedureLinkId')
   List<Element?>? get procedureLinkIdElement;
   @override
-  List<Id>? get informationLinkId;
+  List<FhirId>? get informationLinkId;
   @override
   @JsonKey(name: '_informationLinkId')
   List<Element>? get informationLinkIdElement;
@@ -6685,7 +6685,7 @@ ClaimResponse _$ClaimResponseFromJson(Map<String, dynamic> json) {
 mixin _$ClaimResponse {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ClaimResponse)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  FhirId? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -6747,7 +6747,7 @@ abstract class $ClaimResponseCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ClaimResponse)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -6871,7 +6871,7 @@ class _$ClaimResponseCopyWithImpl<$Res, $Val extends ClaimResponse>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -7267,7 +7267,7 @@ abstract class _$$_ClaimResponseCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ClaimResponse)
           Stu3ResourceType resourceType,
-      Id? id,
+      FhirId? id,
       Meta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -7409,7 +7409,7 @@ class __$$_ClaimResponseCopyWithImpl<$Res>
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -7621,7 +7621,7 @@ class _$_ClaimResponse extends _ClaimResponse {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ClaimResponse)
   final Stu3ResourceType resourceType;
   @override
-  final Id? id;
+  final FhirId? id;
   @override
   final Meta? meta;
   @override
@@ -7913,7 +7913,7 @@ abstract class _ClaimResponse extends ClaimResponse {
   factory _ClaimResponse(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ClaimResponse)
           final Stu3ResourceType resourceType,
-      final Id? id,
+      final FhirId? id,
       final Meta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -7964,7 +7964,7 @@ abstract class _ClaimResponse extends ClaimResponse {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ClaimResponse)
   Stu3ResourceType get resourceType;
   @override
-  Id? get id;
+  FhirId? get id;
   @override
   Meta? get meta;
   @override
@@ -8053,7 +8053,7 @@ ClaimResponseItem _$ClaimResponseItemFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ClaimResponseItem {
-  Id? get sequenceLinkId => throw _privateConstructorUsedError;
+  FhirId? get sequenceLinkId => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequenceLinkId')
   Element? get sequenceLinkIdElement => throw _privateConstructorUsedError;
   List<Decimal>? get noteNumber => throw _privateConstructorUsedError;
@@ -8076,7 +8076,7 @@ abstract class $ClaimResponseItemCopyWith<$Res> {
       _$ClaimResponseItemCopyWithImpl<$Res, ClaimResponseItem>;
   @useResult
   $Res call(
-      {Id? sequenceLinkId,
+      {FhirId? sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
       List<Decimal>? noteNumber,
       @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
@@ -8110,7 +8110,7 @@ class _$ClaimResponseItemCopyWithImpl<$Res, $Val extends ClaimResponseItem>
       sequenceLinkId: freezed == sequenceLinkId
           ? _value.sequenceLinkId
           : sequenceLinkId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sequenceLinkIdElement: freezed == sequenceLinkIdElement
           ? _value.sequenceLinkIdElement
           : sequenceLinkIdElement // ignore: cast_nullable_to_non_nullable
@@ -8156,7 +8156,7 @@ abstract class _$$_ClaimResponseItemCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? sequenceLinkId,
+      {FhirId? sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
       List<Decimal>? noteNumber,
       @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
@@ -8189,7 +8189,7 @@ class __$$_ClaimResponseItemCopyWithImpl<$Res>
       sequenceLinkId: freezed == sequenceLinkId
           ? _value.sequenceLinkId
           : sequenceLinkId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sequenceLinkIdElement: freezed == sequenceLinkIdElement
           ? _value.sequenceLinkIdElement
           : sequenceLinkIdElement // ignore: cast_nullable_to_non_nullable
@@ -8234,7 +8234,7 @@ class _$_ClaimResponseItem extends _ClaimResponseItem {
       _$$_ClaimResponseItemFromJson(json);
 
   @override
-  final Id? sequenceLinkId;
+  final FhirId? sequenceLinkId;
   @override
   @JsonKey(name: '_sequenceLinkId')
   final Element? sequenceLinkIdElement;
@@ -8331,7 +8331,7 @@ class _$_ClaimResponseItem extends _ClaimResponseItem {
 
 abstract class _ClaimResponseItem extends ClaimResponseItem {
   factory _ClaimResponseItem(
-      {final Id? sequenceLinkId,
+      {final FhirId? sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId') final Element? sequenceLinkIdElement,
       final List<Decimal>? noteNumber,
       @JsonKey(name: '_noteNumber') final List<Element?>? noteNumberElement,
@@ -8343,7 +8343,7 @@ abstract class _ClaimResponseItem extends ClaimResponseItem {
       _$_ClaimResponseItem.fromJson;
 
   @override
-  Id? get sequenceLinkId;
+  FhirId? get sequenceLinkId;
   @override
   @JsonKey(name: '_sequenceLinkId')
   Element? get sequenceLinkIdElement;
@@ -8661,7 +8661,7 @@ ClaimResponseDetail _$ClaimResponseDetailFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ClaimResponseDetail {
-  Id? get sequenceLinkId => throw _privateConstructorUsedError;
+  FhirId? get sequenceLinkId => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequenceLinkId')
   Element? get sequenceLinkIdElement => throw _privateConstructorUsedError;
   List<Decimal>? get noteNumber => throw _privateConstructorUsedError;
@@ -8685,7 +8685,7 @@ abstract class $ClaimResponseDetailCopyWith<$Res> {
       _$ClaimResponseDetailCopyWithImpl<$Res, ClaimResponseDetail>;
   @useResult
   $Res call(
-      {Id? sequenceLinkId,
+      {FhirId? sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
       List<Decimal>? noteNumber,
       @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
@@ -8719,7 +8719,7 @@ class _$ClaimResponseDetailCopyWithImpl<$Res, $Val extends ClaimResponseDetail>
       sequenceLinkId: freezed == sequenceLinkId
           ? _value.sequenceLinkId
           : sequenceLinkId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sequenceLinkIdElement: freezed == sequenceLinkIdElement
           ? _value.sequenceLinkIdElement
           : sequenceLinkIdElement // ignore: cast_nullable_to_non_nullable
@@ -8765,7 +8765,7 @@ abstract class _$$_ClaimResponseDetailCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? sequenceLinkId,
+      {FhirId? sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
       List<Decimal>? noteNumber,
       @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
@@ -8798,7 +8798,7 @@ class __$$_ClaimResponseDetailCopyWithImpl<$Res>
       sequenceLinkId: freezed == sequenceLinkId
           ? _value.sequenceLinkId
           : sequenceLinkId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sequenceLinkIdElement: freezed == sequenceLinkIdElement
           ? _value.sequenceLinkIdElement
           : sequenceLinkIdElement // ignore: cast_nullable_to_non_nullable
@@ -8843,7 +8843,7 @@ class _$_ClaimResponseDetail extends _ClaimResponseDetail {
       _$$_ClaimResponseDetailFromJson(json);
 
   @override
-  final Id? sequenceLinkId;
+  final FhirId? sequenceLinkId;
   @override
   @JsonKey(name: '_sequenceLinkId')
   final Element? sequenceLinkIdElement;
@@ -8941,7 +8941,7 @@ class _$_ClaimResponseDetail extends _ClaimResponseDetail {
 
 abstract class _ClaimResponseDetail extends ClaimResponseDetail {
   factory _ClaimResponseDetail(
-      {final Id? sequenceLinkId,
+      {final FhirId? sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId') final Element? sequenceLinkIdElement,
       final List<Decimal>? noteNumber,
       @JsonKey(name: '_noteNumber') final List<Element?>? noteNumberElement,
@@ -8953,7 +8953,7 @@ abstract class _ClaimResponseDetail extends ClaimResponseDetail {
       _$_ClaimResponseDetail.fromJson;
 
   @override
-  Id? get sequenceLinkId;
+  FhirId? get sequenceLinkId;
   @override
   @JsonKey(name: '_sequenceLinkId')
   Element? get sequenceLinkIdElement;
@@ -8979,7 +8979,7 @@ ClaimResponseSubDetail _$ClaimResponseSubDetailFromJson(
 
 /// @nodoc
 mixin _$ClaimResponseSubDetail {
-  Id? get sequenceLinkId => throw _privateConstructorUsedError;
+  FhirId? get sequenceLinkId => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequenceLinkId')
   Element? get sequenceLinkIdElement => throw _privateConstructorUsedError;
   List<Decimal>? get noteNumber => throw _privateConstructorUsedError;
@@ -9001,7 +9001,7 @@ abstract class $ClaimResponseSubDetailCopyWith<$Res> {
       _$ClaimResponseSubDetailCopyWithImpl<$Res, ClaimResponseSubDetail>;
   @useResult
   $Res call(
-      {Id? sequenceLinkId,
+      {FhirId? sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
       List<Decimal>? noteNumber,
       @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
@@ -9034,7 +9034,7 @@ class _$ClaimResponseSubDetailCopyWithImpl<$Res,
       sequenceLinkId: freezed == sequenceLinkId
           ? _value.sequenceLinkId
           : sequenceLinkId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sequenceLinkIdElement: freezed == sequenceLinkIdElement
           ? _value.sequenceLinkIdElement
           : sequenceLinkIdElement // ignore: cast_nullable_to_non_nullable
@@ -9076,7 +9076,7 @@ abstract class _$$_ClaimResponseSubDetailCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? sequenceLinkId,
+      {FhirId? sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
       List<Decimal>? noteNumber,
       @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
@@ -9108,7 +9108,7 @@ class __$$_ClaimResponseSubDetailCopyWithImpl<$Res>
       sequenceLinkId: freezed == sequenceLinkId
           ? _value.sequenceLinkId
           : sequenceLinkId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sequenceLinkIdElement: freezed == sequenceLinkIdElement
           ? _value.sequenceLinkIdElement
           : sequenceLinkIdElement // ignore: cast_nullable_to_non_nullable
@@ -9147,7 +9147,7 @@ class _$_ClaimResponseSubDetail extends _ClaimResponseSubDetail {
       _$$_ClaimResponseSubDetailFromJson(json);
 
   @override
-  final Id? sequenceLinkId;
+  final FhirId? sequenceLinkId;
   @override
   @JsonKey(name: '_sequenceLinkId')
   final Element? sequenceLinkIdElement;
@@ -9232,7 +9232,7 @@ class _$_ClaimResponseSubDetail extends _ClaimResponseSubDetail {
 
 abstract class _ClaimResponseSubDetail extends ClaimResponseSubDetail {
   factory _ClaimResponseSubDetail(
-      {final Id? sequenceLinkId,
+      {final FhirId? sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId') final Element? sequenceLinkIdElement,
       final List<Decimal>? noteNumber,
       @JsonKey(name: '_noteNumber') final List<Element?>? noteNumberElement,
@@ -9244,7 +9244,7 @@ abstract class _ClaimResponseSubDetail extends ClaimResponseSubDetail {
       _$_ClaimResponseSubDetail.fromJson;
 
   @override
-  Id? get sequenceLinkId;
+  FhirId? get sequenceLinkId;
   @override
   @JsonKey(name: '_sequenceLinkId')
   Element? get sequenceLinkIdElement;
@@ -9267,7 +9267,7 @@ ClaimResponseAddItem _$ClaimResponseAddItemFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ClaimResponseAddItem {
-  List<Id>? get sequenceLinkId => throw _privateConstructorUsedError;
+  List<FhirId>? get sequenceLinkId => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequenceLinkId')
   List<Element?>? get sequenceLinkIdElement =>
       throw _privateConstructorUsedError;
@@ -9296,7 +9296,7 @@ abstract class $ClaimResponseAddItemCopyWith<$Res> {
       _$ClaimResponseAddItemCopyWithImpl<$Res, ClaimResponseAddItem>;
   @useResult
   $Res call(
-      {List<Id>? sequenceLinkId,
+      {List<FhirId>? sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId') List<Element?>? sequenceLinkIdElement,
       CodeableConcept? revenue,
       CodeableConcept? category,
@@ -9344,7 +9344,7 @@ class _$ClaimResponseAddItemCopyWithImpl<$Res,
       sequenceLinkId: freezed == sequenceLinkId
           ? _value.sequenceLinkId
           : sequenceLinkId // ignore: cast_nullable_to_non_nullable
-              as List<Id>?,
+              as List<FhirId>?,
       sequenceLinkIdElement: freezed == sequenceLinkIdElement
           ? _value.sequenceLinkIdElement
           : sequenceLinkIdElement // ignore: cast_nullable_to_non_nullable
@@ -9446,7 +9446,7 @@ abstract class _$$_ClaimResponseAddItemCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {List<Id>? sequenceLinkId,
+      {List<FhirId>? sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId') List<Element?>? sequenceLinkIdElement,
       CodeableConcept? revenue,
       CodeableConcept? category,
@@ -9495,7 +9495,7 @@ class __$$_ClaimResponseAddItemCopyWithImpl<$Res>
       sequenceLinkId: freezed == sequenceLinkId
           ? _value._sequenceLinkId
           : sequenceLinkId // ignore: cast_nullable_to_non_nullable
-              as List<Id>?,
+              as List<FhirId>?,
       sequenceLinkIdElement: freezed == sequenceLinkIdElement
           ? _value._sequenceLinkIdElement
           : sequenceLinkIdElement // ignore: cast_nullable_to_non_nullable
@@ -9544,7 +9544,7 @@ class __$$_ClaimResponseAddItemCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
   _$_ClaimResponseAddItem(
-      {final List<Id>? sequenceLinkId,
+      {final List<FhirId>? sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId')
           final List<Element?>? sequenceLinkIdElement,
       this.revenue,
@@ -9569,9 +9569,9 @@ class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
   factory _$_ClaimResponseAddItem.fromJson(Map<String, dynamic> json) =>
       _$$_ClaimResponseAddItemFromJson(json);
 
-  final List<Id>? _sequenceLinkId;
+  final List<FhirId>? _sequenceLinkId;
   @override
-  List<Id>? get sequenceLinkId {
+  List<FhirId>? get sequenceLinkId {
     final value = _sequenceLinkId;
     if (value == null) return null;
     if (_sequenceLinkId is EqualUnmodifiableListView) return _sequenceLinkId;
@@ -9713,7 +9713,7 @@ class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
 
 abstract class _ClaimResponseAddItem extends ClaimResponseAddItem {
   factory _ClaimResponseAddItem(
-      {final List<Id>? sequenceLinkId,
+      {final List<FhirId>? sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId')
           final List<Element?>? sequenceLinkIdElement,
       final CodeableConcept? revenue,
@@ -9732,7 +9732,7 @@ abstract class _ClaimResponseAddItem extends ClaimResponseAddItem {
       _$_ClaimResponseAddItem.fromJson;
 
   @override
-  List<Id>? get sequenceLinkId;
+  List<FhirId>? get sequenceLinkId;
   @override
   @JsonKey(name: '_sequenceLinkId')
   List<Element?>? get sequenceLinkIdElement;
@@ -10167,14 +10167,14 @@ ClaimResponseError _$ClaimResponseErrorFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ClaimResponseError {
-  Id? get sequenceLinkId => throw _privateConstructorUsedError;
+  FhirId? get sequenceLinkId => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequenceLinkId')
   Element? get sequenceLinkIdElement => throw _privateConstructorUsedError;
-  Id? get detailSequenceLinkId => throw _privateConstructorUsedError;
+  FhirId? get detailSequenceLinkId => throw _privateConstructorUsedError;
   @JsonKey(name: '_detailSequenceLinkId')
   Element? get detailSequenceLinkIdElement =>
       throw _privateConstructorUsedError;
-  Id? get subdetailSequenceLinkId => throw _privateConstructorUsedError;
+  FhirId? get subdetailSequenceLinkId => throw _privateConstructorUsedError;
   @JsonKey(name: '_subdetailSequenceLinkId')
   Element? get subdetailSequenceLinkIdElement =>
       throw _privateConstructorUsedError;
@@ -10193,13 +10193,13 @@ abstract class $ClaimResponseErrorCopyWith<$Res> {
       _$ClaimResponseErrorCopyWithImpl<$Res, ClaimResponseError>;
   @useResult
   $Res call(
-      {Id? sequenceLinkId,
+      {FhirId? sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId')
           Element? sequenceLinkIdElement,
-      Id? detailSequenceLinkId,
+      FhirId? detailSequenceLinkId,
       @JsonKey(name: '_detailSequenceLinkId')
           Element? detailSequenceLinkIdElement,
-      Id? subdetailSequenceLinkId,
+      FhirId? subdetailSequenceLinkId,
       @JsonKey(name: '_subdetailSequenceLinkId')
           Element? subdetailSequenceLinkIdElement,
       CodeableConcept code});
@@ -10235,7 +10235,7 @@ class _$ClaimResponseErrorCopyWithImpl<$Res, $Val extends ClaimResponseError>
       sequenceLinkId: freezed == sequenceLinkId
           ? _value.sequenceLinkId
           : sequenceLinkId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sequenceLinkIdElement: freezed == sequenceLinkIdElement
           ? _value.sequenceLinkIdElement
           : sequenceLinkIdElement // ignore: cast_nullable_to_non_nullable
@@ -10243,7 +10243,7 @@ class _$ClaimResponseErrorCopyWithImpl<$Res, $Val extends ClaimResponseError>
       detailSequenceLinkId: freezed == detailSequenceLinkId
           ? _value.detailSequenceLinkId
           : detailSequenceLinkId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       detailSequenceLinkIdElement: freezed == detailSequenceLinkIdElement
           ? _value.detailSequenceLinkIdElement
           : detailSequenceLinkIdElement // ignore: cast_nullable_to_non_nullable
@@ -10251,7 +10251,7 @@ class _$ClaimResponseErrorCopyWithImpl<$Res, $Val extends ClaimResponseError>
       subdetailSequenceLinkId: freezed == subdetailSequenceLinkId
           ? _value.subdetailSequenceLinkId
           : subdetailSequenceLinkId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       subdetailSequenceLinkIdElement: freezed == subdetailSequenceLinkIdElement
           ? _value.subdetailSequenceLinkIdElement
           : subdetailSequenceLinkIdElement // ignore: cast_nullable_to_non_nullable
@@ -10319,13 +10319,13 @@ abstract class _$$_ClaimResponseErrorCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Id? sequenceLinkId,
+      {FhirId? sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId')
           Element? sequenceLinkIdElement,
-      Id? detailSequenceLinkId,
+      FhirId? detailSequenceLinkId,
       @JsonKey(name: '_detailSequenceLinkId')
           Element? detailSequenceLinkIdElement,
-      Id? subdetailSequenceLinkId,
+      FhirId? subdetailSequenceLinkId,
       @JsonKey(name: '_subdetailSequenceLinkId')
           Element? subdetailSequenceLinkIdElement,
       CodeableConcept code});
@@ -10363,7 +10363,7 @@ class __$$_ClaimResponseErrorCopyWithImpl<$Res>
       sequenceLinkId: freezed == sequenceLinkId
           ? _value.sequenceLinkId
           : sequenceLinkId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       sequenceLinkIdElement: freezed == sequenceLinkIdElement
           ? _value.sequenceLinkIdElement
           : sequenceLinkIdElement // ignore: cast_nullable_to_non_nullable
@@ -10371,7 +10371,7 @@ class __$$_ClaimResponseErrorCopyWithImpl<$Res>
       detailSequenceLinkId: freezed == detailSequenceLinkId
           ? _value.detailSequenceLinkId
           : detailSequenceLinkId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       detailSequenceLinkIdElement: freezed == detailSequenceLinkIdElement
           ? _value.detailSequenceLinkIdElement
           : detailSequenceLinkIdElement // ignore: cast_nullable_to_non_nullable
@@ -10379,7 +10379,7 @@ class __$$_ClaimResponseErrorCopyWithImpl<$Res>
       subdetailSequenceLinkId: freezed == subdetailSequenceLinkId
           ? _value.subdetailSequenceLinkId
           : subdetailSequenceLinkId // ignore: cast_nullable_to_non_nullable
-              as Id?,
+              as FhirId?,
       subdetailSequenceLinkIdElement: freezed == subdetailSequenceLinkIdElement
           ? _value.subdetailSequenceLinkIdElement
           : subdetailSequenceLinkIdElement // ignore: cast_nullable_to_non_nullable
@@ -10412,17 +10412,17 @@ class _$_ClaimResponseError extends _ClaimResponseError {
       _$$_ClaimResponseErrorFromJson(json);
 
   @override
-  final Id? sequenceLinkId;
+  final FhirId? sequenceLinkId;
   @override
   @JsonKey(name: '_sequenceLinkId')
   final Element? sequenceLinkIdElement;
   @override
-  final Id? detailSequenceLinkId;
+  final FhirId? detailSequenceLinkId;
   @override
   @JsonKey(name: '_detailSequenceLinkId')
   final Element? detailSequenceLinkIdElement;
   @override
-  final Id? subdetailSequenceLinkId;
+  final FhirId? subdetailSequenceLinkId;
   @override
   @JsonKey(name: '_subdetailSequenceLinkId')
   final Element? subdetailSequenceLinkIdElement;
@@ -10488,13 +10488,13 @@ class _$_ClaimResponseError extends _ClaimResponseError {
 
 abstract class _ClaimResponseError extends ClaimResponseError {
   factory _ClaimResponseError(
-      {final Id? sequenceLinkId,
+      {final FhirId? sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId')
           final Element? sequenceLinkIdElement,
-      final Id? detailSequenceLinkId,
+      final FhirId? detailSequenceLinkId,
       @JsonKey(name: '_detailSequenceLinkId')
           final Element? detailSequenceLinkIdElement,
-      final Id? subdetailSequenceLinkId,
+      final FhirId? subdetailSequenceLinkId,
       @JsonKey(name: '_subdetailSequenceLinkId')
           final Element? subdetailSequenceLinkIdElement,
       required final CodeableConcept code}) = _$_ClaimResponseError;
@@ -10504,17 +10504,17 @@ abstract class _ClaimResponseError extends ClaimResponseError {
       _$_ClaimResponseError.fromJson;
 
   @override
-  Id? get sequenceLinkId;
+  FhirId? get sequenceLinkId;
   @override
   @JsonKey(name: '_sequenceLinkId')
   Element? get sequenceLinkIdElement;
   @override
-  Id? get detailSequenceLinkId;
+  FhirId? get detailSequenceLinkId;
   @override
   @JsonKey(name: '_detailSequenceLinkId')
   Element? get detailSequenceLinkIdElement;
   @override
-  Id? get subdetailSequenceLinkId;
+  FhirId? get subdetailSequenceLinkId;
   @override
   @JsonKey(name: '_subdetailSequenceLinkId')
   Element? get subdetailSequenceLinkIdElement;
