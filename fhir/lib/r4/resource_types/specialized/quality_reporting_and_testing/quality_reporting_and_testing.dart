@@ -285,33 +285,40 @@ class Measure with Resource, _$Measure {
     @Default(R4ResourceType.Measure)
     @JsonKey(unknownEnumValue: R4ResourceType.Measure)
 
-        /// [resourceType] This is a Measure resource
+    /// [resourceType] This is a Measure resource
+    @HiveField(0)
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    String? id,
+    @HiveField(1)
+        String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    @HiveField(2)
+        Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    @HiveField(3)
+        FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
+    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    @HiveField(5)
+        Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
+    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -320,13 +327,15 @@ class Measure with Resource, _$Measure {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    Narrative? text,
+    @HiveField(7)
+        Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    List<Resource>? contained,
+    @HiveField(8)
+        List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -335,6 +344,7 @@ class Measure with Resource, _$Measure {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -350,7 +360,8 @@ class Measure with Resource, _$Measure {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(10)
+        List<FhirExtension>? modifierExtension,
 
     /// [url] An absolute URI that is used to identify this measure when it is
     /// referenced in a specification, model, design or an instance; also called
@@ -359,16 +370,21 @@ class Measure with Resource, _$Measure {
     /// measure is (or will be) published. This URL can be the target of a
     /// canonical reference. It SHALL remain the same when the measure is stored
     ///  on different servers.
-    FhirUri? url,
+    @HiveField(11)
+        FhirUri? url,
 
     /// [urlElement] Extensions for url
     @JsonKey(name: '_url')
+    @HiveField(12)
         Element? urlElement,
 
     /// [identifier] A formal identifier that is used to identify this measure
+    @HiveField(13)
+
     /// when it is represented in other formats, or referenced in a specification,
     ///  model, design or an instance.
-    List<Identifier>? identifier,
+    @HiveField(14)
+        List<Identifier>? identifier,
 
     /// [version] The identifier that is used to identify this version of the
     /// measure when it is referenced in a specification, model, design or
@@ -381,91 +397,112 @@ class Measure with Resource, _$Measure {
     /// information on versioning knowledge assets, refer to the Decision Support
     /// Service specification. Note that a version is required for
     ///  non-experimental active artifacts.
-    String? version,
+    @HiveField(15)
+        String? version,
 
     /// [versionElement] Extensions for version
     @JsonKey(name: '_version')
+    @HiveField(16)
         Element? versionElement,
 
     /// [name] A natural language name identifying the measure. This name should
     /// be usable as an identifier for the module by machine processing
     ///  applications such as code generation.
-    String? name,
+    @HiveField(17)
+        String? name,
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name')
+    @HiveField(18)
         Element? nameElement,
 
     /// [title] A short, descriptive, user-friendly title for the measure.
-    String? title,
+    @HiveField(19)
+        String? title,
 
     /// [titleElement] Extensions for title
     @JsonKey(name: '_title')
+    @HiveField(20)
         Element? titleElement,
 
     /// [subtitle] An explanatory or alternate title for the measure giving
     ///  additional information about its content.
-    String? subtitle,
+    @HiveField(21)
+        String? subtitle,
 
     /// [subtitleElement] Extensions for subtitle
     @JsonKey(name: '_subtitle')
+    @HiveField(22)
         Element? subtitleElement,
 
     /// [status] The status of this measure. Enables tracking the life-cycle of
     ///  the content.
-    Code? status,
+    @HiveField(23)
+        Code? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
+    @HiveField(24)
         Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this measure is authored
     /// for testing purposes (or education/evaluation/marketing) and is not
     ///  intended to be used for genuine usage.
-    Boolean? experimental,
+    @HiveField(25)
+        Boolean? experimental,
 
     /// [experimentalElement] Extensions for experimental
     @JsonKey(name: '_experimental')
+    @HiveField(26)
         Element? experimentalElement,
 
     /// [subjectCodeableConcept] The intended subjects for the measure. If this
     /// element is not provided, a Patient subject is assumed, but the subject of
     ///  the measure can be anything.
-    CodeableConcept? subjectCodeableConcept,
+    @HiveField(27)
+        CodeableConcept? subjectCodeableConcept,
 
     /// [subjectReference] The intended subjects for the measure. If this element
     /// is not provided, a Patient subject is assumed, but the subject of the
     ///  measure can be anything.
-    Reference? subjectReference,
+    @HiveField(28)
+        Reference? subjectReference,
 
     /// [date] The date  (and optionally time) when the measure was published.
     /// The date must change when the business version changes and it must change
     /// if the status code changes. In addition, it should change when the
     ///  substantive content of the measure changes.
-    FhirDateTime? date,
+    @HiveField(29)
+        FhirDateTime? date,
 
     /// [dateElement] Extensions for date
     @JsonKey(name: '_date')
+    @HiveField(30)
         Element? dateElement,
 
     /// [publisher] The name of the organization or individual that published the
     ///  measure.
-    String? publisher,
+    @HiveField(31)
+        String? publisher,
 
     /// [publisherElement] Extensions for publisher
     @JsonKey(name: '_publisher')
+    @HiveField(32)
         Element? publisherElement,
 
     /// [contact] Contact details to assist a user in finding and communicating
     ///  with the publisher.
-    List<ContactDetail>? contact,
+    @HiveField(33)
+        List<ContactDetail>? contact,
 
     /// [description] A free text natural language description of the measure
     ///  from a consumer's perspective.
-    Markdown? description,
+    @HiveField(34)
+        Markdown? description,
 
     /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description')
+    @HiveField(35)
         Element? descriptionElement,
 
     /// [useContext] The content was developed with a focus and intent of
@@ -473,178 +510,224 @@ class Measure with Resource, _$Measure {
     /// categories (gender, age, ...) or may be references to specific programs
     /// (insurance plans, studies, ...) and may be used to assist with indexing
     ///  and searching for appropriate measure instances.
-    List<UsageContext>? useContext,
+    @HiveField(36)
+        List<UsageContext>? useContext,
 
     /// [jurisdiction] A legal or geographic region in which the measure is
     ///  intended to be used.
-    List<CodeableConcept>? jurisdiction,
+    @HiveField(37)
+        List<CodeableConcept>? jurisdiction,
 
     /// [purpose] Explanation of why this measure is needed and why it has been
     ///  designed as it has.
-    Markdown? purpose,
+    @HiveField(38)
+        Markdown? purpose,
 
     /// [purposeElement] Extensions for purpose
     @JsonKey(name: '_purpose')
+    @HiveField(39)
         Element? purposeElement,
 
     /// [usage] A detailed description, from a clinical perspective, of how the
     ///  measure is used.
-    String? usage,
+    @HiveField(40)
+        String? usage,
 
     /// [usageElement] Extensions for usage
     @JsonKey(name: '_usage')
+    @HiveField(41)
         Element? usageElement,
 
     /// [copyright] A copyright statement relating to the measure and/or its
     /// contents. Copyright statements are generally legal restrictions on the use
     ///  and publishing of the measure.
-    Markdown? copyright,
+    @HiveField(42)
+        Markdown? copyright,
 
     /// [copyrightElement] Extensions for copyright
     @JsonKey(name: '_copyright')
+    @HiveField(43)
         Element? copyrightElement,
 
     /// [approvalDate] The date on which the resource content was approved by the
     /// publisher. Approval happens once when the content is officially approved
     ///  for usage.
-    Date? approvalDate,
+    @HiveField(44)
+        Date? approvalDate,
 
     /// [approvalDateElement] Extensions for approvalDate
     @JsonKey(name: '_approvalDate')
+    @HiveField(45)
         Element? approvalDateElement,
 
     /// [lastReviewDate] The date on which the resource content was last
     /// reviewed. Review happens periodically after approval but does not change
     ///  the original approval date.
-    Date? lastReviewDate,
+    @HiveField(46)
+        Date? lastReviewDate,
 
     /// [lastReviewDateElement] Extensions for lastReviewDate
     @JsonKey(name: '_lastReviewDate')
+    @HiveField(47)
         Element? lastReviewDateElement,
 
     /// [effectivePeriod] The period during which the measure content was or is
     ///  planned to be in active use.
-    Period? effectivePeriod,
+    @HiveField(48)
+        Period? effectivePeriod,
 
     /// [topic] Descriptive topics related to the content of the measure. Topics
     /// provide a high-level categorization grouping types of measures that can be
     ///  useful for filtering and searching.
-    List<CodeableConcept>? topic,
+    @HiveField(49)
+        List<CodeableConcept>? topic,
 
     /// [author] An individiual or organization primarily involved in the
     ///  creation and maintenance of the content.
-    List<ContactDetail>? author,
+    @HiveField(50)
+        List<ContactDetail>? author,
 
     /// [editor] An individual or organization primarily responsible for internal
     ///  coherence of the content.
-    List<ContactDetail>? editor,
+    @HiveField(51)
+        List<ContactDetail>? editor,
 
     /// [reviewer] An individual or organization primarily responsible for review
     ///  of some aspect of the content.
-    List<ContactDetail>? reviewer,
+    @HiveField(52)
+        List<ContactDetail>? reviewer,
 
     /// [endorser] An individual or organization responsible for officially
     ///  endorsing the content for use in some setting.
-    List<ContactDetail>? endorser,
+    @HiveField(53)
+        List<ContactDetail>? endorser,
+    @HiveField(54)
 
     /// [relatedArtifact] Related artifacts such as additional documentation,
     ///  justification, or bibliographic references.
-    List<RelatedArtifact>? relatedArtifact,
+    @HiveField(55)
+        List<RelatedArtifact>? relatedArtifact,
 
     /// [library] A reference to a Library resource containing the formal logic
     ///  used by the measure.
     @JsonKey(name: 'library')
+    @HiveField(56)
         List<Canonical>? library_,
 
     /// [disclaimer] Notices and disclaimers regarding the use of the measure or
     /// related to intellectual property (such as code systems) referenced by the
     ///  measure.
-    Markdown? disclaimer,
+    @HiveField(57)
+        Markdown? disclaimer,
 
     /// [disclaimerElement] Extensions for disclaimer
     @JsonKey(name: '_disclaimer')
+    @HiveField(58)
         Element? disclaimerElement,
+    @HiveField(59)
 
     /// [scoring] Indicates how the calculation is performed for the measure,
     /// including proportion, ratio, continuous-variable, and cohort. The value
     /// set is extensible, allowing additional measure scoring types to be
     ///  represented.
-    CodeableConcept? scoring,
+    @HiveField(60)
+        CodeableConcept? scoring,
 
     /// [compositeScoring] If this is a composite measure, the scoring method
     ///  used to combine the component measures to determine the composite score.
-    CodeableConcept? compositeScoring,
+    @HiveField(61)
+        CodeableConcept? compositeScoring,
 
     /// [type] Indicates whether the measure is used to examine a process, an
     /// outcome over time, a patient-reported outcome, or a structure measure such
     ///  as utilization.
-    List<CodeableConcept>? type,
+    @HiveField(62)
+        List<CodeableConcept>? type,
 
     /// [riskAdjustment] A description of the risk adjustment factors that may
     /// impact the resulting score for the measure and how they may be accounted
     ///  for when computing and reporting measure results.
-    String? riskAdjustment,
+    @HiveField(63)
+        String? riskAdjustment,
 
     /// [riskAdjustmentElement] Extensions for riskAdjustment
     @JsonKey(name: '_riskAdjustment')
+    @HiveField(64)
         Element? riskAdjustmentElement,
+    @HiveField(65)
 
     /// [rateAggregation] Describes how to combine the information calculated,
     /// based on logic in each of several populations, into one summarized
     ///  result.
-    String? rateAggregation,
+    @HiveField(66)
+        String? rateAggregation,
 
     /// [rateAggregationElement] Extensions for rateAggregation
     @JsonKey(name: '_rateAggregation')
+    @HiveField(67)
         Element? rateAggregationElement,
 
     /// [rationale] Provides a succinct statement of the need for the measure.
+    @HiveField(68)
+
     /// Usually includes statements pertaining to importance criterion: impact,
     ///  gap in care, and evidence.
-    Markdown? rationale,
+    @HiveField(69)
+        Markdown? rationale,
 
     /// [rationaleElement] Extensions for rationale
     @JsonKey(name: '_rationale')
+    @HiveField(70)
         Element? rationaleElement,
 
     /// [clinicalRecommendationStatement] Provides a summary of relevant clinical
     ///  guidelines or other clinical recommendations supporting the measure.
-    Markdown? clinicalRecommendationStatement,
+    @HiveField(71)
+        Markdown? clinicalRecommendationStatement,
     @JsonKey(name: '_clinicalRecommendationStatement')
 
-        /// [clinicalRecommendationStatementElement] Extensions for
-        ///  clinicalRecommendationStatement
+    /// [clinicalRecommendationStatementElement] Extensions for
+    ///  clinicalRecommendationStatement
+    @HiveField(72)
         Element? clinicalRecommendationStatementElement,
 
     /// [improvementNotation] Information on whether an increase or decrease in
     /// score is the preferred result (e.g., a higher score indicates better
     /// quality OR a lower score indicates better quality OR quality is within a
     ///  range).
-    CodeableConcept? improvementNotation,
+    @HiveField(73)
+        CodeableConcept? improvementNotation,
 
     /// [definition] Provides a description of an individual term used within the
     ///  measure.
-    List<Markdown>? definition,
+    @HiveField(74)
+        List<Markdown>? definition,
 
     /// [definitionElement] Extensions for definition
     @JsonKey(name: '_definition')
+    @HiveField(75)
         List<Element?>? definitionElement,
 
     /// [guidance] Additional guidance for the measure including how it can be
     ///  used in a clinical context, and the intent of the measure.
-    Markdown? guidance,
+    @HiveField(76)
+        Markdown? guidance,
 
     /// [guidanceElement] Extensions for guidance
     @JsonKey(name: '_guidance')
+    @HiveField(77)
         Element? guidanceElement,
 
     /// [group] A group of population criteria for the measure.
-    List<MeasureGroup>? group,
+    @HiveField(78)
+        List<MeasureGroup>? group,
+    @HiveField(79)
 
     /// [supplementalData] The supplemental data criteria for the measure report,
     /// specified as either the name of a valid CQL expression within a referenced
     ///  library, or a valid FHIR Resource Path.
-    List<MeasureSupplementalData>? supplementalData,
+    @HiveField(80)
+        List<MeasureSupplementalData>? supplementalData,
   }) = _Measure;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1420,33 +1503,40 @@ class MeasureReport with Resource, _$MeasureReport {
     @Default(R4ResourceType.MeasureReport)
     @JsonKey(unknownEnumValue: R4ResourceType.MeasureReport)
 
-        /// [resourceType] This is a MeasureReport resource
+    /// [resourceType] This is a MeasureReport resource
+    @HiveField(0)
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    String? id,
+    @HiveField(1)
+        String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    @HiveField(2)
+        Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    @HiveField(3)
+        FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
+    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    @HiveField(5)
+        Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
+    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -1455,13 +1545,15 @@ class MeasureReport with Resource, _$MeasureReport {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    Narrative? text,
+    @HiveField(7)
+        Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    List<Resource>? contained,
+    @HiveField(8)
+        List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -1470,6 +1562,7 @@ class MeasureReport with Resource, _$MeasureReport {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -1485,20 +1578,25 @@ class MeasureReport with Resource, _$MeasureReport {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(10)
+        List<FhirExtension>? modifierExtension,
 
     /// [identifier] A formal identifier that is used to identify this
     /// MeasureReport when it is represented in other formats or referenced in a
     ///  specification, model, design or an instance.
-    List<Identifier>? identifier,
+    @HiveField(11)
+        List<Identifier>? identifier,
 
     /// [status] The MeasureReport status. No data will be available until the
     ///  MeasureReport status is complete.
-    Code? status,
+    @HiveField(12)
+        Code? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
+    @HiveField(13)
         Element? statusElement,
+    @HiveField(14)
 
     /// [type] The type of measure report. This may be an individual report,
     /// which provides the score for the measure for an individual member of the
@@ -1507,45 +1605,56 @@ class MeasureReport with Resource, _$MeasureReport {
     /// population count for each of the criteria in the measure; or a
     /// data-collection, which enables the MeasureReport to be used to exchange
     ///  the data-of-interest for a quality measure.
-    Code? type,
+    @HiveField(15)
+        Code? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type')
+    @HiveField(16)
         Element? typeElement,
 
     /// [measure] A reference to the Measure that was calculated to produce this
     ///  report.
-    required Canonical measure,
+    @HiveField(17)
+        required Canonical measure,
 
     /// [subject] Optional subject identifying the individual or individuals the
     ///  report is for.
-    Reference? subject,
+    @HiveField(18)
+        Reference? subject,
 
     /// [date] The date this measure report was generated.
-    FhirDateTime? date,
+    @HiveField(19)
+        FhirDateTime? date,
 
     /// [dateElement] Extensions for date
     @JsonKey(name: '_date')
+    @HiveField(20)
         Element? dateElement,
 
     /// [reporter] The individual, location, or organization that is reporting
     ///  the data.
-    Reference? reporter,
+    @HiveField(21)
+        Reference? reporter,
 
     /// [period] The reporting period for which the report was calculated.
-    required Period period,
+    @HiveField(22)
+        required Period period,
 
     /// [improvementNotation] Whether improvement in the measure is noted by an
     ///  increase or decrease in the measure score.
-    CodeableConcept? improvementNotation,
+    @HiveField(23)
+        CodeableConcept? improvementNotation,
 
     /// [group] The results of the calculation, one for each population group in
     ///  the measure.
-    List<MeasureReportGroup>? group,
+    @HiveField(24)
+        List<MeasureReportGroup>? group,
 
     /// [evaluatedResource] A reference to a Bundle containing the Resources that
     ///  were used in the calculation of this measure.
-    List<Reference>? evaluatedResource,
+    @HiveField(25)
+        List<Reference>? evaluatedResource,
   }) = _MeasureReport;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2378,33 +2487,40 @@ class TestReport with Resource, _$TestReport {
     @Default(R4ResourceType.TestReport)
     @JsonKey(unknownEnumValue: R4ResourceType.TestReport)
 
-        /// [resourceType] This is a TestReport resource
+    /// [resourceType] This is a TestReport resource
+    @HiveField(0)
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    String? id,
+    @HiveField(1)
+        String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    @HiveField(2)
+        Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    @HiveField(3)
+        FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
+    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    @HiveField(5)
+        Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
+    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -2413,13 +2529,15 @@ class TestReport with Resource, _$TestReport {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    Narrative? text,
+    @HiveField(7)
+        Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    List<Resource>? contained,
+    @HiveField(8)
+        List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -2428,6 +2546,7 @@ class TestReport with Resource, _$TestReport {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -2443,77 +2562,96 @@ class TestReport with Resource, _$TestReport {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(10)
+        List<FhirExtension>? modifierExtension,
 
     /// [identifier] Identifier for the TestScript assigned for external purposes
     ///  outside the context of FHIR.
-    Identifier? identifier,
+    @HiveField(11)
+        Identifier? identifier,
 
     /// [name] A free text natural language name identifying the executed
     ///  TestScript.
-    String? name,
+    @HiveField(12)
+        String? name,
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name')
+    @HiveField(13)
         Element? nameElement,
 
     /// [status] The current state of this test report.
-    Code? status,
+    @HiveField(14)
+        Code? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
+    @HiveField(15)
         Element? statusElement,
 
     /// [testScript] Ideally this is an absolute URL that is used to identify the
     /// version-specific TestScript that was executed, matching the
     ///  `TestScript.url`.
-    required Reference testScript,
+    @HiveField(16)
+        required Reference testScript,
 
     /// [result] The overall result from the execution of the TestScript.
-    Code? result,
+    @HiveField(17)
+        Code? result,
 
     /// [resultElement] Extensions for result
     @JsonKey(name: '_result')
+    @HiveField(18)
         Element? resultElement,
 
     /// [score] The final score (percentage of tests passed) resulting from the
     ///  execution of the TestScript.
-    Decimal? score,
+    @HiveField(19)
+        Decimal? score,
 
     /// [scoreElement] Extensions for score
     @JsonKey(name: '_score')
+    @HiveField(20)
         Element? scoreElement,
 
     /// [tester] Name of the tester producing this report (Organization or
     ///  individual).
-    String? tester,
+    @HiveField(21)
+        String? tester,
 
     /// [testerElement] Extensions for tester
     @JsonKey(name: '_tester')
+    @HiveField(22)
         Element? testerElement,
 
     /// [issued] When the TestScript was executed and this TestReport was
     ///  generated.
-    FhirDateTime? issued,
+    @HiveField(23)
+        FhirDateTime? issued,
 
     /// [issuedElement] Extensions for issued
     @JsonKey(name: '_issued')
+    @HiveField(24)
         Element? issuedElement,
 
     /// [participant] A participant in the test execution, either the execution
     ///  engine, a client, or a server.
-    List<TestReportParticipant>? participant,
+    @HiveField(25)
+        List<TestReportParticipant>? participant,
 
     /// [setup] The results of the series of required setup operations before the
     ///  tests were executed.
-    TestReportSetup? setup,
+    @HiveField(26)
+        TestReportSetup? setup,
 
     /// [test] A test executed from the test script.
-    List<TestReportTest>? test,
+    @HiveField(27)
+        List<TestReportTest>? test,
 
     /// [teardown] The results of the series of operations required to clean up
     ///  after all the tests were executed (successfully or otherwise).
-    TestReportTeardown? teardown,
+    @HiveField(28)
+        TestReportTeardown? teardown,
   }) = _TestReport;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3705,33 +3843,40 @@ class TestScript with Resource, _$TestScript {
     @Default(R4ResourceType.TestScript)
     @JsonKey(unknownEnumValue: R4ResourceType.TestScript)
 
-        /// [resourceType] This is a TestScript resource
+    /// [resourceType] This is a TestScript resource
+    @HiveField(0)
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    String? id,
+    @HiveField(1)
+        String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    @HiveField(2)
+        Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    @HiveField(3)
+        FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
+    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    @HiveField(5)
+        Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
+    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -3740,13 +3885,15 @@ class TestScript with Resource, _$TestScript {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    Narrative? text,
+    @HiveField(7)
+        Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    List<Resource>? contained,
+    @HiveField(8)
+        List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -3755,6 +3902,7 @@ class TestScript with Resource, _$TestScript {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -3770,7 +3918,8 @@ class TestScript with Resource, _$TestScript {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(10)
+        List<FhirExtension>? modifierExtension,
 
     /// [url] An absolute URI that is used to identify this test script when it
     /// is referenced in a specification, model, design or an instance; also
@@ -3779,16 +3928,19 @@ class TestScript with Resource, _$TestScript {
     /// test script is (or will be) published. This URL can be the target of a
     /// canonical reference. It SHALL remain the same when the test script is
     ///  stored on different servers.
-    FhirUri? url,
+    @HiveField(11)
+        FhirUri? url,
 
     /// [urlElement] Extensions for url
     @JsonKey(name: '_url')
+    @HiveField(12)
         Element? urlElement,
 
     /// [identifier] A formal identifier that is used to identify this test
     /// script when it is represented in other formats, or referenced in a
     ///  specification, model, design or an instance.
-    Identifier? identifier,
+    @HiveField(13)
+        Identifier? identifier,
 
     /// [version] The identifier that is used to identify this version of the
     /// test script when it is referenced in a specification, model, design or
@@ -3797,73 +3949,90 @@ class TestScript with Resource, _$TestScript {
     /// timestamp (e.g. yyyymmdd) if a managed version is not available. There is
     /// also no expectation that versions can be placed in a lexicographical
     ///  sequence.
-    String? version,
+    @HiveField(14)
+        String? version,
 
     /// [versionElement] Extensions for version
     @JsonKey(name: '_version')
+    @HiveField(15)
         Element? versionElement,
 
     /// [name] A natural language name identifying the test script. This name
     /// should be usable as an identifier for the module by machine processing
     ///  applications such as code generation.
-    String? name,
+    @HiveField(16)
+        String? name,
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name')
+    @HiveField(17)
         Element? nameElement,
 
     /// [title] A short, descriptive, user-friendly title for the test script.
-    String? title,
+    @HiveField(18)
+        String? title,
 
     /// [titleElement] Extensions for title
     @JsonKey(name: '_title')
+    @HiveField(19)
         Element? titleElement,
 
     /// [status] The status of this test script. Enables tracking the life-cycle
     ///  of the content.
-    Code? status,
+    @HiveField(20)
+        Code? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
+    @HiveField(21)
         Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this test script is
     /// authored for testing purposes (or education/evaluation/marketing) and is
     ///  not intended to be used for genuine usage.
-    Boolean? experimental,
+    @HiveField(22)
+        Boolean? experimental,
 
     /// [experimentalElement] Extensions for experimental
     @JsonKey(name: '_experimental')
+    @HiveField(23)
         Element? experimentalElement,
 
     /// [date] The date  (and optionally time) when the test script was
     /// published. The date must change when the business version changes and it
     /// must change if the status code changes. In addition, it should change when
     ///  the substantive content of the test script changes.
-    FhirDateTime? date,
+    @HiveField(24)
+        FhirDateTime? date,
 
     /// [dateElement] Extensions for date
     @JsonKey(name: '_date')
+    @HiveField(25)
         Element? dateElement,
 
     /// [publisher] The name of the organization or individual that published the
     ///  test script.
-    String? publisher,
+    @HiveField(26)
+        String? publisher,
 
     /// [publisherElement] Extensions for publisher
     @JsonKey(name: '_publisher')
+    @HiveField(27)
         Element? publisherElement,
 
     /// [contact] Contact details to assist a user in finding and communicating
     ///  with the publisher.
-    List<ContactDetail>? contact,
+    @HiveField(28)
+        List<ContactDetail>? contact,
 
     /// [description] A free text natural language description of the test script
     ///  from a consumer's perspective.
-    Markdown? description,
+    @HiveField(29)
+        Markdown? description,
 
     /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description')
+    @HiveField(30)
         Element? descriptionElement,
 
     /// [useContext] The content was developed with a focus and intent of
@@ -3871,61 +4040,76 @@ class TestScript with Resource, _$TestScript {
     /// categories (gender, age, ...) or may be references to specific programs
     /// (insurance plans, studies, ...) and may be used to assist with indexing
     ///  and searching for appropriate test script instances.
-    List<UsageContext>? useContext,
+    @HiveField(31)
+        List<UsageContext>? useContext,
 
     /// [jurisdiction] A legal or geographic region in which the test script is
     ///  intended to be used.
-    List<CodeableConcept>? jurisdiction,
+    @HiveField(32)
+        List<CodeableConcept>? jurisdiction,
 
     /// [purpose] Explanation of why this test script is needed and why it has
     ///  been designed as it has.
-    Markdown? purpose,
+    @HiveField(33)
+        Markdown? purpose,
 
     /// [purposeElement] Extensions for purpose
     @JsonKey(name: '_purpose')
+    @HiveField(34)
         Element? purposeElement,
 
     /// [copyright] A copyright statement relating to the test script and/or its
     /// contents. Copyright statements are generally legal restrictions on the use
     ///  and publishing of the test script.
-    Markdown? copyright,
+    @HiveField(35)
+        Markdown? copyright,
 
     /// [copyrightElement] Extensions for copyright
     @JsonKey(name: '_copyright')
+    @HiveField(36)
         Element? copyrightElement,
 
     /// [origin] An abstract server used in operations within this test script in
     ///  the origin element.
-    List<TestScriptOrigin>? origin,
+    @HiveField(37)
+        List<TestScriptOrigin>? origin,
 
     /// [destination] An abstract server used in operations within this test
     ///  script in the destination element.
-    List<TestScriptDestination>? destination,
+    @HiveField(38)
+        List<TestScriptDestination>? destination,
 
     /// [metadata] The required capability must exist and are assumed to function
     ///  correctly on the FHIR server being tested.
-    TestScriptMetadata? metadata,
+    @HiveField(39)
+        TestScriptMetadata? metadata,
 
     /// [fixture] Fixture in the test script - by reference (uri). All fixtures
     ///  are required for the test script to execute.
-    List<TestScriptFixture>? fixture,
+    @HiveField(40)
+        List<TestScriptFixture>? fixture,
 
     /// [profile] Reference to the profile to be used for validation.
-    List<Reference>? profile,
+    @HiveField(41)
+        List<Reference>? profile,
 
     /// [variable] Variable is set based either on element value in response body
     ///  or on header field value in the response headers.
-    List<TestScriptVariable>? variable,
+    @HiveField(42)
+        List<TestScriptVariable>? variable,
 
     /// [setup] A series of required setup operations before tests are executed.
-    TestScriptSetup? setup,
+    @HiveField(43)
+        TestScriptSetup? setup,
 
     /// [test] A test in this script.
-    List<TestScriptTest>? test,
+    @HiveField(44)
+        List<TestScriptTest>? test,
 
     /// [teardown] A series of operations required to clean up after all the
     ///  tests are executed (successfully or otherwise).
-    TestScriptTeardown? teardown,
+    @HiveField(45)
+        TestScriptTeardown? teardown,
   }) = _TestScript;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument

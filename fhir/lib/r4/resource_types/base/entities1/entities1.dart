@@ -131,20 +131,20 @@ class Endpoint with Resource, _$Endpoint {
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
     @HiveField(1)
-    String? id,
+        String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
     @HiveField(2)
-    Meta? meta,
+        Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
     @HiveField(3)
-    FhirUri? implicitRules,
+        FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
@@ -153,7 +153,7 @@ class Endpoint with Resource, _$Endpoint {
 
     /// [language] The base language in which the resource is written.
     @HiveField(5)
-    Code? language,
+        Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
@@ -167,14 +167,14 @@ class Endpoint with Resource, _$Endpoint {
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
     @HiveField(7)
-    Narrative? text,
+        Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
     @HiveField(8)
-    List<Resource>? contained,
+        List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -200,16 +200,16 @@ class Endpoint with Resource, _$Endpoint {
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
     @HiveField(10)
-    List<FhirExtension>? modifierExtension,
+        List<FhirExtension>? modifierExtension,
 
     /// [identifier] Identifier for the organization that is used to identify the
     ///  endpoint across multiple disparate systems.
     @HiveField(11)
-    List<Identifier>? identifier,
+        List<Identifier>? identifier,
 
     /// [status] active | suspended | error | off | test.
     @HiveField(12)
-    Code? status,
+        Code? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
@@ -220,11 +220,11 @@ class Endpoint with Resource, _$Endpoint {
     /// the usage of this endpoint, such as what WSDLs should be used in what way.
     ///  (e.g. XDS.b/DICOM/cds-hook).
     @HiveField(14)
-    required Coding connectionType,
+        required Coding connectionType,
 
     /// [name] A friendly name that this endpoint can be referred to with.
     @HiveField(15)
-    String? name,
+        String? name,
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name')
@@ -235,29 +235,29 @@ class Endpoint with Resource, _$Endpoint {
     /// if technically another organization is hosting this in the cloud, it is
     ///  the organization associated with the data).
     @HiveField(17)
-    Reference? managingOrganization,
+        Reference? managingOrganization,
 
     /// [contact] Contact details for a human to contact about the subscription.
     ///  The primary use of this for system administrator troubleshooting.
     @HiveField(18)
-    List<ContactPoint>? contact,
+        List<ContactPoint>? contact,
 
     /// [period] The interval during which the endpoint is expected to be
     ///  operational.
     @HiveField(19)
-    Period? period,
+        Period? period,
 
     /// [payloadType] The payload type describes the acceptable content that can
     ///  be communicated on the endpoint.
     @HiveField(20)
-    required List<CodeableConcept> payloadType,
+        required List<CodeableConcept> payloadType,
 
     /// [payloadMimeType] The mime type to send the payload in - e.g.
     /// application/fhir+xml, application/fhir+json. If the mime type is not
     /// specified, then the sender could send any content (including no content
     ///  depending on the connectionType).
     @HiveField(21)
-    List<Code>? payloadMimeType,
+        List<Code>? payloadMimeType,
 
     /// [payloadMimeTypeElement] Extensions for payloadMimeType
     @JsonKey(name: '_payloadMimeType')
@@ -266,7 +266,7 @@ class Endpoint with Resource, _$Endpoint {
 
     /// [address] The uri that describes the actual end-point to connect to.
     @HiveField(23)
-    FhirUrl? address,
+        FhirUrl? address,
 
     /// [addressElement] Extensions for address
     @JsonKey(name: '_address')
@@ -276,7 +276,7 @@ class Endpoint with Resource, _$Endpoint {
     /// [header] Additional headers / information to send as part of the
     ///  notification.
     @HiveField(25)
-    List<String>? header,
+        List<String>? header,
 
     /// [headerElement] Extensions for header
     @JsonKey(name: '_header')

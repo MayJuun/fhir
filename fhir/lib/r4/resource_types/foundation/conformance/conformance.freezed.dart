@@ -21,32 +21,39 @@ CapabilityStatement _$CapabilityStatementFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$CapabilityStatement {
   @JsonKey(unknownEnumValue: R4ResourceType.CapabilityStatement)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -55,12 +62,14 @@ mixin _$CapabilityStatement {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -70,6 +79,7 @@ mixin _$CapabilityStatement {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -85,6 +95,7 @@ mixin _$CapabilityStatement {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
@@ -95,89 +106,103 @@ mixin _$CapabilityStatement {
   /// this capability statement is (or will be) published. This URL can be the
   /// target of a canonical reference. It SHALL remain the same when the
   ///  capability statement is stored on different servers.
+  @HiveField(11)
   FhirUri? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
+  @HiveField(12)
   Element? get urlElement => throw _privateConstructorUsedError;
 
   /// [version] The identifier that is used to identify this version of the
-  /// capability statement when it is referenced in a specification, model,
-  /// design or instance. This is an arbitrary value managed by the capability
-  /// statement author and is not expected to be globally unique. For example,
-  /// it might be a timestamp (e.g. yyyymmdd) if a managed version is not
-  /// available. There is also no expectation that versions can be placed in a
-  ///  lexicographical sequence.
+  @HiveField(13)
+  @HiveField(14)
+  @HiveField(15)
   String? get version => throw _privateConstructorUsedError;
 
   /// [versionElement] Extensions for version
   @JsonKey(name: '_version')
+  @HiveField(16)
   Element? get versionElement => throw _privateConstructorUsedError;
 
   /// [name] A natural language name identifying the capability statement. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
+  @HiveField(17)
   String? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
+  @HiveField(18)
   Element? get nameElement => throw _privateConstructorUsedError;
 
   /// [title] A short, descriptive, user-friendly title for the capability
   ///  statement.
+  @HiveField(19)
   String? get title => throw _privateConstructorUsedError;
 
   /// [titleElement] Extensions for title
   @JsonKey(name: '_title')
+  @HiveField(20)
   Element? get titleElement => throw _privateConstructorUsedError;
 
   /// [status] The status of this capability statement. Enables tracking the
   ///  life-cycle of the content.
+  @HiveField(21)
   Code? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(22)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [experimental] A Boolean value to indicate that this capability statement
   /// is authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
+  @HiveField(23)
   Boolean? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
+  @HiveField(24)
   Element? get experimentalElement => throw _privateConstructorUsedError;
 
   /// [date] The date  (and optionally time) when the capability statement was
   /// published. The date must change when the business version changes and it
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the capability statement changes.
+  @HiveField(25)
   FhirDateTime? get date => throw _privateConstructorUsedError;
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
+  @HiveField(26)
   Element? get dateElement => throw _privateConstructorUsedError;
 
   /// [publisher] The name of the organization or individual that published the
   ///  capability statement.
+  @HiveField(27)
   String? get publisher => throw _privateConstructorUsedError;
 
   /// [publisherElement] Extensions for publisher
   @JsonKey(name: '_publisher')
+  @HiveField(28)
   Element? get publisherElement => throw _privateConstructorUsedError;
 
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
+  @HiveField(29)
   List<ContactDetail>? get contact => throw _privateConstructorUsedError;
 
   /// [description] A free text natural language description of the capability
   /// statement from a consumer's perspective. Typically, this is used when the
-  /// capability statement describes a desired rather than an actual solution,
-  ///  for example as a formal expression of requirements as part of an RFP.
+  @HiveField(30)
+  @HiveField(31)
   Markdown? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
+  @HiveField(32)
   Element? get descriptionElement => throw _privateConstructorUsedError;
 
   /// [useContext] The content was developed with a focus and intent of
@@ -185,37 +210,45 @@ mixin _$CapabilityStatement {
   /// categories (gender, age, ...) or may be references to specific programs
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate capability statement instances.
+  @HiveField(33)
   List<UsageContext>? get useContext => throw _privateConstructorUsedError;
 
   /// [jurisdiction] A legal or geographic region in which the capability
   ///  statement is intended to be used.
+  @HiveField(34)
   List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
 
   /// [purpose] Explanation of why this capability statement is needed and why
   ///  it has been designed as it has.
+  @HiveField(35)
   Markdown? get purpose => throw _privateConstructorUsedError;
 
   /// [purposeElement] Extensions for purpose
   @JsonKey(name: '_purpose')
+  @HiveField(36)
   Element? get purposeElement => throw _privateConstructorUsedError;
 
   /// [copyright] A copyright statement relating to the capability statement
   /// and/or its contents. Copyright statements are generally legal restrictions
   ///  on the use and publishing of the capability statement.
+  @HiveField(37)
   Markdown? get copyright => throw _privateConstructorUsedError;
 
   /// [copyrightElement] Extensions for copyright
   @JsonKey(name: '_copyright')
+  @HiveField(38)
   Element? get copyrightElement => throw _privateConstructorUsedError;
 
   /// [kind] The way that this statement is intended to be used, to describe an
   /// actual running instance of software, a particular product (kind, not
   /// instance of software) or a class of implementation (e.g. a desired
   ///  purchase).
+  @HiveField(39)
   Code? get kind => throw _privateConstructorUsedError;
 
   /// [kindElement] Extensions for kind
   @JsonKey(name: '_kind')
+  @HiveField(40)
   Element? get kindElement => throw _privateConstructorUsedError;
 
   /// [instantiates] Reference to a canonical URL of another
@@ -224,65 +257,76 @@ mixin _$CapabilityStatement {
   /// service. The server may actually implement a subset of the capability
   /// statement it claims to implement, so the capability statement must specify
   ///  the full capability details.
+  @HiveField(41)
   List<Canonical>? get instantiates => throw _privateConstructorUsedError;
 
   /// [imports] Reference to a canonical URL of another CapabilityStatement
   /// that this software adds to. The capability statement automatically
-  /// includes everything in the other statement, and it is not duplicated,
-  /// though the server may repeat the same resources, interactions and
-  ///  operations to add additional details to them.
+  @HiveField(42)
+  @HiveField(43)
   List<Canonical>? get imports => throw _privateConstructorUsedError;
 
   /// [software] Software that is covered by this capability statement.  It is
   /// used when the capability statement describes the capabilities of a
   ///  particular software version, independent of an installation.
+  @HiveField(44)
   CapabilityStatementSoftware? get software =>
       throw _privateConstructorUsedError;
 
   /// [implementation] Identifies a specific implementation instance that is
-  /// described by the capability statement - i.e. a particular installation,
-  ///  rather than the capabilities of a software program.
+  @HiveField(45)
+  @HiveField(46)
   CapabilityStatementImplementation? get implementation =>
       throw _privateConstructorUsedError;
 
   /// [fhirVersion] The version of the FHIR specification that this
   /// CapabilityStatement describes (which SHALL be the same as the FHIR version
   ///  of the CapabilityStatement itself). There is no default value.
+  @HiveField(47)
   Code? get fhirVersion => throw _privateConstructorUsedError;
 
   /// [fhirVersionElement] Extensions for fhirVersion
   @JsonKey(name: '_fhirVersion')
+  @HiveField(48)
   Element? get fhirVersionElement => throw _privateConstructorUsedError;
 
   /// [format] A list of the formats supported by this implementation using
   ///  their content types.
+  @HiveField(49)
   List<Code>? get format => throw _privateConstructorUsedError;
 
   /// [formatElement] Extensions for format
   @JsonKey(name: '_format')
+  @HiveField(50)
   List<Element?>? get formatElement => throw _privateConstructorUsedError;
 
   /// [patchFormat] A list of the patch formats supported by this
   ///  implementation using their content types.
+  @HiveField(51)
   List<Code>? get patchFormat => throw _privateConstructorUsedError;
 
   /// [patchFormatElement] Extensions for patchFormat
   @JsonKey(name: '_patchFormat')
+  @HiveField(52)
   List<Element?>? get patchFormatElement => throw _privateConstructorUsedError;
 
   /// [implementationGuide] A list of implementation guides that the server
   ///  does (or should) support in their entirety.
+  @HiveField(53)
   List<Canonical>? get implementationGuide =>
       throw _privateConstructorUsedError;
 
   /// [rest] A definition of the restful capabilities of the solution, if any.
+  @HiveField(54)
   List<CapabilityStatementRest>? get rest => throw _privateConstructorUsedError;
 
   /// [messaging] A description of the messaging capabilities of the solution.
+  @HiveField(55)
   List<CapabilityStatementMessaging>? get messaging =>
       throw _privateConstructorUsedError;
 
   /// [document] A document definition.
+  @HiveField(56)
   List<CapabilityStatementDocument>? get document =>
       throw _privateConstructorUsedError;
 
@@ -300,76 +344,133 @@ abstract class $CapabilityStatementCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.CapabilityStatement)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          FhirUri? url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           Element? urlElement,
-      String? version,
+      @HiveField(13)
+      @HiveField(14)
+      @HiveField(15)
+          String? version,
       @JsonKey(name: '_version')
+      @HiveField(16)
           Element? versionElement,
-      String? name,
+      @HiveField(17)
+          String? name,
       @JsonKey(name: '_name')
+      @HiveField(18)
           Element? nameElement,
-      String? title,
+      @HiveField(19)
+          String? title,
       @JsonKey(name: '_title')
+      @HiveField(20)
           Element? titleElement,
-      Code? status,
+      @HiveField(21)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(22)
           Element? statusElement,
-      Boolean? experimental,
+      @HiveField(23)
+          Boolean? experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(24)
           Element? experimentalElement,
-      FhirDateTime? date,
+      @HiveField(25)
+          FhirDateTime? date,
       @JsonKey(name: '_date')
+      @HiveField(26)
           Element? dateElement,
-      String? publisher,
+      @HiveField(27)
+          String? publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(28)
           Element? publisherElement,
-      List<ContactDetail>? contact,
-      Markdown? description,
+      @HiveField(29)
+          List<ContactDetail>? contact,
+      @HiveField(30)
+      @HiveField(31)
+          Markdown? description,
       @JsonKey(name: '_description')
+      @HiveField(32)
           Element? descriptionElement,
-      List<UsageContext>? useContext,
-      List<CodeableConcept>? jurisdiction,
-      Markdown? purpose,
+      @HiveField(33)
+          List<UsageContext>? useContext,
+      @HiveField(34)
+          List<CodeableConcept>? jurisdiction,
+      @HiveField(35)
+          Markdown? purpose,
       @JsonKey(name: '_purpose')
+      @HiveField(36)
           Element? purposeElement,
-      Markdown? copyright,
+      @HiveField(37)
+          Markdown? copyright,
       @JsonKey(name: '_copyright')
+      @HiveField(38)
           Element? copyrightElement,
-      Code? kind,
+      @HiveField(39)
+          Code? kind,
       @JsonKey(name: '_kind')
+      @HiveField(40)
           Element? kindElement,
-      List<Canonical>? instantiates,
-      List<Canonical>? imports,
-      CapabilityStatementSoftware? software,
-      CapabilityStatementImplementation? implementation,
-      Code? fhirVersion,
+      @HiveField(41)
+          List<Canonical>? instantiates,
+      @HiveField(42)
+      @HiveField(43)
+          List<Canonical>? imports,
+      @HiveField(44)
+          CapabilityStatementSoftware? software,
+      @HiveField(45)
+      @HiveField(46)
+          CapabilityStatementImplementation? implementation,
+      @HiveField(47)
+          Code? fhirVersion,
       @JsonKey(name: '_fhirVersion')
+      @HiveField(48)
           Element? fhirVersionElement,
-      List<Code>? format,
+      @HiveField(49)
+          List<Code>? format,
       @JsonKey(name: '_format')
+      @HiveField(50)
           List<Element?>? formatElement,
-      List<Code>? patchFormat,
+      @HiveField(51)
+          List<Code>? patchFormat,
       @JsonKey(name: '_patchFormat')
+      @HiveField(52)
           List<Element?>? patchFormatElement,
-      List<Canonical>? implementationGuide,
-      List<CapabilityStatementRest>? rest,
-      List<CapabilityStatementMessaging>? messaging,
-      List<CapabilityStatementDocument>? document});
+      @HiveField(53)
+          List<Canonical>? implementationGuide,
+      @HiveField(54)
+          List<CapabilityStatementRest>? rest,
+      @HiveField(55)
+          List<CapabilityStatementMessaging>? messaging,
+      @HiveField(56)
+          List<CapabilityStatementDocument>? document});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -911,76 +1012,133 @@ abstract class _$$_CapabilityStatementCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.CapabilityStatement)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          FhirUri? url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           Element? urlElement,
-      String? version,
+      @HiveField(13)
+      @HiveField(14)
+      @HiveField(15)
+          String? version,
       @JsonKey(name: '_version')
+      @HiveField(16)
           Element? versionElement,
-      String? name,
+      @HiveField(17)
+          String? name,
       @JsonKey(name: '_name')
+      @HiveField(18)
           Element? nameElement,
-      String? title,
+      @HiveField(19)
+          String? title,
       @JsonKey(name: '_title')
+      @HiveField(20)
           Element? titleElement,
-      Code? status,
+      @HiveField(21)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(22)
           Element? statusElement,
-      Boolean? experimental,
+      @HiveField(23)
+          Boolean? experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(24)
           Element? experimentalElement,
-      FhirDateTime? date,
+      @HiveField(25)
+          FhirDateTime? date,
       @JsonKey(name: '_date')
+      @HiveField(26)
           Element? dateElement,
-      String? publisher,
+      @HiveField(27)
+          String? publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(28)
           Element? publisherElement,
-      List<ContactDetail>? contact,
-      Markdown? description,
+      @HiveField(29)
+          List<ContactDetail>? contact,
+      @HiveField(30)
+      @HiveField(31)
+          Markdown? description,
       @JsonKey(name: '_description')
+      @HiveField(32)
           Element? descriptionElement,
-      List<UsageContext>? useContext,
-      List<CodeableConcept>? jurisdiction,
-      Markdown? purpose,
+      @HiveField(33)
+          List<UsageContext>? useContext,
+      @HiveField(34)
+          List<CodeableConcept>? jurisdiction,
+      @HiveField(35)
+          Markdown? purpose,
       @JsonKey(name: '_purpose')
+      @HiveField(36)
           Element? purposeElement,
-      Markdown? copyright,
+      @HiveField(37)
+          Markdown? copyright,
       @JsonKey(name: '_copyright')
+      @HiveField(38)
           Element? copyrightElement,
-      Code? kind,
+      @HiveField(39)
+          Code? kind,
       @JsonKey(name: '_kind')
+      @HiveField(40)
           Element? kindElement,
-      List<Canonical>? instantiates,
-      List<Canonical>? imports,
-      CapabilityStatementSoftware? software,
-      CapabilityStatementImplementation? implementation,
-      Code? fhirVersion,
+      @HiveField(41)
+          List<Canonical>? instantiates,
+      @HiveField(42)
+      @HiveField(43)
+          List<Canonical>? imports,
+      @HiveField(44)
+          CapabilityStatementSoftware? software,
+      @HiveField(45)
+      @HiveField(46)
+          CapabilityStatementImplementation? implementation,
+      @HiveField(47)
+          Code? fhirVersion,
       @JsonKey(name: '_fhirVersion')
+      @HiveField(48)
           Element? fhirVersionElement,
-      List<Code>? format,
+      @HiveField(49)
+          List<Code>? format,
       @JsonKey(name: '_format')
+      @HiveField(50)
           List<Element?>? formatElement,
-      List<Code>? patchFormat,
+      @HiveField(51)
+          List<Code>? patchFormat,
       @JsonKey(name: '_patchFormat')
+      @HiveField(52)
           List<Element?>? patchFormatElement,
-      List<Canonical>? implementationGuide,
-      List<CapabilityStatementRest>? rest,
-      List<CapabilityStatementMessaging>? messaging,
-      List<CapabilityStatementDocument>? document});
+      @HiveField(53)
+          List<Canonical>? implementationGuide,
+      @HiveField(54)
+          List<CapabilityStatementRest>? rest,
+      @HiveField(55)
+          List<CapabilityStatementMessaging>? messaging,
+      @HiveField(56)
+          List<CapabilityStatementDocument>? document});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -1305,76 +1463,133 @@ class __$$_CapabilityStatementCopyWithImpl<$Res>
 class _$_CapabilityStatement extends _CapabilityStatement {
   _$_CapabilityStatement(
       {@JsonKey(unknownEnumValue: R4ResourceType.CapabilityStatement)
+      @HiveField(0)
           this.resourceType = R4ResourceType.CapabilityStatement,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.url,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          this.url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           this.urlElement,
-      this.version,
+      @HiveField(13)
+      @HiveField(14)
+      @HiveField(15)
+          this.version,
       @JsonKey(name: '_version')
+      @HiveField(16)
           this.versionElement,
-      this.name,
+      @HiveField(17)
+          this.name,
       @JsonKey(name: '_name')
+      @HiveField(18)
           this.nameElement,
-      this.title,
+      @HiveField(19)
+          this.title,
       @JsonKey(name: '_title')
+      @HiveField(20)
           this.titleElement,
-      this.status,
+      @HiveField(21)
+          this.status,
       @JsonKey(name: '_status')
+      @HiveField(22)
           this.statusElement,
-      this.experimental,
+      @HiveField(23)
+          this.experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(24)
           this.experimentalElement,
-      this.date,
+      @HiveField(25)
+          this.date,
       @JsonKey(name: '_date')
+      @HiveField(26)
           this.dateElement,
-      this.publisher,
+      @HiveField(27)
+          this.publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(28)
           this.publisherElement,
-      final List<ContactDetail>? contact,
-      this.description,
+      @HiveField(29)
+          final List<ContactDetail>? contact,
+      @HiveField(30)
+      @HiveField(31)
+          this.description,
       @JsonKey(name: '_description')
+      @HiveField(32)
           this.descriptionElement,
-      final List<UsageContext>? useContext,
-      final List<CodeableConcept>? jurisdiction,
-      this.purpose,
+      @HiveField(33)
+          final List<UsageContext>? useContext,
+      @HiveField(34)
+          final List<CodeableConcept>? jurisdiction,
+      @HiveField(35)
+          this.purpose,
       @JsonKey(name: '_purpose')
+      @HiveField(36)
           this.purposeElement,
-      this.copyright,
+      @HiveField(37)
+          this.copyright,
       @JsonKey(name: '_copyright')
+      @HiveField(38)
           this.copyrightElement,
-      this.kind,
+      @HiveField(39)
+          this.kind,
       @JsonKey(name: '_kind')
+      @HiveField(40)
           this.kindElement,
-      final List<Canonical>? instantiates,
-      final List<Canonical>? imports,
-      this.software,
-      this.implementation,
-      this.fhirVersion,
+      @HiveField(41)
+          final List<Canonical>? instantiates,
+      @HiveField(42)
+      @HiveField(43)
+          final List<Canonical>? imports,
+      @HiveField(44)
+          this.software,
+      @HiveField(45)
+      @HiveField(46)
+          this.implementation,
+      @HiveField(47)
+          this.fhirVersion,
       @JsonKey(name: '_fhirVersion')
+      @HiveField(48)
           this.fhirVersionElement,
-      final List<Code>? format,
+      @HiveField(49)
+          final List<Code>? format,
       @JsonKey(name: '_format')
+      @HiveField(50)
           final List<Element?>? formatElement,
-      final List<Code>? patchFormat,
+      @HiveField(51)
+          final List<Code>? patchFormat,
       @JsonKey(name: '_patchFormat')
+      @HiveField(52)
           final List<Element?>? patchFormatElement,
-      final List<Canonical>? implementationGuide,
-      final List<CapabilityStatementRest>? rest,
-      final List<CapabilityStatementMessaging>? messaging,
-      final List<CapabilityStatementDocument>? document})
+      @HiveField(53)
+          final List<Canonical>? implementationGuide,
+      @HiveField(54)
+          final List<CapabilityStatementRest>? rest,
+      @HiveField(55)
+          final List<CapabilityStatementMessaging>? messaging,
+      @HiveField(56)
+          final List<CapabilityStatementDocument>? document})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -1398,17 +1613,20 @@ class _$_CapabilityStatement extends _CapabilityStatement {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.CapabilityStatement)
+  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
+  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
+  @HiveField(2)
   final Meta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -1416,20 +1634,24 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
+  @HiveField(5)
   final Code? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
+  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -1439,6 +1661,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
+  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -1452,6 +1675,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -1476,6 +1700,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -1513,6 +1738,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -1530,68 +1756,76 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   /// target of a canonical reference. It SHALL remain the same when the
   ///  capability statement is stored on different servers.
   @override
+  @HiveField(11)
   final FhirUri? url;
 
   /// [urlElement] Extensions for url
   @override
   @JsonKey(name: '_url')
+  @HiveField(12)
   final Element? urlElement;
 
   /// [version] The identifier that is used to identify this version of the
-  /// capability statement when it is referenced in a specification, model,
-  /// design or instance. This is an arbitrary value managed by the capability
-  /// statement author and is not expected to be globally unique. For example,
-  /// it might be a timestamp (e.g. yyyymmdd) if a managed version is not
-  /// available. There is also no expectation that versions can be placed in a
-  ///  lexicographical sequence.
   @override
+  @HiveField(13)
+  @HiveField(14)
+  @HiveField(15)
   final String? version;
 
   /// [versionElement] Extensions for version
   @override
   @JsonKey(name: '_version')
+  @HiveField(16)
   final Element? versionElement;
 
   /// [name] A natural language name identifying the capability statement. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
   @override
+  @HiveField(17)
   final String? name;
 
   /// [nameElement] Extensions for name
   @override
   @JsonKey(name: '_name')
+  @HiveField(18)
   final Element? nameElement;
 
   /// [title] A short, descriptive, user-friendly title for the capability
   ///  statement.
   @override
+  @HiveField(19)
   final String? title;
 
   /// [titleElement] Extensions for title
   @override
   @JsonKey(name: '_title')
+  @HiveField(20)
   final Element? titleElement;
 
   /// [status] The status of this capability statement. Enables tracking the
   ///  life-cycle of the content.
   @override
+  @HiveField(21)
   final Code? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
+  @HiveField(22)
   final Element? statusElement;
 
   /// [experimental] A Boolean value to indicate that this capability statement
   /// is authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
   @override
+  @HiveField(23)
   final Boolean? experimental;
 
   /// [experimentalElement] Extensions for experimental
   @override
   @JsonKey(name: '_experimental')
+  @HiveField(24)
   final Element? experimentalElement;
 
   /// [date] The date  (and optionally time) when the capability statement was
@@ -1599,21 +1833,25 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the capability statement changes.
   @override
+  @HiveField(25)
   final FhirDateTime? date;
 
   /// [dateElement] Extensions for date
   @override
   @JsonKey(name: '_date')
+  @HiveField(26)
   final Element? dateElement;
 
   /// [publisher] The name of the organization or individual that published the
   ///  capability statement.
   @override
+  @HiveField(27)
   final String? publisher;
 
   /// [publisherElement] Extensions for publisher
   @override
   @JsonKey(name: '_publisher')
+  @HiveField(28)
   final Element? publisherElement;
 
   /// [contact] Contact details to assist a user in finding and communicating
@@ -1623,6 +1861,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
   @override
+  @HiveField(29)
   List<ContactDetail>? get contact {
     final value = _contact;
     if (value == null) return null;
@@ -1633,14 +1872,15 @@ class _$_CapabilityStatement extends _CapabilityStatement {
 
   /// [description] A free text natural language description of the capability
   /// statement from a consumer's perspective. Typically, this is used when the
-  /// capability statement describes a desired rather than an actual solution,
-  ///  for example as a formal expression of requirements as part of an RFP.
   @override
+  @HiveField(30)
+  @HiveField(31)
   final Markdown? description;
 
   /// [descriptionElement] Extensions for description
   @override
   @JsonKey(name: '_description')
+  @HiveField(32)
   final Element? descriptionElement;
 
   /// [useContext] The content was developed with a focus and intent of
@@ -1656,6 +1896,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate capability statement instances.
   @override
+  @HiveField(33)
   List<UsageContext>? get useContext {
     final value = _useContext;
     if (value == null) return null;
@@ -1671,6 +1912,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   /// [jurisdiction] A legal or geographic region in which the capability
   ///  statement is intended to be used.
   @override
+  @HiveField(34)
   List<CodeableConcept>? get jurisdiction {
     final value = _jurisdiction;
     if (value == null) return null;
@@ -1682,22 +1924,26 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   /// [purpose] Explanation of why this capability statement is needed and why
   ///  it has been designed as it has.
   @override
+  @HiveField(35)
   final Markdown? purpose;
 
   /// [purposeElement] Extensions for purpose
   @override
   @JsonKey(name: '_purpose')
+  @HiveField(36)
   final Element? purposeElement;
 
   /// [copyright] A copyright statement relating to the capability statement
   /// and/or its contents. Copyright statements are generally legal restrictions
   ///  on the use and publishing of the capability statement.
   @override
+  @HiveField(37)
   final Markdown? copyright;
 
   /// [copyrightElement] Extensions for copyright
   @override
   @JsonKey(name: '_copyright')
+  @HiveField(38)
   final Element? copyrightElement;
 
   /// [kind] The way that this statement is intended to be used, to describe an
@@ -1705,11 +1951,13 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   /// instance of software) or a class of implementation (e.g. a desired
   ///  purchase).
   @override
+  @HiveField(39)
   final Code? kind;
 
   /// [kindElement] Extensions for kind
   @override
   @JsonKey(name: '_kind')
+  @HiveField(40)
   final Element? kindElement;
 
   /// [instantiates] Reference to a canonical URL of another
@@ -1727,6 +1975,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   /// statement it claims to implement, so the capability statement must specify
   ///  the full capability details.
   @override
+  @HiveField(41)
   List<Canonical>? get instantiates {
     final value = _instantiates;
     if (value == null) return null;
@@ -1737,17 +1986,13 @@ class _$_CapabilityStatement extends _CapabilityStatement {
 
   /// [imports] Reference to a canonical URL of another CapabilityStatement
   /// that this software adds to. The capability statement automatically
-  /// includes everything in the other statement, and it is not duplicated,
-  /// though the server may repeat the same resources, interactions and
-  ///  operations to add additional details to them.
   final List<Canonical>? _imports;
 
   /// [imports] Reference to a canonical URL of another CapabilityStatement
   /// that this software adds to. The capability statement automatically
-  /// includes everything in the other statement, and it is not duplicated,
-  /// though the server may repeat the same resources, interactions and
-  ///  operations to add additional details to them.
   @override
+  @HiveField(42)
+  @HiveField(43)
   List<Canonical>? get imports {
     final value = _imports;
     if (value == null) return null;
@@ -1760,23 +2005,26 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   /// used when the capability statement describes the capabilities of a
   ///  particular software version, independent of an installation.
   @override
+  @HiveField(44)
   final CapabilityStatementSoftware? software;
 
   /// [implementation] Identifies a specific implementation instance that is
-  /// described by the capability statement - i.e. a particular installation,
-  ///  rather than the capabilities of a software program.
   @override
+  @HiveField(45)
+  @HiveField(46)
   final CapabilityStatementImplementation? implementation;
 
   /// [fhirVersion] The version of the FHIR specification that this
   /// CapabilityStatement describes (which SHALL be the same as the FHIR version
   ///  of the CapabilityStatement itself). There is no default value.
   @override
+  @HiveField(47)
   final Code? fhirVersion;
 
   /// [fhirVersionElement] Extensions for fhirVersion
   @override
   @JsonKey(name: '_fhirVersion')
+  @HiveField(48)
   final Element? fhirVersionElement;
 
   /// [format] A list of the formats supported by this implementation using
@@ -1786,6 +2034,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   /// [format] A list of the formats supported by this implementation using
   ///  their content types.
   @override
+  @HiveField(49)
   List<Code>? get format {
     final value = _format;
     if (value == null) return null;
@@ -1800,6 +2049,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   /// [formatElement] Extensions for format
   @override
   @JsonKey(name: '_format')
+  @HiveField(50)
   List<Element?>? get formatElement {
     final value = _formatElement;
     if (value == null) return null;
@@ -1815,6 +2065,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   /// [patchFormat] A list of the patch formats supported by this
   ///  implementation using their content types.
   @override
+  @HiveField(51)
   List<Code>? get patchFormat {
     final value = _patchFormat;
     if (value == null) return null;
@@ -1829,6 +2080,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   /// [patchFormatElement] Extensions for patchFormat
   @override
   @JsonKey(name: '_patchFormat')
+  @HiveField(52)
   List<Element?>? get patchFormatElement {
     final value = _patchFormatElement;
     if (value == null) return null;
@@ -1845,6 +2097,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   /// [implementationGuide] A list of implementation guides that the server
   ///  does (or should) support in their entirety.
   @override
+  @HiveField(53)
   List<Canonical>? get implementationGuide {
     final value = _implementationGuide;
     if (value == null) return null;
@@ -1859,6 +2112,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
 
   /// [rest] A definition of the restful capabilities of the solution, if any.
   @override
+  @HiveField(54)
   List<CapabilityStatementRest>? get rest {
     final value = _rest;
     if (value == null) return null;
@@ -1872,6 +2126,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
 
   /// [messaging] A description of the messaging capabilities of the solution.
   @override
+  @HiveField(55)
   List<CapabilityStatementMessaging>? get messaging {
     final value = _messaging;
     if (value == null) return null;
@@ -1885,6 +2140,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
 
   /// [document] A document definition.
   @override
+  @HiveField(56)
   List<CapabilityStatementDocument>? get document {
     final value = _document;
     if (value == null) return null;
@@ -2069,76 +2325,133 @@ class _$_CapabilityStatement extends _CapabilityStatement {
 abstract class _CapabilityStatement extends CapabilityStatement {
   factory _CapabilityStatement(
           {@JsonKey(unknownEnumValue: R4ResourceType.CapabilityStatement)
+          @HiveField(0)
               final R4ResourceType resourceType,
-          final String? id,
-          final Meta? meta,
-          final FhirUri? implicitRules,
+          @HiveField(1)
+              final String? id,
+          @HiveField(2)
+              final Meta? meta,
+          @HiveField(3)
+              final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
+          @HiveField(4)
               final Element? implicitRulesElement,
-          final Code? language,
+          @HiveField(5)
+              final Code? language,
           @JsonKey(name: '_language')
+          @HiveField(6)
               final Element? languageElement,
-          final Narrative? text,
-          final List<Resource>? contained,
+          @HiveField(7)
+              final Narrative? text,
+          @HiveField(8)
+              final List<Resource>? contained,
           @JsonKey(name: 'extension')
+          @HiveField(9)
               final List<FhirExtension>? extension_,
-          final List<FhirExtension>? modifierExtension,
-          final FhirUri? url,
+          @HiveField(10)
+              final List<FhirExtension>? modifierExtension,
+          @HiveField(11)
+              final FhirUri? url,
           @JsonKey(name: '_url')
+          @HiveField(12)
               final Element? urlElement,
-          final String? version,
+          @HiveField(13)
+          @HiveField(14)
+          @HiveField(15)
+              final String? version,
           @JsonKey(name: '_version')
+          @HiveField(16)
               final Element? versionElement,
-          final String? name,
+          @HiveField(17)
+              final String? name,
           @JsonKey(name: '_name')
+          @HiveField(18)
               final Element? nameElement,
-          final String? title,
+          @HiveField(19)
+              final String? title,
           @JsonKey(name: '_title')
+          @HiveField(20)
               final Element? titleElement,
-          final Code? status,
+          @HiveField(21)
+              final Code? status,
           @JsonKey(name: '_status')
+          @HiveField(22)
               final Element? statusElement,
-          final Boolean? experimental,
+          @HiveField(23)
+              final Boolean? experimental,
           @JsonKey(name: '_experimental')
+          @HiveField(24)
               final Element? experimentalElement,
-          final FhirDateTime? date,
+          @HiveField(25)
+              final FhirDateTime? date,
           @JsonKey(name: '_date')
+          @HiveField(26)
               final Element? dateElement,
-          final String? publisher,
+          @HiveField(27)
+              final String? publisher,
           @JsonKey(name: '_publisher')
+          @HiveField(28)
               final Element? publisherElement,
-          final List<ContactDetail>? contact,
-          final Markdown? description,
+          @HiveField(29)
+              final List<ContactDetail>? contact,
+          @HiveField(30)
+          @HiveField(31)
+              final Markdown? description,
           @JsonKey(name: '_description')
+          @HiveField(32)
               final Element? descriptionElement,
-          final List<UsageContext>? useContext,
-          final List<CodeableConcept>? jurisdiction,
-          final Markdown? purpose,
+          @HiveField(33)
+              final List<UsageContext>? useContext,
+          @HiveField(34)
+              final List<CodeableConcept>? jurisdiction,
+          @HiveField(35)
+              final Markdown? purpose,
           @JsonKey(name: '_purpose')
+          @HiveField(36)
               final Element? purposeElement,
-          final Markdown? copyright,
+          @HiveField(37)
+              final Markdown? copyright,
           @JsonKey(name: '_copyright')
+          @HiveField(38)
               final Element? copyrightElement,
-          final Code? kind,
+          @HiveField(39)
+              final Code? kind,
           @JsonKey(name: '_kind')
+          @HiveField(40)
               final Element? kindElement,
-          final List<Canonical>? instantiates,
-          final List<Canonical>? imports,
-          final CapabilityStatementSoftware? software,
-          final CapabilityStatementImplementation? implementation,
-          final Code? fhirVersion,
+          @HiveField(41)
+              final List<Canonical>? instantiates,
+          @HiveField(42)
+          @HiveField(43)
+              final List<Canonical>? imports,
+          @HiveField(44)
+              final CapabilityStatementSoftware? software,
+          @HiveField(45)
+          @HiveField(46)
+              final CapabilityStatementImplementation? implementation,
+          @HiveField(47)
+              final Code? fhirVersion,
           @JsonKey(name: '_fhirVersion')
+          @HiveField(48)
               final Element? fhirVersionElement,
-          final List<Code>? format,
+          @HiveField(49)
+              final List<Code>? format,
           @JsonKey(name: '_format')
+          @HiveField(50)
               final List<Element?>? formatElement,
-          final List<Code>? patchFormat,
+          @HiveField(51)
+              final List<Code>? patchFormat,
           @JsonKey(name: '_patchFormat')
+          @HiveField(52)
               final List<Element?>? patchFormatElement,
-          final List<Canonical>? implementationGuide,
-          final List<CapabilityStatementRest>? rest,
-          final List<CapabilityStatementMessaging>? messaging,
-          final List<CapabilityStatementDocument>? document}) =
+          @HiveField(53)
+              final List<Canonical>? implementationGuide,
+          @HiveField(54)
+              final List<CapabilityStatementRest>? rest,
+          @HiveField(55)
+              final List<CapabilityStatementMessaging>? messaging,
+          @HiveField(56)
+              final List<CapabilityStatementDocument>? document}) =
       _$_CapabilityStatement;
   _CapabilityStatement._() : super._();
 
@@ -2147,17 +2460,20 @@ abstract class _CapabilityStatement extends CapabilityStatement {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.CapabilityStatement)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta;
   @override
 
@@ -2165,20 +2481,24 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -2188,6 +2508,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -2195,6 +2516,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -2205,6 +2527,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -2221,6 +2544,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
@@ -2231,68 +2555,76 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   /// this capability statement is (or will be) published. This URL can be the
   /// target of a canonical reference. It SHALL remain the same when the
   ///  capability statement is stored on different servers.
+  @HiveField(11)
   FhirUri? get url;
   @override
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
+  @HiveField(12)
   Element? get urlElement;
   @override
 
   /// [version] The identifier that is used to identify this version of the
-  /// capability statement when it is referenced in a specification, model,
-  /// design or instance. This is an arbitrary value managed by the capability
-  /// statement author and is not expected to be globally unique. For example,
-  /// it might be a timestamp (e.g. yyyymmdd) if a managed version is not
-  /// available. There is also no expectation that versions can be placed in a
-  ///  lexicographical sequence.
+  @HiveField(13)
+  @HiveField(14)
+  @HiveField(15)
   String? get version;
   @override
 
   /// [versionElement] Extensions for version
   @JsonKey(name: '_version')
+  @HiveField(16)
   Element? get versionElement;
   @override
 
   /// [name] A natural language name identifying the capability statement. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
+  @HiveField(17)
   String? get name;
   @override
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
+  @HiveField(18)
   Element? get nameElement;
   @override
 
   /// [title] A short, descriptive, user-friendly title for the capability
   ///  statement.
+  @HiveField(19)
   String? get title;
   @override
 
   /// [titleElement] Extensions for title
   @JsonKey(name: '_title')
+  @HiveField(20)
   Element? get titleElement;
   @override
 
   /// [status] The status of this capability statement. Enables tracking the
   ///  life-cycle of the content.
+  @HiveField(21)
   Code? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(22)
   Element? get statusElement;
   @override
 
   /// [experimental] A Boolean value to indicate that this capability statement
   /// is authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
+  @HiveField(23)
   Boolean? get experimental;
   @override
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
+  @HiveField(24)
   Element? get experimentalElement;
   @override
 
@@ -2300,38 +2632,44 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   /// published. The date must change when the business version changes and it
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the capability statement changes.
+  @HiveField(25)
   FhirDateTime? get date;
   @override
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
+  @HiveField(26)
   Element? get dateElement;
   @override
 
   /// [publisher] The name of the organization or individual that published the
   ///  capability statement.
+  @HiveField(27)
   String? get publisher;
   @override
 
   /// [publisherElement] Extensions for publisher
   @JsonKey(name: '_publisher')
+  @HiveField(28)
   Element? get publisherElement;
   @override
 
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
+  @HiveField(29)
   List<ContactDetail>? get contact;
   @override
 
   /// [description] A free text natural language description of the capability
   /// statement from a consumer's perspective. Typically, this is used when the
-  /// capability statement describes a desired rather than an actual solution,
-  ///  for example as a formal expression of requirements as part of an RFP.
+  @HiveField(30)
+  @HiveField(31)
   Markdown? get description;
   @override
 
   /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
+  @HiveField(32)
   Element? get descriptionElement;
   @override
 
@@ -2340,32 +2678,38 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   /// categories (gender, age, ...) or may be references to specific programs
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate capability statement instances.
+  @HiveField(33)
   List<UsageContext>? get useContext;
   @override
 
   /// [jurisdiction] A legal or geographic region in which the capability
   ///  statement is intended to be used.
+  @HiveField(34)
   List<CodeableConcept>? get jurisdiction;
   @override
 
   /// [purpose] Explanation of why this capability statement is needed and why
   ///  it has been designed as it has.
+  @HiveField(35)
   Markdown? get purpose;
   @override
 
   /// [purposeElement] Extensions for purpose
   @JsonKey(name: '_purpose')
+  @HiveField(36)
   Element? get purposeElement;
   @override
 
   /// [copyright] A copyright statement relating to the capability statement
   /// and/or its contents. Copyright statements are generally legal restrictions
   ///  on the use and publishing of the capability statement.
+  @HiveField(37)
   Markdown? get copyright;
   @override
 
   /// [copyrightElement] Extensions for copyright
   @JsonKey(name: '_copyright')
+  @HiveField(38)
   Element? get copyrightElement;
   @override
 
@@ -2373,11 +2717,13 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   /// actual running instance of software, a particular product (kind, not
   /// instance of software) or a class of implementation (e.g. a desired
   ///  purchase).
+  @HiveField(39)
   Code? get kind;
   @override
 
   /// [kindElement] Extensions for kind
   @JsonKey(name: '_kind')
+  @HiveField(40)
   Element? get kindElement;
   @override
 
@@ -2387,74 +2733,85 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   /// service. The server may actually implement a subset of the capability
   /// statement it claims to implement, so the capability statement must specify
   ///  the full capability details.
+  @HiveField(41)
   List<Canonical>? get instantiates;
   @override
 
   /// [imports] Reference to a canonical URL of another CapabilityStatement
   /// that this software adds to. The capability statement automatically
-  /// includes everything in the other statement, and it is not duplicated,
-  /// though the server may repeat the same resources, interactions and
-  ///  operations to add additional details to them.
+  @HiveField(42)
+  @HiveField(43)
   List<Canonical>? get imports;
   @override
 
   /// [software] Software that is covered by this capability statement.  It is
   /// used when the capability statement describes the capabilities of a
   ///  particular software version, independent of an installation.
+  @HiveField(44)
   CapabilityStatementSoftware? get software;
   @override
 
   /// [implementation] Identifies a specific implementation instance that is
-  /// described by the capability statement - i.e. a particular installation,
-  ///  rather than the capabilities of a software program.
+  @HiveField(45)
+  @HiveField(46)
   CapabilityStatementImplementation? get implementation;
   @override
 
   /// [fhirVersion] The version of the FHIR specification that this
   /// CapabilityStatement describes (which SHALL be the same as the FHIR version
   ///  of the CapabilityStatement itself). There is no default value.
+  @HiveField(47)
   Code? get fhirVersion;
   @override
 
   /// [fhirVersionElement] Extensions for fhirVersion
   @JsonKey(name: '_fhirVersion')
+  @HiveField(48)
   Element? get fhirVersionElement;
   @override
 
   /// [format] A list of the formats supported by this implementation using
   ///  their content types.
+  @HiveField(49)
   List<Code>? get format;
   @override
 
   /// [formatElement] Extensions for format
   @JsonKey(name: '_format')
+  @HiveField(50)
   List<Element?>? get formatElement;
   @override
 
   /// [patchFormat] A list of the patch formats supported by this
   ///  implementation using their content types.
+  @HiveField(51)
   List<Code>? get patchFormat;
   @override
 
   /// [patchFormatElement] Extensions for patchFormat
   @JsonKey(name: '_patchFormat')
+  @HiveField(52)
   List<Element?>? get patchFormatElement;
   @override
 
   /// [implementationGuide] A list of implementation guides that the server
   ///  does (or should) support in their entirety.
+  @HiveField(53)
   List<Canonical>? get implementationGuide;
   @override
 
   /// [rest] A definition of the restful capabilities of the solution, if any.
+  @HiveField(54)
   List<CapabilityStatementRest>? get rest;
   @override
 
   /// [messaging] A description of the messaging capabilities of the solution.
+  @HiveField(55)
   List<CapabilityStatementMessaging>? get messaging;
   @override
 
   /// [document] A document definition.
+  @HiveField(56)
   List<CapabilityStatementDocument>? get document;
   @override
   @JsonKey(ignore: true)
@@ -10291,32 +10648,39 @@ CompartmentDefinition _$CompartmentDefinitionFromJson(
 /// @nodoc
 mixin _$CompartmentDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.CompartmentDefinition)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -10325,12 +10689,14 @@ mixin _$CompartmentDefinition {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -10340,6 +10706,7 @@ mixin _$CompartmentDefinition {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -10355,6 +10722,7 @@ mixin _$CompartmentDefinition {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
@@ -10365,80 +10733,93 @@ mixin _$CompartmentDefinition {
   /// instance of this compartment definition is (or will be) published. This
   /// URL can be the target of a canonical reference. It SHALL remain the same
   ///  when the compartment definition is stored on different servers.
+  @HiveField(11)
   FhirUri? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
+  @HiveField(12)
   Element? get urlElement => throw _privateConstructorUsedError;
 
   /// [version] The identifier that is used to identify this version of the
-  /// compartment definition when it is referenced in a specification, model,
-  /// design or instance. This is an arbitrary value managed by the compartment
-  /// definition author and is not expected to be globally unique. For example,
-  /// it might be a timestamp (e.g. yyyymmdd) if a managed version is not
-  /// available. There is also no expectation that versions can be placed in a
-  ///  lexicographical sequence.
+  @HiveField(13)
+  @HiveField(14)
+  @HiveField(15)
   String? get version => throw _privateConstructorUsedError;
 
   /// [versionElement] Extensions for version
   @JsonKey(name: '_version')
+  @HiveField(16)
   Element? get versionElement => throw _privateConstructorUsedError;
 
   /// [name] A natural language name identifying the compartment definition.
   /// This name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
+  @HiveField(17)
   String? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
+  @HiveField(18)
   Element? get nameElement => throw _privateConstructorUsedError;
 
   /// [status] The status of this compartment definition. Enables tracking the
   ///  life-cycle of the content.
+  @HiveField(19)
   Code? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(20)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [experimental] A Boolean value to indicate that this compartment
   /// definition is authored for testing purposes (or
   /// education/evaluation/marketing) and is not intended to be used for genuine
   ///  usage.
+  @HiveField(21)
   Boolean? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
+  @HiveField(22)
   Element? get experimentalElement => throw _privateConstructorUsedError;
 
   /// [date] The date  (and optionally time) when the compartment definition
   /// was published. The date must change when the business version changes and
   /// it must change if the status code changes. In addition, it should change
   ///  when the substantive content of the compartment definition changes.
+  @HiveField(23)
   FhirDateTime? get date => throw _privateConstructorUsedError;
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
+  @HiveField(24)
   Element? get dateElement => throw _privateConstructorUsedError;
 
   /// [publisher] The name of the organization or individual that published the
   ///  compartment definition.
+  @HiveField(25)
   String? get publisher => throw _privateConstructorUsedError;
 
   /// [publisherElement] Extensions for publisher
   @JsonKey(name: '_publisher')
+  @HiveField(26)
   Element? get publisherElement => throw _privateConstructorUsedError;
 
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
+  @HiveField(27)
   List<ContactDetail>? get contact => throw _privateConstructorUsedError;
 
   /// [description] A free text natural language description of the compartment
   ///  definition from a consumer's perspective.
+  @HiveField(28)
   Markdown? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
+  @HiveField(29)
   Element? get descriptionElement => throw _privateConstructorUsedError;
 
   /// [useContext] The content was developed with a focus and intent of
@@ -10446,32 +10827,40 @@ mixin _$CompartmentDefinition {
   /// categories (gender, age, ...) or may be references to specific programs
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate compartment definition instances.
+  @HiveField(30)
   List<UsageContext>? get useContext => throw _privateConstructorUsedError;
 
   /// [purpose] Explanation of why this compartment definition is needed and
   ///  why it has been designed as it has.
+  @HiveField(31)
   Markdown? get purpose => throw _privateConstructorUsedError;
 
   /// [purposeElement] Extensions for purpose
   @JsonKey(name: '_purpose')
+  @HiveField(32)
   Element? get purposeElement => throw _privateConstructorUsedError;
 
   /// [code] Which compartment this definition describes.
+  @HiveField(33)
   Code? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
+  @HiveField(34)
   Element? get codeElement => throw _privateConstructorUsedError;
 
   /// [search] Whether the search syntax is supported,.
+  @HiveField(35)
   Boolean? get search => throw _privateConstructorUsedError;
 
   /// [searchElement] Extensions for search
   @JsonKey(name: '_search')
+  @HiveField(36)
   Element? get searchElement => throw _privateConstructorUsedError;
 
   /// [resource] Information about how a resource is related to the
   ///  compartment.
+  @HiveField(37)
   List<CompartmentDefinitionResource>? get resource =>
       throw _privateConstructorUsedError;
 
@@ -10489,56 +10878,94 @@ abstract class $CompartmentDefinitionCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.CompartmentDefinition)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          FhirUri? url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           Element? urlElement,
-      String? version,
+      @HiveField(13)
+      @HiveField(14)
+      @HiveField(15)
+          String? version,
       @JsonKey(name: '_version')
+      @HiveField(16)
           Element? versionElement,
-      String? name,
+      @HiveField(17)
+          String? name,
       @JsonKey(name: '_name')
+      @HiveField(18)
           Element? nameElement,
-      Code? status,
+      @HiveField(19)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(20)
           Element? statusElement,
-      Boolean? experimental,
+      @HiveField(21)
+          Boolean? experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(22)
           Element? experimentalElement,
-      FhirDateTime? date,
+      @HiveField(23)
+          FhirDateTime? date,
       @JsonKey(name: '_date')
+      @HiveField(24)
           Element? dateElement,
-      String? publisher,
+      @HiveField(25)
+          String? publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(26)
           Element? publisherElement,
-      List<ContactDetail>? contact,
-      Markdown? description,
+      @HiveField(27)
+          List<ContactDetail>? contact,
+      @HiveField(28)
+          Markdown? description,
       @JsonKey(name: '_description')
+      @HiveField(29)
           Element? descriptionElement,
-      List<UsageContext>? useContext,
-      Markdown? purpose,
+      @HiveField(30)
+          List<UsageContext>? useContext,
+      @HiveField(31)
+          Markdown? purpose,
       @JsonKey(name: '_purpose')
+      @HiveField(32)
           Element? purposeElement,
-      Code? code,
+      @HiveField(33)
+          Code? code,
       @JsonKey(name: '_code')
+      @HiveField(34)
           Element? codeElement,
-      Boolean? search,
+      @HiveField(35)
+          Boolean? search,
       @JsonKey(name: '_search')
+      @HiveField(36)
           Element? searchElement,
-      List<CompartmentDefinitionResource>? resource});
+      @HiveField(37)
+          List<CompartmentDefinitionResource>? resource});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -10947,56 +11374,94 @@ abstract class _$$_CompartmentDefinitionCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.CompartmentDefinition)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          FhirUri? url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           Element? urlElement,
-      String? version,
+      @HiveField(13)
+      @HiveField(14)
+      @HiveField(15)
+          String? version,
       @JsonKey(name: '_version')
+      @HiveField(16)
           Element? versionElement,
-      String? name,
+      @HiveField(17)
+          String? name,
       @JsonKey(name: '_name')
+      @HiveField(18)
           Element? nameElement,
-      Code? status,
+      @HiveField(19)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(20)
           Element? statusElement,
-      Boolean? experimental,
+      @HiveField(21)
+          Boolean? experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(22)
           Element? experimentalElement,
-      FhirDateTime? date,
+      @HiveField(23)
+          FhirDateTime? date,
       @JsonKey(name: '_date')
+      @HiveField(24)
           Element? dateElement,
-      String? publisher,
+      @HiveField(25)
+          String? publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(26)
           Element? publisherElement,
-      List<ContactDetail>? contact,
-      Markdown? description,
+      @HiveField(27)
+          List<ContactDetail>? contact,
+      @HiveField(28)
+          Markdown? description,
       @JsonKey(name: '_description')
+      @HiveField(29)
           Element? descriptionElement,
-      List<UsageContext>? useContext,
-      Markdown? purpose,
+      @HiveField(30)
+          List<UsageContext>? useContext,
+      @HiveField(31)
+          Markdown? purpose,
       @JsonKey(name: '_purpose')
+      @HiveField(32)
           Element? purposeElement,
-      Code? code,
+      @HiveField(33)
+          Code? code,
       @JsonKey(name: '_code')
+      @HiveField(34)
           Element? codeElement,
-      Boolean? search,
+      @HiveField(35)
+          Boolean? search,
       @JsonKey(name: '_search')
+      @HiveField(36)
           Element? searchElement,
-      List<CompartmentDefinitionResource>? resource});
+      @HiveField(37)
+          List<CompartmentDefinitionResource>? resource});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -11233,56 +11698,94 @@ class __$$_CompartmentDefinitionCopyWithImpl<$Res>
 class _$_CompartmentDefinition extends _CompartmentDefinition {
   _$_CompartmentDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.CompartmentDefinition)
+      @HiveField(0)
           this.resourceType = R4ResourceType.CompartmentDefinition,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.url,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          this.url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           this.urlElement,
-      this.version,
+      @HiveField(13)
+      @HiveField(14)
+      @HiveField(15)
+          this.version,
       @JsonKey(name: '_version')
+      @HiveField(16)
           this.versionElement,
-      this.name,
+      @HiveField(17)
+          this.name,
       @JsonKey(name: '_name')
+      @HiveField(18)
           this.nameElement,
-      this.status,
+      @HiveField(19)
+          this.status,
       @JsonKey(name: '_status')
+      @HiveField(20)
           this.statusElement,
-      this.experimental,
+      @HiveField(21)
+          this.experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(22)
           this.experimentalElement,
-      this.date,
+      @HiveField(23)
+          this.date,
       @JsonKey(name: '_date')
+      @HiveField(24)
           this.dateElement,
-      this.publisher,
+      @HiveField(25)
+          this.publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(26)
           this.publisherElement,
-      final List<ContactDetail>? contact,
-      this.description,
+      @HiveField(27)
+          final List<ContactDetail>? contact,
+      @HiveField(28)
+          this.description,
       @JsonKey(name: '_description')
+      @HiveField(29)
           this.descriptionElement,
-      final List<UsageContext>? useContext,
-      this.purpose,
+      @HiveField(30)
+          final List<UsageContext>? useContext,
+      @HiveField(31)
+          this.purpose,
       @JsonKey(name: '_purpose')
+      @HiveField(32)
           this.purposeElement,
-      this.code,
+      @HiveField(33)
+          this.code,
       @JsonKey(name: '_code')
+      @HiveField(34)
           this.codeElement,
-      this.search,
+      @HiveField(35)
+          this.search,
       @JsonKey(name: '_search')
+      @HiveField(36)
           this.searchElement,
-      final List<CompartmentDefinitionResource>? resource})
+      @HiveField(37)
+          final List<CompartmentDefinitionResource>? resource})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -11296,17 +11799,20 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.CompartmentDefinition)
+  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
+  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
+  @HiveField(2)
   final Meta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -11314,20 +11820,24 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
+  @HiveField(5)
   final Code? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
+  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -11337,6 +11847,7 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
+  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -11350,6 +11861,7 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -11374,6 +11886,7 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -11411,6 +11924,7 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -11428,47 +11942,51 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
   /// URL can be the target of a canonical reference. It SHALL remain the same
   ///  when the compartment definition is stored on different servers.
   @override
+  @HiveField(11)
   final FhirUri? url;
 
   /// [urlElement] Extensions for url
   @override
   @JsonKey(name: '_url')
+  @HiveField(12)
   final Element? urlElement;
 
   /// [version] The identifier that is used to identify this version of the
-  /// compartment definition when it is referenced in a specification, model,
-  /// design or instance. This is an arbitrary value managed by the compartment
-  /// definition author and is not expected to be globally unique. For example,
-  /// it might be a timestamp (e.g. yyyymmdd) if a managed version is not
-  /// available. There is also no expectation that versions can be placed in a
-  ///  lexicographical sequence.
   @override
+  @HiveField(13)
+  @HiveField(14)
+  @HiveField(15)
   final String? version;
 
   /// [versionElement] Extensions for version
   @override
   @JsonKey(name: '_version')
+  @HiveField(16)
   final Element? versionElement;
 
   /// [name] A natural language name identifying the compartment definition.
   /// This name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
   @override
+  @HiveField(17)
   final String? name;
 
   /// [nameElement] Extensions for name
   @override
   @JsonKey(name: '_name')
+  @HiveField(18)
   final Element? nameElement;
 
   /// [status] The status of this compartment definition. Enables tracking the
   ///  life-cycle of the content.
   @override
+  @HiveField(19)
   final Code? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
+  @HiveField(20)
   final Element? statusElement;
 
   /// [experimental] A Boolean value to indicate that this compartment
@@ -11476,11 +11994,13 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
   /// education/evaluation/marketing) and is not intended to be used for genuine
   ///  usage.
   @override
+  @HiveField(21)
   final Boolean? experimental;
 
   /// [experimentalElement] Extensions for experimental
   @override
   @JsonKey(name: '_experimental')
+  @HiveField(22)
   final Element? experimentalElement;
 
   /// [date] The date  (and optionally time) when the compartment definition
@@ -11488,21 +12008,25 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
   /// it must change if the status code changes. In addition, it should change
   ///  when the substantive content of the compartment definition changes.
   @override
+  @HiveField(23)
   final FhirDateTime? date;
 
   /// [dateElement] Extensions for date
   @override
   @JsonKey(name: '_date')
+  @HiveField(24)
   final Element? dateElement;
 
   /// [publisher] The name of the organization or individual that published the
   ///  compartment definition.
   @override
+  @HiveField(25)
   final String? publisher;
 
   /// [publisherElement] Extensions for publisher
   @override
   @JsonKey(name: '_publisher')
+  @HiveField(26)
   final Element? publisherElement;
 
   /// [contact] Contact details to assist a user in finding and communicating
@@ -11512,6 +12036,7 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
   @override
+  @HiveField(27)
   List<ContactDetail>? get contact {
     final value = _contact;
     if (value == null) return null;
@@ -11523,11 +12048,13 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
   /// [description] A free text natural language description of the compartment
   ///  definition from a consumer's perspective.
   @override
+  @HiveField(28)
   final Markdown? description;
 
   /// [descriptionElement] Extensions for description
   @override
   @JsonKey(name: '_description')
+  @HiveField(29)
   final Element? descriptionElement;
 
   /// [useContext] The content was developed with a focus and intent of
@@ -11543,6 +12070,7 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate compartment definition instances.
   @override
+  @HiveField(30)
   List<UsageContext>? get useContext {
     final value = _useContext;
     if (value == null) return null;
@@ -11554,29 +12082,35 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
   /// [purpose] Explanation of why this compartment definition is needed and
   ///  why it has been designed as it has.
   @override
+  @HiveField(31)
   final Markdown? purpose;
 
   /// [purposeElement] Extensions for purpose
   @override
   @JsonKey(name: '_purpose')
+  @HiveField(32)
   final Element? purposeElement;
 
   /// [code] Which compartment this definition describes.
   @override
+  @HiveField(33)
   final Code? code;
 
   /// [codeElement] Extensions for code
   @override
   @JsonKey(name: '_code')
+  @HiveField(34)
   final Element? codeElement;
 
   /// [search] Whether the search syntax is supported,.
   @override
+  @HiveField(35)
   final Boolean? search;
 
   /// [searchElement] Extensions for search
   @override
   @JsonKey(name: '_search')
+  @HiveField(36)
   final Element? searchElement;
 
   /// [resource] Information about how a resource is related to the
@@ -11586,6 +12120,7 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
   /// [resource] Information about how a resource is related to the
   ///  compartment.
   @override
+  @HiveField(37)
   List<CompartmentDefinitionResource>? get resource {
     final value = _resource;
     if (value == null) return null;
@@ -11725,56 +12260,94 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
 abstract class _CompartmentDefinition extends CompartmentDefinition {
   factory _CompartmentDefinition(
           {@JsonKey(unknownEnumValue: R4ResourceType.CompartmentDefinition)
+          @HiveField(0)
               final R4ResourceType resourceType,
-          final String? id,
-          final Meta? meta,
-          final FhirUri? implicitRules,
+          @HiveField(1)
+              final String? id,
+          @HiveField(2)
+              final Meta? meta,
+          @HiveField(3)
+              final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
+          @HiveField(4)
               final Element? implicitRulesElement,
-          final Code? language,
+          @HiveField(5)
+              final Code? language,
           @JsonKey(name: '_language')
+          @HiveField(6)
               final Element? languageElement,
-          final Narrative? text,
-          final List<Resource>? contained,
+          @HiveField(7)
+              final Narrative? text,
+          @HiveField(8)
+              final List<Resource>? contained,
           @JsonKey(name: 'extension')
+          @HiveField(9)
               final List<FhirExtension>? extension_,
-          final List<FhirExtension>? modifierExtension,
-          final FhirUri? url,
+          @HiveField(10)
+              final List<FhirExtension>? modifierExtension,
+          @HiveField(11)
+              final FhirUri? url,
           @JsonKey(name: '_url')
+          @HiveField(12)
               final Element? urlElement,
-          final String? version,
+          @HiveField(13)
+          @HiveField(14)
+          @HiveField(15)
+              final String? version,
           @JsonKey(name: '_version')
+          @HiveField(16)
               final Element? versionElement,
-          final String? name,
+          @HiveField(17)
+              final String? name,
           @JsonKey(name: '_name')
+          @HiveField(18)
               final Element? nameElement,
-          final Code? status,
+          @HiveField(19)
+              final Code? status,
           @JsonKey(name: '_status')
+          @HiveField(20)
               final Element? statusElement,
-          final Boolean? experimental,
+          @HiveField(21)
+              final Boolean? experimental,
           @JsonKey(name: '_experimental')
+          @HiveField(22)
               final Element? experimentalElement,
-          final FhirDateTime? date,
+          @HiveField(23)
+              final FhirDateTime? date,
           @JsonKey(name: '_date')
+          @HiveField(24)
               final Element? dateElement,
-          final String? publisher,
+          @HiveField(25)
+              final String? publisher,
           @JsonKey(name: '_publisher')
+          @HiveField(26)
               final Element? publisherElement,
-          final List<ContactDetail>? contact,
-          final Markdown? description,
+          @HiveField(27)
+              final List<ContactDetail>? contact,
+          @HiveField(28)
+              final Markdown? description,
           @JsonKey(name: '_description')
+          @HiveField(29)
               final Element? descriptionElement,
-          final List<UsageContext>? useContext,
-          final Markdown? purpose,
+          @HiveField(30)
+              final List<UsageContext>? useContext,
+          @HiveField(31)
+              final Markdown? purpose,
           @JsonKey(name: '_purpose')
+          @HiveField(32)
               final Element? purposeElement,
-          final Code? code,
+          @HiveField(33)
+              final Code? code,
           @JsonKey(name: '_code')
+          @HiveField(34)
               final Element? codeElement,
-          final Boolean? search,
+          @HiveField(35)
+              final Boolean? search,
           @JsonKey(name: '_search')
+          @HiveField(36)
               final Element? searchElement,
-          final List<CompartmentDefinitionResource>? resource}) =
+          @HiveField(37)
+              final List<CompartmentDefinitionResource>? resource}) =
       _$_CompartmentDefinition;
   _CompartmentDefinition._() : super._();
 
@@ -11783,17 +12356,20 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.CompartmentDefinition)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta;
   @override
 
@@ -11801,20 +12377,24 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -11824,6 +12404,7 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -11831,6 +12412,7 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -11841,6 +12423,7 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -11857,6 +12440,7 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
@@ -11867,47 +12451,51 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
   /// instance of this compartment definition is (or will be) published. This
   /// URL can be the target of a canonical reference. It SHALL remain the same
   ///  when the compartment definition is stored on different servers.
+  @HiveField(11)
   FhirUri? get url;
   @override
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
+  @HiveField(12)
   Element? get urlElement;
   @override
 
   /// [version] The identifier that is used to identify this version of the
-  /// compartment definition when it is referenced in a specification, model,
-  /// design or instance. This is an arbitrary value managed by the compartment
-  /// definition author and is not expected to be globally unique. For example,
-  /// it might be a timestamp (e.g. yyyymmdd) if a managed version is not
-  /// available. There is also no expectation that versions can be placed in a
-  ///  lexicographical sequence.
+  @HiveField(13)
+  @HiveField(14)
+  @HiveField(15)
   String? get version;
   @override
 
   /// [versionElement] Extensions for version
   @JsonKey(name: '_version')
+  @HiveField(16)
   Element? get versionElement;
   @override
 
   /// [name] A natural language name identifying the compartment definition.
   /// This name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
+  @HiveField(17)
   String? get name;
   @override
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
+  @HiveField(18)
   Element? get nameElement;
   @override
 
   /// [status] The status of this compartment definition. Enables tracking the
   ///  life-cycle of the content.
+  @HiveField(19)
   Code? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(20)
   Element? get statusElement;
   @override
 
@@ -11915,11 +12503,13 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
   /// definition is authored for testing purposes (or
   /// education/evaluation/marketing) and is not intended to be used for genuine
   ///  usage.
+  @HiveField(21)
   Boolean? get experimental;
   @override
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
+  @HiveField(22)
   Element? get experimentalElement;
   @override
 
@@ -11927,36 +12517,43 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
   /// was published. The date must change when the business version changes and
   /// it must change if the status code changes. In addition, it should change
   ///  when the substantive content of the compartment definition changes.
+  @HiveField(23)
   FhirDateTime? get date;
   @override
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
+  @HiveField(24)
   Element? get dateElement;
   @override
 
   /// [publisher] The name of the organization or individual that published the
   ///  compartment definition.
+  @HiveField(25)
   String? get publisher;
   @override
 
   /// [publisherElement] Extensions for publisher
   @JsonKey(name: '_publisher')
+  @HiveField(26)
   Element? get publisherElement;
   @override
 
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
+  @HiveField(27)
   List<ContactDetail>? get contact;
   @override
 
   /// [description] A free text natural language description of the compartment
   ///  definition from a consumer's perspective.
+  @HiveField(28)
   Markdown? get description;
   @override
 
   /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
+  @HiveField(29)
   Element? get descriptionElement;
   @override
 
@@ -11965,39 +12562,47 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
   /// categories (gender, age, ...) or may be references to specific programs
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate compartment definition instances.
+  @HiveField(30)
   List<UsageContext>? get useContext;
   @override
 
   /// [purpose] Explanation of why this compartment definition is needed and
   ///  why it has been designed as it has.
+  @HiveField(31)
   Markdown? get purpose;
   @override
 
   /// [purposeElement] Extensions for purpose
   @JsonKey(name: '_purpose')
+  @HiveField(32)
   Element? get purposeElement;
   @override
 
   /// [code] Which compartment this definition describes.
+  @HiveField(33)
   Code? get code;
   @override
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
+  @HiveField(34)
   Element? get codeElement;
   @override
 
   /// [search] Whether the search syntax is supported,.
+  @HiveField(35)
   Boolean? get search;
   @override
 
   /// [searchElement] Extensions for search
   @JsonKey(name: '_search')
+  @HiveField(36)
   Element? get searchElement;
   @override
 
   /// [resource] Information about how a resource is related to the
   ///  compartment.
+  @HiveField(37)
   List<CompartmentDefinitionResource>? get resource;
   @override
   @JsonKey(ignore: true)
@@ -12565,32 +13170,39 @@ ExampleScenario _$ExampleScenarioFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ExampleScenario {
   @JsonKey(unknownEnumValue: R4ResourceType.ExampleScenario)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -12599,12 +13211,14 @@ mixin _$ExampleScenario {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -12614,6 +13228,7 @@ mixin _$ExampleScenario {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -12629,6 +13244,7 @@ mixin _$ExampleScenario {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
@@ -12639,15 +13255,18 @@ mixin _$ExampleScenario {
   /// example scenario is (or will be) published. This URL can be the target of
   /// a canonical reference. It SHALL remain the same when the example scenario
   ///  is stored on different servers.
+  @HiveField(11)
   FhirUri? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
+  @HiveField(12)
   Element? get urlElement => throw _privateConstructorUsedError;
 
   /// [identifier] A formal identifier that is used to identify this example
   /// scenario when it is represented in other formats, or referenced in a
   ///  specification, model, design or an instance.
+  @HiveField(13)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [version] The identifier that is used to identify this version of the
@@ -12657,36 +13276,44 @@ mixin _$ExampleScenario {
   /// a timestamp (e.g. yyyymmdd) if a managed version is not available. There
   /// is also no expectation that versions can be placed in a lexicographical
   ///  sequence.
+  @HiveField(14)
   String? get version => throw _privateConstructorUsedError;
 
   /// [versionElement] Extensions for version
   @JsonKey(name: '_version')
+  @HiveField(15)
   Element? get versionElement => throw _privateConstructorUsedError;
 
   /// [name] A natural language name identifying the example scenario. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
+  @HiveField(16)
   String? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
+  @HiveField(17)
   Element? get nameElement => throw _privateConstructorUsedError;
 
   /// [status] The status of this example scenario. Enables tracking the
   ///  life-cycle of the content.
+  @HiveField(18)
   Code? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(19)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [experimental] A Boolean value to indicate that this example scenario is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
+  @HiveField(20)
   Boolean? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
+  @HiveField(21)
   Element? get experimentalElement => throw _privateConstructorUsedError;
 
   /// [date] The date  (and optionally time) when the example scenario was
@@ -12694,22 +13321,27 @@ mixin _$ExampleScenario {
   /// must change if the status code changes. In addition, it should change when
   /// the substantive content of the example scenario changes. (e.g. the
   ///  'content logical definition').
+  @HiveField(22)
   FhirDateTime? get date => throw _privateConstructorUsedError;
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
+  @HiveField(23)
   Element? get dateElement => throw _privateConstructorUsedError;
 
   /// [publisher] The name of the organization or individual that published the
   ///  example scenario.
+  @HiveField(24)
   String? get publisher => throw _privateConstructorUsedError;
 
   /// [publisherElement] Extensions for publisher
   @JsonKey(name: '_publisher')
+  @HiveField(25)
   Element? get publisherElement => throw _privateConstructorUsedError;
 
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
+  @HiveField(26)
   List<ContactDetail>? get contact => throw _privateConstructorUsedError;
 
   /// [useContext] The content was developed with a focus and intent of
@@ -12717,43 +13349,53 @@ mixin _$ExampleScenario {
   /// categories (gender, age, ...) or may be references to specific programs
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate example scenario instances.
+  @HiveField(27)
   List<UsageContext>? get useContext => throw _privateConstructorUsedError;
 
   /// [jurisdiction] A legal or geographic region in which the example scenario
   ///  is intended to be used.
+  @HiveField(28)
   List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
 
   /// [copyright] A copyright statement relating to the example scenario and/or
   /// its contents. Copyright statements are generally legal restrictions on the
   ///  use and publishing of the example scenario.
+  @HiveField(29)
   Markdown? get copyright => throw _privateConstructorUsedError;
 
   /// [copyrightElement] Extensions for copyright
   @JsonKey(name: '_copyright')
+  @HiveField(30)
   Element? get copyrightElement => throw _privateConstructorUsedError;
 
   /// [purpose] What the example scenario resource is created for. This should
   /// not be used to show the business purpose of the scenario itself, but the
   ///  purpose of documenting a scenario.
+  @HiveField(31)
   Markdown? get purpose => throw _privateConstructorUsedError;
 
   /// [purposeElement] Extensions for purpose
   @JsonKey(name: '_purpose')
+  @HiveField(32)
   Element? get purposeElement => throw _privateConstructorUsedError;
 
   /// [actor] Actor participating in the resource.
+  @HiveField(33)
   List<ExampleScenarioActor>? get actor => throw _privateConstructorUsedError;
 
   /// [instance] Each resource and each version that is present in the
   ///  workflow.
+  @HiveField(34)
   List<ExampleScenarioInstance>? get instance =>
       throw _privateConstructorUsedError;
 
   /// [process] Each major process - a group of operations.
+  @HiveField(35)
   List<ExampleScenarioProcess>? get process =>
       throw _privateConstructorUsedError;
 
   /// [workflow] Another nested workflow.
+  @HiveField(36)
   List<Canonical>? get workflow => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -12770,55 +13412,92 @@ abstract class $ExampleScenarioCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ExampleScenario)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          FhirUri? url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           Element? urlElement,
-      List<Identifier>? identifier,
-      String? version,
+      @HiveField(13)
+          List<Identifier>? identifier,
+      @HiveField(14)
+          String? version,
       @JsonKey(name: '_version')
+      @HiveField(15)
           Element? versionElement,
-      String? name,
+      @HiveField(16)
+          String? name,
       @JsonKey(name: '_name')
+      @HiveField(17)
           Element? nameElement,
-      Code? status,
+      @HiveField(18)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(19)
           Element? statusElement,
-      Boolean? experimental,
+      @HiveField(20)
+          Boolean? experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(21)
           Element? experimentalElement,
-      FhirDateTime? date,
+      @HiveField(22)
+          FhirDateTime? date,
       @JsonKey(name: '_date')
+      @HiveField(23)
           Element? dateElement,
-      String? publisher,
+      @HiveField(24)
+          String? publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(25)
           Element? publisherElement,
-      List<ContactDetail>? contact,
-      List<UsageContext>? useContext,
-      List<CodeableConcept>? jurisdiction,
-      Markdown? copyright,
+      @HiveField(26)
+          List<ContactDetail>? contact,
+      @HiveField(27)
+          List<UsageContext>? useContext,
+      @HiveField(28)
+          List<CodeableConcept>? jurisdiction,
+      @HiveField(29)
+          Markdown? copyright,
       @JsonKey(name: '_copyright')
+      @HiveField(30)
           Element? copyrightElement,
-      Markdown? purpose,
+      @HiveField(31)
+          Markdown? purpose,
       @JsonKey(name: '_purpose')
+      @HiveField(32)
           Element? purposeElement,
-      List<ExampleScenarioActor>? actor,
-      List<ExampleScenarioInstance>? instance,
-      List<ExampleScenarioProcess>? process,
-      List<Canonical>? workflow});
+      @HiveField(33)
+          List<ExampleScenarioActor>? actor,
+      @HiveField(34)
+          List<ExampleScenarioInstance>? instance,
+      @HiveField(35)
+          List<ExampleScenarioProcess>? process,
+      @HiveField(36)
+          List<Canonical>? workflow});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -13205,55 +13884,92 @@ abstract class _$$_ExampleScenarioCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ExampleScenario)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          FhirUri? url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           Element? urlElement,
-      List<Identifier>? identifier,
-      String? version,
+      @HiveField(13)
+          List<Identifier>? identifier,
+      @HiveField(14)
+          String? version,
       @JsonKey(name: '_version')
+      @HiveField(15)
           Element? versionElement,
-      String? name,
+      @HiveField(16)
+          String? name,
       @JsonKey(name: '_name')
+      @HiveField(17)
           Element? nameElement,
-      Code? status,
+      @HiveField(18)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(19)
           Element? statusElement,
-      Boolean? experimental,
+      @HiveField(20)
+          Boolean? experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(21)
           Element? experimentalElement,
-      FhirDateTime? date,
+      @HiveField(22)
+          FhirDateTime? date,
       @JsonKey(name: '_date')
+      @HiveField(23)
           Element? dateElement,
-      String? publisher,
+      @HiveField(24)
+          String? publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(25)
           Element? publisherElement,
-      List<ContactDetail>? contact,
-      List<UsageContext>? useContext,
-      List<CodeableConcept>? jurisdiction,
-      Markdown? copyright,
+      @HiveField(26)
+          List<ContactDetail>? contact,
+      @HiveField(27)
+          List<UsageContext>? useContext,
+      @HiveField(28)
+          List<CodeableConcept>? jurisdiction,
+      @HiveField(29)
+          Markdown? copyright,
       @JsonKey(name: '_copyright')
+      @HiveField(30)
           Element? copyrightElement,
-      Markdown? purpose,
+      @HiveField(31)
+          Markdown? purpose,
       @JsonKey(name: '_purpose')
+      @HiveField(32)
           Element? purposeElement,
-      List<ExampleScenarioActor>? actor,
-      List<ExampleScenarioInstance>? instance,
-      List<ExampleScenarioProcess>? process,
-      List<Canonical>? workflow});
+      @HiveField(33)
+          List<ExampleScenarioActor>? actor,
+      @HiveField(34)
+          List<ExampleScenarioInstance>? instance,
+      @HiveField(35)
+          List<ExampleScenarioProcess>? process,
+      @HiveField(36)
+          List<Canonical>? workflow});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -13491,55 +14207,92 @@ class __$$_ExampleScenarioCopyWithImpl<$Res>
 class _$_ExampleScenario extends _ExampleScenario {
   _$_ExampleScenario(
       {@JsonKey(unknownEnumValue: R4ResourceType.ExampleScenario)
+      @HiveField(0)
           this.resourceType = R4ResourceType.ExampleScenario,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.url,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          this.url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           this.urlElement,
-      final List<Identifier>? identifier,
-      this.version,
+      @HiveField(13)
+          final List<Identifier>? identifier,
+      @HiveField(14)
+          this.version,
       @JsonKey(name: '_version')
+      @HiveField(15)
           this.versionElement,
-      this.name,
+      @HiveField(16)
+          this.name,
       @JsonKey(name: '_name')
+      @HiveField(17)
           this.nameElement,
-      this.status,
+      @HiveField(18)
+          this.status,
       @JsonKey(name: '_status')
+      @HiveField(19)
           this.statusElement,
-      this.experimental,
+      @HiveField(20)
+          this.experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(21)
           this.experimentalElement,
-      this.date,
+      @HiveField(22)
+          this.date,
       @JsonKey(name: '_date')
+      @HiveField(23)
           this.dateElement,
-      this.publisher,
+      @HiveField(24)
+          this.publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(25)
           this.publisherElement,
-      final List<ContactDetail>? contact,
-      final List<UsageContext>? useContext,
-      final List<CodeableConcept>? jurisdiction,
-      this.copyright,
+      @HiveField(26)
+          final List<ContactDetail>? contact,
+      @HiveField(27)
+          final List<UsageContext>? useContext,
+      @HiveField(28)
+          final List<CodeableConcept>? jurisdiction,
+      @HiveField(29)
+          this.copyright,
       @JsonKey(name: '_copyright')
+      @HiveField(30)
           this.copyrightElement,
-      this.purpose,
+      @HiveField(31)
+          this.purpose,
       @JsonKey(name: '_purpose')
+      @HiveField(32)
           this.purposeElement,
-      final List<ExampleScenarioActor>? actor,
-      final List<ExampleScenarioInstance>? instance,
-      final List<ExampleScenarioProcess>? process,
-      final List<Canonical>? workflow})
+      @HiveField(33)
+          final List<ExampleScenarioActor>? actor,
+      @HiveField(34)
+          final List<ExampleScenarioInstance>? instance,
+      @HiveField(35)
+          final List<ExampleScenarioProcess>? process,
+      @HiveField(36)
+          final List<Canonical>? workflow})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -13558,17 +14311,20 @@ class _$_ExampleScenario extends _ExampleScenario {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ExampleScenario)
+  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
+  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
+  @HiveField(2)
   final Meta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -13576,20 +14332,24 @@ class _$_ExampleScenario extends _ExampleScenario {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
+  @HiveField(5)
   final Code? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
+  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -13599,6 +14359,7 @@ class _$_ExampleScenario extends _ExampleScenario {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
+  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -13612,6 +14373,7 @@ class _$_ExampleScenario extends _ExampleScenario {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -13636,6 +14398,7 @@ class _$_ExampleScenario extends _ExampleScenario {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -13673,6 +14436,7 @@ class _$_ExampleScenario extends _ExampleScenario {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -13690,11 +14454,13 @@ class _$_ExampleScenario extends _ExampleScenario {
   /// a canonical reference. It SHALL remain the same when the example scenario
   ///  is stored on different servers.
   @override
+  @HiveField(11)
   final FhirUri? url;
 
   /// [urlElement] Extensions for url
   @override
   @JsonKey(name: '_url')
+  @HiveField(12)
   final Element? urlElement;
 
   /// [identifier] A formal identifier that is used to identify this example
@@ -13706,6 +14472,7 @@ class _$_ExampleScenario extends _ExampleScenario {
   /// scenario when it is represented in other formats, or referenced in a
   ///  specification, model, design or an instance.
   @override
+  @HiveField(13)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -13722,43 +14489,51 @@ class _$_ExampleScenario extends _ExampleScenario {
   /// is also no expectation that versions can be placed in a lexicographical
   ///  sequence.
   @override
+  @HiveField(14)
   final String? version;
 
   /// [versionElement] Extensions for version
   @override
   @JsonKey(name: '_version')
+  @HiveField(15)
   final Element? versionElement;
 
   /// [name] A natural language name identifying the example scenario. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
   @override
+  @HiveField(16)
   final String? name;
 
   /// [nameElement] Extensions for name
   @override
   @JsonKey(name: '_name')
+  @HiveField(17)
   final Element? nameElement;
 
   /// [status] The status of this example scenario. Enables tracking the
   ///  life-cycle of the content.
   @override
+  @HiveField(18)
   final Code? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
+  @HiveField(19)
   final Element? statusElement;
 
   /// [experimental] A Boolean value to indicate that this example scenario is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
   @override
+  @HiveField(20)
   final Boolean? experimental;
 
   /// [experimentalElement] Extensions for experimental
   @override
   @JsonKey(name: '_experimental')
+  @HiveField(21)
   final Element? experimentalElement;
 
   /// [date] The date  (and optionally time) when the example scenario was
@@ -13767,21 +14542,25 @@ class _$_ExampleScenario extends _ExampleScenario {
   /// the substantive content of the example scenario changes. (e.g. the
   ///  'content logical definition').
   @override
+  @HiveField(22)
   final FhirDateTime? date;
 
   /// [dateElement] Extensions for date
   @override
   @JsonKey(name: '_date')
+  @HiveField(23)
   final Element? dateElement;
 
   /// [publisher] The name of the organization or individual that published the
   ///  example scenario.
   @override
+  @HiveField(24)
   final String? publisher;
 
   /// [publisherElement] Extensions for publisher
   @override
   @JsonKey(name: '_publisher')
+  @HiveField(25)
   final Element? publisherElement;
 
   /// [contact] Contact details to assist a user in finding and communicating
@@ -13791,6 +14570,7 @@ class _$_ExampleScenario extends _ExampleScenario {
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
   @override
+  @HiveField(26)
   List<ContactDetail>? get contact {
     final value = _contact;
     if (value == null) return null;
@@ -13812,6 +14592,7 @@ class _$_ExampleScenario extends _ExampleScenario {
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate example scenario instances.
   @override
+  @HiveField(27)
   List<UsageContext>? get useContext {
     final value = _useContext;
     if (value == null) return null;
@@ -13827,6 +14608,7 @@ class _$_ExampleScenario extends _ExampleScenario {
   /// [jurisdiction] A legal or geographic region in which the example scenario
   ///  is intended to be used.
   @override
+  @HiveField(28)
   List<CodeableConcept>? get jurisdiction {
     final value = _jurisdiction;
     if (value == null) return null;
@@ -13839,22 +14621,26 @@ class _$_ExampleScenario extends _ExampleScenario {
   /// its contents. Copyright statements are generally legal restrictions on the
   ///  use and publishing of the example scenario.
   @override
+  @HiveField(29)
   final Markdown? copyright;
 
   /// [copyrightElement] Extensions for copyright
   @override
   @JsonKey(name: '_copyright')
+  @HiveField(30)
   final Element? copyrightElement;
 
   /// [purpose] What the example scenario resource is created for. This should
   /// not be used to show the business purpose of the scenario itself, but the
   ///  purpose of documenting a scenario.
   @override
+  @HiveField(31)
   final Markdown? purpose;
 
   /// [purposeElement] Extensions for purpose
   @override
   @JsonKey(name: '_purpose')
+  @HiveField(32)
   final Element? purposeElement;
 
   /// [actor] Actor participating in the resource.
@@ -13862,6 +14648,7 @@ class _$_ExampleScenario extends _ExampleScenario {
 
   /// [actor] Actor participating in the resource.
   @override
+  @HiveField(33)
   List<ExampleScenarioActor>? get actor {
     final value = _actor;
     if (value == null) return null;
@@ -13877,6 +14664,7 @@ class _$_ExampleScenario extends _ExampleScenario {
   /// [instance] Each resource and each version that is present in the
   ///  workflow.
   @override
+  @HiveField(34)
   List<ExampleScenarioInstance>? get instance {
     final value = _instance;
     if (value == null) return null;
@@ -13890,6 +14678,7 @@ class _$_ExampleScenario extends _ExampleScenario {
 
   /// [process] Each major process - a group of operations.
   @override
+  @HiveField(35)
   List<ExampleScenarioProcess>? get process {
     final value = _process;
     if (value == null) return null;
@@ -13903,6 +14692,7 @@ class _$_ExampleScenario extends _ExampleScenario {
 
   /// [workflow] Another nested workflow.
   @override
+  @HiveField(36)
   List<Canonical>? get workflow {
     final value = _workflow;
     if (value == null) return null;
@@ -14043,55 +14833,92 @@ class _$_ExampleScenario extends _ExampleScenario {
 abstract class _ExampleScenario extends ExampleScenario {
   factory _ExampleScenario(
       {@JsonKey(unknownEnumValue: R4ResourceType.ExampleScenario)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final FhirUri? url,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final FhirUri? url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           final Element? urlElement,
-      final List<Identifier>? identifier,
-      final String? version,
+      @HiveField(13)
+          final List<Identifier>? identifier,
+      @HiveField(14)
+          final String? version,
       @JsonKey(name: '_version')
+      @HiveField(15)
           final Element? versionElement,
-      final String? name,
+      @HiveField(16)
+          final String? name,
       @JsonKey(name: '_name')
+      @HiveField(17)
           final Element? nameElement,
-      final Code? status,
+      @HiveField(18)
+          final Code? status,
       @JsonKey(name: '_status')
+      @HiveField(19)
           final Element? statusElement,
-      final Boolean? experimental,
+      @HiveField(20)
+          final Boolean? experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(21)
           final Element? experimentalElement,
-      final FhirDateTime? date,
+      @HiveField(22)
+          final FhirDateTime? date,
       @JsonKey(name: '_date')
+      @HiveField(23)
           final Element? dateElement,
-      final String? publisher,
+      @HiveField(24)
+          final String? publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(25)
           final Element? publisherElement,
-      final List<ContactDetail>? contact,
-      final List<UsageContext>? useContext,
-      final List<CodeableConcept>? jurisdiction,
-      final Markdown? copyright,
+      @HiveField(26)
+          final List<ContactDetail>? contact,
+      @HiveField(27)
+          final List<UsageContext>? useContext,
+      @HiveField(28)
+          final List<CodeableConcept>? jurisdiction,
+      @HiveField(29)
+          final Markdown? copyright,
       @JsonKey(name: '_copyright')
+      @HiveField(30)
           final Element? copyrightElement,
-      final Markdown? purpose,
+      @HiveField(31)
+          final Markdown? purpose,
       @JsonKey(name: '_purpose')
+      @HiveField(32)
           final Element? purposeElement,
-      final List<ExampleScenarioActor>? actor,
-      final List<ExampleScenarioInstance>? instance,
-      final List<ExampleScenarioProcess>? process,
-      final List<Canonical>? workflow}) = _$_ExampleScenario;
+      @HiveField(33)
+          final List<ExampleScenarioActor>? actor,
+      @HiveField(34)
+          final List<ExampleScenarioInstance>? instance,
+      @HiveField(35)
+          final List<ExampleScenarioProcess>? process,
+      @HiveField(36)
+          final List<Canonical>? workflow}) = _$_ExampleScenario;
   _ExampleScenario._() : super._();
 
   factory _ExampleScenario.fromJson(Map<String, dynamic> json) =
@@ -14099,17 +14926,20 @@ abstract class _ExampleScenario extends ExampleScenario {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ExampleScenario)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta;
   @override
 
@@ -14117,20 +14947,24 @@ abstract class _ExampleScenario extends ExampleScenario {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -14140,6 +14974,7 @@ abstract class _ExampleScenario extends ExampleScenario {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -14147,6 +14982,7 @@ abstract class _ExampleScenario extends ExampleScenario {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -14157,6 +14993,7 @@ abstract class _ExampleScenario extends ExampleScenario {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -14173,6 +15010,7 @@ abstract class _ExampleScenario extends ExampleScenario {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
@@ -14183,17 +15021,20 @@ abstract class _ExampleScenario extends ExampleScenario {
   /// example scenario is (or will be) published. This URL can be the target of
   /// a canonical reference. It SHALL remain the same when the example scenario
   ///  is stored on different servers.
+  @HiveField(11)
   FhirUri? get url;
   @override
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
+  @HiveField(12)
   Element? get urlElement;
   @override
 
   /// [identifier] A formal identifier that is used to identify this example
   /// scenario when it is represented in other formats, or referenced in a
   ///  specification, model, design or an instance.
+  @HiveField(13)
   List<Identifier>? get identifier;
   @override
 
@@ -14204,43 +15045,51 @@ abstract class _ExampleScenario extends ExampleScenario {
   /// a timestamp (e.g. yyyymmdd) if a managed version is not available. There
   /// is also no expectation that versions can be placed in a lexicographical
   ///  sequence.
+  @HiveField(14)
   String? get version;
   @override
 
   /// [versionElement] Extensions for version
   @JsonKey(name: '_version')
+  @HiveField(15)
   Element? get versionElement;
   @override
 
   /// [name] A natural language name identifying the example scenario. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
+  @HiveField(16)
   String? get name;
   @override
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
+  @HiveField(17)
   Element? get nameElement;
   @override
 
   /// [status] The status of this example scenario. Enables tracking the
   ///  life-cycle of the content.
+  @HiveField(18)
   Code? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(19)
   Element? get statusElement;
   @override
 
   /// [experimental] A Boolean value to indicate that this example scenario is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
+  @HiveField(20)
   Boolean? get experimental;
   @override
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
+  @HiveField(21)
   Element? get experimentalElement;
   @override
 
@@ -14249,26 +15098,31 @@ abstract class _ExampleScenario extends ExampleScenario {
   /// must change if the status code changes. In addition, it should change when
   /// the substantive content of the example scenario changes. (e.g. the
   ///  'content logical definition').
+  @HiveField(22)
   FhirDateTime? get date;
   @override
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
+  @HiveField(23)
   Element? get dateElement;
   @override
 
   /// [publisher] The name of the organization or individual that published the
   ///  example scenario.
+  @HiveField(24)
   String? get publisher;
   @override
 
   /// [publisherElement] Extensions for publisher
   @JsonKey(name: '_publisher')
+  @HiveField(25)
   Element? get publisherElement;
   @override
 
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
+  @HiveField(26)
   List<ContactDetail>? get contact;
   @override
 
@@ -14277,50 +15131,60 @@ abstract class _ExampleScenario extends ExampleScenario {
   /// categories (gender, age, ...) or may be references to specific programs
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate example scenario instances.
+  @HiveField(27)
   List<UsageContext>? get useContext;
   @override
 
   /// [jurisdiction] A legal or geographic region in which the example scenario
   ///  is intended to be used.
+  @HiveField(28)
   List<CodeableConcept>? get jurisdiction;
   @override
 
   /// [copyright] A copyright statement relating to the example scenario and/or
   /// its contents. Copyright statements are generally legal restrictions on the
   ///  use and publishing of the example scenario.
+  @HiveField(29)
   Markdown? get copyright;
   @override
 
   /// [copyrightElement] Extensions for copyright
   @JsonKey(name: '_copyright')
+  @HiveField(30)
   Element? get copyrightElement;
   @override
 
   /// [purpose] What the example scenario resource is created for. This should
   /// not be used to show the business purpose of the scenario itself, but the
   ///  purpose of documenting a scenario.
+  @HiveField(31)
   Markdown? get purpose;
   @override
 
   /// [purposeElement] Extensions for purpose
   @JsonKey(name: '_purpose')
+  @HiveField(32)
   Element? get purposeElement;
   @override
 
   /// [actor] Actor participating in the resource.
+  @HiveField(33)
   List<ExampleScenarioActor>? get actor;
   @override
 
   /// [instance] Each resource and each version that is present in the
   ///  workflow.
+  @HiveField(34)
   List<ExampleScenarioInstance>? get instance;
   @override
 
   /// [process] Each major process - a group of operations.
+  @HiveField(35)
   List<ExampleScenarioProcess>? get process;
   @override
 
   /// [workflow] Another nested workflow.
+  @HiveField(36)
   List<Canonical>? get workflow;
   @override
   @JsonKey(ignore: true)
@@ -19168,32 +20032,39 @@ GraphDefinition _$GraphDefinitionFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$GraphDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.GraphDefinition)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -19202,12 +20073,14 @@ mixin _$GraphDefinition {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -19217,6 +20090,7 @@ mixin _$GraphDefinition {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -19232,6 +20106,7 @@ mixin _$GraphDefinition {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
@@ -19242,10 +20117,12 @@ mixin _$GraphDefinition {
   /// graph definition is (or will be) published. This URL can be the target of
   /// a canonical reference. It SHALL remain the same when the graph definition
   ///  is stored on different servers.
+  @HiveField(11)
   FhirUri? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
+  @HiveField(12)
   Element? get urlElement => throw _privateConstructorUsedError;
 
   /// [version] The identifier that is used to identify this version of the
@@ -19255,66 +20132,81 @@ mixin _$GraphDefinition {
   /// a timestamp (e.g. yyyymmdd) if a managed version is not available. There
   /// is also no expectation that versions can be placed in a lexicographical
   ///  sequence.
+  @HiveField(13)
   String? get version => throw _privateConstructorUsedError;
 
   /// [versionElement] Extensions for version
   @JsonKey(name: '_version')
+  @HiveField(14)
   Element? get versionElement => throw _privateConstructorUsedError;
 
   /// [name] A natural language name identifying the graph definition. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
+  @HiveField(15)
   String? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
+  @HiveField(16)
   Element? get nameElement => throw _privateConstructorUsedError;
 
   /// [status] The status of this graph definition. Enables tracking the
   ///  life-cycle of the content.
+  @HiveField(17)
   Code? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(18)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [experimental] A Boolean value to indicate that this graph definition is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
+  @HiveField(19)
   Boolean? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
+  @HiveField(20)
   Element? get experimentalElement => throw _privateConstructorUsedError;
 
   /// [date] The date  (and optionally time) when the graph definition was
   /// published. The date must change when the business version changes and it
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the graph definition changes.
+  @HiveField(21)
   FhirDateTime? get date => throw _privateConstructorUsedError;
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
+  @HiveField(22)
   Element? get dateElement => throw _privateConstructorUsedError;
 
   /// [publisher] The name of the organization or individual that published the
   ///  graph definition.
+  @HiveField(23)
   String? get publisher => throw _privateConstructorUsedError;
 
   /// [publisherElement] Extensions for publisher
   @JsonKey(name: '_publisher')
+  @HiveField(24)
   Element? get publisherElement => throw _privateConstructorUsedError;
 
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
+  @HiveField(25)
   List<ContactDetail>? get contact => throw _privateConstructorUsedError;
 
   /// [description] A free text natural language description of the graph
   ///  definition from a consumer's perspective.
+  @HiveField(26)
   Markdown? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
+  @HiveField(27)
   Element? get descriptionElement => throw _privateConstructorUsedError;
 
   /// [useContext] The content was developed with a focus and intent of
@@ -19322,31 +20214,39 @@ mixin _$GraphDefinition {
   /// categories (gender, age, ...) or may be references to specific programs
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate graph definition instances.
+  @HiveField(28)
   List<UsageContext>? get useContext => throw _privateConstructorUsedError;
 
   /// [jurisdiction] A legal or geographic region in which the graph definition
   ///  is intended to be used.
+  @HiveField(29)
   List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
 
   /// [purpose] Explanation of why this graph definition is needed and why it
   ///  has been designed as it has.
+  @HiveField(30)
   Markdown? get purpose => throw _privateConstructorUsedError;
 
   /// [purposeElement] Extensions for purpose
   @JsonKey(name: '_purpose')
+  @HiveField(31)
   Element? get purposeElement => throw _privateConstructorUsedError;
 
   /// [start] The type of FHIR resource at which instances of this graph start.
+  @HiveField(32)
   Code? get start => throw _privateConstructorUsedError;
 
   /// [startElement] Extensions for start
   @JsonKey(name: '_start')
+  @HiveField(33)
   Element? get startElement => throw _privateConstructorUsedError;
 
   /// [profile] The profile that describes the use of the base resource.
+  @HiveField(34)
   Canonical? get profile => throw _privateConstructorUsedError;
 
   /// [link] Links this graph makes rules about.
+  @HiveField(35)
   List<GraphDefinitionLink>? get link => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -19363,55 +20263,91 @@ abstract class $GraphDefinitionCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.GraphDefinition)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          FhirUri? url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           Element? urlElement,
-      String? version,
+      @HiveField(13)
+          String? version,
       @JsonKey(name: '_version')
+      @HiveField(14)
           Element? versionElement,
-      String? name,
+      @HiveField(15)
+          String? name,
       @JsonKey(name: '_name')
+      @HiveField(16)
           Element? nameElement,
-      Code? status,
+      @HiveField(17)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(18)
           Element? statusElement,
-      Boolean? experimental,
+      @HiveField(19)
+          Boolean? experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(20)
           Element? experimentalElement,
-      FhirDateTime? date,
+      @HiveField(21)
+          FhirDateTime? date,
       @JsonKey(name: '_date')
+      @HiveField(22)
           Element? dateElement,
-      String? publisher,
+      @HiveField(23)
+          String? publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(24)
           Element? publisherElement,
-      List<ContactDetail>? contact,
-      Markdown? description,
+      @HiveField(25)
+          List<ContactDetail>? contact,
+      @HiveField(26)
+          Markdown? description,
       @JsonKey(name: '_description')
+      @HiveField(27)
           Element? descriptionElement,
-      List<UsageContext>? useContext,
-      List<CodeableConcept>? jurisdiction,
-      Markdown? purpose,
+      @HiveField(28)
+          List<UsageContext>? useContext,
+      @HiveField(29)
+          List<CodeableConcept>? jurisdiction,
+      @HiveField(30)
+          Markdown? purpose,
       @JsonKey(name: '_purpose')
+      @HiveField(31)
           Element? purposeElement,
-      Code? start,
+      @HiveField(32)
+          Code? start,
       @JsonKey(name: '_start')
+      @HiveField(33)
           Element? startElement,
-      Canonical? profile,
-      List<GraphDefinitionLink>? link});
+      @HiveField(34)
+          Canonical? profile,
+      @HiveField(35)
+          List<GraphDefinitionLink>? link});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -19806,55 +20742,91 @@ abstract class _$$_GraphDefinitionCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.GraphDefinition)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          FhirUri? url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           Element? urlElement,
-      String? version,
+      @HiveField(13)
+          String? version,
       @JsonKey(name: '_version')
+      @HiveField(14)
           Element? versionElement,
-      String? name,
+      @HiveField(15)
+          String? name,
       @JsonKey(name: '_name')
+      @HiveField(16)
           Element? nameElement,
-      Code? status,
+      @HiveField(17)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(18)
           Element? statusElement,
-      Boolean? experimental,
+      @HiveField(19)
+          Boolean? experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(20)
           Element? experimentalElement,
-      FhirDateTime? date,
+      @HiveField(21)
+          FhirDateTime? date,
       @JsonKey(name: '_date')
+      @HiveField(22)
           Element? dateElement,
-      String? publisher,
+      @HiveField(23)
+          String? publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(24)
           Element? publisherElement,
-      List<ContactDetail>? contact,
-      Markdown? description,
+      @HiveField(25)
+          List<ContactDetail>? contact,
+      @HiveField(26)
+          Markdown? description,
       @JsonKey(name: '_description')
+      @HiveField(27)
           Element? descriptionElement,
-      List<UsageContext>? useContext,
-      List<CodeableConcept>? jurisdiction,
-      Markdown? purpose,
+      @HiveField(28)
+          List<UsageContext>? useContext,
+      @HiveField(29)
+          List<CodeableConcept>? jurisdiction,
+      @HiveField(30)
+          Markdown? purpose,
       @JsonKey(name: '_purpose')
+      @HiveField(31)
           Element? purposeElement,
-      Code? start,
+      @HiveField(32)
+          Code? start,
       @JsonKey(name: '_start')
+      @HiveField(33)
           Element? startElement,
-      Canonical? profile,
-      List<GraphDefinitionLink>? link});
+      @HiveField(34)
+          Canonical? profile,
+      @HiveField(35)
+          List<GraphDefinitionLink>? link});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -20089,55 +21061,91 @@ class __$$_GraphDefinitionCopyWithImpl<$Res>
 class _$_GraphDefinition extends _GraphDefinition {
   _$_GraphDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.GraphDefinition)
+      @HiveField(0)
           this.resourceType = R4ResourceType.GraphDefinition,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.url,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          this.url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           this.urlElement,
-      this.version,
+      @HiveField(13)
+          this.version,
       @JsonKey(name: '_version')
+      @HiveField(14)
           this.versionElement,
-      this.name,
+      @HiveField(15)
+          this.name,
       @JsonKey(name: '_name')
+      @HiveField(16)
           this.nameElement,
-      this.status,
+      @HiveField(17)
+          this.status,
       @JsonKey(name: '_status')
+      @HiveField(18)
           this.statusElement,
-      this.experimental,
+      @HiveField(19)
+          this.experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(20)
           this.experimentalElement,
-      this.date,
+      @HiveField(21)
+          this.date,
       @JsonKey(name: '_date')
+      @HiveField(22)
           this.dateElement,
-      this.publisher,
+      @HiveField(23)
+          this.publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(24)
           this.publisherElement,
-      final List<ContactDetail>? contact,
-      this.description,
+      @HiveField(25)
+          final List<ContactDetail>? contact,
+      @HiveField(26)
+          this.description,
       @JsonKey(name: '_description')
+      @HiveField(27)
           this.descriptionElement,
-      final List<UsageContext>? useContext,
-      final List<CodeableConcept>? jurisdiction,
-      this.purpose,
+      @HiveField(28)
+          final List<UsageContext>? useContext,
+      @HiveField(29)
+          final List<CodeableConcept>? jurisdiction,
+      @HiveField(30)
+          this.purpose,
       @JsonKey(name: '_purpose')
+      @HiveField(31)
           this.purposeElement,
-      this.start,
+      @HiveField(32)
+          this.start,
       @JsonKey(name: '_start')
+      @HiveField(33)
           this.startElement,
-      this.profile,
-      final List<GraphDefinitionLink>? link})
+      @HiveField(34)
+          this.profile,
+      @HiveField(35)
+          final List<GraphDefinitionLink>? link})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -20152,17 +21160,20 @@ class _$_GraphDefinition extends _GraphDefinition {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.GraphDefinition)
+  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
+  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
+  @HiveField(2)
   final Meta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -20170,20 +21181,24 @@ class _$_GraphDefinition extends _GraphDefinition {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
+  @HiveField(5)
   final Code? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
+  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -20193,6 +21208,7 @@ class _$_GraphDefinition extends _GraphDefinition {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
+  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -20206,6 +21222,7 @@ class _$_GraphDefinition extends _GraphDefinition {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -20230,6 +21247,7 @@ class _$_GraphDefinition extends _GraphDefinition {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -20267,6 +21285,7 @@ class _$_GraphDefinition extends _GraphDefinition {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -20284,11 +21303,13 @@ class _$_GraphDefinition extends _GraphDefinition {
   /// a canonical reference. It SHALL remain the same when the graph definition
   ///  is stored on different servers.
   @override
+  @HiveField(11)
   final FhirUri? url;
 
   /// [urlElement] Extensions for url
   @override
   @JsonKey(name: '_url')
+  @HiveField(12)
   final Element? urlElement;
 
   /// [version] The identifier that is used to identify this version of the
@@ -20299,43 +21320,51 @@ class _$_GraphDefinition extends _GraphDefinition {
   /// is also no expectation that versions can be placed in a lexicographical
   ///  sequence.
   @override
+  @HiveField(13)
   final String? version;
 
   /// [versionElement] Extensions for version
   @override
   @JsonKey(name: '_version')
+  @HiveField(14)
   final Element? versionElement;
 
   /// [name] A natural language name identifying the graph definition. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
   @override
+  @HiveField(15)
   final String? name;
 
   /// [nameElement] Extensions for name
   @override
   @JsonKey(name: '_name')
+  @HiveField(16)
   final Element? nameElement;
 
   /// [status] The status of this graph definition. Enables tracking the
   ///  life-cycle of the content.
   @override
+  @HiveField(17)
   final Code? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
+  @HiveField(18)
   final Element? statusElement;
 
   /// [experimental] A Boolean value to indicate that this graph definition is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
   @override
+  @HiveField(19)
   final Boolean? experimental;
 
   /// [experimentalElement] Extensions for experimental
   @override
   @JsonKey(name: '_experimental')
+  @HiveField(20)
   final Element? experimentalElement;
 
   /// [date] The date  (and optionally time) when the graph definition was
@@ -20343,21 +21372,25 @@ class _$_GraphDefinition extends _GraphDefinition {
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the graph definition changes.
   @override
+  @HiveField(21)
   final FhirDateTime? date;
 
   /// [dateElement] Extensions for date
   @override
   @JsonKey(name: '_date')
+  @HiveField(22)
   final Element? dateElement;
 
   /// [publisher] The name of the organization or individual that published the
   ///  graph definition.
   @override
+  @HiveField(23)
   final String? publisher;
 
   /// [publisherElement] Extensions for publisher
   @override
   @JsonKey(name: '_publisher')
+  @HiveField(24)
   final Element? publisherElement;
 
   /// [contact] Contact details to assist a user in finding and communicating
@@ -20367,6 +21400,7 @@ class _$_GraphDefinition extends _GraphDefinition {
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
   @override
+  @HiveField(25)
   List<ContactDetail>? get contact {
     final value = _contact;
     if (value == null) return null;
@@ -20378,11 +21412,13 @@ class _$_GraphDefinition extends _GraphDefinition {
   /// [description] A free text natural language description of the graph
   ///  definition from a consumer's perspective.
   @override
+  @HiveField(26)
   final Markdown? description;
 
   /// [descriptionElement] Extensions for description
   @override
   @JsonKey(name: '_description')
+  @HiveField(27)
   final Element? descriptionElement;
 
   /// [useContext] The content was developed with a focus and intent of
@@ -20398,6 +21434,7 @@ class _$_GraphDefinition extends _GraphDefinition {
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate graph definition instances.
   @override
+  @HiveField(28)
   List<UsageContext>? get useContext {
     final value = _useContext;
     if (value == null) return null;
@@ -20413,6 +21450,7 @@ class _$_GraphDefinition extends _GraphDefinition {
   /// [jurisdiction] A legal or geographic region in which the graph definition
   ///  is intended to be used.
   @override
+  @HiveField(29)
   List<CodeableConcept>? get jurisdiction {
     final value = _jurisdiction;
     if (value == null) return null;
@@ -20424,24 +21462,29 @@ class _$_GraphDefinition extends _GraphDefinition {
   /// [purpose] Explanation of why this graph definition is needed and why it
   ///  has been designed as it has.
   @override
+  @HiveField(30)
   final Markdown? purpose;
 
   /// [purposeElement] Extensions for purpose
   @override
   @JsonKey(name: '_purpose')
+  @HiveField(31)
   final Element? purposeElement;
 
   /// [start] The type of FHIR resource at which instances of this graph start.
   @override
+  @HiveField(32)
   final Code? start;
 
   /// [startElement] Extensions for start
   @override
   @JsonKey(name: '_start')
+  @HiveField(33)
   final Element? startElement;
 
   /// [profile] The profile that describes the use of the base resource.
   @override
+  @HiveField(34)
   final Canonical? profile;
 
   /// [link] Links this graph makes rules about.
@@ -20449,6 +21492,7 @@ class _$_GraphDefinition extends _GraphDefinition {
 
   /// [link] Links this graph makes rules about.
   @override
+  @HiveField(35)
   List<GraphDefinitionLink>? get link {
     final value = _link;
     if (value == null) return null;
@@ -20587,55 +21631,91 @@ class _$_GraphDefinition extends _GraphDefinition {
 abstract class _GraphDefinition extends GraphDefinition {
   factory _GraphDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.GraphDefinition)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final FhirUri? url,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final FhirUri? url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           final Element? urlElement,
-      final String? version,
+      @HiveField(13)
+          final String? version,
       @JsonKey(name: '_version')
+      @HiveField(14)
           final Element? versionElement,
-      final String? name,
+      @HiveField(15)
+          final String? name,
       @JsonKey(name: '_name')
+      @HiveField(16)
           final Element? nameElement,
-      final Code? status,
+      @HiveField(17)
+          final Code? status,
       @JsonKey(name: '_status')
+      @HiveField(18)
           final Element? statusElement,
-      final Boolean? experimental,
+      @HiveField(19)
+          final Boolean? experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(20)
           final Element? experimentalElement,
-      final FhirDateTime? date,
+      @HiveField(21)
+          final FhirDateTime? date,
       @JsonKey(name: '_date')
+      @HiveField(22)
           final Element? dateElement,
-      final String? publisher,
+      @HiveField(23)
+          final String? publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(24)
           final Element? publisherElement,
-      final List<ContactDetail>? contact,
-      final Markdown? description,
+      @HiveField(25)
+          final List<ContactDetail>? contact,
+      @HiveField(26)
+          final Markdown? description,
       @JsonKey(name: '_description')
+      @HiveField(27)
           final Element? descriptionElement,
-      final List<UsageContext>? useContext,
-      final List<CodeableConcept>? jurisdiction,
-      final Markdown? purpose,
+      @HiveField(28)
+          final List<UsageContext>? useContext,
+      @HiveField(29)
+          final List<CodeableConcept>? jurisdiction,
+      @HiveField(30)
+          final Markdown? purpose,
       @JsonKey(name: '_purpose')
+      @HiveField(31)
           final Element? purposeElement,
-      final Code? start,
+      @HiveField(32)
+          final Code? start,
       @JsonKey(name: '_start')
+      @HiveField(33)
           final Element? startElement,
-      final Canonical? profile,
-      final List<GraphDefinitionLink>? link}) = _$_GraphDefinition;
+      @HiveField(34)
+          final Canonical? profile,
+      @HiveField(35)
+          final List<GraphDefinitionLink>? link}) = _$_GraphDefinition;
   _GraphDefinition._() : super._();
 
   factory _GraphDefinition.fromJson(Map<String, dynamic> json) =
@@ -20643,17 +21723,20 @@ abstract class _GraphDefinition extends GraphDefinition {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.GraphDefinition)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta;
   @override
 
@@ -20661,20 +21744,24 @@ abstract class _GraphDefinition extends GraphDefinition {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -20684,6 +21771,7 @@ abstract class _GraphDefinition extends GraphDefinition {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -20691,6 +21779,7 @@ abstract class _GraphDefinition extends GraphDefinition {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -20701,6 +21790,7 @@ abstract class _GraphDefinition extends GraphDefinition {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -20717,6 +21807,7 @@ abstract class _GraphDefinition extends GraphDefinition {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
@@ -20727,11 +21818,13 @@ abstract class _GraphDefinition extends GraphDefinition {
   /// graph definition is (or will be) published. This URL can be the target of
   /// a canonical reference. It SHALL remain the same when the graph definition
   ///  is stored on different servers.
+  @HiveField(11)
   FhirUri? get url;
   @override
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
+  @HiveField(12)
   Element? get urlElement;
   @override
 
@@ -20742,43 +21835,51 @@ abstract class _GraphDefinition extends GraphDefinition {
   /// a timestamp (e.g. yyyymmdd) if a managed version is not available. There
   /// is also no expectation that versions can be placed in a lexicographical
   ///  sequence.
+  @HiveField(13)
   String? get version;
   @override
 
   /// [versionElement] Extensions for version
   @JsonKey(name: '_version')
+  @HiveField(14)
   Element? get versionElement;
   @override
 
   /// [name] A natural language name identifying the graph definition. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
+  @HiveField(15)
   String? get name;
   @override
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
+  @HiveField(16)
   Element? get nameElement;
   @override
 
   /// [status] The status of this graph definition. Enables tracking the
   ///  life-cycle of the content.
+  @HiveField(17)
   Code? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(18)
   Element? get statusElement;
   @override
 
   /// [experimental] A Boolean value to indicate that this graph definition is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
+  @HiveField(19)
   Boolean? get experimental;
   @override
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
+  @HiveField(20)
   Element? get experimentalElement;
   @override
 
@@ -20786,36 +21887,43 @@ abstract class _GraphDefinition extends GraphDefinition {
   /// published. The date must change when the business version changes and it
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the graph definition changes.
+  @HiveField(21)
   FhirDateTime? get date;
   @override
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
+  @HiveField(22)
   Element? get dateElement;
   @override
 
   /// [publisher] The name of the organization or individual that published the
   ///  graph definition.
+  @HiveField(23)
   String? get publisher;
   @override
 
   /// [publisherElement] Extensions for publisher
   @JsonKey(name: '_publisher')
+  @HiveField(24)
   Element? get publisherElement;
   @override
 
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
+  @HiveField(25)
   List<ContactDetail>? get contact;
   @override
 
   /// [description] A free text natural language description of the graph
   ///  definition from a consumer's perspective.
+  @HiveField(26)
   Markdown? get description;
   @override
 
   /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
+  @HiveField(27)
   Element? get descriptionElement;
   @override
 
@@ -20824,38 +21932,46 @@ abstract class _GraphDefinition extends GraphDefinition {
   /// categories (gender, age, ...) or may be references to specific programs
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate graph definition instances.
+  @HiveField(28)
   List<UsageContext>? get useContext;
   @override
 
   /// [jurisdiction] A legal or geographic region in which the graph definition
   ///  is intended to be used.
+  @HiveField(29)
   List<CodeableConcept>? get jurisdiction;
   @override
 
   /// [purpose] Explanation of why this graph definition is needed and why it
   ///  has been designed as it has.
+  @HiveField(30)
   Markdown? get purpose;
   @override
 
   /// [purposeElement] Extensions for purpose
   @JsonKey(name: '_purpose')
+  @HiveField(31)
   Element? get purposeElement;
   @override
 
   /// [start] The type of FHIR resource at which instances of this graph start.
+  @HiveField(32)
   Code? get start;
   @override
 
   /// [startElement] Extensions for start
   @JsonKey(name: '_start')
+  @HiveField(33)
   Element? get startElement;
   @override
 
   /// [profile] The profile that describes the use of the base resource.
+  @HiveField(34)
   Canonical? get profile;
   @override
 
   /// [link] Links this graph makes rules about.
+  @HiveField(35)
   List<GraphDefinitionLink>? get link;
   @override
   @JsonKey(ignore: true)
@@ -22820,32 +23936,39 @@ ImplementationGuide _$ImplementationGuideFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ImplementationGuide {
   @JsonKey(unknownEnumValue: R4ResourceType.ImplementationGuide)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -22854,12 +23977,14 @@ mixin _$ImplementationGuide {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -22869,6 +23994,7 @@ mixin _$ImplementationGuide {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -22884,6 +24010,7 @@ mixin _$ImplementationGuide {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
@@ -22894,87 +24021,101 @@ mixin _$ImplementationGuide {
   /// this implementation guide is (or will be) published. This URL can be the
   /// target of a canonical reference. It SHALL remain the same when the
   ///  implementation guide is stored on different servers.
+  @HiveField(11)
   FhirUri? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
+  @HiveField(12)
   Element? get urlElement => throw _privateConstructorUsedError;
 
   /// [version] The identifier that is used to identify this version of the
-  /// implementation guide when it is referenced in a specification, model,
-  /// design or instance. This is an arbitrary value managed by the
-  /// implementation guide author and is not expected to be globally unique. For
-  /// example, it might be a timestamp (e.g. yyyymmdd) if a managed version is
-  /// not available. There is also no expectation that versions can be placed in
-  ///  a lexicographical sequence.
+  @HiveField(13)
+  @HiveField(14)
   String? get version => throw _privateConstructorUsedError;
 
   /// [versionElement] Extensions for version
   @JsonKey(name: '_version')
+  @HiveField(15)
   Element? get versionElement => throw _privateConstructorUsedError;
 
   /// [name] A natural language name identifying the implementation guide. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
+  @HiveField(16)
   String? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
+  @HiveField(17)
   Element? get nameElement => throw _privateConstructorUsedError;
 
   /// [title] A short, descriptive, user-friendly title for the implementation
   ///  guide.
+  @HiveField(18)
   String? get title => throw _privateConstructorUsedError;
 
   /// [titleElement] Extensions for title
   @JsonKey(name: '_title')
+  @HiveField(19)
   Element? get titleElement => throw _privateConstructorUsedError;
 
   /// [status] The status of this implementation guide. Enables tracking the
   ///  life-cycle of the content.
+  @HiveField(20)
   Code? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(21)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [experimental] A Boolean value to indicate that this implementation guide
   /// is authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
+  @HiveField(22)
   Boolean? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
+  @HiveField(23)
   Element? get experimentalElement => throw _privateConstructorUsedError;
 
   /// [date] The date  (and optionally time) when the implementation guide was
   /// published. The date must change when the business version changes and it
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the implementation guide changes.
+  @HiveField(24)
   FhirDateTime? get date => throw _privateConstructorUsedError;
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
+  @HiveField(25)
   Element? get dateElement => throw _privateConstructorUsedError;
 
   /// [publisher] The name of the organization or individual that published the
   ///  implementation guide.
+  @HiveField(26)
   String? get publisher => throw _privateConstructorUsedError;
 
   /// [publisherElement] Extensions for publisher
   @JsonKey(name: '_publisher')
+  @HiveField(27)
   Element? get publisherElement => throw _privateConstructorUsedError;
 
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
+  @HiveField(28)
   List<ContactDetail>? get contact => throw _privateConstructorUsedError;
 
   /// [description] A free text natural language description of the
   ///  implementation guide from a consumer's perspective.
+  @HiveField(29)
   Markdown? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
+  @HiveField(30)
   Element? get descriptionElement => throw _privateConstructorUsedError;
 
   /// [useContext] The content was developed with a focus and intent of
@@ -22982,37 +24123,44 @@ mixin _$ImplementationGuide {
   /// categories (gender, age, ...) or may be references to specific programs
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate implementation guide instances.
+  @HiveField(31)
   List<UsageContext>? get useContext => throw _privateConstructorUsedError;
 
   /// [jurisdiction] A legal or geographic region in which the implementation
   ///  guide is intended to be used.
+  @HiveField(32)
   List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
 
   /// [copyright] A copyright statement relating to the implementation guide
   /// and/or its contents. Copyright statements are generally legal restrictions
   ///  on the use and publishing of the implementation guide.
+  @HiveField(33)
   Markdown? get copyright => throw _privateConstructorUsedError;
 
   /// [copyrightElement] Extensions for copyright
   @JsonKey(name: '_copyright')
+  @HiveField(34)
   Element? get copyrightElement => throw _privateConstructorUsedError;
 
   /// [packageId] The NPM package name for this Implementation Guide, used in
   /// the NPM package distribution, which is the primary mechanism by which FHIR
-  /// based tooling manages IG dependencies. This value must be globally unique,
-  ///  and should be assigned with care.
+  @HiveField(35)
+  @HiveField(36)
   Id? get packageId => throw _privateConstructorUsedError;
 
   /// [packageIdElement] Extensions for packageId
   @JsonKey(name: '_packageId')
+  @HiveField(37)
   Element? get packageIdElement => throw _privateConstructorUsedError;
 
   /// [license] The license that applies to this Implementation Guide, using an
   ///  SPDX license code, or 'not-open-source'.
+  @HiveField(38)
   Code? get license => throw _privateConstructorUsedError;
 
   /// [licenseElement] Extensions for license
   @JsonKey(name: '_license')
+  @HiveField(39)
   Element? get licenseElement => throw _privateConstructorUsedError;
 
   /// [fhirVersion] The version(s) of the FHIR specification that this
@@ -23020,30 +24168,36 @@ mixin _$ImplementationGuide {
   /// element is the formal version of the specification, without the revision
   /// number, e.g. [publication].[major].[minor], which is 4.0.1. for this
   ///  version.
+  @HiveField(40)
   List<Code>? get fhirVersion => throw _privateConstructorUsedError;
 
   /// [fhirVersionElement] Extensions for fhirVersion
   @JsonKey(name: '_fhirVersion')
+  @HiveField(41)
   List<Element?>? get fhirVersionElement => throw _privateConstructorUsedError;
 
   /// [dependsOn] Another implementation guide that this implementation depends
   /// on. Typically, an implementation guide uses value sets, profiles
   ///  etc.defined in other implementation guides.
+  @HiveField(42)
   List<ImplementationGuideDependsOn>? get dependsOn =>
       throw _privateConstructorUsedError;
 
   /// [global] A set of profiles that all resources covered by this
   ///  implementation guide must conform to.
+  @HiveField(43)
   List<ImplementationGuideGlobal>? get global =>
       throw _privateConstructorUsedError;
 
   /// [definition] The information needed by an IG publisher tool to publish
   ///  the whole implementation guide.
+  @HiveField(44)
   ImplementationGuideDefinition? get definition =>
       throw _privateConstructorUsedError;
 
   /// [manifest] Information about an assembled implementation guide, created
   ///  by the publication tooling.
+  @HiveField(45)
   ImplementationGuideManifest? get manifest =>
       throw _privateConstructorUsedError;
 
@@ -23061,66 +24215,112 @@ abstract class $ImplementationGuideCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ImplementationGuide)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          FhirUri? url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           Element? urlElement,
-      String? version,
+      @HiveField(13)
+      @HiveField(14)
+          String? version,
       @JsonKey(name: '_version')
+      @HiveField(15)
           Element? versionElement,
-      String? name,
+      @HiveField(16)
+          String? name,
       @JsonKey(name: '_name')
+      @HiveField(17)
           Element? nameElement,
-      String? title,
+      @HiveField(18)
+          String? title,
       @JsonKey(name: '_title')
+      @HiveField(19)
           Element? titleElement,
-      Code? status,
+      @HiveField(20)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(21)
           Element? statusElement,
-      Boolean? experimental,
+      @HiveField(22)
+          Boolean? experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(23)
           Element? experimentalElement,
-      FhirDateTime? date,
+      @HiveField(24)
+          FhirDateTime? date,
       @JsonKey(name: '_date')
+      @HiveField(25)
           Element? dateElement,
-      String? publisher,
+      @HiveField(26)
+          String? publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(27)
           Element? publisherElement,
-      List<ContactDetail>? contact,
-      Markdown? description,
+      @HiveField(28)
+          List<ContactDetail>? contact,
+      @HiveField(29)
+          Markdown? description,
       @JsonKey(name: '_description')
+      @HiveField(30)
           Element? descriptionElement,
-      List<UsageContext>? useContext,
-      List<CodeableConcept>? jurisdiction,
-      Markdown? copyright,
+      @HiveField(31)
+          List<UsageContext>? useContext,
+      @HiveField(32)
+          List<CodeableConcept>? jurisdiction,
+      @HiveField(33)
+          Markdown? copyright,
       @JsonKey(name: '_copyright')
+      @HiveField(34)
           Element? copyrightElement,
-      Id? packageId,
+      @HiveField(35)
+      @HiveField(36)
+          Id? packageId,
       @JsonKey(name: '_packageId')
+      @HiveField(37)
           Element? packageIdElement,
-      Code? license,
+      @HiveField(38)
+          Code? license,
       @JsonKey(name: '_license')
+      @HiveField(39)
           Element? licenseElement,
-      List<Code>? fhirVersion,
+      @HiveField(40)
+          List<Code>? fhirVersion,
       @JsonKey(name: '_fhirVersion')
+      @HiveField(41)
           List<Element?>? fhirVersionElement,
-      List<ImplementationGuideDependsOn>? dependsOn,
-      List<ImplementationGuideGlobal>? global,
-      ImplementationGuideDefinition? definition,
-      ImplementationGuideManifest? manifest});
+      @HiveField(42)
+          List<ImplementationGuideDependsOn>? dependsOn,
+      @HiveField(43)
+          List<ImplementationGuideGlobal>? global,
+      @HiveField(44)
+          ImplementationGuideDefinition? definition,
+      @HiveField(45)
+          ImplementationGuideManifest? manifest});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -23609,66 +24809,112 @@ abstract class _$$_ImplementationGuideCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ImplementationGuide)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          FhirUri? url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           Element? urlElement,
-      String? version,
+      @HiveField(13)
+      @HiveField(14)
+          String? version,
       @JsonKey(name: '_version')
+      @HiveField(15)
           Element? versionElement,
-      String? name,
+      @HiveField(16)
+          String? name,
       @JsonKey(name: '_name')
+      @HiveField(17)
           Element? nameElement,
-      String? title,
+      @HiveField(18)
+          String? title,
       @JsonKey(name: '_title')
+      @HiveField(19)
           Element? titleElement,
-      Code? status,
+      @HiveField(20)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(21)
           Element? statusElement,
-      Boolean? experimental,
+      @HiveField(22)
+          Boolean? experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(23)
           Element? experimentalElement,
-      FhirDateTime? date,
+      @HiveField(24)
+          FhirDateTime? date,
       @JsonKey(name: '_date')
+      @HiveField(25)
           Element? dateElement,
-      String? publisher,
+      @HiveField(26)
+          String? publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(27)
           Element? publisherElement,
-      List<ContactDetail>? contact,
-      Markdown? description,
+      @HiveField(28)
+          List<ContactDetail>? contact,
+      @HiveField(29)
+          Markdown? description,
       @JsonKey(name: '_description')
+      @HiveField(30)
           Element? descriptionElement,
-      List<UsageContext>? useContext,
-      List<CodeableConcept>? jurisdiction,
-      Markdown? copyright,
+      @HiveField(31)
+          List<UsageContext>? useContext,
+      @HiveField(32)
+          List<CodeableConcept>? jurisdiction,
+      @HiveField(33)
+          Markdown? copyright,
       @JsonKey(name: '_copyright')
+      @HiveField(34)
           Element? copyrightElement,
-      Id? packageId,
+      @HiveField(35)
+      @HiveField(36)
+          Id? packageId,
       @JsonKey(name: '_packageId')
+      @HiveField(37)
           Element? packageIdElement,
-      Code? license,
+      @HiveField(38)
+          Code? license,
       @JsonKey(name: '_license')
+      @HiveField(39)
           Element? licenseElement,
-      List<Code>? fhirVersion,
+      @HiveField(40)
+          List<Code>? fhirVersion,
       @JsonKey(name: '_fhirVersion')
+      @HiveField(41)
           List<Element?>? fhirVersionElement,
-      List<ImplementationGuideDependsOn>? dependsOn,
-      List<ImplementationGuideGlobal>? global,
-      ImplementationGuideDefinition? definition,
-      ImplementationGuideManifest? manifest});
+      @HiveField(42)
+          List<ImplementationGuideDependsOn>? dependsOn,
+      @HiveField(43)
+          List<ImplementationGuideGlobal>? global,
+      @HiveField(44)
+          ImplementationGuideDefinition? definition,
+      @HiveField(45)
+          ImplementationGuideManifest? manifest});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -23951,66 +25197,112 @@ class __$$_ImplementationGuideCopyWithImpl<$Res>
 class _$_ImplementationGuide extends _ImplementationGuide {
   _$_ImplementationGuide(
       {@JsonKey(unknownEnumValue: R4ResourceType.ImplementationGuide)
+      @HiveField(0)
           this.resourceType = R4ResourceType.ImplementationGuide,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.url,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          this.url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           this.urlElement,
-      this.version,
+      @HiveField(13)
+      @HiveField(14)
+          this.version,
       @JsonKey(name: '_version')
+      @HiveField(15)
           this.versionElement,
-      this.name,
+      @HiveField(16)
+          this.name,
       @JsonKey(name: '_name')
+      @HiveField(17)
           this.nameElement,
-      this.title,
+      @HiveField(18)
+          this.title,
       @JsonKey(name: '_title')
+      @HiveField(19)
           this.titleElement,
-      this.status,
+      @HiveField(20)
+          this.status,
       @JsonKey(name: '_status')
+      @HiveField(21)
           this.statusElement,
-      this.experimental,
+      @HiveField(22)
+          this.experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(23)
           this.experimentalElement,
-      this.date,
+      @HiveField(24)
+          this.date,
       @JsonKey(name: '_date')
+      @HiveField(25)
           this.dateElement,
-      this.publisher,
+      @HiveField(26)
+          this.publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(27)
           this.publisherElement,
-      final List<ContactDetail>? contact,
-      this.description,
+      @HiveField(28)
+          final List<ContactDetail>? contact,
+      @HiveField(29)
+          this.description,
       @JsonKey(name: '_description')
+      @HiveField(30)
           this.descriptionElement,
-      final List<UsageContext>? useContext,
-      final List<CodeableConcept>? jurisdiction,
-      this.copyright,
+      @HiveField(31)
+          final List<UsageContext>? useContext,
+      @HiveField(32)
+          final List<CodeableConcept>? jurisdiction,
+      @HiveField(33)
+          this.copyright,
       @JsonKey(name: '_copyright')
+      @HiveField(34)
           this.copyrightElement,
-      this.packageId,
+      @HiveField(35)
+      @HiveField(36)
+          this.packageId,
       @JsonKey(name: '_packageId')
+      @HiveField(37)
           this.packageIdElement,
-      this.license,
+      @HiveField(38)
+          this.license,
       @JsonKey(name: '_license')
+      @HiveField(39)
           this.licenseElement,
-      final List<Code>? fhirVersion,
+      @HiveField(40)
+          final List<Code>? fhirVersion,
       @JsonKey(name: '_fhirVersion')
+      @HiveField(41)
           final List<Element?>? fhirVersionElement,
-      final List<ImplementationGuideDependsOn>? dependsOn,
-      final List<ImplementationGuideGlobal>? global,
-      this.definition,
-      this.manifest})
+      @HiveField(42)
+          final List<ImplementationGuideDependsOn>? dependsOn,
+      @HiveField(43)
+          final List<ImplementationGuideGlobal>? global,
+      @HiveField(44)
+          this.definition,
+      @HiveField(45)
+          this.manifest})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -24028,17 +25320,20 @@ class _$_ImplementationGuide extends _ImplementationGuide {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ImplementationGuide)
+  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
+  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
+  @HiveField(2)
   final Meta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -24046,20 +25341,24 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
+  @HiveField(5)
   final Code? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
+  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -24069,6 +25368,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
+  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -24082,6 +25382,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -24106,6 +25407,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -24143,6 +25445,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -24160,68 +25463,75 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   /// target of a canonical reference. It SHALL remain the same when the
   ///  implementation guide is stored on different servers.
   @override
+  @HiveField(11)
   final FhirUri? url;
 
   /// [urlElement] Extensions for url
   @override
   @JsonKey(name: '_url')
+  @HiveField(12)
   final Element? urlElement;
 
   /// [version] The identifier that is used to identify this version of the
-  /// implementation guide when it is referenced in a specification, model,
-  /// design or instance. This is an arbitrary value managed by the
-  /// implementation guide author and is not expected to be globally unique. For
-  /// example, it might be a timestamp (e.g. yyyymmdd) if a managed version is
-  /// not available. There is also no expectation that versions can be placed in
-  ///  a lexicographical sequence.
   @override
+  @HiveField(13)
+  @HiveField(14)
   final String? version;
 
   /// [versionElement] Extensions for version
   @override
   @JsonKey(name: '_version')
+  @HiveField(15)
   final Element? versionElement;
 
   /// [name] A natural language name identifying the implementation guide. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
   @override
+  @HiveField(16)
   final String? name;
 
   /// [nameElement] Extensions for name
   @override
   @JsonKey(name: '_name')
+  @HiveField(17)
   final Element? nameElement;
 
   /// [title] A short, descriptive, user-friendly title for the implementation
   ///  guide.
   @override
+  @HiveField(18)
   final String? title;
 
   /// [titleElement] Extensions for title
   @override
   @JsonKey(name: '_title')
+  @HiveField(19)
   final Element? titleElement;
 
   /// [status] The status of this implementation guide. Enables tracking the
   ///  life-cycle of the content.
   @override
+  @HiveField(20)
   final Code? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
+  @HiveField(21)
   final Element? statusElement;
 
   /// [experimental] A Boolean value to indicate that this implementation guide
   /// is authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
   @override
+  @HiveField(22)
   final Boolean? experimental;
 
   /// [experimentalElement] Extensions for experimental
   @override
   @JsonKey(name: '_experimental')
+  @HiveField(23)
   final Element? experimentalElement;
 
   /// [date] The date  (and optionally time) when the implementation guide was
@@ -24229,21 +25539,25 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the implementation guide changes.
   @override
+  @HiveField(24)
   final FhirDateTime? date;
 
   /// [dateElement] Extensions for date
   @override
   @JsonKey(name: '_date')
+  @HiveField(25)
   final Element? dateElement;
 
   /// [publisher] The name of the organization or individual that published the
   ///  implementation guide.
   @override
+  @HiveField(26)
   final String? publisher;
 
   /// [publisherElement] Extensions for publisher
   @override
   @JsonKey(name: '_publisher')
+  @HiveField(27)
   final Element? publisherElement;
 
   /// [contact] Contact details to assist a user in finding and communicating
@@ -24253,6 +25567,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
   @override
+  @HiveField(28)
   List<ContactDetail>? get contact {
     final value = _contact;
     if (value == null) return null;
@@ -24264,11 +25579,13 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   /// [description] A free text natural language description of the
   ///  implementation guide from a consumer's perspective.
   @override
+  @HiveField(29)
   final Markdown? description;
 
   /// [descriptionElement] Extensions for description
   @override
   @JsonKey(name: '_description')
+  @HiveField(30)
   final Element? descriptionElement;
 
   /// [useContext] The content was developed with a focus and intent of
@@ -24284,6 +25601,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate implementation guide instances.
   @override
+  @HiveField(31)
   List<UsageContext>? get useContext {
     final value = _useContext;
     if (value == null) return null;
@@ -24299,6 +25617,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   /// [jurisdiction] A legal or geographic region in which the implementation
   ///  guide is intended to be used.
   @override
+  @HiveField(32)
   List<CodeableConcept>? get jurisdiction {
     final value = _jurisdiction;
     if (value == null) return null;
@@ -24311,33 +25630,38 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   /// and/or its contents. Copyright statements are generally legal restrictions
   ///  on the use and publishing of the implementation guide.
   @override
+  @HiveField(33)
   final Markdown? copyright;
 
   /// [copyrightElement] Extensions for copyright
   @override
   @JsonKey(name: '_copyright')
+  @HiveField(34)
   final Element? copyrightElement;
 
   /// [packageId] The NPM package name for this Implementation Guide, used in
   /// the NPM package distribution, which is the primary mechanism by which FHIR
-  /// based tooling manages IG dependencies. This value must be globally unique,
-  ///  and should be assigned with care.
   @override
+  @HiveField(35)
+  @HiveField(36)
   final Id? packageId;
 
   /// [packageIdElement] Extensions for packageId
   @override
   @JsonKey(name: '_packageId')
+  @HiveField(37)
   final Element? packageIdElement;
 
   /// [license] The license that applies to this Implementation Guide, using an
   ///  SPDX license code, or 'not-open-source'.
   @override
+  @HiveField(38)
   final Code? license;
 
   /// [licenseElement] Extensions for license
   @override
   @JsonKey(name: '_license')
+  @HiveField(39)
   final Element? licenseElement;
 
   /// [fhirVersion] The version(s) of the FHIR specification that this
@@ -24353,6 +25677,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   /// number, e.g. [publication].[major].[minor], which is 4.0.1. for this
   ///  version.
   @override
+  @HiveField(40)
   List<Code>? get fhirVersion {
     final value = _fhirVersion;
     if (value == null) return null;
@@ -24367,6 +25692,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   /// [fhirVersionElement] Extensions for fhirVersion
   @override
   @JsonKey(name: '_fhirVersion')
+  @HiveField(41)
   List<Element?>? get fhirVersionElement {
     final value = _fhirVersionElement;
     if (value == null) return null;
@@ -24385,6 +25711,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   /// on. Typically, an implementation guide uses value sets, profiles
   ///  etc.defined in other implementation guides.
   @override
+  @HiveField(42)
   List<ImplementationGuideDependsOn>? get dependsOn {
     final value = _dependsOn;
     if (value == null) return null;
@@ -24400,6 +25727,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   /// [global] A set of profiles that all resources covered by this
   ///  implementation guide must conform to.
   @override
+  @HiveField(43)
   List<ImplementationGuideGlobal>? get global {
     final value = _global;
     if (value == null) return null;
@@ -24411,11 +25739,13 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   /// [definition] The information needed by an IG publisher tool to publish
   ///  the whole implementation guide.
   @override
+  @HiveField(44)
   final ImplementationGuideDefinition? definition;
 
   /// [manifest] Information about an assembled implementation guide, created
   ///  by the publication tooling.
   @override
+  @HiveField(45)
   final ImplementationGuideManifest? manifest;
 
   @override
@@ -24573,67 +25903,114 @@ class _$_ImplementationGuide extends _ImplementationGuide {
 
 abstract class _ImplementationGuide extends ImplementationGuide {
   factory _ImplementationGuide(
-      {@JsonKey(unknownEnumValue: R4ResourceType.ImplementationGuide)
-          final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
-      final Code? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final FhirUri? url,
-      @JsonKey(name: '_url')
-          final Element? urlElement,
-      final String? version,
-      @JsonKey(name: '_version')
-          final Element? versionElement,
-      final String? name,
-      @JsonKey(name: '_name')
-          final Element? nameElement,
-      final String? title,
-      @JsonKey(name: '_title')
-          final Element? titleElement,
-      final Code? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
-      final Boolean? experimental,
-      @JsonKey(name: '_experimental')
-          final Element? experimentalElement,
-      final FhirDateTime? date,
-      @JsonKey(name: '_date')
-          final Element? dateElement,
-      final String? publisher,
-      @JsonKey(name: '_publisher')
-          final Element? publisherElement,
-      final List<ContactDetail>? contact,
-      final Markdown? description,
-      @JsonKey(name: '_description')
-          final Element? descriptionElement,
-      final List<UsageContext>? useContext,
-      final List<CodeableConcept>? jurisdiction,
-      final Markdown? copyright,
-      @JsonKey(name: '_copyright')
-          final Element? copyrightElement,
-      final Id? packageId,
-      @JsonKey(name: '_packageId')
-          final Element? packageIdElement,
-      final Code? license,
-      @JsonKey(name: '_license')
-          final Element? licenseElement,
-      final List<Code>? fhirVersion,
-      @JsonKey(name: '_fhirVersion')
-          final List<Element?>? fhirVersionElement,
-      final List<ImplementationGuideDependsOn>? dependsOn,
-      final List<ImplementationGuideGlobal>? global,
-      final ImplementationGuideDefinition? definition,
-      final ImplementationGuideManifest? manifest}) = _$_ImplementationGuide;
+          {@JsonKey(unknownEnumValue: R4ResourceType.ImplementationGuide)
+          @HiveField(0)
+              final R4ResourceType resourceType,
+          @HiveField(1)
+              final String? id,
+          @HiveField(2)
+              final Meta? meta,
+          @HiveField(3)
+              final FhirUri? implicitRules,
+          @JsonKey(name: '_implicitRules')
+          @HiveField(4)
+              final Element? implicitRulesElement,
+          @HiveField(5)
+              final Code? language,
+          @JsonKey(name: '_language')
+          @HiveField(6)
+              final Element? languageElement,
+          @HiveField(7)
+              final Narrative? text,
+          @HiveField(8)
+              final List<Resource>? contained,
+          @JsonKey(name: 'extension')
+          @HiveField(9)
+              final List<FhirExtension>? extension_,
+          @HiveField(10)
+              final List<FhirExtension>? modifierExtension,
+          @HiveField(11)
+              final FhirUri? url,
+          @JsonKey(name: '_url')
+          @HiveField(12)
+              final Element? urlElement,
+          @HiveField(13)
+          @HiveField(14)
+              final String? version,
+          @JsonKey(name: '_version')
+          @HiveField(15)
+              final Element? versionElement,
+          @HiveField(16)
+              final String? name,
+          @JsonKey(name: '_name')
+          @HiveField(17)
+              final Element? nameElement,
+          @HiveField(18)
+              final String? title,
+          @JsonKey(name: '_title')
+          @HiveField(19)
+              final Element? titleElement,
+          @HiveField(20)
+              final Code? status,
+          @JsonKey(name: '_status')
+          @HiveField(21)
+              final Element? statusElement,
+          @HiveField(22)
+              final Boolean? experimental,
+          @JsonKey(name: '_experimental')
+          @HiveField(23)
+              final Element? experimentalElement,
+          @HiveField(24)
+              final FhirDateTime? date,
+          @JsonKey(name: '_date')
+          @HiveField(25)
+              final Element? dateElement,
+          @HiveField(26)
+              final String? publisher,
+          @JsonKey(name: '_publisher')
+          @HiveField(27)
+              final Element? publisherElement,
+          @HiveField(28)
+              final List<ContactDetail>? contact,
+          @HiveField(29)
+              final Markdown? description,
+          @JsonKey(name: '_description')
+          @HiveField(30)
+              final Element? descriptionElement,
+          @HiveField(31)
+              final List<UsageContext>? useContext,
+          @HiveField(32)
+              final List<CodeableConcept>? jurisdiction,
+          @HiveField(33)
+              final Markdown? copyright,
+          @JsonKey(name: '_copyright')
+          @HiveField(34)
+              final Element? copyrightElement,
+          @HiveField(35)
+          @HiveField(36)
+              final Id? packageId,
+          @JsonKey(name: '_packageId')
+          @HiveField(37)
+              final Element? packageIdElement,
+          @HiveField(38)
+              final Code? license,
+          @JsonKey(name: '_license')
+          @HiveField(39)
+              final Element? licenseElement,
+          @HiveField(40)
+              final List<Code>? fhirVersion,
+          @JsonKey(name: '_fhirVersion')
+          @HiveField(41)
+              final List<Element?>? fhirVersionElement,
+          @HiveField(42)
+              final List<ImplementationGuideDependsOn>? dependsOn,
+          @HiveField(43)
+              final List<ImplementationGuideGlobal>? global,
+          @HiveField(44)
+              final ImplementationGuideDefinition? definition,
+          @HiveField(45)
+              final ImplementationGuideManifest? manifest}) =
+      _$_ImplementationGuide;
   _ImplementationGuide._() : super._();
 
   factory _ImplementationGuide.fromJson(Map<String, dynamic> json) =
@@ -24641,17 +26018,20 @@ abstract class _ImplementationGuide extends ImplementationGuide {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ImplementationGuide)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta;
   @override
 
@@ -24659,20 +26039,24 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -24682,6 +26066,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -24689,6 +26074,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -24699,6 +26085,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -24715,6 +26102,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
@@ -24725,68 +26113,75 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   /// this implementation guide is (or will be) published. This URL can be the
   /// target of a canonical reference. It SHALL remain the same when the
   ///  implementation guide is stored on different servers.
+  @HiveField(11)
   FhirUri? get url;
   @override
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
+  @HiveField(12)
   Element? get urlElement;
   @override
 
   /// [version] The identifier that is used to identify this version of the
-  /// implementation guide when it is referenced in a specification, model,
-  /// design or instance. This is an arbitrary value managed by the
-  /// implementation guide author and is not expected to be globally unique. For
-  /// example, it might be a timestamp (e.g. yyyymmdd) if a managed version is
-  /// not available. There is also no expectation that versions can be placed in
-  ///  a lexicographical sequence.
+  @HiveField(13)
+  @HiveField(14)
   String? get version;
   @override
 
   /// [versionElement] Extensions for version
   @JsonKey(name: '_version')
+  @HiveField(15)
   Element? get versionElement;
   @override
 
   /// [name] A natural language name identifying the implementation guide. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
+  @HiveField(16)
   String? get name;
   @override
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
+  @HiveField(17)
   Element? get nameElement;
   @override
 
   /// [title] A short, descriptive, user-friendly title for the implementation
   ///  guide.
+  @HiveField(18)
   String? get title;
   @override
 
   /// [titleElement] Extensions for title
   @JsonKey(name: '_title')
+  @HiveField(19)
   Element? get titleElement;
   @override
 
   /// [status] The status of this implementation guide. Enables tracking the
   ///  life-cycle of the content.
+  @HiveField(20)
   Code? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(21)
   Element? get statusElement;
   @override
 
   /// [experimental] A Boolean value to indicate that this implementation guide
   /// is authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
+  @HiveField(22)
   Boolean? get experimental;
   @override
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
+  @HiveField(23)
   Element? get experimentalElement;
   @override
 
@@ -24794,36 +26189,43 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   /// published. The date must change when the business version changes and it
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the implementation guide changes.
+  @HiveField(24)
   FhirDateTime? get date;
   @override
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
+  @HiveField(25)
   Element? get dateElement;
   @override
 
   /// [publisher] The name of the organization or individual that published the
   ///  implementation guide.
+  @HiveField(26)
   String? get publisher;
   @override
 
   /// [publisherElement] Extensions for publisher
   @JsonKey(name: '_publisher')
+  @HiveField(27)
   Element? get publisherElement;
   @override
 
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
+  @HiveField(28)
   List<ContactDetail>? get contact;
   @override
 
   /// [description] A free text natural language description of the
   ///  implementation guide from a consumer's perspective.
+  @HiveField(29)
   Markdown? get description;
   @override
 
   /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
+  @HiveField(30)
   Element? get descriptionElement;
   @override
 
@@ -24832,44 +26234,51 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   /// categories (gender, age, ...) or may be references to specific programs
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate implementation guide instances.
+  @HiveField(31)
   List<UsageContext>? get useContext;
   @override
 
   /// [jurisdiction] A legal or geographic region in which the implementation
   ///  guide is intended to be used.
+  @HiveField(32)
   List<CodeableConcept>? get jurisdiction;
   @override
 
   /// [copyright] A copyright statement relating to the implementation guide
   /// and/or its contents. Copyright statements are generally legal restrictions
   ///  on the use and publishing of the implementation guide.
+  @HiveField(33)
   Markdown? get copyright;
   @override
 
   /// [copyrightElement] Extensions for copyright
   @JsonKey(name: '_copyright')
+  @HiveField(34)
   Element? get copyrightElement;
   @override
 
   /// [packageId] The NPM package name for this Implementation Guide, used in
   /// the NPM package distribution, which is the primary mechanism by which FHIR
-  /// based tooling manages IG dependencies. This value must be globally unique,
-  ///  and should be assigned with care.
+  @HiveField(35)
+  @HiveField(36)
   Id? get packageId;
   @override
 
   /// [packageIdElement] Extensions for packageId
   @JsonKey(name: '_packageId')
+  @HiveField(37)
   Element? get packageIdElement;
   @override
 
   /// [license] The license that applies to this Implementation Guide, using an
   ///  SPDX license code, or 'not-open-source'.
+  @HiveField(38)
   Code? get license;
   @override
 
   /// [licenseElement] Extensions for license
   @JsonKey(name: '_license')
+  @HiveField(39)
   Element? get licenseElement;
   @override
 
@@ -24878,32 +26287,38 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   /// element is the formal version of the specification, without the revision
   /// number, e.g. [publication].[major].[minor], which is 4.0.1. for this
   ///  version.
+  @HiveField(40)
   List<Code>? get fhirVersion;
   @override
 
   /// [fhirVersionElement] Extensions for fhirVersion
   @JsonKey(name: '_fhirVersion')
+  @HiveField(41)
   List<Element?>? get fhirVersionElement;
   @override
 
   /// [dependsOn] Another implementation guide that this implementation depends
   /// on. Typically, an implementation guide uses value sets, profiles
   ///  etc.defined in other implementation guides.
+  @HiveField(42)
   List<ImplementationGuideDependsOn>? get dependsOn;
   @override
 
   /// [global] A set of profiles that all resources covered by this
   ///  implementation guide must conform to.
+  @HiveField(43)
   List<ImplementationGuideGlobal>? get global;
   @override
 
   /// [definition] The information needed by an IG publisher tool to publish
   ///  the whole implementation guide.
+  @HiveField(44)
   ImplementationGuideDefinition? get definition;
   @override
 
   /// [manifest] Information about an assembled implementation guide, created
   ///  by the publication tooling.
+  @HiveField(45)
   ImplementationGuideManifest? get manifest;
   @override
   @JsonKey(ignore: true)
@@ -31016,32 +32431,39 @@ MessageDefinition _$MessageDefinitionFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$MessageDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.MessageDefinition)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -31050,12 +32472,14 @@ mixin _$MessageDefinition {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -31065,6 +32489,7 @@ mixin _$MessageDefinition {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -31080,21 +32505,25 @@ mixin _$MessageDefinition {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [url] The business identifier that is used to reference the
   /// MessageDefinition and *is* expected to be consistent from server to
   ///  server.
+  @HiveField(11)
   FhirUri? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
+  @HiveField(12)
   Element? get urlElement => throw _privateConstructorUsedError;
 
   /// [identifier] A formal identifier that is used to identify this message
   /// definition when it is represented in other formats, or referenced in a
   ///  specification, model, design or an instance.
+  @HiveField(13)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [version] The identifier that is used to identify this version of the
@@ -31104,77 +32533,95 @@ mixin _$MessageDefinition {
   /// a timestamp (e.g. yyyymmdd) if a managed version is not available. There
   /// is also no expectation that versions can be placed in a lexicographical
   ///  sequence.
+  @HiveField(14)
   String? get version => throw _privateConstructorUsedError;
 
   /// [versionElement] Extensions for version
   @JsonKey(name: '_version')
+  @HiveField(15)
   Element? get versionElement => throw _privateConstructorUsedError;
 
   /// [name] A natural language name identifying the message definition. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
+  @HiveField(16)
   String? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
+  @HiveField(17)
   Element? get nameElement => throw _privateConstructorUsedError;
 
   /// [title] A short, descriptive, user-friendly title for the message
   ///  definition.
+  @HiveField(18)
   String? get title => throw _privateConstructorUsedError;
 
   /// [titleElement] Extensions for title
   @JsonKey(name: '_title')
+  @HiveField(19)
   Element? get titleElement => throw _privateConstructorUsedError;
 
   /// [replaces] A MessageDefinition that is superseded by this definition.
+  @HiveField(20)
   List<Canonical>? get replaces => throw _privateConstructorUsedError;
 
   /// [status] The status of this message definition. Enables tracking the
   ///  life-cycle of the content.
+  @HiveField(21)
   Code? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(22)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [experimental] A Boolean value to indicate that this message definition
   /// is authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
+  @HiveField(23)
   Boolean? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
+  @HiveField(24)
   Element? get experimentalElement => throw _privateConstructorUsedError;
 
   /// [date] The date  (and optionally time) when the message definition was
   /// published. The date must change when the business version changes and it
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the message definition changes.
+  @HiveField(25)
   FhirDateTime? get date => throw _privateConstructorUsedError;
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
+  @HiveField(26)
   Element? get dateElement => throw _privateConstructorUsedError;
 
   /// [publisher] The name of the organization or individual that published the
   ///  message definition.
+  @HiveField(27)
   String? get publisher => throw _privateConstructorUsedError;
 
   /// [publisherElement] Extensions for publisher
   @JsonKey(name: '_publisher')
+  @HiveField(28)
   Element? get publisherElement => throw _privateConstructorUsedError;
 
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
+  @HiveField(29)
   List<ContactDetail>? get contact => throw _privateConstructorUsedError;
 
   /// [description] A free text natural language description of the message
   ///  definition from a consumer's perspective.
+  @HiveField(30)
   Markdown? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
+  @HiveField(31)
   Element? get descriptionElement => throw _privateConstructorUsedError;
 
   /// [useContext] The content was developed with a focus and intent of
@@ -31182,77 +32629,90 @@ mixin _$MessageDefinition {
   /// categories (gender, age, ...) or may be references to specific programs
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate message definition instances.
+  @HiveField(32)
   List<UsageContext>? get useContext => throw _privateConstructorUsedError;
 
   /// [jurisdiction] A legal or geographic region in which the message
   ///  definition is intended to be used.
+  @HiveField(33)
   List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
 
   /// [purpose] Explanation of why this message definition is needed and why it
   ///  has been designed as it has.
+  @HiveField(34)
   Markdown? get purpose => throw _privateConstructorUsedError;
 
   /// [purposeElement] Extensions for purpose
   @JsonKey(name: '_purpose')
+  @HiveField(35)
   Element? get purposeElement => throw _privateConstructorUsedError;
 
   /// [copyright] A copyright statement relating to the message definition
   /// and/or its contents. Copyright statements are generally legal restrictions
   ///  on the use and publishing of the message definition.
+  @HiveField(36)
   Markdown? get copyright => throw _privateConstructorUsedError;
 
   /// [copyrightElement] Extensions for copyright
   @JsonKey(name: '_copyright')
+  @HiveField(37)
   Element? get copyrightElement => throw _privateConstructorUsedError;
 
   /// [base] The MessageDefinition that is the basis for the contents of this
   ///  resource.
+  @HiveField(38)
   Canonical? get base => throw _privateConstructorUsedError;
 
   /// [parent] Identifies a protocol or workflow that this MessageDefinition
   ///  represents a step in.
+  @HiveField(39)
   List<Canonical>? get parent => throw _privateConstructorUsedError;
 
   /// [eventCoding] Event code or link to the EventDefinition.
+  @HiveField(40)
   Coding? get eventCoding => throw _privateConstructorUsedError;
 
   /// [eventUri] Event code or link to the EventDefinition.
+  @HiveField(41)
   FhirUri? get eventUri => throw _privateConstructorUsedError;
 
   /// [eventUriElement] Extensions for eventUri
   @JsonKey(name: '_eventUri')
+  @HiveField(42)
   Element? get eventUriElement => throw _privateConstructorUsedError;
 
   /// [category] The impact of the content of the message.
+  @HiveField(43)
   Code? get category => throw _privateConstructorUsedError;
 
   /// [categoryElement] Extensions for category
   @JsonKey(name: '_category')
+  @HiveField(44)
   Element? get categoryElement => throw _privateConstructorUsedError;
 
   /// [focus] Identifies the resource (or resources) that are being addressed
   /// by the event.  For example, the Encounter for an admit message or two
   ///  Account records for a merge.
+  @HiveField(45)
   List<MessageDefinitionFocus>? get focus => throw _privateConstructorUsedError;
 
   /// [responseRequired] Declare at a message definition level whether a
   ///  response is required or only upon error or success, or never.
+  @HiveField(46)
   Code? get responseRequired => throw _privateConstructorUsedError;
 
   /// [responseRequiredElement] Extensions for responseRequired
   @JsonKey(name: '_responseRequired')
+  @HiveField(47)
   Element? get responseRequiredElement => throw _privateConstructorUsedError;
 
   /// [allowedResponse] Indicates what types of messages may be sent as an
   ///  application-level response to this message.
+  @HiveField(48)
   List<MessageDefinitionAllowedResponse>? get allowedResponse =>
       throw _privateConstructorUsedError;
-
-  /// [graph] Canonical reference to a GraphDefinition. If a URL is provided,
-  /// it is the canonical reference to a [[[GraphDefinition]]] that it controls
-  /// what resources are to be added to the bundle when building the document.
-  /// The GraphDefinition can also specify profiles that apply to the various
-  ///  resources.
+  @HiveField(49)
+  @HiveField(50)
   List<Canonical>? get graph => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -31269,73 +32729,124 @@ abstract class $MessageDefinitionCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.MessageDefinition)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          FhirUri? url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           Element? urlElement,
-      List<Identifier>? identifier,
-      String? version,
+      @HiveField(13)
+          List<Identifier>? identifier,
+      @HiveField(14)
+          String? version,
       @JsonKey(name: '_version')
+      @HiveField(15)
           Element? versionElement,
-      String? name,
+      @HiveField(16)
+          String? name,
       @JsonKey(name: '_name')
+      @HiveField(17)
           Element? nameElement,
-      String? title,
+      @HiveField(18)
+          String? title,
       @JsonKey(name: '_title')
+      @HiveField(19)
           Element? titleElement,
-      List<Canonical>? replaces,
-      Code? status,
+      @HiveField(20)
+          List<Canonical>? replaces,
+      @HiveField(21)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(22)
           Element? statusElement,
-      Boolean? experimental,
+      @HiveField(23)
+          Boolean? experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(24)
           Element? experimentalElement,
-      FhirDateTime? date,
+      @HiveField(25)
+          FhirDateTime? date,
       @JsonKey(name: '_date')
+      @HiveField(26)
           Element? dateElement,
-      String? publisher,
+      @HiveField(27)
+          String? publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(28)
           Element? publisherElement,
-      List<ContactDetail>? contact,
-      Markdown? description,
+      @HiveField(29)
+          List<ContactDetail>? contact,
+      @HiveField(30)
+          Markdown? description,
       @JsonKey(name: '_description')
+      @HiveField(31)
           Element? descriptionElement,
-      List<UsageContext>? useContext,
-      List<CodeableConcept>? jurisdiction,
-      Markdown? purpose,
+      @HiveField(32)
+          List<UsageContext>? useContext,
+      @HiveField(33)
+          List<CodeableConcept>? jurisdiction,
+      @HiveField(34)
+          Markdown? purpose,
       @JsonKey(name: '_purpose')
+      @HiveField(35)
           Element? purposeElement,
-      Markdown? copyright,
+      @HiveField(36)
+          Markdown? copyright,
       @JsonKey(name: '_copyright')
+      @HiveField(37)
           Element? copyrightElement,
-      Canonical? base,
-      List<Canonical>? parent,
-      Coding? eventCoding,
-      FhirUri? eventUri,
+      @HiveField(38)
+          Canonical? base,
+      @HiveField(39)
+          List<Canonical>? parent,
+      @HiveField(40)
+          Coding? eventCoding,
+      @HiveField(41)
+          FhirUri? eventUri,
       @JsonKey(name: '_eventUri')
+      @HiveField(42)
           Element? eventUriElement,
-      Code? category,
+      @HiveField(43)
+          Code? category,
       @JsonKey(name: '_category')
+      @HiveField(44)
           Element? categoryElement,
-      List<MessageDefinitionFocus>? focus,
-      Code? responseRequired,
+      @HiveField(45)
+          List<MessageDefinitionFocus>? focus,
+      @HiveField(46)
+          Code? responseRequired,
       @JsonKey(name: '_responseRequired')
+      @HiveField(47)
           Element? responseRequiredElement,
-      List<MessageDefinitionAllowedResponse>? allowedResponse,
-      List<Canonical>? graph});
+      @HiveField(48)
+          List<MessageDefinitionAllowedResponse>? allowedResponse,
+      @HiveField(49)
+      @HiveField(50)
+          List<Canonical>? graph});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -31865,73 +33376,124 @@ abstract class _$$_MessageDefinitionCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.MessageDefinition)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          FhirUri? url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           Element? urlElement,
-      List<Identifier>? identifier,
-      String? version,
+      @HiveField(13)
+          List<Identifier>? identifier,
+      @HiveField(14)
+          String? version,
       @JsonKey(name: '_version')
+      @HiveField(15)
           Element? versionElement,
-      String? name,
+      @HiveField(16)
+          String? name,
       @JsonKey(name: '_name')
+      @HiveField(17)
           Element? nameElement,
-      String? title,
+      @HiveField(18)
+          String? title,
       @JsonKey(name: '_title')
+      @HiveField(19)
           Element? titleElement,
-      List<Canonical>? replaces,
-      Code? status,
+      @HiveField(20)
+          List<Canonical>? replaces,
+      @HiveField(21)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(22)
           Element? statusElement,
-      Boolean? experimental,
+      @HiveField(23)
+          Boolean? experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(24)
           Element? experimentalElement,
-      FhirDateTime? date,
+      @HiveField(25)
+          FhirDateTime? date,
       @JsonKey(name: '_date')
+      @HiveField(26)
           Element? dateElement,
-      String? publisher,
+      @HiveField(27)
+          String? publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(28)
           Element? publisherElement,
-      List<ContactDetail>? contact,
-      Markdown? description,
+      @HiveField(29)
+          List<ContactDetail>? contact,
+      @HiveField(30)
+          Markdown? description,
       @JsonKey(name: '_description')
+      @HiveField(31)
           Element? descriptionElement,
-      List<UsageContext>? useContext,
-      List<CodeableConcept>? jurisdiction,
-      Markdown? purpose,
+      @HiveField(32)
+          List<UsageContext>? useContext,
+      @HiveField(33)
+          List<CodeableConcept>? jurisdiction,
+      @HiveField(34)
+          Markdown? purpose,
       @JsonKey(name: '_purpose')
+      @HiveField(35)
           Element? purposeElement,
-      Markdown? copyright,
+      @HiveField(36)
+          Markdown? copyright,
       @JsonKey(name: '_copyright')
+      @HiveField(37)
           Element? copyrightElement,
-      Canonical? base,
-      List<Canonical>? parent,
-      Coding? eventCoding,
-      FhirUri? eventUri,
+      @HiveField(38)
+          Canonical? base,
+      @HiveField(39)
+          List<Canonical>? parent,
+      @HiveField(40)
+          Coding? eventCoding,
+      @HiveField(41)
+          FhirUri? eventUri,
       @JsonKey(name: '_eventUri')
+      @HiveField(42)
           Element? eventUriElement,
-      Code? category,
+      @HiveField(43)
+          Code? category,
       @JsonKey(name: '_category')
+      @HiveField(44)
           Element? categoryElement,
-      List<MessageDefinitionFocus>? focus,
-      Code? responseRequired,
+      @HiveField(45)
+          List<MessageDefinitionFocus>? focus,
+      @HiveField(46)
+          Code? responseRequired,
       @JsonKey(name: '_responseRequired')
+      @HiveField(47)
           Element? responseRequiredElement,
-      List<MessageDefinitionAllowedResponse>? allowedResponse,
-      List<Canonical>? graph});
+      @HiveField(48)
+          List<MessageDefinitionAllowedResponse>? allowedResponse,
+      @HiveField(49)
+      @HiveField(50)
+          List<Canonical>? graph});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -32246,73 +33808,124 @@ class __$$_MessageDefinitionCopyWithImpl<$Res>
 class _$_MessageDefinition extends _MessageDefinition {
   _$_MessageDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.MessageDefinition)
+      @HiveField(0)
           this.resourceType = R4ResourceType.MessageDefinition,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.url,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          this.url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           this.urlElement,
-      final List<Identifier>? identifier,
-      this.version,
+      @HiveField(13)
+          final List<Identifier>? identifier,
+      @HiveField(14)
+          this.version,
       @JsonKey(name: '_version')
+      @HiveField(15)
           this.versionElement,
-      this.name,
+      @HiveField(16)
+          this.name,
       @JsonKey(name: '_name')
+      @HiveField(17)
           this.nameElement,
-      this.title,
+      @HiveField(18)
+          this.title,
       @JsonKey(name: '_title')
+      @HiveField(19)
           this.titleElement,
-      final List<Canonical>? replaces,
-      this.status,
+      @HiveField(20)
+          final List<Canonical>? replaces,
+      @HiveField(21)
+          this.status,
       @JsonKey(name: '_status')
+      @HiveField(22)
           this.statusElement,
-      this.experimental,
+      @HiveField(23)
+          this.experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(24)
           this.experimentalElement,
-      this.date,
+      @HiveField(25)
+          this.date,
       @JsonKey(name: '_date')
+      @HiveField(26)
           this.dateElement,
-      this.publisher,
+      @HiveField(27)
+          this.publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(28)
           this.publisherElement,
-      final List<ContactDetail>? contact,
-      this.description,
+      @HiveField(29)
+          final List<ContactDetail>? contact,
+      @HiveField(30)
+          this.description,
       @JsonKey(name: '_description')
+      @HiveField(31)
           this.descriptionElement,
-      final List<UsageContext>? useContext,
-      final List<CodeableConcept>? jurisdiction,
-      this.purpose,
+      @HiveField(32)
+          final List<UsageContext>? useContext,
+      @HiveField(33)
+          final List<CodeableConcept>? jurisdiction,
+      @HiveField(34)
+          this.purpose,
       @JsonKey(name: '_purpose')
+      @HiveField(35)
           this.purposeElement,
-      this.copyright,
+      @HiveField(36)
+          this.copyright,
       @JsonKey(name: '_copyright')
+      @HiveField(37)
           this.copyrightElement,
-      this.base,
-      final List<Canonical>? parent,
-      this.eventCoding,
-      this.eventUri,
+      @HiveField(38)
+          this.base,
+      @HiveField(39)
+          final List<Canonical>? parent,
+      @HiveField(40)
+          this.eventCoding,
+      @HiveField(41)
+          this.eventUri,
       @JsonKey(name: '_eventUri')
+      @HiveField(42)
           this.eventUriElement,
-      this.category,
+      @HiveField(43)
+          this.category,
       @JsonKey(name: '_category')
+      @HiveField(44)
           this.categoryElement,
-      final List<MessageDefinitionFocus>? focus,
-      this.responseRequired,
+      @HiveField(45)
+          final List<MessageDefinitionFocus>? focus,
+      @HiveField(46)
+          this.responseRequired,
       @JsonKey(name: '_responseRequired')
+      @HiveField(47)
           this.responseRequiredElement,
-      final List<MessageDefinitionAllowedResponse>? allowedResponse,
-      final List<Canonical>? graph})
+      @HiveField(48)
+          final List<MessageDefinitionAllowedResponse>? allowedResponse,
+      @HiveField(49)
+      @HiveField(50)
+          final List<Canonical>? graph})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -32332,17 +33945,20 @@ class _$_MessageDefinition extends _MessageDefinition {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.MessageDefinition)
+  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
+  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
+  @HiveField(2)
   final Meta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -32350,20 +33966,24 @@ class _$_MessageDefinition extends _MessageDefinition {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
+  @HiveField(5)
   final Code? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
+  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -32373,6 +33993,7 @@ class _$_MessageDefinition extends _MessageDefinition {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
+  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -32386,6 +34007,7 @@ class _$_MessageDefinition extends _MessageDefinition {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -32410,6 +34032,7 @@ class _$_MessageDefinition extends _MessageDefinition {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -32447,6 +34070,7 @@ class _$_MessageDefinition extends _MessageDefinition {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -32460,11 +34084,13 @@ class _$_MessageDefinition extends _MessageDefinition {
   /// MessageDefinition and *is* expected to be consistent from server to
   ///  server.
   @override
+  @HiveField(11)
   final FhirUri? url;
 
   /// [urlElement] Extensions for url
   @override
   @JsonKey(name: '_url')
+  @HiveField(12)
   final Element? urlElement;
 
   /// [identifier] A formal identifier that is used to identify this message
@@ -32476,6 +34102,7 @@ class _$_MessageDefinition extends _MessageDefinition {
   /// definition when it is represented in other formats, or referenced in a
   ///  specification, model, design or an instance.
   @override
+  @HiveField(13)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -32492,32 +34119,38 @@ class _$_MessageDefinition extends _MessageDefinition {
   /// is also no expectation that versions can be placed in a lexicographical
   ///  sequence.
   @override
+  @HiveField(14)
   final String? version;
 
   /// [versionElement] Extensions for version
   @override
   @JsonKey(name: '_version')
+  @HiveField(15)
   final Element? versionElement;
 
   /// [name] A natural language name identifying the message definition. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
   @override
+  @HiveField(16)
   final String? name;
 
   /// [nameElement] Extensions for name
   @override
   @JsonKey(name: '_name')
+  @HiveField(17)
   final Element? nameElement;
 
   /// [title] A short, descriptive, user-friendly title for the message
   ///  definition.
   @override
+  @HiveField(18)
   final String? title;
 
   /// [titleElement] Extensions for title
   @override
   @JsonKey(name: '_title')
+  @HiveField(19)
   final Element? titleElement;
 
   /// [replaces] A MessageDefinition that is superseded by this definition.
@@ -32525,6 +34158,7 @@ class _$_MessageDefinition extends _MessageDefinition {
 
   /// [replaces] A MessageDefinition that is superseded by this definition.
   @override
+  @HiveField(20)
   List<Canonical>? get replaces {
     final value = _replaces;
     if (value == null) return null;
@@ -32536,22 +34170,26 @@ class _$_MessageDefinition extends _MessageDefinition {
   /// [status] The status of this message definition. Enables tracking the
   ///  life-cycle of the content.
   @override
+  @HiveField(21)
   final Code? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
+  @HiveField(22)
   final Element? statusElement;
 
   /// [experimental] A Boolean value to indicate that this message definition
   /// is authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
   @override
+  @HiveField(23)
   final Boolean? experimental;
 
   /// [experimentalElement] Extensions for experimental
   @override
   @JsonKey(name: '_experimental')
+  @HiveField(24)
   final Element? experimentalElement;
 
   /// [date] The date  (and optionally time) when the message definition was
@@ -32559,21 +34197,25 @@ class _$_MessageDefinition extends _MessageDefinition {
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the message definition changes.
   @override
+  @HiveField(25)
   final FhirDateTime? date;
 
   /// [dateElement] Extensions for date
   @override
   @JsonKey(name: '_date')
+  @HiveField(26)
   final Element? dateElement;
 
   /// [publisher] The name of the organization or individual that published the
   ///  message definition.
   @override
+  @HiveField(27)
   final String? publisher;
 
   /// [publisherElement] Extensions for publisher
   @override
   @JsonKey(name: '_publisher')
+  @HiveField(28)
   final Element? publisherElement;
 
   /// [contact] Contact details to assist a user in finding and communicating
@@ -32583,6 +34225,7 @@ class _$_MessageDefinition extends _MessageDefinition {
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
   @override
+  @HiveField(29)
   List<ContactDetail>? get contact {
     final value = _contact;
     if (value == null) return null;
@@ -32594,11 +34237,13 @@ class _$_MessageDefinition extends _MessageDefinition {
   /// [description] A free text natural language description of the message
   ///  definition from a consumer's perspective.
   @override
+  @HiveField(30)
   final Markdown? description;
 
   /// [descriptionElement] Extensions for description
   @override
   @JsonKey(name: '_description')
+  @HiveField(31)
   final Element? descriptionElement;
 
   /// [useContext] The content was developed with a focus and intent of
@@ -32614,6 +34259,7 @@ class _$_MessageDefinition extends _MessageDefinition {
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate message definition instances.
   @override
+  @HiveField(32)
   List<UsageContext>? get useContext {
     final value = _useContext;
     if (value == null) return null;
@@ -32629,6 +34275,7 @@ class _$_MessageDefinition extends _MessageDefinition {
   /// [jurisdiction] A legal or geographic region in which the message
   ///  definition is intended to be used.
   @override
+  @HiveField(33)
   List<CodeableConcept>? get jurisdiction {
     final value = _jurisdiction;
     if (value == null) return null;
@@ -32640,27 +34287,32 @@ class _$_MessageDefinition extends _MessageDefinition {
   /// [purpose] Explanation of why this message definition is needed and why it
   ///  has been designed as it has.
   @override
+  @HiveField(34)
   final Markdown? purpose;
 
   /// [purposeElement] Extensions for purpose
   @override
   @JsonKey(name: '_purpose')
+  @HiveField(35)
   final Element? purposeElement;
 
   /// [copyright] A copyright statement relating to the message definition
   /// and/or its contents. Copyright statements are generally legal restrictions
   ///  on the use and publishing of the message definition.
   @override
+  @HiveField(36)
   final Markdown? copyright;
 
   /// [copyrightElement] Extensions for copyright
   @override
   @JsonKey(name: '_copyright')
+  @HiveField(37)
   final Element? copyrightElement;
 
   /// [base] The MessageDefinition that is the basis for the contents of this
   ///  resource.
   @override
+  @HiveField(38)
   final Canonical? base;
 
   /// [parent] Identifies a protocol or workflow that this MessageDefinition
@@ -32670,6 +34322,7 @@ class _$_MessageDefinition extends _MessageDefinition {
   /// [parent] Identifies a protocol or workflow that this MessageDefinition
   ///  represents a step in.
   @override
+  @HiveField(39)
   List<Canonical>? get parent {
     final value = _parent;
     if (value == null) return null;
@@ -32680,24 +34333,29 @@ class _$_MessageDefinition extends _MessageDefinition {
 
   /// [eventCoding] Event code or link to the EventDefinition.
   @override
+  @HiveField(40)
   final Coding? eventCoding;
 
   /// [eventUri] Event code or link to the EventDefinition.
   @override
+  @HiveField(41)
   final FhirUri? eventUri;
 
   /// [eventUriElement] Extensions for eventUri
   @override
   @JsonKey(name: '_eventUri')
+  @HiveField(42)
   final Element? eventUriElement;
 
   /// [category] The impact of the content of the message.
   @override
+  @HiveField(43)
   final Code? category;
 
   /// [categoryElement] Extensions for category
   @override
   @JsonKey(name: '_category')
+  @HiveField(44)
   final Element? categoryElement;
 
   /// [focus] Identifies the resource (or resources) that are being addressed
@@ -32709,6 +34367,7 @@ class _$_MessageDefinition extends _MessageDefinition {
   /// by the event.  For example, the Encounter for an admit message or two
   ///  Account records for a merge.
   @override
+  @HiveField(45)
   List<MessageDefinitionFocus>? get focus {
     final value = _focus;
     if (value == null) return null;
@@ -32720,11 +34379,13 @@ class _$_MessageDefinition extends _MessageDefinition {
   /// [responseRequired] Declare at a message definition level whether a
   ///  response is required or only upon error or success, or never.
   @override
+  @HiveField(46)
   final Code? responseRequired;
 
   /// [responseRequiredElement] Extensions for responseRequired
   @override
   @JsonKey(name: '_responseRequired')
+  @HiveField(47)
   final Element? responseRequiredElement;
 
   /// [allowedResponse] Indicates what types of messages may be sent as an
@@ -32734,6 +34395,7 @@ class _$_MessageDefinition extends _MessageDefinition {
   /// [allowedResponse] Indicates what types of messages may be sent as an
   ///  application-level response to this message.
   @override
+  @HiveField(48)
   List<MessageDefinitionAllowedResponse>? get allowedResponse {
     final value = _allowedResponse;
     if (value == null) return null;
@@ -32742,19 +34404,10 @@ class _$_MessageDefinition extends _MessageDefinition {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [graph] Canonical reference to a GraphDefinition. If a URL is provided,
-  /// it is the canonical reference to a [[[GraphDefinition]]] that it controls
-  /// what resources are to be added to the bundle when building the document.
-  /// The GraphDefinition can also specify profiles that apply to the various
-  ///  resources.
   final List<Canonical>? _graph;
-
-  /// [graph] Canonical reference to a GraphDefinition. If a URL is provided,
-  /// it is the canonical reference to a [[[GraphDefinition]]] that it controls
-  /// what resources are to be added to the bundle when building the document.
-  /// The GraphDefinition can also specify profiles that apply to the various
-  ///  resources.
   @override
+  @HiveField(49)
+  @HiveField(50)
   List<Canonical>? get graph {
     final value = _graph;
     if (value == null) return null;
@@ -32934,73 +34587,124 @@ class _$_MessageDefinition extends _MessageDefinition {
 abstract class _MessageDefinition extends MessageDefinition {
   factory _MessageDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.MessageDefinition)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final FhirUri? url,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final FhirUri? url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           final Element? urlElement,
-      final List<Identifier>? identifier,
-      final String? version,
+      @HiveField(13)
+          final List<Identifier>? identifier,
+      @HiveField(14)
+          final String? version,
       @JsonKey(name: '_version')
+      @HiveField(15)
           final Element? versionElement,
-      final String? name,
+      @HiveField(16)
+          final String? name,
       @JsonKey(name: '_name')
+      @HiveField(17)
           final Element? nameElement,
-      final String? title,
+      @HiveField(18)
+          final String? title,
       @JsonKey(name: '_title')
+      @HiveField(19)
           final Element? titleElement,
-      final List<Canonical>? replaces,
-      final Code? status,
+      @HiveField(20)
+          final List<Canonical>? replaces,
+      @HiveField(21)
+          final Code? status,
       @JsonKey(name: '_status')
+      @HiveField(22)
           final Element? statusElement,
-      final Boolean? experimental,
+      @HiveField(23)
+          final Boolean? experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(24)
           final Element? experimentalElement,
-      final FhirDateTime? date,
+      @HiveField(25)
+          final FhirDateTime? date,
       @JsonKey(name: '_date')
+      @HiveField(26)
           final Element? dateElement,
-      final String? publisher,
+      @HiveField(27)
+          final String? publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(28)
           final Element? publisherElement,
-      final List<ContactDetail>? contact,
-      final Markdown? description,
+      @HiveField(29)
+          final List<ContactDetail>? contact,
+      @HiveField(30)
+          final Markdown? description,
       @JsonKey(name: '_description')
+      @HiveField(31)
           final Element? descriptionElement,
-      final List<UsageContext>? useContext,
-      final List<CodeableConcept>? jurisdiction,
-      final Markdown? purpose,
+      @HiveField(32)
+          final List<UsageContext>? useContext,
+      @HiveField(33)
+          final List<CodeableConcept>? jurisdiction,
+      @HiveField(34)
+          final Markdown? purpose,
       @JsonKey(name: '_purpose')
+      @HiveField(35)
           final Element? purposeElement,
-      final Markdown? copyright,
+      @HiveField(36)
+          final Markdown? copyright,
       @JsonKey(name: '_copyright')
+      @HiveField(37)
           final Element? copyrightElement,
-      final Canonical? base,
-      final List<Canonical>? parent,
-      final Coding? eventCoding,
-      final FhirUri? eventUri,
+      @HiveField(38)
+          final Canonical? base,
+      @HiveField(39)
+          final List<Canonical>? parent,
+      @HiveField(40)
+          final Coding? eventCoding,
+      @HiveField(41)
+          final FhirUri? eventUri,
       @JsonKey(name: '_eventUri')
+      @HiveField(42)
           final Element? eventUriElement,
-      final Code? category,
+      @HiveField(43)
+          final Code? category,
       @JsonKey(name: '_category')
+      @HiveField(44)
           final Element? categoryElement,
-      final List<MessageDefinitionFocus>? focus,
-      final Code? responseRequired,
+      @HiveField(45)
+          final List<MessageDefinitionFocus>? focus,
+      @HiveField(46)
+          final Code? responseRequired,
       @JsonKey(name: '_responseRequired')
+      @HiveField(47)
           final Element? responseRequiredElement,
-      final List<MessageDefinitionAllowedResponse>? allowedResponse,
-      final List<Canonical>? graph}) = _$_MessageDefinition;
+      @HiveField(48)
+          final List<MessageDefinitionAllowedResponse>? allowedResponse,
+      @HiveField(49)
+      @HiveField(50)
+          final List<Canonical>? graph}) = _$_MessageDefinition;
   _MessageDefinition._() : super._();
 
   factory _MessageDefinition.fromJson(Map<String, dynamic> json) =
@@ -33008,17 +34712,20 @@ abstract class _MessageDefinition extends MessageDefinition {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.MessageDefinition)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta;
   @override
 
@@ -33026,20 +34733,24 @@ abstract class _MessageDefinition extends MessageDefinition {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -33049,6 +34760,7 @@ abstract class _MessageDefinition extends MessageDefinition {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -33056,6 +34768,7 @@ abstract class _MessageDefinition extends MessageDefinition {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -33066,6 +34779,7 @@ abstract class _MessageDefinition extends MessageDefinition {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -33082,23 +34796,27 @@ abstract class _MessageDefinition extends MessageDefinition {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [url] The business identifier that is used to reference the
   /// MessageDefinition and *is* expected to be consistent from server to
   ///  server.
+  @HiveField(11)
   FhirUri? get url;
   @override
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
+  @HiveField(12)
   Element? get urlElement;
   @override
 
   /// [identifier] A formal identifier that is used to identify this message
   /// definition when it is represented in other formats, or referenced in a
   ///  specification, model, design or an instance.
+  @HiveField(13)
   List<Identifier>? get identifier;
   @override
 
@@ -33109,57 +34827,68 @@ abstract class _MessageDefinition extends MessageDefinition {
   /// a timestamp (e.g. yyyymmdd) if a managed version is not available. There
   /// is also no expectation that versions can be placed in a lexicographical
   ///  sequence.
+  @HiveField(14)
   String? get version;
   @override
 
   /// [versionElement] Extensions for version
   @JsonKey(name: '_version')
+  @HiveField(15)
   Element? get versionElement;
   @override
 
   /// [name] A natural language name identifying the message definition. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
+  @HiveField(16)
   String? get name;
   @override
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
+  @HiveField(17)
   Element? get nameElement;
   @override
 
   /// [title] A short, descriptive, user-friendly title for the message
   ///  definition.
+  @HiveField(18)
   String? get title;
   @override
 
   /// [titleElement] Extensions for title
   @JsonKey(name: '_title')
+  @HiveField(19)
   Element? get titleElement;
   @override
 
   /// [replaces] A MessageDefinition that is superseded by this definition.
+  @HiveField(20)
   List<Canonical>? get replaces;
   @override
 
   /// [status] The status of this message definition. Enables tracking the
   ///  life-cycle of the content.
+  @HiveField(21)
   Code? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(22)
   Element? get statusElement;
   @override
 
   /// [experimental] A Boolean value to indicate that this message definition
   /// is authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
+  @HiveField(23)
   Boolean? get experimental;
   @override
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
+  @HiveField(24)
   Element? get experimentalElement;
   @override
 
@@ -33167,36 +34896,43 @@ abstract class _MessageDefinition extends MessageDefinition {
   /// published. The date must change when the business version changes and it
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the message definition changes.
+  @HiveField(25)
   FhirDateTime? get date;
   @override
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
+  @HiveField(26)
   Element? get dateElement;
   @override
 
   /// [publisher] The name of the organization or individual that published the
   ///  message definition.
+  @HiveField(27)
   String? get publisher;
   @override
 
   /// [publisherElement] Extensions for publisher
   @JsonKey(name: '_publisher')
+  @HiveField(28)
   Element? get publisherElement;
   @override
 
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
+  @HiveField(29)
   List<ContactDetail>? get contact;
   @override
 
   /// [description] A free text natural language description of the message
   ///  definition from a consumer's perspective.
+  @HiveField(30)
   Markdown? get description;
   @override
 
   /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
+  @HiveField(31)
   Element? get descriptionElement;
   @override
 
@@ -33205,93 +34941,106 @@ abstract class _MessageDefinition extends MessageDefinition {
   /// categories (gender, age, ...) or may be references to specific programs
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate message definition instances.
+  @HiveField(32)
   List<UsageContext>? get useContext;
   @override
 
   /// [jurisdiction] A legal or geographic region in which the message
   ///  definition is intended to be used.
+  @HiveField(33)
   List<CodeableConcept>? get jurisdiction;
   @override
 
   /// [purpose] Explanation of why this message definition is needed and why it
   ///  has been designed as it has.
+  @HiveField(34)
   Markdown? get purpose;
   @override
 
   /// [purposeElement] Extensions for purpose
   @JsonKey(name: '_purpose')
+  @HiveField(35)
   Element? get purposeElement;
   @override
 
   /// [copyright] A copyright statement relating to the message definition
   /// and/or its contents. Copyright statements are generally legal restrictions
   ///  on the use and publishing of the message definition.
+  @HiveField(36)
   Markdown? get copyright;
   @override
 
   /// [copyrightElement] Extensions for copyright
   @JsonKey(name: '_copyright')
+  @HiveField(37)
   Element? get copyrightElement;
   @override
 
   /// [base] The MessageDefinition that is the basis for the contents of this
   ///  resource.
+  @HiveField(38)
   Canonical? get base;
   @override
 
   /// [parent] Identifies a protocol or workflow that this MessageDefinition
   ///  represents a step in.
+  @HiveField(39)
   List<Canonical>? get parent;
   @override
 
   /// [eventCoding] Event code or link to the EventDefinition.
+  @HiveField(40)
   Coding? get eventCoding;
   @override
 
   /// [eventUri] Event code or link to the EventDefinition.
+  @HiveField(41)
   FhirUri? get eventUri;
   @override
 
   /// [eventUriElement] Extensions for eventUri
   @JsonKey(name: '_eventUri')
+  @HiveField(42)
   Element? get eventUriElement;
   @override
 
   /// [category] The impact of the content of the message.
+  @HiveField(43)
   Code? get category;
   @override
 
   /// [categoryElement] Extensions for category
   @JsonKey(name: '_category')
+  @HiveField(44)
   Element? get categoryElement;
   @override
 
   /// [focus] Identifies the resource (or resources) that are being addressed
   /// by the event.  For example, the Encounter for an admit message or two
   ///  Account records for a merge.
+  @HiveField(45)
   List<MessageDefinitionFocus>? get focus;
   @override
 
   /// [responseRequired] Declare at a message definition level whether a
   ///  response is required or only upon error or success, or never.
+  @HiveField(46)
   Code? get responseRequired;
   @override
 
   /// [responseRequiredElement] Extensions for responseRequired
   @JsonKey(name: '_responseRequired')
+  @HiveField(47)
   Element? get responseRequiredElement;
   @override
 
   /// [allowedResponse] Indicates what types of messages may be sent as an
   ///  application-level response to this message.
+  @HiveField(48)
   List<MessageDefinitionAllowedResponse>? get allowedResponse;
   @override
-
-  /// [graph] Canonical reference to a GraphDefinition. If a URL is provided,
-  /// it is the canonical reference to a [[[GraphDefinition]]] that it controls
-  /// what resources are to be added to the bundle when building the document.
-  /// The GraphDefinition can also specify profiles that apply to the various
-  ///  resources.
+  @HiveField(49)
+  @HiveField(50)
   List<Canonical>? get graph;
   @override
   @JsonKey(ignore: true)
@@ -34297,32 +36046,39 @@ OperationDefinition _$OperationDefinitionFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$OperationDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.OperationDefinition)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -34331,12 +36087,14 @@ mixin _$OperationDefinition {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -34346,6 +36104,7 @@ mixin _$OperationDefinition {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -34361,6 +36120,7 @@ mixin _$OperationDefinition {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
@@ -34371,94 +36131,111 @@ mixin _$OperationDefinition {
   /// this operation definition is (or will be) published. This URL can be the
   /// target of a canonical reference. It SHALL remain the same when the
   ///  operation definition is stored on different servers.
+  @HiveField(11)
   FhirUri? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
+  @HiveField(12)
   Element? get urlElement => throw _privateConstructorUsedError;
 
   /// [version] The identifier that is used to identify this version of the
-  /// operation definition when it is referenced in a specification, model,
-  /// design or instance. This is an arbitrary value managed by the operation
-  /// definition author and is not expected to be globally unique. For example,
-  /// it might be a timestamp (e.g. yyyymmdd) if a managed version is not
-  /// available. There is also no expectation that versions can be placed in a
-  ///  lexicographical sequence.
+  @HiveField(13)
+  @HiveField(14)
+  @HiveField(15)
   String? get version => throw _privateConstructorUsedError;
 
   /// [versionElement] Extensions for version
   @JsonKey(name: '_version')
+  @HiveField(16)
   Element? get versionElement => throw _privateConstructorUsedError;
 
   /// [name] A natural language name identifying the operation definition. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
+  @HiveField(17)
   String? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
+  @HiveField(18)
   Element? get nameElement => throw _privateConstructorUsedError;
 
   /// [title] A short, descriptive, user-friendly title for the operation
   ///  definition.
+  @HiveField(19)
   String? get title => throw _privateConstructorUsedError;
 
   /// [titleElement] Extensions for title
   @JsonKey(name: '_title')
+  @HiveField(20)
   Element? get titleElement => throw _privateConstructorUsedError;
 
   /// [status] The status of this operation definition. Enables tracking the
   ///  life-cycle of the content.
+  @HiveField(21)
   Code? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(22)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [kind] Whether this is an operation or a named query.
+  @HiveField(23)
   Code? get kind => throw _privateConstructorUsedError;
 
   /// [kindElement] Extensions for kind
   @JsonKey(name: '_kind')
+  @HiveField(24)
   Element? get kindElement => throw _privateConstructorUsedError;
 
   /// [experimental] A Boolean value to indicate that this operation definition
   /// is authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
+  @HiveField(25)
   Boolean? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
+  @HiveField(26)
   Element? get experimentalElement => throw _privateConstructorUsedError;
 
   /// [date] The date  (and optionally time) when the operation definition was
   /// published. The date must change when the business version changes and it
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the operation definition changes.
+  @HiveField(27)
   FhirDateTime? get date => throw _privateConstructorUsedError;
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
+  @HiveField(28)
   Element? get dateElement => throw _privateConstructorUsedError;
 
   /// [publisher] The name of the organization or individual that published the
   ///  operation definition.
+  @HiveField(29)
   String? get publisher => throw _privateConstructorUsedError;
 
   /// [publisherElement] Extensions for publisher
   @JsonKey(name: '_publisher')
+  @HiveField(30)
   Element? get publisherElement => throw _privateConstructorUsedError;
 
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
+  @HiveField(31)
   List<ContactDetail>? get contact => throw _privateConstructorUsedError;
 
   /// [description] A free text natural language description of the operation
   ///  definition from a consumer's perspective.
+  @HiveField(32)
   Markdown? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
+  @HiveField(33)
   Element? get descriptionElement => throw _privateConstructorUsedError;
 
   /// [useContext] The content was developed with a focus and intent of
@@ -34466,97 +36243,120 @@ mixin _$OperationDefinition {
   /// categories (gender, age, ...) or may be references to specific programs
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate operation definition instances.
+  @HiveField(34)
   List<UsageContext>? get useContext => throw _privateConstructorUsedError;
 
   /// [jurisdiction] A legal or geographic region in which the operation
   ///  definition is intended to be used.
+  @HiveField(35)
   List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
 
   /// [purpose] Explanation of why this operation definition is needed and why
   ///  it has been designed as it has.
+  @HiveField(36)
   Markdown? get purpose => throw _privateConstructorUsedError;
 
   /// [purposeElement] Extensions for purpose
   @JsonKey(name: '_purpose')
+  @HiveField(37)
   Element? get purposeElement => throw _privateConstructorUsedError;
 
   /// [affectsState] Whether the operation affects state. Side effects such as
   ///  producing audit trail entries do not count as 'affecting  state'.
+  @HiveField(38)
   Boolean? get affectsState => throw _privateConstructorUsedError;
 
   /// [affectsStateElement] Extensions for affectsState
   @JsonKey(name: '_affectsState')
+  @HiveField(39)
   Element? get affectsStateElement => throw _privateConstructorUsedError;
 
   /// [code] The name used to invoke the operation.
+  @HiveField(40)
   Code? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
+  @HiveField(41)
   Element? get codeElement => throw _privateConstructorUsedError;
 
   /// [comment] Additional information about how to use this operation or named
   ///  query.
+  @HiveField(42)
   Markdown? get comment => throw _privateConstructorUsedError;
 
   /// [commentElement] Extensions for comment
   @JsonKey(name: '_comment')
+  @HiveField(43)
   Element? get commentElement => throw _privateConstructorUsedError;
 
   /// [base] Indicates that this operation definition is a constraining profile
   ///  on the base.
+  @HiveField(44)
   Canonical? get base => throw _privateConstructorUsedError;
 
   /// [resource] The types on which this operation can be executed.
+  @HiveField(45)
   List<Code>? get resource => throw _privateConstructorUsedError;
 
   /// [resourceElement] Extensions for resource
   @JsonKey(name: '_resource')
+  @HiveField(46)
   List<Element?>? get resourceElement => throw _privateConstructorUsedError;
 
   /// [system] Indicates whether this operation or named query can be invoked
   /// at the system level (e.g. without needing to choose a resource type for
   ///  the context).
+  @HiveField(47)
   Boolean? get system => throw _privateConstructorUsedError;
 
   /// [systemElement] Extensions for system
   @JsonKey(name: '_system')
+  @HiveField(48)
   Element? get systemElement => throw _privateConstructorUsedError;
 
   /// [type] Indicates whether this operation or named query can be invoked at
   /// the resource type level for any given resource type level (e.g. without
   ///  needing to choose a specific resource id for the context).
+  @HiveField(49)
   Boolean? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
+  @HiveField(50)
   Element? get typeElement => throw _privateConstructorUsedError;
 
   /// [instance] Indicates whether this operation can be invoked on a
   ///  particular instance of one of the given types.
+  @HiveField(51)
   Boolean? get instance => throw _privateConstructorUsedError;
 
   /// [instanceElement] Extensions for instance
   @JsonKey(name: '_instance')
+  @HiveField(52)
   Element? get instanceElement => throw _privateConstructorUsedError;
 
   /// [inputProfile] Additional validation information for the in parameters -
   /// a single profile that covers all the parameters. The profile is a
   ///  constraint on the parameters resource as a whole.
+  @HiveField(53)
   Canonical? get inputProfile => throw _privateConstructorUsedError;
 
   /// [outputProfile] Additional validation information for the out parameters
   /// - a single profile that covers all the parameters. The profile is a
   ///  constraint on the parameters resource.
+  @HiveField(54)
   Canonical? get outputProfile => throw _privateConstructorUsedError;
 
   /// [parameter] The parameters for the operation/query.
+  @HiveField(55)
   List<OperationDefinitionParameter>? get parameter =>
       throw _privateConstructorUsedError;
 
   /// [overload] Defines an appropriate combination of parameters to use when
   /// invoking this operation, to help code generators when generating
   ///  overloaded parameter sets for this operation.
+  @HiveField(56)
   List<OperationDefinitionOverload>? get overload =>
       throw _privateConstructorUsedError;
 
@@ -34574,82 +36374,139 @@ abstract class $OperationDefinitionCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.OperationDefinition)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          FhirUri? url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           Element? urlElement,
-      String? version,
+      @HiveField(13)
+      @HiveField(14)
+      @HiveField(15)
+          String? version,
       @JsonKey(name: '_version')
+      @HiveField(16)
           Element? versionElement,
-      String? name,
+      @HiveField(17)
+          String? name,
       @JsonKey(name: '_name')
+      @HiveField(18)
           Element? nameElement,
-      String? title,
+      @HiveField(19)
+          String? title,
       @JsonKey(name: '_title')
+      @HiveField(20)
           Element? titleElement,
-      Code? status,
+      @HiveField(21)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(22)
           Element? statusElement,
-      Code? kind,
+      @HiveField(23)
+          Code? kind,
       @JsonKey(name: '_kind')
+      @HiveField(24)
           Element? kindElement,
-      Boolean? experimental,
+      @HiveField(25)
+          Boolean? experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(26)
           Element? experimentalElement,
-      FhirDateTime? date,
+      @HiveField(27)
+          FhirDateTime? date,
       @JsonKey(name: '_date')
+      @HiveField(28)
           Element? dateElement,
-      String? publisher,
+      @HiveField(29)
+          String? publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(30)
           Element? publisherElement,
-      List<ContactDetail>? contact,
-      Markdown? description,
+      @HiveField(31)
+          List<ContactDetail>? contact,
+      @HiveField(32)
+          Markdown? description,
       @JsonKey(name: '_description')
+      @HiveField(33)
           Element? descriptionElement,
-      List<UsageContext>? useContext,
-      List<CodeableConcept>? jurisdiction,
-      Markdown? purpose,
+      @HiveField(34)
+          List<UsageContext>? useContext,
+      @HiveField(35)
+          List<CodeableConcept>? jurisdiction,
+      @HiveField(36)
+          Markdown? purpose,
       @JsonKey(name: '_purpose')
+      @HiveField(37)
           Element? purposeElement,
-      Boolean? affectsState,
+      @HiveField(38)
+          Boolean? affectsState,
       @JsonKey(name: '_affectsState')
+      @HiveField(39)
           Element? affectsStateElement,
-      Code? code,
+      @HiveField(40)
+          Code? code,
       @JsonKey(name: '_code')
+      @HiveField(41)
           Element? codeElement,
-      Markdown? comment,
+      @HiveField(42)
+          Markdown? comment,
       @JsonKey(name: '_comment')
+      @HiveField(43)
           Element? commentElement,
-      Canonical? base,
-      List<Code>? resource,
+      @HiveField(44)
+          Canonical? base,
+      @HiveField(45)
+          List<Code>? resource,
       @JsonKey(name: '_resource')
+      @HiveField(46)
           List<Element?>? resourceElement,
-      Boolean? system,
+      @HiveField(47)
+          Boolean? system,
       @JsonKey(name: '_system')
+      @HiveField(48)
           Element? systemElement,
-      Boolean? type,
+      @HiveField(49)
+          Boolean? type,
       @JsonKey(name: '_type')
+      @HiveField(50)
           Element? typeElement,
-      Boolean? instance,
+      @HiveField(51)
+          Boolean? instance,
       @JsonKey(name: '_instance')
+      @HiveField(52)
           Element? instanceElement,
-      Canonical? inputProfile,
-      Canonical? outputProfile,
-      List<OperationDefinitionParameter>? parameter,
-      List<OperationDefinitionOverload>? overload});
+      @HiveField(53)
+          Canonical? inputProfile,
+      @HiveField(54)
+          Canonical? outputProfile,
+      @HiveField(55)
+          List<OperationDefinitionParameter>? parameter,
+      @HiveField(56)
+          List<OperationDefinitionOverload>? overload});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -35230,82 +37087,139 @@ abstract class _$$_OperationDefinitionCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.OperationDefinition)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          FhirUri? url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           Element? urlElement,
-      String? version,
+      @HiveField(13)
+      @HiveField(14)
+      @HiveField(15)
+          String? version,
       @JsonKey(name: '_version')
+      @HiveField(16)
           Element? versionElement,
-      String? name,
+      @HiveField(17)
+          String? name,
       @JsonKey(name: '_name')
+      @HiveField(18)
           Element? nameElement,
-      String? title,
+      @HiveField(19)
+          String? title,
       @JsonKey(name: '_title')
+      @HiveField(20)
           Element? titleElement,
-      Code? status,
+      @HiveField(21)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(22)
           Element? statusElement,
-      Code? kind,
+      @HiveField(23)
+          Code? kind,
       @JsonKey(name: '_kind')
+      @HiveField(24)
           Element? kindElement,
-      Boolean? experimental,
+      @HiveField(25)
+          Boolean? experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(26)
           Element? experimentalElement,
-      FhirDateTime? date,
+      @HiveField(27)
+          FhirDateTime? date,
       @JsonKey(name: '_date')
+      @HiveField(28)
           Element? dateElement,
-      String? publisher,
+      @HiveField(29)
+          String? publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(30)
           Element? publisherElement,
-      List<ContactDetail>? contact,
-      Markdown? description,
+      @HiveField(31)
+          List<ContactDetail>? contact,
+      @HiveField(32)
+          Markdown? description,
       @JsonKey(name: '_description')
+      @HiveField(33)
           Element? descriptionElement,
-      List<UsageContext>? useContext,
-      List<CodeableConcept>? jurisdiction,
-      Markdown? purpose,
+      @HiveField(34)
+          List<UsageContext>? useContext,
+      @HiveField(35)
+          List<CodeableConcept>? jurisdiction,
+      @HiveField(36)
+          Markdown? purpose,
       @JsonKey(name: '_purpose')
+      @HiveField(37)
           Element? purposeElement,
-      Boolean? affectsState,
+      @HiveField(38)
+          Boolean? affectsState,
       @JsonKey(name: '_affectsState')
+      @HiveField(39)
           Element? affectsStateElement,
-      Code? code,
+      @HiveField(40)
+          Code? code,
       @JsonKey(name: '_code')
+      @HiveField(41)
           Element? codeElement,
-      Markdown? comment,
+      @HiveField(42)
+          Markdown? comment,
       @JsonKey(name: '_comment')
+      @HiveField(43)
           Element? commentElement,
-      Canonical? base,
-      List<Code>? resource,
+      @HiveField(44)
+          Canonical? base,
+      @HiveField(45)
+          List<Code>? resource,
       @JsonKey(name: '_resource')
+      @HiveField(46)
           List<Element?>? resourceElement,
-      Boolean? system,
+      @HiveField(47)
+          Boolean? system,
       @JsonKey(name: '_system')
+      @HiveField(48)
           Element? systemElement,
-      Boolean? type,
+      @HiveField(49)
+          Boolean? type,
       @JsonKey(name: '_type')
+      @HiveField(50)
           Element? typeElement,
-      Boolean? instance,
+      @HiveField(51)
+          Boolean? instance,
       @JsonKey(name: '_instance')
+      @HiveField(52)
           Element? instanceElement,
-      Canonical? inputProfile,
-      Canonical? outputProfile,
-      List<OperationDefinitionParameter>? parameter,
-      List<OperationDefinitionOverload>? overload});
+      @HiveField(53)
+          Canonical? inputProfile,
+      @HiveField(54)
+          Canonical? outputProfile,
+      @HiveField(55)
+          List<OperationDefinitionParameter>? parameter,
+      @HiveField(56)
+          List<OperationDefinitionOverload>? overload});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -35649,82 +37563,139 @@ class __$$_OperationDefinitionCopyWithImpl<$Res>
 class _$_OperationDefinition extends _OperationDefinition {
   _$_OperationDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.OperationDefinition)
+      @HiveField(0)
           this.resourceType = R4ResourceType.OperationDefinition,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.url,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          this.url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           this.urlElement,
-      this.version,
+      @HiveField(13)
+      @HiveField(14)
+      @HiveField(15)
+          this.version,
       @JsonKey(name: '_version')
+      @HiveField(16)
           this.versionElement,
-      this.name,
+      @HiveField(17)
+          this.name,
       @JsonKey(name: '_name')
+      @HiveField(18)
           this.nameElement,
-      this.title,
+      @HiveField(19)
+          this.title,
       @JsonKey(name: '_title')
+      @HiveField(20)
           this.titleElement,
-      this.status,
+      @HiveField(21)
+          this.status,
       @JsonKey(name: '_status')
+      @HiveField(22)
           this.statusElement,
-      this.kind,
+      @HiveField(23)
+          this.kind,
       @JsonKey(name: '_kind')
+      @HiveField(24)
           this.kindElement,
-      this.experimental,
+      @HiveField(25)
+          this.experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(26)
           this.experimentalElement,
-      this.date,
+      @HiveField(27)
+          this.date,
       @JsonKey(name: '_date')
+      @HiveField(28)
           this.dateElement,
-      this.publisher,
+      @HiveField(29)
+          this.publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(30)
           this.publisherElement,
-      final List<ContactDetail>? contact,
-      this.description,
+      @HiveField(31)
+          final List<ContactDetail>? contact,
+      @HiveField(32)
+          this.description,
       @JsonKey(name: '_description')
+      @HiveField(33)
           this.descriptionElement,
-      final List<UsageContext>? useContext,
-      final List<CodeableConcept>? jurisdiction,
-      this.purpose,
+      @HiveField(34)
+          final List<UsageContext>? useContext,
+      @HiveField(35)
+          final List<CodeableConcept>? jurisdiction,
+      @HiveField(36)
+          this.purpose,
       @JsonKey(name: '_purpose')
+      @HiveField(37)
           this.purposeElement,
-      this.affectsState,
+      @HiveField(38)
+          this.affectsState,
       @JsonKey(name: '_affectsState')
+      @HiveField(39)
           this.affectsStateElement,
-      this.code,
+      @HiveField(40)
+          this.code,
       @JsonKey(name: '_code')
+      @HiveField(41)
           this.codeElement,
-      this.comment,
+      @HiveField(42)
+          this.comment,
       @JsonKey(name: '_comment')
+      @HiveField(43)
           this.commentElement,
-      this.base,
-      final List<Code>? resource,
+      @HiveField(44)
+          this.base,
+      @HiveField(45)
+          final List<Code>? resource,
       @JsonKey(name: '_resource')
+      @HiveField(46)
           final List<Element?>? resourceElement,
-      this.system,
+      @HiveField(47)
+          this.system,
       @JsonKey(name: '_system')
+      @HiveField(48)
           this.systemElement,
-      this.type,
+      @HiveField(49)
+          this.type,
       @JsonKey(name: '_type')
+      @HiveField(50)
           this.typeElement,
-      this.instance,
+      @HiveField(51)
+          this.instance,
       @JsonKey(name: '_instance')
+      @HiveField(52)
           this.instanceElement,
-      this.inputProfile,
-      this.outputProfile,
-      final List<OperationDefinitionParameter>? parameter,
-      final List<OperationDefinitionOverload>? overload})
+      @HiveField(53)
+          this.inputProfile,
+      @HiveField(54)
+          this.outputProfile,
+      @HiveField(55)
+          final List<OperationDefinitionParameter>? parameter,
+      @HiveField(56)
+          final List<OperationDefinitionOverload>? overload})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -35742,17 +37713,20 @@ class _$_OperationDefinition extends _OperationDefinition {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.OperationDefinition)
+  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
+  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
+  @HiveField(2)
   final Meta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -35760,20 +37734,24 @@ class _$_OperationDefinition extends _OperationDefinition {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
+  @HiveField(5)
   final Code? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
+  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -35783,6 +37761,7 @@ class _$_OperationDefinition extends _OperationDefinition {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
+  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -35796,6 +37775,7 @@ class _$_OperationDefinition extends _OperationDefinition {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -35820,6 +37800,7 @@ class _$_OperationDefinition extends _OperationDefinition {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -35857,6 +37838,7 @@ class _$_OperationDefinition extends _OperationDefinition {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -35874,77 +37856,87 @@ class _$_OperationDefinition extends _OperationDefinition {
   /// target of a canonical reference. It SHALL remain the same when the
   ///  operation definition is stored on different servers.
   @override
+  @HiveField(11)
   final FhirUri? url;
 
   /// [urlElement] Extensions for url
   @override
   @JsonKey(name: '_url')
+  @HiveField(12)
   final Element? urlElement;
 
   /// [version] The identifier that is used to identify this version of the
-  /// operation definition when it is referenced in a specification, model,
-  /// design or instance. This is an arbitrary value managed by the operation
-  /// definition author and is not expected to be globally unique. For example,
-  /// it might be a timestamp (e.g. yyyymmdd) if a managed version is not
-  /// available. There is also no expectation that versions can be placed in a
-  ///  lexicographical sequence.
   @override
+  @HiveField(13)
+  @HiveField(14)
+  @HiveField(15)
   final String? version;
 
   /// [versionElement] Extensions for version
   @override
   @JsonKey(name: '_version')
+  @HiveField(16)
   final Element? versionElement;
 
   /// [name] A natural language name identifying the operation definition. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
   @override
+  @HiveField(17)
   final String? name;
 
   /// [nameElement] Extensions for name
   @override
   @JsonKey(name: '_name')
+  @HiveField(18)
   final Element? nameElement;
 
   /// [title] A short, descriptive, user-friendly title for the operation
   ///  definition.
   @override
+  @HiveField(19)
   final String? title;
 
   /// [titleElement] Extensions for title
   @override
   @JsonKey(name: '_title')
+  @HiveField(20)
   final Element? titleElement;
 
   /// [status] The status of this operation definition. Enables tracking the
   ///  life-cycle of the content.
   @override
+  @HiveField(21)
   final Code? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
+  @HiveField(22)
   final Element? statusElement;
 
   /// [kind] Whether this is an operation or a named query.
   @override
+  @HiveField(23)
   final Code? kind;
 
   /// [kindElement] Extensions for kind
   @override
   @JsonKey(name: '_kind')
+  @HiveField(24)
   final Element? kindElement;
 
   /// [experimental] A Boolean value to indicate that this operation definition
   /// is authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
   @override
+  @HiveField(25)
   final Boolean? experimental;
 
   /// [experimentalElement] Extensions for experimental
   @override
   @JsonKey(name: '_experimental')
+  @HiveField(26)
   final Element? experimentalElement;
 
   /// [date] The date  (and optionally time) when the operation definition was
@@ -35952,21 +37944,25 @@ class _$_OperationDefinition extends _OperationDefinition {
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the operation definition changes.
   @override
+  @HiveField(27)
   final FhirDateTime? date;
 
   /// [dateElement] Extensions for date
   @override
   @JsonKey(name: '_date')
+  @HiveField(28)
   final Element? dateElement;
 
   /// [publisher] The name of the organization or individual that published the
   ///  operation definition.
   @override
+  @HiveField(29)
   final String? publisher;
 
   /// [publisherElement] Extensions for publisher
   @override
   @JsonKey(name: '_publisher')
+  @HiveField(30)
   final Element? publisherElement;
 
   /// [contact] Contact details to assist a user in finding and communicating
@@ -35976,6 +37972,7 @@ class _$_OperationDefinition extends _OperationDefinition {
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
   @override
+  @HiveField(31)
   List<ContactDetail>? get contact {
     final value = _contact;
     if (value == null) return null;
@@ -35987,11 +37984,13 @@ class _$_OperationDefinition extends _OperationDefinition {
   /// [description] A free text natural language description of the operation
   ///  definition from a consumer's perspective.
   @override
+  @HiveField(32)
   final Markdown? description;
 
   /// [descriptionElement] Extensions for description
   @override
   @JsonKey(name: '_description')
+  @HiveField(33)
   final Element? descriptionElement;
 
   /// [useContext] The content was developed with a focus and intent of
@@ -36007,6 +38006,7 @@ class _$_OperationDefinition extends _OperationDefinition {
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate operation definition instances.
   @override
+  @HiveField(34)
   List<UsageContext>? get useContext {
     final value = _useContext;
     if (value == null) return null;
@@ -36022,6 +38022,7 @@ class _$_OperationDefinition extends _OperationDefinition {
   /// [jurisdiction] A legal or geographic region in which the operation
   ///  definition is intended to be used.
   @override
+  @HiveField(35)
   List<CodeableConcept>? get jurisdiction {
     final value = _jurisdiction;
     if (value == null) return null;
@@ -36033,45 +38034,54 @@ class _$_OperationDefinition extends _OperationDefinition {
   /// [purpose] Explanation of why this operation definition is needed and why
   ///  it has been designed as it has.
   @override
+  @HiveField(36)
   final Markdown? purpose;
 
   /// [purposeElement] Extensions for purpose
   @override
   @JsonKey(name: '_purpose')
+  @HiveField(37)
   final Element? purposeElement;
 
   /// [affectsState] Whether the operation affects state. Side effects such as
   ///  producing audit trail entries do not count as 'affecting  state'.
   @override
+  @HiveField(38)
   final Boolean? affectsState;
 
   /// [affectsStateElement] Extensions for affectsState
   @override
   @JsonKey(name: '_affectsState')
+  @HiveField(39)
   final Element? affectsStateElement;
 
   /// [code] The name used to invoke the operation.
   @override
+  @HiveField(40)
   final Code? code;
 
   /// [codeElement] Extensions for code
   @override
   @JsonKey(name: '_code')
+  @HiveField(41)
   final Element? codeElement;
 
   /// [comment] Additional information about how to use this operation or named
   ///  query.
   @override
+  @HiveField(42)
   final Markdown? comment;
 
   /// [commentElement] Extensions for comment
   @override
   @JsonKey(name: '_comment')
+  @HiveField(43)
   final Element? commentElement;
 
   /// [base] Indicates that this operation definition is a constraining profile
   ///  on the base.
   @override
+  @HiveField(44)
   final Canonical? base;
 
   /// [resource] The types on which this operation can be executed.
@@ -36079,6 +38089,7 @@ class _$_OperationDefinition extends _OperationDefinition {
 
   /// [resource] The types on which this operation can be executed.
   @override
+  @HiveField(45)
   List<Code>? get resource {
     final value = _resource;
     if (value == null) return null;
@@ -36093,6 +38104,7 @@ class _$_OperationDefinition extends _OperationDefinition {
   /// [resourceElement] Extensions for resource
   @override
   @JsonKey(name: '_resource')
+  @HiveField(46)
   List<Element?>? get resourceElement {
     final value = _resourceElement;
     if (value == null) return null;
@@ -36105,44 +38117,52 @@ class _$_OperationDefinition extends _OperationDefinition {
   /// at the system level (e.g. without needing to choose a resource type for
   ///  the context).
   @override
+  @HiveField(47)
   final Boolean? system;
 
   /// [systemElement] Extensions for system
   @override
   @JsonKey(name: '_system')
+  @HiveField(48)
   final Element? systemElement;
 
   /// [type] Indicates whether this operation or named query can be invoked at
   /// the resource type level for any given resource type level (e.g. without
   ///  needing to choose a specific resource id for the context).
   @override
+  @HiveField(49)
   final Boolean? type;
 
   /// [typeElement] Extensions for type
   @override
   @JsonKey(name: '_type')
+  @HiveField(50)
   final Element? typeElement;
 
   /// [instance] Indicates whether this operation can be invoked on a
   ///  particular instance of one of the given types.
   @override
+  @HiveField(51)
   final Boolean? instance;
 
   /// [instanceElement] Extensions for instance
   @override
   @JsonKey(name: '_instance')
+  @HiveField(52)
   final Element? instanceElement;
 
   /// [inputProfile] Additional validation information for the in parameters -
   /// a single profile that covers all the parameters. The profile is a
   ///  constraint on the parameters resource as a whole.
   @override
+  @HiveField(53)
   final Canonical? inputProfile;
 
   /// [outputProfile] Additional validation information for the out parameters
   /// - a single profile that covers all the parameters. The profile is a
   ///  constraint on the parameters resource.
   @override
+  @HiveField(54)
   final Canonical? outputProfile;
 
   /// [parameter] The parameters for the operation/query.
@@ -36150,6 +38170,7 @@ class _$_OperationDefinition extends _OperationDefinition {
 
   /// [parameter] The parameters for the operation/query.
   @override
+  @HiveField(55)
   List<OperationDefinitionParameter>? get parameter {
     final value = _parameter;
     if (value == null) return null;
@@ -36167,6 +38188,7 @@ class _$_OperationDefinition extends _OperationDefinition {
   /// invoking this operation, to help code generators when generating
   ///  overloaded parameter sets for this operation.
   @override
+  @HiveField(56)
   List<OperationDefinitionOverload>? get overload {
     final value = _overload;
     if (value == null) return null;
@@ -36357,82 +38379,139 @@ class _$_OperationDefinition extends _OperationDefinition {
 abstract class _OperationDefinition extends OperationDefinition {
   factory _OperationDefinition(
           {@JsonKey(unknownEnumValue: R4ResourceType.OperationDefinition)
+          @HiveField(0)
               final R4ResourceType resourceType,
-          final String? id,
-          final Meta? meta,
-          final FhirUri? implicitRules,
+          @HiveField(1)
+              final String? id,
+          @HiveField(2)
+              final Meta? meta,
+          @HiveField(3)
+              final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
+          @HiveField(4)
               final Element? implicitRulesElement,
-          final Code? language,
+          @HiveField(5)
+              final Code? language,
           @JsonKey(name: '_language')
+          @HiveField(6)
               final Element? languageElement,
-          final Narrative? text,
-          final List<Resource>? contained,
+          @HiveField(7)
+              final Narrative? text,
+          @HiveField(8)
+              final List<Resource>? contained,
           @JsonKey(name: 'extension')
+          @HiveField(9)
               final List<FhirExtension>? extension_,
-          final List<FhirExtension>? modifierExtension,
-          final FhirUri? url,
+          @HiveField(10)
+              final List<FhirExtension>? modifierExtension,
+          @HiveField(11)
+              final FhirUri? url,
           @JsonKey(name: '_url')
+          @HiveField(12)
               final Element? urlElement,
-          final String? version,
+          @HiveField(13)
+          @HiveField(14)
+          @HiveField(15)
+              final String? version,
           @JsonKey(name: '_version')
+          @HiveField(16)
               final Element? versionElement,
-          final String? name,
+          @HiveField(17)
+              final String? name,
           @JsonKey(name: '_name')
+          @HiveField(18)
               final Element? nameElement,
-          final String? title,
+          @HiveField(19)
+              final String? title,
           @JsonKey(name: '_title')
+          @HiveField(20)
               final Element? titleElement,
-          final Code? status,
+          @HiveField(21)
+              final Code? status,
           @JsonKey(name: '_status')
+          @HiveField(22)
               final Element? statusElement,
-          final Code? kind,
+          @HiveField(23)
+              final Code? kind,
           @JsonKey(name: '_kind')
+          @HiveField(24)
               final Element? kindElement,
-          final Boolean? experimental,
+          @HiveField(25)
+              final Boolean? experimental,
           @JsonKey(name: '_experimental')
+          @HiveField(26)
               final Element? experimentalElement,
-          final FhirDateTime? date,
+          @HiveField(27)
+              final FhirDateTime? date,
           @JsonKey(name: '_date')
+          @HiveField(28)
               final Element? dateElement,
-          final String? publisher,
+          @HiveField(29)
+              final String? publisher,
           @JsonKey(name: '_publisher')
+          @HiveField(30)
               final Element? publisherElement,
-          final List<ContactDetail>? contact,
-          final Markdown? description,
+          @HiveField(31)
+              final List<ContactDetail>? contact,
+          @HiveField(32)
+              final Markdown? description,
           @JsonKey(name: '_description')
+          @HiveField(33)
               final Element? descriptionElement,
-          final List<UsageContext>? useContext,
-          final List<CodeableConcept>? jurisdiction,
-          final Markdown? purpose,
+          @HiveField(34)
+              final List<UsageContext>? useContext,
+          @HiveField(35)
+              final List<CodeableConcept>? jurisdiction,
+          @HiveField(36)
+              final Markdown? purpose,
           @JsonKey(name: '_purpose')
+          @HiveField(37)
               final Element? purposeElement,
-          final Boolean? affectsState,
+          @HiveField(38)
+              final Boolean? affectsState,
           @JsonKey(name: '_affectsState')
+          @HiveField(39)
               final Element? affectsStateElement,
-          final Code? code,
+          @HiveField(40)
+              final Code? code,
           @JsonKey(name: '_code')
+          @HiveField(41)
               final Element? codeElement,
-          final Markdown? comment,
+          @HiveField(42)
+              final Markdown? comment,
           @JsonKey(name: '_comment')
+          @HiveField(43)
               final Element? commentElement,
-          final Canonical? base,
-          final List<Code>? resource,
+          @HiveField(44)
+              final Canonical? base,
+          @HiveField(45)
+              final List<Code>? resource,
           @JsonKey(name: '_resource')
+          @HiveField(46)
               final List<Element?>? resourceElement,
-          final Boolean? system,
+          @HiveField(47)
+              final Boolean? system,
           @JsonKey(name: '_system')
+          @HiveField(48)
               final Element? systemElement,
-          final Boolean? type,
+          @HiveField(49)
+              final Boolean? type,
           @JsonKey(name: '_type')
+          @HiveField(50)
               final Element? typeElement,
-          final Boolean? instance,
+          @HiveField(51)
+              final Boolean? instance,
           @JsonKey(name: '_instance')
+          @HiveField(52)
               final Element? instanceElement,
-          final Canonical? inputProfile,
-          final Canonical? outputProfile,
-          final List<OperationDefinitionParameter>? parameter,
-          final List<OperationDefinitionOverload>? overload}) =
+          @HiveField(53)
+              final Canonical? inputProfile,
+          @HiveField(54)
+              final Canonical? outputProfile,
+          @HiveField(55)
+              final List<OperationDefinitionParameter>? parameter,
+          @HiveField(56)
+              final List<OperationDefinitionOverload>? overload}) =
       _$_OperationDefinition;
   _OperationDefinition._() : super._();
 
@@ -36441,17 +38520,20 @@ abstract class _OperationDefinition extends OperationDefinition {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.OperationDefinition)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta;
   @override
 
@@ -36459,20 +38541,24 @@ abstract class _OperationDefinition extends OperationDefinition {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -36482,6 +38568,7 @@ abstract class _OperationDefinition extends OperationDefinition {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -36489,6 +38576,7 @@ abstract class _OperationDefinition extends OperationDefinition {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -36499,6 +38587,7 @@ abstract class _OperationDefinition extends OperationDefinition {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -36515,6 +38604,7 @@ abstract class _OperationDefinition extends OperationDefinition {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
@@ -36525,77 +38615,87 @@ abstract class _OperationDefinition extends OperationDefinition {
   /// this operation definition is (or will be) published. This URL can be the
   /// target of a canonical reference. It SHALL remain the same when the
   ///  operation definition is stored on different servers.
+  @HiveField(11)
   FhirUri? get url;
   @override
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
+  @HiveField(12)
   Element? get urlElement;
   @override
 
   /// [version] The identifier that is used to identify this version of the
-  /// operation definition when it is referenced in a specification, model,
-  /// design or instance. This is an arbitrary value managed by the operation
-  /// definition author and is not expected to be globally unique. For example,
-  /// it might be a timestamp (e.g. yyyymmdd) if a managed version is not
-  /// available. There is also no expectation that versions can be placed in a
-  ///  lexicographical sequence.
+  @HiveField(13)
+  @HiveField(14)
+  @HiveField(15)
   String? get version;
   @override
 
   /// [versionElement] Extensions for version
   @JsonKey(name: '_version')
+  @HiveField(16)
   Element? get versionElement;
   @override
 
   /// [name] A natural language name identifying the operation definition. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
+  @HiveField(17)
   String? get name;
   @override
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
+  @HiveField(18)
   Element? get nameElement;
   @override
 
   /// [title] A short, descriptive, user-friendly title for the operation
   ///  definition.
+  @HiveField(19)
   String? get title;
   @override
 
   /// [titleElement] Extensions for title
   @JsonKey(name: '_title')
+  @HiveField(20)
   Element? get titleElement;
   @override
 
   /// [status] The status of this operation definition. Enables tracking the
   ///  life-cycle of the content.
+  @HiveField(21)
   Code? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(22)
   Element? get statusElement;
   @override
 
   /// [kind] Whether this is an operation or a named query.
+  @HiveField(23)
   Code? get kind;
   @override
 
   /// [kindElement] Extensions for kind
   @JsonKey(name: '_kind')
+  @HiveField(24)
   Element? get kindElement;
   @override
 
   /// [experimental] A Boolean value to indicate that this operation definition
   /// is authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
+  @HiveField(25)
   Boolean? get experimental;
   @override
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
+  @HiveField(26)
   Element? get experimentalElement;
   @override
 
@@ -36603,36 +38703,43 @@ abstract class _OperationDefinition extends OperationDefinition {
   /// published. The date must change when the business version changes and it
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the operation definition changes.
+  @HiveField(27)
   FhirDateTime? get date;
   @override
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
+  @HiveField(28)
   Element? get dateElement;
   @override
 
   /// [publisher] The name of the organization or individual that published the
   ///  operation definition.
+  @HiveField(29)
   String? get publisher;
   @override
 
   /// [publisherElement] Extensions for publisher
   @JsonKey(name: '_publisher')
+  @HiveField(30)
   Element? get publisherElement;
   @override
 
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
+  @HiveField(31)
   List<ContactDetail>? get contact;
   @override
 
   /// [description] A free text natural language description of the operation
   ///  definition from a consumer's perspective.
+  @HiveField(32)
   Markdown? get description;
   @override
 
   /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
+  @HiveField(33)
   Element? get descriptionElement;
   @override
 
@@ -36641,118 +38748,141 @@ abstract class _OperationDefinition extends OperationDefinition {
   /// categories (gender, age, ...) or may be references to specific programs
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate operation definition instances.
+  @HiveField(34)
   List<UsageContext>? get useContext;
   @override
 
   /// [jurisdiction] A legal or geographic region in which the operation
   ///  definition is intended to be used.
+  @HiveField(35)
   List<CodeableConcept>? get jurisdiction;
   @override
 
   /// [purpose] Explanation of why this operation definition is needed and why
   ///  it has been designed as it has.
+  @HiveField(36)
   Markdown? get purpose;
   @override
 
   /// [purposeElement] Extensions for purpose
   @JsonKey(name: '_purpose')
+  @HiveField(37)
   Element? get purposeElement;
   @override
 
   /// [affectsState] Whether the operation affects state. Side effects such as
   ///  producing audit trail entries do not count as 'affecting  state'.
+  @HiveField(38)
   Boolean? get affectsState;
   @override
 
   /// [affectsStateElement] Extensions for affectsState
   @JsonKey(name: '_affectsState')
+  @HiveField(39)
   Element? get affectsStateElement;
   @override
 
   /// [code] The name used to invoke the operation.
+  @HiveField(40)
   Code? get code;
   @override
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
+  @HiveField(41)
   Element? get codeElement;
   @override
 
   /// [comment] Additional information about how to use this operation or named
   ///  query.
+  @HiveField(42)
   Markdown? get comment;
   @override
 
   /// [commentElement] Extensions for comment
   @JsonKey(name: '_comment')
+  @HiveField(43)
   Element? get commentElement;
   @override
 
   /// [base] Indicates that this operation definition is a constraining profile
   ///  on the base.
+  @HiveField(44)
   Canonical? get base;
   @override
 
   /// [resource] The types on which this operation can be executed.
+  @HiveField(45)
   List<Code>? get resource;
   @override
 
   /// [resourceElement] Extensions for resource
   @JsonKey(name: '_resource')
+  @HiveField(46)
   List<Element?>? get resourceElement;
   @override
 
   /// [system] Indicates whether this operation or named query can be invoked
   /// at the system level (e.g. without needing to choose a resource type for
   ///  the context).
+  @HiveField(47)
   Boolean? get system;
   @override
 
   /// [systemElement] Extensions for system
   @JsonKey(name: '_system')
+  @HiveField(48)
   Element? get systemElement;
   @override
 
   /// [type] Indicates whether this operation or named query can be invoked at
   /// the resource type level for any given resource type level (e.g. without
   ///  needing to choose a specific resource id for the context).
+  @HiveField(49)
   Boolean? get type;
   @override
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
+  @HiveField(50)
   Element? get typeElement;
   @override
 
   /// [instance] Indicates whether this operation can be invoked on a
   ///  particular instance of one of the given types.
+  @HiveField(51)
   Boolean? get instance;
   @override
 
   /// [instanceElement] Extensions for instance
   @JsonKey(name: '_instance')
+  @HiveField(52)
   Element? get instanceElement;
   @override
 
   /// [inputProfile] Additional validation information for the in parameters -
   /// a single profile that covers all the parameters. The profile is a
   ///  constraint on the parameters resource as a whole.
+  @HiveField(53)
   Canonical? get inputProfile;
   @override
 
   /// [outputProfile] Additional validation information for the out parameters
   /// - a single profile that covers all the parameters. The profile is a
   ///  constraint on the parameters resource.
+  @HiveField(54)
   Canonical? get outputProfile;
   @override
 
   /// [parameter] The parameters for the operation/query.
+  @HiveField(55)
   List<OperationDefinitionParameter>? get parameter;
   @override
 
   /// [overload] Defines an appropriate combination of parameters to use when
   /// invoking this operation, to help code generators when generating
   ///  overloaded parameter sets for this operation.
+  @HiveField(56)
   List<OperationDefinitionOverload>? get overload;
   @override
   @JsonKey(ignore: true)
@@ -39174,32 +41304,39 @@ SearchParameter _$SearchParameterFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$SearchParameter {
   @JsonKey(unknownEnumValue: R4ResourceType.SearchParameter)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -39208,12 +41345,14 @@ mixin _$SearchParameter {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -39223,6 +41362,7 @@ mixin _$SearchParameter {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -39238,6 +41378,7 @@ mixin _$SearchParameter {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
@@ -39248,10 +41389,12 @@ mixin _$SearchParameter {
   /// search parameter is (or will be) published. This URL can be the target of
   /// a canonical reference. It SHALL remain the same when the search parameter
   ///  is stored on different servers.
+  @HiveField(11)
   FhirUri? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
+  @HiveField(12)
   Element? get urlElement => throw _privateConstructorUsedError;
 
   /// [version] The identifier that is used to identify this version of the
@@ -39261,19 +41404,23 @@ mixin _$SearchParameter {
   /// a timestamp (e.g. yyyymmdd) if a managed version is not available. There
   /// is also no expectation that versions can be placed in a lexicographical
   ///  sequence.
+  @HiveField(13)
   String? get version => throw _privateConstructorUsedError;
 
   /// [versionElement] Extensions for version
   @JsonKey(name: '_version')
+  @HiveField(14)
   Element? get versionElement => throw _privateConstructorUsedError;
 
   /// [name] A natural language name identifying the search parameter. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
+  @HiveField(15)
   String? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
+  @HiveField(16)
   Element? get nameElement => throw _privateConstructorUsedError;
 
   /// [derivedFrom] Where this search parameter is originally defined. If a
@@ -39281,52 +41428,64 @@ mixin _$SearchParameter {
   /// consistent with the definition from which it is defined. i.e. the
   /// parameter should have the same meaning, and (usually) the functionality
   ///  should be a proper subset of the underlying search parameter.
+  @HiveField(17)
   Canonical? get derivedFrom => throw _privateConstructorUsedError;
 
   /// [status] The status of this search parameter. Enables tracking the
   ///  life-cycle of the content.
+  @HiveField(18)
   Code? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(19)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [experimental] A Boolean value to indicate that this search parameter is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
+  @HiveField(20)
   Boolean? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
+  @HiveField(21)
   Element? get experimentalElement => throw _privateConstructorUsedError;
 
   /// [date] The date  (and optionally time) when the search parameter was
   /// published. The date must change when the business version changes and it
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the search parameter changes.
+  @HiveField(22)
   FhirDateTime? get date => throw _privateConstructorUsedError;
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
+  @HiveField(23)
   Element? get dateElement => throw _privateConstructorUsedError;
 
   /// [publisher] The name of the organization or individual that published the
   ///  search parameter.
+  @HiveField(24)
   String? get publisher => throw _privateConstructorUsedError;
 
   /// [publisherElement] Extensions for publisher
   @JsonKey(name: '_publisher')
+  @HiveField(25)
   Element? get publisherElement => throw _privateConstructorUsedError;
 
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
+  @HiveField(26)
   List<ContactDetail>? get contact => throw _privateConstructorUsedError;
 
   /// [description] And how it used.
+  @HiveField(27)
   Markdown? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
+  @HiveField(28)
   Element? get descriptionElement => throw _privateConstructorUsedError;
 
   /// [useContext] The content was developed with a focus and intent of
@@ -39334,105 +41493,131 @@ mixin _$SearchParameter {
   /// categories (gender, age, ...) or may be references to specific programs
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate search parameter instances.
+  @HiveField(29)
   List<UsageContext>? get useContext => throw _privateConstructorUsedError;
 
   /// [jurisdiction] A legal or geographic region in which the search parameter
   ///  is intended to be used.
+  @HiveField(30)
   List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
 
   /// [purpose] Explanation of why this search parameter is needed and why it
   ///  has been designed as it has.
+  @HiveField(31)
   Markdown? get purpose => throw _privateConstructorUsedError;
 
   /// [purposeElement] Extensions for purpose
   @JsonKey(name: '_purpose')
+  @HiveField(32)
   Element? get purposeElement => throw _privateConstructorUsedError;
 
   /// [code] The code used in the URL or the parameter name in a parameters
   ///  resource for this search parameter.
+  @HiveField(33)
   Code? get code => throw _privateConstructorUsedError;
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
+  @HiveField(34)
   Element? get codeElement => throw _privateConstructorUsedError;
 
   /// [base] The base resource type(s) that this search parameter can be used
   ///  against.
+  @HiveField(35)
   List<Code>? get base => throw _privateConstructorUsedError;
 
   /// [baseElement] Extensions for base
   @JsonKey(name: '_base')
+  @HiveField(36)
   List<Element?>? get baseElement => throw _privateConstructorUsedError;
 
   /// [type] The type of value that a search parameter may contain, and how the
   ///  content is interpreted.
+  @HiveField(37)
   Code? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
+  @HiveField(38)
   Element? get typeElement => throw _privateConstructorUsedError;
 
   /// [expression] A FHIRPath expression that returns a set of elements for the
   ///  search parameter.
+  @HiveField(39)
   String? get expression => throw _privateConstructorUsedError;
 
   /// [expressionElement] Extensions for expression
   @JsonKey(name: '_expression')
+  @HiveField(40)
   Element? get expressionElement => throw _privateConstructorUsedError;
 
   /// [xpath] An XPath expression that returns a set of elements for the search
   ///  parameter.
+  @HiveField(41)
   String? get xpath => throw _privateConstructorUsedError;
 
   /// [xpathElement] Extensions for xpath
   @JsonKey(name: '_xpath')
+  @HiveField(42)
   Element? get xpathElement => throw _privateConstructorUsedError;
 
   /// [xpathUsage] How the search parameter relates to the set of elements
   ///  returned by evaluating the xpath query.
+  @HiveField(43)
   Code? get xpathUsage => throw _privateConstructorUsedError;
 
   /// [xpathUsageElement] Extensions for xpathUsage
   @JsonKey(name: '_xpathUsage')
+  @HiveField(44)
   Element? get xpathUsageElement => throw _privateConstructorUsedError;
 
   /// [target] Types of resource (if a resource is referenced).
+  @HiveField(45)
   List<Code>? get target => throw _privateConstructorUsedError;
 
   /// [targetElement] Extensions for target
   @JsonKey(name: '_target')
+  @HiveField(46)
   List<Element?>? get targetElement => throw _privateConstructorUsedError;
 
   /// [multipleOr] Whether multiple values are allowed for each time the
   /// parameter exists. Values are separated by commas, and the parameter
   ///  matches if any of the values match.
+  @HiveField(47)
   Boolean? get multipleOr => throw _privateConstructorUsedError;
 
   /// [multipleOrElement] Extensions for multipleOr
   @JsonKey(name: '_multipleOr')
+  @HiveField(48)
   Element? get multipleOrElement => throw _privateConstructorUsedError;
 
   /// [multipleAnd] Whether multiple parameters are allowed - e.g. more than
   /// one parameter with the same name. The search matches if all the parameters
   ///  match.
+  @HiveField(49)
   Boolean? get multipleAnd => throw _privateConstructorUsedError;
 
   /// [multipleAndElement] Extensions for multipleAnd
   @JsonKey(name: '_multipleAnd')
+  @HiveField(50)
   Element? get multipleAndElement => throw _privateConstructorUsedError;
 
   /// [comparator] Comparators supported for the search parameter.
+  @HiveField(51)
   List<Code>? get comparator => throw _privateConstructorUsedError;
 
   /// [comparatorElement] Extensions for comparator
   @JsonKey(name: '_comparator')
+  @HiveField(52)
   List<Element?>? get comparatorElement => throw _privateConstructorUsedError;
 
   /// [modifier] A modifier supported for the search parameter.
+  @HiveField(53)
   List<Code>? get modifier => throw _privateConstructorUsedError;
 
   /// [modifierElement] Extensions for modifier
   @JsonKey(name: '_modifier')
+  @HiveField(54)
   List<Element?>? get modifierElement => throw _privateConstructorUsedError;
 
   /// [chain] Contains the names of any search parameters which may be chained
@@ -39441,13 +41626,16 @@ mixin _$SearchParameter {
   /// be returned if they contain a reference to a resource which matches the
   /// chained parameter value. Values for this field should be drawn from
   ///  SearchParameter.code for a parameter on the target resource type.
+  @HiveField(55)
   List<String>? get chain => throw _privateConstructorUsedError;
 
   /// [chainElement] Extensions for chain
   @JsonKey(name: '_chain')
+  @HiveField(56)
   List<Element?>? get chainElement => throw _privateConstructorUsedError;
 
   /// [component] Used to define the parts of a composite search parameter.
+  @HiveField(57)
   List<SearchParameterComponent>? get component =>
       throw _privateConstructorUsedError;
 
@@ -39465,88 +41653,146 @@ abstract class $SearchParameterCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.SearchParameter)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          FhirUri? url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           Element? urlElement,
-      String? version,
+      @HiveField(13)
+          String? version,
       @JsonKey(name: '_version')
+      @HiveField(14)
           Element? versionElement,
-      String? name,
+      @HiveField(15)
+          String? name,
       @JsonKey(name: '_name')
+      @HiveField(16)
           Element? nameElement,
-      Canonical? derivedFrom,
-      Code? status,
+      @HiveField(17)
+          Canonical? derivedFrom,
+      @HiveField(18)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(19)
           Element? statusElement,
-      Boolean? experimental,
+      @HiveField(20)
+          Boolean? experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(21)
           Element? experimentalElement,
-      FhirDateTime? date,
+      @HiveField(22)
+          FhirDateTime? date,
       @JsonKey(name: '_date')
+      @HiveField(23)
           Element? dateElement,
-      String? publisher,
+      @HiveField(24)
+          String? publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(25)
           Element? publisherElement,
-      List<ContactDetail>? contact,
-      Markdown? description,
+      @HiveField(26)
+          List<ContactDetail>? contact,
+      @HiveField(27)
+          Markdown? description,
       @JsonKey(name: '_description')
+      @HiveField(28)
           Element? descriptionElement,
-      List<UsageContext>? useContext,
-      List<CodeableConcept>? jurisdiction,
-      Markdown? purpose,
+      @HiveField(29)
+          List<UsageContext>? useContext,
+      @HiveField(30)
+          List<CodeableConcept>? jurisdiction,
+      @HiveField(31)
+          Markdown? purpose,
       @JsonKey(name: '_purpose')
+      @HiveField(32)
           Element? purposeElement,
-      Code? code,
+      @HiveField(33)
+          Code? code,
       @JsonKey(name: '_code')
+      @HiveField(34)
           Element? codeElement,
-      List<Code>? base,
+      @HiveField(35)
+          List<Code>? base,
       @JsonKey(name: '_base')
+      @HiveField(36)
           List<Element?>? baseElement,
-      Code? type,
+      @HiveField(37)
+          Code? type,
       @JsonKey(name: '_type')
+      @HiveField(38)
           Element? typeElement,
-      String? expression,
+      @HiveField(39)
+          String? expression,
       @JsonKey(name: '_expression')
+      @HiveField(40)
           Element? expressionElement,
-      String? xpath,
+      @HiveField(41)
+          String? xpath,
       @JsonKey(name: '_xpath')
+      @HiveField(42)
           Element? xpathElement,
-      Code? xpathUsage,
+      @HiveField(43)
+          Code? xpathUsage,
       @JsonKey(name: '_xpathUsage')
+      @HiveField(44)
           Element? xpathUsageElement,
-      List<Code>? target,
+      @HiveField(45)
+          List<Code>? target,
       @JsonKey(name: '_target')
+      @HiveField(46)
           List<Element?>? targetElement,
-      Boolean? multipleOr,
+      @HiveField(47)
+          Boolean? multipleOr,
       @JsonKey(name: '_multipleOr')
+      @HiveField(48)
           Element? multipleOrElement,
-      Boolean? multipleAnd,
+      @HiveField(49)
+          Boolean? multipleAnd,
       @JsonKey(name: '_multipleAnd')
+      @HiveField(50)
           Element? multipleAndElement,
-      List<Code>? comparator,
+      @HiveField(51)
+          List<Code>? comparator,
       @JsonKey(name: '_comparator')
+      @HiveField(52)
           List<Element?>? comparatorElement,
-      List<Code>? modifier,
+      @HiveField(53)
+          List<Code>? modifier,
       @JsonKey(name: '_modifier')
+      @HiveField(54)
           List<Element?>? modifierElement,
-      List<String>? chain,
+      @HiveField(55)
+          List<String>? chain,
       @JsonKey(name: '_chain')
+      @HiveField(56)
           List<Element?>? chainElement,
-      List<SearchParameterComponent>? component});
+      @HiveField(57)
+          List<SearchParameterComponent>? component});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -40129,88 +42375,146 @@ abstract class _$$_SearchParameterCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.SearchParameter)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          FhirUri? url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           Element? urlElement,
-      String? version,
+      @HiveField(13)
+          String? version,
       @JsonKey(name: '_version')
+      @HiveField(14)
           Element? versionElement,
-      String? name,
+      @HiveField(15)
+          String? name,
       @JsonKey(name: '_name')
+      @HiveField(16)
           Element? nameElement,
-      Canonical? derivedFrom,
-      Code? status,
+      @HiveField(17)
+          Canonical? derivedFrom,
+      @HiveField(18)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(19)
           Element? statusElement,
-      Boolean? experimental,
+      @HiveField(20)
+          Boolean? experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(21)
           Element? experimentalElement,
-      FhirDateTime? date,
+      @HiveField(22)
+          FhirDateTime? date,
       @JsonKey(name: '_date')
+      @HiveField(23)
           Element? dateElement,
-      String? publisher,
+      @HiveField(24)
+          String? publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(25)
           Element? publisherElement,
-      List<ContactDetail>? contact,
-      Markdown? description,
+      @HiveField(26)
+          List<ContactDetail>? contact,
+      @HiveField(27)
+          Markdown? description,
       @JsonKey(name: '_description')
+      @HiveField(28)
           Element? descriptionElement,
-      List<UsageContext>? useContext,
-      List<CodeableConcept>? jurisdiction,
-      Markdown? purpose,
+      @HiveField(29)
+          List<UsageContext>? useContext,
+      @HiveField(30)
+          List<CodeableConcept>? jurisdiction,
+      @HiveField(31)
+          Markdown? purpose,
       @JsonKey(name: '_purpose')
+      @HiveField(32)
           Element? purposeElement,
-      Code? code,
+      @HiveField(33)
+          Code? code,
       @JsonKey(name: '_code')
+      @HiveField(34)
           Element? codeElement,
-      List<Code>? base,
+      @HiveField(35)
+          List<Code>? base,
       @JsonKey(name: '_base')
+      @HiveField(36)
           List<Element?>? baseElement,
-      Code? type,
+      @HiveField(37)
+          Code? type,
       @JsonKey(name: '_type')
+      @HiveField(38)
           Element? typeElement,
-      String? expression,
+      @HiveField(39)
+          String? expression,
       @JsonKey(name: '_expression')
+      @HiveField(40)
           Element? expressionElement,
-      String? xpath,
+      @HiveField(41)
+          String? xpath,
       @JsonKey(name: '_xpath')
+      @HiveField(42)
           Element? xpathElement,
-      Code? xpathUsage,
+      @HiveField(43)
+          Code? xpathUsage,
       @JsonKey(name: '_xpathUsage')
+      @HiveField(44)
           Element? xpathUsageElement,
-      List<Code>? target,
+      @HiveField(45)
+          List<Code>? target,
       @JsonKey(name: '_target')
+      @HiveField(46)
           List<Element?>? targetElement,
-      Boolean? multipleOr,
+      @HiveField(47)
+          Boolean? multipleOr,
       @JsonKey(name: '_multipleOr')
+      @HiveField(48)
           Element? multipleOrElement,
-      Boolean? multipleAnd,
+      @HiveField(49)
+          Boolean? multipleAnd,
       @JsonKey(name: '_multipleAnd')
+      @HiveField(50)
           Element? multipleAndElement,
-      List<Code>? comparator,
+      @HiveField(51)
+          List<Code>? comparator,
       @JsonKey(name: '_comparator')
+      @HiveField(52)
           List<Element?>? comparatorElement,
-      List<Code>? modifier,
+      @HiveField(53)
+          List<Code>? modifier,
       @JsonKey(name: '_modifier')
+      @HiveField(54)
           List<Element?>? modifierElement,
-      List<String>? chain,
+      @HiveField(55)
+          List<String>? chain,
       @JsonKey(name: '_chain')
+      @HiveField(56)
           List<Element?>? chainElement,
-      List<SearchParameterComponent>? component});
+      @HiveField(57)
+          List<SearchParameterComponent>? component});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -40567,88 +42871,146 @@ class __$$_SearchParameterCopyWithImpl<$Res>
 class _$_SearchParameter extends _SearchParameter {
   _$_SearchParameter(
       {@JsonKey(unknownEnumValue: R4ResourceType.SearchParameter)
+      @HiveField(0)
           this.resourceType = R4ResourceType.SearchParameter,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.url,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          this.url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           this.urlElement,
-      this.version,
+      @HiveField(13)
+          this.version,
       @JsonKey(name: '_version')
+      @HiveField(14)
           this.versionElement,
-      this.name,
+      @HiveField(15)
+          this.name,
       @JsonKey(name: '_name')
+      @HiveField(16)
           this.nameElement,
-      this.derivedFrom,
-      this.status,
+      @HiveField(17)
+          this.derivedFrom,
+      @HiveField(18)
+          this.status,
       @JsonKey(name: '_status')
+      @HiveField(19)
           this.statusElement,
-      this.experimental,
+      @HiveField(20)
+          this.experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(21)
           this.experimentalElement,
-      this.date,
+      @HiveField(22)
+          this.date,
       @JsonKey(name: '_date')
+      @HiveField(23)
           this.dateElement,
-      this.publisher,
+      @HiveField(24)
+          this.publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(25)
           this.publisherElement,
-      final List<ContactDetail>? contact,
-      this.description,
+      @HiveField(26)
+          final List<ContactDetail>? contact,
+      @HiveField(27)
+          this.description,
       @JsonKey(name: '_description')
+      @HiveField(28)
           this.descriptionElement,
-      final List<UsageContext>? useContext,
-      final List<CodeableConcept>? jurisdiction,
-      this.purpose,
+      @HiveField(29)
+          final List<UsageContext>? useContext,
+      @HiveField(30)
+          final List<CodeableConcept>? jurisdiction,
+      @HiveField(31)
+          this.purpose,
       @JsonKey(name: '_purpose')
+      @HiveField(32)
           this.purposeElement,
-      this.code,
+      @HiveField(33)
+          this.code,
       @JsonKey(name: '_code')
+      @HiveField(34)
           this.codeElement,
-      final List<Code>? base,
+      @HiveField(35)
+          final List<Code>? base,
       @JsonKey(name: '_base')
+      @HiveField(36)
           final List<Element?>? baseElement,
-      this.type,
+      @HiveField(37)
+          this.type,
       @JsonKey(name: '_type')
+      @HiveField(38)
           this.typeElement,
-      this.expression,
+      @HiveField(39)
+          this.expression,
       @JsonKey(name: '_expression')
+      @HiveField(40)
           this.expressionElement,
-      this.xpath,
+      @HiveField(41)
+          this.xpath,
       @JsonKey(name: '_xpath')
+      @HiveField(42)
           this.xpathElement,
-      this.xpathUsage,
+      @HiveField(43)
+          this.xpathUsage,
       @JsonKey(name: '_xpathUsage')
+      @HiveField(44)
           this.xpathUsageElement,
-      final List<Code>? target,
+      @HiveField(45)
+          final List<Code>? target,
       @JsonKey(name: '_target')
+      @HiveField(46)
           final List<Element?>? targetElement,
-      this.multipleOr,
+      @HiveField(47)
+          this.multipleOr,
       @JsonKey(name: '_multipleOr')
+      @HiveField(48)
           this.multipleOrElement,
-      this.multipleAnd,
+      @HiveField(49)
+          this.multipleAnd,
       @JsonKey(name: '_multipleAnd')
+      @HiveField(50)
           this.multipleAndElement,
-      final List<Code>? comparator,
+      @HiveField(51)
+          final List<Code>? comparator,
       @JsonKey(name: '_comparator')
+      @HiveField(52)
           final List<Element?>? comparatorElement,
-      final List<Code>? modifier,
+      @HiveField(53)
+          final List<Code>? modifier,
       @JsonKey(name: '_modifier')
+      @HiveField(54)
           final List<Element?>? modifierElement,
-      final List<String>? chain,
+      @HiveField(55)
+          final List<String>? chain,
       @JsonKey(name: '_chain')
+      @HiveField(56)
           final List<Element?>? chainElement,
-      final List<SearchParameterComponent>? component})
+      @HiveField(57)
+          final List<SearchParameterComponent>? component})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -40673,17 +43035,20 @@ class _$_SearchParameter extends _SearchParameter {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.SearchParameter)
+  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
+  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
+  @HiveField(2)
   final Meta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -40691,20 +43056,24 @@ class _$_SearchParameter extends _SearchParameter {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
+  @HiveField(5)
   final Code? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
+  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -40714,6 +43083,7 @@ class _$_SearchParameter extends _SearchParameter {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
+  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -40727,6 +43097,7 @@ class _$_SearchParameter extends _SearchParameter {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -40751,6 +43122,7 @@ class _$_SearchParameter extends _SearchParameter {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -40788,6 +43160,7 @@ class _$_SearchParameter extends _SearchParameter {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -40805,11 +43178,13 @@ class _$_SearchParameter extends _SearchParameter {
   /// a canonical reference. It SHALL remain the same when the search parameter
   ///  is stored on different servers.
   @override
+  @HiveField(11)
   final FhirUri? url;
 
   /// [urlElement] Extensions for url
   @override
   @JsonKey(name: '_url')
+  @HiveField(12)
   final Element? urlElement;
 
   /// [version] The identifier that is used to identify this version of the
@@ -40820,22 +43195,26 @@ class _$_SearchParameter extends _SearchParameter {
   /// is also no expectation that versions can be placed in a lexicographical
   ///  sequence.
   @override
+  @HiveField(13)
   final String? version;
 
   /// [versionElement] Extensions for version
   @override
   @JsonKey(name: '_version')
+  @HiveField(14)
   final Element? versionElement;
 
   /// [name] A natural language name identifying the search parameter. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
   @override
+  @HiveField(15)
   final String? name;
 
   /// [nameElement] Extensions for name
   @override
   @JsonKey(name: '_name')
+  @HiveField(16)
   final Element? nameElement;
 
   /// [derivedFrom] Where this search parameter is originally defined. If a
@@ -40844,27 +43223,32 @@ class _$_SearchParameter extends _SearchParameter {
   /// parameter should have the same meaning, and (usually) the functionality
   ///  should be a proper subset of the underlying search parameter.
   @override
+  @HiveField(17)
   final Canonical? derivedFrom;
 
   /// [status] The status of this search parameter. Enables tracking the
   ///  life-cycle of the content.
   @override
+  @HiveField(18)
   final Code? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
+  @HiveField(19)
   final Element? statusElement;
 
   /// [experimental] A Boolean value to indicate that this search parameter is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
   @override
+  @HiveField(20)
   final Boolean? experimental;
 
   /// [experimentalElement] Extensions for experimental
   @override
   @JsonKey(name: '_experimental')
+  @HiveField(21)
   final Element? experimentalElement;
 
   /// [date] The date  (and optionally time) when the search parameter was
@@ -40872,21 +43256,25 @@ class _$_SearchParameter extends _SearchParameter {
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the search parameter changes.
   @override
+  @HiveField(22)
   final FhirDateTime? date;
 
   /// [dateElement] Extensions for date
   @override
   @JsonKey(name: '_date')
+  @HiveField(23)
   final Element? dateElement;
 
   /// [publisher] The name of the organization or individual that published the
   ///  search parameter.
   @override
+  @HiveField(24)
   final String? publisher;
 
   /// [publisherElement] Extensions for publisher
   @override
   @JsonKey(name: '_publisher')
+  @HiveField(25)
   final Element? publisherElement;
 
   /// [contact] Contact details to assist a user in finding and communicating
@@ -40896,6 +43284,7 @@ class _$_SearchParameter extends _SearchParameter {
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
   @override
+  @HiveField(26)
   List<ContactDetail>? get contact {
     final value = _contact;
     if (value == null) return null;
@@ -40906,11 +43295,13 @@ class _$_SearchParameter extends _SearchParameter {
 
   /// [description] And how it used.
   @override
+  @HiveField(27)
   final Markdown? description;
 
   /// [descriptionElement] Extensions for description
   @override
   @JsonKey(name: '_description')
+  @HiveField(28)
   final Element? descriptionElement;
 
   /// [useContext] The content was developed with a focus and intent of
@@ -40926,6 +43317,7 @@ class _$_SearchParameter extends _SearchParameter {
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate search parameter instances.
   @override
+  @HiveField(29)
   List<UsageContext>? get useContext {
     final value = _useContext;
     if (value == null) return null;
@@ -40941,6 +43333,7 @@ class _$_SearchParameter extends _SearchParameter {
   /// [jurisdiction] A legal or geographic region in which the search parameter
   ///  is intended to be used.
   @override
+  @HiveField(30)
   List<CodeableConcept>? get jurisdiction {
     final value = _jurisdiction;
     if (value == null) return null;
@@ -40952,21 +43345,25 @@ class _$_SearchParameter extends _SearchParameter {
   /// [purpose] Explanation of why this search parameter is needed and why it
   ///  has been designed as it has.
   @override
+  @HiveField(31)
   final Markdown? purpose;
 
   /// [purposeElement] Extensions for purpose
   @override
   @JsonKey(name: '_purpose')
+  @HiveField(32)
   final Element? purposeElement;
 
   /// [code] The code used in the URL or the parameter name in a parameters
   ///  resource for this search parameter.
   @override
+  @HiveField(33)
   final Code? code;
 
   /// [codeElement] Extensions for code
   @override
   @JsonKey(name: '_code')
+  @HiveField(34)
   final Element? codeElement;
 
   /// [base] The base resource type(s) that this search parameter can be used
@@ -40976,6 +43373,7 @@ class _$_SearchParameter extends _SearchParameter {
   /// [base] The base resource type(s) that this search parameter can be used
   ///  against.
   @override
+  @HiveField(35)
   List<Code>? get base {
     final value = _base;
     if (value == null) return null;
@@ -40990,6 +43388,7 @@ class _$_SearchParameter extends _SearchParameter {
   /// [baseElement] Extensions for base
   @override
   @JsonKey(name: '_base')
+  @HiveField(36)
   List<Element?>? get baseElement {
     final value = _baseElement;
     if (value == null) return null;
@@ -41001,41 +43400,49 @@ class _$_SearchParameter extends _SearchParameter {
   /// [type] The type of value that a search parameter may contain, and how the
   ///  content is interpreted.
   @override
+  @HiveField(37)
   final Code? type;
 
   /// [typeElement] Extensions for type
   @override
   @JsonKey(name: '_type')
+  @HiveField(38)
   final Element? typeElement;
 
   /// [expression] A FHIRPath expression that returns a set of elements for the
   ///  search parameter.
   @override
+  @HiveField(39)
   final String? expression;
 
   /// [expressionElement] Extensions for expression
   @override
   @JsonKey(name: '_expression')
+  @HiveField(40)
   final Element? expressionElement;
 
   /// [xpath] An XPath expression that returns a set of elements for the search
   ///  parameter.
   @override
+  @HiveField(41)
   final String? xpath;
 
   /// [xpathElement] Extensions for xpath
   @override
   @JsonKey(name: '_xpath')
+  @HiveField(42)
   final Element? xpathElement;
 
   /// [xpathUsage] How the search parameter relates to the set of elements
   ///  returned by evaluating the xpath query.
   @override
+  @HiveField(43)
   final Code? xpathUsage;
 
   /// [xpathUsageElement] Extensions for xpathUsage
   @override
   @JsonKey(name: '_xpathUsage')
+  @HiveField(44)
   final Element? xpathUsageElement;
 
   /// [target] Types of resource (if a resource is referenced).
@@ -41043,6 +43450,7 @@ class _$_SearchParameter extends _SearchParameter {
 
   /// [target] Types of resource (if a resource is referenced).
   @override
+  @HiveField(45)
   List<Code>? get target {
     final value = _target;
     if (value == null) return null;
@@ -41057,6 +43465,7 @@ class _$_SearchParameter extends _SearchParameter {
   /// [targetElement] Extensions for target
   @override
   @JsonKey(name: '_target')
+  @HiveField(46)
   List<Element?>? get targetElement {
     final value = _targetElement;
     if (value == null) return null;
@@ -41069,22 +43478,26 @@ class _$_SearchParameter extends _SearchParameter {
   /// parameter exists. Values are separated by commas, and the parameter
   ///  matches if any of the values match.
   @override
+  @HiveField(47)
   final Boolean? multipleOr;
 
   /// [multipleOrElement] Extensions for multipleOr
   @override
   @JsonKey(name: '_multipleOr')
+  @HiveField(48)
   final Element? multipleOrElement;
 
   /// [multipleAnd] Whether multiple parameters are allowed - e.g. more than
   /// one parameter with the same name. The search matches if all the parameters
   ///  match.
   @override
+  @HiveField(49)
   final Boolean? multipleAnd;
 
   /// [multipleAndElement] Extensions for multipleAnd
   @override
   @JsonKey(name: '_multipleAnd')
+  @HiveField(50)
   final Element? multipleAndElement;
 
   /// [comparator] Comparators supported for the search parameter.
@@ -41092,6 +43505,7 @@ class _$_SearchParameter extends _SearchParameter {
 
   /// [comparator] Comparators supported for the search parameter.
   @override
+  @HiveField(51)
   List<Code>? get comparator {
     final value = _comparator;
     if (value == null) return null;
@@ -41106,6 +43520,7 @@ class _$_SearchParameter extends _SearchParameter {
   /// [comparatorElement] Extensions for comparator
   @override
   @JsonKey(name: '_comparator')
+  @HiveField(52)
   List<Element?>? get comparatorElement {
     final value = _comparatorElement;
     if (value == null) return null;
@@ -41120,6 +43535,7 @@ class _$_SearchParameter extends _SearchParameter {
 
   /// [modifier] A modifier supported for the search parameter.
   @override
+  @HiveField(53)
   List<Code>? get modifier {
     final value = _modifier;
     if (value == null) return null;
@@ -41134,6 +43550,7 @@ class _$_SearchParameter extends _SearchParameter {
   /// [modifierElement] Extensions for modifier
   @override
   @JsonKey(name: '_modifier')
+  @HiveField(54)
   List<Element?>? get modifierElement {
     final value = _modifierElement;
     if (value == null) return null;
@@ -41157,6 +43574,7 @@ class _$_SearchParameter extends _SearchParameter {
   /// chained parameter value. Values for this field should be drawn from
   ///  SearchParameter.code for a parameter on the target resource type.
   @override
+  @HiveField(55)
   List<String>? get chain {
     final value = _chain;
     if (value == null) return null;
@@ -41171,6 +43589,7 @@ class _$_SearchParameter extends _SearchParameter {
   /// [chainElement] Extensions for chain
   @override
   @JsonKey(name: '_chain')
+  @HiveField(56)
   List<Element?>? get chainElement {
     final value = _chainElement;
     if (value == null) return null;
@@ -41184,6 +43603,7 @@ class _$_SearchParameter extends _SearchParameter {
 
   /// [component] Used to define the parts of a composite search parameter.
   @override
+  @HiveField(57)
   List<SearchParameterComponent>? get component {
     final value = _component;
     if (value == null) return null;
@@ -41383,89 +43803,148 @@ class _$_SearchParameter extends _SearchParameter {
 
 abstract class _SearchParameter extends SearchParameter {
   factory _SearchParameter(
-      {@JsonKey(unknownEnumValue: R4ResourceType.SearchParameter)
-          final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
-      final Code? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final FhirUri? url,
-      @JsonKey(name: '_url')
-          final Element? urlElement,
-      final String? version,
-      @JsonKey(name: '_version')
-          final Element? versionElement,
-      final String? name,
-      @JsonKey(name: '_name')
-          final Element? nameElement,
-      final Canonical? derivedFrom,
-      final Code? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
-      final Boolean? experimental,
-      @JsonKey(name: '_experimental')
-          final Element? experimentalElement,
-      final FhirDateTime? date,
-      @JsonKey(name: '_date')
-          final Element? dateElement,
-      final String? publisher,
-      @JsonKey(name: '_publisher')
-          final Element? publisherElement,
-      final List<ContactDetail>? contact,
-      final Markdown? description,
-      @JsonKey(name: '_description')
-          final Element? descriptionElement,
-      final List<UsageContext>? useContext,
-      final List<CodeableConcept>? jurisdiction,
-      final Markdown? purpose,
-      @JsonKey(name: '_purpose')
-          final Element? purposeElement,
-      final Code? code,
-      @JsonKey(name: '_code')
-          final Element? codeElement,
-      final List<Code>? base,
-      @JsonKey(name: '_base')
-          final List<Element?>? baseElement,
-      final Code? type,
-      @JsonKey(name: '_type')
-          final Element? typeElement,
-      final String? expression,
-      @JsonKey(name: '_expression')
-          final Element? expressionElement,
-      final String? xpath,
-      @JsonKey(name: '_xpath')
-          final Element? xpathElement,
-      final Code? xpathUsage,
-      @JsonKey(name: '_xpathUsage')
-          final Element? xpathUsageElement,
-      final List<Code>? target,
-      @JsonKey(name: '_target')
-          final List<Element?>? targetElement,
-      final Boolean? multipleOr,
-      @JsonKey(name: '_multipleOr')
-          final Element? multipleOrElement,
-      final Boolean? multipleAnd,
-      @JsonKey(name: '_multipleAnd')
-          final Element? multipleAndElement,
-      final List<Code>? comparator,
-      @JsonKey(name: '_comparator')
-          final List<Element?>? comparatorElement,
-      final List<Code>? modifier,
-      @JsonKey(name: '_modifier')
-          final List<Element?>? modifierElement,
-      final List<String>? chain,
-      @JsonKey(name: '_chain')
-          final List<Element?>? chainElement,
-      final List<SearchParameterComponent>? component}) = _$_SearchParameter;
+          {@JsonKey(unknownEnumValue: R4ResourceType.SearchParameter)
+          @HiveField(0)
+              final R4ResourceType resourceType,
+          @HiveField(1)
+              final String? id,
+          @HiveField(2)
+              final Meta? meta,
+          @HiveField(3)
+              final FhirUri? implicitRules,
+          @JsonKey(name: '_implicitRules')
+          @HiveField(4)
+              final Element? implicitRulesElement,
+          @HiveField(5)
+              final Code? language,
+          @JsonKey(name: '_language')
+          @HiveField(6)
+              final Element? languageElement,
+          @HiveField(7)
+              final Narrative? text,
+          @HiveField(8)
+              final List<Resource>? contained,
+          @JsonKey(name: 'extension')
+          @HiveField(9)
+              final List<FhirExtension>? extension_,
+          @HiveField(10)
+              final List<FhirExtension>? modifierExtension,
+          @HiveField(11)
+              final FhirUri? url,
+          @JsonKey(name: '_url')
+          @HiveField(12)
+              final Element? urlElement,
+          @HiveField(13)
+              final String? version,
+          @JsonKey(name: '_version')
+          @HiveField(14)
+              final Element? versionElement,
+          @HiveField(15)
+              final String? name,
+          @JsonKey(name: '_name')
+          @HiveField(16)
+              final Element? nameElement,
+          @HiveField(17)
+              final Canonical? derivedFrom,
+          @HiveField(18)
+              final Code? status,
+          @JsonKey(name: '_status')
+          @HiveField(19)
+              final Element? statusElement,
+          @HiveField(20)
+              final Boolean? experimental,
+          @JsonKey(name: '_experimental')
+          @HiveField(21)
+              final Element? experimentalElement,
+          @HiveField(22)
+              final FhirDateTime? date,
+          @JsonKey(name: '_date')
+          @HiveField(23)
+              final Element? dateElement,
+          @HiveField(24)
+              final String? publisher,
+          @JsonKey(name: '_publisher')
+          @HiveField(25)
+              final Element? publisherElement,
+          @HiveField(26)
+              final List<ContactDetail>? contact,
+          @HiveField(27)
+              final Markdown? description,
+          @JsonKey(name: '_description')
+          @HiveField(28)
+              final Element? descriptionElement,
+          @HiveField(29)
+              final List<UsageContext>? useContext,
+          @HiveField(30)
+              final List<CodeableConcept>? jurisdiction,
+          @HiveField(31)
+              final Markdown? purpose,
+          @JsonKey(name: '_purpose')
+          @HiveField(32)
+              final Element? purposeElement,
+          @HiveField(33)
+              final Code? code,
+          @JsonKey(name: '_code')
+          @HiveField(34)
+              final Element? codeElement,
+          @HiveField(35)
+              final List<Code>? base,
+          @JsonKey(name: '_base')
+          @HiveField(36)
+              final List<Element?>? baseElement,
+          @HiveField(37)
+              final Code? type,
+          @JsonKey(name: '_type')
+          @HiveField(38)
+              final Element? typeElement,
+          @HiveField(39)
+              final String? expression,
+          @JsonKey(name: '_expression')
+          @HiveField(40)
+              final Element? expressionElement,
+          @HiveField(41)
+              final String? xpath,
+          @JsonKey(name: '_xpath')
+          @HiveField(42)
+              final Element? xpathElement,
+          @HiveField(43)
+              final Code? xpathUsage,
+          @JsonKey(name: '_xpathUsage')
+          @HiveField(44)
+              final Element? xpathUsageElement,
+          @HiveField(45)
+              final List<Code>? target,
+          @JsonKey(name: '_target')
+          @HiveField(46)
+              final List<Element?>? targetElement,
+          @HiveField(47)
+              final Boolean? multipleOr,
+          @JsonKey(name: '_multipleOr')
+          @HiveField(48)
+              final Element? multipleOrElement,
+          @HiveField(49)
+              final Boolean? multipleAnd,
+          @JsonKey(name: '_multipleAnd')
+          @HiveField(50)
+              final Element? multipleAndElement,
+          @HiveField(51)
+              final List<Code>? comparator,
+          @JsonKey(name: '_comparator')
+          @HiveField(52)
+              final List<Element?>? comparatorElement,
+          @HiveField(53)
+              final List<Code>? modifier,
+          @JsonKey(name: '_modifier')
+          @HiveField(54)
+              final List<Element?>? modifierElement,
+          @HiveField(55)
+              final List<String>? chain,
+          @JsonKey(name: '_chain')
+          @HiveField(56)
+              final List<Element?>? chainElement,
+          @HiveField(57)
+              final List<SearchParameterComponent>? component}) =
+      _$_SearchParameter;
   _SearchParameter._() : super._();
 
   factory _SearchParameter.fromJson(Map<String, dynamic> json) =
@@ -41473,17 +43952,20 @@ abstract class _SearchParameter extends SearchParameter {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.SearchParameter)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta;
   @override
 
@@ -41491,20 +43973,24 @@ abstract class _SearchParameter extends SearchParameter {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -41514,6 +44000,7 @@ abstract class _SearchParameter extends SearchParameter {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -41521,6 +44008,7 @@ abstract class _SearchParameter extends SearchParameter {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -41531,6 +44019,7 @@ abstract class _SearchParameter extends SearchParameter {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -41547,6 +44036,7 @@ abstract class _SearchParameter extends SearchParameter {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
@@ -41557,11 +44047,13 @@ abstract class _SearchParameter extends SearchParameter {
   /// search parameter is (or will be) published. This URL can be the target of
   /// a canonical reference. It SHALL remain the same when the search parameter
   ///  is stored on different servers.
+  @HiveField(11)
   FhirUri? get url;
   @override
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
+  @HiveField(12)
   Element? get urlElement;
   @override
 
@@ -41572,22 +44064,26 @@ abstract class _SearchParameter extends SearchParameter {
   /// a timestamp (e.g. yyyymmdd) if a managed version is not available. There
   /// is also no expectation that versions can be placed in a lexicographical
   ///  sequence.
+  @HiveField(13)
   String? get version;
   @override
 
   /// [versionElement] Extensions for version
   @JsonKey(name: '_version')
+  @HiveField(14)
   Element? get versionElement;
   @override
 
   /// [name] A natural language name identifying the search parameter. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
+  @HiveField(15)
   String? get name;
   @override
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
+  @HiveField(16)
   Element? get nameElement;
   @override
 
@@ -41596,27 +44092,32 @@ abstract class _SearchParameter extends SearchParameter {
   /// consistent with the definition from which it is defined. i.e. the
   /// parameter should have the same meaning, and (usually) the functionality
   ///  should be a proper subset of the underlying search parameter.
+  @HiveField(17)
   Canonical? get derivedFrom;
   @override
 
   /// [status] The status of this search parameter. Enables tracking the
   ///  life-cycle of the content.
+  @HiveField(18)
   Code? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(19)
   Element? get statusElement;
   @override
 
   /// [experimental] A Boolean value to indicate that this search parameter is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
+  @HiveField(20)
   Boolean? get experimental;
   @override
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
+  @HiveField(21)
   Element? get experimentalElement;
   @override
 
@@ -41624,35 +44125,42 @@ abstract class _SearchParameter extends SearchParameter {
   /// published. The date must change when the business version changes and it
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the search parameter changes.
+  @HiveField(22)
   FhirDateTime? get date;
   @override
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
+  @HiveField(23)
   Element? get dateElement;
   @override
 
   /// [publisher] The name of the organization or individual that published the
   ///  search parameter.
+  @HiveField(24)
   String? get publisher;
   @override
 
   /// [publisherElement] Extensions for publisher
   @JsonKey(name: '_publisher')
+  @HiveField(25)
   Element? get publisherElement;
   @override
 
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
+  @HiveField(26)
   List<ContactDetail>? get contact;
   @override
 
   /// [description] And how it used.
+  @HiveField(27)
   Markdown? get description;
   @override
 
   /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
+  @HiveField(28)
   Element? get descriptionElement;
   @override
 
@@ -41661,130 +44169,156 @@ abstract class _SearchParameter extends SearchParameter {
   /// categories (gender, age, ...) or may be references to specific programs
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate search parameter instances.
+  @HiveField(29)
   List<UsageContext>? get useContext;
   @override
 
   /// [jurisdiction] A legal or geographic region in which the search parameter
   ///  is intended to be used.
+  @HiveField(30)
   List<CodeableConcept>? get jurisdiction;
   @override
 
   /// [purpose] Explanation of why this search parameter is needed and why it
   ///  has been designed as it has.
+  @HiveField(31)
   Markdown? get purpose;
   @override
 
   /// [purposeElement] Extensions for purpose
   @JsonKey(name: '_purpose')
+  @HiveField(32)
   Element? get purposeElement;
   @override
 
   /// [code] The code used in the URL or the parameter name in a parameters
   ///  resource for this search parameter.
+  @HiveField(33)
   Code? get code;
   @override
 
   /// [codeElement] Extensions for code
   @JsonKey(name: '_code')
+  @HiveField(34)
   Element? get codeElement;
   @override
 
   /// [base] The base resource type(s) that this search parameter can be used
   ///  against.
+  @HiveField(35)
   List<Code>? get base;
   @override
 
   /// [baseElement] Extensions for base
   @JsonKey(name: '_base')
+  @HiveField(36)
   List<Element?>? get baseElement;
   @override
 
   /// [type] The type of value that a search parameter may contain, and how the
   ///  content is interpreted.
+  @HiveField(37)
   Code? get type;
   @override
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
+  @HiveField(38)
   Element? get typeElement;
   @override
 
   /// [expression] A FHIRPath expression that returns a set of elements for the
   ///  search parameter.
+  @HiveField(39)
   String? get expression;
   @override
 
   /// [expressionElement] Extensions for expression
   @JsonKey(name: '_expression')
+  @HiveField(40)
   Element? get expressionElement;
   @override
 
   /// [xpath] An XPath expression that returns a set of elements for the search
   ///  parameter.
+  @HiveField(41)
   String? get xpath;
   @override
 
   /// [xpathElement] Extensions for xpath
   @JsonKey(name: '_xpath')
+  @HiveField(42)
   Element? get xpathElement;
   @override
 
   /// [xpathUsage] How the search parameter relates to the set of elements
   ///  returned by evaluating the xpath query.
+  @HiveField(43)
   Code? get xpathUsage;
   @override
 
   /// [xpathUsageElement] Extensions for xpathUsage
   @JsonKey(name: '_xpathUsage')
+  @HiveField(44)
   Element? get xpathUsageElement;
   @override
 
   /// [target] Types of resource (if a resource is referenced).
+  @HiveField(45)
   List<Code>? get target;
   @override
 
   /// [targetElement] Extensions for target
   @JsonKey(name: '_target')
+  @HiveField(46)
   List<Element?>? get targetElement;
   @override
 
   /// [multipleOr] Whether multiple values are allowed for each time the
   /// parameter exists. Values are separated by commas, and the parameter
   ///  matches if any of the values match.
+  @HiveField(47)
   Boolean? get multipleOr;
   @override
 
   /// [multipleOrElement] Extensions for multipleOr
   @JsonKey(name: '_multipleOr')
+  @HiveField(48)
   Element? get multipleOrElement;
   @override
 
   /// [multipleAnd] Whether multiple parameters are allowed - e.g. more than
   /// one parameter with the same name. The search matches if all the parameters
   ///  match.
+  @HiveField(49)
   Boolean? get multipleAnd;
   @override
 
   /// [multipleAndElement] Extensions for multipleAnd
   @JsonKey(name: '_multipleAnd')
+  @HiveField(50)
   Element? get multipleAndElement;
   @override
 
   /// [comparator] Comparators supported for the search parameter.
+  @HiveField(51)
   List<Code>? get comparator;
   @override
 
   /// [comparatorElement] Extensions for comparator
   @JsonKey(name: '_comparator')
+  @HiveField(52)
   List<Element?>? get comparatorElement;
   @override
 
   /// [modifier] A modifier supported for the search parameter.
+  @HiveField(53)
   List<Code>? get modifier;
   @override
 
   /// [modifierElement] Extensions for modifier
   @JsonKey(name: '_modifier')
+  @HiveField(54)
   List<Element?>? get modifierElement;
   @override
 
@@ -41794,15 +44328,18 @@ abstract class _SearchParameter extends SearchParameter {
   /// be returned if they contain a reference to a resource which matches the
   /// chained parameter value. Values for this field should be drawn from
   ///  SearchParameter.code for a parameter on the target resource type.
+  @HiveField(55)
   List<String>? get chain;
   @override
 
   /// [chainElement] Extensions for chain
   @JsonKey(name: '_chain')
+  @HiveField(56)
   List<Element?>? get chainElement;
   @override
 
   /// [component] Used to define the parts of a composite search parameter.
+  @HiveField(57)
   List<SearchParameterComponent>? get component;
   @override
   @JsonKey(ignore: true)
@@ -42233,32 +44770,39 @@ StructureDefinition _$StructureDefinitionFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$StructureDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.StructureDefinition)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -42267,12 +44811,14 @@ mixin _$StructureDefinition {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -42282,6 +44828,7 @@ mixin _$StructureDefinition {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -42297,6 +44844,7 @@ mixin _$StructureDefinition {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
@@ -42307,92 +44855,108 @@ mixin _$StructureDefinition {
   /// this structure definition is (or will be) published. This URL can be the
   /// target of a canonical reference. It SHALL remain the same when the
   ///  structure definition is stored on different servers.
+  @HiveField(11)
   FhirUri? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
+  @HiveField(12)
   Element? get urlElement => throw _privateConstructorUsedError;
 
   /// [identifier] A formal identifier that is used to identify this structure
   /// definition when it is represented in other formats, or referenced in a
   ///  specification, model, design or an instance.
+  @HiveField(13)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [version] The identifier that is used to identify this version of the
-  /// structure definition when it is referenced in a specification, model,
-  /// design or instance. This is an arbitrary value managed by the structure
-  /// definition author and is not expected to be globally unique. For example,
-  /// it might be a timestamp (e.g. yyyymmdd) if a managed version is not
-  /// available. There is also no expectation that versions can be placed in a
-  ///  lexicographical sequence.
+  @HiveField(14)
+  @HiveField(15)
+  @HiveField(16)
   String? get version => throw _privateConstructorUsedError;
 
   /// [versionElement] Extensions for version
   @JsonKey(name: '_version')
+  @HiveField(17)
   Element? get versionElement => throw _privateConstructorUsedError;
 
   /// [name] A natural language name identifying the structure definition. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
+  @HiveField(18)
   String? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
+  @HiveField(19)
   Element? get nameElement => throw _privateConstructorUsedError;
 
   /// [title] A short, descriptive, user-friendly title for the structure
   ///  definition.
+  @HiveField(20)
   String? get title => throw _privateConstructorUsedError;
 
   /// [titleElement] Extensions for title
   @JsonKey(name: '_title')
+  @HiveField(21)
   Element? get titleElement => throw _privateConstructorUsedError;
 
   /// [status] The status of this structure definition. Enables tracking the
   ///  life-cycle of the content.
+  @HiveField(22)
   Code? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(23)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [experimental] A Boolean value to indicate that this structure definition
   /// is authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
+  @HiveField(24)
   Boolean? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
+  @HiveField(25)
   Element? get experimentalElement => throw _privateConstructorUsedError;
 
   /// [date] The date  (and optionally time) when the structure definition was
   /// published. The date must change when the business version changes and it
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the structure definition changes.
+  @HiveField(26)
   FhirDateTime? get date => throw _privateConstructorUsedError;
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
+  @HiveField(27)
   Element? get dateElement => throw _privateConstructorUsedError;
 
   /// [publisher] The name of the organization or individual that published the
   ///  structure definition.
+  @HiveField(28)
   String? get publisher => throw _privateConstructorUsedError;
 
   /// [publisherElement] Extensions for publisher
   @JsonKey(name: '_publisher')
+  @HiveField(29)
   Element? get publisherElement => throw _privateConstructorUsedError;
 
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
+  @HiveField(30)
   List<ContactDetail>? get contact => throw _privateConstructorUsedError;
 
   /// [description] A free text natural language description of the structure
   ///  definition from a consumer's perspective.
+  @HiveField(31)
   Markdown? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
+  @HiveField(32)
   Element? get descriptionElement => throw _privateConstructorUsedError;
 
   /// [useContext] The content was developed with a focus and intent of
@@ -42400,54 +44964,66 @@ mixin _$StructureDefinition {
   /// categories (gender, age, ...) or may be references to specific programs
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate structure definition instances.
+  @HiveField(33)
   List<UsageContext>? get useContext => throw _privateConstructorUsedError;
 
   /// [jurisdiction] A legal or geographic region in which the structure
   ///  definition is intended to be used.
+  @HiveField(34)
   List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
 
   /// [purpose] Explanation of why this structure definition is needed and why
   ///  it has been designed as it has.
+  @HiveField(35)
   Markdown? get purpose => throw _privateConstructorUsedError;
 
   /// [purposeElement] Extensions for purpose
   @JsonKey(name: '_purpose')
+  @HiveField(36)
   Element? get purposeElement => throw _privateConstructorUsedError;
 
   /// [copyright] A copyright statement relating to the structure definition
   /// and/or its contents. Copyright statements are generally legal restrictions
   ///  on the use and publishing of the structure definition.
+  @HiveField(37)
   Markdown? get copyright => throw _privateConstructorUsedError;
 
   /// [copyrightElement] Extensions for copyright
   @JsonKey(name: '_copyright')
+  @HiveField(38)
   Element? get copyrightElement => throw _privateConstructorUsedError;
 
   /// [keyword] A set of key words or terms from external terminologies that
   /// may be used to assist with indexing and searching of templates nby
   /// describing the use of this structure definition, or the content it
   ///  describes.
+  @HiveField(39)
   List<Coding>? get keyword => throw _privateConstructorUsedError;
 
   /// [fhirVersion] The version of the FHIR specification on which this
   /// StructureDefinition is based - this is the formal version of the
   /// specification, without the revision number, e.g.
   ///  [publication].[major].[minor], which is 4.0.1. for this version.
+  @HiveField(40)
   Code? get fhirVersion => throw _privateConstructorUsedError;
 
   /// [fhirVersionElement] Extensions for fhirVersion
   @JsonKey(name: '_fhirVersion')
+  @HiveField(41)
   Element? get fhirVersionElement => throw _privateConstructorUsedError;
 
   /// [mapping] An external specification that the content is mapped to.
+  @HiveField(42)
   List<StructureDefinitionMapping>? get mapping =>
       throw _privateConstructorUsedError;
 
   /// [kind] Defines the kind of structure that this definition is describing.
+  @HiveField(43)
   Code? get kind => throw _privateConstructorUsedError;
 
   /// [kindElement] Extensions for kind
   @JsonKey(name: '_kind')
+  @HiveField(44)
   Element? get kindElement => throw _privateConstructorUsedError;
 
   /// [abstract] Whether structure this definition describes is abstract or not
@@ -42455,24 +45031,29 @@ mixin _$StructureDefinition {
   /// Resources and Data types, abstract types will never be exchanged  between
   ///  systems.
   @JsonKey(name: 'abstract')
+  @HiveField(45)
   Boolean? get abstract_ => throw _privateConstructorUsedError;
 
   /// [abstractElement] Extensions for abstract
   @JsonKey(name: '_abstract')
+  @HiveField(46)
   Element? get abstractElement => throw _privateConstructorUsedError;
 
   /// [context] Identifies the types of resource or data type elements to which
   ///  the extension can be applied.
+  @HiveField(47)
   List<StructureDefinitionContext>? get context =>
       throw _privateConstructorUsedError;
 
   /// [contextInvariant] A set of rules as FHIRPath Invariants about when the
   /// extension can be used (e.g. co-occurrence variants for the extension). All
   ///  the rules must be true.
+  @HiveField(48)
   List<String>? get contextInvariant => throw _privateConstructorUsedError;
 
   /// [contextInvariantElement] Extensions for contextInvariant
   @JsonKey(name: '_contextInvariant')
+  @HiveField(49)
   List<Element?>? get contextInvariantElement =>
       throw _privateConstructorUsedError;
 
@@ -42485,32 +45066,40 @@ mixin _$StructureDefinition {
   /// http://hl7.org/fhir/StructureDefinition e.g. "string" is a reference to
   /// http://hl7.org/fhir/StructureDefinition/string. Absolute URLs are only
   ///  allowed in logical models.
+  @HiveField(50)
   FhirUri? get type => throw _privateConstructorUsedError;
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
+  @HiveField(51)
   Element? get typeElement => throw _privateConstructorUsedError;
 
   /// [baseDefinition] An absolute URI that is the base structure from which
   ///  this type is derived, either by specialization or constraint.
+  @HiveField(52)
   Canonical? get baseDefinition => throw _privateConstructorUsedError;
   @JsonKey(name: '_baseDefinition')
+  @HiveField(53)
   Element? get baseDefinitionElement => throw _privateConstructorUsedError;
 
   /// [derivation] How the type relates to the baseDefinition.
+  @HiveField(54)
   Code? get derivation => throw _privateConstructorUsedError;
 
   /// [derivationElement] Extensions for derivation
   @JsonKey(name: '_derivation')
+  @HiveField(55)
   Element? get derivationElement => throw _privateConstructorUsedError;
 
   /// [snapshot] A snapshot view is expressed in a standalone form that can be
   ///  used and interpreted without considering the base StructureDefinition.
+  @HiveField(56)
   StructureDefinitionSnapshot? get snapshot =>
       throw _privateConstructorUsedError;
 
   /// [differential] A differential view is expressed relative to the base
   ///  StructureDefinition - a statement of differences that it applies.
+  @HiveField(57)
   StructureDefinitionDifferential? get differential =>
       throw _privateConstructorUsedError;
 
@@ -42528,84 +45117,142 @@ abstract class $StructureDefinitionCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.StructureDefinition)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          FhirUri? url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           Element? urlElement,
-      List<Identifier>? identifier,
-      String? version,
+      @HiveField(13)
+          List<Identifier>? identifier,
+      @HiveField(14)
+      @HiveField(15)
+      @HiveField(16)
+          String? version,
       @JsonKey(name: '_version')
+      @HiveField(17)
           Element? versionElement,
-      String? name,
+      @HiveField(18)
+          String? name,
       @JsonKey(name: '_name')
+      @HiveField(19)
           Element? nameElement,
-      String? title,
+      @HiveField(20)
+          String? title,
       @JsonKey(name: '_title')
+      @HiveField(21)
           Element? titleElement,
-      Code? status,
+      @HiveField(22)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(23)
           Element? statusElement,
-      Boolean? experimental,
+      @HiveField(24)
+          Boolean? experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(25)
           Element? experimentalElement,
-      FhirDateTime? date,
+      @HiveField(26)
+          FhirDateTime? date,
       @JsonKey(name: '_date')
+      @HiveField(27)
           Element? dateElement,
-      String? publisher,
+      @HiveField(28)
+          String? publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(29)
           Element? publisherElement,
-      List<ContactDetail>? contact,
-      Markdown? description,
+      @HiveField(30)
+          List<ContactDetail>? contact,
+      @HiveField(31)
+          Markdown? description,
       @JsonKey(name: '_description')
+      @HiveField(32)
           Element? descriptionElement,
-      List<UsageContext>? useContext,
-      List<CodeableConcept>? jurisdiction,
-      Markdown? purpose,
+      @HiveField(33)
+          List<UsageContext>? useContext,
+      @HiveField(34)
+          List<CodeableConcept>? jurisdiction,
+      @HiveField(35)
+          Markdown? purpose,
       @JsonKey(name: '_purpose')
+      @HiveField(36)
           Element? purposeElement,
-      Markdown? copyright,
+      @HiveField(37)
+          Markdown? copyright,
       @JsonKey(name: '_copyright')
+      @HiveField(38)
           Element? copyrightElement,
-      List<Coding>? keyword,
-      Code? fhirVersion,
+      @HiveField(39)
+          List<Coding>? keyword,
+      @HiveField(40)
+          Code? fhirVersion,
       @JsonKey(name: '_fhirVersion')
+      @HiveField(41)
           Element? fhirVersionElement,
-      List<StructureDefinitionMapping>? mapping,
-      Code? kind,
+      @HiveField(42)
+          List<StructureDefinitionMapping>? mapping,
+      @HiveField(43)
+          Code? kind,
       @JsonKey(name: '_kind')
+      @HiveField(44)
           Element? kindElement,
       @JsonKey(name: 'abstract')
+      @HiveField(45)
           Boolean? abstract_,
       @JsonKey(name: '_abstract')
+      @HiveField(46)
           Element? abstractElement,
-      List<StructureDefinitionContext>? context,
-      List<String>? contextInvariant,
+      @HiveField(47)
+          List<StructureDefinitionContext>? context,
+      @HiveField(48)
+          List<String>? contextInvariant,
       @JsonKey(name: '_contextInvariant')
+      @HiveField(49)
           List<Element?>? contextInvariantElement,
-      FhirUri? type,
+      @HiveField(50)
+          FhirUri? type,
       @JsonKey(name: '_type')
+      @HiveField(51)
           Element? typeElement,
-      Canonical? baseDefinition,
+      @HiveField(52)
+          Canonical? baseDefinition,
       @JsonKey(name: '_baseDefinition')
+      @HiveField(53)
           Element? baseDefinitionElement,
-      Code? derivation,
+      @HiveField(54)
+          Code? derivation,
       @JsonKey(name: '_derivation')
+      @HiveField(55)
           Element? derivationElement,
-      StructureDefinitionSnapshot? snapshot,
-      StructureDefinitionDifferential? differential});
+      @HiveField(56)
+          StructureDefinitionSnapshot? snapshot,
+      @HiveField(57)
+          StructureDefinitionDifferential? differential});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -43219,84 +45866,142 @@ abstract class _$$_StructureDefinitionCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.StructureDefinition)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          FhirUri? url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           Element? urlElement,
-      List<Identifier>? identifier,
-      String? version,
+      @HiveField(13)
+          List<Identifier>? identifier,
+      @HiveField(14)
+      @HiveField(15)
+      @HiveField(16)
+          String? version,
       @JsonKey(name: '_version')
+      @HiveField(17)
           Element? versionElement,
-      String? name,
+      @HiveField(18)
+          String? name,
       @JsonKey(name: '_name')
+      @HiveField(19)
           Element? nameElement,
-      String? title,
+      @HiveField(20)
+          String? title,
       @JsonKey(name: '_title')
+      @HiveField(21)
           Element? titleElement,
-      Code? status,
+      @HiveField(22)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(23)
           Element? statusElement,
-      Boolean? experimental,
+      @HiveField(24)
+          Boolean? experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(25)
           Element? experimentalElement,
-      FhirDateTime? date,
+      @HiveField(26)
+          FhirDateTime? date,
       @JsonKey(name: '_date')
+      @HiveField(27)
           Element? dateElement,
-      String? publisher,
+      @HiveField(28)
+          String? publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(29)
           Element? publisherElement,
-      List<ContactDetail>? contact,
-      Markdown? description,
+      @HiveField(30)
+          List<ContactDetail>? contact,
+      @HiveField(31)
+          Markdown? description,
       @JsonKey(name: '_description')
+      @HiveField(32)
           Element? descriptionElement,
-      List<UsageContext>? useContext,
-      List<CodeableConcept>? jurisdiction,
-      Markdown? purpose,
+      @HiveField(33)
+          List<UsageContext>? useContext,
+      @HiveField(34)
+          List<CodeableConcept>? jurisdiction,
+      @HiveField(35)
+          Markdown? purpose,
       @JsonKey(name: '_purpose')
+      @HiveField(36)
           Element? purposeElement,
-      Markdown? copyright,
+      @HiveField(37)
+          Markdown? copyright,
       @JsonKey(name: '_copyright')
+      @HiveField(38)
           Element? copyrightElement,
-      List<Coding>? keyword,
-      Code? fhirVersion,
+      @HiveField(39)
+          List<Coding>? keyword,
+      @HiveField(40)
+          Code? fhirVersion,
       @JsonKey(name: '_fhirVersion')
+      @HiveField(41)
           Element? fhirVersionElement,
-      List<StructureDefinitionMapping>? mapping,
-      Code? kind,
+      @HiveField(42)
+          List<StructureDefinitionMapping>? mapping,
+      @HiveField(43)
+          Code? kind,
       @JsonKey(name: '_kind')
+      @HiveField(44)
           Element? kindElement,
       @JsonKey(name: 'abstract')
+      @HiveField(45)
           Boolean? abstract_,
       @JsonKey(name: '_abstract')
+      @HiveField(46)
           Element? abstractElement,
-      List<StructureDefinitionContext>? context,
-      List<String>? contextInvariant,
+      @HiveField(47)
+          List<StructureDefinitionContext>? context,
+      @HiveField(48)
+          List<String>? contextInvariant,
       @JsonKey(name: '_contextInvariant')
+      @HiveField(49)
           List<Element?>? contextInvariantElement,
-      FhirUri? type,
+      @HiveField(50)
+          FhirUri? type,
       @JsonKey(name: '_type')
+      @HiveField(51)
           Element? typeElement,
-      Canonical? baseDefinition,
+      @HiveField(52)
+          Canonical? baseDefinition,
       @JsonKey(name: '_baseDefinition')
+      @HiveField(53)
           Element? baseDefinitionElement,
-      Code? derivation,
+      @HiveField(54)
+          Code? derivation,
       @JsonKey(name: '_derivation')
+      @HiveField(55)
           Element? derivationElement,
-      StructureDefinitionSnapshot? snapshot,
-      StructureDefinitionDifferential? differential});
+      @HiveField(56)
+          StructureDefinitionSnapshot? snapshot,
+      @HiveField(57)
+          StructureDefinitionDifferential? differential});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -43649,84 +46354,142 @@ class __$$_StructureDefinitionCopyWithImpl<$Res>
 class _$_StructureDefinition extends _StructureDefinition {
   _$_StructureDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.StructureDefinition)
+      @HiveField(0)
           this.resourceType = R4ResourceType.StructureDefinition,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.url,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          this.url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           this.urlElement,
-      final List<Identifier>? identifier,
-      this.version,
+      @HiveField(13)
+          final List<Identifier>? identifier,
+      @HiveField(14)
+      @HiveField(15)
+      @HiveField(16)
+          this.version,
       @JsonKey(name: '_version')
+      @HiveField(17)
           this.versionElement,
-      this.name,
+      @HiveField(18)
+          this.name,
       @JsonKey(name: '_name')
+      @HiveField(19)
           this.nameElement,
-      this.title,
+      @HiveField(20)
+          this.title,
       @JsonKey(name: '_title')
+      @HiveField(21)
           this.titleElement,
-      this.status,
+      @HiveField(22)
+          this.status,
       @JsonKey(name: '_status')
+      @HiveField(23)
           this.statusElement,
-      this.experimental,
+      @HiveField(24)
+          this.experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(25)
           this.experimentalElement,
-      this.date,
+      @HiveField(26)
+          this.date,
       @JsonKey(name: '_date')
+      @HiveField(27)
           this.dateElement,
-      this.publisher,
+      @HiveField(28)
+          this.publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(29)
           this.publisherElement,
-      final List<ContactDetail>? contact,
-      this.description,
+      @HiveField(30)
+          final List<ContactDetail>? contact,
+      @HiveField(31)
+          this.description,
       @JsonKey(name: '_description')
+      @HiveField(32)
           this.descriptionElement,
-      final List<UsageContext>? useContext,
-      final List<CodeableConcept>? jurisdiction,
-      this.purpose,
+      @HiveField(33)
+          final List<UsageContext>? useContext,
+      @HiveField(34)
+          final List<CodeableConcept>? jurisdiction,
+      @HiveField(35)
+          this.purpose,
       @JsonKey(name: '_purpose')
+      @HiveField(36)
           this.purposeElement,
-      this.copyright,
+      @HiveField(37)
+          this.copyright,
       @JsonKey(name: '_copyright')
+      @HiveField(38)
           this.copyrightElement,
-      final List<Coding>? keyword,
-      this.fhirVersion,
+      @HiveField(39)
+          final List<Coding>? keyword,
+      @HiveField(40)
+          this.fhirVersion,
       @JsonKey(name: '_fhirVersion')
+      @HiveField(41)
           this.fhirVersionElement,
-      final List<StructureDefinitionMapping>? mapping,
-      this.kind,
+      @HiveField(42)
+          final List<StructureDefinitionMapping>? mapping,
+      @HiveField(43)
+          this.kind,
       @JsonKey(name: '_kind')
+      @HiveField(44)
           this.kindElement,
       @JsonKey(name: 'abstract')
+      @HiveField(45)
           this.abstract_,
       @JsonKey(name: '_abstract')
+      @HiveField(46)
           this.abstractElement,
-      final List<StructureDefinitionContext>? context,
-      final List<String>? contextInvariant,
+      @HiveField(47)
+          final List<StructureDefinitionContext>? context,
+      @HiveField(48)
+          final List<String>? contextInvariant,
       @JsonKey(name: '_contextInvariant')
+      @HiveField(49)
           final List<Element?>? contextInvariantElement,
-      this.type,
+      @HiveField(50)
+          this.type,
       @JsonKey(name: '_type')
+      @HiveField(51)
           this.typeElement,
-      this.baseDefinition,
+      @HiveField(52)
+          this.baseDefinition,
       @JsonKey(name: '_baseDefinition')
+      @HiveField(53)
           this.baseDefinitionElement,
-      this.derivation,
+      @HiveField(54)
+          this.derivation,
       @JsonKey(name: '_derivation')
+      @HiveField(55)
           this.derivationElement,
-      this.snapshot,
-      this.differential})
+      @HiveField(56)
+          this.snapshot,
+      @HiveField(57)
+          this.differential})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -43746,17 +46509,20 @@ class _$_StructureDefinition extends _StructureDefinition {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.StructureDefinition)
+  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
+  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
+  @HiveField(2)
   final Meta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -43764,20 +46530,24 @@ class _$_StructureDefinition extends _StructureDefinition {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
+  @HiveField(5)
   final Code? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
+  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -43787,6 +46557,7 @@ class _$_StructureDefinition extends _StructureDefinition {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
+  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -43800,6 +46571,7 @@ class _$_StructureDefinition extends _StructureDefinition {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -43824,6 +46596,7 @@ class _$_StructureDefinition extends _StructureDefinition {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -43861,6 +46634,7 @@ class _$_StructureDefinition extends _StructureDefinition {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -43878,11 +46652,13 @@ class _$_StructureDefinition extends _StructureDefinition {
   /// target of a canonical reference. It SHALL remain the same when the
   ///  structure definition is stored on different servers.
   @override
+  @HiveField(11)
   final FhirUri? url;
 
   /// [urlElement] Extensions for url
   @override
   @JsonKey(name: '_url')
+  @HiveField(12)
   final Element? urlElement;
 
   /// [identifier] A formal identifier that is used to identify this structure
@@ -43894,6 +46670,7 @@ class _$_StructureDefinition extends _StructureDefinition {
   /// definition when it is represented in other formats, or referenced in a
   ///  specification, model, design or an instance.
   @override
+  @HiveField(13)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -43903,60 +46680,66 @@ class _$_StructureDefinition extends _StructureDefinition {
   }
 
   /// [version] The identifier that is used to identify this version of the
-  /// structure definition when it is referenced in a specification, model,
-  /// design or instance. This is an arbitrary value managed by the structure
-  /// definition author and is not expected to be globally unique. For example,
-  /// it might be a timestamp (e.g. yyyymmdd) if a managed version is not
-  /// available. There is also no expectation that versions can be placed in a
-  ///  lexicographical sequence.
   @override
+  @HiveField(14)
+  @HiveField(15)
+  @HiveField(16)
   final String? version;
 
   /// [versionElement] Extensions for version
   @override
   @JsonKey(name: '_version')
+  @HiveField(17)
   final Element? versionElement;
 
   /// [name] A natural language name identifying the structure definition. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
   @override
+  @HiveField(18)
   final String? name;
 
   /// [nameElement] Extensions for name
   @override
   @JsonKey(name: '_name')
+  @HiveField(19)
   final Element? nameElement;
 
   /// [title] A short, descriptive, user-friendly title for the structure
   ///  definition.
   @override
+  @HiveField(20)
   final String? title;
 
   /// [titleElement] Extensions for title
   @override
   @JsonKey(name: '_title')
+  @HiveField(21)
   final Element? titleElement;
 
   /// [status] The status of this structure definition. Enables tracking the
   ///  life-cycle of the content.
   @override
+  @HiveField(22)
   final Code? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
+  @HiveField(23)
   final Element? statusElement;
 
   /// [experimental] A Boolean value to indicate that this structure definition
   /// is authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
   @override
+  @HiveField(24)
   final Boolean? experimental;
 
   /// [experimentalElement] Extensions for experimental
   @override
   @JsonKey(name: '_experimental')
+  @HiveField(25)
   final Element? experimentalElement;
 
   /// [date] The date  (and optionally time) when the structure definition was
@@ -43964,21 +46747,25 @@ class _$_StructureDefinition extends _StructureDefinition {
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the structure definition changes.
   @override
+  @HiveField(26)
   final FhirDateTime? date;
 
   /// [dateElement] Extensions for date
   @override
   @JsonKey(name: '_date')
+  @HiveField(27)
   final Element? dateElement;
 
   /// [publisher] The name of the organization or individual that published the
   ///  structure definition.
   @override
+  @HiveField(28)
   final String? publisher;
 
   /// [publisherElement] Extensions for publisher
   @override
   @JsonKey(name: '_publisher')
+  @HiveField(29)
   final Element? publisherElement;
 
   /// [contact] Contact details to assist a user in finding and communicating
@@ -43988,6 +46775,7 @@ class _$_StructureDefinition extends _StructureDefinition {
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
   @override
+  @HiveField(30)
   List<ContactDetail>? get contact {
     final value = _contact;
     if (value == null) return null;
@@ -43999,11 +46787,13 @@ class _$_StructureDefinition extends _StructureDefinition {
   /// [description] A free text natural language description of the structure
   ///  definition from a consumer's perspective.
   @override
+  @HiveField(31)
   final Markdown? description;
 
   /// [descriptionElement] Extensions for description
   @override
   @JsonKey(name: '_description')
+  @HiveField(32)
   final Element? descriptionElement;
 
   /// [useContext] The content was developed with a focus and intent of
@@ -44019,6 +46809,7 @@ class _$_StructureDefinition extends _StructureDefinition {
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate structure definition instances.
   @override
+  @HiveField(33)
   List<UsageContext>? get useContext {
     final value = _useContext;
     if (value == null) return null;
@@ -44034,6 +46825,7 @@ class _$_StructureDefinition extends _StructureDefinition {
   /// [jurisdiction] A legal or geographic region in which the structure
   ///  definition is intended to be used.
   @override
+  @HiveField(34)
   List<CodeableConcept>? get jurisdiction {
     final value = _jurisdiction;
     if (value == null) return null;
@@ -44045,22 +46837,26 @@ class _$_StructureDefinition extends _StructureDefinition {
   /// [purpose] Explanation of why this structure definition is needed and why
   ///  it has been designed as it has.
   @override
+  @HiveField(35)
   final Markdown? purpose;
 
   /// [purposeElement] Extensions for purpose
   @override
   @JsonKey(name: '_purpose')
+  @HiveField(36)
   final Element? purposeElement;
 
   /// [copyright] A copyright statement relating to the structure definition
   /// and/or its contents. Copyright statements are generally legal restrictions
   ///  on the use and publishing of the structure definition.
   @override
+  @HiveField(37)
   final Markdown? copyright;
 
   /// [copyrightElement] Extensions for copyright
   @override
   @JsonKey(name: '_copyright')
+  @HiveField(38)
   final Element? copyrightElement;
 
   /// [keyword] A set of key words or terms from external terminologies that
@@ -44074,6 +46870,7 @@ class _$_StructureDefinition extends _StructureDefinition {
   /// describing the use of this structure definition, or the content it
   ///  describes.
   @override
+  @HiveField(39)
   List<Coding>? get keyword {
     final value = _keyword;
     if (value == null) return null;
@@ -44087,11 +46884,13 @@ class _$_StructureDefinition extends _StructureDefinition {
   /// specification, without the revision number, e.g.
   ///  [publication].[major].[minor], which is 4.0.1. for this version.
   @override
+  @HiveField(40)
   final Code? fhirVersion;
 
   /// [fhirVersionElement] Extensions for fhirVersion
   @override
   @JsonKey(name: '_fhirVersion')
+  @HiveField(41)
   final Element? fhirVersionElement;
 
   /// [mapping] An external specification that the content is mapped to.
@@ -44099,6 +46898,7 @@ class _$_StructureDefinition extends _StructureDefinition {
 
   /// [mapping] An external specification that the content is mapped to.
   @override
+  @HiveField(42)
   List<StructureDefinitionMapping>? get mapping {
     final value = _mapping;
     if (value == null) return null;
@@ -44109,11 +46909,13 @@ class _$_StructureDefinition extends _StructureDefinition {
 
   /// [kind] Defines the kind of structure that this definition is describing.
   @override
+  @HiveField(43)
   final Code? kind;
 
   /// [kindElement] Extensions for kind
   @override
   @JsonKey(name: '_kind')
+  @HiveField(44)
   final Element? kindElement;
 
   /// [abstract] Whether structure this definition describes is abstract or not
@@ -44122,11 +46924,13 @@ class _$_StructureDefinition extends _StructureDefinition {
   ///  systems.
   @override
   @JsonKey(name: 'abstract')
+  @HiveField(45)
   final Boolean? abstract_;
 
   /// [abstractElement] Extensions for abstract
   @override
   @JsonKey(name: '_abstract')
+  @HiveField(46)
   final Element? abstractElement;
 
   /// [context] Identifies the types of resource or data type elements to which
@@ -44136,6 +46940,7 @@ class _$_StructureDefinition extends _StructureDefinition {
   /// [context] Identifies the types of resource or data type elements to which
   ///  the extension can be applied.
   @override
+  @HiveField(47)
   List<StructureDefinitionContext>? get context {
     final value = _context;
     if (value == null) return null;
@@ -44153,6 +46958,7 @@ class _$_StructureDefinition extends _StructureDefinition {
   /// extension can be used (e.g. co-occurrence variants for the extension). All
   ///  the rules must be true.
   @override
+  @HiveField(48)
   List<String>? get contextInvariant {
     final value = _contextInvariant;
     if (value == null) return null;
@@ -44168,6 +46974,7 @@ class _$_StructureDefinition extends _StructureDefinition {
   /// [contextInvariantElement] Extensions for contextInvariant
   @override
   @JsonKey(name: '_contextInvariant')
+  @HiveField(49)
   List<Element?>? get contextInvariantElement {
     final value = _contextInvariantElement;
     if (value == null) return null;
@@ -44187,38 +46994,46 @@ class _$_StructureDefinition extends _StructureDefinition {
   /// http://hl7.org/fhir/StructureDefinition/string. Absolute URLs are only
   ///  allowed in logical models.
   @override
+  @HiveField(50)
   final FhirUri? type;
 
   /// [typeElement] Extensions for type
   @override
   @JsonKey(name: '_type')
+  @HiveField(51)
   final Element? typeElement;
 
   /// [baseDefinition] An absolute URI that is the base structure from which
   ///  this type is derived, either by specialization or constraint.
   @override
+  @HiveField(52)
   final Canonical? baseDefinition;
   @override
   @JsonKey(name: '_baseDefinition')
+  @HiveField(53)
   final Element? baseDefinitionElement;
 
   /// [derivation] How the type relates to the baseDefinition.
   @override
+  @HiveField(54)
   final Code? derivation;
 
   /// [derivationElement] Extensions for derivation
   @override
   @JsonKey(name: '_derivation')
+  @HiveField(55)
   final Element? derivationElement;
 
   /// [snapshot] A snapshot view is expressed in a standalone form that can be
   ///  used and interpreted without considering the base StructureDefinition.
   @override
+  @HiveField(56)
   final StructureDefinitionSnapshot? snapshot;
 
   /// [differential] A differential view is expressed relative to the base
   ///  StructureDefinition - a statement of differences that it applies.
   @override
+  @HiveField(57)
   final StructureDefinitionDifferential? differential;
 
   @override
@@ -44409,84 +47224,142 @@ class _$_StructureDefinition extends _StructureDefinition {
 abstract class _StructureDefinition extends StructureDefinition {
   factory _StructureDefinition(
           {@JsonKey(unknownEnumValue: R4ResourceType.StructureDefinition)
+          @HiveField(0)
               final R4ResourceType resourceType,
-          final String? id,
-          final Meta? meta,
-          final FhirUri? implicitRules,
+          @HiveField(1)
+              final String? id,
+          @HiveField(2)
+              final Meta? meta,
+          @HiveField(3)
+              final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
+          @HiveField(4)
               final Element? implicitRulesElement,
-          final Code? language,
+          @HiveField(5)
+              final Code? language,
           @JsonKey(name: '_language')
+          @HiveField(6)
               final Element? languageElement,
-          final Narrative? text,
-          final List<Resource>? contained,
+          @HiveField(7)
+              final Narrative? text,
+          @HiveField(8)
+              final List<Resource>? contained,
           @JsonKey(name: 'extension')
+          @HiveField(9)
               final List<FhirExtension>? extension_,
-          final List<FhirExtension>? modifierExtension,
-          final FhirUri? url,
+          @HiveField(10)
+              final List<FhirExtension>? modifierExtension,
+          @HiveField(11)
+              final FhirUri? url,
           @JsonKey(name: '_url')
+          @HiveField(12)
               final Element? urlElement,
-          final List<Identifier>? identifier,
-          final String? version,
+          @HiveField(13)
+              final List<Identifier>? identifier,
+          @HiveField(14)
+          @HiveField(15)
+          @HiveField(16)
+              final String? version,
           @JsonKey(name: '_version')
+          @HiveField(17)
               final Element? versionElement,
-          final String? name,
+          @HiveField(18)
+              final String? name,
           @JsonKey(name: '_name')
+          @HiveField(19)
               final Element? nameElement,
-          final String? title,
+          @HiveField(20)
+              final String? title,
           @JsonKey(name: '_title')
+          @HiveField(21)
               final Element? titleElement,
-          final Code? status,
+          @HiveField(22)
+              final Code? status,
           @JsonKey(name: '_status')
+          @HiveField(23)
               final Element? statusElement,
-          final Boolean? experimental,
+          @HiveField(24)
+              final Boolean? experimental,
           @JsonKey(name: '_experimental')
+          @HiveField(25)
               final Element? experimentalElement,
-          final FhirDateTime? date,
+          @HiveField(26)
+              final FhirDateTime? date,
           @JsonKey(name: '_date')
+          @HiveField(27)
               final Element? dateElement,
-          final String? publisher,
+          @HiveField(28)
+              final String? publisher,
           @JsonKey(name: '_publisher')
+          @HiveField(29)
               final Element? publisherElement,
-          final List<ContactDetail>? contact,
-          final Markdown? description,
+          @HiveField(30)
+              final List<ContactDetail>? contact,
+          @HiveField(31)
+              final Markdown? description,
           @JsonKey(name: '_description')
+          @HiveField(32)
               final Element? descriptionElement,
-          final List<UsageContext>? useContext,
-          final List<CodeableConcept>? jurisdiction,
-          final Markdown? purpose,
+          @HiveField(33)
+              final List<UsageContext>? useContext,
+          @HiveField(34)
+              final List<CodeableConcept>? jurisdiction,
+          @HiveField(35)
+              final Markdown? purpose,
           @JsonKey(name: '_purpose')
+          @HiveField(36)
               final Element? purposeElement,
-          final Markdown? copyright,
+          @HiveField(37)
+              final Markdown? copyright,
           @JsonKey(name: '_copyright')
+          @HiveField(38)
               final Element? copyrightElement,
-          final List<Coding>? keyword,
-          final Code? fhirVersion,
+          @HiveField(39)
+              final List<Coding>? keyword,
+          @HiveField(40)
+              final Code? fhirVersion,
           @JsonKey(name: '_fhirVersion')
+          @HiveField(41)
               final Element? fhirVersionElement,
-          final List<StructureDefinitionMapping>? mapping,
-          final Code? kind,
+          @HiveField(42)
+              final List<StructureDefinitionMapping>? mapping,
+          @HiveField(43)
+              final Code? kind,
           @JsonKey(name: '_kind')
+          @HiveField(44)
               final Element? kindElement,
           @JsonKey(name: 'abstract')
+          @HiveField(45)
               final Boolean? abstract_,
           @JsonKey(name: '_abstract')
+          @HiveField(46)
               final Element? abstractElement,
-          final List<StructureDefinitionContext>? context,
-          final List<String>? contextInvariant,
+          @HiveField(47)
+              final List<StructureDefinitionContext>? context,
+          @HiveField(48)
+              final List<String>? contextInvariant,
           @JsonKey(name: '_contextInvariant')
+          @HiveField(49)
               final List<Element?>? contextInvariantElement,
-          final FhirUri? type,
+          @HiveField(50)
+              final FhirUri? type,
           @JsonKey(name: '_type')
+          @HiveField(51)
               final Element? typeElement,
-          final Canonical? baseDefinition,
+          @HiveField(52)
+              final Canonical? baseDefinition,
           @JsonKey(name: '_baseDefinition')
+          @HiveField(53)
               final Element? baseDefinitionElement,
-          final Code? derivation,
+          @HiveField(54)
+              final Code? derivation,
           @JsonKey(name: '_derivation')
+          @HiveField(55)
               final Element? derivationElement,
-          final StructureDefinitionSnapshot? snapshot,
-          final StructureDefinitionDifferential? differential}) =
+          @HiveField(56)
+              final StructureDefinitionSnapshot? snapshot,
+          @HiveField(57)
+              final StructureDefinitionDifferential? differential}) =
       _$_StructureDefinition;
   _StructureDefinition._() : super._();
 
@@ -44495,17 +47368,20 @@ abstract class _StructureDefinition extends StructureDefinition {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.StructureDefinition)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta;
   @override
 
@@ -44513,20 +47389,24 @@ abstract class _StructureDefinition extends StructureDefinition {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -44536,6 +47416,7 @@ abstract class _StructureDefinition extends StructureDefinition {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -44543,6 +47424,7 @@ abstract class _StructureDefinition extends StructureDefinition {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -44553,6 +47435,7 @@ abstract class _StructureDefinition extends StructureDefinition {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -44569,6 +47452,7 @@ abstract class _StructureDefinition extends StructureDefinition {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
@@ -44579,74 +47463,83 @@ abstract class _StructureDefinition extends StructureDefinition {
   /// this structure definition is (or will be) published. This URL can be the
   /// target of a canonical reference. It SHALL remain the same when the
   ///  structure definition is stored on different servers.
+  @HiveField(11)
   FhirUri? get url;
   @override
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
+  @HiveField(12)
   Element? get urlElement;
   @override
 
   /// [identifier] A formal identifier that is used to identify this structure
   /// definition when it is represented in other formats, or referenced in a
   ///  specification, model, design or an instance.
+  @HiveField(13)
   List<Identifier>? get identifier;
   @override
 
   /// [version] The identifier that is used to identify this version of the
-  /// structure definition when it is referenced in a specification, model,
-  /// design or instance. This is an arbitrary value managed by the structure
-  /// definition author and is not expected to be globally unique. For example,
-  /// it might be a timestamp (e.g. yyyymmdd) if a managed version is not
-  /// available. There is also no expectation that versions can be placed in a
-  ///  lexicographical sequence.
+  @HiveField(14)
+  @HiveField(15)
+  @HiveField(16)
   String? get version;
   @override
 
   /// [versionElement] Extensions for version
   @JsonKey(name: '_version')
+  @HiveField(17)
   Element? get versionElement;
   @override
 
   /// [name] A natural language name identifying the structure definition. This
   /// name should be usable as an identifier for the module by machine
   ///  processing applications such as code generation.
+  @HiveField(18)
   String? get name;
   @override
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
+  @HiveField(19)
   Element? get nameElement;
   @override
 
   /// [title] A short, descriptive, user-friendly title for the structure
   ///  definition.
+  @HiveField(20)
   String? get title;
   @override
 
   /// [titleElement] Extensions for title
   @JsonKey(name: '_title')
+  @HiveField(21)
   Element? get titleElement;
   @override
 
   /// [status] The status of this structure definition. Enables tracking the
   ///  life-cycle of the content.
+  @HiveField(22)
   Code? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(23)
   Element? get statusElement;
   @override
 
   /// [experimental] A Boolean value to indicate that this structure definition
   /// is authored for testing purposes (or education/evaluation/marketing) and
   ///  is not intended to be used for genuine usage.
+  @HiveField(24)
   Boolean? get experimental;
   @override
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
+  @HiveField(25)
   Element? get experimentalElement;
   @override
 
@@ -44654,36 +47547,43 @@ abstract class _StructureDefinition extends StructureDefinition {
   /// published. The date must change when the business version changes and it
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the structure definition changes.
+  @HiveField(26)
   FhirDateTime? get date;
   @override
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
+  @HiveField(27)
   Element? get dateElement;
   @override
 
   /// [publisher] The name of the organization or individual that published the
   ///  structure definition.
+  @HiveField(28)
   String? get publisher;
   @override
 
   /// [publisherElement] Extensions for publisher
   @JsonKey(name: '_publisher')
+  @HiveField(29)
   Element? get publisherElement;
   @override
 
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
+  @HiveField(30)
   List<ContactDetail>? get contact;
   @override
 
   /// [description] A free text natural language description of the structure
   ///  definition from a consumer's perspective.
+  @HiveField(31)
   Markdown? get description;
   @override
 
   /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
+  @HiveField(32)
   Element? get descriptionElement;
   @override
 
@@ -44692,32 +47592,38 @@ abstract class _StructureDefinition extends StructureDefinition {
   /// categories (gender, age, ...) or may be references to specific programs
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate structure definition instances.
+  @HiveField(33)
   List<UsageContext>? get useContext;
   @override
 
   /// [jurisdiction] A legal or geographic region in which the structure
   ///  definition is intended to be used.
+  @HiveField(34)
   List<CodeableConcept>? get jurisdiction;
   @override
 
   /// [purpose] Explanation of why this structure definition is needed and why
   ///  it has been designed as it has.
+  @HiveField(35)
   Markdown? get purpose;
   @override
 
   /// [purposeElement] Extensions for purpose
   @JsonKey(name: '_purpose')
+  @HiveField(36)
   Element? get purposeElement;
   @override
 
   /// [copyright] A copyright statement relating to the structure definition
   /// and/or its contents. Copyright statements are generally legal restrictions
   ///  on the use and publishing of the structure definition.
+  @HiveField(37)
   Markdown? get copyright;
   @override
 
   /// [copyrightElement] Extensions for copyright
   @JsonKey(name: '_copyright')
+  @HiveField(38)
   Element? get copyrightElement;
   @override
 
@@ -44725,6 +47631,7 @@ abstract class _StructureDefinition extends StructureDefinition {
   /// may be used to assist with indexing and searching of templates nby
   /// describing the use of this structure definition, or the content it
   ///  describes.
+  @HiveField(39)
   List<Coding>? get keyword;
   @override
 
@@ -44732,24 +47639,29 @@ abstract class _StructureDefinition extends StructureDefinition {
   /// StructureDefinition is based - this is the formal version of the
   /// specification, without the revision number, e.g.
   ///  [publication].[major].[minor], which is 4.0.1. for this version.
+  @HiveField(40)
   Code? get fhirVersion;
   @override
 
   /// [fhirVersionElement] Extensions for fhirVersion
   @JsonKey(name: '_fhirVersion')
+  @HiveField(41)
   Element? get fhirVersionElement;
   @override
 
   /// [mapping] An external specification that the content is mapped to.
+  @HiveField(42)
   List<StructureDefinitionMapping>? get mapping;
   @override
 
   /// [kind] Defines the kind of structure that this definition is describing.
+  @HiveField(43)
   Code? get kind;
   @override
 
   /// [kindElement] Extensions for kind
   @JsonKey(name: '_kind')
+  @HiveField(44)
   Element? get kindElement;
   @override
 
@@ -44758,27 +47670,32 @@ abstract class _StructureDefinition extends StructureDefinition {
   /// Resources and Data types, abstract types will never be exchanged  between
   ///  systems.
   @JsonKey(name: 'abstract')
+  @HiveField(45)
   Boolean? get abstract_;
   @override
 
   /// [abstractElement] Extensions for abstract
   @JsonKey(name: '_abstract')
+  @HiveField(46)
   Element? get abstractElement;
   @override
 
   /// [context] Identifies the types of resource or data type elements to which
   ///  the extension can be applied.
+  @HiveField(47)
   List<StructureDefinitionContext>? get context;
   @override
 
   /// [contextInvariant] A set of rules as FHIRPath Invariants about when the
   /// extension can be used (e.g. co-occurrence variants for the extension). All
   ///  the rules must be true.
+  @HiveField(48)
   List<String>? get contextInvariant;
   @override
 
   /// [contextInvariantElement] Extensions for contextInvariant
   @JsonKey(name: '_contextInvariant')
+  @HiveField(49)
   List<Element?>? get contextInvariantElement;
   @override
 
@@ -44791,38 +47708,46 @@ abstract class _StructureDefinition extends StructureDefinition {
   /// http://hl7.org/fhir/StructureDefinition e.g. "string" is a reference to
   /// http://hl7.org/fhir/StructureDefinition/string. Absolute URLs are only
   ///  allowed in logical models.
+  @HiveField(50)
   FhirUri? get type;
   @override
 
   /// [typeElement] Extensions for type
   @JsonKey(name: '_type')
+  @HiveField(51)
   Element? get typeElement;
   @override
 
   /// [baseDefinition] An absolute URI that is the base structure from which
   ///  this type is derived, either by specialization or constraint.
+  @HiveField(52)
   Canonical? get baseDefinition;
   @override
   @JsonKey(name: '_baseDefinition')
+  @HiveField(53)
   Element? get baseDefinitionElement;
   @override
 
   /// [derivation] How the type relates to the baseDefinition.
+  @HiveField(54)
   Code? get derivation;
   @override
 
   /// [derivationElement] Extensions for derivation
   @JsonKey(name: '_derivation')
+  @HiveField(55)
   Element? get derivationElement;
   @override
 
   /// [snapshot] A snapshot view is expressed in a standalone form that can be
   ///  used and interpreted without considering the base StructureDefinition.
+  @HiveField(56)
   StructureDefinitionSnapshot? get snapshot;
   @override
 
   /// [differential] A differential view is expressed relative to the base
   ///  StructureDefinition - a statement of differences that it applies.
+  @HiveField(57)
   StructureDefinitionDifferential? get differential;
   @override
   @JsonKey(ignore: true)
@@ -46606,32 +49531,39 @@ StructureMap _$StructureMapFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$StructureMap {
   @JsonKey(unknownEnumValue: R4ResourceType.StructureMap)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -46640,12 +49572,14 @@ mixin _$StructureMap {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -46655,6 +49589,7 @@ mixin _$StructureMap {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -46670,6 +49605,7 @@ mixin _$StructureMap {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
@@ -46680,15 +49616,18 @@ mixin _$StructureMap {
   /// structure map is (or will be) published. This URL can be the target of a
   /// canonical reference. It SHALL remain the same when the structure map is
   ///  stored on different servers.
+  @HiveField(11)
   FhirUri? get url => throw _privateConstructorUsedError;
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
+  @HiveField(12)
   Element? get urlElement => throw _privateConstructorUsedError;
 
   /// [identifier] A formal identifier that is used to identify this structure
   /// map when it is represented in other formats, or referenced in a
   ///  specification, model, design or an instance.
+  @HiveField(13)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [version] The identifier that is used to identify this version of the
@@ -46698,73 +49637,90 @@ mixin _$StructureMap {
   /// timestamp (e.g. yyyymmdd) if a managed version is not available. There is
   /// also no expectation that versions can be placed in a lexicographical
   ///  sequence.
+  @HiveField(14)
   String? get version => throw _privateConstructorUsedError;
 
   /// [versionElement] Extensions for version
   @JsonKey(name: '_version')
+  @HiveField(15)
   Element? get versionElement => throw _privateConstructorUsedError;
 
   /// [name] A natural language name identifying the structure map. This name
   /// should be usable as an identifier for the module by machine processing
   ///  applications such as code generation.
+  @HiveField(16)
   String? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
+  @HiveField(17)
   Element? get nameElement => throw _privateConstructorUsedError;
 
   /// [title] A short, descriptive, user-friendly title for the structure map.
+  @HiveField(18)
   String? get title => throw _privateConstructorUsedError;
 
   /// [titleElement] Extensions for title
   @JsonKey(name: '_title')
+  @HiveField(19)
   Element? get titleElement => throw _privateConstructorUsedError;
 
   /// [status] The status of this structure map. Enables tracking the
   ///  life-cycle of the content.
+  @HiveField(20)
   Code? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(21)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [experimental] A Boolean value to indicate that this structure map is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
+  @HiveField(22)
   Boolean? get experimental => throw _privateConstructorUsedError;
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
+  @HiveField(23)
   Element? get experimentalElement => throw _privateConstructorUsedError;
 
   /// [date] The date  (and optionally time) when the structure map was
   /// published. The date must change when the business version changes and it
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the structure map changes.
+  @HiveField(24)
   FhirDateTime? get date => throw _privateConstructorUsedError;
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
+  @HiveField(25)
   Element? get dateElement => throw _privateConstructorUsedError;
 
   /// [publisher] The name of the organization or individual that published the
   ///  structure map.
+  @HiveField(26)
   String? get publisher => throw _privateConstructorUsedError;
 
   /// [publisherElement] Extensions for publisher
   @JsonKey(name: '_publisher')
+  @HiveField(27)
   Element? get publisherElement => throw _privateConstructorUsedError;
 
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
+  @HiveField(28)
   List<ContactDetail>? get contact => throw _privateConstructorUsedError;
 
   /// [description] A free text natural language description of the structure
   ///  map from a consumer's perspective.
+  @HiveField(29)
   Markdown? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
+  @HiveField(30)
   Element? get descriptionElement => throw _privateConstructorUsedError;
 
   /// [useContext] The content was developed with a focus and intent of
@@ -46772,41 +49728,50 @@ mixin _$StructureMap {
   /// categories (gender, age, ...) or may be references to specific programs
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate structure map instances.
+  @HiveField(31)
   List<UsageContext>? get useContext => throw _privateConstructorUsedError;
 
   /// [jurisdiction] A legal or geographic region in which the structure map is
   ///  intended to be used.
+  @HiveField(32)
   List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
 
   /// [purpose] Explanation of why this structure map is needed and why it has
   ///  been designed as it has.
+  @HiveField(33)
   Markdown? get purpose => throw _privateConstructorUsedError;
 
   /// [purposeElement] Extensions for purpose
   @JsonKey(name: '_purpose')
+  @HiveField(34)
   Element? get purposeElement => throw _privateConstructorUsedError;
 
   /// [copyright] A copyright statement relating to the structure map and/or
   /// its contents. Copyright statements are generally legal restrictions on the
   ///  use and publishing of the structure map.
+  @HiveField(35)
   Markdown? get copyright => throw _privateConstructorUsedError;
 
   /// [copyrightElement] Extensions for copyright
   @JsonKey(name: '_copyright')
+  @HiveField(36)
   Element? get copyrightElement => throw _privateConstructorUsedError;
 
   /// [structure] A structure definition used by this map. The structure
   /// definition may describe instances that are converted, or the instances
   ///  that are produced.
+  @HiveField(37)
   List<StructureMapStructure>? get structure =>
       throw _privateConstructorUsedError;
 
   /// [import] Other maps used by this map (canonical URLs).
   @JsonKey(name: 'import')
+  @HiveField(38)
   List<Canonical>? get import_ => throw _privateConstructorUsedError;
 
   /// [group] Organizes the mapping into manageable chunks for human
   ///  review/ease of maintenance.
+  @HiveField(39)
   List<StructureMapGroup> get group => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -46823,61 +49788,101 @@ abstract class $StructureMapCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.StructureMap)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          FhirUri? url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           Element? urlElement,
-      List<Identifier>? identifier,
-      String? version,
+      @HiveField(13)
+          List<Identifier>? identifier,
+      @HiveField(14)
+          String? version,
       @JsonKey(name: '_version')
+      @HiveField(15)
           Element? versionElement,
-      String? name,
+      @HiveField(16)
+          String? name,
       @JsonKey(name: '_name')
+      @HiveField(17)
           Element? nameElement,
-      String? title,
+      @HiveField(18)
+          String? title,
       @JsonKey(name: '_title')
+      @HiveField(19)
           Element? titleElement,
-      Code? status,
+      @HiveField(20)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(21)
           Element? statusElement,
-      Boolean? experimental,
+      @HiveField(22)
+          Boolean? experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(23)
           Element? experimentalElement,
-      FhirDateTime? date,
+      @HiveField(24)
+          FhirDateTime? date,
       @JsonKey(name: '_date')
+      @HiveField(25)
           Element? dateElement,
-      String? publisher,
+      @HiveField(26)
+          String? publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(27)
           Element? publisherElement,
-      List<ContactDetail>? contact,
-      Markdown? description,
+      @HiveField(28)
+          List<ContactDetail>? contact,
+      @HiveField(29)
+          Markdown? description,
       @JsonKey(name: '_description')
+      @HiveField(30)
           Element? descriptionElement,
-      List<UsageContext>? useContext,
-      List<CodeableConcept>? jurisdiction,
-      Markdown? purpose,
+      @HiveField(31)
+          List<UsageContext>? useContext,
+      @HiveField(32)
+          List<CodeableConcept>? jurisdiction,
+      @HiveField(33)
+          Markdown? purpose,
       @JsonKey(name: '_purpose')
+      @HiveField(34)
           Element? purposeElement,
-      Markdown? copyright,
+      @HiveField(35)
+          Markdown? copyright,
       @JsonKey(name: '_copyright')
+      @HiveField(36)
           Element? copyrightElement,
-      List<StructureMapStructure>? structure,
+      @HiveField(37)
+          List<StructureMapStructure>? structure,
       @JsonKey(name: 'import')
+      @HiveField(38)
           List<Canonical>? import_,
-      List<StructureMapGroup> group});
+      @HiveField(39)
+          List<StructureMapGroup> group});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -47305,61 +50310,101 @@ abstract class _$$_StructureMapCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.StructureMap)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          FhirUri? url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           Element? urlElement,
-      List<Identifier>? identifier,
-      String? version,
+      @HiveField(13)
+          List<Identifier>? identifier,
+      @HiveField(14)
+          String? version,
       @JsonKey(name: '_version')
+      @HiveField(15)
           Element? versionElement,
-      String? name,
+      @HiveField(16)
+          String? name,
       @JsonKey(name: '_name')
+      @HiveField(17)
           Element? nameElement,
-      String? title,
+      @HiveField(18)
+          String? title,
       @JsonKey(name: '_title')
+      @HiveField(19)
           Element? titleElement,
-      Code? status,
+      @HiveField(20)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(21)
           Element? statusElement,
-      Boolean? experimental,
+      @HiveField(22)
+          Boolean? experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(23)
           Element? experimentalElement,
-      FhirDateTime? date,
+      @HiveField(24)
+          FhirDateTime? date,
       @JsonKey(name: '_date')
+      @HiveField(25)
           Element? dateElement,
-      String? publisher,
+      @HiveField(26)
+          String? publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(27)
           Element? publisherElement,
-      List<ContactDetail>? contact,
-      Markdown? description,
+      @HiveField(28)
+          List<ContactDetail>? contact,
+      @HiveField(29)
+          Markdown? description,
       @JsonKey(name: '_description')
+      @HiveField(30)
           Element? descriptionElement,
-      List<UsageContext>? useContext,
-      List<CodeableConcept>? jurisdiction,
-      Markdown? purpose,
+      @HiveField(31)
+          List<UsageContext>? useContext,
+      @HiveField(32)
+          List<CodeableConcept>? jurisdiction,
+      @HiveField(33)
+          Markdown? purpose,
       @JsonKey(name: '_purpose')
+      @HiveField(34)
           Element? purposeElement,
-      Markdown? copyright,
+      @HiveField(35)
+          Markdown? copyright,
       @JsonKey(name: '_copyright')
+      @HiveField(36)
           Element? copyrightElement,
-      List<StructureMapStructure>? structure,
+      @HiveField(37)
+          List<StructureMapStructure>? structure,
       @JsonKey(name: 'import')
+      @HiveField(38)
           List<Canonical>? import_,
-      List<StructureMapGroup> group});
+      @HiveField(39)
+          List<StructureMapGroup> group});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -47616,61 +50661,101 @@ class __$$_StructureMapCopyWithImpl<$Res>
 class _$_StructureMap extends _StructureMap {
   _$_StructureMap(
       {@JsonKey(unknownEnumValue: R4ResourceType.StructureMap)
+      @HiveField(0)
           this.resourceType = R4ResourceType.StructureMap,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.url,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          this.url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           this.urlElement,
-      final List<Identifier>? identifier,
-      this.version,
+      @HiveField(13)
+          final List<Identifier>? identifier,
+      @HiveField(14)
+          this.version,
       @JsonKey(name: '_version')
+      @HiveField(15)
           this.versionElement,
-      this.name,
+      @HiveField(16)
+          this.name,
       @JsonKey(name: '_name')
+      @HiveField(17)
           this.nameElement,
-      this.title,
+      @HiveField(18)
+          this.title,
       @JsonKey(name: '_title')
+      @HiveField(19)
           this.titleElement,
-      this.status,
+      @HiveField(20)
+          this.status,
       @JsonKey(name: '_status')
+      @HiveField(21)
           this.statusElement,
-      this.experimental,
+      @HiveField(22)
+          this.experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(23)
           this.experimentalElement,
-      this.date,
+      @HiveField(24)
+          this.date,
       @JsonKey(name: '_date')
+      @HiveField(25)
           this.dateElement,
-      this.publisher,
+      @HiveField(26)
+          this.publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(27)
           this.publisherElement,
-      final List<ContactDetail>? contact,
-      this.description,
+      @HiveField(28)
+          final List<ContactDetail>? contact,
+      @HiveField(29)
+          this.description,
       @JsonKey(name: '_description')
+      @HiveField(30)
           this.descriptionElement,
-      final List<UsageContext>? useContext,
-      final List<CodeableConcept>? jurisdiction,
-      this.purpose,
+      @HiveField(31)
+          final List<UsageContext>? useContext,
+      @HiveField(32)
+          final List<CodeableConcept>? jurisdiction,
+      @HiveField(33)
+          this.purpose,
       @JsonKey(name: '_purpose')
+      @HiveField(34)
           this.purposeElement,
-      this.copyright,
+      @HiveField(35)
+          this.copyright,
       @JsonKey(name: '_copyright')
+      @HiveField(36)
           this.copyrightElement,
-      final List<StructureMapStructure>? structure,
+      @HiveField(37)
+          final List<StructureMapStructure>? structure,
       @JsonKey(name: 'import')
+      @HiveField(38)
           final List<Canonical>? import_,
-      required final List<StructureMapGroup> group})
+      @HiveField(39)
+          required final List<StructureMapGroup> group})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -47688,17 +50773,20 @@ class _$_StructureMap extends _StructureMap {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.StructureMap)
+  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
+  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
+  @HiveField(2)
   final Meta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -47706,20 +50794,24 @@ class _$_StructureMap extends _StructureMap {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
+  @HiveField(5)
   final Code? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
+  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -47729,6 +50821,7 @@ class _$_StructureMap extends _StructureMap {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
+  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -47742,6 +50835,7 @@ class _$_StructureMap extends _StructureMap {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -47766,6 +50860,7 @@ class _$_StructureMap extends _StructureMap {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -47803,6 +50898,7 @@ class _$_StructureMap extends _StructureMap {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -47820,11 +50916,13 @@ class _$_StructureMap extends _StructureMap {
   /// canonical reference. It SHALL remain the same when the structure map is
   ///  stored on different servers.
   @override
+  @HiveField(11)
   final FhirUri? url;
 
   /// [urlElement] Extensions for url
   @override
   @JsonKey(name: '_url')
+  @HiveField(12)
   final Element? urlElement;
 
   /// [identifier] A formal identifier that is used to identify this structure
@@ -47836,6 +50934,7 @@ class _$_StructureMap extends _StructureMap {
   /// map when it is represented in other formats, or referenced in a
   ///  specification, model, design or an instance.
   @override
+  @HiveField(13)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -47852,52 +50951,62 @@ class _$_StructureMap extends _StructureMap {
   /// also no expectation that versions can be placed in a lexicographical
   ///  sequence.
   @override
+  @HiveField(14)
   final String? version;
 
   /// [versionElement] Extensions for version
   @override
   @JsonKey(name: '_version')
+  @HiveField(15)
   final Element? versionElement;
 
   /// [name] A natural language name identifying the structure map. This name
   /// should be usable as an identifier for the module by machine processing
   ///  applications such as code generation.
   @override
+  @HiveField(16)
   final String? name;
 
   /// [nameElement] Extensions for name
   @override
   @JsonKey(name: '_name')
+  @HiveField(17)
   final Element? nameElement;
 
   /// [title] A short, descriptive, user-friendly title for the structure map.
   @override
+  @HiveField(18)
   final String? title;
 
   /// [titleElement] Extensions for title
   @override
   @JsonKey(name: '_title')
+  @HiveField(19)
   final Element? titleElement;
 
   /// [status] The status of this structure map. Enables tracking the
   ///  life-cycle of the content.
   @override
+  @HiveField(20)
   final Code? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
+  @HiveField(21)
   final Element? statusElement;
 
   /// [experimental] A Boolean value to indicate that this structure map is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
   @override
+  @HiveField(22)
   final Boolean? experimental;
 
   /// [experimentalElement] Extensions for experimental
   @override
   @JsonKey(name: '_experimental')
+  @HiveField(23)
   final Element? experimentalElement;
 
   /// [date] The date  (and optionally time) when the structure map was
@@ -47905,21 +51014,25 @@ class _$_StructureMap extends _StructureMap {
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the structure map changes.
   @override
+  @HiveField(24)
   final FhirDateTime? date;
 
   /// [dateElement] Extensions for date
   @override
   @JsonKey(name: '_date')
+  @HiveField(25)
   final Element? dateElement;
 
   /// [publisher] The name of the organization or individual that published the
   ///  structure map.
   @override
+  @HiveField(26)
   final String? publisher;
 
   /// [publisherElement] Extensions for publisher
   @override
   @JsonKey(name: '_publisher')
+  @HiveField(27)
   final Element? publisherElement;
 
   /// [contact] Contact details to assist a user in finding and communicating
@@ -47929,6 +51042,7 @@ class _$_StructureMap extends _StructureMap {
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
   @override
+  @HiveField(28)
   List<ContactDetail>? get contact {
     final value = _contact;
     if (value == null) return null;
@@ -47940,11 +51054,13 @@ class _$_StructureMap extends _StructureMap {
   /// [description] A free text natural language description of the structure
   ///  map from a consumer's perspective.
   @override
+  @HiveField(29)
   final Markdown? description;
 
   /// [descriptionElement] Extensions for description
   @override
   @JsonKey(name: '_description')
+  @HiveField(30)
   final Element? descriptionElement;
 
   /// [useContext] The content was developed with a focus and intent of
@@ -47960,6 +51076,7 @@ class _$_StructureMap extends _StructureMap {
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate structure map instances.
   @override
+  @HiveField(31)
   List<UsageContext>? get useContext {
     final value = _useContext;
     if (value == null) return null;
@@ -47975,6 +51092,7 @@ class _$_StructureMap extends _StructureMap {
   /// [jurisdiction] A legal or geographic region in which the structure map is
   ///  intended to be used.
   @override
+  @HiveField(32)
   List<CodeableConcept>? get jurisdiction {
     final value = _jurisdiction;
     if (value == null) return null;
@@ -47986,22 +51104,26 @@ class _$_StructureMap extends _StructureMap {
   /// [purpose] Explanation of why this structure map is needed and why it has
   ///  been designed as it has.
   @override
+  @HiveField(33)
   final Markdown? purpose;
 
   /// [purposeElement] Extensions for purpose
   @override
   @JsonKey(name: '_purpose')
+  @HiveField(34)
   final Element? purposeElement;
 
   /// [copyright] A copyright statement relating to the structure map and/or
   /// its contents. Copyright statements are generally legal restrictions on the
   ///  use and publishing of the structure map.
   @override
+  @HiveField(35)
   final Markdown? copyright;
 
   /// [copyrightElement] Extensions for copyright
   @override
   @JsonKey(name: '_copyright')
+  @HiveField(36)
   final Element? copyrightElement;
 
   /// [structure] A structure definition used by this map. The structure
@@ -48013,6 +51135,7 @@ class _$_StructureMap extends _StructureMap {
   /// definition may describe instances that are converted, or the instances
   ///  that are produced.
   @override
+  @HiveField(37)
   List<StructureMapStructure>? get structure {
     final value = _structure;
     if (value == null) return null;
@@ -48027,6 +51150,7 @@ class _$_StructureMap extends _StructureMap {
   /// [import] Other maps used by this map (canonical URLs).
   @override
   @JsonKey(name: 'import')
+  @HiveField(38)
   List<Canonical>? get import_ {
     final value = _import_;
     if (value == null) return null;
@@ -48042,6 +51166,7 @@ class _$_StructureMap extends _StructureMap {
   /// [group] Organizes the mapping into manageable chunks for human
   ///  review/ease of maintenance.
   @override
+  @HiveField(39)
   List<StructureMapGroup> get group {
     if (_group is EqualUnmodifiableListView) return _group;
     // ignore: implicit_dynamic_type
@@ -48190,61 +51315,101 @@ class _$_StructureMap extends _StructureMap {
 abstract class _StructureMap extends StructureMap {
   factory _StructureMap(
       {@JsonKey(unknownEnumValue: R4ResourceType.StructureMap)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final FhirUri? url,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final FhirUri? url,
       @JsonKey(name: '_url')
+      @HiveField(12)
           final Element? urlElement,
-      final List<Identifier>? identifier,
-      final String? version,
+      @HiveField(13)
+          final List<Identifier>? identifier,
+      @HiveField(14)
+          final String? version,
       @JsonKey(name: '_version')
+      @HiveField(15)
           final Element? versionElement,
-      final String? name,
+      @HiveField(16)
+          final String? name,
       @JsonKey(name: '_name')
+      @HiveField(17)
           final Element? nameElement,
-      final String? title,
+      @HiveField(18)
+          final String? title,
       @JsonKey(name: '_title')
+      @HiveField(19)
           final Element? titleElement,
-      final Code? status,
+      @HiveField(20)
+          final Code? status,
       @JsonKey(name: '_status')
+      @HiveField(21)
           final Element? statusElement,
-      final Boolean? experimental,
+      @HiveField(22)
+          final Boolean? experimental,
       @JsonKey(name: '_experimental')
+      @HiveField(23)
           final Element? experimentalElement,
-      final FhirDateTime? date,
+      @HiveField(24)
+          final FhirDateTime? date,
       @JsonKey(name: '_date')
+      @HiveField(25)
           final Element? dateElement,
-      final String? publisher,
+      @HiveField(26)
+          final String? publisher,
       @JsonKey(name: '_publisher')
+      @HiveField(27)
           final Element? publisherElement,
-      final List<ContactDetail>? contact,
-      final Markdown? description,
+      @HiveField(28)
+          final List<ContactDetail>? contact,
+      @HiveField(29)
+          final Markdown? description,
       @JsonKey(name: '_description')
+      @HiveField(30)
           final Element? descriptionElement,
-      final List<UsageContext>? useContext,
-      final List<CodeableConcept>? jurisdiction,
-      final Markdown? purpose,
+      @HiveField(31)
+          final List<UsageContext>? useContext,
+      @HiveField(32)
+          final List<CodeableConcept>? jurisdiction,
+      @HiveField(33)
+          final Markdown? purpose,
       @JsonKey(name: '_purpose')
+      @HiveField(34)
           final Element? purposeElement,
-      final Markdown? copyright,
+      @HiveField(35)
+          final Markdown? copyright,
       @JsonKey(name: '_copyright')
+      @HiveField(36)
           final Element? copyrightElement,
-      final List<StructureMapStructure>? structure,
+      @HiveField(37)
+          final List<StructureMapStructure>? structure,
       @JsonKey(name: 'import')
+      @HiveField(38)
           final List<Canonical>? import_,
-      required final List<StructureMapGroup> group}) = _$_StructureMap;
+      @HiveField(39)
+          required final List<StructureMapGroup> group}) = _$_StructureMap;
   _StructureMap._() : super._();
 
   factory _StructureMap.fromJson(Map<String, dynamic> json) =
@@ -48252,17 +51417,20 @@ abstract class _StructureMap extends StructureMap {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.StructureMap)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta;
   @override
 
@@ -48270,20 +51438,24 @@ abstract class _StructureMap extends StructureMap {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -48293,6 +51465,7 @@ abstract class _StructureMap extends StructureMap {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -48300,6 +51473,7 @@ abstract class _StructureMap extends StructureMap {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -48310,6 +51484,7 @@ abstract class _StructureMap extends StructureMap {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -48326,6 +51501,7 @@ abstract class _StructureMap extends StructureMap {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
@@ -48336,17 +51512,20 @@ abstract class _StructureMap extends StructureMap {
   /// structure map is (or will be) published. This URL can be the target of a
   /// canonical reference. It SHALL remain the same when the structure map is
   ///  stored on different servers.
+  @HiveField(11)
   FhirUri? get url;
   @override
 
   /// [urlElement] Extensions for url
   @JsonKey(name: '_url')
+  @HiveField(12)
   Element? get urlElement;
   @override
 
   /// [identifier] A formal identifier that is used to identify this structure
   /// map when it is represented in other formats, or referenced in a
   ///  specification, model, design or an instance.
+  @HiveField(13)
   List<Identifier>? get identifier;
   @override
 
@@ -48357,52 +51536,62 @@ abstract class _StructureMap extends StructureMap {
   /// timestamp (e.g. yyyymmdd) if a managed version is not available. There is
   /// also no expectation that versions can be placed in a lexicographical
   ///  sequence.
+  @HiveField(14)
   String? get version;
   @override
 
   /// [versionElement] Extensions for version
   @JsonKey(name: '_version')
+  @HiveField(15)
   Element? get versionElement;
   @override
 
   /// [name] A natural language name identifying the structure map. This name
   /// should be usable as an identifier for the module by machine processing
   ///  applications such as code generation.
+  @HiveField(16)
   String? get name;
   @override
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
+  @HiveField(17)
   Element? get nameElement;
   @override
 
   /// [title] A short, descriptive, user-friendly title for the structure map.
+  @HiveField(18)
   String? get title;
   @override
 
   /// [titleElement] Extensions for title
   @JsonKey(name: '_title')
+  @HiveField(19)
   Element? get titleElement;
   @override
 
   /// [status] The status of this structure map. Enables tracking the
   ///  life-cycle of the content.
+  @HiveField(20)
   Code? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(21)
   Element? get statusElement;
   @override
 
   /// [experimental] A Boolean value to indicate that this structure map is
   /// authored for testing purposes (or education/evaluation/marketing) and is
   ///  not intended to be used for genuine usage.
+  @HiveField(22)
   Boolean? get experimental;
   @override
 
   /// [experimentalElement] Extensions for experimental
   @JsonKey(name: '_experimental')
+  @HiveField(23)
   Element? get experimentalElement;
   @override
 
@@ -48410,36 +51599,43 @@ abstract class _StructureMap extends StructureMap {
   /// published. The date must change when the business version changes and it
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the structure map changes.
+  @HiveField(24)
   FhirDateTime? get date;
   @override
 
   /// [dateElement] Extensions for date
   @JsonKey(name: '_date')
+  @HiveField(25)
   Element? get dateElement;
   @override
 
   /// [publisher] The name of the organization or individual that published the
   ///  structure map.
+  @HiveField(26)
   String? get publisher;
   @override
 
   /// [publisherElement] Extensions for publisher
   @JsonKey(name: '_publisher')
+  @HiveField(27)
   Element? get publisherElement;
   @override
 
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the publisher.
+  @HiveField(28)
   List<ContactDetail>? get contact;
   @override
 
   /// [description] A free text natural language description of the structure
   ///  map from a consumer's perspective.
+  @HiveField(29)
   Markdown? get description;
   @override
 
   /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
+  @HiveField(30)
   Element? get descriptionElement;
   @override
 
@@ -48448,48 +51644,57 @@ abstract class _StructureMap extends StructureMap {
   /// categories (gender, age, ...) or may be references to specific programs
   /// (insurance plans, studies, ...) and may be used to assist with indexing
   ///  and searching for appropriate structure map instances.
+  @HiveField(31)
   List<UsageContext>? get useContext;
   @override
 
   /// [jurisdiction] A legal or geographic region in which the structure map is
   ///  intended to be used.
+  @HiveField(32)
   List<CodeableConcept>? get jurisdiction;
   @override
 
   /// [purpose] Explanation of why this structure map is needed and why it has
   ///  been designed as it has.
+  @HiveField(33)
   Markdown? get purpose;
   @override
 
   /// [purposeElement] Extensions for purpose
   @JsonKey(name: '_purpose')
+  @HiveField(34)
   Element? get purposeElement;
   @override
 
   /// [copyright] A copyright statement relating to the structure map and/or
   /// its contents. Copyright statements are generally legal restrictions on the
   ///  use and publishing of the structure map.
+  @HiveField(35)
   Markdown? get copyright;
   @override
 
   /// [copyrightElement] Extensions for copyright
   @JsonKey(name: '_copyright')
+  @HiveField(36)
   Element? get copyrightElement;
   @override
 
   /// [structure] A structure definition used by this map. The structure
   /// definition may describe instances that are converted, or the instances
   ///  that are produced.
+  @HiveField(37)
   List<StructureMapStructure>? get structure;
   @override
 
   /// [import] Other maps used by this map (canonical URLs).
   @JsonKey(name: 'import')
+  @HiveField(38)
   List<Canonical>? get import_;
   @override
 
   /// [group] Organizes the mapping into manageable chunks for human
   ///  review/ease of maintenance.
+  @HiveField(39)
   List<StructureMapGroup> get group;
   @override
   @JsonKey(ignore: true)

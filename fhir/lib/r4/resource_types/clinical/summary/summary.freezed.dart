@@ -21,50 +21,85 @@ AdverseEvent _$AdverseEventFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$AdverseEvent {
   @JsonKey(unknownEnumValue: R4ResourceType.AdverseEvent)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
+  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+  @HiveField(11)
   Identifier? get identifier => throw _privateConstructorUsedError;
+  @HiveField(12)
   Code? get actuality => throw _privateConstructorUsedError;
+  @HiveField(13)
   @JsonKey(name: '_actuality')
   Element? get actualityElement => throw _privateConstructorUsedError;
+  @HiveField(14)
   List<CodeableConcept>? get category => throw _privateConstructorUsedError;
+  @HiveField(15)
   CodeableConcept? get event => throw _privateConstructorUsedError;
+  @HiveField(16)
   Reference get subject => throw _privateConstructorUsedError;
+  @HiveField(17)
   Reference? get encounter => throw _privateConstructorUsedError;
+  @HiveField(18)
   FhirDateTime? get date => throw _privateConstructorUsedError;
+  @HiveField(19)
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
+  @HiveField(20)
   FhirDateTime? get detected => throw _privateConstructorUsedError;
+  @HiveField(21)
   @JsonKey(name: '_detected')
   Element? get detectedElement => throw _privateConstructorUsedError;
+  @HiveField(22)
   FhirDateTime? get recordedDate => throw _privateConstructorUsedError;
+  @HiveField(23)
   @JsonKey(name: '_recordedDate')
   Element? get recordedDateElement => throw _privateConstructorUsedError;
+  @HiveField(24)
   List<Reference>? get resultingCondition => throw _privateConstructorUsedError;
+  @HiveField(25)
   Reference? get location => throw _privateConstructorUsedError;
+  @HiveField(26)
   CodeableConcept? get seriousness => throw _privateConstructorUsedError;
+  @HiveField(27)
   CodeableConcept? get severity => throw _privateConstructorUsedError;
+  @HiveField(28)
   CodeableConcept? get outcome => throw _privateConstructorUsedError;
+  @HiveField(29)
   Reference? get recorder => throw _privateConstructorUsedError;
+  @HiveField(30)
   List<Reference>? get contributor => throw _privateConstructorUsedError;
+  @HiveField(31)
   List<AdverseEventSuspectEntity>? get suspectEntity =>
       throw _privateConstructorUsedError;
+  @HiveField(32)
   List<Reference>? get subjectMedicalHistory =>
       throw _privateConstructorUsedError;
+  @HiveField(33)
   List<Reference>? get referenceDocument => throw _privateConstructorUsedError;
+  @HiveField(34)
   List<Reference>? get study => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -81,48 +116,83 @@ abstract class $AdverseEventCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.AdverseEvent)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Identifier? identifier,
-      Code? actuality,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          Identifier? identifier,
+      @HiveField(12)
+          Code? actuality,
+      @HiveField(13)
       @JsonKey(name: '_actuality')
           Element? actualityElement,
-      List<CodeableConcept>? category,
-      CodeableConcept? event,
-      Reference subject,
-      Reference? encounter,
-      FhirDateTime? date,
+      @HiveField(14)
+          List<CodeableConcept>? category,
+      @HiveField(15)
+          CodeableConcept? event,
+      @HiveField(16)
+          Reference subject,
+      @HiveField(17)
+          Reference? encounter,
+      @HiveField(18)
+          FhirDateTime? date,
+      @HiveField(19)
       @JsonKey(name: '_date')
           Element? dateElement,
-      FhirDateTime? detected,
+      @HiveField(20)
+          FhirDateTime? detected,
+      @HiveField(21)
       @JsonKey(name: '_detected')
           Element? detectedElement,
-      FhirDateTime? recordedDate,
+      @HiveField(22)
+          FhirDateTime? recordedDate,
+      @HiveField(23)
       @JsonKey(name: '_recordedDate')
           Element? recordedDateElement,
-      List<Reference>? resultingCondition,
-      Reference? location,
-      CodeableConcept? seriousness,
-      CodeableConcept? severity,
-      CodeableConcept? outcome,
-      Reference? recorder,
-      List<Reference>? contributor,
-      List<AdverseEventSuspectEntity>? suspectEntity,
-      List<Reference>? subjectMedicalHistory,
-      List<Reference>? referenceDocument,
-      List<Reference>? study});
+      @HiveField(24)
+          List<Reference>? resultingCondition,
+      @HiveField(25)
+          Reference? location,
+      @HiveField(26)
+          CodeableConcept? seriousness,
+      @HiveField(27)
+          CodeableConcept? severity,
+      @HiveField(28)
+          CodeableConcept? outcome,
+      @HiveField(29)
+          Reference? recorder,
+      @HiveField(30)
+          List<Reference>? contributor,
+      @HiveField(31)
+          List<AdverseEventSuspectEntity>? suspectEntity,
+      @HiveField(32)
+          List<Reference>? subjectMedicalHistory,
+      @HiveField(33)
+          List<Reference>? referenceDocument,
+      @HiveField(34)
+          List<Reference>? study});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -547,48 +617,83 @@ abstract class _$$_AdverseEventCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.AdverseEvent)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Identifier? identifier,
-      Code? actuality,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          Identifier? identifier,
+      @HiveField(12)
+          Code? actuality,
+      @HiveField(13)
       @JsonKey(name: '_actuality')
           Element? actualityElement,
-      List<CodeableConcept>? category,
-      CodeableConcept? event,
-      Reference subject,
-      Reference? encounter,
-      FhirDateTime? date,
+      @HiveField(14)
+          List<CodeableConcept>? category,
+      @HiveField(15)
+          CodeableConcept? event,
+      @HiveField(16)
+          Reference subject,
+      @HiveField(17)
+          Reference? encounter,
+      @HiveField(18)
+          FhirDateTime? date,
+      @HiveField(19)
       @JsonKey(name: '_date')
           Element? dateElement,
-      FhirDateTime? detected,
+      @HiveField(20)
+          FhirDateTime? detected,
+      @HiveField(21)
       @JsonKey(name: '_detected')
           Element? detectedElement,
-      FhirDateTime? recordedDate,
+      @HiveField(22)
+          FhirDateTime? recordedDate,
+      @HiveField(23)
       @JsonKey(name: '_recordedDate')
           Element? recordedDateElement,
-      List<Reference>? resultingCondition,
-      Reference? location,
-      CodeableConcept? seriousness,
-      CodeableConcept? severity,
-      CodeableConcept? outcome,
-      Reference? recorder,
-      List<Reference>? contributor,
-      List<AdverseEventSuspectEntity>? suspectEntity,
-      List<Reference>? subjectMedicalHistory,
-      List<Reference>? referenceDocument,
-      List<Reference>? study});
+      @HiveField(24)
+          List<Reference>? resultingCondition,
+      @HiveField(25)
+          Reference? location,
+      @HiveField(26)
+          CodeableConcept? seriousness,
+      @HiveField(27)
+          CodeableConcept? severity,
+      @HiveField(28)
+          CodeableConcept? outcome,
+      @HiveField(29)
+          Reference? recorder,
+      @HiveField(30)
+          List<Reference>? contributor,
+      @HiveField(31)
+          List<AdverseEventSuspectEntity>? suspectEntity,
+      @HiveField(32)
+          List<Reference>? subjectMedicalHistory,
+      @HiveField(33)
+          List<Reference>? referenceDocument,
+      @HiveField(34)
+          List<Reference>? study});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -824,48 +929,83 @@ class __$$_AdverseEventCopyWithImpl<$Res>
 class _$_AdverseEvent extends _AdverseEvent {
   _$_AdverseEvent(
       {@JsonKey(unknownEnumValue: R4ResourceType.AdverseEvent)
+      @HiveField(0)
           this.resourceType = R4ResourceType.AdverseEvent,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.identifier,
-      this.actuality,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          this.identifier,
+      @HiveField(12)
+          this.actuality,
+      @HiveField(13)
       @JsonKey(name: '_actuality')
           this.actualityElement,
-      final List<CodeableConcept>? category,
-      this.event,
-      required this.subject,
-      this.encounter,
-      this.date,
+      @HiveField(14)
+          final List<CodeableConcept>? category,
+      @HiveField(15)
+          this.event,
+      @HiveField(16)
+          required this.subject,
+      @HiveField(17)
+          this.encounter,
+      @HiveField(18)
+          this.date,
+      @HiveField(19)
       @JsonKey(name: '_date')
           this.dateElement,
-      this.detected,
+      @HiveField(20)
+          this.detected,
+      @HiveField(21)
       @JsonKey(name: '_detected')
           this.detectedElement,
-      this.recordedDate,
+      @HiveField(22)
+          this.recordedDate,
+      @HiveField(23)
       @JsonKey(name: '_recordedDate')
           this.recordedDateElement,
-      final List<Reference>? resultingCondition,
-      this.location,
-      this.seriousness,
-      this.severity,
-      this.outcome,
-      this.recorder,
-      final List<Reference>? contributor,
-      final List<AdverseEventSuspectEntity>? suspectEntity,
-      final List<Reference>? subjectMedicalHistory,
-      final List<Reference>? referenceDocument,
-      final List<Reference>? study})
+      @HiveField(24)
+          final List<Reference>? resultingCondition,
+      @HiveField(25)
+          this.location,
+      @HiveField(26)
+          this.seriousness,
+      @HiveField(27)
+          this.severity,
+      @HiveField(28)
+          this.outcome,
+      @HiveField(29)
+          this.recorder,
+      @HiveField(30)
+          final List<Reference>? contributor,
+      @HiveField(31)
+          final List<AdverseEventSuspectEntity>? suspectEntity,
+      @HiveField(32)
+          final List<Reference>? subjectMedicalHistory,
+      @HiveField(33)
+          final List<Reference>? referenceDocument,
+      @HiveField(34)
+          final List<Reference>? study})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -883,25 +1023,34 @@ class _$_AdverseEvent extends _AdverseEvent {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.AdverseEvent)
+  @HiveField(0)
   final R4ResourceType resourceType;
   @override
+  @HiveField(1)
   final String? id;
   @override
+  @HiveField(2)
   final Meta? meta;
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
   @override
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
+  @HiveField(5)
   final Code? language;
   @override
+  @HiveField(6)
   @JsonKey(name: '_language')
   final Element? languageElement;
   @override
+  @HiveField(7)
   final Narrative? text;
   final List<Resource>? _contained;
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -912,6 +1061,7 @@ class _$_AdverseEvent extends _AdverseEvent {
 
   final List<FhirExtension>? _extension_;
   @override
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -923,6 +1073,7 @@ class _$_AdverseEvent extends _AdverseEvent {
 
   final List<FhirExtension>? _modifierExtension;
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -933,14 +1084,18 @@ class _$_AdverseEvent extends _AdverseEvent {
   }
 
   @override
+  @HiveField(11)
   final Identifier? identifier;
   @override
+  @HiveField(12)
   final Code? actuality;
   @override
+  @HiveField(13)
   @JsonKey(name: '_actuality')
   final Element? actualityElement;
   final List<CodeableConcept>? _category;
   @override
+  @HiveField(14)
   List<CodeableConcept>? get category {
     final value = _category;
     if (value == null) return null;
@@ -950,28 +1105,38 @@ class _$_AdverseEvent extends _AdverseEvent {
   }
 
   @override
+  @HiveField(15)
   final CodeableConcept? event;
   @override
+  @HiveField(16)
   final Reference subject;
   @override
+  @HiveField(17)
   final Reference? encounter;
   @override
+  @HiveField(18)
   final FhirDateTime? date;
   @override
+  @HiveField(19)
   @JsonKey(name: '_date')
   final Element? dateElement;
   @override
+  @HiveField(20)
   final FhirDateTime? detected;
   @override
+  @HiveField(21)
   @JsonKey(name: '_detected')
   final Element? detectedElement;
   @override
+  @HiveField(22)
   final FhirDateTime? recordedDate;
   @override
+  @HiveField(23)
   @JsonKey(name: '_recordedDate')
   final Element? recordedDateElement;
   final List<Reference>? _resultingCondition;
   @override
+  @HiveField(24)
   List<Reference>? get resultingCondition {
     final value = _resultingCondition;
     if (value == null) return null;
@@ -982,17 +1147,23 @@ class _$_AdverseEvent extends _AdverseEvent {
   }
 
   @override
+  @HiveField(25)
   final Reference? location;
   @override
+  @HiveField(26)
   final CodeableConcept? seriousness;
   @override
+  @HiveField(27)
   final CodeableConcept? severity;
   @override
+  @HiveField(28)
   final CodeableConcept? outcome;
   @override
+  @HiveField(29)
   final Reference? recorder;
   final List<Reference>? _contributor;
   @override
+  @HiveField(30)
   List<Reference>? get contributor {
     final value = _contributor;
     if (value == null) return null;
@@ -1003,6 +1174,7 @@ class _$_AdverseEvent extends _AdverseEvent {
 
   final List<AdverseEventSuspectEntity>? _suspectEntity;
   @override
+  @HiveField(31)
   List<AdverseEventSuspectEntity>? get suspectEntity {
     final value = _suspectEntity;
     if (value == null) return null;
@@ -1013,6 +1185,7 @@ class _$_AdverseEvent extends _AdverseEvent {
 
   final List<Reference>? _subjectMedicalHistory;
   @override
+  @HiveField(32)
   List<Reference>? get subjectMedicalHistory {
     final value = _subjectMedicalHistory;
     if (value == null) return null;
@@ -1024,6 +1197,7 @@ class _$_AdverseEvent extends _AdverseEvent {
 
   final List<Reference>? _referenceDocument;
   @override
+  @HiveField(33)
   List<Reference>? get referenceDocument {
     final value = _referenceDocument;
     if (value == null) return null;
@@ -1035,6 +1209,7 @@ class _$_AdverseEvent extends _AdverseEvent {
 
   final List<Reference>? _study;
   @override
+  @HiveField(34)
   List<Reference>? get study {
     final value = _study;
     if (value == null) return null;
@@ -1174,48 +1349,83 @@ class _$_AdverseEvent extends _AdverseEvent {
 abstract class _AdverseEvent extends AdverseEvent {
   factory _AdverseEvent(
       {@JsonKey(unknownEnumValue: R4ResourceType.AdverseEvent)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final Identifier? identifier,
-      final Code? actuality,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final Identifier? identifier,
+      @HiveField(12)
+          final Code? actuality,
+      @HiveField(13)
       @JsonKey(name: '_actuality')
           final Element? actualityElement,
-      final List<CodeableConcept>? category,
-      final CodeableConcept? event,
-      required final Reference subject,
-      final Reference? encounter,
-      final FhirDateTime? date,
+      @HiveField(14)
+          final List<CodeableConcept>? category,
+      @HiveField(15)
+          final CodeableConcept? event,
+      @HiveField(16)
+          required final Reference subject,
+      @HiveField(17)
+          final Reference? encounter,
+      @HiveField(18)
+          final FhirDateTime? date,
+      @HiveField(19)
       @JsonKey(name: '_date')
           final Element? dateElement,
-      final FhirDateTime? detected,
+      @HiveField(20)
+          final FhirDateTime? detected,
+      @HiveField(21)
       @JsonKey(name: '_detected')
           final Element? detectedElement,
-      final FhirDateTime? recordedDate,
+      @HiveField(22)
+          final FhirDateTime? recordedDate,
+      @HiveField(23)
       @JsonKey(name: '_recordedDate')
           final Element? recordedDateElement,
-      final List<Reference>? resultingCondition,
-      final Reference? location,
-      final CodeableConcept? seriousness,
-      final CodeableConcept? severity,
-      final CodeableConcept? outcome,
-      final Reference? recorder,
-      final List<Reference>? contributor,
-      final List<AdverseEventSuspectEntity>? suspectEntity,
-      final List<Reference>? subjectMedicalHistory,
-      final List<Reference>? referenceDocument,
-      final List<Reference>? study}) = _$_AdverseEvent;
+      @HiveField(24)
+          final List<Reference>? resultingCondition,
+      @HiveField(25)
+          final Reference? location,
+      @HiveField(26)
+          final CodeableConcept? seriousness,
+      @HiveField(27)
+          final CodeableConcept? severity,
+      @HiveField(28)
+          final CodeableConcept? outcome,
+      @HiveField(29)
+          final Reference? recorder,
+      @HiveField(30)
+          final List<Reference>? contributor,
+      @HiveField(31)
+          final List<AdverseEventSuspectEntity>? suspectEntity,
+      @HiveField(32)
+          final List<Reference>? subjectMedicalHistory,
+      @HiveField(33)
+          final List<Reference>? referenceDocument,
+      @HiveField(34)
+          final List<Reference>? study}) = _$_AdverseEvent;
   _AdverseEvent._() : super._();
 
   factory _AdverseEvent.fromJson(Map<String, dynamic> json) =
@@ -1223,81 +1433,116 @@ abstract class _AdverseEvent extends AdverseEvent {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.AdverseEvent)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
+  @HiveField(1)
   String? get id;
   @override
+  @HiveField(2)
   Meta? get meta;
   @override
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
+  @HiveField(5)
   Code? get language;
   @override
+  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+  @HiveField(7)
   Narrative? get text;
   @override
+  @HiveField(8)
   List<Resource>? get contained;
   @override
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
+  @HiveField(11)
   Identifier? get identifier;
   @override
+  @HiveField(12)
   Code? get actuality;
   @override
+  @HiveField(13)
   @JsonKey(name: '_actuality')
   Element? get actualityElement;
   @override
+  @HiveField(14)
   List<CodeableConcept>? get category;
   @override
+  @HiveField(15)
   CodeableConcept? get event;
   @override
+  @HiveField(16)
   Reference get subject;
   @override
+  @HiveField(17)
   Reference? get encounter;
   @override
+  @HiveField(18)
   FhirDateTime? get date;
   @override
+  @HiveField(19)
   @JsonKey(name: '_date')
   Element? get dateElement;
   @override
+  @HiveField(20)
   FhirDateTime? get detected;
   @override
+  @HiveField(21)
   @JsonKey(name: '_detected')
   Element? get detectedElement;
   @override
+  @HiveField(22)
   FhirDateTime? get recordedDate;
   @override
+  @HiveField(23)
   @JsonKey(name: '_recordedDate')
   Element? get recordedDateElement;
   @override
+  @HiveField(24)
   List<Reference>? get resultingCondition;
   @override
+  @HiveField(25)
   Reference? get location;
   @override
+  @HiveField(26)
   CodeableConcept? get seriousness;
   @override
+  @HiveField(27)
   CodeableConcept? get severity;
   @override
+  @HiveField(28)
   CodeableConcept? get outcome;
   @override
+  @HiveField(29)
   Reference? get recorder;
   @override
+  @HiveField(30)
   List<Reference>? get contributor;
   @override
+  @HiveField(31)
   List<AdverseEventSuspectEntity>? get suspectEntity;
   @override
+  @HiveField(32)
   List<Reference>? get subjectMedicalHistory;
   @override
+  @HiveField(33)
   List<Reference>? get referenceDocument;
   @override
+  @HiveField(34)
   List<Reference>? get study;
   @override
   @JsonKey(ignore: true)
@@ -1986,54 +2231,92 @@ AllergyIntolerance _$AllergyIntoleranceFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$AllergyIntolerance {
   @JsonKey(unknownEnumValue: R4ResourceType.AllergyIntolerance)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
+  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  @HiveField(12)
   CodeableConcept? get clinicalStatus => throw _privateConstructorUsedError;
+  @HiveField(13)
   CodeableConcept? get verificationStatus => throw _privateConstructorUsedError;
+  @HiveField(14)
   Code? get type => throw _privateConstructorUsedError;
+  @HiveField(15)
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
+  @HiveField(16)
   List<Code>? get category => throw _privateConstructorUsedError;
+  @HiveField(17)
   @JsonKey(name: '_category')
   List<Element?>? get categoryElement => throw _privateConstructorUsedError;
+  @HiveField(18)
   Code? get criticality => throw _privateConstructorUsedError;
+  @HiveField(19)
   @JsonKey(name: '_criticality')
   Element? get criticalityElement => throw _privateConstructorUsedError;
+  @HiveField(20)
   CodeableConcept? get code => throw _privateConstructorUsedError;
+  @HiveField(21)
   Reference get patient => throw _privateConstructorUsedError;
+  @HiveField(22)
   Reference? get encounter => throw _privateConstructorUsedError;
+  @HiveField(23)
   FhirDateTime? get onsetDateTime => throw _privateConstructorUsedError;
+  @HiveField(24)
   @JsonKey(name: '_onsetDateTime')
   Element? get onsetDateTimeElement => throw _privateConstructorUsedError;
+  @HiveField(25)
   Age? get onsetAge => throw _privateConstructorUsedError;
+  @HiveField(26)
   Period? get onsetPeriod => throw _privateConstructorUsedError;
+  @HiveField(27)
   Range? get onsetRange => throw _privateConstructorUsedError;
+  @HiveField(28)
   String? get onsetString => throw _privateConstructorUsedError;
+  @HiveField(29)
   @JsonKey(name: '_onsetString')
   Element? get onsetStringElement => throw _privateConstructorUsedError;
+  @HiveField(30)
   FhirDateTime? get recordedDate => throw _privateConstructorUsedError;
+  @HiveField(31)
   @JsonKey(name: '_recordedDate')
   Element? get recordedDateElement => throw _privateConstructorUsedError;
+  @HiveField(32)
   Reference? get recorder => throw _privateConstructorUsedError;
+  @HiveField(33)
   Reference? get asserter => throw _privateConstructorUsedError;
+  @HiveField(34)
   FhirDateTime? get lastOccurrence => throw _privateConstructorUsedError;
+  @HiveField(35)
   @JsonKey(name: '_lastOccurrence')
   Element? get lastOccurrenceElement => throw _privateConstructorUsedError;
+  @HiveField(36)
   List<Annotation>? get note => throw _privateConstructorUsedError;
+  @HiveField(37)
   List<AllergyIntoleranceReaction>? get reaction =>
       throw _privateConstructorUsedError;
 
@@ -2051,54 +2334,92 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.AllergyIntolerance)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      CodeableConcept? clinicalStatus,
-      CodeableConcept? verificationStatus,
-      Code? type,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          CodeableConcept? clinicalStatus,
+      @HiveField(13)
+          CodeableConcept? verificationStatus,
+      @HiveField(14)
+          Code? type,
+      @HiveField(15)
       @JsonKey(name: '_type')
           Element? typeElement,
-      List<Code>? category,
+      @HiveField(16)
+          List<Code>? category,
+      @HiveField(17)
       @JsonKey(name: '_category')
           List<Element?>? categoryElement,
-      Code? criticality,
+      @HiveField(18)
+          Code? criticality,
+      @HiveField(19)
       @JsonKey(name: '_criticality')
           Element? criticalityElement,
-      CodeableConcept? code,
-      Reference patient,
-      Reference? encounter,
-      FhirDateTime? onsetDateTime,
+      @HiveField(20)
+          CodeableConcept? code,
+      @HiveField(21)
+          Reference patient,
+      @HiveField(22)
+          Reference? encounter,
+      @HiveField(23)
+          FhirDateTime? onsetDateTime,
+      @HiveField(24)
       @JsonKey(name: '_onsetDateTime')
           Element? onsetDateTimeElement,
-      Age? onsetAge,
-      Period? onsetPeriod,
-      Range? onsetRange,
-      String? onsetString,
+      @HiveField(25)
+          Age? onsetAge,
+      @HiveField(26)
+          Period? onsetPeriod,
+      @HiveField(27)
+          Range? onsetRange,
+      @HiveField(28)
+          String? onsetString,
+      @HiveField(29)
       @JsonKey(name: '_onsetString')
           Element? onsetStringElement,
-      FhirDateTime? recordedDate,
+      @HiveField(30)
+          FhirDateTime? recordedDate,
+      @HiveField(31)
       @JsonKey(name: '_recordedDate')
           Element? recordedDateElement,
-      Reference? recorder,
-      Reference? asserter,
-      FhirDateTime? lastOccurrence,
+      @HiveField(32)
+          Reference? recorder,
+      @HiveField(33)
+          Reference? asserter,
+      @HiveField(34)
+          FhirDateTime? lastOccurrence,
+      @HiveField(35)
       @JsonKey(name: '_lastOccurrence')
           Element? lastOccurrenceElement,
-      List<Annotation>? note,
-      List<AllergyIntoleranceReaction>? reaction});
+      @HiveField(36)
+          List<Annotation>? note,
+      @HiveField(37)
+          List<AllergyIntoleranceReaction>? reaction});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -2577,54 +2898,92 @@ abstract class _$$_AllergyIntoleranceCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.AllergyIntolerance)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      CodeableConcept? clinicalStatus,
-      CodeableConcept? verificationStatus,
-      Code? type,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          CodeableConcept? clinicalStatus,
+      @HiveField(13)
+          CodeableConcept? verificationStatus,
+      @HiveField(14)
+          Code? type,
+      @HiveField(15)
       @JsonKey(name: '_type')
           Element? typeElement,
-      List<Code>? category,
+      @HiveField(16)
+          List<Code>? category,
+      @HiveField(17)
       @JsonKey(name: '_category')
           List<Element?>? categoryElement,
-      Code? criticality,
+      @HiveField(18)
+          Code? criticality,
+      @HiveField(19)
       @JsonKey(name: '_criticality')
           Element? criticalityElement,
-      CodeableConcept? code,
-      Reference patient,
-      Reference? encounter,
-      FhirDateTime? onsetDateTime,
+      @HiveField(20)
+          CodeableConcept? code,
+      @HiveField(21)
+          Reference patient,
+      @HiveField(22)
+          Reference? encounter,
+      @HiveField(23)
+          FhirDateTime? onsetDateTime,
+      @HiveField(24)
       @JsonKey(name: '_onsetDateTime')
           Element? onsetDateTimeElement,
-      Age? onsetAge,
-      Period? onsetPeriod,
-      Range? onsetRange,
-      String? onsetString,
+      @HiveField(25)
+          Age? onsetAge,
+      @HiveField(26)
+          Period? onsetPeriod,
+      @HiveField(27)
+          Range? onsetRange,
+      @HiveField(28)
+          String? onsetString,
+      @HiveField(29)
       @JsonKey(name: '_onsetString')
           Element? onsetStringElement,
-      FhirDateTime? recordedDate,
+      @HiveField(30)
+          FhirDateTime? recordedDate,
+      @HiveField(31)
       @JsonKey(name: '_recordedDate')
           Element? recordedDateElement,
-      Reference? recorder,
-      Reference? asserter,
-      FhirDateTime? lastOccurrence,
+      @HiveField(32)
+          Reference? recorder,
+      @HiveField(33)
+          Reference? asserter,
+      @HiveField(34)
+          FhirDateTime? lastOccurrence,
+      @HiveField(35)
       @JsonKey(name: '_lastOccurrence')
           Element? lastOccurrenceElement,
-      List<Annotation>? note,
-      List<AllergyIntoleranceReaction>? reaction});
+      @HiveField(36)
+          List<Annotation>? note,
+      @HiveField(37)
+          List<AllergyIntoleranceReaction>? reaction});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -2881,54 +3240,92 @@ class __$$_AllergyIntoleranceCopyWithImpl<$Res>
 class _$_AllergyIntolerance extends _AllergyIntolerance {
   _$_AllergyIntolerance(
       {@JsonKey(unknownEnumValue: R4ResourceType.AllergyIntolerance)
+      @HiveField(0)
           this.resourceType = R4ResourceType.AllergyIntolerance,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      this.clinicalStatus,
-      this.verificationStatus,
-      this.type,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          this.clinicalStatus,
+      @HiveField(13)
+          this.verificationStatus,
+      @HiveField(14)
+          this.type,
+      @HiveField(15)
       @JsonKey(name: '_type')
           this.typeElement,
-      final List<Code>? category,
+      @HiveField(16)
+          final List<Code>? category,
+      @HiveField(17)
       @JsonKey(name: '_category')
           final List<Element?>? categoryElement,
-      this.criticality,
+      @HiveField(18)
+          this.criticality,
+      @HiveField(19)
       @JsonKey(name: '_criticality')
           this.criticalityElement,
-      this.code,
-      required this.patient,
-      this.encounter,
-      this.onsetDateTime,
+      @HiveField(20)
+          this.code,
+      @HiveField(21)
+          required this.patient,
+      @HiveField(22)
+          this.encounter,
+      @HiveField(23)
+          this.onsetDateTime,
+      @HiveField(24)
       @JsonKey(name: '_onsetDateTime')
           this.onsetDateTimeElement,
-      this.onsetAge,
-      this.onsetPeriod,
-      this.onsetRange,
-      this.onsetString,
+      @HiveField(25)
+          this.onsetAge,
+      @HiveField(26)
+          this.onsetPeriod,
+      @HiveField(27)
+          this.onsetRange,
+      @HiveField(28)
+          this.onsetString,
+      @HiveField(29)
       @JsonKey(name: '_onsetString')
           this.onsetStringElement,
-      this.recordedDate,
+      @HiveField(30)
+          this.recordedDate,
+      @HiveField(31)
       @JsonKey(name: '_recordedDate')
           this.recordedDateElement,
-      this.recorder,
-      this.asserter,
-      this.lastOccurrence,
+      @HiveField(32)
+          this.recorder,
+      @HiveField(33)
+          this.asserter,
+      @HiveField(34)
+          this.lastOccurrence,
+      @HiveField(35)
       @JsonKey(name: '_lastOccurrence')
           this.lastOccurrenceElement,
-      final List<Annotation>? note,
-      final List<AllergyIntoleranceReaction>? reaction})
+      @HiveField(36)
+          final List<Annotation>? note,
+      @HiveField(37)
+          final List<AllergyIntoleranceReaction>? reaction})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -2944,25 +3341,34 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.AllergyIntolerance)
+  @HiveField(0)
   final R4ResourceType resourceType;
   @override
+  @HiveField(1)
   final String? id;
   @override
+  @HiveField(2)
   final Meta? meta;
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
   @override
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
+  @HiveField(5)
   final Code? language;
   @override
+  @HiveField(6)
   @JsonKey(name: '_language')
   final Element? languageElement;
   @override
+  @HiveField(7)
   final Narrative? text;
   final List<Resource>? _contained;
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -2973,6 +3379,7 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
 
   final List<FhirExtension>? _extension_;
   @override
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -2984,6 +3391,7 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
 
   final List<FhirExtension>? _modifierExtension;
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -2995,6 +3403,7 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
 
   final List<Identifier>? _identifier;
   @override
+  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -3004,16 +3413,21 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
   }
 
   @override
+  @HiveField(12)
   final CodeableConcept? clinicalStatus;
   @override
+  @HiveField(13)
   final CodeableConcept? verificationStatus;
   @override
+  @HiveField(14)
   final Code? type;
   @override
+  @HiveField(15)
   @JsonKey(name: '_type')
   final Element? typeElement;
   final List<Code>? _category;
   @override
+  @HiveField(16)
   List<Code>? get category {
     final value = _category;
     if (value == null) return null;
@@ -3024,6 +3438,7 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
 
   final List<Element?>? _categoryElement;
   @override
+  @HiveField(17)
   @JsonKey(name: '_category')
   List<Element?>? get categoryElement {
     final value = _categoryElement;
@@ -3034,48 +3449,67 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
   }
 
   @override
+  @HiveField(18)
   final Code? criticality;
   @override
+  @HiveField(19)
   @JsonKey(name: '_criticality')
   final Element? criticalityElement;
   @override
+  @HiveField(20)
   final CodeableConcept? code;
   @override
+  @HiveField(21)
   final Reference patient;
   @override
+  @HiveField(22)
   final Reference? encounter;
   @override
+  @HiveField(23)
   final FhirDateTime? onsetDateTime;
   @override
+  @HiveField(24)
   @JsonKey(name: '_onsetDateTime')
   final Element? onsetDateTimeElement;
   @override
+  @HiveField(25)
   final Age? onsetAge;
   @override
+  @HiveField(26)
   final Period? onsetPeriod;
   @override
+  @HiveField(27)
   final Range? onsetRange;
   @override
+  @HiveField(28)
   final String? onsetString;
   @override
+  @HiveField(29)
   @JsonKey(name: '_onsetString')
   final Element? onsetStringElement;
   @override
+  @HiveField(30)
   final FhirDateTime? recordedDate;
   @override
+  @HiveField(31)
   @JsonKey(name: '_recordedDate')
   final Element? recordedDateElement;
   @override
+  @HiveField(32)
   final Reference? recorder;
   @override
+  @HiveField(33)
   final Reference? asserter;
   @override
+  @HiveField(34)
   final FhirDateTime? lastOccurrence;
   @override
+  @HiveField(35)
   @JsonKey(name: '_lastOccurrence')
   final Element? lastOccurrenceElement;
   final List<Annotation>? _note;
   @override
+  @HiveField(36)
   List<Annotation>? get note {
     final value = _note;
     if (value == null) return null;
@@ -3086,6 +3520,7 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
 
   final List<AllergyIntoleranceReaction>? _reaction;
   @override
+  @HiveField(37)
   List<AllergyIntoleranceReaction>? get reaction {
     final value = _reaction;
     if (value == null) return null;
@@ -3235,54 +3670,92 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
 abstract class _AllergyIntolerance extends AllergyIntolerance {
   factory _AllergyIntolerance(
           {@JsonKey(unknownEnumValue: R4ResourceType.AllergyIntolerance)
+          @HiveField(0)
               final R4ResourceType resourceType,
-          final String? id,
-          final Meta? meta,
-          final FhirUri? implicitRules,
+          @HiveField(1)
+              final String? id,
+          @HiveField(2)
+              final Meta? meta,
+          @HiveField(3)
+              final FhirUri? implicitRules,
+          @HiveField(4)
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
-          final Code? language,
+          @HiveField(5)
+              final Code? language,
+          @HiveField(6)
           @JsonKey(name: '_language')
               final Element? languageElement,
-          final Narrative? text,
-          final List<Resource>? contained,
+          @HiveField(7)
+              final Narrative? text,
+          @HiveField(8)
+              final List<Resource>? contained,
+          @HiveField(9)
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
-          final List<FhirExtension>? modifierExtension,
-          final List<Identifier>? identifier,
-          final CodeableConcept? clinicalStatus,
-          final CodeableConcept? verificationStatus,
-          final Code? type,
+          @HiveField(10)
+              final List<FhirExtension>? modifierExtension,
+          @HiveField(11)
+              final List<Identifier>? identifier,
+          @HiveField(12)
+              final CodeableConcept? clinicalStatus,
+          @HiveField(13)
+              final CodeableConcept? verificationStatus,
+          @HiveField(14)
+              final Code? type,
+          @HiveField(15)
           @JsonKey(name: '_type')
               final Element? typeElement,
-          final List<Code>? category,
+          @HiveField(16)
+              final List<Code>? category,
+          @HiveField(17)
           @JsonKey(name: '_category')
               final List<Element?>? categoryElement,
-          final Code? criticality,
+          @HiveField(18)
+              final Code? criticality,
+          @HiveField(19)
           @JsonKey(name: '_criticality')
               final Element? criticalityElement,
-          final CodeableConcept? code,
-          required final Reference patient,
-          final Reference? encounter,
-          final FhirDateTime? onsetDateTime,
+          @HiveField(20)
+              final CodeableConcept? code,
+          @HiveField(21)
+              required final Reference patient,
+          @HiveField(22)
+              final Reference? encounter,
+          @HiveField(23)
+              final FhirDateTime? onsetDateTime,
+          @HiveField(24)
           @JsonKey(name: '_onsetDateTime')
               final Element? onsetDateTimeElement,
-          final Age? onsetAge,
-          final Period? onsetPeriod,
-          final Range? onsetRange,
-          final String? onsetString,
+          @HiveField(25)
+              final Age? onsetAge,
+          @HiveField(26)
+              final Period? onsetPeriod,
+          @HiveField(27)
+              final Range? onsetRange,
+          @HiveField(28)
+              final String? onsetString,
+          @HiveField(29)
           @JsonKey(name: '_onsetString')
               final Element? onsetStringElement,
-          final FhirDateTime? recordedDate,
+          @HiveField(30)
+              final FhirDateTime? recordedDate,
+          @HiveField(31)
           @JsonKey(name: '_recordedDate')
               final Element? recordedDateElement,
-          final Reference? recorder,
-          final Reference? asserter,
-          final FhirDateTime? lastOccurrence,
+          @HiveField(32)
+              final Reference? recorder,
+          @HiveField(33)
+              final Reference? asserter,
+          @HiveField(34)
+              final FhirDateTime? lastOccurrence,
+          @HiveField(35)
           @JsonKey(name: '_lastOccurrence')
               final Element? lastOccurrenceElement,
-          final List<Annotation>? note,
-          final List<AllergyIntoleranceReaction>? reaction}) =
+          @HiveField(36)
+              final List<Annotation>? note,
+          @HiveField(37)
+              final List<AllergyIntoleranceReaction>? reaction}) =
       _$_AllergyIntolerance;
   _AllergyIntolerance._() : super._();
 
@@ -3291,90 +3764,128 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.AllergyIntolerance)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
+  @HiveField(1)
   String? get id;
   @override
+  @HiveField(2)
   Meta? get meta;
   @override
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
+  @HiveField(5)
   Code? get language;
   @override
+  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+  @HiveField(7)
   Narrative? get text;
   @override
+  @HiveField(8)
   List<Resource>? get contained;
   @override
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
+  @HiveField(11)
   List<Identifier>? get identifier;
   @override
+  @HiveField(12)
   CodeableConcept? get clinicalStatus;
   @override
+  @HiveField(13)
   CodeableConcept? get verificationStatus;
   @override
+  @HiveField(14)
   Code? get type;
   @override
+  @HiveField(15)
   @JsonKey(name: '_type')
   Element? get typeElement;
   @override
+  @HiveField(16)
   List<Code>? get category;
   @override
+  @HiveField(17)
   @JsonKey(name: '_category')
   List<Element?>? get categoryElement;
   @override
+  @HiveField(18)
   Code? get criticality;
   @override
+  @HiveField(19)
   @JsonKey(name: '_criticality')
   Element? get criticalityElement;
   @override
+  @HiveField(20)
   CodeableConcept? get code;
   @override
+  @HiveField(21)
   Reference get patient;
   @override
+  @HiveField(22)
   Reference? get encounter;
   @override
+  @HiveField(23)
   FhirDateTime? get onsetDateTime;
   @override
+  @HiveField(24)
   @JsonKey(name: '_onsetDateTime')
   Element? get onsetDateTimeElement;
   @override
+  @HiveField(25)
   Age? get onsetAge;
   @override
+  @HiveField(26)
   Period? get onsetPeriod;
   @override
+  @HiveField(27)
   Range? get onsetRange;
   @override
+  @HiveField(28)
   String? get onsetString;
   @override
+  @HiveField(29)
   @JsonKey(name: '_onsetString')
   Element? get onsetStringElement;
   @override
+  @HiveField(30)
   FhirDateTime? get recordedDate;
   @override
+  @HiveField(31)
   @JsonKey(name: '_recordedDate')
   Element? get recordedDateElement;
   @override
+  @HiveField(32)
   Reference? get recorder;
   @override
+  @HiveField(33)
   Reference? get asserter;
   @override
+  @HiveField(34)
   FhirDateTime? get lastOccurrence;
   @override
+  @HiveField(35)
   @JsonKey(name: '_lastOccurrence')
   Element? get lastOccurrenceElement;
   @override
+  @HiveField(36)
   List<Annotation>? get note;
   @override
+  @HiveField(37)
   List<AllergyIntoleranceReaction>? get reaction;
   @override
   @JsonKey(ignore: true)
@@ -3926,56 +4437,94 @@ ClinicalImpression _$ClinicalImpressionFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ClinicalImpression {
   @JsonKey(unknownEnumValue: R4ResourceType.ClinicalImpression)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
+  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  @HiveField(12)
   Code? get status => throw _privateConstructorUsedError;
+  @HiveField(13)
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
+  @HiveField(14)
   CodeableConcept? get statusReason => throw _privateConstructorUsedError;
+  @HiveField(15)
   CodeableConcept? get code => throw _privateConstructorUsedError;
+  @HiveField(16)
   String? get description => throw _privateConstructorUsedError;
+  @HiveField(17)
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
+  @HiveField(18)
   Reference get subject => throw _privateConstructorUsedError;
+  @HiveField(19)
   Reference? get encounter => throw _privateConstructorUsedError;
+  @HiveField(20)
   FhirDateTime? get effectiveDateTime => throw _privateConstructorUsedError;
+  @HiveField(21)
   @JsonKey(name: '_effectiveDateTime')
   Element? get effectiveDateTimeElement => throw _privateConstructorUsedError;
+  @HiveField(22)
   Period? get effectivePeriod => throw _privateConstructorUsedError;
+  @HiveField(23)
   FhirDateTime? get date => throw _privateConstructorUsedError;
+  @HiveField(24)
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
+  @HiveField(25)
   Reference? get assessor => throw _privateConstructorUsedError;
+  @HiveField(26)
   Reference? get previous => throw _privateConstructorUsedError;
+  @HiveField(27)
   List<Reference>? get problem => throw _privateConstructorUsedError;
+  @HiveField(28)
   List<ClinicalImpressionInvestigation>? get investigation =>
       throw _privateConstructorUsedError;
+  @HiveField(29)
   List<FhirUri>? get protocol => throw _privateConstructorUsedError;
+  @HiveField(30)
   @JsonKey(name: '_protocol')
   List<Element?>? get protocolElement => throw _privateConstructorUsedError;
+  @HiveField(31)
   String? get summary => throw _privateConstructorUsedError;
+  @HiveField(32)
   @JsonKey(name: '_summary')
   Element? get summaryElement => throw _privateConstructorUsedError;
+  @HiveField(33)
   List<ClinicalImpressionFinding>? get finding =>
       throw _privateConstructorUsedError;
+  @HiveField(34)
   List<CodeableConcept>? get prognosisCodeableConcept =>
       throw _privateConstructorUsedError;
+  @HiveField(35)
   List<Reference>? get prognosisReference => throw _privateConstructorUsedError;
+  @HiveField(36)
   List<Reference>? get supportingInfo => throw _privateConstructorUsedError;
+  @HiveField(37)
   List<Annotation>? get note => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -3992,53 +4541,91 @@ abstract class $ClinicalImpressionCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ClinicalImpression)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Code? status,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          Code? status,
+      @HiveField(13)
       @JsonKey(name: '_status')
           Element? statusElement,
-      CodeableConcept? statusReason,
-      CodeableConcept? code,
-      String? description,
+      @HiveField(14)
+          CodeableConcept? statusReason,
+      @HiveField(15)
+          CodeableConcept? code,
+      @HiveField(16)
+          String? description,
+      @HiveField(17)
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      Reference subject,
-      Reference? encounter,
-      FhirDateTime? effectiveDateTime,
+      @HiveField(18)
+          Reference subject,
+      @HiveField(19)
+          Reference? encounter,
+      @HiveField(20)
+          FhirDateTime? effectiveDateTime,
+      @HiveField(21)
       @JsonKey(name: '_effectiveDateTime')
           Element? effectiveDateTimeElement,
-      Period? effectivePeriod,
-      FhirDateTime? date,
+      @HiveField(22)
+          Period? effectivePeriod,
+      @HiveField(23)
+          FhirDateTime? date,
+      @HiveField(24)
       @JsonKey(name: '_date')
           Element? dateElement,
-      Reference? assessor,
-      Reference? previous,
-      List<Reference>? problem,
-      List<ClinicalImpressionInvestigation>? investigation,
-      List<FhirUri>? protocol,
+      @HiveField(25)
+          Reference? assessor,
+      @HiveField(26)
+          Reference? previous,
+      @HiveField(27)
+          List<Reference>? problem,
+      @HiveField(28)
+          List<ClinicalImpressionInvestigation>? investigation,
+      @HiveField(29)
+          List<FhirUri>? protocol,
+      @HiveField(30)
       @JsonKey(name: '_protocol')
           List<Element?>? protocolElement,
-      String? summary,
+      @HiveField(31)
+          String? summary,
+      @HiveField(32)
       @JsonKey(name: '_summary')
           Element? summaryElement,
-      List<ClinicalImpressionFinding>? finding,
-      List<CodeableConcept>? prognosisCodeableConcept,
-      List<Reference>? prognosisReference,
-      List<Reference>? supportingInfo,
-      List<Annotation>? note});
+      @HiveField(33)
+          List<ClinicalImpressionFinding>? finding,
+      @HiveField(34)
+          List<CodeableConcept>? prognosisCodeableConcept,
+      @HiveField(35)
+          List<Reference>? prognosisReference,
+      @HiveField(36)
+          List<Reference>? supportingInfo,
+      @HiveField(37)
+          List<Annotation>? note});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -4465,53 +5052,91 @@ abstract class _$$_ClinicalImpressionCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ClinicalImpression)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Code? status,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          Code? status,
+      @HiveField(13)
       @JsonKey(name: '_status')
           Element? statusElement,
-      CodeableConcept? statusReason,
-      CodeableConcept? code,
-      String? description,
+      @HiveField(14)
+          CodeableConcept? statusReason,
+      @HiveField(15)
+          CodeableConcept? code,
+      @HiveField(16)
+          String? description,
+      @HiveField(17)
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      Reference subject,
-      Reference? encounter,
-      FhirDateTime? effectiveDateTime,
+      @HiveField(18)
+          Reference subject,
+      @HiveField(19)
+          Reference? encounter,
+      @HiveField(20)
+          FhirDateTime? effectiveDateTime,
+      @HiveField(21)
       @JsonKey(name: '_effectiveDateTime')
           Element? effectiveDateTimeElement,
-      Period? effectivePeriod,
-      FhirDateTime? date,
+      @HiveField(22)
+          Period? effectivePeriod,
+      @HiveField(23)
+          FhirDateTime? date,
+      @HiveField(24)
       @JsonKey(name: '_date')
           Element? dateElement,
-      Reference? assessor,
-      Reference? previous,
-      List<Reference>? problem,
-      List<ClinicalImpressionInvestigation>? investigation,
-      List<FhirUri>? protocol,
+      @HiveField(25)
+          Reference? assessor,
+      @HiveField(26)
+          Reference? previous,
+      @HiveField(27)
+          List<Reference>? problem,
+      @HiveField(28)
+          List<ClinicalImpressionInvestigation>? investigation,
+      @HiveField(29)
+          List<FhirUri>? protocol,
+      @HiveField(30)
       @JsonKey(name: '_protocol')
           List<Element?>? protocolElement,
-      String? summary,
+      @HiveField(31)
+          String? summary,
+      @HiveField(32)
       @JsonKey(name: '_summary')
           Element? summaryElement,
-      List<ClinicalImpressionFinding>? finding,
-      List<CodeableConcept>? prognosisCodeableConcept,
-      List<Reference>? prognosisReference,
-      List<Reference>? supportingInfo,
-      List<Annotation>? note});
+      @HiveField(33)
+          List<ClinicalImpressionFinding>? finding,
+      @HiveField(34)
+          List<CodeableConcept>? prognosisCodeableConcept,
+      @HiveField(35)
+          List<Reference>? prognosisReference,
+      @HiveField(36)
+          List<Reference>? supportingInfo,
+      @HiveField(37)
+          List<Annotation>? note});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -4760,53 +5385,91 @@ class __$$_ClinicalImpressionCopyWithImpl<$Res>
 class _$_ClinicalImpression extends _ClinicalImpression {
   _$_ClinicalImpression(
       {@JsonKey(unknownEnumValue: R4ResourceType.ClinicalImpression)
+      @HiveField(0)
           this.resourceType = R4ResourceType.ClinicalImpression,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      this.status,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          this.status,
+      @HiveField(13)
       @JsonKey(name: '_status')
           this.statusElement,
-      this.statusReason,
-      this.code,
-      this.description,
+      @HiveField(14)
+          this.statusReason,
+      @HiveField(15)
+          this.code,
+      @HiveField(16)
+          this.description,
+      @HiveField(17)
       @JsonKey(name: '_description')
           this.descriptionElement,
-      required this.subject,
-      this.encounter,
-      this.effectiveDateTime,
+      @HiveField(18)
+          required this.subject,
+      @HiveField(19)
+          this.encounter,
+      @HiveField(20)
+          this.effectiveDateTime,
+      @HiveField(21)
       @JsonKey(name: '_effectiveDateTime')
           this.effectiveDateTimeElement,
-      this.effectivePeriod,
-      this.date,
+      @HiveField(22)
+          this.effectivePeriod,
+      @HiveField(23)
+          this.date,
+      @HiveField(24)
       @JsonKey(name: '_date')
           this.dateElement,
-      this.assessor,
-      this.previous,
-      final List<Reference>? problem,
-      final List<ClinicalImpressionInvestigation>? investigation,
-      final List<FhirUri>? protocol,
+      @HiveField(25)
+          this.assessor,
+      @HiveField(26)
+          this.previous,
+      @HiveField(27)
+          final List<Reference>? problem,
+      @HiveField(28)
+          final List<ClinicalImpressionInvestigation>? investigation,
+      @HiveField(29)
+          final List<FhirUri>? protocol,
+      @HiveField(30)
       @JsonKey(name: '_protocol')
           final List<Element?>? protocolElement,
-      this.summary,
+      @HiveField(31)
+          this.summary,
+      @HiveField(32)
       @JsonKey(name: '_summary')
           this.summaryElement,
-      final List<ClinicalImpressionFinding>? finding,
-      final List<CodeableConcept>? prognosisCodeableConcept,
-      final List<Reference>? prognosisReference,
-      final List<Reference>? supportingInfo,
-      final List<Annotation>? note})
+      @HiveField(33)
+          final List<ClinicalImpressionFinding>? finding,
+      @HiveField(34)
+          final List<CodeableConcept>? prognosisCodeableConcept,
+      @HiveField(35)
+          final List<Reference>? prognosisReference,
+      @HiveField(36)
+          final List<Reference>? supportingInfo,
+      @HiveField(37)
+          final List<Annotation>? note})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -4827,25 +5490,34 @@ class _$_ClinicalImpression extends _ClinicalImpression {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ClinicalImpression)
+  @HiveField(0)
   final R4ResourceType resourceType;
   @override
+  @HiveField(1)
   final String? id;
   @override
+  @HiveField(2)
   final Meta? meta;
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
   @override
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
+  @HiveField(5)
   final Code? language;
   @override
+  @HiveField(6)
   @JsonKey(name: '_language')
   final Element? languageElement;
   @override
+  @HiveField(7)
   final Narrative? text;
   final List<Resource>? _contained;
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -4856,6 +5528,7 @@ class _$_ClinicalImpression extends _ClinicalImpression {
 
   final List<FhirExtension>? _extension_;
   @override
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -4867,6 +5540,7 @@ class _$_ClinicalImpression extends _ClinicalImpression {
 
   final List<FhirExtension>? _modifierExtension;
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -4878,6 +5552,7 @@ class _$_ClinicalImpression extends _ClinicalImpression {
 
   final List<Identifier>? _identifier;
   @override
+  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -4887,41 +5562,57 @@ class _$_ClinicalImpression extends _ClinicalImpression {
   }
 
   @override
+  @HiveField(12)
   final Code? status;
   @override
+  @HiveField(13)
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
+  @HiveField(14)
   final CodeableConcept? statusReason;
   @override
+  @HiveField(15)
   final CodeableConcept? code;
   @override
+  @HiveField(16)
   final String? description;
   @override
+  @HiveField(17)
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
+  @HiveField(18)
   final Reference subject;
   @override
+  @HiveField(19)
   final Reference? encounter;
   @override
+  @HiveField(20)
   final FhirDateTime? effectiveDateTime;
   @override
+  @HiveField(21)
   @JsonKey(name: '_effectiveDateTime')
   final Element? effectiveDateTimeElement;
   @override
+  @HiveField(22)
   final Period? effectivePeriod;
   @override
+  @HiveField(23)
   final FhirDateTime? date;
   @override
+  @HiveField(24)
   @JsonKey(name: '_date')
   final Element? dateElement;
   @override
+  @HiveField(25)
   final Reference? assessor;
   @override
+  @HiveField(26)
   final Reference? previous;
   final List<Reference>? _problem;
   @override
+  @HiveField(27)
   List<Reference>? get problem {
     final value = _problem;
     if (value == null) return null;
@@ -4932,6 +5623,7 @@ class _$_ClinicalImpression extends _ClinicalImpression {
 
   final List<ClinicalImpressionInvestigation>? _investigation;
   @override
+  @HiveField(28)
   List<ClinicalImpressionInvestigation>? get investigation {
     final value = _investigation;
     if (value == null) return null;
@@ -4942,6 +5634,7 @@ class _$_ClinicalImpression extends _ClinicalImpression {
 
   final List<FhirUri>? _protocol;
   @override
+  @HiveField(29)
   List<FhirUri>? get protocol {
     final value = _protocol;
     if (value == null) return null;
@@ -4952,6 +5645,7 @@ class _$_ClinicalImpression extends _ClinicalImpression {
 
   final List<Element?>? _protocolElement;
   @override
+  @HiveField(30)
   @JsonKey(name: '_protocol')
   List<Element?>? get protocolElement {
     final value = _protocolElement;
@@ -4962,12 +5656,15 @@ class _$_ClinicalImpression extends _ClinicalImpression {
   }
 
   @override
+  @HiveField(31)
   final String? summary;
   @override
+  @HiveField(32)
   @JsonKey(name: '_summary')
   final Element? summaryElement;
   final List<ClinicalImpressionFinding>? _finding;
   @override
+  @HiveField(33)
   List<ClinicalImpressionFinding>? get finding {
     final value = _finding;
     if (value == null) return null;
@@ -4978,6 +5675,7 @@ class _$_ClinicalImpression extends _ClinicalImpression {
 
   final List<CodeableConcept>? _prognosisCodeableConcept;
   @override
+  @HiveField(34)
   List<CodeableConcept>? get prognosisCodeableConcept {
     final value = _prognosisCodeableConcept;
     if (value == null) return null;
@@ -4989,6 +5687,7 @@ class _$_ClinicalImpression extends _ClinicalImpression {
 
   final List<Reference>? _prognosisReference;
   @override
+  @HiveField(35)
   List<Reference>? get prognosisReference {
     final value = _prognosisReference;
     if (value == null) return null;
@@ -5000,6 +5699,7 @@ class _$_ClinicalImpression extends _ClinicalImpression {
 
   final List<Reference>? _supportingInfo;
   @override
+  @HiveField(36)
   List<Reference>? get supportingInfo {
     final value = _supportingInfo;
     if (value == null) return null;
@@ -5010,6 +5710,7 @@ class _$_ClinicalImpression extends _ClinicalImpression {
 
   final List<Annotation>? _note;
   @override
+  @HiveField(37)
   List<Annotation>? get note {
     final value = _note;
     if (value == null) return null;
@@ -5157,53 +5858,91 @@ class _$_ClinicalImpression extends _ClinicalImpression {
 abstract class _ClinicalImpression extends ClinicalImpression {
   factory _ClinicalImpression(
       {@JsonKey(unknownEnumValue: R4ResourceType.ClinicalImpression)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final Code? status,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          final Code? status,
+      @HiveField(13)
       @JsonKey(name: '_status')
           final Element? statusElement,
-      final CodeableConcept? statusReason,
-      final CodeableConcept? code,
-      final String? description,
+      @HiveField(14)
+          final CodeableConcept? statusReason,
+      @HiveField(15)
+          final CodeableConcept? code,
+      @HiveField(16)
+          final String? description,
+      @HiveField(17)
       @JsonKey(name: '_description')
           final Element? descriptionElement,
-      required final Reference subject,
-      final Reference? encounter,
-      final FhirDateTime? effectiveDateTime,
+      @HiveField(18)
+          required final Reference subject,
+      @HiveField(19)
+          final Reference? encounter,
+      @HiveField(20)
+          final FhirDateTime? effectiveDateTime,
+      @HiveField(21)
       @JsonKey(name: '_effectiveDateTime')
           final Element? effectiveDateTimeElement,
-      final Period? effectivePeriod,
-      final FhirDateTime? date,
+      @HiveField(22)
+          final Period? effectivePeriod,
+      @HiveField(23)
+          final FhirDateTime? date,
+      @HiveField(24)
       @JsonKey(name: '_date')
           final Element? dateElement,
-      final Reference? assessor,
-      final Reference? previous,
-      final List<Reference>? problem,
-      final List<ClinicalImpressionInvestigation>? investigation,
-      final List<FhirUri>? protocol,
+      @HiveField(25)
+          final Reference? assessor,
+      @HiveField(26)
+          final Reference? previous,
+      @HiveField(27)
+          final List<Reference>? problem,
+      @HiveField(28)
+          final List<ClinicalImpressionInvestigation>? investigation,
+      @HiveField(29)
+          final List<FhirUri>? protocol,
+      @HiveField(30)
       @JsonKey(name: '_protocol')
           final List<Element?>? protocolElement,
-      final String? summary,
+      @HiveField(31)
+          final String? summary,
+      @HiveField(32)
       @JsonKey(name: '_summary')
           final Element? summaryElement,
-      final List<ClinicalImpressionFinding>? finding,
-      final List<CodeableConcept>? prognosisCodeableConcept,
-      final List<Reference>? prognosisReference,
-      final List<Reference>? supportingInfo,
-      final List<Annotation>? note}) = _$_ClinicalImpression;
+      @HiveField(33)
+          final List<ClinicalImpressionFinding>? finding,
+      @HiveField(34)
+          final List<CodeableConcept>? prognosisCodeableConcept,
+      @HiveField(35)
+          final List<Reference>? prognosisReference,
+      @HiveField(36)
+          final List<Reference>? supportingInfo,
+      @HiveField(37)
+          final List<Annotation>? note}) = _$_ClinicalImpression;
   _ClinicalImpression._() : super._();
 
   factory _ClinicalImpression.fromJson(Map<String, dynamic> json) =
@@ -5211,89 +5950,127 @@ abstract class _ClinicalImpression extends ClinicalImpression {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ClinicalImpression)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
+  @HiveField(1)
   String? get id;
   @override
+  @HiveField(2)
   Meta? get meta;
   @override
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
+  @HiveField(5)
   Code? get language;
   @override
+  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+  @HiveField(7)
   Narrative? get text;
   @override
+  @HiveField(8)
   List<Resource>? get contained;
   @override
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
+  @HiveField(11)
   List<Identifier>? get identifier;
   @override
+  @HiveField(12)
   Code? get status;
   @override
+  @HiveField(13)
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
+  @HiveField(14)
   CodeableConcept? get statusReason;
   @override
+  @HiveField(15)
   CodeableConcept? get code;
   @override
+  @HiveField(16)
   String? get description;
   @override
+  @HiveField(17)
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
+  @HiveField(18)
   Reference get subject;
   @override
+  @HiveField(19)
   Reference? get encounter;
   @override
+  @HiveField(20)
   FhirDateTime? get effectiveDateTime;
   @override
+  @HiveField(21)
   @JsonKey(name: '_effectiveDateTime')
   Element? get effectiveDateTimeElement;
   @override
+  @HiveField(22)
   Period? get effectivePeriod;
   @override
+  @HiveField(23)
   FhirDateTime? get date;
   @override
+  @HiveField(24)
   @JsonKey(name: '_date')
   Element? get dateElement;
   @override
+  @HiveField(25)
   Reference? get assessor;
   @override
+  @HiveField(26)
   Reference? get previous;
   @override
+  @HiveField(27)
   List<Reference>? get problem;
   @override
+  @HiveField(28)
   List<ClinicalImpressionInvestigation>? get investigation;
   @override
+  @HiveField(29)
   List<FhirUri>? get protocol;
   @override
+  @HiveField(30)
   @JsonKey(name: '_protocol')
   List<Element?>? get protocolElement;
   @override
+  @HiveField(31)
   String? get summary;
   @override
+  @HiveField(32)
   @JsonKey(name: '_summary')
   Element? get summaryElement;
   @override
+  @HiveField(33)
   List<ClinicalImpressionFinding>? get finding;
   @override
+  @HiveField(34)
   List<CodeableConcept>? get prognosisCodeableConcept;
   @override
+  @HiveField(35)
   List<Reference>? get prognosisReference;
   @override
+  @HiveField(36)
   List<Reference>? get supportingInfo;
   @override
+  @HiveField(37)
   List<Annotation>? get note;
   @override
   @JsonKey(ignore: true)
@@ -5951,55 +6728,96 @@ Condition _$ConditionFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Condition {
   @JsonKey(unknownEnumValue: R4ResourceType.Condition)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
+  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  @HiveField(12)
   CodeableConcept? get clinicalStatus => throw _privateConstructorUsedError;
+  @HiveField(13)
   CodeableConcept? get verificationStatus => throw _privateConstructorUsedError;
+  @HiveField(14)
   List<CodeableConcept>? get category => throw _privateConstructorUsedError;
+  @HiveField(15)
   CodeableConcept? get severity => throw _privateConstructorUsedError;
+  @HiveField(16)
   CodeableConcept? get code => throw _privateConstructorUsedError;
+  @HiveField(17)
   List<CodeableConcept>? get bodySite => throw _privateConstructorUsedError;
+  @HiveField(18)
   Reference get subject => throw _privateConstructorUsedError;
+  @HiveField(19)
   Reference? get encounter => throw _privateConstructorUsedError;
+  @HiveField(20)
   FhirDateTime? get onsetDateTime => throw _privateConstructorUsedError;
+  @HiveField(21)
   @JsonKey(name: '_onsetDateTime')
   Element? get onsetDateTimeElement => throw _privateConstructorUsedError;
+  @HiveField(22)
   Age? get onsetAge => throw _privateConstructorUsedError;
+  @HiveField(23)
   Period? get onsetPeriod => throw _privateConstructorUsedError;
+  @HiveField(24)
   Range? get onsetRange => throw _privateConstructorUsedError;
+  @HiveField(25)
   String? get onsetString => throw _privateConstructorUsedError;
+  @HiveField(26)
   @JsonKey(name: '_onsetString')
   Element? get onsetStringElement => throw _privateConstructorUsedError;
+  @HiveField(27)
   FhirDateTime? get abatementDateTime => throw _privateConstructorUsedError;
+  @HiveField(28)
   @JsonKey(name: '_abatementDateTime')
   Element? get abatementDateTimeElement => throw _privateConstructorUsedError;
+  @HiveField(29)
   Age? get abatementAge => throw _privateConstructorUsedError;
+  @HiveField(30)
   Period? get abatementPeriod => throw _privateConstructorUsedError;
+  @HiveField(31)
   Range? get abatementRange => throw _privateConstructorUsedError;
+  @HiveField(32)
   String? get abatementString => throw _privateConstructorUsedError;
+  @HiveField(33)
   @JsonKey(name: '_abatementString')
   Element? get abatementStringElement => throw _privateConstructorUsedError;
+  @HiveField(34)
   FhirDateTime? get recordedDate => throw _privateConstructorUsedError;
+  @HiveField(35)
   @JsonKey(name: '_recordedDate')
   Element? get recordedDateElement => throw _privateConstructorUsedError;
+  @HiveField(36)
   Reference? get recorder => throw _privateConstructorUsedError;
+  @HiveField(37)
   Reference? get asserter => throw _privateConstructorUsedError;
+  @HiveField(38)
   List<ConditionStage>? get stage => throw _privateConstructorUsedError;
+  @HiveField(39)
   List<ConditionEvidence>? get evidence => throw _privateConstructorUsedError;
+  @HiveField(40)
   List<Annotation>? get note => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -6015,55 +6833,96 @@ abstract class $ConditionCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Condition)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      CodeableConcept? clinicalStatus,
-      CodeableConcept? verificationStatus,
-      List<CodeableConcept>? category,
-      CodeableConcept? severity,
-      CodeableConcept? code,
-      List<CodeableConcept>? bodySite,
-      Reference subject,
-      Reference? encounter,
-      FhirDateTime? onsetDateTime,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          CodeableConcept? clinicalStatus,
+      @HiveField(13)
+          CodeableConcept? verificationStatus,
+      @HiveField(14)
+          List<CodeableConcept>? category,
+      @HiveField(15)
+          CodeableConcept? severity,
+      @HiveField(16)
+          CodeableConcept? code,
+      @HiveField(17)
+          List<CodeableConcept>? bodySite,
+      @HiveField(18)
+          Reference subject,
+      @HiveField(19)
+          Reference? encounter,
+      @HiveField(20)
+          FhirDateTime? onsetDateTime,
+      @HiveField(21)
       @JsonKey(name: '_onsetDateTime')
           Element? onsetDateTimeElement,
-      Age? onsetAge,
-      Period? onsetPeriod,
-      Range? onsetRange,
-      String? onsetString,
+      @HiveField(22)
+          Age? onsetAge,
+      @HiveField(23)
+          Period? onsetPeriod,
+      @HiveField(24)
+          Range? onsetRange,
+      @HiveField(25)
+          String? onsetString,
+      @HiveField(26)
       @JsonKey(name: '_onsetString')
           Element? onsetStringElement,
-      FhirDateTime? abatementDateTime,
+      @HiveField(27)
+          FhirDateTime? abatementDateTime,
+      @HiveField(28)
       @JsonKey(name: '_abatementDateTime')
           Element? abatementDateTimeElement,
-      Age? abatementAge,
-      Period? abatementPeriod,
-      Range? abatementRange,
-      String? abatementString,
+      @HiveField(29)
+          Age? abatementAge,
+      @HiveField(30)
+          Period? abatementPeriod,
+      @HiveField(31)
+          Range? abatementRange,
+      @HiveField(32)
+          String? abatementString,
+      @HiveField(33)
       @JsonKey(name: '_abatementString')
           Element? abatementStringElement,
-      FhirDateTime? recordedDate,
+      @HiveField(34)
+          FhirDateTime? recordedDate,
+      @HiveField(35)
       @JsonKey(name: '_recordedDate')
           Element? recordedDateElement,
-      Reference? recorder,
-      Reference? asserter,
-      List<ConditionStage>? stage,
-      List<ConditionEvidence>? evidence,
-      List<Annotation>? note});
+      @HiveField(36)
+          Reference? recorder,
+      @HiveField(37)
+          Reference? asserter,
+      @HiveField(38)
+          List<ConditionStage>? stage,
+      @HiveField(39)
+          List<ConditionEvidence>? evidence,
+      @HiveField(40)
+          List<Annotation>? note});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -6595,55 +7454,96 @@ abstract class _$$_ConditionCopyWith<$Res> implements $ConditionCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Condition)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      CodeableConcept? clinicalStatus,
-      CodeableConcept? verificationStatus,
-      List<CodeableConcept>? category,
-      CodeableConcept? severity,
-      CodeableConcept? code,
-      List<CodeableConcept>? bodySite,
-      Reference subject,
-      Reference? encounter,
-      FhirDateTime? onsetDateTime,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          CodeableConcept? clinicalStatus,
+      @HiveField(13)
+          CodeableConcept? verificationStatus,
+      @HiveField(14)
+          List<CodeableConcept>? category,
+      @HiveField(15)
+          CodeableConcept? severity,
+      @HiveField(16)
+          CodeableConcept? code,
+      @HiveField(17)
+          List<CodeableConcept>? bodySite,
+      @HiveField(18)
+          Reference subject,
+      @HiveField(19)
+          Reference? encounter,
+      @HiveField(20)
+          FhirDateTime? onsetDateTime,
+      @HiveField(21)
       @JsonKey(name: '_onsetDateTime')
           Element? onsetDateTimeElement,
-      Age? onsetAge,
-      Period? onsetPeriod,
-      Range? onsetRange,
-      String? onsetString,
+      @HiveField(22)
+          Age? onsetAge,
+      @HiveField(23)
+          Period? onsetPeriod,
+      @HiveField(24)
+          Range? onsetRange,
+      @HiveField(25)
+          String? onsetString,
+      @HiveField(26)
       @JsonKey(name: '_onsetString')
           Element? onsetStringElement,
-      FhirDateTime? abatementDateTime,
+      @HiveField(27)
+          FhirDateTime? abatementDateTime,
+      @HiveField(28)
       @JsonKey(name: '_abatementDateTime')
           Element? abatementDateTimeElement,
-      Age? abatementAge,
-      Period? abatementPeriod,
-      Range? abatementRange,
-      String? abatementString,
+      @HiveField(29)
+          Age? abatementAge,
+      @HiveField(30)
+          Period? abatementPeriod,
+      @HiveField(31)
+          Range? abatementRange,
+      @HiveField(32)
+          String? abatementString,
+      @HiveField(33)
       @JsonKey(name: '_abatementString')
           Element? abatementStringElement,
-      FhirDateTime? recordedDate,
+      @HiveField(34)
+          FhirDateTime? recordedDate,
+      @HiveField(35)
       @JsonKey(name: '_recordedDate')
           Element? recordedDateElement,
-      Reference? recorder,
-      Reference? asserter,
-      List<ConditionStage>? stage,
-      List<ConditionEvidence>? evidence,
-      List<Annotation>? note});
+      @HiveField(36)
+          Reference? recorder,
+      @HiveField(37)
+          Reference? asserter,
+      @HiveField(38)
+          List<ConditionStage>? stage,
+      @HiveField(39)
+          List<ConditionEvidence>? evidence,
+      @HiveField(40)
+          List<Annotation>? note});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -6921,55 +7821,96 @@ class __$$_ConditionCopyWithImpl<$Res>
 class _$_Condition extends _Condition {
   _$_Condition(
       {@JsonKey(unknownEnumValue: R4ResourceType.Condition)
+      @HiveField(0)
           this.resourceType = R4ResourceType.Condition,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      this.clinicalStatus,
-      this.verificationStatus,
-      final List<CodeableConcept>? category,
-      this.severity,
-      this.code,
-      final List<CodeableConcept>? bodySite,
-      required this.subject,
-      this.encounter,
-      this.onsetDateTime,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          this.clinicalStatus,
+      @HiveField(13)
+          this.verificationStatus,
+      @HiveField(14)
+          final List<CodeableConcept>? category,
+      @HiveField(15)
+          this.severity,
+      @HiveField(16)
+          this.code,
+      @HiveField(17)
+          final List<CodeableConcept>? bodySite,
+      @HiveField(18)
+          required this.subject,
+      @HiveField(19)
+          this.encounter,
+      @HiveField(20)
+          this.onsetDateTime,
+      @HiveField(21)
       @JsonKey(name: '_onsetDateTime')
           this.onsetDateTimeElement,
-      this.onsetAge,
-      this.onsetPeriod,
-      this.onsetRange,
-      this.onsetString,
+      @HiveField(22)
+          this.onsetAge,
+      @HiveField(23)
+          this.onsetPeriod,
+      @HiveField(24)
+          this.onsetRange,
+      @HiveField(25)
+          this.onsetString,
+      @HiveField(26)
       @JsonKey(name: '_onsetString')
           this.onsetStringElement,
-      this.abatementDateTime,
+      @HiveField(27)
+          this.abatementDateTime,
+      @HiveField(28)
       @JsonKey(name: '_abatementDateTime')
           this.abatementDateTimeElement,
-      this.abatementAge,
-      this.abatementPeriod,
-      this.abatementRange,
-      this.abatementString,
+      @HiveField(29)
+          this.abatementAge,
+      @HiveField(30)
+          this.abatementPeriod,
+      @HiveField(31)
+          this.abatementRange,
+      @HiveField(32)
+          this.abatementString,
+      @HiveField(33)
       @JsonKey(name: '_abatementString')
           this.abatementStringElement,
-      this.recordedDate,
+      @HiveField(34)
+          this.recordedDate,
+      @HiveField(35)
       @JsonKey(name: '_recordedDate')
           this.recordedDateElement,
-      this.recorder,
-      this.asserter,
-      final List<ConditionStage>? stage,
-      final List<ConditionEvidence>? evidence,
-      final List<Annotation>? note})
+      @HiveField(36)
+          this.recorder,
+      @HiveField(37)
+          this.asserter,
+      @HiveField(38)
+          final List<ConditionStage>? stage,
+      @HiveField(39)
+          final List<ConditionEvidence>? evidence,
+      @HiveField(40)
+          final List<Annotation>? note})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -6986,25 +7927,34 @@ class _$_Condition extends _Condition {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Condition)
+  @HiveField(0)
   final R4ResourceType resourceType;
   @override
+  @HiveField(1)
   final String? id;
   @override
+  @HiveField(2)
   final Meta? meta;
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
   @override
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
+  @HiveField(5)
   final Code? language;
   @override
+  @HiveField(6)
   @JsonKey(name: '_language')
   final Element? languageElement;
   @override
+  @HiveField(7)
   final Narrative? text;
   final List<Resource>? _contained;
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -7015,6 +7965,7 @@ class _$_Condition extends _Condition {
 
   final List<FhirExtension>? _extension_;
   @override
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -7026,6 +7977,7 @@ class _$_Condition extends _Condition {
 
   final List<FhirExtension>? _modifierExtension;
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -7037,6 +7989,7 @@ class _$_Condition extends _Condition {
 
   final List<Identifier>? _identifier;
   @override
+  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -7046,11 +7999,14 @@ class _$_Condition extends _Condition {
   }
 
   @override
+  @HiveField(12)
   final CodeableConcept? clinicalStatus;
   @override
+  @HiveField(13)
   final CodeableConcept? verificationStatus;
   final List<CodeableConcept>? _category;
   @override
+  @HiveField(14)
   List<CodeableConcept>? get category {
     final value = _category;
     if (value == null) return null;
@@ -7060,11 +8016,14 @@ class _$_Condition extends _Condition {
   }
 
   @override
+  @HiveField(15)
   final CodeableConcept? severity;
   @override
+  @HiveField(16)
   final CodeableConcept? code;
   final List<CodeableConcept>? _bodySite;
   @override
+  @HiveField(17)
   List<CodeableConcept>? get bodySite {
     final value = _bodySite;
     if (value == null) return null;
@@ -7074,52 +8033,73 @@ class _$_Condition extends _Condition {
   }
 
   @override
+  @HiveField(18)
   final Reference subject;
   @override
+  @HiveField(19)
   final Reference? encounter;
   @override
+  @HiveField(20)
   final FhirDateTime? onsetDateTime;
   @override
+  @HiveField(21)
   @JsonKey(name: '_onsetDateTime')
   final Element? onsetDateTimeElement;
   @override
+  @HiveField(22)
   final Age? onsetAge;
   @override
+  @HiveField(23)
   final Period? onsetPeriod;
   @override
+  @HiveField(24)
   final Range? onsetRange;
   @override
+  @HiveField(25)
   final String? onsetString;
   @override
+  @HiveField(26)
   @JsonKey(name: '_onsetString')
   final Element? onsetStringElement;
   @override
+  @HiveField(27)
   final FhirDateTime? abatementDateTime;
   @override
+  @HiveField(28)
   @JsonKey(name: '_abatementDateTime')
   final Element? abatementDateTimeElement;
   @override
+  @HiveField(29)
   final Age? abatementAge;
   @override
+  @HiveField(30)
   final Period? abatementPeriod;
   @override
+  @HiveField(31)
   final Range? abatementRange;
   @override
+  @HiveField(32)
   final String? abatementString;
   @override
+  @HiveField(33)
   @JsonKey(name: '_abatementString')
   final Element? abatementStringElement;
   @override
+  @HiveField(34)
   final FhirDateTime? recordedDate;
   @override
+  @HiveField(35)
   @JsonKey(name: '_recordedDate')
   final Element? recordedDateElement;
   @override
+  @HiveField(36)
   final Reference? recorder;
   @override
+  @HiveField(37)
   final Reference? asserter;
   final List<ConditionStage>? _stage;
   @override
+  @HiveField(38)
   List<ConditionStage>? get stage {
     final value = _stage;
     if (value == null) return null;
@@ -7130,6 +8110,7 @@ class _$_Condition extends _Condition {
 
   final List<ConditionEvidence>? _evidence;
   @override
+  @HiveField(39)
   List<ConditionEvidence>? get evidence {
     final value = _evidence;
     if (value == null) return null;
@@ -7140,6 +8121,7 @@ class _$_Condition extends _Condition {
 
   final List<Annotation>? _note;
   @override
+  @HiveField(40)
   List<Annotation>? get note {
     final value = _note;
     if (value == null) return null;
@@ -7297,55 +8279,96 @@ class _$_Condition extends _Condition {
 abstract class _Condition extends Condition {
   factory _Condition(
       {@JsonKey(unknownEnumValue: R4ResourceType.Condition)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final CodeableConcept? clinicalStatus,
-      final CodeableConcept? verificationStatus,
-      final List<CodeableConcept>? category,
-      final CodeableConcept? severity,
-      final CodeableConcept? code,
-      final List<CodeableConcept>? bodySite,
-      required final Reference subject,
-      final Reference? encounter,
-      final FhirDateTime? onsetDateTime,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          final CodeableConcept? clinicalStatus,
+      @HiveField(13)
+          final CodeableConcept? verificationStatus,
+      @HiveField(14)
+          final List<CodeableConcept>? category,
+      @HiveField(15)
+          final CodeableConcept? severity,
+      @HiveField(16)
+          final CodeableConcept? code,
+      @HiveField(17)
+          final List<CodeableConcept>? bodySite,
+      @HiveField(18)
+          required final Reference subject,
+      @HiveField(19)
+          final Reference? encounter,
+      @HiveField(20)
+          final FhirDateTime? onsetDateTime,
+      @HiveField(21)
       @JsonKey(name: '_onsetDateTime')
           final Element? onsetDateTimeElement,
-      final Age? onsetAge,
-      final Period? onsetPeriod,
-      final Range? onsetRange,
-      final String? onsetString,
+      @HiveField(22)
+          final Age? onsetAge,
+      @HiveField(23)
+          final Period? onsetPeriod,
+      @HiveField(24)
+          final Range? onsetRange,
+      @HiveField(25)
+          final String? onsetString,
+      @HiveField(26)
       @JsonKey(name: '_onsetString')
           final Element? onsetStringElement,
-      final FhirDateTime? abatementDateTime,
+      @HiveField(27)
+          final FhirDateTime? abatementDateTime,
+      @HiveField(28)
       @JsonKey(name: '_abatementDateTime')
           final Element? abatementDateTimeElement,
-      final Age? abatementAge,
-      final Period? abatementPeriod,
-      final Range? abatementRange,
-      final String? abatementString,
+      @HiveField(29)
+          final Age? abatementAge,
+      @HiveField(30)
+          final Period? abatementPeriod,
+      @HiveField(31)
+          final Range? abatementRange,
+      @HiveField(32)
+          final String? abatementString,
+      @HiveField(33)
       @JsonKey(name: '_abatementString')
           final Element? abatementStringElement,
-      final FhirDateTime? recordedDate,
+      @HiveField(34)
+          final FhirDateTime? recordedDate,
+      @HiveField(35)
       @JsonKey(name: '_recordedDate')
           final Element? recordedDateElement,
-      final Reference? recorder,
-      final Reference? asserter,
-      final List<ConditionStage>? stage,
-      final List<ConditionEvidence>? evidence,
-      final List<Annotation>? note}) = _$_Condition;
+      @HiveField(36)
+          final Reference? recorder,
+      @HiveField(37)
+          final Reference? asserter,
+      @HiveField(38)
+          final List<ConditionStage>? stage,
+      @HiveField(39)
+          final List<ConditionEvidence>? evidence,
+      @HiveField(40)
+          final List<Annotation>? note}) = _$_Condition;
   _Condition._() : super._();
 
   factory _Condition.fromJson(Map<String, dynamic> json) =
@@ -7353,94 +8376,135 @@ abstract class _Condition extends Condition {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Condition)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
+  @HiveField(1)
   String? get id;
   @override
+  @HiveField(2)
   Meta? get meta;
   @override
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
+  @HiveField(5)
   Code? get language;
   @override
+  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+  @HiveField(7)
   Narrative? get text;
   @override
+  @HiveField(8)
   List<Resource>? get contained;
   @override
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
+  @HiveField(11)
   List<Identifier>? get identifier;
   @override
+  @HiveField(12)
   CodeableConcept? get clinicalStatus;
   @override
+  @HiveField(13)
   CodeableConcept? get verificationStatus;
   @override
+  @HiveField(14)
   List<CodeableConcept>? get category;
   @override
+  @HiveField(15)
   CodeableConcept? get severity;
   @override
+  @HiveField(16)
   CodeableConcept? get code;
   @override
+  @HiveField(17)
   List<CodeableConcept>? get bodySite;
   @override
+  @HiveField(18)
   Reference get subject;
   @override
+  @HiveField(19)
   Reference? get encounter;
   @override
+  @HiveField(20)
   FhirDateTime? get onsetDateTime;
   @override
+  @HiveField(21)
   @JsonKey(name: '_onsetDateTime')
   Element? get onsetDateTimeElement;
   @override
+  @HiveField(22)
   Age? get onsetAge;
   @override
+  @HiveField(23)
   Period? get onsetPeriod;
   @override
+  @HiveField(24)
   Range? get onsetRange;
   @override
+  @HiveField(25)
   String? get onsetString;
   @override
+  @HiveField(26)
   @JsonKey(name: '_onsetString')
   Element? get onsetStringElement;
   @override
+  @HiveField(27)
   FhirDateTime? get abatementDateTime;
   @override
+  @HiveField(28)
   @JsonKey(name: '_abatementDateTime')
   Element? get abatementDateTimeElement;
   @override
+  @HiveField(29)
   Age? get abatementAge;
   @override
+  @HiveField(30)
   Period? get abatementPeriod;
   @override
+  @HiveField(31)
   Range? get abatementRange;
   @override
+  @HiveField(32)
   String? get abatementString;
   @override
+  @HiveField(33)
   @JsonKey(name: '_abatementString')
   Element? get abatementStringElement;
   @override
+  @HiveField(34)
   FhirDateTime? get recordedDate;
   @override
+  @HiveField(35)
   @JsonKey(name: '_recordedDate')
   Element? get recordedDateElement;
   @override
+  @HiveField(36)
   Reference? get recorder;
   @override
+  @HiveField(37)
   Reference? get asserter;
   @override
+  @HiveField(38)
   List<ConditionStage>? get stage;
   @override
+  @HiveField(39)
   List<ConditionEvidence>? get evidence;
   @override
+  @HiveField(40)
   List<Annotation>? get note;
   @override
   @JsonKey(ignore: true)
@@ -8042,44 +9106,73 @@ DetectedIssue _$DetectedIssueFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$DetectedIssue {
   @JsonKey(unknownEnumValue: R4ResourceType.DetectedIssue)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
+  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  @HiveField(12)
   Code? get status => throw _privateConstructorUsedError;
+  @HiveField(13)
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
+  @HiveField(14)
   CodeableConcept? get code => throw _privateConstructorUsedError;
+  @HiveField(15)
   Code? get severity => throw _privateConstructorUsedError;
+  @HiveField(16)
   @JsonKey(name: '_severity')
   Element? get severityElement => throw _privateConstructorUsedError;
+  @HiveField(17)
   Reference? get patient => throw _privateConstructorUsedError;
+  @HiveField(18)
   FhirDateTime? get identifiedDateTime => throw _privateConstructorUsedError;
+  @HiveField(19)
   @JsonKey(name: '_identifiedDateTime')
   Element? get identifiedDateTimeElement => throw _privateConstructorUsedError;
+  @HiveField(20)
   Period? get identifiedPeriod => throw _privateConstructorUsedError;
+  @HiveField(21)
   Reference? get author => throw _privateConstructorUsedError;
+  @HiveField(22)
   List<Reference>? get implicated => throw _privateConstructorUsedError;
+  @HiveField(23)
   List<DetectedIssueEvidence>? get evidence =>
       throw _privateConstructorUsedError;
+  @HiveField(24)
   String? get detail => throw _privateConstructorUsedError;
+  @HiveField(25)
   @JsonKey(name: '_detail')
   Element? get detailElement => throw _privateConstructorUsedError;
+  @HiveField(26)
   FhirUri? get reference => throw _privateConstructorUsedError;
+  @HiveField(27)
   @JsonKey(name: '_reference')
   Element? get referenceElement => throw _privateConstructorUsedError;
+  @HiveField(28)
   List<DetectedIssueMitigation>? get mitigation =>
       throw _privateConstructorUsedError;
 
@@ -8097,43 +9190,72 @@ abstract class $DetectedIssueCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.DetectedIssue)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Code? status,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          Code? status,
+      @HiveField(13)
       @JsonKey(name: '_status')
           Element? statusElement,
-      CodeableConcept? code,
-      Code? severity,
+      @HiveField(14)
+          CodeableConcept? code,
+      @HiveField(15)
+          Code? severity,
+      @HiveField(16)
       @JsonKey(name: '_severity')
           Element? severityElement,
-      Reference? patient,
-      FhirDateTime? identifiedDateTime,
+      @HiveField(17)
+          Reference? patient,
+      @HiveField(18)
+          FhirDateTime? identifiedDateTime,
+      @HiveField(19)
       @JsonKey(name: '_identifiedDateTime')
           Element? identifiedDateTimeElement,
-      Period? identifiedPeriod,
-      Reference? author,
-      List<Reference>? implicated,
-      List<DetectedIssueEvidence>? evidence,
-      String? detail,
+      @HiveField(20)
+          Period? identifiedPeriod,
+      @HiveField(21)
+          Reference? author,
+      @HiveField(22)
+          List<Reference>? implicated,
+      @HiveField(23)
+          List<DetectedIssueEvidence>? evidence,
+      @HiveField(24)
+          String? detail,
+      @HiveField(25)
       @JsonKey(name: '_detail')
           Element? detailElement,
-      FhirUri? reference,
+      @HiveField(26)
+          FhirUri? reference,
+      @HiveField(27)
       @JsonKey(name: '_reference')
           Element? referenceElement,
-      List<DetectedIssueMitigation>? mitigation});
+      @HiveField(28)
+          List<DetectedIssueMitigation>? mitigation});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -8480,43 +9602,72 @@ abstract class _$$_DetectedIssueCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.DetectedIssue)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Code? status,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          Code? status,
+      @HiveField(13)
       @JsonKey(name: '_status')
           Element? statusElement,
-      CodeableConcept? code,
-      Code? severity,
+      @HiveField(14)
+          CodeableConcept? code,
+      @HiveField(15)
+          Code? severity,
+      @HiveField(16)
       @JsonKey(name: '_severity')
           Element? severityElement,
-      Reference? patient,
-      FhirDateTime? identifiedDateTime,
+      @HiveField(17)
+          Reference? patient,
+      @HiveField(18)
+          FhirDateTime? identifiedDateTime,
+      @HiveField(19)
       @JsonKey(name: '_identifiedDateTime')
           Element? identifiedDateTimeElement,
-      Period? identifiedPeriod,
-      Reference? author,
-      List<Reference>? implicated,
-      List<DetectedIssueEvidence>? evidence,
-      String? detail,
+      @HiveField(20)
+          Period? identifiedPeriod,
+      @HiveField(21)
+          Reference? author,
+      @HiveField(22)
+          List<Reference>? implicated,
+      @HiveField(23)
+          List<DetectedIssueEvidence>? evidence,
+      @HiveField(24)
+          String? detail,
+      @HiveField(25)
       @JsonKey(name: '_detail')
           Element? detailElement,
-      FhirUri? reference,
+      @HiveField(26)
+          FhirUri? reference,
+      @HiveField(27)
       @JsonKey(name: '_reference')
           Element? referenceElement,
-      List<DetectedIssueMitigation>? mitigation});
+      @HiveField(28)
+          List<DetectedIssueMitigation>? mitigation});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -8714,43 +9865,72 @@ class __$$_DetectedIssueCopyWithImpl<$Res>
 class _$_DetectedIssue extends _DetectedIssue {
   _$_DetectedIssue(
       {@JsonKey(unknownEnumValue: R4ResourceType.DetectedIssue)
+      @HiveField(0)
           this.resourceType = R4ResourceType.DetectedIssue,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      this.status,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          this.status,
+      @HiveField(13)
       @JsonKey(name: '_status')
           this.statusElement,
-      this.code,
-      this.severity,
+      @HiveField(14)
+          this.code,
+      @HiveField(15)
+          this.severity,
+      @HiveField(16)
       @JsonKey(name: '_severity')
           this.severityElement,
-      this.patient,
-      this.identifiedDateTime,
+      @HiveField(17)
+          this.patient,
+      @HiveField(18)
+          this.identifiedDateTime,
+      @HiveField(19)
       @JsonKey(name: '_identifiedDateTime')
           this.identifiedDateTimeElement,
-      this.identifiedPeriod,
-      this.author,
-      final List<Reference>? implicated,
-      final List<DetectedIssueEvidence>? evidence,
-      this.detail,
+      @HiveField(20)
+          this.identifiedPeriod,
+      @HiveField(21)
+          this.author,
+      @HiveField(22)
+          final List<Reference>? implicated,
+      @HiveField(23)
+          final List<DetectedIssueEvidence>? evidence,
+      @HiveField(24)
+          this.detail,
+      @HiveField(25)
       @JsonKey(name: '_detail')
           this.detailElement,
-      this.reference,
+      @HiveField(26)
+          this.reference,
+      @HiveField(27)
       @JsonKey(name: '_reference')
           this.referenceElement,
-      final List<DetectedIssueMitigation>? mitigation})
+      @HiveField(28)
+          final List<DetectedIssueMitigation>? mitigation})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -8765,25 +9945,34 @@ class _$_DetectedIssue extends _DetectedIssue {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.DetectedIssue)
+  @HiveField(0)
   final R4ResourceType resourceType;
   @override
+  @HiveField(1)
   final String? id;
   @override
+  @HiveField(2)
   final Meta? meta;
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
   @override
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
+  @HiveField(5)
   final Code? language;
   @override
+  @HiveField(6)
   @JsonKey(name: '_language')
   final Element? languageElement;
   @override
+  @HiveField(7)
   final Narrative? text;
   final List<Resource>? _contained;
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -8794,6 +9983,7 @@ class _$_DetectedIssue extends _DetectedIssue {
 
   final List<FhirExtension>? _extension_;
   @override
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -8805,6 +9995,7 @@ class _$_DetectedIssue extends _DetectedIssue {
 
   final List<FhirExtension>? _modifierExtension;
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -8816,6 +10007,7 @@ class _$_DetectedIssue extends _DetectedIssue {
 
   final List<Identifier>? _identifier;
   @override
+  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -8825,30 +10017,41 @@ class _$_DetectedIssue extends _DetectedIssue {
   }
 
   @override
+  @HiveField(12)
   final Code? status;
   @override
+  @HiveField(13)
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
+  @HiveField(14)
   final CodeableConcept? code;
   @override
+  @HiveField(15)
   final Code? severity;
   @override
+  @HiveField(16)
   @JsonKey(name: '_severity')
   final Element? severityElement;
   @override
+  @HiveField(17)
   final Reference? patient;
   @override
+  @HiveField(18)
   final FhirDateTime? identifiedDateTime;
   @override
+  @HiveField(19)
   @JsonKey(name: '_identifiedDateTime')
   final Element? identifiedDateTimeElement;
   @override
+  @HiveField(20)
   final Period? identifiedPeriod;
   @override
+  @HiveField(21)
   final Reference? author;
   final List<Reference>? _implicated;
   @override
+  @HiveField(22)
   List<Reference>? get implicated {
     final value = _implicated;
     if (value == null) return null;
@@ -8859,6 +10062,7 @@ class _$_DetectedIssue extends _DetectedIssue {
 
   final List<DetectedIssueEvidence>? _evidence;
   @override
+  @HiveField(23)
   List<DetectedIssueEvidence>? get evidence {
     final value = _evidence;
     if (value == null) return null;
@@ -8868,17 +10072,22 @@ class _$_DetectedIssue extends _DetectedIssue {
   }
 
   @override
+  @HiveField(24)
   final String? detail;
   @override
+  @HiveField(25)
   @JsonKey(name: '_detail')
   final Element? detailElement;
   @override
+  @HiveField(26)
   final FhirUri? reference;
   @override
+  @HiveField(27)
   @JsonKey(name: '_reference')
   final Element? referenceElement;
   final List<DetectedIssueMitigation>? _mitigation;
   @override
+  @HiveField(28)
   List<DetectedIssueMitigation>? get mitigation {
     final value = _mitigation;
     if (value == null) return null;
@@ -9001,43 +10210,72 @@ class _$_DetectedIssue extends _DetectedIssue {
 abstract class _DetectedIssue extends DetectedIssue {
   factory _DetectedIssue(
       {@JsonKey(unknownEnumValue: R4ResourceType.DetectedIssue)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final Code? status,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          final Code? status,
+      @HiveField(13)
       @JsonKey(name: '_status')
           final Element? statusElement,
-      final CodeableConcept? code,
-      final Code? severity,
+      @HiveField(14)
+          final CodeableConcept? code,
+      @HiveField(15)
+          final Code? severity,
+      @HiveField(16)
       @JsonKey(name: '_severity')
           final Element? severityElement,
-      final Reference? patient,
-      final FhirDateTime? identifiedDateTime,
+      @HiveField(17)
+          final Reference? patient,
+      @HiveField(18)
+          final FhirDateTime? identifiedDateTime,
+      @HiveField(19)
       @JsonKey(name: '_identifiedDateTime')
           final Element? identifiedDateTimeElement,
-      final Period? identifiedPeriod,
-      final Reference? author,
-      final List<Reference>? implicated,
-      final List<DetectedIssueEvidence>? evidence,
-      final String? detail,
+      @HiveField(20)
+          final Period? identifiedPeriod,
+      @HiveField(21)
+          final Reference? author,
+      @HiveField(22)
+          final List<Reference>? implicated,
+      @HiveField(23)
+          final List<DetectedIssueEvidence>? evidence,
+      @HiveField(24)
+          final String? detail,
+      @HiveField(25)
       @JsonKey(name: '_detail')
           final Element? detailElement,
-      final FhirUri? reference,
+      @HiveField(26)
+          final FhirUri? reference,
+      @HiveField(27)
       @JsonKey(name: '_reference')
           final Element? referenceElement,
-      final List<DetectedIssueMitigation>? mitigation}) = _$_DetectedIssue;
+      @HiveField(28)
+          final List<DetectedIssueMitigation>? mitigation}) = _$_DetectedIssue;
   _DetectedIssue._() : super._();
 
   factory _DetectedIssue.fromJson(Map<String, dynamic> json) =
@@ -9045,70 +10283,99 @@ abstract class _DetectedIssue extends DetectedIssue {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.DetectedIssue)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
+  @HiveField(1)
   String? get id;
   @override
+  @HiveField(2)
   Meta? get meta;
   @override
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
+  @HiveField(5)
   Code? get language;
   @override
+  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+  @HiveField(7)
   Narrative? get text;
   @override
+  @HiveField(8)
   List<Resource>? get contained;
   @override
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
+  @HiveField(11)
   List<Identifier>? get identifier;
   @override
+  @HiveField(12)
   Code? get status;
   @override
+  @HiveField(13)
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
+  @HiveField(14)
   CodeableConcept? get code;
   @override
+  @HiveField(15)
   Code? get severity;
   @override
+  @HiveField(16)
   @JsonKey(name: '_severity')
   Element? get severityElement;
   @override
+  @HiveField(17)
   Reference? get patient;
   @override
+  @HiveField(18)
   FhirDateTime? get identifiedDateTime;
   @override
+  @HiveField(19)
   @JsonKey(name: '_identifiedDateTime')
   Element? get identifiedDateTimeElement;
   @override
+  @HiveField(20)
   Period? get identifiedPeriod;
   @override
+  @HiveField(21)
   Reference? get author;
   @override
+  @HiveField(22)
   List<Reference>? get implicated;
   @override
+  @HiveField(23)
   List<DetectedIssueEvidence>? get evidence;
   @override
+  @HiveField(24)
   String? get detail;
   @override
+  @HiveField(25)
   @JsonKey(name: '_detail')
   Element? get detailElement;
   @override
+  @HiveField(26)
   FhirUri? get reference;
   @override
+  @HiveField(27)
   @JsonKey(name: '_reference')
   Element? get referenceElement;
   @override
+  @HiveField(28)
   List<DetectedIssueMitigation>? get mitigation;
   @override
   @JsonKey(ignore: true)
@@ -9743,70 +11010,118 @@ FamilyMemberHistory _$FamilyMemberHistoryFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$FamilyMemberHistory {
   @JsonKey(unknownEnumValue: R4ResourceType.FamilyMemberHistory)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
+  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  @HiveField(12)
   List<Canonical>? get instantiatesCanonical =>
       throw _privateConstructorUsedError;
+  @HiveField(13)
   List<FhirUri>? get instantiatesUri => throw _privateConstructorUsedError;
+  @HiveField(14)
   @JsonKey(name: '_instantiatesUri')
   List<Element?>? get instantiatesUriElement =>
       throw _privateConstructorUsedError;
+  @HiveField(15)
   Code? get status => throw _privateConstructorUsedError;
+  @HiveField(16)
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
+  @HiveField(17)
   CodeableConcept? get dataAbsentReason => throw _privateConstructorUsedError;
+  @HiveField(18)
   Reference get patient => throw _privateConstructorUsedError;
+  @HiveField(19)
   FhirDateTime? get date => throw _privateConstructorUsedError;
+  @HiveField(20)
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
+  @HiveField(21)
   String? get name => throw _privateConstructorUsedError;
+  @HiveField(22)
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
+  @HiveField(23)
   CodeableConcept get relationship => throw _privateConstructorUsedError;
+  @HiveField(24)
   CodeableConcept? get sex => throw _privateConstructorUsedError;
+  @HiveField(25)
   Period? get bornPeriod => throw _privateConstructorUsedError;
+  @HiveField(26)
   Date? get bornDate => throw _privateConstructorUsedError;
+  @HiveField(27)
   @JsonKey(name: '_bornDate')
   Element? get bornDateElement => throw _privateConstructorUsedError;
+  @HiveField(28)
   String? get bornString => throw _privateConstructorUsedError;
+  @HiveField(29)
   @JsonKey(name: '_bornString')
   Element? get bornStringElement => throw _privateConstructorUsedError;
+  @HiveField(30)
   Age? get ageAge => throw _privateConstructorUsedError;
+  @HiveField(31)
   Range? get ageRange => throw _privateConstructorUsedError;
+  @HiveField(32)
   String? get ageString => throw _privateConstructorUsedError;
+  @HiveField(33)
   @JsonKey(name: '_ageString')
   Element? get ageStringElement => throw _privateConstructorUsedError;
+  @HiveField(34)
   Boolean? get estimatedAge => throw _privateConstructorUsedError;
+  @HiveField(35)
   @JsonKey(name: '_estimatedAge')
   Element? get estimatedAgeElement => throw _privateConstructorUsedError;
+  @HiveField(36)
   Boolean? get deceasedBoolean => throw _privateConstructorUsedError;
+  @HiveField(37)
   @JsonKey(name: '_deceasedBoolean')
   Element? get deceasedBooleanElement => throw _privateConstructorUsedError;
+  @HiveField(38)
   Age? get deceasedAge => throw _privateConstructorUsedError;
+  @HiveField(39)
   Range? get deceasedRange => throw _privateConstructorUsedError;
+  @HiveField(40)
   Date? get deceasedDate => throw _privateConstructorUsedError;
+  @HiveField(41)
   @JsonKey(name: '_deceasedDate')
   Element? get deceasedDateElement => throw _privateConstructorUsedError;
+  @HiveField(42)
   String? get deceasedString => throw _privateConstructorUsedError;
+  @HiveField(43)
   @JsonKey(name: '_deceasedString')
   Element? get deceasedStringElement => throw _privateConstructorUsedError;
+  @HiveField(44)
   List<CodeableConcept>? get reasonCode => throw _privateConstructorUsedError;
+  @HiveField(45)
   List<Reference>? get reasonReference => throw _privateConstructorUsedError;
+  @HiveField(46)
   List<Annotation>? get note => throw _privateConstructorUsedError;
+  @HiveField(47)
   List<FamilyMemberHistoryCondition>? get condition =>
       throw _privateConstructorUsedError;
 
@@ -9824,68 +11139,116 @@ abstract class $FamilyMemberHistoryCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.FamilyMemberHistory)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Canonical>? instantiatesCanonical,
-      List<FhirUri>? instantiatesUri,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          List<Canonical>? instantiatesCanonical,
+      @HiveField(13)
+          List<FhirUri>? instantiatesUri,
+      @HiveField(14)
       @JsonKey(name: '_instantiatesUri')
           List<Element?>? instantiatesUriElement,
-      Code? status,
+      @HiveField(15)
+          Code? status,
+      @HiveField(16)
       @JsonKey(name: '_status')
           Element? statusElement,
-      CodeableConcept? dataAbsentReason,
-      Reference patient,
-      FhirDateTime? date,
+      @HiveField(17)
+          CodeableConcept? dataAbsentReason,
+      @HiveField(18)
+          Reference patient,
+      @HiveField(19)
+          FhirDateTime? date,
+      @HiveField(20)
       @JsonKey(name: '_date')
           Element? dateElement,
-      String? name,
+      @HiveField(21)
+          String? name,
+      @HiveField(22)
       @JsonKey(name: '_name')
           Element? nameElement,
-      CodeableConcept relationship,
-      CodeableConcept? sex,
-      Period? bornPeriod,
-      Date? bornDate,
+      @HiveField(23)
+          CodeableConcept relationship,
+      @HiveField(24)
+          CodeableConcept? sex,
+      @HiveField(25)
+          Period? bornPeriod,
+      @HiveField(26)
+          Date? bornDate,
+      @HiveField(27)
       @JsonKey(name: '_bornDate')
           Element? bornDateElement,
-      String? bornString,
+      @HiveField(28)
+          String? bornString,
+      @HiveField(29)
       @JsonKey(name: '_bornString')
           Element? bornStringElement,
-      Age? ageAge,
-      Range? ageRange,
-      String? ageString,
+      @HiveField(30)
+          Age? ageAge,
+      @HiveField(31)
+          Range? ageRange,
+      @HiveField(32)
+          String? ageString,
+      @HiveField(33)
       @JsonKey(name: '_ageString')
           Element? ageStringElement,
-      Boolean? estimatedAge,
+      @HiveField(34)
+          Boolean? estimatedAge,
+      @HiveField(35)
       @JsonKey(name: '_estimatedAge')
           Element? estimatedAgeElement,
-      Boolean? deceasedBoolean,
+      @HiveField(36)
+          Boolean? deceasedBoolean,
+      @HiveField(37)
       @JsonKey(name: '_deceasedBoolean')
           Element? deceasedBooleanElement,
-      Age? deceasedAge,
-      Range? deceasedRange,
-      Date? deceasedDate,
+      @HiveField(38)
+          Age? deceasedAge,
+      @HiveField(39)
+          Range? deceasedRange,
+      @HiveField(40)
+          Date? deceasedDate,
+      @HiveField(41)
       @JsonKey(name: '_deceasedDate')
           Element? deceasedDateElement,
-      String? deceasedString,
+      @HiveField(42)
+          String? deceasedString,
+      @HiveField(43)
       @JsonKey(name: '_deceasedString')
           Element? deceasedStringElement,
-      List<CodeableConcept>? reasonCode,
-      List<Reference>? reasonReference,
-      List<Annotation>? note,
-      List<FamilyMemberHistoryCondition>? condition});
+      @HiveField(44)
+          List<CodeableConcept>? reasonCode,
+      @HiveField(45)
+          List<Reference>? reasonReference,
+      @HiveField(46)
+          List<Annotation>? note,
+      @HiveField(47)
+          List<FamilyMemberHistoryCondition>? condition});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -10449,68 +11812,116 @@ abstract class _$$_FamilyMemberHistoryCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.FamilyMemberHistory)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Canonical>? instantiatesCanonical,
-      List<FhirUri>? instantiatesUri,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          List<Canonical>? instantiatesCanonical,
+      @HiveField(13)
+          List<FhirUri>? instantiatesUri,
+      @HiveField(14)
       @JsonKey(name: '_instantiatesUri')
           List<Element?>? instantiatesUriElement,
-      Code? status,
+      @HiveField(15)
+          Code? status,
+      @HiveField(16)
       @JsonKey(name: '_status')
           Element? statusElement,
-      CodeableConcept? dataAbsentReason,
-      Reference patient,
-      FhirDateTime? date,
+      @HiveField(17)
+          CodeableConcept? dataAbsentReason,
+      @HiveField(18)
+          Reference patient,
+      @HiveField(19)
+          FhirDateTime? date,
+      @HiveField(20)
       @JsonKey(name: '_date')
           Element? dateElement,
-      String? name,
+      @HiveField(21)
+          String? name,
+      @HiveField(22)
       @JsonKey(name: '_name')
           Element? nameElement,
-      CodeableConcept relationship,
-      CodeableConcept? sex,
-      Period? bornPeriod,
-      Date? bornDate,
+      @HiveField(23)
+          CodeableConcept relationship,
+      @HiveField(24)
+          CodeableConcept? sex,
+      @HiveField(25)
+          Period? bornPeriod,
+      @HiveField(26)
+          Date? bornDate,
+      @HiveField(27)
       @JsonKey(name: '_bornDate')
           Element? bornDateElement,
-      String? bornString,
+      @HiveField(28)
+          String? bornString,
+      @HiveField(29)
       @JsonKey(name: '_bornString')
           Element? bornStringElement,
-      Age? ageAge,
-      Range? ageRange,
-      String? ageString,
+      @HiveField(30)
+          Age? ageAge,
+      @HiveField(31)
+          Range? ageRange,
+      @HiveField(32)
+          String? ageString,
+      @HiveField(33)
       @JsonKey(name: '_ageString')
           Element? ageStringElement,
-      Boolean? estimatedAge,
+      @HiveField(34)
+          Boolean? estimatedAge,
+      @HiveField(35)
       @JsonKey(name: '_estimatedAge')
           Element? estimatedAgeElement,
-      Boolean? deceasedBoolean,
+      @HiveField(36)
+          Boolean? deceasedBoolean,
+      @HiveField(37)
       @JsonKey(name: '_deceasedBoolean')
           Element? deceasedBooleanElement,
-      Age? deceasedAge,
-      Range? deceasedRange,
-      Date? deceasedDate,
+      @HiveField(38)
+          Age? deceasedAge,
+      @HiveField(39)
+          Range? deceasedRange,
+      @HiveField(40)
+          Date? deceasedDate,
+      @HiveField(41)
       @JsonKey(name: '_deceasedDate')
           Element? deceasedDateElement,
-      String? deceasedString,
+      @HiveField(42)
+          String? deceasedString,
+      @HiveField(43)
       @JsonKey(name: '_deceasedString')
           Element? deceasedStringElement,
-      List<CodeableConcept>? reasonCode,
-      List<Reference>? reasonReference,
-      List<Annotation>? note,
-      List<FamilyMemberHistoryCondition>? condition});
+      @HiveField(44)
+          List<CodeableConcept>? reasonCode,
+      @HiveField(45)
+          List<Reference>? reasonReference,
+      @HiveField(46)
+          List<Annotation>? note,
+      @HiveField(47)
+          List<FamilyMemberHistoryCondition>? condition});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -10823,68 +12234,116 @@ class __$$_FamilyMemberHistoryCopyWithImpl<$Res>
 class _$_FamilyMemberHistory extends _FamilyMemberHistory {
   _$_FamilyMemberHistory(
       {@JsonKey(unknownEnumValue: R4ResourceType.FamilyMemberHistory)
+      @HiveField(0)
           this.resourceType = R4ResourceType.FamilyMemberHistory,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final List<Canonical>? instantiatesCanonical,
-      final List<FhirUri>? instantiatesUri,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          final List<Canonical>? instantiatesCanonical,
+      @HiveField(13)
+          final List<FhirUri>? instantiatesUri,
+      @HiveField(14)
       @JsonKey(name: '_instantiatesUri')
           final List<Element?>? instantiatesUriElement,
-      this.status,
+      @HiveField(15)
+          this.status,
+      @HiveField(16)
       @JsonKey(name: '_status')
           this.statusElement,
-      this.dataAbsentReason,
-      required this.patient,
-      this.date,
+      @HiveField(17)
+          this.dataAbsentReason,
+      @HiveField(18)
+          required this.patient,
+      @HiveField(19)
+          this.date,
+      @HiveField(20)
       @JsonKey(name: '_date')
           this.dateElement,
-      this.name,
+      @HiveField(21)
+          this.name,
+      @HiveField(22)
       @JsonKey(name: '_name')
           this.nameElement,
-      required this.relationship,
-      this.sex,
-      this.bornPeriod,
-      this.bornDate,
+      @HiveField(23)
+          required this.relationship,
+      @HiveField(24)
+          this.sex,
+      @HiveField(25)
+          this.bornPeriod,
+      @HiveField(26)
+          this.bornDate,
+      @HiveField(27)
       @JsonKey(name: '_bornDate')
           this.bornDateElement,
-      this.bornString,
+      @HiveField(28)
+          this.bornString,
+      @HiveField(29)
       @JsonKey(name: '_bornString')
           this.bornStringElement,
-      this.ageAge,
-      this.ageRange,
-      this.ageString,
+      @HiveField(30)
+          this.ageAge,
+      @HiveField(31)
+          this.ageRange,
+      @HiveField(32)
+          this.ageString,
+      @HiveField(33)
       @JsonKey(name: '_ageString')
           this.ageStringElement,
-      this.estimatedAge,
+      @HiveField(34)
+          this.estimatedAge,
+      @HiveField(35)
       @JsonKey(name: '_estimatedAge')
           this.estimatedAgeElement,
-      this.deceasedBoolean,
+      @HiveField(36)
+          this.deceasedBoolean,
+      @HiveField(37)
       @JsonKey(name: '_deceasedBoolean')
           this.deceasedBooleanElement,
-      this.deceasedAge,
-      this.deceasedRange,
-      this.deceasedDate,
+      @HiveField(38)
+          this.deceasedAge,
+      @HiveField(39)
+          this.deceasedRange,
+      @HiveField(40)
+          this.deceasedDate,
+      @HiveField(41)
       @JsonKey(name: '_deceasedDate')
           this.deceasedDateElement,
-      this.deceasedString,
+      @HiveField(42)
+          this.deceasedString,
+      @HiveField(43)
       @JsonKey(name: '_deceasedString')
           this.deceasedStringElement,
-      final List<CodeableConcept>? reasonCode,
-      final List<Reference>? reasonReference,
-      final List<Annotation>? note,
-      final List<FamilyMemberHistoryCondition>? condition})
+      @HiveField(44)
+          final List<CodeableConcept>? reasonCode,
+      @HiveField(45)
+          final List<Reference>? reasonReference,
+      @HiveField(46)
+          final List<Annotation>? note,
+      @HiveField(47)
+          final List<FamilyMemberHistoryCondition>? condition})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -10903,25 +12362,34 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.FamilyMemberHistory)
+  @HiveField(0)
   final R4ResourceType resourceType;
   @override
+  @HiveField(1)
   final String? id;
   @override
+  @HiveField(2)
   final Meta? meta;
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
   @override
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
+  @HiveField(5)
   final Code? language;
   @override
+  @HiveField(6)
   @JsonKey(name: '_language')
   final Element? languageElement;
   @override
+  @HiveField(7)
   final Narrative? text;
   final List<Resource>? _contained;
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -10932,6 +12400,7 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
 
   final List<FhirExtension>? _extension_;
   @override
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -10943,6 +12412,7 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
 
   final List<FhirExtension>? _modifierExtension;
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -10954,6 +12424,7 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
 
   final List<Identifier>? _identifier;
   @override
+  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -10964,6 +12435,7 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
 
   final List<Canonical>? _instantiatesCanonical;
   @override
+  @HiveField(12)
   List<Canonical>? get instantiatesCanonical {
     final value = _instantiatesCanonical;
     if (value == null) return null;
@@ -10975,6 +12447,7 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
 
   final List<FhirUri>? _instantiatesUri;
   @override
+  @HiveField(13)
   List<FhirUri>? get instantiatesUri {
     final value = _instantiatesUri;
     if (value == null) return null;
@@ -10985,6 +12458,7 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
 
   final List<Element?>? _instantiatesUriElement;
   @override
+  @HiveField(14)
   @JsonKey(name: '_instantiatesUri')
   List<Element?>? get instantiatesUriElement {
     final value = _instantiatesUriElement;
@@ -10996,75 +12470,105 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
   }
 
   @override
+  @HiveField(15)
   final Code? status;
   @override
+  @HiveField(16)
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
+  @HiveField(17)
   final CodeableConcept? dataAbsentReason;
   @override
+  @HiveField(18)
   final Reference patient;
   @override
+  @HiveField(19)
   final FhirDateTime? date;
   @override
+  @HiveField(20)
   @JsonKey(name: '_date')
   final Element? dateElement;
   @override
+  @HiveField(21)
   final String? name;
   @override
+  @HiveField(22)
   @JsonKey(name: '_name')
   final Element? nameElement;
   @override
+  @HiveField(23)
   final CodeableConcept relationship;
   @override
+  @HiveField(24)
   final CodeableConcept? sex;
   @override
+  @HiveField(25)
   final Period? bornPeriod;
   @override
+  @HiveField(26)
   final Date? bornDate;
   @override
+  @HiveField(27)
   @JsonKey(name: '_bornDate')
   final Element? bornDateElement;
   @override
+  @HiveField(28)
   final String? bornString;
   @override
+  @HiveField(29)
   @JsonKey(name: '_bornString')
   final Element? bornStringElement;
   @override
+  @HiveField(30)
   final Age? ageAge;
   @override
+  @HiveField(31)
   final Range? ageRange;
   @override
+  @HiveField(32)
   final String? ageString;
   @override
+  @HiveField(33)
   @JsonKey(name: '_ageString')
   final Element? ageStringElement;
   @override
+  @HiveField(34)
   final Boolean? estimatedAge;
   @override
+  @HiveField(35)
   @JsonKey(name: '_estimatedAge')
   final Element? estimatedAgeElement;
   @override
+  @HiveField(36)
   final Boolean? deceasedBoolean;
   @override
+  @HiveField(37)
   @JsonKey(name: '_deceasedBoolean')
   final Element? deceasedBooleanElement;
   @override
+  @HiveField(38)
   final Age? deceasedAge;
   @override
+  @HiveField(39)
   final Range? deceasedRange;
   @override
+  @HiveField(40)
   final Date? deceasedDate;
   @override
+  @HiveField(41)
   @JsonKey(name: '_deceasedDate')
   final Element? deceasedDateElement;
   @override
+  @HiveField(42)
   final String? deceasedString;
   @override
+  @HiveField(43)
   @JsonKey(name: '_deceasedString')
   final Element? deceasedStringElement;
   final List<CodeableConcept>? _reasonCode;
   @override
+  @HiveField(44)
   List<CodeableConcept>? get reasonCode {
     final value = _reasonCode;
     if (value == null) return null;
@@ -11075,6 +12579,7 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
 
   final List<Reference>? _reasonReference;
   @override
+  @HiveField(45)
   List<Reference>? get reasonReference {
     final value = _reasonReference;
     if (value == null) return null;
@@ -11085,6 +12590,7 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
 
   final List<Annotation>? _note;
   @override
+  @HiveField(46)
   List<Annotation>? get note {
     final value = _note;
     if (value == null) return null;
@@ -11095,6 +12601,7 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
 
   final List<FamilyMemberHistoryCondition>? _condition;
   @override
+  @HiveField(47)
   List<FamilyMemberHistoryCondition>? get condition {
     final value = _condition;
     if (value == null) return null;
@@ -11273,68 +12780,116 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
 abstract class _FamilyMemberHistory extends FamilyMemberHistory {
   factory _FamilyMemberHistory(
           {@JsonKey(unknownEnumValue: R4ResourceType.FamilyMemberHistory)
+          @HiveField(0)
               final R4ResourceType resourceType,
-          final String? id,
-          final Meta? meta,
-          final FhirUri? implicitRules,
+          @HiveField(1)
+              final String? id,
+          @HiveField(2)
+              final Meta? meta,
+          @HiveField(3)
+              final FhirUri? implicitRules,
+          @HiveField(4)
           @JsonKey(name: '_implicitRules')
               final Element? implicitRulesElement,
-          final Code? language,
+          @HiveField(5)
+              final Code? language,
+          @HiveField(6)
           @JsonKey(name: '_language')
               final Element? languageElement,
-          final Narrative? text,
-          final List<Resource>? contained,
+          @HiveField(7)
+              final Narrative? text,
+          @HiveField(8)
+              final List<Resource>? contained,
+          @HiveField(9)
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
-          final List<FhirExtension>? modifierExtension,
-          final List<Identifier>? identifier,
-          final List<Canonical>? instantiatesCanonical,
-          final List<FhirUri>? instantiatesUri,
+          @HiveField(10)
+              final List<FhirExtension>? modifierExtension,
+          @HiveField(11)
+              final List<Identifier>? identifier,
+          @HiveField(12)
+              final List<Canonical>? instantiatesCanonical,
+          @HiveField(13)
+              final List<FhirUri>? instantiatesUri,
+          @HiveField(14)
           @JsonKey(name: '_instantiatesUri')
               final List<Element?>? instantiatesUriElement,
-          final Code? status,
+          @HiveField(15)
+              final Code? status,
+          @HiveField(16)
           @JsonKey(name: '_status')
               final Element? statusElement,
-          final CodeableConcept? dataAbsentReason,
-          required final Reference patient,
-          final FhirDateTime? date,
+          @HiveField(17)
+              final CodeableConcept? dataAbsentReason,
+          @HiveField(18)
+              required final Reference patient,
+          @HiveField(19)
+              final FhirDateTime? date,
+          @HiveField(20)
           @JsonKey(name: '_date')
               final Element? dateElement,
-          final String? name,
+          @HiveField(21)
+              final String? name,
+          @HiveField(22)
           @JsonKey(name: '_name')
               final Element? nameElement,
-          required final CodeableConcept relationship,
-          final CodeableConcept? sex,
-          final Period? bornPeriod,
-          final Date? bornDate,
+          @HiveField(23)
+              required final CodeableConcept relationship,
+          @HiveField(24)
+              final CodeableConcept? sex,
+          @HiveField(25)
+              final Period? bornPeriod,
+          @HiveField(26)
+              final Date? bornDate,
+          @HiveField(27)
           @JsonKey(name: '_bornDate')
               final Element? bornDateElement,
-          final String? bornString,
+          @HiveField(28)
+              final String? bornString,
+          @HiveField(29)
           @JsonKey(name: '_bornString')
               final Element? bornStringElement,
-          final Age? ageAge,
-          final Range? ageRange,
-          final String? ageString,
+          @HiveField(30)
+              final Age? ageAge,
+          @HiveField(31)
+              final Range? ageRange,
+          @HiveField(32)
+              final String? ageString,
+          @HiveField(33)
           @JsonKey(name: '_ageString')
               final Element? ageStringElement,
-          final Boolean? estimatedAge,
+          @HiveField(34)
+              final Boolean? estimatedAge,
+          @HiveField(35)
           @JsonKey(name: '_estimatedAge')
               final Element? estimatedAgeElement,
-          final Boolean? deceasedBoolean,
+          @HiveField(36)
+              final Boolean? deceasedBoolean,
+          @HiveField(37)
           @JsonKey(name: '_deceasedBoolean')
               final Element? deceasedBooleanElement,
-          final Age? deceasedAge,
-          final Range? deceasedRange,
-          final Date? deceasedDate,
+          @HiveField(38)
+              final Age? deceasedAge,
+          @HiveField(39)
+              final Range? deceasedRange,
+          @HiveField(40)
+              final Date? deceasedDate,
+          @HiveField(41)
           @JsonKey(name: '_deceasedDate')
               final Element? deceasedDateElement,
-          final String? deceasedString,
+          @HiveField(42)
+              final String? deceasedString,
+          @HiveField(43)
           @JsonKey(name: '_deceasedString')
               final Element? deceasedStringElement,
-          final List<CodeableConcept>? reasonCode,
-          final List<Reference>? reasonReference,
-          final List<Annotation>? note,
-          final List<FamilyMemberHistoryCondition>? condition}) =
+          @HiveField(44)
+              final List<CodeableConcept>? reasonCode,
+          @HiveField(45)
+              final List<Reference>? reasonReference,
+          @HiveField(46)
+              final List<Annotation>? note,
+          @HiveField(47)
+              final List<FamilyMemberHistoryCondition>? condition}) =
       _$_FamilyMemberHistory;
   _FamilyMemberHistory._() : super._();
 
@@ -11343,114 +12898,162 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.FamilyMemberHistory)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
+  @HiveField(1)
   String? get id;
   @override
+  @HiveField(2)
   Meta? get meta;
   @override
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
+  @HiveField(5)
   Code? get language;
   @override
+  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+  @HiveField(7)
   Narrative? get text;
   @override
+  @HiveField(8)
   List<Resource>? get contained;
   @override
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
+  @HiveField(11)
   List<Identifier>? get identifier;
   @override
+  @HiveField(12)
   List<Canonical>? get instantiatesCanonical;
   @override
+  @HiveField(13)
   List<FhirUri>? get instantiatesUri;
   @override
+  @HiveField(14)
   @JsonKey(name: '_instantiatesUri')
   List<Element?>? get instantiatesUriElement;
   @override
+  @HiveField(15)
   Code? get status;
   @override
+  @HiveField(16)
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
+  @HiveField(17)
   CodeableConcept? get dataAbsentReason;
   @override
+  @HiveField(18)
   Reference get patient;
   @override
+  @HiveField(19)
   FhirDateTime? get date;
   @override
+  @HiveField(20)
   @JsonKey(name: '_date')
   Element? get dateElement;
   @override
+  @HiveField(21)
   String? get name;
   @override
+  @HiveField(22)
   @JsonKey(name: '_name')
   Element? get nameElement;
   @override
+  @HiveField(23)
   CodeableConcept get relationship;
   @override
+  @HiveField(24)
   CodeableConcept? get sex;
   @override
+  @HiveField(25)
   Period? get bornPeriod;
   @override
+  @HiveField(26)
   Date? get bornDate;
   @override
+  @HiveField(27)
   @JsonKey(name: '_bornDate')
   Element? get bornDateElement;
   @override
+  @HiveField(28)
   String? get bornString;
   @override
+  @HiveField(29)
   @JsonKey(name: '_bornString')
   Element? get bornStringElement;
   @override
+  @HiveField(30)
   Age? get ageAge;
   @override
+  @HiveField(31)
   Range? get ageRange;
   @override
+  @HiveField(32)
   String? get ageString;
   @override
+  @HiveField(33)
   @JsonKey(name: '_ageString')
   Element? get ageStringElement;
   @override
+  @HiveField(34)
   Boolean? get estimatedAge;
   @override
+  @HiveField(35)
   @JsonKey(name: '_estimatedAge')
   Element? get estimatedAgeElement;
   @override
+  @HiveField(36)
   Boolean? get deceasedBoolean;
   @override
+  @HiveField(37)
   @JsonKey(name: '_deceasedBoolean')
   Element? get deceasedBooleanElement;
   @override
+  @HiveField(38)
   Age? get deceasedAge;
   @override
+  @HiveField(39)
   Range? get deceasedRange;
   @override
+  @HiveField(40)
   Date? get deceasedDate;
   @override
+  @HiveField(41)
   @JsonKey(name: '_deceasedDate')
   Element? get deceasedDateElement;
   @override
+  @HiveField(42)
   String? get deceasedString;
   @override
+  @HiveField(43)
   @JsonKey(name: '_deceasedString')
   Element? get deceasedStringElement;
   @override
+  @HiveField(44)
   List<CodeableConcept>? get reasonCode;
   @override
+  @HiveField(45)
   List<Reference>? get reasonReference;
   @override
+  @HiveField(46)
   List<Annotation>? get note;
   @override
+  @HiveField(47)
   List<FamilyMemberHistoryCondition>? get condition;
   @override
   @JsonKey(ignore: true)
@@ -12023,63 +13626,110 @@ Procedure _$ProcedureFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Procedure {
   @JsonKey(unknownEnumValue: R4ResourceType.Procedure)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
+  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  @HiveField(12)
   List<Canonical>? get instantiatesCanonical =>
       throw _privateConstructorUsedError;
+  @HiveField(13)
   List<FhirUri>? get instantiatesUri => throw _privateConstructorUsedError;
+  @HiveField(14)
   @JsonKey(name: '_instantiatesUri')
   List<Element?>? get instantiatesUriElement =>
       throw _privateConstructorUsedError;
+  @HiveField(15)
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
+  @HiveField(16)
   List<Reference>? get partOf => throw _privateConstructorUsedError;
+  @HiveField(17)
   Code? get status => throw _privateConstructorUsedError;
+  @HiveField(18)
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
+  @HiveField(19)
   CodeableConcept? get statusReason => throw _privateConstructorUsedError;
+  @HiveField(20)
   CodeableConcept? get category => throw _privateConstructorUsedError;
+  @HiveField(21)
   CodeableConcept? get code => throw _privateConstructorUsedError;
+  @HiveField(22)
   Reference get subject => throw _privateConstructorUsedError;
+  @HiveField(23)
   Reference? get encounter => throw _privateConstructorUsedError;
+  @HiveField(24)
   FhirDateTime? get performedDateTime => throw _privateConstructorUsedError;
+  @HiveField(25)
   @JsonKey(name: '_performedDateTime')
   Element? get performedDateTimeElement => throw _privateConstructorUsedError;
+  @HiveField(26)
   Period? get performedPeriod => throw _privateConstructorUsedError;
+  @HiveField(27)
   String? get performedString => throw _privateConstructorUsedError;
+  @HiveField(28)
   @JsonKey(name: '_performedString')
   Element? get performedStringElement => throw _privateConstructorUsedError;
+  @HiveField(29)
   Age? get performedAge => throw _privateConstructorUsedError;
+  @HiveField(30)
   Range? get performedRange => throw _privateConstructorUsedError;
+  @HiveField(31)
   Reference? get recorder => throw _privateConstructorUsedError;
+  @HiveField(32)
   Reference? get asserter => throw _privateConstructorUsedError;
+  @HiveField(33)
   List<ProcedurePerformer>? get performer => throw _privateConstructorUsedError;
+  @HiveField(34)
   Reference? get location => throw _privateConstructorUsedError;
+  @HiveField(35)
   List<CodeableConcept>? get reasonCode => throw _privateConstructorUsedError;
+  @HiveField(36)
   List<Reference>? get reasonReference => throw _privateConstructorUsedError;
+  @HiveField(37)
   List<CodeableConcept>? get bodySite => throw _privateConstructorUsedError;
+  @HiveField(38)
   CodeableConcept? get outcome => throw _privateConstructorUsedError;
+  @HiveField(39)
   List<Reference>? get report => throw _privateConstructorUsedError;
+  @HiveField(40)
   List<CodeableConcept>? get complication => throw _privateConstructorUsedError;
+  @HiveField(41)
   List<Reference>? get complicationDetail => throw _privateConstructorUsedError;
+  @HiveField(42)
   List<CodeableConcept>? get followUp => throw _privateConstructorUsedError;
+  @HiveField(43)
   List<Annotation>? get note => throw _privateConstructorUsedError;
+  @HiveField(44)
   List<ProcedureFocalDevice>? get focalDevice =>
       throw _privateConstructorUsedError;
+  @HiveField(45)
   List<Reference>? get usedReference => throw _privateConstructorUsedError;
+  @HiveField(46)
   List<CodeableConcept>? get usedCode => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -12095,60 +13745,107 @@ abstract class $ProcedureCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Procedure)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Canonical>? instantiatesCanonical,
-      List<FhirUri>? instantiatesUri,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          List<Canonical>? instantiatesCanonical,
+      @HiveField(13)
+          List<FhirUri>? instantiatesUri,
+      @HiveField(14)
       @JsonKey(name: '_instantiatesUri')
           List<Element?>? instantiatesUriElement,
-      List<Reference>? basedOn,
-      List<Reference>? partOf,
-      Code? status,
+      @HiveField(15)
+          List<Reference>? basedOn,
+      @HiveField(16)
+          List<Reference>? partOf,
+      @HiveField(17)
+          Code? status,
+      @HiveField(18)
       @JsonKey(name: '_status')
           Element? statusElement,
-      CodeableConcept? statusReason,
-      CodeableConcept? category,
-      CodeableConcept? code,
-      Reference subject,
-      Reference? encounter,
-      FhirDateTime? performedDateTime,
+      @HiveField(19)
+          CodeableConcept? statusReason,
+      @HiveField(20)
+          CodeableConcept? category,
+      @HiveField(21)
+          CodeableConcept? code,
+      @HiveField(22)
+          Reference subject,
+      @HiveField(23)
+          Reference? encounter,
+      @HiveField(24)
+          FhirDateTime? performedDateTime,
+      @HiveField(25)
       @JsonKey(name: '_performedDateTime')
           Element? performedDateTimeElement,
-      Period? performedPeriod,
-      String? performedString,
+      @HiveField(26)
+          Period? performedPeriod,
+      @HiveField(27)
+          String? performedString,
+      @HiveField(28)
       @JsonKey(name: '_performedString')
           Element? performedStringElement,
-      Age? performedAge,
-      Range? performedRange,
-      Reference? recorder,
-      Reference? asserter,
-      List<ProcedurePerformer>? performer,
-      Reference? location,
-      List<CodeableConcept>? reasonCode,
-      List<Reference>? reasonReference,
-      List<CodeableConcept>? bodySite,
-      CodeableConcept? outcome,
-      List<Reference>? report,
-      List<CodeableConcept>? complication,
-      List<Reference>? complicationDetail,
-      List<CodeableConcept>? followUp,
-      List<Annotation>? note,
-      List<ProcedureFocalDevice>? focalDevice,
-      List<Reference>? usedReference,
-      List<CodeableConcept>? usedCode});
+      @HiveField(29)
+          Age? performedAge,
+      @HiveField(30)
+          Range? performedRange,
+      @HiveField(31)
+          Reference? recorder,
+      @HiveField(32)
+          Reference? asserter,
+      @HiveField(33)
+          List<ProcedurePerformer>? performer,
+      @HiveField(34)
+          Reference? location,
+      @HiveField(35)
+          List<CodeableConcept>? reasonCode,
+      @HiveField(36)
+          List<Reference>? reasonReference,
+      @HiveField(37)
+          List<CodeableConcept>? bodySite,
+      @HiveField(38)
+          CodeableConcept? outcome,
+      @HiveField(39)
+          List<Reference>? report,
+      @HiveField(40)
+          List<CodeableConcept>? complication,
+      @HiveField(41)
+          List<Reference>? complicationDetail,
+      @HiveField(42)
+          List<CodeableConcept>? followUp,
+      @HiveField(43)
+          List<Annotation>? note,
+      @HiveField(44)
+          List<ProcedureFocalDevice>? focalDevice,
+      @HiveField(45)
+          List<Reference>? usedReference,
+      @HiveField(46)
+          List<CodeableConcept>? usedCode});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -12658,60 +14355,107 @@ abstract class _$$_ProcedureCopyWith<$Res> implements $ProcedureCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Procedure)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<Canonical>? instantiatesCanonical,
-      List<FhirUri>? instantiatesUri,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          List<Canonical>? instantiatesCanonical,
+      @HiveField(13)
+          List<FhirUri>? instantiatesUri,
+      @HiveField(14)
       @JsonKey(name: '_instantiatesUri')
           List<Element?>? instantiatesUriElement,
-      List<Reference>? basedOn,
-      List<Reference>? partOf,
-      Code? status,
+      @HiveField(15)
+          List<Reference>? basedOn,
+      @HiveField(16)
+          List<Reference>? partOf,
+      @HiveField(17)
+          Code? status,
+      @HiveField(18)
       @JsonKey(name: '_status')
           Element? statusElement,
-      CodeableConcept? statusReason,
-      CodeableConcept? category,
-      CodeableConcept? code,
-      Reference subject,
-      Reference? encounter,
-      FhirDateTime? performedDateTime,
+      @HiveField(19)
+          CodeableConcept? statusReason,
+      @HiveField(20)
+          CodeableConcept? category,
+      @HiveField(21)
+          CodeableConcept? code,
+      @HiveField(22)
+          Reference subject,
+      @HiveField(23)
+          Reference? encounter,
+      @HiveField(24)
+          FhirDateTime? performedDateTime,
+      @HiveField(25)
       @JsonKey(name: '_performedDateTime')
           Element? performedDateTimeElement,
-      Period? performedPeriod,
-      String? performedString,
+      @HiveField(26)
+          Period? performedPeriod,
+      @HiveField(27)
+          String? performedString,
+      @HiveField(28)
       @JsonKey(name: '_performedString')
           Element? performedStringElement,
-      Age? performedAge,
-      Range? performedRange,
-      Reference? recorder,
-      Reference? asserter,
-      List<ProcedurePerformer>? performer,
-      Reference? location,
-      List<CodeableConcept>? reasonCode,
-      List<Reference>? reasonReference,
-      List<CodeableConcept>? bodySite,
-      CodeableConcept? outcome,
-      List<Reference>? report,
-      List<CodeableConcept>? complication,
-      List<Reference>? complicationDetail,
-      List<CodeableConcept>? followUp,
-      List<Annotation>? note,
-      List<ProcedureFocalDevice>? focalDevice,
-      List<Reference>? usedReference,
-      List<CodeableConcept>? usedCode});
+      @HiveField(29)
+          Age? performedAge,
+      @HiveField(30)
+          Range? performedRange,
+      @HiveField(31)
+          Reference? recorder,
+      @HiveField(32)
+          Reference? asserter,
+      @HiveField(33)
+          List<ProcedurePerformer>? performer,
+      @HiveField(34)
+          Reference? location,
+      @HiveField(35)
+          List<CodeableConcept>? reasonCode,
+      @HiveField(36)
+          List<Reference>? reasonReference,
+      @HiveField(37)
+          List<CodeableConcept>? bodySite,
+      @HiveField(38)
+          CodeableConcept? outcome,
+      @HiveField(39)
+          List<Reference>? report,
+      @HiveField(40)
+          List<CodeableConcept>? complication,
+      @HiveField(41)
+          List<Reference>? complicationDetail,
+      @HiveField(42)
+          List<CodeableConcept>? followUp,
+      @HiveField(43)
+          List<Annotation>? note,
+      @HiveField(44)
+          List<ProcedureFocalDevice>? focalDevice,
+      @HiveField(45)
+          List<Reference>? usedReference,
+      @HiveField(46)
+          List<CodeableConcept>? usedCode});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -13011,60 +14755,107 @@ class __$$_ProcedureCopyWithImpl<$Res>
 class _$_Procedure extends _Procedure {
   _$_Procedure(
       {@JsonKey(unknownEnumValue: R4ResourceType.Procedure)
+      @HiveField(0)
           this.resourceType = R4ResourceType.Procedure,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final List<Canonical>? instantiatesCanonical,
-      final List<FhirUri>? instantiatesUri,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          final List<Canonical>? instantiatesCanonical,
+      @HiveField(13)
+          final List<FhirUri>? instantiatesUri,
+      @HiveField(14)
       @JsonKey(name: '_instantiatesUri')
           final List<Element?>? instantiatesUriElement,
-      final List<Reference>? basedOn,
-      final List<Reference>? partOf,
-      this.status,
+      @HiveField(15)
+          final List<Reference>? basedOn,
+      @HiveField(16)
+          final List<Reference>? partOf,
+      @HiveField(17)
+          this.status,
+      @HiveField(18)
       @JsonKey(name: '_status')
           this.statusElement,
-      this.statusReason,
-      this.category,
-      this.code,
-      required this.subject,
-      this.encounter,
-      this.performedDateTime,
+      @HiveField(19)
+          this.statusReason,
+      @HiveField(20)
+          this.category,
+      @HiveField(21)
+          this.code,
+      @HiveField(22)
+          required this.subject,
+      @HiveField(23)
+          this.encounter,
+      @HiveField(24)
+          this.performedDateTime,
+      @HiveField(25)
       @JsonKey(name: '_performedDateTime')
           this.performedDateTimeElement,
-      this.performedPeriod,
-      this.performedString,
+      @HiveField(26)
+          this.performedPeriod,
+      @HiveField(27)
+          this.performedString,
+      @HiveField(28)
       @JsonKey(name: '_performedString')
           this.performedStringElement,
-      this.performedAge,
-      this.performedRange,
-      this.recorder,
-      this.asserter,
-      final List<ProcedurePerformer>? performer,
-      this.location,
-      final List<CodeableConcept>? reasonCode,
-      final List<Reference>? reasonReference,
-      final List<CodeableConcept>? bodySite,
-      this.outcome,
-      final List<Reference>? report,
-      final List<CodeableConcept>? complication,
-      final List<Reference>? complicationDetail,
-      final List<CodeableConcept>? followUp,
-      final List<Annotation>? note,
-      final List<ProcedureFocalDevice>? focalDevice,
-      final List<Reference>? usedReference,
-      final List<CodeableConcept>? usedCode})
+      @HiveField(29)
+          this.performedAge,
+      @HiveField(30)
+          this.performedRange,
+      @HiveField(31)
+          this.recorder,
+      @HiveField(32)
+          this.asserter,
+      @HiveField(33)
+          final List<ProcedurePerformer>? performer,
+      @HiveField(34)
+          this.location,
+      @HiveField(35)
+          final List<CodeableConcept>? reasonCode,
+      @HiveField(36)
+          final List<Reference>? reasonReference,
+      @HiveField(37)
+          final List<CodeableConcept>? bodySite,
+      @HiveField(38)
+          this.outcome,
+      @HiveField(39)
+          final List<Reference>? report,
+      @HiveField(40)
+          final List<CodeableConcept>? complication,
+      @HiveField(41)
+          final List<Reference>? complicationDetail,
+      @HiveField(42)
+          final List<CodeableConcept>? followUp,
+      @HiveField(43)
+          final List<Annotation>? note,
+      @HiveField(44)
+          final List<ProcedureFocalDevice>? focalDevice,
+      @HiveField(45)
+          final List<Reference>? usedReference,
+      @HiveField(46)
+          final List<CodeableConcept>? usedCode})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -13093,25 +14884,34 @@ class _$_Procedure extends _Procedure {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Procedure)
+  @HiveField(0)
   final R4ResourceType resourceType;
   @override
+  @HiveField(1)
   final String? id;
   @override
+  @HiveField(2)
   final Meta? meta;
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
   @override
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
+  @HiveField(5)
   final Code? language;
   @override
+  @HiveField(6)
   @JsonKey(name: '_language')
   final Element? languageElement;
   @override
+  @HiveField(7)
   final Narrative? text;
   final List<Resource>? _contained;
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -13122,6 +14922,7 @@ class _$_Procedure extends _Procedure {
 
   final List<FhirExtension>? _extension_;
   @override
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -13133,6 +14934,7 @@ class _$_Procedure extends _Procedure {
 
   final List<FhirExtension>? _modifierExtension;
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -13144,6 +14946,7 @@ class _$_Procedure extends _Procedure {
 
   final List<Identifier>? _identifier;
   @override
+  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -13154,6 +14957,7 @@ class _$_Procedure extends _Procedure {
 
   final List<Canonical>? _instantiatesCanonical;
   @override
+  @HiveField(12)
   List<Canonical>? get instantiatesCanonical {
     final value = _instantiatesCanonical;
     if (value == null) return null;
@@ -13165,6 +14969,7 @@ class _$_Procedure extends _Procedure {
 
   final List<FhirUri>? _instantiatesUri;
   @override
+  @HiveField(13)
   List<FhirUri>? get instantiatesUri {
     final value = _instantiatesUri;
     if (value == null) return null;
@@ -13175,6 +14980,7 @@ class _$_Procedure extends _Procedure {
 
   final List<Element?>? _instantiatesUriElement;
   @override
+  @HiveField(14)
   @JsonKey(name: '_instantiatesUri')
   List<Element?>? get instantiatesUriElement {
     final value = _instantiatesUriElement;
@@ -13187,6 +14993,7 @@ class _$_Procedure extends _Procedure {
 
   final List<Reference>? _basedOn;
   @override
+  @HiveField(15)
   List<Reference>? get basedOn {
     final value = _basedOn;
     if (value == null) return null;
@@ -13197,6 +15004,7 @@ class _$_Procedure extends _Procedure {
 
   final List<Reference>? _partOf;
   @override
+  @HiveField(16)
   List<Reference>? get partOf {
     final value = _partOf;
     if (value == null) return null;
@@ -13206,42 +15014,59 @@ class _$_Procedure extends _Procedure {
   }
 
   @override
+  @HiveField(17)
   final Code? status;
   @override
+  @HiveField(18)
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
+  @HiveField(19)
   final CodeableConcept? statusReason;
   @override
+  @HiveField(20)
   final CodeableConcept? category;
   @override
+  @HiveField(21)
   final CodeableConcept? code;
   @override
+  @HiveField(22)
   final Reference subject;
   @override
+  @HiveField(23)
   final Reference? encounter;
   @override
+  @HiveField(24)
   final FhirDateTime? performedDateTime;
   @override
+  @HiveField(25)
   @JsonKey(name: '_performedDateTime')
   final Element? performedDateTimeElement;
   @override
+  @HiveField(26)
   final Period? performedPeriod;
   @override
+  @HiveField(27)
   final String? performedString;
   @override
+  @HiveField(28)
   @JsonKey(name: '_performedString')
   final Element? performedStringElement;
   @override
+  @HiveField(29)
   final Age? performedAge;
   @override
+  @HiveField(30)
   final Range? performedRange;
   @override
+  @HiveField(31)
   final Reference? recorder;
   @override
+  @HiveField(32)
   final Reference? asserter;
   final List<ProcedurePerformer>? _performer;
   @override
+  @HiveField(33)
   List<ProcedurePerformer>? get performer {
     final value = _performer;
     if (value == null) return null;
@@ -13251,9 +15076,11 @@ class _$_Procedure extends _Procedure {
   }
 
   @override
+  @HiveField(34)
   final Reference? location;
   final List<CodeableConcept>? _reasonCode;
   @override
+  @HiveField(35)
   List<CodeableConcept>? get reasonCode {
     final value = _reasonCode;
     if (value == null) return null;
@@ -13264,6 +15091,7 @@ class _$_Procedure extends _Procedure {
 
   final List<Reference>? _reasonReference;
   @override
+  @HiveField(36)
   List<Reference>? get reasonReference {
     final value = _reasonReference;
     if (value == null) return null;
@@ -13274,6 +15102,7 @@ class _$_Procedure extends _Procedure {
 
   final List<CodeableConcept>? _bodySite;
   @override
+  @HiveField(37)
   List<CodeableConcept>? get bodySite {
     final value = _bodySite;
     if (value == null) return null;
@@ -13283,9 +15112,11 @@ class _$_Procedure extends _Procedure {
   }
 
   @override
+  @HiveField(38)
   final CodeableConcept? outcome;
   final List<Reference>? _report;
   @override
+  @HiveField(39)
   List<Reference>? get report {
     final value = _report;
     if (value == null) return null;
@@ -13296,6 +15127,7 @@ class _$_Procedure extends _Procedure {
 
   final List<CodeableConcept>? _complication;
   @override
+  @HiveField(40)
   List<CodeableConcept>? get complication {
     final value = _complication;
     if (value == null) return null;
@@ -13306,6 +15138,7 @@ class _$_Procedure extends _Procedure {
 
   final List<Reference>? _complicationDetail;
   @override
+  @HiveField(41)
   List<Reference>? get complicationDetail {
     final value = _complicationDetail;
     if (value == null) return null;
@@ -13317,6 +15150,7 @@ class _$_Procedure extends _Procedure {
 
   final List<CodeableConcept>? _followUp;
   @override
+  @HiveField(42)
   List<CodeableConcept>? get followUp {
     final value = _followUp;
     if (value == null) return null;
@@ -13327,6 +15161,7 @@ class _$_Procedure extends _Procedure {
 
   final List<Annotation>? _note;
   @override
+  @HiveField(43)
   List<Annotation>? get note {
     final value = _note;
     if (value == null) return null;
@@ -13337,6 +15172,7 @@ class _$_Procedure extends _Procedure {
 
   final List<ProcedureFocalDevice>? _focalDevice;
   @override
+  @HiveField(44)
   List<ProcedureFocalDevice>? get focalDevice {
     final value = _focalDevice;
     if (value == null) return null;
@@ -13347,6 +15183,7 @@ class _$_Procedure extends _Procedure {
 
   final List<Reference>? _usedReference;
   @override
+  @HiveField(45)
   List<Reference>? get usedReference {
     final value = _usedReference;
     if (value == null) return null;
@@ -13357,6 +15194,7 @@ class _$_Procedure extends _Procedure {
 
   final List<CodeableConcept>? _usedCode;
   @override
+  @HiveField(46)
   List<CodeableConcept>? get usedCode {
     final value = _usedCode;
     if (value == null) return null;
@@ -13528,60 +15366,107 @@ class _$_Procedure extends _Procedure {
 abstract class _Procedure extends Procedure {
   factory _Procedure(
       {@JsonKey(unknownEnumValue: R4ResourceType.Procedure)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final List<Canonical>? instantiatesCanonical,
-      final List<FhirUri>? instantiatesUri,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          final List<Canonical>? instantiatesCanonical,
+      @HiveField(13)
+          final List<FhirUri>? instantiatesUri,
+      @HiveField(14)
       @JsonKey(name: '_instantiatesUri')
           final List<Element?>? instantiatesUriElement,
-      final List<Reference>? basedOn,
-      final List<Reference>? partOf,
-      final Code? status,
+      @HiveField(15)
+          final List<Reference>? basedOn,
+      @HiveField(16)
+          final List<Reference>? partOf,
+      @HiveField(17)
+          final Code? status,
+      @HiveField(18)
       @JsonKey(name: '_status')
           final Element? statusElement,
-      final CodeableConcept? statusReason,
-      final CodeableConcept? category,
-      final CodeableConcept? code,
-      required final Reference subject,
-      final Reference? encounter,
-      final FhirDateTime? performedDateTime,
+      @HiveField(19)
+          final CodeableConcept? statusReason,
+      @HiveField(20)
+          final CodeableConcept? category,
+      @HiveField(21)
+          final CodeableConcept? code,
+      @HiveField(22)
+          required final Reference subject,
+      @HiveField(23)
+          final Reference? encounter,
+      @HiveField(24)
+          final FhirDateTime? performedDateTime,
+      @HiveField(25)
       @JsonKey(name: '_performedDateTime')
           final Element? performedDateTimeElement,
-      final Period? performedPeriod,
-      final String? performedString,
+      @HiveField(26)
+          final Period? performedPeriod,
+      @HiveField(27)
+          final String? performedString,
+      @HiveField(28)
       @JsonKey(name: '_performedString')
           final Element? performedStringElement,
-      final Age? performedAge,
-      final Range? performedRange,
-      final Reference? recorder,
-      final Reference? asserter,
-      final List<ProcedurePerformer>? performer,
-      final Reference? location,
-      final List<CodeableConcept>? reasonCode,
-      final List<Reference>? reasonReference,
-      final List<CodeableConcept>? bodySite,
-      final CodeableConcept? outcome,
-      final List<Reference>? report,
-      final List<CodeableConcept>? complication,
-      final List<Reference>? complicationDetail,
-      final List<CodeableConcept>? followUp,
-      final List<Annotation>? note,
-      final List<ProcedureFocalDevice>? focalDevice,
-      final List<Reference>? usedReference,
-      final List<CodeableConcept>? usedCode}) = _$_Procedure;
+      @HiveField(29)
+          final Age? performedAge,
+      @HiveField(30)
+          final Range? performedRange,
+      @HiveField(31)
+          final Reference? recorder,
+      @HiveField(32)
+          final Reference? asserter,
+      @HiveField(33)
+          final List<ProcedurePerformer>? performer,
+      @HiveField(34)
+          final Reference? location,
+      @HiveField(35)
+          final List<CodeableConcept>? reasonCode,
+      @HiveField(36)
+          final List<Reference>? reasonReference,
+      @HiveField(37)
+          final List<CodeableConcept>? bodySite,
+      @HiveField(38)
+          final CodeableConcept? outcome,
+      @HiveField(39)
+          final List<Reference>? report,
+      @HiveField(40)
+          final List<CodeableConcept>? complication,
+      @HiveField(41)
+          final List<Reference>? complicationDetail,
+      @HiveField(42)
+          final List<CodeableConcept>? followUp,
+      @HiveField(43)
+          final List<Annotation>? note,
+      @HiveField(44)
+          final List<ProcedureFocalDevice>? focalDevice,
+      @HiveField(45)
+          final List<Reference>? usedReference,
+      @HiveField(46)
+          final List<CodeableConcept>? usedCode}) = _$_Procedure;
   _Procedure._() : super._();
 
   factory _Procedure.fromJson(Map<String, dynamic> json) =
@@ -13589,105 +15474,152 @@ abstract class _Procedure extends Procedure {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Procedure)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
+  @HiveField(1)
   String? get id;
   @override
+  @HiveField(2)
   Meta? get meta;
   @override
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
+  @HiveField(5)
   Code? get language;
   @override
+  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+  @HiveField(7)
   Narrative? get text;
   @override
+  @HiveField(8)
   List<Resource>? get contained;
   @override
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
+  @HiveField(11)
   List<Identifier>? get identifier;
   @override
+  @HiveField(12)
   List<Canonical>? get instantiatesCanonical;
   @override
+  @HiveField(13)
   List<FhirUri>? get instantiatesUri;
   @override
+  @HiveField(14)
   @JsonKey(name: '_instantiatesUri')
   List<Element?>? get instantiatesUriElement;
   @override
+  @HiveField(15)
   List<Reference>? get basedOn;
   @override
+  @HiveField(16)
   List<Reference>? get partOf;
   @override
+  @HiveField(17)
   Code? get status;
   @override
+  @HiveField(18)
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
+  @HiveField(19)
   CodeableConcept? get statusReason;
   @override
+  @HiveField(20)
   CodeableConcept? get category;
   @override
+  @HiveField(21)
   CodeableConcept? get code;
   @override
+  @HiveField(22)
   Reference get subject;
   @override
+  @HiveField(23)
   Reference? get encounter;
   @override
+  @HiveField(24)
   FhirDateTime? get performedDateTime;
   @override
+  @HiveField(25)
   @JsonKey(name: '_performedDateTime')
   Element? get performedDateTimeElement;
   @override
+  @HiveField(26)
   Period? get performedPeriod;
   @override
+  @HiveField(27)
   String? get performedString;
   @override
+  @HiveField(28)
   @JsonKey(name: '_performedString')
   Element? get performedStringElement;
   @override
+  @HiveField(29)
   Age? get performedAge;
   @override
+  @HiveField(30)
   Range? get performedRange;
   @override
+  @HiveField(31)
   Reference? get recorder;
   @override
+  @HiveField(32)
   Reference? get asserter;
   @override
+  @HiveField(33)
   List<ProcedurePerformer>? get performer;
   @override
+  @HiveField(34)
   Reference? get location;
   @override
+  @HiveField(35)
   List<CodeableConcept>? get reasonCode;
   @override
+  @HiveField(36)
   List<Reference>? get reasonReference;
   @override
+  @HiveField(37)
   List<CodeableConcept>? get bodySite;
   @override
+  @HiveField(38)
   CodeableConcept? get outcome;
   @override
+  @HiveField(39)
   List<Reference>? get report;
   @override
+  @HiveField(40)
   List<CodeableConcept>? get complication;
   @override
+  @HiveField(41)
   List<Reference>? get complicationDetail;
   @override
+  @HiveField(42)
   List<CodeableConcept>? get followUp;
   @override
+  @HiveField(43)
   List<Annotation>? get note;
   @override
+  @HiveField(44)
   List<ProcedureFocalDevice>? get focalDevice;
   @override
+  @HiveField(45)
   List<Reference>? get usedReference;
   @override
+  @HiveField(46)
   List<CodeableConcept>? get usedCode;
   @override
   @JsonKey(ignore: true)

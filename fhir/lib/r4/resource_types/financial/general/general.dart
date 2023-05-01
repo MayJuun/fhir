@@ -116,33 +116,40 @@ class Account with Resource, _$Account {
     @Default(R4ResourceType.Account)
     @JsonKey(unknownEnumValue: R4ResourceType.Account)
 
-        /// [resourceType] This is a Account resource
+    /// [resourceType] This is a Account resource
+    @HiveField(0)
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    String? id,
+    @HiveField(1)
+        String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    @HiveField(2)
+        Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    @HiveField(3)
+        FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
+    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    @HiveField(5)
+        Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
+    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -151,13 +158,15 @@ class Account with Resource, _$Account {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    Narrative? text,
+    @HiveField(7)
+        Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    List<Resource>? contained,
+    @HiveField(8)
+        List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -166,6 +175,7 @@ class Account with Resource, _$Account {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -181,61 +191,77 @@ class Account with Resource, _$Account {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(10)
+        List<FhirExtension>? modifierExtension,
 
     /// [identifier] Unique identifier used to reference the account.  Might or
     ///  might not be intended for human use (e.g. credit card number).
-    List<Identifier>? identifier,
+    @HiveField(11)
+        List<Identifier>? identifier,
 
     /// [status] Indicates whether the account is presently used/usable or not.
-    Code? status,
+    @HiveField(12)
+        Code? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
+    @HiveField(13)
         Element? statusElement,
 
     /// [type] Categorizes the account for reporting and searching purposes.
-    CodeableConcept? type,
+    @HiveField(14)
+        CodeableConcept? type,
+    @HiveField(15)
 
     /// [name] Name used for the account when displaying it to humans in reports,
     ///  etc.
-    String? name,
+    @HiveField(16)
+        String? name,
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name')
+    @HiveField(17)
         Element? nameElement,
 
     /// [subject] Identifies the entity which incurs the expenses. While the
     /// immediate recipients of services or goods might be entities related to the
     /// subject, the expenses were ultimately incurred by the subject of the
     ///  Account.
-    List<Reference>? subject,
+    @HiveField(18)
+        List<Reference>? subject,
 
     /// [servicePeriod] The date range of services associated with this account.
-    Period? servicePeriod,
+    @HiveField(19)
+        Period? servicePeriod,
 
     /// [coverage] The party(s) that are responsible for covering the payment of
     ///  this account, and what order should they be applied to the account.
-    List<AccountCoverage>? coverage,
+    @HiveField(20)
+        List<AccountCoverage>? coverage,
 
     /// [owner] Indicates the service area, hospital, department, etc. with
     ///  responsibility for managing the Account.
-    Reference? owner,
+    @HiveField(21)
+        Reference? owner,
 
     /// [description] Provides additional information about what the account
     ///  tracks and how it is used.
-    String? description,
+    @HiveField(22)
+        String? description,
 
     /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description')
+    @HiveField(23)
         Element? descriptionElement,
 
     /// [guarantor] The parties responsible for balancing the account if other
     ///  payment options fall short.
-    List<AccountGuarantor>? guarantor,
+    @HiveField(24)
+        List<AccountGuarantor>? guarantor,
 
     /// [partOf] Reference to a parent Account.
-    Reference? partOf,
+    @HiveField(25)
+        Reference? partOf,
   }) = _Account;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -658,33 +684,40 @@ class ChargeItem with Resource, _$ChargeItem {
     @Default(R4ResourceType.ChargeItem)
     @JsonKey(unknownEnumValue: R4ResourceType.ChargeItem)
 
-        /// [resourceType] This is a ChargeItem resource
+    /// [resourceType] This is a ChargeItem resource
+    @HiveField(0)
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    String? id,
+    @HiveField(1)
+        String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    @HiveField(2)
+        Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    @HiveField(3)
+        FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
+    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    @HiveField(5)
+        Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
+    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -693,13 +726,15 @@ class ChargeItem with Resource, _$ChargeItem {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    Narrative? text,
+    @HiveField(7)
+        Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    List<Resource>? contained,
+    @HiveField(8)
+        List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -708,6 +743,7 @@ class ChargeItem with Resource, _$ChargeItem {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -723,137 +759,174 @@ class ChargeItem with Resource, _$ChargeItem {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(10)
+        List<FhirExtension>? modifierExtension,
 
     /// [identifier] Identifiers assigned to this event performer or other
     ///  systems.
-    List<Identifier>? identifier,
+    @HiveField(11)
+        List<Identifier>? identifier,
+    @HiveField(12)
 
     /// [definitionUri] References the (external) source of pricing information,
     ///  rules of application for the code this ChargeItem uses.
-    List<FhirUri>? definitionUri,
+    @HiveField(13)
+        List<FhirUri>? definitionUri,
 
     /// [definitionUriElement] Extensions for definitionUri
     @JsonKey(name: '_definitionUri')
+    @HiveField(14)
         List<Element?>? definitionUriElement,
 
     /// [definitionCanonical] References the source of pricing information, rules
     ///  of application for the code this ChargeItem uses.
-    List<Canonical>? definitionCanonical,
+    @HiveField(15)
+        List<Canonical>? definitionCanonical,
 
     /// [status] The current state of the ChargeItem.
-    Code? status,
+    @HiveField(16)
+        Code? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
+    @HiveField(17)
         Element? statusElement,
 
     /// [partOf] ChargeItems can be grouped to larger ChargeItems covering the
     ///  whole set.
-    List<Reference>? partOf,
+    @HiveField(18)
+        List<Reference>? partOf,
 
     /// [code] A code that identifies the charge, like a billing code.
-    required CodeableConcept code,
+    @HiveField(19)
+        required CodeableConcept code,
 
     /// [subject] The individual or set of individuals the action is being or was
     ///  performed on.
-    required Reference subject,
+    @HiveField(20)
+        required Reference subject,
 
     /// [context] The encounter or episode of care that establishes the context
     ///  for this event.
-    Reference? context,
+    @HiveField(21)
+        Reference? context,
 
     /// [occurrenceDateTime] Date/time(s) or duration when the charged service
     ///  was applied.
-    FhirDateTime? occurrenceDateTime,
+    @HiveField(22)
+        FhirDateTime? occurrenceDateTime,
 
     /// [occurrenceDateTimeElement] Extensions for occurrenceDateTime
     @JsonKey(name: '_occurrenceDateTime')
+    @HiveField(23)
         Element? occurrenceDateTimeElement,
 
     /// [occurrencePeriod] Date/time(s) or duration when the charged service was
     ///  applied.
-    Period? occurrencePeriod,
+    @HiveField(24)
+        Period? occurrencePeriod,
 
     /// [occurrenceTiming] Date/time(s) or duration when the charged service was
     ///  applied.
-    Timing? occurrenceTiming,
+    @HiveField(25)
+        Timing? occurrenceTiming,
 
     /// [performer] Indicates who or what performed or participated in the
     ///  charged service.
-    List<ChargeItemPerformer>? performer,
+    @HiveField(26)
+        List<ChargeItemPerformer>? performer,
 
     /// [performingOrganization] The organization requesting the service.
-    Reference? performingOrganization,
+    @HiveField(27)
+        Reference? performingOrganization,
 
     /// [requestingOrganization] The organization performing the service.
-    Reference? requestingOrganization,
+    @HiveField(28)
+        Reference? requestingOrganization,
 
     /// [costCenter] The financial cost center permits the tracking of charge
     ///  attribution.
-    Reference? costCenter,
+    @HiveField(29)
+        Reference? costCenter,
 
     /// [quantity] Quantity of which the charge item has been serviced.
-    Quantity? quantity,
+    @HiveField(30)
+        Quantity? quantity,
 
     /// [bodysite] The anatomical location where the related service has been
     ///  applied.
-    List<CodeableConcept>? bodysite,
+    @HiveField(31)
+        List<CodeableConcept>? bodysite,
 
     /// [factorOverride] Factor overriding the factor determined by the rules
     ///  associated with the code.
-    Decimal? factorOverride,
+    @HiveField(32)
+        Decimal? factorOverride,
 
     /// [factorOverrideElement] Extensions for factorOverride
     @JsonKey(name: '_factorOverride')
+    @HiveField(33)
         Element? factorOverrideElement,
 
     /// [priceOverride] Total price of the charge overriding the list price
     ///  associated with the code.
-    Money? priceOverride,
+    @HiveField(34)
+        Money? priceOverride,
 
     /// [overrideReason] If the list price or the rule-based factor associated
     /// with the code is overridden, this attribute can capture a text to indicate
     ///  the  reason for this action.
-    String? overrideReason,
+    @HiveField(35)
+        String? overrideReason,
 
     /// [overrideReasonElement] Extensions for overrideReason
     @JsonKey(name: '_overrideReason')
+    @HiveField(36)
         Element? overrideReasonElement,
 
     /// [enterer] The device, practitioner, etc. who entered the charge item.
-    Reference? enterer,
+    @HiveField(37)
+        Reference? enterer,
 
     /// [enteredDate] Date the charge item was entered.
-    FhirDateTime? enteredDate,
+    @HiveField(38)
+        FhirDateTime? enteredDate,
 
     /// [enteredDateElement] Extensions for enteredDate
     @JsonKey(name: '_enteredDate')
+    @HiveField(39)
         Element? enteredDateElement,
 
     /// [reason] Describes why the event occurred in coded or textual form.
-    List<CodeableConcept>? reason,
+    @HiveField(40)
+        List<CodeableConcept>? reason,
 
     /// [service] Indicated the rendered service that caused this charge.
-    List<Reference>? service,
+    @HiveField(41)
+        List<Reference>? service,
 
     /// [productReference] Identifies the device, food, drug or other product
     ///  being charged either by type code or reference to an instance.
-    Reference? productReference,
+    @HiveField(42)
+        Reference? productReference,
 
     /// [productCodeableConcept] Identifies the device, food, drug or other
     ///  product being charged either by type code or reference to an instance.
-    CodeableConcept? productCodeableConcept,
+    @HiveField(43)
+        CodeableConcept? productCodeableConcept,
 
     /// [account] Account into which this ChargeItems belongs.
-    List<Reference>? account,
+    @HiveField(44)
+        List<Reference>? account,
 
     /// [note] Comments made about the event by the performer, subject or other
     ///  participants.
-    List<Annotation>? note,
+    @HiveField(45)
+        List<Annotation>? note,
 
     /// [supportingInformation] Further information supporting this charge.
-    List<Reference>? supportingInformation,
+    @HiveField(46)
+        List<Reference>? supportingInformation,
   }) = _ChargeItem;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1181,33 +1254,40 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     @Default(R4ResourceType.ChargeItemDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.ChargeItemDefinition)
 
-        /// [resourceType] This is a ChargeItemDefinition resource
+    /// [resourceType] This is a ChargeItemDefinition resource
+    @HiveField(0)
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    String? id,
+    @HiveField(1)
+        String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    @HiveField(2)
+        Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    @HiveField(3)
+        FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
+    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    @HiveField(5)
+        Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
+    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -1216,13 +1296,15 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    Narrative? text,
+    @HiveField(7)
+        Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    List<Resource>? contained,
+    @HiveField(8)
+        List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -1231,6 +1313,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -1246,7 +1329,8 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(10)
+        List<FhirExtension>? modifierExtension,
 
     /// [url] An absolute URI that is used to identify this charge item
     /// definition when it is referenced in a specification, model, design or an
@@ -1255,20 +1339,27 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     /// instance of this charge item definition is (or will be) published. This
     /// URL can be the target of a canonical reference. It SHALL remain the same
     ///  when the charge item definition is stored on different servers.
-    FhirUri? url,
+    @HiveField(11)
+        FhirUri? url,
 
     /// [urlElement] Extensions for url
     @JsonKey(name: '_url')
+    @HiveField(12)
         Element? urlElement,
 
     /// [identifier] A formal identifier that is used to identify this charge
     /// item definition when it is represented in other formats, or referenced in
     ///  a specification, model, design or an instance.
-    List<Identifier>? identifier,
+    @HiveField(13)
+        List<Identifier>? identifier,
 
     /// [version] The identifier that is used to identify this version of the
+    @HiveField(14)
+
     /// charge item definition when it is referenced in a specification, model,
     /// design or instance. This is an arbitrary value managed by the charge item
+    @HiveField(15)
+
     /// definition author and is not expected to be globally unique. For example,
     /// it might be a timestamp (e.g. yyyymmdd) if a managed version is not
     /// available. There is also no expectation that versions can be placed in a
@@ -1277,81 +1368,100 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     /// Major.Minor.Revision (e.g. 1.0.0). For more information on versioning
     /// knowledge assets, refer to the Decision Support Service specification.
     ///  Note that a version is required for non-experimental active assets.
-    String? version,
+    @HiveField(16)
+        String? version,
 
     /// [versionElement] Extensions for version
     @JsonKey(name: '_version')
+    @HiveField(17)
         Element? versionElement,
 
     /// [title] A short, descriptive, user-friendly title for the charge item
     ///  definition.
-    String? title,
+    @HiveField(18)
+        String? title,
 
     /// [titleElement] Extensions for title
     @JsonKey(name: '_title')
+    @HiveField(19)
         Element? titleElement,
 
     /// [derivedFromUri] The URL pointing to an externally-defined charge item
     ///  definition that is adhered to in whole or in part by this definition.
-    List<FhirUri>? derivedFromUri,
+    @HiveField(20)
+        List<FhirUri>? derivedFromUri,
 
     /// [derivedFromUriElement] Extensions for derivedFromUri
     @JsonKey(name: '_derivedFromUri')
+    @HiveField(21)
         List<Element?>? derivedFromUriElement,
 
     /// [partOf] A larger definition of which this particular definition is a
     ///  component or step.
-    List<Canonical>? partOf,
+    @HiveField(22)
+        List<Canonical>? partOf,
 
     /// [replaces] As new versions of a protocol or guideline are defined, allows
     ///  identification of what versions are replaced by a new instance.
-    List<Canonical>? replaces,
+    @HiveField(23)
+        List<Canonical>? replaces,
 
     /// [status] The current state of the ChargeItemDefinition.
-    Code? status,
+    @HiveField(24)
+        Code? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
+    @HiveField(25)
         Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this charge item
     /// definition is authored for testing purposes (or
     /// education/evaluation/marketing) and is not intended to be used for genuine
     ///  usage.
-    Boolean? experimental,
+    @HiveField(26)
+        Boolean? experimental,
 
     /// [experimentalElement] Extensions for experimental
     @JsonKey(name: '_experimental')
+    @HiveField(27)
         Element? experimentalElement,
 
     /// [date] The date  (and optionally time) when the charge item definition
     /// was published. The date must change when the business version changes and
     /// it must change if the status code changes. In addition, it should change
     ///  when the substantive content of the charge item definition changes.
-    FhirDateTime? date,
+    @HiveField(28)
+        FhirDateTime? date,
 
     /// [dateElement] Extensions for date
     @JsonKey(name: '_date')
+    @HiveField(29)
         Element? dateElement,
 
     /// [publisher] The name of the organization or individual that published the
     ///  charge item definition.
-    String? publisher,
+    @HiveField(30)
+        String? publisher,
 
     /// [publisherElement] Extensions for publisher
     @JsonKey(name: '_publisher')
+    @HiveField(31)
         Element? publisherElement,
 
     /// [contact] Contact details to assist a user in finding and communicating
     ///  with the publisher.
-    List<ContactDetail>? contact,
+    @HiveField(32)
+        List<ContactDetail>? contact,
 
     /// [description] A free text natural language description of the charge item
     ///  definition from a consumer's perspective.
-    Markdown? description,
+    @HiveField(33)
+        Markdown? description,
 
     /// [descriptionElement] Extensions for description
     @JsonKey(name: '_description')
+    @HiveField(34)
         Element? descriptionElement,
 
     /// [useContext] The content was developed with a focus and intent of
@@ -1359,59 +1469,72 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     /// categories (gender, age, ...) or may be references to specific programs
     /// (insurance plans, studies, ...) and may be used to assist with indexing
     ///  and searching for appropriate charge item definition instances.
-    List<UsageContext>? useContext,
+    @HiveField(35)
+        List<UsageContext>? useContext,
 
     /// [jurisdiction] A legal or geographic region in which the charge item
     ///  definition is intended to be used.
-    List<CodeableConcept>? jurisdiction,
+    @HiveField(36)
+        List<CodeableConcept>? jurisdiction,
 
     /// [copyright] A copyright statement relating to the charge item definition
     /// and/or its contents. Copyright statements are generally legal restrictions
     ///  on the use and publishing of the charge item definition.
-    Markdown? copyright,
+    @HiveField(37)
+        Markdown? copyright,
 
     /// [copyrightElement] Extensions for copyright
     @JsonKey(name: '_copyright')
+    @HiveField(38)
         Element? copyrightElement,
 
     /// [approvalDate] The date on which the resource content was approved by the
     /// publisher. Approval happens once when the content is officially approved
     ///  for usage.
-    Date? approvalDate,
+    @HiveField(39)
+        Date? approvalDate,
 
     /// [approvalDateElement] Extensions for approvalDate
     @JsonKey(name: '_approvalDate')
+    @HiveField(40)
         Element? approvalDateElement,
 
     /// [lastReviewDate] The date on which the resource content was last
     /// reviewed. Review happens periodically after approval but does not change
     ///  the original approval date.
-    Date? lastReviewDate,
+    @HiveField(41)
+        Date? lastReviewDate,
 
     /// [lastReviewDateElement] Extensions for lastReviewDate
     @JsonKey(name: '_lastReviewDate')
+    @HiveField(42)
         Element? lastReviewDateElement,
 
     /// [effectivePeriod] The period during which the charge item definition
     ///  content was or is planned to be in active use.
-    Period? effectivePeriod,
+    @HiveField(43)
+        Period? effectivePeriod,
 
     /// [code] The defined billing details in this resource pertain to the given
     ///  billing code.
-    CodeableConcept? code,
+    @HiveField(44)
+        CodeableConcept? code,
 
     /// [instance] The defined billing details in this resource pertain to the
     ///  given product instance(s).
-    List<Reference>? instance,
+    @HiveField(45)
+        List<Reference>? instance,
 
     /// [applicability] Expressions that describe applicability criteria for the
     ///  billing code.
-    List<ChargeItemDefinitionApplicability>? applicability,
+    @HiveField(46)
+        List<ChargeItemDefinitionApplicability>? applicability,
 
     /// [propertyGroup] Group of properties which are applicable under the same
     /// conditions. If no applicability rules are established for the group, then
     ///  all properties always apply.
-    List<ChargeItemDefinitionPropertyGroup>? propertyGroup,
+    @HiveField(47)
+        List<ChargeItemDefinitionPropertyGroup>? propertyGroup,
   }) = _ChargeItemDefinition;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2007,33 +2130,40 @@ class Contract with Resource, _$Contract {
     @Default(R4ResourceType.Contract)
     @JsonKey(unknownEnumValue: R4ResourceType.Contract)
 
-        /// [resourceType] This is a Contract resource
+    /// [resourceType] This is a Contract resource
+    @HiveField(0)
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    String? id,
+    @HiveField(1)
+        String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    @HiveField(2)
+        Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    @HiveField(3)
+        FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
+    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    @HiveField(5)
+        Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
+    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -2042,13 +2172,15 @@ class Contract with Resource, _$Contract {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    Narrative? text,
+    @HiveField(7)
+        Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    List<Resource>? contained,
+    @HiveField(8)
+        List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -2057,6 +2189,7 @@ class Contract with Resource, _$Contract {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -2072,170 +2205,217 @@ class Contract with Resource, _$Contract {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(10)
+        List<FhirExtension>? modifierExtension,
 
     /// [identifier] Unique identifier for this Contract or a derivative that
     ///  references a Source Contract.
-    List<Identifier>? identifier,
+    @HiveField(11)
+        List<Identifier>? identifier,
 
     /// [url] Canonical identifier for this contract, represented as a URI
     ///  (globally unique).
-    FhirUri? url,
+    @HiveField(12)
+        FhirUri? url,
 
     /// [urlElement] Extensions for url
     @JsonKey(name: '_url')
+    @HiveField(13)
         Element? urlElement,
 
     /// [version] An edition identifier used for business purposes to label
     ///  business significant variants.
-    String? version,
+    @HiveField(14)
+        String? version,
 
     /// [versionElement] Extensions for version
     @JsonKey(name: '_version')
+    @HiveField(15)
         Element? versionElement,
 
     /// [status] The status of the resource instance.
-    Code? status,
+    @HiveField(16)
+        Code? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
+    @HiveField(17)
         Element? statusElement,
 
     /// [legalState] Legal states of the formation of a legal instrument, which
     /// is a formally executed written document that can be formally attributed to
+    @HiveField(18)
+
     /// its author, records and formally expresses a legally enforceable act,
     /// process, or contractual duty, obligation, or right, and therefore
     ///  evidences that act, process, or agreement.
-    CodeableConcept? legalState,
+    @HiveField(19)
+        CodeableConcept? legalState,
 
     /// [instantiatesCanonical] The URL pointing to a FHIR-defined Contract
     ///  Definition that is adhered to in whole or part by this Contract.
-    Reference? instantiatesCanonical,
+    @HiveField(20)
+        Reference? instantiatesCanonical,
 
     /// [instantiatesUri] The URL pointing to an externally maintained definition
     ///  that is adhered to in whole or in part by this Contract.
-    FhirUri? instantiatesUri,
+    @HiveField(21)
+        FhirUri? instantiatesUri,
 
     /// [instantiatesUriElement] Extensions for instantiatesUri
     @JsonKey(name: '_instantiatesUri')
+    @HiveField(22)
         Element? instantiatesUriElement,
 
     /// [contentDerivative] The minimal content derived from the basal
     ///  information source at a specific stage in its lifecycle.
-    CodeableConcept? contentDerivative,
+    @HiveField(23)
+        CodeableConcept? contentDerivative,
 
     /// [issued] When this  Contract was issued.
-    FhirDateTime? issued,
+    @HiveField(24)
+        FhirDateTime? issued,
 
     /// [issuedElement] Extensions for issued
     @JsonKey(name: '_issued')
+    @HiveField(25)
         Element? issuedElement,
 
     /// [applies] Relevant time or time-period when this Contract is applicable.
-    Period? applies,
+    @HiveField(26)
+        Period? applies,
 
     /// [expirationType] Event resulting in discontinuation or termination of
     ///  this Contract instance by one or more parties to the contract.
-    CodeableConcept? expirationType,
+    @HiveField(27)
+        CodeableConcept? expirationType,
 
     /// [subject] The target entity impacted by or of interest to parties to the
     ///  agreement.
-    List<Reference>? subject,
+    @HiveField(28)
+        List<Reference>? subject,
+    @HiveField(29)
 
     /// [authority] A formally or informally recognized grouping of people,
     /// principals, organizations, or jurisdictions formed for the purpose of
+    @HiveField(30)
+
     /// achieving some form of collective action such as the promulgation,
     ///  administration and enforcement of contracts and policies.
-    List<Reference>? authority,
+    @HiveField(31)
+        List<Reference>? authority,
 
     /// [domain] Recognized governance framework or system operating with a
+    @HiveField(32)
+
     /// circumscribed scope in accordance with specified principles, policies,
     /// processes or procedures for managing rights, actions, or behaviors of
     ///  parties or principals relative to resources.
-    List<Reference>? domain,
+    @HiveField(33)
+        List<Reference>? domain,
 
     /// [site] Sites in which the contract is complied with,  exercised, or in
     ///  force.
-    List<Reference>? site,
+    @HiveField(34)
+        List<Reference>? site,
+    @HiveField(35)
 
     /// [name] A natural language name identifying this Contract definition,
     /// derivative, or instance in any legal state. Provides additional
     /// information about its content. This name should be usable as an identifier
     /// for the module by machine processing applications such as code
     ///  generation.
-    String? name,
+    @HiveField(36)
+        String? name,
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name')
+    @HiveField(37)
         Element? nameElement,
 
     /// [title] A short, descriptive, user-friendly title for this Contract
     /// definition, derivative, or instance in any legal state.t giving additional
     ///  information about its content.
-    String? title,
+    @HiveField(38)
+        String? title,
 
     /// [titleElement] Extensions for title
     @JsonKey(name: '_title')
+    @HiveField(39)
         Element? titleElement,
 
     /// [subtitle] An explanatory or alternate user-friendly title for this
     /// Contract definition, derivative, or instance in any legal state.t giving
     ///  additional information about its content.
-    String? subtitle,
+    @HiveField(40)
+        String? subtitle,
 
     /// [subtitleElement] Extensions for subtitle
     @JsonKey(name: '_subtitle')
+    @HiveField(41)
         Element? subtitleElement,
 
     /// [alias] Alternative representation of the title for this Contract
     /// definition, derivative, or instance in any legal state., e.g., a domain
     ///  specific contract number related to legislation.
-    List<String>? alias,
+    @HiveField(42)
+        List<String>? alias,
 
     /// [aliasElement] Extensions for alias
     @JsonKey(name: '_alias')
+    @HiveField(43)
         List<Element?>? aliasElement,
 
     /// [author] The individual or organization that authored the Contract
     ///  definition, derivative, or instance in any legal state.
-    Reference? author,
+    @HiveField(44)
+        Reference? author,
+    @HiveField(45)
 
     /// [scope] A selector of legal concerns for this Contract definition,
     ///  derivative, or instance in any legal state.
-    CodeableConcept? scope,
+    @HiveField(46)
+        CodeableConcept? scope,
 
     /// [topicCodeableConcept] Narrows the range of legal concerns to focus on
     ///  the achievement of specific contractual objectives.
-    CodeableConcept? topicCodeableConcept,
+    @HiveField(47)
+        CodeableConcept? topicCodeableConcept,
 
     /// [topicReference] Narrows the range of legal concerns to focus on the
     ///  achievement of specific contractual objectives.
-    Reference? topicReference,
+    @HiveField(48)
+        Reference? topicReference,
 
     /// [type] A high-level category for the legal instrument, whether
     /// constructed as a Contract definition, derivative, or instance in any legal
     /// state.  Provides additional information about its content within the
     /// context of the Contract's scope to distinguish the kinds of systems that
     ///  would be interested in the contract.
-    CodeableConcept? type,
+    @HiveField(49)
+        CodeableConcept? type,
 
     /// [subType] Sub-category for the Contract that distinguishes the kinds of
     /// systems that would be interested in the Contract within the context of the
     ///  Contract's scope.
-    List<CodeableConcept>? subType,
+    @HiveField(50)
+        List<CodeableConcept>? subType,
 
     /// [contentDefinition] Precusory content developed with a focus and intent
     /// of supporting the formation a Contract instance, which may be associated
     ///  with and transformable into a Contract.
-    ContractContentDefinition? contentDefinition,
+    @HiveField(51)
+        ContractContentDefinition? contentDefinition,
 
     /// [term] One or more Contract Provisions, which may be related and conveyed
     ///  as a group, and may contain nested groups.
-    List<ContractTerm>? term,
+    @HiveField(52)
+        List<ContractTerm>? term,
 
     /// [supportingInfo] Information that may be needed by/relevant to the
     ///  performer in their execution of this term action.
-    List<Reference>? supportingInfo,
+    @HiveField(53)
+        List<Reference>? supportingInfo,
 
     /// [relevantHistory] Links to Provenance records for past versions of this
     /// Contract definition, derivative, or instance, which identify key state
@@ -2243,41 +2423,50 @@ class Contract with Resource, _$Contract {
     /// the current version of the Contract.  The Provence.entity indicates the
     /// target that was changed in the update.
     ///  http://build.fhir.org/provenance-definitions.html#Provenance.entity.
-    List<Reference>? relevantHistory,
+    @HiveField(54)
+        List<Reference>? relevantHistory,
 
     /// [signer] Parties with legal standing in the Contract, including the
     /// principal parties, the grantor(s) and grantee(s), which are any person or
     /// organization bound by the contract, and any ancillary parties, which
     ///  facilitate the execution of the contract such as a notary or witness.
-    List<ContractSigner>? signer,
+    @HiveField(55)
+        List<ContractSigner>? signer,
 
     /// [friendly] The "patient friendly language" versionof the Contract in
     /// whole or in parts. "Patient friendly language" means the representation of
     /// the Contract and Contract Provisions in a manner that is readily
     /// accessible and understandable by a layperson in accordance with best
     /// practices for communication styles that ensure that those agreeing to or
+    @HiveField(56)
+
     /// signing the Contract understand the roles, actions, obligations,
     ///  responsibilities, and implication of the agreement.
-    List<ContractFriendly>? friendly,
+    @HiveField(57)
+        List<ContractFriendly>? friendly,
 
     /// [legal] List of Legal expressions or representations of this Contract.
-    List<ContractLegal>? legal,
+    @HiveField(58)
+        List<ContractLegal>? legal,
 
     /// [rule] List of Computable Policy Rule Language Representations of this
     ///  Contract.
-    List<ContractRule>? rule,
+    @HiveField(59)
+        List<ContractRule>? rule,
 
     /// [legallyBindingAttachment] Legally binding Contract: This is the signed
     /// and legally recognized representation of the Contract, which is considered
     /// the "source of truth" and which would be the basis for legal action
     ///  related to enforcement of this Contract.
-    Attachment? legallyBindingAttachment,
+    @HiveField(60)
+        Attachment? legallyBindingAttachment,
 
     /// [legallyBindingReference] Legally binding Contract: This is the signed
     /// and legally recognized representation of the Contract, which is considered
     /// the "source of truth" and which would be the basis for legal action
     ///  related to enforcement of this Contract.
-    Reference? legallyBindingReference,
+    @HiveField(61)
+        Reference? legallyBindingReference,
   }) = _Contract;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -4915,33 +5104,40 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
     @Default(R4ResourceType.ExplanationOfBenefit)
     @JsonKey(unknownEnumValue: R4ResourceType.ExplanationOfBenefit)
 
-        /// [resourceType] This is a ExplanationOfBenefit resource
+    /// [resourceType] This is a ExplanationOfBenefit resource
+    @HiveField(0)
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    String? id,
+    @HiveField(1)
+        String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    @HiveField(2)
+        Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    @HiveField(3)
+        FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
+    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    @HiveField(5)
+        Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
+    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -4950,13 +5146,15 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    Narrative? text,
+    @HiveField(7)
+        Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    List<Resource>? contained,
+    @HiveField(8)
+        List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -4965,6 +5163,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -4980,204 +5179,260 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(10)
+        List<FhirExtension>? modifierExtension,
 
     /// [identifier] A unique identifier assigned to this explanation of benefit.
-    List<Identifier>? identifier,
+    @HiveField(11)
+        List<Identifier>? identifier,
 
     /// [status] The status of the resource instance.
-    Code? status,
+    @HiveField(12)
+        Code? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
+    @HiveField(13)
         Element? statusElement,
+    @HiveField(14)
 
     /// [type] The category of claim, e.g. oral, pharmacy, vision, institutional,
     ///  professional.
-    required CodeableConcept type,
+    @HiveField(15)
+        required CodeableConcept type,
 
     /// [subType] A finer grained suite of claim type codes which may convey
     /// additional information such as Inpatient vs Outpatient and/or a specialty
     ///  service.
-    CodeableConcept? subType,
+    @HiveField(16)
+        CodeableConcept? subType,
 
     /// [use] A code to indicate whether the nature of the request is: to request
     /// adjudication of products and services previously rendered; or requesting
     /// authorization and adjudication for provision in the future; or requesting
     /// the non-binding adjudication of the listed products and services which
     ///  could be provided in the future.
-    Code? use,
+    @HiveField(17)
+        Code? use,
 
     /// [useElement] Extensions for use
     @JsonKey(name: '_use')
+    @HiveField(18)
         Element? useElement,
 
     /// [patient] The party to whom the professional services and/or products
     /// have been supplied or are being considered and for whom actual for
     ///  forecast reimbursement is sought.
-    required Reference patient,
+    @HiveField(19)
+        required Reference patient,
 
     /// [billablePeriod] The period for which charges are being submitted.
-    Period? billablePeriod,
+    @HiveField(20)
+        Period? billablePeriod,
 
     /// [created] The date this resource was created.
-    FhirDateTime? created,
+    @HiveField(21)
+        FhirDateTime? created,
 
     /// [createdElement] Extensions for created
     @JsonKey(name: '_created')
+    @HiveField(22)
         Element? createdElement,
 
     /// [enterer] Individual who created the claim, predetermination or
     ///  preauthorization.
-    Reference? enterer,
+    @HiveField(23)
+        Reference? enterer,
 
     /// [insurer] The party responsible for authorization, adjudication and
     ///  reimbursement.
-    required Reference insurer,
+    @HiveField(24)
+        required Reference insurer,
+    @HiveField(25)
 
     /// [provider] The provider which is responsible for the claim,
     ///  predetermination or preauthorization.
-    required Reference provider,
+    @HiveField(26)
+        required Reference provider,
 
     /// [priority] The provider-required urgency of processing the request.
     ///  Typical values include: stat, routine deferred.
-    CodeableConcept? priority,
+    @HiveField(27)
+        CodeableConcept? priority,
 
     /// [fundsReserveRequested] A code to indicate whether and for whom funds are
     ///  to be reserved for future claims.
-    CodeableConcept? fundsReserveRequested,
+    @HiveField(28)
+        CodeableConcept? fundsReserveRequested,
 
     /// [fundsReserve] A code, used only on a response to a preauthorization, to
     ///  indicate whether the benefits payable have been reserved and for whom.
-    CodeableConcept? fundsReserve,
+    @HiveField(29)
+        CodeableConcept? fundsReserve,
 
     /// [related] Other claims which are related to this claim such as prior
     ///  submissions or claims for related services or for the same event.
-    List<ExplanationOfBenefitRelated>? related,
+    @HiveField(30)
+        List<ExplanationOfBenefitRelated>? related,
 
     /// [prescription] Prescription to support the dispensing of pharmacy, device
     ///  or vision products.
-    Reference? prescription,
+    @HiveField(31)
+        Reference? prescription,
 
     /// [originalPrescription] Original prescription which has been superseded by
+    @HiveField(32)
+
     /// this prescription to support the dispensing of pharmacy services,
     ///  medications or products.
-    Reference? originalPrescription,
+    @HiveField(33)
+        Reference? originalPrescription,
 
     /// [payee] The party to be reimbursed for cost of the products and services
     ///  according to the terms of the policy.
-    ExplanationOfBenefitPayee? payee,
+    @HiveField(34)
+        ExplanationOfBenefitPayee? payee,
 
     /// [referral] A reference to a referral resource.
-    Reference? referral,
+    @HiveField(35)
+        Reference? referral,
 
     /// [facility] Facility where the services were provided.
-    Reference? facility,
+    @HiveField(36)
+        Reference? facility,
 
     /// [claim] The business identifier for the instance of the adjudication
     ///  request: claim predetermination or preauthorization.
-    Reference? claim,
+    @HiveField(37)
+        Reference? claim,
 
     /// [claimResponse] The business identifier for the instance of the
     /// adjudication response: claim, predetermination or preauthorization
     ///  response.
-    Reference? claimResponse,
+    @HiveField(38)
+        Reference? claimResponse,
 
     /// [outcome] The outcome of the claim, predetermination, or preauthorization
     ///  processing.
-    Code? outcome,
+    @HiveField(39)
+        Code? outcome,
 
     /// [outcomeElement] Extensions for outcome
     @JsonKey(name: '_outcome')
+    @HiveField(40)
         Element? outcomeElement,
 
     /// [disposition] A human readable description of the status of the
     ///  adjudication.
-    String? disposition,
+    @HiveField(41)
+        String? disposition,
 
     /// [dispositionElement] Extensions for disposition
     @JsonKey(name: '_disposition')
+    @HiveField(42)
         Element? dispositionElement,
 
     /// [preAuthRef] Reference from the Insurer which is used in later
     ///  communications which refers to this adjudication.
-    List<String>? preAuthRef,
+    @HiveField(43)
+        List<String>? preAuthRef,
 
     /// [preAuthRefElement] Extensions for preAuthRef
     @JsonKey(name: '_preAuthRef')
+    @HiveField(44)
         List<Element?>? preAuthRefElement,
 
     /// [preAuthRefPeriod] The timeframe during which the supplied
     /// preauthorization reference may be quoted on claims to obtain the
     ///  adjudication as provided.
-    List<Period>? preAuthRefPeriod,
+    @HiveField(45)
+        List<Period>? preAuthRefPeriod,
 
     /// [careTeam] The members of the team who provided the products and
     ///  services.
-    List<ExplanationOfBenefitCareTeam>? careTeam,
+    @HiveField(46)
+        List<ExplanationOfBenefitCareTeam>? careTeam,
+    @HiveField(47)
 
     /// [supportingInfo] Additional information codes regarding exceptions,
     /// special considerations, the condition, situation, prior or concurrent
     ///  issues.
-    List<ExplanationOfBenefitSupportingInfo>? supportingInfo,
+    @HiveField(48)
+        List<ExplanationOfBenefitSupportingInfo>? supportingInfo,
 
     /// [diagnosis] Information about diagnoses relevant to the claim items.
-    List<ExplanationOfBenefitDiagnosis>? diagnosis,
+    @HiveField(49)
+        List<ExplanationOfBenefitDiagnosis>? diagnosis,
 
     /// [procedure] Procedures performed on the patient relevant to the billing
     ///  items with the claim.
-    List<ExplanationOfBenefitProcedure>? procedure,
+    @HiveField(50)
+        List<ExplanationOfBenefitProcedure>? procedure,
 
     /// [precedence] This indicates the relative order of a series of EOBs
     ///  related to different coverages for the same suite of services.
-    PositiveInt? precedence,
+    @HiveField(51)
+        PositiveInt? precedence,
 
     /// [precedenceElement] Extensions for precedence
     @JsonKey(name: '_precedence')
+    @HiveField(52)
         Element? precedenceElement,
 
     /// [insurance] Financial instruments for reimbursement for the health care
     ///  products and services specified on the claim.
-    required List<ExplanationOfBenefitInsurance> insurance,
+    @HiveField(53)
+        required List<ExplanationOfBenefitInsurance> insurance,
 
     /// [accident] Details of a accident which resulted in injuries which
     ///  required the products and services listed in the claim.
-    ExplanationOfBenefitAccident? accident,
+    @HiveField(54)
+        ExplanationOfBenefitAccident? accident,
 
     /// [item] A claim line. Either a simple (a product or service) or a 'group'
     ///  of details which can also be a simple items or groups of sub-details.
-    List<ExplanationOfBenefitItem>? item,
+    @HiveField(55)
+        List<ExplanationOfBenefitItem>? item,
 
     /// [addItem] The first-tier service adjudications for payor added product or
     ///  service lines.
-    List<ExplanationOfBenefitAddItem>? addItem,
+    @HiveField(56)
+        List<ExplanationOfBenefitAddItem>? addItem,
 
     /// [adjudication] The adjudication results which are presented at the header
     ///  level rather than at the line-item or add-item levels.
-    List<ExplanationOfBenefitAdjudication>? adjudication,
+    @HiveField(57)
+        List<ExplanationOfBenefitAdjudication>? adjudication,
 
     /// [total] Categorized monetary totals for the adjudication.
-    List<ExplanationOfBenefitTotal>? total,
+    @HiveField(58)
+        List<ExplanationOfBenefitTotal>? total,
 
     /// [payment] Payment details for the adjudication of the claim.
-    ExplanationOfBenefitPayment? payment,
+    @HiveField(59)
+        ExplanationOfBenefitPayment? payment,
 
     /// [formCode] A code for the form to be used for printing the content.
-    CodeableConcept? formCode,
+    @HiveField(60)
+        CodeableConcept? formCode,
 
     /// [form] The actual form, by reference or inclusion, for printing the
     ///  content or an EOB.
-    Attachment? form,
+    @HiveField(61)
+        Attachment? form,
 
     /// [processNote] A note that describes or explains adjudication results in a
     ///  human readable form.
-    List<ExplanationOfBenefitProcessNote>? processNote,
+    @HiveField(62)
+        List<ExplanationOfBenefitProcessNote>? processNote,
 
     /// [benefitPeriod] The term of the benefits documented in this response.
-    Period? benefitPeriod,
+    @HiveField(63)
+        Period? benefitPeriod,
 
     /// [benefitBalance] Balance by Benefit Category.
-    List<ExplanationOfBenefitBenefitBalance>? benefitBalance,
+    @HiveField(64)
+        List<ExplanationOfBenefitBenefitBalance>? benefitBalance,
   }) = _ExplanationOfBenefit;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -8505,33 +8760,40 @@ class InsurancePlan with Resource, _$InsurancePlan {
     @Default(R4ResourceType.InsurancePlan)
     @JsonKey(unknownEnumValue: R4ResourceType.InsurancePlan)
 
-        /// [resourceType] This is a InsurancePlan resource
+    /// [resourceType] This is a InsurancePlan resource
+    @HiveField(0)
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    String? id,
+    @HiveField(1)
+        String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    @HiveField(2)
+        Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    @HiveField(3)
+        FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
+    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    @HiveField(5)
+        Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
+    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -8540,13 +8802,15 @@ class InsurancePlan with Resource, _$InsurancePlan {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    Narrative? text,
+    @HiveField(7)
+        Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    List<Resource>? contained,
+    @HiveField(8)
+        List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -8555,6 +8819,7 @@ class InsurancePlan with Resource, _$InsurancePlan {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -8570,75 +8835,93 @@ class InsurancePlan with Resource, _$InsurancePlan {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(10)
+        List<FhirExtension>? modifierExtension,
 
     /// [identifier] Business identifiers assigned to this health insurance
     /// product which remain constant as the resource is updated and propagates
     ///  from server to server.
-    List<Identifier>? identifier,
+    @HiveField(11)
+        List<Identifier>? identifier,
 
     /// [status] The current state of the health insurance product.
-    Code? status,
+    @HiveField(12)
+        Code? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
+    @HiveField(13)
         Element? statusElement,
 
     /// [type] The kind of health insurance product.
-    List<CodeableConcept>? type,
+    @HiveField(14)
+        List<CodeableConcept>? type,
 
     /// [name] Official name of the health insurance product as designated by the
     ///  owner.
-    String? name,
+    @HiveField(15)
+        String? name,
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name')
+    @HiveField(16)
         Element? nameElement,
 
     /// [alias] A list of alternate names that the product is known as, or was
     ///  known as in the past.
-    List<String>? alias,
+    @HiveField(17)
+        List<String>? alias,
 
     /// [aliasElement] Extensions for alias
     @JsonKey(name: '_alias')
+    @HiveField(18)
         List<Element?>? aliasElement,
 
     /// [period] The period of time that the health insurance product is
     ///  available.
-    Period? period,
+    @HiveField(19)
+        Period? period,
 
     /// [ownedBy] The entity that is providing  the health insurance product and
     /// underwriting the risk.  This is typically an insurance carriers, other
     /// third-party payers, or health plan sponsors comonly referred to as
     ///  'payers'.
-    Reference? ownedBy,
+    @HiveField(20)
+        Reference? ownedBy,
 
     /// [administeredBy] An organization which administer other services such as
     /// underwriting, customer service and/or claims processing on behalf of the
     ///  health insurance product owner.
-    Reference? administeredBy,
+    @HiveField(21)
+        Reference? administeredBy,
 
     /// [coverageArea] The geographic region in which a health insurance
     ///  product's benefits apply.
-    List<Reference>? coverageArea,
+    @HiveField(22)
+        List<Reference>? coverageArea,
 
     /// [contact] The contact for the health insurance product for a certain
     ///  purpose.
-    List<InsurancePlanContact>? contact,
+    @HiveField(23)
+        List<InsurancePlanContact>? contact,
 
     /// [endpoint] The technical endpoints providing access to services operated
     ///  for the health insurance product.
-    List<Reference>? endpoint,
+    @HiveField(24)
+        List<Reference>? endpoint,
 
     /// [network] Reference to the network included in the health insurance
     ///  product.
-    List<Reference>? network,
+    @HiveField(25)
+        List<Reference>? network,
 
     /// [coverage] Details about the coverage offered by the insurance product.
-    List<InsurancePlanCoverage>? coverage,
+    @HiveField(26)
+        List<InsurancePlanCoverage>? coverage,
 
     /// [plan] Details about an insurance plan.
-    List<InsurancePlanPlan>? plan,
+    @HiveField(27)
+        List<InsurancePlanPlan>? plan,
   }) = _InsurancePlan;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument

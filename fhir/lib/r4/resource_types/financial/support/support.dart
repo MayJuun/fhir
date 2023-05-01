@@ -144,33 +144,40 @@ class Coverage with Resource, _$Coverage {
     @Default(R4ResourceType.Coverage)
     @JsonKey(unknownEnumValue: R4ResourceType.Coverage)
 
-        /// [resourceType] This is a Coverage resource
+    /// [resourceType] This is a Coverage resource
+    @HiveField(0)
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    String? id,
+    @HiveField(1)
+        String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    @HiveField(2)
+        Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    @HiveField(3)
+        FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
+    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    @HiveField(5)
+        Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
+    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -179,13 +186,15 @@ class Coverage with Resource, _$Coverage {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    Narrative? text,
+    @HiveField(7)
+        Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    List<Resource>? contained,
+    @HiveField(8)
+        List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -194,6 +203,7 @@ class Coverage with Resource, _$Coverage {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -209,102 +219,126 @@ class Coverage with Resource, _$Coverage {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(10)
+        List<FhirExtension>? modifierExtension,
 
     /// [identifier] A unique identifier assigned to this coverage.
-    List<Identifier>? identifier,
+    @HiveField(11)
+        List<Identifier>? identifier,
 
     /// [status] The status of the resource instance.
-    Code? status,
+    @HiveField(12)
+        Code? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
+    @HiveField(13)
         Element? statusElement,
 
     /// [type] The type of coverage: social program, medical plan, accident
     /// coverage (workers compensation, auto), group health or payment by an
     ///  individual or organization.
-    CodeableConcept? type,
+    @HiveField(14)
+        CodeableConcept? type,
 
     /// [policyHolder] The party who 'owns' the insurance policy.
-    Reference? policyHolder,
+    @HiveField(15)
+        Reference? policyHolder,
 
     /// [subscriber] The party who has signed-up for or 'owns' the contractual
     /// relationship to the policy or to whom the benefit of the policy for
     ///  services rendered to them or their family is due.
-    Reference? subscriber,
+    @HiveField(16)
+        Reference? subscriber,
 
     /// [subscriberId] The insurer assigned ID for the Subscriber.
-    String? subscriberId,
+    @HiveField(17)
+        String? subscriberId,
 
     /// [subscriberIdElement] Extensions for subscriberId
     @JsonKey(name: '_subscriberId')
+    @HiveField(18)
         Element? subscriberIdElement,
 
     /// [beneficiary] The party who benefits from the insurance coverage; the
     ///  patient when products and/or services are provided.
-    required Reference beneficiary,
+    @HiveField(19)
+        required Reference beneficiary,
 
     /// [dependent] A unique identifier for a dependent under the coverage.
-    String? dependent,
+    @HiveField(20)
+        String? dependent,
 
     /// [dependentElement] Extensions for dependent
     @JsonKey(name: '_dependent')
+    @HiveField(21)
         Element? dependentElement,
 
     /// [relationship] The relationship of beneficiary (patient) to the
     ///  subscriber.
-    CodeableConcept? relationship,
+    @HiveField(22)
+        CodeableConcept? relationship,
 
     /// [period] Time period during which the coverage is in force. A missing
     /// start date indicates the start date isn't known, a missing end date means
     ///  the coverage is continuing to be in force.
-    Period? period,
+    @HiveField(23)
+        Period? period,
 
     /// [payor] The program or plan underwriter or payor including both insurance
     ///  and non-insurance agreements, such as patient-pay agreements.
-    required List<Reference> payor,
+    @HiveField(24)
+        required List<Reference> payor,
 
     /// [class] A suite of underwriter specific classifiers.
     @JsonKey(name: 'class')
+    @HiveField(25)
         List<CoverageClass>? class_,
 
     /// [order] The order of applicability of this coverage relative to other
     /// coverages which are currently in force. Note, there may be gaps in the
     /// numbering and this does not imply primary, secondary etc. as the specific
     ///  positioning of coverages depends upon the episode of care.
-    PositiveInt? order,
+    @HiveField(26)
+        PositiveInt? order,
 
     /// [orderElement] Extensions for order
     @JsonKey(name: '_order')
+    @HiveField(27)
         Element? orderElement,
 
     /// [network] The insurer-specific identifier for the insurer-defined network
     /// of providers to which the beneficiary may seek treatment which will be
     /// covered at the 'in-network' rate, otherwise 'out of network' terms and
     ///  conditions apply.
-    String? network,
+    @HiveField(28)
+        String? network,
 
     /// [networkElement] Extensions for network
     @JsonKey(name: '_network')
+    @HiveField(29)
         Element? networkElement,
 
     /// [costToBeneficiary] A suite of codes indicating the cost category and
     /// associated amount which have been detailed in the policy and may have been
     ///   included on the health card.
-    List<CoverageCostToBeneficiary>? costToBeneficiary,
+    @HiveField(30)
+        List<CoverageCostToBeneficiary>? costToBeneficiary,
 
     /// [subrogation] When 'subrogation=true' this insurance instance has been
     /// included not for adjudication but to provide insurers with the details to
     ///  recover costs.
-    Boolean? subrogation,
+    @HiveField(31)
+        Boolean? subrogation,
 
     /// [subrogationElement] Extensions for subrogation
     @JsonKey(name: '_subrogation')
+    @HiveField(32)
         Element? subrogationElement,
 
     /// [contract] The policy(s) which constitute this insurance coverage.
-    List<Reference>? contract,
+    @HiveField(33)
+        List<Reference>? contract,
   }) = _Coverage;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -799,33 +833,40 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
     @Default(R4ResourceType.CoverageEligibilityRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityRequest)
 
-        /// [resourceType] This is a CoverageEligibilityRequest resource
+    /// [resourceType] This is a CoverageEligibilityRequest resource
+    @HiveField(0)
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    String? id,
+    @HiveField(1)
+        String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    @HiveField(2)
+        Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    @HiveField(3)
+        FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
+    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    @HiveField(5)
+        Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
+    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -834,13 +875,15 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    Narrative? text,
+    @HiveField(7)
+        Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    List<Resource>? contained,
+    @HiveField(8)
+        List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -849,6 +892,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -864,83 +908,104 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(10)
+        List<FhirExtension>? modifierExtension,
 
     /// [identifier] A unique identifier assigned to this coverage eligiblity
     ///  request.
-    List<Identifier>? identifier,
+    @HiveField(11)
+        List<Identifier>? identifier,
 
     /// [status] The status of the resource instance.
-    Code? status,
+    @HiveField(12)
+        Code? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
+    @HiveField(13)
         Element? statusElement,
 
     /// [priority] When the requestor expects the processor to complete
     ///  processing.
-    CodeableConcept? priority,
+    @HiveField(14)
+        CodeableConcept? priority,
 
     /// [purpose] Code to specify whether requesting: prior authorization
     /// requirements for some service categories or billing codes; benefits for
     /// coverages specified or discovered; discovery and return of coverages for
     /// the patient; and/or validation that the specified coverage is in-force at
     ///  the date/period specified or 'now' if not specified.
-    List<Code>? purpose,
+    @HiveField(15)
+        List<Code>? purpose,
 
     /// [purposeElement] Extensions for purpose
     @JsonKey(name: '_purpose')
+    @HiveField(16)
         List<Element?>? purposeElement,
 
     /// [patient] The party who is the beneficiary of the supplied coverage and
     ///  for whom eligibility is sought.
-    required Reference patient,
+    @HiveField(17)
+        required Reference patient,
 
     /// [servicedDate] The date or dates when the enclosed suite of services were
     ///  performed or completed.
-    Date? servicedDate,
+    @HiveField(18)
+        Date? servicedDate,
 
     /// [servicedDateElement] Extensions for servicedDate
     @JsonKey(name: '_servicedDate')
+    @HiveField(19)
         Element? servicedDateElement,
 
     /// [servicedPeriod] The date or dates when the enclosed suite of services
     ///  were performed or completed.
-    Period? servicedPeriod,
+    @HiveField(20)
+        Period? servicedPeriod,
 
     /// [created] The date when this resource was created.
-    FhirDateTime? created,
+    @HiveField(21)
+        FhirDateTime? created,
 
     /// [createdElement] Extensions for created
     @JsonKey(name: '_created')
+    @HiveField(22)
         Element? createdElement,
 
     /// [enterer] Person who created the request.
-    Reference? enterer,
+    @HiveField(23)
+        Reference? enterer,
 
     /// [provider] The provider which is responsible for the request.
-    Reference? provider,
+    @HiveField(24)
+        Reference? provider,
 
     /// [insurer] The Insurer who issued the coverage in question and is the
     ///  recipient of the request.
-    required Reference insurer,
+    @HiveField(25)
+        required Reference insurer,
 
     /// [facility] Facility where the services are intended to be provided.
-    Reference? facility,
+    @HiveField(26)
+        Reference? facility,
+    @HiveField(27)
 
     /// [supportingInfo] Additional information codes regarding exceptions,
     /// special considerations, the condition, situation, prior or concurrent
     ///  issues.
-    List<CoverageEligibilityRequestSupportingInfo>? supportingInfo,
+    @HiveField(28)
+        List<CoverageEligibilityRequestSupportingInfo>? supportingInfo,
 
     /// [insurance] Financial instruments for reimbursement for the health care
     ///  products and services.
-    List<CoverageEligibilityRequestInsurance>? insurance,
+    @HiveField(29)
+        List<CoverageEligibilityRequestInsurance>? insurance,
 
     /// [item] Service categories or billable services for which benefit details
     /// and/or an authorization prior to service delivery may be required by the
     ///  payor.
-    List<CoverageEligibilityRequestItem>? item,
+    @HiveField(30)
+        List<CoverageEligibilityRequestItem>? item,
   }) = _CoverageEligibilityRequest;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1593,33 +1658,40 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
     @Default(R4ResourceType.CoverageEligibilityResponse)
     @JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityResponse)
 
-        /// [resourceType] This is a CoverageEligibilityResponse resource
+    /// [resourceType] This is a CoverageEligibilityResponse resource
+    @HiveField(0)
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    String? id,
+    @HiveField(1)
+        String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    @HiveField(2)
+        Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    @HiveField(3)
+        FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
+    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    @HiveField(5)
+        Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
+    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -1628,13 +1700,15 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    Narrative? text,
+    @HiveField(7)
+        Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    List<Resource>? contained,
+    @HiveField(8)
+        List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -1643,6 +1717,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -1658,17 +1733,21 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(10)
+        List<FhirExtension>? modifierExtension,
 
     /// [identifier] A unique identifier assigned to this coverage eligiblity
     ///  request.
-    List<Identifier>? identifier,
+    @HiveField(11)
+        List<Identifier>? identifier,
 
     /// [status] The status of the resource instance.
-    Code? status,
+    @HiveField(12)
+        Code? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
+    @HiveField(13)
         Element? statusElement,
 
     /// [purpose] Code to specify whether requesting: prior authorization
@@ -1676,78 +1755,98 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
     /// coverages specified or discovered; discovery and return of coverages for
     /// the patient; and/or validation that the specified coverage is in-force at
     ///  the date/period specified or 'now' if not specified.
-    List<Code>? purpose,
+    @HiveField(14)
+        List<Code>? purpose,
 
     /// [purposeElement] Extensions for purpose
     @JsonKey(name: '_purpose')
+    @HiveField(15)
         List<Element?>? purposeElement,
 
     /// [patient] The party who is the beneficiary of the supplied coverage and
     ///  for whom eligibility is sought.
-    required Reference patient,
+    @HiveField(16)
+        required Reference patient,
 
     /// [servicedDate] The date or dates when the enclosed suite of services were
     ///  performed or completed.
-    Date? servicedDate,
+    @HiveField(17)
+        Date? servicedDate,
 
     /// [servicedDateElement] Extensions for servicedDate
     @JsonKey(name: '_servicedDate')
+    @HiveField(18)
         Element? servicedDateElement,
 
     /// [servicedPeriod] The date or dates when the enclosed suite of services
     ///  were performed or completed.
-    Period? servicedPeriod,
+    @HiveField(19)
+        Period? servicedPeriod,
 
     /// [created] The date this resource was created.
-    FhirDateTime? created,
+    @HiveField(20)
+        FhirDateTime? created,
 
     /// [createdElement] Extensions for created
     @JsonKey(name: '_created')
+    @HiveField(21)
         Element? createdElement,
 
     /// [requestor] The provider which is responsible for the request.
-    Reference? requestor,
+    @HiveField(22)
+        Reference? requestor,
 
     /// [request] Reference to the original request resource.
-    required Reference request,
+    @HiveField(23)
+        required Reference request,
 
     /// [outcome] The outcome of the request processing.
-    Code? outcome,
+    @HiveField(24)
+        Code? outcome,
 
     /// [outcomeElement] Extensions for outcome
     @JsonKey(name: '_outcome')
+    @HiveField(25)
         Element? outcomeElement,
 
     /// [disposition] A human readable description of the status of the
     ///  adjudication.
-    String? disposition,
+    @HiveField(26)
+        String? disposition,
 
     /// [dispositionElement] Extensions for disposition
     @JsonKey(name: '_disposition')
+    @HiveField(27)
         Element? dispositionElement,
 
     /// [insurer] The Insurer who issued the coverage in question and is the
     ///  author of the response.
-    required Reference insurer,
+    @HiveField(28)
+        required Reference insurer,
 
     /// [insurance] Financial instruments for reimbursement for the health care
     ///  products and services.
-    List<CoverageEligibilityResponseInsurance>? insurance,
+    @HiveField(29)
+        List<CoverageEligibilityResponseInsurance>? insurance,
 
     /// [preAuthRef] A reference from the Insurer to which these services pertain
     /// to be used on further communication and as proof that the request
     ///  occurred.
-    String? preAuthRef,
+    @HiveField(30)
+        String? preAuthRef,
 
     /// [preAuthRefElement] Extensions for preAuthRef
     @JsonKey(name: '_preAuthRef')
+    @HiveField(31)
         Element? preAuthRefElement,
 
     /// [form] A code for the form to be used for printing the content.
-    CodeableConcept? form,
+    @HiveField(32)
+        CodeableConcept? form,
 
     /// [error] Errors encountered during the processing of the request.
-    List<CoverageEligibilityResponseError>? error,
+    @HiveField(33)
+        List<CoverageEligibilityResponseError>? error,
   }) = _CoverageEligibilityResponse;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2434,33 +2533,40 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
     @Default(R4ResourceType.EnrollmentRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.EnrollmentRequest)
 
-        /// [resourceType] This is a EnrollmentRequest resource
+    /// [resourceType] This is a EnrollmentRequest resource
+    @HiveField(0)
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    String? id,
+    @HiveField(1)
+        String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    @HiveField(2)
+        Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    @HiveField(3)
+        FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
+    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    @HiveField(5)
+        Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
+    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -2469,13 +2575,15 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    Narrative? text,
+    @HiveField(7)
+        Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    List<Resource>? contained,
+    @HiveField(8)
+        List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -2484,6 +2592,7 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -2499,38 +2608,48 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(10)
+        List<FhirExtension>? modifierExtension,
 
     /// [identifier] The Response business identifier.
-    List<Identifier>? identifier,
+    @HiveField(11)
+        List<Identifier>? identifier,
 
     /// [status] The status of the resource instance.
-    Code? status,
+    @HiveField(12)
+        Code? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
+    @HiveField(13)
         Element? statusElement,
 
     /// [created] The date when this resource was created.
-    FhirDateTime? created,
+    @HiveField(14)
+        FhirDateTime? created,
 
     /// [createdElement] Extensions for created
     @JsonKey(name: '_created')
+    @HiveField(15)
         Element? createdElement,
 
     /// [insurer] The Insurer who is target  of the request.
-    Reference? insurer,
+    @HiveField(16)
+        Reference? insurer,
 
     /// [provider] The practitioner who is responsible for the services rendered
     ///  to the patient.
-    Reference? provider,
+    @HiveField(17)
+        Reference? provider,
 
     /// [candidate] Patient Resource.
-    Reference? candidate,
+    @HiveField(18)
+        Reference? candidate,
 
     /// [coverage] Reference to the program or plan identification, underwriter
     ///  or payor.
-    Reference? coverage,
+    @HiveField(19)
+        Reference? coverage,
   }) = _EnrollmentRequest;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2653,33 +2772,40 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
     @Default(R4ResourceType.EnrollmentResponse)
     @JsonKey(unknownEnumValue: R4ResourceType.EnrollmentResponse)
 
-        /// [resourceType] This is a EnrollmentResponse resource
+    /// [resourceType] This is a EnrollmentResponse resource
+    @HiveField(0)
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    String? id,
+    @HiveField(1)
+        String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    @HiveField(2)
+        Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    @HiveField(3)
+        FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
+    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    @HiveField(5)
+        Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
+    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -2688,13 +2814,15 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    Narrative? text,
+    @HiveField(7)
+        Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    List<Resource>? contained,
+    @HiveField(8)
+        List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -2703,6 +2831,7 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -2718,49 +2847,62 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(10)
+        List<FhirExtension>? modifierExtension,
 
     /// [identifier] The Response business identifier.
-    List<Identifier>? identifier,
+    @HiveField(11)
+        List<Identifier>? identifier,
 
     /// [status] The status of the resource instance.
-    Code? status,
+    @HiveField(12)
+        Code? status,
 
     /// [statusElement] Extensions for status
     @JsonKey(name: '_status')
+    @HiveField(13)
         Element? statusElement,
 
     /// [request] Original request resource reference.
-    Reference? request,
+    @HiveField(14)
+        Reference? request,
 
     /// [outcome] Processing status: error, complete.
-    Code? outcome,
+    @HiveField(15)
+        Code? outcome,
 
     /// [outcomeElement] Extensions for outcome
     @JsonKey(name: '_outcome')
+    @HiveField(16)
         Element? outcomeElement,
 
     /// [disposition] A description of the status of the adjudication.
-    String? disposition,
+    @HiveField(17)
+        String? disposition,
 
     /// [dispositionElement] Extensions for disposition
     @JsonKey(name: '_disposition')
+    @HiveField(18)
         Element? dispositionElement,
 
     /// [created] The date when the enclosed suite of services were performed or
     ///  completed.
-    FhirDateTime? created,
+    @HiveField(19)
+        FhirDateTime? created,
 
     /// [createdElement] Extensions for created
     @JsonKey(name: '_created')
+    @HiveField(20)
         Element? createdElement,
 
     /// [organization] The Insurer who produced this adjudicated response.
-    Reference? organization,
+    @HiveField(21)
+        Reference? organization,
 
     /// [requestProvider] The practitioner who is responsible for the services
     ///  rendered to the patient.
-    Reference? requestProvider,
+    @HiveField(22)
+        Reference? requestProvider,
   }) = _EnrollmentResponse;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument

@@ -21,32 +21,39 @@ AuditEvent _$AuditEventFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$AuditEvent {
   @JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -55,12 +62,14 @@ mixin _$AuditEvent {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -70,6 +79,7 @@ mixin _$AuditEvent {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -85,62 +95,75 @@ mixin _$AuditEvent {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-
-  /// [type] Identifier for a family of the event.  For example, a menu item,
-  /// program, rule, policy, function code, application name or URL. It
-  ///  identifies the performed function.
+  @HiveField(11)
+  @HiveField(12)
   Coding get type => throw _privateConstructorUsedError;
 
   /// [subtype] Identifier for the category of event.
+  @HiveField(13)
   List<Coding>? get subtype => throw _privateConstructorUsedError;
 
   /// [action] Indicator for type of action performed during the event that
   ///  generated the audit.
+  @HiveField(14)
   Code? get action => throw _privateConstructorUsedError;
 
   /// [actionElement] Extensions for action
   @JsonKey(name: '_action')
+  @HiveField(15)
   Element? get actionElement => throw _privateConstructorUsedError;
 
   /// [period] The period during which the activity occurred.
+  @HiveField(16)
   Period? get period => throw _privateConstructorUsedError;
 
   /// [recorded] The time when the event was recorded.
+  @HiveField(17)
   Instant? get recorded => throw _privateConstructorUsedError;
 
   /// [recordedElement] Extensions for recorded
   @JsonKey(name: '_recorded')
+  @HiveField(18)
   Element? get recordedElement => throw _privateConstructorUsedError;
 
   /// [outcome] Indicates whether the event succeeded or failed.
+  @HiveField(19)
   Code? get outcome => throw _privateConstructorUsedError;
 
   /// [outcomeElement] Extensions for outcome
   @JsonKey(name: '_outcome')
+  @HiveField(20)
   Element? get outcomeElement => throw _privateConstructorUsedError;
 
   /// [outcomeDesc] A free text description of the outcome of the event.
+  @HiveField(21)
   String? get outcomeDesc => throw _privateConstructorUsedError;
 
   /// [outcomeDescElement] Extensions for outcomeDesc
   @JsonKey(name: '_outcomeDesc')
+  @HiveField(22)
   Element? get outcomeDescElement => throw _privateConstructorUsedError;
 
   /// [purposeOfEvent] The purposeOfUse (reason) that was used during the event
   ///  being recorded.
+  @HiveField(23)
   List<CodeableConcept>? get purposeOfEvent =>
       throw _privateConstructorUsedError;
 
   /// [agent] An actor taking an active role in the event or activity that is
   ///  logged.
+  @HiveField(24)
   List<AuditEventAgent> get agent => throw _privateConstructorUsedError;
 
   /// [source] The system that is reporting the event.
+  @HiveField(25)
   AuditEventSource get source => throw _privateConstructorUsedError;
 
   /// [entity] Specific instances of data or objects that have been accessed.
+  @HiveField(26)
   List<AuditEventEntity>? get entity => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -157,39 +180,66 @@ abstract class $AuditEventCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Coding type,
-      List<Coding>? subtype,
-      Code? action,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+      @HiveField(12)
+          Coding type,
+      @HiveField(13)
+          List<Coding>? subtype,
+      @HiveField(14)
+          Code? action,
       @JsonKey(name: '_action')
+      @HiveField(15)
           Element? actionElement,
-      Period? period,
-      Instant? recorded,
+      @HiveField(16)
+          Period? period,
+      @HiveField(17)
+          Instant? recorded,
       @JsonKey(name: '_recorded')
+      @HiveField(18)
           Element? recordedElement,
-      Code? outcome,
+      @HiveField(19)
+          Code? outcome,
       @JsonKey(name: '_outcome')
+      @HiveField(20)
           Element? outcomeElement,
-      String? outcomeDesc,
+      @HiveField(21)
+          String? outcomeDesc,
       @JsonKey(name: '_outcomeDesc')
+      @HiveField(22)
           Element? outcomeDescElement,
-      List<CodeableConcept>? purposeOfEvent,
-      List<AuditEventAgent> agent,
-      AuditEventSource source,
-      List<AuditEventEntity>? entity});
+      @HiveField(23)
+          List<CodeableConcept>? purposeOfEvent,
+      @HiveField(24)
+          List<AuditEventAgent> agent,
+      @HiveField(25)
+          AuditEventSource source,
+      @HiveField(26)
+          List<AuditEventEntity>? entity});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -487,39 +537,66 @@ abstract class _$$_AuditEventCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      Coding type,
-      List<Coding>? subtype,
-      Code? action,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+      @HiveField(12)
+          Coding type,
+      @HiveField(13)
+          List<Coding>? subtype,
+      @HiveField(14)
+          Code? action,
       @JsonKey(name: '_action')
+      @HiveField(15)
           Element? actionElement,
-      Period? period,
-      Instant? recorded,
+      @HiveField(16)
+          Period? period,
+      @HiveField(17)
+          Instant? recorded,
       @JsonKey(name: '_recorded')
+      @HiveField(18)
           Element? recordedElement,
-      Code? outcome,
+      @HiveField(19)
+          Code? outcome,
       @JsonKey(name: '_outcome')
+      @HiveField(20)
           Element? outcomeElement,
-      String? outcomeDesc,
+      @HiveField(21)
+          String? outcomeDesc,
       @JsonKey(name: '_outcomeDesc')
+      @HiveField(22)
           Element? outcomeDescElement,
-      List<CodeableConcept>? purposeOfEvent,
-      List<AuditEventAgent> agent,
-      AuditEventSource source,
-      List<AuditEventEntity>? entity});
+      @HiveField(23)
+          List<CodeableConcept>? purposeOfEvent,
+      @HiveField(24)
+          List<AuditEventAgent> agent,
+      @HiveField(25)
+          AuditEventSource source,
+      @HiveField(26)
+          List<AuditEventEntity>? entity});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -698,39 +775,66 @@ class __$$_AuditEventCopyWithImpl<$Res>
 class _$_AuditEvent extends _AuditEvent {
   _$_AuditEvent(
       {@JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
+      @HiveField(0)
           this.resourceType = R4ResourceType.AuditEvent,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      required this.type,
-      final List<Coding>? subtype,
-      this.action,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+      @HiveField(12)
+          required this.type,
+      @HiveField(13)
+          final List<Coding>? subtype,
+      @HiveField(14)
+          this.action,
       @JsonKey(name: '_action')
+      @HiveField(15)
           this.actionElement,
-      this.period,
-      this.recorded,
+      @HiveField(16)
+          this.period,
+      @HiveField(17)
+          this.recorded,
       @JsonKey(name: '_recorded')
+      @HiveField(18)
           this.recordedElement,
-      this.outcome,
+      @HiveField(19)
+          this.outcome,
       @JsonKey(name: '_outcome')
+      @HiveField(20)
           this.outcomeElement,
-      this.outcomeDesc,
+      @HiveField(21)
+          this.outcomeDesc,
       @JsonKey(name: '_outcomeDesc')
+      @HiveField(22)
           this.outcomeDescElement,
-      final List<CodeableConcept>? purposeOfEvent,
-      required final List<AuditEventAgent> agent,
-      required this.source,
-      final List<AuditEventEntity>? entity})
+      @HiveField(23)
+          final List<CodeableConcept>? purposeOfEvent,
+      @HiveField(24)
+          required final List<AuditEventAgent> agent,
+      @HiveField(25)
+          required this.source,
+      @HiveField(26)
+          final List<AuditEventEntity>? entity})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -745,17 +849,20 @@ class _$_AuditEvent extends _AuditEvent {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
+  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
+  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
+  @HiveField(2)
   final Meta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -763,20 +870,24 @@ class _$_AuditEvent extends _AuditEvent {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
+  @HiveField(5)
   final Code? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
+  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -786,6 +897,7 @@ class _$_AuditEvent extends _AuditEvent {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
+  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -799,6 +911,7 @@ class _$_AuditEvent extends _AuditEvent {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -823,6 +936,7 @@ class _$_AuditEvent extends _AuditEvent {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -860,6 +974,7 @@ class _$_AuditEvent extends _AuditEvent {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -869,10 +984,9 @@ class _$_AuditEvent extends _AuditEvent {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [type] Identifier for a family of the event.  For example, a menu item,
-  /// program, rule, policy, function code, application name or URL. It
-  ///  identifies the performed function.
   @override
+  @HiveField(11)
+  @HiveField(12)
   final Coding type;
 
   /// [subtype] Identifier for the category of event.
@@ -880,6 +994,7 @@ class _$_AuditEvent extends _AuditEvent {
 
   /// [subtype] Identifier for the category of event.
   @override
+  @HiveField(13)
   List<Coding>? get subtype {
     final value = _subtype;
     if (value == null) return null;
@@ -891,42 +1006,51 @@ class _$_AuditEvent extends _AuditEvent {
   /// [action] Indicator for type of action performed during the event that
   ///  generated the audit.
   @override
+  @HiveField(14)
   final Code? action;
 
   /// [actionElement] Extensions for action
   @override
   @JsonKey(name: '_action')
+  @HiveField(15)
   final Element? actionElement;
 
   /// [period] The period during which the activity occurred.
   @override
+  @HiveField(16)
   final Period? period;
 
   /// [recorded] The time when the event was recorded.
   @override
+  @HiveField(17)
   final Instant? recorded;
 
   /// [recordedElement] Extensions for recorded
   @override
   @JsonKey(name: '_recorded')
+  @HiveField(18)
   final Element? recordedElement;
 
   /// [outcome] Indicates whether the event succeeded or failed.
   @override
+  @HiveField(19)
   final Code? outcome;
 
   /// [outcomeElement] Extensions for outcome
   @override
   @JsonKey(name: '_outcome')
+  @HiveField(20)
   final Element? outcomeElement;
 
   /// [outcomeDesc] A free text description of the outcome of the event.
   @override
+  @HiveField(21)
   final String? outcomeDesc;
 
   /// [outcomeDescElement] Extensions for outcomeDesc
   @override
   @JsonKey(name: '_outcomeDesc')
+  @HiveField(22)
   final Element? outcomeDescElement;
 
   /// [purposeOfEvent] The purposeOfUse (reason) that was used during the event
@@ -936,6 +1060,7 @@ class _$_AuditEvent extends _AuditEvent {
   /// [purposeOfEvent] The purposeOfUse (reason) that was used during the event
   ///  being recorded.
   @override
+  @HiveField(23)
   List<CodeableConcept>? get purposeOfEvent {
     final value = _purposeOfEvent;
     if (value == null) return null;
@@ -951,6 +1076,7 @@ class _$_AuditEvent extends _AuditEvent {
   /// [agent] An actor taking an active role in the event or activity that is
   ///  logged.
   @override
+  @HiveField(24)
   List<AuditEventAgent> get agent {
     if (_agent is EqualUnmodifiableListView) return _agent;
     // ignore: implicit_dynamic_type
@@ -959,6 +1085,7 @@ class _$_AuditEvent extends _AuditEvent {
 
   /// [source] The system that is reporting the event.
   @override
+  @HiveField(25)
   final AuditEventSource source;
 
   /// [entity] Specific instances of data or objects that have been accessed.
@@ -966,6 +1093,7 @@ class _$_AuditEvent extends _AuditEvent {
 
   /// [entity] Specific instances of data or objects that have been accessed.
   @override
+  @HiveField(26)
   List<AuditEventEntity>? get entity {
     final value = _entity;
     if (value == null) return null;
@@ -1076,39 +1204,66 @@ class _$_AuditEvent extends _AuditEvent {
 abstract class _AuditEvent extends AuditEvent {
   factory _AuditEvent(
       {@JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      required final Coding type,
-      final List<Coding>? subtype,
-      final Code? action,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+      @HiveField(12)
+          required final Coding type,
+      @HiveField(13)
+          final List<Coding>? subtype,
+      @HiveField(14)
+          final Code? action,
       @JsonKey(name: '_action')
+      @HiveField(15)
           final Element? actionElement,
-      final Period? period,
-      final Instant? recorded,
+      @HiveField(16)
+          final Period? period,
+      @HiveField(17)
+          final Instant? recorded,
       @JsonKey(name: '_recorded')
+      @HiveField(18)
           final Element? recordedElement,
-      final Code? outcome,
+      @HiveField(19)
+          final Code? outcome,
       @JsonKey(name: '_outcome')
+      @HiveField(20)
           final Element? outcomeElement,
-      final String? outcomeDesc,
+      @HiveField(21)
+          final String? outcomeDesc,
       @JsonKey(name: '_outcomeDesc')
+      @HiveField(22)
           final Element? outcomeDescElement,
-      final List<CodeableConcept>? purposeOfEvent,
-      required final List<AuditEventAgent> agent,
-      required final AuditEventSource source,
-      final List<AuditEventEntity>? entity}) = _$_AuditEvent;
+      @HiveField(23)
+          final List<CodeableConcept>? purposeOfEvent,
+      @HiveField(24)
+          required final List<AuditEventAgent> agent,
+      @HiveField(25)
+          required final AuditEventSource source,
+      @HiveField(26)
+          final List<AuditEventEntity>? entity}) = _$_AuditEvent;
   _AuditEvent._() : super._();
 
   factory _AuditEvent.fromJson(Map<String, dynamic> json) =
@@ -1116,17 +1271,20 @@ abstract class _AuditEvent extends AuditEvent {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta;
   @override
 
@@ -1134,20 +1292,24 @@ abstract class _AuditEvent extends AuditEvent {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -1157,6 +1319,7 @@ abstract class _AuditEvent extends AuditEvent {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -1164,6 +1327,7 @@ abstract class _AuditEvent extends AuditEvent {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -1174,6 +1338,7 @@ abstract class _AuditEvent extends AuditEvent {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -1190,75 +1355,88 @@ abstract class _AuditEvent extends AuditEvent {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
-
-  /// [type] Identifier for a family of the event.  For example, a menu item,
-  /// program, rule, policy, function code, application name or URL. It
-  ///  identifies the performed function.
+  @HiveField(11)
+  @HiveField(12)
   Coding get type;
   @override
 
   /// [subtype] Identifier for the category of event.
+  @HiveField(13)
   List<Coding>? get subtype;
   @override
 
   /// [action] Indicator for type of action performed during the event that
   ///  generated the audit.
+  @HiveField(14)
   Code? get action;
   @override
 
   /// [actionElement] Extensions for action
   @JsonKey(name: '_action')
+  @HiveField(15)
   Element? get actionElement;
   @override
 
   /// [period] The period during which the activity occurred.
+  @HiveField(16)
   Period? get period;
   @override
 
   /// [recorded] The time when the event was recorded.
+  @HiveField(17)
   Instant? get recorded;
   @override
 
   /// [recordedElement] Extensions for recorded
   @JsonKey(name: '_recorded')
+  @HiveField(18)
   Element? get recordedElement;
   @override
 
   /// [outcome] Indicates whether the event succeeded or failed.
+  @HiveField(19)
   Code? get outcome;
   @override
 
   /// [outcomeElement] Extensions for outcome
   @JsonKey(name: '_outcome')
+  @HiveField(20)
   Element? get outcomeElement;
   @override
 
   /// [outcomeDesc] A free text description of the outcome of the event.
+  @HiveField(21)
   String? get outcomeDesc;
   @override
 
   /// [outcomeDescElement] Extensions for outcomeDesc
   @JsonKey(name: '_outcomeDesc')
+  @HiveField(22)
   Element? get outcomeDescElement;
   @override
 
   /// [purposeOfEvent] The purposeOfUse (reason) that was used during the event
   ///  being recorded.
+  @HiveField(23)
   List<CodeableConcept>? get purposeOfEvent;
   @override
 
   /// [agent] An actor taking an active role in the event or activity that is
   ///  logged.
+  @HiveField(24)
   List<AuditEventAgent> get agent;
   @override
 
   /// [source] The system that is reporting the event.
+  @HiveField(25)
   AuditEventSource get source;
   @override
 
   /// [entity] Specific instances of data or objects that have been accessed.
+  @HiveField(26)
   List<AuditEventEntity>? get entity;
   @override
   @JsonKey(ignore: true)
@@ -4421,32 +4599,39 @@ Consent _$ConsentFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Consent {
   @JsonKey(unknownEnumValue: R4ResourceType.Consent)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -4455,12 +4640,14 @@ mixin _$Consent {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -4470,6 +4657,7 @@ mixin _$Consent {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -4485,36 +4673,43 @@ mixin _$Consent {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] Unique identifier for this copy of the Consent Statement.
+  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] Indicates the current state of this consent.
+  @HiveField(12)
   Code? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(13)
   Element? get statusElement => throw _privateConstructorUsedError;
-
-  /// [scope] A selector of the type of consent being presented: ADR, Privacy,
-  ///  Treatment, Research.  This list is now extensible.
+  @HiveField(14)
+  @HiveField(15)
   CodeableConcept get scope => throw _privateConstructorUsedError;
 
   /// [category] A classification of the type of consents found in the
   /// statement. This element supports indexing and retrieval of consent
   ///  statements.
+  @HiveField(16)
   List<CodeableConcept> get category => throw _privateConstructorUsedError;
 
   /// [patient] The patient/healthcare consumer to whom this consent applies.
+  @HiveField(17)
   Reference? get patient => throw _privateConstructorUsedError;
 
   /// [dateTime] When this  Consent was issued / created / indexed.
+  @HiveField(18)
   FhirDateTime? get dateTime => throw _privateConstructorUsedError;
 
   /// [dateTimeElement] Extensions for dateTime
   @JsonKey(name: '_dateTime')
+  @HiveField(19)
   Element? get dateTimeElement => throw _privateConstructorUsedError;
 
   /// [performer] Either the Grantor, which is the entity responsible for
@@ -4522,41 +4717,49 @@ mixin _$Consent {
   /// the entity responsible for complying with the Consent Directive, including
   /// any obligations or limitations on authorizations and enforcement of
   ///  prohibitions.
+  @HiveField(20)
   List<Reference>? get performer => throw _privateConstructorUsedError;
 
   /// [organization] The organization that manages the consent, and the
   ///  framework within which it is executed.
+  @HiveField(21)
   List<Reference>? get organization => throw _privateConstructorUsedError;
 
   /// [sourceAttachment] The source on which this consent statement is based.
   /// The source might be a scanned original paper form, or a reference to a
   /// consent that links back to such a source, a reference to a document
   ///  repository (e.g. XDS) that stores the original consent document.
+  @HiveField(22)
   Attachment? get sourceAttachment => throw _privateConstructorUsedError;
 
   /// [sourceReference] The source on which this consent statement is based.
   /// The source might be a scanned original paper form, or a reference to a
   /// consent that links back to such a source, a reference to a document
   ///  repository (e.g. XDS) that stores the original consent document.
+  @HiveField(23)
   Reference? get sourceReference => throw _privateConstructorUsedError;
 
   /// [policy] The references to the policies that are included in this consent
   /// scope. Policies may be organizational, but are often defined
   ///  jurisdictionally, or in law.
+  @HiveField(24)
   List<ConsentPolicy>? get policy => throw _privateConstructorUsedError;
 
   /// [policyRule] A reference to the specific base computable regulation or
   ///  policy.
+  @HiveField(25)
   CodeableConcept? get policyRule => throw _privateConstructorUsedError;
 
   /// [verification] Whether a treatment instruction (e.g. artificial
   /// respiration yes or no) was verified with the patient, his/her family or
   ///  another authorized person.
+  @HiveField(26)
   List<ConsentVerification>? get verification =>
       throw _privateConstructorUsedError;
 
   /// [provision] An exception to the base policy of this consent. An exception
   ///  can be an addition or removal of access permissions.
+  @HiveField(27)
   ConsentProvision? get provision => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -4571,38 +4774,66 @@ abstract class $ConsentCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Consent)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Code? status,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(13)
           Element? statusElement,
-      CodeableConcept scope,
-      List<CodeableConcept> category,
-      Reference? patient,
-      FhirDateTime? dateTime,
+      @HiveField(14)
+      @HiveField(15)
+          CodeableConcept scope,
+      @HiveField(16)
+          List<CodeableConcept> category,
+      @HiveField(17)
+          Reference? patient,
+      @HiveField(18)
+          FhirDateTime? dateTime,
       @JsonKey(name: '_dateTime')
+      @HiveField(19)
           Element? dateTimeElement,
-      List<Reference>? performer,
-      List<Reference>? organization,
-      Attachment? sourceAttachment,
-      Reference? sourceReference,
-      List<ConsentPolicy>? policy,
-      CodeableConcept? policyRule,
-      List<ConsentVerification>? verification,
-      ConsentProvision? provision});
+      @HiveField(20)
+          List<Reference>? performer,
+      @HiveField(21)
+          List<Reference>? organization,
+      @HiveField(22)
+          Attachment? sourceAttachment,
+      @HiveField(23)
+          Reference? sourceReference,
+      @HiveField(24)
+          List<ConsentPolicy>? policy,
+      @HiveField(25)
+          CodeableConcept? policyRule,
+      @HiveField(26)
+          List<ConsentVerification>? verification,
+      @HiveField(27)
+          ConsentProvision? provision});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -4921,38 +5152,66 @@ abstract class _$$_ConsentCopyWith<$Res> implements $ConsentCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Consent)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Code? status,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(13)
           Element? statusElement,
-      CodeableConcept scope,
-      List<CodeableConcept> category,
-      Reference? patient,
-      FhirDateTime? dateTime,
+      @HiveField(14)
+      @HiveField(15)
+          CodeableConcept scope,
+      @HiveField(16)
+          List<CodeableConcept> category,
+      @HiveField(17)
+          Reference? patient,
+      @HiveField(18)
+          FhirDateTime? dateTime,
       @JsonKey(name: '_dateTime')
+      @HiveField(19)
           Element? dateTimeElement,
-      List<Reference>? performer,
-      List<Reference>? organization,
-      Attachment? sourceAttachment,
-      Reference? sourceReference,
-      List<ConsentPolicy>? policy,
-      CodeableConcept? policyRule,
-      List<ConsentVerification>? verification,
-      ConsentProvision? provision});
+      @HiveField(20)
+          List<Reference>? performer,
+      @HiveField(21)
+          List<Reference>? organization,
+      @HiveField(22)
+          Attachment? sourceAttachment,
+      @HiveField(23)
+          Reference? sourceReference,
+      @HiveField(24)
+          List<ConsentPolicy>? policy,
+      @HiveField(25)
+          CodeableConcept? policyRule,
+      @HiveField(26)
+          List<ConsentVerification>? verification,
+      @HiveField(27)
+          ConsentProvision? provision});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -5137,38 +5396,66 @@ class __$$_ConsentCopyWithImpl<$Res>
 class _$_Consent extends _Consent {
   _$_Consent(
       {@JsonKey(unknownEnumValue: R4ResourceType.Consent)
+      @HiveField(0)
           this.resourceType = R4ResourceType.Consent,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      this.status,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          this.status,
       @JsonKey(name: '_status')
+      @HiveField(13)
           this.statusElement,
-      required this.scope,
-      required final List<CodeableConcept> category,
-      this.patient,
-      this.dateTime,
+      @HiveField(14)
+      @HiveField(15)
+          required this.scope,
+      @HiveField(16)
+          required final List<CodeableConcept> category,
+      @HiveField(17)
+          this.patient,
+      @HiveField(18)
+          this.dateTime,
       @JsonKey(name: '_dateTime')
+      @HiveField(19)
           this.dateTimeElement,
-      final List<Reference>? performer,
-      final List<Reference>? organization,
-      this.sourceAttachment,
-      this.sourceReference,
-      final List<ConsentPolicy>? policy,
-      this.policyRule,
-      final List<ConsentVerification>? verification,
-      this.provision})
+      @HiveField(20)
+          final List<Reference>? performer,
+      @HiveField(21)
+          final List<Reference>? organization,
+      @HiveField(22)
+          this.sourceAttachment,
+      @HiveField(23)
+          this.sourceReference,
+      @HiveField(24)
+          final List<ConsentPolicy>? policy,
+      @HiveField(25)
+          this.policyRule,
+      @HiveField(26)
+          final List<ConsentVerification>? verification,
+      @HiveField(27)
+          this.provision})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -5185,17 +5472,20 @@ class _$_Consent extends _Consent {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Consent)
+  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
+  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
+  @HiveField(2)
   final Meta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -5203,20 +5493,24 @@ class _$_Consent extends _Consent {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
+  @HiveField(5)
   final Code? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
+  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -5226,6 +5520,7 @@ class _$_Consent extends _Consent {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
+  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -5239,6 +5534,7 @@ class _$_Consent extends _Consent {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -5263,6 +5559,7 @@ class _$_Consent extends _Consent {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -5300,6 +5597,7 @@ class _$_Consent extends _Consent {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -5314,6 +5612,7 @@ class _$_Consent extends _Consent {
 
   /// [identifier] Unique identifier for this copy of the Consent Statement.
   @override
+  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -5324,16 +5623,17 @@ class _$_Consent extends _Consent {
 
   /// [status] Indicates the current state of this consent.
   @override
+  @HiveField(12)
   final Code? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
+  @HiveField(13)
   final Element? statusElement;
-
-  /// [scope] A selector of the type of consent being presented: ADR, Privacy,
-  ///  Treatment, Research.  This list is now extensible.
   @override
+  @HiveField(14)
+  @HiveField(15)
   final CodeableConcept scope;
 
   /// [category] A classification of the type of consents found in the
@@ -5345,6 +5645,7 @@ class _$_Consent extends _Consent {
   /// statement. This element supports indexing and retrieval of consent
   ///  statements.
   @override
+  @HiveField(16)
   List<CodeableConcept> get category {
     if (_category is EqualUnmodifiableListView) return _category;
     // ignore: implicit_dynamic_type
@@ -5353,15 +5654,18 @@ class _$_Consent extends _Consent {
 
   /// [patient] The patient/healthcare consumer to whom this consent applies.
   @override
+  @HiveField(17)
   final Reference? patient;
 
   /// [dateTime] When this  Consent was issued / created / indexed.
   @override
+  @HiveField(18)
   final FhirDateTime? dateTime;
 
   /// [dateTimeElement] Extensions for dateTime
   @override
   @JsonKey(name: '_dateTime')
+  @HiveField(19)
   final Element? dateTimeElement;
 
   /// [performer] Either the Grantor, which is the entity responsible for
@@ -5377,6 +5681,7 @@ class _$_Consent extends _Consent {
   /// any obligations or limitations on authorizations and enforcement of
   ///  prohibitions.
   @override
+  @HiveField(20)
   List<Reference>? get performer {
     final value = _performer;
     if (value == null) return null;
@@ -5392,6 +5697,7 @@ class _$_Consent extends _Consent {
   /// [organization] The organization that manages the consent, and the
   ///  framework within which it is executed.
   @override
+  @HiveField(21)
   List<Reference>? get organization {
     final value = _organization;
     if (value == null) return null;
@@ -5405,6 +5711,7 @@ class _$_Consent extends _Consent {
   /// consent that links back to such a source, a reference to a document
   ///  repository (e.g. XDS) that stores the original consent document.
   @override
+  @HiveField(22)
   final Attachment? sourceAttachment;
 
   /// [sourceReference] The source on which this consent statement is based.
@@ -5412,6 +5719,7 @@ class _$_Consent extends _Consent {
   /// consent that links back to such a source, a reference to a document
   ///  repository (e.g. XDS) that stores the original consent document.
   @override
+  @HiveField(23)
   final Reference? sourceReference;
 
   /// [policy] The references to the policies that are included in this consent
@@ -5423,6 +5731,7 @@ class _$_Consent extends _Consent {
   /// scope. Policies may be organizational, but are often defined
   ///  jurisdictionally, or in law.
   @override
+  @HiveField(24)
   List<ConsentPolicy>? get policy {
     final value = _policy;
     if (value == null) return null;
@@ -5434,6 +5743,7 @@ class _$_Consent extends _Consent {
   /// [policyRule] A reference to the specific base computable regulation or
   ///  policy.
   @override
+  @HiveField(25)
   final CodeableConcept? policyRule;
 
   /// [verification] Whether a treatment instruction (e.g. artificial
@@ -5445,6 +5755,7 @@ class _$_Consent extends _Consent {
   /// respiration yes or no) was verified with the patient, his/her family or
   ///  another authorized person.
   @override
+  @HiveField(26)
   List<ConsentVerification>? get verification {
     final value = _verification;
     if (value == null) return null;
@@ -5456,6 +5767,7 @@ class _$_Consent extends _Consent {
   /// [provision] An exception to the base policy of this consent. An exception
   ///  can be an addition or removal of access permissions.
   @override
+  @HiveField(27)
   final ConsentProvision? provision;
 
   @override
@@ -5566,55 +5878,86 @@ class _$_Consent extends _Consent {
 abstract class _Consent extends Consent {
   factory _Consent(
       {@JsonKey(unknownEnumValue: R4ResourceType.Consent)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final Code? status,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          final Code? status,
       @JsonKey(name: '_status')
+      @HiveField(13)
           final Element? statusElement,
-      required final CodeableConcept scope,
-      required final List<CodeableConcept> category,
-      final Reference? patient,
-      final FhirDateTime? dateTime,
+      @HiveField(14)
+      @HiveField(15)
+          required final CodeableConcept scope,
+      @HiveField(16)
+          required final List<CodeableConcept> category,
+      @HiveField(17)
+          final Reference? patient,
+      @HiveField(18)
+          final FhirDateTime? dateTime,
       @JsonKey(name: '_dateTime')
+      @HiveField(19)
           final Element? dateTimeElement,
-      final List<Reference>? performer,
-      final List<Reference>? organization,
-      final Attachment? sourceAttachment,
-      final Reference? sourceReference,
-      final List<ConsentPolicy>? policy,
-      final CodeableConcept? policyRule,
-      final List<ConsentVerification>? verification,
-      final ConsentProvision? provision}) = _$_Consent;
+      @HiveField(20)
+          final List<Reference>? performer,
+      @HiveField(21)
+          final List<Reference>? organization,
+      @HiveField(22)
+          final Attachment? sourceAttachment,
+      @HiveField(23)
+          final Reference? sourceReference,
+      @HiveField(24)
+          final List<ConsentPolicy>? policy,
+      @HiveField(25)
+          final CodeableConcept? policyRule,
+      @HiveField(26)
+          final List<ConsentVerification>? verification,
+      @HiveField(27)
+          final ConsentProvision? provision}) = _$_Consent;
   _Consent._() : super._();
 
   factory _Consent.fromJson(Map<String, dynamic> json) = _$_Consent.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Consent)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta;
   @override
 
@@ -5622,20 +5965,24 @@ abstract class _Consent extends Consent {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -5645,6 +5992,7 @@ abstract class _Consent extends Consent {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -5652,6 +6000,7 @@ abstract class _Consent extends Consent {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -5662,6 +6011,7 @@ abstract class _Consent extends Consent {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -5678,43 +6028,50 @@ abstract class _Consent extends Consent {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] Unique identifier for this copy of the Consent Statement.
+  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [status] Indicates the current state of this consent.
+  @HiveField(12)
   Code? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(13)
   Element? get statusElement;
   @override
-
-  /// [scope] A selector of the type of consent being presented: ADR, Privacy,
-  ///  Treatment, Research.  This list is now extensible.
+  @HiveField(14)
+  @HiveField(15)
   CodeableConcept get scope;
   @override
 
   /// [category] A classification of the type of consents found in the
   /// statement. This element supports indexing and retrieval of consent
   ///  statements.
+  @HiveField(16)
   List<CodeableConcept> get category;
   @override
 
   /// [patient] The patient/healthcare consumer to whom this consent applies.
+  @HiveField(17)
   Reference? get patient;
   @override
 
   /// [dateTime] When this  Consent was issued / created / indexed.
+  @HiveField(18)
   FhirDateTime? get dateTime;
   @override
 
   /// [dateTimeElement] Extensions for dateTime
   @JsonKey(name: '_dateTime')
+  @HiveField(19)
   Element? get dateTimeElement;
   @override
 
@@ -5723,11 +6080,13 @@ abstract class _Consent extends Consent {
   /// the entity responsible for complying with the Consent Directive, including
   /// any obligations or limitations on authorizations and enforcement of
   ///  prohibitions.
+  @HiveField(20)
   List<Reference>? get performer;
   @override
 
   /// [organization] The organization that manages the consent, and the
   ///  framework within which it is executed.
+  @HiveField(21)
   List<Reference>? get organization;
   @override
 
@@ -5735,6 +6094,7 @@ abstract class _Consent extends Consent {
   /// The source might be a scanned original paper form, or a reference to a
   /// consent that links back to such a source, a reference to a document
   ///  repository (e.g. XDS) that stores the original consent document.
+  @HiveField(22)
   Attachment? get sourceAttachment;
   @override
 
@@ -5742,28 +6102,33 @@ abstract class _Consent extends Consent {
   /// The source might be a scanned original paper form, or a reference to a
   /// consent that links back to such a source, a reference to a document
   ///  repository (e.g. XDS) that stores the original consent document.
+  @HiveField(23)
   Reference? get sourceReference;
   @override
 
   /// [policy] The references to the policies that are included in this consent
   /// scope. Policies may be organizational, but are often defined
   ///  jurisdictionally, or in law.
+  @HiveField(24)
   List<ConsentPolicy>? get policy;
   @override
 
   /// [policyRule] A reference to the specific base computable regulation or
   ///  policy.
+  @HiveField(25)
   CodeableConcept? get policyRule;
   @override
 
   /// [verification] Whether a treatment instruction (e.g. artificial
   /// respiration yes or no) was verified with the patient, his/her family or
   ///  another authorized person.
+  @HiveField(26)
   List<ConsentVerification>? get verification;
   @override
 
   /// [provision] An exception to the base policy of this consent. An exception
   ///  can be an addition or removal of access permissions.
+  @HiveField(27)
   ConsentProvision? get provision;
   @override
   @JsonKey(ignore: true)
@@ -8340,32 +8705,39 @@ Provenance _$ProvenanceFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Provenance {
   @JsonKey(unknownEnumValue: R4ResourceType.Provenance)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -8374,12 +8746,14 @@ mixin _$Provenance {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -8389,6 +8763,7 @@ mixin _$Provenance {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -8404,61 +8779,75 @@ mixin _$Provenance {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [target] The Reference(s) that were generated or updated by  the activity
   /// described in this resource. A provenance can point to more than one target
   ///  if multiple resources were created/updated by the same activity.
+  @HiveField(11)
   List<Reference> get target => throw _privateConstructorUsedError;
 
   /// [occurredPeriod] The period during which the activity occurred.
+  @HiveField(12)
   Period? get occurredPeriod => throw _privateConstructorUsedError;
 
   /// [occurredDateTime] The period during which the activity occurred.
+  @HiveField(13)
   FhirDateTime? get occurredDateTime => throw _privateConstructorUsedError;
 
   /// [occurredDateTimeElement] Extensions for occurredDateTime
   @JsonKey(name: '_occurredDateTime')
+  @HiveField(14)
   Element? get occurredDateTimeElement => throw _privateConstructorUsedError;
 
   /// [recorded] The instant of time at which the activity was recorded.
+  @HiveField(15)
   Instant? get recorded => throw _privateConstructorUsedError;
 
   /// [recordedElement] Extensions for recorded
   @JsonKey(name: '_recorded')
+  @HiveField(16)
   Element? get recordedElement => throw _privateConstructorUsedError;
 
   /// [policy] Policy or plan the activity was defined by. Typically, a single
   /// activity may have multiple applicable policy documents, such as patient
   ///  consent, guarantor funding, etc.
+  @HiveField(17)
   List<FhirUri>? get policy => throw _privateConstructorUsedError;
 
   /// [policyElement] Extensions for policy
   @JsonKey(name: '_policy')
+  @HiveField(18)
   List<Element?>? get policyElement => throw _privateConstructorUsedError;
 
   /// [location] Where the activity occurred, if relevant.
+  @HiveField(19)
   Reference? get location => throw _privateConstructorUsedError;
 
   /// [reason] The reason that the activity was taking place.
+  @HiveField(20)
   List<CodeableConcept>? get reason => throw _privateConstructorUsedError;
 
   /// [activity] An activity is something that occurs over a period of time and
-  /// acts upon or with entities; it may include consuming, processing,
-  ///  transforming, modifying, relocating, using, or generating entities.
+  @HiveField(21)
+  @HiveField(22)
   CodeableConcept? get activity => throw _privateConstructorUsedError;
 
   /// [agent] An actor taking a role in an activity  for which it can be
   ///  assigned some degree of responsibility for the activity taking place.
+  @HiveField(23)
   List<ProvenanceAgent> get agent => throw _privateConstructorUsedError;
 
   /// [entity] An entity used in this activity.
+  @HiveField(24)
   List<ProvenanceEntity>? get entity => throw _privateConstructorUsedError;
 
   /// [signature] A digital signature on the target Reference(s). The signer
   /// should match a Provenance.agent. The purpose of the signature is
   ///  indicated.
+  @HiveField(25)
   List<Signature>? get signature => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -8475,37 +8864,63 @@ abstract class $ProvenanceCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Provenance)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Reference> target,
-      Period? occurredPeriod,
-      FhirDateTime? occurredDateTime,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Reference> target,
+      @HiveField(12)
+          Period? occurredPeriod,
+      @HiveField(13)
+          FhirDateTime? occurredDateTime,
       @JsonKey(name: '_occurredDateTime')
+      @HiveField(14)
           Element? occurredDateTimeElement,
-      Instant? recorded,
+      @HiveField(15)
+          Instant? recorded,
       @JsonKey(name: '_recorded')
+      @HiveField(16)
           Element? recordedElement,
-      List<FhirUri>? policy,
+      @HiveField(17)
+          List<FhirUri>? policy,
       @JsonKey(name: '_policy')
+      @HiveField(18)
           List<Element?>? policyElement,
-      Reference? location,
-      List<CodeableConcept>? reason,
-      CodeableConcept? activity,
-      List<ProvenanceAgent> agent,
-      List<ProvenanceEntity>? entity,
-      List<Signature>? signature});
+      @HiveField(19)
+          Reference? location,
+      @HiveField(20)
+          List<CodeableConcept>? reason,
+      @HiveField(21)
+      @HiveField(22)
+          CodeableConcept? activity,
+      @HiveField(23)
+          List<ProvenanceAgent> agent,
+      @HiveField(24)
+          List<ProvenanceEntity>? entity,
+      @HiveField(25)
+          List<Signature>? signature});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -8780,37 +9195,63 @@ abstract class _$$_ProvenanceCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Provenance)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Reference> target,
-      Period? occurredPeriod,
-      FhirDateTime? occurredDateTime,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Reference> target,
+      @HiveField(12)
+          Period? occurredPeriod,
+      @HiveField(13)
+          FhirDateTime? occurredDateTime,
       @JsonKey(name: '_occurredDateTime')
+      @HiveField(14)
           Element? occurredDateTimeElement,
-      Instant? recorded,
+      @HiveField(15)
+          Instant? recorded,
       @JsonKey(name: '_recorded')
+      @HiveField(16)
           Element? recordedElement,
-      List<FhirUri>? policy,
+      @HiveField(17)
+          List<FhirUri>? policy,
       @JsonKey(name: '_policy')
+      @HiveField(18)
           List<Element?>? policyElement,
-      Reference? location,
-      List<CodeableConcept>? reason,
-      CodeableConcept? activity,
-      List<ProvenanceAgent> agent,
-      List<ProvenanceEntity>? entity,
-      List<Signature>? signature});
+      @HiveField(19)
+          Reference? location,
+      @HiveField(20)
+          List<CodeableConcept>? reason,
+      @HiveField(21)
+      @HiveField(22)
+          CodeableConcept? activity,
+      @HiveField(23)
+          List<ProvenanceAgent> agent,
+      @HiveField(24)
+          List<ProvenanceEntity>? entity,
+      @HiveField(25)
+          List<Signature>? signature});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -8980,37 +9421,63 @@ class __$$_ProvenanceCopyWithImpl<$Res>
 class _$_Provenance extends _Provenance {
   _$_Provenance(
       {@JsonKey(unknownEnumValue: R4ResourceType.Provenance)
+      @HiveField(0)
           this.resourceType = R4ResourceType.Provenance,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      required final List<Reference> target,
-      this.occurredPeriod,
-      this.occurredDateTime,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          required final List<Reference> target,
+      @HiveField(12)
+          this.occurredPeriod,
+      @HiveField(13)
+          this.occurredDateTime,
       @JsonKey(name: '_occurredDateTime')
+      @HiveField(14)
           this.occurredDateTimeElement,
-      this.recorded,
+      @HiveField(15)
+          this.recorded,
       @JsonKey(name: '_recorded')
+      @HiveField(16)
           this.recordedElement,
-      final List<FhirUri>? policy,
+      @HiveField(17)
+          final List<FhirUri>? policy,
       @JsonKey(name: '_policy')
+      @HiveField(18)
           final List<Element?>? policyElement,
-      this.location,
-      final List<CodeableConcept>? reason,
-      this.activity,
-      required final List<ProvenanceAgent> agent,
-      final List<ProvenanceEntity>? entity,
-      final List<Signature>? signature})
+      @HiveField(19)
+          this.location,
+      @HiveField(20)
+          final List<CodeableConcept>? reason,
+      @HiveField(21)
+      @HiveField(22)
+          this.activity,
+      @HiveField(23)
+          required final List<ProvenanceAgent> agent,
+      @HiveField(24)
+          final List<ProvenanceEntity>? entity,
+      @HiveField(25)
+          final List<Signature>? signature})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -9028,17 +9495,20 @@ class _$_Provenance extends _Provenance {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Provenance)
+  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
+  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
+  @HiveField(2)
   final Meta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -9046,20 +9516,24 @@ class _$_Provenance extends _Provenance {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
+  @HiveField(5)
   final Code? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
+  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -9069,6 +9543,7 @@ class _$_Provenance extends _Provenance {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
+  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -9082,6 +9557,7 @@ class _$_Provenance extends _Provenance {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -9106,6 +9582,7 @@ class _$_Provenance extends _Provenance {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -9143,6 +9620,7 @@ class _$_Provenance extends _Provenance {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -9161,6 +9639,7 @@ class _$_Provenance extends _Provenance {
   /// described in this resource. A provenance can point to more than one target
   ///  if multiple resources were created/updated by the same activity.
   @override
+  @HiveField(11)
   List<Reference> get target {
     if (_target is EqualUnmodifiableListView) return _target;
     // ignore: implicit_dynamic_type
@@ -9169,24 +9648,29 @@ class _$_Provenance extends _Provenance {
 
   /// [occurredPeriod] The period during which the activity occurred.
   @override
+  @HiveField(12)
   final Period? occurredPeriod;
 
   /// [occurredDateTime] The period during which the activity occurred.
   @override
+  @HiveField(13)
   final FhirDateTime? occurredDateTime;
 
   /// [occurredDateTimeElement] Extensions for occurredDateTime
   @override
   @JsonKey(name: '_occurredDateTime')
+  @HiveField(14)
   final Element? occurredDateTimeElement;
 
   /// [recorded] The instant of time at which the activity was recorded.
   @override
+  @HiveField(15)
   final Instant? recorded;
 
   /// [recordedElement] Extensions for recorded
   @override
   @JsonKey(name: '_recorded')
+  @HiveField(16)
   final Element? recordedElement;
 
   /// [policy] Policy or plan the activity was defined by. Typically, a single
@@ -9198,6 +9682,7 @@ class _$_Provenance extends _Provenance {
   /// activity may have multiple applicable policy documents, such as patient
   ///  consent, guarantor funding, etc.
   @override
+  @HiveField(17)
   List<FhirUri>? get policy {
     final value = _policy;
     if (value == null) return null;
@@ -9212,6 +9697,7 @@ class _$_Provenance extends _Provenance {
   /// [policyElement] Extensions for policy
   @override
   @JsonKey(name: '_policy')
+  @HiveField(18)
   List<Element?>? get policyElement {
     final value = _policyElement;
     if (value == null) return null;
@@ -9222,6 +9708,7 @@ class _$_Provenance extends _Provenance {
 
   /// [location] Where the activity occurred, if relevant.
   @override
+  @HiveField(19)
   final Reference? location;
 
   /// [reason] The reason that the activity was taking place.
@@ -9229,6 +9716,7 @@ class _$_Provenance extends _Provenance {
 
   /// [reason] The reason that the activity was taking place.
   @override
+  @HiveField(20)
   List<CodeableConcept>? get reason {
     final value = _reason;
     if (value == null) return null;
@@ -9238,9 +9726,9 @@ class _$_Provenance extends _Provenance {
   }
 
   /// [activity] An activity is something that occurs over a period of time and
-  /// acts upon or with entities; it may include consuming, processing,
-  ///  transforming, modifying, relocating, using, or generating entities.
   @override
+  @HiveField(21)
+  @HiveField(22)
   final CodeableConcept? activity;
 
   /// [agent] An actor taking a role in an activity  for which it can be
@@ -9250,6 +9738,7 @@ class _$_Provenance extends _Provenance {
   /// [agent] An actor taking a role in an activity  for which it can be
   ///  assigned some degree of responsibility for the activity taking place.
   @override
+  @HiveField(23)
   List<ProvenanceAgent> get agent {
     if (_agent is EqualUnmodifiableListView) return _agent;
     // ignore: implicit_dynamic_type
@@ -9261,6 +9750,7 @@ class _$_Provenance extends _Provenance {
 
   /// [entity] An entity used in this activity.
   @override
+  @HiveField(24)
   List<ProvenanceEntity>? get entity {
     final value = _entity;
     if (value == null) return null;
@@ -9278,6 +9768,7 @@ class _$_Provenance extends _Provenance {
   /// should match a Provenance.agent. The purpose of the signature is
   ///  indicated.
   @override
+  @HiveField(25)
   List<Signature>? get signature {
     final value = _signature;
     if (value == null) return null;
@@ -9389,37 +9880,63 @@ class _$_Provenance extends _Provenance {
 abstract class _Provenance extends Provenance {
   factory _Provenance(
       {@JsonKey(unknownEnumValue: R4ResourceType.Provenance)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      required final List<Reference> target,
-      final Period? occurredPeriod,
-      final FhirDateTime? occurredDateTime,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          required final List<Reference> target,
+      @HiveField(12)
+          final Period? occurredPeriod,
+      @HiveField(13)
+          final FhirDateTime? occurredDateTime,
       @JsonKey(name: '_occurredDateTime')
+      @HiveField(14)
           final Element? occurredDateTimeElement,
-      final Instant? recorded,
+      @HiveField(15)
+          final Instant? recorded,
       @JsonKey(name: '_recorded')
+      @HiveField(16)
           final Element? recordedElement,
-      final List<FhirUri>? policy,
+      @HiveField(17)
+          final List<FhirUri>? policy,
       @JsonKey(name: '_policy')
+      @HiveField(18)
           final List<Element?>? policyElement,
-      final Reference? location,
-      final List<CodeableConcept>? reason,
-      final CodeableConcept? activity,
-      required final List<ProvenanceAgent> agent,
-      final List<ProvenanceEntity>? entity,
-      final List<Signature>? signature}) = _$_Provenance;
+      @HiveField(19)
+          final Reference? location,
+      @HiveField(20)
+          final List<CodeableConcept>? reason,
+      @HiveField(21)
+      @HiveField(22)
+          final CodeableConcept? activity,
+      @HiveField(23)
+          required final List<ProvenanceAgent> agent,
+      @HiveField(24)
+          final List<ProvenanceEntity>? entity,
+      @HiveField(25)
+          final List<Signature>? signature}) = _$_Provenance;
   _Provenance._() : super._();
 
   factory _Provenance.fromJson(Map<String, dynamic> json) =
@@ -9427,17 +9944,20 @@ abstract class _Provenance extends Provenance {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Provenance)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta;
   @override
 
@@ -9445,20 +9965,24 @@ abstract class _Provenance extends Provenance {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -9468,6 +9992,7 @@ abstract class _Provenance extends Provenance {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -9475,6 +10000,7 @@ abstract class _Provenance extends Provenance {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -9485,6 +10011,7 @@ abstract class _Provenance extends Provenance {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -9501,74 +10028,88 @@ abstract class _Provenance extends Provenance {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [target] The Reference(s) that were generated or updated by  the activity
   /// described in this resource. A provenance can point to more than one target
   ///  if multiple resources were created/updated by the same activity.
+  @HiveField(11)
   List<Reference> get target;
   @override
 
   /// [occurredPeriod] The period during which the activity occurred.
+  @HiveField(12)
   Period? get occurredPeriod;
   @override
 
   /// [occurredDateTime] The period during which the activity occurred.
+  @HiveField(13)
   FhirDateTime? get occurredDateTime;
   @override
 
   /// [occurredDateTimeElement] Extensions for occurredDateTime
   @JsonKey(name: '_occurredDateTime')
+  @HiveField(14)
   Element? get occurredDateTimeElement;
   @override
 
   /// [recorded] The instant of time at which the activity was recorded.
+  @HiveField(15)
   Instant? get recorded;
   @override
 
   /// [recordedElement] Extensions for recorded
   @JsonKey(name: '_recorded')
+  @HiveField(16)
   Element? get recordedElement;
   @override
 
   /// [policy] Policy or plan the activity was defined by. Typically, a single
   /// activity may have multiple applicable policy documents, such as patient
   ///  consent, guarantor funding, etc.
+  @HiveField(17)
   List<FhirUri>? get policy;
   @override
 
   /// [policyElement] Extensions for policy
   @JsonKey(name: '_policy')
+  @HiveField(18)
   List<Element?>? get policyElement;
   @override
 
   /// [location] Where the activity occurred, if relevant.
+  @HiveField(19)
   Reference? get location;
   @override
 
   /// [reason] The reason that the activity was taking place.
+  @HiveField(20)
   List<CodeableConcept>? get reason;
   @override
 
   /// [activity] An activity is something that occurs over a period of time and
-  /// acts upon or with entities; it may include consuming, processing,
-  ///  transforming, modifying, relocating, using, or generating entities.
+  @HiveField(21)
+  @HiveField(22)
   CodeableConcept? get activity;
   @override
 
   /// [agent] An actor taking a role in an activity  for which it can be
   ///  assigned some degree of responsibility for the activity taking place.
+  @HiveField(23)
   List<ProvenanceAgent> get agent;
   @override
 
   /// [entity] An entity used in this activity.
+  @HiveField(24)
   List<ProvenanceEntity>? get entity;
   @override
 
   /// [signature] A digital signature on the target Reference(s). The signer
   /// should match a Provenance.agent. The purpose of the signature is
   ///  indicated.
+  @HiveField(25)
   List<Signature>? get signature;
   @override
   @JsonKey(ignore: true)

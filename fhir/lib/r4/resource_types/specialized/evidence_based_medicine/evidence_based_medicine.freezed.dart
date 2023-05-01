@@ -20,79 +20,132 @@ Citation _$CitationFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Citation {
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
+  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+  @HiveField(11)
   FhirUri? get url => throw _privateConstructorUsedError;
+  @HiveField(12)
   @JsonKey(name: '_url')
   Element? get urlElement => throw _privateConstructorUsedError;
+  @HiveField(13)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  @HiveField(14)
   String? get version => throw _privateConstructorUsedError;
+  @HiveField(15)
   @JsonKey(name: '_version')
   Element? get versionElement => throw _privateConstructorUsedError;
+  @HiveField(16)
   String? get name => throw _privateConstructorUsedError;
+  @HiveField(17)
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
+  @HiveField(18)
   String? get title => throw _privateConstructorUsedError;
+  @HiveField(19)
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
+  @HiveField(20)
   Code? get status => throw _privateConstructorUsedError;
+  @HiveField(21)
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
+  @HiveField(22)
   Boolean? get experimental => throw _privateConstructorUsedError;
+  @HiveField(23)
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
+  @HiveField(24)
   FhirDateTime? get date => throw _privateConstructorUsedError;
+  @HiveField(25)
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
+  @HiveField(26)
   String? get publisher => throw _privateConstructorUsedError;
+  @HiveField(27)
   @JsonKey(name: '_publisher')
   Element? get publisherElement => throw _privateConstructorUsedError;
+  @HiveField(28)
   List<ContactDetail>? get contact => throw _privateConstructorUsedError;
+  @HiveField(29)
   Markdown? get description => throw _privateConstructorUsedError;
+  @HiveField(30)
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
+  @HiveField(31)
   List<UsageContext>? get useContext => throw _privateConstructorUsedError;
+  @HiveField(32)
   List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
+  @HiveField(33)
   Markdown? get purpose => throw _privateConstructorUsedError;
+  @HiveField(34)
   @JsonKey(name: '_purpose')
   Element? get purposeElement => throw _privateConstructorUsedError;
+  @HiveField(35)
   Markdown? get copyright => throw _privateConstructorUsedError;
+  @HiveField(36)
   @JsonKey(name: '_copyright')
   Element? get copyrightElement => throw _privateConstructorUsedError;
+  @HiveField(37)
   Date? get approvalDate => throw _privateConstructorUsedError;
+  @HiveField(38)
   @JsonKey(name: '_approvalDate')
   Element? get approvalDateElement => throw _privateConstructorUsedError;
+  @HiveField(39)
   Date? get lastReviewDate => throw _privateConstructorUsedError;
+  @HiveField(40)
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement => throw _privateConstructorUsedError;
-  Period? get effectivePeriod =>
-      throw _privateConstructorUsedError; // List<CodeableConcept>? topic,
+  @HiveField(41)
+  Period? get effectivePeriod => throw _privateConstructorUsedError;
+  @HiveField(42)
+  @HiveField(43)
   List<ContactDetail>? get author => throw _privateConstructorUsedError;
+  @HiveField(44)
   List<ContactDetail>? get editor => throw _privateConstructorUsedError;
+  @HiveField(45)
   List<ContactDetail>? get reviewer => throw _privateConstructorUsedError;
-  List<ContactDetail>? get endorser =>
-      throw _privateConstructorUsedError; // List<RelatedArtifact>? relatedArtifact,
+  @HiveField(46)
+  List<ContactDetail>? get endorser => throw _privateConstructorUsedError;
+  @HiveField(47)
+  @HiveField(48)
   List<CitationSummary>? get summary => throw _privateConstructorUsedError;
+  @HiveField(49)
   List<CitationClassification>? get classification =>
       throw _privateConstructorUsedError;
+  @HiveField(50)
   List<Annotation>? get note => throw _privateConstructorUsedError;
+  @HiveField(51)
   List<CodeableConcept>? get currentState => throw _privateConstructorUsedError;
+  @HiveField(52)
   List<CitationStatusDate>? get statusDate =>
       throw _privateConstructorUsedError;
+  @HiveField(53)
   List<CitationRelatesTo>? get relatesTo => throw _privateConstructorUsedError;
+  @HiveField(54)
   CitationCitedArtifact? get citedArtifact =>
       throw _privateConstructorUsedError;
 
@@ -108,59 +161,130 @@ abstract class $CitationCopyWith<$Res> {
       _$CitationCopyWithImpl<$Res, Citation>;
   @useResult
   $Res call(
-      {R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
-      @JsonKey(name: '_url') Element? urlElement,
-      List<Identifier>? identifier,
-      String? version,
-      @JsonKey(name: '_version') Element? versionElement,
-      String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      String? title,
-      @JsonKey(name: '_title') Element? titleElement,
-      Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
-      Boolean? experimental,
-      @JsonKey(name: '_experimental') Element? experimentalElement,
-      FhirDateTime? date,
-      @JsonKey(name: '_date') Element? dateElement,
-      String? publisher,
-      @JsonKey(name: '_publisher') Element? publisherElement,
-      List<ContactDetail>? contact,
-      Markdown? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      List<UsageContext>? useContext,
-      List<CodeableConcept>? jurisdiction,
-      Markdown? purpose,
-      @JsonKey(name: '_purpose') Element? purposeElement,
-      Markdown? copyright,
-      @JsonKey(name: '_copyright') Element? copyrightElement,
-      Date? approvalDate,
-      @JsonKey(name: '_approvalDate') Element? approvalDateElement,
-      Date? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
-      Period? effectivePeriod,
-      List<ContactDetail>? author,
-      List<ContactDetail>? editor,
-      List<ContactDetail>? reviewer,
-      List<ContactDetail>? endorser,
-      List<CitationSummary>? summary,
-      List<CitationClassification>? classification,
-      List<Annotation>? note,
-      List<CodeableConcept>? currentState,
-      List<CitationStatusDate>? statusDate,
-      List<CitationRelatesTo>? relatesTo,
-      CitationCitedArtifact? citedArtifact});
+      {@HiveField(0)
+          R4ResourceType resourceType,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
+      @HiveField(4)
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
+      @HiveField(5)
+          Code? language,
+      @HiveField(6)
+      @JsonKey(name: '_language')
+          Element? languageElement,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
+      @HiveField(9)
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          FhirUri? url,
+      @HiveField(12)
+      @JsonKey(name: '_url')
+          Element? urlElement,
+      @HiveField(13)
+          List<Identifier>? identifier,
+      @HiveField(14)
+          String? version,
+      @HiveField(15)
+      @JsonKey(name: '_version')
+          Element? versionElement,
+      @HiveField(16)
+          String? name,
+      @HiveField(17)
+      @JsonKey(name: '_name')
+          Element? nameElement,
+      @HiveField(18)
+          String? title,
+      @HiveField(19)
+      @JsonKey(name: '_title')
+          Element? titleElement,
+      @HiveField(20)
+          Code? status,
+      @HiveField(21)
+      @JsonKey(name: '_status')
+          Element? statusElement,
+      @HiveField(22)
+          Boolean? experimental,
+      @HiveField(23)
+      @JsonKey(name: '_experimental')
+          Element? experimentalElement,
+      @HiveField(24)
+          FhirDateTime? date,
+      @HiveField(25)
+      @JsonKey(name: '_date')
+          Element? dateElement,
+      @HiveField(26)
+          String? publisher,
+      @HiveField(27)
+      @JsonKey(name: '_publisher')
+          Element? publisherElement,
+      @HiveField(28)
+          List<ContactDetail>? contact,
+      @HiveField(29)
+          Markdown? description,
+      @HiveField(30)
+      @JsonKey(name: '_description')
+          Element? descriptionElement,
+      @HiveField(31)
+          List<UsageContext>? useContext,
+      @HiveField(32)
+          List<CodeableConcept>? jurisdiction,
+      @HiveField(33)
+          Markdown? purpose,
+      @HiveField(34)
+      @JsonKey(name: '_purpose')
+          Element? purposeElement,
+      @HiveField(35)
+          Markdown? copyright,
+      @HiveField(36)
+      @JsonKey(name: '_copyright')
+          Element? copyrightElement,
+      @HiveField(37)
+          Date? approvalDate,
+      @HiveField(38)
+      @JsonKey(name: '_approvalDate')
+          Element? approvalDateElement,
+      @HiveField(39)
+          Date? lastReviewDate,
+      @HiveField(40)
+      @JsonKey(name: '_lastReviewDate')
+          Element? lastReviewDateElement,
+      @HiveField(41)
+          Period? effectivePeriod,
+      @HiveField(42)
+      @HiveField(43)
+          List<ContactDetail>? author,
+      @HiveField(44)
+          List<ContactDetail>? editor,
+      @HiveField(45)
+          List<ContactDetail>? reviewer,
+      @HiveField(46)
+          List<ContactDetail>? endorser,
+      @HiveField(47)
+      @HiveField(48)
+          List<CitationSummary>? summary,
+      @HiveField(49)
+          List<CitationClassification>? classification,
+      @HiveField(50)
+          List<Annotation>? note,
+      @HiveField(51)
+          List<CodeableConcept>? currentState,
+      @HiveField(52)
+          List<CitationStatusDate>? statusDate,
+      @HiveField(53)
+          List<CitationRelatesTo>? relatesTo,
+      @HiveField(54)
+          CitationCitedArtifact? citedArtifact});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -703,59 +827,130 @@ abstract class _$$_CitationCopyWith<$Res> implements $CitationCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
-      @JsonKey(name: '_url') Element? urlElement,
-      List<Identifier>? identifier,
-      String? version,
-      @JsonKey(name: '_version') Element? versionElement,
-      String? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      String? title,
-      @JsonKey(name: '_title') Element? titleElement,
-      Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
-      Boolean? experimental,
-      @JsonKey(name: '_experimental') Element? experimentalElement,
-      FhirDateTime? date,
-      @JsonKey(name: '_date') Element? dateElement,
-      String? publisher,
-      @JsonKey(name: '_publisher') Element? publisherElement,
-      List<ContactDetail>? contact,
-      Markdown? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
-      List<UsageContext>? useContext,
-      List<CodeableConcept>? jurisdiction,
-      Markdown? purpose,
-      @JsonKey(name: '_purpose') Element? purposeElement,
-      Markdown? copyright,
-      @JsonKey(name: '_copyright') Element? copyrightElement,
-      Date? approvalDate,
-      @JsonKey(name: '_approvalDate') Element? approvalDateElement,
-      Date? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
-      Period? effectivePeriod,
-      List<ContactDetail>? author,
-      List<ContactDetail>? editor,
-      List<ContactDetail>? reviewer,
-      List<ContactDetail>? endorser,
-      List<CitationSummary>? summary,
-      List<CitationClassification>? classification,
-      List<Annotation>? note,
-      List<CodeableConcept>? currentState,
-      List<CitationStatusDate>? statusDate,
-      List<CitationRelatesTo>? relatesTo,
-      CitationCitedArtifact? citedArtifact});
+      {@HiveField(0)
+          R4ResourceType resourceType,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
+      @HiveField(4)
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
+      @HiveField(5)
+          Code? language,
+      @HiveField(6)
+      @JsonKey(name: '_language')
+          Element? languageElement,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
+      @HiveField(9)
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          FhirUri? url,
+      @HiveField(12)
+      @JsonKey(name: '_url')
+          Element? urlElement,
+      @HiveField(13)
+          List<Identifier>? identifier,
+      @HiveField(14)
+          String? version,
+      @HiveField(15)
+      @JsonKey(name: '_version')
+          Element? versionElement,
+      @HiveField(16)
+          String? name,
+      @HiveField(17)
+      @JsonKey(name: '_name')
+          Element? nameElement,
+      @HiveField(18)
+          String? title,
+      @HiveField(19)
+      @JsonKey(name: '_title')
+          Element? titleElement,
+      @HiveField(20)
+          Code? status,
+      @HiveField(21)
+      @JsonKey(name: '_status')
+          Element? statusElement,
+      @HiveField(22)
+          Boolean? experimental,
+      @HiveField(23)
+      @JsonKey(name: '_experimental')
+          Element? experimentalElement,
+      @HiveField(24)
+          FhirDateTime? date,
+      @HiveField(25)
+      @JsonKey(name: '_date')
+          Element? dateElement,
+      @HiveField(26)
+          String? publisher,
+      @HiveField(27)
+      @JsonKey(name: '_publisher')
+          Element? publisherElement,
+      @HiveField(28)
+          List<ContactDetail>? contact,
+      @HiveField(29)
+          Markdown? description,
+      @HiveField(30)
+      @JsonKey(name: '_description')
+          Element? descriptionElement,
+      @HiveField(31)
+          List<UsageContext>? useContext,
+      @HiveField(32)
+          List<CodeableConcept>? jurisdiction,
+      @HiveField(33)
+          Markdown? purpose,
+      @HiveField(34)
+      @JsonKey(name: '_purpose')
+          Element? purposeElement,
+      @HiveField(35)
+          Markdown? copyright,
+      @HiveField(36)
+      @JsonKey(name: '_copyright')
+          Element? copyrightElement,
+      @HiveField(37)
+          Date? approvalDate,
+      @HiveField(38)
+      @JsonKey(name: '_approvalDate')
+          Element? approvalDateElement,
+      @HiveField(39)
+          Date? lastReviewDate,
+      @HiveField(40)
+      @JsonKey(name: '_lastReviewDate')
+          Element? lastReviewDateElement,
+      @HiveField(41)
+          Period? effectivePeriod,
+      @HiveField(42)
+      @HiveField(43)
+          List<ContactDetail>? author,
+      @HiveField(44)
+          List<ContactDetail>? editor,
+      @HiveField(45)
+          List<ContactDetail>? reviewer,
+      @HiveField(46)
+          List<ContactDetail>? endorser,
+      @HiveField(47)
+      @HiveField(48)
+          List<CitationSummary>? summary,
+      @HiveField(49)
+          List<CitationClassification>? classification,
+      @HiveField(50)
+          List<Annotation>? note,
+      @HiveField(51)
+          List<CodeableConcept>? currentState,
+      @HiveField(52)
+          List<CitationStatusDate>? statusDate,
+      @HiveField(53)
+          List<CitationRelatesTo>? relatesTo,
+      @HiveField(54)
+          CitationCitedArtifact? citedArtifact});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -1084,59 +1279,130 @@ class __$$_CitationCopyWithImpl<$Res>
 @HiveType(typeId: 120, adapterName: 'CitationAdapter')
 class _$_Citation extends _Citation {
   _$_Citation(
-      {this.resourceType = R4ResourceType.Citation,
-      this.id,
-      this.meta,
-      this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
-      this.language,
-      @JsonKey(name: '_language') this.languageElement,
-      this.text,
-      final List<Resource>? contained,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.url,
-      @JsonKey(name: '_url') this.urlElement,
-      final List<Identifier>? identifier,
-      this.version,
-      @JsonKey(name: '_version') this.versionElement,
-      this.name,
-      @JsonKey(name: '_name') this.nameElement,
-      this.title,
-      @JsonKey(name: '_title') this.titleElement,
-      this.status,
-      @JsonKey(name: '_status') this.statusElement,
-      this.experimental,
-      @JsonKey(name: '_experimental') this.experimentalElement,
-      this.date,
-      @JsonKey(name: '_date') this.dateElement,
-      this.publisher,
-      @JsonKey(name: '_publisher') this.publisherElement,
-      final List<ContactDetail>? contact,
-      this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
-      final List<UsageContext>? useContext,
-      final List<CodeableConcept>? jurisdiction,
-      this.purpose,
-      @JsonKey(name: '_purpose') this.purposeElement,
-      this.copyright,
-      @JsonKey(name: '_copyright') this.copyrightElement,
-      this.approvalDate,
-      @JsonKey(name: '_approvalDate') this.approvalDateElement,
-      this.lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') this.lastReviewDateElement,
-      this.effectivePeriod,
-      final List<ContactDetail>? author,
-      final List<ContactDetail>? editor,
-      final List<ContactDetail>? reviewer,
-      final List<ContactDetail>? endorser,
-      final List<CitationSummary>? summary,
-      final List<CitationClassification>? classification,
-      final List<Annotation>? note,
-      final List<CodeableConcept>? currentState,
-      final List<CitationStatusDate>? statusDate,
-      final List<CitationRelatesTo>? relatesTo,
-      this.citedArtifact})
+      {@HiveField(0)
+          this.resourceType = R4ResourceType.Citation,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
+      @HiveField(4)
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
+      @HiveField(5)
+          this.language,
+      @HiveField(6)
+      @JsonKey(name: '_language')
+          this.languageElement,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
+      @HiveField(9)
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          this.url,
+      @HiveField(12)
+      @JsonKey(name: '_url')
+          this.urlElement,
+      @HiveField(13)
+          final List<Identifier>? identifier,
+      @HiveField(14)
+          this.version,
+      @HiveField(15)
+      @JsonKey(name: '_version')
+          this.versionElement,
+      @HiveField(16)
+          this.name,
+      @HiveField(17)
+      @JsonKey(name: '_name')
+          this.nameElement,
+      @HiveField(18)
+          this.title,
+      @HiveField(19)
+      @JsonKey(name: '_title')
+          this.titleElement,
+      @HiveField(20)
+          this.status,
+      @HiveField(21)
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @HiveField(22)
+          this.experimental,
+      @HiveField(23)
+      @JsonKey(name: '_experimental')
+          this.experimentalElement,
+      @HiveField(24)
+          this.date,
+      @HiveField(25)
+      @JsonKey(name: '_date')
+          this.dateElement,
+      @HiveField(26)
+          this.publisher,
+      @HiveField(27)
+      @JsonKey(name: '_publisher')
+          this.publisherElement,
+      @HiveField(28)
+          final List<ContactDetail>? contact,
+      @HiveField(29)
+          this.description,
+      @HiveField(30)
+      @JsonKey(name: '_description')
+          this.descriptionElement,
+      @HiveField(31)
+          final List<UsageContext>? useContext,
+      @HiveField(32)
+          final List<CodeableConcept>? jurisdiction,
+      @HiveField(33)
+          this.purpose,
+      @HiveField(34)
+      @JsonKey(name: '_purpose')
+          this.purposeElement,
+      @HiveField(35)
+          this.copyright,
+      @HiveField(36)
+      @JsonKey(name: '_copyright')
+          this.copyrightElement,
+      @HiveField(37)
+          this.approvalDate,
+      @HiveField(38)
+      @JsonKey(name: '_approvalDate')
+          this.approvalDateElement,
+      @HiveField(39)
+          this.lastReviewDate,
+      @HiveField(40)
+      @JsonKey(name: '_lastReviewDate')
+          this.lastReviewDateElement,
+      @HiveField(41)
+          this.effectivePeriod,
+      @HiveField(42)
+      @HiveField(43)
+          final List<ContactDetail>? author,
+      @HiveField(44)
+          final List<ContactDetail>? editor,
+      @HiveField(45)
+          final List<ContactDetail>? reviewer,
+      @HiveField(46)
+          final List<ContactDetail>? endorser,
+      @HiveField(47)
+      @HiveField(48)
+          final List<CitationSummary>? summary,
+      @HiveField(49)
+          final List<CitationClassification>? classification,
+      @HiveField(50)
+          final List<Annotation>? note,
+      @HiveField(51)
+          final List<CodeableConcept>? currentState,
+      @HiveField(52)
+          final List<CitationStatusDate>? statusDate,
+      @HiveField(53)
+          final List<CitationRelatesTo>? relatesTo,
+      @HiveField(54)
+          this.citedArtifact})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -1161,25 +1427,34 @@ class _$_Citation extends _Citation {
 
   @override
   @JsonKey()
+  @HiveField(0)
   final R4ResourceType resourceType;
   @override
+  @HiveField(1)
   final String? id;
   @override
+  @HiveField(2)
   final Meta? meta;
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
   @override
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
+  @HiveField(5)
   final Code? language;
   @override
+  @HiveField(6)
   @JsonKey(name: '_language')
   final Element? languageElement;
   @override
+  @HiveField(7)
   final Narrative? text;
   final List<Resource>? _contained;
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -1190,6 +1465,7 @@ class _$_Citation extends _Citation {
 
   final List<FhirExtension>? _extension_;
   @override
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -1201,6 +1477,7 @@ class _$_Citation extends _Citation {
 
   final List<FhirExtension>? _modifierExtension;
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -1211,12 +1488,15 @@ class _$_Citation extends _Citation {
   }
 
   @override
+  @HiveField(11)
   final FhirUri? url;
   @override
+  @HiveField(12)
   @JsonKey(name: '_url')
   final Element? urlElement;
   final List<Identifier>? _identifier;
   @override
+  @HiveField(13)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -1226,42 +1506,57 @@ class _$_Citation extends _Citation {
   }
 
   @override
+  @HiveField(14)
   final String? version;
   @override
+  @HiveField(15)
   @JsonKey(name: '_version')
   final Element? versionElement;
   @override
+  @HiveField(16)
   final String? name;
   @override
+  @HiveField(17)
   @JsonKey(name: '_name')
   final Element? nameElement;
   @override
+  @HiveField(18)
   final String? title;
   @override
+  @HiveField(19)
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
+  @HiveField(20)
   final Code? status;
   @override
+  @HiveField(21)
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
+  @HiveField(22)
   final Boolean? experimental;
   @override
+  @HiveField(23)
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
+  @HiveField(24)
   final FhirDateTime? date;
   @override
+  @HiveField(25)
   @JsonKey(name: '_date')
   final Element? dateElement;
   @override
+  @HiveField(26)
   final String? publisher;
   @override
+  @HiveField(27)
   @JsonKey(name: '_publisher')
   final Element? publisherElement;
   final List<ContactDetail>? _contact;
   @override
+  @HiveField(28)
   List<ContactDetail>? get contact {
     final value = _contact;
     if (value == null) return null;
@@ -1271,12 +1566,15 @@ class _$_Citation extends _Citation {
   }
 
   @override
+  @HiveField(29)
   final Markdown? description;
   @override
+  @HiveField(30)
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   final List<UsageContext>? _useContext;
   @override
+  @HiveField(31)
   List<UsageContext>? get useContext {
     final value = _useContext;
     if (value == null) return null;
@@ -1287,6 +1585,7 @@ class _$_Citation extends _Citation {
 
   final List<CodeableConcept>? _jurisdiction;
   @override
+  @HiveField(32)
   List<CodeableConcept>? get jurisdiction {
     final value = _jurisdiction;
     if (value == null) return null;
@@ -1296,31 +1595,40 @@ class _$_Citation extends _Citation {
   }
 
   @override
+  @HiveField(33)
   final Markdown? purpose;
   @override
+  @HiveField(34)
   @JsonKey(name: '_purpose')
   final Element? purposeElement;
   @override
+  @HiveField(35)
   final Markdown? copyright;
   @override
+  @HiveField(36)
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
   @override
+  @HiveField(37)
   final Date? approvalDate;
   @override
+  @HiveField(38)
   @JsonKey(name: '_approvalDate')
   final Element? approvalDateElement;
   @override
+  @HiveField(39)
   final Date? lastReviewDate;
   @override
+  @HiveField(40)
   @JsonKey(name: '_lastReviewDate')
   final Element? lastReviewDateElement;
   @override
+  @HiveField(41)
   final Period? effectivePeriod;
-// List<CodeableConcept>? topic,
   final List<ContactDetail>? _author;
-// List<CodeableConcept>? topic,
   @override
+  @HiveField(42)
+  @HiveField(43)
   List<ContactDetail>? get author {
     final value = _author;
     if (value == null) return null;
@@ -1331,6 +1639,7 @@ class _$_Citation extends _Citation {
 
   final List<ContactDetail>? _editor;
   @override
+  @HiveField(44)
   List<ContactDetail>? get editor {
     final value = _editor;
     if (value == null) return null;
@@ -1341,6 +1650,7 @@ class _$_Citation extends _Citation {
 
   final List<ContactDetail>? _reviewer;
   @override
+  @HiveField(45)
   List<ContactDetail>? get reviewer {
     final value = _reviewer;
     if (value == null) return null;
@@ -1351,6 +1661,7 @@ class _$_Citation extends _Citation {
 
   final List<ContactDetail>? _endorser;
   @override
+  @HiveField(46)
   List<ContactDetail>? get endorser {
     final value = _endorser;
     if (value == null) return null;
@@ -1359,10 +1670,10 @@ class _$_Citation extends _Citation {
     return EqualUnmodifiableListView(value);
   }
 
-// List<RelatedArtifact>? relatedArtifact,
   final List<CitationSummary>? _summary;
-// List<RelatedArtifact>? relatedArtifact,
   @override
+  @HiveField(47)
+  @HiveField(48)
   List<CitationSummary>? get summary {
     final value = _summary;
     if (value == null) return null;
@@ -1373,6 +1684,7 @@ class _$_Citation extends _Citation {
 
   final List<CitationClassification>? _classification;
   @override
+  @HiveField(49)
   List<CitationClassification>? get classification {
     final value = _classification;
     if (value == null) return null;
@@ -1383,6 +1695,7 @@ class _$_Citation extends _Citation {
 
   final List<Annotation>? _note;
   @override
+  @HiveField(50)
   List<Annotation>? get note {
     final value = _note;
     if (value == null) return null;
@@ -1393,6 +1706,7 @@ class _$_Citation extends _Citation {
 
   final List<CodeableConcept>? _currentState;
   @override
+  @HiveField(51)
   List<CodeableConcept>? get currentState {
     final value = _currentState;
     if (value == null) return null;
@@ -1403,6 +1717,7 @@ class _$_Citation extends _Citation {
 
   final List<CitationStatusDate>? _statusDate;
   @override
+  @HiveField(52)
   List<CitationStatusDate>? get statusDate {
     final value = _statusDate;
     if (value == null) return null;
@@ -1413,6 +1728,7 @@ class _$_Citation extends _Citation {
 
   final List<CitationRelatesTo>? _relatesTo;
   @override
+  @HiveField(53)
   List<CitationRelatesTo>? get relatesTo {
     final value = _relatesTo;
     if (value == null) return null;
@@ -1422,6 +1738,7 @@ class _$_Citation extends _Citation {
   }
 
   @override
+  @HiveField(54)
   final CitationCitedArtifact? citedArtifact;
 
   @override
@@ -1600,184 +1917,310 @@ class _$_Citation extends _Citation {
 
 abstract class _Citation extends Citation {
   factory _Citation(
-      {final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
-      final Code? language,
-      @JsonKey(name: '_language') final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final FhirUri? url,
-      @JsonKey(name: '_url') final Element? urlElement,
-      final List<Identifier>? identifier,
-      final String? version,
-      @JsonKey(name: '_version') final Element? versionElement,
-      final String? name,
-      @JsonKey(name: '_name') final Element? nameElement,
-      final String? title,
-      @JsonKey(name: '_title') final Element? titleElement,
-      final Code? status,
-      @JsonKey(name: '_status') final Element? statusElement,
-      final Boolean? experimental,
-      @JsonKey(name: '_experimental') final Element? experimentalElement,
-      final FhirDateTime? date,
-      @JsonKey(name: '_date') final Element? dateElement,
-      final String? publisher,
-      @JsonKey(name: '_publisher') final Element? publisherElement,
-      final List<ContactDetail>? contact,
-      final Markdown? description,
-      @JsonKey(name: '_description') final Element? descriptionElement,
-      final List<UsageContext>? useContext,
-      final List<CodeableConcept>? jurisdiction,
-      final Markdown? purpose,
-      @JsonKey(name: '_purpose') final Element? purposeElement,
-      final Markdown? copyright,
-      @JsonKey(name: '_copyright') final Element? copyrightElement,
-      final Date? approvalDate,
-      @JsonKey(name: '_approvalDate') final Element? approvalDateElement,
-      final Date? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate') final Element? lastReviewDateElement,
-      final Period? effectivePeriod,
-      final List<ContactDetail>? author,
-      final List<ContactDetail>? editor,
-      final List<ContactDetail>? reviewer,
-      final List<ContactDetail>? endorser,
-      final List<CitationSummary>? summary,
-      final List<CitationClassification>? classification,
-      final List<Annotation>? note,
-      final List<CodeableConcept>? currentState,
-      final List<CitationStatusDate>? statusDate,
-      final List<CitationRelatesTo>? relatesTo,
-      final CitationCitedArtifact? citedArtifact}) = _$_Citation;
+      {@HiveField(0)
+          final R4ResourceType resourceType,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
+      @HiveField(4)
+      @JsonKey(name: '_implicitRules')
+          final Element? implicitRulesElement,
+      @HiveField(5)
+          final Code? language,
+      @HiveField(6)
+      @JsonKey(name: '_language')
+          final Element? languageElement,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
+      @HiveField(9)
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final FhirUri? url,
+      @HiveField(12)
+      @JsonKey(name: '_url')
+          final Element? urlElement,
+      @HiveField(13)
+          final List<Identifier>? identifier,
+      @HiveField(14)
+          final String? version,
+      @HiveField(15)
+      @JsonKey(name: '_version')
+          final Element? versionElement,
+      @HiveField(16)
+          final String? name,
+      @HiveField(17)
+      @JsonKey(name: '_name')
+          final Element? nameElement,
+      @HiveField(18)
+          final String? title,
+      @HiveField(19)
+      @JsonKey(name: '_title')
+          final Element? titleElement,
+      @HiveField(20)
+          final Code? status,
+      @HiveField(21)
+      @JsonKey(name: '_status')
+          final Element? statusElement,
+      @HiveField(22)
+          final Boolean? experimental,
+      @HiveField(23)
+      @JsonKey(name: '_experimental')
+          final Element? experimentalElement,
+      @HiveField(24)
+          final FhirDateTime? date,
+      @HiveField(25)
+      @JsonKey(name: '_date')
+          final Element? dateElement,
+      @HiveField(26)
+          final String? publisher,
+      @HiveField(27)
+      @JsonKey(name: '_publisher')
+          final Element? publisherElement,
+      @HiveField(28)
+          final List<ContactDetail>? contact,
+      @HiveField(29)
+          final Markdown? description,
+      @HiveField(30)
+      @JsonKey(name: '_description')
+          final Element? descriptionElement,
+      @HiveField(31)
+          final List<UsageContext>? useContext,
+      @HiveField(32)
+          final List<CodeableConcept>? jurisdiction,
+      @HiveField(33)
+          final Markdown? purpose,
+      @HiveField(34)
+      @JsonKey(name: '_purpose')
+          final Element? purposeElement,
+      @HiveField(35)
+          final Markdown? copyright,
+      @HiveField(36)
+      @JsonKey(name: '_copyright')
+          final Element? copyrightElement,
+      @HiveField(37)
+          final Date? approvalDate,
+      @HiveField(38)
+      @JsonKey(name: '_approvalDate')
+          final Element? approvalDateElement,
+      @HiveField(39)
+          final Date? lastReviewDate,
+      @HiveField(40)
+      @JsonKey(name: '_lastReviewDate')
+          final Element? lastReviewDateElement,
+      @HiveField(41)
+          final Period? effectivePeriod,
+      @HiveField(42)
+      @HiveField(43)
+          final List<ContactDetail>? author,
+      @HiveField(44)
+          final List<ContactDetail>? editor,
+      @HiveField(45)
+          final List<ContactDetail>? reviewer,
+      @HiveField(46)
+          final List<ContactDetail>? endorser,
+      @HiveField(47)
+      @HiveField(48)
+          final List<CitationSummary>? summary,
+      @HiveField(49)
+          final List<CitationClassification>? classification,
+      @HiveField(50)
+          final List<Annotation>? note,
+      @HiveField(51)
+          final List<CodeableConcept>? currentState,
+      @HiveField(52)
+          final List<CitationStatusDate>? statusDate,
+      @HiveField(53)
+          final List<CitationRelatesTo>? relatesTo,
+      @HiveField(54)
+          final CitationCitedArtifact? citedArtifact}) = _$_Citation;
   _Citation._() : super._();
 
   factory _Citation.fromJson(Map<String, dynamic> json) = _$_Citation.fromJson;
 
   @override
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
+  @HiveField(1)
   String? get id;
   @override
+  @HiveField(2)
   Meta? get meta;
   @override
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
+  @HiveField(5)
   Code? get language;
   @override
+  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+  @HiveField(7)
   Narrative? get text;
   @override
+  @HiveField(8)
   List<Resource>? get contained;
   @override
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
+  @HiveField(11)
   FhirUri? get url;
   @override
+  @HiveField(12)
   @JsonKey(name: '_url')
   Element? get urlElement;
   @override
+  @HiveField(13)
   List<Identifier>? get identifier;
   @override
+  @HiveField(14)
   String? get version;
   @override
+  @HiveField(15)
   @JsonKey(name: '_version')
   Element? get versionElement;
   @override
+  @HiveField(16)
   String? get name;
   @override
+  @HiveField(17)
   @JsonKey(name: '_name')
   Element? get nameElement;
   @override
+  @HiveField(18)
   String? get title;
   @override
+  @HiveField(19)
   @JsonKey(name: '_title')
   Element? get titleElement;
   @override
+  @HiveField(20)
   Code? get status;
   @override
+  @HiveField(21)
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
+  @HiveField(22)
   Boolean? get experimental;
   @override
+  @HiveField(23)
   @JsonKey(name: '_experimental')
   Element? get experimentalElement;
   @override
+  @HiveField(24)
   FhirDateTime? get date;
   @override
+  @HiveField(25)
   @JsonKey(name: '_date')
   Element? get dateElement;
   @override
+  @HiveField(26)
   String? get publisher;
   @override
+  @HiveField(27)
   @JsonKey(name: '_publisher')
   Element? get publisherElement;
   @override
+  @HiveField(28)
   List<ContactDetail>? get contact;
   @override
+  @HiveField(29)
   Markdown? get description;
   @override
+  @HiveField(30)
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
+  @HiveField(31)
   List<UsageContext>? get useContext;
   @override
+  @HiveField(32)
   List<CodeableConcept>? get jurisdiction;
   @override
+  @HiveField(33)
   Markdown? get purpose;
   @override
+  @HiveField(34)
   @JsonKey(name: '_purpose')
   Element? get purposeElement;
   @override
+  @HiveField(35)
   Markdown? get copyright;
   @override
+  @HiveField(36)
   @JsonKey(name: '_copyright')
   Element? get copyrightElement;
   @override
+  @HiveField(37)
   Date? get approvalDate;
   @override
+  @HiveField(38)
   @JsonKey(name: '_approvalDate')
   Element? get approvalDateElement;
   @override
+  @HiveField(39)
   Date? get lastReviewDate;
   @override
+  @HiveField(40)
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement;
   @override
+  @HiveField(41)
   Period? get effectivePeriod;
-  @override // List<CodeableConcept>? topic,
+  @override
+  @HiveField(42)
+  @HiveField(43)
   List<ContactDetail>? get author;
   @override
+  @HiveField(44)
   List<ContactDetail>? get editor;
   @override
+  @HiveField(45)
   List<ContactDetail>? get reviewer;
   @override
+  @HiveField(46)
   List<ContactDetail>? get endorser;
-  @override // List<RelatedArtifact>? relatedArtifact,
+  @override
+  @HiveField(47)
+  @HiveField(48)
   List<CitationSummary>? get summary;
   @override
+  @HiveField(49)
   List<CitationClassification>? get classification;
   @override
+  @HiveField(50)
   List<Annotation>? get note;
   @override
+  @HiveField(51)
   List<CodeableConcept>? get currentState;
   @override
+  @HiveField(52)
   List<CitationStatusDate>? get statusDate;
   @override
+  @HiveField(53)
   List<CitationRelatesTo>? get relatesTo;
   @override
+  @HiveField(54)
   CitationCitedArtifact? get citedArtifact;
   @override
   @JsonKey(ignore: true)
@@ -11675,70 +12118,118 @@ Evidence _$EvidenceFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Evidence {
   @JsonKey(unknownEnumValue: R4ResourceType.Evidence)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
+  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+  @HiveField(11)
   FhirUri? get url => throw _privateConstructorUsedError;
+  @HiveField(12)
   @JsonKey(name: '_url')
   Element? get urlElement => throw _privateConstructorUsedError;
+  @HiveField(13)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  @HiveField(14)
   String? get version => throw _privateConstructorUsedError;
+  @HiveField(15)
   @JsonKey(name: '_version')
   Element? get versionElement => throw _privateConstructorUsedError;
+  @HiveField(16)
   String? get title => throw _privateConstructorUsedError;
+  @HiveField(17)
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
+  @HiveField(18)
   Reference? get citeAsReference => throw _privateConstructorUsedError;
+  @HiveField(19)
   Markdown? get citAsMarkdown => throw _privateConstructorUsedError;
+  @HiveField(20)
   @JsonKey(name: '_citeAsMarkdown')
   Element? get citeAsMarkdownElement => throw _privateConstructorUsedError;
+  @HiveField(21)
   Code? get status => throw _privateConstructorUsedError;
+  @HiveField(22)
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
+  @HiveField(23)
   FhirDateTime? get date => throw _privateConstructorUsedError;
+  @HiveField(24)
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
+  @HiveField(25)
   List<UsageContext>? get useContext => throw _privateConstructorUsedError;
+  @HiveField(26)
   Date? get approvalDate => throw _privateConstructorUsedError;
+  @HiveField(27)
   @JsonKey(name: '_approvalDate')
   Element? get approvalDateElement => throw _privateConstructorUsedError;
+  @HiveField(28)
   Date? get lastReviewDate => throw _privateConstructorUsedError;
+  @HiveField(29)
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement => throw _privateConstructorUsedError;
+  @HiveField(30)
   String? get publisher => throw _privateConstructorUsedError;
+  @HiveField(31)
   @JsonKey(name: '_publisher')
   Element? get publisherElement => throw _privateConstructorUsedError;
+  @HiveField(32)
   List<ContactDetail>? get contact => throw _privateConstructorUsedError;
+  @HiveField(33)
   List<ContactDetail>? get author => throw _privateConstructorUsedError;
+  @HiveField(34)
   List<ContactDetail>? get editor => throw _privateConstructorUsedError;
+  @HiveField(35)
   List<ContactDetail>? get reviewer => throw _privateConstructorUsedError;
+  @HiveField(36)
   List<ContactDetail>? get endorser => throw _privateConstructorUsedError;
+  @HiveField(37)
   List<RelatedArtifact>? get relatedArtifact =>
       throw _privateConstructorUsedError;
+  @HiveField(38)
   Markdown? get description => throw _privateConstructorUsedError;
+  @HiveField(39)
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
+  @HiveField(40)
   Markdown? get assertion => throw _privateConstructorUsedError;
+  @HiveField(41)
   @JsonKey(name: '_assertion')
   Element? get assertionElement => throw _privateConstructorUsedError;
+  @HiveField(42)
   List<Annotation>? get note => throw _privateConstructorUsedError;
+  @HiveField(43)
   List<EvidenceVariableDefinition> get variableDefinition =>
       throw _privateConstructorUsedError;
+  @HiveField(44)
   CodeableConcept? get synthesisType => throw _privateConstructorUsedError;
+  @HiveField(45)
   CodeableConcept? get studyType => throw _privateConstructorUsedError;
+  @HiveField(46)
   List<EvidenceStatistic>? get statistic => throw _privateConstructorUsedError;
+  @HiveField(47)
   List<EvidenceCertainty>? get certainty => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -11754,68 +12245,116 @@ abstract class $EvidenceCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Evidence)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          FhirUri? url,
+      @HiveField(12)
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Identifier>? identifier,
-      String? version,
+      @HiveField(13)
+          List<Identifier>? identifier,
+      @HiveField(14)
+          String? version,
+      @HiveField(15)
       @JsonKey(name: '_version')
           Element? versionElement,
-      String? title,
+      @HiveField(16)
+          String? title,
+      @HiveField(17)
       @JsonKey(name: '_title')
           Element? titleElement,
-      Reference? citeAsReference,
-      Markdown? citAsMarkdown,
+      @HiveField(18)
+          Reference? citeAsReference,
+      @HiveField(19)
+          Markdown? citAsMarkdown,
+      @HiveField(20)
       @JsonKey(name: '_citeAsMarkdown')
           Element? citeAsMarkdownElement,
-      Code? status,
+      @HiveField(21)
+          Code? status,
+      @HiveField(22)
       @JsonKey(name: '_status')
           Element? statusElement,
-      FhirDateTime? date,
+      @HiveField(23)
+          FhirDateTime? date,
+      @HiveField(24)
       @JsonKey(name: '_date')
           Element? dateElement,
-      List<UsageContext>? useContext,
-      Date? approvalDate,
+      @HiveField(25)
+          List<UsageContext>? useContext,
+      @HiveField(26)
+          Date? approvalDate,
+      @HiveField(27)
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      @HiveField(28)
+          Date? lastReviewDate,
+      @HiveField(29)
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
-      String? publisher,
+      @HiveField(30)
+          String? publisher,
+      @HiveField(31)
       @JsonKey(name: '_publisher')
           Element? publisherElement,
-      List<ContactDetail>? contact,
-      List<ContactDetail>? author,
-      List<ContactDetail>? editor,
-      List<ContactDetail>? reviewer,
-      List<ContactDetail>? endorser,
-      List<RelatedArtifact>? relatedArtifact,
-      Markdown? description,
+      @HiveField(32)
+          List<ContactDetail>? contact,
+      @HiveField(33)
+          List<ContactDetail>? author,
+      @HiveField(34)
+          List<ContactDetail>? editor,
+      @HiveField(35)
+          List<ContactDetail>? reviewer,
+      @HiveField(36)
+          List<ContactDetail>? endorser,
+      @HiveField(37)
+          List<RelatedArtifact>? relatedArtifact,
+      @HiveField(38)
+          Markdown? description,
+      @HiveField(39)
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      Markdown? assertion,
+      @HiveField(40)
+          Markdown? assertion,
+      @HiveField(41)
       @JsonKey(name: '_assertion')
           Element? assertionElement,
-      List<Annotation>? note,
-      List<EvidenceVariableDefinition> variableDefinition,
-      CodeableConcept? synthesisType,
-      CodeableConcept? studyType,
-      List<EvidenceStatistic>? statistic,
-      List<EvidenceCertainty>? certainty});
+      @HiveField(42)
+          List<Annotation>? note,
+      @HiveField(43)
+          List<EvidenceVariableDefinition> variableDefinition,
+      @HiveField(44)
+          CodeableConcept? synthesisType,
+      @HiveField(45)
+          CodeableConcept? studyType,
+      @HiveField(46)
+          List<EvidenceStatistic>? statistic,
+      @HiveField(47)
+          List<EvidenceCertainty>? certainty});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -12321,68 +12860,116 @@ abstract class _$$_EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Evidence)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          FhirUri? url,
+      @HiveField(12)
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Identifier>? identifier,
-      String? version,
+      @HiveField(13)
+          List<Identifier>? identifier,
+      @HiveField(14)
+          String? version,
+      @HiveField(15)
       @JsonKey(name: '_version')
           Element? versionElement,
-      String? title,
+      @HiveField(16)
+          String? title,
+      @HiveField(17)
       @JsonKey(name: '_title')
           Element? titleElement,
-      Reference? citeAsReference,
-      Markdown? citAsMarkdown,
+      @HiveField(18)
+          Reference? citeAsReference,
+      @HiveField(19)
+          Markdown? citAsMarkdown,
+      @HiveField(20)
       @JsonKey(name: '_citeAsMarkdown')
           Element? citeAsMarkdownElement,
-      Code? status,
+      @HiveField(21)
+          Code? status,
+      @HiveField(22)
       @JsonKey(name: '_status')
           Element? statusElement,
-      FhirDateTime? date,
+      @HiveField(23)
+          FhirDateTime? date,
+      @HiveField(24)
       @JsonKey(name: '_date')
           Element? dateElement,
-      List<UsageContext>? useContext,
-      Date? approvalDate,
+      @HiveField(25)
+          List<UsageContext>? useContext,
+      @HiveField(26)
+          Date? approvalDate,
+      @HiveField(27)
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      @HiveField(28)
+          Date? lastReviewDate,
+      @HiveField(29)
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
-      String? publisher,
+      @HiveField(30)
+          String? publisher,
+      @HiveField(31)
       @JsonKey(name: '_publisher')
           Element? publisherElement,
-      List<ContactDetail>? contact,
-      List<ContactDetail>? author,
-      List<ContactDetail>? editor,
-      List<ContactDetail>? reviewer,
-      List<ContactDetail>? endorser,
-      List<RelatedArtifact>? relatedArtifact,
-      Markdown? description,
+      @HiveField(32)
+          List<ContactDetail>? contact,
+      @HiveField(33)
+          List<ContactDetail>? author,
+      @HiveField(34)
+          List<ContactDetail>? editor,
+      @HiveField(35)
+          List<ContactDetail>? reviewer,
+      @HiveField(36)
+          List<ContactDetail>? endorser,
+      @HiveField(37)
+          List<RelatedArtifact>? relatedArtifact,
+      @HiveField(38)
+          Markdown? description,
+      @HiveField(39)
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      Markdown? assertion,
+      @HiveField(40)
+          Markdown? assertion,
+      @HiveField(41)
       @JsonKey(name: '_assertion')
           Element? assertionElement,
-      List<Annotation>? note,
-      List<EvidenceVariableDefinition> variableDefinition,
-      CodeableConcept? synthesisType,
-      CodeableConcept? studyType,
-      List<EvidenceStatistic>? statistic,
-      List<EvidenceCertainty>? certainty});
+      @HiveField(42)
+          List<Annotation>? note,
+      @HiveField(43)
+          List<EvidenceVariableDefinition> variableDefinition,
+      @HiveField(44)
+          CodeableConcept? synthesisType,
+      @HiveField(45)
+          CodeableConcept? studyType,
+      @HiveField(46)
+          List<EvidenceStatistic>? statistic,
+      @HiveField(47)
+          List<EvidenceCertainty>? certainty});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -12685,68 +13272,116 @@ class __$$_EvidenceCopyWithImpl<$Res>
 class _$_Evidence extends _Evidence {
   _$_Evidence(
       {@JsonKey(unknownEnumValue: R4ResourceType.Evidence)
+      @HiveField(0)
           this.resourceType = R4ResourceType.Evidence,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.url,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          this.url,
+      @HiveField(12)
       @JsonKey(name: '_url')
           this.urlElement,
-      final List<Identifier>? identifier,
-      this.version,
+      @HiveField(13)
+          final List<Identifier>? identifier,
+      @HiveField(14)
+          this.version,
+      @HiveField(15)
       @JsonKey(name: '_version')
           this.versionElement,
-      this.title,
+      @HiveField(16)
+          this.title,
+      @HiveField(17)
       @JsonKey(name: '_title')
           this.titleElement,
-      this.citeAsReference,
-      this.citAsMarkdown,
+      @HiveField(18)
+          this.citeAsReference,
+      @HiveField(19)
+          this.citAsMarkdown,
+      @HiveField(20)
       @JsonKey(name: '_citeAsMarkdown')
           this.citeAsMarkdownElement,
-      this.status,
+      @HiveField(21)
+          this.status,
+      @HiveField(22)
       @JsonKey(name: '_status')
           this.statusElement,
-      this.date,
+      @HiveField(23)
+          this.date,
+      @HiveField(24)
       @JsonKey(name: '_date')
           this.dateElement,
-      final List<UsageContext>? useContext,
-      this.approvalDate,
+      @HiveField(25)
+          final List<UsageContext>? useContext,
+      @HiveField(26)
+          this.approvalDate,
+      @HiveField(27)
       @JsonKey(name: '_approvalDate')
           this.approvalDateElement,
-      this.lastReviewDate,
+      @HiveField(28)
+          this.lastReviewDate,
+      @HiveField(29)
       @JsonKey(name: '_lastReviewDate')
           this.lastReviewDateElement,
-      this.publisher,
+      @HiveField(30)
+          this.publisher,
+      @HiveField(31)
       @JsonKey(name: '_publisher')
           this.publisherElement,
-      final List<ContactDetail>? contact,
-      final List<ContactDetail>? author,
-      final List<ContactDetail>? editor,
-      final List<ContactDetail>? reviewer,
-      final List<ContactDetail>? endorser,
-      final List<RelatedArtifact>? relatedArtifact,
-      this.description,
+      @HiveField(32)
+          final List<ContactDetail>? contact,
+      @HiveField(33)
+          final List<ContactDetail>? author,
+      @HiveField(34)
+          final List<ContactDetail>? editor,
+      @HiveField(35)
+          final List<ContactDetail>? reviewer,
+      @HiveField(36)
+          final List<ContactDetail>? endorser,
+      @HiveField(37)
+          final List<RelatedArtifact>? relatedArtifact,
+      @HiveField(38)
+          this.description,
+      @HiveField(39)
       @JsonKey(name: '_description')
           this.descriptionElement,
-      this.assertion,
+      @HiveField(40)
+          this.assertion,
+      @HiveField(41)
       @JsonKey(name: '_assertion')
           this.assertionElement,
-      final List<Annotation>? note,
-      required final List<EvidenceVariableDefinition> variableDefinition,
-      this.synthesisType,
-      this.studyType,
-      final List<EvidenceStatistic>? statistic,
-      final List<EvidenceCertainty>? certainty})
+      @HiveField(42)
+          final List<Annotation>? note,
+      @HiveField(43)
+          required final List<EvidenceVariableDefinition> variableDefinition,
+      @HiveField(44)
+          this.synthesisType,
+      @HiveField(45)
+          this.studyType,
+      @HiveField(46)
+          final List<EvidenceStatistic>? statistic,
+      @HiveField(47)
+          final List<EvidenceCertainty>? certainty})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -12769,25 +13404,34 @@ class _$_Evidence extends _Evidence {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Evidence)
+  @HiveField(0)
   final R4ResourceType resourceType;
   @override
+  @HiveField(1)
   final String? id;
   @override
+  @HiveField(2)
   final Meta? meta;
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
   @override
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
+  @HiveField(5)
   final Code? language;
   @override
+  @HiveField(6)
   @JsonKey(name: '_language')
   final Element? languageElement;
   @override
+  @HiveField(7)
   final Narrative? text;
   final List<Resource>? _contained;
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -12798,6 +13442,7 @@ class _$_Evidence extends _Evidence {
 
   final List<FhirExtension>? _extension_;
   @override
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -12809,6 +13454,7 @@ class _$_Evidence extends _Evidence {
 
   final List<FhirExtension>? _modifierExtension;
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -12819,12 +13465,15 @@ class _$_Evidence extends _Evidence {
   }
 
   @override
+  @HiveField(11)
   final FhirUri? url;
   @override
+  @HiveField(12)
   @JsonKey(name: '_url')
   final Element? urlElement;
   final List<Identifier>? _identifier;
   @override
+  @HiveField(13)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -12834,34 +13483,46 @@ class _$_Evidence extends _Evidence {
   }
 
   @override
+  @HiveField(14)
   final String? version;
   @override
+  @HiveField(15)
   @JsonKey(name: '_version')
   final Element? versionElement;
   @override
+  @HiveField(16)
   final String? title;
   @override
+  @HiveField(17)
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
+  @HiveField(18)
   final Reference? citeAsReference;
   @override
+  @HiveField(19)
   final Markdown? citAsMarkdown;
   @override
+  @HiveField(20)
   @JsonKey(name: '_citeAsMarkdown')
   final Element? citeAsMarkdownElement;
   @override
+  @HiveField(21)
   final Code? status;
   @override
+  @HiveField(22)
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
+  @HiveField(23)
   final FhirDateTime? date;
   @override
+  @HiveField(24)
   @JsonKey(name: '_date')
   final Element? dateElement;
   final List<UsageContext>? _useContext;
   @override
+  @HiveField(25)
   List<UsageContext>? get useContext {
     final value = _useContext;
     if (value == null) return null;
@@ -12871,22 +13532,29 @@ class _$_Evidence extends _Evidence {
   }
 
   @override
+  @HiveField(26)
   final Date? approvalDate;
   @override
+  @HiveField(27)
   @JsonKey(name: '_approvalDate')
   final Element? approvalDateElement;
   @override
+  @HiveField(28)
   final Date? lastReviewDate;
   @override
+  @HiveField(29)
   @JsonKey(name: '_lastReviewDate')
   final Element? lastReviewDateElement;
   @override
+  @HiveField(30)
   final String? publisher;
   @override
+  @HiveField(31)
   @JsonKey(name: '_publisher')
   final Element? publisherElement;
   final List<ContactDetail>? _contact;
   @override
+  @HiveField(32)
   List<ContactDetail>? get contact {
     final value = _contact;
     if (value == null) return null;
@@ -12897,6 +13565,7 @@ class _$_Evidence extends _Evidence {
 
   final List<ContactDetail>? _author;
   @override
+  @HiveField(33)
   List<ContactDetail>? get author {
     final value = _author;
     if (value == null) return null;
@@ -12907,6 +13576,7 @@ class _$_Evidence extends _Evidence {
 
   final List<ContactDetail>? _editor;
   @override
+  @HiveField(34)
   List<ContactDetail>? get editor {
     final value = _editor;
     if (value == null) return null;
@@ -12917,6 +13587,7 @@ class _$_Evidence extends _Evidence {
 
   final List<ContactDetail>? _reviewer;
   @override
+  @HiveField(35)
   List<ContactDetail>? get reviewer {
     final value = _reviewer;
     if (value == null) return null;
@@ -12927,6 +13598,7 @@ class _$_Evidence extends _Evidence {
 
   final List<ContactDetail>? _endorser;
   @override
+  @HiveField(36)
   List<ContactDetail>? get endorser {
     final value = _endorser;
     if (value == null) return null;
@@ -12937,6 +13609,7 @@ class _$_Evidence extends _Evidence {
 
   final List<RelatedArtifact>? _relatedArtifact;
   @override
+  @HiveField(37)
   List<RelatedArtifact>? get relatedArtifact {
     final value = _relatedArtifact;
     if (value == null) return null;
@@ -12946,17 +13619,22 @@ class _$_Evidence extends _Evidence {
   }
 
   @override
+  @HiveField(38)
   final Markdown? description;
   @override
+  @HiveField(39)
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
+  @HiveField(40)
   final Markdown? assertion;
   @override
+  @HiveField(41)
   @JsonKey(name: '_assertion')
   final Element? assertionElement;
   final List<Annotation>? _note;
   @override
+  @HiveField(42)
   List<Annotation>? get note {
     final value = _note;
     if (value == null) return null;
@@ -12967,6 +13645,7 @@ class _$_Evidence extends _Evidence {
 
   final List<EvidenceVariableDefinition> _variableDefinition;
   @override
+  @HiveField(43)
   List<EvidenceVariableDefinition> get variableDefinition {
     if (_variableDefinition is EqualUnmodifiableListView)
       return _variableDefinition;
@@ -12975,11 +13654,14 @@ class _$_Evidence extends _Evidence {
   }
 
   @override
+  @HiveField(44)
   final CodeableConcept? synthesisType;
   @override
+  @HiveField(45)
   final CodeableConcept? studyType;
   final List<EvidenceStatistic>? _statistic;
   @override
+  @HiveField(46)
   List<EvidenceStatistic>? get statistic {
     final value = _statistic;
     if (value == null) return null;
@@ -12990,6 +13672,7 @@ class _$_Evidence extends _Evidence {
 
   final List<EvidenceCertainty>? _certainty;
   @override
+  @HiveField(47)
   List<EvidenceCertainty>? get certainty {
     final value = _certainty;
     if (value == null) return null;
@@ -13163,182 +13846,278 @@ class _$_Evidence extends _Evidence {
 abstract class _Evidence extends Evidence {
   factory _Evidence(
       {@JsonKey(unknownEnumValue: R4ResourceType.Evidence)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final FhirUri? url,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final FhirUri? url,
+      @HiveField(12)
       @JsonKey(name: '_url')
           final Element? urlElement,
-      final List<Identifier>? identifier,
-      final String? version,
+      @HiveField(13)
+          final List<Identifier>? identifier,
+      @HiveField(14)
+          final String? version,
+      @HiveField(15)
       @JsonKey(name: '_version')
           final Element? versionElement,
-      final String? title,
+      @HiveField(16)
+          final String? title,
+      @HiveField(17)
       @JsonKey(name: '_title')
           final Element? titleElement,
-      final Reference? citeAsReference,
-      final Markdown? citAsMarkdown,
+      @HiveField(18)
+          final Reference? citeAsReference,
+      @HiveField(19)
+          final Markdown? citAsMarkdown,
+      @HiveField(20)
       @JsonKey(name: '_citeAsMarkdown')
           final Element? citeAsMarkdownElement,
-      final Code? status,
+      @HiveField(21)
+          final Code? status,
+      @HiveField(22)
       @JsonKey(name: '_status')
           final Element? statusElement,
-      final FhirDateTime? date,
+      @HiveField(23)
+          final FhirDateTime? date,
+      @HiveField(24)
       @JsonKey(name: '_date')
           final Element? dateElement,
-      final List<UsageContext>? useContext,
-      final Date? approvalDate,
+      @HiveField(25)
+          final List<UsageContext>? useContext,
+      @HiveField(26)
+          final Date? approvalDate,
+      @HiveField(27)
       @JsonKey(name: '_approvalDate')
           final Element? approvalDateElement,
-      final Date? lastReviewDate,
+      @HiveField(28)
+          final Date? lastReviewDate,
+      @HiveField(29)
       @JsonKey(name: '_lastReviewDate')
           final Element? lastReviewDateElement,
-      final String? publisher,
+      @HiveField(30)
+          final String? publisher,
+      @HiveField(31)
       @JsonKey(name: '_publisher')
           final Element? publisherElement,
-      final List<ContactDetail>? contact,
-      final List<ContactDetail>? author,
-      final List<ContactDetail>? editor,
-      final List<ContactDetail>? reviewer,
-      final List<ContactDetail>? endorser,
-      final List<RelatedArtifact>? relatedArtifact,
-      final Markdown? description,
+      @HiveField(32)
+          final List<ContactDetail>? contact,
+      @HiveField(33)
+          final List<ContactDetail>? author,
+      @HiveField(34)
+          final List<ContactDetail>? editor,
+      @HiveField(35)
+          final List<ContactDetail>? reviewer,
+      @HiveField(36)
+          final List<ContactDetail>? endorser,
+      @HiveField(37)
+          final List<RelatedArtifact>? relatedArtifact,
+      @HiveField(38)
+          final Markdown? description,
+      @HiveField(39)
       @JsonKey(name: '_description')
           final Element? descriptionElement,
-      final Markdown? assertion,
+      @HiveField(40)
+          final Markdown? assertion,
+      @HiveField(41)
       @JsonKey(name: '_assertion')
           final Element? assertionElement,
-      final List<Annotation>? note,
-      required final List<EvidenceVariableDefinition> variableDefinition,
-      final CodeableConcept? synthesisType,
-      final CodeableConcept? studyType,
-      final List<EvidenceStatistic>? statistic,
-      final List<EvidenceCertainty>? certainty}) = _$_Evidence;
+      @HiveField(42)
+          final List<Annotation>? note,
+      @HiveField(43)
+          required final List<EvidenceVariableDefinition> variableDefinition,
+      @HiveField(44)
+          final CodeableConcept? synthesisType,
+      @HiveField(45)
+          final CodeableConcept? studyType,
+      @HiveField(46)
+          final List<EvidenceStatistic>? statistic,
+      @HiveField(47)
+          final List<EvidenceCertainty>? certainty}) = _$_Evidence;
   _Evidence._() : super._();
 
   factory _Evidence.fromJson(Map<String, dynamic> json) = _$_Evidence.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Evidence)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
+  @HiveField(1)
   String? get id;
   @override
+  @HiveField(2)
   Meta? get meta;
   @override
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
+  @HiveField(5)
   Code? get language;
   @override
+  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+  @HiveField(7)
   Narrative? get text;
   @override
+  @HiveField(8)
   List<Resource>? get contained;
   @override
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
+  @HiveField(11)
   FhirUri? get url;
   @override
+  @HiveField(12)
   @JsonKey(name: '_url')
   Element? get urlElement;
   @override
+  @HiveField(13)
   List<Identifier>? get identifier;
   @override
+  @HiveField(14)
   String? get version;
   @override
+  @HiveField(15)
   @JsonKey(name: '_version')
   Element? get versionElement;
   @override
+  @HiveField(16)
   String? get title;
   @override
+  @HiveField(17)
   @JsonKey(name: '_title')
   Element? get titleElement;
   @override
+  @HiveField(18)
   Reference? get citeAsReference;
   @override
+  @HiveField(19)
   Markdown? get citAsMarkdown;
   @override
+  @HiveField(20)
   @JsonKey(name: '_citeAsMarkdown')
   Element? get citeAsMarkdownElement;
   @override
+  @HiveField(21)
   Code? get status;
   @override
+  @HiveField(22)
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
+  @HiveField(23)
   FhirDateTime? get date;
   @override
+  @HiveField(24)
   @JsonKey(name: '_date')
   Element? get dateElement;
   @override
+  @HiveField(25)
   List<UsageContext>? get useContext;
   @override
+  @HiveField(26)
   Date? get approvalDate;
   @override
+  @HiveField(27)
   @JsonKey(name: '_approvalDate')
   Element? get approvalDateElement;
   @override
+  @HiveField(28)
   Date? get lastReviewDate;
   @override
+  @HiveField(29)
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement;
   @override
+  @HiveField(30)
   String? get publisher;
   @override
+  @HiveField(31)
   @JsonKey(name: '_publisher')
   Element? get publisherElement;
   @override
+  @HiveField(32)
   List<ContactDetail>? get contact;
   @override
+  @HiveField(33)
   List<ContactDetail>? get author;
   @override
+  @HiveField(34)
   List<ContactDetail>? get editor;
   @override
+  @HiveField(35)
   List<ContactDetail>? get reviewer;
   @override
+  @HiveField(36)
   List<ContactDetail>? get endorser;
   @override
+  @HiveField(37)
   List<RelatedArtifact>? get relatedArtifact;
   @override
+  @HiveField(38)
   Markdown? get description;
   @override
+  @HiveField(39)
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
+  @HiveField(40)
   Markdown? get assertion;
   @override
+  @HiveField(41)
   @JsonKey(name: '_assertion')
   Element? get assertionElement;
   @override
+  @HiveField(42)
   List<Annotation>? get note;
   @override
+  @HiveField(43)
   List<EvidenceVariableDefinition> get variableDefinition;
   @override
+  @HiveField(44)
   CodeableConcept? get synthesisType;
   @override
+  @HiveField(45)
   CodeableConcept? get studyType;
   @override
+  @HiveField(46)
   List<EvidenceStatistic>? get statistic;
   @override
+  @HiveField(47)
   List<EvidenceCertainty>? get certainty;
   @override
   @JsonKey(ignore: true)
@@ -16700,49 +17479,83 @@ EvidenceReport _$EvidenceReportFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$EvidenceReport {
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
+  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+  @HiveField(11)
   FhirUri? get url => throw _privateConstructorUsedError;
+  @HiveField(12)
   @JsonKey(name: '_url')
   Element? get urlElement => throw _privateConstructorUsedError;
+  @HiveField(13)
   Code? get status => throw _privateConstructorUsedError;
+  @HiveField(14)
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
+  @HiveField(15)
   List<UsageContext>? get useContext => throw _privateConstructorUsedError;
+  @HiveField(16)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  @HiveField(17)
   List<Identifier>? get relatedIdentifier => throw _privateConstructorUsedError;
+  @HiveField(18)
   Reference? get citeAsReference => throw _privateConstructorUsedError;
+  @HiveField(19)
   Markdown? get citeAsMarkdown => throw _privateConstructorUsedError;
+  @HiveField(20)
   @JsonKey(name: '_citeAsMarkdown')
   Element? get citeAsMarkdownElement => throw _privateConstructorUsedError;
+  @HiveField(21)
   CodeableConcept? get type => throw _privateConstructorUsedError;
+  @HiveField(22)
   List<Annotation>? get note => throw _privateConstructorUsedError;
+  @HiveField(23)
   List<RelatedArtifact>? get relatedArtifact =>
       throw _privateConstructorUsedError;
+  @HiveField(24)
   EvidenceReportSubject get subject => throw _privateConstructorUsedError;
+  @HiveField(25)
   String? get publisher => throw _privateConstructorUsedError;
+  @HiveField(26)
   @JsonKey(name: '_publisher')
   Element? get publisherElement => throw _privateConstructorUsedError;
+  @HiveField(27)
   List<ContactDetail>? get contact => throw _privateConstructorUsedError;
+  @HiveField(28)
   List<ContactDetail>? get author => throw _privateConstructorUsedError;
+  @HiveField(29)
   List<ContactDetail>? get editor => throw _privateConstructorUsedError;
+  @HiveField(30)
   List<ContactDetail>? get reviewer => throw _privateConstructorUsedError;
+  @HiveField(31)
   List<ContactDetail>? get endorser => throw _privateConstructorUsedError;
+  @HiveField(32)
   List<EvidenceReportRelatesTo>? get relatesTo =>
       throw _privateConstructorUsedError;
+  @HiveField(33)
   List<EvidenceReportSection>? get section =>
       throw _privateConstructorUsedError;
 
@@ -16759,40 +17572,81 @@ abstract class $EvidenceReportCopyWith<$Res> {
       _$EvidenceReportCopyWithImpl<$Res, EvidenceReport>;
   @useResult
   $Res call(
-      {R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
-      @JsonKey(name: '_url') Element? urlElement,
-      Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
-      List<UsageContext>? useContext,
-      List<Identifier>? identifier,
-      List<Identifier>? relatedIdentifier,
-      Reference? citeAsReference,
-      Markdown? citeAsMarkdown,
-      @JsonKey(name: '_citeAsMarkdown') Element? citeAsMarkdownElement,
-      CodeableConcept? type,
-      List<Annotation>? note,
-      List<RelatedArtifact>? relatedArtifact,
-      EvidenceReportSubject subject,
-      String? publisher,
-      @JsonKey(name: '_publisher') Element? publisherElement,
-      List<ContactDetail>? contact,
-      List<ContactDetail>? author,
-      List<ContactDetail>? editor,
-      List<ContactDetail>? reviewer,
-      List<ContactDetail>? endorser,
-      List<EvidenceReportRelatesTo>? relatesTo,
-      List<EvidenceReportSection>? section});
+      {@HiveField(0)
+          R4ResourceType resourceType,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
+      @HiveField(4)
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
+      @HiveField(5)
+          Code? language,
+      @HiveField(6)
+      @JsonKey(name: '_language')
+          Element? languageElement,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
+      @HiveField(9)
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          FhirUri? url,
+      @HiveField(12)
+      @JsonKey(name: '_url')
+          Element? urlElement,
+      @HiveField(13)
+          Code? status,
+      @HiveField(14)
+      @JsonKey(name: '_status')
+          Element? statusElement,
+      @HiveField(15)
+          List<UsageContext>? useContext,
+      @HiveField(16)
+          List<Identifier>? identifier,
+      @HiveField(17)
+          List<Identifier>? relatedIdentifier,
+      @HiveField(18)
+          Reference? citeAsReference,
+      @HiveField(19)
+          Markdown? citeAsMarkdown,
+      @HiveField(20)
+      @JsonKey(name: '_citeAsMarkdown')
+          Element? citeAsMarkdownElement,
+      @HiveField(21)
+          CodeableConcept? type,
+      @HiveField(22)
+          List<Annotation>? note,
+      @HiveField(23)
+          List<RelatedArtifact>? relatedArtifact,
+      @HiveField(24)
+          EvidenceReportSubject subject,
+      @HiveField(25)
+          String? publisher,
+      @HiveField(26)
+      @JsonKey(name: '_publisher')
+          Element? publisherElement,
+      @HiveField(27)
+          List<ContactDetail>? contact,
+      @HiveField(28)
+          List<ContactDetail>? author,
+      @HiveField(29)
+          List<ContactDetail>? editor,
+      @HiveField(30)
+          List<ContactDetail>? reviewer,
+      @HiveField(31)
+          List<ContactDetail>? endorser,
+      @HiveField(32)
+          List<EvidenceReportRelatesTo>? relatesTo,
+      @HiveField(33)
+          List<EvidenceReportSection>? section});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -17133,40 +17987,81 @@ abstract class _$$_EvidenceReportCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-      Code? language,
-      @JsonKey(name: '_language') Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
-      @JsonKey(name: '_url') Element? urlElement,
-      Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
-      List<UsageContext>? useContext,
-      List<Identifier>? identifier,
-      List<Identifier>? relatedIdentifier,
-      Reference? citeAsReference,
-      Markdown? citeAsMarkdown,
-      @JsonKey(name: '_citeAsMarkdown') Element? citeAsMarkdownElement,
-      CodeableConcept? type,
-      List<Annotation>? note,
-      List<RelatedArtifact>? relatedArtifact,
-      EvidenceReportSubject subject,
-      String? publisher,
-      @JsonKey(name: '_publisher') Element? publisherElement,
-      List<ContactDetail>? contact,
-      List<ContactDetail>? author,
-      List<ContactDetail>? editor,
-      List<ContactDetail>? reviewer,
-      List<ContactDetail>? endorser,
-      List<EvidenceReportRelatesTo>? relatesTo,
-      List<EvidenceReportSection>? section});
+      {@HiveField(0)
+          R4ResourceType resourceType,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
+      @HiveField(4)
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
+      @HiveField(5)
+          Code? language,
+      @HiveField(6)
+      @JsonKey(name: '_language')
+          Element? languageElement,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
+      @HiveField(9)
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          FhirUri? url,
+      @HiveField(12)
+      @JsonKey(name: '_url')
+          Element? urlElement,
+      @HiveField(13)
+          Code? status,
+      @HiveField(14)
+      @JsonKey(name: '_status')
+          Element? statusElement,
+      @HiveField(15)
+          List<UsageContext>? useContext,
+      @HiveField(16)
+          List<Identifier>? identifier,
+      @HiveField(17)
+          List<Identifier>? relatedIdentifier,
+      @HiveField(18)
+          Reference? citeAsReference,
+      @HiveField(19)
+          Markdown? citeAsMarkdown,
+      @HiveField(20)
+      @JsonKey(name: '_citeAsMarkdown')
+          Element? citeAsMarkdownElement,
+      @HiveField(21)
+          CodeableConcept? type,
+      @HiveField(22)
+          List<Annotation>? note,
+      @HiveField(23)
+          List<RelatedArtifact>? relatedArtifact,
+      @HiveField(24)
+          EvidenceReportSubject subject,
+      @HiveField(25)
+          String? publisher,
+      @HiveField(26)
+      @JsonKey(name: '_publisher')
+          Element? publisherElement,
+      @HiveField(27)
+          List<ContactDetail>? contact,
+      @HiveField(28)
+          List<ContactDetail>? author,
+      @HiveField(29)
+          List<ContactDetail>? editor,
+      @HiveField(30)
+          List<ContactDetail>? reviewer,
+      @HiveField(31)
+          List<ContactDetail>? endorser,
+      @HiveField(32)
+          List<EvidenceReportRelatesTo>? relatesTo,
+      @HiveField(33)
+          List<EvidenceReportSection>? section});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -17384,40 +18279,81 @@ class __$$_EvidenceReportCopyWithImpl<$Res>
 @HiveType(typeId: 122, adapterName: 'EvidenceReportAdapter')
 class _$_EvidenceReport extends _EvidenceReport {
   _$_EvidenceReport(
-      {this.resourceType = R4ResourceType.EvidenceReport,
-      this.id,
-      this.meta,
-      this.implicitRules,
-      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
-      this.language,
-      @JsonKey(name: '_language') this.languageElement,
-      this.text,
-      final List<Resource>? contained,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.url,
-      @JsonKey(name: '_url') this.urlElement,
-      this.status,
-      @JsonKey(name: '_status') this.statusElement,
-      final List<UsageContext>? useContext,
-      final List<Identifier>? identifier,
-      final List<Identifier>? relatedIdentifier,
-      this.citeAsReference,
-      this.citeAsMarkdown,
-      @JsonKey(name: '_citeAsMarkdown') this.citeAsMarkdownElement,
-      this.type,
-      final List<Annotation>? note,
-      final List<RelatedArtifact>? relatedArtifact,
-      required this.subject,
-      this.publisher,
-      @JsonKey(name: '_publisher') this.publisherElement,
-      final List<ContactDetail>? contact,
-      final List<ContactDetail>? author,
-      final List<ContactDetail>? editor,
-      final List<ContactDetail>? reviewer,
-      final List<ContactDetail>? endorser,
-      final List<EvidenceReportRelatesTo>? relatesTo,
-      final List<EvidenceReportSection>? section})
+      {@HiveField(0)
+          this.resourceType = R4ResourceType.EvidenceReport,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
+      @HiveField(4)
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
+      @HiveField(5)
+          this.language,
+      @HiveField(6)
+      @JsonKey(name: '_language')
+          this.languageElement,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
+      @HiveField(9)
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          this.url,
+      @HiveField(12)
+      @JsonKey(name: '_url')
+          this.urlElement,
+      @HiveField(13)
+          this.status,
+      @HiveField(14)
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @HiveField(15)
+          final List<UsageContext>? useContext,
+      @HiveField(16)
+          final List<Identifier>? identifier,
+      @HiveField(17)
+          final List<Identifier>? relatedIdentifier,
+      @HiveField(18)
+          this.citeAsReference,
+      @HiveField(19)
+          this.citeAsMarkdown,
+      @HiveField(20)
+      @JsonKey(name: '_citeAsMarkdown')
+          this.citeAsMarkdownElement,
+      @HiveField(21)
+          this.type,
+      @HiveField(22)
+          final List<Annotation>? note,
+      @HiveField(23)
+          final List<RelatedArtifact>? relatedArtifact,
+      @HiveField(24)
+          required this.subject,
+      @HiveField(25)
+          this.publisher,
+      @HiveField(26)
+      @JsonKey(name: '_publisher')
+          this.publisherElement,
+      @HiveField(27)
+          final List<ContactDetail>? contact,
+      @HiveField(28)
+          final List<ContactDetail>? author,
+      @HiveField(29)
+          final List<ContactDetail>? editor,
+      @HiveField(30)
+          final List<ContactDetail>? reviewer,
+      @HiveField(31)
+          final List<ContactDetail>? endorser,
+      @HiveField(32)
+          final List<EvidenceReportRelatesTo>? relatesTo,
+      @HiveField(33)
+          final List<EvidenceReportSection>? section})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -17440,25 +18376,34 @@ class _$_EvidenceReport extends _EvidenceReport {
 
   @override
   @JsonKey()
+  @HiveField(0)
   final R4ResourceType resourceType;
   @override
+  @HiveField(1)
   final String? id;
   @override
+  @HiveField(2)
   final Meta? meta;
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
   @override
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
+  @HiveField(5)
   final Code? language;
   @override
+  @HiveField(6)
   @JsonKey(name: '_language')
   final Element? languageElement;
   @override
+  @HiveField(7)
   final Narrative? text;
   final List<Resource>? _contained;
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -17469,6 +18414,7 @@ class _$_EvidenceReport extends _EvidenceReport {
 
   final List<FhirExtension>? _extension_;
   @override
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -17480,6 +18426,7 @@ class _$_EvidenceReport extends _EvidenceReport {
 
   final List<FhirExtension>? _modifierExtension;
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -17490,17 +18437,22 @@ class _$_EvidenceReport extends _EvidenceReport {
   }
 
   @override
+  @HiveField(11)
   final FhirUri? url;
   @override
+  @HiveField(12)
   @JsonKey(name: '_url')
   final Element? urlElement;
   @override
+  @HiveField(13)
   final Code? status;
   @override
+  @HiveField(14)
   @JsonKey(name: '_status')
   final Element? statusElement;
   final List<UsageContext>? _useContext;
   @override
+  @HiveField(15)
   List<UsageContext>? get useContext {
     final value = _useContext;
     if (value == null) return null;
@@ -17511,6 +18463,7 @@ class _$_EvidenceReport extends _EvidenceReport {
 
   final List<Identifier>? _identifier;
   @override
+  @HiveField(16)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -17521,6 +18474,7 @@ class _$_EvidenceReport extends _EvidenceReport {
 
   final List<Identifier>? _relatedIdentifier;
   @override
+  @HiveField(17)
   List<Identifier>? get relatedIdentifier {
     final value = _relatedIdentifier;
     if (value == null) return null;
@@ -17531,16 +18485,21 @@ class _$_EvidenceReport extends _EvidenceReport {
   }
 
   @override
+  @HiveField(18)
   final Reference? citeAsReference;
   @override
+  @HiveField(19)
   final Markdown? citeAsMarkdown;
   @override
+  @HiveField(20)
   @JsonKey(name: '_citeAsMarkdown')
   final Element? citeAsMarkdownElement;
   @override
+  @HiveField(21)
   final CodeableConcept? type;
   final List<Annotation>? _note;
   @override
+  @HiveField(22)
   List<Annotation>? get note {
     final value = _note;
     if (value == null) return null;
@@ -17551,6 +18510,7 @@ class _$_EvidenceReport extends _EvidenceReport {
 
   final List<RelatedArtifact>? _relatedArtifact;
   @override
+  @HiveField(23)
   List<RelatedArtifact>? get relatedArtifact {
     final value = _relatedArtifact;
     if (value == null) return null;
@@ -17560,14 +18520,18 @@ class _$_EvidenceReport extends _EvidenceReport {
   }
 
   @override
+  @HiveField(24)
   final EvidenceReportSubject subject;
   @override
+  @HiveField(25)
   final String? publisher;
   @override
+  @HiveField(26)
   @JsonKey(name: '_publisher')
   final Element? publisherElement;
   final List<ContactDetail>? _contact;
   @override
+  @HiveField(27)
   List<ContactDetail>? get contact {
     final value = _contact;
     if (value == null) return null;
@@ -17578,6 +18542,7 @@ class _$_EvidenceReport extends _EvidenceReport {
 
   final List<ContactDetail>? _author;
   @override
+  @HiveField(28)
   List<ContactDetail>? get author {
     final value = _author;
     if (value == null) return null;
@@ -17588,6 +18553,7 @@ class _$_EvidenceReport extends _EvidenceReport {
 
   final List<ContactDetail>? _editor;
   @override
+  @HiveField(29)
   List<ContactDetail>? get editor {
     final value = _editor;
     if (value == null) return null;
@@ -17598,6 +18564,7 @@ class _$_EvidenceReport extends _EvidenceReport {
 
   final List<ContactDetail>? _reviewer;
   @override
+  @HiveField(30)
   List<ContactDetail>? get reviewer {
     final value = _reviewer;
     if (value == null) return null;
@@ -17608,6 +18575,7 @@ class _$_EvidenceReport extends _EvidenceReport {
 
   final List<ContactDetail>? _endorser;
   @override
+  @HiveField(31)
   List<ContactDetail>? get endorser {
     final value = _endorser;
     if (value == null) return null;
@@ -17618,6 +18586,7 @@ class _$_EvidenceReport extends _EvidenceReport {
 
   final List<EvidenceReportRelatesTo>? _relatesTo;
   @override
+  @HiveField(32)
   List<EvidenceReportRelatesTo>? get relatesTo {
     final value = _relatesTo;
     if (value == null) return null;
@@ -17628,6 +18597,7 @@ class _$_EvidenceReport extends _EvidenceReport {
 
   final List<EvidenceReportSection>? _section;
   @override
+  @HiveField(33)
   List<EvidenceReportSection>? get section {
     final value = _section;
     if (value == null) return null;
@@ -17758,119 +18728,194 @@ class _$_EvidenceReport extends _EvidenceReport {
 
 abstract class _EvidenceReport extends EvidenceReport {
   factory _EvidenceReport(
-      {final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
-      final Code? language,
-      @JsonKey(name: '_language') final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final FhirUri? url,
-      @JsonKey(name: '_url') final Element? urlElement,
-      final Code? status,
-      @JsonKey(name: '_status') final Element? statusElement,
-      final List<UsageContext>? useContext,
-      final List<Identifier>? identifier,
-      final List<Identifier>? relatedIdentifier,
-      final Reference? citeAsReference,
-      final Markdown? citeAsMarkdown,
-      @JsonKey(name: '_citeAsMarkdown') final Element? citeAsMarkdownElement,
-      final CodeableConcept? type,
-      final List<Annotation>? note,
-      final List<RelatedArtifact>? relatedArtifact,
-      required final EvidenceReportSubject subject,
-      final String? publisher,
-      @JsonKey(name: '_publisher') final Element? publisherElement,
-      final List<ContactDetail>? contact,
-      final List<ContactDetail>? author,
-      final List<ContactDetail>? editor,
-      final List<ContactDetail>? reviewer,
-      final List<ContactDetail>? endorser,
-      final List<EvidenceReportRelatesTo>? relatesTo,
-      final List<EvidenceReportSection>? section}) = _$_EvidenceReport;
+      {@HiveField(0)
+          final R4ResourceType resourceType,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
+      @HiveField(4)
+      @JsonKey(name: '_implicitRules')
+          final Element? implicitRulesElement,
+      @HiveField(5)
+          final Code? language,
+      @HiveField(6)
+      @JsonKey(name: '_language')
+          final Element? languageElement,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
+      @HiveField(9)
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final FhirUri? url,
+      @HiveField(12)
+      @JsonKey(name: '_url')
+          final Element? urlElement,
+      @HiveField(13)
+          final Code? status,
+      @HiveField(14)
+      @JsonKey(name: '_status')
+          final Element? statusElement,
+      @HiveField(15)
+          final List<UsageContext>? useContext,
+      @HiveField(16)
+          final List<Identifier>? identifier,
+      @HiveField(17)
+          final List<Identifier>? relatedIdentifier,
+      @HiveField(18)
+          final Reference? citeAsReference,
+      @HiveField(19)
+          final Markdown? citeAsMarkdown,
+      @HiveField(20)
+      @JsonKey(name: '_citeAsMarkdown')
+          final Element? citeAsMarkdownElement,
+      @HiveField(21)
+          final CodeableConcept? type,
+      @HiveField(22)
+          final List<Annotation>? note,
+      @HiveField(23)
+          final List<RelatedArtifact>? relatedArtifact,
+      @HiveField(24)
+          required final EvidenceReportSubject subject,
+      @HiveField(25)
+          final String? publisher,
+      @HiveField(26)
+      @JsonKey(name: '_publisher')
+          final Element? publisherElement,
+      @HiveField(27)
+          final List<ContactDetail>? contact,
+      @HiveField(28)
+          final List<ContactDetail>? author,
+      @HiveField(29)
+          final List<ContactDetail>? editor,
+      @HiveField(30)
+          final List<ContactDetail>? reviewer,
+      @HiveField(31)
+          final List<ContactDetail>? endorser,
+      @HiveField(32)
+          final List<EvidenceReportRelatesTo>? relatesTo,
+      @HiveField(33)
+          final List<EvidenceReportSection>? section}) = _$_EvidenceReport;
   _EvidenceReport._() : super._();
 
   factory _EvidenceReport.fromJson(Map<String, dynamic> json) =
       _$_EvidenceReport.fromJson;
 
   @override
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
+  @HiveField(1)
   String? get id;
   @override
+  @HiveField(2)
   Meta? get meta;
   @override
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
+  @HiveField(5)
   Code? get language;
   @override
+  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+  @HiveField(7)
   Narrative? get text;
   @override
+  @HiveField(8)
   List<Resource>? get contained;
   @override
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
+  @HiveField(11)
   FhirUri? get url;
   @override
+  @HiveField(12)
   @JsonKey(name: '_url')
   Element? get urlElement;
   @override
+  @HiveField(13)
   Code? get status;
   @override
+  @HiveField(14)
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
+  @HiveField(15)
   List<UsageContext>? get useContext;
   @override
+  @HiveField(16)
   List<Identifier>? get identifier;
   @override
+  @HiveField(17)
   List<Identifier>? get relatedIdentifier;
   @override
+  @HiveField(18)
   Reference? get citeAsReference;
   @override
+  @HiveField(19)
   Markdown? get citeAsMarkdown;
   @override
+  @HiveField(20)
   @JsonKey(name: '_citeAsMarkdown')
   Element? get citeAsMarkdownElement;
   @override
+  @HiveField(21)
   CodeableConcept? get type;
   @override
+  @HiveField(22)
   List<Annotation>? get note;
   @override
+  @HiveField(23)
   List<RelatedArtifact>? get relatedArtifact;
   @override
+  @HiveField(24)
   EvidenceReportSubject get subject;
   @override
+  @HiveField(25)
   String? get publisher;
   @override
+  @HiveField(26)
   @JsonKey(name: '_publisher')
   Element? get publisherElement;
   @override
+  @HiveField(27)
   List<ContactDetail>? get contact;
   @override
+  @HiveField(28)
   List<ContactDetail>? get author;
   @override
+  @HiveField(29)
   List<ContactDetail>? get editor;
   @override
+  @HiveField(30)
   List<ContactDetail>? get reviewer;
   @override
+  @HiveField(31)
   List<ContactDetail>? get endorser;
   @override
+  @HiveField(32)
   List<EvidenceReportRelatesTo>? get relatesTo;
   @override
+  @HiveField(33)
   List<EvidenceReportSection>? get section;
   @override
   @JsonKey(ignore: true)
@@ -19751,73 +20796,121 @@ EvidenceVariable _$EvidenceVariableFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$EvidenceVariable {
   @JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
+  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+  @HiveField(11)
   FhirUri? get url => throw _privateConstructorUsedError;
+  @HiveField(12)
   @JsonKey(name: '_url')
   Element? get urlElement => throw _privateConstructorUsedError;
+  @HiveField(13)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  @HiveField(14)
   String? get version => throw _privateConstructorUsedError;
+  @HiveField(15)
   @JsonKey(name: '_version')
   Element? get versionElement => throw _privateConstructorUsedError;
+  @HiveField(16)
   String? get name => throw _privateConstructorUsedError;
+  @HiveField(17)
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
+  @HiveField(18)
   String? get title => throw _privateConstructorUsedError;
+  @HiveField(19)
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
+  @HiveField(20)
   String? get shortTitle => throw _privateConstructorUsedError;
+  @HiveField(21)
   @JsonKey(name: '_shortTitle')
   Element? get shortTitleElement => throw _privateConstructorUsedError;
+  @HiveField(22)
   String? get subtitle => throw _privateConstructorUsedError;
+  @HiveField(23)
   @JsonKey(name: '_subtitle')
   Element? get subtitleElement => throw _privateConstructorUsedError;
+  @HiveField(24)
   Code? get status => throw _privateConstructorUsedError;
+  @HiveField(25)
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
+  @HiveField(26)
   FhirDateTime? get date => throw _privateConstructorUsedError;
+  @HiveField(27)
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
+  @HiveField(28)
   Markdown? get description => throw _privateConstructorUsedError;
+  @HiveField(29)
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
+  @HiveField(30)
   List<Annotation>? get note => throw _privateConstructorUsedError;
+  @HiveField(31)
   List<UsageContext>? get useContext => throw _privateConstructorUsedError;
+  @HiveField(32)
   String? get publisher => throw _privateConstructorUsedError;
+  @HiveField(33)
   @JsonKey(name: '_publisher')
   Element? get publisherElement => throw _privateConstructorUsedError;
+  @HiveField(34)
   List<ContactDetail>? get contact => throw _privateConstructorUsedError;
+  @HiveField(35)
   List<ContactDetail>? get author => throw _privateConstructorUsedError;
+  @HiveField(36)
   List<ContactDetail>? get editor => throw _privateConstructorUsedError;
+  @HiveField(37)
   List<ContactDetail>? get reviewer => throw _privateConstructorUsedError;
+  @HiveField(38)
   List<ContactDetail>? get endorser => throw _privateConstructorUsedError;
+  @HiveField(39)
   List<RelatedArtifact>? get relatedArtifact =>
       throw _privateConstructorUsedError;
+  @HiveField(40)
   Boolean? get actual => throw _privateConstructorUsedError;
+  @HiveField(41)
   @JsonKey(name: '_actual')
   Element? get actualElement => throw _privateConstructorUsedError;
+  @HiveField(42)
   Code? get characteristicCombination => throw _privateConstructorUsedError;
   @JsonKey(name: '_characteristicCombination')
+  @HiveField(43)
   Element? get characteristicCombinationElement =>
       throw _privateConstructorUsedError;
+  @HiveField(44)
   List<EvidenceVariableCharacteristic> get characteristic =>
       throw _privateConstructorUsedError;
+  @HiveField(45)
   Code? get handling => throw _privateConstructorUsedError;
+  @HiveField(46)
   @JsonKey(name: '_handling')
   Element? get handlingElement => throw _privateConstructorUsedError;
+  @HiveField(47)
   List<EvidenceVariableCategory>? get category =>
       throw _privateConstructorUsedError;
 
@@ -19835,70 +20928,118 @@ abstract class $EvidenceVariableCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          FhirUri? url,
+      @HiveField(12)
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Identifier>? identifier,
-      String? version,
+      @HiveField(13)
+          List<Identifier>? identifier,
+      @HiveField(14)
+          String? version,
+      @HiveField(15)
       @JsonKey(name: '_version')
           Element? versionElement,
-      String? name,
+      @HiveField(16)
+          String? name,
+      @HiveField(17)
       @JsonKey(name: '_name')
           Element? nameElement,
-      String? title,
+      @HiveField(18)
+          String? title,
+      @HiveField(19)
       @JsonKey(name: '_title')
           Element? titleElement,
-      String? shortTitle,
+      @HiveField(20)
+          String? shortTitle,
+      @HiveField(21)
       @JsonKey(name: '_shortTitle')
           Element? shortTitleElement,
-      String? subtitle,
+      @HiveField(22)
+          String? subtitle,
+      @HiveField(23)
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
-      Code? status,
+      @HiveField(24)
+          Code? status,
+      @HiveField(25)
       @JsonKey(name: '_status')
           Element? statusElement,
-      FhirDateTime? date,
+      @HiveField(26)
+          FhirDateTime? date,
+      @HiveField(27)
       @JsonKey(name: '_date')
           Element? dateElement,
-      Markdown? description,
+      @HiveField(28)
+          Markdown? description,
+      @HiveField(29)
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<Annotation>? note,
-      List<UsageContext>? useContext,
-      String? publisher,
+      @HiveField(30)
+          List<Annotation>? note,
+      @HiveField(31)
+          List<UsageContext>? useContext,
+      @HiveField(32)
+          String? publisher,
+      @HiveField(33)
       @JsonKey(name: '_publisher')
           Element? publisherElement,
-      List<ContactDetail>? contact,
-      List<ContactDetail>? author,
-      List<ContactDetail>? editor,
-      List<ContactDetail>? reviewer,
-      List<ContactDetail>? endorser,
-      List<RelatedArtifact>? relatedArtifact,
-      Boolean? actual,
+      @HiveField(34)
+          List<ContactDetail>? contact,
+      @HiveField(35)
+          List<ContactDetail>? author,
+      @HiveField(36)
+          List<ContactDetail>? editor,
+      @HiveField(37)
+          List<ContactDetail>? reviewer,
+      @HiveField(38)
+          List<ContactDetail>? endorser,
+      @HiveField(39)
+          List<RelatedArtifact>? relatedArtifact,
+      @HiveField(40)
+          Boolean? actual,
+      @HiveField(41)
       @JsonKey(name: '_actual')
           Element? actualElement,
-      Code? characteristicCombination,
+      @HiveField(42)
+          Code? characteristicCombination,
       @JsonKey(name: '_characteristicCombination')
+      @HiveField(43)
           Element? characteristicCombinationElement,
-      List<EvidenceVariableCharacteristic> characteristic,
-      Code? handling,
+      @HiveField(44)
+          List<EvidenceVariableCharacteristic> characteristic,
+      @HiveField(45)
+          Code? handling,
+      @HiveField(46)
       @JsonKey(name: '_handling')
           Element? handlingElement,
-      List<EvidenceVariableCategory>? category});
+      @HiveField(47)
+          List<EvidenceVariableCategory>? category});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -20395,70 +21536,118 @@ abstract class _$$_EvidenceVariableCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          FhirUri? url,
+      @HiveField(12)
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Identifier>? identifier,
-      String? version,
+      @HiveField(13)
+          List<Identifier>? identifier,
+      @HiveField(14)
+          String? version,
+      @HiveField(15)
       @JsonKey(name: '_version')
           Element? versionElement,
-      String? name,
+      @HiveField(16)
+          String? name,
+      @HiveField(17)
       @JsonKey(name: '_name')
           Element? nameElement,
-      String? title,
+      @HiveField(18)
+          String? title,
+      @HiveField(19)
       @JsonKey(name: '_title')
           Element? titleElement,
-      String? shortTitle,
+      @HiveField(20)
+          String? shortTitle,
+      @HiveField(21)
       @JsonKey(name: '_shortTitle')
           Element? shortTitleElement,
-      String? subtitle,
+      @HiveField(22)
+          String? subtitle,
+      @HiveField(23)
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
-      Code? status,
+      @HiveField(24)
+          Code? status,
+      @HiveField(25)
       @JsonKey(name: '_status')
           Element? statusElement,
-      FhirDateTime? date,
+      @HiveField(26)
+          FhirDateTime? date,
+      @HiveField(27)
       @JsonKey(name: '_date')
           Element? dateElement,
-      Markdown? description,
+      @HiveField(28)
+          Markdown? description,
+      @HiveField(29)
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<Annotation>? note,
-      List<UsageContext>? useContext,
-      String? publisher,
+      @HiveField(30)
+          List<Annotation>? note,
+      @HiveField(31)
+          List<UsageContext>? useContext,
+      @HiveField(32)
+          String? publisher,
+      @HiveField(33)
       @JsonKey(name: '_publisher')
           Element? publisherElement,
-      List<ContactDetail>? contact,
-      List<ContactDetail>? author,
-      List<ContactDetail>? editor,
-      List<ContactDetail>? reviewer,
-      List<ContactDetail>? endorser,
-      List<RelatedArtifact>? relatedArtifact,
-      Boolean? actual,
+      @HiveField(34)
+          List<ContactDetail>? contact,
+      @HiveField(35)
+          List<ContactDetail>? author,
+      @HiveField(36)
+          List<ContactDetail>? editor,
+      @HiveField(37)
+          List<ContactDetail>? reviewer,
+      @HiveField(38)
+          List<ContactDetail>? endorser,
+      @HiveField(39)
+          List<RelatedArtifact>? relatedArtifact,
+      @HiveField(40)
+          Boolean? actual,
+      @HiveField(41)
       @JsonKey(name: '_actual')
           Element? actualElement,
-      Code? characteristicCombination,
+      @HiveField(42)
+          Code? characteristicCombination,
       @JsonKey(name: '_characteristicCombination')
+      @HiveField(43)
           Element? characteristicCombinationElement,
-      List<EvidenceVariableCharacteristic> characteristic,
-      Code? handling,
+      @HiveField(44)
+          List<EvidenceVariableCharacteristic> characteristic,
+      @HiveField(45)
+          Code? handling,
+      @HiveField(46)
       @JsonKey(name: '_handling')
           Element? handlingElement,
-      List<EvidenceVariableCategory>? category});
+      @HiveField(47)
+          List<EvidenceVariableCategory>? category});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -20760,70 +21949,118 @@ class __$$_EvidenceVariableCopyWithImpl<$Res>
 class _$_EvidenceVariable extends _EvidenceVariable {
   _$_EvidenceVariable(
       {@JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
+      @HiveField(0)
           this.resourceType = R4ResourceType.EvidenceVariable,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.url,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          this.url,
+      @HiveField(12)
       @JsonKey(name: '_url')
           this.urlElement,
-      final List<Identifier>? identifier,
-      this.version,
+      @HiveField(13)
+          final List<Identifier>? identifier,
+      @HiveField(14)
+          this.version,
+      @HiveField(15)
       @JsonKey(name: '_version')
           this.versionElement,
-      this.name,
+      @HiveField(16)
+          this.name,
+      @HiveField(17)
       @JsonKey(name: '_name')
           this.nameElement,
-      this.title,
+      @HiveField(18)
+          this.title,
+      @HiveField(19)
       @JsonKey(name: '_title')
           this.titleElement,
-      this.shortTitle,
+      @HiveField(20)
+          this.shortTitle,
+      @HiveField(21)
       @JsonKey(name: '_shortTitle')
           this.shortTitleElement,
-      this.subtitle,
+      @HiveField(22)
+          this.subtitle,
+      @HiveField(23)
       @JsonKey(name: '_subtitle')
           this.subtitleElement,
-      this.status,
+      @HiveField(24)
+          this.status,
+      @HiveField(25)
       @JsonKey(name: '_status')
           this.statusElement,
-      this.date,
+      @HiveField(26)
+          this.date,
+      @HiveField(27)
       @JsonKey(name: '_date')
           this.dateElement,
-      this.description,
+      @HiveField(28)
+          this.description,
+      @HiveField(29)
       @JsonKey(name: '_description')
           this.descriptionElement,
-      final List<Annotation>? note,
-      final List<UsageContext>? useContext,
-      this.publisher,
+      @HiveField(30)
+          final List<Annotation>? note,
+      @HiveField(31)
+          final List<UsageContext>? useContext,
+      @HiveField(32)
+          this.publisher,
+      @HiveField(33)
       @JsonKey(name: '_publisher')
           this.publisherElement,
-      final List<ContactDetail>? contact,
-      final List<ContactDetail>? author,
-      final List<ContactDetail>? editor,
-      final List<ContactDetail>? reviewer,
-      final List<ContactDetail>? endorser,
-      final List<RelatedArtifact>? relatedArtifact,
-      this.actual,
+      @HiveField(34)
+          final List<ContactDetail>? contact,
+      @HiveField(35)
+          final List<ContactDetail>? author,
+      @HiveField(36)
+          final List<ContactDetail>? editor,
+      @HiveField(37)
+          final List<ContactDetail>? reviewer,
+      @HiveField(38)
+          final List<ContactDetail>? endorser,
+      @HiveField(39)
+          final List<RelatedArtifact>? relatedArtifact,
+      @HiveField(40)
+          this.actual,
+      @HiveField(41)
       @JsonKey(name: '_actual')
           this.actualElement,
-      this.characteristicCombination,
+      @HiveField(42)
+          this.characteristicCombination,
       @JsonKey(name: '_characteristicCombination')
+      @HiveField(43)
           this.characteristicCombinationElement,
-      required final List<EvidenceVariableCharacteristic> characteristic,
-      this.handling,
+      @HiveField(44)
+          required final List<EvidenceVariableCharacteristic> characteristic,
+      @HiveField(45)
+          this.handling,
+      @HiveField(46)
       @JsonKey(name: '_handling')
           this.handlingElement,
-      final List<EvidenceVariableCategory>? category})
+      @HiveField(47)
+          final List<EvidenceVariableCategory>? category})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -20845,25 +22082,34 @@ class _$_EvidenceVariable extends _EvidenceVariable {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
+  @HiveField(0)
   final R4ResourceType resourceType;
   @override
+  @HiveField(1)
   final String? id;
   @override
+  @HiveField(2)
   final Meta? meta;
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
   @override
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
+  @HiveField(5)
   final Code? language;
   @override
+  @HiveField(6)
   @JsonKey(name: '_language')
   final Element? languageElement;
   @override
+  @HiveField(7)
   final Narrative? text;
   final List<Resource>? _contained;
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -20874,6 +22120,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
 
   final List<FhirExtension>? _extension_;
   @override
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -20885,6 +22132,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
 
   final List<FhirExtension>? _modifierExtension;
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -20895,12 +22143,15 @@ class _$_EvidenceVariable extends _EvidenceVariable {
   }
 
   @override
+  @HiveField(11)
   final FhirUri? url;
   @override
+  @HiveField(12)
   @JsonKey(name: '_url')
   final Element? urlElement;
   final List<Identifier>? _identifier;
   @override
+  @HiveField(13)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -20910,47 +22161,64 @@ class _$_EvidenceVariable extends _EvidenceVariable {
   }
 
   @override
+  @HiveField(14)
   final String? version;
   @override
+  @HiveField(15)
   @JsonKey(name: '_version')
   final Element? versionElement;
   @override
+  @HiveField(16)
   final String? name;
   @override
+  @HiveField(17)
   @JsonKey(name: '_name')
   final Element? nameElement;
   @override
+  @HiveField(18)
   final String? title;
   @override
+  @HiveField(19)
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
+  @HiveField(20)
   final String? shortTitle;
   @override
+  @HiveField(21)
   @JsonKey(name: '_shortTitle')
   final Element? shortTitleElement;
   @override
+  @HiveField(22)
   final String? subtitle;
   @override
+  @HiveField(23)
   @JsonKey(name: '_subtitle')
   final Element? subtitleElement;
   @override
+  @HiveField(24)
   final Code? status;
   @override
+  @HiveField(25)
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
+  @HiveField(26)
   final FhirDateTime? date;
   @override
+  @HiveField(27)
   @JsonKey(name: '_date')
   final Element? dateElement;
   @override
+  @HiveField(28)
   final Markdown? description;
   @override
+  @HiveField(29)
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   final List<Annotation>? _note;
   @override
+  @HiveField(30)
   List<Annotation>? get note {
     final value = _note;
     if (value == null) return null;
@@ -20961,6 +22229,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
 
   final List<UsageContext>? _useContext;
   @override
+  @HiveField(31)
   List<UsageContext>? get useContext {
     final value = _useContext;
     if (value == null) return null;
@@ -20970,12 +22239,15 @@ class _$_EvidenceVariable extends _EvidenceVariable {
   }
 
   @override
+  @HiveField(32)
   final String? publisher;
   @override
+  @HiveField(33)
   @JsonKey(name: '_publisher')
   final Element? publisherElement;
   final List<ContactDetail>? _contact;
   @override
+  @HiveField(34)
   List<ContactDetail>? get contact {
     final value = _contact;
     if (value == null) return null;
@@ -20986,6 +22258,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
 
   final List<ContactDetail>? _author;
   @override
+  @HiveField(35)
   List<ContactDetail>? get author {
     final value = _author;
     if (value == null) return null;
@@ -20996,6 +22269,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
 
   final List<ContactDetail>? _editor;
   @override
+  @HiveField(36)
   List<ContactDetail>? get editor {
     final value = _editor;
     if (value == null) return null;
@@ -21006,6 +22280,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
 
   final List<ContactDetail>? _reviewer;
   @override
+  @HiveField(37)
   List<ContactDetail>? get reviewer {
     final value = _reviewer;
     if (value == null) return null;
@@ -21016,6 +22291,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
 
   final List<ContactDetail>? _endorser;
   @override
+  @HiveField(38)
   List<ContactDetail>? get endorser {
     final value = _endorser;
     if (value == null) return null;
@@ -21026,6 +22302,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
 
   final List<RelatedArtifact>? _relatedArtifact;
   @override
+  @HiveField(39)
   List<RelatedArtifact>? get relatedArtifact {
     final value = _relatedArtifact;
     if (value == null) return null;
@@ -21035,17 +22312,22 @@ class _$_EvidenceVariable extends _EvidenceVariable {
   }
 
   @override
+  @HiveField(40)
   final Boolean? actual;
   @override
+  @HiveField(41)
   @JsonKey(name: '_actual')
   final Element? actualElement;
   @override
+  @HiveField(42)
   final Code? characteristicCombination;
   @override
   @JsonKey(name: '_characteristicCombination')
+  @HiveField(43)
   final Element? characteristicCombinationElement;
   final List<EvidenceVariableCharacteristic> _characteristic;
   @override
+  @HiveField(44)
   List<EvidenceVariableCharacteristic> get characteristic {
     if (_characteristic is EqualUnmodifiableListView) return _characteristic;
     // ignore: implicit_dynamic_type
@@ -21053,12 +22335,15 @@ class _$_EvidenceVariable extends _EvidenceVariable {
   }
 
   @override
+  @HiveField(45)
   final Code? handling;
   @override
+  @HiveField(46)
   @JsonKey(name: '_handling')
   final Element? handlingElement;
   final List<EvidenceVariableCategory>? _category;
   @override
+  @HiveField(47)
   List<EvidenceVariableCategory>? get category {
     final value = _category;
     if (value == null) return null;
@@ -21232,70 +22517,119 @@ class _$_EvidenceVariable extends _EvidenceVariable {
 abstract class _EvidenceVariable extends EvidenceVariable {
   factory _EvidenceVariable(
       {@JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final FhirUri? url,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final FhirUri? url,
+      @HiveField(12)
       @JsonKey(name: '_url')
           final Element? urlElement,
-      final List<Identifier>? identifier,
-      final String? version,
+      @HiveField(13)
+          final List<Identifier>? identifier,
+      @HiveField(14)
+          final String? version,
+      @HiveField(15)
       @JsonKey(name: '_version')
           final Element? versionElement,
-      final String? name,
+      @HiveField(16)
+          final String? name,
+      @HiveField(17)
       @JsonKey(name: '_name')
           final Element? nameElement,
-      final String? title,
+      @HiveField(18)
+          final String? title,
+      @HiveField(19)
       @JsonKey(name: '_title')
           final Element? titleElement,
-      final String? shortTitle,
+      @HiveField(20)
+          final String? shortTitle,
+      @HiveField(21)
       @JsonKey(name: '_shortTitle')
           final Element? shortTitleElement,
-      final String? subtitle,
+      @HiveField(22)
+          final String? subtitle,
+      @HiveField(23)
       @JsonKey(name: '_subtitle')
           final Element? subtitleElement,
-      final Code? status,
+      @HiveField(24)
+          final Code? status,
+      @HiveField(25)
       @JsonKey(name: '_status')
           final Element? statusElement,
-      final FhirDateTime? date,
+      @HiveField(26)
+          final FhirDateTime? date,
+      @HiveField(27)
       @JsonKey(name: '_date')
           final Element? dateElement,
-      final Markdown? description,
+      @HiveField(28)
+          final Markdown? description,
+      @HiveField(29)
       @JsonKey(name: '_description')
           final Element? descriptionElement,
-      final List<Annotation>? note,
-      final List<UsageContext>? useContext,
-      final String? publisher,
+      @HiveField(30)
+          final List<Annotation>? note,
+      @HiveField(31)
+          final List<UsageContext>? useContext,
+      @HiveField(32)
+          final String? publisher,
+      @HiveField(33)
       @JsonKey(name: '_publisher')
           final Element? publisherElement,
-      final List<ContactDetail>? contact,
-      final List<ContactDetail>? author,
-      final List<ContactDetail>? editor,
-      final List<ContactDetail>? reviewer,
-      final List<ContactDetail>? endorser,
-      final List<RelatedArtifact>? relatedArtifact,
-      final Boolean? actual,
+      @HiveField(34)
+          final List<ContactDetail>? contact,
+      @HiveField(35)
+          final List<ContactDetail>? author,
+      @HiveField(36)
+          final List<ContactDetail>? editor,
+      @HiveField(37)
+          final List<ContactDetail>? reviewer,
+      @HiveField(38)
+          final List<ContactDetail>? endorser,
+      @HiveField(39)
+          final List<RelatedArtifact>? relatedArtifact,
+      @HiveField(40)
+          final Boolean? actual,
+      @HiveField(41)
       @JsonKey(name: '_actual')
           final Element? actualElement,
-      final Code? characteristicCombination,
+      @HiveField(42)
+          final Code? characteristicCombination,
       @JsonKey(name: '_characteristicCombination')
+      @HiveField(43)
           final Element? characteristicCombinationElement,
-      required final List<EvidenceVariableCharacteristic> characteristic,
-      final Code? handling,
+      @HiveField(44)
+          required final List<EvidenceVariableCharacteristic> characteristic,
+      @HiveField(45)
+          final Code? handling,
+      @HiveField(46)
       @JsonKey(name: '_handling')
           final Element? handlingElement,
-      final List<EvidenceVariableCategory>? category}) = _$_EvidenceVariable;
+      @HiveField(47)
+          final List<EvidenceVariableCategory>?
+              category}) = _$_EvidenceVariable;
   _EvidenceVariable._() : super._();
 
   factory _EvidenceVariable.fromJson(Map<String, dynamic> json) =
@@ -21303,116 +22637,164 @@ abstract class _EvidenceVariable extends EvidenceVariable {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
+  @HiveField(1)
   String? get id;
   @override
+  @HiveField(2)
   Meta? get meta;
   @override
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
+  @HiveField(5)
   Code? get language;
   @override
+  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+  @HiveField(7)
   Narrative? get text;
   @override
+  @HiveField(8)
   List<Resource>? get contained;
   @override
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
+  @HiveField(11)
   FhirUri? get url;
   @override
+  @HiveField(12)
   @JsonKey(name: '_url')
   Element? get urlElement;
   @override
+  @HiveField(13)
   List<Identifier>? get identifier;
   @override
+  @HiveField(14)
   String? get version;
   @override
+  @HiveField(15)
   @JsonKey(name: '_version')
   Element? get versionElement;
   @override
+  @HiveField(16)
   String? get name;
   @override
+  @HiveField(17)
   @JsonKey(name: '_name')
   Element? get nameElement;
   @override
+  @HiveField(18)
   String? get title;
   @override
+  @HiveField(19)
   @JsonKey(name: '_title')
   Element? get titleElement;
   @override
+  @HiveField(20)
   String? get shortTitle;
   @override
+  @HiveField(21)
   @JsonKey(name: '_shortTitle')
   Element? get shortTitleElement;
   @override
+  @HiveField(22)
   String? get subtitle;
   @override
+  @HiveField(23)
   @JsonKey(name: '_subtitle')
   Element? get subtitleElement;
   @override
+  @HiveField(24)
   Code? get status;
   @override
+  @HiveField(25)
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
+  @HiveField(26)
   FhirDateTime? get date;
   @override
+  @HiveField(27)
   @JsonKey(name: '_date')
   Element? get dateElement;
   @override
+  @HiveField(28)
   Markdown? get description;
   @override
+  @HiveField(29)
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
+  @HiveField(30)
   List<Annotation>? get note;
   @override
+  @HiveField(31)
   List<UsageContext>? get useContext;
   @override
+  @HiveField(32)
   String? get publisher;
   @override
+  @HiveField(33)
   @JsonKey(name: '_publisher')
   Element? get publisherElement;
   @override
+  @HiveField(34)
   List<ContactDetail>? get contact;
   @override
+  @HiveField(35)
   List<ContactDetail>? get author;
   @override
+  @HiveField(36)
   List<ContactDetail>? get editor;
   @override
+  @HiveField(37)
   List<ContactDetail>? get reviewer;
   @override
+  @HiveField(38)
   List<ContactDetail>? get endorser;
   @override
+  @HiveField(39)
   List<RelatedArtifact>? get relatedArtifact;
   @override
+  @HiveField(40)
   Boolean? get actual;
   @override
+  @HiveField(41)
   @JsonKey(name: '_actual')
   Element? get actualElement;
   @override
+  @HiveField(42)
   Code? get characteristicCombination;
   @override
   @JsonKey(name: '_characteristicCombination')
+  @HiveField(43)
   Element? get characteristicCombinationElement;
   @override
+  @HiveField(44)
   List<EvidenceVariableCharacteristic> get characteristic;
   @override
+  @HiveField(45)
   Code? get handling;
   @override
+  @HiveField(46)
   @JsonKey(name: '_handling')
   Element? get handlingElement;
   @override
+  @HiveField(47)
   List<EvidenceVariableCategory>? get category;
   @override
   @JsonKey(ignore: true)
@@ -22848,92 +24230,155 @@ ResearchDefinition _$ResearchDefinitionFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ResearchDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
+  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+  @HiveField(11)
   FhirUri? get url => throw _privateConstructorUsedError;
+  @HiveField(12)
   @JsonKey(name: '_url')
   Element? get urlElement => throw _privateConstructorUsedError;
+  @HiveField(13)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  @HiveField(14)
   String? get version => throw _privateConstructorUsedError;
+  @HiveField(15)
   @JsonKey(name: '_version')
   Element? get versionElement => throw _privateConstructorUsedError;
+  @HiveField(16)
   String? get name => throw _privateConstructorUsedError;
+  @HiveField(17)
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
+  @HiveField(18)
   String? get title => throw _privateConstructorUsedError;
+  @HiveField(19)
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
+  @HiveField(20)
   String? get shortTitle => throw _privateConstructorUsedError;
+  @HiveField(21)
   @JsonKey(name: '_shortTitle')
   Element? get shortTitleElement => throw _privateConstructorUsedError;
+  @HiveField(22)
   String? get subtitle => throw _privateConstructorUsedError;
+  @HiveField(23)
   @JsonKey(name: '_subtitle')
   Element? get subtitleElement => throw _privateConstructorUsedError;
+  @HiveField(24)
   Code? get status => throw _privateConstructorUsedError;
+  @HiveField(25)
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
+  @HiveField(26)
   Boolean? get experimental => throw _privateConstructorUsedError;
+  @HiveField(27)
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
+  @HiveField(28)
   CodeableConcept? get subjectCodeableConcept =>
       throw _privateConstructorUsedError;
+  @HiveField(29)
   Reference? get subjectReference => throw _privateConstructorUsedError;
+  @HiveField(30)
   FhirDateTime? get date => throw _privateConstructorUsedError;
+  @HiveField(31)
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
+  @HiveField(32)
   String? get publisher => throw _privateConstructorUsedError;
+  @HiveField(33)
   @JsonKey(name: '_publisher')
   Element? get publisherElement => throw _privateConstructorUsedError;
+  @HiveField(34)
   List<ContactDetail>? get contact => throw _privateConstructorUsedError;
+  @HiveField(35)
   Markdown? get description => throw _privateConstructorUsedError;
+  @HiveField(36)
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
+  @HiveField(37)
   List<String>? get comment => throw _privateConstructorUsedError;
+  @HiveField(38)
   @JsonKey(name: '_comment')
   List<Element?>? get commentElement => throw _privateConstructorUsedError;
+  @HiveField(39)
   List<UsageContext>? get useContext => throw _privateConstructorUsedError;
+  @HiveField(40)
   List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
+  @HiveField(41)
   Markdown? get purpose => throw _privateConstructorUsedError;
+  @HiveField(42)
   @JsonKey(name: '_purpose')
   Element? get purposeElement => throw _privateConstructorUsedError;
+  @HiveField(43)
   String? get usage => throw _privateConstructorUsedError;
+  @HiveField(44)
   @JsonKey(name: '_usage')
   Element? get usageElement => throw _privateConstructorUsedError;
+  @HiveField(45)
   Markdown? get copyright => throw _privateConstructorUsedError;
+  @HiveField(46)
   @JsonKey(name: '_copyright')
   Element? get copyrightElement => throw _privateConstructorUsedError;
+  @HiveField(47)
   Date? get approvalDate => throw _privateConstructorUsedError;
+  @HiveField(48)
   @JsonKey(name: '_approvalDate')
   Element? get approvalDateElement => throw _privateConstructorUsedError;
+  @HiveField(49)
   Date? get lastReviewDate => throw _privateConstructorUsedError;
+  @HiveField(50)
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement => throw _privateConstructorUsedError;
+  @HiveField(51)
   Period? get effectivePeriod => throw _privateConstructorUsedError;
+  @HiveField(52)
   List<CodeableConcept>? get topic => throw _privateConstructorUsedError;
+  @HiveField(53)
   List<ContactDetail>? get author => throw _privateConstructorUsedError;
+  @HiveField(54)
   List<ContactDetail>? get editor => throw _privateConstructorUsedError;
+  @HiveField(55)
   List<ContactDetail>? get reviewer => throw _privateConstructorUsedError;
+  @HiveField(56)
   List<ContactDetail>? get endorser => throw _privateConstructorUsedError;
+  @HiveField(57)
   List<RelatedArtifact>? get relatedArtifact =>
       throw _privateConstructorUsedError;
+  @HiveField(58)
   @JsonKey(name: 'library')
   List<Canonical>? get library_ => throw _privateConstructorUsedError;
+  @HiveField(59)
   Reference get population => throw _privateConstructorUsedError;
+  @HiveField(60)
   Reference? get exposure => throw _privateConstructorUsedError;
+  @HiveField(61)
   Reference? get exposureAlternative => throw _privateConstructorUsedError;
+  @HiveField(62)
   Reference? get outcome => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -22950,90 +24395,153 @@ abstract class $ResearchDefinitionCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          FhirUri? url,
+      @HiveField(12)
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Identifier>? identifier,
-      String? version,
+      @HiveField(13)
+          List<Identifier>? identifier,
+      @HiveField(14)
+          String? version,
+      @HiveField(15)
       @JsonKey(name: '_version')
           Element? versionElement,
-      String? name,
+      @HiveField(16)
+          String? name,
+      @HiveField(17)
       @JsonKey(name: '_name')
           Element? nameElement,
-      String? title,
+      @HiveField(18)
+          String? title,
+      @HiveField(19)
       @JsonKey(name: '_title')
           Element? titleElement,
-      String? shortTitle,
+      @HiveField(20)
+          String? shortTitle,
+      @HiveField(21)
       @JsonKey(name: '_shortTitle')
           Element? shortTitleElement,
-      String? subtitle,
+      @HiveField(22)
+          String? subtitle,
+      @HiveField(23)
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
-      Code? status,
+      @HiveField(24)
+          Code? status,
+      @HiveField(25)
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      @HiveField(26)
+          Boolean? experimental,
+      @HiveField(27)
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
-      CodeableConcept? subjectCodeableConcept,
-      Reference? subjectReference,
-      FhirDateTime? date,
+      @HiveField(28)
+          CodeableConcept? subjectCodeableConcept,
+      @HiveField(29)
+          Reference? subjectReference,
+      @HiveField(30)
+          FhirDateTime? date,
+      @HiveField(31)
       @JsonKey(name: '_date')
           Element? dateElement,
-      String? publisher,
+      @HiveField(32)
+          String? publisher,
+      @HiveField(33)
       @JsonKey(name: '_publisher')
           Element? publisherElement,
-      List<ContactDetail>? contact,
-      Markdown? description,
+      @HiveField(34)
+          List<ContactDetail>? contact,
+      @HiveField(35)
+          Markdown? description,
+      @HiveField(36)
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<String>? comment,
+      @HiveField(37)
+          List<String>? comment,
+      @HiveField(38)
       @JsonKey(name: '_comment')
           List<Element?>? commentElement,
-      List<UsageContext>? useContext,
-      List<CodeableConcept>? jurisdiction,
-      Markdown? purpose,
+      @HiveField(39)
+          List<UsageContext>? useContext,
+      @HiveField(40)
+          List<CodeableConcept>? jurisdiction,
+      @HiveField(41)
+          Markdown? purpose,
+      @HiveField(42)
       @JsonKey(name: '_purpose')
           Element? purposeElement,
-      String? usage,
+      @HiveField(43)
+          String? usage,
+      @HiveField(44)
       @JsonKey(name: '_usage')
           Element? usageElement,
-      Markdown? copyright,
+      @HiveField(45)
+          Markdown? copyright,
+      @HiveField(46)
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Date? approvalDate,
+      @HiveField(47)
+          Date? approvalDate,
+      @HiveField(48)
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      @HiveField(49)
+          Date? lastReviewDate,
+      @HiveField(50)
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
-      Period? effectivePeriod,
-      List<CodeableConcept>? topic,
-      List<ContactDetail>? author,
-      List<ContactDetail>? editor,
-      List<ContactDetail>? reviewer,
-      List<ContactDetail>? endorser,
-      List<RelatedArtifact>? relatedArtifact,
+      @HiveField(51)
+          Period? effectivePeriod,
+      @HiveField(52)
+          List<CodeableConcept>? topic,
+      @HiveField(53)
+          List<ContactDetail>? author,
+      @HiveField(54)
+          List<ContactDetail>? editor,
+      @HiveField(55)
+          List<ContactDetail>? reviewer,
+      @HiveField(56)
+          List<ContactDetail>? endorser,
+      @HiveField(57)
+          List<RelatedArtifact>? relatedArtifact,
+      @HiveField(58)
       @JsonKey(name: 'library')
           List<Canonical>? library_,
-      Reference population,
-      Reference? exposure,
-      Reference? exposureAlternative,
-      Reference? outcome});
+      @HiveField(59)
+          Reference population,
+      @HiveField(60)
+          Reference? exposure,
+      @HiveField(61)
+          Reference? exposureAlternative,
+      @HiveField(62)
+          Reference? outcome});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -23729,90 +25237,153 @@ abstract class _$$_ResearchDefinitionCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          FhirUri? url,
+      @HiveField(12)
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Identifier>? identifier,
-      String? version,
+      @HiveField(13)
+          List<Identifier>? identifier,
+      @HiveField(14)
+          String? version,
+      @HiveField(15)
       @JsonKey(name: '_version')
           Element? versionElement,
-      String? name,
+      @HiveField(16)
+          String? name,
+      @HiveField(17)
       @JsonKey(name: '_name')
           Element? nameElement,
-      String? title,
+      @HiveField(18)
+          String? title,
+      @HiveField(19)
       @JsonKey(name: '_title')
           Element? titleElement,
-      String? shortTitle,
+      @HiveField(20)
+          String? shortTitle,
+      @HiveField(21)
       @JsonKey(name: '_shortTitle')
           Element? shortTitleElement,
-      String? subtitle,
+      @HiveField(22)
+          String? subtitle,
+      @HiveField(23)
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
-      Code? status,
+      @HiveField(24)
+          Code? status,
+      @HiveField(25)
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      @HiveField(26)
+          Boolean? experimental,
+      @HiveField(27)
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
-      CodeableConcept? subjectCodeableConcept,
-      Reference? subjectReference,
-      FhirDateTime? date,
+      @HiveField(28)
+          CodeableConcept? subjectCodeableConcept,
+      @HiveField(29)
+          Reference? subjectReference,
+      @HiveField(30)
+          FhirDateTime? date,
+      @HiveField(31)
       @JsonKey(name: '_date')
           Element? dateElement,
-      String? publisher,
+      @HiveField(32)
+          String? publisher,
+      @HiveField(33)
       @JsonKey(name: '_publisher')
           Element? publisherElement,
-      List<ContactDetail>? contact,
-      Markdown? description,
+      @HiveField(34)
+          List<ContactDetail>? contact,
+      @HiveField(35)
+          Markdown? description,
+      @HiveField(36)
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<String>? comment,
+      @HiveField(37)
+          List<String>? comment,
+      @HiveField(38)
       @JsonKey(name: '_comment')
           List<Element?>? commentElement,
-      List<UsageContext>? useContext,
-      List<CodeableConcept>? jurisdiction,
-      Markdown? purpose,
+      @HiveField(39)
+          List<UsageContext>? useContext,
+      @HiveField(40)
+          List<CodeableConcept>? jurisdiction,
+      @HiveField(41)
+          Markdown? purpose,
+      @HiveField(42)
       @JsonKey(name: '_purpose')
           Element? purposeElement,
-      String? usage,
+      @HiveField(43)
+          String? usage,
+      @HiveField(44)
       @JsonKey(name: '_usage')
           Element? usageElement,
-      Markdown? copyright,
+      @HiveField(45)
+          Markdown? copyright,
+      @HiveField(46)
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Date? approvalDate,
+      @HiveField(47)
+          Date? approvalDate,
+      @HiveField(48)
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      @HiveField(49)
+          Date? lastReviewDate,
+      @HiveField(50)
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
-      Period? effectivePeriod,
-      List<CodeableConcept>? topic,
-      List<ContactDetail>? author,
-      List<ContactDetail>? editor,
-      List<ContactDetail>? reviewer,
-      List<ContactDetail>? endorser,
-      List<RelatedArtifact>? relatedArtifact,
+      @HiveField(51)
+          Period? effectivePeriod,
+      @HiveField(52)
+          List<CodeableConcept>? topic,
+      @HiveField(53)
+          List<ContactDetail>? author,
+      @HiveField(54)
+          List<ContactDetail>? editor,
+      @HiveField(55)
+          List<ContactDetail>? reviewer,
+      @HiveField(56)
+          List<ContactDetail>? endorser,
+      @HiveField(57)
+          List<RelatedArtifact>? relatedArtifact,
+      @HiveField(58)
       @JsonKey(name: 'library')
           List<Canonical>? library_,
-      Reference population,
-      Reference? exposure,
-      Reference? exposureAlternative,
-      Reference? outcome});
+      @HiveField(59)
+          Reference population,
+      @HiveField(60)
+          Reference? exposure,
+      @HiveField(61)
+          Reference? exposureAlternative,
+      @HiveField(62)
+          Reference? outcome});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -24208,90 +25779,153 @@ class __$$_ResearchDefinitionCopyWithImpl<$Res>
 class _$_ResearchDefinition extends _ResearchDefinition {
   _$_ResearchDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
+      @HiveField(0)
           this.resourceType = R4ResourceType.ResearchDefinition,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.url,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          this.url,
+      @HiveField(12)
       @JsonKey(name: '_url')
           this.urlElement,
-      final List<Identifier>? identifier,
-      this.version,
+      @HiveField(13)
+          final List<Identifier>? identifier,
+      @HiveField(14)
+          this.version,
+      @HiveField(15)
       @JsonKey(name: '_version')
           this.versionElement,
-      this.name,
+      @HiveField(16)
+          this.name,
+      @HiveField(17)
       @JsonKey(name: '_name')
           this.nameElement,
-      this.title,
+      @HiveField(18)
+          this.title,
+      @HiveField(19)
       @JsonKey(name: '_title')
           this.titleElement,
-      this.shortTitle,
+      @HiveField(20)
+          this.shortTitle,
+      @HiveField(21)
       @JsonKey(name: '_shortTitle')
           this.shortTitleElement,
-      this.subtitle,
+      @HiveField(22)
+          this.subtitle,
+      @HiveField(23)
       @JsonKey(name: '_subtitle')
           this.subtitleElement,
-      this.status,
+      @HiveField(24)
+          this.status,
+      @HiveField(25)
       @JsonKey(name: '_status')
           this.statusElement,
-      this.experimental,
+      @HiveField(26)
+          this.experimental,
+      @HiveField(27)
       @JsonKey(name: '_experimental')
           this.experimentalElement,
-      this.subjectCodeableConcept,
-      this.subjectReference,
-      this.date,
+      @HiveField(28)
+          this.subjectCodeableConcept,
+      @HiveField(29)
+          this.subjectReference,
+      @HiveField(30)
+          this.date,
+      @HiveField(31)
       @JsonKey(name: '_date')
           this.dateElement,
-      this.publisher,
+      @HiveField(32)
+          this.publisher,
+      @HiveField(33)
       @JsonKey(name: '_publisher')
           this.publisherElement,
-      final List<ContactDetail>? contact,
-      this.description,
+      @HiveField(34)
+          final List<ContactDetail>? contact,
+      @HiveField(35)
+          this.description,
+      @HiveField(36)
       @JsonKey(name: '_description')
           this.descriptionElement,
-      final List<String>? comment,
+      @HiveField(37)
+          final List<String>? comment,
+      @HiveField(38)
       @JsonKey(name: '_comment')
           final List<Element?>? commentElement,
-      final List<UsageContext>? useContext,
-      final List<CodeableConcept>? jurisdiction,
-      this.purpose,
+      @HiveField(39)
+          final List<UsageContext>? useContext,
+      @HiveField(40)
+          final List<CodeableConcept>? jurisdiction,
+      @HiveField(41)
+          this.purpose,
+      @HiveField(42)
       @JsonKey(name: '_purpose')
           this.purposeElement,
-      this.usage,
+      @HiveField(43)
+          this.usage,
+      @HiveField(44)
       @JsonKey(name: '_usage')
           this.usageElement,
-      this.copyright,
+      @HiveField(45)
+          this.copyright,
+      @HiveField(46)
       @JsonKey(name: '_copyright')
           this.copyrightElement,
-      this.approvalDate,
+      @HiveField(47)
+          this.approvalDate,
+      @HiveField(48)
       @JsonKey(name: '_approvalDate')
           this.approvalDateElement,
-      this.lastReviewDate,
+      @HiveField(49)
+          this.lastReviewDate,
+      @HiveField(50)
       @JsonKey(name: '_lastReviewDate')
           this.lastReviewDateElement,
-      this.effectivePeriod,
-      final List<CodeableConcept>? topic,
-      final List<ContactDetail>? author,
-      final List<ContactDetail>? editor,
-      final List<ContactDetail>? reviewer,
-      final List<ContactDetail>? endorser,
-      final List<RelatedArtifact>? relatedArtifact,
+      @HiveField(51)
+          this.effectivePeriod,
+      @HiveField(52)
+          final List<CodeableConcept>? topic,
+      @HiveField(53)
+          final List<ContactDetail>? author,
+      @HiveField(54)
+          final List<ContactDetail>? editor,
+      @HiveField(55)
+          final List<ContactDetail>? reviewer,
+      @HiveField(56)
+          final List<ContactDetail>? endorser,
+      @HiveField(57)
+          final List<RelatedArtifact>? relatedArtifact,
+      @HiveField(58)
       @JsonKey(name: 'library')
           final List<Canonical>? library_,
-      required this.population,
-      this.exposure,
-      this.exposureAlternative,
-      this.outcome})
+      @HiveField(59)
+          required this.population,
+      @HiveField(60)
+          this.exposure,
+      @HiveField(61)
+          this.exposureAlternative,
+      @HiveField(62)
+          this.outcome})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -24315,25 +25949,34 @@ class _$_ResearchDefinition extends _ResearchDefinition {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
+  @HiveField(0)
   final R4ResourceType resourceType;
   @override
+  @HiveField(1)
   final String? id;
   @override
+  @HiveField(2)
   final Meta? meta;
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
   @override
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
+  @HiveField(5)
   final Code? language;
   @override
+  @HiveField(6)
   @JsonKey(name: '_language')
   final Element? languageElement;
   @override
+  @HiveField(7)
   final Narrative? text;
   final List<Resource>? _contained;
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -24344,6 +25987,7 @@ class _$_ResearchDefinition extends _ResearchDefinition {
 
   final List<FhirExtension>? _extension_;
   @override
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -24355,6 +25999,7 @@ class _$_ResearchDefinition extends _ResearchDefinition {
 
   final List<FhirExtension>? _modifierExtension;
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -24365,12 +26010,15 @@ class _$_ResearchDefinition extends _ResearchDefinition {
   }
 
   @override
+  @HiveField(11)
   final FhirUri? url;
   @override
+  @HiveField(12)
   @JsonKey(name: '_url')
   final Element? urlElement;
   final List<Identifier>? _identifier;
   @override
+  @HiveField(13)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -24380,56 +26028,77 @@ class _$_ResearchDefinition extends _ResearchDefinition {
   }
 
   @override
+  @HiveField(14)
   final String? version;
   @override
+  @HiveField(15)
   @JsonKey(name: '_version')
   final Element? versionElement;
   @override
+  @HiveField(16)
   final String? name;
   @override
+  @HiveField(17)
   @JsonKey(name: '_name')
   final Element? nameElement;
   @override
+  @HiveField(18)
   final String? title;
   @override
+  @HiveField(19)
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
+  @HiveField(20)
   final String? shortTitle;
   @override
+  @HiveField(21)
   @JsonKey(name: '_shortTitle')
   final Element? shortTitleElement;
   @override
+  @HiveField(22)
   final String? subtitle;
   @override
+  @HiveField(23)
   @JsonKey(name: '_subtitle')
   final Element? subtitleElement;
   @override
+  @HiveField(24)
   final Code? status;
   @override
+  @HiveField(25)
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
+  @HiveField(26)
   final Boolean? experimental;
   @override
+  @HiveField(27)
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
+  @HiveField(28)
   final CodeableConcept? subjectCodeableConcept;
   @override
+  @HiveField(29)
   final Reference? subjectReference;
   @override
+  @HiveField(30)
   final FhirDateTime? date;
   @override
+  @HiveField(31)
   @JsonKey(name: '_date')
   final Element? dateElement;
   @override
+  @HiveField(32)
   final String? publisher;
   @override
+  @HiveField(33)
   @JsonKey(name: '_publisher')
   final Element? publisherElement;
   final List<ContactDetail>? _contact;
   @override
+  @HiveField(34)
   List<ContactDetail>? get contact {
     final value = _contact;
     if (value == null) return null;
@@ -24439,12 +26108,15 @@ class _$_ResearchDefinition extends _ResearchDefinition {
   }
 
   @override
+  @HiveField(35)
   final Markdown? description;
   @override
+  @HiveField(36)
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   final List<String>? _comment;
   @override
+  @HiveField(37)
   List<String>? get comment {
     final value = _comment;
     if (value == null) return null;
@@ -24455,6 +26127,7 @@ class _$_ResearchDefinition extends _ResearchDefinition {
 
   final List<Element?>? _commentElement;
   @override
+  @HiveField(38)
   @JsonKey(name: '_comment')
   List<Element?>? get commentElement {
     final value = _commentElement;
@@ -24466,6 +26139,7 @@ class _$_ResearchDefinition extends _ResearchDefinition {
 
   final List<UsageContext>? _useContext;
   @override
+  @HiveField(39)
   List<UsageContext>? get useContext {
     final value = _useContext;
     if (value == null) return null;
@@ -24476,6 +26150,7 @@ class _$_ResearchDefinition extends _ResearchDefinition {
 
   final List<CodeableConcept>? _jurisdiction;
   @override
+  @HiveField(40)
   List<CodeableConcept>? get jurisdiction {
     final value = _jurisdiction;
     if (value == null) return null;
@@ -24485,34 +26160,46 @@ class _$_ResearchDefinition extends _ResearchDefinition {
   }
 
   @override
+  @HiveField(41)
   final Markdown? purpose;
   @override
+  @HiveField(42)
   @JsonKey(name: '_purpose')
   final Element? purposeElement;
   @override
+  @HiveField(43)
   final String? usage;
   @override
+  @HiveField(44)
   @JsonKey(name: '_usage')
   final Element? usageElement;
   @override
+  @HiveField(45)
   final Markdown? copyright;
   @override
+  @HiveField(46)
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
   @override
+  @HiveField(47)
   final Date? approvalDate;
   @override
+  @HiveField(48)
   @JsonKey(name: '_approvalDate')
   final Element? approvalDateElement;
   @override
+  @HiveField(49)
   final Date? lastReviewDate;
   @override
+  @HiveField(50)
   @JsonKey(name: '_lastReviewDate')
   final Element? lastReviewDateElement;
   @override
+  @HiveField(51)
   final Period? effectivePeriod;
   final List<CodeableConcept>? _topic;
   @override
+  @HiveField(52)
   List<CodeableConcept>? get topic {
     final value = _topic;
     if (value == null) return null;
@@ -24523,6 +26210,7 @@ class _$_ResearchDefinition extends _ResearchDefinition {
 
   final List<ContactDetail>? _author;
   @override
+  @HiveField(53)
   List<ContactDetail>? get author {
     final value = _author;
     if (value == null) return null;
@@ -24533,6 +26221,7 @@ class _$_ResearchDefinition extends _ResearchDefinition {
 
   final List<ContactDetail>? _editor;
   @override
+  @HiveField(54)
   List<ContactDetail>? get editor {
     final value = _editor;
     if (value == null) return null;
@@ -24543,6 +26232,7 @@ class _$_ResearchDefinition extends _ResearchDefinition {
 
   final List<ContactDetail>? _reviewer;
   @override
+  @HiveField(55)
   List<ContactDetail>? get reviewer {
     final value = _reviewer;
     if (value == null) return null;
@@ -24553,6 +26243,7 @@ class _$_ResearchDefinition extends _ResearchDefinition {
 
   final List<ContactDetail>? _endorser;
   @override
+  @HiveField(56)
   List<ContactDetail>? get endorser {
     final value = _endorser;
     if (value == null) return null;
@@ -24563,6 +26254,7 @@ class _$_ResearchDefinition extends _ResearchDefinition {
 
   final List<RelatedArtifact>? _relatedArtifact;
   @override
+  @HiveField(57)
   List<RelatedArtifact>? get relatedArtifact {
     final value = _relatedArtifact;
     if (value == null) return null;
@@ -24573,6 +26265,7 @@ class _$_ResearchDefinition extends _ResearchDefinition {
 
   final List<Canonical>? _library_;
   @override
+  @HiveField(58)
   @JsonKey(name: 'library')
   List<Canonical>? get library_ {
     final value = _library_;
@@ -24583,12 +26276,16 @@ class _$_ResearchDefinition extends _ResearchDefinition {
   }
 
   @override
+  @HiveField(59)
   final Reference population;
   @override
+  @HiveField(60)
   final Reference? exposure;
   @override
+  @HiveField(61)
   final Reference? exposureAlternative;
   @override
+  @HiveField(62)
   final Reference? outcome;
 
   @override
@@ -24796,90 +26493,153 @@ class _$_ResearchDefinition extends _ResearchDefinition {
 abstract class _ResearchDefinition extends ResearchDefinition {
   factory _ResearchDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final FhirUri? url,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final FhirUri? url,
+      @HiveField(12)
       @JsonKey(name: '_url')
           final Element? urlElement,
-      final List<Identifier>? identifier,
-      final String? version,
+      @HiveField(13)
+          final List<Identifier>? identifier,
+      @HiveField(14)
+          final String? version,
+      @HiveField(15)
       @JsonKey(name: '_version')
           final Element? versionElement,
-      final String? name,
+      @HiveField(16)
+          final String? name,
+      @HiveField(17)
       @JsonKey(name: '_name')
           final Element? nameElement,
-      final String? title,
+      @HiveField(18)
+          final String? title,
+      @HiveField(19)
       @JsonKey(name: '_title')
           final Element? titleElement,
-      final String? shortTitle,
+      @HiveField(20)
+          final String? shortTitle,
+      @HiveField(21)
       @JsonKey(name: '_shortTitle')
           final Element? shortTitleElement,
-      final String? subtitle,
+      @HiveField(22)
+          final String? subtitle,
+      @HiveField(23)
       @JsonKey(name: '_subtitle')
           final Element? subtitleElement,
-      final Code? status,
+      @HiveField(24)
+          final Code? status,
+      @HiveField(25)
       @JsonKey(name: '_status')
           final Element? statusElement,
-      final Boolean? experimental,
+      @HiveField(26)
+          final Boolean? experimental,
+      @HiveField(27)
       @JsonKey(name: '_experimental')
           final Element? experimentalElement,
-      final CodeableConcept? subjectCodeableConcept,
-      final Reference? subjectReference,
-      final FhirDateTime? date,
+      @HiveField(28)
+          final CodeableConcept? subjectCodeableConcept,
+      @HiveField(29)
+          final Reference? subjectReference,
+      @HiveField(30)
+          final FhirDateTime? date,
+      @HiveField(31)
       @JsonKey(name: '_date')
           final Element? dateElement,
-      final String? publisher,
+      @HiveField(32)
+          final String? publisher,
+      @HiveField(33)
       @JsonKey(name: '_publisher')
           final Element? publisherElement,
-      final List<ContactDetail>? contact,
-      final Markdown? description,
+      @HiveField(34)
+          final List<ContactDetail>? contact,
+      @HiveField(35)
+          final Markdown? description,
+      @HiveField(36)
       @JsonKey(name: '_description')
           final Element? descriptionElement,
-      final List<String>? comment,
+      @HiveField(37)
+          final List<String>? comment,
+      @HiveField(38)
       @JsonKey(name: '_comment')
           final List<Element?>? commentElement,
-      final List<UsageContext>? useContext,
-      final List<CodeableConcept>? jurisdiction,
-      final Markdown? purpose,
+      @HiveField(39)
+          final List<UsageContext>? useContext,
+      @HiveField(40)
+          final List<CodeableConcept>? jurisdiction,
+      @HiveField(41)
+          final Markdown? purpose,
+      @HiveField(42)
       @JsonKey(name: '_purpose')
           final Element? purposeElement,
-      final String? usage,
+      @HiveField(43)
+          final String? usage,
+      @HiveField(44)
       @JsonKey(name: '_usage')
           final Element? usageElement,
-      final Markdown? copyright,
+      @HiveField(45)
+          final Markdown? copyright,
+      @HiveField(46)
       @JsonKey(name: '_copyright')
           final Element? copyrightElement,
-      final Date? approvalDate,
+      @HiveField(47)
+          final Date? approvalDate,
+      @HiveField(48)
       @JsonKey(name: '_approvalDate')
           final Element? approvalDateElement,
-      final Date? lastReviewDate,
+      @HiveField(49)
+          final Date? lastReviewDate,
+      @HiveField(50)
       @JsonKey(name: '_lastReviewDate')
           final Element? lastReviewDateElement,
-      final Period? effectivePeriod,
-      final List<CodeableConcept>? topic,
-      final List<ContactDetail>? author,
-      final List<ContactDetail>? editor,
-      final List<ContactDetail>? reviewer,
-      final List<ContactDetail>? endorser,
-      final List<RelatedArtifact>? relatedArtifact,
+      @HiveField(51)
+          final Period? effectivePeriod,
+      @HiveField(52)
+          final List<CodeableConcept>? topic,
+      @HiveField(53)
+          final List<ContactDetail>? author,
+      @HiveField(54)
+          final List<ContactDetail>? editor,
+      @HiveField(55)
+          final List<ContactDetail>? reviewer,
+      @HiveField(56)
+          final List<ContactDetail>? endorser,
+      @HiveField(57)
+          final List<RelatedArtifact>? relatedArtifact,
+      @HiveField(58)
       @JsonKey(name: 'library')
           final List<Canonical>? library_,
-      required final Reference population,
-      final Reference? exposure,
-      final Reference? exposureAlternative,
-      final Reference? outcome}) = _$_ResearchDefinition;
+      @HiveField(59)
+          required final Reference population,
+      @HiveField(60)
+          final Reference? exposure,
+      @HiveField(61)
+          final Reference? exposureAlternative,
+      @HiveField(62)
+          final Reference? outcome}) = _$_ResearchDefinition;
   _ResearchDefinition._() : super._();
 
   factory _ResearchDefinition.fromJson(Map<String, dynamic> json) =
@@ -24887,151 +26647,214 @@ abstract class _ResearchDefinition extends ResearchDefinition {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
+  @HiveField(1)
   String? get id;
   @override
+  @HiveField(2)
   Meta? get meta;
   @override
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
+  @HiveField(5)
   Code? get language;
   @override
+  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+  @HiveField(7)
   Narrative? get text;
   @override
+  @HiveField(8)
   List<Resource>? get contained;
   @override
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
+  @HiveField(11)
   FhirUri? get url;
   @override
+  @HiveField(12)
   @JsonKey(name: '_url')
   Element? get urlElement;
   @override
+  @HiveField(13)
   List<Identifier>? get identifier;
   @override
+  @HiveField(14)
   String? get version;
   @override
+  @HiveField(15)
   @JsonKey(name: '_version')
   Element? get versionElement;
   @override
+  @HiveField(16)
   String? get name;
   @override
+  @HiveField(17)
   @JsonKey(name: '_name')
   Element? get nameElement;
   @override
+  @HiveField(18)
   String? get title;
   @override
+  @HiveField(19)
   @JsonKey(name: '_title')
   Element? get titleElement;
   @override
+  @HiveField(20)
   String? get shortTitle;
   @override
+  @HiveField(21)
   @JsonKey(name: '_shortTitle')
   Element? get shortTitleElement;
   @override
+  @HiveField(22)
   String? get subtitle;
   @override
+  @HiveField(23)
   @JsonKey(name: '_subtitle')
   Element? get subtitleElement;
   @override
+  @HiveField(24)
   Code? get status;
   @override
+  @HiveField(25)
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
+  @HiveField(26)
   Boolean? get experimental;
   @override
+  @HiveField(27)
   @JsonKey(name: '_experimental')
   Element? get experimentalElement;
   @override
+  @HiveField(28)
   CodeableConcept? get subjectCodeableConcept;
   @override
+  @HiveField(29)
   Reference? get subjectReference;
   @override
+  @HiveField(30)
   FhirDateTime? get date;
   @override
+  @HiveField(31)
   @JsonKey(name: '_date')
   Element? get dateElement;
   @override
+  @HiveField(32)
   String? get publisher;
   @override
+  @HiveField(33)
   @JsonKey(name: '_publisher')
   Element? get publisherElement;
   @override
+  @HiveField(34)
   List<ContactDetail>? get contact;
   @override
+  @HiveField(35)
   Markdown? get description;
   @override
+  @HiveField(36)
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
+  @HiveField(37)
   List<String>? get comment;
   @override
+  @HiveField(38)
   @JsonKey(name: '_comment')
   List<Element?>? get commentElement;
   @override
+  @HiveField(39)
   List<UsageContext>? get useContext;
   @override
+  @HiveField(40)
   List<CodeableConcept>? get jurisdiction;
   @override
+  @HiveField(41)
   Markdown? get purpose;
   @override
+  @HiveField(42)
   @JsonKey(name: '_purpose')
   Element? get purposeElement;
   @override
+  @HiveField(43)
   String? get usage;
   @override
+  @HiveField(44)
   @JsonKey(name: '_usage')
   Element? get usageElement;
   @override
+  @HiveField(45)
   Markdown? get copyright;
   @override
+  @HiveField(46)
   @JsonKey(name: '_copyright')
   Element? get copyrightElement;
   @override
+  @HiveField(47)
   Date? get approvalDate;
   @override
+  @HiveField(48)
   @JsonKey(name: '_approvalDate')
   Element? get approvalDateElement;
   @override
+  @HiveField(49)
   Date? get lastReviewDate;
   @override
+  @HiveField(50)
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement;
   @override
+  @HiveField(51)
   Period? get effectivePeriod;
   @override
+  @HiveField(52)
   List<CodeableConcept>? get topic;
   @override
+  @HiveField(53)
   List<ContactDetail>? get author;
   @override
+  @HiveField(54)
   List<ContactDetail>? get editor;
   @override
+  @HiveField(55)
   List<ContactDetail>? get reviewer;
   @override
+  @HiveField(56)
   List<ContactDetail>? get endorser;
   @override
+  @HiveField(57)
   List<RelatedArtifact>? get relatedArtifact;
   @override
+  @HiveField(58)
   @JsonKey(name: 'library')
   List<Canonical>? get library_;
   @override
+  @HiveField(59)
   Reference get population;
   @override
+  @HiveField(60)
   Reference? get exposure;
   @override
+  @HiveField(61)
   Reference? get exposureAlternative;
   @override
+  @HiveField(62)
   Reference? get outcome;
   @override
   @JsonKey(ignore: true)
@@ -25047,95 +26870,159 @@ ResearchElementDefinition _$ResearchElementDefinitionFromJson(
 /// @nodoc
 mixin _$ResearchElementDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
+  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
+  @HiveField(11)
   FhirUri? get url => throw _privateConstructorUsedError;
+  @HiveField(12)
   @JsonKey(name: '_url')
   Element? get urlElement => throw _privateConstructorUsedError;
+  @HiveField(13)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  @HiveField(14)
   String? get version => throw _privateConstructorUsedError;
+  @HiveField(15)
   @JsonKey(name: '_version')
   Element? get versionElement => throw _privateConstructorUsedError;
+  @HiveField(16)
   String? get name => throw _privateConstructorUsedError;
+  @HiveField(17)
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
+  @HiveField(18)
   String? get title => throw _privateConstructorUsedError;
+  @HiveField(19)
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
+  @HiveField(20)
   String? get shortTitle => throw _privateConstructorUsedError;
+  @HiveField(21)
   @JsonKey(name: '_shortTitle')
   Element? get shortTitleElement => throw _privateConstructorUsedError;
+  @HiveField(22)
   String? get subtitle => throw _privateConstructorUsedError;
+  @HiveField(23)
   @JsonKey(name: '_subtitle')
   Element? get subtitleElement => throw _privateConstructorUsedError;
+  @HiveField(24)
   Code? get status => throw _privateConstructorUsedError;
+  @HiveField(25)
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
+  @HiveField(26)
   Boolean? get experimental => throw _privateConstructorUsedError;
+  @HiveField(27)
   @JsonKey(name: '_experimental')
   Element? get experimentalElement => throw _privateConstructorUsedError;
+  @HiveField(28)
   CodeableConcept? get subjectCodeableConcept =>
       throw _privateConstructorUsedError;
+  @HiveField(29)
   Reference? get subjectReference => throw _privateConstructorUsedError;
+  @HiveField(30)
   FhirDateTime? get date => throw _privateConstructorUsedError;
+  @HiveField(31)
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
+  @HiveField(32)
   String? get publisher => throw _privateConstructorUsedError;
+  @HiveField(33)
   @JsonKey(name: '_publisher')
   Element? get publisherElement => throw _privateConstructorUsedError;
+  @HiveField(34)
   List<ContactDetail>? get contact => throw _privateConstructorUsedError;
+  @HiveField(35)
   Markdown? get description => throw _privateConstructorUsedError;
+  @HiveField(36)
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
+  @HiveField(37)
   List<String>? get comment => throw _privateConstructorUsedError;
+  @HiveField(38)
   @JsonKey(name: '_comment')
   List<Element?>? get commentElement => throw _privateConstructorUsedError;
+  @HiveField(39)
   List<UsageContext>? get useContext => throw _privateConstructorUsedError;
+  @HiveField(40)
   List<CodeableConcept>? get jurisdiction => throw _privateConstructorUsedError;
+  @HiveField(41)
   Markdown? get purpose => throw _privateConstructorUsedError;
+  @HiveField(42)
   @JsonKey(name: '_purpose')
   Element? get purposeElement => throw _privateConstructorUsedError;
+  @HiveField(43)
   String? get usage => throw _privateConstructorUsedError;
+  @HiveField(44)
   @JsonKey(name: '_usage')
   Element? get usageElement => throw _privateConstructorUsedError;
+  @HiveField(45)
   Markdown? get copyright => throw _privateConstructorUsedError;
+  @HiveField(46)
   @JsonKey(name: '_copyright')
   Element? get copyrightElement => throw _privateConstructorUsedError;
+  @HiveField(47)
   Date? get approvalDate => throw _privateConstructorUsedError;
+  @HiveField(48)
   @JsonKey(name: '_approvalDate')
   Element? get approvalDateElement => throw _privateConstructorUsedError;
+  @HiveField(49)
   Date? get lastReviewDate => throw _privateConstructorUsedError;
+  @HiveField(50)
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement => throw _privateConstructorUsedError;
+  @HiveField(51)
   Period? get effectivePeriod => throw _privateConstructorUsedError;
+  @HiveField(52)
   List<CodeableConcept>? get topic => throw _privateConstructorUsedError;
+  @HiveField(53)
   List<ContactDetail>? get author => throw _privateConstructorUsedError;
+  @HiveField(54)
   List<ContactDetail>? get editor => throw _privateConstructorUsedError;
+  @HiveField(55)
   List<ContactDetail>? get reviewer => throw _privateConstructorUsedError;
+  @HiveField(56)
   List<ContactDetail>? get endorser => throw _privateConstructorUsedError;
+  @HiveField(57)
   List<RelatedArtifact>? get relatedArtifact =>
       throw _privateConstructorUsedError;
+  @HiveField(58)
   @JsonKey(name: 'library')
   List<Canonical>? get library_ => throw _privateConstructorUsedError;
+  @HiveField(59)
   Code? get type => throw _privateConstructorUsedError;
+  @HiveField(60)
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
+  @HiveField(61)
   Code? get variableType => throw _privateConstructorUsedError;
+  @HiveField(62)
   @JsonKey(name: '_variableType')
   Element? get variableTypeElement => throw _privateConstructorUsedError;
+  @HiveField(63)
   List<ResearchElementDefinitionCharacteristic> get characteristic =>
       throw _privateConstructorUsedError;
 
@@ -25153,93 +27040,157 @@ abstract class $ResearchElementDefinitionCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          FhirUri? url,
+      @HiveField(12)
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Identifier>? identifier,
-      String? version,
+      @HiveField(13)
+          List<Identifier>? identifier,
+      @HiveField(14)
+          String? version,
+      @HiveField(15)
       @JsonKey(name: '_version')
           Element? versionElement,
-      String? name,
+      @HiveField(16)
+          String? name,
+      @HiveField(17)
       @JsonKey(name: '_name')
           Element? nameElement,
-      String? title,
+      @HiveField(18)
+          String? title,
+      @HiveField(19)
       @JsonKey(name: '_title')
           Element? titleElement,
-      String? shortTitle,
+      @HiveField(20)
+          String? shortTitle,
+      @HiveField(21)
       @JsonKey(name: '_shortTitle')
           Element? shortTitleElement,
-      String? subtitle,
+      @HiveField(22)
+          String? subtitle,
+      @HiveField(23)
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
-      Code? status,
+      @HiveField(24)
+          Code? status,
+      @HiveField(25)
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      @HiveField(26)
+          Boolean? experimental,
+      @HiveField(27)
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
-      CodeableConcept? subjectCodeableConcept,
-      Reference? subjectReference,
-      FhirDateTime? date,
+      @HiveField(28)
+          CodeableConcept? subjectCodeableConcept,
+      @HiveField(29)
+          Reference? subjectReference,
+      @HiveField(30)
+          FhirDateTime? date,
+      @HiveField(31)
       @JsonKey(name: '_date')
           Element? dateElement,
-      String? publisher,
+      @HiveField(32)
+          String? publisher,
+      @HiveField(33)
       @JsonKey(name: '_publisher')
           Element? publisherElement,
-      List<ContactDetail>? contact,
-      Markdown? description,
+      @HiveField(34)
+          List<ContactDetail>? contact,
+      @HiveField(35)
+          Markdown? description,
+      @HiveField(36)
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<String>? comment,
+      @HiveField(37)
+          List<String>? comment,
+      @HiveField(38)
       @JsonKey(name: '_comment')
           List<Element?>? commentElement,
-      List<UsageContext>? useContext,
-      List<CodeableConcept>? jurisdiction,
-      Markdown? purpose,
+      @HiveField(39)
+          List<UsageContext>? useContext,
+      @HiveField(40)
+          List<CodeableConcept>? jurisdiction,
+      @HiveField(41)
+          Markdown? purpose,
+      @HiveField(42)
       @JsonKey(name: '_purpose')
           Element? purposeElement,
-      String? usage,
+      @HiveField(43)
+          String? usage,
+      @HiveField(44)
       @JsonKey(name: '_usage')
           Element? usageElement,
-      Markdown? copyright,
+      @HiveField(45)
+          Markdown? copyright,
+      @HiveField(46)
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Date? approvalDate,
+      @HiveField(47)
+          Date? approvalDate,
+      @HiveField(48)
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      @HiveField(49)
+          Date? lastReviewDate,
+      @HiveField(50)
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
-      Period? effectivePeriod,
-      List<CodeableConcept>? topic,
-      List<ContactDetail>? author,
-      List<ContactDetail>? editor,
-      List<ContactDetail>? reviewer,
-      List<ContactDetail>? endorser,
-      List<RelatedArtifact>? relatedArtifact,
+      @HiveField(51)
+          Period? effectivePeriod,
+      @HiveField(52)
+          List<CodeableConcept>? topic,
+      @HiveField(53)
+          List<ContactDetail>? author,
+      @HiveField(54)
+          List<ContactDetail>? editor,
+      @HiveField(55)
+          List<ContactDetail>? reviewer,
+      @HiveField(56)
+          List<ContactDetail>? endorser,
+      @HiveField(57)
+          List<RelatedArtifact>? relatedArtifact,
+      @HiveField(58)
       @JsonKey(name: 'library')
           List<Canonical>? library_,
-      Code? type,
+      @HiveField(59)
+          Code? type,
+      @HiveField(60)
       @JsonKey(name: '_type')
           Element? typeElement,
-      Code? variableType,
+      @HiveField(61)
+          Code? variableType,
+      @HiveField(62)
       @JsonKey(name: '_variableType')
           Element? variableTypeElement,
-      List<ResearchElementDefinitionCharacteristic> characteristic});
+      @HiveField(63)
+          List<ResearchElementDefinitionCharacteristic> characteristic});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -25920,93 +27871,157 @@ abstract class _$$_ResearchElementDefinitionCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? url,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          FhirUri? url,
+      @HiveField(12)
       @JsonKey(name: '_url')
           Element? urlElement,
-      List<Identifier>? identifier,
-      String? version,
+      @HiveField(13)
+          List<Identifier>? identifier,
+      @HiveField(14)
+          String? version,
+      @HiveField(15)
       @JsonKey(name: '_version')
           Element? versionElement,
-      String? name,
+      @HiveField(16)
+          String? name,
+      @HiveField(17)
       @JsonKey(name: '_name')
           Element? nameElement,
-      String? title,
+      @HiveField(18)
+          String? title,
+      @HiveField(19)
       @JsonKey(name: '_title')
           Element? titleElement,
-      String? shortTitle,
+      @HiveField(20)
+          String? shortTitle,
+      @HiveField(21)
       @JsonKey(name: '_shortTitle')
           Element? shortTitleElement,
-      String? subtitle,
+      @HiveField(22)
+          String? subtitle,
+      @HiveField(23)
       @JsonKey(name: '_subtitle')
           Element? subtitleElement,
-      Code? status,
+      @HiveField(24)
+          Code? status,
+      @HiveField(25)
       @JsonKey(name: '_status')
           Element? statusElement,
-      Boolean? experimental,
+      @HiveField(26)
+          Boolean? experimental,
+      @HiveField(27)
       @JsonKey(name: '_experimental')
           Element? experimentalElement,
-      CodeableConcept? subjectCodeableConcept,
-      Reference? subjectReference,
-      FhirDateTime? date,
+      @HiveField(28)
+          CodeableConcept? subjectCodeableConcept,
+      @HiveField(29)
+          Reference? subjectReference,
+      @HiveField(30)
+          FhirDateTime? date,
+      @HiveField(31)
       @JsonKey(name: '_date')
           Element? dateElement,
-      String? publisher,
+      @HiveField(32)
+          String? publisher,
+      @HiveField(33)
       @JsonKey(name: '_publisher')
           Element? publisherElement,
-      List<ContactDetail>? contact,
-      Markdown? description,
+      @HiveField(34)
+          List<ContactDetail>? contact,
+      @HiveField(35)
+          Markdown? description,
+      @HiveField(36)
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      List<String>? comment,
+      @HiveField(37)
+          List<String>? comment,
+      @HiveField(38)
       @JsonKey(name: '_comment')
           List<Element?>? commentElement,
-      List<UsageContext>? useContext,
-      List<CodeableConcept>? jurisdiction,
-      Markdown? purpose,
+      @HiveField(39)
+          List<UsageContext>? useContext,
+      @HiveField(40)
+          List<CodeableConcept>? jurisdiction,
+      @HiveField(41)
+          Markdown? purpose,
+      @HiveField(42)
       @JsonKey(name: '_purpose')
           Element? purposeElement,
-      String? usage,
+      @HiveField(43)
+          String? usage,
+      @HiveField(44)
       @JsonKey(name: '_usage')
           Element? usageElement,
-      Markdown? copyright,
+      @HiveField(45)
+          Markdown? copyright,
+      @HiveField(46)
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Date? approvalDate,
+      @HiveField(47)
+          Date? approvalDate,
+      @HiveField(48)
       @JsonKey(name: '_approvalDate')
           Element? approvalDateElement,
-      Date? lastReviewDate,
+      @HiveField(49)
+          Date? lastReviewDate,
+      @HiveField(50)
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
-      Period? effectivePeriod,
-      List<CodeableConcept>? topic,
-      List<ContactDetail>? author,
-      List<ContactDetail>? editor,
-      List<ContactDetail>? reviewer,
-      List<ContactDetail>? endorser,
-      List<RelatedArtifact>? relatedArtifact,
+      @HiveField(51)
+          Period? effectivePeriod,
+      @HiveField(52)
+          List<CodeableConcept>? topic,
+      @HiveField(53)
+          List<ContactDetail>? author,
+      @HiveField(54)
+          List<ContactDetail>? editor,
+      @HiveField(55)
+          List<ContactDetail>? reviewer,
+      @HiveField(56)
+          List<ContactDetail>? endorser,
+      @HiveField(57)
+          List<RelatedArtifact>? relatedArtifact,
+      @HiveField(58)
       @JsonKey(name: 'library')
           List<Canonical>? library_,
-      Code? type,
+      @HiveField(59)
+          Code? type,
+      @HiveField(60)
       @JsonKey(name: '_type')
           Element? typeElement,
-      Code? variableType,
+      @HiveField(61)
+          Code? variableType,
+      @HiveField(62)
       @JsonKey(name: '_variableType')
           Element? variableTypeElement,
-      List<ResearchElementDefinitionCharacteristic> characteristic});
+      @HiveField(63)
+          List<ResearchElementDefinitionCharacteristic> characteristic});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -26405,94 +28420,158 @@ class __$$_ResearchElementDefinitionCopyWithImpl<$Res>
 class _$_ResearchElementDefinition extends _ResearchElementDefinition {
   _$_ResearchElementDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
+      @HiveField(0)
           this.resourceType = R4ResourceType.ResearchElementDefinition,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      this.url,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          this.url,
+      @HiveField(12)
       @JsonKey(name: '_url')
           this.urlElement,
-      final List<Identifier>? identifier,
-      this.version,
+      @HiveField(13)
+          final List<Identifier>? identifier,
+      @HiveField(14)
+          this.version,
+      @HiveField(15)
       @JsonKey(name: '_version')
           this.versionElement,
-      this.name,
+      @HiveField(16)
+          this.name,
+      @HiveField(17)
       @JsonKey(name: '_name')
           this.nameElement,
-      this.title,
+      @HiveField(18)
+          this.title,
+      @HiveField(19)
       @JsonKey(name: '_title')
           this.titleElement,
-      this.shortTitle,
+      @HiveField(20)
+          this.shortTitle,
+      @HiveField(21)
       @JsonKey(name: '_shortTitle')
           this.shortTitleElement,
-      this.subtitle,
+      @HiveField(22)
+          this.subtitle,
+      @HiveField(23)
       @JsonKey(name: '_subtitle')
           this.subtitleElement,
-      this.status,
+      @HiveField(24)
+          this.status,
+      @HiveField(25)
       @JsonKey(name: '_status')
           this.statusElement,
-      this.experimental,
+      @HiveField(26)
+          this.experimental,
+      @HiveField(27)
       @JsonKey(name: '_experimental')
           this.experimentalElement,
-      this.subjectCodeableConcept,
-      this.subjectReference,
-      this.date,
+      @HiveField(28)
+          this.subjectCodeableConcept,
+      @HiveField(29)
+          this.subjectReference,
+      @HiveField(30)
+          this.date,
+      @HiveField(31)
       @JsonKey(name: '_date')
           this.dateElement,
-      this.publisher,
+      @HiveField(32)
+          this.publisher,
+      @HiveField(33)
       @JsonKey(name: '_publisher')
           this.publisherElement,
-      final List<ContactDetail>? contact,
-      this.description,
+      @HiveField(34)
+          final List<ContactDetail>? contact,
+      @HiveField(35)
+          this.description,
+      @HiveField(36)
       @JsonKey(name: '_description')
           this.descriptionElement,
-      final List<String>? comment,
+      @HiveField(37)
+          final List<String>? comment,
+      @HiveField(38)
       @JsonKey(name: '_comment')
           final List<Element?>? commentElement,
-      final List<UsageContext>? useContext,
-      final List<CodeableConcept>? jurisdiction,
-      this.purpose,
+      @HiveField(39)
+          final List<UsageContext>? useContext,
+      @HiveField(40)
+          final List<CodeableConcept>? jurisdiction,
+      @HiveField(41)
+          this.purpose,
+      @HiveField(42)
       @JsonKey(name: '_purpose')
           this.purposeElement,
-      this.usage,
+      @HiveField(43)
+          this.usage,
+      @HiveField(44)
       @JsonKey(name: '_usage')
           this.usageElement,
-      this.copyright,
+      @HiveField(45)
+          this.copyright,
+      @HiveField(46)
       @JsonKey(name: '_copyright')
           this.copyrightElement,
-      this.approvalDate,
+      @HiveField(47)
+          this.approvalDate,
+      @HiveField(48)
       @JsonKey(name: '_approvalDate')
           this.approvalDateElement,
-      this.lastReviewDate,
+      @HiveField(49)
+          this.lastReviewDate,
+      @HiveField(50)
       @JsonKey(name: '_lastReviewDate')
           this.lastReviewDateElement,
-      this.effectivePeriod,
-      final List<CodeableConcept>? topic,
-      final List<ContactDetail>? author,
-      final List<ContactDetail>? editor,
-      final List<ContactDetail>? reviewer,
-      final List<ContactDetail>? endorser,
-      final List<RelatedArtifact>? relatedArtifact,
+      @HiveField(51)
+          this.effectivePeriod,
+      @HiveField(52)
+          final List<CodeableConcept>? topic,
+      @HiveField(53)
+          final List<ContactDetail>? author,
+      @HiveField(54)
+          final List<ContactDetail>? editor,
+      @HiveField(55)
+          final List<ContactDetail>? reviewer,
+      @HiveField(56)
+          final List<ContactDetail>? endorser,
+      @HiveField(57)
+          final List<RelatedArtifact>? relatedArtifact,
+      @HiveField(58)
       @JsonKey(name: 'library')
           final List<Canonical>? library_,
-      this.type,
+      @HiveField(59)
+          this.type,
+      @HiveField(60)
       @JsonKey(name: '_type')
           this.typeElement,
-      this.variableType,
+      @HiveField(61)
+          this.variableType,
+      @HiveField(62)
       @JsonKey(name: '_variableType')
           this.variableTypeElement,
-      required final List<ResearchElementDefinitionCharacteristic>
-          characteristic})
+      @HiveField(63)
+          required final List<ResearchElementDefinitionCharacteristic>
+              characteristic})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -26517,25 +28596,34 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
+  @HiveField(0)
   final R4ResourceType resourceType;
   @override
+  @HiveField(1)
   final String? id;
   @override
+  @HiveField(2)
   final Meta? meta;
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
   @override
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   final Element? implicitRulesElement;
   @override
+  @HiveField(5)
   final Code? language;
   @override
+  @HiveField(6)
   @JsonKey(name: '_language')
   final Element? languageElement;
   @override
+  @HiveField(7)
   final Narrative? text;
   final List<Resource>? _contained;
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -26546,6 +28634,7 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
 
   final List<FhirExtension>? _extension_;
   @override
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
     final value = _extension_;
@@ -26557,6 +28646,7 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
 
   final List<FhirExtension>? _modifierExtension;
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -26567,12 +28657,15 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
   }
 
   @override
+  @HiveField(11)
   final FhirUri? url;
   @override
+  @HiveField(12)
   @JsonKey(name: '_url')
   final Element? urlElement;
   final List<Identifier>? _identifier;
   @override
+  @HiveField(13)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -26582,56 +28675,77 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
   }
 
   @override
+  @HiveField(14)
   final String? version;
   @override
+  @HiveField(15)
   @JsonKey(name: '_version')
   final Element? versionElement;
   @override
+  @HiveField(16)
   final String? name;
   @override
+  @HiveField(17)
   @JsonKey(name: '_name')
   final Element? nameElement;
   @override
+  @HiveField(18)
   final String? title;
   @override
+  @HiveField(19)
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
+  @HiveField(20)
   final String? shortTitle;
   @override
+  @HiveField(21)
   @JsonKey(name: '_shortTitle')
   final Element? shortTitleElement;
   @override
+  @HiveField(22)
   final String? subtitle;
   @override
+  @HiveField(23)
   @JsonKey(name: '_subtitle')
   final Element? subtitleElement;
   @override
+  @HiveField(24)
   final Code? status;
   @override
+  @HiveField(25)
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
+  @HiveField(26)
   final Boolean? experimental;
   @override
+  @HiveField(27)
   @JsonKey(name: '_experimental')
   final Element? experimentalElement;
   @override
+  @HiveField(28)
   final CodeableConcept? subjectCodeableConcept;
   @override
+  @HiveField(29)
   final Reference? subjectReference;
   @override
+  @HiveField(30)
   final FhirDateTime? date;
   @override
+  @HiveField(31)
   @JsonKey(name: '_date')
   final Element? dateElement;
   @override
+  @HiveField(32)
   final String? publisher;
   @override
+  @HiveField(33)
   @JsonKey(name: '_publisher')
   final Element? publisherElement;
   final List<ContactDetail>? _contact;
   @override
+  @HiveField(34)
   List<ContactDetail>? get contact {
     final value = _contact;
     if (value == null) return null;
@@ -26641,12 +28755,15 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
   }
 
   @override
+  @HiveField(35)
   final Markdown? description;
   @override
+  @HiveField(36)
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   final List<String>? _comment;
   @override
+  @HiveField(37)
   List<String>? get comment {
     final value = _comment;
     if (value == null) return null;
@@ -26657,6 +28774,7 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
 
   final List<Element?>? _commentElement;
   @override
+  @HiveField(38)
   @JsonKey(name: '_comment')
   List<Element?>? get commentElement {
     final value = _commentElement;
@@ -26668,6 +28786,7 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
 
   final List<UsageContext>? _useContext;
   @override
+  @HiveField(39)
   List<UsageContext>? get useContext {
     final value = _useContext;
     if (value == null) return null;
@@ -26678,6 +28797,7 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
 
   final List<CodeableConcept>? _jurisdiction;
   @override
+  @HiveField(40)
   List<CodeableConcept>? get jurisdiction {
     final value = _jurisdiction;
     if (value == null) return null;
@@ -26687,34 +28807,46 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
   }
 
   @override
+  @HiveField(41)
   final Markdown? purpose;
   @override
+  @HiveField(42)
   @JsonKey(name: '_purpose')
   final Element? purposeElement;
   @override
+  @HiveField(43)
   final String? usage;
   @override
+  @HiveField(44)
   @JsonKey(name: '_usage')
   final Element? usageElement;
   @override
+  @HiveField(45)
   final Markdown? copyright;
   @override
+  @HiveField(46)
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
   @override
+  @HiveField(47)
   final Date? approvalDate;
   @override
+  @HiveField(48)
   @JsonKey(name: '_approvalDate')
   final Element? approvalDateElement;
   @override
+  @HiveField(49)
   final Date? lastReviewDate;
   @override
+  @HiveField(50)
   @JsonKey(name: '_lastReviewDate')
   final Element? lastReviewDateElement;
   @override
+  @HiveField(51)
   final Period? effectivePeriod;
   final List<CodeableConcept>? _topic;
   @override
+  @HiveField(52)
   List<CodeableConcept>? get topic {
     final value = _topic;
     if (value == null) return null;
@@ -26725,6 +28857,7 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
 
   final List<ContactDetail>? _author;
   @override
+  @HiveField(53)
   List<ContactDetail>? get author {
     final value = _author;
     if (value == null) return null;
@@ -26735,6 +28868,7 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
 
   final List<ContactDetail>? _editor;
   @override
+  @HiveField(54)
   List<ContactDetail>? get editor {
     final value = _editor;
     if (value == null) return null;
@@ -26745,6 +28879,7 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
 
   final List<ContactDetail>? _reviewer;
   @override
+  @HiveField(55)
   List<ContactDetail>? get reviewer {
     final value = _reviewer;
     if (value == null) return null;
@@ -26755,6 +28890,7 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
 
   final List<ContactDetail>? _endorser;
   @override
+  @HiveField(56)
   List<ContactDetail>? get endorser {
     final value = _endorser;
     if (value == null) return null;
@@ -26765,6 +28901,7 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
 
   final List<RelatedArtifact>? _relatedArtifact;
   @override
+  @HiveField(57)
   List<RelatedArtifact>? get relatedArtifact {
     final value = _relatedArtifact;
     if (value == null) return null;
@@ -26775,6 +28912,7 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
 
   final List<Canonical>? _library_;
   @override
+  @HiveField(58)
   @JsonKey(name: 'library')
   List<Canonical>? get library_ {
     final value = _library_;
@@ -26785,17 +28923,22 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
   }
 
   @override
+  @HiveField(59)
   final Code? type;
   @override
+  @HiveField(60)
   @JsonKey(name: '_type')
   final Element? typeElement;
   @override
+  @HiveField(61)
   final Code? variableType;
   @override
+  @HiveField(62)
   @JsonKey(name: '_variableType')
   final Element? variableTypeElement;
   final List<ResearchElementDefinitionCharacteristic> _characteristic;
   @override
+  @HiveField(63)
   List<ResearchElementDefinitionCharacteristic> get characteristic {
     if (_characteristic is EqualUnmodifiableListView) return _characteristic;
     // ignore: implicit_dynamic_type
@@ -27009,94 +29152,158 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
 abstract class _ResearchElementDefinition extends ResearchElementDefinition {
   factory _ResearchElementDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
+      @HiveField(4)
       @JsonKey(name: '_implicitRules')
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
+      @HiveField(6)
       @JsonKey(name: '_language')
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
+      @HiveField(9)
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final FhirUri? url,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final FhirUri? url,
+      @HiveField(12)
       @JsonKey(name: '_url')
           final Element? urlElement,
-      final List<Identifier>? identifier,
-      final String? version,
+      @HiveField(13)
+          final List<Identifier>? identifier,
+      @HiveField(14)
+          final String? version,
+      @HiveField(15)
       @JsonKey(name: '_version')
           final Element? versionElement,
-      final String? name,
+      @HiveField(16)
+          final String? name,
+      @HiveField(17)
       @JsonKey(name: '_name')
           final Element? nameElement,
-      final String? title,
+      @HiveField(18)
+          final String? title,
+      @HiveField(19)
       @JsonKey(name: '_title')
           final Element? titleElement,
-      final String? shortTitle,
+      @HiveField(20)
+          final String? shortTitle,
+      @HiveField(21)
       @JsonKey(name: '_shortTitle')
           final Element? shortTitleElement,
-      final String? subtitle,
+      @HiveField(22)
+          final String? subtitle,
+      @HiveField(23)
       @JsonKey(name: '_subtitle')
           final Element? subtitleElement,
-      final Code? status,
+      @HiveField(24)
+          final Code? status,
+      @HiveField(25)
       @JsonKey(name: '_status')
           final Element? statusElement,
-      final Boolean? experimental,
+      @HiveField(26)
+          final Boolean? experimental,
+      @HiveField(27)
       @JsonKey(name: '_experimental')
           final Element? experimentalElement,
-      final CodeableConcept? subjectCodeableConcept,
-      final Reference? subjectReference,
-      final FhirDateTime? date,
+      @HiveField(28)
+          final CodeableConcept? subjectCodeableConcept,
+      @HiveField(29)
+          final Reference? subjectReference,
+      @HiveField(30)
+          final FhirDateTime? date,
+      @HiveField(31)
       @JsonKey(name: '_date')
           final Element? dateElement,
-      final String? publisher,
+      @HiveField(32)
+          final String? publisher,
+      @HiveField(33)
       @JsonKey(name: '_publisher')
           final Element? publisherElement,
-      final List<ContactDetail>? contact,
-      final Markdown? description,
+      @HiveField(34)
+          final List<ContactDetail>? contact,
+      @HiveField(35)
+          final Markdown? description,
+      @HiveField(36)
       @JsonKey(name: '_description')
           final Element? descriptionElement,
-      final List<String>? comment,
+      @HiveField(37)
+          final List<String>? comment,
+      @HiveField(38)
       @JsonKey(name: '_comment')
           final List<Element?>? commentElement,
-      final List<UsageContext>? useContext,
-      final List<CodeableConcept>? jurisdiction,
-      final Markdown? purpose,
+      @HiveField(39)
+          final List<UsageContext>? useContext,
+      @HiveField(40)
+          final List<CodeableConcept>? jurisdiction,
+      @HiveField(41)
+          final Markdown? purpose,
+      @HiveField(42)
       @JsonKey(name: '_purpose')
           final Element? purposeElement,
-      final String? usage,
+      @HiveField(43)
+          final String? usage,
+      @HiveField(44)
       @JsonKey(name: '_usage')
           final Element? usageElement,
-      final Markdown? copyright,
+      @HiveField(45)
+          final Markdown? copyright,
+      @HiveField(46)
       @JsonKey(name: '_copyright')
           final Element? copyrightElement,
-      final Date? approvalDate,
+      @HiveField(47)
+          final Date? approvalDate,
+      @HiveField(48)
       @JsonKey(name: '_approvalDate')
           final Element? approvalDateElement,
-      final Date? lastReviewDate,
+      @HiveField(49)
+          final Date? lastReviewDate,
+      @HiveField(50)
       @JsonKey(name: '_lastReviewDate')
           final Element? lastReviewDateElement,
-      final Period? effectivePeriod,
-      final List<CodeableConcept>? topic,
-      final List<ContactDetail>? author,
-      final List<ContactDetail>? editor,
-      final List<ContactDetail>? reviewer,
-      final List<ContactDetail>? endorser,
-      final List<RelatedArtifact>? relatedArtifact,
+      @HiveField(51)
+          final Period? effectivePeriod,
+      @HiveField(52)
+          final List<CodeableConcept>? topic,
+      @HiveField(53)
+          final List<ContactDetail>? author,
+      @HiveField(54)
+          final List<ContactDetail>? editor,
+      @HiveField(55)
+          final List<ContactDetail>? reviewer,
+      @HiveField(56)
+          final List<ContactDetail>? endorser,
+      @HiveField(57)
+          final List<RelatedArtifact>? relatedArtifact,
+      @HiveField(58)
       @JsonKey(name: 'library')
           final List<Canonical>? library_,
-      final Code? type,
+      @HiveField(59)
+          final Code? type,
+      @HiveField(60)
       @JsonKey(name: '_type')
           final Element? typeElement,
-      final Code? variableType,
+      @HiveField(61)
+          final Code? variableType,
+      @HiveField(62)
       @JsonKey(name: '_variableType')
           final Element? variableTypeElement,
-      required final List<ResearchElementDefinitionCharacteristic>
-          characteristic}) = _$_ResearchElementDefinition;
+      @HiveField(63)
+          required final List<ResearchElementDefinitionCharacteristic>
+              characteristic}) = _$_ResearchElementDefinition;
   _ResearchElementDefinition._() : super._();
 
   factory _ResearchElementDefinition.fromJson(Map<String, dynamic> json) =
@@ -27104,155 +29311,219 @@ abstract class _ResearchElementDefinition extends ResearchElementDefinition {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
+  @HiveField(1)
   String? get id;
   @override
+  @HiveField(2)
   Meta? get meta;
   @override
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
+  @HiveField(4)
   @JsonKey(name: '_implicitRules')
   Element? get implicitRulesElement;
   @override
+  @HiveField(5)
   Code? get language;
   @override
+  @HiveField(6)
   @JsonKey(name: '_language')
   Element? get languageElement;
   @override
+  @HiveField(7)
   Narrative? get text;
   @override
+  @HiveField(8)
   List<Resource>? get contained;
   @override
+  @HiveField(9)
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
+  @HiveField(11)
   FhirUri? get url;
   @override
+  @HiveField(12)
   @JsonKey(name: '_url')
   Element? get urlElement;
   @override
+  @HiveField(13)
   List<Identifier>? get identifier;
   @override
+  @HiveField(14)
   String? get version;
   @override
+  @HiveField(15)
   @JsonKey(name: '_version')
   Element? get versionElement;
   @override
+  @HiveField(16)
   String? get name;
   @override
+  @HiveField(17)
   @JsonKey(name: '_name')
   Element? get nameElement;
   @override
+  @HiveField(18)
   String? get title;
   @override
+  @HiveField(19)
   @JsonKey(name: '_title')
   Element? get titleElement;
   @override
+  @HiveField(20)
   String? get shortTitle;
   @override
+  @HiveField(21)
   @JsonKey(name: '_shortTitle')
   Element? get shortTitleElement;
   @override
+  @HiveField(22)
   String? get subtitle;
   @override
+  @HiveField(23)
   @JsonKey(name: '_subtitle')
   Element? get subtitleElement;
   @override
+  @HiveField(24)
   Code? get status;
   @override
+  @HiveField(25)
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
+  @HiveField(26)
   Boolean? get experimental;
   @override
+  @HiveField(27)
   @JsonKey(name: '_experimental')
   Element? get experimentalElement;
   @override
+  @HiveField(28)
   CodeableConcept? get subjectCodeableConcept;
   @override
+  @HiveField(29)
   Reference? get subjectReference;
   @override
+  @HiveField(30)
   FhirDateTime? get date;
   @override
+  @HiveField(31)
   @JsonKey(name: '_date')
   Element? get dateElement;
   @override
+  @HiveField(32)
   String? get publisher;
   @override
+  @HiveField(33)
   @JsonKey(name: '_publisher')
   Element? get publisherElement;
   @override
+  @HiveField(34)
   List<ContactDetail>? get contact;
   @override
+  @HiveField(35)
   Markdown? get description;
   @override
+  @HiveField(36)
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
+  @HiveField(37)
   List<String>? get comment;
   @override
+  @HiveField(38)
   @JsonKey(name: '_comment')
   List<Element?>? get commentElement;
   @override
+  @HiveField(39)
   List<UsageContext>? get useContext;
   @override
+  @HiveField(40)
   List<CodeableConcept>? get jurisdiction;
   @override
+  @HiveField(41)
   Markdown? get purpose;
   @override
+  @HiveField(42)
   @JsonKey(name: '_purpose')
   Element? get purposeElement;
   @override
+  @HiveField(43)
   String? get usage;
   @override
+  @HiveField(44)
   @JsonKey(name: '_usage')
   Element? get usageElement;
   @override
+  @HiveField(45)
   Markdown? get copyright;
   @override
+  @HiveField(46)
   @JsonKey(name: '_copyright')
   Element? get copyrightElement;
   @override
+  @HiveField(47)
   Date? get approvalDate;
   @override
+  @HiveField(48)
   @JsonKey(name: '_approvalDate')
   Element? get approvalDateElement;
   @override
+  @HiveField(49)
   Date? get lastReviewDate;
   @override
+  @HiveField(50)
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement;
   @override
+  @HiveField(51)
   Period? get effectivePeriod;
   @override
+  @HiveField(52)
   List<CodeableConcept>? get topic;
   @override
+  @HiveField(53)
   List<ContactDetail>? get author;
   @override
+  @HiveField(54)
   List<ContactDetail>? get editor;
   @override
+  @HiveField(55)
   List<ContactDetail>? get reviewer;
   @override
+  @HiveField(56)
   List<ContactDetail>? get endorser;
   @override
+  @HiveField(57)
   List<RelatedArtifact>? get relatedArtifact;
   @override
+  @HiveField(58)
   @JsonKey(name: 'library')
   List<Canonical>? get library_;
   @override
+  @HiveField(59)
   Code? get type;
   @override
+  @HiveField(60)
   @JsonKey(name: '_type')
   Element? get typeElement;
   @override
+  @HiveField(61)
   Code? get variableType;
   @override
+  @HiveField(62)
   @JsonKey(name: '_variableType')
   Element? get variableTypeElement;
   @override
+  @HiveField(63)
   List<ResearchElementDefinitionCharacteristic> get characteristic;
   @override
   @JsonKey(ignore: true)
