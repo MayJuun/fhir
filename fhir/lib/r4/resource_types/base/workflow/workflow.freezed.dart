@@ -21,32 +21,39 @@ Appointment _$AppointmentFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Appointment {
   @JsonKey(unknownEnumValue: R4ResourceType.Appointment)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -55,12 +62,14 @@ mixin _$Appointment {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -70,6 +79,7 @@ mixin _$Appointment {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -85,6 +95,7 @@ mixin _$Appointment {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
@@ -92,41 +103,50 @@ mixin _$Appointment {
   /// concern that are defined by business processes and/or used to refer to it
   /// when a direct URL reference to the resource itself is not appropriate
   ///  (e.g. in CDA documents, or in written / printed documentation).
+  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] The overall status of the Appointment. Each of the participants
   /// has their own participation status which indicates their involvement in
   ///  the process, however this status indicates the shared status.
+  @HiveField(12)
   Code? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(13)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [cancelationReason] The coded reason for the appointment being cancelled.
   /// This is often used in reporting/billing/futher processing to determine if
   ///  further actions are required, or specific fees apply.
+  @HiveField(14)
   CodeableConcept? get cancelationReason => throw _privateConstructorUsedError;
 
   /// [serviceCategory] A broad categorization of the service that is to be
   ///  performed during this appointment.
+  @HiveField(15)
   List<CodeableConcept>? get serviceCategory =>
       throw _privateConstructorUsedError;
 
   /// [serviceType] The specific service that is to be performed during this
   ///  appointment.
+  @HiveField(16)
   List<CodeableConcept>? get serviceType => throw _privateConstructorUsedError;
 
   /// [specialty] The specialty of a practitioner that would be required to
   ///  perform the service requested in this appointment.
+  @HiveField(17)
   List<CodeableConcept>? get specialty => throw _privateConstructorUsedError;
 
   /// [appointmentType] The style of appointment or patient that has been
   ///  booked in the slot (not service type).
+  @HiveField(18)
   CodeableConcept? get appointmentType => throw _privateConstructorUsedError;
 
   /// [reasonCode] The coded reason that this appointment is being scheduled.
   ///  This is more clinical than administrative.
+  @HiveField(19)
   List<CodeableConcept>? get reasonCode => throw _privateConstructorUsedError;
 
   /// [reasonReference] Reason the appointment has been scheduled to take
@@ -134,94 +154,111 @@ mixin _$Appointment {
   /// patient arrives and the encounter begins it may be used as the admission
   /// diagnosis. The indication will typically be a Condition (with other
   ///  resources referenced in the evidence.detail), or a Procedure.
+  @HiveField(20)
   List<Reference>? get reasonReference => throw _privateConstructorUsedError;
 
   /// [priority] The priority of the appointment. Can be used to make informed
   /// decisions if needing to re-prioritize appointments. (The iCal Standard
   ///  specifies 0 as undefined, 1 as highest, 9 as lowest priority).
+  @HiveField(21)
   UnsignedInt? get priority => throw _privateConstructorUsedError;
 
   /// [priorityElement] Extensions for priority
   @JsonKey(name: '_priority')
+  @HiveField(22)
   Element? get priorityElement => throw _privateConstructorUsedError;
 
   /// [description] The brief description of the appointment as would be shown
   /// on a subject line in a meeting request, or appointment list. Detailed or
   ///  expanded information should be put in the comment field.
+  @HiveField(23)
   String? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
+  @HiveField(24)
   Element? get descriptionElement => throw _privateConstructorUsedError;
 
   /// [supportingInformation] Additional information to support the appointment
   ///  provided when making the appointment.
+  @HiveField(25)
   List<Reference>? get supportingInformation =>
       throw _privateConstructorUsedError;
 
   /// [start] Date/Time that the appointment is to take place.
+  @HiveField(26)
   Instant? get start => throw _privateConstructorUsedError;
 
   /// [startElement] Extensions for start
   @JsonKey(name: '_start')
+  @HiveField(27)
   Element? get startElement => throw _privateConstructorUsedError;
 
   /// [end] Date/Time that the appointment is to conclude.
+  @HiveField(28)
   Instant? get end => throw _privateConstructorUsedError;
 
   /// [endElement] Extensions for end
   @JsonKey(name: '_end')
+  @HiveField(29)
   Element? get endElement => throw _privateConstructorUsedError;
 
   /// [minutesDuration] Number of minutes that the appointment is to take. This
   /// can be less than the duration between the start and end times.  For
   /// example, where the actual time of appointment is only an estimate or if a
-  /// 30 minute appointment is being requested, but any time would work.  Also,
-  /// if there is, for example, a planned 15 minute break in the middle of a
-  /// long appointment, the duration may be 15 minutes less than the difference
-  ///  between the start and end.
+  @HiveField(30)
+  @HiveField(31)
   PositiveInt? get minutesDuration => throw _privateConstructorUsedError;
 
   /// [minutesDurationElement] Extensions for minutesDuration
   @JsonKey(name: '_minutesDuration')
+  @HiveField(32)
   Element? get minutesDurationElement => throw _privateConstructorUsedError;
 
   /// [slot] The slots from the participants' schedules that will be filled by
   ///  the appointment.
+  @HiveField(33)
   List<Reference>? get slot => throw _privateConstructorUsedError;
 
   /// [created] The date that this appointment was initially created. This
   /// could be different to the meta.lastModified value on the initial entry, as
-  /// this could have been before the resource was created on the FHIR server,
-  ///  and should remain unchanged over the lifespan of the appointment.
+  @HiveField(34)
+  @HiveField(35)
   FhirDateTime? get created => throw _privateConstructorUsedError;
 
   /// [createdElement] Extensions for created
   @JsonKey(name: '_created')
+  @HiveField(36)
   Element? get createdElement => throw _privateConstructorUsedError;
 
   /// [comment] Additional comments about the appointment.
+  @HiveField(37)
   String? get comment => throw _privateConstructorUsedError;
 
   /// [commentElement] Extensions for comment
   @JsonKey(name: '_comment')
+  @HiveField(38)
   Element? get commentElement => throw _privateConstructorUsedError;
 
   /// [patientInstruction] While Appointment.comment contains information for
   /// internal use, Appointment.patientInstructions is used to capture patient
   /// facing information about the Appointment (e.g. please bring your referral
   ///  or fast from 8pm night before).
+  @HiveField(39)
   String? get patientInstruction => throw _privateConstructorUsedError;
 
   /// [patientInstructionElement] Extensions for patientInstruction
   @JsonKey(name: '_patientInstruction')
+  @HiveField(40)
   Element? get patientInstructionElement => throw _privateConstructorUsedError;
 
   /// [basedOn] The service request this appointment is allocated to assess
   ///  (e.g. incoming referral or procedure request).
+  @HiveField(41)
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
 
   /// [participant] List of participants involved in the appointment.
+  @HiveField(42)
   List<AppointmentParticipant> get participant =>
       throw _privateConstructorUsedError;
 
@@ -231,6 +268,7 @@ mixin _$Appointment {
   /// length of the appointment to fill and populate the start/end times for the
   /// actual allocated time. However, in other situations the duration may be
   ///  calculated by the scheduling system.
+  @HiveField(43)
   List<Period>? get requestedPeriod => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -247,60 +285,104 @@ abstract class $AppointmentCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Appointment)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Code? status,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(13)
           Element? statusElement,
-      CodeableConcept? cancelationReason,
-      List<CodeableConcept>? serviceCategory,
-      List<CodeableConcept>? serviceType,
-      List<CodeableConcept>? specialty,
-      CodeableConcept? appointmentType,
-      List<CodeableConcept>? reasonCode,
-      List<Reference>? reasonReference,
-      UnsignedInt? priority,
+      @HiveField(14)
+          CodeableConcept? cancelationReason,
+      @HiveField(15)
+          List<CodeableConcept>? serviceCategory,
+      @HiveField(16)
+          List<CodeableConcept>? serviceType,
+      @HiveField(17)
+          List<CodeableConcept>? specialty,
+      @HiveField(18)
+          CodeableConcept? appointmentType,
+      @HiveField(19)
+          List<CodeableConcept>? reasonCode,
+      @HiveField(20)
+          List<Reference>? reasonReference,
+      @HiveField(21)
+          UnsignedInt? priority,
       @JsonKey(name: '_priority')
+      @HiveField(22)
           Element? priorityElement,
-      String? description,
+      @HiveField(23)
+          String? description,
       @JsonKey(name: '_description')
+      @HiveField(24)
           Element? descriptionElement,
-      List<Reference>? supportingInformation,
-      Instant? start,
+      @HiveField(25)
+          List<Reference>? supportingInformation,
+      @HiveField(26)
+          Instant? start,
       @JsonKey(name: '_start')
+      @HiveField(27)
           Element? startElement,
-      Instant? end,
+      @HiveField(28)
+          Instant? end,
       @JsonKey(name: '_end')
+      @HiveField(29)
           Element? endElement,
-      PositiveInt? minutesDuration,
+      @HiveField(30)
+      @HiveField(31)
+          PositiveInt? minutesDuration,
       @JsonKey(name: '_minutesDuration')
+      @HiveField(32)
           Element? minutesDurationElement,
-      List<Reference>? slot,
-      FhirDateTime? created,
+      @HiveField(33)
+          List<Reference>? slot,
+      @HiveField(34)
+      @HiveField(35)
+          FhirDateTime? created,
       @JsonKey(name: '_created')
+      @HiveField(36)
           Element? createdElement,
-      String? comment,
+      @HiveField(37)
+          String? comment,
       @JsonKey(name: '_comment')
+      @HiveField(38)
           Element? commentElement,
-      String? patientInstruction,
+      @HiveField(39)
+          String? patientInstruction,
       @JsonKey(name: '_patientInstruction')
+      @HiveField(40)
           Element? patientInstructionElement,
-      List<Reference>? basedOn,
-      List<AppointmentParticipant> participant,
-      List<Period>? requestedPeriod});
+      @HiveField(41)
+          List<Reference>? basedOn,
+      @HiveField(42)
+          List<AppointmentParticipant> participant,
+      @HiveField(43)
+          List<Period>? requestedPeriod});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -738,60 +820,104 @@ abstract class _$$_AppointmentCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Appointment)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Code? status,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(13)
           Element? statusElement,
-      CodeableConcept? cancelationReason,
-      List<CodeableConcept>? serviceCategory,
-      List<CodeableConcept>? serviceType,
-      List<CodeableConcept>? specialty,
-      CodeableConcept? appointmentType,
-      List<CodeableConcept>? reasonCode,
-      List<Reference>? reasonReference,
-      UnsignedInt? priority,
+      @HiveField(14)
+          CodeableConcept? cancelationReason,
+      @HiveField(15)
+          List<CodeableConcept>? serviceCategory,
+      @HiveField(16)
+          List<CodeableConcept>? serviceType,
+      @HiveField(17)
+          List<CodeableConcept>? specialty,
+      @HiveField(18)
+          CodeableConcept? appointmentType,
+      @HiveField(19)
+          List<CodeableConcept>? reasonCode,
+      @HiveField(20)
+          List<Reference>? reasonReference,
+      @HiveField(21)
+          UnsignedInt? priority,
       @JsonKey(name: '_priority')
+      @HiveField(22)
           Element? priorityElement,
-      String? description,
+      @HiveField(23)
+          String? description,
       @JsonKey(name: '_description')
+      @HiveField(24)
           Element? descriptionElement,
-      List<Reference>? supportingInformation,
-      Instant? start,
+      @HiveField(25)
+          List<Reference>? supportingInformation,
+      @HiveField(26)
+          Instant? start,
       @JsonKey(name: '_start')
+      @HiveField(27)
           Element? startElement,
-      Instant? end,
+      @HiveField(28)
+          Instant? end,
       @JsonKey(name: '_end')
+      @HiveField(29)
           Element? endElement,
-      PositiveInt? minutesDuration,
+      @HiveField(30)
+      @HiveField(31)
+          PositiveInt? minutesDuration,
       @JsonKey(name: '_minutesDuration')
+      @HiveField(32)
           Element? minutesDurationElement,
-      List<Reference>? slot,
-      FhirDateTime? created,
+      @HiveField(33)
+          List<Reference>? slot,
+      @HiveField(34)
+      @HiveField(35)
+          FhirDateTime? created,
       @JsonKey(name: '_created')
+      @HiveField(36)
           Element? createdElement,
-      String? comment,
+      @HiveField(37)
+          String? comment,
       @JsonKey(name: '_comment')
+      @HiveField(38)
           Element? commentElement,
-      String? patientInstruction,
+      @HiveField(39)
+          String? patientInstruction,
       @JsonKey(name: '_patientInstruction')
+      @HiveField(40)
           Element? patientInstructionElement,
-      List<Reference>? basedOn,
-      List<AppointmentParticipant> participant,
-      List<Period>? requestedPeriod});
+      @HiveField(41)
+          List<Reference>? basedOn,
+      @HiveField(42)
+          List<AppointmentParticipant> participant,
+      @HiveField(43)
+          List<Period>? requestedPeriod});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -1058,60 +1184,104 @@ class __$$_AppointmentCopyWithImpl<$Res>
 class _$_Appointment extends _Appointment {
   _$_Appointment(
       {@JsonKey(unknownEnumValue: R4ResourceType.Appointment)
+      @HiveField(0)
           this.resourceType = R4ResourceType.Appointment,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      this.status,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          this.status,
       @JsonKey(name: '_status')
+      @HiveField(13)
           this.statusElement,
-      this.cancelationReason,
-      final List<CodeableConcept>? serviceCategory,
-      final List<CodeableConcept>? serviceType,
-      final List<CodeableConcept>? specialty,
-      this.appointmentType,
-      final List<CodeableConcept>? reasonCode,
-      final List<Reference>? reasonReference,
-      this.priority,
+      @HiveField(14)
+          this.cancelationReason,
+      @HiveField(15)
+          final List<CodeableConcept>? serviceCategory,
+      @HiveField(16)
+          final List<CodeableConcept>? serviceType,
+      @HiveField(17)
+          final List<CodeableConcept>? specialty,
+      @HiveField(18)
+          this.appointmentType,
+      @HiveField(19)
+          final List<CodeableConcept>? reasonCode,
+      @HiveField(20)
+          final List<Reference>? reasonReference,
+      @HiveField(21)
+          this.priority,
       @JsonKey(name: '_priority')
+      @HiveField(22)
           this.priorityElement,
-      this.description,
+      @HiveField(23)
+          this.description,
       @JsonKey(name: '_description')
+      @HiveField(24)
           this.descriptionElement,
-      final List<Reference>? supportingInformation,
-      this.start,
+      @HiveField(25)
+          final List<Reference>? supportingInformation,
+      @HiveField(26)
+          this.start,
       @JsonKey(name: '_start')
+      @HiveField(27)
           this.startElement,
-      this.end,
+      @HiveField(28)
+          this.end,
       @JsonKey(name: '_end')
+      @HiveField(29)
           this.endElement,
-      this.minutesDuration,
+      @HiveField(30)
+      @HiveField(31)
+          this.minutesDuration,
       @JsonKey(name: '_minutesDuration')
+      @HiveField(32)
           this.minutesDurationElement,
-      final List<Reference>? slot,
-      this.created,
+      @HiveField(33)
+          final List<Reference>? slot,
+      @HiveField(34)
+      @HiveField(35)
+          this.created,
       @JsonKey(name: '_created')
+      @HiveField(36)
           this.createdElement,
-      this.comment,
+      @HiveField(37)
+          this.comment,
       @JsonKey(name: '_comment')
+      @HiveField(38)
           this.commentElement,
-      this.patientInstruction,
+      @HiveField(39)
+          this.patientInstruction,
       @JsonKey(name: '_patientInstruction')
+      @HiveField(40)
           this.patientInstructionElement,
-      final List<Reference>? basedOn,
-      required final List<AppointmentParticipant> participant,
-      final List<Period>? requestedPeriod})
+      @HiveField(41)
+          final List<Reference>? basedOn,
+      @HiveField(42)
+          required final List<AppointmentParticipant> participant,
+      @HiveField(43)
+          final List<Period>? requestedPeriod})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -1133,17 +1303,20 @@ class _$_Appointment extends _Appointment {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Appointment)
+  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
+  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
+  @HiveField(2)
   final Meta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -1151,20 +1324,24 @@ class _$_Appointment extends _Appointment {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
+  @HiveField(5)
   final Code? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
+  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -1174,6 +1351,7 @@ class _$_Appointment extends _Appointment {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
+  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -1187,6 +1365,7 @@ class _$_Appointment extends _Appointment {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -1211,6 +1390,7 @@ class _$_Appointment extends _Appointment {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -1248,6 +1428,7 @@ class _$_Appointment extends _Appointment {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -1268,6 +1449,7 @@ class _$_Appointment extends _Appointment {
   /// when a direct URL reference to the resource itself is not appropriate
   ///  (e.g. in CDA documents, or in written / printed documentation).
   @override
+  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -1280,17 +1462,20 @@ class _$_Appointment extends _Appointment {
   /// has their own participation status which indicates their involvement in
   ///  the process, however this status indicates the shared status.
   @override
+  @HiveField(12)
   final Code? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
+  @HiveField(13)
   final Element? statusElement;
 
   /// [cancelationReason] The coded reason for the appointment being cancelled.
   /// This is often used in reporting/billing/futher processing to determine if
   ///  further actions are required, or specific fees apply.
   @override
+  @HiveField(14)
   final CodeableConcept? cancelationReason;
 
   /// [serviceCategory] A broad categorization of the service that is to be
@@ -1300,6 +1485,7 @@ class _$_Appointment extends _Appointment {
   /// [serviceCategory] A broad categorization of the service that is to be
   ///  performed during this appointment.
   @override
+  @HiveField(15)
   List<CodeableConcept>? get serviceCategory {
     final value = _serviceCategory;
     if (value == null) return null;
@@ -1315,6 +1501,7 @@ class _$_Appointment extends _Appointment {
   /// [serviceType] The specific service that is to be performed during this
   ///  appointment.
   @override
+  @HiveField(16)
   List<CodeableConcept>? get serviceType {
     final value = _serviceType;
     if (value == null) return null;
@@ -1330,6 +1517,7 @@ class _$_Appointment extends _Appointment {
   /// [specialty] The specialty of a practitioner that would be required to
   ///  perform the service requested in this appointment.
   @override
+  @HiveField(17)
   List<CodeableConcept>? get specialty {
     final value = _specialty;
     if (value == null) return null;
@@ -1341,6 +1529,7 @@ class _$_Appointment extends _Appointment {
   /// [appointmentType] The style of appointment or patient that has been
   ///  booked in the slot (not service type).
   @override
+  @HiveField(18)
   final CodeableConcept? appointmentType;
 
   /// [reasonCode] The coded reason that this appointment is being scheduled.
@@ -1350,6 +1539,7 @@ class _$_Appointment extends _Appointment {
   /// [reasonCode] The coded reason that this appointment is being scheduled.
   ///  This is more clinical than administrative.
   @override
+  @HiveField(19)
   List<CodeableConcept>? get reasonCode {
     final value = _reasonCode;
     if (value == null) return null;
@@ -1371,6 +1561,7 @@ class _$_Appointment extends _Appointment {
   /// diagnosis. The indication will typically be a Condition (with other
   ///  resources referenced in the evidence.detail), or a Procedure.
   @override
+  @HiveField(20)
   List<Reference>? get reasonReference {
     final value = _reasonReference;
     if (value == null) return null;
@@ -1383,22 +1574,26 @@ class _$_Appointment extends _Appointment {
   /// decisions if needing to re-prioritize appointments. (The iCal Standard
   ///  specifies 0 as undefined, 1 as highest, 9 as lowest priority).
   @override
+  @HiveField(21)
   final UnsignedInt? priority;
 
   /// [priorityElement] Extensions for priority
   @override
   @JsonKey(name: '_priority')
+  @HiveField(22)
   final Element? priorityElement;
 
   /// [description] The brief description of the appointment as would be shown
   /// on a subject line in a meeting request, or appointment list. Detailed or
   ///  expanded information should be put in the comment field.
   @override
+  @HiveField(23)
   final String? description;
 
   /// [descriptionElement] Extensions for description
   @override
   @JsonKey(name: '_description')
+  @HiveField(24)
   final Element? descriptionElement;
 
   /// [supportingInformation] Additional information to support the appointment
@@ -1408,6 +1603,7 @@ class _$_Appointment extends _Appointment {
   /// [supportingInformation] Additional information to support the appointment
   ///  provided when making the appointment.
   @override
+  @HiveField(25)
   List<Reference>? get supportingInformation {
     final value = _supportingInformation;
     if (value == null) return null;
@@ -1419,35 +1615,38 @@ class _$_Appointment extends _Appointment {
 
   /// [start] Date/Time that the appointment is to take place.
   @override
+  @HiveField(26)
   final Instant? start;
 
   /// [startElement] Extensions for start
   @override
   @JsonKey(name: '_start')
+  @HiveField(27)
   final Element? startElement;
 
   /// [end] Date/Time that the appointment is to conclude.
   @override
+  @HiveField(28)
   final Instant? end;
 
   /// [endElement] Extensions for end
   @override
   @JsonKey(name: '_end')
+  @HiveField(29)
   final Element? endElement;
 
   /// [minutesDuration] Number of minutes that the appointment is to take. This
   /// can be less than the duration between the start and end times.  For
   /// example, where the actual time of appointment is only an estimate or if a
-  /// 30 minute appointment is being requested, but any time would work.  Also,
-  /// if there is, for example, a planned 15 minute break in the middle of a
-  /// long appointment, the duration may be 15 minutes less than the difference
-  ///  between the start and end.
   @override
+  @HiveField(30)
+  @HiveField(31)
   final PositiveInt? minutesDuration;
 
   /// [minutesDurationElement] Extensions for minutesDuration
   @override
   @JsonKey(name: '_minutesDuration')
+  @HiveField(32)
   final Element? minutesDurationElement;
 
   /// [slot] The slots from the participants' schedules that will be filled by
@@ -1457,6 +1656,7 @@ class _$_Appointment extends _Appointment {
   /// [slot] The slots from the participants' schedules that will be filled by
   ///  the appointment.
   @override
+  @HiveField(33)
   List<Reference>? get slot {
     final value = _slot;
     if (value == null) return null;
@@ -1467,23 +1667,26 @@ class _$_Appointment extends _Appointment {
 
   /// [created] The date that this appointment was initially created. This
   /// could be different to the meta.lastModified value on the initial entry, as
-  /// this could have been before the resource was created on the FHIR server,
-  ///  and should remain unchanged over the lifespan of the appointment.
   @override
+  @HiveField(34)
+  @HiveField(35)
   final FhirDateTime? created;
 
   /// [createdElement] Extensions for created
   @override
   @JsonKey(name: '_created')
+  @HiveField(36)
   final Element? createdElement;
 
   /// [comment] Additional comments about the appointment.
   @override
+  @HiveField(37)
   final String? comment;
 
   /// [commentElement] Extensions for comment
   @override
   @JsonKey(name: '_comment')
+  @HiveField(38)
   final Element? commentElement;
 
   /// [patientInstruction] While Appointment.comment contains information for
@@ -1491,11 +1694,13 @@ class _$_Appointment extends _Appointment {
   /// facing information about the Appointment (e.g. please bring your referral
   ///  or fast from 8pm night before).
   @override
+  @HiveField(39)
   final String? patientInstruction;
 
   /// [patientInstructionElement] Extensions for patientInstruction
   @override
   @JsonKey(name: '_patientInstruction')
+  @HiveField(40)
   final Element? patientInstructionElement;
 
   /// [basedOn] The service request this appointment is allocated to assess
@@ -1505,6 +1710,7 @@ class _$_Appointment extends _Appointment {
   /// [basedOn] The service request this appointment is allocated to assess
   ///  (e.g. incoming referral or procedure request).
   @override
+  @HiveField(41)
   List<Reference>? get basedOn {
     final value = _basedOn;
     if (value == null) return null;
@@ -1518,6 +1724,7 @@ class _$_Appointment extends _Appointment {
 
   /// [participant] List of participants involved in the appointment.
   @override
+  @HiveField(42)
   List<AppointmentParticipant> get participant {
     if (_participant is EqualUnmodifiableListView) return _participant;
     // ignore: implicit_dynamic_type
@@ -1539,6 +1746,7 @@ class _$_Appointment extends _Appointment {
   /// actual allocated time. However, in other situations the duration may be
   ///  calculated by the scheduling system.
   @override
+  @HiveField(43)
   List<Period>? get requestedPeriod {
     final value = _requestedPeriod;
     if (value == null) return null;
@@ -1699,60 +1907,104 @@ class _$_Appointment extends _Appointment {
 abstract class _Appointment extends Appointment {
   factory _Appointment(
       {@JsonKey(unknownEnumValue: R4ResourceType.Appointment)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final Code? status,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          final Code? status,
       @JsonKey(name: '_status')
+      @HiveField(13)
           final Element? statusElement,
-      final CodeableConcept? cancelationReason,
-      final List<CodeableConcept>? serviceCategory,
-      final List<CodeableConcept>? serviceType,
-      final List<CodeableConcept>? specialty,
-      final CodeableConcept? appointmentType,
-      final List<CodeableConcept>? reasonCode,
-      final List<Reference>? reasonReference,
-      final UnsignedInt? priority,
+      @HiveField(14)
+          final CodeableConcept? cancelationReason,
+      @HiveField(15)
+          final List<CodeableConcept>? serviceCategory,
+      @HiveField(16)
+          final List<CodeableConcept>? serviceType,
+      @HiveField(17)
+          final List<CodeableConcept>? specialty,
+      @HiveField(18)
+          final CodeableConcept? appointmentType,
+      @HiveField(19)
+          final List<CodeableConcept>? reasonCode,
+      @HiveField(20)
+          final List<Reference>? reasonReference,
+      @HiveField(21)
+          final UnsignedInt? priority,
       @JsonKey(name: '_priority')
+      @HiveField(22)
           final Element? priorityElement,
-      final String? description,
+      @HiveField(23)
+          final String? description,
       @JsonKey(name: '_description')
+      @HiveField(24)
           final Element? descriptionElement,
-      final List<Reference>? supportingInformation,
-      final Instant? start,
+      @HiveField(25)
+          final List<Reference>? supportingInformation,
+      @HiveField(26)
+          final Instant? start,
       @JsonKey(name: '_start')
+      @HiveField(27)
           final Element? startElement,
-      final Instant? end,
+      @HiveField(28)
+          final Instant? end,
       @JsonKey(name: '_end')
+      @HiveField(29)
           final Element? endElement,
-      final PositiveInt? minutesDuration,
+      @HiveField(30)
+      @HiveField(31)
+          final PositiveInt? minutesDuration,
       @JsonKey(name: '_minutesDuration')
+      @HiveField(32)
           final Element? minutesDurationElement,
-      final List<Reference>? slot,
-      final FhirDateTime? created,
+      @HiveField(33)
+          final List<Reference>? slot,
+      @HiveField(34)
+      @HiveField(35)
+          final FhirDateTime? created,
       @JsonKey(name: '_created')
+      @HiveField(36)
           final Element? createdElement,
-      final String? comment,
+      @HiveField(37)
+          final String? comment,
       @JsonKey(name: '_comment')
+      @HiveField(38)
           final Element? commentElement,
-      final String? patientInstruction,
+      @HiveField(39)
+          final String? patientInstruction,
       @JsonKey(name: '_patientInstruction')
+      @HiveField(40)
           final Element? patientInstructionElement,
-      final List<Reference>? basedOn,
-      required final List<AppointmentParticipant> participant,
-      final List<Period>? requestedPeriod}) = _$_Appointment;
+      @HiveField(41)
+          final List<Reference>? basedOn,
+      @HiveField(42)
+          required final List<AppointmentParticipant> participant,
+      @HiveField(43)
+          final List<Period>? requestedPeriod}) = _$_Appointment;
   _Appointment._() : super._();
 
   factory _Appointment.fromJson(Map<String, dynamic> json) =
@@ -1760,17 +2012,20 @@ abstract class _Appointment extends Appointment {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Appointment)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta;
   @override
 
@@ -1778,20 +2033,24 @@ abstract class _Appointment extends Appointment {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -1801,6 +2060,7 @@ abstract class _Appointment extends Appointment {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -1808,6 +2068,7 @@ abstract class _Appointment extends Appointment {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -1818,6 +2079,7 @@ abstract class _Appointment extends Appointment {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -1834,6 +2096,7 @@ abstract class _Appointment extends Appointment {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
@@ -1841,48 +2104,57 @@ abstract class _Appointment extends Appointment {
   /// concern that are defined by business processes and/or used to refer to it
   /// when a direct URL reference to the resource itself is not appropriate
   ///  (e.g. in CDA documents, or in written / printed documentation).
+  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [status] The overall status of the Appointment. Each of the participants
   /// has their own participation status which indicates their involvement in
   ///  the process, however this status indicates the shared status.
+  @HiveField(12)
   Code? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(13)
   Element? get statusElement;
   @override
 
   /// [cancelationReason] The coded reason for the appointment being cancelled.
   /// This is often used in reporting/billing/futher processing to determine if
   ///  further actions are required, or specific fees apply.
+  @HiveField(14)
   CodeableConcept? get cancelationReason;
   @override
 
   /// [serviceCategory] A broad categorization of the service that is to be
   ///  performed during this appointment.
+  @HiveField(15)
   List<CodeableConcept>? get serviceCategory;
   @override
 
   /// [serviceType] The specific service that is to be performed during this
   ///  appointment.
+  @HiveField(16)
   List<CodeableConcept>? get serviceType;
   @override
 
   /// [specialty] The specialty of a practitioner that would be required to
   ///  perform the service requested in this appointment.
+  @HiveField(17)
   List<CodeableConcept>? get specialty;
   @override
 
   /// [appointmentType] The style of appointment or patient that has been
   ///  booked in the slot (not service type).
+  @HiveField(18)
   CodeableConcept? get appointmentType;
   @override
 
   /// [reasonCode] The coded reason that this appointment is being scheduled.
   ///  This is more clinical than administrative.
+  @HiveField(19)
   List<CodeableConcept>? get reasonCode;
   @override
 
@@ -1891,92 +2163,105 @@ abstract class _Appointment extends Appointment {
   /// patient arrives and the encounter begins it may be used as the admission
   /// diagnosis. The indication will typically be a Condition (with other
   ///  resources referenced in the evidence.detail), or a Procedure.
+  @HiveField(20)
   List<Reference>? get reasonReference;
   @override
 
   /// [priority] The priority of the appointment. Can be used to make informed
   /// decisions if needing to re-prioritize appointments. (The iCal Standard
   ///  specifies 0 as undefined, 1 as highest, 9 as lowest priority).
+  @HiveField(21)
   UnsignedInt? get priority;
   @override
 
   /// [priorityElement] Extensions for priority
   @JsonKey(name: '_priority')
+  @HiveField(22)
   Element? get priorityElement;
   @override
 
   /// [description] The brief description of the appointment as would be shown
   /// on a subject line in a meeting request, or appointment list. Detailed or
   ///  expanded information should be put in the comment field.
+  @HiveField(23)
   String? get description;
   @override
 
   /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
+  @HiveField(24)
   Element? get descriptionElement;
   @override
 
   /// [supportingInformation] Additional information to support the appointment
   ///  provided when making the appointment.
+  @HiveField(25)
   List<Reference>? get supportingInformation;
   @override
 
   /// [start] Date/Time that the appointment is to take place.
+  @HiveField(26)
   Instant? get start;
   @override
 
   /// [startElement] Extensions for start
   @JsonKey(name: '_start')
+  @HiveField(27)
   Element? get startElement;
   @override
 
   /// [end] Date/Time that the appointment is to conclude.
+  @HiveField(28)
   Instant? get end;
   @override
 
   /// [endElement] Extensions for end
   @JsonKey(name: '_end')
+  @HiveField(29)
   Element? get endElement;
   @override
 
   /// [minutesDuration] Number of minutes that the appointment is to take. This
   /// can be less than the duration between the start and end times.  For
   /// example, where the actual time of appointment is only an estimate or if a
-  /// 30 minute appointment is being requested, but any time would work.  Also,
-  /// if there is, for example, a planned 15 minute break in the middle of a
-  /// long appointment, the duration may be 15 minutes less than the difference
-  ///  between the start and end.
+  @HiveField(30)
+  @HiveField(31)
   PositiveInt? get minutesDuration;
   @override
 
   /// [minutesDurationElement] Extensions for minutesDuration
   @JsonKey(name: '_minutesDuration')
+  @HiveField(32)
   Element? get minutesDurationElement;
   @override
 
   /// [slot] The slots from the participants' schedules that will be filled by
   ///  the appointment.
+  @HiveField(33)
   List<Reference>? get slot;
   @override
 
   /// [created] The date that this appointment was initially created. This
   /// could be different to the meta.lastModified value on the initial entry, as
-  /// this could have been before the resource was created on the FHIR server,
-  ///  and should remain unchanged over the lifespan of the appointment.
+  @HiveField(34)
+  @HiveField(35)
   FhirDateTime? get created;
   @override
 
   /// [createdElement] Extensions for created
   @JsonKey(name: '_created')
+  @HiveField(36)
   Element? get createdElement;
   @override
 
   /// [comment] Additional comments about the appointment.
+  @HiveField(37)
   String? get comment;
   @override
 
   /// [commentElement] Extensions for comment
   @JsonKey(name: '_comment')
+  @HiveField(38)
   Element? get commentElement;
   @override
 
@@ -1984,20 +2269,24 @@ abstract class _Appointment extends Appointment {
   /// internal use, Appointment.patientInstructions is used to capture patient
   /// facing information about the Appointment (e.g. please bring your referral
   ///  or fast from 8pm night before).
+  @HiveField(39)
   String? get patientInstruction;
   @override
 
   /// [patientInstructionElement] Extensions for patientInstruction
   @JsonKey(name: '_patientInstruction')
+  @HiveField(40)
   Element? get patientInstructionElement;
   @override
 
   /// [basedOn] The service request this appointment is allocated to assess
   ///  (e.g. incoming referral or procedure request).
+  @HiveField(41)
   List<Reference>? get basedOn;
   @override
 
   /// [participant] List of participants involved in the appointment.
+  @HiveField(42)
   List<AppointmentParticipant> get participant;
   @override
 
@@ -2007,6 +2296,7 @@ abstract class _Appointment extends Appointment {
   /// length of the appointment to fill and populate the start/end times for the
   /// actual allocated time. However, in other situations the duration may be
   ///  calculated by the scheduling system.
+  @HiveField(43)
   List<Period>? get requestedPeriod;
   @override
   @JsonKey(ignore: true)
@@ -2610,32 +2900,39 @@ AppointmentResponse _$AppointmentResponseFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$AppointmentResponse {
   @JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -2644,12 +2941,14 @@ mixin _$AppointmentResponse {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -2659,6 +2958,7 @@ mixin _$AppointmentResponse {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -2674,6 +2974,7 @@ mixin _$AppointmentResponse {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
@@ -2681,34 +2982,42 @@ mixin _$AppointmentResponse {
   /// response concern that are defined by business processes and/ or used to
   /// refer to it when a direct URL reference to the resource itself is not
   ///  appropriate.
+  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [appointment] Appointment that this response is replying to.
+  @HiveField(12)
   Reference get appointment => throw _privateConstructorUsedError;
 
   /// [start] Date/Time that the appointment is to take place, or requested new
   ///  start time.
+  @HiveField(13)
   Instant? get start => throw _privateConstructorUsedError;
 
   /// [startElement] Extensions for start
   @JsonKey(name: '_start')
+  @HiveField(14)
   Element? get startElement => throw _privateConstructorUsedError;
 
   /// [end] This may be either the same as the appointment request to confirm
   /// the details of the appointment, or alternately a new time to request a
   ///  re-negotiation of the end time.
+  @HiveField(15)
   Instant? get end => throw _privateConstructorUsedError;
 
   /// [endElement] Extensions for end
   @JsonKey(name: '_end')
+  @HiveField(16)
   Element? get endElement => throw _privateConstructorUsedError;
 
   /// [participantType] Role of participant in the appointment.
+  @HiveField(17)
   List<CodeableConcept>? get participantType =>
       throw _privateConstructorUsedError;
 
   /// [actor] A Person, Location, HealthcareService, or Device that is
   ///  participating in the appointment.
+  @HiveField(18)
   Reference? get actor => throw _privateConstructorUsedError;
 
   /// [participantStatus] Participation status of the participant. When the
@@ -2716,17 +3025,21 @@ mixin _$AppointmentResponse {
   /// the appointment, then these times should be interpreted as a requested
   /// time change. When the status is accepted, the times can either be the time
   ///  of the appointment (as a confirmation of the time) or can be empty.
+  @HiveField(19)
   Code? get participantStatus => throw _privateConstructorUsedError;
 
   /// [participantStatusElement] Extensions for participantStatus
   @JsonKey(name: '_participantStatus')
+  @HiveField(20)
   Element? get participantStatusElement => throw _privateConstructorUsedError;
 
   /// [comment] Additional comments about the appointment.
+  @HiveField(21)
   String? get comment => throw _privateConstructorUsedError;
 
   /// [commentElement] Extensions for comment
   @JsonKey(name: '_comment')
+  @HiveField(22)
   Element? get commentElement => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2743,35 +3056,58 @@ abstract class $AppointmentResponseCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Reference appointment,
-      Instant? start,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          Reference appointment,
+      @HiveField(13)
+          Instant? start,
       @JsonKey(name: '_start')
+      @HiveField(14)
           Element? startElement,
-      Instant? end,
+      @HiveField(15)
+          Instant? end,
       @JsonKey(name: '_end')
+      @HiveField(16)
           Element? endElement,
-      List<CodeableConcept>? participantType,
-      Reference? actor,
-      Code? participantStatus,
+      @HiveField(17)
+          List<CodeableConcept>? participantType,
+      @HiveField(18)
+          Reference? actor,
+      @HiveField(19)
+          Code? participantStatus,
       @JsonKey(name: '_participantStatus')
+      @HiveField(20)
           Element? participantStatusElement,
-      String? comment,
+      @HiveField(21)
+          String? comment,
       @JsonKey(name: '_comment')
+      @HiveField(22)
           Element? commentElement});
 
   $MetaCopyWith<$Res>? get meta;
@@ -3046,35 +3382,58 @@ abstract class _$$_AppointmentResponseCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Reference appointment,
-      Instant? start,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          Reference appointment,
+      @HiveField(13)
+          Instant? start,
       @JsonKey(name: '_start')
+      @HiveField(14)
           Element? startElement,
-      Instant? end,
+      @HiveField(15)
+          Instant? end,
       @JsonKey(name: '_end')
+      @HiveField(16)
           Element? endElement,
-      List<CodeableConcept>? participantType,
-      Reference? actor,
-      Code? participantStatus,
+      @HiveField(17)
+          List<CodeableConcept>? participantType,
+      @HiveField(18)
+          Reference? actor,
+      @HiveField(19)
+          Code? participantStatus,
       @JsonKey(name: '_participantStatus')
+      @HiveField(20)
           Element? participantStatusElement,
-      String? comment,
+      @HiveField(21)
+          String? comment,
       @JsonKey(name: '_comment')
+      @HiveField(22)
           Element? commentElement});
 
   @override
@@ -3237,35 +3596,58 @@ class __$$_AppointmentResponseCopyWithImpl<$Res>
 class _$_AppointmentResponse extends _AppointmentResponse {
   _$_AppointmentResponse(
       {@JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
+      @HiveField(0)
           this.resourceType = R4ResourceType.AppointmentResponse,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      required this.appointment,
-      this.start,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          required this.appointment,
+      @HiveField(13)
+          this.start,
       @JsonKey(name: '_start')
+      @HiveField(14)
           this.startElement,
-      this.end,
+      @HiveField(15)
+          this.end,
       @JsonKey(name: '_end')
+      @HiveField(16)
           this.endElement,
-      final List<CodeableConcept>? participantType,
-      this.actor,
-      this.participantStatus,
+      @HiveField(17)
+          final List<CodeableConcept>? participantType,
+      @HiveField(18)
+          this.actor,
+      @HiveField(19)
+          this.participantStatus,
       @JsonKey(name: '_participantStatus')
+      @HiveField(20)
           this.participantStatusElement,
-      this.comment,
+      @HiveField(21)
+          this.comment,
       @JsonKey(name: '_comment')
+      @HiveField(22)
           this.commentElement})
       : _contained = contained,
         _extension_ = extension_,
@@ -3279,17 +3661,20 @@ class _$_AppointmentResponse extends _AppointmentResponse {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
+  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
+  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
+  @HiveField(2)
   final Meta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -3297,20 +3682,24 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
+  @HiveField(5)
   final Code? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
+  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -3320,6 +3709,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
+  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -3333,6 +3723,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -3357,6 +3748,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -3394,6 +3786,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -3414,6 +3807,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   /// refer to it when a direct URL reference to the resource itself is not
   ///  appropriate.
   @override
+  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -3424,27 +3818,32 @@ class _$_AppointmentResponse extends _AppointmentResponse {
 
   /// [appointment] Appointment that this response is replying to.
   @override
+  @HiveField(12)
   final Reference appointment;
 
   /// [start] Date/Time that the appointment is to take place, or requested new
   ///  start time.
   @override
+  @HiveField(13)
   final Instant? start;
 
   /// [startElement] Extensions for start
   @override
   @JsonKey(name: '_start')
+  @HiveField(14)
   final Element? startElement;
 
   /// [end] This may be either the same as the appointment request to confirm
   /// the details of the appointment, or alternately a new time to request a
   ///  re-negotiation of the end time.
   @override
+  @HiveField(15)
   final Instant? end;
 
   /// [endElement] Extensions for end
   @override
   @JsonKey(name: '_end')
+  @HiveField(16)
   final Element? endElement;
 
   /// [participantType] Role of participant in the appointment.
@@ -3452,6 +3851,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
 
   /// [participantType] Role of participant in the appointment.
   @override
+  @HiveField(17)
   List<CodeableConcept>? get participantType {
     final value = _participantType;
     if (value == null) return null;
@@ -3463,6 +3863,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   /// [actor] A Person, Location, HealthcareService, or Device that is
   ///  participating in the appointment.
   @override
+  @HiveField(18)
   final Reference? actor;
 
   /// [participantStatus] Participation status of the participant. When the
@@ -3471,20 +3872,24 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   /// time change. When the status is accepted, the times can either be the time
   ///  of the appointment (as a confirmation of the time) or can be empty.
   @override
+  @HiveField(19)
   final Code? participantStatus;
 
   /// [participantStatusElement] Extensions for participantStatus
   @override
   @JsonKey(name: '_participantStatus')
+  @HiveField(20)
   final Element? participantStatusElement;
 
   /// [comment] Additional comments about the appointment.
   @override
+  @HiveField(21)
   final String? comment;
 
   /// [commentElement] Extensions for comment
   @override
   @JsonKey(name: '_comment')
+  @HiveField(22)
   final Element? commentElement;
 
   @override
@@ -3586,35 +3991,58 @@ class _$_AppointmentResponse extends _AppointmentResponse {
 abstract class _AppointmentResponse extends AppointmentResponse {
   factory _AppointmentResponse(
       {@JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      required final Reference appointment,
-      final Instant? start,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          required final Reference appointment,
+      @HiveField(13)
+          final Instant? start,
       @JsonKey(name: '_start')
+      @HiveField(14)
           final Element? startElement,
-      final Instant? end,
+      @HiveField(15)
+          final Instant? end,
       @JsonKey(name: '_end')
+      @HiveField(16)
           final Element? endElement,
-      final List<CodeableConcept>? participantType,
-      final Reference? actor,
-      final Code? participantStatus,
+      @HiveField(17)
+          final List<CodeableConcept>? participantType,
+      @HiveField(18)
+          final Reference? actor,
+      @HiveField(19)
+          final Code? participantStatus,
       @JsonKey(name: '_participantStatus')
+      @HiveField(20)
           final Element? participantStatusElement,
-      final String? comment,
+      @HiveField(21)
+          final String? comment,
       @JsonKey(name: '_comment')
+      @HiveField(22)
           final Element? commentElement}) = _$_AppointmentResponse;
   _AppointmentResponse._() : super._();
 
@@ -3623,17 +4051,20 @@ abstract class _AppointmentResponse extends AppointmentResponse {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta;
   @override
 
@@ -3641,20 +4072,24 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -3664,6 +4099,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -3671,6 +4107,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -3681,6 +4118,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -3697,6 +4135,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
@@ -3704,40 +4143,48 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   /// response concern that are defined by business processes and/ or used to
   /// refer to it when a direct URL reference to the resource itself is not
   ///  appropriate.
+  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [appointment] Appointment that this response is replying to.
+  @HiveField(12)
   Reference get appointment;
   @override
 
   /// [start] Date/Time that the appointment is to take place, or requested new
   ///  start time.
+  @HiveField(13)
   Instant? get start;
   @override
 
   /// [startElement] Extensions for start
   @JsonKey(name: '_start')
+  @HiveField(14)
   Element? get startElement;
   @override
 
   /// [end] This may be either the same as the appointment request to confirm
   /// the details of the appointment, or alternately a new time to request a
   ///  re-negotiation of the end time.
+  @HiveField(15)
   Instant? get end;
   @override
 
   /// [endElement] Extensions for end
   @JsonKey(name: '_end')
+  @HiveField(16)
   Element? get endElement;
   @override
 
   /// [participantType] Role of participant in the appointment.
+  @HiveField(17)
   List<CodeableConcept>? get participantType;
   @override
 
   /// [actor] A Person, Location, HealthcareService, or Device that is
   ///  participating in the appointment.
+  @HiveField(18)
   Reference? get actor;
   @override
 
@@ -3746,20 +4193,24 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   /// the appointment, then these times should be interpreted as a requested
   /// time change. When the status is accepted, the times can either be the time
   ///  of the appointment (as a confirmation of the time) or can be empty.
+  @HiveField(19)
   Code? get participantStatus;
   @override
 
   /// [participantStatusElement] Extensions for participantStatus
   @JsonKey(name: '_participantStatus')
+  @HiveField(20)
   Element? get participantStatusElement;
   @override
 
   /// [comment] Additional comments about the appointment.
+  @HiveField(21)
   String? get comment;
   @override
 
   /// [commentElement] Extensions for comment
   @JsonKey(name: '_comment')
+  @HiveField(22)
   Element? get commentElement;
   @override
   @JsonKey(ignore: true)
@@ -3774,32 +4225,39 @@ Schedule _$ScheduleFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Schedule {
   @JsonKey(unknownEnumValue: R4ResourceType.Schedule)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -3808,12 +4266,14 @@ mixin _$Schedule {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -3823,6 +4283,7 @@ mixin _$Schedule {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -3838,35 +4299,43 @@ mixin _$Schedule {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] External Ids for this item.
+  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [active] Whether this schedule record is in active use or should not be
   ///  used (such as was entered in error).
+  @HiveField(12)
   Boolean? get active => throw _privateConstructorUsedError;
 
   /// [activeElement] Extensions for active
   @JsonKey(name: '_active')
+  @HiveField(13)
   Element? get activeElement => throw _privateConstructorUsedError;
 
   /// [serviceCategory] A broad categorization of the service that is to be
   ///  performed during this appointment.
+  @HiveField(14)
   List<CodeableConcept>? get serviceCategory =>
       throw _privateConstructorUsedError;
 
   /// [serviceType] The specific service that is to be performed during this
   ///  appointment.
+  @HiveField(15)
   List<CodeableConcept>? get serviceType => throw _privateConstructorUsedError;
 
   /// [specialty] The specialty of a practitioner that would be required to
   ///  perform the service requested in this appointment.
+  @HiveField(16)
   List<CodeableConcept>? get specialty => throw _privateConstructorUsedError;
 
   /// [actor] Slots that reference this schedule resource provide the
   ///  availability details to these referenced resource(s).
+  @HiveField(17)
   List<Reference> get actor => throw _privateConstructorUsedError;
 
   /// [planningHorizon] The period of time that the slots that reference this
@@ -3874,15 +4343,18 @@ mixin _$Schedule {
   /// time that an organization's planning horizon; the interval for which they
   /// are currently accepting appointments. This does not define a "template"
   ///  for planning outside these dates.
+  @HiveField(18)
   Period? get planningHorizon => throw _privateConstructorUsedError;
 
   /// [comment] Comments on the availability to describe any extended
   /// information. Such as custom constraints on the slots that may be
   ///  associated.
+  @HiveField(19)
   String? get comment => throw _privateConstructorUsedError;
 
   /// [commentElement] Extensions for comment
   @JsonKey(name: '_comment')
+  @HiveField(20)
   Element? get commentElement => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -3898,31 +4370,52 @@ abstract class $ScheduleCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Schedule)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Boolean? active,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          Boolean? active,
       @JsonKey(name: '_active')
+      @HiveField(13)
           Element? activeElement,
-      List<CodeableConcept>? serviceCategory,
-      List<CodeableConcept>? serviceType,
-      List<CodeableConcept>? specialty,
-      List<Reference> actor,
-      Period? planningHorizon,
-      String? comment,
+      @HiveField(14)
+          List<CodeableConcept>? serviceCategory,
+      @HiveField(15)
+          List<CodeableConcept>? serviceType,
+      @HiveField(16)
+          List<CodeableConcept>? specialty,
+      @HiveField(17)
+          List<Reference> actor,
+      @HiveField(18)
+          Period? planningHorizon,
+      @HiveField(19)
+          String? comment,
       @JsonKey(name: '_comment')
+      @HiveField(20)
           Element? commentElement});
 
   $MetaCopyWith<$Res>? get meta;
@@ -4151,31 +4644,52 @@ abstract class _$$_ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Schedule)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Boolean? active,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          Boolean? active,
       @JsonKey(name: '_active')
+      @HiveField(13)
           Element? activeElement,
-      List<CodeableConcept>? serviceCategory,
-      List<CodeableConcept>? serviceType,
-      List<CodeableConcept>? specialty,
-      List<Reference> actor,
-      Period? planningHorizon,
-      String? comment,
+      @HiveField(14)
+          List<CodeableConcept>? serviceCategory,
+      @HiveField(15)
+          List<CodeableConcept>? serviceType,
+      @HiveField(16)
+          List<CodeableConcept>? specialty,
+      @HiveField(17)
+          List<Reference> actor,
+      @HiveField(18)
+          Period? planningHorizon,
+      @HiveField(19)
+          String? comment,
       @JsonKey(name: '_comment')
+      @HiveField(20)
           Element? commentElement});
 
   @override
@@ -4322,31 +4836,52 @@ class __$$_ScheduleCopyWithImpl<$Res>
 class _$_Schedule extends _Schedule {
   _$_Schedule(
       {@JsonKey(unknownEnumValue: R4ResourceType.Schedule)
+      @HiveField(0)
           this.resourceType = R4ResourceType.Schedule,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      this.active,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          this.active,
       @JsonKey(name: '_active')
+      @HiveField(13)
           this.activeElement,
-      final List<CodeableConcept>? serviceCategory,
-      final List<CodeableConcept>? serviceType,
-      final List<CodeableConcept>? specialty,
-      required final List<Reference> actor,
-      this.planningHorizon,
-      this.comment,
+      @HiveField(14)
+          final List<CodeableConcept>? serviceCategory,
+      @HiveField(15)
+          final List<CodeableConcept>? serviceType,
+      @HiveField(16)
+          final List<CodeableConcept>? specialty,
+      @HiveField(17)
+          required final List<Reference> actor,
+      @HiveField(18)
+          this.planningHorizon,
+      @HiveField(19)
+          this.comment,
       @JsonKey(name: '_comment')
+      @HiveField(20)
           this.commentElement})
       : _contained = contained,
         _extension_ = extension_,
@@ -4363,17 +4898,20 @@ class _$_Schedule extends _Schedule {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Schedule)
+  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
+  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
+  @HiveField(2)
   final Meta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -4381,20 +4919,24 @@ class _$_Schedule extends _Schedule {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
+  @HiveField(5)
   final Code? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
+  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -4404,6 +4946,7 @@ class _$_Schedule extends _Schedule {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
+  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -4417,6 +4960,7 @@ class _$_Schedule extends _Schedule {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -4441,6 +4985,7 @@ class _$_Schedule extends _Schedule {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -4478,6 +5023,7 @@ class _$_Schedule extends _Schedule {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -4492,6 +5038,7 @@ class _$_Schedule extends _Schedule {
 
   /// [identifier] External Ids for this item.
   @override
+  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -4503,11 +5050,13 @@ class _$_Schedule extends _Schedule {
   /// [active] Whether this schedule record is in active use or should not be
   ///  used (such as was entered in error).
   @override
+  @HiveField(12)
   final Boolean? active;
 
   /// [activeElement] Extensions for active
   @override
   @JsonKey(name: '_active')
+  @HiveField(13)
   final Element? activeElement;
 
   /// [serviceCategory] A broad categorization of the service that is to be
@@ -4517,6 +5066,7 @@ class _$_Schedule extends _Schedule {
   /// [serviceCategory] A broad categorization of the service that is to be
   ///  performed during this appointment.
   @override
+  @HiveField(14)
   List<CodeableConcept>? get serviceCategory {
     final value = _serviceCategory;
     if (value == null) return null;
@@ -4532,6 +5082,7 @@ class _$_Schedule extends _Schedule {
   /// [serviceType] The specific service that is to be performed during this
   ///  appointment.
   @override
+  @HiveField(15)
   List<CodeableConcept>? get serviceType {
     final value = _serviceType;
     if (value == null) return null;
@@ -4547,6 +5098,7 @@ class _$_Schedule extends _Schedule {
   /// [specialty] The specialty of a practitioner that would be required to
   ///  perform the service requested in this appointment.
   @override
+  @HiveField(16)
   List<CodeableConcept>? get specialty {
     final value = _specialty;
     if (value == null) return null;
@@ -4562,6 +5114,7 @@ class _$_Schedule extends _Schedule {
   /// [actor] Slots that reference this schedule resource provide the
   ///  availability details to these referenced resource(s).
   @override
+  @HiveField(17)
   List<Reference> get actor {
     if (_actor is EqualUnmodifiableListView) return _actor;
     // ignore: implicit_dynamic_type
@@ -4574,17 +5127,20 @@ class _$_Schedule extends _Schedule {
   /// are currently accepting appointments. This does not define a "template"
   ///  for planning outside these dates.
   @override
+  @HiveField(18)
   final Period? planningHorizon;
 
   /// [comment] Comments on the availability to describe any extended
   /// information. Such as custom constraints on the slots that may be
   ///  associated.
   @override
+  @HiveField(19)
   final String? comment;
 
   /// [commentElement] Extensions for comment
   @override
   @JsonKey(name: '_comment')
+  @HiveField(20)
   final Element? commentElement;
 
   @override
@@ -4679,31 +5235,52 @@ class _$_Schedule extends _Schedule {
 abstract class _Schedule extends Schedule {
   factory _Schedule(
       {@JsonKey(unknownEnumValue: R4ResourceType.Schedule)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final Boolean? active,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          final Boolean? active,
       @JsonKey(name: '_active')
+      @HiveField(13)
           final Element? activeElement,
-      final List<CodeableConcept>? serviceCategory,
-      final List<CodeableConcept>? serviceType,
-      final List<CodeableConcept>? specialty,
-      required final List<Reference> actor,
-      final Period? planningHorizon,
-      final String? comment,
+      @HiveField(14)
+          final List<CodeableConcept>? serviceCategory,
+      @HiveField(15)
+          final List<CodeableConcept>? serviceType,
+      @HiveField(16)
+          final List<CodeableConcept>? specialty,
+      @HiveField(17)
+          required final List<Reference> actor,
+      @HiveField(18)
+          final Period? planningHorizon,
+      @HiveField(19)
+          final String? comment,
       @JsonKey(name: '_comment')
+      @HiveField(20)
           final Element? commentElement}) = _$_Schedule;
   _Schedule._() : super._();
 
@@ -4711,17 +5288,20 @@ abstract class _Schedule extends Schedule {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Schedule)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta;
   @override
 
@@ -4729,20 +5309,24 @@ abstract class _Schedule extends Schedule {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -4752,6 +5336,7 @@ abstract class _Schedule extends Schedule {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -4759,6 +5344,7 @@ abstract class _Schedule extends Schedule {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -4769,6 +5355,7 @@ abstract class _Schedule extends Schedule {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -4785,40 +5372,48 @@ abstract class _Schedule extends Schedule {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] External Ids for this item.
+  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [active] Whether this schedule record is in active use or should not be
   ///  used (such as was entered in error).
+  @HiveField(12)
   Boolean? get active;
   @override
 
   /// [activeElement] Extensions for active
   @JsonKey(name: '_active')
+  @HiveField(13)
   Element? get activeElement;
   @override
 
   /// [serviceCategory] A broad categorization of the service that is to be
   ///  performed during this appointment.
+  @HiveField(14)
   List<CodeableConcept>? get serviceCategory;
   @override
 
   /// [serviceType] The specific service that is to be performed during this
   ///  appointment.
+  @HiveField(15)
   List<CodeableConcept>? get serviceType;
   @override
 
   /// [specialty] The specialty of a practitioner that would be required to
   ///  perform the service requested in this appointment.
+  @HiveField(16)
   List<CodeableConcept>? get specialty;
   @override
 
   /// [actor] Slots that reference this schedule resource provide the
   ///  availability details to these referenced resource(s).
+  @HiveField(17)
   List<Reference> get actor;
   @override
 
@@ -4827,17 +5422,20 @@ abstract class _Schedule extends Schedule {
   /// time that an organization's planning horizon; the interval for which they
   /// are currently accepting appointments. This does not define a "template"
   ///  for planning outside these dates.
+  @HiveField(18)
   Period? get planningHorizon;
   @override
 
   /// [comment] Comments on the availability to describe any extended
   /// information. Such as custom constraints on the slots that may be
   ///  associated.
+  @HiveField(19)
   String? get comment;
   @override
 
   /// [commentElement] Extensions for comment
   @JsonKey(name: '_comment')
+  @HiveField(20)
   Element? get commentElement;
   @override
   @JsonKey(ignore: true)
@@ -4852,32 +5450,39 @@ Slot _$SlotFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Slot {
   @JsonKey(unknownEnumValue: R4ResourceType.Slot)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -4886,12 +5491,14 @@ mixin _$Slot {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -4901,6 +5508,7 @@ mixin _$Slot {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -4916,71 +5524,86 @@ mixin _$Slot {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] External Ids for this item.
+  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [serviceCategory] A broad categorization of the service that is to be
   ///  performed during this appointment.
+  @HiveField(12)
   List<CodeableConcept>? get serviceCategory =>
       throw _privateConstructorUsedError;
 
   /// [serviceType] The type of appointments that can be booked into this slot
-  /// (ideally this would be an identifiable service - which is at a location,
-  /// rather than the location itself). If provided then this overrides the
-  ///  value provided on the availability resource.
+  @HiveField(13)
+  @HiveField(14)
   List<CodeableConcept>? get serviceType => throw _privateConstructorUsedError;
 
   /// [specialty] The specialty of a practitioner that would be required to
   ///  perform the service requested in this appointment.
+  @HiveField(15)
   List<CodeableConcept>? get specialty => throw _privateConstructorUsedError;
 
   /// [appointmentType] The style of appointment or patient that may be booked
   ///  in the slot (not service type).
+  @HiveField(16)
   CodeableConcept? get appointmentType => throw _privateConstructorUsedError;
 
   /// [schedule] The schedule resource that this slot defines an interval of
   ///  status information.
+  @HiveField(17)
   Reference get schedule => throw _privateConstructorUsedError;
 
   /// [status] busy | free | busy-unavailable | busy-tentative |
   ///  entered-in-error.
+  @HiveField(18)
   Code? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(19)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [start] Date/Time that the slot is to begin.
+  @HiveField(20)
   Instant? get start => throw _privateConstructorUsedError;
 
   /// [startElement] Extensions for start
   @JsonKey(name: '_start')
+  @HiveField(21)
   Element? get startElement => throw _privateConstructorUsedError;
 
   /// [end] Date/Time that the slot is to conclude.
+  @HiveField(22)
   Instant? get end => throw _privateConstructorUsedError;
 
   /// [endElement] Extensions for end
   @JsonKey(name: '_end')
+  @HiveField(23)
   Element? get endElement => throw _privateConstructorUsedError;
 
   /// [overbooked] This slot has already been overbooked, appointments are
   ///  unlikely to be accepted for this time.
+  @HiveField(24)
   Boolean? get overbooked => throw _privateConstructorUsedError;
 
   /// [overbookedElement] Extensions for overbooked
   @JsonKey(name: '_overbooked')
+  @HiveField(25)
   Element? get overbookedElement => throw _privateConstructorUsedError;
 
   /// [comment] Comments on the slot to describe any extended information. Such
   ///  as custom constraints on the slot.
+  @HiveField(26)
   String? get comment => throw _privateConstructorUsedError;
 
   /// [commentElement] Extensions for comment
   @JsonKey(name: '_comment')
+  @HiveField(27)
   Element? get commentElement => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -4995,40 +5618,68 @@ abstract class $SlotCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Slot)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<CodeableConcept>? serviceCategory,
-      List<CodeableConcept>? serviceType,
-      List<CodeableConcept>? specialty,
-      CodeableConcept? appointmentType,
-      Reference schedule,
-      Code? status,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          List<CodeableConcept>? serviceCategory,
+      @HiveField(13)
+      @HiveField(14)
+          List<CodeableConcept>? serviceType,
+      @HiveField(15)
+          List<CodeableConcept>? specialty,
+      @HiveField(16)
+          CodeableConcept? appointmentType,
+      @HiveField(17)
+          Reference schedule,
+      @HiveField(18)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(19)
           Element? statusElement,
-      Instant? start,
+      @HiveField(20)
+          Instant? start,
       @JsonKey(name: '_start')
+      @HiveField(21)
           Element? startElement,
-      Instant? end,
+      @HiveField(22)
+          Instant? end,
       @JsonKey(name: '_end')
+      @HiveField(23)
           Element? endElement,
-      Boolean? overbooked,
+      @HiveField(24)
+          Boolean? overbooked,
       @JsonKey(name: '_overbooked')
+      @HiveField(25)
           Element? overbookedElement,
-      String? comment,
+      @HiveField(26)
+          String? comment,
       @JsonKey(name: '_comment')
+      @HiveField(27)
           Element? commentElement});
 
   $MetaCopyWith<$Res>? get meta;
@@ -5334,40 +5985,68 @@ abstract class _$$_SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Slot)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      List<CodeableConcept>? serviceCategory,
-      List<CodeableConcept>? serviceType,
-      List<CodeableConcept>? specialty,
-      CodeableConcept? appointmentType,
-      Reference schedule,
-      Code? status,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          List<CodeableConcept>? serviceCategory,
+      @HiveField(13)
+      @HiveField(14)
+          List<CodeableConcept>? serviceType,
+      @HiveField(15)
+          List<CodeableConcept>? specialty,
+      @HiveField(16)
+          CodeableConcept? appointmentType,
+      @HiveField(17)
+          Reference schedule,
+      @HiveField(18)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(19)
           Element? statusElement,
-      Instant? start,
+      @HiveField(20)
+          Instant? start,
       @JsonKey(name: '_start')
+      @HiveField(21)
           Element? startElement,
-      Instant? end,
+      @HiveField(22)
+          Instant? end,
       @JsonKey(name: '_end')
+      @HiveField(23)
           Element? endElement,
-      Boolean? overbooked,
+      @HiveField(24)
+          Boolean? overbooked,
       @JsonKey(name: '_overbooked')
+      @HiveField(25)
           Element? overbookedElement,
-      String? comment,
+      @HiveField(26)
+          String? comment,
       @JsonKey(name: '_comment')
+      @HiveField(27)
           Element? commentElement});
 
   @override
@@ -5550,40 +6229,68 @@ class __$$_SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res, _$_Slot>
 class _$_Slot extends _Slot {
   _$_Slot(
       {@JsonKey(unknownEnumValue: R4ResourceType.Slot)
+      @HiveField(0)
           this.resourceType = R4ResourceType.Slot,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final List<CodeableConcept>? serviceCategory,
-      final List<CodeableConcept>? serviceType,
-      final List<CodeableConcept>? specialty,
-      this.appointmentType,
-      required this.schedule,
-      this.status,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          final List<CodeableConcept>? serviceCategory,
+      @HiveField(13)
+      @HiveField(14)
+          final List<CodeableConcept>? serviceType,
+      @HiveField(15)
+          final List<CodeableConcept>? specialty,
+      @HiveField(16)
+          this.appointmentType,
+      @HiveField(17)
+          required this.schedule,
+      @HiveField(18)
+          this.status,
       @JsonKey(name: '_status')
+      @HiveField(19)
           this.statusElement,
-      this.start,
+      @HiveField(20)
+          this.start,
       @JsonKey(name: '_start')
+      @HiveField(21)
           this.startElement,
-      this.end,
+      @HiveField(22)
+          this.end,
       @JsonKey(name: '_end')
+      @HiveField(23)
           this.endElement,
-      this.overbooked,
+      @HiveField(24)
+          this.overbooked,
       @JsonKey(name: '_overbooked')
+      @HiveField(25)
           this.overbookedElement,
-      this.comment,
+      @HiveField(26)
+          this.comment,
       @JsonKey(name: '_comment')
+      @HiveField(27)
           this.commentElement})
       : _contained = contained,
         _extension_ = extension_,
@@ -5598,17 +6305,20 @@ class _$_Slot extends _Slot {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Slot)
+  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
+  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
+  @HiveField(2)
   final Meta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -5616,20 +6326,24 @@ class _$_Slot extends _Slot {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
+  @HiveField(5)
   final Code? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
+  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -5639,6 +6353,7 @@ class _$_Slot extends _Slot {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
+  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -5652,6 +6367,7 @@ class _$_Slot extends _Slot {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -5676,6 +6392,7 @@ class _$_Slot extends _Slot {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -5713,6 +6430,7 @@ class _$_Slot extends _Slot {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -5727,6 +6445,7 @@ class _$_Slot extends _Slot {
 
   /// [identifier] External Ids for this item.
   @override
+  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -5742,6 +6461,7 @@ class _$_Slot extends _Slot {
   /// [serviceCategory] A broad categorization of the service that is to be
   ///  performed during this appointment.
   @override
+  @HiveField(12)
   List<CodeableConcept>? get serviceCategory {
     final value = _serviceCategory;
     if (value == null) return null;
@@ -5751,16 +6471,12 @@ class _$_Slot extends _Slot {
   }
 
   /// [serviceType] The type of appointments that can be booked into this slot
-  /// (ideally this would be an identifiable service - which is at a location,
-  /// rather than the location itself). If provided then this overrides the
-  ///  value provided on the availability resource.
   final List<CodeableConcept>? _serviceType;
 
   /// [serviceType] The type of appointments that can be booked into this slot
-  /// (ideally this would be an identifiable service - which is at a location,
-  /// rather than the location itself). If provided then this overrides the
-  ///  value provided on the availability resource.
   @override
+  @HiveField(13)
+  @HiveField(14)
   List<CodeableConcept>? get serviceType {
     final value = _serviceType;
     if (value == null) return null;
@@ -5776,6 +6492,7 @@ class _$_Slot extends _Slot {
   /// [specialty] The specialty of a practitioner that would be required to
   ///  perform the service requested in this appointment.
   @override
+  @HiveField(15)
   List<CodeableConcept>? get specialty {
     final value = _specialty;
     if (value == null) return null;
@@ -5787,59 +6504,71 @@ class _$_Slot extends _Slot {
   /// [appointmentType] The style of appointment or patient that may be booked
   ///  in the slot (not service type).
   @override
+  @HiveField(16)
   final CodeableConcept? appointmentType;
 
   /// [schedule] The schedule resource that this slot defines an interval of
   ///  status information.
   @override
+  @HiveField(17)
   final Reference schedule;
 
   /// [status] busy | free | busy-unavailable | busy-tentative |
   ///  entered-in-error.
   @override
+  @HiveField(18)
   final Code? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
+  @HiveField(19)
   final Element? statusElement;
 
   /// [start] Date/Time that the slot is to begin.
   @override
+  @HiveField(20)
   final Instant? start;
 
   /// [startElement] Extensions for start
   @override
   @JsonKey(name: '_start')
+  @HiveField(21)
   final Element? startElement;
 
   /// [end] Date/Time that the slot is to conclude.
   @override
+  @HiveField(22)
   final Instant? end;
 
   /// [endElement] Extensions for end
   @override
   @JsonKey(name: '_end')
+  @HiveField(23)
   final Element? endElement;
 
   /// [overbooked] This slot has already been overbooked, appointments are
   ///  unlikely to be accepted for this time.
   @override
+  @HiveField(24)
   final Boolean? overbooked;
 
   /// [overbookedElement] Extensions for overbooked
   @override
   @JsonKey(name: '_overbooked')
+  @HiveField(25)
   final Element? overbookedElement;
 
   /// [comment] Comments on the slot to describe any extended information. Such
   ///  as custom constraints on the slot.
   @override
+  @HiveField(26)
   final String? comment;
 
   /// [commentElement] Extensions for comment
   @override
   @JsonKey(name: '_comment')
+  @HiveField(27)
   final Element? commentElement;
 
   @override
@@ -5951,40 +6680,68 @@ class _$_Slot extends _Slot {
 abstract class _Slot extends Slot {
   factory _Slot(
       {@JsonKey(unknownEnumValue: R4ResourceType.Slot)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final List<CodeableConcept>? serviceCategory,
-      final List<CodeableConcept>? serviceType,
-      final List<CodeableConcept>? specialty,
-      final CodeableConcept? appointmentType,
-      required final Reference schedule,
-      final Code? status,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          final List<CodeableConcept>? serviceCategory,
+      @HiveField(13)
+      @HiveField(14)
+          final List<CodeableConcept>? serviceType,
+      @HiveField(15)
+          final List<CodeableConcept>? specialty,
+      @HiveField(16)
+          final CodeableConcept? appointmentType,
+      @HiveField(17)
+          required final Reference schedule,
+      @HiveField(18)
+          final Code? status,
       @JsonKey(name: '_status')
+      @HiveField(19)
           final Element? statusElement,
-      final Instant? start,
+      @HiveField(20)
+          final Instant? start,
       @JsonKey(name: '_start')
+      @HiveField(21)
           final Element? startElement,
-      final Instant? end,
+      @HiveField(22)
+          final Instant? end,
       @JsonKey(name: '_end')
+      @HiveField(23)
           final Element? endElement,
-      final Boolean? overbooked,
+      @HiveField(24)
+          final Boolean? overbooked,
       @JsonKey(name: '_overbooked')
+      @HiveField(25)
           final Element? overbookedElement,
-      final String? comment,
+      @HiveField(26)
+          final String? comment,
       @JsonKey(name: '_comment')
+      @HiveField(27)
           final Element? commentElement}) = _$_Slot;
   _Slot._() : super._();
 
@@ -5992,17 +6749,20 @@ abstract class _Slot extends Slot {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Slot)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta;
   @override
 
@@ -6010,20 +6770,24 @@ abstract class _Slot extends Slot {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -6033,6 +6797,7 @@ abstract class _Slot extends Slot {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -6040,6 +6805,7 @@ abstract class _Slot extends Slot {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -6050,6 +6816,7 @@ abstract class _Slot extends Slot {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -6066,85 +6833,100 @@ abstract class _Slot extends Slot {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] External Ids for this item.
+  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [serviceCategory] A broad categorization of the service that is to be
   ///  performed during this appointment.
+  @HiveField(12)
   List<CodeableConcept>? get serviceCategory;
   @override
 
   /// [serviceType] The type of appointments that can be booked into this slot
-  /// (ideally this would be an identifiable service - which is at a location,
-  /// rather than the location itself). If provided then this overrides the
-  ///  value provided on the availability resource.
+  @HiveField(13)
+  @HiveField(14)
   List<CodeableConcept>? get serviceType;
   @override
 
   /// [specialty] The specialty of a practitioner that would be required to
   ///  perform the service requested in this appointment.
+  @HiveField(15)
   List<CodeableConcept>? get specialty;
   @override
 
   /// [appointmentType] The style of appointment or patient that may be booked
   ///  in the slot (not service type).
+  @HiveField(16)
   CodeableConcept? get appointmentType;
   @override
 
   /// [schedule] The schedule resource that this slot defines an interval of
   ///  status information.
+  @HiveField(17)
   Reference get schedule;
   @override
 
   /// [status] busy | free | busy-unavailable | busy-tentative |
   ///  entered-in-error.
+  @HiveField(18)
   Code? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(19)
   Element? get statusElement;
   @override
 
   /// [start] Date/Time that the slot is to begin.
+  @HiveField(20)
   Instant? get start;
   @override
 
   /// [startElement] Extensions for start
   @JsonKey(name: '_start')
+  @HiveField(21)
   Element? get startElement;
   @override
 
   /// [end] Date/Time that the slot is to conclude.
+  @HiveField(22)
   Instant? get end;
   @override
 
   /// [endElement] Extensions for end
   @JsonKey(name: '_end')
+  @HiveField(23)
   Element? get endElement;
   @override
 
   /// [overbooked] This slot has already been overbooked, appointments are
   ///  unlikely to be accepted for this time.
+  @HiveField(24)
   Boolean? get overbooked;
   @override
 
   /// [overbookedElement] Extensions for overbooked
   @JsonKey(name: '_overbooked')
+  @HiveField(25)
   Element? get overbookedElement;
   @override
 
   /// [comment] Comments on the slot to describe any extended information. Such
   ///  as custom constraints on the slot.
+  @HiveField(26)
   String? get comment;
   @override
 
   /// [commentElement] Extensions for comment
   @JsonKey(name: '_comment')
+  @HiveField(27)
   Element? get commentElement;
   @override
   @JsonKey(ignore: true)
@@ -6158,32 +6940,39 @@ Task _$TaskFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Task {
   @JsonKey(unknownEnumValue: R4ResourceType.Task)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -6192,12 +6981,14 @@ mixin _$Task {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -6207,6 +6998,7 @@ mixin _$Task {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -6222,24 +7014,26 @@ mixin _$Task {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] The business identifier for this task.
+  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-
-  /// [instantiatesCanonical] The URL pointing to a *FHIR*-defined protocol,
-  /// guideline, orderset or other definition that is adhered to in whole or in
-  ///  part by this Task.
+  @HiveField(12)
+  @HiveField(13)
   Canonical? get instantiatesCanonical => throw _privateConstructorUsedError;
 
   /// [instantiatesUri] The URL pointing to an *externally* maintained
   /// protocol, guideline, orderset or other definition that is adhered to in
   ///  whole or in part by this Task.
+  @HiveField(14)
   FhirUri? get instantiatesUri => throw _privateConstructorUsedError;
 
   /// [instantiatesUriElement] Extensions for instantiatesUri
   @JsonKey(name: '_instantiatesUri')
+  @HiveField(15)
   Element? get instantiatesUriElement => throw _privateConstructorUsedError;
 
   /// [basedOn] BasedOn refers to a higher-level authorization that triggered
@@ -6249,135 +7043,167 @@ mixin _$Task {
   /// latter resource is referenced by FocusOn.  For example, based on a
   /// ServiceRequest (= BasedOn), a task is created to fulfill a
   ///  procedureRequest ( = FocusOn ) to collect a specimen from a patient.
+  @HiveField(16)
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
 
   /// [groupIdentifier] An identifier that links together multiple tasks and
   ///  other requests that were created in the same context.
+  @HiveField(17)
   Identifier? get groupIdentifier => throw _privateConstructorUsedError;
 
   /// [partOf] Task that this particular task is part of.
+  @HiveField(18)
   List<Reference>? get partOf => throw _privateConstructorUsedError;
 
   /// [status] The current status of the task.
+  @HiveField(19)
   Code? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(20)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [statusReason] An explanation as to why this task is held, failed, was
   ///  refused, etc.
+  @HiveField(21)
   CodeableConcept? get statusReason => throw _privateConstructorUsedError;
 
   /// [businessStatus] Contains business-specific nuances of the business
   ///  state.
+  @HiveField(22)
   CodeableConcept? get businessStatus => throw _privateConstructorUsedError;
-
-  /// [intent] Indicates the "level" of actionability associated with the Task,
-  /// i.e. i+R[9]Cs this a proposed task, a planned task, an actionable task,
-  ///  etc.
+  @HiveField(23)
+  @HiveField(24)
+  @HiveField(25)
   Code? get intent => throw _privateConstructorUsedError;
 
   /// [intentElement] Extensions for intent
   @JsonKey(name: '_intent')
+  @HiveField(26)
   Element? get intentElement => throw _privateConstructorUsedError;
 
   /// [priority] Indicates how quickly the Task should be addressed with
   ///  respect to other requests.
+  @HiveField(27)
   Code? get priority => throw _privateConstructorUsedError;
 
   /// [priorityElement] Extensions for priority
   @JsonKey(name: '_priority')
+  @HiveField(28)
   Element? get priorityElement => throw _privateConstructorUsedError;
 
   /// [code] A name or code (or both) briefly describing what the task
   ///  involves.
+  @HiveField(29)
   CodeableConcept? get code => throw _privateConstructorUsedError;
 
   /// [description] A free-text description of what is to be performed.
+  @HiveField(30)
   String? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
+  @HiveField(31)
   Element? get descriptionElement => throw _privateConstructorUsedError;
 
   /// [focus] The request being actioned or the resource being manipulated by
   ///  this task.
+  @HiveField(32)
   Reference? get focus => throw _privateConstructorUsedError;
 
   /// [for] The entity who benefits from the performance of the service
   ///  specified in the task (e.g., the patient).
   @JsonKey(name: 'for')
+  @HiveField(33)
   Reference? get for_ => throw _privateConstructorUsedError;
 
   /// [encounter] The healthcare event  (e.g. a patient and healthcare provider
   ///  interaction) during which this task was created.
+  @HiveField(34)
   Reference? get encounter => throw _privateConstructorUsedError;
 
   /// [executionPeriod] Identifies the time action was first taken against the
   /// task (start) and/or the time final action was taken against the task prior
   ///  to marking it as completed (end).
+  @HiveField(35)
   Period? get executionPeriod => throw _privateConstructorUsedError;
 
   /// [authoredOn] The date and time this task was created.
+  @HiveField(36)
   FhirDateTime? get authoredOn => throw _privateConstructorUsedError;
 
   /// [authoredOnElement] Extensions for authoredOn
   @JsonKey(name: '_authoredOn')
+  @HiveField(37)
   Element? get authoredOnElement => throw _privateConstructorUsedError;
 
   /// [lastModified] The date and time of last modification to this task.
+  @HiveField(38)
   FhirDateTime? get lastModified => throw _privateConstructorUsedError;
 
   /// [lastModifiedElement] Extensions for lastModified
   @JsonKey(name: '_lastModified')
+  @HiveField(39)
   Element? get lastModifiedElement => throw _privateConstructorUsedError;
 
   /// [requester] The creator of the task.
+  @HiveField(40)
   Reference? get requester => throw _privateConstructorUsedError;
 
   /// [performerType] The kind of participant that should perform the task.
+  @HiveField(41)
   List<CodeableConcept>? get performerType =>
       throw _privateConstructorUsedError;
 
   /// [owner] Individual organization or Device currently responsible for task
   ///  execution.
+  @HiveField(42)
   Reference? get owner => throw _privateConstructorUsedError;
 
   /// [location] Principal physical location where the this task is performed.
+  @HiveField(43)
   Reference? get location => throw _privateConstructorUsedError;
 
   /// [reasonCode] A description or code indicating why this task needs to be
   ///  performed.
+  @HiveField(44)
   CodeableConcept? get reasonCode => throw _privateConstructorUsedError;
 
   /// [reasonReference] A resource reference indicating why this task needs to
   ///  be performed.
+  @HiveField(45)
   Reference? get reasonReference => throw _privateConstructorUsedError;
 
   /// [insurance] Insurance plans, coverage extensions, pre-authorizations
   ///  and/or pre-determinations that may be relevant to the Task.
+  @HiveField(46)
   List<Reference>? get insurance => throw _privateConstructorUsedError;
 
   /// [note] Free-text information captured about the task as it progresses.
+  @HiveField(47)
   List<Annotation>? get note => throw _privateConstructorUsedError;
 
   /// [relevantHistory] Links to Provenance records for past versions of this
   /// Task that identify key state transitions or updates that are likely to be
   ///  relevant to a user looking at the current version of the task.
+  @HiveField(48)
   List<Reference>? get relevantHistory => throw _privateConstructorUsedError;
 
   /// [restriction] If the Task.focus is a request resource and the task is
   /// seeking fulfillment (i.e. is asking for the request to be actioned), this
   /// element identifies any limitations on what parts of the referenced request
   ///  should be actioned.
+  @HiveField(49)
   TaskRestriction? get restriction => throw _privateConstructorUsedError;
 
   /// [input] Additional information that may be needed in the execution of the
   ///  task.
+  @HiveField(50)
   List<TaskInput>? get input => throw _privateConstructorUsedError;
 
   /// [output] Outputs produced by the Task.
+  @HiveField(51)
   List<TaskOutput>? get output => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -6392,66 +7218,118 @@ abstract class $TaskCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Task)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Canonical? instantiatesCanonical,
-      FhirUri? instantiatesUri,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+      @HiveField(13)
+          Canonical? instantiatesCanonical,
+      @HiveField(14)
+          FhirUri? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
+      @HiveField(15)
           Element? instantiatesUriElement,
-      List<Reference>? basedOn,
-      Identifier? groupIdentifier,
-      List<Reference>? partOf,
-      Code? status,
+      @HiveField(16)
+          List<Reference>? basedOn,
+      @HiveField(17)
+          Identifier? groupIdentifier,
+      @HiveField(18)
+          List<Reference>? partOf,
+      @HiveField(19)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(20)
           Element? statusElement,
-      CodeableConcept? statusReason,
-      CodeableConcept? businessStatus,
-      Code? intent,
+      @HiveField(21)
+          CodeableConcept? statusReason,
+      @HiveField(22)
+          CodeableConcept? businessStatus,
+      @HiveField(23)
+      @HiveField(24)
+      @HiveField(25)
+          Code? intent,
       @JsonKey(name: '_intent')
+      @HiveField(26)
           Element? intentElement,
-      Code? priority,
+      @HiveField(27)
+          Code? priority,
       @JsonKey(name: '_priority')
+      @HiveField(28)
           Element? priorityElement,
-      CodeableConcept? code,
-      String? description,
+      @HiveField(29)
+          CodeableConcept? code,
+      @HiveField(30)
+          String? description,
       @JsonKey(name: '_description')
+      @HiveField(31)
           Element? descriptionElement,
-      Reference? focus,
+      @HiveField(32)
+          Reference? focus,
       @JsonKey(name: 'for')
+      @HiveField(33)
           Reference? for_,
-      Reference? encounter,
-      Period? executionPeriod,
-      FhirDateTime? authoredOn,
+      @HiveField(34)
+          Reference? encounter,
+      @HiveField(35)
+          Period? executionPeriod,
+      @HiveField(36)
+          FhirDateTime? authoredOn,
       @JsonKey(name: '_authoredOn')
+      @HiveField(37)
           Element? authoredOnElement,
-      FhirDateTime? lastModified,
+      @HiveField(38)
+          FhirDateTime? lastModified,
       @JsonKey(name: '_lastModified')
+      @HiveField(39)
           Element? lastModifiedElement,
-      Reference? requester,
-      List<CodeableConcept>? performerType,
-      Reference? owner,
-      Reference? location,
-      CodeableConcept? reasonCode,
-      Reference? reasonReference,
-      List<Reference>? insurance,
-      List<Annotation>? note,
-      List<Reference>? relevantHistory,
-      TaskRestriction? restriction,
-      List<TaskInput>? input,
-      List<TaskOutput>? output});
+      @HiveField(40)
+          Reference? requester,
+      @HiveField(41)
+          List<CodeableConcept>? performerType,
+      @HiveField(42)
+          Reference? owner,
+      @HiveField(43)
+          Reference? location,
+      @HiveField(44)
+          CodeableConcept? reasonCode,
+      @HiveField(45)
+          Reference? reasonReference,
+      @HiveField(46)
+          List<Reference>? insurance,
+      @HiveField(47)
+          List<Annotation>? note,
+      @HiveField(48)
+          List<Reference>? relevantHistory,
+      @HiveField(49)
+          TaskRestriction? restriction,
+      @HiveField(50)
+          List<TaskInput>? input,
+      @HiveField(51)
+          List<TaskOutput>? output});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -7052,66 +7930,118 @@ abstract class _$$_TaskCopyWith<$Res> implements $TaskCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Task)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Canonical? instantiatesCanonical,
-      FhirUri? instantiatesUri,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+      @HiveField(13)
+          Canonical? instantiatesCanonical,
+      @HiveField(14)
+          FhirUri? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
+      @HiveField(15)
           Element? instantiatesUriElement,
-      List<Reference>? basedOn,
-      Identifier? groupIdentifier,
-      List<Reference>? partOf,
-      Code? status,
+      @HiveField(16)
+          List<Reference>? basedOn,
+      @HiveField(17)
+          Identifier? groupIdentifier,
+      @HiveField(18)
+          List<Reference>? partOf,
+      @HiveField(19)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(20)
           Element? statusElement,
-      CodeableConcept? statusReason,
-      CodeableConcept? businessStatus,
-      Code? intent,
+      @HiveField(21)
+          CodeableConcept? statusReason,
+      @HiveField(22)
+          CodeableConcept? businessStatus,
+      @HiveField(23)
+      @HiveField(24)
+      @HiveField(25)
+          Code? intent,
       @JsonKey(name: '_intent')
+      @HiveField(26)
           Element? intentElement,
-      Code? priority,
+      @HiveField(27)
+          Code? priority,
       @JsonKey(name: '_priority')
+      @HiveField(28)
           Element? priorityElement,
-      CodeableConcept? code,
-      String? description,
+      @HiveField(29)
+          CodeableConcept? code,
+      @HiveField(30)
+          String? description,
       @JsonKey(name: '_description')
+      @HiveField(31)
           Element? descriptionElement,
-      Reference? focus,
+      @HiveField(32)
+          Reference? focus,
       @JsonKey(name: 'for')
+      @HiveField(33)
           Reference? for_,
-      Reference? encounter,
-      Period? executionPeriod,
-      FhirDateTime? authoredOn,
+      @HiveField(34)
+          Reference? encounter,
+      @HiveField(35)
+          Period? executionPeriod,
+      @HiveField(36)
+          FhirDateTime? authoredOn,
       @JsonKey(name: '_authoredOn')
+      @HiveField(37)
           Element? authoredOnElement,
-      FhirDateTime? lastModified,
+      @HiveField(38)
+          FhirDateTime? lastModified,
       @JsonKey(name: '_lastModified')
+      @HiveField(39)
           Element? lastModifiedElement,
-      Reference? requester,
-      List<CodeableConcept>? performerType,
-      Reference? owner,
-      Reference? location,
-      CodeableConcept? reasonCode,
-      Reference? reasonReference,
-      List<Reference>? insurance,
-      List<Annotation>? note,
-      List<Reference>? relevantHistory,
-      TaskRestriction? restriction,
-      List<TaskInput>? input,
-      List<TaskOutput>? output});
+      @HiveField(40)
+          Reference? requester,
+      @HiveField(41)
+          List<CodeableConcept>? performerType,
+      @HiveField(42)
+          Reference? owner,
+      @HiveField(43)
+          Reference? location,
+      @HiveField(44)
+          CodeableConcept? reasonCode,
+      @HiveField(45)
+          Reference? reasonReference,
+      @HiveField(46)
+          List<Reference>? insurance,
+      @HiveField(47)
+          List<Annotation>? note,
+      @HiveField(48)
+          List<Reference>? relevantHistory,
+      @HiveField(49)
+          TaskRestriction? restriction,
+      @HiveField(50)
+          List<TaskInput>? input,
+      @HiveField(51)
+          List<TaskOutput>? output});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -7431,66 +8361,118 @@ class __$$_TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res, _$_Task>
 class _$_Task extends _Task {
   _$_Task(
       {@JsonKey(unknownEnumValue: R4ResourceType.Task)
+      @HiveField(0)
           this.resourceType = R4ResourceType.Task,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      this.instantiatesCanonical,
-      this.instantiatesUri,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+      @HiveField(13)
+          this.instantiatesCanonical,
+      @HiveField(14)
+          this.instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
+      @HiveField(15)
           this.instantiatesUriElement,
-      final List<Reference>? basedOn,
-      this.groupIdentifier,
-      final List<Reference>? partOf,
-      this.status,
+      @HiveField(16)
+          final List<Reference>? basedOn,
+      @HiveField(17)
+          this.groupIdentifier,
+      @HiveField(18)
+          final List<Reference>? partOf,
+      @HiveField(19)
+          this.status,
       @JsonKey(name: '_status')
+      @HiveField(20)
           this.statusElement,
-      this.statusReason,
-      this.businessStatus,
-      this.intent,
+      @HiveField(21)
+          this.statusReason,
+      @HiveField(22)
+          this.businessStatus,
+      @HiveField(23)
+      @HiveField(24)
+      @HiveField(25)
+          this.intent,
       @JsonKey(name: '_intent')
+      @HiveField(26)
           this.intentElement,
-      this.priority,
+      @HiveField(27)
+          this.priority,
       @JsonKey(name: '_priority')
+      @HiveField(28)
           this.priorityElement,
-      this.code,
-      this.description,
+      @HiveField(29)
+          this.code,
+      @HiveField(30)
+          this.description,
       @JsonKey(name: '_description')
+      @HiveField(31)
           this.descriptionElement,
-      this.focus,
+      @HiveField(32)
+          this.focus,
       @JsonKey(name: 'for')
+      @HiveField(33)
           this.for_,
-      this.encounter,
-      this.executionPeriod,
-      this.authoredOn,
+      @HiveField(34)
+          this.encounter,
+      @HiveField(35)
+          this.executionPeriod,
+      @HiveField(36)
+          this.authoredOn,
       @JsonKey(name: '_authoredOn')
+      @HiveField(37)
           this.authoredOnElement,
-      this.lastModified,
+      @HiveField(38)
+          this.lastModified,
       @JsonKey(name: '_lastModified')
+      @HiveField(39)
           this.lastModifiedElement,
-      this.requester,
-      final List<CodeableConcept>? performerType,
-      this.owner,
-      this.location,
-      this.reasonCode,
-      this.reasonReference,
-      final List<Reference>? insurance,
-      final List<Annotation>? note,
-      final List<Reference>? relevantHistory,
-      this.restriction,
-      final List<TaskInput>? input,
-      final List<TaskOutput>? output})
+      @HiveField(40)
+          this.requester,
+      @HiveField(41)
+          final List<CodeableConcept>? performerType,
+      @HiveField(42)
+          this.owner,
+      @HiveField(43)
+          this.location,
+      @HiveField(44)
+          this.reasonCode,
+      @HiveField(45)
+          this.reasonReference,
+      @HiveField(46)
+          final List<Reference>? insurance,
+      @HiveField(47)
+          final List<Annotation>? note,
+      @HiveField(48)
+          final List<Reference>? relevantHistory,
+      @HiveField(49)
+          this.restriction,
+      @HiveField(50)
+          final List<TaskInput>? input,
+      @HiveField(51)
+          final List<TaskOutput>? output})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -7509,17 +8491,20 @@ class _$_Task extends _Task {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Task)
+  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
+  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
+  @HiveField(2)
   final Meta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -7527,20 +8512,24 @@ class _$_Task extends _Task {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
+  @HiveField(5)
   final Code? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
+  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -7550,6 +8539,7 @@ class _$_Task extends _Task {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
+  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -7563,6 +8553,7 @@ class _$_Task extends _Task {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -7587,6 +8578,7 @@ class _$_Task extends _Task {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -7624,6 +8616,7 @@ class _$_Task extends _Task {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -7638,6 +8631,7 @@ class _$_Task extends _Task {
 
   /// [identifier] The business identifier for this task.
   @override
+  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -7646,21 +8640,22 @@ class _$_Task extends _Task {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [instantiatesCanonical] The URL pointing to a *FHIR*-defined protocol,
-  /// guideline, orderset or other definition that is adhered to in whole or in
-  ///  part by this Task.
   @override
+  @HiveField(12)
+  @HiveField(13)
   final Canonical? instantiatesCanonical;
 
   /// [instantiatesUri] The URL pointing to an *externally* maintained
   /// protocol, guideline, orderset or other definition that is adhered to in
   ///  whole or in part by this Task.
   @override
+  @HiveField(14)
   final FhirUri? instantiatesUri;
 
   /// [instantiatesUriElement] Extensions for instantiatesUri
   @override
   @JsonKey(name: '_instantiatesUri')
+  @HiveField(15)
   final Element? instantiatesUriElement;
 
   /// [basedOn] BasedOn refers to a higher-level authorization that triggered
@@ -7680,6 +8675,7 @@ class _$_Task extends _Task {
   /// ServiceRequest (= BasedOn), a task is created to fulfill a
   ///  procedureRequest ( = FocusOn ) to collect a specimen from a patient.
   @override
+  @HiveField(16)
   List<Reference>? get basedOn {
     final value = _basedOn;
     if (value == null) return null;
@@ -7691,6 +8687,7 @@ class _$_Task extends _Task {
   /// [groupIdentifier] An identifier that links together multiple tasks and
   ///  other requests that were created in the same context.
   @override
+  @HiveField(17)
   final Identifier? groupIdentifier;
 
   /// [partOf] Task that this particular task is part of.
@@ -7698,6 +8695,7 @@ class _$_Task extends _Task {
 
   /// [partOf] Task that this particular task is part of.
   @override
+  @HiveField(18)
   List<Reference>? get partOf {
     final value = _partOf;
     if (value == null) return null;
@@ -7708,100 +8706,118 @@ class _$_Task extends _Task {
 
   /// [status] The current status of the task.
   @override
+  @HiveField(19)
   final Code? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
+  @HiveField(20)
   final Element? statusElement;
 
   /// [statusReason] An explanation as to why this task is held, failed, was
   ///  refused, etc.
   @override
+  @HiveField(21)
   final CodeableConcept? statusReason;
 
   /// [businessStatus] Contains business-specific nuances of the business
   ///  state.
   @override
+  @HiveField(22)
   final CodeableConcept? businessStatus;
-
-  /// [intent] Indicates the "level" of actionability associated with the Task,
-  /// i.e. i+R[9]Cs this a proposed task, a planned task, an actionable task,
-  ///  etc.
   @override
+  @HiveField(23)
+  @HiveField(24)
+  @HiveField(25)
   final Code? intent;
 
   /// [intentElement] Extensions for intent
   @override
   @JsonKey(name: '_intent')
+  @HiveField(26)
   final Element? intentElement;
 
   /// [priority] Indicates how quickly the Task should be addressed with
   ///  respect to other requests.
   @override
+  @HiveField(27)
   final Code? priority;
 
   /// [priorityElement] Extensions for priority
   @override
   @JsonKey(name: '_priority')
+  @HiveField(28)
   final Element? priorityElement;
 
   /// [code] A name or code (or both) briefly describing what the task
   ///  involves.
   @override
+  @HiveField(29)
   final CodeableConcept? code;
 
   /// [description] A free-text description of what is to be performed.
   @override
+  @HiveField(30)
   final String? description;
 
   /// [descriptionElement] Extensions for description
   @override
   @JsonKey(name: '_description')
+  @HiveField(31)
   final Element? descriptionElement;
 
   /// [focus] The request being actioned or the resource being manipulated by
   ///  this task.
   @override
+  @HiveField(32)
   final Reference? focus;
 
   /// [for] The entity who benefits from the performance of the service
   ///  specified in the task (e.g., the patient).
   @override
   @JsonKey(name: 'for')
+  @HiveField(33)
   final Reference? for_;
 
   /// [encounter] The healthcare event  (e.g. a patient and healthcare provider
   ///  interaction) during which this task was created.
   @override
+  @HiveField(34)
   final Reference? encounter;
 
   /// [executionPeriod] Identifies the time action was first taken against the
   /// task (start) and/or the time final action was taken against the task prior
   ///  to marking it as completed (end).
   @override
+  @HiveField(35)
   final Period? executionPeriod;
 
   /// [authoredOn] The date and time this task was created.
   @override
+  @HiveField(36)
   final FhirDateTime? authoredOn;
 
   /// [authoredOnElement] Extensions for authoredOn
   @override
   @JsonKey(name: '_authoredOn')
+  @HiveField(37)
   final Element? authoredOnElement;
 
   /// [lastModified] The date and time of last modification to this task.
   @override
+  @HiveField(38)
   final FhirDateTime? lastModified;
 
   /// [lastModifiedElement] Extensions for lastModified
   @override
   @JsonKey(name: '_lastModified')
+  @HiveField(39)
   final Element? lastModifiedElement;
 
   /// [requester] The creator of the task.
   @override
+  @HiveField(40)
   final Reference? requester;
 
   /// [performerType] The kind of participant that should perform the task.
@@ -7809,6 +8825,7 @@ class _$_Task extends _Task {
 
   /// [performerType] The kind of participant that should perform the task.
   @override
+  @HiveField(41)
   List<CodeableConcept>? get performerType {
     final value = _performerType;
     if (value == null) return null;
@@ -7820,20 +8837,24 @@ class _$_Task extends _Task {
   /// [owner] Individual organization or Device currently responsible for task
   ///  execution.
   @override
+  @HiveField(42)
   final Reference? owner;
 
   /// [location] Principal physical location where the this task is performed.
   @override
+  @HiveField(43)
   final Reference? location;
 
   /// [reasonCode] A description or code indicating why this task needs to be
   ///  performed.
   @override
+  @HiveField(44)
   final CodeableConcept? reasonCode;
 
   /// [reasonReference] A resource reference indicating why this task needs to
   ///  be performed.
   @override
+  @HiveField(45)
   final Reference? reasonReference;
 
   /// [insurance] Insurance plans, coverage extensions, pre-authorizations
@@ -7843,6 +8864,7 @@ class _$_Task extends _Task {
   /// [insurance] Insurance plans, coverage extensions, pre-authorizations
   ///  and/or pre-determinations that may be relevant to the Task.
   @override
+  @HiveField(46)
   List<Reference>? get insurance {
     final value = _insurance;
     if (value == null) return null;
@@ -7856,6 +8878,7 @@ class _$_Task extends _Task {
 
   /// [note] Free-text information captured about the task as it progresses.
   @override
+  @HiveField(47)
   List<Annotation>? get note {
     final value = _note;
     if (value == null) return null;
@@ -7873,6 +8896,7 @@ class _$_Task extends _Task {
   /// Task that identify key state transitions or updates that are likely to be
   ///  relevant to a user looking at the current version of the task.
   @override
+  @HiveField(48)
   List<Reference>? get relevantHistory {
     final value = _relevantHistory;
     if (value == null) return null;
@@ -7886,6 +8910,7 @@ class _$_Task extends _Task {
   /// element identifies any limitations on what parts of the referenced request
   ///  should be actioned.
   @override
+  @HiveField(49)
   final TaskRestriction? restriction;
 
   /// [input] Additional information that may be needed in the execution of the
@@ -7895,6 +8920,7 @@ class _$_Task extends _Task {
   /// [input] Additional information that may be needed in the execution of the
   ///  task.
   @override
+  @HiveField(50)
   List<TaskInput>? get input {
     final value = _input;
     if (value == null) return null;
@@ -7908,6 +8934,7 @@ class _$_Task extends _Task {
 
   /// [output] Outputs produced by the Task.
   @override
+  @HiveField(51)
   List<TaskOutput>? get output {
     final value = _output;
     if (value == null) return null;
@@ -8084,83 +9111,138 @@ class _$_Task extends _Task {
 abstract class _Task extends Task {
   factory _Task(
       {@JsonKey(unknownEnumValue: R4ResourceType.Task)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final Canonical? instantiatesCanonical,
-      final FhirUri? instantiatesUri,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+      @HiveField(13)
+          final Canonical? instantiatesCanonical,
+      @HiveField(14)
+          final FhirUri? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
+      @HiveField(15)
           final Element? instantiatesUriElement,
-      final List<Reference>? basedOn,
-      final Identifier? groupIdentifier,
-      final List<Reference>? partOf,
-      final Code? status,
+      @HiveField(16)
+          final List<Reference>? basedOn,
+      @HiveField(17)
+          final Identifier? groupIdentifier,
+      @HiveField(18)
+          final List<Reference>? partOf,
+      @HiveField(19)
+          final Code? status,
       @JsonKey(name: '_status')
+      @HiveField(20)
           final Element? statusElement,
-      final CodeableConcept? statusReason,
-      final CodeableConcept? businessStatus,
-      final Code? intent,
+      @HiveField(21)
+          final CodeableConcept? statusReason,
+      @HiveField(22)
+          final CodeableConcept? businessStatus,
+      @HiveField(23)
+      @HiveField(24)
+      @HiveField(25)
+          final Code? intent,
       @JsonKey(name: '_intent')
+      @HiveField(26)
           final Element? intentElement,
-      final Code? priority,
+      @HiveField(27)
+          final Code? priority,
       @JsonKey(name: '_priority')
+      @HiveField(28)
           final Element? priorityElement,
-      final CodeableConcept? code,
-      final String? description,
+      @HiveField(29)
+          final CodeableConcept? code,
+      @HiveField(30)
+          final String? description,
       @JsonKey(name: '_description')
+      @HiveField(31)
           final Element? descriptionElement,
-      final Reference? focus,
+      @HiveField(32)
+          final Reference? focus,
       @JsonKey(name: 'for')
+      @HiveField(33)
           final Reference? for_,
-      final Reference? encounter,
-      final Period? executionPeriod,
-      final FhirDateTime? authoredOn,
+      @HiveField(34)
+          final Reference? encounter,
+      @HiveField(35)
+          final Period? executionPeriod,
+      @HiveField(36)
+          final FhirDateTime? authoredOn,
       @JsonKey(name: '_authoredOn')
+      @HiveField(37)
           final Element? authoredOnElement,
-      final FhirDateTime? lastModified,
+      @HiveField(38)
+          final FhirDateTime? lastModified,
       @JsonKey(name: '_lastModified')
+      @HiveField(39)
           final Element? lastModifiedElement,
-      final Reference? requester,
-      final List<CodeableConcept>? performerType,
-      final Reference? owner,
-      final Reference? location,
-      final CodeableConcept? reasonCode,
-      final Reference? reasonReference,
-      final List<Reference>? insurance,
-      final List<Annotation>? note,
-      final List<Reference>? relevantHistory,
-      final TaskRestriction? restriction,
-      final List<TaskInput>? input,
-      final List<TaskOutput>? output}) = _$_Task;
+      @HiveField(40)
+          final Reference? requester,
+      @HiveField(41)
+          final List<CodeableConcept>? performerType,
+      @HiveField(42)
+          final Reference? owner,
+      @HiveField(43)
+          final Reference? location,
+      @HiveField(44)
+          final CodeableConcept? reasonCode,
+      @HiveField(45)
+          final Reference? reasonReference,
+      @HiveField(46)
+          final List<Reference>? insurance,
+      @HiveField(47)
+          final List<Annotation>? note,
+      @HiveField(48)
+          final List<Reference>? relevantHistory,
+      @HiveField(49)
+          final TaskRestriction? restriction,
+      @HiveField(50)
+          final List<TaskInput>? input,
+      @HiveField(51)
+          final List<TaskOutput>? output}) = _$_Task;
   _Task._() : super._();
 
   factory _Task.fromJson(Map<String, dynamic> json) = _$_Task.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Task)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta;
   @override
 
@@ -8168,20 +9250,24 @@ abstract class _Task extends Task {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -8191,6 +9277,7 @@ abstract class _Task extends Task {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -8198,6 +9285,7 @@ abstract class _Task extends Task {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -8208,6 +9296,7 @@ abstract class _Task extends Task {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -8224,27 +9313,29 @@ abstract class _Task extends Task {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] The business identifier for this task.
+  @HiveField(11)
   List<Identifier>? get identifier;
   @override
-
-  /// [instantiatesCanonical] The URL pointing to a *FHIR*-defined protocol,
-  /// guideline, orderset or other definition that is adhered to in whole or in
-  ///  part by this Task.
+  @HiveField(12)
+  @HiveField(13)
   Canonical? get instantiatesCanonical;
   @override
 
   /// [instantiatesUri] The URL pointing to an *externally* maintained
   /// protocol, guideline, orderset or other definition that is adhered to in
   ///  whole or in part by this Task.
+  @HiveField(14)
   FhirUri? get instantiatesUri;
   @override
 
   /// [instantiatesUriElement] Extensions for instantiatesUri
   @JsonKey(name: '_instantiatesUri')
+  @HiveField(15)
   Element? get instantiatesUriElement;
   @override
 
@@ -8255,151 +9346,180 @@ abstract class _Task extends Task {
   /// latter resource is referenced by FocusOn.  For example, based on a
   /// ServiceRequest (= BasedOn), a task is created to fulfill a
   ///  procedureRequest ( = FocusOn ) to collect a specimen from a patient.
+  @HiveField(16)
   List<Reference>? get basedOn;
   @override
 
   /// [groupIdentifier] An identifier that links together multiple tasks and
   ///  other requests that were created in the same context.
+  @HiveField(17)
   Identifier? get groupIdentifier;
   @override
 
   /// [partOf] Task that this particular task is part of.
+  @HiveField(18)
   List<Reference>? get partOf;
   @override
 
   /// [status] The current status of the task.
+  @HiveField(19)
   Code? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(20)
   Element? get statusElement;
   @override
 
   /// [statusReason] An explanation as to why this task is held, failed, was
   ///  refused, etc.
+  @HiveField(21)
   CodeableConcept? get statusReason;
   @override
 
   /// [businessStatus] Contains business-specific nuances of the business
   ///  state.
+  @HiveField(22)
   CodeableConcept? get businessStatus;
   @override
-
-  /// [intent] Indicates the "level" of actionability associated with the Task,
-  /// i.e. i+R[9]Cs this a proposed task, a planned task, an actionable task,
-  ///  etc.
+  @HiveField(23)
+  @HiveField(24)
+  @HiveField(25)
   Code? get intent;
   @override
 
   /// [intentElement] Extensions for intent
   @JsonKey(name: '_intent')
+  @HiveField(26)
   Element? get intentElement;
   @override
 
   /// [priority] Indicates how quickly the Task should be addressed with
   ///  respect to other requests.
+  @HiveField(27)
   Code? get priority;
   @override
 
   /// [priorityElement] Extensions for priority
   @JsonKey(name: '_priority')
+  @HiveField(28)
   Element? get priorityElement;
   @override
 
   /// [code] A name or code (or both) briefly describing what the task
   ///  involves.
+  @HiveField(29)
   CodeableConcept? get code;
   @override
 
   /// [description] A free-text description of what is to be performed.
+  @HiveField(30)
   String? get description;
   @override
 
   /// [descriptionElement] Extensions for description
   @JsonKey(name: '_description')
+  @HiveField(31)
   Element? get descriptionElement;
   @override
 
   /// [focus] The request being actioned or the resource being manipulated by
   ///  this task.
+  @HiveField(32)
   Reference? get focus;
   @override
 
   /// [for] The entity who benefits from the performance of the service
   ///  specified in the task (e.g., the patient).
   @JsonKey(name: 'for')
+  @HiveField(33)
   Reference? get for_;
   @override
 
   /// [encounter] The healthcare event  (e.g. a patient and healthcare provider
   ///  interaction) during which this task was created.
+  @HiveField(34)
   Reference? get encounter;
   @override
 
   /// [executionPeriod] Identifies the time action was first taken against the
   /// task (start) and/or the time final action was taken against the task prior
   ///  to marking it as completed (end).
+  @HiveField(35)
   Period? get executionPeriod;
   @override
 
   /// [authoredOn] The date and time this task was created.
+  @HiveField(36)
   FhirDateTime? get authoredOn;
   @override
 
   /// [authoredOnElement] Extensions for authoredOn
   @JsonKey(name: '_authoredOn')
+  @HiveField(37)
   Element? get authoredOnElement;
   @override
 
   /// [lastModified] The date and time of last modification to this task.
+  @HiveField(38)
   FhirDateTime? get lastModified;
   @override
 
   /// [lastModifiedElement] Extensions for lastModified
   @JsonKey(name: '_lastModified')
+  @HiveField(39)
   Element? get lastModifiedElement;
   @override
 
   /// [requester] The creator of the task.
+  @HiveField(40)
   Reference? get requester;
   @override
 
   /// [performerType] The kind of participant that should perform the task.
+  @HiveField(41)
   List<CodeableConcept>? get performerType;
   @override
 
   /// [owner] Individual organization or Device currently responsible for task
   ///  execution.
+  @HiveField(42)
   Reference? get owner;
   @override
 
   /// [location] Principal physical location where the this task is performed.
+  @HiveField(43)
   Reference? get location;
   @override
 
   /// [reasonCode] A description or code indicating why this task needs to be
   ///  performed.
+  @HiveField(44)
   CodeableConcept? get reasonCode;
   @override
 
   /// [reasonReference] A resource reference indicating why this task needs to
   ///  be performed.
+  @HiveField(45)
   Reference? get reasonReference;
   @override
 
   /// [insurance] Insurance plans, coverage extensions, pre-authorizations
   ///  and/or pre-determinations that may be relevant to the Task.
+  @HiveField(46)
   List<Reference>? get insurance;
   @override
 
   /// [note] Free-text information captured about the task as it progresses.
+  @HiveField(47)
   List<Annotation>? get note;
   @override
 
   /// [relevantHistory] Links to Provenance records for past versions of this
   /// Task that identify key state transitions or updates that are likely to be
   ///  relevant to a user looking at the current version of the task.
+  @HiveField(48)
   List<Reference>? get relevantHistory;
   @override
 
@@ -8407,15 +9527,18 @@ abstract class _Task extends Task {
   /// seeking fulfillment (i.e. is asking for the request to be actioned), this
   /// element identifies any limitations on what parts of the referenced request
   ///  should be actioned.
+  @HiveField(49)
   TaskRestriction? get restriction;
   @override
 
   /// [input] Additional information that may be needed in the execution of the
   ///  task.
+  @HiveField(50)
   List<TaskInput>? get input;
   @override
 
   /// [output] Outputs produced by the Task.
+  @HiveField(51)
   List<TaskOutput>? get output;
   @override
   @JsonKey(ignore: true)
@@ -15047,32 +16170,39 @@ VerificationResult _$VerificationResultFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$VerificationResult {
   @JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -15081,12 +16211,14 @@ mixin _$VerificationResult {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -15096,6 +16228,7 @@ mixin _$VerificationResult {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -15111,82 +16244,102 @@ mixin _$VerificationResult {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [target] A resource that was validated.
+  @HiveField(11)
   List<Reference>? get target => throw _privateConstructorUsedError;
 
   /// [targetLocation] The fhirpath location(s) within the resource that was
   ///  validated.
+  @HiveField(12)
   List<String>? get targetLocation => throw _privateConstructorUsedError;
 
   /// [targetLocationElement] Extensions for targetLocation
   @JsonKey(name: '_targetLocation')
+  @HiveField(13)
   List<Element?>? get targetLocationElement =>
       throw _privateConstructorUsedError;
 
   /// [need] The frequency with which the target must be validated (none;
   ///  initial; periodic).
+  @HiveField(14)
   CodeableConcept? get need => throw _privateConstructorUsedError;
 
   /// [status] The validation status of the target (attested; validated; in
   ///  process; requires revalidation; validation failed; revalidation failed).
+  @HiveField(15)
   Code? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(16)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [statusDate] When the validation status was updated.
+  @HiveField(17)
   FhirDateTime? get statusDate => throw _privateConstructorUsedError;
 
   /// [statusDateElement] Extensions for statusDate
   @JsonKey(name: '_statusDate')
+  @HiveField(18)
   Element? get statusDateElement => throw _privateConstructorUsedError;
 
   /// [validationType] What the target is validated against (nothing; primary
   ///  source; multiple sources).
+  @HiveField(19)
   CodeableConcept? get validationType => throw _privateConstructorUsedError;
 
   /// [validationProcess] The primary process by which the target is validated
   /// (edit check; value set; primary source; multiple sources; standalone; in
   ///  context).
+  @HiveField(20)
   List<CodeableConcept>? get validationProcess =>
       throw _privateConstructorUsedError;
 
   /// [frequency] Frequency of revalidation.
+  @HiveField(21)
   Timing? get frequency => throw _privateConstructorUsedError;
 
   /// [lastPerformed] The date/time validation was last completed (including
   ///  failed validations).
+  @HiveField(22)
   FhirDateTime? get lastPerformed => throw _privateConstructorUsedError;
 
   /// [lastPerformedElement] Extensions for lastPerformed
   @JsonKey(name: '_lastPerformed')
+  @HiveField(23)
   Element? get lastPerformedElement => throw _privateConstructorUsedError;
 
   /// [nextScheduled] The date when target is next validated, if appropriate.
+  @HiveField(24)
   Date? get nextScheduled => throw _privateConstructorUsedError;
 
   /// [nextScheduledElement] Extensions for nextScheduled
   @JsonKey(name: '_nextScheduled')
+  @HiveField(25)
   Element? get nextScheduledElement => throw _privateConstructorUsedError;
 
   /// [failureAction] The result if validation fails (fatal; warning; record
   ///  only; none).
+  @HiveField(26)
   CodeableConcept? get failureAction => throw _privateConstructorUsedError;
 
   /// [primarySource] Information about the primary source(s) involved in
   ///  validation.
+  @HiveField(27)
   List<VerificationResultPrimarySource>? get primarySource =>
       throw _privateConstructorUsedError;
 
   /// [attestation] Information about the entity attesting to information.
+  @HiveField(28)
   VerificationResultAttestation? get attestation =>
       throw _privateConstructorUsedError;
 
   /// [validator] Information about the entity validating information.
+  @HiveField(29)
   List<VerificationResultValidator>? get validator =>
       throw _privateConstructorUsedError;
 
@@ -15204,44 +16357,74 @@ abstract class $VerificationResultCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Reference>? target,
-      List<String>? targetLocation,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Reference>? target,
+      @HiveField(12)
+          List<String>? targetLocation,
       @JsonKey(name: '_targetLocation')
+      @HiveField(13)
           List<Element?>? targetLocationElement,
-      CodeableConcept? need,
-      Code? status,
+      @HiveField(14)
+          CodeableConcept? need,
+      @HiveField(15)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(16)
           Element? statusElement,
-      FhirDateTime? statusDate,
+      @HiveField(17)
+          FhirDateTime? statusDate,
       @JsonKey(name: '_statusDate')
+      @HiveField(18)
           Element? statusDateElement,
-      CodeableConcept? validationType,
-      List<CodeableConcept>? validationProcess,
-      Timing? frequency,
-      FhirDateTime? lastPerformed,
+      @HiveField(19)
+          CodeableConcept? validationType,
+      @HiveField(20)
+          List<CodeableConcept>? validationProcess,
+      @HiveField(21)
+          Timing? frequency,
+      @HiveField(22)
+          FhirDateTime? lastPerformed,
       @JsonKey(name: '_lastPerformed')
+      @HiveField(23)
           Element? lastPerformedElement,
-      Date? nextScheduled,
+      @HiveField(24)
+          Date? nextScheduled,
       @JsonKey(name: '_nextScheduled')
+      @HiveField(25)
           Element? nextScheduledElement,
-      CodeableConcept? failureAction,
-      List<VerificationResultPrimarySource>? primarySource,
-      VerificationResultAttestation? attestation,
-      List<VerificationResultValidator>? validator});
+      @HiveField(26)
+          CodeableConcept? failureAction,
+      @HiveField(27)
+          List<VerificationResultPrimarySource>? primarySource,
+      @HiveField(28)
+          VerificationResultAttestation? attestation,
+      @HiveField(29)
+          List<VerificationResultValidator>? validator});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -15594,44 +16777,74 @@ abstract class _$$_VerificationResultCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Reference>? target,
-      List<String>? targetLocation,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Reference>? target,
+      @HiveField(12)
+          List<String>? targetLocation,
       @JsonKey(name: '_targetLocation')
+      @HiveField(13)
           List<Element?>? targetLocationElement,
-      CodeableConcept? need,
-      Code? status,
+      @HiveField(14)
+          CodeableConcept? need,
+      @HiveField(15)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(16)
           Element? statusElement,
-      FhirDateTime? statusDate,
+      @HiveField(17)
+          FhirDateTime? statusDate,
       @JsonKey(name: '_statusDate')
+      @HiveField(18)
           Element? statusDateElement,
-      CodeableConcept? validationType,
-      List<CodeableConcept>? validationProcess,
-      Timing? frequency,
-      FhirDateTime? lastPerformed,
+      @HiveField(19)
+          CodeableConcept? validationType,
+      @HiveField(20)
+          List<CodeableConcept>? validationProcess,
+      @HiveField(21)
+          Timing? frequency,
+      @HiveField(22)
+          FhirDateTime? lastPerformed,
       @JsonKey(name: '_lastPerformed')
+      @HiveField(23)
           Element? lastPerformedElement,
-      Date? nextScheduled,
+      @HiveField(24)
+          Date? nextScheduled,
       @JsonKey(name: '_nextScheduled')
+      @HiveField(25)
           Element? nextScheduledElement,
-      CodeableConcept? failureAction,
-      List<VerificationResultPrimarySource>? primarySource,
-      VerificationResultAttestation? attestation,
-      List<VerificationResultValidator>? validator});
+      @HiveField(26)
+          CodeableConcept? failureAction,
+      @HiveField(27)
+          List<VerificationResultPrimarySource>? primarySource,
+      @HiveField(28)
+          VerificationResultAttestation? attestation,
+      @HiveField(29)
+          List<VerificationResultValidator>? validator});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -15834,44 +17047,74 @@ class __$$_VerificationResultCopyWithImpl<$Res>
 class _$_VerificationResult extends _VerificationResult {
   _$_VerificationResult(
       {@JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
+      @HiveField(0)
           this.resourceType = R4ResourceType.VerificationResult,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Reference>? target,
-      final List<String>? targetLocation,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Reference>? target,
+      @HiveField(12)
+          final List<String>? targetLocation,
       @JsonKey(name: '_targetLocation')
+      @HiveField(13)
           final List<Element?>? targetLocationElement,
-      this.need,
-      this.status,
+      @HiveField(14)
+          this.need,
+      @HiveField(15)
+          this.status,
       @JsonKey(name: '_status')
+      @HiveField(16)
           this.statusElement,
-      this.statusDate,
+      @HiveField(17)
+          this.statusDate,
       @JsonKey(name: '_statusDate')
+      @HiveField(18)
           this.statusDateElement,
-      this.validationType,
-      final List<CodeableConcept>? validationProcess,
-      this.frequency,
-      this.lastPerformed,
+      @HiveField(19)
+          this.validationType,
+      @HiveField(20)
+          final List<CodeableConcept>? validationProcess,
+      @HiveField(21)
+          this.frequency,
+      @HiveField(22)
+          this.lastPerformed,
       @JsonKey(name: '_lastPerformed')
+      @HiveField(23)
           this.lastPerformedElement,
-      this.nextScheduled,
+      @HiveField(24)
+          this.nextScheduled,
       @JsonKey(name: '_nextScheduled')
+      @HiveField(25)
           this.nextScheduledElement,
-      this.failureAction,
-      final List<VerificationResultPrimarySource>? primarySource,
-      this.attestation,
-      final List<VerificationResultValidator>? validator})
+      @HiveField(26)
+          this.failureAction,
+      @HiveField(27)
+          final List<VerificationResultPrimarySource>? primarySource,
+      @HiveField(28)
+          this.attestation,
+      @HiveField(29)
+          final List<VerificationResultValidator>? validator})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -15888,17 +17131,20 @@ class _$_VerificationResult extends _VerificationResult {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
+  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
+  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
+  @HiveField(2)
   final Meta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -15906,20 +17152,24 @@ class _$_VerificationResult extends _VerificationResult {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
+  @HiveField(5)
   final Code? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
+  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -15929,6 +17179,7 @@ class _$_VerificationResult extends _VerificationResult {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
+  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -15942,6 +17193,7 @@ class _$_VerificationResult extends _VerificationResult {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -15966,6 +17218,7 @@ class _$_VerificationResult extends _VerificationResult {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -16003,6 +17256,7 @@ class _$_VerificationResult extends _VerificationResult {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -16017,6 +17271,7 @@ class _$_VerificationResult extends _VerificationResult {
 
   /// [target] A resource that was validated.
   @override
+  @HiveField(11)
   List<Reference>? get target {
     final value = _target;
     if (value == null) return null;
@@ -16032,6 +17287,7 @@ class _$_VerificationResult extends _VerificationResult {
   /// [targetLocation] The fhirpath location(s) within the resource that was
   ///  validated.
   @override
+  @HiveField(12)
   List<String>? get targetLocation {
     final value = _targetLocation;
     if (value == null) return null;
@@ -16046,6 +17302,7 @@ class _$_VerificationResult extends _VerificationResult {
   /// [targetLocationElement] Extensions for targetLocation
   @override
   @JsonKey(name: '_targetLocation')
+  @HiveField(13)
   List<Element?>? get targetLocationElement {
     final value = _targetLocationElement;
     if (value == null) return null;
@@ -16058,30 +17315,36 @@ class _$_VerificationResult extends _VerificationResult {
   /// [need] The frequency with which the target must be validated (none;
   ///  initial; periodic).
   @override
+  @HiveField(14)
   final CodeableConcept? need;
 
   /// [status] The validation status of the target (attested; validated; in
   ///  process; requires revalidation; validation failed; revalidation failed).
   @override
+  @HiveField(15)
   final Code? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
+  @HiveField(16)
   final Element? statusElement;
 
   /// [statusDate] When the validation status was updated.
   @override
+  @HiveField(17)
   final FhirDateTime? statusDate;
 
   /// [statusDateElement] Extensions for statusDate
   @override
   @JsonKey(name: '_statusDate')
+  @HiveField(18)
   final Element? statusDateElement;
 
   /// [validationType] What the target is validated against (nothing; primary
   ///  source; multiple sources).
   @override
+  @HiveField(19)
   final CodeableConcept? validationType;
 
   /// [validationProcess] The primary process by which the target is validated
@@ -16093,6 +17356,7 @@ class _$_VerificationResult extends _VerificationResult {
   /// (edit check; value set; primary source; multiple sources; standalone; in
   ///  context).
   @override
+  @HiveField(20)
   List<CodeableConcept>? get validationProcess {
     final value = _validationProcess;
     if (value == null) return null;
@@ -16104,30 +17368,36 @@ class _$_VerificationResult extends _VerificationResult {
 
   /// [frequency] Frequency of revalidation.
   @override
+  @HiveField(21)
   final Timing? frequency;
 
   /// [lastPerformed] The date/time validation was last completed (including
   ///  failed validations).
   @override
+  @HiveField(22)
   final FhirDateTime? lastPerformed;
 
   /// [lastPerformedElement] Extensions for lastPerformed
   @override
   @JsonKey(name: '_lastPerformed')
+  @HiveField(23)
   final Element? lastPerformedElement;
 
   /// [nextScheduled] The date when target is next validated, if appropriate.
   @override
+  @HiveField(24)
   final Date? nextScheduled;
 
   /// [nextScheduledElement] Extensions for nextScheduled
   @override
   @JsonKey(name: '_nextScheduled')
+  @HiveField(25)
   final Element? nextScheduledElement;
 
   /// [failureAction] The result if validation fails (fatal; warning; record
   ///  only; none).
   @override
+  @HiveField(26)
   final CodeableConcept? failureAction;
 
   /// [primarySource] Information about the primary source(s) involved in
@@ -16137,6 +17407,7 @@ class _$_VerificationResult extends _VerificationResult {
   /// [primarySource] Information about the primary source(s) involved in
   ///  validation.
   @override
+  @HiveField(27)
   List<VerificationResultPrimarySource>? get primarySource {
     final value = _primarySource;
     if (value == null) return null;
@@ -16147,6 +17418,7 @@ class _$_VerificationResult extends _VerificationResult {
 
   /// [attestation] Information about the entity attesting to information.
   @override
+  @HiveField(28)
   final VerificationResultAttestation? attestation;
 
   /// [validator] Information about the entity validating information.
@@ -16154,6 +17426,7 @@ class _$_VerificationResult extends _VerificationResult {
 
   /// [validator] Information about the entity validating information.
   @override
+  @HiveField(29)
   List<VerificationResultValidator>? get validator {
     final value = _validator;
     if (value == null) return null;
@@ -16282,44 +17555,74 @@ class _$_VerificationResult extends _VerificationResult {
 abstract class _VerificationResult extends VerificationResult {
   factory _VerificationResult(
           {@JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
+          @HiveField(0)
               final R4ResourceType resourceType,
-          final String? id,
-          final Meta? meta,
-          final FhirUri? implicitRules,
+          @HiveField(1)
+              final String? id,
+          @HiveField(2)
+              final Meta? meta,
+          @HiveField(3)
+              final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
+          @HiveField(4)
               final Element? implicitRulesElement,
-          final Code? language,
+          @HiveField(5)
+              final Code? language,
           @JsonKey(name: '_language')
+          @HiveField(6)
               final Element? languageElement,
-          final Narrative? text,
-          final List<Resource>? contained,
+          @HiveField(7)
+              final Narrative? text,
+          @HiveField(8)
+              final List<Resource>? contained,
           @JsonKey(name: 'extension')
+          @HiveField(9)
               final List<FhirExtension>? extension_,
-          final List<FhirExtension>? modifierExtension,
-          final List<Reference>? target,
-          final List<String>? targetLocation,
+          @HiveField(10)
+              final List<FhirExtension>? modifierExtension,
+          @HiveField(11)
+              final List<Reference>? target,
+          @HiveField(12)
+              final List<String>? targetLocation,
           @JsonKey(name: '_targetLocation')
+          @HiveField(13)
               final List<Element?>? targetLocationElement,
-          final CodeableConcept? need,
-          final Code? status,
+          @HiveField(14)
+              final CodeableConcept? need,
+          @HiveField(15)
+              final Code? status,
           @JsonKey(name: '_status')
+          @HiveField(16)
               final Element? statusElement,
-          final FhirDateTime? statusDate,
+          @HiveField(17)
+              final FhirDateTime? statusDate,
           @JsonKey(name: '_statusDate')
+          @HiveField(18)
               final Element? statusDateElement,
-          final CodeableConcept? validationType,
-          final List<CodeableConcept>? validationProcess,
-          final Timing? frequency,
-          final FhirDateTime? lastPerformed,
+          @HiveField(19)
+              final CodeableConcept? validationType,
+          @HiveField(20)
+              final List<CodeableConcept>? validationProcess,
+          @HiveField(21)
+              final Timing? frequency,
+          @HiveField(22)
+              final FhirDateTime? lastPerformed,
           @JsonKey(name: '_lastPerformed')
+          @HiveField(23)
               final Element? lastPerformedElement,
-          final Date? nextScheduled,
+          @HiveField(24)
+              final Date? nextScheduled,
           @JsonKey(name: '_nextScheduled')
+          @HiveField(25)
               final Element? nextScheduledElement,
-          final CodeableConcept? failureAction,
-          final List<VerificationResultPrimarySource>? primarySource,
-          final VerificationResultAttestation? attestation,
-          final List<VerificationResultValidator>? validator}) =
+          @HiveField(26)
+              final CodeableConcept? failureAction,
+          @HiveField(27)
+              final List<VerificationResultPrimarySource>? primarySource,
+          @HiveField(28)
+              final VerificationResultAttestation? attestation,
+          @HiveField(29)
+              final List<VerificationResultValidator>? validator}) =
       _$_VerificationResult;
   _VerificationResult._() : super._();
 
@@ -16328,17 +17631,20 @@ abstract class _VerificationResult extends VerificationResult {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta;
   @override
 
@@ -16346,20 +17652,24 @@ abstract class _VerificationResult extends VerificationResult {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -16369,6 +17679,7 @@ abstract class _VerificationResult extends VerificationResult {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -16376,6 +17687,7 @@ abstract class _VerificationResult extends VerificationResult {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -16386,6 +17698,7 @@ abstract class _VerificationResult extends VerificationResult {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -16402,96 +17715,116 @@ abstract class _VerificationResult extends VerificationResult {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [target] A resource that was validated.
+  @HiveField(11)
   List<Reference>? get target;
   @override
 
   /// [targetLocation] The fhirpath location(s) within the resource that was
   ///  validated.
+  @HiveField(12)
   List<String>? get targetLocation;
   @override
 
   /// [targetLocationElement] Extensions for targetLocation
   @JsonKey(name: '_targetLocation')
+  @HiveField(13)
   List<Element?>? get targetLocationElement;
   @override
 
   /// [need] The frequency with which the target must be validated (none;
   ///  initial; periodic).
+  @HiveField(14)
   CodeableConcept? get need;
   @override
 
   /// [status] The validation status of the target (attested; validated; in
   ///  process; requires revalidation; validation failed; revalidation failed).
+  @HiveField(15)
   Code? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(16)
   Element? get statusElement;
   @override
 
   /// [statusDate] When the validation status was updated.
+  @HiveField(17)
   FhirDateTime? get statusDate;
   @override
 
   /// [statusDateElement] Extensions for statusDate
   @JsonKey(name: '_statusDate')
+  @HiveField(18)
   Element? get statusDateElement;
   @override
 
   /// [validationType] What the target is validated against (nothing; primary
   ///  source; multiple sources).
+  @HiveField(19)
   CodeableConcept? get validationType;
   @override
 
   /// [validationProcess] The primary process by which the target is validated
   /// (edit check; value set; primary source; multiple sources; standalone; in
   ///  context).
+  @HiveField(20)
   List<CodeableConcept>? get validationProcess;
   @override
 
   /// [frequency] Frequency of revalidation.
+  @HiveField(21)
   Timing? get frequency;
   @override
 
   /// [lastPerformed] The date/time validation was last completed (including
   ///  failed validations).
+  @HiveField(22)
   FhirDateTime? get lastPerformed;
   @override
 
   /// [lastPerformedElement] Extensions for lastPerformed
   @JsonKey(name: '_lastPerformed')
+  @HiveField(23)
   Element? get lastPerformedElement;
   @override
 
   /// [nextScheduled] The date when target is next validated, if appropriate.
+  @HiveField(24)
   Date? get nextScheduled;
   @override
 
   /// [nextScheduledElement] Extensions for nextScheduled
   @JsonKey(name: '_nextScheduled')
+  @HiveField(25)
   Element? get nextScheduledElement;
   @override
 
   /// [failureAction] The result if validation fails (fatal; warning; record
   ///  only; none).
+  @HiveField(26)
   CodeableConcept? get failureAction;
   @override
 
   /// [primarySource] Information about the primary source(s) involved in
   ///  validation.
+  @HiveField(27)
   List<VerificationResultPrimarySource>? get primarySource;
   @override
 
   /// [attestation] Information about the entity attesting to information.
+  @HiveField(28)
   VerificationResultAttestation? get attestation;
   @override
 
   /// [validator] Information about the entity validating information.
+  @HiveField(29)
   List<VerificationResultValidator>? get validator;
   @override
   @JsonKey(ignore: true)

@@ -119,33 +119,40 @@ class Group with Resource, _$Group {
     @Default(R4ResourceType.Group)
     @JsonKey(unknownEnumValue: R4ResourceType.Group)
 
-        /// [resourceType] This is a Group resource
+    /// [resourceType] This is a Group resource
+    @HiveField(0)
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    String? id,
+    @HiveField(1)
+        String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    @HiveField(2)
+        Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    @HiveField(3)
+        FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
+    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    @HiveField(5)
+        Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
+    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -154,13 +161,15 @@ class Group with Resource, _$Group {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    Narrative? text,
+    @HiveField(7)
+        Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    List<Resource>? contained,
+    @HiveField(8)
+        List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -169,6 +178,7 @@ class Group with Resource, _$Group {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -184,66 +194,82 @@ class Group with Resource, _$Group {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(10)
+        List<FhirExtension>? modifierExtension,
 
     /// [identifier] A unique business identifier for this group.
-    List<Identifier>? identifier,
+    @HiveField(11)
+        List<Identifier>? identifier,
 
     /// [active] Indicates whether the record for the group is available for use
     ///  or is merely being retained for historical purposes.
-    Boolean? active,
+    @HiveField(12)
+        Boolean? active,
 
     /// [activeElement] Extensions for active
     @JsonKey(name: '_active')
+    @HiveField(13)
         Element? activeElement,
 
     /// [type] Identifies the broad classification of the kind of resources the
     ///  group includes.
-    Code? type,
+    @HiveField(14)
+        Code? type,
 
     /// [typeElement] Extensions for type
     @JsonKey(name: '_type')
+    @HiveField(15)
         Element? typeElement,
 
     /// [actual] If true, indicates that the resource refers to a specific group
     /// of real individuals.  If false, the group defines a set of intended
     ///  individuals.
-    Boolean? actual,
+    @HiveField(16)
+        Boolean? actual,
 
     /// [actualElement] Extensions for actual
     @JsonKey(name: '_actual')
+    @HiveField(17)
         Element? actualElement,
 
     /// [code] Provides a specific type of resource the group includes; e.g.
     ///  "cow", "syringe", etc.
-    CodeableConcept? code,
+    @HiveField(18)
+        CodeableConcept? code,
 
     /// [name] A label assigned to the group for human identification and
     ///  communication.
-    String? name,
+    @HiveField(19)
+        String? name,
 
     /// [nameElement] Extensions for name
     @JsonKey(name: '_name')
+    @HiveField(20)
         Element? nameElement,
 
     /// [quantity] A count of the number of resource instances that are part of
     ///  the group.
-    UnsignedInt? quantity,
+    @HiveField(21)
+        UnsignedInt? quantity,
 
     /// [quantityElement] Extensions for quantity
     @JsonKey(name: '_quantity')
+    @HiveField(22)
         Element? quantityElement,
 
     /// [managingEntity] Entity responsible for defining and maintaining Group
     ///  characteristics and/or registered members.
-    Reference? managingEntity,
+    @HiveField(23)
+        Reference? managingEntity,
 
     /// [characteristic] Identifies traits whose presence r absence is shared by
     ///  members of the group.
-    List<GroupCharacteristic>? characteristic,
+    @HiveField(24)
+        List<GroupCharacteristic>? characteristic,
 
     /// [member] Identifies the resource instances that are members of the group.
-    List<GroupMember>? member,
+    @HiveField(25)
+        List<GroupMember>? member,
   }) = _Group;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -681,33 +707,40 @@ class Patient with Resource, _$Patient {
     @Default(R4ResourceType.Patient)
     @JsonKey(unknownEnumValue: R4ResourceType.Patient)
 
-        /// [resourceType] This is a Patient resource
+    /// [resourceType] This is a Patient resource
+    @HiveField(0)
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    String? id,
+    @HiveField(1)
+        String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    @HiveField(2)
+        Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    @HiveField(3)
+        FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
+    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    @HiveField(5)
+        Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
+    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -716,13 +749,15 @@ class Patient with Resource, _$Patient {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    Narrative? text,
+    @HiveField(7)
+        Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    List<Resource>? contained,
+    @HiveField(8)
+        List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -731,6 +766,7 @@ class Patient with Resource, _$Patient {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -746,10 +782,12 @@ class Patient with Resource, _$Patient {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(10)
+        List<FhirExtension>? modifierExtension,
 
     /// [identifier] An identifier for this patient.
-    List<Identifier>? identifier,
+    @HiveField(11)
+        List<Identifier>? identifier,
 
     /// [active] Whether this patient record is in active use.
     /// Many systems use this property to mark as non-current patients, such as
@@ -758,92 +796,116 @@ class Patient with Resource, _$Patient {
     /// It is often used to filter patient lists to exclude inactive patients
     /// Deceased patients may also be marked as inactive for the same reasons, but
     ///  may be active for some time after death.
-    Boolean? active,
+    @HiveField(12)
+        Boolean? active,
 
     /// [activeElement] Extensions for active
     @JsonKey(name: '_active')
+    @HiveField(13)
         Element? activeElement,
 
     /// [name] A name associated with the individual.
-    List<HumanName>? name,
+    @HiveField(14)
+        List<HumanName>? name,
 
     /// [telecom] A contact detail (e.g. a telephone number or an email address)
     ///  by which the individual may be contacted.
-    List<ContactPoint>? telecom,
+    @HiveField(15)
+        List<ContactPoint>? telecom,
 
     /// [gender] Administrative Gender - the gender that the patient is
     ///  considered to have for administration and record keeping purposes.
-    Code? gender,
+    @HiveField(16)
+        Code? gender,
 
     /// [genderElement] Extensions for gender
     @JsonKey(name: '_gender')
+    @HiveField(17)
         Element? genderElement,
 
     /// [birthDate] The date of birth for the individual.
-    Date? birthDate,
+    @HiveField(18)
+        Date? birthDate,
 
     /// [birthDateElement] Extensions for birthDate
     @JsonKey(name: '_birthDate')
+    @HiveField(19)
         Element? birthDateElement,
 
     /// [deceasedBoolean] Indicates if the individual is deceased or not.
-    Boolean? deceasedBoolean,
+    @HiveField(20)
+        Boolean? deceasedBoolean,
 
     /// [deceasedBooleanElement] Extensions for deceasedBoolean
     @JsonKey(name: '_deceasedBoolean')
+    @HiveField(21)
         Element? deceasedBooleanElement,
 
     /// [deceasedDateTime] Indicates if the individual is deceased or not.
-    FhirDateTime? deceasedDateTime,
+    @HiveField(22)
+        FhirDateTime? deceasedDateTime,
 
     /// [deceasedDateTimeElement] Extensions for deceasedDateTime
     @JsonKey(name: '_deceasedDateTime')
+    @HiveField(23)
         Element? deceasedDateTimeElement,
 
     /// [address] An address for the individual.
-    List<Address>? address,
+    @HiveField(24)
+        List<Address>? address,
 
     /// [maritalStatus] This field contains a patient's most recent marital
     ///  (civil) status.
-    CodeableConcept? maritalStatus,
+    @HiveField(25)
+        CodeableConcept? maritalStatus,
 
     /// [multipleBirthBoolean] Indicates whether the patient is part of a
     ///  multiple (boolean) or indicates the actual birth order (integer).
-    Boolean? multipleBirthBoolean,
+    @HiveField(26)
+        Boolean? multipleBirthBoolean,
     @JsonKey(name: '_multipleBirthBoolean')
 
-        /// [multipleBirthBooleanElement] Extensions for multipleBirthBoolean
+    /// [multipleBirthBooleanElement] Extensions for multipleBirthBoolean
+    @HiveField(27)
         Element? multipleBirthBooleanElement,
 
     /// [multipleBirthInteger] Indicates whether the patient is part of a
     ///  multiple (boolean) or indicates the actual birth order (integer).
-    Integer? multipleBirthInteger,
+    @HiveField(28)
+        Integer? multipleBirthInteger,
     @JsonKey(name: '_multipleBirthInteger')
 
-        /// [multipleBirthIntegerElement] Extensions for multipleBirthInteger
+    /// [multipleBirthIntegerElement] Extensions for multipleBirthInteger
+    @HiveField(29)
         Element? multipleBirthIntegerElement,
 
     /// [photo] Image of the patient.
-    List<Attachment>? photo,
+    @HiveField(30)
+        List<Attachment>? photo,
 
     /// [contact] A contact party (e.g. guardian, partner, friend) for the
     ///  patient.
-    List<PatientContact>? contact,
+    @HiveField(31)
+        List<PatientContact>? contact,
 
     /// [communication] A language which may be used to communicate with the
     ///  patient about his or her health.
-    List<PatientCommunication>? communication,
+    @HiveField(32)
+        List<PatientCommunication>? communication,
 
     /// [generalPractitioner] Patient's nominated care provider.
-    List<Reference>? generalPractitioner,
+    @HiveField(33)
+        List<Reference>? generalPractitioner,
 
     /// [managingOrganization] Organization that is the custodian of the patient
     ///  record.
-    Reference? managingOrganization,
+    @HiveField(34)
+        Reference? managingOrganization,
 
     /// [link] Link to another patient resource that concerns the same actual
     ///  patient.
-    List<PatientLink>? link,
+    @HiveField(35)
+        List<PatientLink>? link,
   }) = _Patient;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1336,33 +1398,40 @@ class Person with Resource, _$Person {
     @Default(R4ResourceType.Person)
     @JsonKey(unknownEnumValue: R4ResourceType.Person)
 
-        /// [resourceType] This is a Person resource
+    /// [resourceType] This is a Person resource
+    @HiveField(0)
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    String? id,
+    @HiveField(1)
+        String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    @HiveField(2)
+        Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    @HiveField(3)
+        FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
+    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    @HiveField(5)
+        Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
+    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -1371,13 +1440,15 @@ class Person with Resource, _$Person {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    Narrative? text,
+    @HiveField(7)
+        Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    List<Resource>? contained,
+    @HiveField(8)
+        List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -1386,6 +1457,7 @@ class Person with Resource, _$Person {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -1401,52 +1473,66 @@ class Person with Resource, _$Person {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(10)
+        List<FhirExtension>? modifierExtension,
 
     /// [identifier] Identifier for a person within a particular scope.
-    List<Identifier>? identifier,
+    @HiveField(11)
+        List<Identifier>? identifier,
 
     /// [name] A name associated with the person.
-    List<HumanName>? name,
+    @HiveField(12)
+        List<HumanName>? name,
 
     /// [telecom] A contact detail for the person, e.g. a telephone number or an
     ///  email address.
-    List<ContactPoint>? telecom,
+    @HiveField(13)
+        List<ContactPoint>? telecom,
 
     /// [gender] Administrative Gender.
-    Code? gender,
+    @HiveField(14)
+        Code? gender,
 
     /// [genderElement] Extensions for gender
     @JsonKey(name: '_gender')
+    @HiveField(15)
         Element? genderElement,
 
     /// [birthDate] The birth date for the person.
-    Date? birthDate,
+    @HiveField(16)
+        Date? birthDate,
 
     /// [birthDateElement] Extensions for birthDate
     @JsonKey(name: '_birthDate')
+    @HiveField(17)
         Element? birthDateElement,
 
     /// [address] One or more addresses for the person.
-    List<Address>? address,
+    @HiveField(18)
+        List<Address>? address,
 
     /// [photo] An image that can be displayed as a thumbnail of the person to
     ///  enhance the identification of the individual.
-    Attachment? photo,
+    @HiveField(19)
+        Attachment? photo,
 
     /// [managingOrganization] The organization that is the custodian of the
     ///  person record.
-    Reference? managingOrganization,
+    @HiveField(20)
+        Reference? managingOrganization,
 
     /// [active] Whether this person's record is in active use.
-    Boolean? active,
+    @HiveField(21)
+        Boolean? active,
 
     /// [activeElement] Extensions for active
     @JsonKey(name: '_active')
+    @HiveField(22)
         Element? activeElement,
 
     /// [link] Link to a resource that concerns the same actual person.
-    List<PersonLink>? link,
+    @HiveField(23)
+        List<PersonLink>? link,
   }) = _Person;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1687,33 +1773,40 @@ class Practitioner with Resource, _$Practitioner {
     @Default(R4ResourceType.Practitioner)
     @JsonKey(unknownEnumValue: R4ResourceType.Practitioner)
 
-        /// [resourceType] This is a Practitioner resource
+    /// [resourceType] This is a Practitioner resource
+    @HiveField(0)
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    String? id,
+    @HiveField(1)
+        String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    @HiveField(2)
+        Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    @HiveField(3)
+        FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
+    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    @HiveField(5)
+        Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
+    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -1722,13 +1815,15 @@ class Practitioner with Resource, _$Practitioner {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    Narrative? text,
+    @HiveField(7)
+        Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    List<Resource>? contained,
+    @HiveField(8)
+        List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -1737,6 +1832,7 @@ class Practitioner with Resource, _$Practitioner {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -1752,59 +1848,73 @@ class Practitioner with Resource, _$Practitioner {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(10)
+        List<FhirExtension>? modifierExtension,
 
     /// [identifier] An identifier that applies to this person in this role.
-    List<Identifier>? identifier,
+    @HiveField(11)
+        List<Identifier>? identifier,
 
     /// [active] Whether this practitioner's record is in active use.
-    Boolean? active,
+    @HiveField(12)
+        Boolean? active,
 
     /// [activeElement] Extensions for active
     @JsonKey(name: '_active')
+    @HiveField(13)
         Element? activeElement,
 
     /// [name] The name(s) associated with the practitioner.
-    List<HumanName>? name,
+    @HiveField(14)
+        List<HumanName>? name,
 
     /// [telecom] A contact detail for the practitioner, e.g. a telephone number
     ///  or an email address.
-    List<ContactPoint>? telecom,
+    @HiveField(15)
+        List<ContactPoint>? telecom,
 
     /// [address] Address(es) of the practitioner that are not role specific
     ///  (typically home address).
     /// Work addresses are not typically entered in this property as they are
     ///  usually role dependent.
-    List<Address>? address,
+    @HiveField(16)
+        List<Address>? address,
 
     /// [gender] Administrative Gender - the gender that the person is considered
     ///  to have for administration and record keeping purposes.
-    Code? gender,
+    @HiveField(17)
+        Code? gender,
 
     /// [genderElement] Extensions for gender
     @JsonKey(name: '_gender')
+    @HiveField(18)
         Element? genderElement,
 
     /// [birthDate] The date of birth for the practitioner.
-    Date? birthDate,
+    @HiveField(19)
+        Date? birthDate,
 
     /// [birthDateElement] Extensions for birthDate
     @JsonKey(name: '_birthDate')
+    @HiveField(20)
         Element? birthDateElement,
 
     /// [photo] Image of the person.
-    List<Attachment>? photo,
+    @HiveField(21)
+        List<Attachment>? photo,
 
     /// [qualification] The official certifications, training, and licenses that
     /// authorize or otherwise pertain to the provision of care by the
     /// practitioner.  For example, a medical license issued by a medical board
     /// authorizing the practitioner to practice medicine within a certian
     ///  locality.
-    List<PractitionerQualification>? qualification,
+    @HiveField(22)
+        List<PractitionerQualification>? qualification,
 
     /// [communication] A language the practitioner can use in patient
     ///  communication.
-    List<CodeableConcept>? communication,
+    @HiveField(23)
+        List<CodeableConcept>? communication,
   }) = _Practitioner;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2058,33 +2168,40 @@ class PractitionerRole with Resource, _$PractitionerRole {
     @Default(R4ResourceType.PractitionerRole)
     @JsonKey(unknownEnumValue: R4ResourceType.PractitionerRole)
 
-        /// [resourceType] This is a PractitionerRole resource
+    /// [resourceType] This is a PractitionerRole resource
+    @HiveField(0)
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    String? id,
+    @HiveField(1)
+        String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    @HiveField(2)
+        Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    @HiveField(3)
+        FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
+    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    @HiveField(5)
+        Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
+    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -2093,13 +2210,15 @@ class PractitionerRole with Resource, _$PractitionerRole {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    Narrative? text,
+    @HiveField(7)
+        Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    List<Resource>? contained,
+    @HiveField(8)
+        List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -2108,6 +2227,7 @@ class PractitionerRole with Resource, _$PractitionerRole {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -2123,68 +2243,86 @@ class PractitionerRole with Resource, _$PractitionerRole {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(10)
+        List<FhirExtension>? modifierExtension,
 
     /// [identifier] Business Identifiers that are specific to a role/location.
-    List<Identifier>? identifier,
+    @HiveField(11)
+        List<Identifier>? identifier,
 
     /// [active] Whether this practitioner role record is in active use.
-    Boolean? active,
+    @HiveField(12)
+        Boolean? active,
 
     /// [activeElement] Extensions for active
     @JsonKey(name: '_active')
+    @HiveField(13)
         Element? activeElement,
 
     /// [period] The period during which the person is authorized to act as a
     ///  practitioner in these role(s) for the organization.
-    Period? period,
+    @HiveField(14)
+        Period? period,
 
     /// [practitioner] Practitioner that is able to provide the defined services
     ///  for the organization.
-    Reference? practitioner,
+    @HiveField(15)
+        Reference? practitioner,
 
     /// [organization] The organization where the Practitioner performs the roles
     ///  associated.
-    Reference? organization,
+    @HiveField(16)
+        Reference? organization,
 
     /// [code] Roles which this practitioner is authorized to perform for the
     ///  organization.
-    List<CodeableConcept>? code,
+    @HiveField(17)
+        List<CodeableConcept>? code,
 
     /// [specialty] Specific specialty of the practitioner.
-    List<CodeableConcept>? specialty,
+    @HiveField(18)
+        List<CodeableConcept>? specialty,
 
     /// [location] The location(s) at which this practitioner provides care.
-    List<Reference>? location,
+    @HiveField(19)
+        List<Reference>? location,
 
     /// [healthcareService] The list of healthcare services that this worker
     ///  provides for this role's Organization/Location(s).
-    List<Reference>? healthcareService,
+    @HiveField(20)
+        List<Reference>? healthcareService,
 
     /// [telecom] Contact details that are specific to the role/location/service.
-    List<ContactPoint>? telecom,
+    @HiveField(21)
+        List<ContactPoint>? telecom,
 
     /// [availableTime] A collection of times the practitioner is available or
     ///  performing this role at the location and/or healthcareservice.
-    List<PractitionerRoleAvailableTime>? availableTime,
+    @HiveField(22)
+        List<PractitionerRoleAvailableTime>? availableTime,
 
     /// [notAvailable] The practitioner is not available or performing this role
     ///  during this period of time due to the provided reason.
-    List<PractitionerRoleNotAvailable>? notAvailable,
+    @HiveField(23)
+        List<PractitionerRoleNotAvailable>? notAvailable,
+    @HiveField(24)
 
     /// [availabilityExceptions] A description of site availability exceptions,
     /// e.g. public holiday availability. Succinctly describing all possible
     /// exceptions to normal site availability as details in the available Times
     ///  and not available Times.
-    String? availabilityExceptions,
+    @HiveField(25)
+        String? availabilityExceptions,
     @JsonKey(name: '_availabilityExceptions')
 
-        /// [availabilityExceptionsElement] Extensions for availabilityExceptions
+    /// [availabilityExceptionsElement] Extensions for availabilityExceptions
+    @HiveField(26)
         Element? availabilityExceptionsElement,
 
     /// [endpoint] Technical endpoints providing access to services operated for
     ///  the practitioner with this role.
-    List<Reference>? endpoint,
+    @HiveField(27)
+        List<Reference>? endpoint,
   }) = _PractitionerRole;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2570,33 +2708,40 @@ class RelatedPerson with Resource, _$RelatedPerson {
     @Default(R4ResourceType.RelatedPerson)
     @JsonKey(unknownEnumValue: R4ResourceType.RelatedPerson)
 
-        /// [resourceType] This is a RelatedPerson resource
+    /// [resourceType] This is a RelatedPerson resource
+    @HiveField(0)
         R4ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    String? id,
+    @HiveField(1)
+        String? id,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
     ///  be associated with version changes to the resource.
-    Meta? meta,
+    @HiveField(2)
+        Meta? meta,
 
     /// [implicitRules] A reference to a set of rules that were followed when the
     /// resource was constructed, and which must be understood when processing the
     /// content. Often, this is a reference to an implementation guide that
     ///  defines the special rules along with other profiles etc.
-    FhirUri? implicitRules,
+    @HiveField(3)
+        FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules')
+    @HiveField(4)
         Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
-    Code? language,
+    @HiveField(5)
+        Code? language,
 
     /// [languageElement] Extensions for language
     @JsonKey(name: '_language')
+    @HiveField(6)
         Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
@@ -2605,13 +2750,15 @@ class RelatedPerson with Resource, _$RelatedPerson {
     /// contain sufficient detail to make it "clinically safe" for a human to just
     /// read the narrative. Resource definitions may define what content should be
     ///  represented in the narrative to ensure clinical safety.
-    Narrative? text,
+    @HiveField(7)
+        Narrative? text,
 
     /// [contained] These resources do not have an independent existence apart
     /// from the resource that contains them - they cannot be identified
     /// independently, and nor can they have their own independent transaction
     ///  scope.
-    List<Resource>? contained,
+    @HiveField(8)
+        List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the resource. To make the use of
@@ -2620,6 +2767,7 @@ class RelatedPerson with Resource, _$RelatedPerson {
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
     @JsonKey(name: 'extension')
+    @HiveField(9)
         List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
@@ -2635,60 +2783,76 @@ class RelatedPerson with Resource, _$RelatedPerson {
     /// Modifier extensions SHALL NOT change the meaning of any elements on
     /// Resource or DomainResource (including cannot change the meaning of
     ///  modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    @HiveField(10)
+        List<FhirExtension>? modifierExtension,
 
     /// [identifier] Identifier for a person within a particular scope.
-    List<Identifier>? identifier,
+    @HiveField(11)
+        List<Identifier>? identifier,
 
     /// [active] Whether this related person record is in active use.
-    Boolean? active,
+    @HiveField(12)
+        Boolean? active,
 
     /// [activeElement] Extensions for active
     @JsonKey(name: '_active')
+    @HiveField(13)
         Element? activeElement,
 
     /// [patient] The patient this person is related to.
-    required Reference patient,
+    @HiveField(14)
+        required Reference patient,
 
     /// [relationship] The nature of the relationship between a patient and the
     ///  related person.
-    List<CodeableConcept>? relationship,
+    @HiveField(15)
+        List<CodeableConcept>? relationship,
 
     /// [name] A name associated with the person.
-    List<HumanName>? name,
+    @HiveField(16)
+        List<HumanName>? name,
 
     /// [telecom] A contact detail for the person, e.g. a telephone number or an
     ///  email address.
-    List<ContactPoint>? telecom,
+    @HiveField(17)
+        List<ContactPoint>? telecom,
 
     /// [gender] Administrative Gender - the gender that the person is considered
     ///  to have for administration and record keeping purposes.
-    Code? gender,
+    @HiveField(18)
+        Code? gender,
 
     /// [genderElement] Extensions for gender
     @JsonKey(name: '_gender')
+    @HiveField(19)
         Element? genderElement,
 
     /// [birthDate] The date on which the related person was born.
-    Date? birthDate,
+    @HiveField(20)
+        Date? birthDate,
 
     /// [birthDateElement] Extensions for birthDate
     @JsonKey(name: '_birthDate')
+    @HiveField(21)
         Element? birthDateElement,
 
     /// [address] Address where the related person can be contacted or visited.
-    List<Address>? address,
+    @HiveField(22)
+        List<Address>? address,
 
     /// [photo] Image of the person.
-    List<Attachment>? photo,
+    @HiveField(23)
+        List<Attachment>? photo,
 
     /// [period] The period of time during which this relationship is or was
     ///  active. If there are no dates defined, then the interval is unknown.
-    Period? period,
+    @HiveField(24)
+        Period? period,
 
     /// [communication] A language which may be used to communicate with about
     ///  the patient's health.
-    List<RelatedPersonCommunication>? communication,
+    @HiveField(25)
+        List<RelatedPersonCommunication>? communication,
   }) = _RelatedPerson;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
