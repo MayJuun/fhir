@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -144,6 +145,7 @@ class AdverseEvent with Resource, _$AdverseEvent {
   /// [referenceDocument] AdverseEvent.referenceDocument.
   ///
   /// [study] AdverseEvent.study.
+  @HiveType(typeId: 58, adapterName: 'AdverseEventAdapter')
   factory AdverseEvent({
     @Default(R4ResourceType.AdverseEvent)
     @JsonKey(unknownEnumValue: R4ResourceType.AdverseEvent)
@@ -529,6 +531,7 @@ class AllergyIntolerance with Resource, _$AllergyIntolerance {
   ///
   /// [reaction] Details about each adverse reaction event linked to exposure
   ///  to the identified substance.
+  @HiveType(typeId: 59, adapterName: 'AllergyIntoleranceAdapter')
   factory AllergyIntolerance({
     @Default(R4ResourceType.AllergyIntolerance)
     @JsonKey(unknownEnumValue: R4ResourceType.AllergyIntolerance)
@@ -856,6 +859,7 @@ class ClinicalImpression with Resource, _$ClinicalImpression {
   /// [note] Commentary about the impression, typically recorded after the
   /// impression itself was made, though supplemental notes by the original
   ///  author could also appear.
+  @HiveType(typeId: 60, adapterName: 'ClinicalImpressionAdapter')
   factory ClinicalImpression({
     @Default(R4ResourceType.ClinicalImpression)
     @JsonKey(unknownEnumValue: R4ResourceType.ClinicalImpression)
@@ -1256,6 +1260,7 @@ class Condition with Resource, _$Condition {
   /// [note] Additional information about the Condition. This is a general
   /// notes/comments entry  for description of the Condition, its diagnosis and
   ///  prognosis.
+  @HiveType(typeId: 61, adapterName: 'ConditionAdapter')
   factory Condition({
     @Default(R4ResourceType.Condition)
     @JsonKey(unknownEnumValue: R4ResourceType.Condition)
@@ -1602,6 +1607,7 @@ class DetectedIssue with Resource, _$DetectedIssue {
   /// reduce or eliminate the likelihood of the risk identified by the detected
   /// issue from manifesting.  Can also reflect an observation of known
   ///  mitigating factors that may reduce/eliminate the need for any action.
+  @HiveType(typeId: 62, adapterName: 'DetectedIssueAdapter')
   factory DetectedIssue({
     @Default(R4ResourceType.DetectedIssue)
     @JsonKey(unknownEnumValue: R4ResourceType.DetectedIssue)
@@ -1990,6 +1996,7 @@ class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
   /// member had. This is a repeating section to allow a system to represent
   /// more than one condition per resource, though there is nothing stopping
   ///  multiple resources - one per condition.
+  @HiveType(typeId: 63, adapterName: 'FamilyMemberHistoryAdapter')
   factory FamilyMemberHistory({
     @Default(R4ResourceType.FamilyMemberHistory)
     @JsonKey(unknownEnumValue: R4ResourceType.FamilyMemberHistory)
@@ -2368,6 +2375,7 @@ class Procedure with Resource, _$Procedure {
   ///
   /// [usedCode] Identifies coded items that were used as part of the
   ///  procedure.
+  @HiveType(typeId: 64, adapterName: 'ProcedureAdapter')
   factory Procedure({
     @Default(R4ResourceType.Procedure)
     @JsonKey(unknownEnumValue: R4ResourceType.Procedure)

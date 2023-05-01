@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -168,6 +169,7 @@ class Immunization with Resource, _$Immunization {
   ///
   /// [protocolApplied] The protocol (set of recommendations) being followed by
   ///  the provider who administered the dose.
+  @HiveType(typeId: 42, adapterName: 'ImmunizationAdapter')
   factory Immunization({
     @Default(R4ResourceType.Immunization)
     @JsonKey(unknownEnumValue: R4ResourceType.Immunization)
@@ -1053,6 +1055,7 @@ class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
   /// [seriesDosesString] The recommended number of doses to achieve immunity.
   ///
   /// [seriesDosesStringElement] Extensions for seriesDosesString
+  @HiveType(typeId: 43, adapterName: 'ImmunizationEvaluationAdapter')
   factory ImmunizationEvaluation({
     @Default(R4ResourceType.ImmunizationEvaluation)
     @JsonKey(unknownEnumValue: R4ResourceType.ImmunizationEvaluation)
@@ -1316,6 +1319,7 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
   ///  ACIP).
   ///
   /// [recommendation] Vaccine administration recommendations.
+  @HiveType(typeId: 44, adapterName: 'ImmunizationRecommendationAdapter')
   factory ImmunizationRecommendation({
     @Default(R4ResourceType.ImmunizationRecommendation)
     @JsonKey(unknownEnumValue: R4ResourceType.ImmunizationRecommendation)
@@ -1839,6 +1843,7 @@ class Medication with Resource, _$Medication {
   ///  product.
   ///
   /// [batch] Information that only applies to packages (not products).
+  @HiveType(typeId: 45, adapterName: 'MedicationAdapter')
   factory Medication({
     @Default(R4ResourceType.Medication)
     @JsonKey(unknownEnumValue: R4ResourceType.Medication)
@@ -2367,6 +2372,7 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
   ///
   /// [eventHistory] A summary of the events of interest that have occurred,
   ///  such as when the administration was verified.
+  @HiveType(typeId: 46, adapterName: 'MedicationAdministrationAdapter')
   factory MedicationAdministration({
     @Default(R4ResourceType.MedicationAdministration)
     @JsonKey(unknownEnumValue: R4ResourceType.MedicationAdministration)
@@ -3006,6 +3012,7 @@ class MedicationDispense with Resource, _$MedicationDispense {
   ///
   /// [eventHistory] A summary of the events of interest that have occurred,
   ///  such as when the dispense was verified.
+  @HiveType(typeId: 47, adapterName: 'MedicationDispenseAdapter')
   factory MedicationDispense({
     @Default(R4ResourceType.MedicationDispense)
     @JsonKey(unknownEnumValue: R4ResourceType.MedicationDispense)
@@ -3608,6 +3615,7 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
   ///
   /// [kinetics] The time course of drug absorption, distribution, metabolism
   ///  and excretion of a medication from the body.
+  @HiveType(typeId: 48, adapterName: 'MedicationKnowledgeAdapter')
   factory MedicationKnowledge({
     @Default(R4ResourceType.MedicationKnowledge)
     @JsonKey(unknownEnumValue: R4ResourceType.MedicationKnowledge)
@@ -5724,6 +5732,7 @@ class MedicationRequest with Resource, _$MedicationRequest {
   /// resource or fulfilling request or event resources that identify key state
   /// transitions or updates that are likely to be relevant to a user looking at
   ///  the current version of the resource.
+  @HiveType(typeId: 49, adapterName: 'MedicationRequestAdapter')
   factory MedicationRequest({
     @Default(R4ResourceType.MedicationRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.MedicationRequest)
@@ -6557,6 +6566,7 @@ class MedicationStatement with Resource, _$MedicationStatement {
   ///
   /// [dosage] Indicates how the medication is/was or should be taken by the
   ///  patient.
+  @HiveType(typeId: 50, adapterName: 'MedicationStatementAdapter')
   factory MedicationStatement({
     @Default(R4ResourceType.MedicationStatement)
     @JsonKey(unknownEnumValue: R4ResourceType.MedicationStatement)

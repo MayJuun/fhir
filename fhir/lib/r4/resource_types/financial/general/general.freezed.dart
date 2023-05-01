@@ -683,6 +683,7 @@ class __$$_AccountCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 68, adapterName: 'AccountAdapter')
 class _$_Account extends _Account {
   _$_Account(
       {@JsonKey(unknownEnumValue: R4ResourceType.Account)
@@ -3310,6 +3311,7 @@ class __$$_ChargeItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 69, adapterName: 'ChargeItemAdapter')
 class _$_ChargeItem extends _ChargeItem {
   _$_ChargeItem(
       {@JsonKey(unknownEnumValue: R4ResourceType.ChargeItem)
@@ -5803,6 +5805,7 @@ class __$$_ChargeItemDefinitionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 70, adapterName: 'ChargeItemDefinitionAdapter')
 class _$_ChargeItemDefinition extends _ChargeItemDefinition {
   _$_ChargeItemDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.ChargeItemDefinition)
@@ -9774,6 +9777,7 @@ class __$$_ContractCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 71, adapterName: 'ContractAdapter')
 class _$_Contract extends _Contract {
   _$_Contract(
       {@JsonKey(unknownEnumValue: R4ResourceType.Contract)
@@ -23517,6 +23521,7 @@ class __$$_ExplanationOfBenefitCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 72, adapterName: 'ExplanationOfBenefitAdapter')
 class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   _$_ExplanationOfBenefit(
       {@JsonKey(unknownEnumValue: R4ResourceType.ExplanationOfBenefit)
@@ -40416,6 +40421,7 @@ class __$$_InsurancePlanCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 73, adapterName: 'InsurancePlanAdapter')
 class _$_InsurancePlan extends _InsurancePlan {
   _$_InsurancePlan(
       {@JsonKey(unknownEnumValue: R4ResourceType.InsurancePlan)

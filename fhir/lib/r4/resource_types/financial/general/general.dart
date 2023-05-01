@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -110,6 +111,7 @@ class Account with Resource, _$Account {
   ///  payment options fall short.
   ///
   /// [partOf] Reference to a parent Account.
+  @HiveType(typeId: 68, adapterName: 'AccountAdapter')
   factory Account({
     @Default(R4ResourceType.Account)
     @JsonKey(unknownEnumValue: R4ResourceType.Account)
@@ -651,6 +653,7 @@ class ChargeItem with Resource, _$ChargeItem {
   ///  participants.
   ///
   /// [supportingInformation] Further information supporting this charge.
+  @HiveType(typeId: 69, adapterName: 'ChargeItemAdapter')
   factory ChargeItem({
     @Default(R4ResourceType.ChargeItem)
     @JsonKey(unknownEnumValue: R4ResourceType.ChargeItem)
@@ -1173,6 +1176,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
   /// [propertyGroup] Group of properties which are applicable under the same
   /// conditions. If no applicability rules are established for the group, then
   ///  all properties always apply.
+  @HiveType(typeId: 70, adapterName: 'ChargeItemDefinitionAdapter')
   factory ChargeItemDefinition({
     @Default(R4ResourceType.ChargeItemDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.ChargeItemDefinition)
@@ -1998,6 +2002,7 @@ class Contract with Resource, _$Contract {
   /// and legally recognized representation of the Contract, which is considered
   /// the "source of truth" and which would be the basis for legal action
   ///  related to enforcement of this Contract.
+  @HiveType(typeId: 71, adapterName: 'ContractAdapter')
   factory Contract({
     @Default(R4ResourceType.Contract)
     @JsonKey(unknownEnumValue: R4ResourceType.Contract)
@@ -4905,6 +4910,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
   /// [benefitPeriod] The term of the benefits documented in this response.
   ///
   /// [benefitBalance] Balance by Benefit Category.
+  @HiveType(typeId: 72, adapterName: 'ExplanationOfBenefitAdapter')
   factory ExplanationOfBenefit({
     @Default(R4ResourceType.ExplanationOfBenefit)
     @JsonKey(unknownEnumValue: R4ResourceType.ExplanationOfBenefit)
@@ -8494,6 +8500,7 @@ class InsurancePlan with Resource, _$InsurancePlan {
   /// [coverage] Details about the coverage offered by the insurance product.
   ///
   /// [plan] Details about an insurance plan.
+  @HiveType(typeId: 73, adapterName: 'InsurancePlanAdapter')
   factory InsurancePlan({
     @Default(R4ResourceType.InsurancePlan)
     @JsonKey(unknownEnumValue: R4ResourceType.InsurancePlan)

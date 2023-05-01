@@ -501,6 +501,7 @@ class __$$_BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res, _$_Basic>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 94, adapterName: 'BasicAdapter')
 class _$_Basic extends _Basic {
   _$_Basic(
       {@JsonKey(unknownEnumValue: R4ResourceType.Basic)
@@ -1282,6 +1283,7 @@ class __$$_BinaryCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 95, adapterName: 'BinaryAdapter')
 class _$_Binary extends _Binary {
   _$_Binary(
       {@JsonKey(unknownEnumValue: R4ResourceType.Binary)
@@ -2008,6 +2010,7 @@ class __$$_BundleCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 96, adapterName: 'BundleAdapter')
 class _$_Bundle extends _Bundle {
   _$_Bundle(
       {@JsonKey(unknownEnumValue: R4ResourceType.Bundle)
@@ -5720,6 +5723,7 @@ class __$$_LinkageCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 97, adapterName: 'LinkageAdapter')
 class _$_Linkage extends _Linkage {
   _$_Linkage(
       {@JsonKey(unknownEnumValue: R4ResourceType.Linkage)
@@ -7216,6 +7220,7 @@ class __$$_MessageHeaderCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 98, adapterName: 'MessageHeaderAdapter')
 class _$_MessageHeader extends _MessageHeader {
   _$_MessageHeader(
       {@JsonKey(unknownEnumValue: R4ResourceType.MessageHeader)
@@ -9816,6 +9821,7 @@ class __$$_OperationOutcomeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 100, adapterName: 'OperationOutcomeAdapter')
 class _$_OperationOutcome extends _OperationOutcome {
   _$_OperationOutcome(
       {@JsonKey(unknownEnumValue: R4ResourceType.OperationOutcome)
@@ -11191,6 +11197,7 @@ class __$$_ParametersCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 101, adapterName: 'ParametersAdapter')
 class _$_Parameters extends _Parameters {
   _$_Parameters(
       {@JsonKey(unknownEnumValue: R4ResourceType.Parameters)
@@ -15177,6 +15184,7 @@ class __$$_SubscriptionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 102, adapterName: 'SubscriptionAdapter')
 class _$_Subscription extends _Subscription {
   _$_Subscription(
       {@JsonKey(unknownEnumValue: R4ResourceType.Subscription)
@@ -16835,6 +16843,7 @@ class __$$_SubscriptionStatusCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 103, adapterName: 'SubscriptionStatusAdapter')
 class _$_SubscriptionStatus extends _SubscriptionStatus {
   _$_SubscriptionStatus(
       {this.resourceType = R4ResourceType.SubscriptionStatus,
@@ -18713,6 +18722,7 @@ class __$$_SubscriptionTopicCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 104, adapterName: 'SubscriptionTopicAdapter')
 class _$_SubscriptionTopic extends _SubscriptionTopic {
   _$_SubscriptionTopic(
       {this.resourceType = R4ResourceType.SubscriptionTopic,

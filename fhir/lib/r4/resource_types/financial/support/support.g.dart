@@ -3,6 +3,157 @@
 part of 'support.dart';
 
 // **************************************************************************
+// TypeAdapterGenerator
+// **************************************************************************
+
+class CoverageAdapter extends TypeAdapter<_$_Coverage> {
+  @override
+  final int typeId = 76;
+
+  @override
+  _$_Coverage read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_Coverage();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_Coverage obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is CoverageAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class CoverageEligibilityRequestAdapter
+    extends TypeAdapter<_$_CoverageEligibilityRequest> {
+  @override
+  final int typeId = 77;
+
+  @override
+  _$_CoverageEligibilityRequest read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_CoverageEligibilityRequest();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_CoverageEligibilityRequest obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is CoverageEligibilityRequestAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class CoverageEligibilityResponseAdapter
+    extends TypeAdapter<_$_CoverageEligibilityResponse> {
+  @override
+  final int typeId = 78;
+
+  @override
+  _$_CoverageEligibilityResponse read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_CoverageEligibilityResponse();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_CoverageEligibilityResponse obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is CoverageEligibilityResponseAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class EnrollmentRequestAdapter extends TypeAdapter<_$_EnrollmentRequest> {
+  @override
+  final int typeId = 79;
+
+  @override
+  _$_EnrollmentRequest read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_EnrollmentRequest();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_EnrollmentRequest obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is EnrollmentRequestAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class EnrollmentResponseAdapter extends TypeAdapter<_$_EnrollmentResponse> {
+  @override
+  final int typeId = 80;
+
+  @override
+  _$_EnrollmentResponse read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_EnrollmentResponse();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_EnrollmentResponse obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is EnrollmentResponseAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

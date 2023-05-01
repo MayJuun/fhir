@@ -21,32 +21,39 @@ Endpoint _$EndpointFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Endpoint {
   @JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
+  @HiveField(0)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id => throw _privateConstructorUsedError;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta => throw _privateConstructorUsedError;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement => throw _privateConstructorUsedError;
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language => throw _privateConstructorUsedError;
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement => throw _privateConstructorUsedError;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -55,12 +62,14 @@ mixin _$Endpoint {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text => throw _privateConstructorUsedError;
 
   /// [contained] These resources do not have an independent existence apart
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
   /// [extension_] May be used to represent additional information that is not
@@ -70,6 +79,7 @@ mixin _$Endpoint {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
   /// [modifierExtension] May be used to represent additional information that
@@ -85,73 +95,90 @@ mixin _$Endpoint {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [identifier] Identifier for the organization that is used to identify the
   ///  endpoint across multiple disparate systems.
+  @HiveField(11)
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] active | suspended | error | off | test.
+  @HiveField(12)
   Code? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(13)
   Element? get statusElement => throw _privateConstructorUsedError;
 
   /// [connectionType] A coded value that represents the technical details of
   /// the usage of this endpoint, such as what WSDLs should be used in what way.
   ///  (e.g. XDS.b/DICOM/cds-hook).
+  @HiveField(14)
   Coding get connectionType => throw _privateConstructorUsedError;
 
   /// [name] A friendly name that this endpoint can be referred to with.
+  @HiveField(15)
   String? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
+  @HiveField(16)
   Element? get nameElement => throw _privateConstructorUsedError;
 
   /// [managingOrganization] The organization that manages this endpoint (even
   /// if technically another organization is hosting this in the cloud, it is
   ///  the organization associated with the data).
+  @HiveField(17)
   Reference? get managingOrganization => throw _privateConstructorUsedError;
 
   /// [contact] Contact details for a human to contact about the subscription.
   ///  The primary use of this for system administrator troubleshooting.
+  @HiveField(18)
   List<ContactPoint>? get contact => throw _privateConstructorUsedError;
 
   /// [period] The interval during which the endpoint is expected to be
   ///  operational.
+  @HiveField(19)
   Period? get period => throw _privateConstructorUsedError;
 
   /// [payloadType] The payload type describes the acceptable content that can
   ///  be communicated on the endpoint.
+  @HiveField(20)
   List<CodeableConcept> get payloadType => throw _privateConstructorUsedError;
 
   /// [payloadMimeType] The mime type to send the payload in - e.g.
   /// application/fhir+xml, application/fhir+json. If the mime type is not
   /// specified, then the sender could send any content (including no content
   ///  depending on the connectionType).
+  @HiveField(21)
   List<Code>? get payloadMimeType => throw _privateConstructorUsedError;
 
   /// [payloadMimeTypeElement] Extensions for payloadMimeType
   @JsonKey(name: '_payloadMimeType')
+  @HiveField(22)
   List<Element?>? get payloadMimeTypeElement =>
       throw _privateConstructorUsedError;
 
   /// [address] The uri that describes the actual end-point to connect to.
+  @HiveField(23)
   FhirUrl? get address => throw _privateConstructorUsedError;
 
   /// [addressElement] Extensions for address
   @JsonKey(name: '_address')
+  @HiveField(24)
   Element? get addressElement => throw _privateConstructorUsedError;
 
   /// [header] Additional headers / information to send as part of the
   ///  notification.
+  @HiveField(25)
   List<String>? get header => throw _privateConstructorUsedError;
 
   /// [headerElement] Extensions for header
   @JsonKey(name: '_header')
+  @HiveField(26)
   List<Element?>? get headerElement => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -167,40 +194,67 @@ abstract class $EndpointCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Code? status,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(13)
           Element? statusElement,
-      Coding connectionType,
-      String? name,
+      @HiveField(14)
+          Coding connectionType,
+      @HiveField(15)
+          String? name,
       @JsonKey(name: '_name')
+      @HiveField(16)
           Element? nameElement,
-      Reference? managingOrganization,
-      List<ContactPoint>? contact,
-      Period? period,
-      List<CodeableConcept> payloadType,
-      List<Code>? payloadMimeType,
+      @HiveField(17)
+          Reference? managingOrganization,
+      @HiveField(18)
+          List<ContactPoint>? contact,
+      @HiveField(19)
+          Period? period,
+      @HiveField(20)
+          List<CodeableConcept> payloadType,
+      @HiveField(21)
+          List<Code>? payloadMimeType,
       @JsonKey(name: '_payloadMimeType')
+      @HiveField(22)
           List<Element?>? payloadMimeTypeElement,
-      FhirUrl? address,
+      @HiveField(23)
+          FhirUrl? address,
       @JsonKey(name: '_address')
+      @HiveField(24)
           Element? addressElement,
-      List<String>? header,
+      @HiveField(25)
+          List<String>? header,
       @JsonKey(name: '_header')
+      @HiveField(26)
           List<Element?>? headerElement});
 
   $MetaCopyWith<$Res>? get meta;
@@ -494,40 +548,67 @@ abstract class _$$_EndpointCopyWith<$Res> implements $EndpointCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
+      @HiveField(0)
           R4ResourceType resourceType,
-      String? id,
-      Meta? meta,
-      FhirUri? implicitRules,
+      @HiveField(1)
+          String? id,
+      @HiveField(2)
+          Meta? meta,
+      @HiveField(3)
+          FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           Element? implicitRulesElement,
-      Code? language,
+      @HiveField(5)
+          Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           Element? languageElement,
-      Narrative? text,
-      List<Resource>? contained,
+      @HiveField(7)
+          Narrative? text,
+      @HiveField(8)
+          List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<Identifier>? identifier,
-      Code? status,
+      @HiveField(10)
+          List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          List<Identifier>? identifier,
+      @HiveField(12)
+          Code? status,
       @JsonKey(name: '_status')
+      @HiveField(13)
           Element? statusElement,
-      Coding connectionType,
-      String? name,
+      @HiveField(14)
+          Coding connectionType,
+      @HiveField(15)
+          String? name,
       @JsonKey(name: '_name')
+      @HiveField(16)
           Element? nameElement,
-      Reference? managingOrganization,
-      List<ContactPoint>? contact,
-      Period? period,
-      List<CodeableConcept> payloadType,
-      List<Code>? payloadMimeType,
+      @HiveField(17)
+          Reference? managingOrganization,
+      @HiveField(18)
+          List<ContactPoint>? contact,
+      @HiveField(19)
+          Period? period,
+      @HiveField(20)
+          List<CodeableConcept> payloadType,
+      @HiveField(21)
+          List<Code>? payloadMimeType,
       @JsonKey(name: '_payloadMimeType')
+      @HiveField(22)
           List<Element?>? payloadMimeTypeElement,
-      FhirUrl? address,
+      @HiveField(23)
+          FhirUrl? address,
       @JsonKey(name: '_address')
+      @HiveField(24)
           Element? addressElement,
-      List<String>? header,
+      @HiveField(25)
+          List<String>? header,
       @JsonKey(name: '_header')
+      @HiveField(26)
           List<Element?>? headerElement});
 
   @override
@@ -706,43 +787,71 @@ class __$$_EndpointCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 0, adapterName: 'EndpointAdapter')
 class _$_Endpoint extends _Endpoint {
   _$_Endpoint(
       {@JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
+      @HiveField(0)
           this.resourceType = R4ResourceType.Endpoint,
-      this.id,
-      this.meta,
-      this.implicitRules,
+      @HiveField(1)
+          this.id,
+      @HiveField(2)
+          this.meta,
+      @HiveField(3)
+          this.implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           this.implicitRulesElement,
-      this.language,
+      @HiveField(5)
+          this.language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           this.languageElement,
-      this.text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          this.text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      this.status,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          this.status,
       @JsonKey(name: '_status')
+      @HiveField(13)
           this.statusElement,
-      required this.connectionType,
-      this.name,
+      @HiveField(14)
+          required this.connectionType,
+      @HiveField(15)
+          this.name,
       @JsonKey(name: '_name')
+      @HiveField(16)
           this.nameElement,
-      this.managingOrganization,
-      final List<ContactPoint>? contact,
-      this.period,
-      required final List<CodeableConcept> payloadType,
-      final List<Code>? payloadMimeType,
+      @HiveField(17)
+          this.managingOrganization,
+      @HiveField(18)
+          final List<ContactPoint>? contact,
+      @HiveField(19)
+          this.period,
+      @HiveField(20)
+          required final List<CodeableConcept> payloadType,
+      @HiveField(21)
+          final List<Code>? payloadMimeType,
       @JsonKey(name: '_payloadMimeType')
+      @HiveField(22)
           final List<Element?>? payloadMimeTypeElement,
-      this.address,
+      @HiveField(23)
+          this.address,
       @JsonKey(name: '_address')
+      @HiveField(24)
           this.addressElement,
-      final List<String>? header,
+      @HiveField(25)
+          final List<String>? header,
       @JsonKey(name: '_header')
+      @HiveField(26)
           final List<Element?>? headerElement})
       : _contained = contained,
         _extension_ = extension_,
@@ -761,17 +870,20 @@ class _$_Endpoint extends _Endpoint {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
+  @HiveField(0)
   final R4ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   @override
+  @HiveField(1)
   final String? id;
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
   @override
+  @HiveField(2)
   final Meta? meta;
 
   /// [implicitRules] A reference to a set of rules that were followed when the
@@ -779,20 +891,24 @@ class _$_Endpoint extends _Endpoint {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   @override
+  @HiveField(3)
   final FhirUri? implicitRules;
 
   /// [implicitRulesElement] Extensions for implicitRules
   @override
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   final Element? implicitRulesElement;
 
   /// [language] The base language in which the resource is written.
   @override
+  @HiveField(5)
   final Code? language;
 
   /// [languageElement] Extensions for language
   @override
   @JsonKey(name: '_language')
+  @HiveField(6)
   final Element? languageElement;
 
   /// [text] A human-readable narrative that contains a summary of the resource
@@ -802,6 +918,7 @@ class _$_Endpoint extends _Endpoint {
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
   @override
+  @HiveField(7)
   final Narrative? text;
 
   /// [contained] These resources do not have an independent existence apart
@@ -815,6 +932,7 @@ class _$_Endpoint extends _Endpoint {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   @override
+  @HiveField(8)
   List<Resource>? get contained {
     final value = _contained;
     if (value == null) return null;
@@ -839,6 +957,7 @@ class _$_Endpoint extends _Endpoint {
   ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_ {
     final value = _extension_;
     if (value == null) return null;
@@ -876,6 +995,7 @@ class _$_Endpoint extends _Endpoint {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   @override
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
     if (value == null) return null;
@@ -892,6 +1012,7 @@ class _$_Endpoint extends _Endpoint {
   /// [identifier] Identifier for the organization that is used to identify the
   ///  endpoint across multiple disparate systems.
   @override
+  @HiveField(11)
   List<Identifier>? get identifier {
     final value = _identifier;
     if (value == null) return null;
@@ -902,32 +1023,38 @@ class _$_Endpoint extends _Endpoint {
 
   /// [status] active | suspended | error | off | test.
   @override
+  @HiveField(12)
   final Code? status;
 
   /// [statusElement] Extensions for status
   @override
   @JsonKey(name: '_status')
+  @HiveField(13)
   final Element? statusElement;
 
   /// [connectionType] A coded value that represents the technical details of
   /// the usage of this endpoint, such as what WSDLs should be used in what way.
   ///  (e.g. XDS.b/DICOM/cds-hook).
   @override
+  @HiveField(14)
   final Coding connectionType;
 
   /// [name] A friendly name that this endpoint can be referred to with.
   @override
+  @HiveField(15)
   final String? name;
 
   /// [nameElement] Extensions for name
   @override
   @JsonKey(name: '_name')
+  @HiveField(16)
   final Element? nameElement;
 
   /// [managingOrganization] The organization that manages this endpoint (even
   /// if technically another organization is hosting this in the cloud, it is
   ///  the organization associated with the data).
   @override
+  @HiveField(17)
   final Reference? managingOrganization;
 
   /// [contact] Contact details for a human to contact about the subscription.
@@ -937,6 +1064,7 @@ class _$_Endpoint extends _Endpoint {
   /// [contact] Contact details for a human to contact about the subscription.
   ///  The primary use of this for system administrator troubleshooting.
   @override
+  @HiveField(18)
   List<ContactPoint>? get contact {
     final value = _contact;
     if (value == null) return null;
@@ -948,6 +1076,7 @@ class _$_Endpoint extends _Endpoint {
   /// [period] The interval during which the endpoint is expected to be
   ///  operational.
   @override
+  @HiveField(19)
   final Period? period;
 
   /// [payloadType] The payload type describes the acceptable content that can
@@ -957,6 +1086,7 @@ class _$_Endpoint extends _Endpoint {
   /// [payloadType] The payload type describes the acceptable content that can
   ///  be communicated on the endpoint.
   @override
+  @HiveField(20)
   List<CodeableConcept> get payloadType {
     if (_payloadType is EqualUnmodifiableListView) return _payloadType;
     // ignore: implicit_dynamic_type
@@ -974,6 +1104,7 @@ class _$_Endpoint extends _Endpoint {
   /// specified, then the sender could send any content (including no content
   ///  depending on the connectionType).
   @override
+  @HiveField(21)
   List<Code>? get payloadMimeType {
     final value = _payloadMimeType;
     if (value == null) return null;
@@ -988,6 +1119,7 @@ class _$_Endpoint extends _Endpoint {
   /// [payloadMimeTypeElement] Extensions for payloadMimeType
   @override
   @JsonKey(name: '_payloadMimeType')
+  @HiveField(22)
   List<Element?>? get payloadMimeTypeElement {
     final value = _payloadMimeTypeElement;
     if (value == null) return null;
@@ -999,11 +1131,13 @@ class _$_Endpoint extends _Endpoint {
 
   /// [address] The uri that describes the actual end-point to connect to.
   @override
+  @HiveField(23)
   final FhirUrl? address;
 
   /// [addressElement] Extensions for address
   @override
   @JsonKey(name: '_address')
+  @HiveField(24)
   final Element? addressElement;
 
   /// [header] Additional headers / information to send as part of the
@@ -1013,6 +1147,7 @@ class _$_Endpoint extends _Endpoint {
   /// [header] Additional headers / information to send as part of the
   ///  notification.
   @override
+  @HiveField(25)
   List<String>? get header {
     final value = _header;
     if (value == null) return null;
@@ -1027,6 +1162,7 @@ class _$_Endpoint extends _Endpoint {
   /// [headerElement] Extensions for header
   @override
   @JsonKey(name: '_header')
+  @HiveField(26)
   List<Element?>? get headerElement {
     final value = _headerElement;
     if (value == null) return null;
@@ -1142,40 +1278,67 @@ class _$_Endpoint extends _Endpoint {
 abstract class _Endpoint extends Endpoint {
   factory _Endpoint(
       {@JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
+      @HiveField(0)
           final R4ResourceType resourceType,
-      final String? id,
-      final Meta? meta,
-      final FhirUri? implicitRules,
+      @HiveField(1)
+          final String? id,
+      @HiveField(2)
+          final Meta? meta,
+      @HiveField(3)
+          final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
+      @HiveField(4)
           final Element? implicitRulesElement,
-      final Code? language,
+      @HiveField(5)
+          final Code? language,
       @JsonKey(name: '_language')
+      @HiveField(6)
           final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
+      @HiveField(7)
+          final Narrative? text,
+      @HiveField(8)
+          final List<Resource>? contained,
       @JsonKey(name: 'extension')
+      @HiveField(9)
           final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final Code? status,
+      @HiveField(10)
+          final List<FhirExtension>? modifierExtension,
+      @HiveField(11)
+          final List<Identifier>? identifier,
+      @HiveField(12)
+          final Code? status,
       @JsonKey(name: '_status')
+      @HiveField(13)
           final Element? statusElement,
-      required final Coding connectionType,
-      final String? name,
+      @HiveField(14)
+          required final Coding connectionType,
+      @HiveField(15)
+          final String? name,
       @JsonKey(name: '_name')
+      @HiveField(16)
           final Element? nameElement,
-      final Reference? managingOrganization,
-      final List<ContactPoint>? contact,
-      final Period? period,
-      required final List<CodeableConcept> payloadType,
-      final List<Code>? payloadMimeType,
+      @HiveField(17)
+          final Reference? managingOrganization,
+      @HiveField(18)
+          final List<ContactPoint>? contact,
+      @HiveField(19)
+          final Period? period,
+      @HiveField(20)
+          required final List<CodeableConcept> payloadType,
+      @HiveField(21)
+          final List<Code>? payloadMimeType,
       @JsonKey(name: '_payloadMimeType')
+      @HiveField(22)
           final List<Element?>? payloadMimeTypeElement,
-      final FhirUrl? address,
+      @HiveField(23)
+          final FhirUrl? address,
       @JsonKey(name: '_address')
+      @HiveField(24)
           final Element? addressElement,
-      final List<String>? header,
+      @HiveField(25)
+          final List<String>? header,
       @JsonKey(name: '_header')
+      @HiveField(26)
           final List<Element?>? headerElement}) = _$_Endpoint;
   _Endpoint._() : super._();
 
@@ -1183,17 +1346,20 @@ abstract class _Endpoint extends Endpoint {
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
+  @HiveField(0)
   R4ResourceType get resourceType;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
+  @HiveField(1)
   String? get id;
   @override
 
   /// [meta] The metadata about the resource. This is content that is
   /// maintained by the infrastructure. Changes to the content might not always
   ///  be associated with version changes to the resource.
+  @HiveField(2)
   Meta? get meta;
   @override
 
@@ -1201,20 +1367,24 @@ abstract class _Endpoint extends Endpoint {
   /// resource was constructed, and which must be understood when processing the
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
+  @HiveField(3)
   FhirUri? get implicitRules;
   @override
 
   /// [implicitRulesElement] Extensions for implicitRules
   @JsonKey(name: '_implicitRules')
+  @HiveField(4)
   Element? get implicitRulesElement;
   @override
 
   /// [language] The base language in which the resource is written.
+  @HiveField(5)
   Code? get language;
   @override
 
   /// [languageElement] Extensions for language
   @JsonKey(name: '_language')
+  @HiveField(6)
   Element? get languageElement;
   @override
 
@@ -1224,6 +1394,7 @@ abstract class _Endpoint extends Endpoint {
   /// contain sufficient detail to make it "clinically safe" for a human to just
   /// read the narrative. Resource definitions may define what content should be
   ///  represented in the narrative to ensure clinical safety.
+  @HiveField(7)
   Narrative? get text;
   @override
 
@@ -1231,6 +1402,7 @@ abstract class _Endpoint extends Endpoint {
   /// from the resource that contains them - they cannot be identified
   /// independently, and nor can they have their own independent transaction
   ///  scope.
+  @HiveField(8)
   List<Resource>? get contained;
   @override
 
@@ -1241,6 +1413,7 @@ abstract class _Endpoint extends Endpoint {
   /// can define an extension, there is a set of requirements that SHALL be met
   ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
+  @HiveField(9)
   List<FhirExtension>? get extension_;
   @override
 
@@ -1257,56 +1430,67 @@ abstract class _Endpoint extends Endpoint {
   /// Modifier extensions SHALL NOT change the meaning of any elements on
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
+  @HiveField(10)
   List<FhirExtension>? get modifierExtension;
   @override
 
   /// [identifier] Identifier for the organization that is used to identify the
   ///  endpoint across multiple disparate systems.
+  @HiveField(11)
   List<Identifier>? get identifier;
   @override
 
   /// [status] active | suspended | error | off | test.
+  @HiveField(12)
   Code? get status;
   @override
 
   /// [statusElement] Extensions for status
   @JsonKey(name: '_status')
+  @HiveField(13)
   Element? get statusElement;
   @override
 
   /// [connectionType] A coded value that represents the technical details of
   /// the usage of this endpoint, such as what WSDLs should be used in what way.
   ///  (e.g. XDS.b/DICOM/cds-hook).
+  @HiveField(14)
   Coding get connectionType;
   @override
 
   /// [name] A friendly name that this endpoint can be referred to with.
+  @HiveField(15)
   String? get name;
   @override
 
   /// [nameElement] Extensions for name
   @JsonKey(name: '_name')
+  @HiveField(16)
   Element? get nameElement;
   @override
 
   /// [managingOrganization] The organization that manages this endpoint (even
   /// if technically another organization is hosting this in the cloud, it is
   ///  the organization associated with the data).
+  @HiveField(17)
   Reference? get managingOrganization;
   @override
 
   /// [contact] Contact details for a human to contact about the subscription.
   ///  The primary use of this for system administrator troubleshooting.
+  @HiveField(18)
   List<ContactPoint>? get contact;
   @override
 
   /// [period] The interval during which the endpoint is expected to be
   ///  operational.
+  @HiveField(19)
   Period? get period;
   @override
 
   /// [payloadType] The payload type describes the acceptable content that can
   ///  be communicated on the endpoint.
+  @HiveField(20)
   List<CodeableConcept> get payloadType;
   @override
 
@@ -1314,30 +1498,36 @@ abstract class _Endpoint extends Endpoint {
   /// application/fhir+xml, application/fhir+json. If the mime type is not
   /// specified, then the sender could send any content (including no content
   ///  depending on the connectionType).
+  @HiveField(21)
   List<Code>? get payloadMimeType;
   @override
 
   /// [payloadMimeTypeElement] Extensions for payloadMimeType
   @JsonKey(name: '_payloadMimeType')
+  @HiveField(22)
   List<Element?>? get payloadMimeTypeElement;
   @override
 
   /// [address] The uri that describes the actual end-point to connect to.
+  @HiveField(23)
   FhirUrl? get address;
   @override
 
   /// [addressElement] Extensions for address
   @JsonKey(name: '_address')
+  @HiveField(24)
   Element? get addressElement;
   @override
 
   /// [header] Additional headers / information to send as part of the
   ///  notification.
+  @HiveField(25)
   List<String>? get header;
   @override
 
   /// [headerElement] Extensions for header
   @JsonKey(name: '_header')
+  @HiveField(26)
   List<Element?>? get headerElement;
   @override
   @JsonKey(ignore: true)
@@ -2306,6 +2496,7 @@ class __$$_HealthcareServiceCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 1, adapterName: 'HealthcareServiceAdapter')
 class _$_HealthcareService extends _HealthcareService {
   _$_HealthcareService(
       {@JsonKey(unknownEnumValue: R4ResourceType.HealthcareService)
@@ -5635,6 +5826,7 @@ class __$$_LocationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 2, adapterName: 'LocationAdapter')
 class _$_Location extends _Location {
   _$_Location(
       {@JsonKey(unknownEnumValue: R4ResourceType.Location)
@@ -8119,6 +8311,7 @@ class __$$_OrganizationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 3, adapterName: 'OrganizationAdapter')
 class _$_Organization extends _Organization {
   _$_Organization(
       {@JsonKey(unknownEnumValue: R4ResourceType.Organization)
@@ -9780,6 +9973,7 @@ class __$$_OrganizationAffiliationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 4, adapterName: 'OrganizationAffiliationAdapter')
 class _$_OrganizationAffiliation extends _OrganizationAffiliation {
   _$_OrganizationAffiliation(
       {@JsonKey(unknownEnumValue: R4ResourceType.OrganizationAffiliation)

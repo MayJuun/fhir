@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -158,6 +159,7 @@ class Claim with Resource, _$Claim {
   ///  details which can each be a simple items or groups of sub-details.
   ///
   /// [total] The total value of the all the items in the claim.
+  @HiveType(typeId: 65, adapterName: 'ClaimAdapter')
   factory Claim({
     @Default(R4ResourceType.Claim)
     @JsonKey(unknownEnumValue: R4ResourceType.Claim)
@@ -2294,6 +2296,7 @@ class ClaimResponse with Resource, _$ClaimResponse {
   ///  products and services specified on the claim.
   ///
   /// [error] Errors encountered during the processing of the adjudication.
+  @HiveType(typeId: 66, adapterName: 'ClaimResponseAdapter')
   factory ClaimResponse({
     @Default(R4ResourceType.ClaimResponse)
     @JsonKey(unknownEnumValue: R4ResourceType.ClaimResponse)
@@ -4398,6 +4401,7 @@ class Invoice with Resource, _$Invoice {
   ///
   /// [note] Comments made about the invoice by the issuer, subject, or other
   ///  participants.
+  @HiveType(typeId: 67, adapterName: 'InvoiceAdapter')
   factory Invoice({
     @Default(R4ResourceType.Invoice)
     @JsonKey(unknownEnumValue: R4ResourceType.Invoice)

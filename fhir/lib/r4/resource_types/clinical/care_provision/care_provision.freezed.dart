@@ -963,6 +963,7 @@ class __$$_CarePlanCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 27, adapterName: 'CarePlanAdapter')
 class _$_CarePlan extends _CarePlan {
   _$_CarePlan(
       {@JsonKey(unknownEnumValue: R4ResourceType.CarePlan)
@@ -4525,6 +4526,7 @@ class __$$_CareTeamCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 28, adapterName: 'CareTeamAdapter')
 class _$_CareTeam extends _CareTeam {
   _$_CareTeam(
       {@JsonKey(unknownEnumValue: R4ResourceType.CareTeam)
@@ -6444,6 +6446,7 @@ class __$$_GoalCopyWithImpl<$Res> extends _$GoalCopyWithImpl<$Res, _$_Goal>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 29, adapterName: 'GoalAdapter')
 class _$_Goal extends _Goal {
   _$_Goal(
       {@JsonKey(unknownEnumValue: R4ResourceType.Goal)
@@ -8957,6 +8960,7 @@ class __$$_NutritionOrderCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 30, adapterName: 'NutritionOrderAdapter')
 class _$_NutritionOrder extends _NutritionOrder {
   _$_NutritionOrder(
       {@JsonKey(unknownEnumValue: R4ResourceType.NutritionOrder)
@@ -13999,6 +14003,7 @@ class __$$_RequestGroupCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 31, adapterName: 'RequestGroupAdapter')
 class _$_RequestGroup extends _RequestGroup {
   _$_RequestGroup(
       {@JsonKey(unknownEnumValue: R4ResourceType.RequestGroup)
@@ -18379,6 +18384,7 @@ class __$$_RiskAssessmentCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 32, adapterName: 'RiskAssessmentAdapter')
 class _$_RiskAssessment extends _RiskAssessment {
   _$_RiskAssessment(
       {@JsonKey(unknownEnumValue: R4ResourceType.RiskAssessment)
@@ -21265,6 +21271,7 @@ class __$$_ServiceRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 33, adapterName: 'ServiceRequestAdapter')
 class _$_ServiceRequest extends _ServiceRequest {
   _$_ServiceRequest(
       {@JsonKey(unknownEnumValue: R4ResourceType.ServiceRequest)
@@ -23159,6 +23166,7 @@ class __$$_VisionPrescriptionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 34, adapterName: 'VisionPrescriptionAdapter')
 class _$_VisionPrescription extends _VisionPrescription {
   _$_VisionPrescription(
       {@JsonKey(unknownEnumValue: R4ResourceType.VisionPrescription)

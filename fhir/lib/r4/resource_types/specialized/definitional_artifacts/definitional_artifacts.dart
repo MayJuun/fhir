@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -307,6 +308,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
   /// medication must be computed based on the patient's weight, a dynamic value
   /// would be used to specify an expression that calculated the weight, and the
   ///  path on the request resource that would contain the result.
+  @HiveType(typeId: 113, adapterName: 'ActivityDefinitionAdapter')
   factory ActivityDefinition({
     @Default(R4ResourceType.ActivityDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.ActivityDefinition)
@@ -1105,6 +1107,7 @@ class DeviceDefinition with Resource, _$DeviceDefinition {
   ///
   /// [material] A substance used to create the material(s) of which the device
   ///  is made.
+  @HiveType(typeId: 114, adapterName: 'DeviceDefinitionAdapter')
   factory DeviceDefinition({
     @Default(R4ResourceType.DeviceDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.DeviceDefinition)
@@ -2186,6 +2189,7 @@ class EventDefinition with Resource, _$EventDefinition {
   /// [trigger] The trigger element defines when the event occurs. If more than
   /// one trigger condition is specified, the event fires whenever any one of
   ///  the trigger conditions is met.
+  @HiveType(typeId: 115, adapterName: 'EventDefinitionAdapter')
   factory EventDefinition({
     @Default(R4ResourceType.EventDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.EventDefinition)
@@ -2591,6 +2595,7 @@ class ObservationDefinition with Resource, _$ObservationDefinition {
   ///
   /// [criticalCodedValueSet] The set of critical coded results for the
   ///  observation conforming to this ObservationDefinition.
+  @HiveType(typeId: 116, adapterName: 'ObservationDefinitionAdapter')
   factory ObservationDefinition({
     @Default(R4ResourceType.ObservationDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.ObservationDefinition)
@@ -3238,6 +3243,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
   ///  improvement objective, etc.
   ///
   /// [action] An action or group of actions to be taken as part of the plan.
+  @HiveType(typeId: 117, adapterName: 'PlanDefinitionAdapter')
   factory PlanDefinition({
     @Default(R4ResourceType.PlanDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.PlanDefinition)
@@ -4926,6 +4932,7 @@ class Questionnaire with Resource, _$Questionnaire {
   ///
   /// [item] A particular question, question grouping or display text that is
   ///  part of the questionnaire.
+  @HiveType(typeId: 118, adapterName: 'QuestionnaireAdapter')
   factory Questionnaire({
     @Default(R4ResourceType.Questionnaire)
     @JsonKey(unknownEnumValue: R4ResourceType.Questionnaire)
@@ -6128,6 +6135,7 @@ class SpecimenDefinition with Resource, _$SpecimenDefinition {
   ///
   /// [typeTested] Specimen conditioned in a container as expected by the
   ///  testing laboratory.
+  @HiveType(typeId: 119, adapterName: 'SpecimenDefinitionAdapter')
   factory SpecimenDefinition({
     @Default(R4ResourceType.SpecimenDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.SpecimenDefinition)

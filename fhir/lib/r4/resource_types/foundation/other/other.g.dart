@@ -3,6 +3,300 @@
 part of 'other.dart';
 
 // **************************************************************************
+// TypeAdapterGenerator
+// **************************************************************************
+
+class BasicAdapter extends TypeAdapter<_$_Basic> {
+  @override
+  final int typeId = 94;
+
+  @override
+  _$_Basic read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_Basic();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_Basic obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is BasicAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class BinaryAdapter extends TypeAdapter<_$_Binary> {
+  @override
+  final int typeId = 95;
+
+  @override
+  _$_Binary read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_Binary();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_Binary obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is BinaryAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class BundleAdapter extends TypeAdapter<_$_Bundle> {
+  @override
+  final int typeId = 96;
+
+  @override
+  _$_Bundle read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_Bundle();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_Bundle obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is BundleAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class LinkageAdapter extends TypeAdapter<_$_Linkage> {
+  @override
+  final int typeId = 97;
+
+  @override
+  _$_Linkage read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_Linkage();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_Linkage obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is LinkageAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class MessageHeaderAdapter extends TypeAdapter<_$_MessageHeader> {
+  @override
+  final int typeId = 98;
+
+  @override
+  _$_MessageHeader read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_MessageHeader();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_MessageHeader obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is MessageHeaderAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class OperationOutcomeAdapter extends TypeAdapter<_$_OperationOutcome> {
+  @override
+  final int typeId = 100;
+
+  @override
+  _$_OperationOutcome read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_OperationOutcome();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_OperationOutcome obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is OperationOutcomeAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class ParametersAdapter extends TypeAdapter<_$_Parameters> {
+  @override
+  final int typeId = 101;
+
+  @override
+  _$_Parameters read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_Parameters();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_Parameters obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ParametersAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class SubscriptionAdapter extends TypeAdapter<_$_Subscription> {
+  @override
+  final int typeId = 102;
+
+  @override
+  _$_Subscription read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_Subscription();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_Subscription obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is SubscriptionAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class SubscriptionStatusAdapter extends TypeAdapter<_$_SubscriptionStatus> {
+  @override
+  final int typeId = 103;
+
+  @override
+  _$_SubscriptionStatus read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_SubscriptionStatus();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_SubscriptionStatus obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is SubscriptionStatusAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class SubscriptionTopicAdapter extends TypeAdapter<_$_SubscriptionTopic> {
+  @override
+  final int typeId = 104;
+
+  @override
+  _$_SubscriptionTopic read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_SubscriptionTopic();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_SubscriptionTopic obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is SubscriptionTopicAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

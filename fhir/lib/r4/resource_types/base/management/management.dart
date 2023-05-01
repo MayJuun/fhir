@@ -5,6 +5,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -155,6 +156,7 @@ class Encounter with Resource, _$Encounter {
   ///
   /// [partOf] Another Encounter of which this encounter is a part of
   ///  (administratively or in time).
+  @HiveType(typeId: 16, adapterName: 'EncounterAdapter')
   factory Encounter({
     @Default(R4ResourceType.Encounter)
     @JsonKey(unknownEnumValue: R4ResourceType.Encounter)
@@ -1182,6 +1184,7 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
   ///
   /// [account] The set of accounts that may be used for billing for this
   ///  EpisodeOfCare.
+  @HiveType(typeId: 17, adapterName: 'EpisodeOfCareAdapter')
   factory EpisodeOfCare({
     @Default(R4ResourceType.EpisodeOfCare)
     @JsonKey(unknownEnumValue: R4ResourceType.EpisodeOfCare)
@@ -1648,6 +1651,7 @@ class Flag with Resource, _$Flag {
   /// [encounter] This alert is only relevant during the encounter.
   ///
   /// [author] The person, organization or device that created the flag.
+  @HiveType(typeId: 18, adapterName: 'FlagAdapter')
   factory Flag({
     @Default(R4ResourceType.Flag)
     @JsonKey(unknownEnumValue: R4ResourceType.Flag)
@@ -2000,6 +2004,7 @@ class Library with Resource, _$Library {
   /// a reference to a url, or may be directly embedded as a base-64 string.
   /// Either way, the contentType of the attachment determines how to interpret
   ///  the content.
+  @HiveType(typeId: 19, adapterName: 'LibraryAdapter')
   factory Library({
     @Default(R4ResourceType.Library)
     @JsonKey(unknownEnumValue: R4ResourceType.Library)
@@ -2419,6 +2424,7 @@ class List_ with Resource, _$List_ {
   /// [entry] Entries in this list.
   ///
   /// [emptyReason] If the list is empty, why the list is empty.
+  @HiveType(typeId: 20, adapterName: 'List_Adapter')
   factory List_({
     @Default(R4ResourceType.List_)
     @JsonKey(unknownEnumValue: R4ResourceType.List_)

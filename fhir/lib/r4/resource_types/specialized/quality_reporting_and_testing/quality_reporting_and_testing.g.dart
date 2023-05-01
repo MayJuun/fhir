@@ -3,6 +3,126 @@
 part of 'quality_reporting_and_testing.dart';
 
 // **************************************************************************
+// TypeAdapterGenerator
+// **************************************************************************
+
+class MeasureAdapter extends TypeAdapter<_$_Measure> {
+  @override
+  final int typeId = 136;
+
+  @override
+  _$_Measure read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_Measure();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_Measure obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is MeasureAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class MeasureReportAdapter extends TypeAdapter<_$_MeasureReport> {
+  @override
+  final int typeId = 137;
+
+  @override
+  _$_MeasureReport read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_MeasureReport();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_MeasureReport obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is MeasureReportAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class TestReportAdapter extends TypeAdapter<_$_TestReport> {
+  @override
+  final int typeId = 138;
+
+  @override
+  _$_TestReport read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_TestReport();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_TestReport obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is TestReportAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class TestScriptAdapter extends TypeAdapter<_$_TestScript> {
+  @override
+  final int typeId = 139;
+
+  @override
+  _$_TestScript read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_TestScript();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_TestScript obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is TestScriptAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -192,6 +193,7 @@ class Citation with Resource, _$Citation {
   /// [relatesTo] Artifact related to the Citation Resource.
   ///
   /// [citedArtifact] The article or artifact being described.
+  @HiveType(typeId: 120, adapterName: 'CitationAdapter')
   factory Citation({
     @Default(R4ResourceType.Citation) R4ResourceType resourceType,
     String? id,
@@ -2592,6 +2594,7 @@ class Evidence with Resource, _$Evidence {
   ///
   /// [outcome] A reference to a EvidenceVariable resomece that defines the
   ///  outcome for the research.
+  @HiveType(typeId: 121, adapterName: 'EvidenceAdapter')
   factory Evidence({
     @Default(R4ResourceType.Evidence)
     @JsonKey(unknownEnumValue: R4ResourceType.Evidence)
@@ -3332,6 +3335,7 @@ class EvidenceReport with Resource, _$EvidenceReport {
   /// [relatesTo] Relationships that this composition has with other compositions or documents that already exist.;
   ///
   /// [section] The root of the sections that make up the composition.;
+  @HiveType(typeId: 122, adapterName: 'EvidenceReportAdapter')
   factory EvidenceReport({
     @Default(R4ResourceType.EvidenceReport) R4ResourceType resourceType,
     String? id,
@@ -3895,6 +3899,7 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
   /// [characteristic] A characteristic that defines the members of the
   /// evidence element. Multiple characteristics are applied with "and"
   ///  semantics.
+  @HiveType(typeId: 123, adapterName: 'EvidenceVariableAdapter')
   factory EvidenceVariable({
     @Default(R4ResourceType.EvidenceVariable)
     @JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
@@ -4512,6 +4517,7 @@ class ResearchDefinition with Resource, _$ResearchDefinition {
   ///
   /// [outcome] A reference to a ResearchElementDefinition resomece that
   ///  defines the outcome for the research.
+  @HiveType(typeId: 124, adapterName: 'ResearchDefinitionAdapter')
   factory ResearchDefinition({
     @Default(R4ResourceType.ResearchDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
@@ -4847,6 +4853,7 @@ class ResearchElementDefinition with Resource, _$ResearchElementDefinition {
   /// [characteristic] A characteristic that defines the members of the
   /// research element. Multiple characteristics are applied with "and"
   ///  semantics.
+  @HiveType(typeId: 125, adapterName: 'ResearchElementDefinitionAdapter')
   factory ResearchElementDefinition({
     @Default(R4ResourceType.ResearchElementDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)

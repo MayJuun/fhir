@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -158,6 +159,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
   /// [objective] A goal that the study is aiming to achieve in terms of a
   /// scientific question to be answered by the analysis of data collected
   ///  during the study.
+  @HiveType(typeId: 134, adapterName: 'ResearchStudyAdapter')
   factory ResearchStudy({
     @Default(R4ResourceType.ResearchStudy)
     @JsonKey(unknownEnumValue: R4ResourceType.ResearchStudy)
@@ -695,6 +697,7 @@ class ResearchSubject with Resource, _$ResearchSubject {
   ///
   /// [consent] A record of the patient's informed agreement to participate in
   ///  the study.
+  @HiveType(typeId: 135, adapterName: 'ResearchSubjectAdapter')
   factory ResearchSubject({
     @Default(R4ResourceType.ResearchSubject)
     @JsonKey(unknownEnumValue: R4ResourceType.ResearchSubject)

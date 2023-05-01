@@ -3,6 +3,184 @@
 part of 'general.dart';
 
 // **************************************************************************
+// TypeAdapterGenerator
+// **************************************************************************
+
+class AccountAdapter extends TypeAdapter<_$_Account> {
+  @override
+  final int typeId = 68;
+
+  @override
+  _$_Account read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_Account();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_Account obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is AccountAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class ChargeItemAdapter extends TypeAdapter<_$_ChargeItem> {
+  @override
+  final int typeId = 69;
+
+  @override
+  _$_ChargeItem read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_ChargeItem();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_ChargeItem obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ChargeItemAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class ChargeItemDefinitionAdapter extends TypeAdapter<_$_ChargeItemDefinition> {
+  @override
+  final int typeId = 70;
+
+  @override
+  _$_ChargeItemDefinition read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_ChargeItemDefinition();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_ChargeItemDefinition obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ChargeItemDefinitionAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class ContractAdapter extends TypeAdapter<_$_Contract> {
+  @override
+  final int typeId = 71;
+
+  @override
+  _$_Contract read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_Contract();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_Contract obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ContractAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class ExplanationOfBenefitAdapter extends TypeAdapter<_$_ExplanationOfBenefit> {
+  @override
+  final int typeId = 72;
+
+  @override
+  _$_ExplanationOfBenefit read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_ExplanationOfBenefit();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_ExplanationOfBenefit obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ExplanationOfBenefitAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class InsurancePlanAdapter extends TypeAdapter<_$_InsurancePlan> {
+  @override
+  final int typeId = 73;
+
+  @override
+  _$_InsurancePlan read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_InsurancePlan();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_InsurancePlan obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is InsurancePlanAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

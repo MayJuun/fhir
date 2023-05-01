@@ -1081,6 +1081,7 @@ class __$$_CitationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 120, adapterName: 'CitationAdapter')
 class _$_Citation extends _Citation {
   _$_Citation(
       {this.resourceType = R4ResourceType.Citation,
@@ -12680,6 +12681,7 @@ class __$$_EvidenceCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 121, adapterName: 'EvidenceAdapter')
 class _$_Evidence extends _Evidence {
   _$_Evidence(
       {@JsonKey(unknownEnumValue: R4ResourceType.Evidence)
@@ -17379,6 +17381,7 @@ class __$$_EvidenceReportCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 122, adapterName: 'EvidenceReportAdapter')
 class _$_EvidenceReport extends _EvidenceReport {
   _$_EvidenceReport(
       {this.resourceType = R4ResourceType.EvidenceReport,
@@ -20753,6 +20756,7 @@ class __$$_EvidenceVariableCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 123, adapterName: 'EvidenceVariableAdapter')
 class _$_EvidenceVariable extends _EvidenceVariable {
   _$_EvidenceVariable(
       {@JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
@@ -24200,6 +24204,7 @@ class __$$_ResearchDefinitionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 124, adapterName: 'ResearchDefinitionAdapter')
 class _$_ResearchDefinition extends _ResearchDefinition {
   _$_ResearchDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
@@ -26396,6 +26401,7 @@ class __$$_ResearchElementDefinitionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 125, adapterName: 'ResearchElementDefinitionAdapter')
 class _$_ResearchElementDefinition extends _ResearchElementDefinition {
   _$_ResearchElementDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)

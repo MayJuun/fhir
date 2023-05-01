@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -207,6 +208,7 @@ class CodeSystem with Resource, _$CodeSystem {
   /// [concept] Concepts that are in the code system. The concept definitions
   /// are inherently hierarchical, but the definitions must be consulted to
   ///  determine what the meanings of the hierarchical relationships are.
+  @HiveType(typeId: 108, adapterName: 'CodeSystemAdapter')
   factory CodeSystem({
     @Default(R4ResourceType.CodeSystem)
     @JsonKey(unknownEnumValue: R4ResourceType.CodeSystem)
@@ -1399,6 +1401,7 @@ class ConceptMap with Resource, _$ConceptMap {
   ///
   /// [group] A group of mappings that all have the same source and target
   ///  system.
+  @HiveType(typeId: 109, adapterName: 'ConceptMapAdapter')
   factory ConceptMap({
     @Default(R4ResourceType.ConceptMap)
     @JsonKey(unknownEnumValue: R4ResourceType.ConceptMap)
@@ -2518,6 +2521,7 @@ class NamingSystem with Resource, _$NamingSystem {
   ///
   /// [uniqueId] Indicates how the system may be identified when referenced in
   ///  electronic exchange.
+  @HiveType(typeId: 110, adapterName: 'NamingSystemAdapter')
   factory NamingSystem({
     @Default(R4ResourceType.NamingSystem)
     @JsonKey(unknownEnumValue: R4ResourceType.NamingSystem)
@@ -3041,6 +3045,7 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
   /// [codeSearchElement] Extensions for codeSearch
   ///
   /// [validateCode] Information about the
+  @HiveType(typeId: 111, adapterName: 'TerminologyCapabilitiesAdapter')
   factory TerminologyCapabilities({
     @Default(R4ResourceType.TerminologyCapabilities)
     @JsonKey(unknownEnumValue: R4ResourceType.TerminologyCapabilities)
@@ -4593,6 +4598,7 @@ class ValueSet with Resource, _$ValueSet {
   /// [expansion] A value set can also be "expanded", where the value set is
   /// turned into a simple collection of enumerated codes. This element holds
   ///  the expansion, if it has been performed.
+  @HiveType(typeId: 112, adapterName: 'ValueSetAdapter')
   factory ValueSet({
     @Default(R4ResourceType.ValueSet)
     @JsonKey(unknownEnumValue: R4ResourceType.ValueSet)

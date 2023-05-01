@@ -952,6 +952,7 @@ class __$$_CommunicationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 51, adapterName: 'CommunicationAdapter')
 class _$_Communication extends _Communication {
   _$_Communication(
       {@JsonKey(unknownEnumValue: R4ResourceType.Communication)
@@ -3319,6 +3320,7 @@ class __$$_CommunicationRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 52, adapterName: 'CommunicationRequestAdapter')
 class _$_CommunicationRequest extends _CommunicationRequest {
   _$_CommunicationRequest(
       {@JsonKey(unknownEnumValue: R4ResourceType.CommunicationRequest)
@@ -5768,6 +5770,7 @@ class __$$_DeviceRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 53, adapterName: 'DeviceRequestAdapter')
 class _$_DeviceRequest extends _DeviceRequest {
   _$_DeviceRequest(
       {@JsonKey(unknownEnumValue: R4ResourceType.DeviceRequest)
@@ -8047,6 +8050,7 @@ class __$$_DeviceUseStatementCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 54, adapterName: 'DeviceUseStatementAdapter')
 class _$_DeviceUseStatement extends _DeviceUseStatement {
   _$_DeviceUseStatement(
       {@JsonKey(unknownEnumValue: R4ResourceType.DeviceUseStatement)
@@ -9562,6 +9566,7 @@ class __$$_GuidanceResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 55, adapterName: 'GuidanceResponseAdapter')
 class _$_GuidanceResponse extends _GuidanceResponse {
   _$_GuidanceResponse(
       {@JsonKey(unknownEnumValue: R4ResourceType.GuidanceResponse)
@@ -11024,6 +11029,7 @@ class __$$_SupplyDeliveryCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 56, adapterName: 'SupplyDeliveryAdapter')
 class _$_SupplyDelivery extends _SupplyDelivery {
   _$_SupplyDelivery(
       {@JsonKey(unknownEnumValue: R4ResourceType.SupplyDelivery)
@@ -12937,6 +12943,7 @@ class __$$_SupplyRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 57, adapterName: 'SupplyRequestAdapter')
 class _$_SupplyRequest extends _SupplyRequest {
   _$_SupplyRequest(
       {@JsonKey(unknownEnumValue: R4ResourceType.SupplyRequest)

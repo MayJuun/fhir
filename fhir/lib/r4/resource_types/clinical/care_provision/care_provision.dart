@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -157,6 +158,7 @@ class CarePlan with Resource, _$CarePlan {
   ///  education, etc.
   ///
   /// [note] General notes about the care plan not covered elsewhere.
+  @HiveType(typeId: 27, adapterName: 'CarePlanAdapter')
   factory CarePlan({
     @Default(R4ResourceType.CarePlan)
     @JsonKey(unknownEnumValue: R4ResourceType.CarePlan)
@@ -900,6 +902,7 @@ class CareTeam with Resource, _$CareTeam {
   ///  members).
   ///
   /// [note] Comments made about the CareTeam.
+  @HiveType(typeId: 28, adapterName: 'CareTeamAdapter')
   factory CareTeam({
     @Default(R4ResourceType.CareTeam)
     @JsonKey(unknownEnumValue: R4ResourceType.CareTeam)
@@ -1296,6 +1299,7 @@ class Goal with Resource, _$Goal {
   ///  the status of the goal is assessed.
   ///
   /// [outcomeReference] Details of what's changed (or not changed).
+  @HiveType(typeId: 29, adapterName: 'GoalAdapter')
   factory Goal({
     @Default(R4ResourceType.Goal)
     @JsonKey(unknownEnumValue: R4ResourceType.Goal)
@@ -1852,6 +1856,7 @@ class NutritionOrder with Resource, _$NutritionOrder {
   ///
   /// [note] Comments made about the {{title}} by the requester, performer,
   ///  subject or other participants.
+  @HiveType(typeId: 30, adapterName: 'NutritionOrderAdapter')
   factory NutritionOrder({
     @Default(R4ResourceType.NutritionOrder)
     @JsonKey(unknownEnumValue: R4ResourceType.NutritionOrder)
@@ -2981,6 +2986,7 @@ class RequestGroup with Resource, _$RequestGroup {
   ///  the response.
   ///
   /// [action] The actions, if any, produced by the evaluation of the artifact.
+  @HiveType(typeId: 31, adapterName: 'RequestGroupAdapter')
   factory RequestGroup({
     @Default(R4ResourceType.RequestGroup)
     @JsonKey(unknownEnumValue: R4ResourceType.RequestGroup)
@@ -3840,6 +3846,7 @@ class RiskAssessment with Resource, _$RiskAssessment {
   /// [mitigationElement] Extensions for mitigation
   ///
   /// [note] Additional comments about the risk assessment.
+  @HiveType(typeId: 32, adapterName: 'RiskAssessmentAdapter')
   factory RiskAssessment({
     @Default(R4ResourceType.RiskAssessment)
     @JsonKey(unknownEnumValue: R4ResourceType.RiskAssessment)
@@ -4396,6 +4403,7 @@ class ServiceRequest with Resource, _$ServiceRequest {
   /// [patientInstructionElement] Extensions for patientInstruction
   ///
   /// [relevantHistory] Key events in the history of the request.
+  @HiveType(typeId: 33, adapterName: 'ServiceRequestAdapter')
   factory ServiceRequest({
     @Default(R4ResourceType.ServiceRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.ServiceRequest)
@@ -4794,6 +4802,7 @@ class VisionPrescription with Resource, _$VisionPrescription {
   /// [lensSpecification] Contain the details of  the individual lens
   /// specifications and serves as the authorization for the fullfillment by
   ///  certified professionals.
+  @HiveType(typeId: 34, adapterName: 'VisionPrescriptionAdapter')
   factory VisionPrescription({
     @Default(R4ResourceType.VisionPrescription)
     @JsonKey(unknownEnumValue: R4ResourceType.VisionPrescription)

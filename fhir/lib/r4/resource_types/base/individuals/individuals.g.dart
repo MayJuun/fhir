@@ -3,6 +3,184 @@
 part of 'individuals.dart';
 
 // **************************************************************************
+// TypeAdapterGenerator
+// **************************************************************************
+
+class GroupAdapter extends TypeAdapter<_$_Group> {
+  @override
+  final int typeId = 10;
+
+  @override
+  _$_Group read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_Group();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_Group obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is GroupAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class PatientAdapter extends TypeAdapter<_$_Patient> {
+  @override
+  final int typeId = 11;
+
+  @override
+  _$_Patient read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_Patient();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_Patient obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is PatientAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class PersonAdapter extends TypeAdapter<_$_Person> {
+  @override
+  final int typeId = 12;
+
+  @override
+  _$_Person read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_Person();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_Person obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is PersonAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class PractitionerAdapter extends TypeAdapter<_$_Practitioner> {
+  @override
+  final int typeId = 13;
+
+  @override
+  _$_Practitioner read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_Practitioner();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_Practitioner obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is PractitionerAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class PractitionerRoleAdapter extends TypeAdapter<_$_PractitionerRole> {
+  @override
+  final int typeId = 14;
+
+  @override
+  _$_PractitionerRole read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_PractitionerRole();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_PractitionerRole obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is PractitionerRoleAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class RelatedPersonAdapter extends TypeAdapter<_$_RelatedPerson> {
+  @override
+  final int typeId = 15;
+
+  @override
+  _$_RelatedPerson read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_RelatedPerson();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_RelatedPerson obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is RelatedPersonAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

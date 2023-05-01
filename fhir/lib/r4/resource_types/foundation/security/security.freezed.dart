@@ -694,6 +694,7 @@ class __$$_AuditEventCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 105, adapterName: 'AuditEventAdapter')
 class _$_AuditEvent extends _AuditEvent {
   _$_AuditEvent(
       {@JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
@@ -5132,6 +5133,7 @@ class __$$_ConsentCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 106, adapterName: 'ConsentAdapter')
 class _$_Consent extends _Consent {
   _$_Consent(
       {@JsonKey(unknownEnumValue: R4ResourceType.Consent)
@@ -8974,6 +8976,7 @@ class __$$_ProvenanceCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 107, adapterName: 'ProvenanceAdapter')
 class _$_Provenance extends _Provenance {
   _$_Provenance(
       {@JsonKey(unknownEnumValue: R4ResourceType.Provenance)

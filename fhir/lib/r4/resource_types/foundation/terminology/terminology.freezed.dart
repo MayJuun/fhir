@@ -1353,6 +1353,7 @@ class __$$_CodeSystemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 108, adapterName: 'CodeSystemAdapter')
 class _$_CodeSystem extends _CodeSystem {
   _$_CodeSystem(
       {@JsonKey(unknownEnumValue: R4ResourceType.CodeSystem)
@@ -6908,6 +6909,7 @@ class __$$_ConceptMapCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 109, adapterName: 'ConceptMapAdapter')
 class _$_ConceptMap extends _ConceptMap {
   _$_ConceptMap(
       {@JsonKey(unknownEnumValue: R4ResourceType.ConceptMap)
@@ -11744,6 +11746,7 @@ class __$$_NamingSystemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 110, adapterName: 'NamingSystemAdapter')
 class _$_NamingSystem extends _NamingSystem {
   _$_NamingSystem(
       {@JsonKey(unknownEnumValue: R4ResourceType.NamingSystem)
@@ -14411,6 +14414,7 @@ class __$$_TerminologyCapabilitiesCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 111, adapterName: 'TerminologyCapabilitiesAdapter')
 class _$_TerminologyCapabilities extends _TerminologyCapabilities {
   _$_TerminologyCapabilities(
       {@JsonKey(unknownEnumValue: R4ResourceType.TerminologyCapabilities)
@@ -21365,6 +21369,7 @@ class __$$_ValueSetCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 112, adapterName: 'ValueSetAdapter')
 class _$_ValueSet extends _ValueSet {
   _$_ValueSet(
       {@JsonKey(unknownEnumValue: R4ResourceType.ValueSet)

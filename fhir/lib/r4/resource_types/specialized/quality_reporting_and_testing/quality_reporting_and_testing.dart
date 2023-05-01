@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -279,6 +280,7 @@ class Measure with Resource, _$Measure {
   /// [supplementalData] The supplemental data criteria for the measure report,
   /// specified as either the name of a valid CQL expression within a referenced
   ///  library, or a valid FHIR Resource Path.
+  @HiveType(typeId: 136, adapterName: 'MeasureAdapter')
   factory Measure({
     @Default(R4ResourceType.Measure)
     @JsonKey(unknownEnumValue: R4ResourceType.Measure)
@@ -1413,6 +1415,7 @@ class MeasureReport with Resource, _$MeasureReport {
   ///
   /// [evaluatedResource] A reference to a Bundle containing the Resources that
   ///  were used in the calculation of this measure.
+  @HiveType(typeId: 137, adapterName: 'MeasureReportAdapter')
   factory MeasureReport({
     @Default(R4ResourceType.MeasureReport)
     @JsonKey(unknownEnumValue: R4ResourceType.MeasureReport)
@@ -2370,6 +2373,7 @@ class TestReport with Resource, _$TestReport {
   ///
   /// [teardown] The results of the series of operations required to clean up
   ///  after all the tests were executed (successfully or otherwise).
+  @HiveType(typeId: 138, adapterName: 'TestReportAdapter')
   factory TestReport({
     @Default(R4ResourceType.TestReport)
     @JsonKey(unknownEnumValue: R4ResourceType.TestReport)
@@ -3696,6 +3700,7 @@ class TestScript with Resource, _$TestScript {
   ///
   /// [teardown] A series of operations required to clean up after all the
   ///  tests are executed (successfully or otherwise).
+  @HiveType(typeId: 139, adapterName: 'TestScriptAdapter')
   factory TestScript({
     @Default(R4ResourceType.TestScript)
     @JsonKey(unknownEnumValue: R4ResourceType.TestScript)

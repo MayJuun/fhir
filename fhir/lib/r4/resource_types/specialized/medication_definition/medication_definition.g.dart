@@ -3,6 +3,248 @@
 part of 'medication_definition.dart';
 
 // **************************************************************************
+// TypeAdapterGenerator
+// **************************************************************************
+
+class AdministrableProductDefinitionAdapter
+    extends TypeAdapter<_$_AdministrableProductDefinition> {
+  @override
+  final int typeId = 126;
+
+  @override
+  _$_AdministrableProductDefinition read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_AdministrableProductDefinition();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_AdministrableProductDefinition obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is AdministrableProductDefinitionAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class IngredientAdapter extends TypeAdapter<_$_Ingredient> {
+  @override
+  final int typeId = 127;
+
+  @override
+  _$_Ingredient read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_Ingredient();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_Ingredient obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is IngredientAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class ClinicalUseDefinitionAdapter
+    extends TypeAdapter<_$_ClinicalUseDefinition> {
+  @override
+  final int typeId = 128;
+
+  @override
+  _$_ClinicalUseDefinition read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_ClinicalUseDefinition();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_ClinicalUseDefinition obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ClinicalUseDefinitionAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class ManufacturedItemDefinitionAdapter
+    extends TypeAdapter<_$_ManufacturedItemDefinition> {
+  @override
+  final int typeId = 129;
+
+  @override
+  _$_ManufacturedItemDefinition read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_ManufacturedItemDefinition();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_ManufacturedItemDefinition obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ManufacturedItemDefinitionAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class MedicinalProductDefinitionAdapter
+    extends TypeAdapter<_$_MedicinalProductDefinition> {
+  @override
+  final int typeId = 130;
+
+  @override
+  _$_MedicinalProductDefinition read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_MedicinalProductDefinition();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_MedicinalProductDefinition obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is MedicinalProductDefinitionAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class PackagedProductDefinitionAdapter
+    extends TypeAdapter<_$_PackagedProductDefinition> {
+  @override
+  final int typeId = 131;
+
+  @override
+  _$_PackagedProductDefinition read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_PackagedProductDefinition();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_PackagedProductDefinition obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is PackagedProductDefinitionAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class RegulatedAuthorizationAdapter
+    extends TypeAdapter<_$_RegulatedAuthorization> {
+  @override
+  final int typeId = 132;
+
+  @override
+  _$_RegulatedAuthorization read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_RegulatedAuthorization();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_RegulatedAuthorization obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is RegulatedAuthorizationAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class SubstanceDefinitionAdapter extends TypeAdapter<_$_SubstanceDefinition> {
+  @override
+  final int typeId = 133;
+
+  @override
+  _$_SubstanceDefinition read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_SubstanceDefinition();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_SubstanceDefinition obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is SubstanceDefinitionAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

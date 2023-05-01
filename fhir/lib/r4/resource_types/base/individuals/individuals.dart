@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -113,6 +114,7 @@ class Group with Resource, _$Group {
   ///  members of the group.
   ///
   /// [member] Identifies the resource instances that are members of the group.
+  @HiveType(typeId: 10, adapterName: 'GroupAdapter')
   factory Group({
     @Default(R4ResourceType.Group)
     @JsonKey(unknownEnumValue: R4ResourceType.Group)
@@ -674,6 +676,7 @@ class Patient with Resource, _$Patient {
   ///
   /// [link] Link to another patient resource that concerns the same actual
   ///  patient.
+  @HiveType(typeId: 11, adapterName: 'PatientAdapter')
   factory Patient({
     @Default(R4ResourceType.Patient)
     @JsonKey(unknownEnumValue: R4ResourceType.Patient)
@@ -1328,6 +1331,7 @@ class Person with Resource, _$Person {
   /// [activeElement] Extensions for active
   ///
   /// [link] Link to a resource that concerns the same actual person.
+  @HiveType(typeId: 12, adapterName: 'PersonAdapter')
   factory Person({
     @Default(R4ResourceType.Person)
     @JsonKey(unknownEnumValue: R4ResourceType.Person)
@@ -1678,6 +1682,7 @@ class Practitioner with Resource, _$Practitioner {
   ///
   /// [communication] A language the practitioner can use in patient
   ///  communication.
+  @HiveType(typeId: 13, adapterName: 'PractitionerAdapter')
   factory Practitioner({
     @Default(R4ResourceType.Practitioner)
     @JsonKey(unknownEnumValue: R4ResourceType.Practitioner)
@@ -2048,6 +2053,7 @@ class PractitionerRole with Resource, _$PractitionerRole {
   ///
   /// [endpoint] Technical endpoints providing access to services operated for
   ///  the practitioner with this role.
+  @HiveType(typeId: 14, adapterName: 'PractitionerRoleAdapter')
   factory PractitionerRole({
     @Default(R4ResourceType.PractitionerRole)
     @JsonKey(unknownEnumValue: R4ResourceType.PractitionerRole)
@@ -2559,6 +2565,7 @@ class RelatedPerson with Resource, _$RelatedPerson {
   ///
   /// [communication] A language which may be used to communicate with about
   ///  the patient's health.
+  @HiveType(typeId: 15, adapterName: 'RelatedPersonAdapter')
   factory RelatedPerson({
     @Default(R4ResourceType.RelatedPerson)
     @JsonKey(unknownEnumValue: R4ResourceType.RelatedPerson)

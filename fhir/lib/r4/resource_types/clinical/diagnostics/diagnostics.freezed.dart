@@ -588,6 +588,7 @@ class __$$_BodyStructureCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 34, adapterName: 'BodyStructureAdapter')
 class _$_BodyStructure extends _BodyStructure {
   _$_BodyStructure(
       {@JsonKey(unknownEnumValue: R4ResourceType.BodyStructure)
@@ -1930,6 +1931,7 @@ class __$$_DiagnosticReportCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 35, adapterName: 'DiagnosticReportAdapter')
 class _$_DiagnosticReport extends _DiagnosticReport {
   _$_DiagnosticReport(
       {@JsonKey(unknownEnumValue: R4ResourceType.DiagnosticReport)
@@ -4066,6 +4068,7 @@ class __$$_ImagingStudyCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 36, adapterName: 'ImagingStudyAdapter')
 class _$_ImagingStudy extends _ImagingStudy {
   _$_ImagingStudy(
       {@JsonKey(unknownEnumValue: R4ResourceType.ImagingStudy)
@@ -7955,6 +7958,7 @@ class __$$_MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res, _$_Media>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 37, adapterName: 'MediaAdapter')
 class _$_Media extends _Media {
   _$_Media(
       {@JsonKey(unknownEnumValue: R4ResourceType.Media)
@@ -9619,6 +9623,7 @@ class __$$_MolecularSequenceCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 38, adapterName: 'MolecularSequenceAdapter')
 class _$_MolecularSequence extends _MolecularSequence {
   _$_MolecularSequence(
       {@JsonKey(unknownEnumValue: R4ResourceType.MolecularSequence)
@@ -18084,6 +18089,7 @@ class __$$_ObservationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 39, adapterName: 'ObservationAdapter')
 class _$_Observation extends _Observation {
   _$_Observation(
       {@JsonKey(unknownEnumValue: R4ResourceType.Observation)
@@ -21767,6 +21773,7 @@ class __$$_QuestionnaireResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 40, adapterName: 'QuestionnaireResponseAdapter')
 class _$_QuestionnaireResponse extends _QuestionnaireResponse {
   _$_QuestionnaireResponse(
       {@JsonKey(unknownEnumValue: R4ResourceType.QuestionnaireResponse)
@@ -24777,6 +24784,7 @@ class __$$_SpecimenCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 41, adapterName: 'SpecimenAdapter')
 class _$_Specimen extends _Specimen {
   _$_Specimen(
       {@JsonKey(unknownEnumValue: R4ResourceType.Specimen)

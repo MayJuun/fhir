@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -89,6 +90,7 @@ class Basic with Resource, _$Basic {
   ///
   /// [author] Indicates who was responsible for creating the resource
   ///  instance.
+  @HiveType(typeId: 94, adapterName: 'BasicAdapter')
   factory Basic({
     @Default(R4ResourceType.Basic)
     @JsonKey(unknownEnumValue: R4ResourceType.Basic)
@@ -260,6 +262,7 @@ class Binary with Resource, _$Binary {
   /// [data] The actual content, base64 encoded.
   ///
   /// [dataElement] Extensions for data
+  @HiveType(typeId: 95, adapterName: 'BinaryAdapter')
   factory Binary({
     @Default(R4ResourceType.Binary)
     @JsonKey(unknownEnumValue: R4ResourceType.Binary)
@@ -403,6 +406,7 @@ class Bundle with Resource, _$Bundle {
   ///  information about a resource (transactions and history only).
   ///
   /// [signature] Digital Signature - base64 encoded. XML-DSig or a JWT.
+  @HiveType(typeId: 96, adapterName: 'BundleAdapter')
   factory Bundle({
     @Default(R4ResourceType.Bundle)
     @JsonKey(unknownEnumValue: R4ResourceType.Bundle)
@@ -1341,6 +1345,7 @@ class Linkage with Resource, _$Linkage {
   /// [item] Identifies which record considered as the reference to the same
   /// real-world occurrence as well as how the items should be evaluated within
   ///  the collection of linked items.
+  @HiveType(typeId: 97, adapterName: 'LinkageAdapter')
   factory Linkage({
     @Default(R4ResourceType.Linkage)
     @JsonKey(unknownEnumValue: R4ResourceType.Linkage)
@@ -1678,6 +1683,7 @@ class MessageHeader with Resource, _$MessageHeader {
   ///  class of the event.
   ///
   /// [definition] Permanent link to the MessageDefinition for this message.
+  @HiveType(typeId: 98, adapterName: 'MessageHeaderAdapter')
   factory MessageHeader({
     @Default(R4ResourceType.MessageHeader)
     @JsonKey(unknownEnumValue: R4ResourceType.MessageHeader)
@@ -2303,6 +2309,7 @@ class OperationOutcome with Resource, _$OperationOutcome {
   ///
   /// [issue] An error, warning, or information message that results from a
   ///  system action.
+  @HiveType(typeId: 100, adapterName: 'OperationOutcomeAdapter')
   factory OperationOutcome({
     @Default(R4ResourceType.OperationOutcome)
     @JsonKey(unknownEnumValue: R4ResourceType.OperationOutcome)
@@ -2616,6 +2623,7 @@ class Parameters with Resource, _$Parameters {
   /// [languageElement] Extensions for language
   ///
   /// [parameter] A parameter passed to or received from the operation.
+  @HiveType(typeId: 101, adapterName: 'ParametersAdapter')
   factory Parameters({
     @Default(R4ResourceType.Parameters)
     @JsonKey(unknownEnumValue: R4ResourceType.Parameters)
@@ -3233,6 +3241,7 @@ class Subscription with Resource, _$Subscription {
   ///
   /// [channel] Details where to send notifications when resources are received
   ///  that meet the criteria.
+  @HiveType(typeId: 102, adapterName: 'SubscriptionAdapter')
   factory Subscription({
     @Default(R4ResourceType.Subscription)
     @JsonKey(unknownEnumValue: R4ResourceType.Subscription)
@@ -3579,6 +3588,7 @@ class SubscriptionStatus with Resource, _$SubscriptionStatus {
   /// [topic] The reference to the SubscriptionTopic for the Subscription which generated this notification.;
   ///
   /// [error] A record of errors that occurred when the server processed a notification.;
+  @HiveType(typeId: 103, adapterName: 'SubscriptionStatusAdapter')
   factory SubscriptionStatus({
     /// [resourceType] This is a SubscriptionStatus resource;
     @Default(R4ResourceType.SubscriptionStatus)
@@ -3867,6 +3877,7 @@ class SubscriptionTopic with Resource, _$SubscriptionTopic {
   /// [canFilterBy] List of properties by which Subscriptions on the SubscriptionTopic can be filtered. May be defined Search Parameters (e.g., Encounter.patient) or parameters defined within this SubscriptionTopic context (e.g., hub.event).;
   ///
   /// [notificationShape] List of properties to describe the shape (e.g., resources) included in notifications from this Subscription Topic.;
+  @HiveType(typeId: 104, adapterName: 'SubscriptionTopicAdapter')
   factory SubscriptionTopic({
     /// [resourceType] This is a SubscriptionTopic resource;
     @Default(R4ResourceType.SubscriptionTopic) R4ResourceType resourceType,

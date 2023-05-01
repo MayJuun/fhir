@@ -3,6 +3,213 @@
 part of 'summary.dart';
 
 // **************************************************************************
+// TypeAdapterGenerator
+// **************************************************************************
+
+class AdverseEventAdapter extends TypeAdapter<_$_AdverseEvent> {
+  @override
+  final int typeId = 58;
+
+  @override
+  _$_AdverseEvent read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_AdverseEvent();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_AdverseEvent obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is AdverseEventAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class AllergyIntoleranceAdapter extends TypeAdapter<_$_AllergyIntolerance> {
+  @override
+  final int typeId = 59;
+
+  @override
+  _$_AllergyIntolerance read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_AllergyIntolerance();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_AllergyIntolerance obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is AllergyIntoleranceAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class ClinicalImpressionAdapter extends TypeAdapter<_$_ClinicalImpression> {
+  @override
+  final int typeId = 60;
+
+  @override
+  _$_ClinicalImpression read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_ClinicalImpression();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_ClinicalImpression obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ClinicalImpressionAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class ConditionAdapter extends TypeAdapter<_$_Condition> {
+  @override
+  final int typeId = 61;
+
+  @override
+  _$_Condition read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_Condition();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_Condition obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ConditionAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class DetectedIssueAdapter extends TypeAdapter<_$_DetectedIssue> {
+  @override
+  final int typeId = 62;
+
+  @override
+  _$_DetectedIssue read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_DetectedIssue();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_DetectedIssue obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is DetectedIssueAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class FamilyMemberHistoryAdapter extends TypeAdapter<_$_FamilyMemberHistory> {
+  @override
+  final int typeId = 63;
+
+  @override
+  _$_FamilyMemberHistory read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_FamilyMemberHistory();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_FamilyMemberHistory obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is FamilyMemberHistoryAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class ProcedureAdapter extends TypeAdapter<_$_Procedure> {
+  @override
+  final int typeId = 64;
+
+  @override
+  _$_Procedure read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_Procedure();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_Procedure obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ProcedureAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

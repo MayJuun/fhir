@@ -1237,6 +1237,7 @@ class __$$_ImmunizationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 42, adapterName: 'ImmunizationAdapter')
 class _$_Immunization extends _Immunization {
   _$_Immunization(
       {@JsonKey(unknownEnumValue: R4ResourceType.Immunization)
@@ -5406,6 +5407,7 @@ class __$$_ImmunizationEvaluationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 43, adapterName: 'ImmunizationEvaluationAdapter')
 class _$_ImmunizationEvaluation extends _ImmunizationEvaluation {
   _$_ImmunizationEvaluation(
       {@JsonKey(unknownEnumValue: R4ResourceType.ImmunizationEvaluation)
@@ -6577,6 +6579,7 @@ class __$$_ImmunizationRecommendationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 44, adapterName: 'ImmunizationRecommendationAdapter')
 class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
   _$_ImmunizationRecommendation(
       {@JsonKey(unknownEnumValue: R4ResourceType.ImmunizationRecommendation)
@@ -9167,6 +9170,7 @@ class __$$_MedicationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 45, adapterName: 'MedicationAdapter')
 class _$_Medication extends _Medication {
   _$_Medication(
       {@JsonKey(unknownEnumValue: R4ResourceType.Medication)
@@ -11519,6 +11523,7 @@ class __$$_MedicationAdministrationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 46, adapterName: 'MedicationAdministrationAdapter')
 class _$_MedicationAdministration extends _MedicationAdministration {
   _$_MedicationAdministration(
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicationAdministration)
@@ -14530,6 +14535,7 @@ class __$$_MedicationDispenseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 47, adapterName: 'MedicationDispenseAdapter')
 class _$_MedicationDispense extends _MedicationDispense {
   _$_MedicationDispense(
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicationDispense)
@@ -17211,6 +17217,7 @@ class __$$_MedicationKnowledgeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 48, adapterName: 'MedicationKnowledgeAdapter')
 class _$_MedicationKnowledge extends _MedicationKnowledge {
   _$_MedicationKnowledge(
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicationKnowledge)
@@ -26583,6 +26590,7 @@ class __$$_MedicationRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 49, adapterName: 'MedicationRequestAdapter')
 class _$_MedicationRequest extends _MedicationRequest {
   _$_MedicationRequest(
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicationRequest)
@@ -30195,6 +30203,7 @@ class __$$_MedicationStatementCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 50, adapterName: 'MedicationStatementAdapter')
 class _$_MedicationStatement extends _MedicationStatement {
   _$_MedicationStatement(
       {@JsonKey(unknownEnumValue: R4ResourceType.MedicationStatement)

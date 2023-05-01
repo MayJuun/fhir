@@ -685,6 +685,7 @@ class __$$_BiologicallyDerivedProductCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 5, adapterName: 'BiologicallyDerivedProductAdapter')
 class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
   _$_BiologicallyDerivedProduct(
       {@JsonKey(unknownEnumValue: R4ResourceType.BiologicallyDerivedProduct)
@@ -4645,6 +4646,7 @@ class __$$_DeviceCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 6, adapterName: 'DeviceAdapter')
 class _$_Device extends _Device {
   _$_Device(
       {@JsonKey(unknownEnumValue: R4ResourceType.Device)
@@ -8872,6 +8874,7 @@ class __$$_DeviceMetricCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 7, adapterName: 'DeviceMetricAdapter')
 class _$_DeviceMetric extends _DeviceMetric {
   _$_DeviceMetric(
       {@JsonKey(unknownEnumValue: R4ResourceType.DeviceMetric)
@@ -10464,6 +10467,7 @@ class __$$_NutritionProductCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 8, adapterName: 'NutritionProductAdapter')
 class _$_NutritionProduct extends _NutritionProduct {
   _$_NutritionProduct(
       {this.resourceType = R4ResourceType.NutritionProduct,
@@ -13200,6 +13204,7 @@ class __$$_SubstanceCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 9, adapterName: 'SubstanceAdapter')
 class _$_Substance extends _Substance {
   _$_Substance(
       {@JsonKey(unknownEnumValue: R4ResourceType.Substance)

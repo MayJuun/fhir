@@ -3,6 +3,156 @@
 part of 'terminology.dart';
 
 // **************************************************************************
+// TypeAdapterGenerator
+// **************************************************************************
+
+class CodeSystemAdapter extends TypeAdapter<_$_CodeSystem> {
+  @override
+  final int typeId = 108;
+
+  @override
+  _$_CodeSystem read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_CodeSystem();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_CodeSystem obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is CodeSystemAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class ConceptMapAdapter extends TypeAdapter<_$_ConceptMap> {
+  @override
+  final int typeId = 109;
+
+  @override
+  _$_ConceptMap read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_ConceptMap();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_ConceptMap obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ConceptMapAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class NamingSystemAdapter extends TypeAdapter<_$_NamingSystem> {
+  @override
+  final int typeId = 110;
+
+  @override
+  _$_NamingSystem read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_NamingSystem();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_NamingSystem obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is NamingSystemAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class TerminologyCapabilitiesAdapter
+    extends TypeAdapter<_$_TerminologyCapabilities> {
+  @override
+  final int typeId = 111;
+
+  @override
+  _$_TerminologyCapabilities read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_TerminologyCapabilities();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_TerminologyCapabilities obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is TerminologyCapabilitiesAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class ValueSetAdapter extends TypeAdapter<_$_ValueSet> {
+  @override
+  final int typeId = 112;
+
+  @override
+  _$_ValueSet read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_ValueSet();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_ValueSet obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ValueSetAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

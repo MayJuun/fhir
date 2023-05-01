@@ -703,6 +703,7 @@ class __$$_GroupCopyWithImpl<$Res> extends _$GroupCopyWithImpl<$Res, _$_Group>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 10, adapterName: 'GroupAdapter')
 class _$_Group extends _Group {
   _$_Group(
       {@JsonKey(unknownEnumValue: R4ResourceType.Group)
@@ -3351,6 +3352,7 @@ class __$$_PatientCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 11, adapterName: 'PatientAdapter')
 class _$_Patient extends _Patient {
   _$_Patient(
       {@JsonKey(unknownEnumValue: R4ResourceType.Patient)
@@ -6234,6 +6236,7 @@ class __$$_PersonCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 12, adapterName: 'PersonAdapter')
 class _$_Person extends _Person {
   _$_Person(
       {@JsonKey(unknownEnumValue: R4ResourceType.Person)
@@ -7801,6 +7804,7 @@ class __$$_PractitionerCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 13, adapterName: 'PractitionerAdapter')
 class _$_Practitioner extends _Practitioner {
   _$_Practitioner(
       {@JsonKey(unknownEnumValue: R4ResourceType.Practitioner)
@@ -9540,6 +9544,7 @@ class __$$_PractitionerRoleCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 14, adapterName: 'PractitionerRoleAdapter')
 class _$_PractitionerRole extends _PractitionerRole {
   _$_PractitionerRole(
       {@JsonKey(unknownEnumValue: R4ResourceType.PractitionerRole)
@@ -11902,6 +11907,7 @@ class __$$_RelatedPersonCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 15, adapterName: 'RelatedPersonAdapter')
 class _$_RelatedPerson extends _RelatedPerson {
   _$_RelatedPerson(
       {@JsonKey(unknownEnumValue: R4ResourceType.RelatedPerson)

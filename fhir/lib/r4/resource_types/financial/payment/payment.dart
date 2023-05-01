@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -107,6 +108,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
   ///
   /// [paymentStatus] A code indicating whether payment has been sent or
   ///  cleared.
+  @HiveType(typeId: 74, adapterName: 'PaymentNoticeAdapter')
   factory PaymentNotice({
     @Default(R4ResourceType.PaymentNotice)
     @JsonKey(unknownEnumValue: R4ResourceType.PaymentNotice)
@@ -368,6 +370,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
   ///
   /// [processNote] A note that describes or explains the processing in a human
   ///  readable form.
+  @HiveType(typeId: 75, adapterName: 'PaymentReconciliationAdapter')
   factory PaymentReconciliation({
     @Default(R4ResourceType.PaymentReconciliation)
     @JsonKey(unknownEnumValue: R4ResourceType.PaymentReconciliation)

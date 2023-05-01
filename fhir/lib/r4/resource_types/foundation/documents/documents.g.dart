@@ -3,6 +3,126 @@
 part of 'documents.dart';
 
 // **************************************************************************
+// TypeAdapterGenerator
+// **************************************************************************
+
+class CatalogEntryAdapter extends TypeAdapter<_$_CatalogEntry> {
+  @override
+  final int typeId = 90;
+
+  @override
+  _$_CatalogEntry read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_CatalogEntry();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_CatalogEntry obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is CatalogEntryAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class CompositionAdapter extends TypeAdapter<_$_Composition> {
+  @override
+  final int typeId = 91;
+
+  @override
+  _$_Composition read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_Composition();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_Composition obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is CompositionAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class DocumentManifestAdapter extends TypeAdapter<_$_DocumentManifest> {
+  @override
+  final int typeId = 92;
+
+  @override
+  _$_DocumentManifest read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_DocumentManifest();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_DocumentManifest obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is DocumentManifestAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class DocumentReferenceAdapter extends TypeAdapter<_$_DocumentReference> {
+  @override
+  final int typeId = 93;
+
+  @override
+  _$_DocumentReference read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_DocumentReference();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_DocumentReference obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is DocumentReferenceAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

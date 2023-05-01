@@ -932,6 +932,7 @@ class __$$_ResearchStudyCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 134, adapterName: 'ResearchStudyAdapter')
 class _$_ResearchStudy extends _ResearchStudy {
   _$_ResearchStudy(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchStudy)
@@ -3356,6 +3357,7 @@ class __$$_ResearchSubjectCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 135, adapterName: 'ResearchSubjectAdapter')
 class _$_ResearchSubject extends _ResearchSubject {
   _$_ResearchSubject(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchSubject)

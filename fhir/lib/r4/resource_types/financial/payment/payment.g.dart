@@ -3,6 +3,69 @@
 part of 'payment.dart';
 
 // **************************************************************************
+// TypeAdapterGenerator
+// **************************************************************************
+
+class PaymentNoticeAdapter extends TypeAdapter<_$_PaymentNotice> {
+  @override
+  final int typeId = 74;
+
+  @override
+  _$_PaymentNotice read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_PaymentNotice();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_PaymentNotice obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is PaymentNoticeAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class PaymentReconciliationAdapter
+    extends TypeAdapter<_$_PaymentReconciliation> {
+  @override
+  final int typeId = 75;
+
+  @override
+  _$_PaymentReconciliation read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_PaymentReconciliation();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_PaymentReconciliation obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is PaymentReconciliationAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

@@ -914,6 +914,7 @@ class __$$_CoverageCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 76, adapterName: 'CoverageAdapter')
 class _$_Coverage extends _Coverage {
   _$_Coverage(
       {@JsonKey(unknownEnumValue: R4ResourceType.Coverage)
@@ -3799,6 +3800,7 @@ class __$$_CoverageEligibilityRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 77, adapterName: 'CoverageEligibilityRequestAdapter')
 class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   _$_CoverageEligibilityRequest(
       {@JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityRequest)
@@ -7623,6 +7625,7 @@ class __$$_CoverageEligibilityResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 78, adapterName: 'CoverageEligibilityResponseAdapter')
 class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   _$_CoverageEligibilityResponse(
       {@JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityResponse)
@@ -11677,6 +11680,7 @@ class __$$_EnrollmentRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 79, adapterName: 'EnrollmentRequestAdapter')
 class _$_EnrollmentRequest extends _EnrollmentRequest {
   _$_EnrollmentRequest(
       {@JsonKey(unknownEnumValue: R4ResourceType.EnrollmentRequest)
@@ -12771,6 +12775,7 @@ class __$$_EnrollmentResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 80, adapterName: 'EnrollmentResponseAdapter')
 class _$_EnrollmentResponse extends _EnrollmentResponse {
   _$_EnrollmentResponse(
       {@JsonKey(unknownEnumValue: R4ResourceType.EnrollmentResponse)

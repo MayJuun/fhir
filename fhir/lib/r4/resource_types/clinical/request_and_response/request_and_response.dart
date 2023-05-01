@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -155,6 +156,7 @@ class Communication with Resource, _$Communication {
   ///
   /// [note] Additional notes or commentary about the communication by the
   ///  sender, receiver or other interested parties.
+  @HiveType(typeId: 51, adapterName: 'CommunicationAdapter')
   factory Communication({
     @Default(R4ResourceType.Communication)
     @JsonKey(unknownEnumValue: R4ResourceType.Communication)
@@ -631,6 +633,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
   ///
   /// [note] Comments made about the request by the requester, sender,
   ///  recipient, subject or other participants.
+  @HiveType(typeId: 52, adapterName: 'CommunicationRequestAdapter')
   factory CommunicationRequest({
     @Default(R4ResourceType.CommunicationRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.CommunicationRequest)
@@ -1119,6 +1122,7 @@ class DeviceRequest with Resource, _$DeviceRequest {
   ///  the statement.
   ///
   /// [relevantHistory] Key events in the history of the request.
+  @HiveType(typeId: 53, adapterName: 'DeviceRequestAdapter')
   factory DeviceRequest({
     @Default(R4ResourceType.DeviceRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.DeviceRequest)
@@ -1583,6 +1587,7 @@ class DeviceUseStatement with Resource, _$DeviceUseStatement {
   /// all or sufficiently in one of the attributes provided in a class. These
   /// may include for example a comment, an instruction, or a note associated
   ///  with the statement.
+  @HiveType(typeId: 54, adapterName: 'DeviceUseStatementAdapter')
   factory DeviceUseStatement({
     @Default(R4ResourceType.DeviceUseStatement)
     @JsonKey(unknownEnumValue: R4ResourceType.DeviceUseStatement)
@@ -1889,6 +1894,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
   /// accurate response, this element will a description of the data required in
   /// order to proceed with the evaluation. A subsequent request to the service
   ///  should include this data.
+  @HiveType(typeId: 55, adapterName: 'GuidanceResponseAdapter')
   factory GuidanceResponse({
     @Default(R4ResourceType.GuidanceResponse)
     @JsonKey(unknownEnumValue: R4ResourceType.GuidanceResponse)
@@ -2188,6 +2194,7 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
   ///  was shipped to, as part of the dispense event.
   ///
   /// [receiver] Identifies the person who picked up the Supply.
+  @HiveType(typeId: 56, adapterName: 'SupplyDeliveryAdapter')
   factory SupplyDelivery({
     @Default(R4ResourceType.SupplyDelivery)
     @JsonKey(unknownEnumValue: R4ResourceType.SupplyDelivery)
@@ -2573,6 +2580,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
   /// [deliverFrom] Where the supply is expected to come from.
   ///
   /// [deliverTo] Where the supply is destined to go.
+  @HiveType(typeId: 57, adapterName: 'SupplyRequestAdapter')
   factory SupplyRequest({
     @Default(R4ResourceType.SupplyRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.SupplyRequest)

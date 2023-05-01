@@ -745,6 +745,7 @@ class __$$_PaymentNoticeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 74, adapterName: 'PaymentNoticeAdapter')
 class _$_PaymentNotice extends _PaymentNotice {
   _$_PaymentNotice(
       {@JsonKey(unknownEnumValue: R4ResourceType.PaymentNotice)
@@ -2125,6 +2126,7 @@ class __$$_PaymentReconciliationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 75, adapterName: 'PaymentReconciliationAdapter')
 class _$_PaymentReconciliation extends _PaymentReconciliation {
   _$_PaymentReconciliation(
       {@JsonKey(unknownEnumValue: R4ResourceType.PaymentReconciliation)

@@ -2149,6 +2149,7 @@ class __$$_ActivityDefinitionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 113, adapterName: 'ActivityDefinitionAdapter')
 class _$_ActivityDefinition extends _ActivityDefinition {
   _$_ActivityDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.ActivityDefinition)
@@ -5694,6 +5695,7 @@ class __$$_DeviceDefinitionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 114, adapterName: 'DeviceDefinitionAdapter')
 class _$_DeviceDefinition extends _DeviceDefinition {
   _$_DeviceDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.DeviceDefinition)
@@ -10739,6 +10741,7 @@ class __$$_EventDefinitionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 115, adapterName: 'EventDefinitionAdapter')
 class _$_EventDefinition extends _EventDefinition {
   _$_EventDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.EventDefinition)
@@ -12643,6 +12646,7 @@ class __$$_ObservationDefinitionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 116, adapterName: 'ObservationDefinitionAdapter')
 class _$_ObservationDefinition extends _ObservationDefinition {
   _$_ObservationDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.ObservationDefinition)
@@ -16075,6 +16079,7 @@ class __$$_PlanDefinitionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 117, adapterName: 'PlanDefinitionAdapter')
 class _$_PlanDefinition extends _PlanDefinition {
   _$_PlanDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.PlanDefinition)
@@ -23929,6 +23934,7 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 118, adapterName: 'QuestionnaireAdapter')
 class _$_Questionnaire extends _Questionnaire {
   _$_Questionnaire(
       {@JsonKey(unknownEnumValue: R4ResourceType.Questionnaire)
@@ -29769,6 +29775,7 @@ class __$$_SpecimenDefinitionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 119, adapterName: 'SpecimenDefinitionAdapter')
 class _$_SpecimenDefinition extends _SpecimenDefinition {
   _$_SpecimenDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.SpecimenDefinition)

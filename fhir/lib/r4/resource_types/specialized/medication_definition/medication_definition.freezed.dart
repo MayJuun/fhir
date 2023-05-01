@@ -537,6 +537,7 @@ class __$$_AdministrableProductDefinitionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 126, adapterName: 'AdministrableProductDefinitionAdapter')
 class _$_AdministrableProductDefinition
     extends _AdministrableProductDefinition {
   _$_AdministrableProductDefinition(
@@ -3416,6 +3417,7 @@ class __$$_IngredientCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 127, adapterName: 'IngredientAdapter')
 class _$_Ingredient extends _Ingredient {
   _$_Ingredient(
       {this.resourceType = R4ResourceType.Ingredient,
@@ -6334,6 +6336,7 @@ class __$$_ClinicalUseDefinitionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 128, adapterName: 'ClinicalUseDefinitionAdapter')
 class _$_ClinicalUseDefinition extends _ClinicalUseDefinition {
   _$_ClinicalUseDefinition(
       {this.resourceType = R4ResourceType.ClinicalUseDefinition,
@@ -10133,6 +10136,7 @@ class __$$_ManufacturedItemDefinitionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 129, adapterName: 'ManufacturedItemDefinitionAdapter')
 class _$_ManufacturedItemDefinition extends _ManufacturedItemDefinition {
   _$_ManufacturedItemDefinition(
       {this.resourceType = R4ResourceType.ManufacturedItemDefinition,
@@ -12051,6 +12055,7 @@ class __$$_MedicinalProductDefinitionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 130, adapterName: 'MedicinalProductDefinitionAdapter')
 class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
   _$_MedicinalProductDefinition(
       {this.resourceType = R4ResourceType.MedicinalProductDefinition,
@@ -16406,6 +16411,7 @@ class __$$_PackagedProductDefinitionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 131, adapterName: 'PackagedProductDefinitionAdapter')
 class _$_PackagedProductDefinition extends _PackagedProductDefinition {
   _$_PackagedProductDefinition(
       {this.resourceType = R4ResourceType.PackagedProductDefinition,
@@ -20168,6 +20174,7 @@ class __$$_RegulatedAuthorizationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 132, adapterName: 'RegulatedAuthorizationAdapter')
 class _$_RegulatedAuthorization extends _RegulatedAuthorization {
   _$_RegulatedAuthorization(
       {this.resourceType = R4ResourceType.RegulatedAuthorization,
@@ -21894,6 +21901,7 @@ class __$$_SubstanceDefinitionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 133, adapterName: 'SubstanceDefinitionAdapter')
 class _$_SubstanceDefinition extends _SubstanceDefinition {
   _$_SubstanceDefinition(
       {this.resourceType = R4ResourceType.SubstanceDefinition,

@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -175,6 +176,7 @@ class Appointment with Resource, _$Appointment {
   /// length of the appointment to fill and populate the start/end times for the
   /// actual allocated time. However, in other situations the duration may be
   ///  calculated by the scheduling system.
+  @HiveType(typeId: 21, adapterName: 'AppointmentAdapter')
   factory Appointment({
     @Default(R4ResourceType.Appointment)
     @JsonKey(unknownEnumValue: R4ResourceType.Appointment)
@@ -649,6 +651,7 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
   /// [comment] Additional comments about the appointment.
   ///
   /// [commentElement] Extensions for comment
+  @HiveType(typeId: 22, adapterName: 'AppointmentResponseAdapter')
   factory AppointmentResponse({
     @Default(R4ResourceType.AppointmentResponse)
     @JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
@@ -892,6 +895,7 @@ class Schedule with Resource, _$Schedule {
   ///  associated.
   ///
   /// [commentElement] Extensions for comment
+  @HiveType(typeId: 23, adapterName: 'ScheduleAdapter')
   factory Schedule({
     @Default(R4ResourceType.Schedule)
     @JsonKey(unknownEnumValue: R4ResourceType.Schedule)
@@ -1138,6 +1142,7 @@ class Slot with Resource, _$Slot {
   ///  as custom constraints on the slot.
   ///
   /// [commentElement] Extensions for comment
+  @HiveType(typeId: 24, adapterName: 'SlotAdapter')
   factory Slot({
     @Default(R4ResourceType.Slot)
     @JsonKey(unknownEnumValue: R4ResourceType.Slot)
@@ -1467,6 +1472,7 @@ class Task with Resource, _$Task {
   ///  task.
   ///
   /// [output] Outputs produced by the Task.
+  @HiveType(typeId: 25, adapterName: 'TaskAdapter')
   factory Task({
     @Default(R4ResourceType.Task)
     @JsonKey(unknownEnumValue: R4ResourceType.Task)
@@ -2834,6 +2840,7 @@ class VerificationResult with Resource, _$VerificationResult {
   /// [attestation] Information about the entity attesting to information.
   ///
   /// [validator] Information about the entity validating information.
+  @HiveType(typeId: 26, adapterName: 'VerificationResultAdapter')
   factory VerificationResult({
     @Default(R4ResourceType.VerificationResult)
     @JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)

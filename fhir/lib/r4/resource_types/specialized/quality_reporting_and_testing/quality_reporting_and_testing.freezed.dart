@@ -1873,6 +1873,7 @@ class __$$_MeasureCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 136, adapterName: 'MeasureAdapter')
 class _$_Measure extends _Measure {
   _$_Measure(
       {@JsonKey(unknownEnumValue: R4ResourceType.Measure)
@@ -6602,6 +6603,7 @@ class __$$_MeasureReportCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 137, adapterName: 'MeasureReportAdapter')
 class _$_MeasureReport extends _MeasureReport {
   _$_MeasureReport(
       {@JsonKey(unknownEnumValue: R4ResourceType.MeasureReport)
@@ -10635,6 +10637,7 @@ class __$$_TestReportCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 138, adapterName: 'TestReportAdapter')
 class _$_TestReport extends _TestReport {
   _$_TestReport(
       {@JsonKey(unknownEnumValue: R4ResourceType.TestReport)
@@ -16269,6 +16272,7 @@ class __$$_TestScriptCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 139, adapterName: 'TestScriptAdapter')
 class _$_TestScript extends _TestScript {
   _$_TestScript(
       {@JsonKey(unknownEnumValue: R4ResourceType.TestScript)

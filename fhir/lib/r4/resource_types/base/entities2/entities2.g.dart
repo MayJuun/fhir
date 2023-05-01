@@ -3,6 +3,156 @@
 part of 'entities2.dart';
 
 // **************************************************************************
+// TypeAdapterGenerator
+// **************************************************************************
+
+class BiologicallyDerivedProductAdapter
+    extends TypeAdapter<_$_BiologicallyDerivedProduct> {
+  @override
+  final int typeId = 5;
+
+  @override
+  _$_BiologicallyDerivedProduct read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_BiologicallyDerivedProduct();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_BiologicallyDerivedProduct obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is BiologicallyDerivedProductAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class DeviceAdapter extends TypeAdapter<_$_Device> {
+  @override
+  final int typeId = 6;
+
+  @override
+  _$_Device read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_Device();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_Device obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is DeviceAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class DeviceMetricAdapter extends TypeAdapter<_$_DeviceMetric> {
+  @override
+  final int typeId = 7;
+
+  @override
+  _$_DeviceMetric read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_DeviceMetric();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_DeviceMetric obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is DeviceMetricAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class NutritionProductAdapter extends TypeAdapter<_$_NutritionProduct> {
+  @override
+  final int typeId = 8;
+
+  @override
+  _$_NutritionProduct read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_NutritionProduct();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_NutritionProduct obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is NutritionProductAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class SubstanceAdapter extends TypeAdapter<_$_Substance> {
+  @override
+  final int typeId = 9;
+
+  @override
+  _$_Substance read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_Substance();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_Substance obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is SubstanceAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

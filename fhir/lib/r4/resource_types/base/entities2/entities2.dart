@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -111,6 +112,7 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
   ///  infusion.
   ///
   /// [storage] Product storage.
+  @HiveType(typeId: 5, adapterName: 'BiologicallyDerivedProductAdapter')
   factory BiologicallyDerivedProduct({
     @Default(R4ResourceType.BiologicallyDerivedProduct)
     @JsonKey(unknownEnumValue: R4ResourceType.BiologicallyDerivedProduct)
@@ -867,6 +869,7 @@ class Device with Resource, _$Device {
   ///  device.  For example devices containing latex.
   ///
   /// [parent] The parent device.
+  @HiveType(typeId: 6, adapterName: 'DeviceAdapter')
   factory Device({
     @Default(R4ResourceType.Device)
     @JsonKey(unknownEnumValue: R4ResourceType.Device)
@@ -1862,6 +1865,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
   ///
   /// [calibration] Describes the calibrations that have been performed or that
   ///  are required to be performed.
+  @HiveType(typeId: 7, adapterName: 'DeviceMetricAdapter')
   factory DeviceMetric({
     @Default(R4ResourceType.DeviceMetric)
     @JsonKey(unknownEnumValue: R4ResourceType.DeviceMetric)
@@ -2202,6 +2206,7 @@ class NutritionProduct with Resource, _$NutritionProduct {
   /// [instance] Conveys instance-level information about this product item. One or several physical, countable instances or occurrences of the product.;
   ///
   /// [note] Comments made about the product.;
+  @HiveType(typeId: 8, adapterName: 'NutritionProductAdapter')
   factory NutritionProduct({
     /// [resourceType] This is a NutritionProduct resource;
     @Default(R4ResourceType.NutritionProduct) R4ResourceType resourceType,
@@ -2724,6 +2729,7 @@ class Substance with Resource, _$Substance {
   ///  specific package/container of the substance: an instance.
   ///
   /// [ingredient] A substance can be composed of other substances.
+  @HiveType(typeId: 9, adapterName: 'SubstanceAdapter')
   factory Substance({
     @Default(R4ResourceType.Substance)
     @JsonKey(unknownEnumValue: R4ResourceType.Substance)

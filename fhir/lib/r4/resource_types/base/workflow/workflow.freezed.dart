@@ -1054,6 +1054,7 @@ class __$$_AppointmentCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 21, adapterName: 'AppointmentAdapter')
 class _$_Appointment extends _Appointment {
   _$_Appointment(
       {@JsonKey(unknownEnumValue: R4ResourceType.Appointment)
@@ -3232,6 +3233,7 @@ class __$$_AppointmentResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 22, adapterName: 'AppointmentResponseAdapter')
 class _$_AppointmentResponse extends _AppointmentResponse {
   _$_AppointmentResponse(
       {@JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
@@ -4316,6 +4318,7 @@ class __$$_ScheduleCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 23, adapterName: 'ScheduleAdapter')
 class _$_Schedule extends _Schedule {
   _$_Schedule(
       {@JsonKey(unknownEnumValue: R4ResourceType.Schedule)
@@ -5543,6 +5546,7 @@ class __$$_SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res, _$_Slot>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 24, adapterName: 'SlotAdapter')
 class _$_Slot extends _Slot {
   _$_Slot(
       {@JsonKey(unknownEnumValue: R4ResourceType.Slot)
@@ -7423,6 +7427,7 @@ class __$$_TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res, _$_Task>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 25, adapterName: 'TaskAdapter')
 class _$_Task extends _Task {
   _$_Task(
       {@JsonKey(unknownEnumValue: R4ResourceType.Task)
@@ -15825,6 +15830,7 @@ class __$$_VerificationResultCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 26, adapterName: 'VerificationResultAdapter')
 class _$_VerificationResult extends _VerificationResult {
   _$_VerificationResult(
       {@JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)

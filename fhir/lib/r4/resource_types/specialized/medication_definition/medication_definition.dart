@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -47,6 +48,7 @@ class AdministrableProductDefinition
   ///
   /// [statusElement] (_status): Extensions for status;
   ///
+  @HiveType(typeId: 126, adapterName: 'AdministrableProductDefinitionAdapter')
   factory AdministrableProductDefinition({
     @Default(R4ResourceType.AdministrableProductDefinition)
 
@@ -547,6 +549,7 @@ class Ingredient with Resource, _$Ingredient {
   /// [manufacturer] The organization(s) that manufacture this ingredient. Can be used to indicate:         1) Organizations we are aware of that manufacture this ingredient         2) Specific Manufacturer(s) currently being used         3) Set of organisations allowed to manufacture this ingredient for this product         Users must be clear on the application of context relevant to their use case.;
   ///
   /// [substance] The substance that comprises this ingredient.;
+  @HiveType(typeId: 127, adapterName: 'IngredientAdapter')
   factory Ingredient({
     /// [resourceType] This is a Ingredient resource;
     @Default(R4ResourceType.Ingredient) R4ResourceType resourceType,
@@ -1051,6 +1054,7 @@ class ClinicalUseDefinition with Resource, _$ClinicalUseDefinition {
   /// [undesirableEffect] Describe the possible undesirable effects (negative outcomes) from the use of the medicinal product as treatment.;
   ///
   /// [warning] A critical piece of information about environmental, health or physical risks or hazards that serve as caution to the user. For example 'Do not operate heavy machinery', 'May cause drowsiness', or 'Get medical advice/attention if you feel unwell'.;
+  @HiveType(typeId: 128, adapterName: 'ClinicalUseDefinitionAdapter')
   factory ClinicalUseDefinition({
     /// [resourceType] This is a ClinicalUseDefinition resource;
     @Default(R4ResourceType.ClinicalUseDefinition) R4ResourceType resourceType,
@@ -1743,6 +1747,7 @@ class ManufacturedItemDefinition with Resource, _$ManufacturedItemDefinition {
   /// [ingredient] The ingredients of this manufactured item. This is only needed if the ingredients are not specified by incoming references from the Ingredient resource.;
   ///
   /// [property] General characteristics of this item.;
+  @HiveType(typeId: 129, adapterName: 'ManufacturedItemDefinitionAdapter')
   factory ManufacturedItemDefinition({
     @Default(R4ResourceType.ManufacturedItemDefinition)
 
@@ -2032,6 +2037,7 @@ class MedicinalProductDefinition with Resource, _$MedicinalProductDefinition {
   /// [operation] A manufacturing or administrative process or step associated with (or performed on) the medicinal product.;
   ///
   /// [characteristic] Allows the key product features to be recorded, such as "sugar free", "modified release", "parallel import".;
+  @HiveType(typeId: 130, adapterName: 'MedicinalProductDefinitionAdapter')
   factory MedicinalProductDefinition({
     @Default(R4ResourceType.MedicinalProductDefinition)
 
@@ -2827,6 +2833,7 @@ class PackagedProductDefinition with Resource, _$PackagedProductDefinition {
   /// [manufacturer] Manufacturer of this package type. When there are multiple it means these are all possible manufacturers.;
   ///
   /// [package] A packaging item, as a container for medically related items, possibly with other packaging items within, or a packaging component, such as bottle cap (which is not a device or a medication manufactured item).;
+  @HiveType(typeId: 131, adapterName: 'PackagedProductDefinitionAdapter')
   factory PackagedProductDefinition({
     @Default(R4ResourceType.PackagedProductDefinition)
 
@@ -3529,6 +3536,7 @@ class RegulatedAuthorization with Resource, _$RegulatedAuthorization {
   /// [regulator] The regulatory authority or authorizing body granting the authorization. For example, European Medicines Agency (EMA), Food and Drug Administration (FDA), Health Canada (HC), etc.;
   ///
   /// [case_] The case or regulatory procedure for granting or amending a regulated authorization. An authorization is granted in response to submissions/applications by those seeking authorization. A case is the administrative process that deals with the application(s) that relate to this and assesses them. Note: This area is subject to ongoing review and the workgroup is seeking implementer feedback on its use (see link at bottom of page).;
+  @HiveType(typeId: 132, adapterName: 'RegulatedAuthorizationAdapter')
   factory RegulatedAuthorization({
     /// [resourceType] This is a RegulatedAuthorization resource;
     @Default(R4ResourceType.RegulatedAuthorization) R4ResourceType resourceType,
@@ -3809,6 +3817,7 @@ class SubstanceDefinition with Resource, _$SubstanceDefinition {
   /// [relationship] A link between this substance and another, with details of the relationship.;
   ///
   /// [sourceMaterial] Material or taxonomic/anatomical source for the substance.;
+  @HiveType(typeId: 133, adapterName: 'SubstanceDefinitionAdapter')
   factory SubstanceDefinition({
     /// [resourceType] This is a SubstanceDefinition resource;
     @Default(R4ResourceType.SubstanceDefinition) R4ResourceType resourceType,

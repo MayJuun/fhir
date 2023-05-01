@@ -3,6 +3,243 @@
 part of 'diagnostics.dart';
 
 // **************************************************************************
+// TypeAdapterGenerator
+// **************************************************************************
+
+class BodyStructureAdapter extends TypeAdapter<_$_BodyStructure> {
+  @override
+  final int typeId = 34;
+
+  @override
+  _$_BodyStructure read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_BodyStructure();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_BodyStructure obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is BodyStructureAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class DiagnosticReportAdapter extends TypeAdapter<_$_DiagnosticReport> {
+  @override
+  final int typeId = 35;
+
+  @override
+  _$_DiagnosticReport read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_DiagnosticReport();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_DiagnosticReport obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is DiagnosticReportAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class ImagingStudyAdapter extends TypeAdapter<_$_ImagingStudy> {
+  @override
+  final int typeId = 36;
+
+  @override
+  _$_ImagingStudy read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_ImagingStudy();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_ImagingStudy obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ImagingStudyAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class MediaAdapter extends TypeAdapter<_$_Media> {
+  @override
+  final int typeId = 37;
+
+  @override
+  _$_Media read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_Media();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_Media obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is MediaAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class MolecularSequenceAdapter extends TypeAdapter<_$_MolecularSequence> {
+  @override
+  final int typeId = 38;
+
+  @override
+  _$_MolecularSequence read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_MolecularSequence();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_MolecularSequence obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is MolecularSequenceAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class ObservationAdapter extends TypeAdapter<_$_Observation> {
+  @override
+  final int typeId = 39;
+
+  @override
+  _$_Observation read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_Observation();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_Observation obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ObservationAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class QuestionnaireResponseAdapter
+    extends TypeAdapter<_$_QuestionnaireResponse> {
+  @override
+  final int typeId = 40;
+
+  @override
+  _$_QuestionnaireResponse read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_QuestionnaireResponse();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_QuestionnaireResponse obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is QuestionnaireResponseAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class SpecimenAdapter extends TypeAdapter<_$_Specimen> {
+  @override
+  final int typeId = 41;
+
+  @override
+  _$_Specimen read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_Specimen();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_Specimen obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is SpecimenAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

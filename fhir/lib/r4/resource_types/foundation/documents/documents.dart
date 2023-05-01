@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -114,6 +115,7 @@ class CatalogEntry with Resource, _$CatalogEntry {
   ///
   /// [relatedEntry] Used for example, to point to a substance, or to a device
   ///  used to administer a medication.
+  @HiveType(typeId: 90, adapterName: 'CatalogEntryAdapter')
   factory CatalogEntry({
     @Default(R4ResourceType.CatalogEntry)
     @JsonKey(unknownEnumValue: R4ResourceType.CatalogEntry)
@@ -511,6 +513,7 @@ class Composition with Resource, _$Composition {
   ///  being documented.
   ///
   /// [section] The root of the sections that make up the composition.
+  @HiveType(typeId: 91, adapterName: 'CompositionAdapter')
   factory Composition({
     @Default(R4ResourceType.Composition)
     @JsonKey(unknownEnumValue: R4ResourceType.Composition)
@@ -1381,6 +1384,7 @@ class DocumentManifest with Resource, _$DocumentManifest {
   ///
   /// [related] Related identifiers or resources associated with the
   ///  DocumentManifest.
+  @HiveType(typeId: 92, adapterName: 'DocumentManifestAdapter')
   factory DocumentManifest({
     @Default(R4ResourceType.DocumentManifest)
     @JsonKey(unknownEnumValue: R4ResourceType.DocumentManifest)
@@ -1781,6 +1785,7 @@ class DocumentReference with Resource, _$DocumentReference {
   ///  content element repetitions, each with a different format.
   ///
   /// [context] The clinical context in which the document was prepared.
+  @HiveType(typeId: 93, adapterName: 'DocumentReferenceAdapter')
   factory DocumentReference({
     @Default(R4ResourceType.DocumentReference)
     @JsonKey(unknownEnumValue: R4ResourceType.DocumentReference)

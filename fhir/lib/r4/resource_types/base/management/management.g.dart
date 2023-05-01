@@ -3,6 +3,155 @@
 part of 'management.dart';
 
 // **************************************************************************
+// TypeAdapterGenerator
+// **************************************************************************
+
+class EncounterAdapter extends TypeAdapter<_$_Encounter> {
+  @override
+  final int typeId = 16;
+
+  @override
+  _$_Encounter read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_Encounter();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_Encounter obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is EncounterAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class EpisodeOfCareAdapter extends TypeAdapter<_$_EpisodeOfCare> {
+  @override
+  final int typeId = 17;
+
+  @override
+  _$_EpisodeOfCare read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_EpisodeOfCare();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_EpisodeOfCare obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is EpisodeOfCareAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class FlagAdapter extends TypeAdapter<_$_Flag> {
+  @override
+  final int typeId = 18;
+
+  @override
+  _$_Flag read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_Flag();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_Flag obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is FlagAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class LibraryAdapter extends TypeAdapter<_$_Library> {
+  @override
+  final int typeId = 19;
+
+  @override
+  _$_Library read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_Library();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_Library obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is LibraryAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class List_Adapter extends TypeAdapter<_$_List_> {
+  @override
+  final int typeId = 20;
+
+  @override
+  _$_List_ read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_List_();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_List_ obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is List_Adapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

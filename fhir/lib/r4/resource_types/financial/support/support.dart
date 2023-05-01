@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -138,6 +139,7 @@ class Coverage with Resource, _$Coverage {
   /// [subrogationElement] Extensions for subrogation
   ///
   /// [contract] The policy(s) which constitute this insurance coverage.
+  @HiveType(typeId: 76, adapterName: 'CoverageAdapter')
   factory Coverage({
     @Default(R4ResourceType.Coverage)
     @JsonKey(unknownEnumValue: R4ResourceType.Coverage)
@@ -792,6 +794,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
   /// [item] Service categories or billable services for which benefit details
   /// and/or an authorization prior to service delivery may be required by the
   ///  payor.
+  @HiveType(typeId: 77, adapterName: 'CoverageEligibilityRequestAdapter')
   factory CoverageEligibilityRequest({
     @Default(R4ResourceType.CoverageEligibilityRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityRequest)
@@ -1585,6 +1588,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
   /// [form] A code for the form to be used for printing the content.
   ///
   /// [error] Errors encountered during the processing of the request.
+  @HiveType(typeId: 78, adapterName: 'CoverageEligibilityResponseAdapter')
   factory CoverageEligibilityResponse({
     @Default(R4ResourceType.CoverageEligibilityResponse)
     @JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityResponse)
@@ -2425,6 +2429,7 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
   ///
   /// [coverage] Reference to the program or plan identification, underwriter
   ///  or payor.
+  @HiveType(typeId: 79, adapterName: 'EnrollmentRequestAdapter')
   factory EnrollmentRequest({
     @Default(R4ResourceType.EnrollmentRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.EnrollmentRequest)
@@ -2643,6 +2648,7 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
   ///
   /// [requestProvider] The practitioner who is responsible for the services
   ///  rendered to the patient.
+  @HiveType(typeId: 80, adapterName: 'EnrollmentResponseAdapter')
   factory EnrollmentResponse({
     @Default(R4ResourceType.EnrollmentResponse)
     @JsonKey(unknownEnumValue: R4ResourceType.EnrollmentResponse)

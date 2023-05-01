@@ -1102,6 +1102,7 @@ class __$$_ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res, _$_Claim>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 65, adapterName: 'ClaimAdapter')
 class _$_Claim extends _Claim {
   _$_Claim(
       {@JsonKey(unknownEnumValue: R4ResourceType.Claim)
@@ -11280,6 +11281,7 @@ class __$$_ClaimResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 66, adapterName: 'ClaimResponseAdapter')
 class _$_ClaimResponse extends _ClaimResponse {
   _$_ClaimResponse(
       {@JsonKey(unknownEnumValue: R4ResourceType.ClaimResponse)
@@ -20884,6 +20886,7 @@ class __$$_InvoiceCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 67, adapterName: 'InvoiceAdapter')
 class _$_Invoice extends _Invoice {
   _$_Invoice(
       {@JsonKey(unknownEnumValue: R4ResourceType.Invoice)

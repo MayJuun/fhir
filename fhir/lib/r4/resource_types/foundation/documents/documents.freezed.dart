@@ -735,6 +735,7 @@ class __$$_CatalogEntryCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 90, adapterName: 'CatalogEntryAdapter')
 class _$_CatalogEntry extends _CatalogEntry {
   _$_CatalogEntry(
       {@JsonKey(unknownEnumValue: R4ResourceType.CatalogEntry)
@@ -2579,6 +2580,7 @@ class __$$_CompositionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 91, adapterName: 'CompositionAdapter')
 class _$_Composition extends _Composition {
   _$_Composition(
       {@JsonKey(unknownEnumValue: R4ResourceType.Composition)
@@ -6209,6 +6211,7 @@ class __$$_DocumentManifestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 92, adapterName: 'DocumentManifestAdapter')
 class _$_DocumentManifest extends _DocumentManifest {
   _$_DocumentManifest(
       {@JsonKey(unknownEnumValue: R4ResourceType.DocumentManifest)
@@ -8052,6 +8055,7 @@ class __$$_DocumentReferenceCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 93, adapterName: 'DocumentReferenceAdapter')
 class _$_DocumentReference extends _DocumentReference {
   _$_DocumentReference(
       {@JsonKey(unknownEnumValue: R4ResourceType.DocumentReference)

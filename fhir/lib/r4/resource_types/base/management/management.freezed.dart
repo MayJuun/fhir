@@ -901,6 +901,7 @@ class __$$_EncounterCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 16, adapterName: 'EncounterAdapter')
 class _$_Encounter extends _Encounter {
   _$_Encounter(
       {@JsonKey(unknownEnumValue: R4ResourceType.Encounter)
@@ -5288,6 +5289,7 @@ class __$$_EpisodeOfCareCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 17, adapterName: 'EpisodeOfCareAdapter')
 class _$_EpisodeOfCare extends _EpisodeOfCare {
   _$_EpisodeOfCare(
       {@JsonKey(unknownEnumValue: R4ResourceType.EpisodeOfCare)
@@ -7322,6 +7324,7 @@ class __$$_FlagCopyWithImpl<$Res> extends _$FlagCopyWithImpl<$Res, _$_Flag>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 18, adapterName: 'FlagAdapter')
 class _$_Flag extends _Flag {
   _$_Flag(
       {@JsonKey(unknownEnumValue: R4ResourceType.Flag)
@@ -9225,6 +9228,7 @@ class __$$_LibraryCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 19, adapterName: 'LibraryAdapter')
 class _$_Library extends _Library {
   _$_Library(
       {@JsonKey(unknownEnumValue: R4ResourceType.Library)
@@ -11230,6 +11234,7 @@ class __$$_List_CopyWithImpl<$Res> extends _$List_CopyWithImpl<$Res, _$_List_>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 20, adapterName: 'List_Adapter')
 class _$_List_ extends _List_ {
   _$_List_(
       {@JsonKey(unknownEnumValue: R4ResourceType.List_)

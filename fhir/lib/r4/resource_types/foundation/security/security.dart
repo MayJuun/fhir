@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -108,6 +109,7 @@ class AuditEvent with Resource, _$AuditEvent {
   /// [source] The system that is reporting the event.
   ///
   /// [entity] Specific instances of data or objects that have been accessed.
+  @HiveType(typeId: 105, adapterName: 'AuditEventAdapter')
   factory AuditEvent({
     @Default(R4ResourceType.AuditEvent)
     @JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
@@ -1087,6 +1089,7 @@ class Consent with Resource, _$Consent {
   ///
   /// [provision] An exception to the base policy of this consent. An exception
   ///  can be an addition or removal of access permissions.
+  @HiveType(typeId: 106, adapterName: 'ConsentAdapter')
   factory Consent({
     @Default(R4ResourceType.Consent)
     @JsonKey(unknownEnumValue: R4ResourceType.Consent)
@@ -1999,6 +2002,7 @@ class Provenance with Resource, _$Provenance {
   /// [signature] A digital signature on the target Reference(s). The signer
   /// should match a Provenance.agent. The purpose of the signature is
   ///  indicated.
+  @HiveType(typeId: 107, adapterName: 'ProvenanceAdapter')
   factory Provenance({
     @Default(R4ResourceType.Provenance)
     @JsonKey(unknownEnumValue: R4ResourceType.Provenance)

@@ -3,6 +3,242 @@
 part of 'care_provision.dart';
 
 // **************************************************************************
+// TypeAdapterGenerator
+// **************************************************************************
+
+class CarePlanAdapter extends TypeAdapter<_$_CarePlan> {
+  @override
+  final int typeId = 27;
+
+  @override
+  _$_CarePlan read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_CarePlan();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_CarePlan obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is CarePlanAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class CareTeamAdapter extends TypeAdapter<_$_CareTeam> {
+  @override
+  final int typeId = 28;
+
+  @override
+  _$_CareTeam read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_CareTeam();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_CareTeam obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is CareTeamAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class GoalAdapter extends TypeAdapter<_$_Goal> {
+  @override
+  final int typeId = 29;
+
+  @override
+  _$_Goal read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_Goal();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_Goal obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is GoalAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class NutritionOrderAdapter extends TypeAdapter<_$_NutritionOrder> {
+  @override
+  final int typeId = 30;
+
+  @override
+  _$_NutritionOrder read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_NutritionOrder();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_NutritionOrder obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is NutritionOrderAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class RequestGroupAdapter extends TypeAdapter<_$_RequestGroup> {
+  @override
+  final int typeId = 31;
+
+  @override
+  _$_RequestGroup read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_RequestGroup();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_RequestGroup obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is RequestGroupAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class RiskAssessmentAdapter extends TypeAdapter<_$_RiskAssessment> {
+  @override
+  final int typeId = 32;
+
+  @override
+  _$_RiskAssessment read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_RiskAssessment();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_RiskAssessment obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is RiskAssessmentAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class ServiceRequestAdapter extends TypeAdapter<_$_ServiceRequest> {
+  @override
+  final int typeId = 33;
+
+  @override
+  _$_ServiceRequest read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_ServiceRequest();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_ServiceRequest obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ServiceRequestAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class VisionPrescriptionAdapter extends TypeAdapter<_$_VisionPrescription> {
+  @override
+  final int typeId = 34;
+
+  @override
+  _$_VisionPrescription read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_VisionPrescription();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_VisionPrescription obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is VisionPrescriptionAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

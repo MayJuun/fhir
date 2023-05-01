@@ -820,6 +820,7 @@ class __$$_AdverseEventCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 58, adapterName: 'AdverseEventAdapter')
 class _$_AdverseEvent extends _AdverseEvent {
   _$_AdverseEvent(
       {@JsonKey(unknownEnumValue: R4ResourceType.AdverseEvent)
@@ -2876,6 +2877,7 @@ class __$$_AllergyIntoleranceCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 59, adapterName: 'AllergyIntoleranceAdapter')
 class _$_AllergyIntolerance extends _AllergyIntolerance {
   _$_AllergyIntolerance(
       {@JsonKey(unknownEnumValue: R4ResourceType.AllergyIntolerance)
@@ -4754,6 +4756,7 @@ class __$$_ClinicalImpressionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 60, adapterName: 'ClinicalImpressionAdapter')
 class _$_ClinicalImpression extends _ClinicalImpression {
   _$_ClinicalImpression(
       {@JsonKey(unknownEnumValue: R4ResourceType.ClinicalImpression)
@@ -6914,6 +6917,7 @@ class __$$_ConditionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 61, adapterName: 'ConditionAdapter')
 class _$_Condition extends _Condition {
   _$_Condition(
       {@JsonKey(unknownEnumValue: R4ResourceType.Condition)
@@ -8706,6 +8710,7 @@ class __$$_DetectedIssueCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 62, adapterName: 'DetectedIssueAdapter')
 class _$_DetectedIssue extends _DetectedIssue {
   _$_DetectedIssue(
       {@JsonKey(unknownEnumValue: R4ResourceType.DetectedIssue)
@@ -10814,6 +10819,7 @@ class __$$_FamilyMemberHistoryCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 63, adapterName: 'FamilyMemberHistoryAdapter')
 class _$_FamilyMemberHistory extends _FamilyMemberHistory {
   _$_FamilyMemberHistory(
       {@JsonKey(unknownEnumValue: R4ResourceType.FamilyMemberHistory)
@@ -13001,6 +13007,7 @@ class __$$_ProcedureCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 64, adapterName: 'ProcedureAdapter')
 class _$_Procedure extends _Procedure {
   _$_Procedure(
       {@JsonKey(unknownEnumValue: R4ResourceType.Procedure)

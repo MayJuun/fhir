@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -211,6 +212,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
   /// [messaging] A description of the messaging capabilities of the solution.
   ///
   /// [document] A document definition.
+  @HiveType(typeId: 81, adapterName: 'CapabilityStatementAdapter')
   factory CapabilityStatement({
     @Default(R4ResourceType.CapabilityStatement)
     @JsonKey(unknownEnumValue: R4ResourceType.CapabilityStatement)
@@ -2550,6 +2552,7 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
   ///
   /// [resource] Information about how a resource is related to the
   ///  compartment.
+  @HiveType(typeId: 82, adapterName: 'CompartmentDefinitionAdapter')
   factory CompartmentDefinition({
     @Default(R4ResourceType.CompartmentDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.CompartmentDefinition)
@@ -3041,6 +3044,7 @@ class ExampleScenario with Resource, _$ExampleScenario {
   /// [process] Each major process - a group of operations.
   ///
   /// [workflow] Another nested workflow.
+  @HiveType(typeId: 83, adapterName: 'ExampleScenarioAdapter')
   factory ExampleScenario({
     @Default(R4ResourceType.ExampleScenario)
     @JsonKey(unknownEnumValue: R4ResourceType.ExampleScenario)
@@ -4449,6 +4453,7 @@ class GraphDefinition with Resource, _$GraphDefinition {
   /// [profile] The profile that describes the use of the base resource.
   ///
   /// [link] Links this graph makes rules about.
+  @HiveType(typeId: 84, adapterName: 'GraphDefinitionAdapter')
   factory GraphDefinition({
     @Default(R4ResourceType.GraphDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.GraphDefinition)
@@ -5267,6 +5272,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
   ///
   /// [manifest] Information about an assembled implementation guide, created
   ///  by the publication tooling.
+  @HiveType(typeId: 85, adapterName: 'ImplementationGuideAdapter')
   factory ImplementationGuide({
     @Default(R4ResourceType.ImplementationGuide)
     @JsonKey(unknownEnumValue: R4ResourceType.ImplementationGuide)
@@ -7160,6 +7166,7 @@ class MessageDefinition with Resource, _$MessageDefinition {
   /// what resources are to be added to the bundle when building the document.
   /// The GraphDefinition can also specify profiles that apply to the various
   ///  resources.
+  @HiveType(typeId: 86, adapterName: 'MessageDefinitionAdapter')
   factory MessageDefinition({
     @Default(R4ResourceType.MessageDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.MessageDefinition)
@@ -7865,6 +7872,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
   /// [overload] Defines an appropriate combination of parameters to use when
   /// invoking this operation, to help code generators when generating
   ///  overloaded parameter sets for this operation.
+  @HiveType(typeId: 87, adapterName: 'OperationDefinitionAdapter')
   factory OperationDefinition({
     @Default(R4ResourceType.OperationDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.OperationDefinition)
@@ -8904,6 +8912,7 @@ class SearchParameter with Resource, _$SearchParameter {
   /// [chainElement] Extensions for chain
   ///
   /// [component] Used to define the parts of a composite search parameter.
+  @HiveType(typeId: 87, adapterName: 'SearchParameterAdapter')
   factory SearchParameter({
     @Default(R4ResourceType.SearchParameter)
     @JsonKey(unknownEnumValue: R4ResourceType.SearchParameter)
@@ -9532,6 +9541,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
   ///
   /// [differential] A differential view is expressed relative to the base
   ///  StructureDefinition - a statement of differences that it applies.
+  @HiveType(typeId: 88, adapterName: 'StructureDefinitionAdapter')
   factory StructureDefinition({
     @Default(R4ResourceType.StructureDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.StructureDefinition)
@@ -10453,6 +10463,7 @@ class StructureMap with Resource, _$StructureMap {
   ///
   /// [group] Organizes the mapping into manageable chunks for human
   ///  review/ease of maintenance.
+  @HiveType(typeId: 89, adapterName: 'StructureMapAdapter')
   factory StructureMap({
     @Default(R4ResourceType.StructureMap)
     @JsonKey(unknownEnumValue: R4ResourceType.StructureMap)

@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -99,6 +100,7 @@ class BodyStructure with Resource, _$BodyStructure {
   /// [image] Image or images used to identify a location.
   ///
   /// [patient] The person to which the body site belongs.
+  @HiveType(typeId: 34, adapterName: 'BodyStructureAdapter')
   factory BodyStructure({
     @Default(R4ResourceType.BodyStructure)
     @JsonKey(unknownEnumValue: R4ResourceType.BodyStructure)
@@ -378,6 +380,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
   /// [presentedForm] Rich text representation of the entire result as issued
   /// by the diagnostic service. Multiple formats are allowed but they SHALL be
   ///  semantically equivalent.
+  @HiveType(typeId: 35, adapterName: 'DiagnosticReportAdapter')
   factory DiagnosticReport({
     @Default(R4ResourceType.DiagnosticReport)
     @JsonKey(unknownEnumValue: R4ResourceType.DiagnosticReport)
@@ -835,6 +838,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
   /// [descriptionElement] Extensions for description
   ///
   /// [series] Each study has one or more series of images or other content.
+  @HiveType(typeId: 36, adapterName: 'ImagingStudyAdapter')
   factory ImagingStudy({
     @Default(R4ResourceType.ImagingStudy)
     @JsonKey(unknownEnumValue: R4ResourceType.ImagingStudy)
@@ -1634,6 +1638,7 @@ class Media with Resource, _$Media {
   ///
   /// [note] Comments made about the media by the performer, subject or other
   ///  participants.
+  @HiveType(typeId: 37, adapterName: 'MediaAdapter')
   factory Media({
     @Default(R4ResourceType.Media)
     @JsonKey(unknownEnumValue: R4ResourceType.Media)
@@ -1972,6 +1977,7 @@ class MolecularSequence with Resource, _$MolecularSequence {
   ///  variant.
   ///
   /// [structureVariant] Information about chromosome structure variation.
+  @HiveType(typeId: 38, adapterName: 'MolecularSequenceAdapter')
   factory MolecularSequence({
     @Default(R4ResourceType.MolecularSequence)
     @JsonKey(unknownEnumValue: R4ResourceType.MolecularSequence)
@@ -3729,6 +3735,7 @@ class Observation with Resource, _$Observation {
   /// that share the same attributes.  Examples include systolic and diastolic
   /// component observations for blood pressure measurement and multiple
   ///  component observations for genetics observations.
+  @HiveType(typeId: 39, adapterName: 'ObservationAdapter')
   factory Observation({
     @Default(R4ResourceType.Observation)
     @JsonKey(unknownEnumValue: R4ResourceType.Observation)
@@ -4525,6 +4532,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
   ///
   /// [item] A group or question item from the original questionnaire for which
   ///  answers are provided.
+  @HiveType(typeId: 40, adapterName: 'QuestionnaireResponseAdapter')
   factory QuestionnaireResponse({
     @Default(R4ResourceType.QuestionnaireResponse)
     @JsonKey(unknownEnumValue: R4ResourceType.QuestionnaireResponse)
@@ -5150,6 +5158,7 @@ class Specimen with Resource, _$Specimen {
   /// [note] To communicate any details or issues about the specimen or during
   /// the specimen collection. (for example: broken vial, sent with patient,
   ///  frozen).
+  @HiveType(typeId: 41, adapterName: 'SpecimenAdapter')
   factory Specimen({
     @Default(R4ResourceType.Specimen)
     @JsonKey(unknownEnumValue: R4ResourceType.Specimen)

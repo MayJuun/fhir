@@ -1301,6 +1301,7 @@ class __$$_CapabilityStatementCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 81, adapterName: 'CapabilityStatementAdapter')
 class _$_CapabilityStatement extends _CapabilityStatement {
   _$_CapabilityStatement(
       {@JsonKey(unknownEnumValue: R4ResourceType.CapabilityStatement)
@@ -11228,6 +11229,7 @@ class __$$_CompartmentDefinitionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 82, adapterName: 'CompartmentDefinitionAdapter')
 class _$_CompartmentDefinition extends _CompartmentDefinition {
   _$_CompartmentDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.CompartmentDefinition)
@@ -13485,6 +13487,7 @@ class __$$_ExampleScenarioCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 83, adapterName: 'ExampleScenarioAdapter')
 class _$_ExampleScenario extends _ExampleScenario {
   _$_ExampleScenario(
       {@JsonKey(unknownEnumValue: R4ResourceType.ExampleScenario)
@@ -20082,6 +20085,7 @@ class __$$_GraphDefinitionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 84, adapterName: 'GraphDefinitionAdapter')
 class _$_GraphDefinition extends _GraphDefinition {
   _$_GraphDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.GraphDefinition)
@@ -23943,6 +23947,7 @@ class __$$_ImplementationGuideCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 85, adapterName: 'ImplementationGuideAdapter')
 class _$_ImplementationGuide extends _ImplementationGuide {
   _$_ImplementationGuide(
       {@JsonKey(unknownEnumValue: R4ResourceType.ImplementationGuide)
@@ -32237,6 +32242,7 @@ class __$$_MessageDefinitionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 86, adapterName: 'MessageDefinitionAdapter')
 class _$_MessageDefinition extends _MessageDefinition {
   _$_MessageDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.MessageDefinition)
@@ -35639,6 +35645,7 @@ class __$$_OperationDefinitionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 87, adapterName: 'OperationDefinitionAdapter')
 class _$_OperationDefinition extends _OperationDefinition {
   _$_OperationDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.OperationDefinition)
@@ -40556,6 +40563,7 @@ class __$$_SearchParameterCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 87, adapterName: 'SearchParameterAdapter')
 class _$_SearchParameter extends _SearchParameter {
   _$_SearchParameter(
       {@JsonKey(unknownEnumValue: R4ResourceType.SearchParameter)
@@ -43637,6 +43645,7 @@ class __$$_StructureDefinitionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 88, adapterName: 'StructureDefinitionAdapter')
 class _$_StructureDefinition extends _StructureDefinition {
   _$_StructureDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.StructureDefinition)
@@ -47603,6 +47612,7 @@ class __$$_StructureMapCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
+@HiveType(typeId: 89, adapterName: 'StructureMapAdapter')
 class _$_StructureMap extends _StructureMap {
   _$_StructureMap(
       {@JsonKey(unknownEnumValue: R4ResourceType.StructureMap)

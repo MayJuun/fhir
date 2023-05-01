@@ -3,6 +3,301 @@
 part of 'conformance.dart';
 
 // **************************************************************************
+// TypeAdapterGenerator
+// **************************************************************************
+
+class CapabilityStatementAdapter extends TypeAdapter<_$_CapabilityStatement> {
+  @override
+  final int typeId = 81;
+
+  @override
+  _$_CapabilityStatement read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_CapabilityStatement();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_CapabilityStatement obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is CapabilityStatementAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class CompartmentDefinitionAdapter
+    extends TypeAdapter<_$_CompartmentDefinition> {
+  @override
+  final int typeId = 82;
+
+  @override
+  _$_CompartmentDefinition read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_CompartmentDefinition();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_CompartmentDefinition obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is CompartmentDefinitionAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class ExampleScenarioAdapter extends TypeAdapter<_$_ExampleScenario> {
+  @override
+  final int typeId = 83;
+
+  @override
+  _$_ExampleScenario read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_ExampleScenario();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_ExampleScenario obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ExampleScenarioAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class GraphDefinitionAdapter extends TypeAdapter<_$_GraphDefinition> {
+  @override
+  final int typeId = 84;
+
+  @override
+  _$_GraphDefinition read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_GraphDefinition();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_GraphDefinition obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is GraphDefinitionAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class ImplementationGuideAdapter extends TypeAdapter<_$_ImplementationGuide> {
+  @override
+  final int typeId = 85;
+
+  @override
+  _$_ImplementationGuide read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_ImplementationGuide();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_ImplementationGuide obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ImplementationGuideAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class MessageDefinitionAdapter extends TypeAdapter<_$_MessageDefinition> {
+  @override
+  final int typeId = 86;
+
+  @override
+  _$_MessageDefinition read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_MessageDefinition();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_MessageDefinition obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is MessageDefinitionAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class OperationDefinitionAdapter extends TypeAdapter<_$_OperationDefinition> {
+  @override
+  final int typeId = 87;
+
+  @override
+  _$_OperationDefinition read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_OperationDefinition();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_OperationDefinition obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is OperationDefinitionAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class SearchParameterAdapter extends TypeAdapter<_$_SearchParameter> {
+  @override
+  final int typeId = 87;
+
+  @override
+  _$_SearchParameter read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_SearchParameter();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_SearchParameter obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is SearchParameterAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class StructureDefinitionAdapter extends TypeAdapter<_$_StructureDefinition> {
+  @override
+  final int typeId = 88;
+
+  @override
+  _$_StructureDefinition read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_StructureDefinition();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_StructureDefinition obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is StructureDefinitionAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class StructureMapAdapter extends TypeAdapter<_$_StructureMap> {
+  @override
+  final int typeId = 89;
+
+  @override
+  _$_StructureMap read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_StructureMap();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_StructureMap obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is StructureMapAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

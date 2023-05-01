@@ -3,6 +3,68 @@
 part of 'public_health_and_research.dart';
 
 // **************************************************************************
+// TypeAdapterGenerator
+// **************************************************************************
+
+class ResearchStudyAdapter extends TypeAdapter<_$_ResearchStudy> {
+  @override
+  final int typeId = 134;
+
+  @override
+  _$_ResearchStudy read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_ResearchStudy();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_ResearchStudy obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ResearchStudyAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+class ResearchSubjectAdapter extends TypeAdapter<_$_ResearchSubject> {
+  @override
+  final int typeId = 135;
+
+  @override
+  _$_ResearchSubject read(BinaryReader reader) {
+    final numOfFields = reader.readByte();
+    final fields = <int, dynamic>{
+      for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
+    };
+    return _$_ResearchSubject();
+  }
+
+  @override
+  void write(BinaryWriter writer, _$_ResearchSubject obj) {
+    writer.writeByte(0);
+  }
+
+  @override
+  int get hashCode => typeId.hashCode;
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ResearchSubjectAdapter &&
+          runtimeType == other.runtimeType &&
+          typeId == other.typeId;
+}
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
