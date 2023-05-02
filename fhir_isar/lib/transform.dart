@@ -9,13 +9,19 @@ Future<void> main() async {
         !file.contains('.g.') &&
         !file.contains('hive') &&
         file.contains('dart') &&
-        !file.contains('transform.dart')) {
+        !file.contains('transform.dart') &&
+        !file.contains('primitive') &&
+        !file.contains('freezed') &&
+        !file.contains('field_map') &&
+        !(file.contains('resource') && !file.contains('resource_types'))) {
+      print(file);
       final fileText = await File(file).readAsString();
       final fileList = fileText.split('\n');
       var newText = '';
       var classFile = false;
       var isClass = false;
       var className = '';
+      final classVars = <List>[];
       for (final line in fileList) {
         if (!classFile) {
           if (line.contains('class')) {
@@ -29,14 +35,36 @@ Future<void> main() async {
           }
         } else {
           if (isClass) {
-            if (line.contains('$className._()')) {
-            } else if (line.contains('factory $className')) {
+            if (line == '' || line.trim() == '') {
+            } else if (line.contains('const')) {
               newText += 'const $className({\n';
-            } else if (line.contains('}) =')) {
+            } else if (line.contains('});')) {
               isClass = false;
-              newText += '});\n}\n';
+              newText += '});\n';
+
+              classVars.forEach((element) {
+                newText +=
+                    '${element[element.length - 2]} ${element.last.toString().replaceAll(',', ';')}\n';
+              });
+
+              newText += '}\n';
             } else {
-              newText += '$line\n';
+              if (line.contains('}')) {
+                newText += '$line\n';
+              } else {
+                final lineSplit = line.split(' ');
+                lineSplit
+                    .removeWhere((element) => element == '' || element == ' ');
+                print(lineSplit);
+                if (lineSplit.length == 2) {
+                  newText += 'this.${lineSplit.last}\n';
+                } else {
+                  final tempLine =
+                      lineSplit.sublist(0, lineSplit.length - 2).join(' ');
+                  newText += '$tempLine this.${lineSplit.last}\n';
+                }
+                classVars.add(lineSplit);
+              }
             }
           }
         }
