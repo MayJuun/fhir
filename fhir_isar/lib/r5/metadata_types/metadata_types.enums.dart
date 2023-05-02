@@ -1,0 +1,105 @@
+part of 'metadata_types.dart';
+
+enum ContributorType {
+  @JsonValue('author')
+  author,
+  @JsonValue('editor')
+  editor,
+  @JsonValue('reviewer')
+  reviewer,
+  @JsonValue('endorser')
+  endorser,
+}
+
+enum DataRequirementSortDirection {
+  @JsonValue('ascending')
+  ascending,
+  @JsonValue('descending')
+  descending,
+}
+
+enum RelatedArtifactType {
+  @JsonValue('documentation')
+  documentation,
+  @JsonValue('justification')
+  justification,
+  @JsonValue('citation')
+  citation,
+  @JsonValue('predecessor')
+  predecessor,
+  @JsonValue('successor')
+  successor,
+  @JsonValue('derived-from')
+  derived_from,
+  @JsonValue('depends-on')
+  depends_on,
+  @JsonValue('composed-of')
+  composed_of,
+  @JsonValue('part-of')
+  part_of,
+  @JsonValue('amends')
+  amends,
+  @JsonValue('amended-with')
+  amended_with,
+  @JsonValue('appends')
+  appends,
+  @JsonValue('appended-with')
+  appended_with,
+  @JsonValue('cites')
+  cites,
+  @JsonValue('cited-by')
+  cited_by,
+  @JsonValue('comments-on')
+  comments_on,
+  @JsonValue('comment-in')
+  comment_in,
+  @JsonValue('contains')
+  contains,
+  @JsonValue('contained-in')
+  contained_in,
+  @JsonValue('corrects')
+  corrects,
+  @JsonValue('correction-in')
+  correction_in,
+  @JsonValue('replaces')
+  replaces,
+  @JsonValue('replaced-with')
+  replaced_with,
+  @JsonValue('retracts')
+  retracts,
+  @JsonValue('retracted-by')
+  retracted_by,
+  @JsonValue('signs')
+  signs,
+  @JsonValue('similar-to')
+  similar_to,
+  @JsonValue('supports')
+  supports,
+  @JsonValue('supported-with')
+  supported_with,
+  @JsonValue('transforms')
+  transforms,
+  @JsonValue('transformed-into')
+  transformed_into,
+  @JsonValue('transformed-with')
+  transformed_with,
+}
+
+enum TriggerDefinitionType {
+  @JsonValue('named-event')
+  named_event,
+  @JsonValue('periodic')
+  periodic,
+  @JsonValue('data-changed')
+  data_changed,
+  @JsonValue('data-added')
+  data_added,
+  @JsonValue('data-modified')
+  data_modified,
+  @JsonValue('data-removed')
+  data_removed,
+  @JsonValue('data-accessed')
+  data_accessed,
+  @JsonValue('data-access-ended')
+  data_access_ended,
+}

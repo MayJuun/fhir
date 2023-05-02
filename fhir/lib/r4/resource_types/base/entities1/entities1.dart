@@ -4,7 +4,6 @@ import 'dart:convert';
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:hive/hive.dart';
-import 'package:isar/isar.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -15,7 +14,6 @@ part 'entities1.g.dart';
 
 /// [Endpoint] The technical details of an endpoint that can be used for
 @freezed
-@collection
 class Endpoint with Resource, _$Endpoint {
   /// [Endpoint] The technical details of an endpoint that can be used for
   Endpoint._();

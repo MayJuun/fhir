@@ -4,6 +4,7 @@
 import 'dart:convert';
 
 // Package imports:
+import 'package:isar/isar.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:xml2json/xml2json.dart';
 import 'package:yaml/yaml.dart';
