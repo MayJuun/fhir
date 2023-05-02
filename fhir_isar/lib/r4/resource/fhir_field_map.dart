@@ -12326,3 +12326,4 @@ final fhirFieldMap = {
     '_reference': const FhirField(false, 'Element'),
   },
 };
+

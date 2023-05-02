@@ -322,3 +322,4 @@ class ResourceUtils {
     R5ResourceType.VisionPrescription: 'VisionPrescription',
   };
 }
+

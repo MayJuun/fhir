@@ -196,3 +196,4 @@ Resource _newId(Resource resource) {
           '${resource.resourceType} is not a defined resourceType');
   }
 }
+

@@ -377,3 +377,4 @@ Resource _updateMeta(Resource resource, {Meta? meta}) {
           '${resource.resourceType} is not a defined resourceType');
   }
 }
+

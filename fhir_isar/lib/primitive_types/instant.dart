@@ -8,12 +8,12 @@ import 'package:yaml/yaml.dart';
 import 'fhir_date_time_base.dart';
 import 'primitive_type_exceptions.dart';
 
-class Instant extends FhirDateTimeBase {
+class Instant {
   const Instant._(String valueString, DateTime? valueDateTime, bool isValid,
       Exception? parseError)
       : super(valueString, valueDateTime, isValid, parseError);
 
-  factory Instant(dynamic inValue) {
+const Instant({
     if (inValue is DateTime) {
       return Instant._(inValue.toIso8601String(), inValue, true, null);
     } else if (inValue is String) {
@@ -28,13 +28,13 @@ class Instant extends FhirDateTimeBase {
     }
   }
 
-  factory Instant.fromDateTime(DateTime dateTime) {
+const Instant({
     return Instant._(dateTime.toIso8601String(), dateTime, true, null);
   }
 
-  factory Instant.fromJson(dynamic json) => Instant(json);
+const Instant({
 
-  factory Instant.fromYaml(dynamic yaml) => yaml is String
+const Instant({
       ? Instant.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Instant.fromJson(jsonDecode(jsonEncode(yaml)))
@@ -59,3 +59,4 @@ class Instant extends FhirDateTimeBase {
     }
   }
 }
+

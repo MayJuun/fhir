@@ -284,3 +284,4 @@ enum R4ResourceType {
   @JsonValue('VisionPrescription')
   VisionPrescription,
 }
+

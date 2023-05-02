@@ -12,7 +12,7 @@ part of 'other.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+class  {
 
 ExplanationOfBenefit _$ExplanationOfBenefitFromJson(Map<String, dynamic> json) {
   return _ExplanationOfBenefit.fromJson(json);
@@ -63,7 +63,7 @@ mixin _$ExplanationOfBenefit {
 
 /// @nodoc
 abstract class $ExplanationOfBenefitCopyWith<$Res> {
-  factory $ExplanationOfBenefitCopyWith(ExplanationOfBenefit value,
+const ({
           $Res Function(ExplanationOfBenefit) then) =
       _$ExplanationOfBenefitCopyWithImpl<$Res, ExplanationOfBenefit>;
   @useResult
@@ -415,7 +415,7 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res,
 /// @nodoc
 abstract class _$$_ExplanationOfBenefitCopyWith<$Res>
     implements $ExplanationOfBenefitCopyWith<$Res> {
-  factory _$$_ExplanationOfBenefitCopyWith(_$_ExplanationOfBenefit value,
+const ({
           $Res Function(_$_ExplanationOfBenefit) then) =
       __$$_ExplanationOfBenefitCopyWithImpl<$Res>;
   @override
@@ -659,9 +659,8 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
         _identifier = identifier,
-        super._();
 
-  factory _$_ExplanationOfBenefit.fromJson(
+const ({
     Map<String, dynamic> json,
     SerializationManager serializationManager,
   ) =>
@@ -856,7 +855,7 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
 }
 
 abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
-  factory _ExplanationOfBenefit(
+const ({
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
           final Dstu2ResourceType resourceType,
       final FhirId? id,
@@ -888,72 +887,5 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
           final Element? createdElement,
       final Reference? organization,
       final Reference? requestProvider,
-      final Reference? requestOrganization}) = _$_ExplanationOfBenefit;
-  _ExplanationOfBenefit._() : super._();
-
-  factory _ExplanationOfBenefit.fromJson(
-    Map<String, dynamic> json,
-    SerializationManager serializationManager,
-  ) = _$_ExplanationOfBenefit.fromJson;
-
-  @override
-  @JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
-  Dstu2ResourceType get resourceType;
-  @override
-  FhirId? get id;
-  @override
-  Meta? get meta;
-  @override
-  FhirUri? get implicitRules;
-  @override
-  @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
-  @override
-  Code? get language;
-  @override
-  @JsonKey(name: '_language')
-  Element? get languageElement;
-  @override
-  Narrative? get text;
-  @override
-  List<Resource>? get contained;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  @override
-  List<FhirExtension>? get modifierExtension;
-  @override
-  List<Identifier>? get identifier;
-  @override
-  Reference? get request;
-  @override
-  @JsonKey(unknownEnumValue: ExplanationOfBenefitOutcome.unknown)
-  ExplanationOfBenefitOutcome? get outcome;
-  @override
-  @JsonKey(name: '_outcome')
-  Element? get outcomeElement;
-  @override
-  String? get disposition;
-  @override
-  @JsonKey(name: '_disposition')
-  Element? get dispositionElement;
-  @override
-  Coding? get ruleset;
-  @override
-  Coding? get originalRuleset;
-  @override
-  FhirDateTime? get created;
-  @override
-  @JsonKey(name: '_created')
-  Element? get createdElement;
-  @override
-  Reference? get organization;
-  @override
-  Reference? get requestProvider;
-  @override
-  Reference? get requestOrganization;
-  @override
-  @JsonKey(ignore: true)
-  _$$_ExplanationOfBenefitCopyWith<_$_ExplanationOfBenefit> get copyWith =>
-      throw _privateConstructorUsedError;
+});
 }

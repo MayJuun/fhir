@@ -244,3 +244,4 @@ class ResourceUtils {
     Stu3ResourceType.VisionPrescription: 'VisionPrescription',
   };
 }
+

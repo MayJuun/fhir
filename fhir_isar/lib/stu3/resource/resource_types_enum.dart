@@ -236,3 +236,4 @@ enum Stu3ResourceType {
   @JsonValue('VisionPrescription')
   VisionPrescription,
 }
+

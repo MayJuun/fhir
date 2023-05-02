@@ -1,4 +1,4 @@
-class PrimitiveTypeFormatException<T> extends FormatException {
+class PrimitiveTypeFormatException<T> {
   PrimitiveTypeFormatException(String message) : super(message);
 }
 
@@ -21,3 +21,4 @@ class UnequalPrecision<T> extends PrimitiveTypeArgumentError<T> {
 class InvalidTypes<T> extends PrimitiveTypeArgumentError<T> {
   InvalidTypes(String message) : super(message);
 }
+

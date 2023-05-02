@@ -16,12 +16,12 @@ enum DatePrecision {
 }
 
 // TODO(Dokotela): Does not accept 'YYYY-MM'
-class Date extends FhirDateTimeBase {
+class Date {
   const Date._(String valueString, DateTime? valueDateTime, bool isValid,
       this._precision, Exception? parseError)
       : super(valueString, valueDateTime, isValid, parseError);
 
-  factory Date(dynamic inValue) {
+const Date({
     if (inValue is DateTime) {
       return Date.fromDateTime(inValue, DatePrecision.YYYYMMDD);
     } else if (inValue is String) {
@@ -38,7 +38,7 @@ class Date extends FhirDateTimeBase {
     }
   }
 
-  factory Date.fromDateTime(DateTime dateTime,
+const Date({
       [DatePrecision precision = DatePrecision.YYYYMMDD]) {
     final String dateString = dateTime.toIso8601String();
     final int len = <int>[4, 7, 10][precision.index];
@@ -47,9 +47,9 @@ class Date extends FhirDateTimeBase {
         dateString.substring(0, len), dateTime, true, precision, null);
   }
 
-  factory Date.fromJson(dynamic json) => Date(json);
+const Date({
 
-  factory Date.fromYaml(dynamic yaml) => yaml is String
+const Date({
       ? Date.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Date.fromJson(jsonDecode(jsonEncode(yaml)))
@@ -114,3 +114,4 @@ class Date extends FhirDateTimeBase {
     }
   }
 }
+

@@ -12,7 +12,7 @@ part of 'backbone_type.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+class  {
 
 BackboneType _$BackboneTypeFromJson(Map<String, dynamic> json) {
   return _BackboneType.fromJson(json);
@@ -60,7 +60,7 @@ mixin _$BackboneType {
 
 /// @nodoc
 abstract class $BackboneTypeCopyWith<$Res> {
-  factory $BackboneTypeCopyWith(
+const ({
           BackboneType value, $Res Function(BackboneType) then) =
       _$BackboneTypeCopyWithImpl<$Res, BackboneType>;
   @useResult
@@ -107,7 +107,7 @@ class _$BackboneTypeCopyWithImpl<$Res, $Val extends BackboneType>
 /// @nodoc
 abstract class _$$_BackboneTypeCopyWith<$Res>
     implements $BackboneTypeCopyWith<$Res> {
-  factory _$$_BackboneTypeCopyWith(
+const ({
           _$_BackboneType value, $Res Function(_$_BackboneType) then) =
       __$$_BackboneTypeCopyWithImpl<$Res>;
   @override
@@ -159,9 +159,8 @@ class _$_BackboneType extends _BackboneType {
       final List<FhirExtension>? modifierExtension})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
-        super._();
 
-  factory _$_BackboneType.fromJson(
+const ({
     Map<String, dynamic> json,
     SerializationManager serializationManager,
   ) =>
@@ -279,53 +278,8 @@ class _$_BackboneType extends _BackboneType {
 }
 
 abstract class _BackboneType extends BackboneType {
-  factory _BackboneType(
+const ({
       {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension}) = _$_BackboneType;
-  _BackboneType._() : super._();
-
-  factory _BackboneType.fromJson(
-    Map<String, dynamic> json,
-    SerializationManager serializationManager,
-  ) = _$_BackboneType.fromJson;
-
-  @override
-
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references).
-  /// This may be any string value that does not contain spaces.;
-  String? get id;
-  @override
-
-  /// [extension_] May be used to represent additional information that is not
-  /// part of the basic definition of the element. To make the use of
-  ///  extensions
-  /// safe and manageable, there is a strict set of governance  applied to the
-  /// definition and use of extensions. Though any implementer can define an
-  /// extension, there is a set of requirements that SHALL be met as part of
-  ///  the
-  /// definition of the extension.;
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  @override
-
-  /// [modifierExtension] May be used to represent additional information that
-  /// is not part of the basic definition of the element and that modifies the
-  /// understanding of the element in which it is contained and/or the
-  /// understanding of the containing element's descendants. Usually modifier
-  /// elements provide negation or qualification. To make the use of
-  ///  extensions
-  /// safe and manageable, there is a strict set of governance applied to the
-  /// definition and use of extensions. Though any implementer can define an
-  /// extension, there is a set of requirements that SHALL be met as part of
-  /// the definition of the extension. Applications processing a resource are
-  /// required to check for modifier extensions. Modifier extensions SHALL NOT
-  /// change the meaning of any elements on Resource or DomainResource
-  /// (including cannot change the meaning of modifierExtension itself).
-  List<FhirExtension>? get modifierExtension;
-  @override
-  @JsonKey(ignore: true)
-  _$$_BackboneTypeCopyWith<_$_BackboneType> get copyWith =>
-      throw _privateConstructorUsedError;
+});
 }

@@ -12,7 +12,7 @@ part of 'element.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+class  {
 
 Element _$ElementFromJson(Map<String, dynamic> json) {
   return _Element.fromJson(json);
@@ -31,7 +31,7 @@ mixin _$Element {
 
 /// @nodoc
 abstract class $ElementCopyWith<$Res> {
-  factory $ElementCopyWith(Element value, $Res Function(Element) then) =
+const ({
       _$ElementCopyWithImpl<$Res, Element>;
   @useResult
   $Res call(
@@ -70,7 +70,7 @@ class _$ElementCopyWithImpl<$Res, $Val extends Element>
 
 /// @nodoc
 abstract class _$$_ElementCopyWith<$Res> implements $ElementCopyWith<$Res> {
-  factory _$$_ElementCopyWith(
+const ({
           _$_Element value, $Res Function(_$_Element) then) =
       __$$_ElementCopyWithImpl<$Res>;
   @override
@@ -113,9 +113,8 @@ class _$_Element extends _Element {
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_})
       : _extension_ = extension_,
-        super._();
 
-  factory _$_Element.fromJson(
+const ({
     Map<String, dynamic> json,
     SerializationManager serializationManager,
   ) =>
@@ -169,24 +168,7 @@ class _$_Element extends _Element {
 }
 
 abstract class _Element extends Element {
-  factory _Element(
+const ({
           {final String? id,
-          @JsonKey(name: 'extension') final List<FhirExtension>? extension_}) =
-      _$_Element;
-  _Element._() : super._();
-
-  factory _Element.fromJson(
-    Map<String, dynamic> json,
-    SerializationManager serializationManager,
-  ) = _$_Element.fromJson;
-
-  @override
-  String? get id;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  @override
-  @JsonKey(ignore: true)
-  _$$_ElementCopyWith<_$_Element> get copyWith =>
-      throw _privateConstructorUsedError;
+});
 }

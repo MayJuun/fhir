@@ -62,52 +62,5 @@ class Resource {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-  }) =>
-      Resource.fromJson(<String, dynamic>{
-        'id': id?.toString(),
-        'resourceType': resourceType?.toString(),
-        'meta': meta?.toString(),
-        'implicitRules': implicitRules?.toString(),
-        'text': text?.toString(),
-        'contained': contained?.toString(),
-        'extension': extension_?.toString(),
-        'modifierExtension': modifierExtension?.toString(),
-      });
-
-  Map<String, dynamic> toJson() {
-    final val = <String, dynamic>{};
-
-    void writeNotNull(String key, dynamic value) {
-      if (value != null) {
-        val[key] = value;
-      }
-    }
-
-    writeNotNull('id', id?.toJson());
-    writeNotNull('resourceType', resourceType);
-    writeNotNull('meta', meta?.toJson());
-    writeNotNull('implicitRules', implicitRules?.toJson());
-    writeNotNull('language', language?.toJson());
-    writeNotNull('text', text?.toJson());
-    writeNotNull('contained', contained?.map((e) => e.toJson()).toList());
-    writeNotNull('extension', extension_?.map((e) => e.toJson()).toList());
-    writeNotNull('modifierExtension',
-        modifierExtension?.map((e) => e.toJson()).toList());
-    return val;
-  }
-
-  String toYaml() => json2yaml(toJson());
-
-  String? get resourceTypeString =>
-      ResourceUtils.resourceTypeToStringMap[resourceType];
-
-  Reference get thisReference => Reference(reference: path);
-
-  String get path => '$resourceTypeString/$id';
-
-  Resource newIdIfNoId() => id == null ? _newId(this) : this;
-
-  Resource newId() => _newId(this);
-
-  Resource updateVersion({Meta? oldMeta}) => _updateMeta(this, meta: oldMeta);
+});
 }

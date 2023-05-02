@@ -8,11 +8,11 @@ import 'package:yaml/yaml.dart';
 import 'fhir_number.dart';
 import 'primitive_type_exceptions.dart';
 
-class Integer extends FhirNumber {
+class Integer {
   const Integer._(String valueString, int? valueNumber, bool isValid)
       : super(valueString, valueNumber, isValid);
 
-  factory Integer(dynamic inValue) {
+const Integer({
     if (inValue is int) {
       return Integer._(inValue.toString(), inValue, true);
     } else if (inValue is num) {
@@ -23,9 +23,9 @@ class Integer extends FhirNumber {
         'Integer cannot be constructed from $inValue.');
   }
 
-  factory Integer.fromJson(dynamic json) => Integer(json);
+const Integer({
 
-  factory Integer.fromYaml(dynamic yaml) => yaml is String
+const Integer({
       ? Integer.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Integer.fromJson(jsonDecode(jsonEncode(yaml)))
@@ -34,3 +34,4 @@ class Integer extends FhirNumber {
 
   int? get value => valueNumber as int?;
 }
+

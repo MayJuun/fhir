@@ -12,7 +12,7 @@ part of 'fhir_extension.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+class  {
 
 FhirExtension _$FhirExtensionFromJson(Map<String, dynamic> json) {
   return _FhirExtension.fromJson(json);
@@ -129,7 +129,7 @@ mixin _$FhirExtension {
 
 /// @nodoc
 abstract class $FhirExtensionCopyWith<$Res> {
-  factory $FhirExtensionCopyWith(
+const ({
           FhirExtension value, $Res Function(FhirExtension) then) =
       _$FhirExtensionCopyWithImpl<$Res, FhirExtension>;
   @useResult
@@ -1312,7 +1312,7 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
 /// @nodoc
 abstract class _$$_FhirExtensionCopyWith<$Res>
     implements $FhirExtensionCopyWith<$Res> {
-  factory _$$_FhirExtensionCopyWith(
+const ({
           _$_FhirExtension value, $Res Function(_$_FhirExtension) then) =
       __$$_FhirExtensionCopyWithImpl<$Res>;
   @override
@@ -1969,9 +1969,8 @@ class _$_FhirExtension extends _FhirExtension {
       this.valueParameterDefinition,
       this.valueTriggerDefinition})
       : _extension_ = extension_,
-        super._();
 
-  factory _$_FhirExtension.fromJson(
+const ({
     Map<String, dynamic> json,
     SerializationManager serializationManager,
   ) =>
@@ -2368,7 +2367,7 @@ class _$_FhirExtension extends _FhirExtension {
 }
 
 abstract class _FhirExtension extends FhirExtension {
-  factory _FhirExtension(
+const ({
       {final String? id,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
@@ -2461,183 +2460,5 @@ abstract class _FhirExtension extends FhirExtension {
       final UsageContext? valueUsageContext,
       final DataRequirement? valueDataRequirement,
       final ParameterDefinition? valueParameterDefinition,
-      final TriggerDefinition? valueTriggerDefinition}) = _$_FhirExtension;
-  _FhirExtension._() : super._();
-
-  factory _FhirExtension.fromJson(
-    Map<String, dynamic> json,
-    SerializationManager serializationManager,
-  ) = _$_FhirExtension.fromJson;
-
-  @override
-  String? get id;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  @override
-  FhirUri? get url;
-  @override
-  @JsonKey(name: '_url')
-  Element? get urlElement;
-  @override
-  Boolean? get valueBoolean;
-  @override
-  @JsonKey(name: '_valueBoolean')
-  Element? get valueBooleanElement;
-  @override
-  Integer? get valueInteger;
-  @override
-  @JsonKey(name: '_valueInteger')
-  Element? get valueIntegerElement;
-  @override
-  Decimal? get valueDecimal;
-  @override
-  @JsonKey(name: '_valueDecimal')
-  Element? get valueDecimalElement;
-  @override
-  Base64Binary? get valueBase64Binary;
-  @override
-  @JsonKey(name: '_valueBase64Binary')
-  Element? get valueBase64BinaryElement;
-  @override
-  Instant? get valueInstant;
-  @override
-  @JsonKey(name: '_valueInstant')
-  Element? get valueInstantElement;
-  @override
-  String? get valueString;
-  @override
-  @JsonKey(name: '_valueString')
-  Element? get valueStringElement;
-  @override
-  FhirUri? get valueUri;
-  @override
-  @JsonKey(name: '_valueUri')
-  Element? get valueUriElement;
-  @override
-  Date? get valueDate;
-  @override
-  @JsonKey(name: '_valueDate')
-  Element? get valueDateElement;
-  @override
-  FhirDateTime? get valueDateTime;
-  @override
-  @JsonKey(name: '_valueDateTime')
-  Element? get valueDateTimeElement;
-  @override
-  Time? get valueTime;
-  @override
-  @JsonKey(name: '_valueTime')
-  Element? get valueTimeElement;
-  @override
-  Code? get valueCode;
-  @override
-  @JsonKey(name: '_valueCode')
-  Element? get valueCodeElement;
-  @override
-  Oid? get valueOid;
-  @override
-  @JsonKey(name: '_valueOid')
-  Element? get valueOidElement;
-  @override
-  Uuid? get valueUuid;
-  @override
-  @JsonKey(name: '_valueUuid')
-  Element? get valueUuidElement;
-  @override
-  FhirId? get valueId;
-  @override
-  @JsonKey(name: '_valueId')
-  Element? get valueIdElement;
-  @override
-  UnsignedInt? get valueUnsignedInt;
-  @override
-  @JsonKey(name: '_valueUnsignedInt')
-  Element? get valueUnsignedIntElement;
-  @override
-  PositiveInt? get valuePositiveInt;
-  @override
-  @JsonKey(name: '_valuePositiveInt')
-  Element? get valuePositiveIntElement;
-  @override
-  String? get valueMarkdown;
-  @override
-  @JsonKey(name: '_valueMarkdown')
-  Element? get valueMarkdownElement;
-  @override
-  Element? get valueElement;
-  @override
-  FhirExtension? get valueExtension;
-  @override
-  BackboneElement? get valueBackboneElement;
-  @override
-  Narrative? get valueNarrative;
-  @override
-  Annotation? get valueAnnotation;
-  @override
-  Attachment? get valueAttachment;
-  @override
-  Identifier? get valueIdentifier;
-  @override
-  CodeableConcept? get valueCodeableConcept;
-  @override
-  Coding? get valueCoding;
-  @override
-  Quantity? get valueQuantity;
-  @override
-  FhirDuration? get valueDuration;
-  @override
-  Quantity? get valueSimpleQuantity;
-  @override
-  Distance? get valueDistance;
-  @override
-  Count? get valueCount;
-  @override
-  Money? get valueMoney;
-  @override
-  Age? get valueAge;
-  @override
-  Range? get valueRange;
-  @override
-  Period? get valuePeriod;
-  @override
-  Ratio? get valueRatio;
-  @override
-  Reference? get valueReference;
-  @override
-  SampledData? get valueSampledData;
-  @override
-  Signature? get valueSignature;
-  @override
-  HumanName? get valueHumanName;
-  @override
-  Address? get valueAddress;
-  @override
-  ContactPoint? get valueContactPoint;
-  @override
-  Timing? get valueTiming;
-  @override
-  Meta? get valueMeta;
-  @override
-  ElementDefinition? get valueElementDefinition;
-  @override
-  ContactDetail? get valueContactDetail;
-  @override
-  Contributor? get valueContributor;
-  @override
-  Dosage? get valueDosage;
-  @override
-  RelatedArtifact? get valueRelatedArtifact;
-  @override
-  UsageContext? get valueUsageContext;
-  @override
-  DataRequirement? get valueDataRequirement;
-  @override
-  ParameterDefinition? get valueParameterDefinition;
-  @override
-  TriggerDefinition? get valueTriggerDefinition;
-  @override
-  @JsonKey(ignore: true)
-  _$$_FhirExtensionCopyWith<_$_FhirExtension> get copyWith =>
-      throw _privateConstructorUsedError;
+});
 }

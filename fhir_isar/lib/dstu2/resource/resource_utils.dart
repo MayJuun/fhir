@@ -200,3 +200,4 @@ class ResourceUtils {
     Dstu2ResourceType.VisionPrescription: 'VisionPrescription',
   };
 }
+

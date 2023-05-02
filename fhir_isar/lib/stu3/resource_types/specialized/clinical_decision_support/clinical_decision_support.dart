@@ -12,9 +12,8 @@ part 'clinical_decision_support.enums.dart';
 
 part 'clinical_decision_support.g.dart';
 
-class GuidanceResponse with Resource, _$GuidanceResponse {
-  GuidanceResponse._();
-  factory GuidanceResponse({
+class GuidanceResponse {
+const GuidanceResponse({
     @Default(Stu3ResourceType.GuidanceResponse)
     @JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
         Stu3ResourceType resourceType,
@@ -46,31 +45,5 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
     Reference? outputParameters,
     Reference? result,
     List<DataRequirement>? dataRequirement,
-  }) = _GuidanceResponse;
-
-  factory GuidanceResponse.fromYaml(dynamic yaml) => yaml is String
-      ? GuidanceResponse.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? GuidanceResponse.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'GuidanceResponse cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory GuidanceResponse.fromJson(
-    Map<String, dynamic> json,
-    SerializationManager serializationManager,
-  ) =>
-      _$GuidanceResponseFromJson(json);
-
-  factory GuidanceResponse.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$GuidanceResponseFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
+});
 }

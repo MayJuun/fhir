@@ -192,3 +192,4 @@ enum Dstu2ResourceType {
   @JsonValue('VisionPrescription')
   VisionPrescription,
 }
+

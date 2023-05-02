@@ -19,7 +19,7 @@ part 'resource_new_id.dart';
 part 'resource_new_version.dart';
 part 'resource_types_enum.dart';
 
-/// This class ends up functioning mostly like an abstract superclass. Some of
+class /// {
 /// the fields in other classes contain a generic resource, so in order for
 /// them to be able to implement a resource.toJson() function, it also has to
 /// be implemented here (although it is always overridden). Each resource
@@ -81,64 +81,5 @@ class Resource {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-  }) =>
-      Resource.fromJson(<String, dynamic>{
-        'id': id?.toString(),
-        'resourceType': resourceType?.toString(),
-        'meta': meta?.toString(),
-        'implicitRules': implicitRules?.toString(),
-        'text': text?.toString(),
-        'contained': contained?.toString(),
-        'extension': extension_?.toString(),
-        'modifierExtension': modifierExtension?.toString(),
-      });
-
-  /// Returns a [Map<String, dynamic>] of the [Resource]
-  Map<String, dynamic> toJson() {
-    final val = <String, dynamic>{};
-
-    void writeNotNull(String key, dynamic value) {
-      if (value != null) {
-        val[key] = value;
-      }
-    }
-
-    writeNotNull('id', id?.toJson());
-    writeNotNull('resourceType', resourceType);
-    writeNotNull('meta', meta?.toJson());
-    writeNotNull('implicitRules', implicitRules?.toJson());
-    writeNotNull('language', language?.toJson());
-    writeNotNull('text', text?.toJson());
-    writeNotNull('contained', contained?.map((e) => e.toJson()).toList());
-    writeNotNull('extension', extension_?.map((e) => e.toJson()).toList());
-    writeNotNull('modifierExtension',
-        modifierExtension?.map((e) => e.toJson()).toList());
-    return val;
-  }
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// produce a string of the [resourceType]
-  String? get resourceTypeString =>
-      ResourceUtils.resourceTypeToStringMap[resourceType];
-
-  /// Convenience method to return a [Reference] referring to that [Resource]
-  Reference get thisReference => Reference(
-      reference: path,
-      type: resourceTypeString == null ? null : FhirUri(resourceTypeString));
-
-  /// Local Reference for this Resource, form is "ResourceType/Id"
-  String get path => '$resourceTypeString/$id';
-
-  /// returns the same resource with a new ID if there is no current ID
-  Resource newIdIfNoId() => id == null ? _newId(this) : this;
-
-  /// returns the same resource with a new ID (even if there is already an ID
-  /// present)
-  Resource newId() => _newId(this);
-
-  /// Updates the [meta] field of this Resource, updates the meta.lastUpdated
-  /// field, adds 1 to the version number
-  Resource updateVersion({Meta? oldMeta}) => _updateMeta(this, meta: oldMeta);
+});
 }

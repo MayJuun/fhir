@@ -12,7 +12,7 @@ part of 'element.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+class  {
 
 Element _$ElementFromJson(Map<String, dynamic> json) {
   return _Element.fromJson(json);
@@ -42,7 +42,7 @@ mixin _$Element {
 
 /// @nodoc
 abstract class $ElementCopyWith<$Res> {
-  factory $ElementCopyWith(Element value, $Res Function(Element) then) =
+const ({
       _$ElementCopyWithImpl<$Res, Element>;
   @useResult
   $Res call(
@@ -81,7 +81,7 @@ class _$ElementCopyWithImpl<$Res, $Val extends Element>
 
 /// @nodoc
 abstract class _$$_ElementCopyWith<$Res> implements $ElementCopyWith<$Res> {
-  factory _$$_ElementCopyWith(
+const ({
           _$_Element value, $Res Function(_$_Element) then) =
       __$$_ElementCopyWithImpl<$Res>;
   @override
@@ -124,9 +124,8 @@ class _$_Element extends _Element {
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_})
       : _extension_ = extension_,
-        super._();
 
-  factory _$_Element.fromJson(
+const ({
     Map<String, dynamic> json,
     SerializationManager serializationManager,
   ) =>
@@ -200,36 +199,7 @@ class _$_Element extends _Element {
 }
 
 abstract class _Element extends Element {
-  factory _Element(
+const ({
           {final String? id,
-          @JsonKey(name: 'extension') final List<FhirExtension>? extension_}) =
-      _$_Element;
-  _Element._() : super._();
-
-  factory _Element.fromJson(
-    Map<String, dynamic> json,
-    SerializationManager serializationManager,
-  ) = _$_Element.fromJson;
-
-  @override
-
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
-  String? get id;
-  @override
-
-  /// [extension_] May be used to represent additional information that is not
-  /// part of the basic definition of the element. To make the use of
-  ///  extensions
-  /// safe and manageable, there is a strict set of governance  applied to the
-  /// definition and use of extensions. Though any implementer can define an
-  /// extension, there is a set of requirements that SHALL be met as part of
-  ///  the
-  ///  definition of the extension.
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  @override
-  @JsonKey(ignore: true)
-  _$$_ElementCopyWith<_$_Element> get copyWith =>
-      throw _privateConstructorUsedError;
+});
 }

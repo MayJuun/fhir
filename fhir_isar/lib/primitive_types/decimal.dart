@@ -9,7 +9,7 @@ import 'fhir_number.dart';
 import 'integer.dart';
 import 'primitive_type_exceptions.dart';
 
-class Decimal extends FhirNumber {
+class Decimal {
   const Decimal._(
     String valueString,
     double? valueNumber,
@@ -17,7 +17,7 @@ class Decimal extends FhirNumber {
     this.isInt,
   ) : super(valueString, valueNumber, isValid);
 
-  factory Decimal(dynamic inValue) {
+const Decimal({
     if (inValue is Decimal) {
       return inValue;
     } else if (inValue is Integer) {
@@ -39,9 +39,9 @@ class Decimal extends FhirNumber {
         'Decimal cannot be constructed from $inValue ${inValue.runtimeType}');
   }
 
-  factory Decimal.fromJson(dynamic json) => Decimal(json);
+const Decimal({
 
-  factory Decimal.fromYaml(dynamic yaml) => yaml is String
+const Decimal({
       ? Decimal.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Decimal.fromJson(jsonDecode(jsonEncode(yaml)))
@@ -57,3 +57,4 @@ class Decimal extends FhirNumber {
   @override
   dynamic toYaml() => isInt ? valueNumber?.toInt() : valueNumber;
 }
+

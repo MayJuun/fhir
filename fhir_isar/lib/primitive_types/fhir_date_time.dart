@@ -17,12 +17,12 @@ enum DateTimePrecision {
   INVALID,
 }
 
-class FhirDateTime extends FhirDateTimeBase {
+class FhirDateTime {
   const FhirDateTime._(String valueString, DateTime? valueDateTime,
       bool isValid, this._precision, Exception? parseError)
       : super(valueString, valueDateTime, isValid, parseError);
 
-  factory FhirDateTime(dynamic inValue) {
+const FhirDateTime({
     if (inValue is FhirDateTime) {
       return inValue;
     } else if (inValue is DateTime) {
@@ -58,7 +58,7 @@ class FhirDateTime extends FhirDateTimeBase {
     }
   }
 
-  factory FhirDateTime.fromDateTime(DateTime dateTime,
+const FhirDateTime({
       [DateTimePrecision precision = DateTimePrecision.FULL]) {
     final String dateTimeString = dateTime.toIso8601String();
     final int len = <int>[4, 7, 10, dateTimeString.length][precision.index];
@@ -78,9 +78,9 @@ class FhirDateTime extends FhirDateTimeBase {
     }
   }
 
-  factory FhirDateTime.fromJson(dynamic json) => FhirDateTime(json);
+const FhirDateTime({
 
-  factory FhirDateTime.fromYaml(dynamic yaml) => yaml is String
+const FhirDateTime({
       ? FhirDateTime.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? FhirDateTime.fromJson(jsonDecode(jsonEncode(yaml)))
@@ -144,3 +144,4 @@ class FhirDateTime extends FhirDateTimeBase {
     }
   }
 }
+

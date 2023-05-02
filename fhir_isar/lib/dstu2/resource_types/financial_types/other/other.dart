@@ -12,9 +12,8 @@ part 'other.enums.dart';
 
 part 'other.g.dart';
 
-class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
-  ExplanationOfBenefit._();
-  factory ExplanationOfBenefit({
+class ExplanationOfBenefit {
+const ExplanationOfBenefit({
     @Default(Dstu2ResourceType.ExplanationOfBenefit)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
         Dstu2ResourceType resourceType,
@@ -42,35 +41,5 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
     Reference? organization,
     Reference? requestProvider,
     Reference? requestOrganization,
-  }) = _ExplanationOfBenefit;
-
-  /// Factory constructor, accepts a [String] in YAML format as an argument
-  factory ExplanationOfBenefit.fromYaml(dynamic yaml) => yaml is String
-      ? ExplanationOfBenefit.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ExplanationOfBenefit.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ExplanationOfBenefit cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ExplanationOfBenefit.fromJson(
-    Map<String, dynamic> json,
-    SerializationManager serializationManager,
-  ) =>
-      _$ExplanationOfBenefitFromJson(json);
-
-  /// Acts like a constructor, returns a [ExplanationOfBenefit], accepts a
-  /// [String] as an argument, mostly because I got tired of typing it out
-  factory ExplanationOfBenefit.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ExplanationOfBenefitFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
+});
 }

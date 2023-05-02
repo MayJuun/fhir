@@ -1,4 +1,4 @@
-//ignore_for_file: avoid_equals_and_hash_code_on_mutable_classes, avoid_renaming_method_parameters, avoid_bool_literals_in_conditional_expressions
+class //ignore_for_file: {
 
 // Dart imports:
 import 'dart:convert';
@@ -54,3 +54,4 @@ class FhirId {
               ? o == _valueString
               : false;
 }
+

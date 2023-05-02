@@ -8,11 +8,11 @@ import 'package:yaml/yaml.dart';
 import 'fhir_number.dart';
 import 'primitive_type_exceptions.dart';
 
-class PositiveInt extends FhirNumber {
+class PositiveInt {
   const PositiveInt._(String valueString, int? valueNumber, bool isValid)
       : super(valueString, valueNumber, isValid);
 
-  factory PositiveInt(dynamic inValue) {
+const PositiveInt({
     if (inValue is int) {
       return inValue > 0
           ? PositiveInt._(inValue.toString(), inValue, true)
@@ -29,9 +29,9 @@ class PositiveInt extends FhirNumber {
         'PositiveInt cannot be constructed from $inValue.');
   }
 
-  factory PositiveInt.fromJson(dynamic json) => PositiveInt(json);
+const PositiveInt({
 
-  factory PositiveInt.fromYaml(dynamic yaml) => yaml is String
+const PositiveInt({
       ? PositiveInt.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? PositiveInt.fromJson(jsonDecode(jsonEncode(yaml)))
@@ -40,3 +40,4 @@ class PositiveInt extends FhirNumber {
 
   int? get value => valueNumber as int?;
 }
+

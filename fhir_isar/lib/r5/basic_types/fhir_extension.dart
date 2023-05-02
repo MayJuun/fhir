@@ -12,8 +12,7 @@ part 'fhir_extension.g.dart';
 
 /// [extension_] Optional Extension Element - found in all resources.
 
-class FhirExtension with _$FhirExtension {
-  FhirExtension._();
+class FhirExtension {
 
   /// [extension_] Optional Extension Element - found in all resources.
   ///
@@ -246,7 +245,7 @@ class FhirExtension with _$FhirExtension {
   /// extension, there is a set of requirements that SHALL be met as part of the
   ///  definition of the extension.
   ///
-  factory FhirExtension({
+const FhirExtension({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -555,38 +554,5 @@ class FhirExtension with _$FhirExtension {
     /// [valueMeta] Value of extension - must be one of a constrained set of the
     ///  data types (see [Extensibility](extensibility.html) for a list).
     Meta? valueMeta,
-  }) = _FhirExtension;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory FhirExtension.fromYaml(dynamic yaml) => yaml is String
-      ? FhirExtension.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? FhirExtension.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'FhirExtension cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory FhirExtension.fromJson(
-    Map<String, dynamic> json,
-    SerializationManager serializationManager,
-  ) =>
-      _$FhirExtensionFromJson(json);
-
-  /// Acts like a constructor, returns a [FhirExtension], accepts a
-  /// [String] as an argument, mostly because I got tired of typing it out
-  factory FhirExtension.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$FhirExtensionFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
+});
 }

@@ -300,3 +300,4 @@ R4ResourceType? resourceTypeFromString(String type) =>
 
 String resourceTypeToString(R4ResourceType type) =>
     ResourceUtils.resourceTypeToStringMap[type]!;
+

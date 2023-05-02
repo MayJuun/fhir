@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_bool_literals_in_conditional_expressions, avoid_equals_and_hash_code_on_mutable_classes
+class // {
 
 // Dart imports:
 import 'dart:convert';
@@ -80,3 +80,4 @@ class Integer64 {
 
   bool operator <=(Object o) => this == o || this < o;
 }
+

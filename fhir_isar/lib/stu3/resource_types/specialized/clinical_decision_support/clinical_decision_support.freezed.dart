@@ -12,7 +12,7 @@ part of 'clinical_decision_support.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+class  {
 
 GuidanceResponse _$GuidanceResponseFromJson(Map<String, dynamic> json) {
   return _GuidanceResponse.fromJson(json);
@@ -68,7 +68,7 @@ mixin _$GuidanceResponse {
 
 /// @nodoc
 abstract class $GuidanceResponseCopyWith<$Res> {
-  factory $GuidanceResponseCopyWith(
+const ({
           GuidanceResponse value, $Res Function(GuidanceResponse) then) =
       _$GuidanceResponseCopyWithImpl<$Res, GuidanceResponse>;
   @useResult
@@ -484,7 +484,7 @@ class _$GuidanceResponseCopyWithImpl<$Res, $Val extends GuidanceResponse>
 /// @nodoc
 abstract class _$$_GuidanceResponseCopyWith<$Res>
     implements $GuidanceResponseCopyWith<$Res> {
-  factory _$$_GuidanceResponseCopyWith(
+const ({
           _$_GuidanceResponse value, $Res Function(_$_GuidanceResponse) then) =
       __$$_GuidanceResponseCopyWithImpl<$Res>;
   @override
@@ -769,9 +769,8 @@ class _$_GuidanceResponse extends _GuidanceResponse {
         _note = note,
         _evaluationMessage = evaluationMessage,
         _dataRequirement = dataRequirement,
-        super._();
 
-  factory _$_GuidanceResponse.fromJson(
+const ({
     Map<String, dynamic> json,
     SerializationManager serializationManager,
   ) =>
@@ -1004,7 +1003,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
 }
 
 abstract class _GuidanceResponse extends GuidanceResponse {
-  factory _GuidanceResponse(
+const ({
       {@JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
           final Stu3ResourceType resourceType,
       final FhirId? id,
@@ -1040,81 +1039,5 @@ abstract class _GuidanceResponse extends GuidanceResponse {
       final List<Reference>? evaluationMessage,
       final Reference? outputParameters,
       final Reference? result,
-      final List<DataRequirement>? dataRequirement}) = _$_GuidanceResponse;
-  _GuidanceResponse._() : super._();
-
-  factory _GuidanceResponse.fromJson(
-    Map<String, dynamic> json,
-    SerializationManager serializationManager,
-  ) = _$_GuidanceResponse.fromJson;
-
-  @override
-  @JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
-  Stu3ResourceType get resourceType;
-  @override
-  FhirId? get id;
-  @override
-  Meta? get meta;
-  @override
-  FhirUri? get implicitRules;
-  @override
-  @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement;
-  @override
-  Code? get language;
-  @override
-  @JsonKey(name: '_language')
-  Element? get languageElement;
-  @override
-  Narrative? get text;
-  @override
-  List<Resource>? get contained;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  @override
-  List<FhirExtension>? get modifierExtension;
-  @override
-  FhirId? get requestId;
-  @override
-  @JsonKey(name: '_requestId')
-  Element? get requestIdElement;
-  @override
-  Identifier? get identifier;
-  @override
-  Reference get module;
-  @override
-  GuidanceResponseStatus? get status;
-  @override
-  @JsonKey(name: '_status')
-  Element? get statusElement;
-  @override
-  Reference? get subject;
-  @override
-  Reference? get context;
-  @override
-  FhirDateTime? get occurrenceDateTime;
-  @override
-  @JsonKey(name: '_occurrenceDateTime')
-  Element? get occurrenceDateTimeElement;
-  @override
-  Reference? get performer;
-  @override
-  CodeableConcept? get reasonCodeableConcept;
-  @override
-  Reference? get reasonReference;
-  @override
-  List<Annotation>? get note;
-  @override
-  List<Reference>? get evaluationMessage;
-  @override
-  Reference? get outputParameters;
-  @override
-  Reference? get result;
-  @override
-  List<DataRequirement>? get dataRequirement;
-  @override
-  @JsonKey(ignore: true)
-  _$$_GuidanceResponseCopyWith<_$_GuidanceResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+});
 }

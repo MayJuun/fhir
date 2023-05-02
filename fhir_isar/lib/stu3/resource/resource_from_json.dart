@@ -241,3 +241,4 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
 
   return _$ResourceFromJson(json);
 }
+
