@@ -51,10 +51,15 @@ Future<void> main() async {
             } else {
               if (line.contains('}')) {
                 newText += '$line\n';
+              } else if (line.contains('ResourceType') &&
+                  line.contains('@Default')) {
+                newText += '$line\n';
               } else {
                 final lineSplit = line.split(' ');
                 lineSplit
                     .removeWhere((element) => element == '' || element == ' ');
+                print(line.contains('ResourceType'));
+                print(line.contains('@Default'));
                 print(lineSplit);
                 if (lineSplit.length == 2) {
                   newText += 'this.${lineSplit.last}\n';
