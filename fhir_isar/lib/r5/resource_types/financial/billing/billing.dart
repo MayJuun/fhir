@@ -12,9 +12,7 @@ part 'billing.g.dart';
 
 class Claim {
   const Claim({
-    @Default(R5ResourceType.Claim)
-    @JsonKey(unknownEnumValue: R5ResourceType.Claim)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Claim) R5ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,

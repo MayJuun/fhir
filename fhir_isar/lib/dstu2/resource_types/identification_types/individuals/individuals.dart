@@ -13,10 +13,8 @@ part 'individuals.enums.dart';
 part 'individuals.g.dart';
 
 class Patient {
-const Patient({
-    @Default(Dstu2ResourceType.Patient)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Patient)
-        Dstu2ResourceType resourceType,
+  const Patient({
+    @Default(Dstu2ResourceType.Patient) Dstu2ResourceType resourceType,
     FhirId? id,
     @JsonKey(name: '_id') Element? idElement,
     Meta? meta,
@@ -56,5 +54,5 @@ const Patient({
     List<Reference>? careProvider,
     Reference? managingOrganization,
     List<PatientLink>? link,
-});
+  });
 }

@@ -12,9 +12,7 @@ part 'documents.g.dart';
 
 class CatalogEntry {
   const CatalogEntry({
-    @Default(R4ResourceType.CatalogEntry)
-    @JsonKey(unknownEnumValue: R4ResourceType.CatalogEntry)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.CatalogEntry) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,

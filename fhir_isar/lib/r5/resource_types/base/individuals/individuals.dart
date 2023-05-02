@@ -12,9 +12,7 @@ part 'individuals.g.dart';
 
 class Group {
   const Group({
-    @Default(R5ResourceType.Group)
-    @JsonKey(unknownEnumValue: R5ResourceType.Group)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Group) R5ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,

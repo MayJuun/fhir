@@ -13,10 +13,8 @@ part 'definitional_artifacts.enums.dart';
 part 'definitional_artifacts.g.dart';
 
 class ActivityDefinition {
-const ActivityDefinition({
-    @Default(Stu3ResourceType.ActivityDefinition)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.ActivityDefinition)
-        Stu3ResourceType resourceType,
+  const ActivityDefinition({
+    @Default(Stu3ResourceType.ActivityDefinition) Stu3ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -81,5 +79,5 @@ const ActivityDefinition({
     List<CodeableConcept>? bodySite,
     Reference? transform,
     List<ActivityDefinitionDynamicValue>? dynamicValue,
-});
+  });
 }

@@ -13,9 +13,8 @@ part 'content.enums.dart';
 part 'content.g.dart';
 
 class StructureDefinition {
-const StructureDefinition({
+  const StructureDefinition({
     @Default(Dstu2ResourceType.StructureDefinition)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.StructureDefinition)
         Dstu2ResourceType resourceType,
     FhirId? id,
     Meta? meta,
@@ -68,5 +67,5 @@ const StructureDefinition({
     FhirUri? base,
     StructureDefinitionSnapshot? snapshot,
     StructureDefinitionDifferential? differential,
-});
+  });
 }

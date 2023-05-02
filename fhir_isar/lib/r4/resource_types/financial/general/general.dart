@@ -11,11 +11,8 @@ import '../../../../r4.dart';
 part 'general.g.dart';
 
 class Account {
-
-const Account({
-    @Default(R4ResourceType.Account)
-    @JsonKey(unknownEnumValue: R4ResourceType.Account)
-        R4ResourceType resourceType,
+  const Account({
+    @Default(R4ResourceType.Account) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -40,5 +37,5 @@ const Account({
     @JsonKey(name: '_description') Element? descriptionElement,
     List<AccountGuarantor>? guarantor,
     Reference? partOf,
-});
+  });
 }

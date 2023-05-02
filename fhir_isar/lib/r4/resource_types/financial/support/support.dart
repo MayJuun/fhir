@@ -11,11 +11,8 @@ import '../../../../r4.dart';
 part 'support.g.dart';
 
 class Coverage {
-
-const Coverage({
-    @Default(R4ResourceType.Coverage)
-    @JsonKey(unknownEnumValue: R4ResourceType.Coverage)
-        R4ResourceType resourceType,
+  const Coverage({
+    @Default(R4ResourceType.Coverage) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -49,5 +46,5 @@ const Coverage({
     Boolean? subrogation,
     @JsonKey(name: '_subrogation') Element? subrogationElement,
     List<Reference>? contract,
-});
+  });
 }

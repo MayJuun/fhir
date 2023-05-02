@@ -11,11 +11,8 @@ import '../../../../r4.dart';
 part 'payment.g.dart';
 
 class PaymentNotice {
-
-const PaymentNotice({
-    @Default(R4ResourceType.PaymentNotice)
-    @JsonKey(unknownEnumValue: R4ResourceType.PaymentNotice)
-        R4ResourceType resourceType,
+  const PaymentNotice({
+    @Default(R4ResourceType.PaymentNotice) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -41,5 +38,5 @@ const PaymentNotice({
     required Reference recipient,
     required Money amount,
     CodeableConcept? paymentStatus,
-});
+  });
 }

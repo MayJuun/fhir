@@ -13,10 +13,8 @@ part 'information_tracking.enums.dart';
 part 'information_tracking.g.dart';
 
 class Questionnaire {
-const Questionnaire({
-    @Default(Dstu2ResourceType.Questionnaire)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Questionnaire)
-        Dstu2ResourceType resourceType,
+  const Questionnaire({
+    @Default(Dstu2ResourceType.Questionnaire) Dstu2ResourceType resourceType,
     FhirId? id,
     @JsonKey(name: '_id') Element? idElement,
     Meta? meta,
@@ -42,5 +40,5 @@ const Questionnaire({
     List<Code>? subjectType,
     @JsonKey(name: '_subjectType') List<Element?>? subjectTypeElement,
     required QuestionnaireGroup group,
-});
+  });
 }

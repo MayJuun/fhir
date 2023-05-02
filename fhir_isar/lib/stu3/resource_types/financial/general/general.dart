@@ -13,10 +13,8 @@ part 'general.enums.dart';
 part 'general.g.dart';
 
 class Account {
-const Account({
-    @Default(Stu3ResourceType.Account)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Account)
-        Stu3ResourceType resourceType,
+  const Account({
+    @Default(Stu3ResourceType.Account) Stu3ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -42,5 +40,5 @@ const Account({
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     List<AccountGuarantor>? guarantor,
-});
+  });
 }

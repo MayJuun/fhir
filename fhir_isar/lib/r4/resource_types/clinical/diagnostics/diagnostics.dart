@@ -12,9 +12,7 @@ part 'diagnostics.g.dart';
 
 class BodyStructure {
   const BodyStructure({
-    @Default(R4ResourceType.BodyStructure)
-    @JsonKey(unknownEnumValue: R4ResourceType.BodyStructure)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.BodyStructure) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,

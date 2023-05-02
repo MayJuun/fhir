@@ -12,9 +12,7 @@ part 'quality_reporting_and_testing.g.dart';
 
 class Measure {
   const Measure({
-    @Default(R5ResourceType.Measure)
-    @JsonKey(unknownEnumValue: R5ResourceType.Measure)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Measure) R5ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,

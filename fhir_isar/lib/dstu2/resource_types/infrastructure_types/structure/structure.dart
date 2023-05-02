@@ -13,10 +13,8 @@ part 'structure.enums.dart';
 part 'structure.g.dart';
 
 class Media {
-const Media({
-    @Default(Dstu2ResourceType.Media)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Media)
-        Dstu2ResourceType resourceType,
+  const Media({
+    @Default(Dstu2ResourceType.Media) Dstu2ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -44,5 +42,5 @@ const Media({
     UnsignedInt? duration,
     @JsonKey(name: '_duration') Element? durationElement,
     required Attachment content,
-});
+  });
 }

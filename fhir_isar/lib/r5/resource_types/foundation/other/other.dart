@@ -12,9 +12,7 @@ part 'other.g.dart';
 
 class Basic {
   const Basic({
-    @Default(R5ResourceType.Basic)
-    @JsonKey(unknownEnumValue: R5ResourceType.Basic)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Basic) R5ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,

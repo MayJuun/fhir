@@ -13,10 +13,8 @@ part 'devices.enums.dart';
 part 'devices.g.dart';
 
 class Device {
-const Device({
-    @Default(Dstu2ResourceType.Device)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Device)
-        Dstu2ResourceType resourceType,
+  const Device({
+    @Default(Dstu2ResourceType.Device) Dstu2ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -49,5 +47,5 @@ const Device({
     List<ContactPoint>? contact,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
-});
+  });
 }

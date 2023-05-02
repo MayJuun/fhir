@@ -13,10 +13,8 @@ part 'documents.enums.dart';
 part 'documents.g.dart';
 
 class Composition {
-const Composition({
-    @Default(Stu3ResourceType.Composition)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
-        Stu3ResourceType resourceType,
+  const Composition({
+    @Default(Stu3ResourceType.Composition) Stu3ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -46,5 +44,5 @@ const Composition({
     List<CompositionRelatesTo>? relatesTo,
     List<CompositionEvent>? event,
     List<CompositionSection>? section,
-});
+  });
 }

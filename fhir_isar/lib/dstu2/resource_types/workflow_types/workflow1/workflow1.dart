@@ -13,10 +13,8 @@ part 'workflow1.enums.dart';
 part 'workflow1.g.dart';
 
 class Order {
-const Order({
-    @Default(Dstu2ResourceType.Order)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Order)
-        Dstu2ResourceType resourceType,
+  const Order({
+    @Default(Dstu2ResourceType.Order) Dstu2ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -34,5 +32,5 @@ const Order({
     Reference? reasonReference,
     OrderWhen? when,
     required List<Reference> detail,
-});
+  });
 }

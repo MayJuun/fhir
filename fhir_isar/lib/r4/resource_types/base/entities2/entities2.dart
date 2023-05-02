@@ -13,7 +13,6 @@ part 'entities2.g.dart';
 class BiologicallyDerivedProduct {
   const BiologicallyDerivedProduct({
     @Default(R4ResourceType.BiologicallyDerivedProduct)
-    @JsonKey(unknownEnumValue: R4ResourceType.BiologicallyDerivedProduct)
         R4ResourceType resourceType,
     String? id,
     Meta? meta,

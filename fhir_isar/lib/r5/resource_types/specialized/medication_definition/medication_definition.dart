@@ -140,7 +140,6 @@ class AdministrableProductDefinition {
 const AdministrableProductDefinition({
     
     @Default(R5ResourceType.AdministrableProductDefinition)
-    @JsonKey(unknownEnumValue: R5ResourceType.AdministrableProductDefinition)
         R5ResourceType resourceType,
 
     

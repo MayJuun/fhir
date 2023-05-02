@@ -12,9 +12,7 @@ part 'workflow.g.dart';
 
 class Appointment {
   const Appointment({
-    @Default(R4ResourceType.Appointment)
-    @JsonKey(unknownEnumValue: R4ResourceType.Appointment)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Appointment) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,

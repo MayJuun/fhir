@@ -12,9 +12,7 @@ part 'public_health_and_research.g.dart';
 
 class ResearchStudy {
   const ResearchStudy({
-    @Default(R4ResourceType.ResearchStudy)
-    @JsonKey(unknownEnumValue: R4ResourceType.ResearchStudy)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.ResearchStudy) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,

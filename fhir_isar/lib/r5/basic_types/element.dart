@@ -11,8 +11,10 @@ import '../../r5.dart';
 part 'element.g.dart';
 
 class Element {
-  const Element({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-  });
+const Element({
+this.id,
+@JsonKey(name: 'extension') this.extension_,
+});
+String? id;
+List<FhirExtension>? extension_;
 }

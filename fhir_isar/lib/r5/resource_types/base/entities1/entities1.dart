@@ -12,9 +12,7 @@ part 'entities1.g.dart';
 
 class Endpoint {
   const Endpoint({
-    @Default(R5ResourceType.Endpoint)
-    @JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Endpoint) R5ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,

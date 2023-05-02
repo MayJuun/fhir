@@ -13,9 +13,8 @@ part 'misc.enums.dart';
 part 'misc.g.dart';
 
 class ImplementationGuide {
-const ImplementationGuide({
+  const ImplementationGuide({
     @Default(Dstu2ResourceType.ImplementationGuide)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
         Dstu2ResourceType resourceType,
     FhirId? id,
     Meta? meta,
@@ -55,5 +54,5 @@ const ImplementationGuide({
     List<ImplementationGuideGlobal>? global,
     List<FhirUri>? binary,
     required ImplementationGuidePage page,
-});
+  });
 }

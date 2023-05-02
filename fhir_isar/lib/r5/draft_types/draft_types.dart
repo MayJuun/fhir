@@ -11,14 +11,22 @@ import '../../r5.dart';
 part 'draft_types.g.dart';
 
 class Population {
-  const Population({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Range? ageRange,
-    CodeableConcept? ageCodeableConcept,
-    CodeableConcept? gender,
-    CodeableConcept? race,
-    CodeableConcept? physiologicalCondition,
-  });
+const Population({
+this.id,
+@JsonKey(name: 'extension') this.extension_,
+this.modifierExtension,
+this.ageRange,
+this.ageCodeableConcept,
+this.gender,
+this.race,
+this.physiologicalCondition,
+});
+String? id;
+List<FhirExtension>? extension_;
+List<FhirExtension>? modifierExtension;
+Range? ageRange;
+CodeableConcept? ageCodeableConcept;
+CodeableConcept? gender;
+CodeableConcept? race;
+CodeableConcept? physiologicalCondition;
 }

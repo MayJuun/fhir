@@ -12,9 +12,7 @@ part 'medications.g.dart';
 
 class FormularyItem {
   const FormularyItem({
-    @Default(R5ResourceType.FormularyItem)
-    @JsonKey(unknownEnumValue: R5ResourceType.FormularyItem)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.FormularyItem) R5ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,

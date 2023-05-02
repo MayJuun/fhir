@@ -11,9 +11,12 @@ import '../../r5.dart';
 part 'backbone_type.g.dart';
 
 class BackboneType {
-  const BackboneType({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-  });
+const BackboneType({
+this.id,
+@JsonKey(name: 'extension') this.extension_,
+this.modifierExtension,
+});
+String? id;
+List<FhirExtension>? extension_;
+List<FhirExtension>? modifierExtension;
 }

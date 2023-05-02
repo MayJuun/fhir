@@ -13,10 +13,8 @@ part 'security.enums.dart';
 part 'security.g.dart';
 
 class AuditEvent {
-const AuditEvent({
-    @Default(Stu3ResourceType.AuditEvent)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.AuditEvent)
-        Stu3ResourceType resourceType,
+  const AuditEvent({
+    @Default(Stu3ResourceType.AuditEvent) Stu3ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -41,5 +39,5 @@ const AuditEvent({
     required List<AuditEventAgent> agent,
     required AuditEventSource source,
     List<AuditEventEntity>? entity,
-});
+  });
 }

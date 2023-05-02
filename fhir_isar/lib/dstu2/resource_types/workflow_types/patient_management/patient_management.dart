@@ -13,10 +13,8 @@ part 'patient_management.enums.dart';
 part 'patient_management.g.dart';
 
 class Encounter {
-const Encounter({
-    @Default(Dstu2ResourceType.Encounter)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Encounter)
-        Dstu2ResourceType resourceType,
+  const Encounter({
+    @Default(Dstu2ResourceType.Encounter) Dstu2ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -50,5 +48,5 @@ const Encounter({
     List<EncounterLocation>? location,
     Reference? serviceProvider,
     Reference? partOf,
-});
+  });
 }

@@ -13,10 +13,8 @@ part 'quality_reporting.enums.dart';
 part 'quality_reporting.g.dart';
 
 class Measure {
-const Measure({
-    @Default(Stu3ResourceType.Measure)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
-        Stu3ResourceType resourceType,
+  const Measure({
+    @Default(Stu3ResourceType.Measure) Stu3ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -88,5 +86,5 @@ const Measure({
     @JsonKey(name: '_set') Element? setElement,
     List<MeasureGroup>? group,
     List<MeasureSupplementalData>? supplementalData,
-});
+  });
 }

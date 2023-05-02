@@ -13,10 +13,8 @@ part 'terminology.enums.dart';
 part 'terminology.g.dart';
 
 class CodeSystem {
-const CodeSystem({
-    @Default(Stu3ResourceType.CodeSystem)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.CodeSystem)
-        Stu3ResourceType resourceType,
+  const CodeSystem({
+    @Default(Stu3ResourceType.CodeSystem) Stu3ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -70,5 +68,5 @@ const CodeSystem({
     List<CodeSystemFilter>? filter,
     List<CodeSystemProperty>? property,
     List<CodeSystemConcept>? concept,
-});
+  });
 }

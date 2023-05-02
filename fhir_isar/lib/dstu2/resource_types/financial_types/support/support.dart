@@ -13,10 +13,8 @@ part 'support.enums.dart';
 part 'support.g.dart';
 
 class Coverage {
-const Coverage({
-    @Default(Dstu2ResourceType.Coverage)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Coverage)
-        Dstu2ResourceType resourceType,
+  const Coverage({
+    @Default(Dstu2ResourceType.Coverage) Dstu2ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -44,5 +42,5 @@ const Coverage({
     Identifier? network,
     @JsonKey(name: '_network') Element? networkElement,
     List<Reference>? contract,
-});
+  });
 }

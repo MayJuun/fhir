@@ -13,9 +13,8 @@ part 'conformance.enums.dart';
 part 'conformance.g.dart';
 
 class CapabilityStatement {
-const CapabilityStatement({
+  const CapabilityStatement({
     @Default(Stu3ResourceType.CapabilityStatement)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.CapabilityStatement)
         Stu3ResourceType resourceType,
     FhirId? id,
     Meta? meta,
@@ -73,5 +72,5 @@ const CapabilityStatement({
     List<CapabilityStatementRest>? rest,
     List<CapabilityStatementMessaging>? messaging,
     List<CapabilityStatementDocument>? document,
-});
+  });
 }

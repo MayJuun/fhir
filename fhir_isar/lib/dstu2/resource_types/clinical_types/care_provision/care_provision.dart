@@ -13,10 +13,8 @@ part 'care_provision.enums.dart';
 part 'care_provision.g.dart';
 
 class CarePlan {
-const CarePlan({
-    @Default(Dstu2ResourceType.CarePlan)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.CarePlan)
-        Dstu2ResourceType resourceType,
+  const CarePlan({
+    @Default(Dstu2ResourceType.CarePlan) Dstu2ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -46,5 +44,5 @@ const CarePlan({
     List<Reference>? goal,
     List<CarePlanActivity>? activity,
     Annotation? note,
-});
+  });
 }

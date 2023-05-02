@@ -13,10 +13,8 @@ part 'medication_and_immunization.enums.dart';
 part 'medication_and_immunization.g.dart';
 
 class Medication {
-const Medication({
-    @Default(Dstu2ResourceType.Medication)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Medication)
-        Dstu2ResourceType resourceType,
+  const Medication({
+    @Default(Dstu2ResourceType.Medication) Dstu2ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -32,5 +30,5 @@ const Medication({
     Reference? manufacturer,
     MedicationProduct? product,
     MedicationPackage? package,
-});
+  });
 }

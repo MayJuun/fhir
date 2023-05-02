@@ -12,9 +12,7 @@ part 'medications.g.dart';
 
 class Immunization {
   const Immunization({
-    @Default(R4ResourceType.Immunization)
-    @JsonKey(unknownEnumValue: R4ResourceType.Immunization)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Immunization) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,

@@ -13,10 +13,8 @@ part 'diagnostics.enums.dart';
 part 'diagnostics.g.dart';
 
 class Observation {
-const Observation({
-    @Default(Dstu2ResourceType.Observation)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Observation)
-        Dstu2ResourceType resourceType,
+  const Observation({
+    @Default(Dstu2ResourceType.Observation) Dstu2ResourceType resourceType,
     FhirId? id,
     @JsonKey(name: '_id') Element? idElement,
     Meta? meta,
@@ -65,5 +63,5 @@ const Observation({
     List<ObservationReferenceRange>? referenceRange,
     List<ObservationRelated>? related,
     List<ObservationComponent>? component,
-});
+  });
 }

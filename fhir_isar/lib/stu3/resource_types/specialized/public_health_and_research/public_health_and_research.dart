@@ -13,10 +13,8 @@ part 'public_health_and_research.enums.dart';
 part 'public_health_and_research.g.dart';
 
 class ResearchStudy {
-const ResearchStudy({
-    @Default(Stu3ResourceType.ResearchStudy)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.ResearchStudy)
-        Stu3ResourceType resourceType,
+  const ResearchStudy({
+    @Default(Stu3ResourceType.ResearchStudy) Stu3ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -50,5 +48,5 @@ const ResearchStudy({
     CodeableConcept? reasonStopped,
     List<Annotation>? note,
     List<ResearchStudyArm>? arm,
-});
+  });
 }

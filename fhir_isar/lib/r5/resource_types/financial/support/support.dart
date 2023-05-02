@@ -12,9 +12,7 @@ part 'support.g.dart';
 
 class Coverage {
   const Coverage({
-    @Default(R5ResourceType.Coverage)
-    @JsonKey(unknownEnumValue: R5ResourceType.Coverage)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Coverage) R5ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,

@@ -13,10 +13,8 @@ part 'operations_control.enums.dart';
 part 'operations_control.g.dart';
 
 class Conformance {
-const Conformance({
-    @Default(Dstu2ResourceType.Conformance)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
-        Dstu2ResourceType resourceType,
+  const Conformance({
+    @Default(Dstu2ResourceType.Conformance) Dstu2ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -52,5 +50,5 @@ const Conformance({
     List<ConformanceRest>? rest,
     List<ConformanceMessaging>? messaging,
     List<ConformanceDocument>? document,
-});
+  });
 }

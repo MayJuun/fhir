@@ -13,10 +13,8 @@ part 'request_and_response.enums.dart';
 part 'request_and_response.g.dart';
 
 class Communication {
-const Communication({
-    @Default(Stu3ResourceType.Communication)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Communication)
-        Stu3ResourceType resourceType,
+  const Communication({
+    @Default(Stu3ResourceType.Communication) Stu3ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -51,5 +49,5 @@ const Communication({
     List<Reference>? reasonReference,
     List<CommunicationPayload>? payload,
     List<Annotation>? note,
-});
+  });
 }

@@ -14,9 +14,7 @@ part 'management.g.dart';
 
 class Encounter {
   const Encounter({
-    @Default(R4ResourceType.Encounter)
-    @JsonKey(unknownEnumValue: R4ResourceType.Encounter)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Encounter) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,

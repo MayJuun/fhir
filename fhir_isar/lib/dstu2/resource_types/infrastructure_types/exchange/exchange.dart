@@ -13,10 +13,8 @@ part 'exchange.enums.dart';
 part 'exchange.g.dart';
 
 class MessageHeader {
-const MessageHeader({
-    @Default(Dstu2ResourceType.MessageHeader)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.MessageHeader)
-        Dstu2ResourceType resourceType,
+  const MessageHeader({
+    @Default(Dstu2ResourceType.MessageHeader) Dstu2ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -38,5 +36,5 @@ const MessageHeader({
     Reference? responsible,
     CodeableConcept? reason,
     List<Reference>? data,
-});
+  });
 }

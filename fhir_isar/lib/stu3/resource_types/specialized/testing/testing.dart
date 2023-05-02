@@ -13,10 +13,8 @@ part 'testing.enums.dart';
 part 'testing.g.dart';
 
 class TestReport {
-const TestReport({
-    @Default(Stu3ResourceType.TestReport)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.TestReport)
-        Stu3ResourceType resourceType,
+  const TestReport({
+    @Default(Stu3ResourceType.TestReport) Stu3ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -45,5 +43,5 @@ const TestReport({
     TestReportSetup? setup,
     List<TestReportTest>? test,
     TestReportTeardown? teardown,
-});
+  });
 }

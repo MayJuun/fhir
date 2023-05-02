@@ -12,9 +12,7 @@ part 'terminology.g.dart';
 
 class CodeSystem {
   const CodeSystem({
-    @Default(R4ResourceType.CodeSystem)
-    @JsonKey(unknownEnumValue: R4ResourceType.CodeSystem)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.CodeSystem) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,

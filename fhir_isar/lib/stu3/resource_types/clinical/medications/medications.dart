@@ -13,10 +13,8 @@ part 'medications.enums.dart';
 part 'medications.g.dart';
 
 class Immunization {
-const Immunization({
-    @Default(Stu3ResourceType.Immunization)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Immunization)
-        Stu3ResourceType resourceType,
+  const Immunization({
+    @Default(Stu3ResourceType.Immunization) Stu3ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -54,5 +52,5 @@ const Immunization({
     ImmunizationExplanation? explanation,
     List<ImmunizationReaction>? reaction,
     List<ImmunizationVaccinationProtocol>? vaccinationProtocol,
-});
+  });
 }

@@ -13,10 +13,8 @@ part 'billing.enums.dart';
 part 'billing.g.dart';
 
 class Account {
-const Account({
-    @Default(Dstu2ResourceType.Account)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Account)
-        Dstu2ResourceType resourceType,
+  const Account({
+    @Default(Dstu2ResourceType.Account) Dstu2ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -41,5 +39,5 @@ const Account({
     Reference? owner,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-});
+  });
 }

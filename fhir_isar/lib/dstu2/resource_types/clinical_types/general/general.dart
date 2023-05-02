@@ -13,9 +13,8 @@ part 'general.enums.dart';
 part 'general.g.dart';
 
 class AllergyIntolerance {
-const AllergyIntolerance({
+  const AllergyIntolerance({
     @Default(Dstu2ResourceType.AllergyIntolerance)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.AllergyIntolerance)
         Dstu2ResourceType resourceType,
     FhirId? id,
     Meta? meta,
@@ -51,5 +50,5 @@ const AllergyIntolerance({
     @JsonKey(name: '_lastOccurence') Element? lastOccurenceElement,
     Annotation? note,
     List<AllergyIntoleranceReaction>? reaction,
-});
+  });
 }

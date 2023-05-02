@@ -13,10 +13,8 @@ part 'other.enums.dart';
 part 'other.g.dart';
 
 class Basic {
-const Basic({
-    @Default(Stu3ResourceType.Basic)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Basic)
-        Stu3ResourceType resourceType,
+  const Basic({
+    @Default(Stu3ResourceType.Basic) Stu3ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -33,5 +31,5 @@ const Basic({
     String? created,
     @JsonKey(name: '_created') Element? createdElement,
     Reference? author,
-});
+  });
 }

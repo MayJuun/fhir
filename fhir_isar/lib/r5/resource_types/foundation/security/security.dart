@@ -12,9 +12,7 @@ part 'security.g.dart';
 
 class AuditEvent {
   const AuditEvent({
-    @Default(R5ResourceType.AuditEvent)
-    @JsonKey(unknownEnumValue: R5ResourceType.AuditEvent)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.AuditEvent) R5ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,

@@ -11,11 +11,8 @@ import '../../../../r4.dart';
 part 'billing.g.dart';
 
 class Claim {
-
-const Claim({
-    @Default(R4ResourceType.Claim)
-    @JsonKey(unknownEnumValue: R4ResourceType.Claim)
-        R4ResourceType resourceType,
+  const Claim({
+    @Default(R4ResourceType.Claim) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -56,5 +53,5 @@ const Claim({
     ClaimAccident? accident,
     List<ClaimItem>? item,
     Money? total,
-});
+  });
 }

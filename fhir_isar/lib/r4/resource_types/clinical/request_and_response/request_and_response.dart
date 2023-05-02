@@ -12,9 +12,7 @@ part 'request_and_response.g.dart';
 
 class Communication {
   const Communication({
-    @Default(R4ResourceType.Communication)
-    @JsonKey(unknownEnumValue: R4ResourceType.Communication)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Communication) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,

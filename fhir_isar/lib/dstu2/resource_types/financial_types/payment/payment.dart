@@ -13,10 +13,8 @@ part 'payment.enums.dart';
 part 'payment.g.dart';
 
 class PaymentNotice {
-const PaymentNotice({
-    @Default(Dstu2ResourceType.PaymentNotice)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.PaymentNotice)
-        Dstu2ResourceType resourceType,
+  const PaymentNotice({
+    @Default(Dstu2ResourceType.PaymentNotice) Dstu2ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -38,5 +36,5 @@ const PaymentNotice({
     Reference? request,
     Reference? response,
     required Coding paymentStatus,
-});
+  });
 }

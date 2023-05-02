@@ -13,10 +13,8 @@ part 'individuals.enums.dart';
 part 'individuals.g.dart';
 
 class Group {
-const Group({
-    @Default(Stu3ResourceType.Group)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Group)
-        Stu3ResourceType resourceType,
+  const Group({
+    @Default(Stu3ResourceType.Group) Stu3ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -41,5 +39,5 @@ const Group({
     @JsonKey(name: '_quantity') Element? quantityElement,
     List<GroupCharacteristic>? characteristic,
     List<GroupMember>? member,
-});
+  });
 }

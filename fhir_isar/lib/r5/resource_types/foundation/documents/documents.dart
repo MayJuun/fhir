@@ -12,9 +12,7 @@ part 'documents.g.dart';
 
 class Composition {
   const Composition({
-    @Default(R5ResourceType.Composition)
-    @JsonKey(unknownEnumValue: R5ResourceType.Composition)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Composition) R5ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,

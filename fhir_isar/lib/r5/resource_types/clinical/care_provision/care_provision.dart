@@ -12,9 +12,7 @@ part 'care_provision.g.dart';
 
 class CarePlan {
   const CarePlan({
-    @Default(R5ResourceType.CarePlan)
-    @JsonKey(unknownEnumValue: R5ResourceType.CarePlan)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.CarePlan) R5ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,

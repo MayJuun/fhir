@@ -13,11 +13,16 @@ part 'special_types.enums.dart';
 part 'special_types.g.dart';
 
 class Narrative {
-  const Narrative({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    NarrativeStatus? status,
-    @JsonKey(name: '_status') Element? statusElement,
-    required Markdown div,
-  });
+const Narrative({
+this.id,
+@JsonKey(name: 'extension') this.extension_,
+this.status,
+@JsonKey(name: '_status') this.statusElement,
+required this.div,
+});
+String? id;
+List<FhirExtension>? extension_;
+NarrativeStatus? status;
+Element? statusElement;
+Markdown div;
 }

@@ -13,10 +13,8 @@ part 'workflow.enums.dart';
 part 'workflow.g.dart';
 
 class Appointment {
-const Appointment({
-    @Default(Stu3ResourceType.Appointment)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Appointment)
-        Stu3ResourceType resourceType,
+  const Appointment({
+    @Default(Stu3ResourceType.Appointment) Stu3ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -55,5 +53,5 @@ const Appointment({
     List<Reference>? incomingReferral,
     required List<AppointmentParticipant> participant,
     List<Period>? requestedPeriod,
-});
+  });
 }

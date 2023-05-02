@@ -13,9 +13,8 @@ part 'other.enums.dart';
 part 'other.g.dart';
 
 class ExplanationOfBenefit {
-const ExplanationOfBenefit({
+  const ExplanationOfBenefit({
     @Default(Dstu2ResourceType.ExplanationOfBenefit)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
         Dstu2ResourceType resourceType,
     FhirId? id,
     Meta? meta,
@@ -41,5 +40,5 @@ const ExplanationOfBenefit({
     Reference? organization,
     Reference? requestProvider,
     Reference? requestOrganization,
-});
+  });
 }

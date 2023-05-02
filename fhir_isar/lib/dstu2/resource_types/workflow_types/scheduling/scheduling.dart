@@ -13,10 +13,8 @@ part 'scheduling.enums.dart';
 part 'scheduling.g.dart';
 
 class Appointment {
-const Appointment({
-    @Default(Dstu2ResourceType.Appointment)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
-        Dstu2ResourceType resourceType,
+  const Appointment({
+    @Default(Dstu2ResourceType.Appointment) Dstu2ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -47,5 +45,5 @@ const Appointment({
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
     required List<AppointmentParticipant> participant,
-});
+  });
 }

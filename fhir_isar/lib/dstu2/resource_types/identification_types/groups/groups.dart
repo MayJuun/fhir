@@ -13,10 +13,8 @@ part 'groups.enums.dart';
 part 'groups.g.dart';
 
 class Organization {
-const Organization({
-    @Default(Dstu2ResourceType.Organization)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Organization)
-        Dstu2ResourceType resourceType,
+  const Organization({
+    @Default(Dstu2ResourceType.Organization) Dstu2ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -39,5 +37,5 @@ const Organization({
     List<OrganizationContact>? contact,
 
     // @JsonKey(name: '_alias') Element? aliasElement,
-});
+  });
 }

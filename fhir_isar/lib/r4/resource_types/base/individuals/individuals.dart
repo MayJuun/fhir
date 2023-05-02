@@ -11,11 +11,8 @@ import '../../../../r4.dart';
 part 'individuals.g.dart';
 
 class Group {
-
-const Group({
-    @Default(R4ResourceType.Group)
-    @JsonKey(unknownEnumValue: R4ResourceType.Group)
-        R4ResourceType resourceType,
+  const Group({
+    @Default(R4ResourceType.Group) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -41,5 +38,5 @@ const Group({
     Reference? managingEntity,
     List<GroupCharacteristic>? characteristic,
     List<GroupMember>? member,
-});
+  });
 }

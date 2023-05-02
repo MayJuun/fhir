@@ -13,10 +13,8 @@ part 'diagnostics.enums.dart';
 part 'diagnostics.g.dart';
 
 class BodySite {
-const BodySite({
-    @Default(Stu3ResourceType.BodySite)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.BodySite)
-        Stu3ResourceType resourceType,
+  const BodySite({
+    @Default(Stu3ResourceType.BodySite) Stu3ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -36,5 +34,5 @@ const BodySite({
     @JsonKey(name: '_description') Element? descriptionElement,
     List<Attachment>? image,
     required Reference patient,
-});
+  });
 }

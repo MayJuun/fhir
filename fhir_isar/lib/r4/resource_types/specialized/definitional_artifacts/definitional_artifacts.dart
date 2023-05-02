@@ -12,9 +12,7 @@ part 'definitional_artifacts.g.dart';
 
 class ActivityDefinition {
   const ActivityDefinition({
-    @Default(R4ResourceType.ActivityDefinition)
-    @JsonKey(unknownEnumValue: R4ResourceType.ActivityDefinition)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.ActivityDefinition) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,

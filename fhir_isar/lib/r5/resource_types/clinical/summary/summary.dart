@@ -12,9 +12,7 @@ part 'summary.g.dart';
 
 class AdverseEvent {
   const AdverseEvent({
-    @Default(R5ResourceType.AdverseEvent)
-    @JsonKey(unknownEnumValue: R5ResourceType.AdverseEvent)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.AdverseEvent) R5ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,

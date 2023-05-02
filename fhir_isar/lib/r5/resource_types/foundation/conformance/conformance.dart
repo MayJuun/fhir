@@ -12,9 +12,7 @@ part 'conformance.g.dart';
 
 class CapabilityStatement {
   const CapabilityStatement({
-    @Default(R5ResourceType.CapabilityStatement)
-    @JsonKey(unknownEnumValue: R5ResourceType.CapabilityStatement)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.CapabilityStatement) R5ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,

@@ -13,10 +13,8 @@ part 'billing.enums.dart';
 part 'billing.g.dart';
 
 class Claim {
-const Claim({
-    @Default(Stu3ResourceType.Claim)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Claim)
-        Stu3ResourceType resourceType,
+  const Claim({
+    @Default(Stu3ResourceType.Claim) Stu3ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -60,5 +58,5 @@ const Claim({
     Period? hospitalization,
     List<ClaimItem>? item,
     Money? total,
-});
+  });
 }

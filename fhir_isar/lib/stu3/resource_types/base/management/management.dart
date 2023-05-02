@@ -15,10 +15,8 @@ part 'management.enums.dart';
 part 'management.g.dart';
 
 class Encounter {
-const Encounter({
-    @Default(Stu3ResourceType.Encounter)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Encounter)
-        Stu3ResourceType resourceType,
+  const Encounter({
+    @Default(Stu3ResourceType.Encounter) Stu3ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -51,5 +49,5 @@ const Encounter({
     List<EncounterLocation>? location,
     Reference? serviceProvider,
     Reference? partOf,
-});
+  });
 }

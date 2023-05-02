@@ -13,10 +13,8 @@ part 'entities.enums.dart';
 part 'entities.g.dart';
 
 class Location {
-const Location({
-    @Default(Dstu2ResourceType.Location)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Location)
-        Dstu2ResourceType resourceType,
+  const Location({
+    @Default(Dstu2ResourceType.Location) Dstu2ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -43,5 +41,5 @@ const Location({
     LocationPosition? position,
     Reference? managingOrganization,
     Reference? partOf,
-});
+  });
 }

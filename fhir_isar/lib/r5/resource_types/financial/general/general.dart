@@ -12,9 +12,7 @@ part 'general.g.dart';
 
 class Account {
   const Account({
-    @Default(R5ResourceType.Account)
-    @JsonKey(unknownEnumValue: R5ResourceType.Account)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Account) R5ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,

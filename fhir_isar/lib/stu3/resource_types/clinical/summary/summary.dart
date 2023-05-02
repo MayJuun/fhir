@@ -13,10 +13,8 @@ part 'summary.enums.dart';
 part 'summary.g.dart';
 
 class AdverseEvent {
-const AdverseEvent({
-    @Default(Stu3ResourceType.AdverseEvent)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.AdverseEvent)
-        Stu3ResourceType resourceType,
+  const AdverseEvent({
+    @Default(Stu3ResourceType.AdverseEvent) Stu3ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -46,5 +44,5 @@ const AdverseEvent({
     List<Reference>? subjectMedicalHistory,
     List<Reference>? referenceDocument,
     List<Reference>? study,
-});
+  });
 }

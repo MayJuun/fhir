@@ -13,10 +13,8 @@ part 'workflow2.enums.dart';
 part 'workflow2.g.dart';
 
 class ProcessRequest {
-const ProcessRequest({
-    @Default(Dstu2ResourceType.ProcessRequest)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessRequest)
-        Dstu2ResourceType resourceType,
+  const ProcessRequest({
+    @Default(Dstu2ResourceType.ProcessRequest) Dstu2ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -42,5 +40,5 @@ const ProcessRequest({
     List<String>? include,
     List<String>? exclude,
     Period? period,
-});
+  });
 }

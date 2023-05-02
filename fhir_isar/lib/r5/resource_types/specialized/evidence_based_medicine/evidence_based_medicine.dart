@@ -144,7 +144,6 @@ class ArtifactAssessment with Resource, _$ArtifactAssessment {
   factory ArtifactAssessment({
     
     @Default(R5ResourceType.ArtifactAssessment)
-    @JsonKey(unknownEnumValue: R5ResourceType.ArtifactAssessment)
         R5ResourceType resourceType,
 
     

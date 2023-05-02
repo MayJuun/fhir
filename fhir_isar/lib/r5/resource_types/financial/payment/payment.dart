@@ -12,9 +12,7 @@ part 'payment.g.dart';
 
 class PaymentNotice {
   const PaymentNotice({
-    @Default(R5ResourceType.PaymentNotice)
-    @JsonKey(unknownEnumValue: R5ResourceType.PaymentNotice)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.PaymentNotice) R5ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,

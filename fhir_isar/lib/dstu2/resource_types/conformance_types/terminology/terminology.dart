@@ -13,10 +13,8 @@ part 'terminology.enums.dart';
 part 'terminology.g.dart';
 
 class ValueSet {
-const ValueSet({
-    @Default(Dstu2ResourceType.ValueSet)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.ValueSet)
-        Dstu2ResourceType resourceType,
+  const ValueSet({
+    @Default(Dstu2ResourceType.ValueSet) Dstu2ResourceType resourceType,
     FhirId? id,
     @JsonKey(name: '_id') Element? idElement,
     Meta? meta,
@@ -59,5 +57,5 @@ const ValueSet({
     ValueSetCodeSystem? codeSystem,
     ValueSetCompose? compose,
     ValueSetExpansion? expansion,
-});
+  });
 }

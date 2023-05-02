@@ -13,10 +13,8 @@ part 'clinical_decision_support.enums.dart';
 part 'clinical_decision_support.g.dart';
 
 class GuidanceResponse {
-const GuidanceResponse({
-    @Default(Stu3ResourceType.GuidanceResponse)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
-        Stu3ResourceType resourceType,
+  const GuidanceResponse({
+    @Default(Stu3ResourceType.GuidanceResponse) Stu3ResourceType resourceType,
     FhirId? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -45,5 +43,5 @@ const GuidanceResponse({
     Reference? outputParameters,
     Reference? result,
     List<DataRequirement>? dataRequirement,
-});
+  });
 }
