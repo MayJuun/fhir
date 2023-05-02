@@ -1,17 +1,3 @@
-import 'dart:convert';
-
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:yaml/yaml.dart';
-
-import '../../../../dstu2.dart';
-
-part 'documents_and_lists.enums.dart';
-part 'documents_and_lists.freezed.dart';
-part 'documents_and_lists.g.dart';
-
-@freezed
-class Composition with Resource, _$Composition {
-  Composition._();
   factory Composition({
     @Default(Dstu2ResourceType.Composition)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Composition)
@@ -46,34 +32,6 @@ class Composition with Resource, _$Composition {
     Reference? encounter,
     List<CompositionSection>? section,
   }) = _Composition;
-
-  factory Composition.fromYaml(dynamic yaml) => yaml is String
-      ? Composition.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? Composition.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'Composition cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory Composition.fromJson(Map<String, dynamic> json) =>
-      _$CompositionFromJson(json);
-
-  factory Composition.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$CompositionFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class CompositionAttester with _$CompositionAttester {
-  CompositionAttester._();
   factory CompositionAttester({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -84,36 +42,6 @@ class CompositionAttester with _$CompositionAttester {
     @JsonKey(name: '_time') Element? timeElement,
     Reference? party,
   }) = _CompositionAttester;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory CompositionAttester.fromYaml(dynamic yaml) => yaml is String
-      ? CompositionAttester.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? CompositionAttester.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'CompositionAttester cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory CompositionAttester.fromJson(Map<String, dynamic> json) =>
-      _$CompositionAttesterFromJson(json);
-
-  factory CompositionAttester.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$CompositionAttesterFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class CompositionEvent with _$CompositionEvent {
-  CompositionEvent._();
   factory CompositionEvent({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -122,36 +50,6 @@ class CompositionEvent with _$CompositionEvent {
     Period? period,
     List<Reference>? detail,
   }) = _CompositionEvent;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory CompositionEvent.fromYaml(dynamic yaml) => yaml is String
-      ? CompositionEvent.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? CompositionEvent.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'CompositionEvent cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory CompositionEvent.fromJson(Map<String, dynamic> json) =>
-      _$CompositionEventFromJson(json);
-
-  factory CompositionEvent.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$CompositionEventFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class CompositionSection with _$CompositionSection {
-  CompositionSection._();
   factory CompositionSection({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -168,36 +66,6 @@ class CompositionSection with _$CompositionSection {
     CodeableConcept? emptyReason,
     List<CompositionSection>? section,
   }) = _CompositionSection;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory CompositionSection.fromYaml(dynamic yaml) => yaml is String
-      ? CompositionSection.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? CompositionSection.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'CompositionSection cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory CompositionSection.fromJson(Map<String, dynamic> json) =>
-      _$CompositionSectionFromJson(json);
-
-  factory CompositionSection.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$CompositionSectionFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class DocumentManifest with Resource, _$DocumentManifest {
-  DocumentManifest._();
   factory DocumentManifest({
     @Default(Dstu2ResourceType.DocumentManifest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentManifest)
@@ -230,34 +98,6 @@ class DocumentManifest with Resource, _$DocumentManifest {
     required List<DocumentManifestContent> content,
     List<DocumentManifestRelated>? related,
   }) = _DocumentManifest;
-
-  factory DocumentManifest.fromYaml(dynamic yaml) => yaml is String
-      ? DocumentManifest.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? DocumentManifest.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'DocumentManifest cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory DocumentManifest.fromJson(Map<String, dynamic> json) =>
-      _$DocumentManifestFromJson(json);
-
-  factory DocumentManifest.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$DocumentManifestFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class DocumentManifestContent with _$DocumentManifestContent {
-  DocumentManifestContent._();
   factory DocumentManifestContent({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -265,36 +105,6 @@ class DocumentManifestContent with _$DocumentManifestContent {
     Attachment? pAttachment,
     Reference? pReference,
   }) = _DocumentManifestContent;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory DocumentManifestContent.fromYaml(dynamic yaml) => yaml is String
-      ? DocumentManifestContent.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? DocumentManifestContent.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'DocumentManifestContent cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory DocumentManifestContent.fromJson(Map<String, dynamic> json) =>
-      _$DocumentManifestContentFromJson(json);
-
-  factory DocumentManifestContent.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$DocumentManifestContentFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class DocumentManifestRelated with _$DocumentManifestRelated {
-  DocumentManifestRelated._();
   factory DocumentManifestRelated({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -302,36 +112,6 @@ class DocumentManifestRelated with _$DocumentManifestRelated {
     Identifier? identifier,
     Reference? ref,
   }) = _DocumentManifestRelated;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory DocumentManifestRelated.fromYaml(dynamic yaml) => yaml is String
-      ? DocumentManifestRelated.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? DocumentManifestRelated.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'DocumentManifestRelated cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory DocumentManifestRelated.fromJson(Map<String, dynamic> json) =>
-      _$DocumentManifestRelatedFromJson(json);
-
-  factory DocumentManifestRelated.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$DocumentManifestRelatedFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class DocumentReference with Resource, _$DocumentReference {
-  DocumentReference._();
   factory DocumentReference({
     @Default(Dstu2ResourceType.DocumentReference)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentReference)
@@ -368,34 +148,6 @@ class DocumentReference with Resource, _$DocumentReference {
     required List<DocumentReferenceContent> content,
     DocumentReferenceContext? context,
   }) = _DocumentReference;
-
-  factory DocumentReference.fromYaml(dynamic yaml) => yaml is String
-      ? DocumentReference.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? DocumentReference.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'DocumentReference cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory DocumentReference.fromJson(Map<String, dynamic> json) =>
-      _$DocumentReferenceFromJson(json);
-
-  factory DocumentReference.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$DocumentReferenceFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
-  DocumentReferenceRelatesTo._();
   factory DocumentReferenceRelatesTo({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -405,36 +157,6 @@ class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
     @JsonKey(name: '_code') Element? codeElement,
     required Reference target,
   }) = _DocumentReferenceRelatesTo;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory DocumentReferenceRelatesTo.fromYaml(dynamic yaml) => yaml is String
-      ? DocumentReferenceRelatesTo.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? DocumentReferenceRelatesTo.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'DocumentReferenceRelatesTo cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =>
-      _$DocumentReferenceRelatesToFromJson(json);
-
-  factory DocumentReferenceRelatesTo.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$DocumentReferenceRelatesToFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class DocumentReferenceContent with _$DocumentReferenceContent {
-  DocumentReferenceContent._();
   factory DocumentReferenceContent({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -442,36 +164,6 @@ class DocumentReferenceContent with _$DocumentReferenceContent {
     required Attachment attachment,
     List<Coding>? format,
   }) = _DocumentReferenceContent;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory DocumentReferenceContent.fromYaml(dynamic yaml) => yaml is String
-      ? DocumentReferenceContent.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? DocumentReferenceContent.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'DocumentReferenceContent cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory DocumentReferenceContent.fromJson(Map<String, dynamic> json) =>
-      _$DocumentReferenceContentFromJson(json);
-
-  factory DocumentReferenceContent.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$DocumentReferenceContentFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class DocumentReferenceContext with _$DocumentReferenceContext {
-  DocumentReferenceContext._();
   factory DocumentReferenceContext({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -484,36 +176,6 @@ class DocumentReferenceContext with _$DocumentReferenceContext {
     Reference? sourcePatientInfo,
     List<DocumentReferenceContextRelated>? related,
   }) = _DocumentReferenceContext;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory DocumentReferenceContext.fromYaml(dynamic yaml) => yaml is String
-      ? DocumentReferenceContext.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? DocumentReferenceContext.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'DocumentReferenceContext cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory DocumentReferenceContext.fromJson(Map<String, dynamic> json) =>
-      _$DocumentReferenceContextFromJson(json);
-
-  factory DocumentReferenceContext.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$DocumentReferenceContextFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class DocumentReferenceContextRelated with _$DocumentReferenceContextRelated {
-  DocumentReferenceContextRelated._();
   factory DocumentReferenceContextRelated({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -521,37 +183,6 @@ class DocumentReferenceContextRelated with _$DocumentReferenceContextRelated {
     Identifier? identifier,
     Reference? ref,
   }) = _DocumentReferenceContextRelated;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory DocumentReferenceContextRelated.fromYaml(dynamic yaml) => yaml
-          is String
-      ? DocumentReferenceContextRelated.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? DocumentReferenceContextRelated.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'DocumentReferenceContextRelated cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory DocumentReferenceContextRelated.fromJson(Map<String, dynamic> json) =>
-      _$DocumentReferenceContextRelatedFromJson(json);
-
-  factory DocumentReferenceContextRelated.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$DocumentReferenceContextRelatedFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class List_ with Resource, _$List_ {
-  List_._();
   factory List_({
     @Default(Dstu2ResourceType.List_)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.List_)
@@ -584,32 +215,6 @@ class List_ with Resource, _$List_ {
     List<ListEntry>? entry,
     CodeableConcept? emptyReason,
   }) = _List_;
-
-  factory List_.fromYaml(dynamic yaml) => yaml is String
-      ? List_.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? List_.fromJson(jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'List_ cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory List_.fromJson(Map<String, dynamic> json) => _$List_FromJson(json);
-
-  factory List_.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$List_FromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ListEntry with _$ListEntry {
-  ListEntry._();
   factory ListEntry({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -622,29 +227,3 @@ class ListEntry with _$ListEntry {
     @JsonKey(name: '_date') Element? dateElement,
     required Reference item,
   }) = _ListEntry;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory ListEntry.fromYaml(dynamic yaml) => yaml is String
-      ? ListEntry.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ListEntry.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ListEntry cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ListEntry.fromJson(Map<String, dynamic> json) =>
-      _$ListEntryFromJson(json);
-
-  factory ListEntry.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ListEntryFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}

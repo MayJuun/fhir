@@ -1,19 +1,3 @@
-import 'dart:convert';
-
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:hive/hive.dart';
-import 'package:yaml/yaml.dart';
-
-import '../../../../r4.dart';
-
-part 'workflow.freezed.dart';
-part 'workflow.g.dart';
-
-@freezed
-class Appointment with Resource, _$Appointment {
-  Appointment._();
-
-  @HiveType(typeId: 21, adapterName: 'AppointmentAdapter')
   factory Appointment({
     @Default(R4ResourceType.Appointment)
     @JsonKey(unknownEnumValue: R4ResourceType.Appointment)
@@ -67,35 +51,6 @@ class Appointment with Resource, _$Appointment {
     @HiveField(42) required List<AppointmentParticipant> participant,
     @HiveField(43) List<Period>? requestedPeriod,
   }) = _Appointment;
-
-  factory Appointment.fromYaml(dynamic yaml) => yaml is String
-      ? Appointment.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? Appointment.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'Appointment cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory Appointment.fromJson(Map<String, dynamic> json) =>
-      _$AppointmentFromJson(json);
-
-  factory Appointment.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$AppointmentFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class AppointmentParticipant with _$AppointmentParticipant {
-  AppointmentParticipant._();
-
   factory AppointmentParticipant({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -108,38 +63,6 @@ class AppointmentParticipant with _$AppointmentParticipant {
     @JsonKey(name: '_status') Element? statusElement,
     Period? period,
   }) = _AppointmentParticipant;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory AppointmentParticipant.fromYaml(dynamic yaml) => yaml is String
-      ? AppointmentParticipant.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? AppointmentParticipant.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'AppointmentParticipant cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
-      _$AppointmentParticipantFromJson(json);
-
-  factory AppointmentParticipant.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$AppointmentParticipantFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class AppointmentResponse with Resource, _$AppointmentResponse {
-  AppointmentResponse._();
-
-  @HiveType(typeId: 22, adapterName: 'AppointmentResponseAdapter')
   factory AppointmentResponse({
     @Default(R4ResourceType.AppointmentResponse)
     @JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
@@ -172,36 +95,6 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
     @HiveField(21) String? comment,
     @JsonKey(name: '_comment') @HiveField(22) Element? commentElement,
   }) = _AppointmentResponse;
-
-  factory AppointmentResponse.fromYaml(dynamic yaml) => yaml is String
-      ? AppointmentResponse.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? AppointmentResponse.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'AppointmentResponse cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory AppointmentResponse.fromJson(Map<String, dynamic> json) =>
-      _$AppointmentResponseFromJson(json);
-
-  factory AppointmentResponse.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$AppointmentResponseFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class Schedule with Resource, _$Schedule {
-  Schedule._();
-
-  @HiveType(typeId: 23, adapterName: 'ScheduleAdapter')
   factory Schedule({
     @Default(R4ResourceType.Schedule)
     @JsonKey(unknownEnumValue: R4ResourceType.Schedule)
@@ -230,36 +123,6 @@ class Schedule with Resource, _$Schedule {
     @HiveField(19) String? comment,
     @JsonKey(name: '_comment') @HiveField(20) Element? commentElement,
   }) = _Schedule;
-
-  factory Schedule.fromYaml(dynamic yaml) => yaml is String
-      ? Schedule.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? Schedule.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'Schedule cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory Schedule.fromJson(Map<String, dynamic> json) =>
-      _$ScheduleFromJson(json);
-
-  factory Schedule.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ScheduleFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class Slot with Resource, _$Slot {
-  Slot._();
-
-  @HiveType(typeId: 24, adapterName: 'SlotAdapter')
   factory Slot({
     @Default(R4ResourceType.Slot)
     @JsonKey(unknownEnumValue: R4ResourceType.Slot)
@@ -294,34 +157,6 @@ class Slot with Resource, _$Slot {
     @HiveField(26) String? comment,
     @JsonKey(name: '_comment') @HiveField(27) Element? commentElement,
   }) = _Slot;
-
-  factory Slot.fromYaml(dynamic yaml) => yaml is String
-      ? Slot.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? Slot.fromJson(jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'Slot cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory Slot.fromJson(Map<String, dynamic> json) => _$SlotFromJson(json);
-
-  factory Slot.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$SlotFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class Task with Resource, _$Task {
-  Task._();
-
-  @HiveType(typeId: 25, adapterName: 'TaskAdapter')
   factory Task({
     @Default(R4ResourceType.Task)
     @JsonKey(unknownEnumValue: R4ResourceType.Task)
@@ -380,33 +215,6 @@ class Task with Resource, _$Task {
     @HiveField(50) List<TaskInput>? input,
     @HiveField(51) List<TaskOutput>? output,
   }) = _Task;
-
-  factory Task.fromYaml(dynamic yaml) => yaml is String
-      ? Task.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? Task.fromJson(jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'Task cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory Task.fromJson(Map<String, dynamic> json) => _$TaskFromJson(json);
-
-  factory Task.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$TaskFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class TaskRestriction with _$TaskRestriction {
-  TaskRestriction._();
-
   factory TaskRestriction({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -416,37 +224,6 @@ class TaskRestriction with _$TaskRestriction {
     Period? period,
     List<Reference>? recipient,
   }) = _TaskRestriction;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory TaskRestriction.fromYaml(dynamic yaml) => yaml is String
-      ? TaskRestriction.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? TaskRestriction.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'TaskRestriction cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory TaskRestriction.fromJson(Map<String, dynamic> json) =>
-      _$TaskRestrictionFromJson(json);
-
-  factory TaskRestriction.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$TaskRestrictionFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class TaskInput with _$TaskInput {
-  TaskInput._();
-
   factory TaskInput({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -522,37 +299,6 @@ class TaskInput with _$TaskInput {
     Dosage? valueDosage,
     Meta? valueMeta,
   }) = _TaskInput;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory TaskInput.fromYaml(dynamic yaml) => yaml is String
-      ? TaskInput.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? TaskInput.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'TaskInput cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory TaskInput.fromJson(Map<String, dynamic> json) =>
-      _$TaskInputFromJson(json);
-
-  factory TaskInput.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$TaskInputFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class TaskOutput with _$TaskOutput {
-  TaskOutput._();
-
   factory TaskOutput({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -628,38 +374,6 @@ class TaskOutput with _$TaskOutput {
     Dosage? valueDosage,
     Meta? valueMeta,
   }) = _TaskOutput;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory TaskOutput.fromYaml(dynamic yaml) => yaml is String
-      ? TaskOutput.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? TaskOutput.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'TaskOutput cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory TaskOutput.fromJson(Map<String, dynamic> json) =>
-      _$TaskOutputFromJson(json);
-
-  factory TaskOutput.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$TaskOutputFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class VerificationResult with Resource, _$VerificationResult {
-  VerificationResult._();
-
-  @HiveType(typeId: 26, adapterName: 'VerificationResultAdapter')
   factory VerificationResult({
     @Default(R4ResourceType.VerificationResult)
     @JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
@@ -703,35 +417,6 @@ class VerificationResult with Resource, _$VerificationResult {
     @HiveField(28) VerificationResultAttestation? attestation,
     @HiveField(29) List<VerificationResultValidator>? validator,
   }) = _VerificationResult;
-
-  factory VerificationResult.fromYaml(dynamic yaml) => yaml is String
-      ? VerificationResult.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? VerificationResult.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'VerificationResult cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory VerificationResult.fromJson(Map<String, dynamic> json) =>
-      _$VerificationResultFromJson(json);
-
-  factory VerificationResult.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$VerificationResultFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class VerificationResultPrimarySource with _$VerificationResultPrimarySource {
-  VerificationResultPrimarySource._();
-
   factory VerificationResultPrimarySource({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -745,38 +430,6 @@ class VerificationResultPrimarySource with _$VerificationResultPrimarySource {
     CodeableConcept? canPushUpdates,
     List<CodeableConcept>? pushTypeAvailable,
   }) = _VerificationResultPrimarySource;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory VerificationResultPrimarySource.fromYaml(dynamic yaml) => yaml
-          is String
-      ? VerificationResultPrimarySource.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? VerificationResultPrimarySource.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'VerificationResultPrimarySource cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
-
-  factory VerificationResultPrimarySource.fromJson(Map<String, dynamic> json) =>
-      _$VerificationResultPrimarySourceFromJson(json);
-
-  factory VerificationResultPrimarySource.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$VerificationResultPrimarySourceFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class VerificationResultAttestation with _$VerificationResultAttestation {
-  VerificationResultAttestation._();
-
   factory VerificationResultAttestation({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -795,37 +448,6 @@ class VerificationResultAttestation with _$VerificationResultAttestation {
     Signature? proxySignature,
     Signature? sourceSignature,
   }) = _VerificationResultAttestation;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory VerificationResultAttestation.fromYaml(dynamic yaml) => yaml is String
-      ? VerificationResultAttestation.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? VerificationResultAttestation.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'VerificationResultAttestation cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory VerificationResultAttestation.fromJson(Map<String, dynamic> json) =>
-      _$VerificationResultAttestationFromJson(json);
-
-  factory VerificationResultAttestation.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$VerificationResultAttestationFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class VerificationResultValidator with _$VerificationResultValidator {
-  VerificationResultValidator._();
-
   factory VerificationResultValidator({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -835,29 +457,3 @@ class VerificationResultValidator with _$VerificationResultValidator {
     @JsonKey(name: '_identityCertificate') Element? identityCertificateElement,
     Signature? attestationSignature,
   }) = _VerificationResultValidator;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory VerificationResultValidator.fromYaml(dynamic yaml) => yaml is String
-      ? VerificationResultValidator.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? VerificationResultValidator.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'VerificationResultValidator cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory VerificationResultValidator.fromJson(Map<String, dynamic> json) =>
-      _$VerificationResultValidatorFromJson(json);
-
-  factory VerificationResultValidator.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$VerificationResultValidatorFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}

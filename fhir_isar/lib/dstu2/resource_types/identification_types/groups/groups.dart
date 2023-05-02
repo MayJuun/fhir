@@ -1,17 +1,3 @@
-import 'dart:convert';
-
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:yaml/yaml.dart';
-
-import '../../../../dstu2.dart';
-
-part 'groups.enums.dart';
-part 'groups.freezed.dart';
-part 'groups.g.dart';
-
-@freezed
-class Organization with Resource, _$Organization {
-  Organization._();
   factory Organization({
     @Default(Dstu2ResourceType.Organization)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Organization)
@@ -37,34 +23,6 @@ class Organization with Resource, _$Organization {
     Reference? partOf,
     List<OrganizationContact>? contact,
   }) = _Organization;
-
-  factory Organization.fromYaml(dynamic yaml) => yaml is String
-      ? Organization.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? Organization.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'Organization cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory Organization.fromJson(Map<String, dynamic> json) =>
-      _$OrganizationFromJson(json);
-
-  factory Organization.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$OrganizationFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class OrganizationContact with _$OrganizationContact {
-  OrganizationContact._();
   factory OrganizationContact({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -75,36 +33,6 @@ class OrganizationContact with _$OrganizationContact {
     List<ContactPoint>? telecom,
     Address? address,
   }) = _OrganizationContact;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory OrganizationContact.fromYaml(dynamic yaml) => yaml is String
-      ? OrganizationContact.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? OrganizationContact.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'OrganizationContact cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory OrganizationContact.fromJson(Map<String, dynamic> json) =>
-      _$OrganizationContactFromJson(json);
-
-  factory OrganizationContact.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$OrganizationContactFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class HealthcareService with Resource, _$HealthcareService {
-  HealthcareService._();
   factory HealthcareService({
     @Default(Dstu2ResourceType.HealthcareService)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.HealthcareService)
@@ -147,34 +75,6 @@ class HealthcareService with Resource, _$HealthcareService {
     @JsonKey(name: '_availabilityExceptions')
         Element? availabilityExceptionsElement,
   }) = _HealthcareService;
-
-  factory HealthcareService.fromYaml(dynamic yaml) => yaml is String
-      ? HealthcareService.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? HealthcareService.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'HealthcareService cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory HealthcareService.fromJson(Map<String, dynamic> json) =>
-      _$HealthcareServiceFromJson(json);
-
-  factory HealthcareService.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$HealthcareServiceFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class HealthcareServiceServiceType with _$HealthcareServiceServiceType {
-  HealthcareServiceServiceType._();
   factory HealthcareServiceServiceType({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -182,36 +82,6 @@ class HealthcareServiceServiceType with _$HealthcareServiceServiceType {
     required CodeableConcept type,
     List<CodeableConcept>? specialty,
   }) = _HealthcareServiceServiceType;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory HealthcareServiceServiceType.fromYaml(dynamic yaml) => yaml is String
-      ? HealthcareServiceServiceType.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? HealthcareServiceServiceType.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'HealthcareServiceServiceType cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory HealthcareServiceServiceType.fromJson(Map<String, dynamic> json) =>
-      _$HealthcareServiceServiceTypeFromJson(json);
-
-  factory HealthcareServiceServiceType.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$HealthcareServiceServiceTypeFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
-  HealthcareServiceAvailableTime._();
   factory HealthcareServiceAvailableTime({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -225,37 +95,6 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
     Time? availableEndTime,
     @JsonKey(name: '_availableEndTime') Element? availableEndTimeElement,
   }) = _HealthcareServiceAvailableTime;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory HealthcareServiceAvailableTime.fromYaml(dynamic yaml) => yaml
-          is String
-      ? HealthcareServiceAvailableTime.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? HealthcareServiceAvailableTime.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'HealthcareServiceAvailableTime cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory HealthcareServiceAvailableTime.fromJson(Map<String, dynamic> json) =>
-      _$HealthcareServiceAvailableTimeFromJson(json);
-
-  factory HealthcareServiceAvailableTime.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$HealthcareServiceAvailableTimeFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
-  HealthcareServiceNotAvailable._();
   factory HealthcareServiceNotAvailable({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -264,36 +103,6 @@ class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
     @JsonKey(name: '_description') Element? descriptionElement,
     Period? during,
   }) = _HealthcareServiceNotAvailable;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory HealthcareServiceNotAvailable.fromYaml(dynamic yaml) => yaml is String
-      ? HealthcareServiceNotAvailable.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? HealthcareServiceNotAvailable.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'HealthcareServiceNotAvailable cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory HealthcareServiceNotAvailable.fromJson(Map<String, dynamic> json) =>
-      _$HealthcareServiceNotAvailableFromJson(json);
-
-  factory HealthcareServiceNotAvailable.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$HealthcareServiceNotAvailableFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class Group with Resource, _$Group {
-  Group._();
   factory Group({
     @Default(Dstu2ResourceType.Group)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Group)
@@ -321,32 +130,6 @@ class Group with Resource, _$Group {
     List<GroupCharacteristic>? characteristic,
     List<GroupMember>? member,
   }) = _Group;
-
-  factory Group.fromYaml(dynamic yaml) => yaml is String
-      ? Group.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? Group.fromJson(jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'Group cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory Group.fromJson(Map<String, dynamic> json) => _$GroupFromJson(json);
-
-  factory Group.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$GroupFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class GroupCharacteristic with _$GroupCharacteristic {
-  GroupCharacteristic._();
   factory GroupCharacteristic({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -360,36 +143,6 @@ class GroupCharacteristic with _$GroupCharacteristic {
     required Boolean exclude,
     Period? period,
   }) = _GroupCharacteristic;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory GroupCharacteristic.fromYaml(dynamic yaml) => yaml is String
-      ? GroupCharacteristic.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? GroupCharacteristic.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'GroupCharacteristic cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory GroupCharacteristic.fromJson(Map<String, dynamic> json) =>
-      _$GroupCharacteristicFromJson(json);
-
-  factory GroupCharacteristic.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$GroupCharacteristicFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class GroupMember with _$GroupMember {
-  GroupMember._();
   factory GroupMember({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -399,29 +152,3 @@ class GroupMember with _$GroupMember {
     Boolean? inactive,
     @JsonKey(name: '_inactive') Element? inactiveElement,
   }) = _GroupMember;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory GroupMember.fromYaml(dynamic yaml) => yaml is String
-      ? GroupMember.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? GroupMember.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'GroupMember cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory GroupMember.fromJson(Map<String, dynamic> json) =>
-      _$GroupMemberFromJson(json);
-
-  factory GroupMember.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$GroupMemberFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}

@@ -1,19 +1,3 @@
-import 'dart:convert';
-
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:hive/hive.dart';
-import 'package:yaml/yaml.dart';
-
-import '../../../../r4.dart';
-
-part 'security.freezed.dart';
-part 'security.g.dart';
-
-@freezed
-class AuditEvent with Resource, _$AuditEvent {
-  AuditEvent._();
-
-  @HiveType(typeId: 105, adapterName: 'AuditEventAdapter')
   factory AuditEvent({
     @Default(R4ResourceType.AuditEvent)
     @JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
@@ -47,35 +31,6 @@ class AuditEvent with Resource, _$AuditEvent {
     @HiveField(25) required AuditEventSource source,
     @HiveField(26) List<AuditEventEntity>? entity,
   }) = _AuditEvent;
-
-  factory AuditEvent.fromYaml(dynamic yaml) => yaml is String
-      ? AuditEvent.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? AuditEvent.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'AuditEvent cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory AuditEvent.fromJson(Map<String, dynamic> json) =>
-      _$AuditEventFromJson(json);
-
-  factory AuditEvent.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$AuditEventFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class AuditEventAgent with _$AuditEventAgent {
-  AuditEventAgent._();
-
   factory AuditEventAgent({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -96,37 +51,6 @@ class AuditEventAgent with _$AuditEventAgent {
     AuditEventNetwork? network,
     List<CodeableConcept>? purposeOfUse,
   }) = _AuditEventAgent;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory AuditEventAgent.fromYaml(dynamic yaml) => yaml is String
-      ? AuditEventAgent.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? AuditEventAgent.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'AuditEventAgent cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory AuditEventAgent.fromJson(Map<String, dynamic> json) =>
-      _$AuditEventAgentFromJson(json);
-
-  factory AuditEventAgent.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$AuditEventAgentFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class AuditEventNetwork with _$AuditEventNetwork {
-  AuditEventNetwork._();
-
   factory AuditEventNetwork({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -136,37 +60,6 @@ class AuditEventNetwork with _$AuditEventNetwork {
     Code? type,
     @JsonKey(name: '_type') Element? typeElement,
   }) = _AuditEventNetwork;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory AuditEventNetwork.fromYaml(dynamic yaml) => yaml is String
-      ? AuditEventNetwork.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? AuditEventNetwork.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'AuditEventNetwork cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory AuditEventNetwork.fromJson(Map<String, dynamic> json) =>
-      _$AuditEventNetworkFromJson(json);
-
-  factory AuditEventNetwork.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$AuditEventNetworkFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class AuditEventSource with _$AuditEventSource {
-  AuditEventSource._();
-
   factory AuditEventSource({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -176,37 +69,6 @@ class AuditEventSource with _$AuditEventSource {
     required Reference observer,
     List<Coding>? type,
   }) = _AuditEventSource;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory AuditEventSource.fromYaml(dynamic yaml) => yaml is String
-      ? AuditEventSource.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? AuditEventSource.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'AuditEventSource cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory AuditEventSource.fromJson(Map<String, dynamic> json) =>
-      _$AuditEventSourceFromJson(json);
-
-  factory AuditEventSource.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$AuditEventSourceFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class AuditEventEntity with _$AuditEventEntity {
-  AuditEventEntity._();
-
   factory AuditEventEntity({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -224,37 +86,6 @@ class AuditEventEntity with _$AuditEventEntity {
     @JsonKey(name: '_query') Element? queryElement,
     List<AuditEventDetail>? detail,
   }) = _AuditEventEntity;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory AuditEventEntity.fromYaml(dynamic yaml) => yaml is String
-      ? AuditEventEntity.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? AuditEventEntity.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'AuditEventEntity cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory AuditEventEntity.fromJson(Map<String, dynamic> json) =>
-      _$AuditEventEntityFromJson(json);
-
-  factory AuditEventEntity.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$AuditEventEntityFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class AuditEventDetail with _$AuditEventDetail {
-  AuditEventDetail._();
-
   factory AuditEventDetail({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -266,38 +97,6 @@ class AuditEventDetail with _$AuditEventDetail {
     Base64Binary? valueBase64Binary,
     @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
   }) = _AuditEventDetail;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory AuditEventDetail.fromYaml(dynamic yaml) => yaml is String
-      ? AuditEventDetail.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? AuditEventDetail.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'AuditEventDetail cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory AuditEventDetail.fromJson(Map<String, dynamic> json) =>
-      _$AuditEventDetailFromJson(json);
-
-  factory AuditEventDetail.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$AuditEventDetailFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class Consent with Resource, _$Consent {
-  Consent._();
-
-  @HiveType(typeId: 106, adapterName: 'ConsentAdapter')
   factory Consent({
     @Default(R4ResourceType.Consent)
     @JsonKey(unknownEnumValue: R4ResourceType.Consent)
@@ -332,35 +131,6 @@ class Consent with Resource, _$Consent {
     @HiveField(26) List<ConsentVerification>? verification,
     @HiveField(27) ConsentProvision? provision,
   }) = _Consent;
-
-  factory Consent.fromYaml(dynamic yaml) => yaml is String
-      ? Consent.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? Consent.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'Consent cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory Consent.fromJson(Map<String, dynamic> json) =>
-      _$ConsentFromJson(json);
-
-  factory Consent.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ConsentFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ConsentPolicy with _$ConsentPolicy {
-  ConsentPolicy._();
-
   factory ConsentPolicy({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -370,37 +140,6 @@ class ConsentPolicy with _$ConsentPolicy {
     FhirUri? uri,
     @JsonKey(name: '_uri') Element? uriElement,
   }) = _ConsentPolicy;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory ConsentPolicy.fromYaml(dynamic yaml) => yaml is String
-      ? ConsentPolicy.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ConsentPolicy.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ConsentPolicy cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ConsentPolicy.fromJson(Map<String, dynamic> json) =>
-      _$ConsentPolicyFromJson(json);
-
-  factory ConsentPolicy.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ConsentPolicyFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ConsentVerification with _$ConsentVerification {
-  ConsentVerification._();
-
   factory ConsentVerification({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -411,37 +150,6 @@ class ConsentVerification with _$ConsentVerification {
     FhirDateTime? verificationDate,
     @JsonKey(name: '_verificationDate') Element? verificationDateElement,
   }) = _ConsentVerification;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory ConsentVerification.fromYaml(dynamic yaml) => yaml is String
-      ? ConsentVerification.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ConsentVerification.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ConsentVerification cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ConsentVerification.fromJson(Map<String, dynamic> json) =>
-      _$ConsentVerificationFromJson(json);
-
-  factory ConsentVerification.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ConsentVerificationFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ConsentProvision with _$ConsentProvision {
-  ConsentProvision._();
-
   factory ConsentProvision({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -459,37 +167,6 @@ class ConsentProvision with _$ConsentProvision {
     List<ConsentData>? data,
     List<ConsentProvision>? provision,
   }) = _ConsentProvision;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory ConsentProvision.fromYaml(dynamic yaml) => yaml is String
-      ? ConsentProvision.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ConsentProvision.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ConsentProvision cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ConsentProvision.fromJson(Map<String, dynamic> json) =>
-      _$ConsentProvisionFromJson(json);
-
-  factory ConsentProvision.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ConsentProvisionFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ConsentActor with _$ConsentActor {
-  ConsentActor._();
-
   factory ConsentActor({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -497,37 +174,6 @@ class ConsentActor with _$ConsentActor {
     required CodeableConcept role,
     required Reference reference,
   }) = _ConsentActor;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory ConsentActor.fromYaml(dynamic yaml) => yaml is String
-      ? ConsentActor.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ConsentActor.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ConsentActor cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ConsentActor.fromJson(Map<String, dynamic> json) =>
-      _$ConsentActorFromJson(json);
-
-  factory ConsentActor.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ConsentActorFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ConsentData with _$ConsentData {
-  ConsentData._();
-
   factory ConsentData({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -536,38 +182,6 @@ class ConsentData with _$ConsentData {
     @JsonKey(name: '_meaning') Element? meaningElement,
     required Reference reference,
   }) = _ConsentData;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory ConsentData.fromYaml(dynamic yaml) => yaml is String
-      ? ConsentData.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ConsentData.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ConsentData cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ConsentData.fromJson(Map<String, dynamic> json) =>
-      _$ConsentDataFromJson(json);
-
-  factory ConsentData.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ConsentDataFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class Provenance with Resource, _$Provenance {
-  Provenance._();
-
-  @HiveType(typeId: 107, adapterName: 'ProvenanceAdapter')
   factory Provenance({
     @Default(R4ResourceType.Provenance)
     @JsonKey(unknownEnumValue: R4ResourceType.Provenance)
@@ -602,35 +216,6 @@ class Provenance with Resource, _$Provenance {
     @HiveField(24) List<ProvenanceEntity>? entity,
     @HiveField(25) List<Signature>? signature,
   }) = _Provenance;
-
-  factory Provenance.fromYaml(dynamic yaml) => yaml is String
-      ? Provenance.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? Provenance.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'Provenance cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory Provenance.fromJson(Map<String, dynamic> json) =>
-      _$ProvenanceFromJson(json);
-
-  factory Provenance.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ProvenanceFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ProvenanceAgent with _$ProvenanceAgent {
-  ProvenanceAgent._();
-
   factory ProvenanceAgent({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -640,37 +225,6 @@ class ProvenanceAgent with _$ProvenanceAgent {
     required Reference who,
     Reference? onBehalfOf,
   }) = _ProvenanceAgent;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory ProvenanceAgent.fromYaml(dynamic yaml) => yaml is String
-      ? ProvenanceAgent.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ProvenanceAgent.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ProvenanceAgent cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ProvenanceAgent.fromJson(Map<String, dynamic> json) =>
-      _$ProvenanceAgentFromJson(json);
-
-  factory ProvenanceAgent.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ProvenanceAgentFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ProvenanceEntity with _$ProvenanceEntity {
-  ProvenanceEntity._();
-
   factory ProvenanceEntity({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -680,29 +234,3 @@ class ProvenanceEntity with _$ProvenanceEntity {
     required Reference what,
     List<ProvenanceAgent>? agent,
   }) = _ProvenanceEntity;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory ProvenanceEntity.fromYaml(dynamic yaml) => yaml is String
-      ? ProvenanceEntity.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ProvenanceEntity.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ProvenanceEntity cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ProvenanceEntity.fromJson(Map<String, dynamic> json) =>
-      _$ProvenanceEntityFromJson(json);
-
-  factory ProvenanceEntity.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ProvenanceEntityFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}

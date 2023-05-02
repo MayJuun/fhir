@@ -1,17 +1,3 @@
-import 'dart:convert';
-
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:yaml/yaml.dart';
-
-import '../../../../stu3.dart';
-
-part 'payment.enums.dart';
-part 'payment.freezed.dart';
-part 'payment.g.dart';
-
-@freezed
-class PaymentNotice with Resource, _$PaymentNotice {
-  PaymentNotice._();
   factory PaymentNotice({
     @Default(Stu3ResourceType.PaymentNotice)
     @JsonKey(unknownEnumValue: Stu3ResourceType.PaymentNotice)
@@ -40,34 +26,6 @@ class PaymentNotice with Resource, _$PaymentNotice {
     Reference? organization,
     CodeableConcept? paymentStatus,
   }) = _PaymentNotice;
-
-  factory PaymentNotice.fromYaml(dynamic yaml) => yaml is String
-      ? PaymentNotice.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? PaymentNotice.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'PaymentNotice cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory PaymentNotice.fromJson(Map<String, dynamic> json) =>
-      _$PaymentNoticeFromJson(json);
-
-  factory PaymentNotice.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$PaymentNoticeFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class PaymentReconciliation with Resource, _$PaymentReconciliation {
-  PaymentReconciliation._();
   factory PaymentReconciliation({
     @Default(Stu3ResourceType.PaymentReconciliation)
     @JsonKey(unknownEnumValue: Stu3ResourceType.PaymentReconciliation)
@@ -100,34 +58,6 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
     Money? total,
     List<PaymentReconciliationProcessNote>? processNote,
   }) = _PaymentReconciliation;
-
-  factory PaymentReconciliation.fromYaml(dynamic yaml) => yaml is String
-      ? PaymentReconciliation.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? PaymentReconciliation.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'PaymentReconciliation cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
-      _$PaymentReconciliationFromJson(json);
-
-  factory PaymentReconciliation.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$PaymentReconciliationFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
-  PaymentReconciliationDetail._();
   factory PaymentReconciliationDetail({
     required CodeableConcept type,
     Reference? request,
@@ -138,56 +68,8 @@ class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
     @JsonKey(name: '_date') Element? dateElement,
     Money? amount,
   }) = _PaymentReconciliationDetail;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory PaymentReconciliationDetail.fromYaml(dynamic yaml) => yaml is String
-      ? PaymentReconciliationDetail.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? PaymentReconciliationDetail.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'PaymentReconciliationDetail cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =>
-      _$PaymentReconciliationDetailFromJson(json);
-
-  factory PaymentReconciliationDetail.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$PaymentReconciliationDetailFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
-  PaymentReconciliationProcessNote._();
   factory PaymentReconciliationProcessNote({
     CodeableConcept? type,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
   }) = _PaymentReconciliationProcessNote;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory PaymentReconciliationProcessNote.fromYaml(dynamic yaml) => yaml
-          is String
-      ? PaymentReconciliationProcessNote.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? PaymentReconciliationProcessNote.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'PaymentReconciliationProcessNote cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
-
-  factory PaymentReconciliationProcessNote.fromJson(
-          Map<String, dynamic> json) =>
-      _$PaymentReconciliationProcessNoteFromJson(json);
-}

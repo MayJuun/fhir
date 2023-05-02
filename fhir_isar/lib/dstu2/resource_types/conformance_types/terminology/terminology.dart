@@ -1,17 +1,3 @@
-import 'dart:convert';
-
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:yaml/yaml.dart';
-
-import '../../../../dstu2.dart';
-
-part 'terminology.enums.dart';
-part 'terminology.freezed.dart';
-part 'terminology.g.dart';
-
-@freezed
-class ValueSet with Resource, _$ValueSet {
-  ValueSet._();
   factory ValueSet({
     @Default(Dstu2ResourceType.ValueSet)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ValueSet)
@@ -59,34 +45,6 @@ class ValueSet with Resource, _$ValueSet {
     ValueSetCompose? compose,
     ValueSetExpansion? expansion,
   }) = _ValueSet;
-
-  factory ValueSet.fromYaml(dynamic yaml) => yaml is String
-      ? ValueSet.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ValueSet.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ValueSet cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ValueSet.fromJson(Map<String, dynamic> json) =>
-      _$ValueSetFromJson(json);
-
-  factory ValueSet.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ValueSetFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ValueSetContact with _$ValueSetContact {
-  ValueSetContact._();
   factory ValueSetContact({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -95,36 +53,6 @@ class ValueSetContact with _$ValueSetContact {
     String? name,
     List<ContactPoint>? telecom,
   }) = _ValueSetContact;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory ValueSetContact.fromYaml(dynamic yaml) => yaml is String
-      ? ValueSetContact.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ValueSetContact.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ValueSetContact cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ValueSetContact.fromJson(Map<String, dynamic> json) =>
-      _$ValueSetContactFromJson(json);
-
-  factory ValueSetContact.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ValueSetContactFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ValueSetCodeSystem with _$ValueSetCodeSystem {
-  ValueSetCodeSystem._();
   factory ValueSetCodeSystem({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -138,36 +66,6 @@ class ValueSetCodeSystem with _$ValueSetCodeSystem {
     @JsonKey(name: '_caseSensitive') Element? caseSensitiveElement,
     required List<ValueSetCodeSystemConcept> concept,
   }) = _ValueSetCodeSystem;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory ValueSetCodeSystem.fromYaml(dynamic yaml) => yaml is String
-      ? ValueSetCodeSystem.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ValueSetCodeSystem.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ValueSetCodeSystem cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ValueSetCodeSystem.fromJson(Map<String, dynamic> json) =>
-      _$ValueSetCodeSystemFromJson(json);
-
-  factory ValueSetCodeSystem.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ValueSetCodeSystemFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ValueSetCodeSystemConcept with _$ValueSetCodeSystemConcept {
-  ValueSetCodeSystemConcept._();
   factory ValueSetCodeSystemConcept({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -182,36 +80,6 @@ class ValueSetCodeSystemConcept with _$ValueSetCodeSystemConcept {
     List<ValueSetConceptDesignation>? designation,
     List<ValueSetCodeSystemConcept>? concept,
   }) = _ValueSetCodeSystemConcept;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory ValueSetCodeSystemConcept.fromYaml(dynamic yaml) => yaml is String
-      ? ValueSetCodeSystemConcept.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ValueSetCodeSystemConcept.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ValueSetCodeSystemConcept cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ValueSetCodeSystemConcept.fromJson(Map<String, dynamic> json) =>
-      _$ValueSetCodeSystemConceptFromJson(json);
-
-  factory ValueSetCodeSystemConcept.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ValueSetCodeSystemConceptFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ValueSetConceptDesignation with _$ValueSetConceptDesignation {
-  ValueSetConceptDesignation._();
   factory ValueSetConceptDesignation({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -222,36 +90,6 @@ class ValueSetConceptDesignation with _$ValueSetConceptDesignation {
     required String value,
     @JsonKey(name: '_value') Element? valueElement,
   }) = _ValueSetConceptDesignation;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory ValueSetConceptDesignation.fromYaml(dynamic yaml) => yaml is String
-      ? ValueSetConceptDesignation.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ValueSetConceptDesignation.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ValueSetConceptDesignation cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ValueSetConceptDesignation.fromJson(Map<String, dynamic> json) =>
-      _$ValueSetConceptDesignationFromJson(json);
-
-  factory ValueSetConceptDesignation.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ValueSetConceptDesignationFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ValueSetCompose with _$ValueSetCompose {
-  ValueSetCompose._();
   factory ValueSetCompose({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -261,36 +99,6 @@ class ValueSetCompose with _$ValueSetCompose {
     List<ValueSetComposeInclude>? include,
     List<ValueSetComposeInclude>? exclude,
   }) = _ValueSetCompose;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory ValueSetCompose.fromYaml(dynamic yaml) => yaml is String
-      ? ValueSetCompose.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ValueSetCompose.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ValueSetCompose cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ValueSetCompose.fromJson(Map<String, dynamic> json) =>
-      _$ValueSetComposeFromJson(json);
-
-  factory ValueSetCompose.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ValueSetComposeFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ValueSetComposeInclude with _$ValueSetComposeInclude {
-  ValueSetComposeInclude._();
   factory ValueSetComposeInclude({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -303,36 +111,6 @@ class ValueSetComposeInclude with _$ValueSetComposeInclude {
     List<ValueSetIncludeConcept>? concept,
     List<ValueSetIncludeFilter>? filter,
   }) = _ValueSetComposeInclude;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory ValueSetComposeInclude.fromYaml(dynamic yaml) => yaml is String
-      ? ValueSetComposeInclude.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ValueSetComposeInclude.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ValueSetComposeInclude cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ValueSetComposeInclude.fromJson(Map<String, dynamic> json) =>
-      _$ValueSetComposeIncludeFromJson(json);
-
-  factory ValueSetComposeInclude.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ValueSetComposeIncludeFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ValueSetIncludeConcept with _$ValueSetIncludeConcept {
-  ValueSetIncludeConcept._();
   factory ValueSetIncludeConcept({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -344,36 +122,6 @@ class ValueSetIncludeConcept with _$ValueSetIncludeConcept {
     @JsonKey(name: '_display') Element? displayElement,
     List<ValueSetConceptDesignation>? designation,
   }) = _ValueSetIncludeConcept;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory ValueSetIncludeConcept.fromYaml(dynamic yaml) => yaml is String
-      ? ValueSetIncludeConcept.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ValueSetIncludeConcept.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ValueSetIncludeConcept cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ValueSetIncludeConcept.fromJson(Map<String, dynamic> json) =>
-      _$ValueSetIncludeConceptFromJson(json);
-
-  factory ValueSetIncludeConcept.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ValueSetIncludeConceptFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ValueSetIncludeFilter with _$ValueSetIncludeFilter {
-  ValueSetIncludeFilter._();
   factory ValueSetIncludeFilter({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -386,36 +134,6 @@ class ValueSetIncludeFilter with _$ValueSetIncludeFilter {
     required Code value,
     @JsonKey(name: '_value') Element? valueElement,
   }) = _ValueSetIncludeFilter;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory ValueSetIncludeFilter.fromYaml(dynamic yaml) => yaml is String
-      ? ValueSetIncludeFilter.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ValueSetIncludeFilter.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ValueSetIncludeFilter cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ValueSetIncludeFilter.fromJson(Map<String, dynamic> json) =>
-      _$ValueSetIncludeFilterFromJson(json);
-
-  factory ValueSetIncludeFilter.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ValueSetIncludeFilterFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ValueSetExpansion with _$ValueSetExpansion {
-  ValueSetExpansion._();
   factory ValueSetExpansion({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -432,36 +150,6 @@ class ValueSetExpansion with _$ValueSetExpansion {
     List<ValueSetExpansionParameter>? parameter,
     List<ValueSetExpansionContains>? contains,
   }) = _ValueSetExpansion;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory ValueSetExpansion.fromYaml(dynamic yaml) => yaml is String
-      ? ValueSetExpansion.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ValueSetExpansion.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ValueSetExpansion cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ValueSetExpansion.fromJson(Map<String, dynamic> json) =>
-      _$ValueSetExpansionFromJson(json);
-
-  factory ValueSetExpansion.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ValueSetExpansionFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ValueSetExpansionParameter with _$ValueSetExpansionParameter {
-  ValueSetExpansionParameter._();
   factory ValueSetExpansionParameter({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -482,36 +170,6 @@ class ValueSetExpansionParameter with _$ValueSetExpansionParameter {
     Code? valueCode,
     @JsonKey(name: '_valueCode') Element? valueCodeElement,
   }) = _ValueSetExpansionParameter;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory ValueSetExpansionParameter.fromYaml(dynamic yaml) => yaml is String
-      ? ValueSetExpansionParameter.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ValueSetExpansionParameter.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ValueSetExpansionParameter cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ValueSetExpansionParameter.fromJson(Map<String, dynamic> json) =>
-      _$ValueSetExpansionParameterFromJson(json);
-
-  factory ValueSetExpansionParameter.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ValueSetExpansionParameterFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ValueSetExpansionContains with _$ValueSetExpansionContains {
-  ValueSetExpansionContains._();
   factory ValueSetExpansionContains({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -529,36 +187,6 @@ class ValueSetExpansionContains with _$ValueSetExpansionContains {
     @JsonKey(name: '_display') Element? displayElement,
     List<ValueSetExpansionContains>? contains,
   }) = _ValueSetExpansionContains;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory ValueSetExpansionContains.fromYaml(dynamic yaml) => yaml is String
-      ? ValueSetExpansionContains.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ValueSetExpansionContains.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ValueSetExpansionContains cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ValueSetExpansionContains.fromJson(Map<String, dynamic> json) =>
-      _$ValueSetExpansionContainsFromJson(json);
-
-  factory ValueSetExpansionContains.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ValueSetExpansionContainsFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ConceptMap with Resource, _$ConceptMap {
-  ConceptMap._();
   factory ConceptMap({
     @Default(Dstu2ResourceType.ConceptMap)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ConceptMap)
@@ -604,34 +232,6 @@ class ConceptMap with Resource, _$ConceptMap {
     List<ConceptMapElement>? element,
     @JsonKey(name: '_date') Element? dateElement,
   }) = _ConceptMap;
-
-  factory ConceptMap.fromYaml(dynamic yaml) => yaml is String
-      ? ConceptMap.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ConceptMap.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ConceptMap cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ConceptMap.fromJson(Map<String, dynamic> json) =>
-      _$ConceptMapFromJson(json);
-
-  factory ConceptMap.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ConceptMapFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ConceptMapContact with _$ConceptMapContact {
-  ConceptMapContact._();
   factory ConceptMapContact({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -639,36 +239,6 @@ class ConceptMapContact with _$ConceptMapContact {
     String? name,
     List<ContactPoint>? telecom,
   }) = _ConceptMapContact;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory ConceptMapContact.fromYaml(dynamic yaml) => yaml is String
-      ? ConceptMapContact.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ConceptMapContact.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ConceptMapContact cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ConceptMapContact.fromJson(Map<String, dynamic> json) =>
-      _$ConceptMapContactFromJson(json);
-
-  factory ConceptMapContact.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ConceptMapContactFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ConceptMapElement with _$ConceptMapElement {
-  ConceptMapElement._();
   factory ConceptMapElement({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -678,36 +248,6 @@ class ConceptMapElement with _$ConceptMapElement {
     @JsonKey(name: '_code') Element? codeElement,
     List<ConceptMapElementTarget>? target,
   }) = _ConceptMapElement;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory ConceptMapElement.fromYaml(dynamic yaml) => yaml is String
-      ? ConceptMapElement.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ConceptMapElement.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ConceptMapElement cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ConceptMapElement.fromJson(Map<String, dynamic> json) =>
-      _$ConceptMapElementFromJson(json);
-
-  factory ConceptMapElement.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ConceptMapElementFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ConceptMapElementTarget with _$ConceptMapElementTarget {
-  ConceptMapElementTarget._();
   factory ConceptMapElementTarget({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -723,36 +263,6 @@ class ConceptMapElementTarget with _$ConceptMapElementTarget {
     List<ConceptMapTargetDependsOn>? dependsOn,
     List<ConceptMapTargetDependsOn>? product,
   }) = _ConceptMapElementTarget;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory ConceptMapElementTarget.fromYaml(dynamic yaml) => yaml is String
-      ? ConceptMapElementTarget.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ConceptMapElementTarget.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ConceptMapElementTarget cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ConceptMapElementTarget.fromJson(Map<String, dynamic> json) =>
-      _$ConceptMapElementTargetFromJson(json);
-
-  factory ConceptMapElementTarget.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ConceptMapElementTargetFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ConceptMapTargetDependsOn with _$ConceptMapTargetDependsOn {
-  ConceptMapTargetDependsOn._();
   factory ConceptMapTargetDependsOn({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -761,36 +271,6 @@ class ConceptMapTargetDependsOn with _$ConceptMapTargetDependsOn {
     required FhirUri codeSystem,
     required String code,
   }) = _ConceptMapTargetDependsOn;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory ConceptMapTargetDependsOn.fromYaml(dynamic yaml) => yaml is String
-      ? ConceptMapTargetDependsOn.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ConceptMapTargetDependsOn.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ConceptMapTargetDependsOn cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ConceptMapTargetDependsOn.fromJson(Map<String, dynamic> json) =>
-      _$ConceptMapTargetDependsOnFromJson(json);
-
-  factory ConceptMapTargetDependsOn.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ConceptMapTargetDependsOnFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class NamingSystem with Resource, _$NamingSystem {
-  NamingSystem._();
   factory NamingSystem({
     @Default(Dstu2ResourceType.NamingSystem)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.NamingSystem)
@@ -829,34 +309,6 @@ class NamingSystem with Resource, _$NamingSystem {
     required List<NamingSystemUniqueId> uniqueId,
     Reference? replacedBy,
   }) = _NamingSystem;
-
-  factory NamingSystem.fromYaml(dynamic yaml) => yaml is String
-      ? NamingSystem.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? NamingSystem.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'NamingSystem cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory NamingSystem.fromJson(Map<String, dynamic> json) =>
-      _$NamingSystemFromJson(json);
-
-  factory NamingSystem.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$NamingSystemFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class NamingSystemContact with _$NamingSystemContact {
-  NamingSystemContact._();
   factory NamingSystemContact({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -864,36 +316,6 @@ class NamingSystemContact with _$NamingSystemContact {
     String? name,
     List<ContactPoint>? telecom,
   }) = _NamingSystemContact;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory NamingSystemContact.fromYaml(dynamic yaml) => yaml is String
-      ? NamingSystemContact.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? NamingSystemContact.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'NamingSystemContact cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory NamingSystemContact.fromJson(Map<String, dynamic> json) =>
-      _$NamingSystemContactFromJson(json);
-
-  factory NamingSystemContact.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$NamingSystemContactFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class NamingSystemUniqueId with _$NamingSystemUniqueId {
-  NamingSystemUniqueId._();
   factory NamingSystemUniqueId({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -906,29 +328,3 @@ class NamingSystemUniqueId with _$NamingSystemUniqueId {
     @JsonKey(name: '_preferred') Element? preferredElement,
     Period? period,
   }) = _NamingSystemUniqueId;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory NamingSystemUniqueId.fromYaml(dynamic yaml) => yaml is String
-      ? NamingSystemUniqueId.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? NamingSystemUniqueId.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'NamingSystemUniqueId cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory NamingSystemUniqueId.fromJson(Map<String, dynamic> json) =>
-      _$NamingSystemUniqueIdFromJson(json);
-
-  factory NamingSystemUniqueId.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$NamingSystemUniqueIdFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}

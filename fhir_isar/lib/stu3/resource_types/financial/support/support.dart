@@ -1,17 +1,3 @@
-import 'dart:convert';
-
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:yaml/yaml.dart';
-
-import '../../../../stu3.dart';
-
-part 'support.enums.dart';
-part 'support.freezed.dart';
-part 'support.g.dart';
-
-@freezed
-class Coverage with Resource, _$Coverage {
-  Coverage._();
   factory Coverage({
     @Default(Stu3ResourceType.Coverage)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Coverage)
@@ -49,34 +35,6 @@ class Coverage with Resource, _$Coverage {
     @JsonKey(name: '_network') Element? networkElement,
     List<Reference>? contract,
   }) = _Coverage;
-
-  factory Coverage.fromYaml(dynamic yaml) => yaml is String
-      ? Coverage.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? Coverage.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'Coverage cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory Coverage.fromJson(Map<String, dynamic> json) =>
-      _$CoverageFromJson(json);
-
-  factory Coverage.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$CoverageFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class CoverageGrouping with _$CoverageGrouping {
-  CoverageGrouping._();
   factory CoverageGrouping({
     String? group,
     @JsonKey(name: '_group') Element? groupElement,
@@ -103,36 +61,6 @@ class CoverageGrouping with _$CoverageGrouping {
     String? subClassDisplay,
     @JsonKey(name: '_subClassDisplay') Element? subClassDisplayElement,
   }) = _CoverageGrouping;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory CoverageGrouping.fromYaml(dynamic yaml) => yaml is String
-      ? CoverageGrouping.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? CoverageGrouping.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'CoverageGrouping cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory CoverageGrouping.fromJson(Map<String, dynamic> json) =>
-      _$CoverageGroupingFromJson(json);
-
-  factory CoverageGrouping.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$CoverageGroupingFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class EligibilityRequest with Resource, _$EligibilityRequest {
-  EligibilityRequest._();
   factory EligibilityRequest({
     @Default(Stu3ResourceType.EligibilityRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityRequest)
@@ -168,34 +96,6 @@ class EligibilityRequest with Resource, _$EligibilityRequest {
     CodeableConcept? benefitCategory,
     CodeableConcept? benefitSubCategory,
   }) = _EligibilityRequest;
-
-  factory EligibilityRequest.fromYaml(dynamic yaml) => yaml is String
-      ? EligibilityRequest.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? EligibilityRequest.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'EligibilityRequest cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory EligibilityRequest.fromJson(Map<String, dynamic> json) =>
-      _$EligibilityRequestFromJson(json);
-
-  factory EligibilityRequest.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$EligibilityRequestFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class EligibilityResponse with Resource, _$EligibilityResponse {
-  EligibilityResponse._();
   factory EligibilityResponse({
     @Default(Stu3ResourceType.EligibilityResponse)
     @JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityResponse)
@@ -228,70 +128,11 @@ class EligibilityResponse with Resource, _$EligibilityResponse {
     CodeableConcept? form,
     List<EligibilityResponseError>? error,
   }) = _EligibilityResponse;
-
-  factory EligibilityResponse.fromYaml(dynamic yaml) => yaml is String
-      ? EligibilityResponse.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? EligibilityResponse.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'EligibilityResponse cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory EligibilityResponse.fromJson(Map<String, dynamic> json) =>
-      _$EligibilityResponseFromJson(json);
-
-  factory EligibilityResponse.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$EligibilityResponseFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class EligibilityResponseInsurance with _$EligibilityResponseInsurance {
-  EligibilityResponseInsurance._();
   factory EligibilityResponseInsurance({
     Reference? coverage,
     Reference? contract,
     List<EligibilityResponseBenefitBalance>? benefitBalance,
   }) = _EligibilityResponseInsurance;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory EligibilityResponseInsurance.fromYaml(dynamic yaml) => yaml is String
-      ? EligibilityResponseInsurance.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? EligibilityResponseInsurance.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'EligibilityResponseInsurance cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory EligibilityResponseInsurance.fromJson(Map<String, dynamic> json) =>
-      _$EligibilityResponseInsuranceFromJson(json);
-
-  factory EligibilityResponseInsurance.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$EligibilityResponseInsuranceFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class EligibilityResponseBenefitBalance
-    with _$EligibilityResponseBenefitBalance {
-  EligibilityResponseBenefitBalance._();
   factory EligibilityResponseBenefitBalance({
     required CodeableConcept category,
     CodeableConcept? subCategory,
@@ -306,28 +147,6 @@ class EligibilityResponseBenefitBalance
     CodeableConcept? term,
     List<EligibilityResponseFinancial>? financial,
   }) = _EligibilityResponseBenefitBalance;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory EligibilityResponseBenefitBalance.fromYaml(dynamic yaml) => yaml
-          is String
-      ? EligibilityResponseBenefitBalance.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? EligibilityResponseBenefitBalance.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'EligibilityResponseBenefitBalance cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
-
-  factory EligibilityResponseBenefitBalance.fromJson(
-          Map<String, dynamic> json) =>
-      _$EligibilityResponseBenefitBalanceFromJson(json);
-}
-
-@freezed
-class EligibilityResponseFinancial with _$EligibilityResponseFinancial {
-  EligibilityResponseFinancial._();
   factory EligibilityResponseFinancial({
     required CodeableConcept type,
     Decimal? allowedUnsignedInt,
@@ -339,69 +158,9 @@ class EligibilityResponseFinancial with _$EligibilityResponseFinancial {
     @JsonKey(name: '_usedUnsignedInt') Element? usedUnsignedIntElement,
     Money? usedMoney,
   }) = _EligibilityResponseFinancial;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory EligibilityResponseFinancial.fromYaml(dynamic yaml) => yaml is String
-      ? EligibilityResponseFinancial.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? EligibilityResponseFinancial.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'EligibilityResponseFinancial cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory EligibilityResponseFinancial.fromJson(Map<String, dynamic> json) =>
-      _$EligibilityResponseFinancialFromJson(json);
-
-  factory EligibilityResponseFinancial.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$EligibilityResponseFinancialFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class EligibilityResponseError with _$EligibilityResponseError {
-  EligibilityResponseError._();
   factory EligibilityResponseError({
     required CodeableConcept code,
   }) = _EligibilityResponseError;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory EligibilityResponseError.fromYaml(dynamic yaml) => yaml is String
-      ? EligibilityResponseError.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? EligibilityResponseError.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'EligibilityResponseError cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory EligibilityResponseError.fromJson(Map<String, dynamic> json) =>
-      _$EligibilityResponseErrorFromJson(json);
-
-  factory EligibilityResponseError.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$EligibilityResponseErrorFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class EnrollmentRequest with Resource, _$EnrollmentRequest {
-  EnrollmentRequest._();
   factory EnrollmentRequest({
     @Default(Stu3ResourceType.EnrollmentRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentRequest)
@@ -427,34 +186,6 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
     Reference? subject,
     Reference? coverage,
   }) = _EnrollmentRequest;
-
-  factory EnrollmentRequest.fromYaml(dynamic yaml) => yaml is String
-      ? EnrollmentRequest.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? EnrollmentRequest.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'EnrollmentRequest cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
-      _$EnrollmentRequestFromJson(json);
-
-  factory EnrollmentRequest.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$EnrollmentRequestFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class EnrollmentResponse with Resource, _$EnrollmentResponse {
-  EnrollmentResponse._();
   factory EnrollmentResponse({
     @Default(Stu3ResourceType.EnrollmentResponse)
     @JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentResponse)
@@ -482,27 +213,3 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
     Reference? requestProvider,
     Reference? requestOrganization,
   }) = _EnrollmentResponse;
-
-  factory EnrollmentResponse.fromYaml(dynamic yaml) => yaml is String
-      ? EnrollmentResponse.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? EnrollmentResponse.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'EnrollmentResponse cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
-      _$EnrollmentResponseFromJson(json);
-
-  factory EnrollmentResponse.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$EnrollmentResponseFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}

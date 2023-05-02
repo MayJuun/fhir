@@ -1,17 +1,3 @@
-import 'dart:convert';
-
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:yaml/yaml.dart';
-
-import '../../../../stu3.dart';
-
-part 'entities.enums.dart';
-part 'entities.freezed.dart';
-part 'entities.g.dart';
-
-@freezed
-class Device with Resource, _$Device {
-  Device._();
   factory Device({
     @Default(Stu3ResourceType.Device)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Device)
@@ -52,33 +38,6 @@ class Device with Resource, _$Device {
     List<Annotation>? note,
     List<CodeableConcept>? safety,
   }) = _Device;
-
-  factory Device.fromYaml(dynamic yaml) => yaml is String
-      ? Device.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? Device.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'Device cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory Device.fromJson(Map<String, dynamic> json) => _$DeviceFromJson(json);
-
-  factory Device.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$DeviceFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class DeviceUdi with _$DeviceUdi {
-  DeviceUdi._();
   factory DeviceUdi({
     String? deviceIdentifier,
     @JsonKey(name: '_deviceIdentifier') Element? deviceIdentifierElement,
@@ -95,36 +54,6 @@ class DeviceUdi with _$DeviceUdi {
     DeviceUdiEntryType? entryType,
     @JsonKey(name: '_entryType') Element? entryTypeElement,
   }) = _DeviceUdi;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory DeviceUdi.fromYaml(dynamic yaml) => yaml is String
-      ? DeviceUdi.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? DeviceUdi.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'DeviceUdi cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory DeviceUdi.fromJson(Map<String, dynamic> json) =>
-      _$DeviceUdiFromJson(json);
-
-  factory DeviceUdi.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$DeviceUdiFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class DeviceComponent with Resource, _$DeviceComponent {
-  DeviceComponent._();
   factory DeviceComponent({
     @Default(Stu3ResourceType.DeviceComponent)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceComponent)
@@ -153,63 +82,12 @@ class DeviceComponent with Resource, _$DeviceComponent {
     List<DeviceComponentProductionSpecification>? productionSpecification,
     CodeableConcept? languageCode,
   }) = _DeviceComponent;
-
-  factory DeviceComponent.fromYaml(dynamic yaml) => yaml is String
-      ? DeviceComponent.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? DeviceComponent.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'DeviceComponent cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory DeviceComponent.fromJson(Map<String, dynamic> json) =>
-      _$DeviceComponentFromJson(json);
-
-  factory DeviceComponent.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$DeviceComponentFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class DeviceComponentProductionSpecification
-    with _$DeviceComponentProductionSpecification {
-  DeviceComponentProductionSpecification._();
   factory DeviceComponentProductionSpecification({
     CodeableConcept? specType,
     Identifier? componentId,
     String? productionSpec,
     @JsonKey(name: '_productionSpec') Element? productionSpecElement,
   }) = _DeviceComponentProductionSpecification;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory DeviceComponentProductionSpecification.fromYaml(dynamic yaml) => yaml
-          is String
-      ? DeviceComponentProductionSpecification.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? DeviceComponentProductionSpecification.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'DeviceComponentProductionSpecification cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
-
-  factory DeviceComponentProductionSpecification.fromJson(
-          Map<String, dynamic> json) =>
-      _$DeviceComponentProductionSpecificationFromJson(json);
-}
-
-@freezed
-class DeviceMetric with Resource, _$DeviceMetric {
-  DeviceMetric._();
   factory DeviceMetric({
     @Default(Stu3ResourceType.DeviceMetric)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceMetric)
@@ -238,34 +116,6 @@ class DeviceMetric with Resource, _$DeviceMetric {
     Timing? measurementPeriod,
     List<DeviceMetricCalibration>? calibration,
   }) = _DeviceMetric;
-
-  factory DeviceMetric.fromYaml(dynamic yaml) => yaml is String
-      ? DeviceMetric.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? DeviceMetric.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'DeviceMetric cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory DeviceMetric.fromJson(Map<String, dynamic> json) =>
-      _$DeviceMetricFromJson(json);
-
-  factory DeviceMetric.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$DeviceMetricFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class DeviceMetricCalibration with _$DeviceMetricCalibration {
-  DeviceMetricCalibration._();
   factory DeviceMetricCalibration({
     DeviceMetricCalibrationType? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -274,36 +124,6 @@ class DeviceMetricCalibration with _$DeviceMetricCalibration {
     String? time,
     @JsonKey(name: '_time') Element? timeElement,
   }) = _DeviceMetricCalibration;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory DeviceMetricCalibration.fromYaml(dynamic yaml) => yaml is String
-      ? DeviceMetricCalibration.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? DeviceMetricCalibration.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'DeviceMetricCalibration cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =>
-      _$DeviceMetricCalibrationFromJson(json);
-
-  factory DeviceMetricCalibration.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$DeviceMetricCalibrationFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class Endpoint with Resource, _$Endpoint {
-  Endpoint._();
   factory Endpoint({
     @Default(Stu3ResourceType.Endpoint)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Endpoint)
@@ -335,34 +155,6 @@ class Endpoint with Resource, _$Endpoint {
     List<String>? header,
     @JsonKey(name: '_header') List<Element?>? headerElement,
   }) = _Endpoint;
-
-  factory Endpoint.fromYaml(dynamic yaml) => yaml is String
-      ? Endpoint.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? Endpoint.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'Endpoint cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory Endpoint.fromJson(Map<String, dynamic> json) =>
-      _$EndpointFromJson(json);
-
-  factory Endpoint.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$EndpointFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class HealthcareService with Resource, _$HealthcareService {
-  HealthcareService._();
   factory HealthcareService({
     @Default(Stu3ResourceType.HealthcareService)
     @JsonKey(unknownEnumValue: Stu3ResourceType.HealthcareService)
@@ -411,34 +203,6 @@ class HealthcareService with Resource, _$HealthcareService {
         Element? availabilityExceptionsElement,
     List<Reference>? endpoint,
   }) = _HealthcareService;
-
-  factory HealthcareService.fromYaml(dynamic yaml) => yaml is String
-      ? HealthcareService.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? HealthcareService.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'HealthcareService cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory HealthcareService.fromJson(Map<String, dynamic> json) =>
-      _$HealthcareServiceFromJson(json);
-
-  factory HealthcareService.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$HealthcareServiceFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
-  HealthcareServiceAvailableTime._();
   factory HealthcareServiceAvailableTime({
     List<HealthcareServiceAvailableTimeDaysOfWeek>? daysOfWeek,
     @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
@@ -449,72 +213,11 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
     Time? availableEndTime,
     @JsonKey(name: '_availableEndTime') Element? availableEndTimeElement,
   }) = _HealthcareServiceAvailableTime;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory HealthcareServiceAvailableTime.fromYaml(dynamic yaml) => yaml
-          is String
-      ? HealthcareServiceAvailableTime.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? HealthcareServiceAvailableTime.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'HealthcareServiceAvailableTime cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
-
-  factory HealthcareServiceAvailableTime.fromJson(Map<String, dynamic> json) =>
-      _$HealthcareServiceAvailableTimeFromJson(json);
-
-  factory HealthcareServiceAvailableTime.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$HealthcareServiceAvailableTimeFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
-  HealthcareServiceNotAvailable._();
   factory HealthcareServiceNotAvailable({
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     Period? during,
   }) = _HealthcareServiceNotAvailable;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory HealthcareServiceNotAvailable.fromYaml(dynamic yaml) => yaml is String
-      ? HealthcareServiceNotAvailable.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? HealthcareServiceNotAvailable.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'HealthcareServiceNotAvailable cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory HealthcareServiceNotAvailable.fromJson(Map<String, dynamic> json) =>
-      _$HealthcareServiceNotAvailableFromJson(json);
-
-  factory HealthcareServiceNotAvailable.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$HealthcareServiceNotAvailableFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class Location with Resource, _$Location {
-  Location._();
   factory Location({
     @Default(Stu3ResourceType.Location)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Location)
@@ -550,34 +253,6 @@ class Location with Resource, _$Location {
     Reference? partOf,
     List<Reference>? endpoint,
   }) = _Location;
-
-  factory Location.fromYaml(dynamic yaml) => yaml is String
-      ? Location.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? Location.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'Location cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory Location.fromJson(Map<String, dynamic> json) =>
-      _$LocationFromJson(json);
-
-  factory Location.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$LocationFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class LocationPosition with _$LocationPosition {
-  LocationPosition._();
   factory LocationPosition({
     Decimal? longitude,
     @JsonKey(name: '_longitude') Element? longitudeElement,
@@ -586,36 +261,6 @@ class LocationPosition with _$LocationPosition {
     Decimal? altitude,
     @JsonKey(name: '_altitude') Element? altitudeElement,
   }) = _LocationPosition;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory LocationPosition.fromYaml(dynamic yaml) => yaml is String
-      ? LocationPosition.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? LocationPosition.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'LocationPosition cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory LocationPosition.fromJson(Map<String, dynamic> json) =>
-      _$LocationPositionFromJson(json);
-
-  factory LocationPosition.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$LocationPositionFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class Organization with Resource, _$Organization {
-  Organization._();
   factory Organization({
     @Default(Stu3ResourceType.Organization)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Organization)
@@ -644,70 +289,12 @@ class Organization with Resource, _$Organization {
     List<OrganizationContact>? contact,
     List<Reference>? endpoint,
   }) = _Organization;
-
-  factory Organization.fromYaml(dynamic yaml) => yaml is String
-      ? Organization.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? Organization.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'Organization cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory Organization.fromJson(Map<String, dynamic> json) =>
-      _$OrganizationFromJson(json);
-
-  factory Organization.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$OrganizationFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class OrganizationContact with _$OrganizationContact {
-  OrganizationContact._();
   factory OrganizationContact({
     CodeableConcept? purpose,
     HumanName? name,
     List<ContactPoint>? telecom,
     Address? address,
   }) = _OrganizationContact;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory OrganizationContact.fromYaml(dynamic yaml) => yaml is String
-      ? OrganizationContact.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? OrganizationContact.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'OrganizationContact cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory OrganizationContact.fromJson(Map<String, dynamic> json) =>
-      _$OrganizationContactFromJson(json);
-
-  factory OrganizationContact.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$OrganizationContactFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class Substance with Resource, _$Substance {
-  Substance._();
   factory Substance({
     @Default(Stu3ResourceType.Substance)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Substance)
@@ -732,98 +319,14 @@ class Substance with Resource, _$Substance {
     List<SubstanceInstance>? instance,
     List<SubstanceIngredient>? ingredient,
   }) = _Substance;
-
-  factory Substance.fromYaml(dynamic yaml) => yaml is String
-      ? Substance.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? Substance.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'Substance cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory Substance.fromJson(Map<String, dynamic> json) =>
-      _$SubstanceFromJson(json);
-
-  factory Substance.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$SubstanceFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class SubstanceInstance with _$SubstanceInstance {
-  SubstanceInstance._();
   factory SubstanceInstance({
     Identifier? identifier,
     String? expiry,
     @JsonKey(name: '_expiry') Element? expiryElement,
     Quantity? quantity,
   }) = _SubstanceInstance;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory SubstanceInstance.fromYaml(dynamic yaml) => yaml is String
-      ? SubstanceInstance.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? SubstanceInstance.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'SubstanceInstance cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory SubstanceInstance.fromJson(Map<String, dynamic> json) =>
-      _$SubstanceInstanceFromJson(json);
-
-  factory SubstanceInstance.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$SubstanceInstanceFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class SubstanceIngredient with _$SubstanceIngredient {
-  SubstanceIngredient._();
   factory SubstanceIngredient({
     Ratio? quantity,
     CodeableConcept? substanceCodeableConcept,
     Reference? substanceReference,
   }) = _SubstanceIngredient;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory SubstanceIngredient.fromYaml(dynamic yaml) => yaml is String
-      ? SubstanceIngredient.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? SubstanceIngredient.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'SubstanceIngredient cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory SubstanceIngredient.fromJson(Map<String, dynamic> json) =>
-      _$SubstanceIngredientFromJson(json);
-
-  factory SubstanceIngredient.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$SubstanceIngredientFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}

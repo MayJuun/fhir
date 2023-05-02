@@ -1,17 +1,3 @@
-import 'dart:convert';
-
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:yaml/yaml.dart';
-
-import '../../../../dstu2.dart';
-
-part 'other.enums.dart';
-part 'other.freezed.dart';
-part 'other.g.dart';
-
-@freezed
-class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
-  ExplanationOfBenefit._();
   factory ExplanationOfBenefit({
     @Default(Dstu2ResourceType.ExplanationOfBenefit)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
@@ -41,27 +27,3 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
     Reference? requestProvider,
     Reference? requestOrganization,
   }) = _ExplanationOfBenefit;
-
-  factory ExplanationOfBenefit.fromYaml(dynamic yaml) => yaml is String
-      ? ExplanationOfBenefit.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ExplanationOfBenefit.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ExplanationOfBenefit cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =>
-      _$ExplanationOfBenefitFromJson(json);
-
-  factory ExplanationOfBenefit.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ExplanationOfBenefitFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}

@@ -1,52 +1,8 @@
-import 'dart:convert';
-
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:yaml/yaml.dart';
-
-import '../../stu3.dart';
-
-part 'special_types.enums.dart';
-part 'special_types.freezed.dart';
-part 'special_types.g.dart';
-
-@freezed
-class Narrative with _$Narrative {
-  Narrative._();
   factory Narrative({
     NarrativeStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     required String div,
   }) = _Narrative;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory Narrative.fromYaml(dynamic yaml) => yaml is String
-      ? Narrative.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? Narrative.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'Narrative cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory Narrative.fromJson(Map<String, dynamic> json) =>
-      _$NarrativeFromJson(json);
-
-  factory Narrative.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$NarrativeFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class Reference with _$Reference {
-  Reference._();
   factory Reference({
     String? reference,
     @JsonKey(name: '_reference') Element? referenceElement,
@@ -54,36 +10,6 @@ class Reference with _$Reference {
     String? display,
     @JsonKey(name: '_display') Element? displayElement,
   }) = _Reference;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory Reference.fromYaml(dynamic yaml) => yaml is String
-      ? Reference.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? Reference.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'Reference cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory Reference.fromJson(Map<String, dynamic> json) =>
-      _$ReferenceFromJson(json);
-
-  factory Reference.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ReferenceFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class Meta with _$Meta {
-  Meta._();
   factory Meta({
     FhirId? versionId,
     @JsonKey(name: '_versionId') Element? versionIdElement,
@@ -94,34 +20,6 @@ class Meta with _$Meta {
     List<Coding>? security,
     List<Coding>? tag,
   }) = _Meta;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory Meta.fromYaml(dynamic yaml) => yaml is String
-      ? Meta.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? Meta.fromJson(jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'Meta cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory Meta.fromJson(Map<String, dynamic> json) => _$MetaFromJson(json);
-
-  factory Meta.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$MetaFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ElementDefinition with _$ElementDefinition {
-  ElementDefinition._();
   factory ElementDefinition({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -421,36 +319,6 @@ class ElementDefinition with _$ElementDefinition {
     ElementDefinitionBinding? binding,
     List<ElementDefinitionMapping>? mapping,
   }) = _ElementDefinition;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory ElementDefinition.fromYaml(dynamic yaml) => yaml is String
-      ? ElementDefinition.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ElementDefinition.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ElementDefinition cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ElementDefinition.fromJson(Map<String, dynamic> json) =>
-      _$ElementDefinitionFromJson(json);
-
-  factory ElementDefinition.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ElementDefinitionFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
-  ElementDefinitionSlicing._();
   factory ElementDefinitionSlicing({
     List<ElementDefinitionDiscriminator>? discriminator,
     String? description,
@@ -460,73 +328,12 @@ class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
     ElementDefinitionSlicingRules? rules,
     @JsonKey(name: '_rules') Element? rulesElement,
   }) = _ElementDefinitionSlicing;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory ElementDefinitionSlicing.fromYaml(dynamic yaml) => yaml is String
-      ? ElementDefinitionSlicing.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ElementDefinitionSlicing.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ElementDefinitionSlicing cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ElementDefinitionSlicing.fromJson(Map<String, dynamic> json) =>
-      _$ElementDefinitionSlicingFromJson(json);
-
-  factory ElementDefinitionSlicing.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ElementDefinitionSlicingFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ElementDefinitionDiscriminator with _$ElementDefinitionDiscriminator {
-  ElementDefinitionDiscriminator._();
   factory ElementDefinitionDiscriminator({
     ElementDefinitionDiscriminatorType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
   }) = _ElementDefinitionDiscriminator;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory ElementDefinitionDiscriminator.fromYaml(dynamic yaml) => yaml
-          is String
-      ? ElementDefinitionDiscriminator.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ElementDefinitionDiscriminator.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ElementDefinitionDiscriminator cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
-
-  factory ElementDefinitionDiscriminator.fromJson(Map<String, dynamic> json) =>
-      _$ElementDefinitionDiscriminatorFromJson(json);
-
-  factory ElementDefinitionDiscriminator.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ElementDefinitionDiscriminatorFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ElementDefinitionBase with _$ElementDefinitionBase {
-  ElementDefinitionBase._();
   factory ElementDefinitionBase({
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
@@ -535,36 +342,6 @@ class ElementDefinitionBase with _$ElementDefinitionBase {
     String? max,
     @JsonKey(name: '_max') Element? maxElement,
   }) = _ElementDefinitionBase;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory ElementDefinitionBase.fromYaml(dynamic yaml) => yaml is String
-      ? ElementDefinitionBase.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ElementDefinitionBase.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ElementDefinitionBase cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ElementDefinitionBase.fromJson(Map<String, dynamic> json) =>
-      _$ElementDefinitionBaseFromJson(json);
-
-  factory ElementDefinitionBase.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ElementDefinitionBaseFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ElementDefinitionType with _$ElementDefinitionType {
-  ElementDefinitionType._();
   factory ElementDefinitionType({
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     String? code,
@@ -578,36 +355,6 @@ class ElementDefinitionType with _$ElementDefinitionType {
     ElementDefinitionTypeVersioning? versioning,
     @JsonKey(name: '_versioning') Element? versioningElement,
   }) = _ElementDefinitionType;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory ElementDefinitionType.fromYaml(dynamic yaml) => yaml is String
-      ? ElementDefinitionType.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ElementDefinitionType.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ElementDefinitionType cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ElementDefinitionType.fromJson(Map<String, dynamic> json) =>
-      _$ElementDefinitionTypeFromJson(json);
-
-  factory ElementDefinitionType.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ElementDefinitionTypeFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ElementDefinitionExample with _$ElementDefinitionExample {
-  ElementDefinitionExample._();
   factory ElementDefinitionExample({
     String? label,
     @JsonKey(name: '_label') Element? labelElement,
@@ -682,36 +429,6 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
     ParameterDefinition? valueParameterDefinition,
     TriggerDefinition? valueTriggerDefinition,
   }) = _ElementDefinitionExample;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory ElementDefinitionExample.fromYaml(dynamic yaml) => yaml is String
-      ? ElementDefinitionExample.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ElementDefinitionExample.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ElementDefinitionExample cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ElementDefinitionExample.fromJson(Map<String, dynamic> json) =>
-      _$ElementDefinitionExampleFromJson(json);
-
-  factory ElementDefinitionExample.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ElementDefinitionExampleFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
-  ElementDefinitionConstraint._();
   factory ElementDefinitionConstraint({
     String? key,
     @JsonKey(name: '_key') Element? keyElement,
@@ -728,36 +445,6 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
     String? source,
     @JsonKey(name: '_source') Element? sourceElement,
   }) = _ElementDefinitionConstraint;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory ElementDefinitionConstraint.fromYaml(dynamic yaml) => yaml is String
-      ? ElementDefinitionConstraint.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ElementDefinitionConstraint.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ElementDefinitionConstraint cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ElementDefinitionConstraint.fromJson(Map<String, dynamic> json) =>
-      _$ElementDefinitionConstraintFromJson(json);
-
-  factory ElementDefinitionConstraint.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ElementDefinitionConstraintFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ElementDefinitionBinding with _$ElementDefinitionBinding {
-  ElementDefinitionBinding._();
   factory ElementDefinitionBinding({
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     ElementDefinitionBindingStrength? strength,
@@ -768,36 +455,6 @@ class ElementDefinitionBinding with _$ElementDefinitionBinding {
     @JsonKey(name: '_valueSetUri') Element? valueSetUriElement,
     Reference? valueSetReference,
   }) = _ElementDefinitionBinding;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory ElementDefinitionBinding.fromYaml(dynamic yaml) => yaml is String
-      ? ElementDefinitionBinding.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ElementDefinitionBinding.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ElementDefinitionBinding cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ElementDefinitionBinding.fromJson(Map<String, dynamic> json) =>
-      _$ElementDefinitionBindingFromJson(json);
-
-  factory ElementDefinitionBinding.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ElementDefinitionBindingFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ElementDefinitionMapping with _$ElementDefinitionMapping {
-  ElementDefinitionMapping._();
   factory ElementDefinitionMapping({
     FhirId? identity,
     @JsonKey(name: '_identity') Element? identityElement,
@@ -808,36 +465,6 @@ class ElementDefinitionMapping with _$ElementDefinitionMapping {
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
   }) = _ElementDefinitionMapping;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory ElementDefinitionMapping.fromYaml(dynamic yaml) => yaml is String
-      ? ElementDefinitionMapping.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ElementDefinitionMapping.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ElementDefinitionMapping cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ElementDefinitionMapping.fromJson(Map<String, dynamic> json) =>
-      _$ElementDefinitionMappingFromJson(json);
-
-  factory ElementDefinitionMapping.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ElementDefinitionMappingFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class Dosage with _$Dosage {
-  Dosage._();
   factory Dosage({
     Decimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
@@ -862,28 +489,3 @@ class Dosage with _$Dosage {
     Range? rateRange,
     Quantity? rateSimpleQuantity,
   }) = _Dosage;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory Dosage.fromYaml(dynamic yaml) => yaml is String
-      ? Dosage.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? Dosage.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'Dosage cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory Dosage.fromJson(Map<String, dynamic> json) => _$DosageFromJson(json);
-
-  factory Dosage.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$DosageFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}

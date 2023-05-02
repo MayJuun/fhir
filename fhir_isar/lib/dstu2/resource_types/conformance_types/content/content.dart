@@ -1,17 +1,3 @@
-import 'dart:convert';
-
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:yaml/yaml.dart';
-
-import '../../../../dstu2.dart';
-
-part 'content.enums.dart';
-part 'content.freezed.dart';
-part 'content.g.dart';
-
-@freezed
-class StructureDefinition with Resource, _$StructureDefinition {
-  StructureDefinition._();
   factory StructureDefinition({
     @Default(Dstu2ResourceType.StructureDefinition)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.StructureDefinition)
@@ -68,34 +54,6 @@ class StructureDefinition with Resource, _$StructureDefinition {
     StructureDefinitionSnapshot? snapshot,
     StructureDefinitionDifferential? differential,
   }) = _StructureDefinition;
-
-  factory StructureDefinition.fromYaml(dynamic yaml) => yaml is String
-      ? StructureDefinition.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? StructureDefinition.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'StructureDefinition cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory StructureDefinition.fromJson(Map<String, dynamic> json) =>
-      _$StructureDefinitionFromJson(json);
-
-  factory StructureDefinition.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$StructureDefinitionFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class StructureDefinitionContact with _$StructureDefinitionContact {
-  StructureDefinitionContact._();
   factory StructureDefinitionContact({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -103,36 +61,6 @@ class StructureDefinitionContact with _$StructureDefinitionContact {
     String? name,
     List<ContactPoint>? telecom,
   }) = _StructureDefinitionContact;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory StructureDefinitionContact.fromYaml(dynamic yaml) => yaml is String
-      ? StructureDefinitionContact.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? StructureDefinitionContact.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'StructureDefinitionContact cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory StructureDefinitionContact.fromJson(Map<String, dynamic> json) =>
-      _$StructureDefinitionContactFromJson(json);
-
-  factory StructureDefinitionContact.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$StructureDefinitionContactFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class StructureDefinitionMapping with _$StructureDefinitionMapping {
-  StructureDefinitionMapping._();
   factory StructureDefinitionMapping({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -147,109 +75,18 @@ class StructureDefinitionMapping with _$StructureDefinitionMapping {
     String? comments,
     @JsonKey(name: '_comments') Element? commentElement,
   }) = _StructureDefinitionMapping;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory StructureDefinitionMapping.fromYaml(dynamic yaml) => yaml is String
-      ? StructureDefinitionMapping.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? StructureDefinitionMapping.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'StructureDefinitionMapping cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory StructureDefinitionMapping.fromJson(Map<String, dynamic> json) =>
-      _$StructureDefinitionMappingFromJson(json);
-
-  factory StructureDefinitionMapping.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$StructureDefinitionMappingFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
-  StructureDefinitionSnapshot._();
   factory StructureDefinitionSnapshot({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required List<ElementDefinition> element,
   }) = _StructureDefinitionSnapshot;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory StructureDefinitionSnapshot.fromYaml(dynamic yaml) => yaml is String
-      ? StructureDefinitionSnapshot.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? StructureDefinitionSnapshot.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'StructureDefinitionSnapshot cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json) =>
-      _$StructureDefinitionSnapshotFromJson(json);
-
-  factory StructureDefinitionSnapshot.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$StructureDefinitionSnapshotFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
-  StructureDefinitionDifferential._();
   factory StructureDefinitionDifferential({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required List<ElementDefinition> element,
   }) = _StructureDefinitionDifferential;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory StructureDefinitionDifferential.fromYaml(dynamic yaml) => yaml
-          is String
-      ? StructureDefinitionDifferential.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? StructureDefinitionDifferential.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'StructureDefinitionDifferential cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory StructureDefinitionDifferential.fromJson(Map<String, dynamic> json) =>
-      _$StructureDefinitionDifferentialFromJson(json);
-
-  factory StructureDefinitionDifferential.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$StructureDefinitionDifferentialFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class DataElement with Resource, _$DataElement {
-  DataElement._();
   factory DataElement({
     @Default(Dstu2ResourceType.DataElement)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DataElement)
@@ -279,34 +116,6 @@ class DataElement with Resource, _$DataElement {
     List<DataElementMapping>? mapping,
     required List<ElementDefinition> element,
   }) = _DataElement;
-
-  factory DataElement.fromYaml(dynamic yaml) => yaml is String
-      ? DataElement.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? DataElement.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'DataElement cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory DataElement.fromJson(Map<String, dynamic> json) =>
-      _$DataElementFromJson(json);
-
-  factory DataElement.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$DataElementFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class DataElementContact with _$DataElementContact {
-  DataElementContact._();
   factory DataElementContact({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -314,36 +123,6 @@ class DataElementContact with _$DataElementContact {
     String? name,
     List<ContactPoint>? telecom,
   }) = _DataElementContact;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory DataElementContact.fromYaml(dynamic yaml) => yaml is String
-      ? DataElementContact.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? DataElementContact.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'DataElementContact cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory DataElementContact.fromJson(Map<String, dynamic> json) =>
-      _$DataElementContactFromJson(json);
-
-  factory DataElementContact.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$DataElementContactFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class DataElementMapping with _$DataElementMapping {
-  DataElementMapping._();
   factory DataElementMapping({
     FhirId? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -358,29 +137,3 @@ class DataElementMapping with _$DataElementMapping {
     String? comments,
     @JsonKey(name: '_comment') Element? commentElement,
   }) = _DataElementMapping;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory DataElementMapping.fromYaml(dynamic yaml) => yaml is String
-      ? DataElementMapping.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? DataElementMapping.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'DataElementMapping cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory DataElementMapping.fromJson(Map<String, dynamic> json) =>
-      _$DataElementMappingFromJson(json);
-
-  factory DataElementMapping.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$DataElementMappingFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}

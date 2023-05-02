@@ -1,19 +1,3 @@
-import 'dart:convert';
-
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:hive/hive.dart';
-import 'package:yaml/yaml.dart';
-
-import '../../../../r4.dart';
-
-part 'public_health_and_research.freezed.dart';
-part 'public_health_and_research.g.dart';
-
-@freezed
-class ResearchStudy with Resource, _$ResearchStudy {
-  ResearchStudy._();
-
-  @HiveType(typeId: 134, adapterName: 'ResearchStudyAdapter')
   factory ResearchStudy({
     @Default(R4ResourceType.ResearchStudy)
     @JsonKey(unknownEnumValue: R4ResourceType.ResearchStudy)
@@ -59,35 +43,6 @@ class ResearchStudy with Resource, _$ResearchStudy {
     @HiveField(38) List<ResearchStudyArm>? arm,
     @HiveField(39) List<ResearchStudyObjective>? objective,
   }) = _ResearchStudy;
-
-  factory ResearchStudy.fromYaml(dynamic yaml) => yaml is String
-      ? ResearchStudy.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ResearchStudy.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ResearchStudy cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ResearchStudy.fromJson(Map<String, dynamic> json) =>
-      _$ResearchStudyFromJson(json);
-
-  factory ResearchStudy.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ResearchStudyFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ResearchStudyArm with _$ResearchStudyArm {
-  ResearchStudyArm._();
-
   factory ResearchStudyArm({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -98,37 +53,6 @@ class ResearchStudyArm with _$ResearchStudyArm {
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
   }) = _ResearchStudyArm;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory ResearchStudyArm.fromYaml(dynamic yaml) => yaml is String
-      ? ResearchStudyArm.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ResearchStudyArm.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ResearchStudyArm cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ResearchStudyArm.fromJson(Map<String, dynamic> json) =>
-      _$ResearchStudyArmFromJson(json);
-
-  factory ResearchStudyArm.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ResearchStudyArmFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ResearchStudyObjective with _$ResearchStudyObjective {
-  ResearchStudyObjective._();
-
   factory ResearchStudyObjective({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -137,38 +61,6 @@ class ResearchStudyObjective with _$ResearchStudyObjective {
     @JsonKey(name: '_name') Element? nameElement,
     CodeableConcept? type,
   }) = _ResearchStudyObjective;
-
-  String toYaml() => json2yaml(toJson());
-
-  factory ResearchStudyObjective.fromYaml(dynamic yaml) => yaml is String
-      ? ResearchStudyObjective.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ResearchStudyObjective.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ResearchStudyObjective cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ResearchStudyObjective.fromJson(Map<String, dynamic> json) =>
-      _$ResearchStudyObjectiveFromJson(json);
-
-  factory ResearchStudyObjective.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ResearchStudyObjectiveFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ResearchSubject with Resource, _$ResearchSubject {
-  ResearchSubject._();
-
-  @HiveType(typeId: 135, adapterName: 'ResearchSubjectAdapter')
   factory ResearchSubject({
     @Default(R4ResourceType.ResearchSubject)
     @JsonKey(unknownEnumValue: R4ResourceType.ResearchSubject)
@@ -198,27 +90,3 @@ class ResearchSubject with Resource, _$ResearchSubject {
     @JsonKey(name: '_actualArm') @HiveField(20) Element? actualArmElement,
     @HiveField(21) Reference? consent,
   }) = _ResearchSubject;
-
-  factory ResearchSubject.fromYaml(dynamic yaml) => yaml is String
-      ? ResearchSubject.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ResearchSubject.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ResearchSubject cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  factory ResearchSubject.fromJson(Map<String, dynamic> json) =>
-      _$ResearchSubjectFromJson(json);
-
-  factory ResearchSubject.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ResearchSubjectFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
