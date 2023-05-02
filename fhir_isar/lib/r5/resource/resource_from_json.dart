@@ -1,7 +1,5 @@
 part of 'resource.dart';
 
-/// Acts like a constructor, returns a [Resource], accepts a
-/// [Map<String, Dynamic>] as an argument
 Resource _resourceFromJson(Map<String, dynamic> json) {
   final dynamic resourceType = json['resourceType'];
   switch (resourceType) {
@@ -317,4 +315,3 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
 
   return _$ResourceFromJson(json);
 }
-

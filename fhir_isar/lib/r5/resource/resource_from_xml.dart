@@ -50,66 +50,38 @@ Map<String, dynamic> reformatXmlJsonMap(
       final id = oldValue['id'] ?? oldValue['@id'];
       final fhirExtension = oldValue['extension'] ?? oldValue['@extension'];
       newMap['_${key.replaceAll('@', '')}'] =
-
-          /// Is there a List?
           fhirField != null && fhirField.isList
-
-              /// +List, is there an ID?
               ? id != null
-
-                  /// +List, +ID, is there an Extension?
                   ? fhirExtension != null
-
-                      /// +List, +ID, +Extension
                       ? [
                           reformatXmlJsonMap(
                             {'id': id, 'extension': fhirExtension},
                             fhirFieldMap['Element']!,
                           )
                         ]
-                      :
-
-                      /// +List, +ID, -Extension
-                      [
+                      : [
                           reformatXmlJsonMap(
                             {'id': id},
                             fhirFieldMap['Element']!,
                           )
                         ]
-                  :
-
-                  /// +List, -ID, +Extension
-                  [
+                  : [
                       reformatXmlJsonMap(
                         {'extension': fhirExtension},
                         fhirFieldMap['Element']!,
                       )
                     ]
-
-              /// -List, is there an ID?
               : id != null
-
-                  /// -List, +ID, is there an Extension?
                   ? fhirExtension != null
-
-                      /// -List, +ID, +Extension
                       ? reformatXmlJsonMap(
                           {'id': id, 'extension': fhirExtension},
                           fhirFieldMap['Element']!,
                         )
-                      :
-
-                      /// -List, +ID, -Extension
-
-                      reformatXmlJsonMap(
+                      : reformatXmlJsonMap(
                           {'id': id},
                           fhirFieldMap['Element']!,
                         )
-                  :
-
-                  /// -List, -ID, +Extension
-
-                  reformatXmlJsonMap(
+                  : reformatXmlJsonMap(
                       {'extension': fhirExtension},
                       fhirFieldMap['Element']!,
                     );
@@ -325,4 +297,3 @@ dynamic primitiveValue(
   }
   return value;
 }
-

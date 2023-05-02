@@ -1,6 +1,5 @@
 part of 'resource.dart';
 
-/// Creates a new [id] for the Resources that's passed
 Resource _newId(Resource resource) {
   switch (resource.resourceType) {
     case Dstu2ResourceType.Account:
@@ -196,4 +195,3 @@ Resource _newId(Resource resource) {
           '${resource.resourceType} is not a defined resourceType');
   }
 }
-

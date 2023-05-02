@@ -19,12 +19,12 @@ part 'resource_new_id.dart';
 part 'resource_new_version.dart';
 part 'resource_types_enum.dart';
 
-class /// {
-/// the fields in other classes contain a generic resource, so in order for
-/// them to be able to implement a resource.toJson() function, it also has to
-/// be implemented here (although it is always overridden). Each resource
-/// class also has it's own fromJson() function as well. The fromJson function
-/// in this class is only used if the resourceType is not previously known
+class 
+
+
+
+
+
 @JsonSerializable()
 class Resource {
   FhirId? id;
@@ -38,18 +38,18 @@ class Resource {
   List<FhirExtension>? extension_;
   List<FhirExtension>? modifierExtension;
 
-  /// I don't like XML. However, there appears to be times when it's
-  ///  unavoidable.
-  /// Thus, I'm going to include this so that we can work with it, yuck.
+  
+  
+  
   static Resource fromXml(String xmlString) => _resourceFromXml(xmlString);
 
-  /// Acts like a constructor, returns a [Resource], accepts a
-  /// [Map<String, Dynamic>] as an argument
+  
+  
   static Resource fromJson(Map<String, dynamic> json) =>
       _resourceFromJson(json);
 
-  /// Acts like a constructor, returns a [Resource], accepts a
-  /// [String] as an argument, mostly because I got tired of typing it out
+  
+  
   static Resource fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
@@ -60,7 +60,7 @@ class Resource {
     }
   }
 
-  /// Returns a Resource, accepts a [String] in YAML format as an argument
+  
   static Resource fromYaml(dynamic yaml) => yaml is String
       ? Resource.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
