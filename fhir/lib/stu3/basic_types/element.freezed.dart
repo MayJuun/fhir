@@ -115,7 +115,7 @@ class _$_Element extends _Element {
       : _extension_ = extension_,
         super._();
 
-  factory _$_Element.fromJson(Map<String, dynamic> json) =>
+  factory _$_Element.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ElementFromJson(json);
 
   @override
@@ -172,7 +172,7 @@ abstract class _Element extends Element {
       _$_Element;
   _Element._() : super._();
 
-  factory _Element.fromJson(Map<String, dynamic> json) = _$_Element.fromJson;
+  factory _Element.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) = _$_Element.fromJson;
 
   @override
   String? get id;

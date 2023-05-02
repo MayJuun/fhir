@@ -661,7 +661,7 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
         _identifier = identifier,
         super._();
 
-  factory _$_ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =>
+  factory _$_ExplanationOfBenefit.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ExplanationOfBenefitFromJson(json);
 
   @override
@@ -888,7 +888,7 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
       final Reference? requestOrganization}) = _$_ExplanationOfBenefit;
   _ExplanationOfBenefit._() : super._();
 
-  factory _ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =
+  factory _ExplanationOfBenefit.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ExplanationOfBenefit.fromJson;
 
   @override

@@ -318,9 +318,9 @@ _$_AppointmentParticipant _$$_AppointmentParticipantFromJson(
       actor: json['actor'] == null
           ? null
           : Reference.fromJson(json['actor'] as Map<String, dynamic>),
-      _: $enumDecodeNullable(
+      required_: $enumDecodeNullable(
           _$AppointmentParticipantRequiredEnumMap, json['required']),
-      Element: json['_required'] == null
+      requiredElement: json['_required'] == null
           ? null
           : Element.fromJson(json['_required'] as Map<String, dynamic>),
       status: $enumDecodeNullable(
@@ -1011,8 +1011,8 @@ _$_RequestGroupAction _$$_RequestGroupActionFromJson(
           ? null
           : Element.fromJson(
               json['_selectionBehavior'] as Map<String, dynamic>),
-      Behavior: json['requiredBehavior'] as String?,
-      BehaviorElement: json['_requiredBehavior'] == null
+      requiredBehavior: json['requiredBehavior'] as String?,
+      requiredBehaviorElement: json['_requiredBehavior'] == null
           ? null
           : Element.fromJson(json['_requiredBehavior'] as Map<String, dynamic>),
       precheckBehavior: json['precheckBehavior'] as String?,

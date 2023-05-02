@@ -758,7 +758,7 @@ class _$_PaymentNotice extends _PaymentNotice {
         _identifier = identifier,
         super._();
 
-  factory _$_PaymentNotice.fromJson(Map<String, dynamic> json) =>
+  factory _$_PaymentNotice.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_PaymentNoticeFromJson(json);
 
   /// [resourceType] This is a PaymentNotice resource
@@ -1053,7 +1053,7 @@ abstract class _PaymentNotice extends PaymentNotice {
       final CodeableConcept? paymentStatus}) = _$_PaymentNotice;
   _PaymentNotice._() : super._();
 
-  factory _PaymentNotice.fromJson(Map<String, dynamic> json) =
+  factory _PaymentNotice.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_PaymentNotice.fromJson;
 
   @override
@@ -2590,7 +2590,7 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
         _processNote = processNote,
         super._();
 
-  factory _$_PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
+  factory _$_PaymentReconciliation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_PaymentReconciliationFromJson(json);
 
   /// [resourceType] This is a PaymentReconciliation resource
@@ -3116,7 +3116,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
       _$_PaymentReconciliation;
   _PaymentReconciliation._() : super._();
 
-  factory _PaymentReconciliation.fromJson(Map<String, dynamic> json) =
+  factory _PaymentReconciliation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_PaymentReconciliation.fromJson;
 
   @override
@@ -4301,7 +4301,7 @@ abstract class _PaymentReconciliationAllocation
       final Money? amount}) = _$_PaymentReconciliationAllocation;
   _PaymentReconciliationAllocation._() : super._();
 
-  factory _PaymentReconciliationAllocation.fromJson(Map<String, dynamic> json) =
+  factory _PaymentReconciliationAllocation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_PaymentReconciliationAllocation.fromJson;
 
   @override

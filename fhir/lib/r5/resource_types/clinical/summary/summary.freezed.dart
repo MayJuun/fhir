@@ -1115,7 +1115,7 @@ class _$_AdverseEvent extends _AdverseEvent {
         _note = note,
         super._();
 
-  factory _$_AdverseEvent.fromJson(Map<String, dynamic> json) =>
+  factory _$_AdverseEvent.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_AdverseEventFromJson(json);
 
   /// [resourceType] This is a AdverseEvent resource
@@ -1655,7 +1655,7 @@ abstract class _AdverseEvent extends AdverseEvent {
       final List<Annotation>? note}) = _$_AdverseEvent;
   _AdverseEvent._() : super._();
 
-  factory _AdverseEvent.fromJson(Map<String, dynamic> json) =
+  factory _AdverseEvent.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_AdverseEvent.fromJson;
 
   @override
@@ -2059,7 +2059,7 @@ class _$_AdverseEventParticipant extends _AdverseEventParticipant {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_AdverseEventParticipant.fromJson(Map<String, dynamic> json) =>
+  factory _$_AdverseEventParticipant.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_AdverseEventParticipantFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -2191,7 +2191,7 @@ abstract class _AdverseEventParticipant extends AdverseEventParticipant {
       required final Reference actor}) = _$_AdverseEventParticipant;
   _AdverseEventParticipant._() : super._();
 
-  factory _AdverseEventParticipant.fromJson(Map<String, dynamic> json) =
+  factory _AdverseEventParticipant.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_AdverseEventParticipant.fromJson;
 
   @override
@@ -2484,7 +2484,7 @@ class _$_AdverseEventSuspectEntity extends _AdverseEventSuspectEntity {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_AdverseEventSuspectEntity.fromJson(Map<String, dynamic> json) =>
+  factory _$_AdverseEventSuspectEntity.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_AdverseEventSuspectEntityFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -2624,7 +2624,7 @@ abstract class _AdverseEventSuspectEntity extends AdverseEventSuspectEntity {
       final AdverseEventCausality? causality}) = _$_AdverseEventSuspectEntity;
   _AdverseEventSuspectEntity._() : super._();
 
-  factory _AdverseEventSuspectEntity.fromJson(Map<String, dynamic> json) =
+  factory _AdverseEventSuspectEntity.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_AdverseEventSuspectEntity.fromJson;
 
   @override
@@ -2915,7 +2915,7 @@ class _$_AdverseEventCausality extends _AdverseEventCausality {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_AdverseEventCausality.fromJson(Map<String, dynamic> json) =>
+  factory _$_AdverseEventCausality.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_AdverseEventCausalityFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -3053,7 +3053,7 @@ abstract class _AdverseEventCausality extends AdverseEventCausality {
       final Reference? author}) = _$_AdverseEventCausality;
   _AdverseEventCausality._() : super._();
 
-  factory _AdverseEventCausality.fromJson(Map<String, dynamic> json) =
+  factory _AdverseEventCausality.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_AdverseEventCausality.fromJson;
 
   @override
@@ -3454,7 +3454,7 @@ abstract class _AdverseEventContributingFactor
       _$_AdverseEventContributingFactor;
   _AdverseEventContributingFactor._() : super._();
 
-  factory _AdverseEventContributingFactor.fromJson(Map<String, dynamic> json) =
+  factory _AdverseEventContributingFactor.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_AdverseEventContributingFactor.fromJson;
 
   @override
@@ -3716,7 +3716,7 @@ class _$_AdverseEventPreventiveAction extends _AdverseEventPreventiveAction {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_AdverseEventPreventiveAction.fromJson(Map<String, dynamic> json) =>
+  factory _$_AdverseEventPreventiveAction.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_AdverseEventPreventiveActionFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -3849,7 +3849,7 @@ abstract class _AdverseEventPreventiveAction
       _$_AdverseEventPreventiveAction;
   _AdverseEventPreventiveAction._() : super._();
 
-  factory _AdverseEventPreventiveAction.fromJson(Map<String, dynamic> json) =
+  factory _AdverseEventPreventiveAction.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_AdverseEventPreventiveAction.fromJson;
 
   @override
@@ -4111,7 +4111,7 @@ class _$_AdverseEventMitigatingAction extends _AdverseEventMitigatingAction {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_AdverseEventMitigatingAction.fromJson(Map<String, dynamic> json) =>
+  factory _$_AdverseEventMitigatingAction.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_AdverseEventMitigatingActionFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -4244,7 +4244,7 @@ abstract class _AdverseEventMitigatingAction
       _$_AdverseEventMitigatingAction;
   _AdverseEventMitigatingAction._() : super._();
 
-  factory _AdverseEventMitigatingAction.fromJson(Map<String, dynamic> json) =
+  factory _AdverseEventMitigatingAction.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_AdverseEventMitigatingAction.fromJson;
 
   @override
@@ -4505,7 +4505,7 @@ class _$_AdverseEventSupportingInfo extends _AdverseEventSupportingInfo {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_AdverseEventSupportingInfo.fromJson(Map<String, dynamic> json) =>
+  factory _$_AdverseEventSupportingInfo.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_AdverseEventSupportingInfoFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -4637,7 +4637,7 @@ abstract class _AdverseEventSupportingInfo extends AdverseEventSupportingInfo {
       _$_AdverseEventSupportingInfo;
   _AdverseEventSupportingInfo._() : super._();
 
-  factory _AdverseEventSupportingInfo.fromJson(Map<String, dynamic> json) =
+  factory _AdverseEventSupportingInfo.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_AdverseEventSupportingInfo.fromJson;
 
   @override
@@ -5660,7 +5660,7 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
         _reaction = reaction,
         super._();
 
-  factory _$_AllergyIntolerance.fromJson(Map<String, dynamic> json) =>
+  factory _$_AllergyIntolerance.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_AllergyIntoleranceFromJson(json);
 
   /// [resourceType] This is a AllergyIntolerance resource
@@ -6088,7 +6088,7 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
       _$_AllergyIntolerance;
   _AllergyIntolerance._() : super._();
 
-  factory _AllergyIntolerance.fromJson(Map<String, dynamic> json) =
+  factory _AllergyIntolerance.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_AllergyIntolerance.fromJson;
 
   @override
@@ -6601,7 +6601,7 @@ abstract class _AllergyIntoleranceParticipant
       required final Reference actor}) = _$_AllergyIntoleranceParticipant;
   _AllergyIntoleranceParticipant._() : super._();
 
-  factory _AllergyIntoleranceParticipant.fromJson(Map<String, dynamic> json) =
+  factory _AllergyIntoleranceParticipant.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_AllergyIntoleranceParticipant.fromJson;
 
   @override
@@ -7041,7 +7041,7 @@ class _$_AllergyIntoleranceReaction extends _AllergyIntoleranceReaction {
         _note = note,
         super._();
 
-  factory _$_AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json) =>
+  factory _$_AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_AllergyIntoleranceReactionFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -7253,7 +7253,7 @@ abstract class _AllergyIntoleranceReaction extends AllergyIntoleranceReaction {
       final List<Annotation>? note}) = _$_AllergyIntoleranceReaction;
   _AllergyIntoleranceReaction._() : super._();
 
-  factory _AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json) =
+  factory _AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_AllergyIntoleranceReaction.fromJson;
 
   @override
@@ -8300,7 +8300,7 @@ class _$_ClinicalImpression extends _ClinicalImpression {
         _note = note,
         super._();
 
-  factory _$_ClinicalImpression.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClinicalImpression.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ClinicalImpressionFromJson(json);
 
   /// [resourceType] This is a ClinicalImpression resource
@@ -8763,7 +8763,7 @@ abstract class _ClinicalImpression extends ClinicalImpression {
       final List<Annotation>? note}) = _$_ClinicalImpression;
   _ClinicalImpression._() : super._();
 
-  factory _ClinicalImpression.fromJson(Map<String, dynamic> json) =
+  factory _ClinicalImpression.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ClinicalImpression.fromJson;
 
   @override
@@ -9165,7 +9165,7 @@ class _$_ClinicalImpressionFinding extends _ClinicalImpressionFinding {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ClinicalImpressionFinding.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClinicalImpressionFinding.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ClinicalImpressionFindingFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -9304,7 +9304,7 @@ abstract class _ClinicalImpressionFinding extends ClinicalImpressionFinding {
       _$_ClinicalImpressionFinding;
   _ClinicalImpressionFinding._() : super._();
 
-  factory _ClinicalImpressionFinding.fromJson(Map<String, dynamic> json) =
+  factory _ClinicalImpressionFinding.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ClinicalImpressionFinding.fromJson;
 
   @override
@@ -10431,7 +10431,7 @@ class _$_Condition extends _Condition {
         _note = note,
         super._();
 
-  factory _$_Condition.fromJson(Map<String, dynamic> json) =>
+  factory _$_Condition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ConditionFromJson(json);
 
   /// [resourceType] This is a Condition resource
@@ -10896,7 +10896,7 @@ abstract class _Condition extends Condition {
       final List<Annotation>? note}) = _$_Condition;
   _Condition._() : super._();
 
-  factory _Condition.fromJson(Map<String, dynamic> json) =
+  factory _Condition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_Condition.fromJson;
 
   @override
@@ -11285,7 +11285,7 @@ class _$_ConditionParticipant extends _ConditionParticipant {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ConditionParticipant.fromJson(Map<String, dynamic> json) =>
+  factory _$_ConditionParticipant.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ConditionParticipantFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -11416,7 +11416,7 @@ abstract class _ConditionParticipant extends ConditionParticipant {
       required final Reference actor}) = _$_ConditionParticipant;
   _ConditionParticipant._() : super._();
 
-  factory _ConditionParticipant.fromJson(Map<String, dynamic> json) =
+  factory _ConditionParticipant.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ConditionParticipant.fromJson;
 
   @override
@@ -11688,7 +11688,7 @@ class _$_ConditionStage extends _ConditionStage {
         _assessment = assessment,
         super._();
 
-  factory _$_ConditionStage.fromJson(Map<String, dynamic> json) =>
+  factory _$_ConditionStage.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ConditionStageFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -11833,7 +11833,7 @@ abstract class _ConditionStage extends ConditionStage {
       final CodeableConcept? type}) = _$_ConditionStage;
   _ConditionStage._() : super._();
 
-  factory _ConditionStage.fromJson(Map<String, dynamic> json) =
+  factory _ConditionStage.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ConditionStage.fromJson;
 
   @override
@@ -12688,7 +12688,7 @@ class _$_DetectedIssue extends _DetectedIssue {
         _mitigation = mitigation,
         super._();
 
-  factory _$_DetectedIssue.fromJson(Map<String, dynamic> json) =>
+  factory _$_DetectedIssue.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_DetectedIssueFromJson(json);
 
   /// [resourceType] This is a DetectedIssue resource
@@ -13055,7 +13055,7 @@ abstract class _DetectedIssue extends DetectedIssue {
       final List<DetectedIssueMitigation>? mitigation}) = _$_DetectedIssue;
   _DetectedIssue._() : super._();
 
-  factory _DetectedIssue.fromJson(Map<String, dynamic> json) =
+  factory _DetectedIssue.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_DetectedIssue.fromJson;
 
   @override
@@ -13378,7 +13378,7 @@ class _$_DetectedIssueEvidence extends _DetectedIssueEvidence {
         _detail = detail,
         super._();
 
-  factory _$_DetectedIssueEvidence.fromJson(Map<String, dynamic> json) =>
+  factory _$_DetectedIssueEvidence.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_DetectedIssueEvidenceFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -13525,7 +13525,7 @@ abstract class _DetectedIssueEvidence extends DetectedIssueEvidence {
       final List<Reference>? detail}) = _$_DetectedIssueEvidence;
   _DetectedIssueEvidence._() : super._();
 
-  factory _DetectedIssueEvidence.fromJson(Map<String, dynamic> json) =
+  factory _DetectedIssueEvidence.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_DetectedIssueEvidence.fromJson;
 
   @override
@@ -13826,7 +13826,7 @@ class _$_DetectedIssueMitigation extends _DetectedIssueMitigation {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_DetectedIssueMitigation.fromJson(Map<String, dynamic> json) =>
+  factory _$_DetectedIssueMitigation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_DetectedIssueMitigationFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -13972,7 +13972,7 @@ abstract class _DetectedIssueMitigation extends DetectedIssueMitigation {
       final Reference? author}) = _$_DetectedIssueMitigation;
   _DetectedIssueMitigation._() : super._();
 
-  factory _DetectedIssueMitigation.fromJson(Map<String, dynamic> json) =
+  factory _DetectedIssueMitigation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_DetectedIssueMitigation.fromJson;
 
   @override
@@ -15309,7 +15309,7 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
         _procedure = procedure,
         super._();
 
-  factory _$_FamilyMemberHistory.fromJson(Map<String, dynamic> json) =>
+  factory _$_FamilyMemberHistory.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_FamilyMemberHistoryFromJson(json);
 
   /// [resourceType] This is a FamilyMemberHistory resource
@@ -15878,7 +15878,7 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
       _$_FamilyMemberHistory;
   _FamilyMemberHistory._() : super._();
 
-  factory _FamilyMemberHistory.fromJson(Map<String, dynamic> json) =
+  factory _FamilyMemberHistory.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_FamilyMemberHistory.fromJson;
 
   @override
@@ -16449,7 +16449,7 @@ abstract class _FamilyMemberHistoryParticipant
       required final Reference actor}) = _$_FamilyMemberHistoryParticipant;
   _FamilyMemberHistoryParticipant._() : super._();
 
-  factory _FamilyMemberHistoryParticipant.fromJson(Map<String, dynamic> json) =
+  factory _FamilyMemberHistoryParticipant.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_FamilyMemberHistoryParticipant.fromJson;
 
   @override
@@ -16913,7 +16913,7 @@ class _$_FamilyMemberHistoryCondition extends _FamilyMemberHistoryCondition {
         _note = note,
         super._();
 
-  factory _$_FamilyMemberHistoryCondition.fromJson(Map<String, dynamic> json) =>
+  factory _$_FamilyMemberHistoryCondition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_FamilyMemberHistoryConditionFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -17121,7 +17121,7 @@ abstract class _FamilyMemberHistoryCondition
       final List<Annotation>? note}) = _$_FamilyMemberHistoryCondition;
   _FamilyMemberHistoryCondition._() : super._();
 
-  factory _FamilyMemberHistoryCondition.fromJson(Map<String, dynamic> json) =
+  factory _FamilyMemberHistoryCondition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_FamilyMemberHistoryCondition.fromJson;
 
   @override
@@ -17666,7 +17666,7 @@ class _$_FamilyMemberHistoryProcedure extends _FamilyMemberHistoryProcedure {
         _note = note,
         super._();
 
-  factory _$_FamilyMemberHistoryProcedure.fromJson(Map<String, dynamic> json) =>
+  factory _$_FamilyMemberHistoryProcedure.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_FamilyMemberHistoryProcedureFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -17893,7 +17893,7 @@ abstract class _FamilyMemberHistoryProcedure
       final List<Annotation>? note}) = _$_FamilyMemberHistoryProcedure;
   _FamilyMemberHistoryProcedure._() : super._();
 
-  factory _FamilyMemberHistoryProcedure.fromJson(Map<String, dynamic> json) =
+  factory _FamilyMemberHistoryProcedure.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_FamilyMemberHistoryProcedure.fromJson;
 
   @override
@@ -19270,7 +19270,7 @@ class _$_Procedure extends _Procedure {
         _supportingInfo = supportingInfo,
         super._();
 
-  factory _$_Procedure.fromJson(Map<String, dynamic> json) =>
+  factory _$_Procedure.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ProcedureFromJson(json);
 
   /// [resourceType] This is a Procedure resource
@@ -19909,7 +19909,7 @@ abstract class _Procedure extends Procedure {
       final List<Reference>? supportingInfo}) = _$_Procedure;
   _Procedure._() : super._();
 
-  factory _Procedure.fromJson(Map<String, dynamic> json) =
+  factory _Procedure.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_Procedure.fromJson;
 
   @override
@@ -20404,7 +20404,7 @@ class _$_ProcedurePerformer extends _ProcedurePerformer {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ProcedurePerformer.fromJson(Map<String, dynamic> json) =>
+  factory _$_ProcedurePerformer.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ProcedurePerformerFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -20550,7 +20550,7 @@ abstract class _ProcedurePerformer extends ProcedurePerformer {
       final Period? period}) = _$_ProcedurePerformer;
   _ProcedurePerformer._() : super._();
 
-  factory _ProcedurePerformer.fromJson(Map<String, dynamic> json) =
+  factory _ProcedurePerformer.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ProcedurePerformer.fromJson;
 
   @override
@@ -20810,7 +20810,7 @@ class _$_ProcedureFocalDevice extends _ProcedureFocalDevice {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ProcedureFocalDevice.fromJson(Map<String, dynamic> json) =>
+  factory _$_ProcedureFocalDevice.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ProcedureFocalDeviceFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -20940,7 +20940,7 @@ abstract class _ProcedureFocalDevice extends ProcedureFocalDevice {
       required final Reference manipulated}) = _$_ProcedureFocalDevice;
   _ProcedureFocalDevice._() : super._();
 
-  factory _ProcedureFocalDevice.fromJson(Map<String, dynamic> json) =
+  factory _ProcedureFocalDevice.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ProcedureFocalDevice.fromJson;
 
   @override

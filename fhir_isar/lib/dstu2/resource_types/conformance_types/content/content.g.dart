@@ -10,7 +10,7 @@ _$_StructureDefinition _$$_StructureDefinitionFromJson(
     Map<String, dynamic> json) {
   $checkKeys(
     json,
-    Keys: const ['status'],
+    requiredKeys: const ['status'],
   );
   return _$_StructureDefinition(
     resourceType: $enumDecodeNullable(

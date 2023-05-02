@@ -1,5 +1,6 @@
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 
 enum ActiveInactive {
   @JsonValue('active')

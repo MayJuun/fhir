@@ -917,7 +917,7 @@ class _$_Composition extends _Composition {
         _section = section,
         super._();
 
-  factory _$_Composition.fromJson(Map<String, dynamic> json) =>
+  factory _$_Composition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_CompositionFromJson(json);
 
   /// [resourceType] This is a Composition resource
@@ -1369,7 +1369,7 @@ abstract class _Composition extends Composition {
       final List<CompositionSection>? section}) = _$_Composition;
   _Composition._() : super._();
 
-  factory _Composition.fromJson(Map<String, dynamic> json) =
+  factory _Composition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_Composition.fromJson;
 
   @override
@@ -1789,7 +1789,7 @@ class _$_CompositionAttester extends _CompositionAttester {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_CompositionAttester.fromJson(Map<String, dynamic> json) =>
+  factory _$_CompositionAttester.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_CompositionAttesterFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -1934,7 +1934,7 @@ abstract class _CompositionAttester extends CompositionAttester {
       final Reference? party}) = _$_CompositionAttester;
   _CompositionAttester._() : super._();
 
-  factory _CompositionAttester.fromJson(Map<String, dynamic> json) =
+  factory _CompositionAttester.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_CompositionAttester.fromJson;
 
   @override
@@ -2200,7 +2200,7 @@ class _$_CompositionEvent extends _CompositionEvent {
         _detail = detail,
         super._();
 
-  factory _$_CompositionEvent.fromJson(Map<String, dynamic> json) =>
+  factory _$_CompositionEvent.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_CompositionEventFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -2353,7 +2353,7 @@ abstract class _CompositionEvent extends CompositionEvent {
       final List<Reference>? detail}) = _$_CompositionEvent;
   _CompositionEvent._() : super._();
 
-  factory _CompositionEvent.fromJson(Map<String, dynamic> json) =
+  factory _CompositionEvent.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_CompositionEvent.fromJson;
 
   @override
@@ -2851,7 +2851,7 @@ class _$_CompositionSection extends _CompositionSection {
         _section = section,
         super._();
 
-  factory _$_CompositionSection.fromJson(Map<String, dynamic> json) =>
+  factory _$_CompositionSection.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_CompositionSectionFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -3083,7 +3083,7 @@ abstract class _CompositionSection extends CompositionSection {
       final List<CompositionSection>? section}) = _$_CompositionSection;
   _CompositionSection._() : super._();
 
-  factory _CompositionSection.fromJson(Map<String, dynamic> json) =
+  factory _CompositionSection.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_CompositionSection.fromJson;
 
   @override
@@ -3893,7 +3893,7 @@ class _$_DocumentManifest extends _DocumentManifest {
         _related = related,
         super._();
 
-  factory _$_DocumentManifest.fromJson(Map<String, dynamic> json) =>
+  factory _$_DocumentManifest.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_DocumentManifestFromJson(json);
 
   /// [resourceType] This is a DocumentManifest resource
@@ -4230,7 +4230,7 @@ abstract class _DocumentManifest extends DocumentManifest {
       final List<DocumentManifestRelated>? related}) = _$_DocumentManifest;
   _DocumentManifest._() : super._();
 
-  factory _DocumentManifest.fromJson(Map<String, dynamic> json) =
+  factory _DocumentManifest.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_DocumentManifest.fromJson;
 
   @override
@@ -4571,7 +4571,7 @@ class _$_DocumentManifestRelated extends _DocumentManifestRelated {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_DocumentManifestRelated.fromJson(Map<String, dynamic> json) =>
+  factory _$_DocumentManifestRelated.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_DocumentManifestRelatedFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -4702,7 +4702,7 @@ abstract class _DocumentManifestRelated extends DocumentManifestRelated {
       final Reference? ref}) = _$_DocumentManifestRelated;
   _DocumentManifestRelated._() : super._();
 
-  factory _DocumentManifestRelated.fromJson(Map<String, dynamic> json) =
+  factory _DocumentManifestRelated.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_DocumentManifestRelated.fromJson;
 
   @override
@@ -5651,7 +5651,7 @@ class _$_DocumentReference extends _DocumentReference {
         _content = content,
         super._();
 
-  factory _$_DocumentReference.fromJson(Map<String, dynamic> json) =>
+  factory _$_DocumentReference.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_DocumentReferenceFromJson(json);
 
   /// [resourceType] This is a DocumentReference resource
@@ -6095,7 +6095,7 @@ abstract class _DocumentReference extends DocumentReference {
       _$_DocumentReference;
   _DocumentReference._() : super._();
 
-  factory _DocumentReference.fromJson(Map<String, dynamic> json) =
+  factory _DocumentReference.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_DocumentReference.fromJson;
 
   @override
@@ -6514,7 +6514,7 @@ class _$_DocumentReferenceAttester extends _DocumentReferenceAttester {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_DocumentReferenceAttester.fromJson(Map<String, dynamic> json) =>
+  factory _$_DocumentReferenceAttester.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_DocumentReferenceAttesterFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -6659,7 +6659,7 @@ abstract class _DocumentReferenceAttester extends DocumentReferenceAttester {
       final Reference? party}) = _$_DocumentReferenceAttester;
   _DocumentReferenceAttester._() : super._();
 
-  factory _DocumentReferenceAttester.fromJson(Map<String, dynamic> json) =
+  factory _DocumentReferenceAttester.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_DocumentReferenceAttester.fromJson;
 
   @override
@@ -6920,7 +6920,7 @@ class _$_DocumentReferenceRelatesTo extends _DocumentReferenceRelatesTo {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =>
+  factory _$_DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_DocumentReferenceRelatesToFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -7049,7 +7049,7 @@ abstract class _DocumentReferenceRelatesTo extends DocumentReferenceRelatesTo {
       required final Reference target}) = _$_DocumentReferenceRelatesTo;
   _DocumentReferenceRelatesTo._() : super._();
 
-  factory _DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =
+  factory _DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_DocumentReferenceRelatesTo.fromJson;
 
   @override
@@ -7290,7 +7290,7 @@ class _$_DocumentReferenceContent extends _DocumentReferenceContent {
         _profile = profile,
         super._();
 
-  factory _$_DocumentReferenceContent.fromJson(Map<String, dynamic> json) =>
+  factory _$_DocumentReferenceContent.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_DocumentReferenceContentFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -7430,7 +7430,7 @@ abstract class _DocumentReferenceContent extends DocumentReferenceContent {
       _$_DocumentReferenceContent;
   _DocumentReferenceContent._() : super._();
 
-  factory _DocumentReferenceContent.fromJson(Map<String, dynamic> json) =
+  factory _DocumentReferenceContent.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_DocumentReferenceContent.fromJson;
 
   @override
@@ -7753,7 +7753,7 @@ class _$_DocumentReferenceProfile extends _DocumentReferenceProfile {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_DocumentReferenceProfile.fromJson(Map<String, dynamic> json) =>
+  factory _$_DocumentReferenceProfile.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_DocumentReferenceProfileFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -7913,7 +7913,7 @@ abstract class _DocumentReferenceProfile extends DocumentReferenceProfile {
           final Element? valueCanonicalElement}) = _$_DocumentReferenceProfile;
   _DocumentReferenceProfile._() : super._();
 
-  factory _DocumentReferenceProfile.fromJson(Map<String, dynamic> json) =
+  factory _DocumentReferenceProfile.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_DocumentReferenceProfile.fromJson;
 
   @override

@@ -1659,7 +1659,7 @@ class _$_Measure extends _Measure {
         _supplementalData = supplementalData,
         super._();
 
-  factory _$_Measure.fromJson(Map<String, dynamic> json) =>
+  factory _$_Measure.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_MeasureFromJson(json);
 
   @override
@@ -2285,7 +2285,7 @@ abstract class _Measure extends Measure {
       final List<MeasureSupplementalData>? supplementalData}) = _$_Measure;
   _Measure._() : super._();
 
-  factory _Measure.fromJson(Map<String, dynamic> json) = _$_Measure.fromJson;
+  factory _Measure.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) = _$_Measure.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
@@ -2684,7 +2684,7 @@ class _$_MeasureGroup extends _MeasureGroup {
         _stratifier = stratifier,
         super._();
 
-  factory _$_MeasureGroup.fromJson(Map<String, dynamic> json) =>
+  factory _$_MeasureGroup.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_MeasureGroupFromJson(json);
 
   @override
@@ -2781,7 +2781,7 @@ abstract class _MeasureGroup extends MeasureGroup {
       final List<MeasureStratifier>? stratifier}) = _$_MeasureGroup;
   _MeasureGroup._() : super._();
 
-  factory _MeasureGroup.fromJson(Map<String, dynamic> json) =
+  factory _MeasureGroup.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_MeasureGroup.fromJson;
 
   @override
@@ -3073,7 +3073,7 @@ class _$_MeasurePopulation extends _MeasurePopulation {
       @JsonKey(name: '_criteria') this.criteriaElement})
       : super._();
 
-  factory _$_MeasurePopulation.fromJson(Map<String, dynamic> json) =>
+  factory _$_MeasurePopulation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_MeasurePopulationFromJson(json);
 
   @override
@@ -3155,7 +3155,7 @@ abstract class _MeasurePopulation extends MeasurePopulation {
       _$_MeasurePopulation;
   _MeasurePopulation._() : super._();
 
-  factory _MeasurePopulation.fromJson(Map<String, dynamic> json) =
+  factory _MeasurePopulation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_MeasurePopulation.fromJson;
 
   @override
@@ -3377,7 +3377,7 @@ class _$_MeasureStratifier extends _MeasureStratifier {
       @JsonKey(name: '_path') this.pathElement})
       : super._();
 
-  factory _$_MeasureStratifier.fromJson(Map<String, dynamic> json) =>
+  factory _$_MeasureStratifier.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_MeasureStratifierFromJson(json);
 
   @override
@@ -3444,7 +3444,7 @@ abstract class _MeasureStratifier extends MeasureStratifier {
       _$_MeasureStratifier;
   _MeasureStratifier._() : super._();
 
-  factory _MeasureStratifier.fromJson(Map<String, dynamic> json) =
+  factory _MeasureStratifier.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_MeasureStratifier.fromJson;
 
   @override
@@ -3677,7 +3677,7 @@ class _$_MeasureSupplementalData extends _MeasureSupplementalData {
       : _usage = usage,
         super._();
 
-  factory _$_MeasureSupplementalData.fromJson(Map<String, dynamic> json) =>
+  factory _$_MeasureSupplementalData.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_MeasureSupplementalDataFromJson(json);
 
   @override
@@ -3763,7 +3763,7 @@ abstract class _MeasureSupplementalData extends MeasureSupplementalData {
       _$_MeasureSupplementalData;
   _MeasureSupplementalData._() : super._();
 
-  factory _MeasureSupplementalData.fromJson(Map<String, dynamic> json) =
+  factory _MeasureSupplementalData.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_MeasureSupplementalData.fromJson;
 
   @override
@@ -4419,7 +4419,7 @@ class _$_MeasureReport extends _MeasureReport {
         _group = group,
         super._();
 
-  factory _$_MeasureReport.fromJson(Map<String, dynamic> json) =>
+  factory _$_MeasureReport.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_MeasureReportFromJson(json);
 
   @override
@@ -4640,7 +4640,7 @@ abstract class _MeasureReport extends MeasureReport {
       final Reference? evaluatedResources}) = _$_MeasureReport;
   _MeasureReport._() : super._();
 
-  factory _MeasureReport.fromJson(Map<String, dynamic> json) =
+  factory _MeasureReport.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_MeasureReport.fromJson;
 
   @override
@@ -4882,7 +4882,7 @@ class _$_MeasureReportGroup extends _MeasureReportGroup {
         _stratifier = stratifier,
         super._();
 
-  factory _$_MeasureReportGroup.fromJson(Map<String, dynamic> json) =>
+  factory _$_MeasureReportGroup.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_MeasureReportGroupFromJson(json);
 
   @override
@@ -4968,7 +4968,7 @@ abstract class _MeasureReportGroup extends MeasureReportGroup {
       final List<MeasureReportStratifier>? stratifier}) = _$_MeasureReportGroup;
   _MeasureReportGroup._() : super._();
 
-  factory _MeasureReportGroup.fromJson(Map<String, dynamic> json) =
+  factory _MeasureReportGroup.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_MeasureReportGroup.fromJson;
 
   @override
@@ -5199,7 +5199,7 @@ class _$_MeasureReportPopulation extends _MeasureReportPopulation {
       this.patients})
       : super._();
 
-  factory _$_MeasureReportPopulation.fromJson(Map<String, dynamic> json) =>
+  factory _$_MeasureReportPopulation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_MeasureReportPopulationFromJson(json);
 
   @override
@@ -5264,7 +5264,7 @@ abstract class _MeasureReportPopulation extends MeasureReportPopulation {
       final Reference? patients}) = _$_MeasureReportPopulation;
   _MeasureReportPopulation._() : super._();
 
-  factory _MeasureReportPopulation.fromJson(Map<String, dynamic> json) =
+  factory _MeasureReportPopulation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_MeasureReportPopulation.fromJson;
 
   @override
@@ -5403,7 +5403,7 @@ class _$_MeasureReportStratifier extends _MeasureReportStratifier {
       : _stratum = stratum,
         super._();
 
-  factory _$_MeasureReportStratifier.fromJson(Map<String, dynamic> json) =>
+  factory _$_MeasureReportStratifier.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_MeasureReportStratifierFromJson(json);
 
   @override
@@ -5460,7 +5460,7 @@ abstract class _MeasureReportStratifier extends MeasureReportStratifier {
       final List<MeasureReportStratum>? stratum}) = _$_MeasureReportStratifier;
   _MeasureReportStratifier._() : super._();
 
-  factory _MeasureReportStratifier.fromJson(Map<String, dynamic> json) =
+  factory _MeasureReportStratifier.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_MeasureReportStratifier.fromJson;
 
   @override
@@ -5655,7 +5655,7 @@ class _$_MeasureReportStratum extends _MeasureReportStratum {
       : _population = population,
         super._();
 
-  factory _$_MeasureReportStratum.fromJson(Map<String, dynamic> json) =>
+  factory _$_MeasureReportStratum.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_MeasureReportStratumFromJson(json);
 
   @override
@@ -5735,7 +5735,7 @@ abstract class _MeasureReportStratum extends MeasureReportStratum {
       _$_MeasureReportStratum;
   _MeasureReportStratum._() : super._();
 
-  factory _MeasureReportStratum.fromJson(Map<String, dynamic> json) =
+  factory _MeasureReportStratum.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_MeasureReportStratum.fromJson;
 
   @override
@@ -5968,7 +5968,7 @@ class _$_MeasureReportPopulation1 extends _MeasureReportPopulation1 {
       this.patients})
       : super._();
 
-  factory _$_MeasureReportPopulation1.fromJson(Map<String, dynamic> json) =>
+  factory _$_MeasureReportPopulation1.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_MeasureReportPopulation1FromJson(json);
 
   @override
@@ -6032,7 +6032,7 @@ abstract class _MeasureReportPopulation1 extends MeasureReportPopulation1 {
       final Reference? patients}) = _$_MeasureReportPopulation1;
   _MeasureReportPopulation1._() : super._();
 
-  factory _MeasureReportPopulation1.fromJson(Map<String, dynamic> json) =
+  factory _MeasureReportPopulation1.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_MeasureReportPopulation1.fromJson;
 
   @override

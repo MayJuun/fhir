@@ -346,7 +346,7 @@ class _$_Population extends _Population {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_Population.fromJson(Map<String, dynamic> json) =>
+  factory _$_Population.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_PopulationFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -549,7 +549,7 @@ abstract class _Population extends Population {
       final CodeableConcept? physiologicalCondition}) = _$_Population;
   _Population._() : super._();
 
-  factory _Population.fromJson(Map<String, dynamic> json) =
+  factory _Population.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_Population.fromJson;
 
   @override
@@ -969,7 +969,7 @@ class _$_ProductShelfLife extends _ProductShelfLife {
         _specialPrecautionsForStorage = specialPrecautionsForStorage,
         super._();
 
-  factory _$_ProductShelfLife.fromJson(Map<String, dynamic> json) =>
+  factory _$_ProductShelfLife.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ProductShelfLifeFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -1219,7 +1219,7 @@ abstract class _ProductShelfLife extends ProductShelfLife {
       _$_ProductShelfLife;
   _ProductShelfLife._() : super._();
 
-  factory _ProductShelfLife.fromJson(Map<String, dynamic> json) =
+  factory _ProductShelfLife.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ProductShelfLife.fromJson;
 
   @override
@@ -1719,7 +1719,7 @@ class _$_MarketingStatus extends _MarketingStatus {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_MarketingStatus.fromJson(Map<String, dynamic> json) =>
+  factory _$_MarketingStatus.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_MarketingStatusFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -1971,7 +1971,7 @@ abstract class _MarketingStatus extends MarketingStatus {
       _$_MarketingStatus;
   _MarketingStatus._() : super._();
 
-  factory _MarketingStatus.fromJson(Map<String, dynamic> json) =
+  factory _MarketingStatus.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_MarketingStatus.fromJson;
 
   @override

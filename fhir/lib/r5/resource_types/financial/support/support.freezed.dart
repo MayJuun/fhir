@@ -1007,7 +1007,7 @@ class _$_Coverage extends _Coverage {
         _contract = contract,
         super._();
 
-  factory _$_Coverage.fromJson(Map<String, dynamic> json) =>
+  factory _$_Coverage.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_CoverageFromJson(json);
 
   /// [resourceType] This is a Coverage resource
@@ -1441,7 +1441,7 @@ abstract class _Coverage extends Coverage {
       final Reference? insurancePlan}) = _$_Coverage;
   _Coverage._() : super._();
 
-  factory _Coverage.fromJson(Map<String, dynamic> json) = _$_Coverage.fromJson;
+  factory _Coverage.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) = _$_Coverage.fromJson;
 
   @override
 
@@ -1834,7 +1834,7 @@ class _$_CoveragePaymentBy extends _CoveragePaymentBy {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_CoveragePaymentBy.fromJson(Map<String, dynamic> json) =>
+  factory _$_CoveragePaymentBy.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_CoveragePaymentByFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -1975,7 +1975,7 @@ abstract class _CoveragePaymentBy extends CoveragePaymentBy {
           final Element? responsibilityElement}) = _$_CoveragePaymentBy;
   _CoveragePaymentBy._() : super._();
 
-  factory _CoveragePaymentBy.fromJson(Map<String, dynamic> json) =
+  factory _CoveragePaymentBy.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_CoveragePaymentBy.fromJson;
 
   @override
@@ -2274,7 +2274,7 @@ class _$_CoverageClass extends _CoverageClass {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_CoverageClass.fromJson(Map<String, dynamic> json) =>
+  factory _$_CoverageClass.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_CoverageClassFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -2418,7 +2418,7 @@ abstract class _CoverageClass extends CoverageClass {
       @JsonKey(name: '_name') final Element? nameElement}) = _$_CoverageClass;
   _CoverageClass._() : super._();
 
-  factory _CoverageClass.fromJson(Map<String, dynamic> json) =
+  factory _CoverageClass.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_CoverageClass.fromJson;
 
   @override
@@ -2858,7 +2858,7 @@ class _$_CoverageCostToBeneficiary extends _CoverageCostToBeneficiary {
         _exception = exception,
         super._();
 
-  factory _$_CoverageCostToBeneficiary.fromJson(Map<String, dynamic> json) =>
+  factory _$_CoverageCostToBeneficiary.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_CoverageCostToBeneficiaryFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -3042,7 +3042,7 @@ abstract class _CoverageCostToBeneficiary extends CoverageCostToBeneficiary {
       final List<CoverageException>? exception}) = _$_CoverageCostToBeneficiary;
   _CoverageCostToBeneficiary._() : super._();
 
-  factory _CoverageCostToBeneficiary.fromJson(Map<String, dynamic> json) =
+  factory _CoverageCostToBeneficiary.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_CoverageCostToBeneficiary.fromJson;
 
   @override
@@ -3316,7 +3316,7 @@ class _$_CoverageException extends _CoverageException {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_CoverageException.fromJson(Map<String, dynamic> json) =>
+  factory _$_CoverageException.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_CoverageExceptionFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -3445,7 +3445,7 @@ abstract class _CoverageException extends CoverageException {
       final Period? period}) = _$_CoverageException;
   _CoverageException._() : super._();
 
-  factory _CoverageException.fromJson(Map<String, dynamic> json) =
+  factory _CoverageException.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_CoverageException.fromJson;
 
   @override
@@ -4307,7 +4307,7 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
         _item = item,
         super._();
 
-  factory _$_CoverageEligibilityRequest.fromJson(Map<String, dynamic> json) =>
+  factory _$_CoverageEligibilityRequest.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_CoverageEligibilityRequestFromJson(json);
 
   /// [resourceType] This is a CoverageEligibilityRequest resource
@@ -4682,7 +4682,7 @@ abstract class _CoverageEligibilityRequest extends CoverageEligibilityRequest {
       _$_CoverageEligibilityRequest;
   _CoverageEligibilityRequest._() : super._();
 
-  factory _CoverageEligibilityRequest.fromJson(Map<String, dynamic> json) =
+  factory _CoverageEligibilityRequest.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_CoverageEligibilityRequest.fromJson;
 
   @override
@@ -6527,7 +6527,7 @@ abstract class _CoverageEligibilityRequestItem
       final List<Reference>? detail}) = _$_CoverageEligibilityRequestItem;
   _CoverageEligibilityRequestItem._() : super._();
 
-  factory _CoverageEligibilityRequestItem.fromJson(Map<String, dynamic> json) =
+  factory _CoverageEligibilityRequestItem.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_CoverageEligibilityRequestItem.fromJson;
 
   @override
@@ -7930,7 +7930,7 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
         _error = error,
         super._();
 
-  factory _$_CoverageEligibilityResponse.fromJson(Map<String, dynamic> json) =>
+  factory _$_CoverageEligibilityResponse.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_CoverageEligibilityResponseFromJson(json);
 
   /// [resourceType] This is a CoverageEligibilityResponse resource
@@ -8333,7 +8333,7 @@ abstract class _CoverageEligibilityResponse
           error}) = _$_CoverageEligibilityResponse;
   _CoverageEligibilityResponse._() : super._();
 
-  factory _CoverageEligibilityResponse.fromJson(Map<String, dynamic> json) =
+  factory _CoverageEligibilityResponse.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_CoverageEligibilityResponse.fromJson;
 
   @override
@@ -9963,7 +9963,7 @@ abstract class _CoverageEligibilityResponseItem
       _$_CoverageEligibilityResponseItem;
   _CoverageEligibilityResponseItem._() : super._();
 
-  factory _CoverageEligibilityResponseItem.fromJson(Map<String, dynamic> json) =
+  factory _CoverageEligibilityResponseItem.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_CoverageEligibilityResponseItem.fromJson;
 
   @override
@@ -11754,7 +11754,7 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
         _identifier = identifier,
         super._();
 
-  factory _$_EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
+  factory _$_EnrollmentRequest.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_EnrollmentRequestFromJson(json);
 
   /// [resourceType] This is a EnrollmentRequest resource
@@ -12003,7 +12003,7 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
       final Reference? coverage}) = _$_EnrollmentRequest;
   _EnrollmentRequest._() : super._();
 
-  factory _EnrollmentRequest.fromJson(Map<String, dynamic> json) =
+  factory _EnrollmentRequest.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_EnrollmentRequest.fromJson;
 
   @override
@@ -12756,7 +12756,7 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
         _identifier = identifier,
         super._();
 
-  factory _$_EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
+  factory _$_EnrollmentResponse.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_EnrollmentResponseFromJson(json);
 
   /// [resourceType] This is a EnrollmentResponse resource
@@ -13032,7 +13032,7 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
       final Reference? requestProvider}) = _$_EnrollmentResponse;
   _EnrollmentResponse._() : super._();
 
-  factory _EnrollmentResponse.fromJson(Map<String, dynamic> json) =
+  factory _EnrollmentResponse.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_EnrollmentResponse.fromJson;
 
   @override

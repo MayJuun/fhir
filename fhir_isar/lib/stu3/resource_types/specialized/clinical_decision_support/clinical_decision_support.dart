@@ -1,34 +1,76 @@
+// Dart imports:
+import 'dart:convert';
+
+// Package imports:
+
+import 'package:yaml/yaml.dart';
+
+// Project imports:
 import '../../../../stu3.dart';
+
 part 'clinical_decision_support.enums.dart';
 
-class GuidanceResponse {
-  Stu3ResourceType resourceType;
-  FhirId? id;
-  Meta? meta;
-  FhirUri? implicitRules;
-  Element? implicitRulesElement;
-  Code? language;
-  Element? languageElement;
-  Narrative? text;
-  List<Resource>? contained;
-  List<FhirExtension>? extension_;
-  List<FhirExtension>? modifierExtension;
-  FhirId? requestId;
-  Element? requestIdElement;
-  Identifier? identifier;
-  Reference module;
-  GuidanceResponseStatus? status;
-  Element? statusElement;
-  Reference? subject;
-  Reference? context;
-  FhirDateTime? occurrenceDateTime;
-  Element? occurrenceDateTimeElement;
-  Reference? performer;
-  CodeableConcept? reasonCodeableConcept;
-  Reference? reasonReference;
-  List<Annotation>? note;
-  List<Reference>? evaluationMessage;
-  Reference? outputParameters;
-  Reference? result;
-  List<DataRequirement>? dataRequirement;
+part 'clinical_decision_support.g.dart';
+
+class GuidanceResponse with Resource, _$GuidanceResponse {
+  GuidanceResponse._();
+  factory GuidanceResponse({
+    @Default(Stu3ResourceType.GuidanceResponse)
+    @JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
+        Stu3ResourceType resourceType,
+    FhirId? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    FhirId? requestId,
+    @JsonKey(name: '_requestId') Element? requestIdElement,
+    Identifier? identifier,
+    required Reference module,
+    GuidanceResponseStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    Reference? subject,
+    Reference? context,
+    FhirDateTime? occurrenceDateTime,
+    @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
+    Reference? performer,
+    CodeableConcept? reasonCodeableConcept,
+    Reference? reasonReference,
+    List<Annotation>? note,
+    List<Reference>? evaluationMessage,
+    Reference? outputParameters,
+    Reference? result,
+    List<DataRequirement>? dataRequirement,
+  }) = _GuidanceResponse;
+
+  factory GuidanceResponse.fromYaml(dynamic yaml) => yaml is String
+      ? GuidanceResponse.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? GuidanceResponse.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'GuidanceResponse cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  factory GuidanceResponse.fromJson(
+    Map<String, dynamic> json,
+    SerializationManager serializationManager,
+  ) =>
+      _$GuidanceResponseFromJson(json);
+
+  factory GuidanceResponse.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$GuidanceResponseFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }

@@ -102,7 +102,7 @@ class _$_BackboneElement extends _BackboneElement {
       : _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_BackboneElement.fromJson(Map<String, dynamic> json) =>
+  factory _$_BackboneElement.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_BackboneElementFromJson(json);
 
   final List<FhirExtension>? _modifierExtension;
@@ -154,7 +154,7 @@ abstract class _BackboneElement extends BackboneElement {
       _$_BackboneElement;
   _BackboneElement._() : super._();
 
-  factory _BackboneElement.fromJson(Map<String, dynamic> json) =
+  factory _BackboneElement.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_BackboneElement.fromJson;
 
   @override
@@ -403,7 +403,7 @@ class _$_Annotation extends _Annotation {
       @JsonKey(name: '_text') this.textElement})
       : super._();
 
-  factory _$_Annotation.fromJson(Map<String, dynamic> json) =>
+  factory _$_Annotation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_AnnotationFromJson(json);
 
   @override
@@ -478,7 +478,7 @@ abstract class _Annotation extends Annotation {
       @JsonKey(name: '_text') final Element? textElement}) = _$_Annotation;
   _Annotation._() : super._();
 
-  factory _Annotation.fromJson(Map<String, dynamic> json) =
+  factory _Annotation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_Annotation.fromJson;
 
   @override
@@ -933,7 +933,7 @@ class _$_Attachment extends _Attachment {
       @JsonKey(name: '_creation') this.creationElement})
       : super._();
 
-  factory _$_Attachment.fromJson(Map<String, dynamic> json) =>
+  factory _$_Attachment.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_AttachmentFromJson(json);
 
   @override
@@ -1072,7 +1072,7 @@ abstract class _Attachment extends Attachment {
       _$_Attachment;
   _Attachment._() : super._();
 
-  factory _Attachment.fromJson(Map<String, dynamic> json) =
+  factory _Attachment.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_Attachment.fromJson;
 
   @override
@@ -1417,7 +1417,7 @@ class _$_Identifier extends _Identifier {
       this.assigner})
       : super._();
 
-  factory _$_Identifier.fromJson(Map<String, dynamic> json) =>
+  factory _$_Identifier.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_IdentifierFromJson(json);
 
   @override
@@ -1499,7 +1499,7 @@ abstract class _Identifier extends Identifier {
       final Reference? assigner}) = _$_Identifier;
   _Identifier._() : super._();
 
-  factory _Identifier.fromJson(Map<String, dynamic> json) =
+  factory _Identifier.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_Identifier.fromJson;
 
   @override
@@ -1665,7 +1665,7 @@ class _$_CodeableConcept extends _CodeableConcept {
       : _coding = coding,
         super._();
 
-  factory _$_CodeableConcept.fromJson(Map<String, dynamic> json) =>
+  factory _$_CodeableConcept.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_CodeableConceptFromJson(json);
 
   final List<Coding>? _coding;
@@ -1726,7 +1726,7 @@ abstract class _CodeableConcept extends CodeableConcept {
       @JsonKey(name: '_text') final Element? textElement}) = _$_CodeableConcept;
   _CodeableConcept._() : super._();
 
-  factory _CodeableConcept.fromJson(Map<String, dynamic> json) =
+  factory _CodeableConcept.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_CodeableConcept.fromJson;
 
   @override
@@ -2034,7 +2034,7 @@ class _$_Coding extends _Coding {
       @JsonKey(name: '_userSelected') this.userSelectedElement})
       : super._();
 
-  factory _$_Coding.fromJson(Map<String, dynamic> json) =>
+  factory _$_Coding.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_CodingFromJson(json);
 
   @override
@@ -2135,7 +2135,7 @@ abstract class _Coding extends Coding {
       _$_Coding;
   _Coding._() : super._();
 
-  factory _Coding.fromJson(Map<String, dynamic> json) = _$_Coding.fromJson;
+  factory _Coding.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) = _$_Coding.fromJson;
 
   @override
   String? get system;
@@ -2463,7 +2463,7 @@ class _$_Quantity extends _Quantity {
       @JsonKey(name: '_code') this.codeElement})
       : super._();
 
-  factory _$_Quantity.fromJson(Map<String, dynamic> json) =>
+  factory _$_Quantity.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_QuantityFromJson(json);
 
   @override
@@ -2563,7 +2563,7 @@ abstract class _Quantity extends Quantity {
       @JsonKey(name: '_code') final Element? codeElement}) = _$_Quantity;
   _Quantity._() : super._();
 
-  factory _Quantity.fromJson(Map<String, dynamic> json) = _$_Quantity.fromJson;
+  factory _Quantity.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) = _$_Quantity.fromJson;
 
   @override
   Decimal? get value;
@@ -2893,7 +2893,7 @@ class _$_FhirDuration extends _FhirDuration {
       @JsonKey(name: '_code') this.codeElement})
       : super._();
 
-  factory _$_FhirDuration.fromJson(Map<String, dynamic> json) =>
+  factory _$_FhirDuration.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_FhirDurationFromJson(json);
 
   @override
@@ -2993,7 +2993,7 @@ abstract class _FhirDuration extends FhirDuration {
       @JsonKey(name: '_code') final Element? codeElement}) = _$_FhirDuration;
   _FhirDuration._() : super._();
 
-  factory _FhirDuration.fromJson(Map<String, dynamic> json) =
+  factory _FhirDuration.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_FhirDuration.fromJson;
 
   @override
@@ -3322,7 +3322,7 @@ class _$_Distance extends _Distance {
       @JsonKey(name: '_code') this.codeElement})
       : super._();
 
-  factory _$_Distance.fromJson(Map<String, dynamic> json) =>
+  factory _$_Distance.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_DistanceFromJson(json);
 
   @override
@@ -3422,7 +3422,7 @@ abstract class _Distance extends Distance {
       @JsonKey(name: '_code') final Element? codeElement}) = _$_Distance;
   _Distance._() : super._();
 
-  factory _Distance.fromJson(Map<String, dynamic> json) = _$_Distance.fromJson;
+  factory _Distance.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) = _$_Distance.fromJson;
 
   @override
   Decimal? get value;
@@ -3746,7 +3746,7 @@ class _$_Count extends _Count {
       @JsonKey(name: '_code') this.codeElement})
       : super._();
 
-  factory _$_Count.fromJson(Map<String, dynamic> json) =>
+  factory _$_Count.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_CountFromJson(json);
 
   @override
@@ -3846,7 +3846,7 @@ abstract class _Count extends Count {
       @JsonKey(name: '_code') final Element? codeElement}) = _$_Count;
   _Count._() : super._();
 
-  factory _Count.fromJson(Map<String, dynamic> json) = _$_Count.fromJson;
+  factory _Count.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) = _$_Count.fromJson;
 
   @override
   Decimal? get value;
@@ -4170,7 +4170,7 @@ class _$_Money extends _Money {
       @JsonKey(name: '_code') this.codeElement})
       : super._();
 
-  factory _$_Money.fromJson(Map<String, dynamic> json) =>
+  factory _$_Money.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_MoneyFromJson(json);
 
   @override
@@ -4270,7 +4270,7 @@ abstract class _Money extends Money {
       @JsonKey(name: '_code') final Element? codeElement}) = _$_Money;
   _Money._() : super._();
 
-  factory _Money.fromJson(Map<String, dynamic> json) = _$_Money.fromJson;
+  factory _Money.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) = _$_Money.fromJson;
 
   @override
   Decimal? get value;
@@ -4593,7 +4593,7 @@ class _$_Age extends _Age {
       @JsonKey(name: '_code') this.codeElement})
       : super._();
 
-  factory _$_Age.fromJson(Map<String, dynamic> json) => _$$_AgeFromJson(json);
+  factory _$_Age.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) => _$$_AgeFromJson(json);
 
   @override
   final Decimal? value;
@@ -4692,7 +4692,7 @@ abstract class _Age extends Age {
       @JsonKey(name: '_code') final Element? codeElement}) = _$_Age;
   _Age._() : super._();
 
-  factory _Age.fromJson(Map<String, dynamic> json) = _$_Age.fromJson;
+  factory _Age.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) = _$_Age.fromJson;
 
   @override
   Decimal? get value;
@@ -4846,7 +4846,7 @@ class __$$_RangeCopyWithImpl<$Res> extends _$RangeCopyWithImpl<$Res, _$_Range>
 class _$_Range extends _Range {
   _$_Range({this.low, this.high}) : super._();
 
-  factory _$_Range.fromJson(Map<String, dynamic> json) =>
+  factory _$_Range.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_RangeFromJson(json);
 
   @override
@@ -4890,7 +4890,7 @@ abstract class _Range extends Range {
   factory _Range({final Quantity? low, final Quantity? high}) = _$_Range;
   _Range._() : super._();
 
-  factory _Range.fromJson(Map<String, dynamic> json) = _$_Range.fromJson;
+  factory _Range.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) = _$_Range.fromJson;
 
   @override
   Quantity? get low;
@@ -5062,7 +5062,7 @@ class _$_Period extends _Period {
       @JsonKey(name: '_end') this.endElement})
       : super._();
 
-  factory _$_Period.fromJson(Map<String, dynamic> json) =>
+  factory _$_Period.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_PeriodFromJson(json);
 
   @override
@@ -5121,7 +5121,7 @@ abstract class _Period extends Period {
       @JsonKey(name: '_end') final Element? endElement}) = _$_Period;
   _Period._() : super._();
 
-  factory _Period.fromJson(Map<String, dynamic> json) = _$_Period.fromJson;
+  factory _Period.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) = _$_Period.fromJson;
 
   @override
   String? get start;
@@ -5261,7 +5261,7 @@ class __$$_RatioCopyWithImpl<$Res> extends _$RatioCopyWithImpl<$Res, _$_Ratio>
 class _$_Ratio extends _Ratio {
   _$_Ratio({this.numerator, this.denominator}) : super._();
 
-  factory _$_Ratio.fromJson(Map<String, dynamic> json) =>
+  factory _$_Ratio.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_RatioFromJson(json);
 
   @override
@@ -5308,7 +5308,7 @@ abstract class _Ratio extends Ratio {
       _$_Ratio;
   _Ratio._() : super._();
 
-  factory _Ratio.fromJson(Map<String, dynamic> json) = _$_Ratio.fromJson;
+  factory _Ratio.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) = _$_Ratio.fromJson;
 
   @override
   Quantity? get numerator;
@@ -5686,7 +5686,7 @@ class _$_SampledData extends _SampledData {
       @JsonKey(name: '_data') this.dataElement})
       : super._();
 
-  factory _$_SampledData.fromJson(Map<String, dynamic> json) =>
+  factory _$_SampledData.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_SampledDataFromJson(json);
 
   @override
@@ -5805,7 +5805,7 @@ abstract class _SampledData extends SampledData {
       @JsonKey(name: '_data') final Element? dataElement}) = _$_SampledData;
   _SampledData._() : super._();
 
-  factory _SampledData.fromJson(Map<String, dynamic> json) =
+  factory _SampledData.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_SampledData.fromJson;
 
   @override
@@ -6214,7 +6214,7 @@ class _$_Signature extends _Signature {
       : _type = type,
         super._();
 
-  factory _$_Signature.fromJson(Map<String, dynamic> json) =>
+  factory _$_Signature.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_SignatureFromJson(json);
 
   final List<Coding> _type;
@@ -6338,7 +6338,7 @@ abstract class _Signature extends Signature {
       @JsonKey(name: '_blob') final Element? blobElement}) = _$_Signature;
   _Signature._() : super._();
 
-  factory _Signature.fromJson(Map<String, dynamic> json) =
+  factory _Signature.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_Signature.fromJson;
 
   @override
@@ -6707,7 +6707,7 @@ class _$_HumanName extends _HumanName {
         _suffixElement = suffixElement,
         super._();
 
-  factory _$_HumanName.fromJson(Map<String, dynamic> json) =>
+  factory _$_HumanName.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_HumanNameFromJson(json);
 
   @override
@@ -6871,7 +6871,7 @@ abstract class _HumanName extends HumanName {
       final Period? period}) = _$_HumanName;
   _HumanName._() : super._();
 
-  factory _HumanName.fromJson(Map<String, dynamic> json) =
+  factory _HumanName.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_HumanName.fromJson;
 
   @override
@@ -7397,7 +7397,7 @@ class _$_Address extends _Address {
         _lineElement = lineElement,
         super._();
 
-  factory _$_Address.fromJson(Map<String, dynamic> json) =>
+  factory _$_Address.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_AddressFromJson(json);
 
   @override
@@ -7568,7 +7568,7 @@ abstract class _Address extends Address {
       final Period? period}) = _$_Address;
   _Address._() : super._();
 
-  factory _Address.fromJson(Map<String, dynamic> json) = _$_Address.fromJson;
+  factory _Address.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) = _$_Address.fromJson;
 
   @override
   AddressUse? get use;
@@ -7905,7 +7905,7 @@ class _$_ContactPoint extends _ContactPoint {
       this.period})
       : super._();
 
-  factory _$_ContactPoint.fromJson(Map<String, dynamic> json) =>
+  factory _$_ContactPoint.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ContactPointFromJson(json);
 
   @override
@@ -7988,7 +7988,7 @@ abstract class _ContactPoint extends ContactPoint {
       final Period? period}) = _$_ContactPoint;
   _ContactPoint._() : super._();
 
-  factory _ContactPoint.fromJson(Map<String, dynamic> json) =
+  factory _ContactPoint.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ContactPoint.fromJson;
 
   @override
@@ -8180,7 +8180,7 @@ class _$_Timing extends _Timing {
         _eventElement = eventElement,
         super._();
 
-  factory _$_Timing.fromJson(Map<String, dynamic> json) =>
+  factory _$_Timing.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TimingFromJson(json);
 
   final List<String>? _event;
@@ -8257,7 +8257,7 @@ abstract class _Timing extends Timing {
       final CodeableConcept? code}) = _$_Timing;
   _Timing._() : super._();
 
-  factory _Timing.fromJson(Map<String, dynamic> json) = _$_Timing.fromJson;
+  factory _Timing.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) = _$_Timing.fromJson;
 
   @override
   List<String>? get event;
@@ -9016,7 +9016,7 @@ class _$_TimingRepeat extends _TimingRepeat {
         _whenElement = whenElement,
         super._();
 
-  factory _$_TimingRepeat.fromJson(Map<String, dynamic> json) =>
+  factory _$_TimingRepeat.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TimingRepeatFromJson(json);
 
   @override
@@ -9303,7 +9303,7 @@ abstract class _TimingRepeat extends TimingRepeat {
       _$_TimingRepeat;
   _TimingRepeat._() : super._();
 
-  factory _TimingRepeat.fromJson(Map<String, dynamic> json) =
+  factory _TimingRepeat.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TimingRepeat.fromJson;
 
   @override

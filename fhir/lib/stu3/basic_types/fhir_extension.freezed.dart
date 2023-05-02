@@ -1971,7 +1971,7 @@ class _$_FhirExtension extends _FhirExtension {
       : _extension_ = extension_,
         super._();
 
-  factory _$_FhirExtension.fromJson(Map<String, dynamic> json) =>
+  factory _$_FhirExtension.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_FhirExtensionFromJson(json);
 
   @override
@@ -2461,7 +2461,7 @@ abstract class _FhirExtension extends FhirExtension {
       final TriggerDefinition? valueTriggerDefinition}) = _$_FhirExtension;
   _FhirExtension._() : super._();
 
-  factory _FhirExtension.fromJson(Map<String, dynamic> json) =
+  factory _FhirExtension.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_FhirExtension.fromJson;
 
   @override

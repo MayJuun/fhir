@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -66,7 +67,7 @@ class Encounter with Resource, _$Encounter {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Encounter.fromJson(Map<String, dynamic> json) =>
+  factory Encounter.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$EncounterFromJson(json);
 
   /// Acts like a constructor, returns a [Encounter], accepts a
@@ -110,7 +111,7 @@ class EncounterStatusHistory with _$EncounterStatusHistory {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EncounterStatusHistory.fromJson(Map<String, dynamic> json) =>
+  factory EncounterStatusHistory.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$EncounterStatusHistoryFromJson(json);
 
   /// Acts like a constructor, returns a [EncounterStatusHistory], accepts a
@@ -153,7 +154,7 @@ class EncounterParticipant with _$EncounterParticipant {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EncounterParticipant.fromJson(Map<String, dynamic> json) =>
+  factory EncounterParticipant.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$EncounterParticipantFromJson(json);
 
   /// Acts like a constructor, returns a [EncounterParticipant], accepts a
@@ -205,7 +206,7 @@ class EncounterHospitalization with _$EncounterHospitalization {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EncounterHospitalization.fromJson(Map<String, dynamic> json) =>
+  factory EncounterHospitalization.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$EncounterHospitalizationFromJson(json);
 
   /// Acts like a constructor, returns a [EncounterHospitalization], accepts a
@@ -250,7 +251,7 @@ class EncounterLocation with _$EncounterLocation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EncounterLocation.fromJson(Map<String, dynamic> json) =>
+  factory EncounterLocation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$EncounterLocationFromJson(json);
 
   /// Acts like a constructor, returns a [EncounterLocation], accepts a
@@ -310,7 +311,7 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EpisodeOfCare.fromJson(Map<String, dynamic> json) =>
+  factory EpisodeOfCare.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$EpisodeOfCareFromJson(json);
 
   /// Acts like a constructor, returns a [EpisodeOfCare], accepts a
@@ -354,7 +355,7 @@ class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EpisodeOfCareStatusHistory.fromJson(Map<String, dynamic> json) =>
+  factory EpisodeOfCareStatusHistory.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$EpisodeOfCareStatusHistoryFromJson(json);
 
   /// Acts like a constructor, returns a [EpisodeOfCareStatusHistory], accepts a
@@ -397,7 +398,7 @@ class EpisodeOfCareCareTeam with _$EpisodeOfCareCareTeam {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EpisodeOfCareCareTeam.fromJson(Map<String, dynamic> json) =>
+  factory EpisodeOfCareCareTeam.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$EpisodeOfCareCareTeamFromJson(json);
 
   /// Acts like a constructor, returns a [EpisodeOfCareCareTeam], accepts a
@@ -461,7 +462,7 @@ class Communication with Resource, _$Communication {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Communication.fromJson(Map<String, dynamic> json) =>
+  factory Communication.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$CommunicationFromJson(json);
 
   /// Acts like a constructor, returns a [Communication], accepts a
@@ -505,7 +506,7 @@ class CommunicationPayload with _$CommunicationPayload {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CommunicationPayload.fromJson(Map<String, dynamic> json) =>
+  factory CommunicationPayload.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$CommunicationPayloadFromJson(json);
 
   /// Acts like a constructor, returns a [CommunicationPayload], accepts a
@@ -560,7 +561,7 @@ class Flag with Resource, _$Flag {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Flag.fromJson(Map<String, dynamic> json) => _$FlagFromJson(json);
+  factory Flag.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) => _$FlagFromJson(json);
 
   /// Acts like a constructor, returns a [Flag], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out

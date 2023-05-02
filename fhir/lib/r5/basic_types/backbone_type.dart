@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -90,7 +91,7 @@ class BackboneType with _$BackboneType {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory BackboneType.fromJson(Map<String, dynamic> json) =>
+  factory BackboneType.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$BackboneTypeFromJson(json);
 
   /// Acts like a constructor, returns a [BackboneType], accepts a

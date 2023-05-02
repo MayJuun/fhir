@@ -2303,7 +2303,7 @@ class _$_Measure extends _Measure {
         _supplementalData = supplementalData,
         super._();
 
-  factory _$_Measure.fromJson(Map<String, dynamic> json) =>
+  factory _$_Measure.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_MeasureFromJson(json);
 
   @override
@@ -3420,7 +3420,7 @@ abstract class _Measure extends Measure {
           final List<MeasureSupplementalData>? supplementalData}) = _$_Measure;
   _Measure._() : super._();
 
-  factory _Measure.fromJson(Map<String, dynamic> json) = _$_Measure.fromJson;
+  factory _Measure.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) = _$_Measure.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Measure)
@@ -4185,7 +4185,7 @@ class _$_MeasureGroup extends _MeasureGroup {
         _stratifier = stratifier,
         super._();
 
-  factory _$_MeasureGroup.fromJson(Map<String, dynamic> json) =>
+  factory _$_MeasureGroup.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_MeasureGroupFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -4366,7 +4366,7 @@ abstract class _MeasureGroup extends MeasureGroup {
       final List<MeasureStratifier>? stratifier}) = _$_MeasureGroup;
   _MeasureGroup._() : super._();
 
-  factory _MeasureGroup.fromJson(Map<String, dynamic> json) =
+  factory _MeasureGroup.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_MeasureGroup.fromJson;
 
   @override
@@ -4685,7 +4685,7 @@ class _$_MeasurePopulation extends _MeasurePopulation {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_MeasurePopulation.fromJson(Map<String, dynamic> json) =>
+  factory _$_MeasurePopulation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_MeasurePopulationFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -4835,7 +4835,7 @@ abstract class _MeasurePopulation extends MeasurePopulation {
       required final Expression criteria}) = _$_MeasurePopulation;
   _MeasurePopulation._() : super._();
 
-  factory _MeasurePopulation.fromJson(Map<String, dynamic> json) =
+  factory _MeasurePopulation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_MeasurePopulation.fromJson;
 
   @override
@@ -5173,7 +5173,7 @@ class _$_MeasureStratifier extends _MeasureStratifier {
         _component = component,
         super._();
 
-  factory _$_MeasureStratifier.fromJson(Map<String, dynamic> json) =>
+  factory _$_MeasureStratifier.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_MeasureStratifierFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -5348,7 +5348,7 @@ abstract class _MeasureStratifier extends MeasureStratifier {
       final List<MeasureComponent>? component}) = _$_MeasureStratifier;
   _MeasureStratifier._() : super._();
 
-  factory _MeasureStratifier.fromJson(Map<String, dynamic> json) =
+  factory _MeasureStratifier.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_MeasureStratifier.fromJson;
 
   @override
@@ -5675,7 +5675,7 @@ class _$_MeasureComponent extends _MeasureComponent {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_MeasureComponent.fromJson(Map<String, dynamic> json) =>
+  factory _$_MeasureComponent.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_MeasureComponentFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -5830,7 +5830,7 @@ abstract class _MeasureComponent extends MeasureComponent {
       required final Expression criteria}) = _$_MeasureComponent;
   _MeasureComponent._() : super._();
 
-  factory _MeasureComponent.fromJson(Map<String, dynamic> json) =
+  factory _MeasureComponent.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_MeasureComponent.fromJson;
 
   @override
@@ -6176,7 +6176,7 @@ class _$_MeasureSupplementalData extends _MeasureSupplementalData {
         _usage = usage,
         super._();
 
-  factory _$_MeasureSupplementalData.fromJson(Map<String, dynamic> json) =>
+  factory _$_MeasureSupplementalData.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_MeasureSupplementalDataFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -6356,7 +6356,7 @@ abstract class _MeasureSupplementalData extends MeasureSupplementalData {
       required final Expression criteria}) = _$_MeasureSupplementalData;
   _MeasureSupplementalData._() : super._();
 
-  factory _MeasureSupplementalData.fromJson(Map<String, dynamic> json) =
+  factory _MeasureSupplementalData.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_MeasureSupplementalData.fromJson;
 
   @override
@@ -7242,7 +7242,7 @@ class _$_MeasureReport extends _MeasureReport {
         _evaluatedResource = evaluatedResource,
         super._();
 
-  factory _$_MeasureReport.fromJson(Map<String, dynamic> json) =>
+  factory _$_MeasureReport.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_MeasureReportFromJson(json);
 
   @override
@@ -7654,7 +7654,7 @@ abstract class _MeasureReport extends MeasureReport {
           final List<Reference>? evaluatedResource}) = _$_MeasureReport;
   _MeasureReport._() : super._();
 
-  factory _MeasureReport.fromJson(Map<String, dynamic> json) =
+  factory _MeasureReport.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_MeasureReport.fromJson;
 
   @override
@@ -8081,7 +8081,7 @@ class _$_MeasureReportGroup extends _MeasureReportGroup {
         _stratifier = stratifier,
         super._();
 
-  factory _$_MeasureReportGroup.fromJson(Map<String, dynamic> json) =>
+  factory _$_MeasureReportGroup.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_MeasureReportGroupFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -8254,7 +8254,7 @@ abstract class _MeasureReportGroup extends MeasureReportGroup {
       final List<MeasureReportStratifier>? stratifier}) = _$_MeasureReportGroup;
   _MeasureReportGroup._() : super._();
 
-  factory _MeasureReportGroup.fromJson(Map<String, dynamic> json) =
+  factory _MeasureReportGroup.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_MeasureReportGroup.fromJson;
 
   @override
@@ -8575,7 +8575,7 @@ class _$_MeasureReportPopulation extends _MeasureReportPopulation {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_MeasureReportPopulation.fromJson(Map<String, dynamic> json) =>
+  factory _$_MeasureReportPopulation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_MeasureReportPopulationFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -8725,7 +8725,7 @@ abstract class _MeasureReportPopulation extends MeasureReportPopulation {
       final Reference? subjectResults}) = _$_MeasureReportPopulation;
   _MeasureReportPopulation._() : super._();
 
-  factory _MeasureReportPopulation.fromJson(Map<String, dynamic> json) =
+  factory _MeasureReportPopulation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_MeasureReportPopulation.fromJson;
 
   @override
@@ -8967,7 +8967,7 @@ class _$_MeasureReportStratifier extends _MeasureReportStratifier {
         _stratum = stratum,
         super._();
 
-  factory _$_MeasureReportStratifier.fromJson(Map<String, dynamic> json) =>
+  factory _$_MeasureReportStratifier.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_MeasureReportStratifierFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -9123,7 +9123,7 @@ abstract class _MeasureReportStratifier extends MeasureReportStratifier {
       final List<MeasureReportStratum>? stratum}) = _$_MeasureReportStratifier;
   _MeasureReportStratifier._() : super._();
 
-  factory _MeasureReportStratifier.fromJson(Map<String, dynamic> json) =
+  factory _MeasureReportStratifier.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_MeasureReportStratifier.fromJson;
 
   @override
@@ -9424,7 +9424,7 @@ class _$_MeasureReportStratum extends _MeasureReportStratum {
         _population = population,
         super._();
 
-  factory _$_MeasureReportStratum.fromJson(Map<String, dynamic> json) =>
+  factory _$_MeasureReportStratum.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_MeasureReportStratumFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -9596,7 +9596,7 @@ abstract class _MeasureReportStratum extends MeasureReportStratum {
       final Quantity? measureScore}) = _$_MeasureReportStratum;
   _MeasureReportStratum._() : super._();
 
-  factory _MeasureReportStratum.fromJson(Map<String, dynamic> json) =
+  factory _MeasureReportStratum.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_MeasureReportStratum.fromJson;
 
   @override
@@ -9860,7 +9860,7 @@ class _$_MeasureReportComponent extends _MeasureReportComponent {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_MeasureReportComponent.fromJson(Map<String, dynamic> json) =>
+  factory _$_MeasureReportComponent.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_MeasureReportComponentFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -9991,7 +9991,7 @@ abstract class _MeasureReportComponent extends MeasureReportComponent {
       required final CodeableConcept value}) = _$_MeasureReportComponent;
   _MeasureReportComponent._() : super._();
 
-  factory _MeasureReportComponent.fromJson(Map<String, dynamic> json) =
+  factory _MeasureReportComponent.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_MeasureReportComponent.fromJson;
 
   @override
@@ -10301,7 +10301,7 @@ class _$_MeasureReportPopulation1 extends _MeasureReportPopulation1 {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_MeasureReportPopulation1.fromJson(Map<String, dynamic> json) =>
+  factory _$_MeasureReportPopulation1.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_MeasureReportPopulation1FromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -10451,7 +10451,7 @@ abstract class _MeasureReportPopulation1 extends MeasureReportPopulation1 {
       final Reference? subjectResults}) = _$_MeasureReportPopulation1;
   _MeasureReportPopulation1._() : super._();
 
-  factory _MeasureReportPopulation1.fromJson(Map<String, dynamic> json) =
+  factory _MeasureReportPopulation1.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_MeasureReportPopulation1.fromJson;
 
   @override
@@ -11460,7 +11460,7 @@ class _$_TestReport extends _TestReport {
         _test = test,
         super._();
 
-  factory _$_TestReport.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestReport.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestReportFromJson(json);
 
   @override
@@ -11905,7 +11905,7 @@ abstract class _TestReport extends TestReport {
           final TestReportTeardown? teardown}) = _$_TestReport;
   _TestReport._() : super._();
 
-  factory _TestReport.fromJson(Map<String, dynamic> json) =
+  factory _TestReport.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestReport.fromJson;
 
   @override
@@ -12400,7 +12400,7 @@ class _$_TestReportParticipant extends _TestReportParticipant {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_TestReportParticipant.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestReportParticipant.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestReportParticipantFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -12566,7 +12566,7 @@ abstract class _TestReportParticipant extends TestReportParticipant {
       _$_TestReportParticipant;
   _TestReportParticipant._() : super._();
 
-  factory _TestReportParticipant.fromJson(Map<String, dynamic> json) =
+  factory _TestReportParticipant.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestReportParticipant.fromJson;
 
   @override
@@ -12794,7 +12794,7 @@ class _$_TestReportSetup extends _TestReportSetup {
         _action = action,
         super._();
 
-  factory _$_TestReportSetup.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestReportSetup.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestReportSetupFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -12924,7 +12924,7 @@ abstract class _TestReportSetup extends TestReportSetup {
       required final List<TestReportAction> action}) = _$_TestReportSetup;
   _TestReportSetup._() : super._();
 
-  factory _TestReportSetup.fromJson(Map<String, dynamic> json) =
+  factory _TestReportSetup.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestReportSetup.fromJson;
 
   @override
@@ -13178,7 +13178,7 @@ class _$_TestReportAction extends _TestReportAction {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_TestReportAction.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestReportAction.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestReportActionFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -13312,7 +13312,7 @@ abstract class _TestReportAction extends TestReportAction {
       _$_TestReportAction;
   _TestReportAction._() : super._();
 
-  factory _TestReportAction.fromJson(Map<String, dynamic> json) =
+  factory _TestReportAction.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestReportAction.fromJson;
 
   @override
@@ -13652,7 +13652,7 @@ class _$_TestReportOperation extends _TestReportOperation {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_TestReportOperation.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestReportOperation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestReportOperationFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -13818,7 +13818,7 @@ abstract class _TestReportOperation extends TestReportOperation {
       _$_TestReportOperation;
   _TestReportOperation._() : super._();
 
-  factory _TestReportOperation.fromJson(Map<String, dynamic> json) =
+  factory _TestReportOperation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestReportOperation.fromJson;
 
   @override
@@ -14175,7 +14175,7 @@ class _$_TestReportAssert extends _TestReportAssert {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_TestReportAssert.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestReportAssert.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestReportAssertFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -14340,7 +14340,7 @@ abstract class _TestReportAssert extends TestReportAssert {
       _$_TestReportAssert;
   _TestReportAssert._() : super._();
 
-  factory _TestReportAssert.fromJson(Map<String, dynamic> json) =
+  factory _TestReportAssert.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestReportAssert.fromJson;
 
   @override
@@ -14668,7 +14668,7 @@ class _$_TestReportTest extends _TestReportTest {
         _action = action,
         super._();
 
-  factory _$_TestReportTest.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestReportTest.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestReportTestFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -14833,7 +14833,7 @@ abstract class _TestReportTest extends TestReportTest {
       required final List<TestReportAction1> action}) = _$_TestReportTest;
   _TestReportTest._() : super._();
 
-  factory _TestReportTest.fromJson(Map<String, dynamic> json) =
+  factory _TestReportTest.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestReportTest.fromJson;
 
   @override
@@ -15107,7 +15107,7 @@ class _$_TestReportAction1 extends _TestReportAction1 {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_TestReportAction1.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestReportAction1.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestReportAction1FromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -15242,7 +15242,7 @@ abstract class _TestReportAction1 extends TestReportAction1 {
       _$_TestReportAction1;
   _TestReportAction1._() : super._();
 
-  factory _TestReportAction1.fromJson(Map<String, dynamic> json) =
+  factory _TestReportAction1.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestReportAction1.fromJson;
 
   @override
@@ -15453,7 +15453,7 @@ class _$_TestReportTeardown extends _TestReportTeardown {
         _action = action,
         super._();
 
-  factory _$_TestReportTeardown.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestReportTeardown.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestReportTeardownFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -15584,7 +15584,7 @@ abstract class _TestReportTeardown extends TestReportTeardown {
       required final List<TestReportAction2> action}) = _$_TestReportTeardown;
   _TestReportTeardown._() : super._();
 
-  factory _TestReportTeardown.fromJson(Map<String, dynamic> json) =
+  factory _TestReportTeardown.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestReportTeardown.fromJson;
 
   @override
@@ -15801,7 +15801,7 @@ class _$_TestReportAction2 extends _TestReportAction2 {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_TestReportAction2.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestReportAction2.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestReportAction2FromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -15926,7 +15926,7 @@ abstract class _TestReportAction2 extends TestReportAction2 {
       required final TestReportOperation operation}) = _$_TestReportAction2;
   _TestReportAction2._() : super._();
 
-  factory _TestReportAction2.fromJson(Map<String, dynamic> json) =
+  factory _TestReportAction2.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestReportAction2.fromJson;
 
   @override
@@ -17395,7 +17395,7 @@ class _$_TestScript extends _TestScript {
         _test = test,
         super._();
 
-  factory _$_TestScript.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScript.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptFromJson(json);
 
   @override
@@ -18115,7 +18115,7 @@ abstract class _TestScript extends TestScript {
           final TestScriptTeardown? teardown}) = _$_TestScript;
   _TestScript._() : super._();
 
-  factory _TestScript.fromJson(Map<String, dynamic> json) =
+  factory _TestScript.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScript.fromJson;
 
   @override
@@ -18659,7 +18659,7 @@ class _$_TestScriptOrigin extends _TestScriptOrigin {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_TestScriptOrigin.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptOrigin.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptOriginFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -18799,7 +18799,7 @@ abstract class _TestScriptOrigin extends TestScriptOrigin {
       required final Coding profile}) = _$_TestScriptOrigin;
   _TestScriptOrigin._() : super._();
 
-  factory _TestScriptOrigin.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptOrigin.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptOrigin.fromJson;
 
   @override
@@ -19077,7 +19077,7 @@ class _$_TestScriptDestination extends _TestScriptDestination {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_TestScriptDestination.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptDestination.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptDestinationFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -19218,7 +19218,7 @@ abstract class _TestScriptDestination extends TestScriptDestination {
       required final Coding profile}) = _$_TestScriptDestination;
   _TestScriptDestination._() : super._();
 
-  factory _TestScriptDestination.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptDestination.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptDestination.fromJson;
 
   @override
@@ -19452,7 +19452,7 @@ class _$_TestScriptMetadata extends _TestScriptMetadata {
         _capability = capability,
         super._();
 
-  factory _$_TestScriptMetadata.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptMetadata.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptMetadataFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -19603,7 +19603,7 @@ abstract class _TestScriptMetadata extends TestScriptMetadata {
       _$_TestScriptMetadata;
   _TestScriptMetadata._() : super._();
 
-  factory _TestScriptMetadata.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptMetadata.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptMetadata.fromJson;
 
   @override
@@ -19895,7 +19895,7 @@ class _$_TestScriptLink extends _TestScriptLink {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_TestScriptLink.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptLink.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptLinkFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -20046,7 +20046,7 @@ abstract class _TestScriptLink extends TestScriptLink {
       _$_TestScriptLink;
   _TestScriptLink._() : super._();
 
-  factory _TestScriptLink.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptLink.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptLink.fromJson;
 
   @override
@@ -20538,7 +20538,7 @@ class _$_TestScriptCapability extends _TestScriptCapability {
         _linkElement = linkElement,
         super._();
 
-  factory _$_TestScriptCapability.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptCapability.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptCapabilityFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -20808,7 +20808,7 @@ abstract class _TestScriptCapability extends TestScriptCapability {
       required final Canonical capabilities}) = _$_TestScriptCapability;
   _TestScriptCapability._() : super._();
 
-  factory _TestScriptCapability.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptCapability.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptCapability.fromJson;
 
   @override
@@ -21194,7 +21194,7 @@ class _$_TestScriptFixture extends _TestScriptFixture {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_TestScriptFixture.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptFixture.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptFixtureFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -21360,7 +21360,7 @@ abstract class _TestScriptFixture extends TestScriptFixture {
       final Reference? resource}) = _$_TestScriptFixture;
   _TestScriptFixture._() : super._();
 
-  factory _TestScriptFixture.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptFixture.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptFixture.fromJson;
 
   @override
@@ -21968,7 +21968,7 @@ class _$_TestScriptVariable extends _TestScriptVariable {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_TestScriptVariable.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptVariable.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptVariableFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -22229,7 +22229,7 @@ abstract class _TestScriptVariable extends TestScriptVariable {
       _$_TestScriptVariable;
   _TestScriptVariable._() : super._();
 
-  factory _TestScriptVariable.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptVariable.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptVariable.fromJson;
 
   @override
@@ -22511,7 +22511,7 @@ class _$_TestScriptSetup extends _TestScriptSetup {
         _action = action,
         super._();
 
-  factory _$_TestScriptSetup.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptSetup.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptSetupFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -22641,7 +22641,7 @@ abstract class _TestScriptSetup extends TestScriptSetup {
       required final List<TestScriptAction> action}) = _$_TestScriptSetup;
   _TestScriptSetup._() : super._();
 
-  factory _TestScriptSetup.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptSetup.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptSetup.fromJson;
 
   @override
@@ -22895,7 +22895,7 @@ class _$_TestScriptAction extends _TestScriptAction {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_TestScriptAction.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptAction.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptActionFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -23029,7 +23029,7 @@ abstract class _TestScriptAction extends TestScriptAction {
       _$_TestScriptAction;
   _TestScriptAction._() : super._();
 
-  factory _TestScriptAction.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptAction.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptAction.fromJson;
 
   @override
@@ -24008,7 +24008,7 @@ class _$_TestScriptOperation extends _TestScriptOperation {
         _requestHeader = requestHeader,
         super._();
 
-  factory _$_TestScriptOperation.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptOperation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptOperationFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -24430,7 +24430,7 @@ abstract class _TestScriptOperation extends TestScriptOperation {
           final Element? urlElement}) = _$_TestScriptOperation;
   _TestScriptOperation._() : super._();
 
-  factory _TestScriptOperation.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptOperation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptOperation.fromJson;
 
   @override
@@ -24872,7 +24872,7 @@ class _$_TestScriptRequestHeader extends _TestScriptRequestHeader {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_TestScriptRequestHeader.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptRequestHeader.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptRequestHeaderFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -25023,7 +25023,7 @@ abstract class _TestScriptRequestHeader extends TestScriptRequestHeader {
       _$_TestScriptRequestHeader;
   _TestScriptRequestHeader._() : super._();
 
-  factory _TestScriptRequestHeader.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptRequestHeader.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptRequestHeader.fromJson;
 
   @override
@@ -26382,7 +26382,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_TestScriptAssert.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptAssert.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptAssertFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -26899,7 +26899,7 @@ abstract class _TestScriptAssert extends TestScriptAssert {
           final Element? warningOnlyElement}) = _$_TestScriptAssert;
   _TestScriptAssert._() : super._();
 
-  factory _TestScriptAssert.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptAssert.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptAssert.fromJson;
 
   @override
@@ -27420,7 +27420,7 @@ class _$_TestScriptTest extends _TestScriptTest {
         _action = action,
         super._();
 
-  factory _$_TestScriptTest.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptTest.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptTestFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -27585,7 +27585,7 @@ abstract class _TestScriptTest extends TestScriptTest {
       required final List<TestScriptAction1> action}) = _$_TestScriptTest;
   _TestScriptTest._() : super._();
 
-  factory _TestScriptTest.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptTest.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptTest.fromJson;
 
   @override
@@ -27859,7 +27859,7 @@ class _$_TestScriptAction1 extends _TestScriptAction1 {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_TestScriptAction1.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptAction1.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptAction1FromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -27994,7 +27994,7 @@ abstract class _TestScriptAction1 extends TestScriptAction1 {
       _$_TestScriptAction1;
   _TestScriptAction1._() : super._();
 
-  factory _TestScriptAction1.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptAction1.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptAction1.fromJson;
 
   @override
@@ -28205,7 +28205,7 @@ class _$_TestScriptTeardown extends _TestScriptTeardown {
         _action = action,
         super._();
 
-  factory _$_TestScriptTeardown.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptTeardown.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptTeardownFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -28336,7 +28336,7 @@ abstract class _TestScriptTeardown extends TestScriptTeardown {
       required final List<TestScriptAction2> action}) = _$_TestScriptTeardown;
   _TestScriptTeardown._() : super._();
 
-  factory _TestScriptTeardown.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptTeardown.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptTeardown.fromJson;
 
   @override
@@ -28553,7 +28553,7 @@ class _$_TestScriptAction2 extends _TestScriptAction2 {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_TestScriptAction2.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptAction2.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptAction2FromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -28678,7 +28678,7 @@ abstract class _TestScriptAction2 extends TestScriptAction2 {
       required final TestScriptOperation operation}) = _$_TestScriptAction2;
   _TestScriptAction2._() : super._();
 
-  factory _TestScriptAction2.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptAction2.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptAction2.fromJson;
 
   @override

@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:hive/hive.dart';
 import 'package:yaml/yaml.dart';
 
@@ -396,7 +397,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchStudy.fromJson(Map<String, dynamic> json) =>
+  factory ResearchStudy.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$ResearchStudyFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchStudy], accepts a
@@ -522,7 +523,7 @@ class ResearchStudyArm with _$ResearchStudyArm {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchStudyArm.fromJson(Map<String, dynamic> json) =>
+  factory ResearchStudyArm.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$ResearchStudyArmFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchStudyArm], accepts a
@@ -634,7 +635,7 @@ class ResearchStudyObjective with _$ResearchStudyObjective {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchStudyObjective.fromJson(Map<String, dynamic> json) =>
+  factory ResearchStudyObjective.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$ResearchStudyObjectiveFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchStudyObjective], accepts a
@@ -886,7 +887,7 @@ class ResearchSubject with Resource, _$ResearchSubject {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchSubject.fromJson(Map<String, dynamic> json) =>
+  factory ResearchSubject.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$ResearchSubjectFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchSubject], accepts a

@@ -1505,7 +1505,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
         _document = document,
         super._();
 
-  factory _$_CapabilityStatement.fromJson(Map<String, dynamic> json) =>
+  factory _$_CapabilityStatement.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_CapabilityStatementFromJson(json);
 
   /// [resourceType] This is a CapabilityStatement resource
@@ -2228,7 +2228,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
       _$_CapabilityStatement;
   _CapabilityStatement._() : super._();
 
-  factory _CapabilityStatement.fromJson(Map<String, dynamic> json) =
+  factory _CapabilityStatement.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_CapabilityStatement.fromJson;
 
   @override
@@ -2801,7 +2801,7 @@ class _$_CapabilityStatementSoftware extends _CapabilityStatementSoftware {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_CapabilityStatementSoftware.fromJson(Map<String, dynamic> json) =>
+  factory _$_CapabilityStatementSoftware.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_CapabilityStatementSoftwareFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -2967,7 +2967,7 @@ abstract class _CapabilityStatementSoftware
       _$_CapabilityStatementSoftware;
   _CapabilityStatementSoftware._() : super._();
 
-  factory _CapabilityStatementSoftware.fromJson(Map<String, dynamic> json) =
+  factory _CapabilityStatementSoftware.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_CapabilityStatementSoftware.fromJson;
 
   @override
@@ -3901,7 +3901,7 @@ class _$_CapabilityStatementRest extends _CapabilityStatementRest {
         _compartment = compartment,
         super._();
 
-  factory _$_CapabilityStatementRest.fromJson(Map<String, dynamic> json) =>
+  factory _$_CapabilityStatementRest.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_CapabilityStatementRestFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -4142,7 +4142,7 @@ abstract class _CapabilityStatementRest extends CapabilityStatementRest {
       final List<Canonical>? compartment}) = _$_CapabilityStatementRest;
   _CapabilityStatementRest._() : super._();
 
-  factory _CapabilityStatementRest.fromJson(Map<String, dynamic> json) =
+  factory _CapabilityStatementRest.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_CapabilityStatementRest.fromJson;
 
   @override
@@ -4488,7 +4488,7 @@ class _$_CapabilityStatementSecurity extends _CapabilityStatementSecurity {
         _service = service,
         super._();
 
-  factory _$_CapabilityStatementSecurity.fromJson(Map<String, dynamic> json) =>
+  factory _$_CapabilityStatementSecurity.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_CapabilityStatementSecurityFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -4654,7 +4654,7 @@ abstract class _CapabilityStatementSecurity
       _$_CapabilityStatementSecurity;
   _CapabilityStatementSecurity._() : super._();
 
-  factory _CapabilityStatementSecurity.fromJson(Map<String, dynamic> json) =
+  factory _CapabilityStatementSecurity.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_CapabilityStatementSecurity.fromJson;
 
   @override
@@ -5583,7 +5583,7 @@ class _$_CapabilityStatementResource extends _CapabilityStatementResource {
         _operation = operation,
         super._();
 
-  factory _$_CapabilityStatementResource.fromJson(Map<String, dynamic> json) =>
+  factory _$_CapabilityStatementResource.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_CapabilityStatementResourceFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -6069,7 +6069,7 @@ abstract class _CapabilityStatementResource
       _$_CapabilityStatementResource;
   _CapabilityStatementResource._() : super._();
 
-  factory _CapabilityStatementResource.fromJson(Map<String, dynamic> json) =
+  factory _CapabilityStatementResource.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_CapabilityStatementResource.fromJson;
 
   @override
@@ -6648,7 +6648,7 @@ abstract class _CapabilityStatementInteraction
       _$_CapabilityStatementInteraction;
   _CapabilityStatementInteraction._() : super._();
 
-  factory _CapabilityStatementInteraction.fromJson(Map<String, dynamic> json) =
+  factory _CapabilityStatementInteraction.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_CapabilityStatementInteraction.fromJson;
 
   @override
@@ -7197,7 +7197,7 @@ abstract class _CapabilityStatementSearchParam
       _$_CapabilityStatementSearchParam;
   _CapabilityStatementSearchParam._() : super._();
 
-  factory _CapabilityStatementSearchParam.fromJson(Map<String, dynamic> json) =
+  factory _CapabilityStatementSearchParam.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_CapabilityStatementSearchParam.fromJson;
 
   @override
@@ -7531,7 +7531,7 @@ class _$_CapabilityStatementOperation extends _CapabilityStatementOperation {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_CapabilityStatementOperation.fromJson(Map<String, dynamic> json) =>
+  factory _$_CapabilityStatementOperation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_CapabilityStatementOperationFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -7692,7 +7692,7 @@ abstract class _CapabilityStatementOperation
       _$_CapabilityStatementOperation;
   _CapabilityStatementOperation._() : super._();
 
-  factory _CapabilityStatementOperation.fromJson(Map<String, dynamic> json) =
+  factory _CapabilityStatementOperation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_CapabilityStatementOperation.fromJson;
 
   @override
@@ -8157,7 +8157,7 @@ abstract class _CapabilityStatementInteraction1
       _$_CapabilityStatementInteraction1;
   _CapabilityStatementInteraction1._() : super._();
 
-  factory _CapabilityStatementInteraction1.fromJson(Map<String, dynamic> json) =
+  factory _CapabilityStatementInteraction1.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_CapabilityStatementInteraction1.fromJson;
 
   @override
@@ -8499,7 +8499,7 @@ class _$_CapabilityStatementMessaging extends _CapabilityStatementMessaging {
         _supportedMessage = supportedMessage,
         super._();
 
-  factory _$_CapabilityStatementMessaging.fromJson(Map<String, dynamic> json) =>
+  factory _$_CapabilityStatementMessaging.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_CapabilityStatementMessagingFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -8684,7 +8684,7 @@ abstract class _CapabilityStatementMessaging
       _$_CapabilityStatementMessaging;
   _CapabilityStatementMessaging._() : super._();
 
-  factory _CapabilityStatementMessaging.fromJson(Map<String, dynamic> json) =
+  factory _CapabilityStatementMessaging.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_CapabilityStatementMessaging.fromJson;
 
   @override
@@ -8976,7 +8976,7 @@ class _$_CapabilityStatementEndpoint extends _CapabilityStatementEndpoint {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_CapabilityStatementEndpoint.fromJson(Map<String, dynamic> json) =>
+  factory _$_CapabilityStatementEndpoint.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_CapabilityStatementEndpointFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -9117,7 +9117,7 @@ abstract class _CapabilityStatementEndpoint
       _$_CapabilityStatementEndpoint;
   _CapabilityStatementEndpoint._() : super._();
 
-  factory _CapabilityStatementEndpoint.fromJson(Map<String, dynamic> json) =
+  factory _CapabilityStatementEndpoint.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_CapabilityStatementEndpoint.fromJson;
 
   @override
@@ -9848,7 +9848,7 @@ class _$_CapabilityStatementDocument extends _CapabilityStatementDocument {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_CapabilityStatementDocument.fromJson(Map<String, dynamic> json) =>
+  factory _$_CapabilityStatementDocument.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_CapabilityStatementDocumentFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -10004,7 +10004,7 @@ abstract class _CapabilityStatementDocument
       required final Canonical profile}) = _$_CapabilityStatementDocument;
   _CapabilityStatementDocument._() : super._();
 
-  factory _CapabilityStatementDocument.fromJson(Map<String, dynamic> json) =
+  factory _CapabilityStatementDocument.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_CapabilityStatementDocument.fromJson;
 
   @override
@@ -11290,7 +11290,7 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
         _resource = resource,
         super._();
 
-  factory _$_CompartmentDefinition.fromJson(Map<String, dynamic> json) =>
+  factory _$_CompartmentDefinition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_CompartmentDefinitionFromJson(json);
 
   /// [resourceType] This is a CompartmentDefinition resource
@@ -11812,7 +11812,7 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
       _$_CompartmentDefinition;
   _CompartmentDefinition._() : super._();
 
-  factory _CompartmentDefinition.fromJson(Map<String, dynamic> json) =
+  factory _CompartmentDefinition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_CompartmentDefinition.fromJson;
 
   @override
@@ -12632,7 +12632,7 @@ abstract class _CompartmentDefinitionResource
       _$_CompartmentDefinitionResource;
   _CompartmentDefinitionResource._() : super._();
 
-  factory _CompartmentDefinitionResource.fromJson(Map<String, dynamic> json) =
+  factory _CompartmentDefinitionResource.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_CompartmentDefinitionResource.fromJson;
 
   @override
@@ -13904,7 +13904,7 @@ class _$_GraphDefinition extends _GraphDefinition {
         _link = link,
         super._();
 
-  factory _$_GraphDefinition.fromJson(Map<String, dynamic> json) =>
+  factory _$_GraphDefinition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_GraphDefinitionFromJson(json);
 
   /// [resourceType] This is a GraphDefinition resource
@@ -14423,7 +14423,7 @@ abstract class _GraphDefinition extends GraphDefinition {
       final List<GraphDefinitionLink>? link}) = _$_GraphDefinition;
   _GraphDefinition._() : super._();
 
-  factory _GraphDefinition.fromJson(Map<String, dynamic> json) =
+  factory _GraphDefinition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_GraphDefinition.fromJson;
 
   @override
@@ -14945,7 +14945,7 @@ class _$_GraphDefinitionNode extends _GraphDefinitionNode {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_GraphDefinitionNode.fromJson(Map<String, dynamic> json) =>
+  factory _$_GraphDefinitionNode.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_GraphDefinitionNodeFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -15116,7 +15116,7 @@ abstract class _GraphDefinitionNode extends GraphDefinitionNode {
       final Canonical? profile}) = _$_GraphDefinitionNode;
   _GraphDefinitionNode._() : super._();
 
-  factory _GraphDefinitionNode.fromJson(Map<String, dynamic> json) =
+  factory _GraphDefinitionNode.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_GraphDefinitionNode.fromJson;
 
   @override
@@ -15733,7 +15733,7 @@ class _$_GraphDefinitionLink extends _GraphDefinitionLink {
         _compartment = compartment,
         super._();
 
-  factory _$_GraphDefinitionLink.fromJson(Map<String, dynamic> json) =>
+  factory _$_GraphDefinitionLink.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_GraphDefinitionLinkFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -15999,7 +15999,7 @@ abstract class _GraphDefinitionLink extends GraphDefinitionLink {
       _$_GraphDefinitionLink;
   _GraphDefinitionLink._() : super._();
 
-  factory _GraphDefinitionLink.fromJson(Map<String, dynamic> json) =
+  factory _GraphDefinitionLink.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_GraphDefinitionLink.fromJson;
 
   @override
@@ -16505,7 +16505,7 @@ class _$_GraphDefinitionCompartment extends _GraphDefinitionCompartment {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_GraphDefinitionCompartment.fromJson(Map<String, dynamic> json) =>
+  factory _$_GraphDefinitionCompartment.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_GraphDefinitionCompartmentFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -16703,7 +16703,7 @@ abstract class _GraphDefinitionCompartment extends GraphDefinitionCompartment {
       _$_GraphDefinitionCompartment;
   _GraphDefinitionCompartment._() : super._();
 
-  factory _GraphDefinitionCompartment.fromJson(Map<String, dynamic> json) =
+  factory _GraphDefinitionCompartment.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_GraphDefinitionCompartment.fromJson;
 
   @override
@@ -18132,7 +18132,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
         _global = global,
         super._();
 
-  factory _$_ImplementationGuide.fromJson(Map<String, dynamic> json) =>
+  factory _$_ImplementationGuide.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ImplementationGuideFromJson(json);
 
   /// [resourceType] This is a ImplementationGuide resource
@@ -18720,7 +18720,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
       final ImplementationGuideManifest? manifest}) = _$_ImplementationGuide;
   _ImplementationGuide._() : super._();
 
-  factory _ImplementationGuide.fromJson(Map<String, dynamic> json) =
+  factory _ImplementationGuide.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ImplementationGuide.fromJson;
 
   @override
@@ -19275,7 +19275,7 @@ class _$_ImplementationGuideDependsOn extends _ImplementationGuideDependsOn {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ImplementationGuideDependsOn.fromJson(Map<String, dynamic> json) =>
+  factory _$_ImplementationGuideDependsOn.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ImplementationGuideDependsOnFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -19448,7 +19448,7 @@ abstract class _ImplementationGuideDependsOn
       _$_ImplementationGuideDependsOn;
   _ImplementationGuideDependsOn._() : super._();
 
-  factory _ImplementationGuideDependsOn.fromJson(Map<String, dynamic> json) =
+  factory _ImplementationGuideDependsOn.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ImplementationGuideDependsOn.fromJson;
 
   @override
@@ -19732,7 +19732,7 @@ class _$_ImplementationGuideGlobal extends _ImplementationGuideGlobal {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ImplementationGuideGlobal.fromJson(Map<String, dynamic> json) =>
+  factory _$_ImplementationGuideGlobal.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ImplementationGuideGlobalFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -19870,7 +19870,7 @@ abstract class _ImplementationGuideGlobal extends ImplementationGuideGlobal {
       required final Canonical profile}) = _$_ImplementationGuideGlobal;
   _ImplementationGuideGlobal._() : super._();
 
-  factory _ImplementationGuideGlobal.fromJson(Map<String, dynamic> json) =
+  factory _ImplementationGuideGlobal.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ImplementationGuideGlobal.fromJson;
 
   @override
@@ -20367,7 +20367,7 @@ abstract class _ImplementationGuideDefinition
       _$_ImplementationGuideDefinition;
   _ImplementationGuideDefinition._() : super._();
 
-  factory _ImplementationGuideDefinition.fromJson(Map<String, dynamic> json) =
+  factory _ImplementationGuideDefinition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ImplementationGuideDefinition.fromJson;
 
   @override
@@ -20674,7 +20674,7 @@ class _$_ImplementationGuideGrouping extends _ImplementationGuideGrouping {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ImplementationGuideGrouping.fromJson(Map<String, dynamic> json) =>
+  factory _$_ImplementationGuideGrouping.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ImplementationGuideGroupingFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -20824,7 +20824,7 @@ abstract class _ImplementationGuideGrouping
       _$_ImplementationGuideGrouping;
   _ImplementationGuideGrouping._() : super._();
 
-  factory _ImplementationGuideGrouping.fromJson(Map<String, dynamic> json) =
+  factory _ImplementationGuideGrouping.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ImplementationGuideGrouping.fromJson;
 
   @override
@@ -21304,7 +21304,7 @@ class _$_ImplementationGuideResource extends _ImplementationGuideResource {
         _profile = profile,
         super._();
 
-  factory _$_ImplementationGuideResource.fromJson(Map<String, dynamic> json) =>
+  factory _$_ImplementationGuideResource.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ImplementationGuideResourceFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -21553,7 +21553,7 @@ abstract class _ImplementationGuideResource
           final Element? groupingIdElement}) = _$_ImplementationGuideResource;
   _ImplementationGuideResource._() : super._();
 
-  factory _ImplementationGuideResource.fromJson(Map<String, dynamic> json) =
+  factory _ImplementationGuideResource.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ImplementationGuideResource.fromJson;
 
   @override
@@ -22098,7 +22098,7 @@ class _$_ImplementationGuidePage extends _ImplementationGuidePage {
         _page = page,
         super._();
 
-  factory _$_ImplementationGuidePage.fromJson(Map<String, dynamic> json) =>
+  factory _$_ImplementationGuidePage.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ImplementationGuidePageFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -22330,7 +22330,7 @@ abstract class _ImplementationGuidePage extends ImplementationGuidePage {
       final List<ImplementationGuidePage>? page}) = _$_ImplementationGuidePage;
   _ImplementationGuidePage._() : super._();
 
-  factory _ImplementationGuidePage.fromJson(Map<String, dynamic> json) =
+  factory _ImplementationGuidePage.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ImplementationGuidePage.fromJson;
 
   @override
@@ -22654,7 +22654,7 @@ class _$_ImplementationGuideParameter extends _ImplementationGuideParameter {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ImplementationGuideParameter.fromJson(Map<String, dynamic> json) =>
+  factory _$_ImplementationGuideParameter.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ImplementationGuideParameterFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -22794,7 +22794,7 @@ abstract class _ImplementationGuideParameter
       _$_ImplementationGuideParameter;
   _ImplementationGuideParameter._() : super._();
 
-  factory _ImplementationGuideParameter.fromJson(Map<String, dynamic> json) =
+  factory _ImplementationGuideParameter.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ImplementationGuideParameter.fromJson;
 
   @override
@@ -23142,7 +23142,7 @@ class _$_ImplementationGuideTemplate extends _ImplementationGuideTemplate {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ImplementationGuideTemplate.fromJson(Map<String, dynamic> json) =>
+  factory _$_ImplementationGuideTemplate.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ImplementationGuideTemplateFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -23307,7 +23307,7 @@ abstract class _ImplementationGuideTemplate
       _$_ImplementationGuideTemplate;
   _ImplementationGuideTemplate._() : super._();
 
-  factory _ImplementationGuideTemplate.fromJson(Map<String, dynamic> json) =
+  factory _ImplementationGuideTemplate.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ImplementationGuideTemplate.fromJson;
 
   @override
@@ -23679,7 +23679,7 @@ class _$_ImplementationGuideManifest extends _ImplementationGuideManifest {
         _otherElement = otherElement,
         super._();
 
-  factory _$_ImplementationGuideManifest.fromJson(Map<String, dynamic> json) =>
+  factory _$_ImplementationGuideManifest.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ImplementationGuideManifestFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -23911,7 +23911,7 @@ abstract class _ImplementationGuideManifest
       _$_ImplementationGuideManifest;
   _ImplementationGuideManifest._() : super._();
 
-  factory _ImplementationGuideManifest.fromJson(Map<String, dynamic> json) =
+  factory _ImplementationGuideManifest.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ImplementationGuideManifest.fromJson;
 
   @override
@@ -24277,7 +24277,7 @@ class _$_ImplementationGuideResource1 extends _ImplementationGuideResource1 {
         _profile = profile,
         super._();
 
-  factory _$_ImplementationGuideResource1.fromJson(Map<String, dynamic> json) =>
+  factory _$_ImplementationGuideResource1.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ImplementationGuideResource1FromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -24452,7 +24452,7 @@ abstract class _ImplementationGuideResource1
       _$_ImplementationGuideResource1;
   _ImplementationGuideResource1._() : super._();
 
-  factory _ImplementationGuideResource1.fromJson(Map<String, dynamic> json) =
+  factory _ImplementationGuideResource1.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ImplementationGuideResource1.fromJson;
 
   @override
@@ -24797,7 +24797,7 @@ class _$_ImplementationGuidePage1 extends _ImplementationGuidePage1 {
         _anchorElement = anchorElement,
         super._();
 
-  factory _$_ImplementationGuidePage1.fromJson(Map<String, dynamic> json) =>
+  factory _$_ImplementationGuidePage1.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ImplementationGuidePage1FromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -24979,7 +24979,7 @@ abstract class _ImplementationGuidePage1 extends ImplementationGuidePage1 {
       _$_ImplementationGuidePage1;
   _ImplementationGuidePage1._() : super._();
 
-  factory _ImplementationGuidePage1.fromJson(Map<String, dynamic> json) =
+  factory _ImplementationGuidePage1.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ImplementationGuidePage1.fromJson;
 
   @override
@@ -26433,7 +26433,7 @@ class _$_MessageDefinition extends _MessageDefinition {
         _allowedResponse = allowedResponse,
         super._();
 
-  factory _$_MessageDefinition.fromJson(Map<String, dynamic> json) =>
+  factory _$_MessageDefinition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_MessageDefinitionFromJson(json);
 
   /// [resourceType] This is a MessageDefinition resource
@@ -27041,7 +27041,7 @@ abstract class _MessageDefinition extends MessageDefinition {
       final Canonical? graph}) = _$_MessageDefinition;
   _MessageDefinition._() : super._();
 
-  factory _MessageDefinition.fromJson(Map<String, dynamic> json) =
+  factory _MessageDefinition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_MessageDefinition.fromJson;
 
   @override
@@ -27604,7 +27604,7 @@ class _$_MessageDefinitionFocus extends _MessageDefinitionFocus {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_MessageDefinitionFocus.fromJson(Map<String, dynamic> json) =>
+  factory _$_MessageDefinitionFocus.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_MessageDefinitionFocusFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -27775,7 +27775,7 @@ abstract class _MessageDefinitionFocus extends MessageDefinitionFocus {
       _$_MessageDefinitionFocus;
   _MessageDefinitionFocus._() : super._();
 
-  factory _MessageDefinitionFocus.fromJson(Map<String, dynamic> json) =
+  factory _MessageDefinitionFocus.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_MessageDefinitionFocus.fromJson;
 
   @override
@@ -29840,7 +29840,7 @@ class _$_OperationDefinition extends _OperationDefinition {
         _overload = overload,
         super._();
 
-  factory _$_OperationDefinition.fromJson(Map<String, dynamic> json) =>
+  factory _$_OperationDefinition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_OperationDefinitionFromJson(json);
 
   /// [resourceType] This is a OperationDefinition resource
@@ -30515,7 +30515,7 @@ abstract class _OperationDefinition extends OperationDefinition {
       _$_OperationDefinition;
   _OperationDefinition._() : super._();
 
-  factory _OperationDefinition.fromJson(Map<String, dynamic> json) =
+  factory _OperationDefinition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_OperationDefinition.fromJson;
 
   @override
@@ -31450,7 +31450,7 @@ class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
         _part_ = part_,
         super._();
 
-  factory _$_OperationDefinitionParameter.fromJson(Map<String, dynamic> json) =>
+  factory _$_OperationDefinitionParameter.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_OperationDefinitionParameterFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -31821,7 +31821,7 @@ abstract class _OperationDefinitionParameter
       _$_OperationDefinitionParameter;
   _OperationDefinitionParameter._() : super._();
 
-  factory _OperationDefinitionParameter.fromJson(Map<String, dynamic> json) =
+  factory _OperationDefinitionParameter.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_OperationDefinitionParameter.fromJson;
 
   @override
@@ -32173,7 +32173,7 @@ class _$_OperationDefinitionBinding extends _OperationDefinitionBinding {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_OperationDefinitionBinding.fromJson(Map<String, dynamic> json) =>
+  factory _$_OperationDefinitionBinding.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_OperationDefinitionBindingFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -32313,7 +32313,7 @@ abstract class _OperationDefinitionBinding extends OperationDefinitionBinding {
       required final Canonical valueSet}) = _$_OperationDefinitionBinding;
   _OperationDefinitionBinding._() : super._();
 
-  factory _OperationDefinitionBinding.fromJson(Map<String, dynamic> json) =
+  factory _OperationDefinitionBinding.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_OperationDefinitionBinding.fromJson;
 
   @override
@@ -33063,7 +33063,7 @@ class _$_OperationDefinitionOverload extends _OperationDefinitionOverload {
         _parameterNameElement = parameterNameElement,
         super._();
 
-  factory _$_OperationDefinitionOverload.fromJson(Map<String, dynamic> json) =>
+  factory _$_OperationDefinitionOverload.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_OperationDefinitionOverloadFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -33234,7 +33234,7 @@ abstract class _OperationDefinitionOverload
           final Element? commentElement}) = _$_OperationDefinitionOverload;
   _OperationDefinitionOverload._() : super._();
 
-  factory _OperationDefinitionOverload.fromJson(Map<String, dynamic> json) =
+  factory _OperationDefinitionOverload.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_OperationDefinitionOverload.fromJson;
 
   @override
@@ -34975,7 +34975,7 @@ class _$_SearchParameter extends _SearchParameter {
         _component = component,
         super._();
 
-  factory _$_SearchParameter.fromJson(Map<String, dynamic> json) =>
+  factory _$_SearchParameter.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_SearchParameterFromJson(json);
 
   /// [resourceType] This is a SearchParameter resource
@@ -35755,7 +35755,7 @@ abstract class _SearchParameter extends SearchParameter {
       final List<SearchParameterComponent>? component}) = _$_SearchParameter;
   _SearchParameter._() : super._();
 
-  factory _SearchParameter.fromJson(Map<String, dynamic> json) =
+  factory _SearchParameter.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_SearchParameter.fromJson;
 
   @override
@@ -36284,7 +36284,7 @@ class _$_SearchParameterComponent extends _SearchParameterComponent {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_SearchParameterComponent.fromJson(Map<String, dynamic> json) =>
+  factory _$_SearchParameterComponent.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_SearchParameterComponentFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -36425,7 +36425,7 @@ abstract class _SearchParameterComponent extends SearchParameterComponent {
       _$_SearchParameterComponent;
   _SearchParameterComponent._() : super._();
 
-  factory _SearchParameterComponent.fromJson(Map<String, dynamic> json) =
+  factory _SearchParameterComponent.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_SearchParameterComponent.fromJson;
 
   @override
@@ -38013,7 +38013,7 @@ class _$_StructureDefinition extends _StructureDefinition {
         _contextInvariantElement = contextInvariantElement,
         super._();
 
-  factory _$_StructureDefinition.fromJson(Map<String, dynamic> json) =>
+  factory _$_StructureDefinition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_StructureDefinitionFromJson(json);
 
   /// [resourceType] This is a StructureDefinition resource
@@ -38676,7 +38676,7 @@ abstract class _StructureDefinition extends StructureDefinition {
       _$_StructureDefinition;
   _StructureDefinition._() : super._();
 
-  factory _StructureDefinition.fromJson(Map<String, dynamic> json) =
+  factory _StructureDefinition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_StructureDefinition.fromJson;
 
   @override
@@ -39298,7 +39298,7 @@ class _$_StructureDefinitionMapping extends _StructureDefinitionMapping {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_StructureDefinitionMapping.fromJson(Map<String, dynamic> json) =>
+  factory _$_StructureDefinitionMapping.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_StructureDefinitionMappingFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -39479,7 +39479,7 @@ abstract class _StructureDefinitionMapping extends StructureDefinitionMapping {
       _$_StructureDefinitionMapping;
   _StructureDefinitionMapping._() : super._();
 
-  factory _StructureDefinitionMapping.fromJson(Map<String, dynamic> json) =
+  factory _StructureDefinitionMapping.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_StructureDefinitionMapping.fromJson;
 
   @override
@@ -39801,7 +39801,7 @@ class _$_StructureDefinitionContext extends _StructureDefinitionContext {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_StructureDefinitionContext.fromJson(Map<String, dynamic> json) =>
+  factory _$_StructureDefinitionContext.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_StructureDefinitionContextFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -39950,7 +39950,7 @@ abstract class _StructureDefinitionContext extends StructureDefinitionContext {
       _$_StructureDefinitionContext;
   _StructureDefinitionContext._() : super._();
 
-  factory _StructureDefinitionContext.fromJson(Map<String, dynamic> json) =
+  factory _StructureDefinitionContext.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_StructureDefinitionContext.fromJson;
 
   @override
@@ -40174,7 +40174,7 @@ class _$_StructureDefinitionSnapshot extends _StructureDefinitionSnapshot {
         _element = element,
         super._();
 
-  factory _$_StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json) =>
+  factory _$_StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_StructureDefinitionSnapshotFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -40305,7 +40305,7 @@ abstract class _StructureDefinitionSnapshot
       _$_StructureDefinitionSnapshot;
   _StructureDefinitionSnapshot._() : super._();
 
-  factory _StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json) =
+  factory _StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_StructureDefinitionSnapshot.fromJson;
 
   @override
@@ -40649,7 +40649,7 @@ abstract class _StructureDefinitionDifferential
       _$_StructureDefinitionDifferential;
   _StructureDefinitionDifferential._() : super._();
 
-  factory _StructureDefinitionDifferential.fromJson(Map<String, dynamic> json) =
+  factory _StructureDefinitionDifferential.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_StructureDefinitionDifferential.fromJson;
 
   @override
@@ -41852,7 +41852,7 @@ class _$_StructureMap extends _StructureMap {
         _group = group,
         super._();
 
-  factory _$_StructureMap.fromJson(Map<String, dynamic> json) =>
+  factory _$_StructureMap.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_StructureMapFromJson(json);
 
   /// [resourceType] This is a StructureMap resource
@@ -42371,7 +42371,7 @@ abstract class _StructureMap extends StructureMap {
       required final List<StructureMapGroup> group}) = _$_StructureMap;
   _StructureMap._() : super._();
 
-  factory _StructureMap.fromJson(Map<String, dynamic> json) =
+  factory _StructureMap.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_StructureMap.fromJson;
 
   @override
@@ -42891,7 +42891,7 @@ class _$_StructureMapStructure extends _StructureMapStructure {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_StructureMapStructure.fromJson(Map<String, dynamic> json) =>
+  factory _$_StructureMapStructure.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_StructureMapStructureFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -43066,7 +43066,7 @@ abstract class _StructureMapStructure extends StructureMapStructure {
           final Element? documentationElement}) = _$_StructureMapStructure;
   _StructureMapStructure._() : super._();
 
-  factory _StructureMapStructure.fromJson(Map<String, dynamic> json) =
+  factory _StructureMapStructure.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_StructureMapStructure.fromJson;
 
   @override
@@ -43508,7 +43508,7 @@ class _$_StructureMapGroup extends _StructureMapGroup {
         _rule = rule,
         super._();
 
-  factory _$_StructureMapGroup.fromJson(Map<String, dynamic> json) =>
+  factory _$_StructureMapGroup.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_StructureMapGroupFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -43721,7 +43721,7 @@ abstract class _StructureMapGroup extends StructureMapGroup {
       final List<StructureMapRule>? rule}) = _$_StructureMapGroup;
   _StructureMapGroup._() : super._();
 
-  factory _StructureMapGroup.fromJson(Map<String, dynamic> json) =
+  factory _StructureMapGroup.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_StructureMapGroup.fromJson;
 
   @override
@@ -44142,7 +44142,7 @@ class _$_StructureMapInput extends _StructureMapInput {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_StructureMapInput.fromJson(Map<String, dynamic> json) =>
+  factory _$_StructureMapInput.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_StructureMapInputFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -44327,7 +44327,7 @@ abstract class _StructureMapInput extends StructureMapInput {
           final Element? documentationElement}) = _$_StructureMapInput;
   _StructureMapInput._() : super._();
 
-  factory _StructureMapInput.fromJson(Map<String, dynamic> json) =
+  factory _StructureMapInput.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_StructureMapInput.fromJson;
 
   @override
@@ -44712,7 +44712,7 @@ class _$_StructureMapRule extends _StructureMapRule {
         _dependent = dependent,
         super._();
 
-  factory _$_StructureMapRule.fromJson(Map<String, dynamic> json) =>
+  factory _$_StructureMapRule.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_StructureMapRuleFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -44925,7 +44925,7 @@ abstract class _StructureMapRule extends StructureMapRule {
           final Element? documentationElement}) = _$_StructureMapRule;
   _StructureMapRule._() : super._();
 
-  factory _StructureMapRule.fromJson(Map<String, dynamic> json) =
+  factory _StructureMapRule.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_StructureMapRule.fromJson;
 
   @override
@@ -45671,7 +45671,7 @@ class _$_StructureMapSource extends _StructureMapSource {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_StructureMapSource.fromJson(Map<String, dynamic> json) =>
+  factory _$_StructureMapSource.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_StructureMapSourceFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -45969,7 +45969,7 @@ abstract class _StructureMapSource extends StructureMapSource {
       _$_StructureMapSource;
   _StructureMapSource._() : super._();
 
-  factory _StructureMapSource.fromJson(Map<String, dynamic> json) =
+  factory _StructureMapSource.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_StructureMapSource.fromJson;
 
   @override
@@ -46545,7 +46545,7 @@ class _$_StructureMapTarget extends _StructureMapTarget {
         _parameter = parameter,
         super._();
 
-  factory _$_StructureMapTarget.fromJson(Map<String, dynamic> json) =>
+  factory _$_StructureMapTarget.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_StructureMapTargetFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -46794,7 +46794,7 @@ abstract class _StructureMapTarget extends StructureMapTarget {
       final List<StructureMapParameter>? parameter}) = _$_StructureMapTarget;
   _StructureMapTarget._() : super._();
 
-  factory _StructureMapTarget.fromJson(Map<String, dynamic> json) =
+  factory _StructureMapTarget.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_StructureMapTarget.fromJson;
 
   @override
@@ -47422,7 +47422,7 @@ class _$_StructureMapParameter extends _StructureMapParameter {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_StructureMapParameter.fromJson(Map<String, dynamic> json) =>
+  factory _$_StructureMapParameter.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_StructureMapParameterFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -47682,7 +47682,7 @@ abstract class _StructureMapParameter extends StructureMapParameter {
           final Element? valueDateTimeElement}) = _$_StructureMapParameter;
   _StructureMapParameter._() : super._();
 
-  factory _StructureMapParameter.fromJson(Map<String, dynamic> json) =
+  factory _StructureMapParameter.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_StructureMapParameter.fromJson;
 
   @override
@@ -48006,7 +48006,7 @@ class _$_StructureMapDependent extends _StructureMapDependent {
         _parameter = parameter,
         super._();
 
-  factory _$_StructureMapDependent.fromJson(Map<String, dynamic> json) =>
+  factory _$_StructureMapDependent.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_StructureMapDependentFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -48153,7 +48153,7 @@ abstract class _StructureMapDependent extends StructureMapDependent {
       _$_StructureMapDependent;
   _StructureMapDependent._() : super._();
 
-  factory _StructureMapDependent.fromJson(Map<String, dynamic> json) =
+  factory _StructureMapDependent.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_StructureMapDependent.fromJson;
 
   @override

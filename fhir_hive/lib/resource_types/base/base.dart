@@ -1,1 +1,0 @@
-export 'individuals/individuals.dart';

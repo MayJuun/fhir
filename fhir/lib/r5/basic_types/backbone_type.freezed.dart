@@ -161,7 +161,7 @@ class _$_BackboneType extends _BackboneType {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_BackboneType.fromJson(Map<String, dynamic> json) =>
+  factory _$_BackboneType.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_BackboneTypeFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -282,7 +282,7 @@ abstract class _BackboneType extends BackboneType {
       final List<FhirExtension>? modifierExtension}) = _$_BackboneType;
   _BackboneType._() : super._();
 
-  factory _BackboneType.fromJson(Map<String, dynamic> json) =
+  factory _BackboneType.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_BackboneType.fromJson;
 
   @override

@@ -1051,7 +1051,7 @@ class _$_ValueSet extends _ValueSet {
         _useContext = useContext,
         super._();
 
-  factory _$_ValueSet.fromJson(Map<String, dynamic> json) =>
+  factory _$_ValueSet.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ValueSetFromJson(json);
 
   @override
@@ -1408,7 +1408,7 @@ abstract class _ValueSet extends ValueSet {
       final ValueSetExpansion? expansion}) = _$_ValueSet;
   _ValueSet._() : super._();
 
-  factory _ValueSet.fromJson(Map<String, dynamic> json) = _$_ValueSet.fromJson;
+  factory _ValueSet.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) = _$_ValueSet.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ValueSet)
@@ -1683,7 +1683,7 @@ class _$_ValueSetContact extends _ValueSetContact {
         _telecom = telecom,
         super._();
 
-  factory _$_ValueSetContact.fromJson(Map<String, dynamic> json) =>
+  factory _$_ValueSetContact.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ValueSetContactFromJson(json);
 
   @override
@@ -1789,7 +1789,7 @@ abstract class _ValueSetContact extends ValueSetContact {
       final List<ContactPoint>? telecom}) = _$_ValueSetContact;
   _ValueSetContact._() : super._();
 
-  factory _ValueSetContact.fromJson(Map<String, dynamic> json) =
+  factory _ValueSetContact.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ValueSetContact.fromJson;
 
   @override
@@ -2099,7 +2099,7 @@ class _$_ValueSetCodeSystem extends _ValueSetCodeSystem {
         _concept = concept,
         super._();
 
-  factory _$_ValueSetCodeSystem.fromJson(Map<String, dynamic> json) =>
+  factory _$_ValueSetCodeSystem.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ValueSetCodeSystemFromJson(json);
 
   @override
@@ -2237,7 +2237,7 @@ abstract class _ValueSetCodeSystem extends ValueSetCodeSystem {
       _$_ValueSetCodeSystem;
   _ValueSetCodeSystem._() : super._();
 
-  factory _ValueSetCodeSystem.fromJson(Map<String, dynamic> json) =
+  factory _ValueSetCodeSystem.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ValueSetCodeSystem.fromJson;
 
   @override
@@ -2566,7 +2566,7 @@ class _$_ValueSetCodeSystemConcept extends _ValueSetCodeSystemConcept {
         _concept = concept,
         super._();
 
-  factory _$_ValueSetCodeSystemConcept.fromJson(Map<String, dynamic> json) =>
+  factory _$_ValueSetCodeSystemConcept.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ValueSetCodeSystemConceptFromJson(json);
 
   @override
@@ -2720,7 +2720,7 @@ abstract class _ValueSetCodeSystemConcept extends ValueSetCodeSystemConcept {
       _$_ValueSetCodeSystemConcept;
   _ValueSetCodeSystemConcept._() : super._();
 
-  factory _ValueSetCodeSystemConcept.fromJson(Map<String, dynamic> json) =
+  factory _ValueSetCodeSystemConcept.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ValueSetCodeSystemConcept.fromJson;
 
   @override
@@ -3004,7 +3004,7 @@ class _$_ValueSetConceptDesignation extends _ValueSetConceptDesignation {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ValueSetConceptDesignation.fromJson(Map<String, dynamic> json) =>
+  factory _$_ValueSetConceptDesignation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ValueSetConceptDesignationFromJson(json);
 
   @override
@@ -3110,7 +3110,7 @@ abstract class _ValueSetConceptDesignation extends ValueSetConceptDesignation {
       _$_ValueSetConceptDesignation;
   _ValueSetConceptDesignation._() : super._();
 
-  factory _ValueSetConceptDesignation.fromJson(Map<String, dynamic> json) =
+  factory _ValueSetConceptDesignation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ValueSetConceptDesignation.fromJson;
 
   @override
@@ -3323,7 +3323,7 @@ class _$_ValueSetCompose extends _ValueSetCompose {
         _exclude = exclude,
         super._();
 
-  factory _$_ValueSetCompose.fromJson(Map<String, dynamic> json) =>
+  factory _$_ValueSetCompose.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ValueSetComposeFromJson(json);
 
   @override
@@ -3451,7 +3451,7 @@ abstract class _ValueSetCompose extends ValueSetCompose {
       final List<ValueSetComposeInclude>? exclude}) = _$_ValueSetCompose;
   _ValueSetCompose._() : super._();
 
-  factory _ValueSetCompose.fromJson(Map<String, dynamic> json) =
+  factory _ValueSetCompose.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ValueSetCompose.fromJson;
 
   @override
@@ -3738,7 +3738,7 @@ class _$_ValueSetComposeInclude extends _ValueSetComposeInclude {
         _filter = filter,
         super._();
 
-  factory _$_ValueSetComposeInclude.fromJson(Map<String, dynamic> json) =>
+  factory _$_ValueSetComposeInclude.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ValueSetComposeIncludeFromJson(json);
 
   @override
@@ -3877,7 +3877,7 @@ abstract class _ValueSetComposeInclude extends ValueSetComposeInclude {
       final List<ValueSetIncludeFilter>? filter}) = _$_ValueSetComposeInclude;
   _ValueSetComposeInclude._() : super._();
 
-  factory _ValueSetComposeInclude.fromJson(Map<String, dynamic> json) =
+  factory _ValueSetComposeInclude.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ValueSetComposeInclude.fromJson;
 
   @override
@@ -4156,7 +4156,7 @@ class _$_ValueSetIncludeConcept extends _ValueSetIncludeConcept {
         _designation = designation,
         super._();
 
-  factory _$_ValueSetIncludeConcept.fromJson(Map<String, dynamic> json) =>
+  factory _$_ValueSetIncludeConcept.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ValueSetIncludeConceptFromJson(json);
 
   @override
@@ -4284,7 +4284,7 @@ abstract class _ValueSetIncludeConcept extends ValueSetIncludeConcept {
       _$_ValueSetIncludeConcept;
   _ValueSetIncludeConcept._() : super._();
 
-  factory _ValueSetIncludeConcept.fromJson(Map<String, dynamic> json) =
+  factory _ValueSetIncludeConcept.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ValueSetIncludeConcept.fromJson;
 
   @override
@@ -4589,7 +4589,7 @@ class _$_ValueSetIncludeFilter extends _ValueSetIncludeFilter {
         _fhirComments = fhirComments,
         super._();
 
-  factory _$_ValueSetIncludeFilter.fromJson(Map<String, dynamic> json) =>
+  factory _$_ValueSetIncludeFilter.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ValueSetIncludeFilterFromJson(json);
 
   @override
@@ -4723,7 +4723,7 @@ abstract class _ValueSetIncludeFilter extends ValueSetIncludeFilter {
           final Element? valueElement}) = _$_ValueSetIncludeFilter;
   _ValueSetIncludeFilter._() : super._();
 
-  factory _ValueSetIncludeFilter.fromJson(Map<String, dynamic> json) =
+  factory _ValueSetIncludeFilter.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ValueSetIncludeFilter.fromJson;
 
   @override
@@ -5105,7 +5105,7 @@ class _$_ValueSetExpansion extends _ValueSetExpansion {
         _contains = contains,
         super._();
 
-  factory _$_ValueSetExpansion.fromJson(Map<String, dynamic> json) =>
+  factory _$_ValueSetExpansion.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ValueSetExpansionFromJson(json);
 
   @override
@@ -5271,7 +5271,7 @@ abstract class _ValueSetExpansion extends ValueSetExpansion {
       final List<ValueSetExpansionContains>? contains}) = _$_ValueSetExpansion;
   _ValueSetExpansion._() : super._();
 
-  factory _ValueSetExpansion.fromJson(Map<String, dynamic> json) =
+  factory _ValueSetExpansion.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ValueSetExpansion.fromJson;
 
   @override
@@ -5767,7 +5767,7 @@ class _$_ValueSetExpansionParameter extends _ValueSetExpansionParameter {
         _fhirComments = fhirComments,
         super._();
 
-  factory _$_ValueSetExpansionParameter.fromJson(Map<String, dynamic> json) =>
+  factory _$_ValueSetExpansionParameter.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ValueSetExpansionParameterFromJson(json);
 
   @override
@@ -5948,7 +5948,7 @@ abstract class _ValueSetExpansionParameter extends ValueSetExpansionParameter {
       _$_ValueSetExpansionParameter;
   _ValueSetExpansionParameter._() : super._();
 
-  factory _ValueSetExpansionParameter.fromJson(Map<String, dynamic> json) =
+  factory _ValueSetExpansionParameter.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ValueSetExpansionParameter.fromJson;
 
   @override
@@ -6383,7 +6383,7 @@ class _$_ValueSetExpansionContains extends _ValueSetExpansionContains {
         _contains = contains,
         super._();
 
-  factory _$_ValueSetExpansionContains.fromJson(Map<String, dynamic> json) =>
+  factory _$_ValueSetExpansionContains.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ValueSetExpansionContainsFromJson(json);
 
   @override
@@ -6548,7 +6548,7 @@ abstract class _ValueSetExpansionContains extends ValueSetExpansionContains {
       _$_ValueSetExpansionContains;
   _ValueSetExpansionContains._() : super._();
 
-  factory _ValueSetExpansionContains.fromJson(Map<String, dynamic> json) =
+  factory _ValueSetExpansionContains.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ValueSetExpansionContains.fromJson;
 
   @override
@@ -7573,7 +7573,7 @@ class _$_ConceptMap extends _ConceptMap {
         _element = element,
         super._();
 
-  factory _$_ConceptMap.fromJson(Map<String, dynamic> json) =>
+  factory _$_ConceptMap.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ConceptMapFromJson(json);
 
   @override
@@ -7924,7 +7924,7 @@ abstract class _ConceptMap extends ConceptMap {
           final Element? dateElement}) = _$_ConceptMap;
   _ConceptMap._() : super._();
 
-  factory _ConceptMap.fromJson(Map<String, dynamic> json) =
+  factory _ConceptMap.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ConceptMap.fromJson;
 
   @override
@@ -8179,7 +8179,7 @@ class _$_ConceptMapContact extends _ConceptMapContact {
         _telecom = telecom,
         super._();
 
-  factory _$_ConceptMapContact.fromJson(Map<String, dynamic> json) =>
+  factory _$_ConceptMapContact.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ConceptMapContactFromJson(json);
 
   @override
@@ -8271,7 +8271,7 @@ abstract class _ConceptMapContact extends ConceptMapContact {
       final List<ContactPoint>? telecom}) = _$_ConceptMapContact;
   _ConceptMapContact._() : super._();
 
-  factory _ConceptMapContact.fromJson(Map<String, dynamic> json) =
+  factory _ConceptMapContact.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ConceptMapContact.fromJson;
 
   @override
@@ -8488,7 +8488,7 @@ class _$_ConceptMapElement extends _ConceptMapElement {
         _target = target,
         super._();
 
-  factory _$_ConceptMapElement.fromJson(Map<String, dynamic> json) =>
+  factory _$_ConceptMapElement.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ConceptMapElementFromJson(json);
 
   @override
@@ -8593,7 +8593,7 @@ abstract class _ConceptMapElement extends ConceptMapElement {
       final List<ConceptMapElementTarget>? target}) = _$_ConceptMapElement;
   _ConceptMapElement._() : super._();
 
-  factory _ConceptMapElement.fromJson(Map<String, dynamic> json) =
+  factory _ConceptMapElement.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ConceptMapElement.fromJson;
 
   @override
@@ -8938,7 +8938,7 @@ class _$_ConceptMapElementTarget extends _ConceptMapElementTarget {
         _product = product,
         super._();
 
-  factory _$_ConceptMapElementTarget.fromJson(Map<String, dynamic> json) =>
+  factory _$_ConceptMapElementTarget.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ConceptMapElementTargetFromJson(json);
 
   @override
@@ -9091,7 +9091,7 @@ abstract class _ConceptMapElementTarget extends ConceptMapElementTarget {
       _$_ConceptMapElementTarget;
   _ConceptMapElementTarget._() : super._();
 
-  factory _ConceptMapElementTarget.fromJson(Map<String, dynamic> json) =
+  factory _ConceptMapElementTarget.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ConceptMapElementTarget.fromJson;
 
   @override
@@ -9297,7 +9297,7 @@ class _$_ConceptMapTargetDependsOn extends _ConceptMapTargetDependsOn {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ConceptMapTargetDependsOn.fromJson(Map<String, dynamic> json) =>
+  factory _$_ConceptMapTargetDependsOn.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ConceptMapTargetDependsOnFromJson(json);
 
   @override
@@ -9388,7 +9388,7 @@ abstract class _ConceptMapTargetDependsOn extends ConceptMapTargetDependsOn {
       required final String code}) = _$_ConceptMapTargetDependsOn;
   _ConceptMapTargetDependsOn._() : super._();
 
-  factory _ConceptMapTargetDependsOn.fromJson(Map<String, dynamic> json) =
+  factory _ConceptMapTargetDependsOn.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ConceptMapTargetDependsOn.fromJson;
 
   @override
@@ -10208,7 +10208,7 @@ class _$_NamingSystem extends _NamingSystem {
         _uniqueId = uniqueId,
         super._();
 
-  factory _$_NamingSystem.fromJson(Map<String, dynamic> json) =>
+  factory _$_NamingSystem.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_NamingSystemFromJson(json);
 
   @override
@@ -10504,7 +10504,7 @@ abstract class _NamingSystem extends NamingSystem {
       final Reference? replacedBy}) = _$_NamingSystem;
   _NamingSystem._() : super._();
 
-  factory _NamingSystem.fromJson(Map<String, dynamic> json) =
+  factory _NamingSystem.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_NamingSystem.fromJson;
 
   @override
@@ -10741,7 +10741,7 @@ class _$_NamingSystemContact extends _NamingSystemContact {
         _telecom = telecom,
         super._();
 
-  factory _$_NamingSystemContact.fromJson(Map<String, dynamic> json) =>
+  factory _$_NamingSystemContact.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_NamingSystemContactFromJson(json);
 
   @override
@@ -10833,7 +10833,7 @@ abstract class _NamingSystemContact extends NamingSystemContact {
       final List<ContactPoint>? telecom}) = _$_NamingSystemContact;
   _NamingSystemContact._() : super._();
 
-  factory _NamingSystemContact.fromJson(Map<String, dynamic> json) =
+  factory _NamingSystemContact.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_NamingSystemContact.fromJson;
 
   @override
@@ -11139,7 +11139,7 @@ class _$_NamingSystemUniqueId extends _NamingSystemUniqueId {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_NamingSystemUniqueId.fromJson(Map<String, dynamic> json) =>
+  factory _$_NamingSystemUniqueId.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_NamingSystemUniqueIdFromJson(json);
 
   @override
@@ -11262,7 +11262,7 @@ abstract class _NamingSystemUniqueId extends NamingSystemUniqueId {
       final Period? period}) = _$_NamingSystemUniqueId;
   _NamingSystemUniqueId._() : super._();
 
-  factory _NamingSystemUniqueId.fromJson(Map<String, dynamic> json) =
+  factory _NamingSystemUniqueId.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_NamingSystemUniqueId.fromJson;
 
   @override

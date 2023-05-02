@@ -264,7 +264,7 @@ class _$_Meta extends _Meta {
         _tag = tag,
         super._();
 
-  factory _$_Meta.fromJson(Map<String, dynamic> json) => _$$_MetaFromJson(json);
+  factory _$_Meta.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) => _$$_MetaFromJson(json);
 
   @override
   final FhirId? id;
@@ -401,7 +401,7 @@ abstract class _Meta extends Meta {
       final List<Coding>? tag}) = _$_Meta;
   _Meta._() : super._();
 
-  factory _Meta.fromJson(Map<String, dynamic> json) = _$_Meta.fromJson;
+  factory _Meta.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) = _$_Meta.fromJson;
 
   @override
   FhirId? get id;
@@ -641,7 +641,7 @@ class _$_Reference extends _Reference {
         _fhirComments = fhirComments,
         super._();
 
-  factory _$_Reference.fromJson(Map<String, dynamic> json) =>
+  factory _$_Reference.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ReferenceFromJson(json);
 
   @override
@@ -740,7 +740,7 @@ abstract class _Reference extends Reference {
       @JsonKey(name: '_display') final Element? displayElement}) = _$_Reference;
   _Reference._() : super._();
 
-  factory _Reference.fromJson(Map<String, dynamic> json) =
+  factory _Reference.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_Reference.fromJson;
 
   @override
@@ -9232,7 +9232,7 @@ class _$_ElementDefinition extends _ElementDefinition {
         _mapping = mapping,
         super._();
 
-  factory _$_ElementDefinition.fromJson(Map<String, dynamic> json) =>
+  factory _$_ElementDefinition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ElementDefinitionFromJson(json);
 
   @override
@@ -11265,7 +11265,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final List<ElementDefinitionMapping>? mapping}) = _$_ElementDefinition;
   _ElementDefinition._() : super._();
 
-  factory _ElementDefinition.fromJson(Map<String, dynamic> json) =
+  factory _ElementDefinition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ElementDefinition.fromJson;
 
   @override
@@ -12241,7 +12241,7 @@ class _$_Narrative extends _Narrative {
         _fhirComments = fhirComments,
         super._();
 
-  factory _$_Narrative.fromJson(Map<String, dynamic> json) =>
+  factory _$_Narrative.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_NarrativeFromJson(json);
 
   @override
@@ -12337,7 +12337,7 @@ abstract class _Narrative extends Narrative {
       required final String div}) = _$_Narrative;
   _Narrative._() : super._();
 
-  factory _Narrative.fromJson(Map<String, dynamic> json) =
+  factory _Narrative.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_Narrative.fromJson;
 
   @override
@@ -12621,7 +12621,7 @@ class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
         _discriminator = discriminator,
         super._();
 
-  factory _$_ElementDefinitionSlicing.fromJson(Map<String, dynamic> json) =>
+  factory _$_ElementDefinitionSlicing.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ElementDefinitionSlicingFromJson(json);
 
   @override
@@ -12738,7 +12738,7 @@ abstract class _ElementDefinitionSlicing extends ElementDefinitionSlicing {
           final Element? rulesElement}) = _$_ElementDefinitionSlicing;
   _ElementDefinitionSlicing._() : super._();
 
-  factory _ElementDefinitionSlicing.fromJson(Map<String, dynamic> json) =
+  factory _ElementDefinitionSlicing.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ElementDefinitionSlicing.fromJson;
 
   @override
@@ -13011,7 +13011,7 @@ class _$_ElementDefinitionBase extends _ElementDefinitionBase {
       : _extension_ = extension_,
         super._();
 
-  factory _$_ElementDefinitionBase.fromJson(Map<String, dynamic> json) =>
+  factory _$_ElementDefinitionBase.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ElementDefinitionBaseFromJson(json);
 
   @override
@@ -13108,7 +13108,7 @@ abstract class _ElementDefinitionBase extends ElementDefinitionBase {
       _$_ElementDefinitionBase;
   _ElementDefinitionBase._() : super._();
 
-  factory _ElementDefinitionBase.fromJson(Map<String, dynamic> json) =
+  factory _ElementDefinitionBase.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ElementDefinitionBase.fromJson;
 
   @override
@@ -13366,7 +13366,7 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
         _fhirElement = fhirElement,
         super._();
 
-  factory _$_ElementDefinitionType.fromJson(Map<String, dynamic> json) =>
+  factory _$_ElementDefinitionType.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ElementDefinitionTypeFromJson(json);
 
   @override
@@ -13487,7 +13487,7 @@ abstract class _ElementDefinitionType extends ElementDefinitionType {
       _$_ElementDefinitionType;
   _ElementDefinitionType._() : super._();
 
-  factory _ElementDefinitionType.fromJson(Map<String, dynamic> json) =
+  factory _ElementDefinitionType.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ElementDefinitionType.fromJson;
 
   @override
@@ -13605,7 +13605,7 @@ class _$_TypeCodeExtension extends _TypeCodeExtension {
       : _extension_ = extension_,
         super._();
 
-  factory _$_TypeCodeExtension.fromJson(Map<String, dynamic> json) =>
+  factory _$_TypeCodeExtension.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TypeCodeExtensionFromJson(json);
 
   final List<FhirExtension>? _extension_;
@@ -13659,7 +13659,7 @@ abstract class _TypeCodeExtension extends TypeCodeExtension {
       _$_TypeCodeExtension;
   _TypeCodeExtension._() : super._();
 
-  factory _TypeCodeExtension.fromJson(Map<String, dynamic> json) =
+  factory _TypeCodeExtension.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TypeCodeExtension.fromJson;
 
   @override
@@ -14027,7 +14027,7 @@ class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
       : _extension_ = extension_,
         super._();
 
-  factory _$_ElementDefinitionConstraint.fromJson(Map<String, dynamic> json) =>
+  factory _$_ElementDefinitionConstraint.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ElementDefinitionConstraintFromJson(json);
 
   @override
@@ -14158,7 +14158,7 @@ abstract class _ElementDefinitionConstraint
           final Element? xpathElement}) = _$_ElementDefinitionConstraint;
   _ElementDefinitionConstraint._() : super._();
 
-  factory _ElementDefinitionConstraint.fromJson(Map<String, dynamic> json) =
+  factory _ElementDefinitionConstraint.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ElementDefinitionConstraint.fromJson;
 
   @override
@@ -14456,7 +14456,7 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
       : _extension_ = extension_,
         super._();
 
-  factory _$_ElementDefinitionBinding.fromJson(Map<String, dynamic> json) =>
+  factory _$_ElementDefinitionBinding.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ElementDefinitionBindingFromJson(json);
 
   @override
@@ -14561,7 +14561,7 @@ abstract class _ElementDefinitionBinding extends ElementDefinitionBinding {
       final Reference? valueSetReference}) = _$_ElementDefinitionBinding;
   _ElementDefinitionBinding._() : super._();
 
-  factory _ElementDefinitionBinding.fromJson(Map<String, dynamic> json) =
+  factory _ElementDefinitionBinding.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ElementDefinitionBinding.fromJson;
 
   @override
@@ -14851,7 +14851,7 @@ class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
         _fhirComments = fhirComments,
         super._();
 
-  factory _$_ElementDefinitionMapping.fromJson(Map<String, dynamic> json) =>
+  factory _$_ElementDefinitionMapping.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ElementDefinitionMappingFromJson(json);
 
   @override
@@ -14965,7 +14965,7 @@ abstract class _ElementDefinitionMapping extends ElementDefinitionMapping {
       _$_ElementDefinitionMapping;
   _ElementDefinitionMapping._() : super._();
 
-  factory _ElementDefinitionMapping.fromJson(Map<String, dynamic> json) =
+  factory _ElementDefinitionMapping.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ElementDefinitionMapping.fromJson;
 
   @override

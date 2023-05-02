@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -216,7 +217,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PaymentNotice.fromJson(Map<String, dynamic> json) =>
+  factory PaymentNotice.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$PaymentNoticeFromJson(json);
 
   /// Acts like a constructor, returns a [PaymentNotice], accepts a
@@ -576,7 +577,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
+  factory PaymentReconciliation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$PaymentReconciliationFromJson(json);
 
   /// Acts like a constructor, returns a [PaymentReconciliation], accepts a
@@ -778,7 +779,7 @@ class PaymentReconciliationAllocation with _$PaymentReconciliationAllocation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PaymentReconciliationAllocation.fromJson(Map<String, dynamic> json) =>
+  factory PaymentReconciliationAllocation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$PaymentReconciliationAllocationFromJson(json);
 
   /// Acts like a constructor, returns a [PaymentReconciliationAllocation],

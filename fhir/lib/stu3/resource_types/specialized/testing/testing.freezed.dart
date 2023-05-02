@@ -750,7 +750,7 @@ class _$_TestReport extends _TestReport {
         _test = test,
         super._();
 
-  factory _$_TestReport.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestReport.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestReportFromJson(json);
 
   @override
@@ -1014,7 +1014,7 @@ abstract class _TestReport extends TestReport {
       final TestReportTeardown? teardown}) = _$_TestReport;
   _TestReport._() : super._();
 
-  factory _TestReport.fromJson(Map<String, dynamic> json) =
+  factory _TestReport.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestReport.fromJson;
 
   @override
@@ -1302,7 +1302,7 @@ class _$_TestReportParticipant extends _TestReportParticipant {
       @JsonKey(name: '_display') this.displayElement})
       : super._();
 
-  factory _$_TestReportParticipant.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestReportParticipant.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestReportParticipantFromJson(json);
 
   @override
@@ -1373,7 +1373,7 @@ abstract class _TestReportParticipant extends TestReportParticipant {
       _$_TestReportParticipant;
   _TestReportParticipant._() : super._();
 
-  factory _TestReportParticipant.fromJson(Map<String, dynamic> json) =
+  factory _TestReportParticipant.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestReportParticipant.fromJson;
 
   @override
@@ -1484,7 +1484,7 @@ class _$_TestReportSetup extends _TestReportSetup {
       : _action = action,
         super._();
 
-  factory _$_TestReportSetup.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestReportSetup.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestReportSetupFromJson(json);
 
   final List<TestReportAction> _action;
@@ -1532,7 +1532,7 @@ abstract class _TestReportSetup extends TestReportSetup {
       _$_TestReportSetup;
   _TestReportSetup._() : super._();
 
-  factory _TestReportSetup.fromJson(Map<String, dynamic> json) =
+  factory _TestReportSetup.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestReportSetup.fromJson;
 
   @override
@@ -1677,7 +1677,7 @@ class _$_TestReportAction extends _TestReportAction {
   _$_TestReportAction({this.operation, @JsonKey(name: 'assert') this.assert_})
       : super._();
 
-  factory _$_TestReportAction.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestReportAction.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestReportActionFromJson(json);
 
   @override
@@ -1726,7 +1726,7 @@ abstract class _TestReportAction extends TestReportAction {
       _$_TestReportAction;
   _TestReportAction._() : super._();
 
-  factory _TestReportAction.fromJson(Map<String, dynamic> json) =
+  factory _TestReportAction.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestReportAction.fromJson;
 
   @override
@@ -1949,7 +1949,7 @@ class _$_TestReportOperation extends _TestReportOperation {
       @JsonKey(name: '_detail') this.detailElement})
       : super._();
 
-  factory _$_TestReportOperation.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestReportOperation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestReportOperationFromJson(json);
 
   @override
@@ -2020,7 +2020,7 @@ abstract class _TestReportOperation extends TestReportOperation {
       _$_TestReportOperation;
   _TestReportOperation._() : super._();
 
-  factory _TestReportOperation.fromJson(Map<String, dynamic> json) =
+  factory _TestReportOperation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestReportOperation.fromJson;
 
   @override
@@ -2253,7 +2253,7 @@ class _$_TestReportAssert extends _TestReportAssert {
       @JsonKey(name: '_detail') this.detailElement})
       : super._();
 
-  factory _$_TestReportAssert.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestReportAssert.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestReportAssertFromJson(json);
 
   @override
@@ -2323,7 +2323,7 @@ abstract class _TestReportAssert extends TestReportAssert {
       _$_TestReportAssert;
   _TestReportAssert._() : super._();
 
-  factory _TestReportAssert.fromJson(Map<String, dynamic> json) =
+  factory _TestReportAssert.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestReportAssert.fromJson;
 
   @override
@@ -2527,7 +2527,7 @@ class _$_TestReportTest extends _TestReportTest {
       : _action = action,
         super._();
 
-  factory _$_TestReportTest.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestReportTest.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestReportTestFromJson(json);
 
   @override
@@ -2596,7 +2596,7 @@ abstract class _TestReportTest extends TestReportTest {
       required final List<TestReportAction1> action}) = _$_TestReportTest;
   _TestReportTest._() : super._();
 
-  factory _TestReportTest.fromJson(Map<String, dynamic> json) =
+  factory _TestReportTest.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestReportTest.fromJson;
 
   @override
@@ -2751,7 +2751,7 @@ class _$_TestReportAction1 extends _TestReportAction1 {
   _$_TestReportAction1({this.operation, @JsonKey(name: 'assert') this.assert_})
       : super._();
 
-  factory _$_TestReportAction1.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestReportAction1.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestReportAction1FromJson(json);
 
   @override
@@ -2801,7 +2801,7 @@ abstract class _TestReportAction1 extends TestReportAction1 {
       _$_TestReportAction1;
   _TestReportAction1._() : super._();
 
-  factory _TestReportAction1.fromJson(Map<String, dynamic> json) =
+  factory _TestReportAction1.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestReportAction1.fromJson;
 
   @override
@@ -2902,7 +2902,7 @@ class _$_TestReportTeardown extends _TestReportTeardown {
       : _action = action,
         super._();
 
-  factory _$_TestReportTeardown.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestReportTeardown.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestReportTeardownFromJson(json);
 
   final List<TestReportAction2> _action;
@@ -2951,7 +2951,7 @@ abstract class _TestReportTeardown extends TestReportTeardown {
       _$_TestReportTeardown;
   _TestReportTeardown._() : super._();
 
-  factory _TestReportTeardown.fromJson(Map<String, dynamic> json) =
+  factory _TestReportTeardown.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestReportTeardown.fromJson;
 
   @override
@@ -3060,7 +3060,7 @@ class __$$_TestReportAction2CopyWithImpl<$Res>
 class _$_TestReportAction2 extends _TestReportAction2 {
   _$_TestReportAction2({required this.operation}) : super._();
 
-  factory _$_TestReportAction2.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestReportAction2.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestReportAction2FromJson(json);
 
   @override
@@ -3104,7 +3104,7 @@ abstract class _TestReportAction2 extends TestReportAction2 {
       _$_TestReportAction2;
   _TestReportAction2._() : super._();
 
-  factory _TestReportAction2.fromJson(Map<String, dynamic> json) =
+  factory _TestReportAction2.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestReportAction2.fromJson;
 
   @override
@@ -4225,7 +4225,7 @@ class _$_TestScript extends _TestScript {
         _test = test,
         super._();
 
-  factory _$_TestScript.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScript.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptFromJson(json);
 
   @override
@@ -4677,7 +4677,7 @@ abstract class _TestScript extends TestScript {
       final TestScriptTeardown? teardown}) = _$_TestScript;
   _TestScript._() : super._();
 
-  factory _TestScript.fromJson(Map<String, dynamic> json) =
+  factory _TestScript.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScript.fromJson;
 
   @override
@@ -4943,7 +4943,7 @@ class _$_TestScriptOrigin extends _TestScriptOrigin {
       required this.profile})
       : super._();
 
-  factory _$_TestScriptOrigin.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptOrigin.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptOriginFromJson(json);
 
   @override
@@ -4995,7 +4995,7 @@ abstract class _TestScriptOrigin extends TestScriptOrigin {
       required final Coding profile}) = _$_TestScriptOrigin;
   _TestScriptOrigin._() : super._();
 
-  factory _TestScriptOrigin.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptOrigin.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptOrigin.fromJson;
 
   @override
@@ -5159,7 +5159,7 @@ class _$_TestScriptDestination extends _TestScriptDestination {
       required this.profile})
       : super._();
 
-  factory _$_TestScriptDestination.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptDestination.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptDestinationFromJson(json);
 
   @override
@@ -5212,7 +5212,7 @@ abstract class _TestScriptDestination extends TestScriptDestination {
       required final Coding profile}) = _$_TestScriptDestination;
   _TestScriptDestination._() : super._();
 
-  factory _TestScriptDestination.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptDestination.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptDestination.fromJson;
 
   @override
@@ -5332,7 +5332,7 @@ class _$_TestScriptMetadata extends _TestScriptMetadata {
         _capability = capability,
         super._();
 
-  factory _$_TestScriptMetadata.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptMetadata.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptMetadataFromJson(json);
 
   final List<TestScriptLink>? _link;
@@ -5397,7 +5397,7 @@ abstract class _TestScriptMetadata extends TestScriptMetadata {
       _$_TestScriptMetadata;
   _TestScriptMetadata._() : super._();
 
-  factory _TestScriptMetadata.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptMetadata.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptMetadata.fromJson;
 
   @override
@@ -5575,7 +5575,7 @@ class _$_TestScriptLink extends _TestScriptLink {
       @JsonKey(name: '_description') this.descriptionElement})
       : super._();
 
-  factory _$_TestScriptLink.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptLink.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptLinkFromJson(json);
 
   @override
@@ -5636,7 +5636,7 @@ abstract class _TestScriptLink extends TestScriptLink {
       _$_TestScriptLink;
   _TestScriptLink._() : super._();
 
-  factory _TestScriptLink.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptLink.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptLink.fromJson;
 
   @override
@@ -5997,7 +5997,7 @@ class _$_TestScriptCapability extends _TestScriptCapability {
         _linkElement = linkElement,
         super._();
 
-  factory _$_TestScriptCapability.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptCapability.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptCapabilityFromJson(json);
 
   @override
@@ -6152,7 +6152,7 @@ abstract class _TestScriptCapability extends TestScriptCapability {
       required final Reference capabilities}) = _$_TestScriptCapability;
   _TestScriptCapability._() : super._();
 
-  factory _TestScriptCapability.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptCapability.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptCapability.fromJson;
 
   @override
@@ -6388,7 +6388,7 @@ class _$_TestScriptFixture extends _TestScriptFixture {
       this.resource})
       : super._();
 
-  factory _$_TestScriptFixture.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptFixture.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptFixtureFromJson(json);
 
   @override
@@ -6455,7 +6455,7 @@ abstract class _TestScriptFixture extends TestScriptFixture {
       final Reference? resource}) = _$_TestScriptFixture;
   _TestScriptFixture._() : super._();
 
-  factory _TestScriptFixture.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptFixture.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptFixture.fromJson;
 
   @override
@@ -6905,7 +6905,7 @@ class _$_TestScriptVariable extends _TestScriptVariable {
       @JsonKey(name: '_sourceId') this.sourceIdElement})
       : super._();
 
-  factory _$_TestScriptVariable.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptVariable.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptVariableFromJson(json);
 
   @override
@@ -7047,7 +7047,7 @@ abstract class _TestScriptVariable extends TestScriptVariable {
       _$_TestScriptVariable;
   _TestScriptVariable._() : super._();
 
-  factory _TestScriptVariable.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptVariable.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptVariable.fromJson;
 
   @override
@@ -7208,7 +7208,7 @@ class _$_TestScriptRule extends _TestScriptRule {
       : _param = param,
         super._();
 
-  factory _$_TestScriptRule.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptRule.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptRuleFromJson(json);
 
   @override
@@ -7263,7 +7263,7 @@ abstract class _TestScriptRule extends TestScriptRule {
       final List<TestScriptParam>? param}) = _$_TestScriptRule;
   _TestScriptRule._() : super._();
 
-  factory _TestScriptRule.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptRule.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptRule.fromJson;
 
   @override
@@ -7441,7 +7441,7 @@ class _$_TestScriptParam extends _TestScriptParam {
       @JsonKey(name: '_value') this.valueElement})
       : super._();
 
-  factory _$_TestScriptParam.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptParam.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptParamFromJson(json);
 
   @override
@@ -7501,7 +7501,7 @@ abstract class _TestScriptParam extends TestScriptParam {
       _$_TestScriptParam;
   _TestScriptParam._() : super._();
 
-  factory _TestScriptParam.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptParam.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptParam.fromJson;
 
   @override
@@ -7632,7 +7632,7 @@ class _$_TestScriptRuleset extends _TestScriptRuleset {
       : _rule = rule,
         super._();
 
-  factory _$_TestScriptRuleset.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptRuleset.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptRulesetFromJson(json);
 
   @override
@@ -7686,7 +7686,7 @@ abstract class _TestScriptRuleset extends TestScriptRuleset {
       required final List<TestScriptRule1> rule}) = _$_TestScriptRuleset;
   _TestScriptRuleset._() : super._();
 
-  factory _TestScriptRuleset.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptRuleset.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptRuleset.fromJson;
 
   @override
@@ -7835,7 +7835,7 @@ class _$_TestScriptRule1 extends _TestScriptRule1 {
       : _param = param,
         super._();
 
-  factory _$_TestScriptRule1.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptRule1.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptRule1FromJson(json);
 
   @override
@@ -7895,7 +7895,7 @@ abstract class _TestScriptRule1 extends TestScriptRule1 {
       final List<TestScriptParam1>? param}) = _$_TestScriptRule1;
   _TestScriptRule1._() : super._();
 
-  factory _TestScriptRule1.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptRule1.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptRule1.fromJson;
 
   @override
@@ -8076,7 +8076,7 @@ class _$_TestScriptParam1 extends _TestScriptParam1 {
       @JsonKey(name: '_value') this.valueElement})
       : super._();
 
-  factory _$_TestScriptParam1.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptParam1.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptParam1FromJson(json);
 
   @override
@@ -8136,7 +8136,7 @@ abstract class _TestScriptParam1 extends TestScriptParam1 {
       _$_TestScriptParam1;
   _TestScriptParam1._() : super._();
 
-  factory _TestScriptParam1.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptParam1.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptParam1.fromJson;
 
   @override
@@ -8242,7 +8242,7 @@ class _$_TestScriptSetup extends _TestScriptSetup {
       : _action = action,
         super._();
 
-  factory _$_TestScriptSetup.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptSetup.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptSetupFromJson(json);
 
   final List<TestScriptAction> _action;
@@ -8290,7 +8290,7 @@ abstract class _TestScriptSetup extends TestScriptSetup {
       _$_TestScriptSetup;
   _TestScriptSetup._() : super._();
 
-  factory _TestScriptSetup.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptSetup.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptSetup.fromJson;
 
   @override
@@ -8435,7 +8435,7 @@ class _$_TestScriptAction extends _TestScriptAction {
   _$_TestScriptAction({this.operation, @JsonKey(name: 'assert') this.assert_})
       : super._();
 
-  factory _$_TestScriptAction.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptAction.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptActionFromJson(json);
 
   @override
@@ -8484,7 +8484,7 @@ abstract class _TestScriptAction extends TestScriptAction {
       _$_TestScriptAction;
   _TestScriptAction._() : super._();
 
-  factory _TestScriptAction.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptAction.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptAction.fromJson;
 
   @override
@@ -9237,7 +9237,7 @@ class _$_TestScriptOperation extends _TestScriptOperation {
       : _requestHeader = requestHeader,
         super._();
 
-  factory _$_TestScriptOperation.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptOperation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptOperationFromJson(json);
 
   @override
@@ -9489,7 +9489,7 @@ abstract class _TestScriptOperation extends TestScriptOperation {
           final Element? urlElement}) = _$_TestScriptOperation;
   _TestScriptOperation._() : super._();
 
-  factory _TestScriptOperation.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptOperation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptOperation.fromJson;
 
   @override
@@ -9740,7 +9740,7 @@ class _$_TestScriptRequestHeader extends _TestScriptRequestHeader {
       @JsonKey(name: '_value') this.valueElement})
       : super._();
 
-  factory _$_TestScriptRequestHeader.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptRequestHeader.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptRequestHeaderFromJson(json);
 
   @override
@@ -9802,7 +9802,7 @@ abstract class _TestScriptRequestHeader extends TestScriptRequestHeader {
       _$_TestScriptRequestHeader;
   _TestScriptRequestHeader._() : super._();
 
-  factory _TestScriptRequestHeader.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptRequestHeader.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptRequestHeader.fromJson;
 
   @override
@@ -11002,7 +11002,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
           this.warningOnlyElement})
       : super._();
 
-  factory _$_TestScriptAssert.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptAssert.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptAssertFromJson(json);
 
   @override
@@ -11343,7 +11343,7 @@ abstract class _TestScriptAssert extends TestScriptAssert {
           final Element? warningOnlyElement}) = _$_TestScriptAssert;
   _TestScriptAssert._() : super._();
 
-  factory _TestScriptAssert.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptAssert.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptAssert.fromJson;
 
   @override
@@ -11603,7 +11603,7 @@ class _$_TestScriptRule2 extends _TestScriptRule2 {
       : _param = param,
         super._();
 
-  factory _$_TestScriptRule2.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptRule2.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptRule2FromJson(json);
 
   @override
@@ -11663,7 +11663,7 @@ abstract class _TestScriptRule2 extends TestScriptRule2 {
       final List<TestScriptParam2>? param}) = _$_TestScriptRule2;
   _TestScriptRule2._() : super._();
 
-  factory _TestScriptRule2.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptRule2.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptRule2.fromJson;
 
   @override
@@ -11844,7 +11844,7 @@ class _$_TestScriptParam2 extends _TestScriptParam2 {
       @JsonKey(name: '_value') this.valueElement})
       : super._();
 
-  factory _$_TestScriptParam2.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptParam2.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptParam2FromJson(json);
 
   @override
@@ -11904,7 +11904,7 @@ abstract class _TestScriptParam2 extends TestScriptParam2 {
       _$_TestScriptParam2;
   _TestScriptParam2._() : super._();
 
-  factory _TestScriptParam2.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptParam2.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptParam2.fromJson;
 
   @override
@@ -12059,7 +12059,7 @@ class _$_TestScriptRuleset1 extends _TestScriptRuleset1 {
       : _rule = rule,
         super._();
 
-  factory _$_TestScriptRuleset1.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptRuleset1.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptRuleset1FromJson(json);
 
   @override
@@ -12121,7 +12121,7 @@ abstract class _TestScriptRuleset1 extends TestScriptRuleset1 {
       final List<TestScriptRule3>? rule}) = _$_TestScriptRuleset1;
   _TestScriptRuleset1._() : super._();
 
-  factory _TestScriptRuleset1.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptRuleset1.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptRuleset1.fromJson;
 
   @override
@@ -12273,7 +12273,7 @@ class _$_TestScriptRule3 extends _TestScriptRule3 {
       : _param = param,
         super._();
 
-  factory _$_TestScriptRule3.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptRule3.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptRule3FromJson(json);
 
   @override
@@ -12333,7 +12333,7 @@ abstract class _TestScriptRule3 extends TestScriptRule3 {
       final List<TestScriptParam3>? param}) = _$_TestScriptRule3;
   _TestScriptRule3._() : super._();
 
-  factory _TestScriptRule3.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptRule3.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptRule3.fromJson;
 
   @override
@@ -12514,7 +12514,7 @@ class _$_TestScriptParam3 extends _TestScriptParam3 {
       @JsonKey(name: '_value') this.valueElement})
       : super._();
 
-  factory _$_TestScriptParam3.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptParam3.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptParam3FromJson(json);
 
   @override
@@ -12574,7 +12574,7 @@ abstract class _TestScriptParam3 extends TestScriptParam3 {
       _$_TestScriptParam3;
   _TestScriptParam3._() : super._();
 
-  factory _TestScriptParam3.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptParam3.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptParam3.fromJson;
 
   @override
@@ -12773,7 +12773,7 @@ class _$_TestScriptTest extends _TestScriptTest {
       : _action = action,
         super._();
 
-  factory _$_TestScriptTest.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptTest.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptTestFromJson(json);
 
   @override
@@ -12842,7 +12842,7 @@ abstract class _TestScriptTest extends TestScriptTest {
       required final List<TestScriptAction1> action}) = _$_TestScriptTest;
   _TestScriptTest._() : super._();
 
-  factory _TestScriptTest.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptTest.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptTest.fromJson;
 
   @override
@@ -12997,7 +12997,7 @@ class _$_TestScriptAction1 extends _TestScriptAction1 {
   _$_TestScriptAction1({this.operation, @JsonKey(name: 'assert') this.assert_})
       : super._();
 
-  factory _$_TestScriptAction1.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptAction1.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptAction1FromJson(json);
 
   @override
@@ -13047,7 +13047,7 @@ abstract class _TestScriptAction1 extends TestScriptAction1 {
       _$_TestScriptAction1;
   _TestScriptAction1._() : super._();
 
-  factory _TestScriptAction1.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptAction1.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptAction1.fromJson;
 
   @override
@@ -13148,7 +13148,7 @@ class _$_TestScriptTeardown extends _TestScriptTeardown {
       : _action = action,
         super._();
 
-  factory _$_TestScriptTeardown.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptTeardown.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptTeardownFromJson(json);
 
   final List<TestScriptAction2> _action;
@@ -13197,7 +13197,7 @@ abstract class _TestScriptTeardown extends TestScriptTeardown {
       _$_TestScriptTeardown;
   _TestScriptTeardown._() : super._();
 
-  factory _TestScriptTeardown.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptTeardown.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptTeardown.fromJson;
 
   @override
@@ -13306,7 +13306,7 @@ class __$$_TestScriptAction2CopyWithImpl<$Res>
 class _$_TestScriptAction2 extends _TestScriptAction2 {
   _$_TestScriptAction2({required this.operation}) : super._();
 
-  factory _$_TestScriptAction2.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptAction2.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptAction2FromJson(json);
 
   @override
@@ -13350,7 +13350,7 @@ abstract class _TestScriptAction2 extends TestScriptAction2 {
       _$_TestScriptAction2;
   _TestScriptAction2._() : super._();
 
-  factory _TestScriptAction2.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptAction2.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptAction2.fromJson;
 
   @override

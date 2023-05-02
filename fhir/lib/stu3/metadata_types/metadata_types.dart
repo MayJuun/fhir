@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -36,7 +37,7 @@ class ContactDetail with _$ContactDetail {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ContactDetail.fromJson(Map<String, dynamic> json) =>
+  factory ContactDetail.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$ContactDetailFromJson(json);
 
   /// Acts like a constructor, returns a [ContactDetail], accepts a
@@ -78,7 +79,7 @@ class Contributor with _$Contributor {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Contributor.fromJson(Map<String, dynamic> json) =>
+  factory Contributor.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$ContributorFromJson(json);
 
   /// Acts like a constructor, returns a [Contributor], accepts a
@@ -125,7 +126,7 @@ class RelatedArtifact with _$RelatedArtifact {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory RelatedArtifact.fromJson(Map<String, dynamic> json) =>
+  factory RelatedArtifact.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$RelatedArtifactFromJson(json);
 
   /// Acts like a constructor, returns a [RelatedArtifact], accepts a
@@ -166,7 +167,7 @@ class UsageContext with _$UsageContext {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory UsageContext.fromJson(Map<String, dynamic> json) =>
+  factory UsageContext.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$UsageContextFromJson(json);
 
   /// Acts like a constructor, returns a [UsageContext], accepts a
@@ -211,7 +212,7 @@ class DataRequirement with _$DataRequirement {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DataRequirement.fromJson(Map<String, dynamic> json) =>
+  factory DataRequirement.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$DataRequirementFromJson(json);
 
   /// Acts like a constructor, returns a [DataRequirement], accepts a
@@ -257,7 +258,7 @@ class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DataRequirementCodeFilter.fromJson(Map<String, dynamic> json) =>
+  factory DataRequirementCodeFilter.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$DataRequirementCodeFilterFromJson(json);
 
   /// Acts like a constructor, returns a [DataRequirementCodeFilter], accepts a
@@ -300,7 +301,7 @@ class DataRequirementDateFilter with _$DataRequirementDateFilter {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DataRequirementDateFilter.fromJson(Map<String, dynamic> json) =>
+  factory DataRequirementDateFilter.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$DataRequirementDateFilterFromJson(json);
 
   /// Acts like a constructor, returns a [DataRequirementDateFilter], accepts a
@@ -350,7 +351,7 @@ class ParameterDefinition with _$ParameterDefinition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ParameterDefinition.fromJson(Map<String, dynamic> json) =>
+  factory ParameterDefinition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$ParameterDefinitionFromJson(json);
 
   /// Acts like a constructor, returns a [ParameterDefinition], accepts a
@@ -398,7 +399,7 @@ class TriggerDefinition with _$TriggerDefinition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TriggerDefinition.fromJson(Map<String, dynamic> json) =>
+  factory TriggerDefinition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$TriggerDefinitionFromJson(json);
 
   /// Acts like a constructor, returns a [TriggerDefinition], accepts a

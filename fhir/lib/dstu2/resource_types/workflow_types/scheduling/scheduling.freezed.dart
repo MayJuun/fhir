@@ -762,7 +762,7 @@ class _$_Appointment extends _Appointment {
         _participant = participant,
         super._();
 
-  factory _$_Appointment.fromJson(Map<String, dynamic> json) =>
+  factory _$_Appointment.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_AppointmentFromJson(json);
 
   @override
@@ -1043,7 +1043,7 @@ abstract class _Appointment extends Appointment {
       _$_Appointment;
   _Appointment._() : super._();
 
-  factory _Appointment.fromJson(Map<String, dynamic> json) =
+  factory _Appointment.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_Appointment.fromJson;
 
   @override
@@ -1399,7 +1399,7 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
         _type = type,
         super._();
 
-  factory _$_AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
+  factory _$_AppointmentParticipant.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_AppointmentParticipantFromJson(json);
 
   @override
@@ -1524,7 +1524,7 @@ abstract class _AppointmentParticipant extends AppointmentParticipant {
           final Element? statusElement}) = _$_AppointmentParticipant;
   _AppointmentParticipant._() : super._();
 
-  factory _AppointmentParticipant.fromJson(Map<String, dynamic> json) =
+  factory _AppointmentParticipant.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_AppointmentParticipant.fromJson;
 
   @override
@@ -2147,7 +2147,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
         _participantType = participantType,
         super._();
 
-  factory _$_AppointmentResponse.fromJson(Map<String, dynamic> json) =>
+  factory _$_AppointmentResponse.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_AppointmentResponseFromJson(json);
 
   @override
@@ -2381,7 +2381,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
           final Element? commentElement}) = _$_AppointmentResponse;
   _AppointmentResponse._() : super._();
 
-  factory _AppointmentResponse.fromJson(Map<String, dynamic> json) =
+  factory _AppointmentResponse.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_AppointmentResponse.fromJson;
 
   @override
@@ -2887,7 +2887,7 @@ class _$_Schedule extends _Schedule {
         _type = type,
         super._();
 
-  factory _$_Schedule.fromJson(Map<String, dynamic> json) =>
+  factory _$_Schedule.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ScheduleFromJson(json);
 
   @override
@@ -3073,7 +3073,7 @@ abstract class _Schedule extends Schedule {
           final Element? commentElement}) = _$_Schedule;
   _Schedule._() : super._();
 
-  factory _Schedule.fromJson(Map<String, dynamic> json) = _$_Schedule.fromJson;
+  factory _Schedule.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) = _$_Schedule.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
@@ -3700,7 +3700,7 @@ class _$_Slot extends _Slot {
         _identifier = identifier,
         super._();
 
-  factory _$_Slot.fromJson(Map<String, dynamic> json) => _$$_SlotFromJson(json);
+  factory _$_Slot.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) => _$$_SlotFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
@@ -3921,7 +3921,7 @@ abstract class _Slot extends Slot {
           final Element? commentElement}) = _$_Slot;
   _Slot._() : super._();
 
-  factory _Slot.fromJson(Map<String, dynamic> json) = _$_Slot.fromJson;
+  factory _Slot.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) = _$_Slot.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)

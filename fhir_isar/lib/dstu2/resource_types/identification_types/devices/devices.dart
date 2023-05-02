@@ -1,114 +1,289 @@
+// Dart imports:
+import 'dart:convert';
+
+// Package imports:
+
+import 'package:yaml/yaml.dart';
+
+// Project imports:
 import '../../../../dstu2.dart';
+
 part 'devices.enums.dart';
 
-class Device {
-  Dstu2ResourceType resourceType;
-  FhirId? id;
-  Meta? meta;
-  FhirUri? implicitRules;
-  Element? implicitRulesElement;
-  Code? language;
-  Element? languageElement;
-  Narrative? text;
-  List<Resource>? contained;
-  List<FhirExtension>? extension_;
-  List<FhirExtension>? modifierExtension;
-  List<Identifier>? identifier;
-  CodeableConcept type;
-  List<Annotation>? note;
-  DeviceStatus? status;
-  Element? statusElement;
-  String? manufacturer;
-  Element? manufacturerElement;
-  String? model;
-  String? version;
-  FhirDateTime? manufactureDate;
-  Element? manufactureDateElement;
-  FhirDateTime? expiry;
-  String? udi;
-  Element? udiElement;
-  String? lotNumber;
-  Element? lotNumberElement;
-  Reference? owner;
-  Reference? location;
-  Reference? patient;
-  List<ContactPoint>? contact;
-  FhirUri? url;
-  Element? urlElement;
+part 'devices.g.dart';
+
+class Device with Resource, _$Device {
+  Device._();
+  factory Device({
+    @Default(Dstu2ResourceType.Device)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.Device)
+        Dstu2ResourceType resourceType,
+    FhirId? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    required CodeableConcept type,
+    List<Annotation>? note,
+    @JsonKey(unknownEnumValue: DeviceStatus.unknown) DeviceStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    String? manufacturer,
+    @JsonKey(name: '_manufacturer') Element? manufacturerElement,
+    String? model,
+    String? version,
+    FhirDateTime? manufactureDate,
+    @JsonKey(name: '_manufactureDate') Element? manufactureDateElement,
+    FhirDateTime? expiry,
+    String? udi,
+    @JsonKey(name: '_udi') Element? udiElement,
+    String? lotNumber,
+    @JsonKey(name: '_lotNumber') Element? lotNumberElement,
+    Reference? owner,
+    Reference? location,
+    Reference? patient,
+    List<ContactPoint>? contact,
+    FhirUri? url,
+    @JsonKey(name: '_url') Element? urlElement,
+  }) = _Device;
+
+  /// Factory constructor, accepts a [String] in YAML format as an argument
+  factory Device.fromYaml(dynamic yaml) => yaml is String
+      ? Device.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? Device.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'Device cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory Device.fromJson(
+    Map<String, dynamic> json,
+    SerializationManager serializationManager,
+  ) =>
+      _$DeviceFromJson(json);
+
+  /// Acts like a constructor, returns a [Device], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory Device.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DeviceFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
-class DeviceComponent {
-  Dstu2ResourceType resourceType;
-  FhirId? id;
-  Element? idElement;
-  Meta? meta;
-  FhirUri? implicitRules;
-  Code? language;
-  Narrative? text;
-  List<Resource>? contained;
-  List<FhirExtension>? extension_;
-  List<FhirExtension>? modifierExtension;
-  CodeableConcept type;
-  Identifier identifier;
-  Instant lastSystemChange;
-  Reference? source;
-  Reference? parent;
-  List<CodeableConcept>? operationalStatus;
-  CodeableConcept? parameterGroup;
+class DeviceComponent with Resource, _$DeviceComponent {
+  DeviceComponent._();
+  factory DeviceComponent({
+    @Default(Dstu2ResourceType.DeviceComponent)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceComponent)
+        Dstu2ResourceType resourceType,
+    FhirId? id,
+    @JsonKey(name: '_id') Element? idElement,
+    Meta? meta,
+    FhirUri? implicitRules,
+    Code? language,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept type,
+    required Identifier identifier,
+    required Instant lastSystemChange,
+    Reference? source,
+    Reference? parent,
+    List<CodeableConcept>? operationalStatus,
+    CodeableConcept? parameterGroup,
+    @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
+        DeviceComponentMeasurementPrinciple? measurementPrinciple,
+    List<DeviceComponentProductionSpecification>? productionSpecification,
+    CodeableConcept? languageCode,
+  }) = _DeviceComponent;
 
-  DeviceComponentMeasurementPrinciple? measurementPrinciple;
-  List<DeviceComponentProductionSpecification>? productionSpecification;
-  CodeableConcept? languageCode;
+  /// Factory constructor, accepts a [String] in YAML format as an argument
+  factory DeviceComponent.fromYaml(dynamic yaml) => yaml is String
+      ? DeviceComponent.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? DeviceComponent.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'DeviceComponent cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory DeviceComponent.fromJson(
+    Map<String, dynamic> json,
+    SerializationManager serializationManager,
+  ) =>
+      _$DeviceComponentFromJson(json);
+
+  /// Acts like a constructor, returns a [DeviceComponent], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory DeviceComponent.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DeviceComponentFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
-class DeviceComponentProductionSpecification {
-  FhirId? id;
-  List<FhirExtension>? extension_;
-  List<FhirExtension>? modifierExtension;
-  CodeableConcept? specType;
-  Identifier? componentId;
-  String? productionSpec;
+class DeviceComponentProductionSpecification
+    with _$DeviceComponentProductionSpecification {
+  DeviceComponentProductionSpecification._();
+  factory DeviceComponentProductionSpecification({
+    FhirId? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? specType,
+    Identifier? componentId,
+    String? productionSpec,
+  }) = _DeviceComponentProductionSpecification;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor, accepts a [String] in YAML format as an argument
+  factory DeviceComponentProductionSpecification.fromYaml(dynamic yaml) => yaml
+          is String
+      ? DeviceComponentProductionSpecification.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? DeviceComponentProductionSpecification.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'DeviceComponentProductionSpecification cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  factory DeviceComponentProductionSpecification.fromJson(
+          Map<String, dynamic> json) =>
+      _$DeviceComponentProductionSpecificationFromJson(json);
 }
 
-class DeviceMetric {
-  Dstu2ResourceType resourceType;
-  FhirId? id;
-  Meta? meta;
-  FhirUri? implicitRules;
-  Element? implicitRulesElement;
-  Code? language;
-  Element? languageElement;
-  Narrative? text;
-  List<Resource>? contained;
-  List<FhirExtension>? extension_;
-  List<FhirExtension>? modifierExtension;
-  CodeableConcept type;
-  Identifier identifier;
-  CodeableConcept? unit;
-  Reference? source;
-  Reference? parent;
+class DeviceMetric with Resource, _$DeviceMetric {
+  DeviceMetric._();
+  factory DeviceMetric({
+    @Default(Dstu2ResourceType.DeviceMetric)
+    @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceMetric)
+        Dstu2ResourceType resourceType,
+    FhirId? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept type,
+    required Identifier identifier,
+    CodeableConcept? unit,
+    Reference? source,
+    Reference? parent,
+    @JsonKey(unknownEnumValue: DeviceMetricOperationalStatus.unknown)
+        DeviceMetricOperationalStatus? operationalStatus,
+    @JsonKey(name: '_operationalStatus') Element? operationalStatusElement,
+    @JsonKey(unknownEnumValue: DeviceMetricColor.unknown)
+        DeviceMetricColor? color,
+    @JsonKey(name: '_color') Element? colorElement,
+    @JsonKey(unknownEnumValue: DeviceMetricCategory.unknown)
+        required DeviceMetricCategory category,
+    @JsonKey(name: '_category') Element? categoryElement,
+    Timing? measurementPeriod,
+    List<DeviceMetricCalibration>? calibration,
+  }) = _DeviceMetric;
 
-  DeviceMetricOperationalStatus? operationalStatus;
-  Element? operationalStatusElement;
+  /// Factory constructor, accepts a [String] in YAML format as an argument
+  factory DeviceMetric.fromYaml(dynamic yaml) => yaml is String
+      ? DeviceMetric.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? DeviceMetric.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'DeviceMetric cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
-  DeviceMetricColor? color;
-  Element? colorElement;
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory DeviceMetric.fromJson(
+    Map<String, dynamic> json,
+    SerializationManager serializationManager,
+  ) =>
+      _$DeviceMetricFromJson(json);
 
-  DeviceMetricCategory category;
-  Element? categoryElement;
-  Timing? measurementPeriod;
-  List<DeviceMetricCalibration>? calibration;
+  /// Acts like a constructor, returns a [DeviceMetric], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory DeviceMetric.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DeviceMetricFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
-class DeviceMetricCalibration {
-  FhirId? id;
-  List<FhirExtension>? extension_;
-  List<FhirExtension>? modifierExtension;
-  CalibrationType? type;
-  Element? typeElement;
+class DeviceMetricCalibration with _$DeviceMetricCalibration {
+  DeviceMetricCalibration._();
+  factory DeviceMetricCalibration({
+    FhirId? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    @JsonKey(unknownEnumValue: CalibrationType.unknown) CalibrationType? type,
+    @JsonKey(name: '_type') Element? typeElement,
+    @JsonKey(unknownEnumValue: CalibrationState.unknown)
+        CalibrationState? state,
+    @JsonKey(name: '_state') Element? stateElement,
+    Instant? time,
+    @JsonKey(name: '_time') Element? timeElement,
+  }) = _DeviceMetricCalibration;
 
-  CalibrationState? state;
-  Element? stateElement;
-  Instant? time;
-  Element? timeElement;
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor, accepts a [String] in YAML format as an argument
+  factory DeviceMetricCalibration.fromYaml(dynamic yaml) => yaml is String
+      ? DeviceMetricCalibration.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? DeviceMetricCalibration.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'DeviceMetricCalibration cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory DeviceMetricCalibration.fromJson(
+    Map<String, dynamic> json,
+    SerializationManager serializationManager,
+  ) =>
+      _$DeviceMetricCalibrationFromJson(json);
+
+  /// Acts like a constructor, returns a [DeviceMetricCalibration], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory DeviceMetricCalibration.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DeviceMetricCalibrationFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }

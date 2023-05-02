@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -392,7 +393,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchStudy.fromJson(Map<String, dynamic> json) =>
+  factory ResearchStudy.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$ResearchStudyFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchStudy], accepts a
@@ -513,7 +514,7 @@ class ResearchStudyLabel with _$ResearchStudyLabel {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchStudyLabel.fromJson(Map<String, dynamic> json) =>
+  factory ResearchStudyLabel.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$ResearchStudyLabelFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchStudyLabel], accepts a
@@ -651,7 +652,7 @@ class ResearchStudyAssociatedParty with _$ResearchStudyAssociatedParty {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchStudyAssociatedParty.fromJson(Map<String, dynamic> json) =>
+  factory ResearchStudyAssociatedParty.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$ResearchStudyAssociatedPartyFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchStudyAssociatedParty],
@@ -780,7 +781,7 @@ class ResearchStudyProgressStatus with _$ResearchStudyProgressStatus {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchStudyProgressStatus.fromJson(Map<String, dynamic> json) =>
+  factory ResearchStudyProgressStatus.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$ResearchStudyProgressStatusFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchStudyProgressStatus], accepts
@@ -917,7 +918,7 @@ class ResearchStudyRecruitment with _$ResearchStudyRecruitment {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchStudyRecruitment.fromJson(Map<String, dynamic> json) =>
+  factory ResearchStudyRecruitment.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$ResearchStudyRecruitmentFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchStudyRecruitment], accepts a
@@ -1068,7 +1069,7 @@ class ResearchStudyComparisonGroup with _$ResearchStudyComparisonGroup {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchStudyComparisonGroup.fromJson(Map<String, dynamic> json) =>
+  factory ResearchStudyComparisonGroup.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$ResearchStudyComparisonGroupFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchStudyComparisonGroup],
@@ -1202,7 +1203,7 @@ class ResearchStudyObjective with _$ResearchStudyObjective {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchStudyObjective.fromJson(Map<String, dynamic> json) =>
+  factory ResearchStudyObjective.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$ResearchStudyObjectiveFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchStudyObjective], accepts a
@@ -1339,7 +1340,7 @@ class ResearchStudyOutcomeMeasure with _$ResearchStudyOutcomeMeasure {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchStudyOutcomeMeasure.fromJson(Map<String, dynamic> json) =>
+  factory ResearchStudyOutcomeMeasure.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$ResearchStudyOutcomeMeasureFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchStudyOutcomeMeasure], accepts
@@ -1546,7 +1547,7 @@ class ResearchSubject with Resource, _$ResearchSubject {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchSubject.fromJson(Map<String, dynamic> json) =>
+  factory ResearchSubject.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$ResearchSubjectFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchSubject], accepts a
@@ -1682,7 +1683,7 @@ class ResearchSubjectProgress with _$ResearchSubjectProgress {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchSubjectProgress.fromJson(Map<String, dynamic> json) =>
+  factory ResearchSubjectProgress.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$ResearchSubjectProgressFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchSubjectProgress], accepts a

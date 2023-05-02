@@ -11,9 +11,8 @@ dependencies:
   freezed_annotation: ^2.2.0
   hive: ^2.2.3
   hive_generator: ^2.0.0
-  isar: ^3.1.0+1
-  isar_flutter_libs: ^3.1.0+1
   json_annotation: ^4.8.0
+  serverpod_serialization: ^1.1.0
   uuid: ^3.0.7
   xml2json: ^5.3.6
   yaml: ^3.1.1

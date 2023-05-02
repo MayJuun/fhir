@@ -775,7 +775,7 @@ class _$_AdverseEvent extends _AdverseEvent {
         _study = study,
         super._();
 
-  factory _$_AdverseEvent.fromJson(Map<String, dynamic> json) =>
+  factory _$_AdverseEvent.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_AdverseEventFromJson(json);
 
   @override
@@ -1066,7 +1066,7 @@ abstract class _AdverseEvent extends AdverseEvent {
       final List<Reference>? study}) = _$_AdverseEvent;
   _AdverseEvent._() : super._();
 
-  factory _AdverseEvent.fromJson(Map<String, dynamic> json) =
+  factory _AdverseEvent.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_AdverseEvent.fromJson;
 
   @override
@@ -1466,7 +1466,7 @@ class _$_AdverseEventSuspectEntity extends _AdverseEventSuspectEntity {
       this.causalityResult})
       : super._();
 
-  factory _$_AdverseEventSuspectEntity.fromJson(Map<String, dynamic> json) =>
+  factory _$_AdverseEventSuspectEntity.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_AdverseEventSuspectEntityFromJson(json);
 
   @override
@@ -1568,7 +1568,7 @@ abstract class _AdverseEventSuspectEntity extends AdverseEventSuspectEntity {
       final CodeableConcept? causalityResult}) = _$_AdverseEventSuspectEntity;
   _AdverseEventSuspectEntity._() : super._();
 
-  factory _AdverseEventSuspectEntity.fromJson(Map<String, dynamic> json) =
+  factory _AdverseEventSuspectEntity.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_AdverseEventSuspectEntity.fromJson;
 
   @override
@@ -2567,7 +2567,7 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
         _reaction = reaction,
         super._();
 
-  factory _$_AllergyIntolerance.fromJson(Map<String, dynamic> json) =>
+  factory _$_AllergyIntolerance.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_AllergyIntoleranceFromJson(json);
 
   @override
@@ -2925,7 +2925,7 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
       _$_AllergyIntolerance;
   _AllergyIntolerance._() : super._();
 
-  factory _AllergyIntolerance.fromJson(Map<String, dynamic> json) =
+  factory _AllergyIntolerance.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_AllergyIntolerance.fromJson;
 
   @override
@@ -3329,7 +3329,7 @@ class _$_AllergyIntoleranceReaction extends _AllergyIntoleranceReaction {
         _note = note,
         super._();
 
-  factory _$_AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json) =>
+  factory _$_AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_AllergyIntoleranceReactionFromJson(json);
 
   @override
@@ -3443,7 +3443,7 @@ abstract class _AllergyIntoleranceReaction extends AllergyIntoleranceReaction {
       final List<Annotation>? note}) = _$_AllergyIntoleranceReaction;
   _AllergyIntoleranceReaction._() : super._();
 
-  factory _AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json) =
+  factory _AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_AllergyIntoleranceReaction.fromJson;
 
   @override
@@ -4348,7 +4348,7 @@ class _$_ClinicalImpression extends _ClinicalImpression {
         _note = note,
         super._();
 
-  factory _$_ClinicalImpression.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClinicalImpression.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ClinicalImpressionFromJson(json);
 
   @override
@@ -4724,7 +4724,7 @@ abstract class _ClinicalImpression extends ClinicalImpression {
       final List<Annotation>? note}) = _$_ClinicalImpression;
   _ClinicalImpression._() : super._();
 
-  factory _ClinicalImpression.fromJson(Map<String, dynamic> json) =
+  factory _ClinicalImpression.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ClinicalImpression.fromJson;
 
   @override
@@ -4995,7 +4995,7 @@ abstract class _ClinicalImpressionInvestigation
       final List<Reference>? item}) = _$_ClinicalImpressionInvestigation;
   _ClinicalImpressionInvestigation._() : super._();
 
-  factory _ClinicalImpressionInvestigation.fromJson(Map<String, dynamic> json) =
+  factory _ClinicalImpressionInvestigation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ClinicalImpressionInvestigation.fromJson;
 
   @override
@@ -5194,7 +5194,7 @@ class _$_ClinicalImpressionFinding extends _ClinicalImpressionFinding {
       @JsonKey(name: '_basis') this.basisElement})
       : super._();
 
-  factory _$_ClinicalImpressionFinding.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClinicalImpressionFinding.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ClinicalImpressionFindingFromJson(json);
 
   @override
@@ -5255,7 +5255,7 @@ abstract class _ClinicalImpressionFinding extends ClinicalImpressionFinding {
       _$_ClinicalImpressionFinding;
   _ClinicalImpressionFinding._() : super._();
 
-  factory _ClinicalImpressionFinding.fromJson(Map<String, dynamic> json) =
+  factory _ClinicalImpressionFinding.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ClinicalImpressionFinding.fromJson;
 
   @override
@@ -6378,7 +6378,7 @@ class _$_Condition extends _Condition {
         _note = note,
         super._();
 
-  factory _$_Condition.fromJson(Map<String, dynamic> json) =>
+  factory _$_Condition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ConditionFromJson(json);
 
   @override
@@ -6760,7 +6760,7 @@ abstract class _Condition extends Condition {
       final List<Annotation>? note}) = _$_Condition;
   _Condition._() : super._();
 
-  factory _Condition.fromJson(Map<String, dynamic> json) =
+  factory _Condition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_Condition.fromJson;
 
   @override
@@ -6984,7 +6984,7 @@ class _$_ConditionStage extends _ConditionStage {
       : _assessment = assessment,
         super._();
 
-  factory _$_ConditionStage.fromJson(Map<String, dynamic> json) =>
+  factory _$_ConditionStage.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ConditionStageFromJson(json);
 
   @override
@@ -7039,7 +7039,7 @@ abstract class _ConditionStage extends ConditionStage {
       final List<Reference>? assessment}) = _$_ConditionStage;
   _ConditionStage._() : super._();
 
-  factory _ConditionStage.fromJson(Map<String, dynamic> json) =
+  factory _ConditionStage.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ConditionStage.fromJson;
 
   @override
@@ -7152,7 +7152,7 @@ class _$_ConditionEvidence extends _ConditionEvidence {
         _detail = detail,
         super._();
 
-  factory _$_ConditionEvidence.fromJson(Map<String, dynamic> json) =>
+  factory _$_ConditionEvidence.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ConditionEvidenceFromJson(json);
 
   final List<CodeableConcept>? _code;
@@ -7217,7 +7217,7 @@ abstract class _ConditionEvidence extends ConditionEvidence {
       final List<Reference>? detail}) = _$_ConditionEvidence;
   _ConditionEvidence._() : super._();
 
-  factory _ConditionEvidence.fromJson(Map<String, dynamic> json) =
+  factory _ConditionEvidence.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ConditionEvidence.fromJson;
 
   @override
@@ -7923,7 +7923,7 @@ class _$_DetectedIssue extends _DetectedIssue {
         _mitigation = mitigation,
         super._();
 
-  factory _$_DetectedIssue.fromJson(Map<String, dynamic> json) =>
+  factory _$_DetectedIssue.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_DetectedIssueFromJson(json);
 
   @override
@@ -8175,7 +8175,7 @@ abstract class _DetectedIssue extends DetectedIssue {
       final List<DetectedIssueMitigation>? mitigation}) = _$_DetectedIssue;
   _DetectedIssue._() : super._();
 
-  factory _DetectedIssue.fromJson(Map<String, dynamic> json) =
+  factory _DetectedIssue.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_DetectedIssue.fromJson;
 
   @override
@@ -8425,7 +8425,7 @@ class _$_DetectedIssueMitigation extends _DetectedIssueMitigation {
       this.author})
       : super._();
 
-  factory _$_DetectedIssueMitigation.fromJson(Map<String, dynamic> json) =>
+  factory _$_DetectedIssueMitigation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_DetectedIssueMitigationFromJson(json);
 
   @override
@@ -8484,7 +8484,7 @@ abstract class _DetectedIssueMitigation extends DetectedIssueMitigation {
       final Reference? author}) = _$_DetectedIssueMitigation;
   _DetectedIssueMitigation._() : super._();
 
-  factory _DetectedIssueMitigation.fromJson(Map<String, dynamic> json) =
+  factory _DetectedIssueMitigation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_DetectedIssueMitigation.fromJson;
 
   @override
@@ -9692,7 +9692,7 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
         _condition = condition,
         super._();
 
-  factory _$_FamilyMemberHistory.fromJson(Map<String, dynamic> json) =>
+  factory _$_FamilyMemberHistory.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_FamilyMemberHistoryFromJson(json);
 
   @override
@@ -10121,7 +10121,7 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
       _$_FamilyMemberHistory;
   _FamilyMemberHistory._() : super._();
 
-  factory _FamilyMemberHistory.fromJson(Map<String, dynamic> json) =
+  factory _FamilyMemberHistory.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_FamilyMemberHistory.fromJson;
 
   @override
@@ -10528,7 +10528,7 @@ class _$_FamilyMemberHistoryCondition extends _FamilyMemberHistoryCondition {
       : _note = note,
         super._();
 
-  factory _$_FamilyMemberHistoryCondition.fromJson(Map<String, dynamic> json) =>
+  factory _$_FamilyMemberHistoryCondition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_FamilyMemberHistoryConditionFromJson(json);
 
   @override
@@ -10622,7 +10622,7 @@ abstract class _FamilyMemberHistoryCondition
       final List<Annotation>? note}) = _$_FamilyMemberHistoryCondition;
   _FamilyMemberHistoryCondition._() : super._();
 
-  factory _FamilyMemberHistoryCondition.fromJson(Map<String, dynamic> json) =
+  factory _FamilyMemberHistoryCondition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_FamilyMemberHistoryCondition.fromJson;
 
   @override
@@ -11567,7 +11567,7 @@ class _$_Procedure extends _Procedure {
         _usedCode = usedCode,
         super._();
 
-  factory _$_Procedure.fromJson(Map<String, dynamic> json) =>
+  factory _$_Procedure.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ProcedureFromJson(json);
 
   @override
@@ -12005,7 +12005,7 @@ abstract class _Procedure extends Procedure {
       final List<CodeableConcept>? usedCode}) = _$_Procedure;
   _Procedure._() : super._();
 
-  factory _Procedure.fromJson(Map<String, dynamic> json) =
+  factory _Procedure.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_Procedure.fromJson;
 
   @override
@@ -12254,7 +12254,7 @@ class _$_ProcedurePerformer extends _ProcedurePerformer {
   _$_ProcedurePerformer({this.role, required this.actor, this.onBehalfOf})
       : super._();
 
-  factory _$_ProcedurePerformer.fromJson(Map<String, dynamic> json) =>
+  factory _$_ProcedurePerformer.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ProcedurePerformerFromJson(json);
 
   @override
@@ -12306,7 +12306,7 @@ abstract class _ProcedurePerformer extends ProcedurePerformer {
       final Reference? onBehalfOf}) = _$_ProcedurePerformer;
   _ProcedurePerformer._() : super._();
 
-  factory _ProcedurePerformer.fromJson(Map<String, dynamic> json) =
+  factory _ProcedurePerformer.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ProcedurePerformer.fromJson;
 
   @override
@@ -12446,7 +12446,7 @@ class __$$_ProcedureFocalDeviceCopyWithImpl<$Res>
 class _$_ProcedureFocalDevice extends _ProcedureFocalDevice {
   _$_ProcedureFocalDevice({this.action, required this.manipulated}) : super._();
 
-  factory _$_ProcedureFocalDevice.fromJson(Map<String, dynamic> json) =>
+  factory _$_ProcedureFocalDevice.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ProcedureFocalDeviceFromJson(json);
 
   @override
@@ -12494,7 +12494,7 @@ abstract class _ProcedureFocalDevice extends ProcedureFocalDevice {
       required final Reference manipulated}) = _$_ProcedureFocalDevice;
   _ProcedureFocalDevice._() : super._();
 
-  factory _ProcedureFocalDevice.fromJson(Map<String, dynamic> json) =
+  factory _ProcedureFocalDevice.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ProcedureFocalDevice.fromJson;
 
   @override

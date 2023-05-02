@@ -150,7 +150,7 @@ class _$_ContactDetail extends _ContactDetail {
       : _telecom = telecom,
         super._();
 
-  factory _$_ContactDetail.fromJson(Map<String, dynamic> json) =>
+  factory _$_ContactDetail.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ContactDetailFromJson(json);
 
   @override
@@ -210,7 +210,7 @@ abstract class _ContactDetail extends ContactDetail {
       final List<ContactPoint>? telecom}) = _$_ContactDetail;
   _ContactDetail._() : super._();
 
-  factory _ContactDetail.fromJson(Map<String, dynamic> json) =
+  factory _ContactDetail.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ContactDetail.fromJson;
 
   @override
@@ -406,7 +406,7 @@ class _$_Contributor extends _Contributor {
       : _contact = contact,
         super._();
 
-  factory _$_Contributor.fromJson(Map<String, dynamic> json) =>
+  factory _$_Contributor.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ContributorFromJson(json);
 
   @override
@@ -476,7 +476,7 @@ abstract class _Contributor extends Contributor {
       final List<ContactDetail>? contact}) = _$_Contributor;
   _Contributor._() : super._();
 
-  factory _Contributor.fromJson(Map<String, dynamic> json) =
+  factory _Contributor.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_Contributor.fromJson;
 
   @override
@@ -808,7 +808,7 @@ class _$_RelatedArtifact extends _RelatedArtifact {
       this.resource})
       : super._();
 
-  factory _$_RelatedArtifact.fromJson(Map<String, dynamic> json) =>
+  factory _$_RelatedArtifact.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_RelatedArtifactFromJson(json);
 
   @override
@@ -908,7 +908,7 @@ abstract class _RelatedArtifact extends RelatedArtifact {
       final Reference? resource}) = _$_RelatedArtifact;
   _RelatedArtifact._() : super._();
 
-  factory _RelatedArtifact.fromJson(Map<String, dynamic> json) =
+  factory _RelatedArtifact.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_RelatedArtifact.fromJson;
 
   @override
@@ -1132,7 +1132,7 @@ class _$_UsageContext extends _UsageContext {
       this.valueRange})
       : super._();
 
-  factory _$_UsageContext.fromJson(Map<String, dynamic> json) =>
+  factory _$_UsageContext.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_UsageContextFromJson(json);
 
   @override
@@ -1190,7 +1190,7 @@ abstract class _UsageContext extends UsageContext {
       final Range? valueRange}) = _$_UsageContext;
   _UsageContext._() : super._();
 
-  factory _UsageContext.fromJson(Map<String, dynamic> json) =
+  factory _UsageContext.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_UsageContext.fromJson;
 
   @override
@@ -1422,7 +1422,7 @@ class _$_DataRequirement extends _DataRequirement {
         _dateFilter = dateFilter,
         super._();
 
-  factory _$_DataRequirement.fromJson(Map<String, dynamic> json) =>
+  factory _$_DataRequirement.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_DataRequirementFromJson(json);
 
   @override
@@ -1558,7 +1558,7 @@ abstract class _DataRequirement extends DataRequirement {
       final List<DataRequirementDateFilter>? dateFilter}) = _$_DataRequirement;
   _DataRequirement._() : super._();
 
-  factory _DataRequirement.fromJson(Map<String, dynamic> json) =
+  factory _DataRequirement.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_DataRequirement.fromJson;
 
   @override
@@ -1847,7 +1847,7 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
         _valueCodeableConcept = valueCodeableConcept,
         super._();
 
-  factory _$_DataRequirementCodeFilter.fromJson(Map<String, dynamic> json) =>
+  factory _$_DataRequirementCodeFilter.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_DataRequirementCodeFilterFromJson(json);
 
   @override
@@ -1977,7 +1977,7 @@ abstract class _DataRequirementCodeFilter extends DataRequirementCodeFilter {
           valueCodeableConcept}) = _$_DataRequirementCodeFilter;
   _DataRequirementCodeFilter._() : super._();
 
-  factory _DataRequirementCodeFilter.fromJson(Map<String, dynamic> json) =
+  factory _DataRequirementCodeFilter.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_DataRequirementCodeFilter.fromJson;
 
   @override
@@ -2235,7 +2235,7 @@ class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
       this.valueDuration})
       : super._();
 
-  factory _$_DataRequirementDateFilter.fromJson(Map<String, dynamic> json) =>
+  factory _$_DataRequirementDateFilter.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_DataRequirementDateFilterFromJson(json);
 
   @override
@@ -2306,7 +2306,7 @@ abstract class _DataRequirementDateFilter extends DataRequirementDateFilter {
       final FhirDuration? valueDuration}) = _$_DataRequirementDateFilter;
   _DataRequirementDateFilter._() : super._();
 
-  factory _DataRequirementDateFilter.fromJson(Map<String, dynamic> json) =
+  factory _DataRequirementDateFilter.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_DataRequirementDateFilter.fromJson;
 
   @override
@@ -2699,7 +2699,7 @@ class _$_ParameterDefinition extends _ParameterDefinition {
       this.profile})
       : super._();
 
-  factory _$_ParameterDefinition.fromJson(Map<String, dynamic> json) =>
+  factory _$_ParameterDefinition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ParameterDefinitionFromJson(json);
 
   @override
@@ -2817,7 +2817,7 @@ abstract class _ParameterDefinition extends ParameterDefinition {
       final Reference? profile}) = _$_ParameterDefinition;
   _ParameterDefinition._() : super._();
 
-  factory _ParameterDefinition.fromJson(Map<String, dynamic> json) =
+  factory _ParameterDefinition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ParameterDefinition.fromJson;
 
   @override
@@ -3206,7 +3206,7 @@ class _$_TriggerDefinition extends _TriggerDefinition {
       this.eventData})
       : super._();
 
-  factory _$_TriggerDefinition.fromJson(Map<String, dynamic> json) =>
+  factory _$_TriggerDefinition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TriggerDefinitionFromJson(json);
 
   @override
@@ -3321,7 +3321,7 @@ abstract class _TriggerDefinition extends TriggerDefinition {
       final DataRequirement? eventData}) = _$_TriggerDefinition;
   _TriggerDefinition._() : super._();
 
-  factory _TriggerDefinition.fromJson(Map<String, dynamic> json) =
+  factory _TriggerDefinition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TriggerDefinition.fromJson;
 
   @override

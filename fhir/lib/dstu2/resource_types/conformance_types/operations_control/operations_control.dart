@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -68,7 +69,7 @@ class Conformance with Resource, _$Conformance {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Conformance.fromJson(Map<String, dynamic> json) =>
+  factory Conformance.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$ConformanceFromJson(json);
 
   /// Acts like a constructor, returns a [Conformance], accepts a
@@ -140,7 +141,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CapabilityStatement.fromJson(Map<String, dynamic> json) =>
+  factory CapabilityStatement.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$CapabilityStatementFromJson(json);
 
   /// Acts like a constructor, returns a [CapabilityStatement], accepts a
@@ -182,7 +183,7 @@ class ConformanceContact with _$ConformanceContact {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConformanceContact.fromJson(Map<String, dynamic> json) =>
+  factory ConformanceContact.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$ConformanceContactFromJson(json);
 
   /// Acts like a constructor, returns a [ConformanceContact], accepts a
@@ -225,7 +226,7 @@ class ConformanceSoftware with _$ConformanceSoftware {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConformanceSoftware.fromJson(Map<String, dynamic> json) =>
+  factory ConformanceSoftware.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$ConformanceSoftwareFromJson(json);
 
   /// Acts like a constructor, returns a [ConformanceSoftware], accepts a
@@ -267,7 +268,7 @@ class ConformanceImplementation with _$ConformanceImplementation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConformanceImplementation.fromJson(Map<String, dynamic> json) =>
+  factory ConformanceImplementation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$ConformanceImplementationFromJson(json);
 
   /// Acts like a constructor, returns a [ConformanceImplementation], accepts a
@@ -319,7 +320,7 @@ class ConformanceRest with _$ConformanceRest {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConformanceRest.fromJson(Map<String, dynamic> json) =>
+  factory ConformanceRest.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$ConformanceRestFromJson(json);
 
   /// Acts like a constructor, returns a [ConformanceRest], accepts a
@@ -364,7 +365,7 @@ class ConformanceMessaging with _$ConformanceMessaging {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConformanceMessaging.fromJson(Map<String, dynamic> json) =>
+  factory ConformanceMessaging.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$ConformanceMessagingFromJson(json);
 
   /// Acts like a constructor, returns a [ConformanceMessaging], accepts a
@@ -408,7 +409,7 @@ class ConformanceDocument with _$ConformanceDocument {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConformanceDocument.fromJson(Map<String, dynamic> json) =>
+  factory ConformanceDocument.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$ConformanceDocumentFromJson(json);
 
   /// Acts like a constructor, returns a [ConformanceDocument], accepts a
@@ -453,7 +454,7 @@ class ConformanceRestSecurity with _$ConformanceRestSecurity {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConformanceRestSecurity.fromJson(Map<String, dynamic> json) =>
+  factory ConformanceRestSecurity.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$ConformanceRestSecurityFromJson(json);
 
   /// Acts like a constructor, returns a [ConformanceRestSecurity], accepts a
@@ -513,7 +514,7 @@ class ConformanceRestResource with _$ConformanceRestResource {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConformanceRestResource.fromJson(Map<String, dynamic> json) =>
+  factory ConformanceRestResource.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$ConformanceRestResourceFromJson(json);
 
   /// Acts like a constructor, returns a [ConformanceRestResource], accepts a
@@ -557,7 +558,7 @@ class ConformanceResourceInteraction with _$ConformanceResourceInteraction {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConformanceResourceInteraction.fromJson(Map<String, dynamic> json) =>
+  factory ConformanceResourceInteraction.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$ConformanceResourceInteractionFromJson(json);
 
   /// Acts like a constructor, returns a [ConformanceResourceInteraction], accepts a
@@ -600,7 +601,7 @@ class ConformanceRestOperation with _$ConformanceRestOperation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConformanceRestOperation.fromJson(Map<String, dynamic> json) =>
+  factory ConformanceRestOperation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$ConformanceRestOperationFromJson(json);
 
   /// Acts like a constructor, returns a [ConformanceRestOperation], accepts a
@@ -643,7 +644,7 @@ class ConformanceMessagingEndpoint with _$ConformanceMessagingEndpoint {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConformanceMessagingEndpoint.fromJson(Map<String, dynamic> json) =>
+  factory ConformanceMessagingEndpoint.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$ConformanceMessagingEndpointFromJson(json);
 
   /// Acts like a constructor, returns a [ConformanceMessagingEndpoint], accepts a
@@ -691,7 +692,7 @@ class ConformanceMessagingEvent with _$ConformanceMessagingEvent {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConformanceMessagingEvent.fromJson(Map<String, dynamic> json) =>
+  factory ConformanceMessagingEvent.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$ConformanceMessagingEventFromJson(json);
 
   /// Acts like a constructor, returns a [ConformanceMessagingEvent], accepts a
@@ -735,7 +736,7 @@ class ConformanceSecurityCertificate with _$ConformanceSecurityCertificate {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConformanceSecurityCertificate.fromJson(Map<String, dynamic> json) =>
+  factory ConformanceSecurityCertificate.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$ConformanceSecurityCertificateFromJson(json);
 
   /// Acts like a constructor, returns a [ConformanceSecurityCertificate], accepts a
@@ -778,7 +779,7 @@ class ConformanceRestInteraction with _$ConformanceRestInteraction {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConformanceRestInteraction.fromJson(Map<String, dynamic> json) =>
+  factory ConformanceRestInteraction.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$ConformanceRestInteractionFromJson(json);
 
   /// Acts like a constructor, returns a [ConformanceRestInteraction], accepts a
@@ -828,7 +829,7 @@ class ConformanceResourceSearchParam with _$ConformanceResourceSearchParam {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConformanceResourceSearchParam.fromJson(Map<String, dynamic> json) =>
+  factory ConformanceResourceSearchParam.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$ConformanceResourceSearchParamFromJson(json);
 
   /// Acts like a constructor, returns a [ConformanceResourceSearchParam], accepts a
@@ -894,7 +895,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory OperationDefinition.fromJson(Map<String, dynamic> json) =>
+  factory OperationDefinition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$OperationDefinitionFromJson(json);
 
   /// Acts like a constructor, returns a [OperationDefinition], accepts a
@@ -936,7 +937,7 @@ class OperationDefinitionContact with _$OperationDefinitionContact {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory OperationDefinitionContact.fromJson(Map<String, dynamic> json) =>
+  factory OperationDefinitionContact.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$OperationDefinitionContactFromJson(json);
 
   /// Acts like a constructor, returns a [OperationDefinitionContact], accepts a
@@ -986,7 +987,7 @@ class OperationDefinitionParameter with _$OperationDefinitionParameter {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory OperationDefinitionParameter.fromJson(Map<String, dynamic> json) =>
+  factory OperationDefinitionParameter.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$OperationDefinitionParameterFromJson(json);
 
   /// Acts like a constructor, returns a [OperationDefinitionParameter], accepts a
@@ -1087,7 +1088,7 @@ class SearchParameter with Resource, _$SearchParameter {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SearchParameter.fromJson(Map<String, dynamic> json) =>
+  factory SearchParameter.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$SearchParameterFromJson(json);
 
   /// Acts like a constructor, returns a [SearchParameter], accepts a
@@ -1129,7 +1130,7 @@ class SearchParameterContact with _$SearchParameterContact {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SearchParameterContact.fromJson(Map<String, dynamic> json) =>
+  factory SearchParameterContact.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$SearchParameterContactFromJson(json);
 
   /// Acts like a constructor, returns a [SearchParameterContact], accepts a

@@ -615,7 +615,7 @@ class _$_PaymentNotice extends _PaymentNotice {
         _identifier = identifier,
         super._();
 
-  factory _$_PaymentNotice.fromJson(Map<String, dynamic> json) =>
+  factory _$_PaymentNotice.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_PaymentNoticeFromJson(json);
 
   @override
@@ -823,7 +823,7 @@ abstract class _PaymentNotice extends PaymentNotice {
       required final Coding paymentStatus}) = _$_PaymentNotice;
   _PaymentNotice._() : super._();
 
-  factory _PaymentNotice.fromJson(Map<String, dynamic> json) =
+  factory _PaymentNotice.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_PaymentNotice.fromJson;
 
   @override
@@ -1644,7 +1644,7 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
         _note = note,
         super._();
 
-  factory _$_PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
+  factory _$_PaymentReconciliation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_PaymentReconciliationFromJson(json);
 
   @override
@@ -1911,7 +1911,7 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
       final List<PaymentReconciliationNote>? note}) = _$_PaymentReconciliation;
   _PaymentReconciliation._() : super._();
 
-  factory _PaymentReconciliation.fromJson(Map<String, dynamic> json) =
+  factory _PaymentReconciliation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_PaymentReconciliation.fromJson;
 
   @override
@@ -2330,7 +2330,7 @@ class _$_PaymentReconciliationDetail extends _PaymentReconciliationDetail {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =>
+  factory _$_PaymentReconciliationDetail.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_PaymentReconciliationDetailFromJson(json);
 
   @override
@@ -2450,7 +2450,7 @@ abstract class _PaymentReconciliationDetail
       final Quantity? amount}) = _$_PaymentReconciliationDetail;
   _PaymentReconciliationDetail._() : super._();
 
-  factory _PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =
+  factory _PaymentReconciliationDetail.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_PaymentReconciliationDetail.fromJson;
 
   @override
@@ -2714,7 +2714,7 @@ class _$_PaymentReconciliationNote extends _PaymentReconciliationNote {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_PaymentReconciliationNote.fromJson(Map<String, dynamic> json) =>
+  factory _$_PaymentReconciliationNote.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_PaymentReconciliationNoteFromJson(json);
 
   @override
@@ -2814,7 +2814,7 @@ abstract class _PaymentReconciliationNote extends PaymentReconciliationNote {
       _$_PaymentReconciliationNote;
   _PaymentReconciliationNote._() : super._();
 
-  factory _PaymentReconciliationNote.fromJson(Map<String, dynamic> json) =
+  factory _PaymentReconciliationNote.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_PaymentReconciliationNote.fromJson;
 
   @override

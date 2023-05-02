@@ -684,7 +684,7 @@ class _$_Account extends _Account {
         _identifier = identifier,
         super._();
 
-  factory _$_Account.fromJson(Map<String, dynamic> json) =>
+  factory _$_Account.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_AccountFromJson(json);
 
   @override
@@ -914,7 +914,7 @@ abstract class _Account extends Account {
           final Element? descriptionElement}) = _$_Account;
   _Account._() : super._();
 
-  factory _Account.fromJson(Map<String, dynamic> json) = _$_Account.fromJson;
+  factory _Account.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) = _$_Account.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Account)
@@ -1996,7 +1996,7 @@ class _$_Claim extends _Claim {
         _missingTeeth = missingTeeth,
         super._();
 
-  factory _$_Claim.fromJson(Map<String, dynamic> json) =>
+  factory _$_Claim.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ClaimFromJson(json);
 
   @override
@@ -2388,7 +2388,7 @@ abstract class _Claim extends Claim {
       final List<ClaimMissingTeeth>? missingTeeth}) = _$_Claim;
   _Claim._() : super._();
 
-  factory _Claim.fromJson(Map<String, dynamic> json) = _$_Claim.fromJson;
+  factory _Claim.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) = _$_Claim.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Claim)
@@ -2727,7 +2727,7 @@ class _$_ClaimPayee extends _ClaimPayee {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ClaimPayee.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimPayee.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ClaimPayeeFromJson(json);
 
   @override
@@ -2823,7 +2823,7 @@ abstract class _ClaimPayee extends ClaimPayee {
       final Reference? person}) = _$_ClaimPayee;
   _ClaimPayee._() : super._();
 
-  factory _ClaimPayee.fromJson(Map<String, dynamic> json) =
+  factory _ClaimPayee.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ClaimPayee.fromJson;
 
   @override
@@ -3039,7 +3039,7 @@ class _$_ClaimDiagnosis extends _ClaimDiagnosis {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ClaimDiagnosis.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimDiagnosis.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ClaimDiagnosisFromJson(json);
 
   @override
@@ -3132,7 +3132,7 @@ abstract class _ClaimDiagnosis extends ClaimDiagnosis {
       required final Coding diagnosis}) = _$_ClaimDiagnosis;
   _ClaimDiagnosis._() : super._();
 
-  factory _ClaimDiagnosis.fromJson(Map<String, dynamic> json) =
+  factory _ClaimDiagnosis.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ClaimDiagnosis.fromJson;
 
   @override
@@ -3443,7 +3443,7 @@ class _$_ClaimCoverage extends _ClaimCoverage {
         _preAuthRef = preAuthRef,
         super._();
 
-  factory _$_ClaimCoverage.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimCoverage.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ClaimCoverageFromJson(json);
 
   @override
@@ -3572,7 +3572,7 @@ abstract class _ClaimCoverage extends ClaimCoverage {
       final Coding? originalRuleset}) = _$_ClaimCoverage;
   _ClaimCoverage._() : super._();
 
-  factory _ClaimCoverage.fromJson(Map<String, dynamic> json) =
+  factory _ClaimCoverage.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ClaimCoverage.fromJson;
 
   @override
@@ -4184,7 +4184,7 @@ class _$_ClaimItem extends _ClaimItem {
         _detail = detail,
         super._();
 
-  factory _$_ClaimItem.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimItem.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ClaimItemFromJson(json);
 
   @override
@@ -4405,7 +4405,7 @@ abstract class _ClaimItem extends ClaimItem {
       final ClaimItemProsthesis? prosthesis}) = _$_ClaimItem;
   _ClaimItem._() : super._();
 
-  factory _ClaimItem.fromJson(Map<String, dynamic> json) =
+  factory _ClaimItem.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ClaimItem.fromJson;
 
   @override
@@ -4871,7 +4871,7 @@ class _$_ClaimItemDetail extends _ClaimItemDetail {
         _subDetail = subDetail,
         super._();
 
-  factory _$_ClaimItemDetail.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimItemDetail.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ClaimItemDetailFromJson(json);
 
   @override
@@ -5020,7 +5020,7 @@ abstract class _ClaimItemDetail extends ClaimItemDetail {
       final List<ClaimDetailSubDetail>? subDetail}) = _$_ClaimItemDetail;
   _ClaimItemDetail._() : super._();
 
-  factory _ClaimItemDetail.fromJson(Map<String, dynamic> json) =
+  factory _ClaimItemDetail.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ClaimItemDetail.fromJson;
 
   @override
@@ -5454,7 +5454,7 @@ class _$_ClaimDetailSubDetail extends _ClaimDetailSubDetail {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ClaimDetailSubDetail.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimDetailSubDetail.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ClaimDetailSubDetailFromJson(json);
 
   @override
@@ -5591,7 +5591,7 @@ abstract class _ClaimDetailSubDetail extends ClaimDetailSubDetail {
       final Coding? udi}) = _$_ClaimDetailSubDetail;
   _ClaimDetailSubDetail._() : super._();
 
-  factory _ClaimDetailSubDetail.fromJson(Map<String, dynamic> json) =
+  factory _ClaimDetailSubDetail.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ClaimDetailSubDetail.fromJson;
 
   @override
@@ -5811,7 +5811,7 @@ class _$_ClaimItemProsthesis extends _ClaimItemProsthesis {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ClaimItemProsthesis.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimItemProsthesis.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ClaimItemProsthesisFromJson(json);
 
   @override
@@ -5903,7 +5903,7 @@ abstract class _ClaimItemProsthesis extends ClaimItemProsthesis {
       final Coding? priorMaterial}) = _$_ClaimItemProsthesis;
   _ClaimItemProsthesis._() : super._();
 
-  factory _ClaimItemProsthesis.fromJson(Map<String, dynamic> json) =
+  factory _ClaimItemProsthesis.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ClaimItemProsthesis.fromJson;
 
   @override
@@ -6116,7 +6116,7 @@ class _$_ClaimMissingTeeth extends _ClaimMissingTeeth {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ClaimMissingTeeth.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimMissingTeeth.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ClaimMissingTeethFromJson(json);
 
   @override
@@ -6207,7 +6207,7 @@ abstract class _ClaimMissingTeeth extends ClaimMissingTeeth {
       final Date? extractionDate}) = _$_ClaimMissingTeeth;
   _ClaimMissingTeeth._() : super._();
 
-  factory _ClaimMissingTeeth.fromJson(Map<String, dynamic> json) =
+  factory _ClaimMissingTeeth.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ClaimMissingTeeth.fromJson;
 
   @override
@@ -7287,7 +7287,7 @@ class _$_ClaimResponse extends _ClaimResponse {
         _coverage = coverage,
         super._();
 
-  factory _$_ClaimResponse.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimResponse.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ClaimResponseFromJson(json);
 
   @override
@@ -7651,7 +7651,7 @@ abstract class _ClaimResponse extends ClaimResponse {
       final List<ClaimResponseCoverage>? coverage}) = _$_ClaimResponse;
   _ClaimResponse._() : super._();
 
-  factory _ClaimResponse.fromJson(Map<String, dynamic> json) =
+  factory _ClaimResponse.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ClaimResponse.fromJson;
 
   @override
@@ -7965,7 +7965,7 @@ class _$_ClaimResponseItem extends _ClaimResponseItem {
         _detail = detail,
         super._();
 
-  factory _$_ClaimResponseItem.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimResponseItem.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ClaimResponseItemFromJson(json);
 
   @override
@@ -8117,7 +8117,7 @@ abstract class _ClaimResponseItem extends ClaimResponseItem {
       final List<ClaimResponseItemDetail>? detail}) = _$_ClaimResponseItem;
   _ClaimResponseItem._() : super._();
 
-  factory _ClaimResponseItem.fromJson(Map<String, dynamic> json) =
+  factory _ClaimResponseItem.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ClaimResponseItem.fromJson;
 
   @override
@@ -8475,7 +8475,7 @@ abstract class _ClaimResponseItemAdjudication
       _$_ClaimResponseItemAdjudication;
   _ClaimResponseItemAdjudication._() : super._();
 
-  factory _ClaimResponseItemAdjudication.fromJson(Map<String, dynamic> json) =
+  factory _ClaimResponseItemAdjudication.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ClaimResponseItemAdjudication.fromJson;
 
   @override
@@ -8670,7 +8670,7 @@ class _$_ClaimResponseItemDetail extends _ClaimResponseItemDetail {
         _subDetail = subDetail,
         super._();
 
-  factory _$_ClaimResponseItemDetail.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimResponseItemDetail.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ClaimResponseItemDetailFromJson(json);
 
   @override
@@ -8780,7 +8780,7 @@ abstract class _ClaimResponseItemDetail extends ClaimResponseItemDetail {
       _$_ClaimResponseItemDetail;
   _ClaimResponseItemDetail._() : super._();
 
-  factory _ClaimResponseItemDetail.fromJson(Map<String, dynamic> json) =
+  factory _ClaimResponseItemDetail.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ClaimResponseItemDetail.fromJson;
 
   @override
@@ -8960,7 +8960,7 @@ class _$_ClaimResponseDetailSubDetail extends _ClaimResponseDetailSubDetail {
         _adjudication = adjudication,
         super._();
 
-  factory _$_ClaimResponseDetailSubDetail.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimResponseDetailSubDetail.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ClaimResponseDetailSubDetailFromJson(json);
 
   @override
@@ -9056,7 +9056,7 @@ abstract class _ClaimResponseDetailSubDetail
       _$_ClaimResponseDetailSubDetail;
   _ClaimResponseDetailSubDetail._() : super._();
 
-  factory _ClaimResponseDetailSubDetail.fromJson(Map<String, dynamic> json) =
+  factory _ClaimResponseDetailSubDetail.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ClaimResponseDetailSubDetail.fromJson;
 
   @override
@@ -9329,7 +9329,7 @@ class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
         _adjudication = adjudication,
         super._();
 
-  factory _$_ClaimResponseAddItem.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimResponseAddItem.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ClaimResponseAddItemFromJson(json);
 
   @override
@@ -9462,7 +9462,7 @@ abstract class _ClaimResponseAddItem extends ClaimResponseAddItem {
       final ClaimResponseAddItemDetail? detail}) = _$_ClaimResponseAddItem;
   _ClaimResponseAddItem._() : super._();
 
-  factory _ClaimResponseAddItem.fromJson(Map<String, dynamic> json) =
+  factory _ClaimResponseAddItem.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ClaimResponseAddItem.fromJson;
 
   @override
@@ -9689,7 +9689,7 @@ class _$_ClaimResponseAddItemDetail extends _ClaimResponseAddItemDetail {
         _adjudication = adjudication,
         super._();
 
-  factory _$_ClaimResponseAddItemDetail.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimResponseAddItemDetail.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ClaimResponseAddItemDetailFromJson(json);
 
   @override
@@ -9788,7 +9788,7 @@ abstract class _ClaimResponseAddItemDetail extends ClaimResponseAddItemDetail {
       _$_ClaimResponseAddItemDetail;
   _ClaimResponseAddItemDetail._() : super._();
 
-  factory _ClaimResponseAddItemDetail.fromJson(Map<String, dynamic> json) =
+  factory _ClaimResponseAddItemDetail.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ClaimResponseAddItemDetail.fromJson;
 
   @override
@@ -10001,7 +10001,7 @@ class _$_ClaimResponseError extends _ClaimResponseError {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ClaimResponseError.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimResponseError.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ClaimResponseErrorFromJson(json);
 
   @override
@@ -10100,7 +10100,7 @@ abstract class _ClaimResponseError extends ClaimResponseError {
       required final Coding code}) = _$_ClaimResponseError;
   _ClaimResponseError._() : super._();
 
-  factory _ClaimResponseError.fromJson(Map<String, dynamic> json) =
+  factory _ClaimResponseError.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ClaimResponseError.fromJson;
 
   @override
@@ -10394,7 +10394,7 @@ class _$_ClaimResponseNote extends _ClaimResponseNote {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ClaimResponseNote.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimResponseNote.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ClaimResponseNoteFromJson(json);
 
   @override
@@ -10506,7 +10506,7 @@ abstract class _ClaimResponseNote extends ClaimResponseNote {
       _$_ClaimResponseNote;
   _ClaimResponseNote._() : super._();
 
-  factory _ClaimResponseNote.fromJson(Map<String, dynamic> json) =
+  factory _ClaimResponseNote.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ClaimResponseNote.fromJson;
 
   @override
@@ -10827,7 +10827,7 @@ class _$_ClaimResponseCoverage extends _ClaimResponseCoverage {
         _preAuthRef = preAuthRef,
         super._();
 
-  factory _$_ClaimResponseCoverage.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimResponseCoverage.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ClaimResponseCoverageFromJson(json);
 
   @override
@@ -10957,7 +10957,7 @@ abstract class _ClaimResponseCoverage extends ClaimResponseCoverage {
       final Coding? originalRuleset}) = _$_ClaimResponseCoverage;
   _ClaimResponseCoverage._() : super._();
 
-  factory _ClaimResponseCoverage.fromJson(Map<String, dynamic> json) =
+  factory _ClaimResponseCoverage.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ClaimResponseCoverage.fromJson;
 
   @override

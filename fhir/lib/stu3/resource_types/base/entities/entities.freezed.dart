@@ -901,7 +901,7 @@ class _$_Device extends _Device {
         _safety = safety,
         super._();
 
-  factory _$_Device.fromJson(Map<String, dynamic> json) =>
+  factory _$_Device.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_DeviceFromJson(json);
 
   @override
@@ -1223,7 +1223,7 @@ abstract class _Device extends Device {
       final List<CodeableConcept>? safety}) = _$_Device;
   _Device._() : super._();
 
-  factory _Device.fromJson(Map<String, dynamic> json) = _$_Device.fromJson;
+  factory _Device.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) = _$_Device.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Device)
@@ -1698,7 +1698,7 @@ class _$_DeviceUdi extends _DeviceUdi {
       @JsonKey(name: '_entryType') this.entryTypeElement})
       : super._();
 
-  factory _$_DeviceUdi.fromJson(Map<String, dynamic> json) =>
+  factory _$_DeviceUdi.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_DeviceUdiFromJson(json);
 
   @override
@@ -1834,7 +1834,7 @@ abstract class _DeviceUdi extends DeviceUdi {
           final Element? entryTypeElement}) = _$_DeviceUdi;
   _DeviceUdi._() : super._();
 
-  factory _DeviceUdi.fromJson(Map<String, dynamic> json) =
+  factory _DeviceUdi.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_DeviceUdi.fromJson;
 
   @override
@@ -2484,7 +2484,7 @@ class _$_DeviceComponent extends _DeviceComponent {
         _productionSpecification = productionSpecification,
         super._();
 
-  factory _$_DeviceComponent.fromJson(Map<String, dynamic> json) =>
+  factory _$_DeviceComponent.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_DeviceComponentFromJson(json);
 
   @override
@@ -2715,7 +2715,7 @@ abstract class _DeviceComponent extends DeviceComponent {
       final CodeableConcept? languageCode}) = _$_DeviceComponent;
   _DeviceComponent._() : super._();
 
-  factory _DeviceComponent.fromJson(Map<String, dynamic> json) =
+  factory _DeviceComponent.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_DeviceComponent.fromJson;
 
   @override
@@ -3686,7 +3686,7 @@ class _$_DeviceMetric extends _DeviceMetric {
         _calibration = calibration,
         super._();
 
-  factory _$_DeviceMetric.fromJson(Map<String, dynamic> json) =>
+  factory _$_DeviceMetric.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_DeviceMetricFromJson(json);
 
   @override
@@ -3909,7 +3909,7 @@ abstract class _DeviceMetric extends DeviceMetric {
       final List<DeviceMetricCalibration>? calibration}) = _$_DeviceMetric;
   _DeviceMetric._() : super._();
 
-  factory _DeviceMetric.fromJson(Map<String, dynamic> json) =
+  factory _DeviceMetric.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_DeviceMetric.fromJson;
 
   @override
@@ -4185,7 +4185,7 @@ class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
       @JsonKey(name: '_time') this.timeElement})
       : super._();
 
-  factory _$_DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =>
+  factory _$_DeviceMetricCalibration.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_DeviceMetricCalibrationFromJson(json);
 
   @override
@@ -4257,7 +4257,7 @@ abstract class _DeviceMetricCalibration extends DeviceMetricCalibration {
       _$_DeviceMetricCalibration;
   _DeviceMetricCalibration._() : super._();
 
-  factory _DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =
+  factory _DeviceMetricCalibration.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_DeviceMetricCalibration.fromJson;
 
   @override
@@ -4928,7 +4928,7 @@ class _$_Endpoint extends _Endpoint {
         _headerElement = headerElement,
         super._();
 
-  factory _$_Endpoint.fromJson(Map<String, dynamic> json) =>
+  factory _$_Endpoint.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_EndpointFromJson(json);
 
   @override
@@ -5218,7 +5218,7 @@ abstract class _Endpoint extends Endpoint {
           final List<Element?>? headerElement}) = _$_Endpoint;
   _Endpoint._() : super._();
 
-  factory _Endpoint.fromJson(Map<String, dynamic> json) = _$_Endpoint.fromJson;
+  factory _Endpoint.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) = _$_Endpoint.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Endpoint)
@@ -6267,7 +6267,7 @@ class _$_HealthcareService extends _HealthcareService {
         _endpoint = endpoint,
         super._();
 
-  factory _$_HealthcareService.fromJson(Map<String, dynamic> json) =>
+  factory _$_HealthcareService.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_HealthcareServiceFromJson(json);
 
   @override
@@ -6721,7 +6721,7 @@ abstract class _HealthcareService extends HealthcareService {
       final List<Reference>? endpoint}) = _$_HealthcareService;
   _HealthcareService._() : super._();
 
-  factory _HealthcareService.fromJson(Map<String, dynamic> json) =
+  factory _HealthcareService.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_HealthcareService.fromJson;
 
   @override
@@ -7194,7 +7194,7 @@ abstract class _HealthcareServiceAvailableTime
       _$_HealthcareServiceAvailableTime;
   _HealthcareServiceAvailableTime._() : super._();
 
-  factory _HealthcareServiceAvailableTime.fromJson(Map<String, dynamic> json) =
+  factory _HealthcareServiceAvailableTime.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_HealthcareServiceAvailableTime.fromJson;
 
   @override
@@ -7437,7 +7437,7 @@ abstract class _HealthcareServiceNotAvailable
       final Period? during}) = _$_HealthcareServiceNotAvailable;
   _HealthcareServiceNotAvailable._() : super._();
 
-  factory _HealthcareServiceNotAvailable.fromJson(Map<String, dynamic> json) =
+  factory _HealthcareServiceNotAvailable.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_HealthcareServiceNotAvailable.fromJson;
 
   @override
@@ -8232,7 +8232,7 @@ class _$_Location extends _Location {
         _endpoint = endpoint,
         super._();
 
-  factory _$_Location.fromJson(Map<String, dynamic> json) =>
+  factory _$_Location.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_LocationFromJson(json);
 
   @override
@@ -8528,7 +8528,7 @@ abstract class _Location extends Location {
       final List<Reference>? endpoint}) = _$_Location;
   _Location._() : super._();
 
-  factory _Location.fromJson(Map<String, dynamic> json) = _$_Location.fromJson;
+  factory _Location.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) = _$_Location.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Location)
@@ -8816,7 +8816,7 @@ class _$_LocationPosition extends _LocationPosition {
       @JsonKey(name: '_altitude') this.altitudeElement})
       : super._();
 
-  factory _$_LocationPosition.fromJson(Map<String, dynamic> json) =>
+  factory _$_LocationPosition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_LocationPositionFromJson(json);
 
   @override
@@ -8889,7 +8889,7 @@ abstract class _LocationPosition extends LocationPosition {
       _$_LocationPosition;
   _LocationPosition._() : super._();
 
-  factory _LocationPosition.fromJson(Map<String, dynamic> json) =
+  factory _LocationPosition.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_LocationPosition.fromJson;
 
   @override
@@ -9471,7 +9471,7 @@ class _$_Organization extends _Organization {
         _endpoint = endpoint,
         super._();
 
-  factory _$_Organization.fromJson(Map<String, dynamic> json) =>
+  factory _$_Organization.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_OrganizationFromJson(json);
 
   @override
@@ -9745,7 +9745,7 @@ abstract class _Organization extends Organization {
       final List<Reference>? endpoint}) = _$_Organization;
   _Organization._() : super._();
 
-  factory _Organization.fromJson(Map<String, dynamic> json) =
+  factory _Organization.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_Organization.fromJson;
 
   @override
@@ -9988,7 +9988,7 @@ class _$_OrganizationContact extends _OrganizationContact {
       : _telecom = telecom,
         super._();
 
-  factory _$_OrganizationContact.fromJson(Map<String, dynamic> json) =>
+  factory _$_OrganizationContact.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_OrganizationContactFromJson(json);
 
   @override
@@ -10052,7 +10052,7 @@ abstract class _OrganizationContact extends OrganizationContact {
       final Address? address}) = _$_OrganizationContact;
   _OrganizationContact._() : super._();
 
-  factory _OrganizationContact.fromJson(Map<String, dynamic> json) =
+  factory _OrganizationContact.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_OrganizationContact.fromJson;
 
   @override
@@ -10558,7 +10558,7 @@ class _$_Substance extends _Substance {
         _ingredient = ingredient,
         super._();
 
-  factory _$_Substance.fromJson(Map<String, dynamic> json) =>
+  factory _$_Substance.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_SubstanceFromJson(json);
 
   @override
@@ -10779,7 +10779,7 @@ abstract class _Substance extends Substance {
       final List<SubstanceIngredient>? ingredient}) = _$_Substance;
   _Substance._() : super._();
 
-  factory _Substance.fromJson(Map<String, dynamic> json) =
+  factory _Substance.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_Substance.fromJson;
 
   @override
@@ -11013,7 +11013,7 @@ class _$_SubstanceInstance extends _SubstanceInstance {
       this.quantity})
       : super._();
 
-  factory _$_SubstanceInstance.fromJson(Map<String, dynamic> json) =>
+  factory _$_SubstanceInstance.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_SubstanceInstanceFromJson(json);
 
   @override
@@ -11073,7 +11073,7 @@ abstract class _SubstanceInstance extends SubstanceInstance {
       final Quantity? quantity}) = _$_SubstanceInstance;
   _SubstanceInstance._() : super._();
 
-  factory _SubstanceInstance.fromJson(Map<String, dynamic> json) =
+  factory _SubstanceInstance.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_SubstanceInstance.fromJson;
 
   @override
@@ -11255,7 +11255,7 @@ class _$_SubstanceIngredient extends _SubstanceIngredient {
       {this.quantity, this.substanceCodeableConcept, this.substanceReference})
       : super._();
 
-  factory _$_SubstanceIngredient.fromJson(Map<String, dynamic> json) =>
+  factory _$_SubstanceIngredient.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_SubstanceIngredientFromJson(json);
 
   @override
@@ -11311,7 +11311,7 @@ abstract class _SubstanceIngredient extends SubstanceIngredient {
       final Reference? substanceReference}) = _$_SubstanceIngredient;
   _SubstanceIngredient._() : super._();
 
-  factory _SubstanceIngredient.fromJson(Map<String, dynamic> json) =
+  factory _SubstanceIngredient.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_SubstanceIngredient.fromJson;
 
   @override

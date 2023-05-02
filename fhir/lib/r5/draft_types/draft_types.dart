@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -142,7 +143,7 @@ class Population with _$Population {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Population.fromJson(Map<String, dynamic> json) =>
+  factory Population.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$PopulationFromJson(json);
 
   /// Acts like a constructor, returns a [Population], accepts a
@@ -334,7 +335,7 @@ class ProductShelfLife with _$ProductShelfLife {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ProductShelfLife.fromJson(Map<String, dynamic> json) =>
+  factory ProductShelfLife.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$ProductShelfLifeFromJson(json);
 
   /// Acts like a constructor, returns a [ProductShelfLife], accepts a
@@ -550,7 +551,7 @@ class MarketingStatus with _$MarketingStatus {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MarketingStatus.fromJson(Map<String, dynamic> json) =>
+  factory MarketingStatus.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$MarketingStatusFromJson(json);
 
   /// Acts like a constructor, returns a [MarketingStatus], accepts a

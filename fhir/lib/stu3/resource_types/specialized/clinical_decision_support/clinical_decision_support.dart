@@ -3,6 +3,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -61,7 +62,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory GuidanceResponse.fromJson(Map<String, dynamic> json) =>
+  factory GuidanceResponse.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$GuidanceResponseFromJson(json);
 
   /// Acts like a constructor, returns a [GuidanceResponse], accepts a

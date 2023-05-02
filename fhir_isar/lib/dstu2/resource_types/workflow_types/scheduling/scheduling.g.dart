@@ -262,9 +262,10 @@ _$_AppointmentParticipant _$$_AppointmentParticipantFromJson(
       actor: json['actor'] == null
           ? null
           : Reference.fromJson(json['actor'] as Map<String, dynamic>),
-      _: $enumDecodeNullable(_$ParticipantRequiredEnumMap, json['required'],
+      required_: $enumDecodeNullable(
+          _$ParticipantRequiredEnumMap, json['required'],
           unknownValue: ParticipantRequired.unknown),
-      Element: json['_required'] == null
+      requiredElement: json['_required'] == null
           ? null
           : Element.fromJson(json['_required'] as Map<String, dynamic>),
       status: $enumDecode(_$ParticipantStatusEnumMap, json['status'],
@@ -317,7 +318,7 @@ _$_AppointmentResponse _$$_AppointmentResponseFromJson(
     Map<String, dynamic> json) {
   $checkKeys(
     json,
-    Keys: const ['participantStatus'],
+    requiredKeys: const ['participantStatus'],
   );
   return _$_AppointmentResponse(
     resourceType: $enumDecodeNullable(

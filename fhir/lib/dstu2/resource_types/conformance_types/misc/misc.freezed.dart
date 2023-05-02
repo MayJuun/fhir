@@ -904,7 +904,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
         _binary = binary,
         super._();
 
-  factory _$_ImplementationGuide.fromJson(Map<String, dynamic> json) =>
+  factory _$_ImplementationGuide.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ImplementationGuideFromJson(json);
 
   @override
@@ -1270,7 +1270,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
       required final ImplementationGuidePage page}) = _$_ImplementationGuide;
   _ImplementationGuide._() : super._();
 
-  factory _ImplementationGuide.fromJson(Map<String, dynamic> json) =
+  factory _ImplementationGuide.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ImplementationGuide.fromJson;
 
   @override
@@ -1526,7 +1526,7 @@ class _$_ImplementationGuideContact extends _ImplementationGuideContact {
         _telecom = telecom,
         super._();
 
-  factory _$_ImplementationGuideContact.fromJson(Map<String, dynamic> json) =>
+  factory _$_ImplementationGuideContact.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ImplementationGuideContactFromJson(json);
 
   @override
@@ -1618,7 +1618,7 @@ abstract class _ImplementationGuideContact extends ImplementationGuideContact {
       final List<ContactPoint>? telecom}) = _$_ImplementationGuideContact;
   _ImplementationGuideContact._() : super._();
 
-  factory _ImplementationGuideContact.fromJson(Map<String, dynamic> json) =
+  factory _ImplementationGuideContact.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ImplementationGuideContact.fromJson;
 
   @override
@@ -1925,7 +1925,7 @@ abstract class _ImplementationGuideDependency
           final Element? uriElement}) = _$_ImplementationGuideDependency;
   _ImplementationGuideDependency._() : super._();
 
-  factory _ImplementationGuideDependency.fromJson(Map<String, dynamic> json) =
+  factory _ImplementationGuideDependency.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ImplementationGuideDependency.fromJson;
 
   @override
@@ -2127,7 +2127,7 @@ class _$_ImplementationGuidePackage extends _ImplementationGuidePackage {
         _resource = resource,
         super._();
 
-  factory _$_ImplementationGuidePackage.fromJson(Map<String, dynamic> json) =>
+  factory _$_ImplementationGuidePackage.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ImplementationGuidePackageFromJson(json);
 
   @override
@@ -2227,7 +2227,7 @@ abstract class _ImplementationGuidePackage extends ImplementationGuidePackage {
               resource}) = _$_ImplementationGuidePackage;
   _ImplementationGuidePackage._() : super._();
 
-  factory _ImplementationGuidePackage.fromJson(Map<String, dynamic> json) =
+  factory _ImplementationGuidePackage.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ImplementationGuidePackage.fromJson;
 
   @override
@@ -2447,7 +2447,7 @@ class _$_ImplementationGuideGlobal extends _ImplementationGuideGlobal {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ImplementationGuideGlobal.fromJson(Map<String, dynamic> json) =>
+  factory _$_ImplementationGuideGlobal.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ImplementationGuideGlobalFromJson(json);
 
   @override
@@ -2539,7 +2539,7 @@ abstract class _ImplementationGuideGlobal extends ImplementationGuideGlobal {
       required final Reference profile}) = _$_ImplementationGuideGlobal;
   _ImplementationGuideGlobal._() : super._();
 
-  factory _ImplementationGuideGlobal.fromJson(Map<String, dynamic> json) =
+  factory _ImplementationGuideGlobal.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ImplementationGuideGlobal.fromJson;
 
   @override
@@ -2788,7 +2788,7 @@ class _$_ImplementationGuidePage extends _ImplementationGuidePage {
         _page = page,
         super._();
 
-  factory _$_ImplementationGuidePage.fromJson(Map<String, dynamic> json) =>
+  factory _$_ImplementationGuidePage.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_ImplementationGuidePageFromJson(json);
 
   @override
@@ -2923,7 +2923,7 @@ abstract class _ImplementationGuidePage extends ImplementationGuidePage {
       final List<ImplementationGuidePage>? page}) = _$_ImplementationGuidePage;
   _ImplementationGuidePage._() : super._();
 
-  factory _ImplementationGuidePage.fromJson(Map<String, dynamic> json) =
+  factory _ImplementationGuidePage.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_ImplementationGuidePage.fromJson;
 
   @override
@@ -4354,7 +4354,7 @@ class _$_TestScript extends _TestScript {
         _test = test,
         super._();
 
-  factory _$_TestScript.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScript.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptFromJson(json);
 
   @override
@@ -4719,7 +4719,7 @@ abstract class _TestScript extends TestScript {
       final TestScriptTeardown? teardown}) = _$_TestScript;
   _TestScript._() : super._();
 
-  factory _TestScript.fromJson(Map<String, dynamic> json) =
+  factory _TestScript.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScript.fromJson;
 
   @override
@@ -4971,7 +4971,7 @@ class _$_TestScriptContact extends _TestScriptContact {
         _telecom = telecom,
         super._();
 
-  factory _$_TestScriptContact.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptContact.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptContactFromJson(json);
 
   @override
@@ -5063,7 +5063,7 @@ abstract class _TestScriptContact extends TestScriptContact {
       final List<ContactPoint>? telecom}) = _$_TestScriptContact;
   _TestScriptContact._() : super._();
 
-  factory _TestScriptContact.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptContact.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptContact.fromJson;
 
   @override
@@ -5238,7 +5238,7 @@ class _$_TestScriptMetadata extends _TestScriptMetadata {
         _capability = capability,
         super._();
 
-  factory _$_TestScriptMetadata.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptMetadata.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptMetadataFromJson(json);
 
   @override
@@ -5341,7 +5341,7 @@ abstract class _TestScriptMetadata extends TestScriptMetadata {
       _$_TestScriptMetadata;
   _TestScriptMetadata._() : super._();
 
-  factory _TestScriptMetadata.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptMetadata.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptMetadata.fromJson;
 
   @override
@@ -5576,7 +5576,7 @@ class _$_TestScriptMetadataLink extends _TestScriptMetadataLink {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_TestScriptMetadataLink.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptMetadataLink.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptMetadataLinkFromJson(json);
 
   @override
@@ -5677,7 +5677,7 @@ abstract class _TestScriptMetadataLink extends TestScriptMetadataLink {
       _$_TestScriptMetadataLink;
   _TestScriptMetadataLink._() : super._();
 
-  factory _TestScriptMetadataLink.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptMetadataLink.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptMetadataLink.fromJson;
 
   @override
@@ -6066,7 +6066,7 @@ class _$_TestScriptMetadataCapability extends _TestScriptMetadataCapability {
         _linkElement = linkElement,
         super._();
 
-  factory _$_TestScriptMetadataCapability.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptMetadataCapability.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptMetadataCapabilityFromJson(json);
 
   @override
@@ -6229,7 +6229,7 @@ abstract class _TestScriptMetadataCapability
       required final Reference conformance}) = _$_TestScriptMetadataCapability;
   _TestScriptMetadataCapability._() : super._();
 
-  factory _TestScriptMetadataCapability.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptMetadataCapability.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptMetadataCapability.fromJson;
 
   @override
@@ -6513,7 +6513,7 @@ class _$_TestScriptFixture extends _TestScriptFixture {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_TestScriptFixture.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptFixture.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptFixtureFromJson(json);
 
   @override
@@ -6620,7 +6620,7 @@ abstract class _TestScriptFixture extends TestScriptFixture {
       final Reference? resource}) = _$_TestScriptFixture;
   _TestScriptFixture._() : super._();
 
-  factory _TestScriptFixture.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptFixture.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptFixture.fromJson;
 
   @override
@@ -6947,7 +6947,7 @@ class _$_TestScriptVariable extends _TestScriptVariable {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_TestScriptVariable.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptVariable.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptVariableFromJson(json);
 
   @override
@@ -7073,7 +7073,7 @@ abstract class _TestScriptVariable extends TestScriptVariable {
       _$_TestScriptVariable;
   _TestScriptVariable._() : super._();
 
-  factory _TestScriptVariable.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptVariable.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptVariable.fromJson;
 
   @override
@@ -7276,7 +7276,7 @@ class _$_TestScriptSetup extends _TestScriptSetup {
         _action = action,
         super._();
 
-  factory _$_TestScriptSetup.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptSetup.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptSetupFromJson(json);
 
   @override
@@ -7366,7 +7366,7 @@ abstract class _TestScriptSetup extends TestScriptSetup {
       required final List<TestScriptSetupAction> action}) = _$_TestScriptSetup;
   _TestScriptSetup._() : super._();
 
-  factory _TestScriptSetup.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptSetup.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptSetup.fromJson;
 
   @override
@@ -7587,7 +7587,7 @@ class _$_TestScriptSetupAction extends _TestScriptSetupAction {
         _fhirComments = fhirComments,
         super._();
 
-  factory _$_TestScriptSetupAction.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptSetupAction.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptSetupActionFromJson(json);
 
   @override
@@ -7690,7 +7690,7 @@ abstract class _TestScriptSetupAction extends TestScriptSetupAction {
       _$_TestScriptSetupAction;
   _TestScriptSetupAction._() : super._();
 
-  factory _TestScriptSetupAction.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptSetupAction.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptSetupAction.fromJson;
 
   @override
@@ -8465,7 +8465,7 @@ class _$_TestScriptActionOperation extends _TestScriptActionOperation {
         _requestHeader = requestHeader,
         super._();
 
-  factory _$_TestScriptActionOperation.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptActionOperation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptActionOperationFromJson(json);
 
   @override
@@ -8746,7 +8746,7 @@ abstract class _TestScriptActionOperation extends TestScriptActionOperation {
           final Element? urlElement}) = _$_TestScriptActionOperation;
   _TestScriptActionOperation._() : super._();
 
-  factory _TestScriptActionOperation.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptActionOperation.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptActionOperation.fromJson;
 
   @override
@@ -10142,7 +10142,7 @@ class _$_TestScriptActionAssert extends _TestScriptActionAssert {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_TestScriptActionAssert.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptActionAssert.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptActionAssertFromJson(json);
 
   @override
@@ -10463,7 +10463,7 @@ abstract class _TestScriptActionAssert extends TestScriptActionAssert {
           final Element? warningOnlyElement}) = _$_TestScriptActionAssert;
   _TestScriptActionAssert._() : super._();
 
-  factory _TestScriptActionAssert.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptActionAssert.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptActionAssert.fromJson;
 
   @override
@@ -10825,7 +10825,7 @@ class _$_TestScriptTest extends _TestScriptTest {
         _action = action,
         super._();
 
-  factory _$_TestScriptTest.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptTest.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptTestFromJson(json);
 
   @override
@@ -10940,7 +10940,7 @@ abstract class _TestScriptTest extends TestScriptTest {
       required final List<TestScriptSetupAction> action}) = _$_TestScriptTest;
   _TestScriptTest._() : super._();
 
-  factory _TestScriptTest.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptTest.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptTest.fromJson;
 
   @override
@@ -11107,7 +11107,7 @@ class _$_TestScriptTeardown extends _TestScriptTeardown {
         _action = action,
         super._();
 
-  factory _$_TestScriptTeardown.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptTeardown.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptTeardownFromJson(json);
 
   @override
@@ -11193,7 +11193,7 @@ abstract class _TestScriptTeardown extends TestScriptTeardown {
       _$_TestScriptTeardown;
   _TestScriptTeardown._() : super._();
 
-  factory _TestScriptTeardown.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptTeardown.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptTeardown.fromJson;
 
   @override
@@ -11384,7 +11384,7 @@ class _$_TestScriptTeardownAction extends _TestScriptTeardownAction {
         _fhirComments = fhirComments,
         super._();
 
-  factory _$_TestScriptTeardownAction.fromJson(Map<String, dynamic> json) =>
+  factory _$_TestScriptTeardownAction.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_TestScriptTeardownActionFromJson(json);
 
   @override
@@ -11481,7 +11481,7 @@ abstract class _TestScriptTeardownAction extends TestScriptTeardownAction {
       _$_TestScriptTeardownAction;
   _TestScriptTeardownAction._() : super._();
 
-  factory _TestScriptTeardownAction.fromJson(Map<String, dynamic> json) =
+  factory _TestScriptTeardownAction.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_TestScriptTeardownAction.fromJson;
 
   @override

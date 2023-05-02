@@ -805,7 +805,7 @@ class _$_Device extends _Device {
         _contact = contact,
         super._();
 
-  factory _$_Device.fromJson(Map<String, dynamic> json) =>
+  factory _$_Device.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_DeviceFromJson(json);
 
   @override
@@ -1100,7 +1100,7 @@ abstract class _Device extends Device {
           final Element? urlElement}) = _$_Device;
   _Device._() : super._();
 
-  factory _Device.fromJson(Map<String, dynamic> json) = _$_Device.fromJson;
+  factory _Device.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) = _$_Device.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Device)
@@ -1695,7 +1695,7 @@ class _$_DeviceComponent extends _DeviceComponent {
         _productionSpecification = productionSpecification,
         super._();
 
-  factory _$_DeviceComponent.fromJson(Map<String, dynamic> json) =>
+  factory _$_DeviceComponent.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_DeviceComponentFromJson(json);
 
   @override
@@ -1901,7 +1901,7 @@ abstract class _DeviceComponent extends DeviceComponent {
       final CodeableConcept? languageCode}) = _$_DeviceComponent;
   _DeviceComponent._() : super._();
 
-  factory _DeviceComponent.fromJson(Map<String, dynamic> json) =
+  factory _DeviceComponent.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_DeviceComponent.fromJson;
 
   @override
@@ -2927,7 +2927,7 @@ class _$_DeviceMetric extends _DeviceMetric {
         _calibration = calibration,
         super._();
 
-  factory _$_DeviceMetric.fromJson(Map<String, dynamic> json) =>
+  factory _$_DeviceMetric.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_DeviceMetricFromJson(json);
 
   @override
@@ -3156,7 +3156,7 @@ abstract class _DeviceMetric extends DeviceMetric {
       final List<DeviceMetricCalibration>? calibration}) = _$_DeviceMetric;
   _DeviceMetric._() : super._();
 
-  factory _DeviceMetric.fromJson(Map<String, dynamic> json) =
+  factory _DeviceMetric.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_DeviceMetric.fromJson;
 
   @override
@@ -3495,7 +3495,7 @@ class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =>
+  factory _$_DeviceMetricCalibration.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =>
       _$$_DeviceMetricCalibrationFromJson(json);
 
   @override
@@ -3615,7 +3615,7 @@ abstract class _DeviceMetricCalibration extends DeviceMetricCalibration {
           final Element? timeElement}) = _$_DeviceMetricCalibration;
   _DeviceMetricCalibration._() : super._();
 
-  factory _DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =
+  factory _DeviceMetricCalibration.fromJson(Map<String, dynamic> json, SerializationManager serializationManager,) =
       _$_DeviceMetricCalibration.fromJson;
 
   @override

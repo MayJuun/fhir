@@ -1716,7 +1716,7 @@ _$_ImagingObjectSelectionStudy _$$_ImagingObjectSelectionStudyFromJson(
     Map<String, dynamic> json) {
   $checkKeys(
     json,
-    Keys: const ['series'],
+    requiredKeys: const ['series'],
   );
   return _$_ImagingObjectSelectionStudy(
     id: json['id'] == null ? null : FhirId.fromJson(json['id']),
@@ -1764,7 +1764,7 @@ _$_ImagingObjectSelectionStudySeries
     _$$_ImagingObjectSelectionStudySeriesFromJson(Map<String, dynamic> json) {
   $checkKeys(
     json,
-    Keys: const ['instance'],
+    requiredKeys: const ['instance'],
   );
   return _$_ImagingObjectSelectionStudySeries(
     id: json['id'] == null ? null : FhirId.fromJson(json['id']),
