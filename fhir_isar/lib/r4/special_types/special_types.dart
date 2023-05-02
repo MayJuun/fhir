@@ -1,546 +1,563 @@
-  factory Narrative({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @JsonKey(unknownEnumValue: NarrativeStatus.unknown) NarrativeStatus? status,
-    @JsonKey(name: '_status') Element? statusElement,
-    required String div,
-  }) = _Narrative;
-  factory CodeableReference({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    CodeableConcept? concept,
-    Reference? reference,
-  }) = _CodeableReference;
-  factory Reference({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    String? reference,
-    @JsonKey(name: '_reference') Element? referenceElement,
-    FhirUri? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    Identifier? identifier,
-    String? display,
-    @JsonKey(name: '_display') Element? displayElement,
-  }) = _Reference;
-  factory Meta({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    FhirId? versionId,
-    @JsonKey(name: '_versionId') Element? versionIdElement,
-    Instant? lastUpdated,
-    @JsonKey(name: '_lastUpdated') Element? lastUpdatedElement,
-    FhirUri? source,
-    @JsonKey(name: '_source') Element? sourceElement,
-    List<Canonical>? profile,
-    List<Coding>? security,
-    List<Coding>? tag,
-  }) = _Meta;
-  factory Dosage({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Integer? sequence,
-    @JsonKey(name: '_sequence') Element? sequenceElement,
-    String? text,
-    @JsonKey(name: '_text') Element? textElement,
-    List<CodeableConcept>? additionalInstruction,
-    String? patientInstruction,
-    @JsonKey(name: '_patientInstruction') Element? patientInstructionElement,
-    Timing? timing,
-    Boolean? asNeededBoolean,
-    @JsonKey(name: '_asNeededBoolean') Element? asNeededBooleanElement,
-    CodeableConcept? asNeededCodeableConcept,
-    CodeableConcept? site,
-    CodeableConcept? route,
-    CodeableConcept? method,
-    List<DosageDoseAndRate>? doseAndRate,
-    Ratio? maxDosePerPeriod,
-    Quantity? maxDosePerAdministration,
-    Quantity? maxDosePerLifetime,
-  }) = _Dosage;
-  factory DosageDoseAndRate({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? type,
-    Range? doseRange,
-    Quantity? doseQuantity,
-    Ratio? rateRatio,
-    Range? rateRange,
-    Quantity? rateQuantity,
-  }) = _DosageDoseAndRate;
-  factory ElementDefinition({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? path,
-    @JsonKey(name: '_path') Element? pathElement,
-    List<ElementDefinitionRepresentation>? representation,
-    @JsonKey(name: '_representation') List<Element?>? representationElement,
-    String? sliceName,
-    @JsonKey(name: '_sliceName') Element? sliceNameElement,
-    Boolean? sliceIsConstraining,
-    @JsonKey(name: '_sliceIsConstraining') Element? sliceIsConstrainingElement,
-    String? label,
-    @JsonKey(name: '_label') Element? labelElement,
-    List<Coding>? code,
-    ElementDefinitionSlicing? slicing,
-    String? short,
-    @JsonKey(name: '_short') Element? shortElement,
-    Markdown? definition,
-    @JsonKey(name: '_definition') Element? definitionElement,
-    Markdown? comment,
-    @JsonKey(name: '_comment') Element? commentElement,
-    Markdown? requirements,
-    @JsonKey(name: '_requirements') Element? requirementsElement,
-    List<String>? alias,
-    @JsonKey(name: '_alias') List<Element?>? aliasElement,
-    UnsignedInt? min,
-    @JsonKey(name: '_min') Element? minElement,
-    String? max,
-    @JsonKey(name: '_max') Element? maxElement,
-    ElementDefinitionBase? base,
-    FhirUri? contentReference,
-    @JsonKey(name: '_contentReference') Element? contentReferenceElement,
-    List<ElementDefinitionType>? type,
-    Base64Binary? defaultValueBase64Binary,
-    @JsonKey(name: '_defaultValueBase64Binary')
-        Element? defaultValueBase64BinaryElement,
-    Boolean? defaultValueBoolean,
-    @JsonKey(name: '_defaultValueBoolean') Element? defaultValueBooleanElement,
-    Canonical? defaultValueCanonical,
-    @JsonKey(name: '_defaultValueCanonical')
-        Element? defaultValueCanonicalElement,
-    Code? defaultValueCode,
-    @JsonKey(name: '_defaultValueCode') Element? defaultValueCodeElement,
-    Date? defaultValueDate,
-    @JsonKey(name: '_defaultValueDate') Element? defaultValueDateElement,
-    FhirDateTime? defaultValueDateTime,
-    @JsonKey(name: '_defaultValueDateTime')
-        Element? defaultValueDateTimeElement,
-    Decimal? defaultValueDecimal,
-    @JsonKey(name: '_defaultValueDecimal') Element? defaultValueDecimalElement,
-    FhirId? defaultValueId,
-    @JsonKey(name: '_defaultValueId') Element? defaultValueIdElement,
-    Instant? defaultValueInstant,
-    @JsonKey(name: '_defaultValueInstant') Element? defaultValueInstantElement,
-    Integer? defaultValueInteger,
-    @JsonKey(name: '_defaultValueInteger') Element? defaultValueIntegerElement,
-    Markdown? defaultValueMarkdown,
-    @JsonKey(name: '_defaultValueMarkdown')
-        Element? defaultValueMarkdownElement,
-    Oid? defaultValueOid,
-    @JsonKey(name: '_defaultValueOid') Element? defaultValueOidElement,
-    PositiveInt? defaultValuePositiveInt,
-    @JsonKey(name: '_defaultValuePositiveInt')
-        Element? defaultValuePositiveIntElement,
-    String? defaultValueString,
-    @JsonKey(name: '_defaultValueString') Element? defaultValueStringElement,
-    Time? defaultValueTime,
-    @JsonKey(name: '_defaultValueTime') Element? defaultValueTimeElement,
-    UnsignedInt? defaultValueUnsignedInt,
-    @JsonKey(name: '_defaultValueUnsignedInt')
-        Element? defaultValueUnsignedIntElement,
-    FhirUri? defaultValueUri,
-    @JsonKey(name: '_defaultValueUri') Element? defaultValueUriElement,
-    FhirUrl? defaultValueUrl,
-    @JsonKey(name: '_defaultValueUrl') Element? defaultValueUrlElement,
-    Uuid? defaultValueUuid,
-    @JsonKey(name: '_defaultValueUuid') Element? defaultValueUuidElement,
-    Address? defaultValueAddress,
-    Age? defaultValueAge,
-    Annotation? defaultValueAnnotation,
-    Attachment? defaultValueAttachment,
-    CodeableConcept? defaultValueCodeableConcept,
-    CodeableReference? defaultValueCodeableReference,
-    Coding? defaultValueCoding,
-    ContactPoint? defaultValueContactPoint,
-    Count? defaultValueCount,
-    Distance? defaultValueDistance,
-    FhirDuration? defaultValueDuration,
-    HumanName? defaultValueHumanName,
-    Identifier? defaultValueIdentifier,
-    Money? defaultValueMoney,
-    Period? defaultValuePeriod,
-    Quantity? defaultValueQuantity,
-    Range? defaultValueRange,
-    Ratio? defaultValueRatio,
-    RatioRange? defaultValueRatioRange,
-    Reference? defaultValueReference,
-    SampledData? defaultValueSampledData,
-    Signature? defaultValueSignature,
-    Timing? defaultValueTiming,
-    ContactDetail? defaultValueContactDetail,
-    Contributor? defaultValueContributor,
-    DataRequirement? defaultValueDataRequirement,
-    Expression? defaultValueExpression,
-    ParameterDefinition? defaultValueParameterDefinition,
-    RelatedArtifact? defaultValueRelatedArtifact,
-    TriggerDefinition? defaultValueTriggerDefinition,
-    UsageContext? defaultValueUsageContext,
-    Dosage? defaultValueDosage,
-    Markdown? meaningWhenMissing,
-    @JsonKey(name: '_meaningWhenMissing') Element? meaningWhenMissingElement,
-    String? orderMeaning,
-    @JsonKey(name: '_orderMeaning') Element? orderMeaningElement,
-    Base64Binary? fixedBase64Binary,
-    @JsonKey(name: '_fixedBase64Binary') Element? fixedBase64BinaryElement,
-    Boolean? fixedBoolean,
-    @JsonKey(name: '_fixedBoolean') Element? fixedBooleanElement,
-    Canonical? fixedCanonical,
-    @JsonKey(name: '_fixedCanonical') Element? fixedCanonicalElement,
-    Code? fixedCode,
-    @JsonKey(name: '_fixedCode') Element? fixedCodeElement,
-    Date? fixedDate,
-    @JsonKey(name: '_fixedDate') Element? fixedDateElement,
-    FhirDateTime? fixedDateTime,
-    @JsonKey(name: '_fixedDateTime') Element? fixedDateTimeElement,
-    Decimal? fixedDecimal,
-    @JsonKey(name: '_fixedDecimal') Element? fixedDecimalElement,
-    FhirId? fixedId,
-    @JsonKey(name: '_fixedId') Element? fixedIdElement,
-    Instant? fixedInstant,
-    @JsonKey(name: '_fixedInstant') Element? fixedInstantElement,
-    Integer? fixedInteger,
-    @JsonKey(name: '_fixedInteger') Element? fixedIntegerElement,
-    Markdown? fixedMarkdown,
-    @JsonKey(name: '_fixedMarkdown') Element? fixedMarkdownElement,
-    Oid? fixedOid,
-    @JsonKey(name: '_fixedOid') Element? fixedOidElement,
-    PositiveInt? fixedPositiveInt,
-    @JsonKey(name: '_fixedPositiveInt') Element? fixedPositiveIntElement,
-    String? fixedString,
-    @JsonKey(name: '_fixedString') Element? fixedStringElement,
-    Time? fixedTime,
-    @JsonKey(name: '_fixedTime') Element? fixedTimeElement,
-    UnsignedInt? fixedUnsignedInt,
-    @JsonKey(name: '_fixedUnsignedInt') Element? fixedUnsignedIntElement,
-    FhirUri? fixedUri,
-    @JsonKey(name: '_fixedUri') Element? fixedUriElement,
-    FhirUrl? fixedUrl,
-    @JsonKey(name: '_fixedUrl') Element? fixedUrlElement,
-    Uuid? fixedUuid,
-    @JsonKey(name: '_fixedUuid') Element? fixedUuidElement,
-    Address? fixedAddress,
-    Age? fixedAge,
-    Annotation? fixedAnnotation,
-    Attachment? fixedAttachment,
-    CodeableConcept? fixedCodeableConcept,
-    CodeableReference? fixedCodeableReference,
-    Coding? fixedCoding,
-    ContactPoint? fixedContactPoint,
-    Count? fixedCount,
-    Distance? fixedDistance,
-    FhirDuration? fixedDuration,
-    HumanName? fixedHumanName,
-    Identifier? fixedIdentifier,
-    Money? fixedMoney,
-    Period? fixedPeriod,
-    Quantity? fixedQuantity,
-    Range? fixedRange,
-    Ratio? fixedRatio,
-    RatioRange? fixedRatioRange,
-    Reference? fixedReference,
-    SampledData? fixedSampledData,
-    Signature? fixedSignature,
-    Timing? fixedTiming,
-    ContactDetail? fixedContactDetail,
-    Contributor? fixedContributor,
-    DataRequirement? fixedDataRequirement,
-    Expression? fixedExpression,
-    ParameterDefinition? fixedParameterDefinition,
-    RelatedArtifact? fixedRelatedArtifact,
-    TriggerDefinition? fixedTriggerDefinition,
-    UsageContext? fixedUsageContext,
-    Dosage? fixedDosage,
-    Base64Binary? patternBase64Binary,
-    @JsonKey(name: '_patternBase64Binary') Element? patternBase64BinaryElement,
-    Boolean? patternBoolean,
-    @JsonKey(name: '_patternBoolean') Element? patternBooleanElement,
-    Canonical? patternCanonical,
-    @JsonKey(name: '_patternCanonical') Element? patternCanonicalElement,
-    Code? patternCode,
-    @JsonKey(name: '_patternCode') Element? patternCodeElement,
-    Date? patternDate,
-    @JsonKey(name: '_patternDate') Element? patternDateElement,
-    FhirDateTime? patternDateTime,
-    @JsonKey(name: '_patternDateTime') Element? patternDateTimeElement,
-    Decimal? patternDecimal,
-    @JsonKey(name: '_patternDecimal') Element? patternDecimalElement,
-    FhirId? patternId,
-    @JsonKey(name: '_patternId') Element? patternIdElement,
-    Instant? patternInstant,
-    @JsonKey(name: '_patternInstant') Element? patternInstantElement,
-    Integer? patternInteger,
-    @JsonKey(name: '_patternInteger') Element? patternIntegerElement,
-    Markdown? patternMarkdown,
-    @JsonKey(name: '_patternMarkdown') Element? patternMarkdownElement,
-    Oid? patternOid,
-    @JsonKey(name: '_patternOid') Element? patternOidElement,
-    PositiveInt? patternPositiveInt,
-    @JsonKey(name: '_patternPositiveInt') Element? patternPositiveIntElement,
-    String? patternString,
-    @JsonKey(name: '_patternString') Element? patternStringElement,
-    Time? patternTime,
-    @JsonKey(name: '_patternTime') Element? patternTimeElement,
-    UnsignedInt? patternUnsignedInt,
-    @JsonKey(name: '_patternUnsignedInt') Element? patternUnsignedIntElement,
-    FhirUri? patternUri,
-    @JsonKey(name: '_patternUri') Element? patternUriElement,
-    FhirUrl? patternUrl,
-    @JsonKey(name: '_patternUrl') Element? patternUrlElement,
-    Uuid? patternUuid,
-    @JsonKey(name: '_patternUuid') Element? patternUuidElement,
-    Address? patternAddress,
-    Age? patternAge,
-    Annotation? patternAnnotation,
-    Attachment? patternAttachment,
-    CodeableConcept? patternCodeableConcept,
-    CodeableReference? patternCodeableReference,
-    Coding? patternCoding,
-    ContactPoint? patternContactPoint,
-    Count? patternCount,
-    Distance? patternDistance,
-    FhirDuration? patternDuration,
-    HumanName? patternHumanName,
-    Identifier? patternIdentifier,
-    Money? patternMoney,
-    Period? patternPeriod,
-    Quantity? patternQuantity,
-    Range? patternRange,
-    Ratio? patternRatio,
-    RatioRange? patternRatioRange,
-    Reference? patternReference,
-    SampledData? patternSampledData,
-    Signature? patternSignature,
-    Timing? patternTiming,
-    ContactDetail? patternContactDetail,
-    Contributor? patternContributor,
-    DataRequirement? patternDataRequirement,
-    Expression? patternExpression,
-    ParameterDefinition? patternParameterDefinition,
-    RelatedArtifact? patternRelatedArtifact,
-    TriggerDefinition? patternTriggerDefinition,
-    UsageContext? patternUsageContext,
-    Dosage? patternDosage,
-    List<ElementDefinitionExample>? example,
-    Date? minValueDate,
-    @JsonKey(name: '_minValueDate') Element? minValueDateElement,
-    FhirDateTime? minValueDateTime,
-    @JsonKey(name: '_minValueDateTime') Element? minValueDateTimeElement,
-    Instant? minValueInstant,
-    @JsonKey(name: '_minValueInstant') Element? minValueInstantElement,
-    Time? minValueTime,
-    @JsonKey(name: '_minValueTime') Element? minValueTimeElement,
-    Decimal? minValueDecimal,
-    @JsonKey(name: '_minValueDecimal') Element? minValueDecimalElement,
-    Integer? minValueInteger,
-    @JsonKey(name: '_minValueInteger') Element? minValueIntegerElement,
-    PositiveInt? minValuePositiveInt,
-    @JsonKey(name: '_minValuePositiveInt') Element? minValuePositiveIntElement,
-    UnsignedInt? minValueUnsignedInt,
-    @JsonKey(name: '_minValueUnsignedInt') Element? minValueUnsignedIntElement,
-    Quantity? minValueQuantity,
-    Date? maxValueDate,
-    @JsonKey(name: '_maxValueDate') Element? maxValueDateElement,
-    FhirDateTime? maxValueDateTime,
-    @JsonKey(name: '_maxValueDateTime') Element? maxValueDateTimeElement,
-    Instant? maxValueInstant,
-    @JsonKey(name: '_maxValueInstant') Element? maxValueInstantElement,
-    Time? maxValueTime,
-    @JsonKey(name: '_maxValueTime') Element? maxValueTimeElement,
-    Decimal? maxValueDecimal,
-    @JsonKey(name: '_maxValueDecimal') Element? maxValueDecimalElement,
-    Integer? maxValueInteger,
-    @JsonKey(name: '_maxValueInteger') Element? maxValueIntegerElement,
-    PositiveInt? maxValuePositiveInt,
-    @JsonKey(name: '_maxValuePositiveInt') Element? maxValuePositiveIntElement,
-    UnsignedInt? maxValueUnsignedInt,
-    @JsonKey(name: '_maxValueUnsignedInt') Element? maxValueUnsignedIntElement,
-    Quantity? maxValueQuantity,
-    Integer? maxLength,
-    @JsonKey(name: '_maxLength') Element? maxLengthElement,
-    List<FhirId>? condition,
-    @JsonKey(name: '_condition') List<Element?>? conditionElement,
-    List<ElementDefinitionConstraint>? constraint,
-    Boolean? mustSupport,
-    @JsonKey(name: '_mustSupport') Element? mustSupportElement,
-    Boolean? isModifier,
-    @JsonKey(name: '_isModifier') Element? isModifierElement,
-    String? isModifierReason,
-    @JsonKey(name: '_isModifierReason') Element? isModifierReasonElement,
-    Boolean? isSummary,
-    @JsonKey(name: '_isSummary') Element? isSummaryElement,
-    ElementDefinitionBinding? binding,
-    List<ElementDefinitionMapping>? mapping,
-  }) = _ElementDefinition;
-  factory ElementDefinitionSlicing({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<ElementDefinitionDiscriminator>? discriminator,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    Boolean? ordered,
-    @JsonKey(name: '_ordered') Element? orderedElement,
-    @JsonKey(unknownEnumValue: ElementDefinitionSlicingRules.unknown)
-        ElementDefinitionSlicingRules? rules,
-    @JsonKey(name: '_rules') Element? rulesElement,
-  }) = _ElementDefinitionSlicing;
-  factory ElementDefinitionDiscriminator({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: ElementDefinitionDiscriminatorType.unknown)
-        ElementDefinitionDiscriminatorType? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    String? path,
-    @JsonKey(name: '_path') Element? pathElement,
-  }) = _ElementDefinitionDiscriminator;
-  factory ElementDefinitionBase({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? path,
-    @JsonKey(name: '_path') Element? pathElement,
-    UnsignedInt? min,
-    @JsonKey(name: '_min') Element? minElement,
-    String? max,
-    @JsonKey(name: '_max') Element? maxElement,
-  }) = _ElementDefinitionBase;
-  factory ElementDefinitionType({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    FhirUri? code,
-    @JsonKey(name: '_code') Element? codeElement,
-    List<Canonical>? profile,
-    @JsonKey(name: '_profile') List<Element?>? profileElement,
-    List<Canonical>? targetProfile,
-    List<ElementDefinitionTypeAggregation>? aggregation,
-    @JsonKey(name: '_aggregation') List<Element?>? aggregationElement,
-    @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
-        ElementDefinitionTypeVersioning? versioning,
-    @JsonKey(name: '_versioning') Element? versioningElement,
-  }) = _ElementDefinitionType;
-  factory ElementDefinitionExample({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? label,
-    @JsonKey(name: '_label') Element? labelElement,
-    Base64Binary? valueBase64Binary,
-    @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-    Boolean? valueBoolean,
-    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-    Canonical? valueCanonical,
-    @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-    Code? valueCode,
-    @JsonKey(name: '_valueCode') Element? valueCodeElement,
-    Date? valueDate,
-    @JsonKey(name: '_valueDate') Element? valueDateElement,
-    FhirDateTime? valueDateTime,
-    @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-    Decimal? valueDecimal,
-    @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-    FhirId? valueId,
-    @JsonKey(name: '_valueId') Element? valueIdElement,
-    Instant? valueInstant,
-    @JsonKey(name: '_valueInstant') Element? valueInstantElement,
-    Integer? valueInteger,
-    @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-    Markdown? valueMarkdown,
-    @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-    Oid? valueOid,
-    @JsonKey(name: '_valueOid') Element? valueOidElement,
-    PositiveInt? valuePositiveInt,
-    @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
-    String? valueString,
-    @JsonKey(name: '_valueString') Element? valueStringElement,
-    Time? valueTime,
-    @JsonKey(name: '_valueTime') Element? valueTimeElement,
-    UnsignedInt? valueUnsignedInt,
-    @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
-    FhirUri? valueUri,
-    @JsonKey(name: '_valueUri') Element? valueUriElement,
-    FhirUrl? valueUrl,
-    @JsonKey(name: '_valueUrl') Element? valueUrlElement,
-    Uuid? valueUuid,
-    @JsonKey(name: '_valueUuid') Element? valueUuidElement,
-    Address? valueAddress,
-    Age? valueAge,
-    Annotation? valueAnnotation,
-    Attachment? valueAttachment,
-    CodeableConcept? valueCodeableConcept,
-    CodeableReference? valueCodeableReference,
-    Coding? valueCoding,
-    ContactPoint? valueContactPoint,
-    Count? valueCount,
-    Distance? valueDistance,
-    FhirDuration? valueDuration,
-    HumanName? valueHumanName,
-    Identifier? valueIdentifier,
-    Money? valueMoney,
-    Period? valuePeriod,
-    Quantity? valueQuantity,
-    Range? valueRange,
-    Ratio? valueRatio,
-    RatioRange? valueRatioRange,
-    Reference? valueReference,
-    SampledData? valueSampledData,
-    Signature? valueSignature,
-    Timing? valueTiming,
-    ContactDetail? valueContactDetail,
-    Contributor? valueContributor,
-    DataRequirement? valueDataRequirement,
-    Expression? valueExpression,
-    ParameterDefinition? valueParameterDefinition,
-    RelatedArtifact? valueRelatedArtifact,
-    TriggerDefinition? valueTriggerDefinition,
-    UsageContext? valueUsageContext,
-    Dosage? valueDosage,
-    Meta? valueMeta,
-  }) = _ElementDefinitionExample;
-  factory ElementDefinitionConstraint({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    FhirId? key,
-    @JsonKey(name: '_key') Element? keyElement,
-    String? requirements,
-    @JsonKey(name: '_requirements') Element? requirementsElement,
-    @JsonKey(unknownEnumValue: ElementDefinitionConstraintSeverity.unknown)
-        ElementDefinitionConstraintSeverity? severity,
-    @JsonKey(name: '_severity') Element? severityElement,
-    String? human,
-    @JsonKey(name: '_human') Element? humanElement,
-    String? expression,
-    @JsonKey(name: '_expression') Element? expressionElement,
-    String? xpath,
-    @JsonKey(name: '_xpath') Element? xpathElement,
-    Canonical? source,
-  }) = _ElementDefinitionConstraint;
-  factory ElementDefinitionBinding({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: ElementDefinitionBindingStrength.unknown)
-        ElementDefinitionBindingStrength? strength,
-    @JsonKey(name: '_strength') Element? strengthElement,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    Canonical? valueSet,
-  }) = _ElementDefinitionBinding;
-  factory ElementDefinitionMapping({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    FhirId? identity,
-    @JsonKey(name: '_identity') Element? identityElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    String? map,
-    @JsonKey(name: '_map') Element? mapElement,
-    String? comment,
-    @JsonKey(name: '_comment') Element? commentElement,
-  }) = _ElementDefinitionMapping;
+import '../../r4.dart';
+part 'special_types.enums.dart';
+
+class Narrative {
+  String? id;
+  List<FhirExtension>? extension_;
+  NarrativeStatus? status;
+  Element? statusElement;
+  String div;
+}
+
+class CodeableReference {
+  String? id;
+  List<FhirExtension>? extension_;
+  CodeableConcept? concept;
+  Reference? reference;
+}
+
+class Reference {
+  String? id;
+  List<FhirExtension>? extension_;
+  String? reference;
+  Element? referenceElement;
+  FhirUri? type;
+  Element? typeElement;
+  Identifier? identifier;
+  String? display;
+  Element? displayElement;
+}
+
+class Meta {
+  String? id;
+  List<FhirExtension>? extension_;
+  FhirId? versionId;
+  Element? versionIdElement;
+  Instant? lastUpdated;
+  Element? lastUpdatedElement;
+  FhirUri? source;
+  Element? sourceElement;
+  List<Canonical>? profile;
+  List<Coding>? security;
+  List<Coding>? tag;
+}
+
+class Dosage {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Integer? sequence;
+  Element? sequenceElement;
+  String? text;
+  Element? textElement;
+  List<CodeableConcept>? additionalInstruction;
+  String? patientInstruction;
+  Element? patientInstructionElement;
+  Timing? timing;
+  Boolean? asNeededBoolean;
+  Element? asNeededBooleanElement;
+  CodeableConcept? asNeededCodeableConcept;
+  CodeableConcept? site;
+  CodeableConcept? route;
+  CodeableConcept? method;
+  List<DosageDoseAndRate>? doseAndRate;
+  Ratio? maxDosePerPeriod;
+  Quantity? maxDosePerAdministration;
+  Quantity? maxDosePerLifetime;
+}
+
+class DosageDoseAndRate {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? type;
+  Range? doseRange;
+  Quantity? doseQuantity;
+  Ratio? rateRatio;
+  Range? rateRange;
+  Quantity? rateQuantity;
+}
+
+class ElementDefinition {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? path;
+  Element? pathElement;
+  List<ElementDefinitionRepresentation>? representation;
+  List<Element?>? representationElement;
+  String? sliceName;
+  Element? sliceNameElement;
+  Boolean? sliceIsConstraining;
+  Element? sliceIsConstrainingElement;
+  String? label;
+  Element? labelElement;
+  List<Coding>? code;
+  ElementDefinitionSlicing? slicing;
+  String? short;
+  Element? shortElement;
+  Markdown? definition;
+  Element? definitionElement;
+  Markdown? comment;
+  Element? commentElement;
+  Markdown? requirements;
+  Element? requirementsElement;
+  List<String>? alias;
+  List<Element?>? aliasElement;
+  UnsignedInt? min;
+  Element? minElement;
+  String? max;
+  Element? maxElement;
+  ElementDefinitionBase? base;
+  FhirUri? contentReference;
+  Element? contentReferenceElement;
+  List<ElementDefinitionType>? type;
+  Base64Binary? defaultValueBase64Binary;
+
+  Element? defaultValueBase64BinaryElement;
+  Boolean? defaultValueBoolean;
+  Element? defaultValueBooleanElement;
+  Canonical? defaultValueCanonical;
+
+  Element? defaultValueCanonicalElement;
+  Code? defaultValueCode;
+  Element? defaultValueCodeElement;
+  Date? defaultValueDate;
+  Element? defaultValueDateElement;
+  FhirDateTime? defaultValueDateTime;
+
+  Element? defaultValueDateTimeElement;
+  Decimal? defaultValueDecimal;
+  Element? defaultValueDecimalElement;
+  FhirId? defaultValueId;
+  Element? defaultValueIdElement;
+  Instant? defaultValueInstant;
+  Element? defaultValueInstantElement;
+  Integer? defaultValueInteger;
+  Element? defaultValueIntegerElement;
+  Markdown? defaultValueMarkdown;
+
+  Element? defaultValueMarkdownElement;
+  Oid? defaultValueOid;
+  Element? defaultValueOidElement;
+  PositiveInt? defaultValuePositiveInt;
+
+  Element? defaultValuePositiveIntElement;
+  String? defaultValueString;
+  Element? defaultValueStringElement;
+  Time? defaultValueTime;
+  Element? defaultValueTimeElement;
+  UnsignedInt? defaultValueUnsignedInt;
+
+  Element? defaultValueUnsignedIntElement;
+  FhirUri? defaultValueUri;
+  Element? defaultValueUriElement;
+  FhirUrl? defaultValueUrl;
+  Element? defaultValueUrlElement;
+  Uuid? defaultValueUuid;
+  Element? defaultValueUuidElement;
+  Address? defaultValueAddress;
+  Age? defaultValueAge;
+  Annotation? defaultValueAnnotation;
+  Attachment? defaultValueAttachment;
+  CodeableConcept? defaultValueCodeableConcept;
+  CodeableReference? defaultValueCodeableReference;
+  Coding? defaultValueCoding;
+  ContactPoint? defaultValueContactPoint;
+  Count? defaultValueCount;
+  Distance? defaultValueDistance;
+  FhirDuration? defaultValueDuration;
+  HumanName? defaultValueHumanName;
+  Identifier? defaultValueIdentifier;
+  Money? defaultValueMoney;
+  Period? defaultValuePeriod;
+  Quantity? defaultValueQuantity;
+  Range? defaultValueRange;
+  Ratio? defaultValueRatio;
+  RatioRange? defaultValueRatioRange;
+  Reference? defaultValueReference;
+  SampledData? defaultValueSampledData;
+  Signature? defaultValueSignature;
+  Timing? defaultValueTiming;
+  ContactDetail? defaultValueContactDetail;
+  Contributor? defaultValueContributor;
+  DataRequirement? defaultValueDataRequirement;
+  Expression? defaultValueExpression;
+  ParameterDefinition? defaultValueParameterDefinition;
+  RelatedArtifact? defaultValueRelatedArtifact;
+  TriggerDefinition? defaultValueTriggerDefinition;
+  UsageContext? defaultValueUsageContext;
+  Dosage? defaultValueDosage;
+  Markdown? meaningWhenMissing;
+  Element? meaningWhenMissingElement;
+  String? orderMeaning;
+  Element? orderMeaningElement;
+  Base64Binary? fixedBase64Binary;
+  Element? fixedBase64BinaryElement;
+  Boolean? fixedBoolean;
+  Element? fixedBooleanElement;
+  Canonical? fixedCanonical;
+  Element? fixedCanonicalElement;
+  Code? fixedCode;
+  Element? fixedCodeElement;
+  Date? fixedDate;
+  Element? fixedDateElement;
+  FhirDateTime? fixedDateTime;
+  Element? fixedDateTimeElement;
+  Decimal? fixedDecimal;
+  Element? fixedDecimalElement;
+  FhirId? fixedId;
+  Element? fixedIdElement;
+  Instant? fixedInstant;
+  Element? fixedInstantElement;
+  Integer? fixedInteger;
+  Element? fixedIntegerElement;
+  Markdown? fixedMarkdown;
+  Element? fixedMarkdownElement;
+  Oid? fixedOid;
+  Element? fixedOidElement;
+  PositiveInt? fixedPositiveInt;
+  Element? fixedPositiveIntElement;
+  String? fixedString;
+  Element? fixedStringElement;
+  Time? fixedTime;
+  Element? fixedTimeElement;
+  UnsignedInt? fixedUnsignedInt;
+  Element? fixedUnsignedIntElement;
+  FhirUri? fixedUri;
+  Element? fixedUriElement;
+  FhirUrl? fixedUrl;
+  Element? fixedUrlElement;
+  Uuid? fixedUuid;
+  Element? fixedUuidElement;
+  Address? fixedAddress;
+  Age? fixedAge;
+  Annotation? fixedAnnotation;
+  Attachment? fixedAttachment;
+  CodeableConcept? fixedCodeableConcept;
+  CodeableReference? fixedCodeableReference;
+  Coding? fixedCoding;
+  ContactPoint? fixedContactPoint;
+  Count? fixedCount;
+  Distance? fixedDistance;
+  FhirDuration? fixedDuration;
+  HumanName? fixedHumanName;
+  Identifier? fixedIdentifier;
+  Money? fixedMoney;
+  Period? fixedPeriod;
+  Quantity? fixedQuantity;
+  Range? fixedRange;
+  Ratio? fixedRatio;
+  RatioRange? fixedRatioRange;
+  Reference? fixedReference;
+  SampledData? fixedSampledData;
+  Signature? fixedSignature;
+  Timing? fixedTiming;
+  ContactDetail? fixedContactDetail;
+  Contributor? fixedContributor;
+  DataRequirement? fixedDataRequirement;
+  Expression? fixedExpression;
+  ParameterDefinition? fixedParameterDefinition;
+  RelatedArtifact? fixedRelatedArtifact;
+  TriggerDefinition? fixedTriggerDefinition;
+  UsageContext? fixedUsageContext;
+  Dosage? fixedDosage;
+  Base64Binary? patternBase64Binary;
+  Element? patternBase64BinaryElement;
+  Boolean? patternBoolean;
+  Element? patternBooleanElement;
+  Canonical? patternCanonical;
+  Element? patternCanonicalElement;
+  Code? patternCode;
+  Element? patternCodeElement;
+  Date? patternDate;
+  Element? patternDateElement;
+  FhirDateTime? patternDateTime;
+  Element? patternDateTimeElement;
+  Decimal? patternDecimal;
+  Element? patternDecimalElement;
+  FhirId? patternId;
+  Element? patternIdElement;
+  Instant? patternInstant;
+  Element? patternInstantElement;
+  Integer? patternInteger;
+  Element? patternIntegerElement;
+  Markdown? patternMarkdown;
+  Element? patternMarkdownElement;
+  Oid? patternOid;
+  Element? patternOidElement;
+  PositiveInt? patternPositiveInt;
+  Element? patternPositiveIntElement;
+  String? patternString;
+  Element? patternStringElement;
+  Time? patternTime;
+  Element? patternTimeElement;
+  UnsignedInt? patternUnsignedInt;
+  Element? patternUnsignedIntElement;
+  FhirUri? patternUri;
+  Element? patternUriElement;
+  FhirUrl? patternUrl;
+  Element? patternUrlElement;
+  Uuid? patternUuid;
+  Element? patternUuidElement;
+  Address? patternAddress;
+  Age? patternAge;
+  Annotation? patternAnnotation;
+  Attachment? patternAttachment;
+  CodeableConcept? patternCodeableConcept;
+  CodeableReference? patternCodeableReference;
+  Coding? patternCoding;
+  ContactPoint? patternContactPoint;
+  Count? patternCount;
+  Distance? patternDistance;
+  FhirDuration? patternDuration;
+  HumanName? patternHumanName;
+  Identifier? patternIdentifier;
+  Money? patternMoney;
+  Period? patternPeriod;
+  Quantity? patternQuantity;
+  Range? patternRange;
+  Ratio? patternRatio;
+  RatioRange? patternRatioRange;
+  Reference? patternReference;
+  SampledData? patternSampledData;
+  Signature? patternSignature;
+  Timing? patternTiming;
+  ContactDetail? patternContactDetail;
+  Contributor? patternContributor;
+  DataRequirement? patternDataRequirement;
+  Expression? patternExpression;
+  ParameterDefinition? patternParameterDefinition;
+  RelatedArtifact? patternRelatedArtifact;
+  TriggerDefinition? patternTriggerDefinition;
+  UsageContext? patternUsageContext;
+  Dosage? patternDosage;
+  List<ElementDefinitionExample>? example;
+  Date? minValueDate;
+  Element? minValueDateElement;
+  FhirDateTime? minValueDateTime;
+  Element? minValueDateTimeElement;
+  Instant? minValueInstant;
+  Element? minValueInstantElement;
+  Time? minValueTime;
+  Element? minValueTimeElement;
+  Decimal? minValueDecimal;
+  Element? minValueDecimalElement;
+  Integer? minValueInteger;
+  Element? minValueIntegerElement;
+  PositiveInt? minValuePositiveInt;
+  Element? minValuePositiveIntElement;
+  UnsignedInt? minValueUnsignedInt;
+  Element? minValueUnsignedIntElement;
+  Quantity? minValueQuantity;
+  Date? maxValueDate;
+  Element? maxValueDateElement;
+  FhirDateTime? maxValueDateTime;
+  Element? maxValueDateTimeElement;
+  Instant? maxValueInstant;
+  Element? maxValueInstantElement;
+  Time? maxValueTime;
+  Element? maxValueTimeElement;
+  Decimal? maxValueDecimal;
+  Element? maxValueDecimalElement;
+  Integer? maxValueInteger;
+  Element? maxValueIntegerElement;
+  PositiveInt? maxValuePositiveInt;
+  Element? maxValuePositiveIntElement;
+  UnsignedInt? maxValueUnsignedInt;
+  Element? maxValueUnsignedIntElement;
+  Quantity? maxValueQuantity;
+  Integer? maxLength;
+  Element? maxLengthElement;
+  List<FhirId>? condition;
+  List<Element?>? conditionElement;
+  List<ElementDefinitionConstraint>? constraint;
+  Boolean? mustSupport;
+  Element? mustSupportElement;
+  Boolean? isModifier;
+  Element? isModifierElement;
+  String? isModifierReason;
+  Element? isModifierReasonElement;
+  Boolean? isSummary;
+  Element? isSummaryElement;
+  ElementDefinitionBinding? binding;
+  List<ElementDefinitionMapping>? mapping;
+}
+
+class ElementDefinitionSlicing {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<ElementDefinitionDiscriminator>? discriminator;
+  String? description;
+  Element? descriptionElement;
+  Boolean? ordered;
+  Element? orderedElement;
+
+  ElementDefinitionSlicingRules? rules;
+  Element? rulesElement;
+}
+
+class ElementDefinitionDiscriminator {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+
+  ElementDefinitionDiscriminatorType? type;
+  Element? typeElement;
+  String? path;
+  Element? pathElement;
+}
+
+class ElementDefinitionBase {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? path;
+  Element? pathElement;
+  UnsignedInt? min;
+  Element? minElement;
+  String? max;
+  Element? maxElement;
+}
+
+class ElementDefinitionType {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirUri? code;
+  Element? codeElement;
+  List<Canonical>? profile;
+  List<Element?>? profileElement;
+  List<Canonical>? targetProfile;
+  List<ElementDefinitionTypeAggregation>? aggregation;
+  List<Element?>? aggregationElement;
+
+  ElementDefinitionTypeVersioning? versioning;
+  Element? versioningElement;
+}
+
+class ElementDefinitionExample {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? label;
+  Element? labelElement;
+  Base64Binary? valueBase64Binary;
+  Element? valueBase64BinaryElement;
+  Boolean? valueBoolean;
+  Element? valueBooleanElement;
+  Canonical? valueCanonical;
+  Element? valueCanonicalElement;
+  Code? valueCode;
+  Element? valueCodeElement;
+  Date? valueDate;
+  Element? valueDateElement;
+  FhirDateTime? valueDateTime;
+  Element? valueDateTimeElement;
+  Decimal? valueDecimal;
+  Element? valueDecimalElement;
+  FhirId? valueId;
+  Element? valueIdElement;
+  Instant? valueInstant;
+  Element? valueInstantElement;
+  Integer? valueInteger;
+  Element? valueIntegerElement;
+  Markdown? valueMarkdown;
+  Element? valueMarkdownElement;
+  Oid? valueOid;
+  Element? valueOidElement;
+  PositiveInt? valuePositiveInt;
+  Element? valuePositiveIntElement;
+  String? valueString;
+  Element? valueStringElement;
+  Time? valueTime;
+  Element? valueTimeElement;
+  UnsignedInt? valueUnsignedInt;
+  Element? valueUnsignedIntElement;
+  FhirUri? valueUri;
+  Element? valueUriElement;
+  FhirUrl? valueUrl;
+  Element? valueUrlElement;
+  Uuid? valueUuid;
+  Element? valueUuidElement;
+  Address? valueAddress;
+  Age? valueAge;
+  Annotation? valueAnnotation;
+  Attachment? valueAttachment;
+  CodeableConcept? valueCodeableConcept;
+  CodeableReference? valueCodeableReference;
+  Coding? valueCoding;
+  ContactPoint? valueContactPoint;
+  Count? valueCount;
+  Distance? valueDistance;
+  FhirDuration? valueDuration;
+  HumanName? valueHumanName;
+  Identifier? valueIdentifier;
+  Money? valueMoney;
+  Period? valuePeriod;
+  Quantity? valueQuantity;
+  Range? valueRange;
+  Ratio? valueRatio;
+  RatioRange? valueRatioRange;
+  Reference? valueReference;
+  SampledData? valueSampledData;
+  Signature? valueSignature;
+  Timing? valueTiming;
+  ContactDetail? valueContactDetail;
+  Contributor? valueContributor;
+  DataRequirement? valueDataRequirement;
+  Expression? valueExpression;
+  ParameterDefinition? valueParameterDefinition;
+  RelatedArtifact? valueRelatedArtifact;
+  TriggerDefinition? valueTriggerDefinition;
+  UsageContext? valueUsageContext;
+  Dosage? valueDosage;
+  Meta? valueMeta;
+}
+
+class ElementDefinitionConstraint {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirId? key;
+  Element? keyElement;
+  String? requirements;
+  Element? requirementsElement;
+
+  ElementDefinitionConstraintSeverity? severity;
+  Element? severityElement;
+  String? human;
+  Element? humanElement;
+  String? expression;
+  Element? expressionElement;
+  String? xpath;
+  Element? xpathElement;
+  Canonical? source;
+}
+
+class ElementDefinitionBinding {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+
+  ElementDefinitionBindingStrength? strength;
+  Element? strengthElement;
+  String? description;
+  Element? descriptionElement;
+  Canonical? valueSet;
+}
+
+class ElementDefinitionMapping {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirId? identity;
+  Element? identityElement;
+  Code? language;
+  Element? languageElement;
+  String? map;
+  Element? mapElement;
+  String? comment;
+  Element? commentElement;
+}

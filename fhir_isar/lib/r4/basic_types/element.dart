@@ -1,4 +1,6 @@
-  factory Element({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-  }) = _Element;
+import '../../r4.dart';
+
+class Element {
+  String? id;
+  List<FhirExtension>? extension_;
+}

@@ -1,233 +1,251 @@
-  factory Period({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    FhirDateTime? start,
-    @JsonKey(name: '_start') Element? startElement,
-    FhirDateTime? end,
-    @JsonKey(name: '_end') Element? endElement,
-  }) = _Period;
-  factory Coding({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    FhirUri? system,
-    @JsonKey(name: '_system') Element? systemElement,
-    String? version,
-    @JsonKey(name: '_version') Element? versionElement,
-    Code? code,
-    @JsonKey(name: '_code') Element? codeElement,
-    String? display,
-    @JsonKey(name: '_display') Element? displayElement,
-    Boolean? userSelected,
-    @JsonKey(name: '_userSelected') Element? userSelectedElement,
-  }) = _Coding;
-  factory Range({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    Quantity? low,
-    Quantity? high,
-  }) = _Range;
-  factory Quantity({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    Decimal? value,
-    @JsonKey(name: '_value') Element? valueElement,
-    @JsonKey(unknownEnumValue: QuantityComparator.unknown)
-        QuantityComparator? comparator,
-    @JsonKey(name: '_comparator') Element? comparatorElement,
-    String? unit,
-    @JsonKey(name: '_unit') Element? unitElement,
-    FhirUri? system,
-    @JsonKey(name: '_system') Element? systemElement,
-    Code? code,
-    @JsonKey(name: '_code') Element? codeElement,
-  }) = _Quantity;
-  factory Attachment({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    Code? contentType,
-    @JsonKey(name: '_contentType') Element? contentTypeElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Base64Binary? data,
-    @JsonKey(name: '_data') Element? dataElement,
-    FhirUri? url,
-    @JsonKey(name: '_url') Element? urlElement,
-    UnsignedInt? size,
-    @JsonKey(name: '_size') Element? sizeElement,
-    Base64Binary? hash,
-    @JsonKey(name: '_hash') Element? hashElement,
-    String? title,
-    @JsonKey(name: '_title') Element? titleElement,
-    FhirDateTime? creation,
-    @JsonKey(name: '_creation') Element? creationElement,
-  }) = _Attachment;
-  factory Ratio({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    Quantity? numerator,
-    Quantity? denominator,
-  }) = _Ratio;
-  factory Annotation({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    Reference? authorReference,
-    String? authorString,
-    @JsonKey(name: '_authorString') Element? authorStringElement,
-    FhirDateTime? time,
-    @JsonKey(name: '_time') Element? timeElement,
-    required String text,
-    @JsonKey(name: '_text') Element? textElement,
-  }) = _Annotation;
-  factory SampledData({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    required Quantity origin,
-    required Decimal period,
-    @JsonKey(name: '_period') Element? periodElement,
-    Decimal? factor,
-    @JsonKey(name: '_factor') Element? factorElement,
-    Decimal? lowerLimit,
-    @JsonKey(name: '_lowerLimit') Element? lowerLimitElement,
-    Decimal? upperLimit,
-    @JsonKey(name: '_upperLimit') Element? upperLimitElement,
-    required PositiveInt dimensions,
-    @JsonKey(name: '_dimensions') Element? dimensionsElement,
-    required String data,
-    @JsonKey(name: '_data') Element? dataElement,
-  }) = _SampledData;
-  factory CodeableConcept({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    List<Coding>? coding,
-    String? text,
-    @JsonKey(name: '_text') Element? textElement,
-  }) = _CodeableConcept;
-  factory Identifier({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    @JsonKey(unknownEnumValue: IdentifierUse.unknown) IdentifierUse? use,
-    @JsonKey(name: '_use') Element? useElement,
-    CodeableConcept? type,
-    FhirUri? system,
-    @JsonKey(name: '_system') Element? systemElement,
-    String? value,
-    @JsonKey(name: '_value') Element? valueElement,
-    Period? period,
-    Reference? assigner,
-  }) = _Identifier;
-  factory Signature({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    required List<Coding> type,
-    required Instant when,
-    @JsonKey(name: '_when') Element? whenElement,
-    FhirUri? whoUri,
-    Reference? whoReference,
-    required Code contentType,
-    required Base64Binary blob,
-    @JsonKey(name: '_targetFormat') Element? targetFormatElement,
-    @JsonKey(name: '_sigFormat') Element? sigFormatElement,
-    @JsonKey(name: '_data') Element? dataElement,
-    @JsonKey(name: '_contentType') Element? contentTypeElement,
-  }) = _Signature;
-  factory Timing({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    List<FhirDateTime>? event,
-    @JsonKey(name: '_event') Element? eventElement,
-    TimingRepeat? repeat,
-    CodeableConcept? code,
-  }) = _Timing;
-  factory Address({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    @JsonKey(unknownEnumValue: AddressUse.unknown) AddressUse? use,
-    @JsonKey(name: '_use') Element? useElement,
-    @JsonKey(unknownEnumValue: AddressType.unknown) AddressType? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    String? text,
-    @JsonKey(name: '_text') Element? textElement,
-    List<String>? line,
-    @JsonKey(name: '_line') Element? lineElement,
-    String? city,
-    @JsonKey(name: '_city') Element? cityElement,
-    String? district,
-    @JsonKey(name: '_district') Element? districtElement,
-    String? state,
-    @JsonKey(name: '_state') Element? stateElement,
-    String? postalCode,
-    @JsonKey(name: '_postalCode') Element? postalCodeElement,
-    String? country,
-    @JsonKey(name: '_country') Element? countryElement,
-    Period? period,
-  }) = _Address;
-  factory HumanName({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    @JsonKey(unknownEnumValue: HumanNameUse.unknown) HumanNameUse? use,
-    @JsonKey(name: '_use') Element? useElement,
-    String? text,
-    @JsonKey(name: '_text') Element? textElement,
-    List<String>? family,
-    @JsonKey(name: '_family') List<Element?>? familyElement,
-    List<String>? given,
-    @JsonKey(name: '_given') List<Element?>? givenElement,
-    List<String>? prefix,
-    @JsonKey(name: '_prefix') Element? prefixElement,
-    List<String>? suffix,
-    @JsonKey(name: '_suffix') Element? suffixElement,
-    Period? period,
-  }) = _HumanName;
-  factory ContactPoint({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-        ContactPointSystem? system,
-    @JsonKey(name: '_system') Element? systemElement,
-    String? value,
-    @JsonKey(name: '_value') Element? valueElement,
-    @JsonKey(unknownEnumValue: ContactPointUse.unknown) ContactPointUse? use,
-    @JsonKey(name: '_use') Element? useElement,
-    PositiveInt? rank,
-    @JsonKey(name: '_rank') Element? rankElement,
-    Period? period,
-  }) = _ContactPoint;
-  factory TimingRepeat({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    Quantity? boundsQuantity,
-    Range? boundsRange,
-    Period? boundsPeriod,
-    Integer? count,
-    @JsonKey(name: '_count') Element? countElement,
-    Decimal? duration,
-    @JsonKey(name: '_duration') Element? durationElement,
-    Decimal? durationMax,
-    @JsonKey(name: '_durationMax') Element? durationMaxElement,
-    @JsonKey(unknownEnumValue: RepeatUnits.unknown) RepeatUnits? durationUnits,
-    @JsonKey(name: '_durationUnit') Element? durationUnitElement,
-    Integer? frequency,
-    @JsonKey(name: '_frequency') Element? frequencyElement,
-    Integer? frequencyMax,
-    @JsonKey(name: '_frequencyMax') Element? frequencyMaxElement,
-    Decimal? period,
-    @JsonKey(name: '_period') Element? periodElement,
-    Decimal? periodMax,
-    @JsonKey(name: '_periodMax') Element? periodMaxElement,
-    @JsonKey(unknownEnumValue: RepeatUnits.unknown) RepeatUnits? periodUnits,
-    @JsonKey(name: '_periodUnits') Element? periodUnitElement,
-    Code? when,
-    @JsonKey(name: '_when') Element? whenElement,
-  }) = _TimingRepeat;
+import '../../dstu2.dart';
+part 'general_types.enums.dart';
+
+class Period {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<String>? fhirComments;
+  FhirDateTime? start;
+  Element? startElement;
+  FhirDateTime? end;
+  Element? endElement;
+}
+
+class Coding {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<String>? fhirComments;
+  FhirUri? system;
+  Element? systemElement;
+  String? version;
+  Element? versionElement;
+  Code? code;
+  Element? codeElement;
+  String? display;
+  Element? displayElement;
+  Boolean? userSelected;
+  Element? userSelectedElement;
+}
+
+class Range {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  Quantity? low;
+  Quantity? high;
+}
+
+class Quantity {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<String>? fhirComments;
+  Decimal? value;
+  Element? valueElement;
+
+  QuantityComparator? comparator;
+  Element? comparatorElement;
+  String? unit;
+  Element? unitElement;
+  FhirUri? system;
+  Element? systemElement;
+  Code? code;
+  Element? codeElement;
+}
+
+class Attachment {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<String>? fhirComments;
+  Code? contentType;
+  Element? contentTypeElement;
+  Code? language;
+  Element? languageElement;
+  Base64Binary? data;
+  Element? dataElement;
+  FhirUri? url;
+  Element? urlElement;
+  UnsignedInt? size;
+  Element? sizeElement;
+  Base64Binary? hash;
+  Element? hashElement;
+  String? title;
+  Element? titleElement;
+  FhirDateTime? creation;
+  Element? creationElement;
+}
+
+class Ratio {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  Quantity? numerator;
+  Quantity? denominator;
+}
+
+class Annotation {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<String>? fhirComments;
+  Reference? authorReference;
+  String? authorString;
+  Element? authorStringElement;
+  FhirDateTime? time;
+  Element? timeElement;
+  String text;
+  Element? textElement;
+}
+
+class SampledData {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  Quantity origin;
+  Decimal period;
+  Element? periodElement;
+  Decimal? factor;
+  Element? factorElement;
+  Decimal? lowerLimit;
+  Element? lowerLimitElement;
+  Decimal? upperLimit;
+  Element? upperLimitElement;
+  PositiveInt dimensions;
+  Element? dimensionsElement;
+  String data;
+  Element? dataElement;
+}
+
+class CodeableConcept {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<String>? fhirComments;
+  List<Coding>? coding;
+  String? text;
+  Element? textElement;
+}
+
+class Identifier {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<String>? fhirComments;
+  IdentifierUse? use;
+  Element? useElement;
+  CodeableConcept? type;
+  FhirUri? system;
+  Element? systemElement;
+  String? value;
+  Element? valueElement;
+  Period? period;
+  Reference? assigner;
+}
+
+class Signature {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<Coding> type;
+  Instant when;
+  Element? whenElement;
+  FhirUri? whoUri;
+  Reference? whoReference;
+  Code contentType;
+  Base64Binary blob;
+  Element? targetFormatElement;
+  Element? sigFormatElement;
+  Element? dataElement;
+  Element? contentTypeElement;
+}
+
+class Timing {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<String>? fhirComments;
+  List<FhirDateTime>? event;
+  Element? eventElement;
+  TimingRepeat? repeat;
+  CodeableConcept? code;
+}
+
+class Address {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<String>? fhirComments;
+  AddressUse? use;
+  Element? useElement;
+  AddressType? type;
+  Element? typeElement;
+  String? text;
+  Element? textElement;
+  List<String>? line;
+  Element? lineElement;
+  String? city;
+  Element? cityElement;
+  String? district;
+  Element? districtElement;
+  String? state;
+  Element? stateElement;
+  String? postalCode;
+  Element? postalCodeElement;
+  String? country;
+  Element? countryElement;
+  Period? period;
+}
+
+class HumanName {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<String>? fhirComments;
+  HumanNameUse? use;
+  Element? useElement;
+  String? text;
+  Element? textElement;
+  List<String>? family;
+  List<Element?>? familyElement;
+  List<String>? given;
+  List<Element?>? givenElement;
+  List<String>? prefix;
+  Element? prefixElement;
+  List<String>? suffix;
+  Element? suffixElement;
+  Period? period;
+}
+
+class ContactPoint {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<String>? fhirComments;
+
+  ContactPointSystem? system;
+  Element? systemElement;
+  String? value;
+  Element? valueElement;
+  ContactPointUse? use;
+  Element? useElement;
+  PositiveInt? rank;
+  Element? rankElement;
+  Period? period;
+}
+
+class TimingRepeat {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<String>? fhirComments;
+  Quantity? boundsQuantity;
+  Range? boundsRange;
+  Period? boundsPeriod;
+  Integer? count;
+  Element? countElement;
+  Decimal? duration;
+  Element? durationElement;
+  Decimal? durationMax;
+  Element? durationMaxElement;
+  RepeatUnits? durationUnits;
+  Element? durationUnitElement;
+  Integer? frequency;
+  Element? frequencyElement;
+  Integer? frequencyMax;
+  Element? frequencyMaxElement;
+  Decimal? period;
+  Element? periodElement;
+  Decimal? periodMax;
+  Element? periodMaxElement;
+  RepeatUnits? periodUnits;
+  Element? periodUnitElement;
+  Code? when;
+  Element? whenElement;
+}

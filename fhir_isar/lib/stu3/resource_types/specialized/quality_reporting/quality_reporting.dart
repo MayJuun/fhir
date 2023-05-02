@@ -1,170 +1,179 @@
-  factory Measure({
-    @Default(Stu3ResourceType.Measure)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
-        Stu3ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? url,
-    @JsonKey(name: '_url') Element? urlElement,
-    List<Identifier>? identifier,
-    String? version,
-    @JsonKey(name: '_version') Element? versionElement,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? title,
-    @JsonKey(name: '_title') Element? titleElement,
-    MeasureStatus? status,
-    @JsonKey(name: '_status') Element? statusElement,
-    Boolean? experimental,
-    @JsonKey(name: '_experimental') Element? experimentalElement,
-    Date? date,
-    @JsonKey(name: '_date') Element? dateElement,
-    String? publisher,
-    @JsonKey(name: '_publisher') Element? publisherElement,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    String? purpose,
-    @JsonKey(name: '_purpose') Element? purposeElement,
-    String? usage,
-    @JsonKey(name: '_usage') Element? usageElement,
-    Date? approvalDate,
-    @JsonKey(name: '_approvalDate') Element? approvalDateElement,
-    Date? lastReviewDate,
-    @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
-    Period? effectivePeriod,
-    List<UsageContext>? useContext,
-    List<CodeableConcept>? jurisdiction,
-    List<CodeableConcept>? topic,
-    List<Contributor>? contributor,
-    List<ContactDetail>? contact,
-    String? copyright,
-    @JsonKey(name: '_copyright') Element? copyrightElement,
-    List<RelatedArtifact>? relatedArtifact,
-    @JsonKey(name: 'library') List<Reference>? library_,
-    String? disclaimer,
-    @JsonKey(name: '_disclaimer') Element? disclaimerElement,
-    CodeableConcept? scoring,
-    CodeableConcept? compositeScoring,
-    List<CodeableConcept>? type,
-    String? riskAdjustment,
-    @JsonKey(name: '_riskAdjustment') Element? riskAdjustmentElement,
-    String? rateAggregation,
-    @JsonKey(name: '_rateAggregation') Element? rateAggregationElement,
-    String? rationale,
-    @JsonKey(name: '_rationale') Element? rationaleElement,
-    String? clinicalRecommendationStatement,
-    @JsonKey(name: '_clinicalRecommendationStatement')
-        Element? clinicalRecommendationStatementElement,
-    String? improvementNotation,
-    @JsonKey(name: '_improvementNotation') Element? improvementNotationElement,
-    List<String>? definition,
-    @JsonKey(name: '_definition') List<Element?>? definitionElement,
-    String? guidance,
-    @JsonKey(name: '_guidance') Element? guidanceElement,
-    @JsonKey(name: 'set') String? set_,
-    @JsonKey(name: '_set') Element? setElement,
-    List<MeasureGroup>? group,
-    List<MeasureSupplementalData>? supplementalData,
-  }) = _Measure;
-  factory MeasureGroup({
-    required Identifier identifier,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    List<MeasurePopulation>? population,
-    List<MeasureStratifier>? stratifier,
-  }) = _MeasureGroup;
-  factory MeasurePopulation({
-    Identifier? identifier,
-    CodeableConcept? code,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    String? criteria,
-    @JsonKey(name: '_criteria') Element? criteriaElement,
-  }) = _MeasurePopulation;
-  factory MeasureStratifier({
-    Identifier? identifier,
-    String? criteria,
-    @JsonKey(name: '_criteria') Element? criteriaElement,
-    String? path,
-    @JsonKey(name: '_path') Element? pathElement,
-  }) = _MeasureStratifier;
-  factory MeasureSupplementalData({
-    Identifier? identifier,
-    List<CodeableConcept>? usage,
-    String? criteria,
-    @JsonKey(name: '_criteria') Element? criteriaElement,
-    String? path,
-    @JsonKey(name: '_path') Element? pathElement,
-  }) = _MeasureSupplementalData;
-  factory MeasureReport({
-    @Default(Stu3ResourceType.MeasureReport)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
-        Stu3ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Identifier? identifier,
-    MeasureReportStatus? status,
-    @JsonKey(name: '_status') Element? statusElement,
-    MeasureReportType? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    required Reference measure,
-    Reference? patient,
-    Date? date,
-    @JsonKey(name: '_date') Element? dateElement,
-    Reference? reportingOrganization,
-    required Period period,
-    List<MeasureReportGroup>? group,
-    Reference? evaluatedResources,
-  }) = _MeasureReport;
-  factory MeasureReportGroup({
-    required Identifier identifier,
-    List<MeasureReportPopulation>? population,
-    Decimal? measureScore,
-    @JsonKey(name: '_measureScore') Element? measureScoreElement,
-    List<MeasureReportStratifier>? stratifier,
-  }) = _MeasureReportGroup;
-  factory MeasureReportPopulation({
-    Identifier? identifier,
-    CodeableConcept? code,
-    Decimal? count,
-    @JsonKey(name: '_count') Element? countElement,
-    Reference? patients,
-  }) = _MeasureReportPopulation;
-  factory MeasureReportStratifier({
-    Identifier? identifier,
-    List<MeasureReportStratum>? stratum,
-  }) = _MeasureReportStratifier;
-  factory MeasureReportStratum({
-    String? value,
-    @JsonKey(name: '_value') Element? valueElement,
-    List<MeasureReportPopulation1>? population,
-    Decimal? measureScore,
-    @JsonKey(name: '_measureScore') Element? measureScoreElement,
-  }) = _MeasureReportStratum;
-  factory MeasureReportPopulation1({
-    Identifier? identifier,
-    CodeableConcept? code,
-    Decimal? count,
-    @JsonKey(name: '_count') Element? countElement,
-    Reference? patients,
-  }) = _MeasureReportPopulation1;
+import '../../../../stu3.dart';
+part 'quality_reporting.enums.dart';
+
+class Measure {
+  Stu3ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? url;
+  Element? urlElement;
+  List<Identifier>? identifier;
+  String? version;
+  Element? versionElement;
+  String? name;
+  Element? nameElement;
+  String? title;
+  Element? titleElement;
+  MeasureStatus? status;
+  Element? statusElement;
+  Boolean? experimental;
+  Element? experimentalElement;
+  Date? date;
+  Element? dateElement;
+  String? publisher;
+  Element? publisherElement;
+  String? description;
+  Element? descriptionElement;
+  String? purpose;
+  Element? purposeElement;
+  String? usage;
+  Element? usageElement;
+  Date? approvalDate;
+  Element? approvalDateElement;
+  Date? lastReviewDate;
+  Element? lastReviewDateElement;
+  Period? effectivePeriod;
+  List<UsageContext>? useContext;
+  List<CodeableConcept>? jurisdiction;
+  List<CodeableConcept>? topic;
+  List<Contributor>? contributor;
+  List<ContactDetail>? contact;
+  String? copyright;
+  Element? copyrightElement;
+  List<RelatedArtifact>? relatedArtifact;
+  List<Reference>? library_;
+  String? disclaimer;
+  Element? disclaimerElement;
+  CodeableConcept? scoring;
+  CodeableConcept? compositeScoring;
+  List<CodeableConcept>? type;
+  String? riskAdjustment;
+  Element? riskAdjustmentElement;
+  String? rateAggregation;
+  Element? rateAggregationElement;
+  String? rationale;
+  Element? rationaleElement;
+  String? clinicalRecommendationStatement;
+
+  Element? clinicalRecommendationStatementElement;
+  String? improvementNotation;
+  Element? improvementNotationElement;
+  List<String>? definition;
+  List<Element?>? definitionElement;
+  String? guidance;
+  Element? guidanceElement;
+  String? set_;
+  Element? setElement;
+  List<MeasureGroup>? group;
+  List<MeasureSupplementalData>? supplementalData;
+}
+
+class MeasureGroup {
+  Identifier identifier;
+  String? name;
+  Element? nameElement;
+  String? description;
+  Element? descriptionElement;
+  List<MeasurePopulation>? population;
+  List<MeasureStratifier>? stratifier;
+}
+
+class MeasurePopulation {
+  Identifier? identifier;
+  CodeableConcept? code;
+  String? name;
+  Element? nameElement;
+  String? description;
+  Element? descriptionElement;
+  String? criteria;
+  Element? criteriaElement;
+}
+
+class MeasureStratifier {
+  Identifier? identifier;
+  String? criteria;
+  Element? criteriaElement;
+  String? path;
+  Element? pathElement;
+}
+
+class MeasureSupplementalData {
+  Identifier? identifier;
+  List<CodeableConcept>? usage;
+  String? criteria;
+  Element? criteriaElement;
+  String? path;
+  Element? pathElement;
+}
+
+class MeasureReport {
+  Stu3ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Identifier? identifier;
+  MeasureReportStatus? status;
+  Element? statusElement;
+  MeasureReportType? type;
+  Element? typeElement;
+  Reference measure;
+  Reference? patient;
+  Date? date;
+  Element? dateElement;
+  Reference? reportingOrganization;
+  Period period;
+  List<MeasureReportGroup>? group;
+  Reference? evaluatedResources;
+}
+
+class MeasureReportGroup {
+  Identifier identifier;
+  List<MeasureReportPopulation>? population;
+  Decimal? measureScore;
+  Element? measureScoreElement;
+  List<MeasureReportStratifier>? stratifier;
+}
+
+class MeasureReportPopulation {
+  Identifier? identifier;
+  CodeableConcept? code;
+  Decimal? count;
+  Element? countElement;
+  Reference? patients;
+}
+
+class MeasureReportStratifier {
+  Identifier? identifier;
+  List<MeasureReportStratum>? stratum;
+}
+
+class MeasureReportStratum {
+  String? value;
+  Element? valueElement;
+  List<MeasureReportPopulation1>? population;
+  Decimal? measureScore;
+  Element? measureScoreElement;
+}
+
+class MeasureReportPopulation1 {
+  Identifier? identifier;
+  CodeableConcept? code;
+  Decimal? count;
+  Element? countElement;
+  Reference? patients;
+}

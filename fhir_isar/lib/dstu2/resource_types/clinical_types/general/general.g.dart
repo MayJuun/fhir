@@ -377,7 +377,7 @@ const _$ReactionSeverityEnumMap = {
 _$_Condition _$$_ConditionFromJson(Map<String, dynamic> json) {
   $checkKeys(
     json,
-    requiredKeys: const ['verificationStatus'],
+    Keys: const ['verificationStatus'],
   );
   return _$_Condition(
     resourceType: $enumDecodeNullable(
@@ -1173,7 +1173,7 @@ _$_FamilyMemberHistory _$$_FamilyMemberHistoryFromJson(
     Map<String, dynamic> json) {
   $checkKeys(
     json,
-    requiredKeys: const ['status'],
+    Keys: const ['status'],
   );
   return _$_FamilyMemberHistory(
     resourceType: $enumDecodeNullable(

@@ -1,330 +1,346 @@
-  factory ValueSet({
-    @Default(Dstu2ResourceType.ValueSet)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.ValueSet)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    @JsonKey(name: '_id') Element? idElement,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    FhirUri? url,
-    @JsonKey(name: '_url') Element? urlElement,
-    Identifier? identifier,
-    String? version,
-    @JsonKey(name: '_version') Element? versionElement,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    @JsonKey(unknownEnumValue: ValueSetStatus.unknown)
-        required ValueSetStatus status,
-    @JsonKey(name: '_status') Element? statusElement,
-    Boolean? experimental,
-    @JsonKey(name: '_experimental') Element? experimentalElement,
-    String? publisher,
-    @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ValueSetContact>? contact,
-    FhirDateTime? date,
-    @JsonKey(name: '_date') Element? dateElement,
-    Date? lockedDate,
-    @JsonKey(name: '_lockedDate') Element? lockedDateElement,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    List<CodeableConcept>? useContext,
-    Boolean? immutable,
-    @JsonKey(name: '_immutable') Element? immutableElement,
-    String? requirements,
-    String? copyright,
-    @JsonKey(name: '_copyright') Element? copyrightElement,
-    Boolean? extensible,
-    ValueSetCodeSystem? codeSystem,
-    ValueSetCompose? compose,
-    ValueSetExpansion? expansion,
-  }) = _ValueSet;
-  factory ValueSetContact({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    String? name,
-    List<ContactPoint>? telecom,
-  }) = _ValueSetContact;
-  factory ValueSetCodeSystem({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    required FhirUri system,
-    @JsonKey(name: '_system') Element? systemElement,
-    String? version,
-    @JsonKey(name: '_version') Element? versionElement,
-    Boolean? caseSensitive,
-    @JsonKey(name: '_caseSensitive') Element? caseSensitiveElement,
-    required List<ValueSetCodeSystemConcept> concept,
-  }) = _ValueSetCodeSystem;
-  factory ValueSetCodeSystemConcept({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    required Code code,
-    @JsonKey(name: '_code') Element? codeElement,
-    @JsonKey(name: 'abstract') Boolean? abstract_,
-    String? display,
-    @JsonKey(name: '_display') Element? displayElement,
-    String? definition,
-    List<ValueSetConceptDesignation>? designation,
-    List<ValueSetCodeSystemConcept>? concept,
-  }) = _ValueSetCodeSystemConcept;
-  factory ValueSetConceptDesignation({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Coding? use,
-    required String value,
-    @JsonKey(name: '_value') Element? valueElement,
-  }) = _ValueSetConceptDesignation;
-  factory ValueSetCompose({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    @JsonKey(name: 'import') List<FhirUri>? import_,
-    List<ValueSetComposeInclude>? include,
-    List<ValueSetComposeInclude>? exclude,
-  }) = _ValueSetCompose;
-  factory ValueSetComposeInclude({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    required FhirUri system,
-    @JsonKey(name: '_system') Element? systemElement,
-    String? version,
-    @JsonKey(name: '_version') Element? versionElement,
-    List<ValueSetIncludeConcept>? concept,
-    List<ValueSetIncludeFilter>? filter,
-  }) = _ValueSetComposeInclude;
-  factory ValueSetIncludeConcept({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    required Code code,
-    @JsonKey(name: '_code') Element? codeElement,
-    String? display,
-    @JsonKey(name: '_display') Element? displayElement,
-    List<ValueSetConceptDesignation>? designation,
-  }) = _ValueSetIncludeConcept;
-  factory ValueSetIncludeFilter({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    required Code property,
-    @JsonKey(name: '_property') Element? propertyElement,
-    @JsonKey(unknownEnumValue: FilterOp.unknown) required FilterOp op,
-    @JsonKey(name: '_op') Element? opElement,
-    required Code value,
-    @JsonKey(name: '_value') Element? valueElement,
-  }) = _ValueSetIncludeFilter;
-  factory ValueSetExpansion({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    required FhirUri identifier,
-    @JsonKey(name: '_identifier') Element? identifierElement,
-    required FhirDateTime timestamp,
-    @JsonKey(name: '_timestamp') Element? timestampElement,
-    Integer? total,
-    @JsonKey(name: '_total') Element? totalElement,
-    Integer? offset,
-    @JsonKey(name: '_offset') Element? offsetElement,
-    List<ValueSetExpansionParameter>? parameter,
-    List<ValueSetExpansionContains>? contains,
-  }) = _ValueSetExpansion;
-  factory ValueSetExpansionParameter({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    required String name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? valueString,
-    @JsonKey(name: '_valueString') Element? valueStringElement,
-    Boolean? valueBoolean,
-    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-    Integer? valueInteger,
-    @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-    Decimal? valueDecimal,
-    @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-    FhirUri? valueUri,
-    @JsonKey(name: '_valueUri') Element? valueUriElement,
-    Code? valueCode,
-    @JsonKey(name: '_valueCode') Element? valueCodeElement,
-  }) = _ValueSetExpansionParameter;
-  factory ValueSetExpansionContains({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    FhirUri? system,
-    @JsonKey(name: '_system') Element? systemElement,
-    @JsonKey(name: 'abstract') Boolean? abstract_,
-    @JsonKey(name: '_abstract') Element? abstractElement,
-    String? version,
-    @JsonKey(name: '_version') Element? versionElement,
-    Code? code,
-    @JsonKey(name: '_code') Element? codeElement,
-    String? display,
-    @JsonKey(name: '_display') Element? displayElement,
-    List<ValueSetExpansionContains>? contains,
-  }) = _ValueSetExpansionContains;
-  factory ConceptMap({
-    @Default(Dstu2ResourceType.ConceptMap)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.ConceptMap)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    FhirUri? url,
-    @JsonKey(name: '_url') Element? urlElement,
-    Identifier? identifier,
-    String? version,
-    @JsonKey(name: '_version') Element? versionElement,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    @JsonKey(unknownEnumValue: ConceptMapStatus.unknown)
-        required ConceptMapStatus status,
-    @JsonKey(name: '_status') Element? statusElement,
-    Boolean? experimental,
-    @JsonKey(name: '_experimental') Element? experimentalElement,
-    String? publisher,
-    @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ConceptMapContact>? contact,
-    FhirDateTime? date,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    List<CodeableConcept>? useContext,
-    String? requirements,
-    String? copyright,
-    @JsonKey(name: '_copyright') Element? copyrightElement,
-    FhirUri? sourceUri,
-    @JsonKey(name: '_sourceUri') Element? sourceUriElement,
-    Reference? sourceReference,
-    FhirUri? targetUri,
-    @JsonKey(name: '_targetUri') Element? targetUriElement,
-    Reference? targetReference,
-    List<ConceptMapElement>? element,
-    @JsonKey(name: '_date') Element? dateElement,
-  }) = _ConceptMap;
-  factory ConceptMapContact({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? name,
-    List<ContactPoint>? telecom,
-  }) = _ConceptMapContact;
-  factory ConceptMapElement({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    FhirUri? codeSystem,
-    Code? code,
-    @JsonKey(name: '_code') Element? codeElement,
-    List<ConceptMapElementTarget>? target,
-  }) = _ConceptMapElement;
-  factory ConceptMapElementTarget({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    FhirUri? codeSystem,
-    Code? code,
-    @JsonKey(name: '_code') Element? codeElement,
-    @JsonKey(unknownEnumValue: TargetEquivalence.unknown)
-        required TargetEquivalence equivalence,
-    @JsonKey(name: '_equivalence') Element? equivalenceElement,
-    String? comments,
-    @JsonKey(name: '_comments') Element? commentsElement,
-    List<ConceptMapTargetDependsOn>? dependsOn,
-    List<ConceptMapTargetDependsOn>? product,
-  }) = _ConceptMapElementTarget;
-  factory ConceptMapTargetDependsOn({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required FhirUri element,
-    required FhirUri codeSystem,
-    required String code,
-  }) = _ConceptMapTargetDependsOn;
-  factory NamingSystem({
-    @Default(Dstu2ResourceType.NamingSystem)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.NamingSystem)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required String name,
-    @JsonKey(name: '_name') Element? nameElement,
-    @JsonKey(unknownEnumValue: NamingSystemStatus.unknown)
-        required NamingSystemStatus status,
-    @JsonKey(name: '_status') Element? statusElement,
-    @JsonKey(unknownEnumValue: NamingSystemKind.unknown)
-        required NamingSystemKind kind,
-    @JsonKey(name: '_kind') Element? kindElement,
-    String? publisher,
-    @JsonKey(name: '_publisher') Element? publisherElement,
-    List<NamingSystemContact>? contact,
-    String? responsible,
-    @JsonKey(name: '_responsible') Element? responsibleElement,
-    required FhirDateTime date,
-    @JsonKey(name: '_date') Element? dateElement,
-    CodeableConcept? type,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    List<CodeableConcept>? useContext,
-    String? usage,
-    @JsonKey(name: '_usage') Element? usageElement,
-    required List<NamingSystemUniqueId> uniqueId,
-    Reference? replacedBy,
-  }) = _NamingSystem;
-  factory NamingSystemContact({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? name,
-    List<ContactPoint>? telecom,
-  }) = _NamingSystemContact;
-  factory NamingSystemUniqueId({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: UniqueIdType.unknown) required UniqueIdType type,
-    @JsonKey(name: '_type') Element? typeElement,
-    required String value,
-    @JsonKey(name: '_value') Element? valueElement,
-    Boolean? preferred,
-    @JsonKey(name: '_preferred') Element? preferredElement,
-    Period? period,
-  }) = _NamingSystemUniqueId;
+import '../../../../dstu2.dart';
+part 'terminology.enums.dart';
+
+class ValueSet {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Element? idElement;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirUri? url;
+  Element? urlElement;
+  Identifier? identifier;
+  String? version;
+  Element? versionElement;
+  String? name;
+  Element? nameElement;
+
+  ValueSetStatus status;
+  Element? statusElement;
+  Boolean? experimental;
+  Element? experimentalElement;
+  String? publisher;
+  Element? publisherElement;
+  List<ValueSetContact>? contact;
+  FhirDateTime? date;
+  Element? dateElement;
+  Date? lockedDate;
+  Element? lockedDateElement;
+  String? description;
+  Element? descriptionElement;
+  List<CodeableConcept>? useContext;
+  Boolean? immutable;
+  Element? immutableElement;
+  String? requirements;
+  String? copyright;
+  Element? copyrightElement;
+  Boolean? extensible;
+  ValueSetCodeSystem? codeSystem;
+  ValueSetCompose? compose;
+  ValueSetExpansion? expansion;
+}
+
+class ValueSetContact {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<String>? fhirComments;
+  String? name;
+  List<ContactPoint>? telecom;
+}
+
+class ValueSetCodeSystem {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<String>? fhirComments;
+  FhirUri system;
+  Element? systemElement;
+  String? version;
+  Element? versionElement;
+  Boolean? caseSensitive;
+  Element? caseSensitiveElement;
+  List<ValueSetCodeSystemConcept> concept;
+}
+
+class ValueSetCodeSystemConcept {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<String>? fhirComments;
+  Code code;
+  Element? codeElement;
+  Boolean? abstract_;
+  String? display;
+  Element? displayElement;
+  String? definition;
+  List<ValueSetConceptDesignation>? designation;
+  List<ValueSetCodeSystemConcept>? concept;
+}
+
+class ValueSetConceptDesignation {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code? language;
+  Element? languageElement;
+  Coding? use;
+  String value;
+  Element? valueElement;
+}
+
+class ValueSetCompose {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<String>? fhirComments;
+  List<FhirUri>? import_;
+  List<ValueSetComposeInclude>? include;
+  List<ValueSetComposeInclude>? exclude;
+}
+
+class ValueSetComposeInclude {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<String>? fhirComments;
+  FhirUri system;
+  Element? systemElement;
+  String? version;
+  Element? versionElement;
+  List<ValueSetIncludeConcept>? concept;
+  List<ValueSetIncludeFilter>? filter;
+}
+
+class ValueSetIncludeConcept {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<String>? fhirComments;
+  Code code;
+  Element? codeElement;
+  String? display;
+  Element? displayElement;
+  List<ValueSetConceptDesignation>? designation;
+}
+
+class ValueSetIncludeFilter {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<String>? fhirComments;
+  Code property;
+  Element? propertyElement;
+  FilterOp op;
+  Element? opElement;
+  Code value;
+  Element? valueElement;
+}
+
+class ValueSetExpansion {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<String>? fhirComments;
+  FhirUri identifier;
+  Element? identifierElement;
+  FhirDateTime timestamp;
+  Element? timestampElement;
+  Integer? total;
+  Element? totalElement;
+  Integer? offset;
+  Element? offsetElement;
+  List<ValueSetExpansionParameter>? parameter;
+  List<ValueSetExpansionContains>? contains;
+}
+
+class ValueSetExpansionParameter {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<String>? fhirComments;
+  String name;
+  Element? nameElement;
+  String? valueString;
+  Element? valueStringElement;
+  Boolean? valueBoolean;
+  Element? valueBooleanElement;
+  Integer? valueInteger;
+  Element? valueIntegerElement;
+  Decimal? valueDecimal;
+  Element? valueDecimalElement;
+  FhirUri? valueUri;
+  Element? valueUriElement;
+  Code? valueCode;
+  Element? valueCodeElement;
+}
+
+class ValueSetExpansionContains {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<String>? fhirComments;
+  FhirUri? system;
+  Element? systemElement;
+  Boolean? abstract_;
+  Element? abstractElement;
+  String? version;
+  Element? versionElement;
+  Code? code;
+  Element? codeElement;
+  String? display;
+  Element? displayElement;
+  List<ValueSetExpansionContains>? contains;
+}
+
+class ConceptMap {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirUri? url;
+  Element? urlElement;
+  Identifier? identifier;
+  String? version;
+  Element? versionElement;
+  String? name;
+  Element? nameElement;
+
+  ConceptMapStatus status;
+  Element? statusElement;
+  Boolean? experimental;
+  Element? experimentalElement;
+  String? publisher;
+  Element? publisherElement;
+  List<ConceptMapContact>? contact;
+  FhirDateTime? date;
+  String? description;
+  Element? descriptionElement;
+  List<CodeableConcept>? useContext;
+  String? requirements;
+  String? copyright;
+  Element? copyrightElement;
+  FhirUri? sourceUri;
+  Element? sourceUriElement;
+  Reference? sourceReference;
+  FhirUri? targetUri;
+  Element? targetUriElement;
+  Reference? targetReference;
+  List<ConceptMapElement>? element;
+  Element? dateElement;
+}
+
+class ConceptMapContact {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? name;
+  List<ContactPoint>? telecom;
+}
+
+class ConceptMapElement {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirUri? codeSystem;
+  Code? code;
+  Element? codeElement;
+  List<ConceptMapElementTarget>? target;
+}
+
+class ConceptMapElementTarget {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirUri? codeSystem;
+  Code? code;
+  Element? codeElement;
+
+  TargetEquivalence equivalence;
+  Element? equivalenceElement;
+  String? comments;
+  Element? commentsElement;
+  List<ConceptMapTargetDependsOn>? dependsOn;
+  List<ConceptMapTargetDependsOn>? product;
+}
+
+class ConceptMapTargetDependsOn {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirUri element;
+  FhirUri codeSystem;
+  String code;
+}
+
+class NamingSystem {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String name;
+  Element? nameElement;
+
+  NamingSystemStatus status;
+  Element? statusElement;
+
+  NamingSystemKind kind;
+  Element? kindElement;
+  String? publisher;
+  Element? publisherElement;
+  List<NamingSystemContact>? contact;
+  String? responsible;
+  Element? responsibleElement;
+  FhirDateTime date;
+  Element? dateElement;
+  CodeableConcept? type;
+  String? description;
+  Element? descriptionElement;
+  List<CodeableConcept>? useContext;
+  String? usage;
+  Element? usageElement;
+  List<NamingSystemUniqueId> uniqueId;
+  Reference? replacedBy;
+}
+
+class NamingSystemContact {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? name;
+  List<ContactPoint>? telecom;
+}
+
+class NamingSystemUniqueId {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  UniqueIdType type;
+  Element? typeElement;
+  String value;
+  Element? valueElement;
+  Boolean? preferred;
+  Element? preferredElement;
+  Period? period;
+}

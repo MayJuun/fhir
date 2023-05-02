@@ -249,8 +249,7 @@ _$_QuestionnaireGroup _$$_QuestionnaireGroupFromJson(
           ?.map((e) => Coding.fromJson(e as Map<String, dynamic>))
           .toList(),
       text: json['text'] as String?,
-      required_:
-          json['required'] == null ? null : Boolean.fromJson(json['required']),
+      _: json['required'] == null ? null : Boolean.fromJson(json['required']),
       repeats:
           json['repeats'] == null ? null : Boolean.fromJson(json['repeats']),
       group: (json['group'] as List<dynamic>?)
@@ -314,8 +313,7 @@ _$_QuestionnaireGroupQuestion _$$_QuestionnaireGroupQuestionFromJson(
       text: json['text'] as String?,
       type: $enumDecodeNullable(_$QuestionTypeEnumMap, json['type'],
           unknownValue: QuestionType.unknown),
-      required_:
-          json['required'] == null ? null : Boolean.fromJson(json['required']),
+      _: json['required'] == null ? null : Boolean.fromJson(json['required']),
       repeats:
           json['repeats'] == null ? null : Boolean.fromJson(json['repeats']),
       options: json['options'] == null
@@ -381,7 +379,7 @@ _$_QuestionnaireResponse _$$_QuestionnaireResponseFromJson(
     Map<String, dynamic> json) {
   $checkKeys(
     json,
-    requiredKeys: const ['status'],
+    Keys: const ['status'],
   );
   return _$_QuestionnaireResponse(
     resourceType: $enumDecodeNullable(

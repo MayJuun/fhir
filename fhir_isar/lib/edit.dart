@@ -35,11 +35,12 @@ Future<void> main() async {
           final className =
               tempString.replaceAll('factory ', '').replaceAll('({', '');
           newFile += 'class $className {\n';
-        } else {
+        } else if (!tempString.contains('})')) {
           final newString = tempString.replaceAll(',', ';');
           newFile += '$newString\n';
         }
       }
+      newFile = newFile.replaceFirst('}', '');
 
       await File(file).writeAsString(newFile);
     }

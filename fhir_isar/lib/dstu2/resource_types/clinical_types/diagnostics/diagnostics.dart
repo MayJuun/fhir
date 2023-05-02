@@ -1,395 +1,405 @@
-  factory Observation({
-    @Default(Dstu2ResourceType.Observation)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Observation)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    @JsonKey(name: '_id') Element? idElement,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: ObservationStatus.unknown)
-        required ObservationStatus status,
-    @JsonKey(name: '_status') Element? statusElement,
-    CodeableConcept? category,
-    required CodeableConcept code,
-    Reference? subject,
-    Reference? encounter,
-    FhirDateTime? effectiveDateTime,
-    @JsonKey(name: '_effectiveDateTime') Element? effectiveDateTimeElement,
-    Period? effectivePeriod,
-    Instant? issued,
-    @JsonKey(name: '_issued') Element? issuedElement,
-    List<Reference>? performer,
-    Quantity? valueQuantity,
-    CodeableConcept? valueCodeableConcept,
-    String? valueString,
-    @JsonKey(name: '_valueString') Element? valueStringElement,
-    Range? valueRange,
-    Ratio? valueRatio,
-    SampledData? valueSampledData,
-    Attachment? valueAttachment,
-    Time? valueTime,
-    @JsonKey(name: '_valueTime') Element? valueTimeElement,
-    FhirDateTime? valueDateTime,
-    @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-    Period? valuePeriod,
-    CodeableConcept? dataAbsentReason,
-    CodeableConcept? interpretation,
-    String? comments,
-    CodeableConcept? bodySite,
-    CodeableConcept? method,
-    Reference? specimen,
-    Reference? device,
-    List<ObservationReferenceRange>? referenceRange,
-    List<ObservationRelated>? related,
-    List<ObservationComponent>? component,
-  }) = _Observation;
-  factory ObservationReferenceRange({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    Quantity? low,
-    Quantity? high,
-    CodeableConcept? meaning,
-    Range? age,
-    String? text,
-    @JsonKey(name: '_text') Element? textElement,
-  }) = _ObservationReferenceRange;
-  factory ObservationRelated({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    @JsonKey(unknownEnumValue: RelatedType.unknown) RelatedType? type,
-    required Reference target,
-  }) = _ObservationRelated;
-  factory ObservationComponent({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    required CodeableConcept code,
-    Quantity? valueQuantity,
-    CodeableConcept? valueCodeableConcept,
-    String? valueString,
-    @JsonKey(name: '_valueString') Element? valueStringElement,
-    Range? valueRange,
-    Ratio? valueRatio,
-    SampledData? valueSampledData,
-    Attachment? valueAttachment,
-    Time? valueTime,
-    @JsonKey(name: '_valueTime') Element? valueTimeElement,
-    FhirDateTime? valueDateTime,
-    @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-    Period? valuePeriod,
-    CodeableConcept? dataAbsentReason,
-    List<ObservationReferenceRange>? referenceRange,
-  }) = _ObservationComponent;
-  factory DiagnosticReport({
-    @Default(Dstu2ResourceType.DiagnosticReport)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.DiagnosticReport)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
-        required DiagnosticReportStatus status,
-    @JsonKey(name: '_status') Element? statusElement,
-    CodeableConcept? category,
-    required CodeableConcept code,
-    required Reference subject,
-    Reference? encounter,
-    FhirDateTime? effectiveDateTime,
-    @JsonKey(name: '_effectiveDateTime') Element? effectiveDateTimeElement,
-    Period? effectivePeriod,
-    required Instant issued,
-    @JsonKey(name: '_issued') Element? issuedElement,
-    required Reference performer,
-    List<Reference>? request,
-    List<Reference>? specimen,
-    List<Reference>? result,
-    List<Reference>? imagingStudy,
-    List<DiagnosticReportImage>? image,
-    String? conclusion,
-    @JsonKey(name: '_conclusion') Element? conclusionElement,
-    List<CodeableConcept>? codedDiagnosis,
-    List<Attachment>? presentedForm,
-  }) = _DiagnosticReport;
-  factory DiagnosticReportImage({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? comment,
-    @JsonKey(name: '_comment') Element? commentElement,
-    required Reference link,
-  }) = _DiagnosticReportImage;
-  factory DiagnosticOrder({
-    @Default(Dstu2ResourceType.DiagnosticOrder)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.DiagnosticOrder)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    Code? language,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required Reference subject,
-    Reference? orderer,
-    List<Identifier>? identifier,
-    Reference? encounter,
-    List<CodeableConcept>? reason,
-    List<Reference>? supportingInformation,
-    List<Reference>? specimen,
-    @JsonKey(unknownEnumValue: DiagnosticOrderStatus.unknown)
-        DiagnosticOrderStatus? status,
-    @JsonKey(unknownEnumValue: DiagnosticOrderPriority.unknown)
-        DiagnosticOrderPriority? priority,
-    List<DiagnosticOrderEvent>? event,
-    List<DiagnosticOrderItem>? item,
-    List<Annotation>? note,
-  }) = _DiagnosticOrder;
-  factory DiagnosticOrderEvent({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: EventStatus.unknown) required EventStatus status,
-    CodeableConcept? description,
-    required FhirDateTime dateTime,
-    Reference? actor,
-  }) = _DiagnosticOrderEvent;
-  factory DiagnosticOrderItem({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept code,
-    List<Reference>? specimen,
-    CodeableConcept? bodySite,
-    @JsonKey(unknownEnumValue: ItemStatus.unknown) ItemStatus? status,
-    List<DiagnosticOrderEvent>? event,
-  }) = _DiagnosticOrderItem;
-  factory Specimen({
-    @Default(Dstu2ResourceType.Specimen)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Specimen)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: SpecimenStatus.unknown) SpecimenStatus? status,
-    @JsonKey(name: '_status') Element? statusElement,
-    CodeableConcept? type,
-    List<Reference>? parent,
-    required Reference subject,
-    Identifier? accessionIdentifier,
-    FhirDateTime? receivedTime,
-    @JsonKey(name: '_receivedTime') Element? receivedTimeElement,
-    SpecimenCollection? collection,
-    List<SpecimenTreatment>? treatment,
-    List<SpecimenContainer>? container,
-  }) = _Specimen;
-  factory SpecimenCollection({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    List<FhirExtension>? modifierExtension,
-    Reference? collector,
-    List<String>? comment,
-    FhirDateTime? collectedDateTime,
-    @JsonKey(name: '_collectedDateTime') Element? collectedDateTimeElement,
-    Period? collectedPeriod,
-    Quantity? quantity,
-    CodeableConcept? method,
-    CodeableConcept? bodySite,
-  }) = _SpecimenCollection;
-  factory SpecimenTreatment({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? description,
-    CodeableConcept? procedure,
-    List<Reference>? additive,
-  }) = _SpecimenTreatment;
-  factory SpecimenContainer({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    CodeableConcept? type,
-    Quantity? capacity,
-    Quantity? specimenQuantity,
-    CodeableConcept? additiveCodeableConcept,
-    Reference? additiveReference,
-  }) = _SpecimenContainer;
-  factory BodySite({
-    @Default(Dstu2ResourceType.BodySite)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.BodySite)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    Code? language,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required Reference patient,
-    List<Identifier>? identifier,
-    CodeableConcept? code,
-    List<CodeableConcept>? modifier,
-    String? description,
-    List<Attachment>? image,
-  }) = _BodySite;
-  factory ImagingStudy({
-    @Default(Dstu2ResourceType.ImagingStudy)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.ImagingStudy)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    FhirDateTime? started,
-    @JsonKey(name: '_started') Element? startedElement,
-    required Reference patient,
-    required Oid uid,
-    Identifier? accession,
-    List<Identifier>? identifier,
-    List<Reference>? order,
-    List<Coding>? modalityList,
-    Reference? referrer,
-    @JsonKey(unknownEnumValue: ImagingStudyAvailability.unknown)
-        ImagingStudyAvailability? availability,
-    FhirUri? url,
-    required UnsignedInt numberOfSeries,
-    @JsonKey(name: '_numberOfSeries') Element? numberOfSeriesElement,
-    required UnsignedInt numberOfInstances,
-    @JsonKey(name: '_numberOfInstances') Element? numberOfInstancesElement,
-    List<Reference>? procedure,
-    Reference? interpreter,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    List<ImagingStudySeries>? series,
-  }) = _ImagingStudy;
-  factory ImagingStudySeries({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    UnsignedInt? number,
-    @JsonKey(name: '_number') Element? numberElement,
-    required Coding modality,
-    required Oid uid,
-    @JsonKey(name: '_uid') Element? uidElement,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    required UnsignedInt numberOfInstances,
-    @JsonKey(name: '_numberOfInstances') Element? numberOfInstancesElement,
-    @JsonKey(unknownEnumValue: SeriesAvailability.unknown)
-        SeriesAvailability? availability,
-    FhirUri? url,
-    Coding? bodySite,
-    Coding? laterality,
-    FhirDateTime? started,
-    @JsonKey(name: '_started') Element? startedElement,
-    List<ImagingStudySeriesInstance>? instance,
-  }) = _ImagingStudySeries;
-  factory ImagingStudySeriesInstance({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    UnsignedInt? number,
-    @JsonKey(name: '_number') Element? numberElement,
-    required Oid uid,
-    @JsonKey(name: '_uid') Element? uidElement,
-    required Oid sopClass,
-    String? type,
-    String? title,
-    @JsonKey(name: '_title') Element? titleElement,
-    List<Attachment>? content,
-  }) = _ImagingStudySeriesInstance;
-  factory ImagingObjectSelection({
-    @Default(Dstu2ResourceType.ImagingObjectSelection)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.ImagingObjectSelection)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    Code? language,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required Oid uid,
-    required Reference patient,
-    required CodeableConcept title,
-    String? description,
-    Reference? author,
-    FhirDateTime? authoringTime,
-    required List<ImagingObjectSelectionStudy> study,
-  }) = _ImagingObjectSelection;
-  factory ImagingObjectSelectionStudy({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required Oid uid,
-    FhirUri? url,
-    Reference? imagingStudy,
-    @JsonKey(required: true)
-        required List<ImagingObjectSelectionStudySeries> series,
-  }) = _ImagingObjectSelectionStudy;
-  factory ImagingObjectSelectionStudySeries({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Oid? uid,
-    FhirUri? url,
-    @JsonKey(required: true)
-        required List<ImagingObjectSelectionSeriesInstance> instance,
-  }) = _ImagingObjectSelectionStudySeries;
-  factory ImagingObjectSelectionSeriesInstance({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required Oid sopClass,
-    required Oid uid,
-    required FhirUri url,
-    List<ImagingObjectSelectionInstanceFrames>? frames,
-  }) = _ImagingObjectSelectionSeriesInstance;
-  factory ImagingObjectSelectionInstanceFrames({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    FhirExtension? modifierExte,
-    required List<UnsignedInt> frameNumbers,
-    required FhirUri url,
-  }) = _ImagingObjectSelectionInstanceFrames;
+import '../../../../dstu2.dart';
+part 'diagnostics.enums.dart';
+
+class Observation {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Element? idElement;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+
+  ObservationStatus status;
+  Element? statusElement;
+  CodeableConcept? category;
+  CodeableConcept code;
+  Reference? subject;
+  Reference? encounter;
+  FhirDateTime? effectiveDateTime;
+  Element? effectiveDateTimeElement;
+  Period? effectivePeriod;
+  Instant? issued;
+  Element? issuedElement;
+  List<Reference>? performer;
+  Quantity? valueQuantity;
+  CodeableConcept? valueCodeableConcept;
+  String? valueString;
+  Element? valueStringElement;
+  Range? valueRange;
+  Ratio? valueRatio;
+  SampledData? valueSampledData;
+  Attachment? valueAttachment;
+  Time? valueTime;
+  Element? valueTimeElement;
+  FhirDateTime? valueDateTime;
+  Element? valueDateTimeElement;
+  Period? valuePeriod;
+  CodeableConcept? dataAbsentReason;
+  CodeableConcept? interpretation;
+  String? comments;
+  CodeableConcept? bodySite;
+  CodeableConcept? method;
+  Reference? specimen;
+  Reference? device;
+  List<ObservationReferenceRange>? referenceRange;
+  List<ObservationRelated>? related;
+  List<ObservationComponent>? component;
+}
+
+class ObservationReferenceRange {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<String>? fhirComments;
+  Quantity? low;
+  Quantity? high;
+  CodeableConcept? meaning;
+  Range? age;
+  String? text;
+  Element? textElement;
+}
+
+class ObservationRelated {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<String>? fhirComments;
+  RelatedType? type;
+  Reference target;
+}
+
+class ObservationComponent {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<String>? fhirComments;
+  CodeableConcept code;
+  Quantity? valueQuantity;
+  CodeableConcept? valueCodeableConcept;
+  String? valueString;
+  Element? valueStringElement;
+  Range? valueRange;
+  Ratio? valueRatio;
+  SampledData? valueSampledData;
+  Attachment? valueAttachment;
+  Time? valueTime;
+  Element? valueTimeElement;
+  FhirDateTime? valueDateTime;
+  Element? valueDateTimeElement;
+  Period? valuePeriod;
+  CodeableConcept? dataAbsentReason;
+  List<ObservationReferenceRange>? referenceRange;
+}
+
+class DiagnosticReport {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+
+  DiagnosticReportStatus status;
+  Element? statusElement;
+  CodeableConcept? category;
+  CodeableConcept code;
+  Reference subject;
+  Reference? encounter;
+  FhirDateTime? effectiveDateTime;
+  Element? effectiveDateTimeElement;
+  Period? effectivePeriod;
+  Instant issued;
+  Element? issuedElement;
+  Reference performer;
+  List<Reference>? request;
+  List<Reference>? specimen;
+  List<Reference>? result;
+  List<Reference>? imagingStudy;
+  List<DiagnosticReportImage>? image;
+  String? conclusion;
+  Element? conclusionElement;
+  List<CodeableConcept>? codedDiagnosis;
+  List<Attachment>? presentedForm;
+}
+
+class DiagnosticReportImage {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? comment;
+  Element? commentElement;
+  Reference link;
+}
+
+class DiagnosticOrder {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Code? language;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Reference subject;
+  Reference? orderer;
+  List<Identifier>? identifier;
+  Reference? encounter;
+  List<CodeableConcept>? reason;
+  List<Reference>? supportingInformation;
+  List<Reference>? specimen;
+
+  DiagnosticOrderStatus? status;
+
+  DiagnosticOrderPriority? priority;
+  List<DiagnosticOrderEvent>? event;
+  List<DiagnosticOrderItem>? item;
+  List<Annotation>? note;
+}
+
+class DiagnosticOrderEvent {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  EventStatus status;
+  CodeableConcept? description;
+  FhirDateTime dateTime;
+  Reference? actor;
+}
+
+class DiagnosticOrderItem {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept code;
+  List<Reference>? specimen;
+  CodeableConcept? bodySite;
+  ItemStatus? status;
+  List<DiagnosticOrderEvent>? event;
+}
+
+class Specimen {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  SpecimenStatus? status;
+  Element? statusElement;
+  CodeableConcept? type;
+  List<Reference>? parent;
+  Reference subject;
+  Identifier? accessionIdentifier;
+  FhirDateTime? receivedTime;
+  Element? receivedTimeElement;
+  SpecimenCollection? collection;
+  List<SpecimenTreatment>? treatment;
+  List<SpecimenContainer>? container;
+}
+
+class SpecimenCollection {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<String>? fhirComments;
+  List<FhirExtension>? modifierExtension;
+  Reference? collector;
+  List<String>? comment;
+  FhirDateTime? collectedDateTime;
+  Element? collectedDateTimeElement;
+  Period? collectedPeriod;
+  Quantity? quantity;
+  CodeableConcept? method;
+  CodeableConcept? bodySite;
+}
+
+class SpecimenTreatment {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? description;
+  CodeableConcept? procedure;
+  List<Reference>? additive;
+}
+
+class SpecimenContainer {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  String? description;
+  Element? descriptionElement;
+  CodeableConcept? type;
+  Quantity? capacity;
+  Quantity? specimenQuantity;
+  CodeableConcept? additiveCodeableConcept;
+  Reference? additiveReference;
+}
+
+class BodySite {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Code? language;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Reference patient;
+  List<Identifier>? identifier;
+  CodeableConcept? code;
+  List<CodeableConcept>? modifier;
+  String? description;
+  List<Attachment>? image;
+}
+
+class ImagingStudy {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirDateTime? started;
+  Element? startedElement;
+  Reference patient;
+  Oid uid;
+  Identifier? accession;
+  List<Identifier>? identifier;
+  List<Reference>? order;
+  List<Coding>? modalityList;
+  Reference? referrer;
+
+  ImagingStudyAvailability? availability;
+  FhirUri? url;
+  UnsignedInt numberOfSeries;
+  Element? numberOfSeriesElement;
+  UnsignedInt numberOfInstances;
+  Element? numberOfInstancesElement;
+  List<Reference>? procedure;
+  Reference? interpreter;
+  String? description;
+  Element? descriptionElement;
+  List<ImagingStudySeries>? series;
+}
+
+class ImagingStudySeries {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  UnsignedInt? number;
+  Element? numberElement;
+  Coding modality;
+  Oid uid;
+  Element? uidElement;
+  String? description;
+  Element? descriptionElement;
+  UnsignedInt numberOfInstances;
+  Element? numberOfInstancesElement;
+
+  SeriesAvailability? availability;
+  FhirUri? url;
+  Coding? bodySite;
+  Coding? laterality;
+  FhirDateTime? started;
+  Element? startedElement;
+  List<ImagingStudySeriesInstance>? instance;
+}
+
+class ImagingStudySeriesInstance {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  UnsignedInt? number;
+  Element? numberElement;
+  Oid uid;
+  Element? uidElement;
+  Oid sopClass;
+  String? type;
+  String? title;
+  Element? titleElement;
+  List<Attachment>? content;
+}
+
+class ImagingObjectSelection {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Code? language;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Oid uid;
+  Reference patient;
+  CodeableConcept title;
+  String? description;
+  Reference? author;
+  FhirDateTime? authoringTime;
+  List<ImagingObjectSelectionStudy> study;
+}
+
+class ImagingObjectSelectionStudy {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Oid uid;
+  FhirUri? url;
+  Reference? imagingStudy;
+
+  List<ImagingObjectSelectionStudySeries> series;
+}
+
+class ImagingObjectSelectionStudySeries {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Oid? uid;
+  FhirUri? url;
+
+  List<ImagingObjectSelectionSeriesInstance> instance;
+}
+
+class ImagingObjectSelectionSeriesInstance {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Oid sopClass;
+  Oid uid;
+  FhirUri url;
+  List<ImagingObjectSelectionInstanceFrames>? frames;
+}
+
+class ImagingObjectSelectionInstanceFrames {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  FhirExtension? modifierExte;
+  List<UnsignedInt> frameNumbers;
+  FhirUri url;
+}

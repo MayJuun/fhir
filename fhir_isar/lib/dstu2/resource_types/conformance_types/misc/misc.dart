@@ -1,334 +1,354 @@
-  factory ImplementationGuide({
-    @Default(Dstu2ResourceType.ImplementationGuide)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required FhirUri url,
-    @JsonKey(name: '_url') Element? urlElement,
-    String? version,
-    @JsonKey(name: '_version') Element? versionElement,
-    required String name,
-    @JsonKey(name: '_name') Element? nameElement,
-    @JsonKey(required: true, unknownEnumValue: ImplementationGuideStatus.unknown)
-        required ImplementationGuideStatus status,
-    @JsonKey(name: '_status') Element? statusElement,
-    Boolean? experimental,
-    @JsonKey(name: '_experimental') Element? experimentalElement,
-    String? publisher,
-    @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ImplementationGuideContact>? contact,
-    FhirDateTime? date,
-    @JsonKey(name: '_date') Element? dateElement,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    List<CodeableConcept>? useContext,
-    String? copyright,
-    @JsonKey(name: '_copyright') Element? copyrightElement,
-    FhirId? fhirVersion,
-    @JsonKey(name: '_fhirVersion') List<Element?>? fhirVersionElement,
-    List<ImplementationGuideDependency>? dependency,
-    required List<ImplementationGuidePackage> package,
-    List<ImplementationGuideGlobal>? global,
-    List<FhirUri>? binary,
-    required ImplementationGuidePage page,
-  }) = _ImplementationGuide;
-  factory ImplementationGuideContact({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? name,
-    List<ContactPoint>? telecom,
-  }) = _ImplementationGuideContact;
-  factory ImplementationGuideDependency({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: DependencyType.unknown)
-        required DependencyType type,
-    required FhirUri uri,
-    @JsonKey(name: '_uri') Element? uriElement,
-  }) = _ImplementationGuideDependency;
-  factory ImplementationGuidePackage({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required String name,
-    String? description,
-    @JsonKey(required: true)
-        required List<ImplementationGuidePackageResource> resource,
-  }) = _ImplementationGuidePackage;
-  factory ImplementationGuideGlobal({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required Code type,
-    @JsonKey(name: '_type') Element? typeElement,
-    required Reference profile,
-  }) = _ImplementationGuideGlobal;
-  factory ImplementationGuidePage({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required FhirUri source,
-    required String name,
-    @JsonKey(unknownEnumValue: PageKind.unknown) required PageKind kind,
-    List<Code>? type,
-    List<String>? package,
-    Code? format,
-    List<ImplementationGuidePage>? page,
-  }) = _ImplementationGuidePage;
-  factory ImplementationGuidePackageResource({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: ResourcePurpose.unknown)
-        required ResourcePurpose purpose,
-    String? name,
-    String? description,
-    String? acronym,
-    @JsonKey(name: '_acronym') Element? acronymElement,
-    FhirUri? sourceUri,
-    Reference? sourceReference,
-    Reference? exampleFor,
-  }) = _ImplementationGuidePackageResource;
-  factory TestScript({
-    @Default(Dstu2ResourceType.TestScript)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.TestScript)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required FhirUri url,
-    @JsonKey(name: '_url') Element? urlElement,
-    String? version,
-    required String name,
-    @JsonKey(name: '_name') Element? nameElement,
-    @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
-        required TestScriptStatus status,
-    @JsonKey(name: '_status') Element? statusElement,
-    Identifier? identifier,
-    Boolean? experimental,
-    @JsonKey(name: '_experimental') Element? experimentalElement,
-    String? publisher,
-    @JsonKey(name: '_publisher') Element? publisherElement,
-    List<TestScriptContact>? contact,
-    FhirDateTime? date,
-    @JsonKey(name: '_date') Element? dateElement,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    List<CodeableConcept>? useContext,
-    String? requirements,
-    String? copyright,
-    @JsonKey(name: '_copyright') Element? copyrightElement,
-    TestScriptMetadata? metadata,
-    Boolean? multiserver,
-    List<TestScriptFixture>? fixture,
-    List<Reference>? profile,
-    List<TestScriptVariable>? variable,
-    TestScriptSetup? setup,
-    List<TestScriptTest>? test,
-    TestScriptTeardown? teardown,
-  }) = _TestScript;
-  factory TestScriptContact({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? name,
-    List<ContactPoint>? telecom,
-  }) = _TestScriptContact;
-  factory TestScriptMetadata({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<TestScriptMetadataLink>? link,
-    @JsonKey(required: true)
-        required List<TestScriptMetadataCapability> capability,
-  }) = _TestScriptMetadata;
-  factory TestScriptMetadataLink({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required FhirUri url,
-    @JsonKey(name: '_url') Element? urlElement,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-  }) = _TestScriptMetadataLink;
-  factory TestScriptMetadataCapability({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'required') Boolean? required_,
-    @JsonKey(name: '_required') Element? requiredElement,
-    Boolean? validated,
-    @JsonKey(name: '_validated') Element? validatedElement,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    Integer? destination,
-    @JsonKey(name: '_destination') Element? destinationElement,
-    List<FhirUri>? link,
-    @JsonKey(name: '_link') List<Element?>? linkElement,
-    required Reference conformance,
-  }) = _TestScriptMetadataCapability;
-  factory TestScriptFixture({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Boolean? autocreate,
-    @JsonKey(name: '_autocreate') Element? autocreateElement,
-    Boolean? autodelete,
-    @JsonKey(name: '_autodelete') Element? autodeleteElement,
-    Reference? resource,
-  }) = _TestScriptFixture;
-  factory TestScriptVariable({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required String name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? headerField,
-    @JsonKey(name: '_headerField') Element? headerFieldElement,
-    String? path,
-    @JsonKey(name: '_path') Element? pathElement,
-    FhirId? sourceId,
-    @JsonKey(name: '_sourceId') Element? sourceIdElement,
-  }) = _TestScriptVariable;
-  factory TestScriptSetup({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    TestScriptMetadata? metadata,
-    required List<TestScriptSetupAction> action,
-  }) = _TestScriptSetup;
-  factory TestScriptSetupAction({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    TestScriptActionOperation? operation,
-    @JsonKey(name: 'assert') TestScriptActionAssert? assert_,
-  }) = _TestScriptSetupAction;
-  factory TestScriptActionOperation({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    Coding? type,
-    Code? resource,
-    @JsonKey(name: '_resource') Element? resourceElement,
-    String? label,
-    @JsonKey(name: '_label') Element? labelElement,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    @JsonKey(unknownEnumValue: OperationAccept.unknown) OperationAccept? accept,
-    @JsonKey(name: '_accept') Element? acceptElement,
-    @JsonKey(unknownEnumValue: OperationContentType.unknown)
-        OperationContentType? contentType,
-    @JsonKey(name: '_contentType') Element? contentTypeElement,
-    Integer? destination,
-    @JsonKey(name: '_destination') Element? destinationElement,
-    Boolean? encodeRequestUrl,
-    @JsonKey(name: '_encodeRequestUrl') Element? encodeRequestUrlElement,
-    String? params,
-    @JsonKey(name: '_params') Element? paramsElement,
-    List<TestScriptOperationRequestHeader>? requestHeader,
-    FhirId? responseId,
-    @JsonKey(name: '_responseId') Element? responseIdElement,
-    FhirId? sourceId,
-    @JsonKey(name: '_sourceId') Element? sourceIdElement,
-    FhirId? targetId,
-    @JsonKey(name: '_targetId') Element? targetIdElement,
-    String? url,
-    @JsonKey(name: '_url') Element? urlElement,
-  }) = _TestScriptActionOperation;
-  factory TestScriptOperationRequestHeader({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    FhirExtension? modifierExtension,
-    required String field,
-    @JsonKey(name: '_field') Element? fieldElement,
-    required String value,
-    @JsonKey(name: '_value') Element? valueElement,
-  }) = _TestScriptOperationRequestHeader;
-  factory TestScriptActionAssert({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? label,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    @JsonKey(unknownEnumValue: AssertDirection.unknown)
-        AssertDirection? direction,
-    @JsonKey(name: '_direction') Element? directionElement,
-    String? compareToSourceId,
-    @JsonKey(name: '_compareToSourceId') Element? compareToSourceIdElement,
-    String? compareToSourcePath,
-    @JsonKey(name: '_compareToSourcePath') Element? compareToSourcePathElement,
-    @JsonKey(unknownEnumValue: AssertContentType.unknown)
-        AssertContentType? contentType,
-    @JsonKey(name: '_contentType') Element? contentTypeElement,
-    String? headerField,
-    @JsonKey(name: '_headerField') Element? headerFieldElement,
-    String? minimumId,
-    @JsonKey(name: '_minimumId') Element? minimumIdElement,
-    Boolean? navigationLinks,
-    @JsonKey(name: '_navigationLinks') Element? navigationLinksElement,
-    @JsonKey(unknownEnumValue: AssertOperator.unknown, name: 'operator')
-        AssertOperator? operator_,
-    @JsonKey(name: '_operator') Element? operatorElement,
-    String? path,
-    @JsonKey(name: '_path') Element? pathElement,
-    Code? resource,
-    @JsonKey(name: '_resource') Element? resourceElement,
-    @JsonKey(unknownEnumValue: AssertResponse.unknown) AssertResponse? response,
-    @JsonKey(name: '_response') Element? responseElement,
-    String? responseCode,
-    @JsonKey(name: '_responseCode') Element? responseCodeElement,
-    FhirId? sourceId,
-    @JsonKey(name: '_sourceId') Element? sourceIdElement,
-    FhirId? validateProfileId,
-    @JsonKey(name: '_validateProfileId') Element? validateProfileIdElement,
-    String? value,
-    @JsonKey(name: '_value') Element? valueElement,
-    Boolean? warningOnly,
-    @JsonKey(name: '_warningOnly') Element? warningOnlyElement,
-  }) = _TestScriptActionAssert;
-  factory TestScriptTest({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    TestScriptMetadata? metadata,
-    required List<TestScriptSetupAction> action,
-  }) = _TestScriptTest;
-  factory TestScriptTeardown({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required List<TestScriptTeardownAction> action,
-  }) = _TestScriptTeardown;
-  factory TestScriptTeardownAction({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    TestScriptActionOperation? operation,
-  }) = _TestScriptTeardownAction;
+import '../../../../dstu2.dart';
+part 'misc.enums.dart';
+
+class ImplementationGuide {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirUri url;
+  Element? urlElement;
+  String? version;
+  Element? versionElement;
+  String name;
+  Element? nameElement;
+
+  ImplementationGuideStatus status;
+  Element? statusElement;
+  Boolean? experimental;
+  Element? experimentalElement;
+  String? publisher;
+  Element? publisherElement;
+  List<ImplementationGuideContact>? contact;
+  FhirDateTime? date;
+  Element? dateElement;
+  String? description;
+  Element? descriptionElement;
+  List<CodeableConcept>? useContext;
+  String? copyright;
+  Element? copyrightElement;
+  FhirId? fhirVersion;
+  List<Element?>? fhirVersionElement;
+  List<ImplementationGuideDependency>? dependency;
+  List<ImplementationGuidePackage> package;
+  List<ImplementationGuideGlobal>? global;
+  List<FhirUri>? binary;
+  ImplementationGuidePage page;
+}
+
+class ImplementationGuideContact {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? name;
+  List<ContactPoint>? telecom;
+}
+
+class ImplementationGuideDependency {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+
+  DependencyType type;
+  FhirUri uri;
+  Element? uriElement;
+}
+
+class ImplementationGuidePackage {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String name;
+  String? description;
+
+  List<ImplementationGuidePackageResource> resource;
+}
+
+class ImplementationGuideGlobal {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code type;
+  Element? typeElement;
+  Reference profile;
+}
+
+class ImplementationGuidePage {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirUri source;
+  String name;
+  PageKind kind;
+  List<Code>? type;
+  List<String>? package;
+  Code? format;
+  List<ImplementationGuidePage>? page;
+}
+
+class ImplementationGuidePackageResource {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+
+  ResourcePurpose purpose;
+  String? name;
+  String? description;
+  String? acronym;
+  Element? acronymElement;
+  FhirUri? sourceUri;
+  Reference? sourceReference;
+  Reference? exampleFor;
+}
+
+class TestScript {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirUri url;
+  Element? urlElement;
+  String? version;
+  String name;
+  Element? nameElement;
+
+  TestScriptStatus status;
+  Element? statusElement;
+  Identifier? identifier;
+  Boolean? experimental;
+  Element? experimentalElement;
+  String? publisher;
+  Element? publisherElement;
+  List<TestScriptContact>? contact;
+  FhirDateTime? date;
+  Element? dateElement;
+  String? description;
+  Element? descriptionElement;
+  List<CodeableConcept>? useContext;
+  String? requirements;
+  String? copyright;
+  Element? copyrightElement;
+  TestScriptMetadata? metadata;
+  Boolean? multiserver;
+  List<TestScriptFixture>? fixture;
+  List<Reference>? profile;
+  List<TestScriptVariable>? variable;
+  TestScriptSetup? setup;
+  List<TestScriptTest>? test;
+  TestScriptTeardown? teardown;
+}
+
+class TestScriptContact {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? name;
+  List<ContactPoint>? telecom;
+}
+
+class TestScriptMetadata {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<TestScriptMetadataLink>? link;
+
+  List<TestScriptMetadataCapability> capability;
+}
+
+class TestScriptMetadataLink {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirUri url;
+  Element? urlElement;
+  String? description;
+  Element? descriptionElement;
+}
+
+class TestScriptMetadataCapability {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Boolean? _;
+  Element? Element;
+  Boolean? validated;
+  Element? validatedElement;
+  String? description;
+  Element? descriptionElement;
+  Integer? destination;
+  Element? destinationElement;
+  List<FhirUri>? link;
+  List<Element?>? linkElement;
+  Reference conformance;
+}
+
+class TestScriptFixture {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Boolean? autocreate;
+  Element? autocreateElement;
+  Boolean? autodelete;
+  Element? autodeleteElement;
+  Reference? resource;
+}
+
+class TestScriptVariable {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String name;
+  Element? nameElement;
+  String? headerField;
+  Element? headerFieldElement;
+  String? path;
+  Element? pathElement;
+  FhirId? sourceId;
+  Element? sourceIdElement;
+}
+
+class TestScriptSetup {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  TestScriptMetadata? metadata;
+  List<TestScriptSetupAction> action;
+}
+
+class TestScriptSetupAction {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<String>? fhirComments;
+  TestScriptActionOperation? operation;
+  TestScriptActionAssert? assert_;
+}
+
+class TestScriptActionOperation {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<String>? fhirComments;
+  Coding? type;
+  Code? resource;
+  Element? resourceElement;
+  String? label;
+  Element? labelElement;
+  String? description;
+  Element? descriptionElement;
+  OperationAccept? accept;
+  Element? acceptElement;
+
+  OperationContentType? contentType;
+  Element? contentTypeElement;
+  Integer? destination;
+  Element? destinationElement;
+  Boolean? encodeRequestUrl;
+  Element? encodeRequestUrlElement;
+  String? params;
+  Element? paramsElement;
+  List<TestScriptOperationRequestHeader>? requestHeader;
+  FhirId? responseId;
+  Element? responseIdElement;
+  FhirId? sourceId;
+  Element? sourceIdElement;
+  FhirId? targetId;
+  Element? targetIdElement;
+  String? url;
+  Element? urlElement;
+}
+
+class TestScriptOperationRequestHeader {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  FhirExtension? modifierExtension;
+  String field;
+  Element? fieldElement;
+  String value;
+  Element? valueElement;
+}
+
+class TestScriptActionAssert {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? label;
+  String? description;
+  Element? descriptionElement;
+
+  AssertDirection? direction;
+  Element? directionElement;
+  String? compareToSourceId;
+  Element? compareToSourceIdElement;
+  String? compareToSourcePath;
+  Element? compareToSourcePathElement;
+
+  AssertContentType? contentType;
+  Element? contentTypeElement;
+  String? headerField;
+  Element? headerFieldElement;
+  String? minimumId;
+  Element? minimumIdElement;
+  Boolean? navigationLinks;
+  Element? navigationLinksElement;
+
+  AssertOperator? operator_;
+  Element? operatorElement;
+  String? path;
+  Element? pathElement;
+  Code? resource;
+  Element? resourceElement;
+  AssertResponse? response;
+  Element? responseElement;
+  String? responseCode;
+  Element? responseCodeElement;
+  FhirId? sourceId;
+  Element? sourceIdElement;
+  FhirId? validateProfileId;
+  Element? validateProfileIdElement;
+  String? value;
+  Element? valueElement;
+  Boolean? warningOnly;
+  Element? warningOnlyElement;
+}
+
+class TestScriptTest {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? name;
+  Element? nameElement;
+  String? description;
+  Element? descriptionElement;
+  TestScriptMetadata? metadata;
+  List<TestScriptSetupAction> action;
+}
+
+class TestScriptTeardown {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<TestScriptTeardownAction> action;
+}
+
+class TestScriptTeardownAction {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<String>? fhirComments;
+  TestScriptActionOperation? operation;
+}

@@ -1,229 +1,237 @@
-  factory Composition({
-    @Default(Dstu2ResourceType.Composition)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Composition)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Identifier? identifier,
-    required FhirDateTime date,
-    @JsonKey(name: '_date') Element? dateElement,
-    required CodeableConcept type,
-    @JsonKey(name: 'class') CodeableConcept? class_,
-    required String title,
-    @JsonKey(name: '_title') Element? titleElement,
-    @JsonKey(unknownEnumValue: CompositionStatus.unknown)
-        required CompositionStatus status,
-    @JsonKey(name: '_status') Element? statusElement,
-    Code? confidentiality,
-    @JsonKey(name: '_confidentiality') Element? confidentialityElement,
-    required Reference subject,
-    required List<Reference> author,
-    List<CompositionAttester>? attester,
-    Reference? custodian,
-    List<CompositionEvent>? event,
-    Reference? encounter,
-    List<CompositionSection>? section,
-  }) = _Composition;
-  factory CompositionAttester({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required List<AttesterMode> mode,
-    @JsonKey(name: '_mode') Element? modeElement,
-    FhirDateTime? time,
-    @JsonKey(name: '_time') Element? timeElement,
-    Reference? party,
-  }) = _CompositionAttester;
-  factory CompositionEvent({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<CodeableConcept>? code,
-    Period? period,
-    List<Reference>? detail,
-  }) = _CompositionEvent;
-  factory CompositionSection({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    String? title,
-    @JsonKey(name: '_title') Element? titleElement,
-    CodeableConcept? code,
-    Narrative? text,
-    @JsonKey(unknownEnumValue: SectionMode.unknown) SectionMode? mode,
-    @JsonKey(name: '_mode') Element? modeElement,
-    CodeableConcept? orderedBy,
-    List<Reference>? entry,
-    CodeableConcept? emptyReason,
-    List<CompositionSection>? section,
-  }) = _CompositionSection;
-  factory DocumentManifest({
-    @Default(Dstu2ResourceType.DocumentManifest)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentManifest)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Identifier? masterIdentifier,
-    List<Identifier>? identifier,
-    Reference? subject,
-    List<Reference>? recipient,
-    CodeableConcept? type,
-    List<Reference>? author,
-    FhirDateTime? created,
-    @JsonKey(name: '_created') Element? createdElement,
-    FhirUri? source,
-    @JsonKey(name: '_source') Element? sourceElement,
-    @JsonKey(unknownEnumValue: DocumentManifestStatus.unknown)
-        required DocumentManifestStatus status,
-    @JsonKey(name: '_status') Element? statusElement,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    required List<DocumentManifestContent> content,
-    List<DocumentManifestRelated>? related,
-  }) = _DocumentManifest;
-  factory DocumentManifestContent({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Attachment? pAttachment,
-    Reference? pReference,
-  }) = _DocumentManifestContent;
-  factory DocumentManifestRelated({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Identifier? identifier,
-    Reference? ref,
-  }) = _DocumentManifestRelated;
-  factory DocumentReference({
-    @Default(Dstu2ResourceType.DocumentReference)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentReference)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Identifier? masterIdentifier,
-    List<Identifier>? identifier,
-    Reference? subject,
-    required CodeableConcept type,
-    @JsonKey(name: 'class') CodeableConcept? class_,
-    List<Reference>? author,
-    Reference? custodian,
-    Reference? authenticator,
-    FhirDateTime? created,
-    required Instant indexed,
-    @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
-        required DocumentReferenceStatus status,
-    @JsonKey(name: '_status') Element? statusElement,
-    CodeableConcept? docStatus,
-    @JsonKey(name: '_docStatus') Element? docStatusElement,
-    List<DocumentReferenceRelatesTo>? relatesTo,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    List<CodeableConcept>? securityLabel,
-    required List<DocumentReferenceContent> content,
-    DocumentReferenceContext? context,
-  }) = _DocumentReference;
-  factory DocumentReferenceRelatesTo({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: RelatesToCode.unknown)
-        required RelatesToCode code,
-    @JsonKey(name: '_code') Element? codeElement,
-    required Reference target,
-  }) = _DocumentReferenceRelatesTo;
-  factory DocumentReferenceContent({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required Attachment attachment,
-    List<Coding>? format,
-  }) = _DocumentReferenceContent;
-  factory DocumentReferenceContext({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Reference? encounter,
-    List<CodeableConcept>? event,
-    Period? period,
-    CodeableConcept? facilityType,
-    CodeableConcept? practiceSetting,
-    Reference? sourcePatientInfo,
-    List<DocumentReferenceContextRelated>? related,
-  }) = _DocumentReferenceContext;
-  factory DocumentReferenceContextRelated({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Identifier? identifier,
-    Reference? ref,
-  }) = _DocumentReferenceContextRelated;
-  factory List_({
-    @Default(Dstu2ResourceType.List_)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.List_)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    String? title,
-    @JsonKey(name: '_title') Element? titleElement,
-    CodeableConcept? code,
-    Reference? subject,
-    Reference? source,
-    Reference? encounter,
-    @JsonKey(unknownEnumValue: ListStatus.unknown) required ListStatus status,
-    @JsonKey(name: '_status') Element? statusElement,
-    FhirDateTime? date,
-    @JsonKey(name: '_date') Element? dateElement,
-    CodeableConcept? orderedBy,
-    @JsonKey(unknownEnumValue: ListMode.unknown) required ListMode mode,
-    @JsonKey(name: '_mode') Element? modeElement,
-    String? note,
-    List<ListEntry>? entry,
-    CodeableConcept? emptyReason,
-  }) = _List_;
-  factory ListEntry({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    CodeableConcept? flag,
-    Boolean? deleted,
-    @JsonKey(name: '_deleted') Element? deletedElement,
-    FhirDateTime? date,
-    @JsonKey(name: '_date') Element? dateElement,
-    required Reference item,
-  }) = _ListEntry;
+import '../../../../dstu2.dart';
+part 'documents_and_lists.enums.dart';
+
+class Composition {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Identifier? identifier;
+  FhirDateTime date;
+  Element? dateElement;
+  CodeableConcept type;
+  CodeableConcept? class_;
+  String title;
+  Element? titleElement;
+
+  CompositionStatus status;
+  Element? statusElement;
+  Code? confidentiality;
+  Element? confidentialityElement;
+  Reference subject;
+  List<Reference> author;
+  List<CompositionAttester>? attester;
+  Reference? custodian;
+  List<CompositionEvent>? event;
+  Reference? encounter;
+  List<CompositionSection>? section;
+}
+
+class CompositionAttester {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<AttesterMode> mode;
+  Element? modeElement;
+  FhirDateTime? time;
+  Element? timeElement;
+  Reference? party;
+}
+
+class CompositionEvent {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<CodeableConcept>? code;
+  Period? period;
+  List<Reference>? detail;
+}
+
+class CompositionSection {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<String>? fhirComments;
+  String? title;
+  Element? titleElement;
+  CodeableConcept? code;
+  Narrative? text;
+  SectionMode? mode;
+  Element? modeElement;
+  CodeableConcept? orderedBy;
+  List<Reference>? entry;
+  CodeableConcept? emptyReason;
+  List<CompositionSection>? section;
+}
+
+class DocumentManifest {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Identifier? masterIdentifier;
+  List<Identifier>? identifier;
+  Reference? subject;
+  List<Reference>? recipient;
+  CodeableConcept? type;
+  List<Reference>? author;
+  FhirDateTime? created;
+  Element? createdElement;
+  FhirUri? source;
+  Element? sourceElement;
+
+  DocumentManifestStatus status;
+  Element? statusElement;
+  String? description;
+  Element? descriptionElement;
+  List<DocumentManifestContent> content;
+  List<DocumentManifestRelated>? related;
+}
+
+class DocumentManifestContent {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Attachment? pAttachment;
+  Reference? pReference;
+}
+
+class DocumentManifestRelated {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Identifier? identifier;
+  Reference? ref;
+}
+
+class DocumentReference {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Identifier? masterIdentifier;
+  List<Identifier>? identifier;
+  Reference? subject;
+  CodeableConcept type;
+  CodeableConcept? class_;
+  List<Reference>? author;
+  Reference? custodian;
+  Reference? authenticator;
+  FhirDateTime? created;
+  Instant indexed;
+
+  DocumentReferenceStatus status;
+  Element? statusElement;
+  CodeableConcept? docStatus;
+  Element? docStatusElement;
+  List<DocumentReferenceRelatesTo>? relatesTo;
+  String? description;
+  Element? descriptionElement;
+  List<CodeableConcept>? securityLabel;
+  List<DocumentReferenceContent> content;
+  DocumentReferenceContext? context;
+}
+
+class DocumentReferenceRelatesTo {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+
+  RelatesToCode code;
+  Element? codeElement;
+  Reference target;
+}
+
+class DocumentReferenceContent {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Attachment attachment;
+  List<Coding>? format;
+}
+
+class DocumentReferenceContext {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Reference? encounter;
+  List<CodeableConcept>? event;
+  Period? period;
+  CodeableConcept? facilityType;
+  CodeableConcept? practiceSetting;
+  Reference? sourcePatientInfo;
+  List<DocumentReferenceContextRelated>? related;
+}
+
+class DocumentReferenceContextRelated {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Identifier? identifier;
+  Reference? ref;
+}
+
+class List_ {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  String? title;
+  Element? titleElement;
+  CodeableConcept? code;
+  Reference? subject;
+  Reference? source;
+  Reference? encounter;
+  ListStatus status;
+  Element? statusElement;
+  FhirDateTime? date;
+  Element? dateElement;
+  CodeableConcept? orderedBy;
+  ListMode mode;
+  Element? modeElement;
+  String? note;
+  List<ListEntry>? entry;
+  CodeableConcept? emptyReason;
+}
+
+class ListEntry {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<String>? fhirComments;
+  CodeableConcept? flag;
+  Boolean? deleted;
+  Element? deletedElement;
+  FhirDateTime? date;
+  Element? dateElement;
+  Reference item;
+}

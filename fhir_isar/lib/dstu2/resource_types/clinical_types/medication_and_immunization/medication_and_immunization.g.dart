@@ -733,7 +733,7 @@ _$_MedicationAdministration _$$_MedicationAdministrationFromJson(
     Map<String, dynamic> json) {
   $checkKeys(
     json,
-    requiredKeys: const ['status'],
+    Keys: const ['status'],
   );
   return _$_MedicationAdministration(
     resourceType: $enumDecodeNullable(
@@ -1244,7 +1244,7 @@ _$_MedicationStatement _$$_MedicationStatementFromJson(
     Map<String, dynamic> json) {
   $checkKeys(
     json,
-    requiredKeys: const ['status'],
+    Keys: const ['status'],
   );
   return _$_MedicationStatement(
     resourceType: $enumDecodeNullable(
@@ -1792,7 +1792,7 @@ _$_ImmunizationRecommendation _$$_ImmunizationRecommendationFromJson(
     Map<String, dynamic> json) {
   $checkKeys(
     json,
-    requiredKeys: const ['recommendation'],
+    Keys: const ['recommendation'],
   );
   return _$_ImmunizationRecommendation(
     resourceType: $enumDecodeNullable(

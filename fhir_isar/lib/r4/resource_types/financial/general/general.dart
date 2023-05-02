@@ -1,995 +1,1019 @@
-  factory Account({
-    @Default(R4ResourceType.Account)
-    @JsonKey(unknownEnumValue: R4ResourceType.Account)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) Code? status,
-    @JsonKey(name: '_status') @HiveField(13) Element? statusElement,
-    @HiveField(14) CodeableConcept? type,
-    @HiveField(15) @HiveField(16) String? name,
-    @JsonKey(name: '_name') @HiveField(17) Element? nameElement,
-    @HiveField(18) List<Reference>? subject,
-    @HiveField(19) Period? servicePeriod,
-    @HiveField(20) List<AccountCoverage>? coverage,
-    @HiveField(21) Reference? owner,
-    @HiveField(22) String? description,
-    @JsonKey(name: '_description') @HiveField(23) Element? descriptionElement,
-    @HiveField(24) List<AccountGuarantor>? guarantor,
-    @HiveField(25) Reference? partOf,
-  }) = _Account;
-  factory AccountCoverage({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required Reference coverage,
-    PositiveInt? priority,
-    @JsonKey(name: '_priority') Element? priorityElement,
-  }) = _AccountCoverage;
-  factory AccountGuarantor({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required Reference party,
-    Boolean? onHold,
-    @JsonKey(name: '_onHold') Element? onHoldElement,
-    Period? period,
-  }) = _AccountGuarantor;
-  factory ChargeItem({
-    @Default(R4ResourceType.ChargeItem)
-    @JsonKey(unknownEnumValue: R4ResourceType.ChargeItem)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) @HiveField(13) List<FhirUri>? definitionUri,
-    @JsonKey(name: '_definitionUri')
-    @HiveField(14)
-        List<Element?>? definitionUriElement,
-    @HiveField(15) List<Canonical>? definitionCanonical,
-    @HiveField(16) Code? status,
-    @JsonKey(name: '_status') @HiveField(17) Element? statusElement,
-    @HiveField(18) List<Reference>? partOf,
-    @HiveField(19) required CodeableConcept code,
-    @HiveField(20) required Reference subject,
-    @HiveField(21) Reference? context,
-    @HiveField(22) FhirDateTime? occurrenceDateTime,
-    @JsonKey(name: '_occurrenceDateTime')
-    @HiveField(23)
-        Element? occurrenceDateTimeElement,
-    @HiveField(24) Period? occurrencePeriod,
-    @HiveField(25) Timing? occurrenceTiming,
-    @HiveField(26) List<ChargeItemPerformer>? performer,
-    @HiveField(27) Reference? performingOrganization,
-    @HiveField(28) Reference? requestingOrganization,
-    @HiveField(29) Reference? costCenter,
-    @HiveField(30) Quantity? quantity,
-    @HiveField(31) List<CodeableConcept>? bodysite,
-    @HiveField(32) Decimal? factorOverride,
-    @JsonKey(name: '_factorOverride')
-    @HiveField(33)
-        Element? factorOverrideElement,
-    @HiveField(34) Money? priceOverride,
-    @HiveField(35) String? overrideReason,
-    @JsonKey(name: '_overrideReason')
-    @HiveField(36)
-        Element? overrideReasonElement,
-    @HiveField(37) Reference? enterer,
-    @HiveField(38) FhirDateTime? enteredDate,
-    @JsonKey(name: '_enteredDate') @HiveField(39) Element? enteredDateElement,
-    @HiveField(40) List<CodeableConcept>? reason,
-    @HiveField(41) List<Reference>? service,
-    @HiveField(42) Reference? productReference,
-    @HiveField(43) CodeableConcept? productCodeableConcept,
-    @HiveField(44) List<Reference>? account,
-    @HiveField(45) List<Annotation>? note,
-    @HiveField(46) List<Reference>? supportingInformation,
-  }) = _ChargeItem;
-  factory ChargeItemPerformer({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? function,
-    required Reference actor,
-  }) = _ChargeItemPerformer;
-  factory ChargeItemDefinition({
-    @Default(R4ResourceType.ChargeItemDefinition)
-    @JsonKey(unknownEnumValue: R4ResourceType.ChargeItemDefinition)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) FhirUri? url,
-    @JsonKey(name: '_url') @HiveField(12) Element? urlElement,
-    @HiveField(13) List<Identifier>? identifier,
-    @HiveField(14) @HiveField(15) @HiveField(16) String? version,
-    @JsonKey(name: '_version') @HiveField(17) Element? versionElement,
-    @HiveField(18) String? title,
-    @JsonKey(name: '_title') @HiveField(19) Element? titleElement,
-    @HiveField(20) List<FhirUri>? derivedFromUri,
-    @JsonKey(name: '_derivedFromUri')
-    @HiveField(21)
-        List<Element?>? derivedFromUriElement,
-    @HiveField(22) List<Canonical>? partOf,
-    @HiveField(23) List<Canonical>? replaces,
-    @HiveField(24) Code? status,
-    @JsonKey(name: '_status') @HiveField(25) Element? statusElement,
-    @HiveField(26) Boolean? experimental,
-    @JsonKey(name: '_experimental') @HiveField(27) Element? experimentalElement,
-    @HiveField(28) FhirDateTime? date,
-    @JsonKey(name: '_date') @HiveField(29) Element? dateElement,
-    @HiveField(30) String? publisher,
-    @JsonKey(name: '_publisher') @HiveField(31) Element? publisherElement,
-    @HiveField(32) List<ContactDetail>? contact,
-    @HiveField(33) Markdown? description,
-    @JsonKey(name: '_description') @HiveField(34) Element? descriptionElement,
-    @HiveField(35) List<UsageContext>? useContext,
-    @HiveField(36) List<CodeableConcept>? jurisdiction,
-    @HiveField(37) Markdown? copyright,
-    @JsonKey(name: '_copyright') @HiveField(38) Element? copyrightElement,
-    @HiveField(39) Date? approvalDate,
-    @JsonKey(name: '_approvalDate') @HiveField(40) Element? approvalDateElement,
-    @HiveField(41) Date? lastReviewDate,
-    @JsonKey(name: '_lastReviewDate')
-    @HiveField(42)
-        Element? lastReviewDateElement,
-    @HiveField(43) Period? effectivePeriod,
-    @HiveField(44) CodeableConcept? code,
-    @HiveField(45) List<Reference>? instance,
-    @HiveField(46) List<ChargeItemDefinitionApplicability>? applicability,
-    @HiveField(47) List<ChargeItemDefinitionPropertyGroup>? propertyGroup,
-  }) = _ChargeItemDefinition;
-  factory ChargeItemDefinitionApplicability({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    String? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    String? expression,
-    @JsonKey(name: '_expression') Element? expressionElement,
-  }) = _ChargeItemDefinitionApplicability;
-  factory ChargeItemDefinitionPropertyGroup({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<ChargeItemDefinitionApplicability>? applicability,
-    List<ChargeItemDefinitionPriceComponent>? priceComponent,
-  }) = _ChargeItemDefinitionPropertyGroup;
-  factory ChargeItemDefinitionPriceComponent({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    CodeableConcept? code,
-    Decimal? factor,
-    @JsonKey(name: '_factor') Element? factorElement,
-    Money? amount,
-  }) = _ChargeItemDefinitionPriceComponent;
-  factory Contract({
-    @Default(R4ResourceType.Contract)
-    @JsonKey(unknownEnumValue: R4ResourceType.Contract)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) FhirUri? url,
-    @JsonKey(name: '_url') @HiveField(13) Element? urlElement,
-    @HiveField(14) String? version,
-    @JsonKey(name: '_version') @HiveField(15) Element? versionElement,
-    @HiveField(16) Code? status,
-    @JsonKey(name: '_status') @HiveField(17) Element? statusElement,
-    @HiveField(18) @HiveField(19) CodeableConcept? legalState,
-    @HiveField(20) Reference? instantiatesCanonical,
-    @HiveField(21) FhirUri? instantiatesUri,
-    @JsonKey(name: '_instantiatesUri')
-    @HiveField(22)
-        Element? instantiatesUriElement,
-    @HiveField(23) CodeableConcept? contentDerivative,
-    @HiveField(24) FhirDateTime? issued,
-    @JsonKey(name: '_issued') @HiveField(25) Element? issuedElement,
-    @HiveField(26) Period? applies,
-    @HiveField(27) CodeableConcept? expirationType,
-    @HiveField(28) List<Reference>? subject,
-    @HiveField(29) @HiveField(30) @HiveField(31) List<Reference>? authority,
-    @HiveField(32) @HiveField(33) List<Reference>? domain,
-    @HiveField(34) List<Reference>? site,
-    @HiveField(35) @HiveField(36) String? name,
-    @JsonKey(name: '_name') @HiveField(37) Element? nameElement,
-    @HiveField(38) String? title,
-    @JsonKey(name: '_title') @HiveField(39) Element? titleElement,
-    @HiveField(40) String? subtitle,
-    @JsonKey(name: '_subtitle') @HiveField(41) Element? subtitleElement,
-    @HiveField(42) List<String>? alias,
-    @JsonKey(name: '_alias') @HiveField(43) List<Element?>? aliasElement,
-    @HiveField(44) Reference? author,
-    @HiveField(45) @HiveField(46) CodeableConcept? scope,
-    @HiveField(47) CodeableConcept? topicCodeableConcept,
-    @HiveField(48) Reference? topicReference,
-    @HiveField(49) CodeableConcept? type,
-    @HiveField(50) List<CodeableConcept>? subType,
-    @HiveField(51) ContractContentDefinition? contentDefinition,
-    @HiveField(52) List<ContractTerm>? term,
-    @HiveField(53) List<Reference>? supportingInfo,
-    @HiveField(54) List<Reference>? relevantHistory,
-    @HiveField(55) List<ContractSigner>? signer,
-    @HiveField(56) @HiveField(57) List<ContractFriendly>? friendly,
-    @HiveField(58) List<ContractLegal>? legal,
-    @HiveField(59) List<ContractRule>? rule,
-    @HiveField(60) Attachment? legallyBindingAttachment,
-    @HiveField(61) Reference? legallyBindingReference,
-  }) = _Contract;
-  factory ContractContentDefinition({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept type,
-    CodeableConcept? subType,
-    Reference? publisher,
-    FhirDateTime? publicationDate,
-    @JsonKey(name: '_publicationDate') Element? publicationDateElement,
-    Code? publicationStatus,
-    @JsonKey(name: '_publicationStatus') Element? publicationStatusElement,
-    Markdown? copyright,
-    @JsonKey(name: '_copyright') Element? copyrightElement,
-  }) = _ContractContentDefinition;
-  factory ContractTerm({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Identifier? identifier,
-    FhirDateTime? issued,
-    @JsonKey(name: '_issued') Element? issuedElement,
-    Period? applies,
-    CodeableConcept? topicCodeableConcept,
-    Reference? topicReference,
-    CodeableConcept? type,
-    CodeableConcept? subType,
-    String? text,
-    @JsonKey(name: '_text') Element? textElement,
-    List<ContractSecurityLabel>? securityLabel,
-    required ContractOffer offer,
-    List<ContractAsset>? asset,
-    List<ContractAction>? action,
-    List<ContractTerm>? group,
-  }) = _ContractTerm;
-  factory ContractSecurityLabel({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<UnsignedInt>? number,
-    @JsonKey(name: '_number') List<Element?>? numberElement,
-    required Coding classification,
-    List<Coding>? category,
-    List<Coding>? control,
-  }) = _ContractSecurityLabel;
-  factory ContractOffer({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    List<ContractParty>? party,
-    Reference? topic,
-    CodeableConcept? type,
-    CodeableConcept? decision,
-    List<CodeableConcept>? decisionMode,
-    List<ContractAnswer>? answer,
-    String? text,
-    @JsonKey(name: '_text') Element? textElement,
-    List<String>? linkId,
-    @JsonKey(name: '_linkId') List<Element?>? linkIdElement,
-    List<UnsignedInt>? securityLabelNumber,
-    @JsonKey(name: '_securityLabelNumber')
-        List<Element>? securityLabelNumberElement,
-  }) = _ContractOffer;
-  factory ContractParty({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required List<Reference> reference,
-    required CodeableConcept role,
-  }) = _ContractParty;
-  factory ContractAnswer({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Boolean? valueBoolean,
-    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-    Decimal? valueDecimal,
-    @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-    Integer? valueInteger,
-    @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-    Date? valueDate,
-    @JsonKey(name: '_valueDate') Element? valueDateElement,
-    FhirDateTime? valueDateTime,
-    @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-    Time? valueTime,
-    @JsonKey(name: '_valueTime') Element? valueTimeElement,
-    String? valueString,
-    @JsonKey(name: '_valueString') Element? valueStringElement,
-    FhirUri? valueUri,
-    @JsonKey(name: '_valueUri') Element? valueUriElement,
-    Attachment? valueAttachment,
-    Coding? valueCoding,
-    Quantity? valueQuantity,
-    Reference? valueReference,
-  }) = _ContractAnswer;
-  factory ContractAsset({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? scope,
-    List<CodeableConcept>? type,
-    List<Reference>? typeReference,
-    List<CodeableConcept>? subtype,
-    Coding? relationship,
-    List<ContractContext>? context,
-    String? condition,
-    @JsonKey(name: '_condition') Element? conditionElement,
-    List<CodeableConcept>? periodType,
-    List<Period>? period,
-    List<Period>? usePeriod,
-    String? text,
-    @JsonKey(name: '_text') Element? textElement,
-    List<String>? linkId,
-    @JsonKey(name: '_linkId') List<Element?>? linkIdElement,
-    List<ContractAnswer>? answer,
-    List<UnsignedInt>? securityLabelNumber,
-    @JsonKey(name: '_securityLabelNumber')
-        List<Element>? securityLabelNumberElement,
-    List<ContractValuedItem>? valuedItem,
-  }) = _ContractAsset;
-  factory ContractContext({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Reference? reference,
-    List<CodeableConcept>? code,
-    String? text,
-    @JsonKey(name: '_text') Element? textElement,
-  }) = _ContractContext;
-  factory ContractValuedItem({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? entityCodeableConcept,
-    Reference? entityReference,
-    Identifier? identifier,
-    FhirDateTime? effectiveTime,
-    @JsonKey(name: '_effectiveTime') Element? effectiveTimeElement,
-    Quantity? quantity,
-    Money? unitPrice,
-    Decimal? factor,
-    @JsonKey(name: '_factor') Element? factorElement,
-    Decimal? points,
-    @JsonKey(name: '_points') Element? pointsElement,
-    Money? net,
-    String? payment,
-    @JsonKey(name: '_payment') Element? paymentElement,
-    FhirDateTime? paymentDate,
-    @JsonKey(name: '_paymentDate') Element? paymentDateElement,
-    Reference? responsible,
-    Reference? recipient,
-    List<String>? linkId,
-    @JsonKey(name: '_linkId') List<Element?>? linkIdElement,
-    List<UnsignedInt>? securityLabelNumber,
-    @JsonKey(name: '_securityLabelNumber')
-        List<Element>? securityLabelNumberElement,
-  }) = _ContractValuedItem;
-  factory ContractAction({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Boolean? doNotPerform,
-    @JsonKey(name: '_doNotPerform') Element? doNotPerformElement,
-    required CodeableConcept type,
-    List<ContractSubject>? subject,
-    required CodeableConcept intent,
-    List<String>? linkId,
-    @JsonKey(name: '_linkId') List<Element?>? linkIdElement,
-    required CodeableConcept status,
-    Reference? context,
-    List<String>? contextLinkId,
-    @JsonKey(name: '_contextLinkId') List<Element?>? contextLinkIdElement,
-    FhirDateTime? occurrenceDateTime,
-    @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
-    Period? occurrencePeriod,
-    Timing? occurrenceTiming,
-    List<Reference>? requester,
-    List<String>? requesterLinkId,
-    @JsonKey(name: '_requesterLinkId') List<Element?>? requesterLinkIdElement,
-    List<CodeableConcept>? performerType,
-    CodeableConcept? performerRole,
-    Reference? performer,
-    List<String>? performerLinkId,
-    @JsonKey(name: '_performerLinkId') List<Element?>? performerLinkIdElement,
-    List<CodeableConcept>? reasonCode,
-    List<Reference>? reasonReference,
-    List<String>? reason,
-    @JsonKey(name: '_reason') List<Element?>? reasonElement,
-    List<String>? reasonLinkId,
-    @JsonKey(name: '_reasonLinkId') List<Element?>? reasonLinkIdElement,
-    List<Annotation>? note,
-    List<UnsignedInt>? securityLabelNumber,
-    @JsonKey(name: '_securityLabelNumber')
-        List<Element>? securityLabelNumberElement,
-  }) = _ContractAction;
-  factory ContractSubject({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required List<Reference> reference,
-    CodeableConcept? role,
-  }) = _ContractSubject;
-  factory ContractSigner({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required Coding type,
-    required Reference party,
-    required List<Signature> signature,
-  }) = _ContractSigner;
-  factory ContractFriendly({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Attachment? contentAttachment,
-    Reference? contentReference,
-  }) = _ContractFriendly;
-  factory ContractLegal({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Attachment? contentAttachment,
-    Reference? contentReference,
-  }) = _ContractLegal;
-  factory ContractRule({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Attachment? contentAttachment,
-    Reference? contentReference,
-  }) = _ContractRule;
-  factory ExplanationOfBenefit({
-    @Default(R4ResourceType.ExplanationOfBenefit)
-    @JsonKey(unknownEnumValue: R4ResourceType.ExplanationOfBenefit)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) Code? status,
-    @JsonKey(name: '_status') @HiveField(13) Element? statusElement,
-    @HiveField(14) @HiveField(15) required CodeableConcept type,
-    @HiveField(16) CodeableConcept? subType,
-    @HiveField(17) Code? use,
-    @JsonKey(name: '_use') @HiveField(18) Element? useElement,
-    @HiveField(19) required Reference patient,
-    @HiveField(20) Period? billablePeriod,
-    @HiveField(21) FhirDateTime? created,
-    @JsonKey(name: '_created') @HiveField(22) Element? createdElement,
-    @HiveField(23) Reference? enterer,
-    @HiveField(24) required Reference insurer,
-    @HiveField(25) @HiveField(26) required Reference provider,
-    @HiveField(27) CodeableConcept? priority,
-    @HiveField(28) CodeableConcept? fundsReserveRequested,
-    @HiveField(29) CodeableConcept? fundsReserve,
-    @HiveField(30) List<ExplanationOfBenefitRelated>? related,
-    @HiveField(31) Reference? prescription,
-    @HiveField(32) @HiveField(33) Reference? originalPrescription,
-    @HiveField(34) ExplanationOfBenefitPayee? payee,
-    @HiveField(35) Reference? referral,
-    @HiveField(36) Reference? facility,
-    @HiveField(37) Reference? claim,
-    @HiveField(38) Reference? claimResponse,
-    @HiveField(39) Code? outcome,
-    @JsonKey(name: '_outcome') @HiveField(40) Element? outcomeElement,
-    @HiveField(41) String? disposition,
-    @JsonKey(name: '_disposition') @HiveField(42) Element? dispositionElement,
-    @HiveField(43) List<String>? preAuthRef,
-    @JsonKey(name: '_preAuthRef')
-    @HiveField(44)
-        List<Element?>? preAuthRefElement,
-    @HiveField(45) List<Period>? preAuthRefPeriod,
-    @HiveField(46) List<ExplanationOfBenefitCareTeam>? careTeam,
-    @HiveField(47)
-    @HiveField(48)
-        List<ExplanationOfBenefitSupportingInfo>? supportingInfo,
-    @HiveField(49) List<ExplanationOfBenefitDiagnosis>? diagnosis,
-    @HiveField(50) List<ExplanationOfBenefitProcedure>? procedure,
-    @HiveField(51) PositiveInt? precedence,
-    @JsonKey(name: '_precedence') @HiveField(52) Element? precedenceElement,
-    @HiveField(53) required List<ExplanationOfBenefitInsurance> insurance,
-    @HiveField(54) ExplanationOfBenefitAccident? accident,
-    @HiveField(55) List<ExplanationOfBenefitItem>? item,
-    @HiveField(56) List<ExplanationOfBenefitAddItem>? addItem,
-    @HiveField(57) List<ExplanationOfBenefitAdjudication>? adjudication,
-    @HiveField(58) List<ExplanationOfBenefitTotal>? total,
-    @HiveField(59) ExplanationOfBenefitPayment? payment,
-    @HiveField(60) CodeableConcept? formCode,
-    @HiveField(61) Attachment? form,
-    @HiveField(62) List<ExplanationOfBenefitProcessNote>? processNote,
-    @HiveField(63) Period? benefitPeriod,
-    @HiveField(64) List<ExplanationOfBenefitBenefitBalance>? benefitBalance,
-  }) = _ExplanationOfBenefit;
-  factory ExplanationOfBenefitRelated({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Reference? claim,
-    CodeableConcept? relationship,
-    Identifier? reference,
-  }) = _ExplanationOfBenefitRelated;
-  factory ExplanationOfBenefitPayee({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? type,
-    Reference? party,
-  }) = _ExplanationOfBenefitPayee;
-  factory ExplanationOfBenefitCareTeam({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    PositiveInt? sequence,
-    @JsonKey(name: '_sequence') Element? sequenceElement,
-    required Reference provider,
-    Boolean? responsible,
-    @JsonKey(name: '_responsible') Element? responsibleElement,
-    CodeableConcept? role,
-    CodeableConcept? qualification,
-  }) = _ExplanationOfBenefitCareTeam;
-  factory ExplanationOfBenefitSupportingInfo({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    PositiveInt? sequence,
-    @JsonKey(name: '_sequence') Element? sequenceElement,
-    required CodeableConcept category,
-    CodeableConcept? code,
-    Date? timingDate,
-    @JsonKey(name: '_timingDate') Element? timingDateElement,
-    Period? timingPeriod,
-    Boolean? valueBoolean,
-    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-    String? valueString,
-    @JsonKey(name: '_valueString') Element? valueStringElement,
-    Quantity? valueQuantity,
-    Attachment? valueAttachment,
-    Reference? valueReference,
-    Coding? reason,
-  }) = _ExplanationOfBenefitSupportingInfo;
-  factory ExplanationOfBenefitDiagnosis({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    PositiveInt? sequence,
-    @JsonKey(name: '_sequence') Element? sequenceElement,
-    CodeableConcept? diagnosisCodeableConcept,
-    Reference? diagnosisReference,
-    List<CodeableConcept>? type,
-    CodeableConcept? onAdmission,
-    CodeableConcept? packageCode,
-  }) = _ExplanationOfBenefitDiagnosis;
-  factory ExplanationOfBenefitProcedure({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    PositiveInt? sequence,
-    @JsonKey(name: '_sequence') Element? sequenceElement,
-    List<CodeableConcept>? type,
-    FhirDateTime? date,
-    @JsonKey(name: '_date') Element? dateElement,
-    CodeableConcept? procedureCodeableConcept,
-    Reference? procedureReference,
-    List<Reference>? udi,
-  }) = _ExplanationOfBenefitProcedure;
-  factory ExplanationOfBenefitInsurance({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Boolean? focal,
-    @JsonKey(name: '_focal') Element? focalElement,
-    required Reference coverage,
-    List<String>? preAuthRef,
-    @JsonKey(name: '_preAuthRef') List<Element?>? preAuthRefElement,
-  }) = _ExplanationOfBenefitInsurance;
-  factory ExplanationOfBenefitAccident({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Date? date,
-    @JsonKey(name: '_date') Element? dateElement,
-    CodeableConcept? type,
-    Address? locationAddress,
-    Reference? locationReference,
-  }) = _ExplanationOfBenefitAccident;
-  factory ExplanationOfBenefitItem({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    PositiveInt? sequence,
-    @JsonKey(name: '_sequence') Element? sequenceElement,
-    List<PositiveInt>? careTeamSequence,
-    @JsonKey(name: '_careTeamSequence') List<Element?>? careTeamSequenceElement,
-    List<PositiveInt>? diagnosisSequence,
-    @JsonKey(name: '_diagnosisSequence')
-        List<Element>? diagnosisSequenceElement,
-    List<PositiveInt>? procedureSequence,
-    @JsonKey(name: '_procedureSequence')
-        List<Element>? procedureSequenceElement,
-    List<PositiveInt>? informationSequence,
-    @JsonKey(name: '_informationSequence')
-        List<Element>? informationSequenceElement,
-    CodeableConcept? revenue,
-    CodeableConcept? category,
-    required CodeableConcept productOrService,
-    List<CodeableConcept>? modifier,
-    List<CodeableConcept>? programCode,
-    Date? servicedDate,
-    @JsonKey(name: '_servicedDate') Element? servicedDateElement,
-    Period? servicedPeriod,
-    CodeableConcept? locationCodeableConcept,
-    Address? locationAddress,
-    Reference? locationReference,
-    Quantity? quantity,
-    Money? unitPrice,
-    Decimal? factor,
-    @JsonKey(name: '_factor') Element? factorElement,
-    Money? net,
-    List<Reference>? udi,
-    CodeableConcept? bodySite,
-    List<CodeableConcept>? subSite,
-    List<Reference>? encounter,
-    List<PositiveInt>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
-    List<ExplanationOfBenefitAdjudication>? adjudication,
-    List<ExplanationOfBenefitDetail>? detail,
-  }) = _ExplanationOfBenefitItem;
-  factory ExplanationOfBenefitAdjudication({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept category,
-    CodeableConcept? reason,
-    Money? amount,
-    Decimal? value,
-    @JsonKey(name: '_value') Element? valueElement,
-  }) = _ExplanationOfBenefitAdjudication;
-  factory ExplanationOfBenefitDetail({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    PositiveInt? sequence,
-    @JsonKey(name: '_sequence') Element? sequenceElement,
-    CodeableConcept? revenue,
-    CodeableConcept? category,
-    required CodeableConcept productOrService,
-    List<CodeableConcept>? modifier,
-    List<CodeableConcept>? programCode,
-    Quantity? quantity,
-    Money? unitPrice,
-    Decimal? factor,
-    @JsonKey(name: '_factor') Element? factorElement,
-    Money? net,
-    List<Reference>? udi,
-    List<PositiveInt>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
-    List<ExplanationOfBenefitAdjudication>? adjudication,
-    List<ExplanationOfBenefitSubDetail>? subDetail,
-  }) = _ExplanationOfBenefitDetail;
-  factory ExplanationOfBenefitSubDetail({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    PositiveInt? sequence,
-    @JsonKey(name: '_sequence') Element? sequenceElement,
-    CodeableConcept? revenue,
-    CodeableConcept? category,
-    required CodeableConcept productOrService,
-    List<CodeableConcept>? modifier,
-    List<CodeableConcept>? programCode,
-    Quantity? quantity,
-    Money? unitPrice,
-    Decimal? factor,
-    @JsonKey(name: '_factor') Element? factorElement,
-    Money? net,
-    List<Reference>? udi,
-    List<PositiveInt>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
-    List<ExplanationOfBenefitAdjudication>? adjudication,
-  }) = _ExplanationOfBenefitSubDetail;
-  factory ExplanationOfBenefitAddItem({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<PositiveInt>? itemSequence,
-    @JsonKey(name: '_itemSequence') List<Element?>? itemSequenceElement,
-    List<PositiveInt>? detailSequence,
-    @JsonKey(name: '_detailSequence') List<Element?>? detailSequenceElement,
-    List<PositiveInt>? subDetailSequence,
-    @JsonKey(name: '_subDetailSequence')
-        List<Element>? subDetailSequenceElement,
-    List<Reference>? provider,
-    required CodeableConcept productOrService,
-    List<CodeableConcept>? modifier,
-    List<CodeableConcept>? programCode,
-    Date? servicedDate,
-    @JsonKey(name: '_servicedDate') Element? servicedDateElement,
-    Period? servicedPeriod,
-    CodeableConcept? locationCodeableConcept,
-    Address? locationAddress,
-    Reference? locationReference,
-    Quantity? quantity,
-    Money? unitPrice,
-    Decimal? factor,
-    @JsonKey(name: '_factor') Element? factorElement,
-    Money? net,
-    CodeableConcept? bodySite,
-    List<CodeableConcept>? subSite,
-    List<PositiveInt>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
-    List<ExplanationOfBenefitAdjudication>? adjudication,
-    List<ExplanationOfBenefitDetail1>? detail,
-  }) = _ExplanationOfBenefitAddItem;
-  factory ExplanationOfBenefitDetail1({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept productOrService,
-    List<CodeableConcept>? modifier,
-    Quantity? quantity,
-    Money? unitPrice,
-    Decimal? factor,
-    @JsonKey(name: '_factor') Element? factorElement,
-    Money? net,
-    List<PositiveInt>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
-    List<ExplanationOfBenefitAdjudication>? adjudication,
-    List<ExplanationOfBenefitSubDetail1>? subDetail,
-  }) = _ExplanationOfBenefitDetail1;
-  factory ExplanationOfBenefitSubDetail1({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept productOrService,
-    List<CodeableConcept>? modifier,
-    Quantity? quantity,
-    Money? unitPrice,
-    Decimal? factor,
-    @JsonKey(name: '_factor') Element? factorElement,
-    Money? net,
-    List<PositiveInt>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
-    List<ExplanationOfBenefitAdjudication>? adjudication,
-  }) = _ExplanationOfBenefitSubDetail1;
-  factory ExplanationOfBenefitTotal({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept category,
-    required Money amount,
-  }) = _ExplanationOfBenefitTotal;
-  factory ExplanationOfBenefitPayment({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? type,
-    Money? adjustment,
-    CodeableConcept? adjustmentReason,
-    Date? date,
-    @JsonKey(name: '_date') Element? dateElement,
-    Money? amount,
-    Identifier? identifier,
-  }) = _ExplanationOfBenefitPayment;
-  factory ExplanationOfBenefitProcessNote({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    PositiveInt? number,
-    @JsonKey(name: '_number') Element? numberElement,
-    Code? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    String? text,
-    @JsonKey(name: '_text') Element? textElement,
-    CodeableConcept? language,
-  }) = _ExplanationOfBenefitProcessNote;
-  factory ExplanationOfBenefitBenefitBalance({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept category,
-    Boolean? excluded,
-    @JsonKey(name: '_excluded') Element? excludedElement,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    CodeableConcept? network,
-    CodeableConcept? unit,
-    CodeableConcept? term,
-    List<ExplanationOfBenefitFinancial>? financial,
-  }) = _ExplanationOfBenefitBenefitBalance;
-  factory ExplanationOfBenefitFinancial({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept type,
-    UnsignedInt? allowedUnsignedInt,
-    @JsonKey(name: '_allowedUnsignedInt') Element? allowedUnsignedIntElement,
-    String? allowedString,
-    @JsonKey(name: '_allowedString') Element? allowedStringElement,
-    Money? allowedMoney,
-    UnsignedInt? usedUnsignedInt,
-    @JsonKey(name: '_usedUnsignedInt') Element? usedUnsignedIntElement,
-    Money? usedMoney,
-  }) = _ExplanationOfBenefitFinancial;
-  factory InsurancePlan({
-    @Default(R4ResourceType.InsurancePlan)
-    @JsonKey(unknownEnumValue: R4ResourceType.InsurancePlan)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) Code? status,
-    @JsonKey(name: '_status') @HiveField(13) Element? statusElement,
-    @HiveField(14) List<CodeableConcept>? type,
-    @HiveField(15) String? name,
-    @JsonKey(name: '_name') @HiveField(16) Element? nameElement,
-    @HiveField(17) List<String>? alias,
-    @JsonKey(name: '_alias') @HiveField(18) List<Element?>? aliasElement,
-    @HiveField(19) Period? period,
-    @HiveField(20) Reference? ownedBy,
-    @HiveField(21) Reference? administeredBy,
-    @HiveField(22) List<Reference>? coverageArea,
-    @HiveField(23) List<InsurancePlanContact>? contact,
-    @HiveField(24) List<Reference>? endpoint,
-    @HiveField(25) List<Reference>? network,
-    @HiveField(26) List<InsurancePlanCoverage>? coverage,
-    @HiveField(27) List<InsurancePlanPlan>? plan,
-  }) = _InsurancePlan;
-  factory InsurancePlanContact({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? purpose,
-    HumanName? name,
-    List<ContactPoint>? telecom,
-    Address? address,
-  }) = _InsurancePlanContact;
-  factory InsurancePlanCoverage({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept type,
-    List<Reference>? network,
-    required List<InsurancePlanBenefit> benefit,
-  }) = _InsurancePlanCoverage;
-  factory InsurancePlanBenefit({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept type,
-    String? requirement,
-    @JsonKey(name: '_requirement') Element? requirementElement,
-    List<InsurancePlanLimit>? limit,
-  }) = _InsurancePlanBenefit;
-  factory InsurancePlanLimit({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Quantity? value,
-    CodeableConcept? code,
-  }) = _InsurancePlanLimit;
-  factory InsurancePlanPlan({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    CodeableConcept? type,
-    List<Reference>? coverageArea,
-    List<Reference>? network,
-    List<InsurancePlanGeneralCost>? generalCost,
-    List<InsurancePlanSpecificCost>? specificCost,
-  }) = _InsurancePlanPlan;
-  factory InsurancePlanGeneralCost({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? type,
-    PositiveInt? groupSize,
-    @JsonKey(name: '_groupSize') Element? groupSizeElement,
-    Money? cost,
-    String? comment,
-    @JsonKey(name: '_comment') Element? commentElement,
-  }) = _InsurancePlanGeneralCost;
-  factory InsurancePlanSpecificCost({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept category,
-    List<InsurancePlanBenefit1>? benefit,
-  }) = _InsurancePlanSpecificCost;
-  factory InsurancePlanBenefit1({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept type,
-    List<InsurancePlanCost>? cost,
-  }) = _InsurancePlanBenefit1;
-  factory InsurancePlanCost({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept type,
-    CodeableConcept? applicability,
-    List<CodeableConcept>? qualifiers,
-    Quantity? value,
-  }) = _InsurancePlanCost;
+import '../../../../r4.dart';
+
+class Account {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  Code? status;
+  Element? statusElement;
+  CodeableConcept? type;
+  String? name;
+  Element? nameElement;
+  List<Reference>? subject;
+  Period? servicePeriod;
+  List<AccountCoverage>? coverage;
+  Reference? owner;
+  String? description;
+  Element? descriptionElement;
+  List<AccountGuarantor>? guarantor;
+  Reference? partOf;
+}
+
+class AccountCoverage {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Reference coverage;
+  PositiveInt? priority;
+  Element? priorityElement;
+}
+
+class AccountGuarantor {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Reference party;
+  Boolean? onHold;
+  Element? onHoldElement;
+  Period? period;
+}
+
+class ChargeItem {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  List<FhirUri>? definitionUri;
+
+  List<Element?>? definitionUriElement;
+  List<Canonical>? definitionCanonical;
+  Code? status;
+  Element? statusElement;
+  List<Reference>? partOf;
+  CodeableConcept code;
+  Reference subject;
+  Reference? context;
+  FhirDateTime? occurrenceDateTime;
+
+  Element? occurrenceDateTimeElement;
+  Period? occurrencePeriod;
+  Timing? occurrenceTiming;
+  List<ChargeItemPerformer>? performer;
+  Reference? performingOrganization;
+  Reference? requestingOrganization;
+  Reference? costCenter;
+  Quantity? quantity;
+  List<CodeableConcept>? bodysite;
+  Decimal? factorOverride;
+
+  Element? factorOverrideElement;
+  Money? priceOverride;
+  String? overrideReason;
+
+  Element? overrideReasonElement;
+  Reference? enterer;
+  FhirDateTime? enteredDate;
+  Element? enteredDateElement;
+  List<CodeableConcept>? reason;
+  List<Reference>? service;
+  Reference? productReference;
+  CodeableConcept? productCodeableConcept;
+  List<Reference>? account;
+  List<Annotation>? note;
+  List<Reference>? supportingInformation;
+}
+
+class ChargeItemPerformer {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? function;
+  Reference actor;
+}
+
+class ChargeItemDefinition {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirUri? url;
+  Element? urlElement;
+  List<Identifier>? identifier;
+  String? version;
+  Element? versionElement;
+  String? title;
+  Element? titleElement;
+  List<FhirUri>? derivedFromUri;
+
+  List<Element?>? derivedFromUriElement;
+  List<Canonical>? partOf;
+  List<Canonical>? replaces;
+  Code? status;
+  Element? statusElement;
+  Boolean? experimental;
+  Element? experimentalElement;
+  FhirDateTime? date;
+  Element? dateElement;
+  String? publisher;
+  Element? publisherElement;
+  List<ContactDetail>? contact;
+  Markdown? description;
+  Element? descriptionElement;
+  List<UsageContext>? useContext;
+  List<CodeableConcept>? jurisdiction;
+  Markdown? copyright;
+  Element? copyrightElement;
+  Date? approvalDate;
+  Element? approvalDateElement;
+  Date? lastReviewDate;
+
+  Element? lastReviewDateElement;
+  Period? effectivePeriod;
+  CodeableConcept? code;
+  List<Reference>? instance;
+  List<ChargeItemDefinitionApplicability>? applicability;
+  List<ChargeItemDefinitionPropertyGroup>? propertyGroup;
+}
+
+class ChargeItemDefinitionApplicability {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? description;
+  Element? descriptionElement;
+  String? language;
+  Element? languageElement;
+  String? expression;
+  Element? expressionElement;
+}
+
+class ChargeItemDefinitionPropertyGroup {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<ChargeItemDefinitionApplicability>? applicability;
+  List<ChargeItemDefinitionPriceComponent>? priceComponent;
+}
+
+class ChargeItemDefinitionPriceComponent {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code? type;
+  Element? typeElement;
+  CodeableConcept? code;
+  Decimal? factor;
+  Element? factorElement;
+  Money? amount;
+}
+
+class Contract {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  FhirUri? url;
+  Element? urlElement;
+  String? version;
+  Element? versionElement;
+  Code? status;
+  Element? statusElement;
+  CodeableConcept? legalState;
+  Reference? instantiatesCanonical;
+  FhirUri? instantiatesUri;
+
+  Element? instantiatesUriElement;
+  CodeableConcept? contentDerivative;
+  FhirDateTime? issued;
+  Element? issuedElement;
+  Period? applies;
+  CodeableConcept? expirationType;
+  List<Reference>? subject;
+  List<Reference>? authority;
+  List<Reference>? domain;
+  List<Reference>? site;
+  String? name;
+  Element? nameElement;
+  String? title;
+  Element? titleElement;
+  String? subtitle;
+  Element? subtitleElement;
+  List<String>? alias;
+  List<Element?>? aliasElement;
+  Reference? author;
+  CodeableConcept? scope;
+  CodeableConcept? topicCodeableConcept;
+  Reference? topicReference;
+  CodeableConcept? type;
+  List<CodeableConcept>? subType;
+  ContractContentDefinition? contentDefinition;
+  List<ContractTerm>? term;
+  List<Reference>? supportingInfo;
+  List<Reference>? relevantHistory;
+  List<ContractSigner>? signer;
+  List<ContractFriendly>? friendly;
+  List<ContractLegal>? legal;
+  List<ContractRule>? rule;
+  Attachment? legallyBindingAttachment;
+  Reference? legallyBindingReference;
+}
+
+class ContractContentDefinition {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept type;
+  CodeableConcept? subType;
+  Reference? publisher;
+  FhirDateTime? publicationDate;
+  Element? publicationDateElement;
+  Code? publicationStatus;
+  Element? publicationStatusElement;
+  Markdown? copyright;
+  Element? copyrightElement;
+}
+
+class ContractTerm {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Identifier? identifier;
+  FhirDateTime? issued;
+  Element? issuedElement;
+  Period? applies;
+  CodeableConcept? topicCodeableConcept;
+  Reference? topicReference;
+  CodeableConcept? type;
+  CodeableConcept? subType;
+  String? text;
+  Element? textElement;
+  List<ContractSecurityLabel>? securityLabel;
+  ContractOffer offer;
+  List<ContractAsset>? asset;
+  List<ContractAction>? action;
+  List<ContractTerm>? group;
+}
+
+class ContractSecurityLabel {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<UnsignedInt>? number;
+  List<Element?>? numberElement;
+  Coding classification;
+  List<Coding>? category;
+  List<Coding>? control;
+}
+
+class ContractOffer {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  List<ContractParty>? party;
+  Reference? topic;
+  CodeableConcept? type;
+  CodeableConcept? decision;
+  List<CodeableConcept>? decisionMode;
+  List<ContractAnswer>? answer;
+  String? text;
+  Element? textElement;
+  List<String>? linkId;
+  List<Element?>? linkIdElement;
+  List<UnsignedInt>? securityLabelNumber;
+
+  List<Element>? securityLabelNumberElement;
+}
+
+class ContractParty {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Reference> reference;
+  CodeableConcept role;
+}
+
+class ContractAnswer {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Boolean? valueBoolean;
+  Element? valueBooleanElement;
+  Decimal? valueDecimal;
+  Element? valueDecimalElement;
+  Integer? valueInteger;
+  Element? valueIntegerElement;
+  Date? valueDate;
+  Element? valueDateElement;
+  FhirDateTime? valueDateTime;
+  Element? valueDateTimeElement;
+  Time? valueTime;
+  Element? valueTimeElement;
+  String? valueString;
+  Element? valueStringElement;
+  FhirUri? valueUri;
+  Element? valueUriElement;
+  Attachment? valueAttachment;
+  Coding? valueCoding;
+  Quantity? valueQuantity;
+  Reference? valueReference;
+}
+
+class ContractAsset {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? scope;
+  List<CodeableConcept>? type;
+  List<Reference>? typeReference;
+  List<CodeableConcept>? subtype;
+  Coding? relationship;
+  List<ContractContext>? context;
+  String? condition;
+  Element? conditionElement;
+  List<CodeableConcept>? periodType;
+  List<Period>? period;
+  List<Period>? usePeriod;
+  String? text;
+  Element? textElement;
+  List<String>? linkId;
+  List<Element?>? linkIdElement;
+  List<ContractAnswer>? answer;
+  List<UnsignedInt>? securityLabelNumber;
+
+  List<Element>? securityLabelNumberElement;
+  List<ContractValuedItem>? valuedItem;
+}
+
+class ContractContext {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Reference? reference;
+  List<CodeableConcept>? code;
+  String? text;
+  Element? textElement;
+}
+
+class ContractValuedItem {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? entityCodeableConcept;
+  Reference? entityReference;
+  Identifier? identifier;
+  FhirDateTime? effectiveTime;
+  Element? effectiveTimeElement;
+  Quantity? quantity;
+  Money? unitPrice;
+  Decimal? factor;
+  Element? factorElement;
+  Decimal? points;
+  Element? pointsElement;
+  Money? net;
+  String? payment;
+  Element? paymentElement;
+  FhirDateTime? paymentDate;
+  Element? paymentDateElement;
+  Reference? responsible;
+  Reference? recipient;
+  List<String>? linkId;
+  List<Element?>? linkIdElement;
+  List<UnsignedInt>? securityLabelNumber;
+
+  List<Element>? securityLabelNumberElement;
+}
+
+class ContractAction {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Boolean? doNotPerform;
+  Element? doNotPerformElement;
+  CodeableConcept type;
+  List<ContractSubject>? subject;
+  CodeableConcept intent;
+  List<String>? linkId;
+  List<Element?>? linkIdElement;
+  CodeableConcept status;
+  Reference? context;
+  List<String>? contextLinkId;
+  List<Element?>? contextLinkIdElement;
+  FhirDateTime? occurrenceDateTime;
+  Element? occurrenceDateTimeElement;
+  Period? occurrencePeriod;
+  Timing? occurrenceTiming;
+  List<Reference>? requester;
+  List<String>? requesterLinkId;
+  List<Element?>? requesterLinkIdElement;
+  List<CodeableConcept>? performerType;
+  CodeableConcept? performerRole;
+  Reference? performer;
+  List<String>? performerLinkId;
+  List<Element?>? performerLinkIdElement;
+  List<CodeableConcept>? reasonCode;
+  List<Reference>? reasonReference;
+  List<String>? reason;
+  List<Element?>? reasonElement;
+  List<String>? reasonLinkId;
+  List<Element?>? reasonLinkIdElement;
+  List<Annotation>? note;
+  List<UnsignedInt>? securityLabelNumber;
+
+  List<Element>? securityLabelNumberElement;
+}
+
+class ContractSubject {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Reference> reference;
+  CodeableConcept? role;
+}
+
+class ContractSigner {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Coding type;
+  Reference party;
+  List<Signature> signature;
+}
+
+class ContractFriendly {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Attachment? contentAttachment;
+  Reference? contentReference;
+}
+
+class ContractLegal {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Attachment? contentAttachment;
+  Reference? contentReference;
+}
+
+class ContractRule {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Attachment? contentAttachment;
+  Reference? contentReference;
+}
+
+class ExplanationOfBenefit {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  Code? status;
+  Element? statusElement;
+  CodeableConcept type;
+  CodeableConcept? subType;
+  Code? use;
+  Element? useElement;
+  Reference patient;
+  Period? billablePeriod;
+  FhirDateTime? created;
+  Element? createdElement;
+  Reference? enterer;
+  Reference insurer;
+  Reference provider;
+  CodeableConcept? priority;
+  CodeableConcept? fundsReserveRequested;
+  CodeableConcept? fundsReserve;
+  List<ExplanationOfBenefitRelated>? related;
+  Reference? prescription;
+  Reference? originalPrescription;
+  ExplanationOfBenefitPayee? payee;
+  Reference? referral;
+  Reference? facility;
+  Reference? claim;
+  Reference? claimResponse;
+  Code? outcome;
+  Element? outcomeElement;
+  String? disposition;
+  Element? dispositionElement;
+  List<String>? preAuthRef;
+
+  List<Element?>? preAuthRefElement;
+  List<Period>? preAuthRefPeriod;
+  List<ExplanationOfBenefitCareTeam>? careTeam;
+
+  List<ExplanationOfBenefitSupportingInfo>? supportingInfo;
+  List<ExplanationOfBenefitDiagnosis>? diagnosis;
+  List<ExplanationOfBenefitProcedure>? procedure;
+  PositiveInt? precedence;
+  Element? precedenceElement;
+  List<ExplanationOfBenefitInsurance> insurance;
+  ExplanationOfBenefitAccident? accident;
+  List<ExplanationOfBenefitItem>? item;
+  List<ExplanationOfBenefitAddItem>? addItem;
+  List<ExplanationOfBenefitAdjudication>? adjudication;
+  List<ExplanationOfBenefitTotal>? total;
+  ExplanationOfBenefitPayment? payment;
+  CodeableConcept? formCode;
+  Attachment? form;
+  List<ExplanationOfBenefitProcessNote>? processNote;
+  Period? benefitPeriod;
+  List<ExplanationOfBenefitBenefitBalance>? benefitBalance;
+}
+
+class ExplanationOfBenefitRelated {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Reference? claim;
+  CodeableConcept? relationship;
+  Identifier? reference;
+}
+
+class ExplanationOfBenefitPayee {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? type;
+  Reference? party;
+}
+
+class ExplanationOfBenefitCareTeam {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  PositiveInt? sequence;
+  Element? sequenceElement;
+  Reference provider;
+  Boolean? responsible;
+  Element? responsibleElement;
+  CodeableConcept? role;
+  CodeableConcept? qualification;
+}
+
+class ExplanationOfBenefitSupportingInfo {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  PositiveInt? sequence;
+  Element? sequenceElement;
+  CodeableConcept category;
+  CodeableConcept? code;
+  Date? timingDate;
+  Element? timingDateElement;
+  Period? timingPeriod;
+  Boolean? valueBoolean;
+  Element? valueBooleanElement;
+  String? valueString;
+  Element? valueStringElement;
+  Quantity? valueQuantity;
+  Attachment? valueAttachment;
+  Reference? valueReference;
+  Coding? reason;
+}
+
+class ExplanationOfBenefitDiagnosis {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  PositiveInt? sequence;
+  Element? sequenceElement;
+  CodeableConcept? diagnosisCodeableConcept;
+  Reference? diagnosisReference;
+  List<CodeableConcept>? type;
+  CodeableConcept? onAdmission;
+  CodeableConcept? packageCode;
+}
+
+class ExplanationOfBenefitProcedure {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  PositiveInt? sequence;
+  Element? sequenceElement;
+  List<CodeableConcept>? type;
+  FhirDateTime? date;
+  Element? dateElement;
+  CodeableConcept? procedureCodeableConcept;
+  Reference? procedureReference;
+  List<Reference>? udi;
+}
+
+class ExplanationOfBenefitInsurance {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Boolean? focal;
+  Element? focalElement;
+  Reference coverage;
+  List<String>? preAuthRef;
+  List<Element?>? preAuthRefElement;
+}
+
+class ExplanationOfBenefitAccident {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Date? date;
+  Element? dateElement;
+  CodeableConcept? type;
+  Address? locationAddress;
+  Reference? locationReference;
+}
+
+class ExplanationOfBenefitItem {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  PositiveInt? sequence;
+  Element? sequenceElement;
+  List<PositiveInt>? careTeamSequence;
+  List<Element?>? careTeamSequenceElement;
+  List<PositiveInt>? diagnosisSequence;
+
+  List<Element>? diagnosisSequenceElement;
+  List<PositiveInt>? procedureSequence;
+
+  List<Element>? procedureSequenceElement;
+  List<PositiveInt>? informationSequence;
+
+  List<Element>? informationSequenceElement;
+  CodeableConcept? revenue;
+  CodeableConcept? category;
+  CodeableConcept productOrService;
+  List<CodeableConcept>? modifier;
+  List<CodeableConcept>? programCode;
+  Date? servicedDate;
+  Element? servicedDateElement;
+  Period? servicedPeriod;
+  CodeableConcept? locationCodeableConcept;
+  Address? locationAddress;
+  Reference? locationReference;
+  Quantity? quantity;
+  Money? unitPrice;
+  Decimal? factor;
+  Element? factorElement;
+  Money? net;
+  List<Reference>? udi;
+  CodeableConcept? bodySite;
+  List<CodeableConcept>? subSite;
+  List<Reference>? encounter;
+  List<PositiveInt>? noteNumber;
+  List<Element?>? noteNumberElement;
+  List<ExplanationOfBenefitAdjudication>? adjudication;
+  List<ExplanationOfBenefitDetail>? detail;
+}
+
+class ExplanationOfBenefitAdjudication {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept category;
+  CodeableConcept? reason;
+  Money? amount;
+  Decimal? value;
+  Element? valueElement;
+}
+
+class ExplanationOfBenefitDetail {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  PositiveInt? sequence;
+  Element? sequenceElement;
+  CodeableConcept? revenue;
+  CodeableConcept? category;
+  CodeableConcept productOrService;
+  List<CodeableConcept>? modifier;
+  List<CodeableConcept>? programCode;
+  Quantity? quantity;
+  Money? unitPrice;
+  Decimal? factor;
+  Element? factorElement;
+  Money? net;
+  List<Reference>? udi;
+  List<PositiveInt>? noteNumber;
+  List<Element?>? noteNumberElement;
+  List<ExplanationOfBenefitAdjudication>? adjudication;
+  List<ExplanationOfBenefitSubDetail>? subDetail;
+}
+
+class ExplanationOfBenefitSubDetail {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  PositiveInt? sequence;
+  Element? sequenceElement;
+  CodeableConcept? revenue;
+  CodeableConcept? category;
+  CodeableConcept productOrService;
+  List<CodeableConcept>? modifier;
+  List<CodeableConcept>? programCode;
+  Quantity? quantity;
+  Money? unitPrice;
+  Decimal? factor;
+  Element? factorElement;
+  Money? net;
+  List<Reference>? udi;
+  List<PositiveInt>? noteNumber;
+  List<Element?>? noteNumberElement;
+  List<ExplanationOfBenefitAdjudication>? adjudication;
+}
+
+class ExplanationOfBenefitAddItem {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<PositiveInt>? itemSequence;
+  List<Element?>? itemSequenceElement;
+  List<PositiveInt>? detailSequence;
+  List<Element?>? detailSequenceElement;
+  List<PositiveInt>? subDetailSequence;
+
+  List<Element>? subDetailSequenceElement;
+  List<Reference>? provider;
+  CodeableConcept productOrService;
+  List<CodeableConcept>? modifier;
+  List<CodeableConcept>? programCode;
+  Date? servicedDate;
+  Element? servicedDateElement;
+  Period? servicedPeriod;
+  CodeableConcept? locationCodeableConcept;
+  Address? locationAddress;
+  Reference? locationReference;
+  Quantity? quantity;
+  Money? unitPrice;
+  Decimal? factor;
+  Element? factorElement;
+  Money? net;
+  CodeableConcept? bodySite;
+  List<CodeableConcept>? subSite;
+  List<PositiveInt>? noteNumber;
+  List<Element?>? noteNumberElement;
+  List<ExplanationOfBenefitAdjudication>? adjudication;
+  List<ExplanationOfBenefitDetail1>? detail;
+}
+
+class ExplanationOfBenefitDetail1 {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept productOrService;
+  List<CodeableConcept>? modifier;
+  Quantity? quantity;
+  Money? unitPrice;
+  Decimal? factor;
+  Element? factorElement;
+  Money? net;
+  List<PositiveInt>? noteNumber;
+  List<Element?>? noteNumberElement;
+  List<ExplanationOfBenefitAdjudication>? adjudication;
+  List<ExplanationOfBenefitSubDetail1>? subDetail;
+}
+
+class ExplanationOfBenefitSubDetail1 {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept productOrService;
+  List<CodeableConcept>? modifier;
+  Quantity? quantity;
+  Money? unitPrice;
+  Decimal? factor;
+  Element? factorElement;
+  Money? net;
+  List<PositiveInt>? noteNumber;
+  List<Element?>? noteNumberElement;
+  List<ExplanationOfBenefitAdjudication>? adjudication;
+}
+
+class ExplanationOfBenefitTotal {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept category;
+  Money amount;
+}
+
+class ExplanationOfBenefitPayment {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? type;
+  Money? adjustment;
+  CodeableConcept? adjustmentReason;
+  Date? date;
+  Element? dateElement;
+  Money? amount;
+  Identifier? identifier;
+}
+
+class ExplanationOfBenefitProcessNote {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  PositiveInt? number;
+  Element? numberElement;
+  Code? type;
+  Element? typeElement;
+  String? text;
+  Element? textElement;
+  CodeableConcept? language;
+}
+
+class ExplanationOfBenefitBenefitBalance {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept category;
+  Boolean? excluded;
+  Element? excludedElement;
+  String? name;
+  Element? nameElement;
+  String? description;
+  Element? descriptionElement;
+  CodeableConcept? network;
+  CodeableConcept? unit;
+  CodeableConcept? term;
+  List<ExplanationOfBenefitFinancial>? financial;
+}
+
+class ExplanationOfBenefitFinancial {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept type;
+  UnsignedInt? allowedUnsignedInt;
+  Element? allowedUnsignedIntElement;
+  String? allowedString;
+  Element? allowedStringElement;
+  Money? allowedMoney;
+  UnsignedInt? usedUnsignedInt;
+  Element? usedUnsignedIntElement;
+  Money? usedMoney;
+}
+
+class InsurancePlan {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  Code? status;
+  Element? statusElement;
+  List<CodeableConcept>? type;
+  String? name;
+  Element? nameElement;
+  List<String>? alias;
+  List<Element?>? aliasElement;
+  Period? period;
+  Reference? ownedBy;
+  Reference? administeredBy;
+  List<Reference>? coverageArea;
+  List<InsurancePlanContact>? contact;
+  List<Reference>? endpoint;
+  List<Reference>? network;
+  List<InsurancePlanCoverage>? coverage;
+  List<InsurancePlanPlan>? plan;
+}
+
+class InsurancePlanContact {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? purpose;
+  HumanName? name;
+  List<ContactPoint>? telecom;
+  Address? address;
+}
+
+class InsurancePlanCoverage {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept type;
+  List<Reference>? network;
+  List<InsurancePlanBenefit> benefit;
+}
+
+class InsurancePlanBenefit {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept type;
+  String? requirement;
+  Element? requirementElement;
+  List<InsurancePlanLimit>? limit;
+}
+
+class InsurancePlanLimit {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Quantity? value;
+  CodeableConcept? code;
+}
+
+class InsurancePlanPlan {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  CodeableConcept? type;
+  List<Reference>? coverageArea;
+  List<Reference>? network;
+  List<InsurancePlanGeneralCost>? generalCost;
+  List<InsurancePlanSpecificCost>? specificCost;
+}
+
+class InsurancePlanGeneralCost {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? type;
+  PositiveInt? groupSize;
+  Element? groupSizeElement;
+  Money? cost;
+  String? comment;
+  Element? commentElement;
+}
+
+class InsurancePlanSpecificCost {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept category;
+  List<InsurancePlanBenefit1>? benefit;
+}
+
+class InsurancePlanBenefit1 {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept type;
+  List<InsurancePlanCost>? cost;
+}
+
+class InsurancePlanCost {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept type;
+  CodeableConcept? applicability;
+  List<CodeableConcept>? qualifiers;
+  Quantity? value;
+}

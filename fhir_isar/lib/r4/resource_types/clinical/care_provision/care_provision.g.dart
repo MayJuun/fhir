@@ -2721,10 +2721,10 @@ _$_RequestGroupAction _$$_RequestGroupActionFromJson(
           ? null
           : Element.fromJson(
               json['_selectionBehavior'] as Map<String, dynamic>),
-      requiredBehavior: json['requiredBehavior'] == null
+      Behavior: json['requiredBehavior'] == null
           ? null
           : Code.fromJson(json['requiredBehavior']),
-      requiredBehaviorElement: json['_requiredBehavior'] == null
+      BehaviorElement: json['_requiredBehavior'] == null
           ? null
           : Element.fromJson(json['_requiredBehavior'] as Map<String, dynamic>),
       precheckBehavior: json['precheckBehavior'] == null

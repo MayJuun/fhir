@@ -1,1294 +1,1313 @@
-  factory CapabilityStatement({
-    @Default(R4ResourceType.CapabilityStatement)
-    @JsonKey(unknownEnumValue: R4ResourceType.CapabilityStatement)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) FhirUri? url,
-    @JsonKey(name: '_url') @HiveField(12) Element? urlElement,
-    @HiveField(13) @HiveField(14) @HiveField(15) String? version,
-    @JsonKey(name: '_version') @HiveField(16) Element? versionElement,
-    @HiveField(17) String? name,
-    @JsonKey(name: '_name') @HiveField(18) Element? nameElement,
-    @HiveField(19) String? title,
-    @JsonKey(name: '_title') @HiveField(20) Element? titleElement,
-    @HiveField(21) Code? status,
-    @JsonKey(name: '_status') @HiveField(22) Element? statusElement,
-    @HiveField(23) Boolean? experimental,
-    @JsonKey(name: '_experimental') @HiveField(24) Element? experimentalElement,
-    @HiveField(25) FhirDateTime? date,
-    @JsonKey(name: '_date') @HiveField(26) Element? dateElement,
-    @HiveField(27) String? publisher,
-    @JsonKey(name: '_publisher') @HiveField(28) Element? publisherElement,
-    @HiveField(29) List<ContactDetail>? contact,
-    @HiveField(30) @HiveField(31) Markdown? description,
-    @JsonKey(name: '_description') @HiveField(32) Element? descriptionElement,
-    @HiveField(33) List<UsageContext>? useContext,
-    @HiveField(34) List<CodeableConcept>? jurisdiction,
-    @HiveField(35) Markdown? purpose,
-    @JsonKey(name: '_purpose') @HiveField(36) Element? purposeElement,
-    @HiveField(37) Markdown? copyright,
-    @JsonKey(name: '_copyright') @HiveField(38) Element? copyrightElement,
-    @HiveField(39) Code? kind,
-    @JsonKey(name: '_kind') @HiveField(40) Element? kindElement,
-    @HiveField(41) List<Canonical>? instantiates,
-    @HiveField(42) @HiveField(43) List<Canonical>? imports,
-    @HiveField(44) CapabilityStatementSoftware? software,
-    @HiveField(45)
-    @HiveField(46)
-        CapabilityStatementImplementation? implementation,
-    @HiveField(47) Code? fhirVersion,
-    @JsonKey(name: '_fhirVersion') @HiveField(48) Element? fhirVersionElement,
-    @HiveField(49) List<Code>? format,
-    @JsonKey(name: '_format') @HiveField(50) List<Element?>? formatElement,
-    @HiveField(51) List<Code>? patchFormat,
-    @JsonKey(name: '_patchFormat')
-    @HiveField(52)
-        List<Element?>? patchFormatElement,
-    @HiveField(53) List<Canonical>? implementationGuide,
-    @HiveField(54) List<CapabilityStatementRest>? rest,
-    @HiveField(55) List<CapabilityStatementMessaging>? messaging,
-    @HiveField(56) List<CapabilityStatementDocument>? document,
-  }) = _CapabilityStatement;
-  factory CapabilityStatementSoftware({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? version,
-    @JsonKey(name: '_version') Element? versionElement,
-    FhirDateTime? releaseDate,
-    @JsonKey(name: '_releaseDate') Element? releaseDateElement,
-  }) = _CapabilityStatementSoftware;
-  factory CapabilityStatementImplementation({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    FhirUrl? url,
-    @JsonKey(name: '_url') Element? urlElement,
-    Reference? custodian,
-  }) = _CapabilityStatementImplementation;
-  factory CapabilityStatementRest({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? mode,
-    @JsonKey(name: '_mode') Element? modeElement,
-    Markdown? documentation,
-    @JsonKey(name: '_documentation') Element? documentationElement,
-    CapabilityStatementSecurity? security,
-    List<CapabilityStatementResource>? resource,
-    List<CapabilityStatementInteraction1>? interaction,
-    List<CapabilityStatementSearchParam>? searchParam,
-    List<CapabilityStatementOperation>? operation,
-    List<Canonical>? compartment,
-  }) = _CapabilityStatementRest;
-  factory CapabilityStatementSecurity({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Boolean? cors,
-    @JsonKey(name: '_cors') Element? corsElement,
-    List<CodeableConcept>? service,
-    Markdown? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-  }) = _CapabilityStatementSecurity;
-  factory CapabilityStatementResource({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    Canonical? profile,
-    List<Canonical>? supportedProfile,
-    Markdown? documentation,
-    @JsonKey(name: '_documentation') Element? documentationElement,
-    List<CapabilityStatementInteraction>? interaction,
-    Code? versioning,
-    @JsonKey(name: '_versioning') Element? versioningElement,
-    Boolean? readHistory,
-    @JsonKey(name: '_readHistory') Element? readHistoryElement,
-    Boolean? updateCreate,
-    @JsonKey(name: '_updateCreate') Element? updateCreateElement,
-    Boolean? conditionalCreate,
-    @JsonKey(name: '_conditionalCreate') Element? conditionalCreateElement,
-    Code? conditionalRead,
-    @JsonKey(name: '_conditionalRead') Element? conditionalReadElement,
-    Boolean? conditionalUpdate,
-    @JsonKey(name: '_conditionalUpdate') Element? conditionalUpdateElement,
-    Code? conditionalDelete,
-    @JsonKey(name: '_conditionalDelete') Element? conditionalDeleteElement,
-    List<Code>? referencePolicy,
-    @JsonKey(name: '_referencePolicy') List<Element?>? referencePolicyElement,
-    List<String>? searchInclude,
-    @JsonKey(name: '_searchInclude') List<Element?>? searchIncludeElement,
-    List<String>? searchRevInclude,
-    @JsonKey(name: '_searchRevInclude') List<Element?>? searchRevIncludeElement,
-    List<CapabilityStatementSearchParam>? searchParam,
-    List<CapabilityStatementOperation>? operation,
-  }) = _CapabilityStatementResource;
-  factory CapabilityStatementInteraction({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? code,
-    @JsonKey(name: '_code') Element? codeElement,
-    Markdown? documentation,
-    @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _CapabilityStatementInteraction;
-  factory CapabilityStatementSearchParam({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    Canonical? definition,
-    Code? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    Markdown? documentation,
-    @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _CapabilityStatementSearchParam;
-  factory CapabilityStatementOperation({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    required Canonical definition,
-    Markdown? documentation,
-    @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _CapabilityStatementOperation;
-  factory CapabilityStatementInteraction1({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? code,
-    @JsonKey(name: '_code') Element? codeElement,
-    Markdown? documentation,
-    @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _CapabilityStatementInteraction1;
-  factory CapabilityStatementMessaging({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<CapabilityStatementEndpoint>? endpoint,
-    UnsignedInt? reliableCache,
-    @JsonKey(name: '_reliableCache') Element? reliableCacheElement,
-    Markdown? documentation,
-    @JsonKey(name: '_documentation') Element? documentationElement,
-    List<CapabilityStatementSupportedMessage>? supportedMessage,
-  }) = _CapabilityStatementMessaging;
-  factory CapabilityStatementEndpoint({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required Coding protocol,
-    FhirUrl? address,
-    @JsonKey(name: '_address') Element? addressElement,
-  }) = _CapabilityStatementEndpoint;
-  factory CapabilityStatementSupportedMessage({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? mode,
-    @JsonKey(name: '_mode') Element? modeElement,
-    required Canonical definition,
-  }) = _CapabilityStatementSupportedMessage;
-  factory CapabilityStatementDocument({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? mode,
-    @JsonKey(name: '_mode') Element? modeElement,
-    Markdown? documentation,
-    @JsonKey(name: '_documentation') Element? documentationElement,
-    required Canonical profile,
-  }) = _CapabilityStatementDocument;
-  factory CompartmentDefinition({
-    @Default(R4ResourceType.CompartmentDefinition)
-    @JsonKey(unknownEnumValue: R4ResourceType.CompartmentDefinition)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) FhirUri? url,
-    @JsonKey(name: '_url') @HiveField(12) Element? urlElement,
-    @HiveField(13) @HiveField(14) @HiveField(15) String? version,
-    @JsonKey(name: '_version') @HiveField(16) Element? versionElement,
-    @HiveField(17) String? name,
-    @JsonKey(name: '_name') @HiveField(18) Element? nameElement,
-    @HiveField(19) Code? status,
-    @JsonKey(name: '_status') @HiveField(20) Element? statusElement,
-    @HiveField(21) Boolean? experimental,
-    @JsonKey(name: '_experimental') @HiveField(22) Element? experimentalElement,
-    @HiveField(23) FhirDateTime? date,
-    @JsonKey(name: '_date') @HiveField(24) Element? dateElement,
-    @HiveField(25) String? publisher,
-    @JsonKey(name: '_publisher') @HiveField(26) Element? publisherElement,
-    @HiveField(27) List<ContactDetail>? contact,
-    @HiveField(28) Markdown? description,
-    @JsonKey(name: '_description') @HiveField(29) Element? descriptionElement,
-    @HiveField(30) List<UsageContext>? useContext,
-    @HiveField(31) Markdown? purpose,
-    @JsonKey(name: '_purpose') @HiveField(32) Element? purposeElement,
-    @HiveField(33) Code? code,
-    @JsonKey(name: '_code') @HiveField(34) Element? codeElement,
-    @HiveField(35) Boolean? search,
-    @JsonKey(name: '_search') @HiveField(36) Element? searchElement,
-    @HiveField(37) List<CompartmentDefinitionResource>? resource,
-  }) = _CompartmentDefinition;
-  factory CompartmentDefinitionResource({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? code,
-    @JsonKey(name: '_code') Element? codeElement,
-    List<String>? param,
-    @JsonKey(name: '_param') List<Element?>? paramElement,
-    String? documentation,
-    @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _CompartmentDefinitionResource;
-  factory ExampleScenario({
-    @Default(R4ResourceType.ExampleScenario)
-    @JsonKey(unknownEnumValue: R4ResourceType.ExampleScenario)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) FhirUri? url,
-    @JsonKey(name: '_url') @HiveField(12) Element? urlElement,
-    @HiveField(13) List<Identifier>? identifier,
-    @HiveField(14) String? version,
-    @JsonKey(name: '_version') @HiveField(15) Element? versionElement,
-    @HiveField(16) String? name,
-    @JsonKey(name: '_name') @HiveField(17) Element? nameElement,
-    @HiveField(18) Code? status,
-    @JsonKey(name: '_status') @HiveField(19) Element? statusElement,
-    @HiveField(20) Boolean? experimental,
-    @JsonKey(name: '_experimental') @HiveField(21) Element? experimentalElement,
-    @HiveField(22) FhirDateTime? date,
-    @JsonKey(name: '_date') @HiveField(23) Element? dateElement,
-    @HiveField(24) String? publisher,
-    @JsonKey(name: '_publisher') @HiveField(25) Element? publisherElement,
-    @HiveField(26) List<ContactDetail>? contact,
-    @HiveField(27) List<UsageContext>? useContext,
-    @HiveField(28) List<CodeableConcept>? jurisdiction,
-    @HiveField(29) Markdown? copyright,
-    @JsonKey(name: '_copyright') @HiveField(30) Element? copyrightElement,
-    @HiveField(31) Markdown? purpose,
-    @JsonKey(name: '_purpose') @HiveField(32) Element? purposeElement,
-    @HiveField(33) List<ExampleScenarioActor>? actor,
-    @HiveField(34) List<ExampleScenarioInstance>? instance,
-    @HiveField(35) List<ExampleScenarioProcess>? process,
-    @HiveField(36) List<Canonical>? workflow,
-  }) = _ExampleScenario;
-  factory ExampleScenarioActor({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? actorId,
-    @JsonKey(name: '_actorId') Element? actorIdElement,
-    Code? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    Markdown? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-  }) = _ExampleScenarioActor;
-  factory ExampleScenarioInstance({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? resourceId,
-    @JsonKey(name: '_resourceId') Element? resourceIdElement,
-    Code? resourceType,
-    @JsonKey(name: '_resourceType') Element? resourceTypeElement,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    Markdown? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    List<ExampleScenarioVersion>? version,
-    List<ExampleScenarioContainedInstance>? containedInstance,
-  }) = _ExampleScenarioInstance;
-  factory ExampleScenarioVersion({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? versionId,
-    @JsonKey(name: '_versionId') Element? versionIdElement,
-    Markdown? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-  }) = _ExampleScenarioVersion;
-  factory ExampleScenarioContainedInstance({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? resourceId,
-    @JsonKey(name: '_resourceId') Element? resourceIdElement,
-    String? versionId,
-    @JsonKey(name: '_versionId') Element? versionIdElement,
-  }) = _ExampleScenarioContainedInstance;
-  factory ExampleScenarioProcess({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? title,
-    @JsonKey(name: '_title') Element? titleElement,
-    Markdown? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    Markdown? preConditions,
-    @JsonKey(name: '_preConditions') Element? preConditionsElement,
-    Markdown? postConditions,
-    @JsonKey(name: '_postConditions') Element? postConditionsElement,
-    List<ExampleScenarioStep>? step,
-  }) = _ExampleScenarioProcess;
-  factory ExampleScenarioStep({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<ExampleScenarioProcess>? process,
-    Boolean? pause,
-    @JsonKey(name: '_pause') Element? pauseElement,
-    ExampleScenarioOperation? operation,
-    List<ExampleScenarioAlternative>? alternative,
-  }) = _ExampleScenarioStep;
-  factory ExampleScenarioOperation({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? number,
-    @JsonKey(name: '_number') Element? numberElement,
-    String? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? initiator,
-    @JsonKey(name: '_initiator') Element? initiatorElement,
-    String? receiver,
-    @JsonKey(name: '_receiver') Element? receiverElement,
-    Markdown? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    Boolean? initiatorActive,
-    @JsonKey(name: '_initiatorActive') Element? initiatorActiveElement,
-    Boolean? receiverActive,
-    @JsonKey(name: '_receiverActive') Element? receiverActiveElement,
-    ExampleScenarioContainedInstance? request,
-    ExampleScenarioContainedInstance? response,
-  }) = _ExampleScenarioOperation;
-  factory ExampleScenarioAlternative({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? title,
-    @JsonKey(name: '_title') Element? titleElement,
-    Markdown? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    List<ExampleScenarioStep>? step,
-  }) = _ExampleScenarioAlternative;
-  factory GraphDefinition({
-    @Default(R4ResourceType.GraphDefinition)
-    @JsonKey(unknownEnumValue: R4ResourceType.GraphDefinition)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) FhirUri? url,
-    @JsonKey(name: '_url') @HiveField(12) Element? urlElement,
-    @HiveField(13) String? version,
-    @JsonKey(name: '_version') @HiveField(14) Element? versionElement,
-    @HiveField(15) String? name,
-    @JsonKey(name: '_name') @HiveField(16) Element? nameElement,
-    @HiveField(17) Code? status,
-    @JsonKey(name: '_status') @HiveField(18) Element? statusElement,
-    @HiveField(19) Boolean? experimental,
-    @JsonKey(name: '_experimental') @HiveField(20) Element? experimentalElement,
-    @HiveField(21) FhirDateTime? date,
-    @JsonKey(name: '_date') @HiveField(22) Element? dateElement,
-    @HiveField(23) String? publisher,
-    @JsonKey(name: '_publisher') @HiveField(24) Element? publisherElement,
-    @HiveField(25) List<ContactDetail>? contact,
-    @HiveField(26) Markdown? description,
-    @JsonKey(name: '_description') @HiveField(27) Element? descriptionElement,
-    @HiveField(28) List<UsageContext>? useContext,
-    @HiveField(29) List<CodeableConcept>? jurisdiction,
-    @HiveField(30) Markdown? purpose,
-    @JsonKey(name: '_purpose') @HiveField(31) Element? purposeElement,
-    @HiveField(32) Code? start,
-    @JsonKey(name: '_start') @HiveField(33) Element? startElement,
-    @HiveField(34) Canonical? profile,
-    @HiveField(35) List<GraphDefinitionLink>? link,
-  }) = _GraphDefinition;
-  factory GraphDefinitionLink({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? path,
-    @JsonKey(name: '_path') Element? pathElement,
-    String? sliceName,
-    @JsonKey(name: '_sliceName') Element? sliceNameElement,
-    Integer? min,
-    @JsonKey(name: '_min') Element? minElement,
-    String? max,
-    @JsonKey(name: '_max') Element? maxElement,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    List<GraphDefinitionTarget>? target,
-  }) = _GraphDefinitionLink;
-  factory GraphDefinitionTarget({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    String? params,
-    @JsonKey(name: '_params') Element? paramsElement,
-    Canonical? profile,
-    List<GraphDefinitionCompartment>? compartment,
-    List<GraphDefinitionLink>? link,
-  }) = _GraphDefinitionTarget;
-  factory GraphDefinitionCompartment({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? use,
-    @JsonKey(name: '_use') Element? useElement,
-    Code? code,
-    @JsonKey(name: '_code') Element? codeElement,
-    Code? rule,
-    @JsonKey(name: '_rule') Element? ruleElement,
-    String? expression,
-    @JsonKey(name: '_expression') Element? expressionElement,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-  }) = _GraphDefinitionCompartment;
-  factory ImplementationGuide({
-    @Default(R4ResourceType.ImplementationGuide)
-    @JsonKey(unknownEnumValue: R4ResourceType.ImplementationGuide)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) FhirUri? url,
-    @JsonKey(name: '_url') @HiveField(12) Element? urlElement,
-    @HiveField(13) @HiveField(14) String? version,
-    @JsonKey(name: '_version') @HiveField(15) Element? versionElement,
-    @HiveField(16) String? name,
-    @JsonKey(name: '_name') @HiveField(17) Element? nameElement,
-    @HiveField(18) String? title,
-    @JsonKey(name: '_title') @HiveField(19) Element? titleElement,
-    @HiveField(20) Code? status,
-    @JsonKey(name: '_status') @HiveField(21) Element? statusElement,
-    @HiveField(22) Boolean? experimental,
-    @JsonKey(name: '_experimental') @HiveField(23) Element? experimentalElement,
-    @HiveField(24) FhirDateTime? date,
-    @JsonKey(name: '_date') @HiveField(25) Element? dateElement,
-    @HiveField(26) String? publisher,
-    @JsonKey(name: '_publisher') @HiveField(27) Element? publisherElement,
-    @HiveField(28) List<ContactDetail>? contact,
-    @HiveField(29) Markdown? description,
-    @JsonKey(name: '_description') @HiveField(30) Element? descriptionElement,
-    @HiveField(31) List<UsageContext>? useContext,
-    @HiveField(32) List<CodeableConcept>? jurisdiction,
-    @HiveField(33) Markdown? copyright,
-    @JsonKey(name: '_copyright') @HiveField(34) Element? copyrightElement,
-    @HiveField(35) @HiveField(36) FhirId? packageId,
-    @JsonKey(name: '_packageId') @HiveField(37) Element? packageIdElement,
-    @HiveField(38) Code? license,
-    @JsonKey(name: '_license') @HiveField(39) Element? licenseElement,
-    @HiveField(40) List<Code>? fhirVersion,
-    @JsonKey(name: '_fhirVersion')
-    @HiveField(41)
-        List<Element?>? fhirVersionElement,
-    @HiveField(42) List<ImplementationGuideDependsOn>? dependsOn,
-    @HiveField(43) List<ImplementationGuideGlobal>? global,
-    @HiveField(44) ImplementationGuideDefinition? definition,
-    @HiveField(45) ImplementationGuideManifest? manifest,
-  }) = _ImplementationGuide;
-  factory ImplementationGuideDependsOn({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required Canonical uri,
-    FhirId? packageId,
-    @JsonKey(name: '_packageId') Element? packageIdElement,
-    String? version,
-    @JsonKey(name: '_version') Element? versionElement,
-  }) = _ImplementationGuideDependsOn;
-  factory ImplementationGuideGlobal({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    required Canonical profile,
-  }) = _ImplementationGuideGlobal;
-  factory ImplementationGuideDefinition({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<ImplementationGuideGrouping>? grouping,
-    required List<ImplementationGuideResource> resource,
-    ImplementationGuidePage? page,
-    List<ImplementationGuideParameter>? parameter,
-    List<ImplementationGuideTemplate>? template,
-  }) = _ImplementationGuideDefinition;
-  factory ImplementationGuideGrouping({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-  }) = _ImplementationGuideGrouping;
-  factory ImplementationGuideResource({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required Reference reference,
-    List<Code>? fhirVersion,
-    @JsonKey(name: '_fhirVersion') List<Element?>? fhirVersionElement,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    Boolean? exampleBoolean,
-    @JsonKey(name: '_exampleBoolean') Element? exampleBooleanElement,
-    Canonical? exampleCanonical,
-    @JsonKey(name: '_exampleCanonical') Element? exampleCanonicalElement,
-    FhirId? groupingId,
-    @JsonKey(name: '_groupingId') Element? groupingIdElement,
-  }) = _ImplementationGuideResource;
-  factory ImplementationGuidePage({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    FhirUrl? nameUrl,
-    @JsonKey(name: '_nameUrl') Element? nameUrlElement,
-    Reference? nameReference,
-    String? title,
-    @JsonKey(name: '_title') Element? titleElement,
-    Code? generation,
-    @JsonKey(name: '_generation') Element? generationElement,
-    List<ImplementationGuidePage>? page,
-  }) = _ImplementationGuidePage;
-  factory ImplementationGuideParameter({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? code,
-    @JsonKey(name: '_code') Element? codeElement,
-    String? value,
-    @JsonKey(name: '_value') Element? valueElement,
-  }) = _ImplementationGuideParameter;
-  factory ImplementationGuideTemplate({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? code,
-    @JsonKey(name: '_code') Element? codeElement,
-    String? source,
-    @JsonKey(name: '_source') Element? sourceElement,
-    String? scope,
-    @JsonKey(name: '_scope') Element? scopeElement,
-  }) = _ImplementationGuideTemplate;
-  factory ImplementationGuideManifest({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    FhirUrl? rendering,
-    @JsonKey(name: '_rendering') Element? renderingElement,
-    required List<ImplementationGuideResource1> resource,
-    List<ImplementationGuidePage1>? page,
-    List<String>? image,
-    @JsonKey(name: '_image') List<Element?>? imageElement,
-    List<String>? other,
-    @JsonKey(name: '_other') List<Element?>? otherElement,
-  }) = _ImplementationGuideManifest;
-  factory ImplementationGuideResource1({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required Reference reference,
-    Boolean? exampleBoolean,
-    @JsonKey(name: '_exampleBoolean') Element? exampleBooleanElement,
-    Canonical? exampleCanonical,
-    @JsonKey(name: '_exampleCanonical') Element? exampleCanonicalElement,
-    FhirUrl? relativePath,
-    @JsonKey(name: '_relativePath') Element? relativePathElement,
-  }) = _ImplementationGuideResource1;
-  factory ImplementationGuidePage1({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? title,
-    @JsonKey(name: '_title') Element? titleElement,
-    List<String>? anchor,
-    @JsonKey(name: '_anchor') List<Element?>? anchorElement,
-  }) = _ImplementationGuidePage1;
-  factory MessageDefinition({
-    @Default(R4ResourceType.MessageDefinition)
-    @JsonKey(unknownEnumValue: R4ResourceType.MessageDefinition)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) FhirUri? url,
-    @JsonKey(name: '_url') @HiveField(12) Element? urlElement,
-    @HiveField(13) List<Identifier>? identifier,
-    @HiveField(14) String? version,
-    @JsonKey(name: '_version') @HiveField(15) Element? versionElement,
-    @HiveField(16) String? name,
-    @JsonKey(name: '_name') @HiveField(17) Element? nameElement,
-    @HiveField(18) String? title,
-    @JsonKey(name: '_title') @HiveField(19) Element? titleElement,
-    @HiveField(20) List<Canonical>? replaces,
-    @HiveField(21) Code? status,
-    @JsonKey(name: '_status') @HiveField(22) Element? statusElement,
-    @HiveField(23) Boolean? experimental,
-    @JsonKey(name: '_experimental') @HiveField(24) Element? experimentalElement,
-    @HiveField(25) FhirDateTime? date,
-    @JsonKey(name: '_date') @HiveField(26) Element? dateElement,
-    @HiveField(27) String? publisher,
-    @JsonKey(name: '_publisher') @HiveField(28) Element? publisherElement,
-    @HiveField(29) List<ContactDetail>? contact,
-    @HiveField(30) Markdown? description,
-    @JsonKey(name: '_description') @HiveField(31) Element? descriptionElement,
-    @HiveField(32) List<UsageContext>? useContext,
-    @HiveField(33) List<CodeableConcept>? jurisdiction,
-    @HiveField(34) Markdown? purpose,
-    @JsonKey(name: '_purpose') @HiveField(35) Element? purposeElement,
-    @HiveField(36) Markdown? copyright,
-    @JsonKey(name: '_copyright') @HiveField(37) Element? copyrightElement,
-    @HiveField(38) Canonical? base,
-    @HiveField(39) List<Canonical>? parent,
-    @HiveField(40) Coding? eventCoding,
-    @HiveField(41) FhirUri? eventUri,
-    @JsonKey(name: '_eventUri') @HiveField(42) Element? eventUriElement,
-    @HiveField(43) Code? category,
-    @JsonKey(name: '_category') @HiveField(44) Element? categoryElement,
-    @HiveField(45) List<MessageDefinitionFocus>? focus,
-    @HiveField(46) Code? responseRequired,
-    @JsonKey(name: '_responseRequired')
-    @HiveField(47)
-        Element? responseRequiredElement,
-    @HiveField(48) List<MessageDefinitionAllowedResponse>? allowedResponse,
-    @HiveField(49) @HiveField(50) List<Canonical>? graph,
-  }) = _MessageDefinition;
-  factory MessageDefinitionFocus({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? code,
-    @JsonKey(name: '_code') Element? codeElement,
-    Canonical? profile,
-    UnsignedInt? min,
-    @JsonKey(name: '_min') Element? minElement,
-    String? max,
-    @JsonKey(name: '_max') Element? maxElement,
-  }) = _MessageDefinitionFocus;
-  factory MessageDefinitionAllowedResponse({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required Canonical message,
-    Markdown? situation,
-    @JsonKey(name: '_situation') Element? situationElement,
-  }) = _MessageDefinitionAllowedResponse;
-  factory OperationDefinition({
-    @Default(R4ResourceType.OperationDefinition)
-    @JsonKey(unknownEnumValue: R4ResourceType.OperationDefinition)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) FhirUri? url,
-    @JsonKey(name: '_url') @HiveField(12) Element? urlElement,
-    @HiveField(13) @HiveField(14) @HiveField(15) String? version,
-    @JsonKey(name: '_version') @HiveField(16) Element? versionElement,
-    @HiveField(17) String? name,
-    @JsonKey(name: '_name') @HiveField(18) Element? nameElement,
-    @HiveField(19) String? title,
-    @JsonKey(name: '_title') @HiveField(20) Element? titleElement,
-    @HiveField(21) Code? status,
-    @JsonKey(name: '_status') @HiveField(22) Element? statusElement,
-    @HiveField(23) Code? kind,
-    @JsonKey(name: '_kind') @HiveField(24) Element? kindElement,
-    @HiveField(25) Boolean? experimental,
-    @JsonKey(name: '_experimental') @HiveField(26) Element? experimentalElement,
-    @HiveField(27) FhirDateTime? date,
-    @JsonKey(name: '_date') @HiveField(28) Element? dateElement,
-    @HiveField(29) String? publisher,
-    @JsonKey(name: '_publisher') @HiveField(30) Element? publisherElement,
-    @HiveField(31) List<ContactDetail>? contact,
-    @HiveField(32) Markdown? description,
-    @JsonKey(name: '_description') @HiveField(33) Element? descriptionElement,
-    @HiveField(34) List<UsageContext>? useContext,
-    @HiveField(35) List<CodeableConcept>? jurisdiction,
-    @HiveField(36) Markdown? purpose,
-    @JsonKey(name: '_purpose') @HiveField(37) Element? purposeElement,
-    @HiveField(38) Boolean? affectsState,
-    @JsonKey(name: '_affectsState') @HiveField(39) Element? affectsStateElement,
-    @HiveField(40) Code? code,
-    @JsonKey(name: '_code') @HiveField(41) Element? codeElement,
-    @HiveField(42) Markdown? comment,
-    @JsonKey(name: '_comment') @HiveField(43) Element? commentElement,
-    @HiveField(44) Canonical? base,
-    @HiveField(45) List<Code>? resource,
-    @JsonKey(name: '_resource') @HiveField(46) List<Element?>? resourceElement,
-    @HiveField(47) Boolean? system,
-    @JsonKey(name: '_system') @HiveField(48) Element? systemElement,
-    @HiveField(49) Boolean? type,
-    @JsonKey(name: '_type') @HiveField(50) Element? typeElement,
-    @HiveField(51) Boolean? instance,
-    @JsonKey(name: '_instance') @HiveField(52) Element? instanceElement,
-    @HiveField(53) Canonical? inputProfile,
-    @HiveField(54) Canonical? outputProfile,
-    @HiveField(55) List<OperationDefinitionParameter>? parameter,
-    @HiveField(56) List<OperationDefinitionOverload>? overload,
-  }) = _OperationDefinition;
-  factory OperationDefinitionParameter({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    Code? use,
-    @JsonKey(name: '_use') Element? useElement,
-    Integer? min,
-    @JsonKey(name: '_min') Element? minElement,
-    String? max,
-    @JsonKey(name: '_max') Element? maxElement,
-    String? documentation,
-    @JsonKey(name: '_documentation') Element? documentationElement,
-    Code? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    List<Canonical>? targetProfile,
-    Code? searchType,
-    @JsonKey(name: '_searchType') Element? searchTypeElement,
-    OperationDefinitionBinding? binding,
-    List<OperationDefinitionReferencedFrom>? referencedFrom,
-    @JsonKey(name: 'part') List<OperationDefinitionParameter>? part_,
-  }) = _OperationDefinitionParameter;
-  factory OperationDefinitionBinding({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? strength,
-    @JsonKey(name: '_strength') Element? strengthElement,
-    required Canonical valueSet,
-  }) = _OperationDefinitionBinding;
-  factory OperationDefinitionReferencedFrom({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? source,
-    @JsonKey(name: '_source') Element? sourceElement,
-    String? sourceId,
-    @JsonKey(name: '_sourceId') Element? sourceIdElement,
-  }) = _OperationDefinitionReferencedFrom;
-  factory OperationDefinitionOverload({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<String>? parameterName,
-    @JsonKey(name: '_parameterName') List<Element?>? parameterNameElement,
-    String? comment,
-    @JsonKey(name: '_comment') Element? commentElement,
-  }) = _OperationDefinitionOverload;
-  factory SearchParameter({
-    @Default(R4ResourceType.SearchParameter)
-    @JsonKey(unknownEnumValue: R4ResourceType.SearchParameter)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) FhirUri? url,
-    @JsonKey(name: '_url') @HiveField(12) Element? urlElement,
-    @HiveField(13) String? version,
-    @JsonKey(name: '_version') @HiveField(14) Element? versionElement,
-    @HiveField(15) String? name,
-    @JsonKey(name: '_name') @HiveField(16) Element? nameElement,
-    @HiveField(17) Canonical? derivedFrom,
-    @HiveField(18) Code? status,
-    @JsonKey(name: '_status') @HiveField(19) Element? statusElement,
-    @HiveField(20) Boolean? experimental,
-    @JsonKey(name: '_experimental') @HiveField(21) Element? experimentalElement,
-    @HiveField(22) FhirDateTime? date,
-    @JsonKey(name: '_date') @HiveField(23) Element? dateElement,
-    @HiveField(24) String? publisher,
-    @JsonKey(name: '_publisher') @HiveField(25) Element? publisherElement,
-    @HiveField(26) List<ContactDetail>? contact,
-    @HiveField(27) Markdown? description,
-    @JsonKey(name: '_description') @HiveField(28) Element? descriptionElement,
-    @HiveField(29) List<UsageContext>? useContext,
-    @HiveField(30) List<CodeableConcept>? jurisdiction,
-    @HiveField(31) Markdown? purpose,
-    @JsonKey(name: '_purpose') @HiveField(32) Element? purposeElement,
-    @HiveField(33) Code? code,
-    @JsonKey(name: '_code') @HiveField(34) Element? codeElement,
-    @HiveField(35) List<Code>? base,
-    @JsonKey(name: '_base') @HiveField(36) List<Element?>? baseElement,
-    @HiveField(37) Code? type,
-    @JsonKey(name: '_type') @HiveField(38) Element? typeElement,
-    @HiveField(39) String? expression,
-    @JsonKey(name: '_expression') @HiveField(40) Element? expressionElement,
-    @HiveField(41) String? xpath,
-    @JsonKey(name: '_xpath') @HiveField(42) Element? xpathElement,
-    @HiveField(43) Code? xpathUsage,
-    @JsonKey(name: '_xpathUsage') @HiveField(44) Element? xpathUsageElement,
-    @HiveField(45) List<Code>? target,
-    @JsonKey(name: '_target') @HiveField(46) List<Element?>? targetElement,
-    @HiveField(47) Boolean? multipleOr,
-    @JsonKey(name: '_multipleOr') @HiveField(48) Element? multipleOrElement,
-    @HiveField(49) Boolean? multipleAnd,
-    @JsonKey(name: '_multipleAnd') @HiveField(50) Element? multipleAndElement,
-    @HiveField(51) List<Code>? comparator,
-    @JsonKey(name: '_comparator')
-    @HiveField(52)
-        List<Element?>? comparatorElement,
-    @HiveField(53) List<Code>? modifier,
-    @JsonKey(name: '_modifier') @HiveField(54) List<Element?>? modifierElement,
-    @HiveField(55) List<String>? chain,
-    @JsonKey(name: '_chain') @HiveField(56) List<Element?>? chainElement,
-    @HiveField(57) List<SearchParameterComponent>? component,
-  }) = _SearchParameter;
-  factory SearchParameterComponent({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required Canonical definition,
-    String? expression,
-    @JsonKey(name: '_expression') Element? expressionElement,
-  }) = _SearchParameterComponent;
-  factory StructureDefinition({
-    @Default(R4ResourceType.StructureDefinition)
-    @JsonKey(unknownEnumValue: R4ResourceType.StructureDefinition)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) FhirUri? url,
-    @JsonKey(name: '_url') @HiveField(12) Element? urlElement,
-    @HiveField(13) List<Identifier>? identifier,
-    @HiveField(14) @HiveField(15) @HiveField(16) String? version,
-    @JsonKey(name: '_version') @HiveField(17) Element? versionElement,
-    @HiveField(18) String? name,
-    @JsonKey(name: '_name') @HiveField(19) Element? nameElement,
-    @HiveField(20) String? title,
-    @JsonKey(name: '_title') @HiveField(21) Element? titleElement,
-    @HiveField(22) Code? status,
-    @JsonKey(name: '_status') @HiveField(23) Element? statusElement,
-    @HiveField(24) Boolean? experimental,
-    @JsonKey(name: '_experimental') @HiveField(25) Element? experimentalElement,
-    @HiveField(26) FhirDateTime? date,
-    @JsonKey(name: '_date') @HiveField(27) Element? dateElement,
-    @HiveField(28) String? publisher,
-    @JsonKey(name: '_publisher') @HiveField(29) Element? publisherElement,
-    @HiveField(30) List<ContactDetail>? contact,
-    @HiveField(31) Markdown? description,
-    @JsonKey(name: '_description') @HiveField(32) Element? descriptionElement,
-    @HiveField(33) List<UsageContext>? useContext,
-    @HiveField(34) List<CodeableConcept>? jurisdiction,
-    @HiveField(35) Markdown? purpose,
-    @JsonKey(name: '_purpose') @HiveField(36) Element? purposeElement,
-    @HiveField(37) Markdown? copyright,
-    @JsonKey(name: '_copyright') @HiveField(38) Element? copyrightElement,
-    @HiveField(39) List<Coding>? keyword,
-    @HiveField(40) Code? fhirVersion,
-    @JsonKey(name: '_fhirVersion') @HiveField(41) Element? fhirVersionElement,
-    @HiveField(42) List<StructureDefinitionMapping>? mapping,
-    @HiveField(43) Code? kind,
-    @JsonKey(name: '_kind') @HiveField(44) Element? kindElement,
-    @JsonKey(name: 'abstract') @HiveField(45) Boolean? abstract_,
-    @JsonKey(name: '_abstract') @HiveField(46) Element? abstractElement,
-    @HiveField(47) List<StructureDefinitionContext>? context,
-    @HiveField(48) List<String>? contextInvariant,
-    @JsonKey(name: '_contextInvariant')
-    @HiveField(49)
-        List<Element?>? contextInvariantElement,
-    @HiveField(50) FhirUri? type,
-    @JsonKey(name: '_type') @HiveField(51) Element? typeElement,
-    @HiveField(52) Canonical? baseDefinition,
-    @JsonKey(name: '_baseDefinition')
-    @HiveField(53)
-        Element? baseDefinitionElement,
-    @HiveField(54) Code? derivation,
-    @JsonKey(name: '_derivation') @HiveField(55) Element? derivationElement,
-    @HiveField(56) StructureDefinitionSnapshot? snapshot,
-    @HiveField(57) StructureDefinitionDifferential? differential,
-  }) = _StructureDefinition;
-  factory StructureDefinitionMapping({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    FhirId? identity,
-    @JsonKey(name: '_identity') Element? identityElement,
-    FhirUri? uri,
-    @JsonKey(name: '_uri') Element? uriElement,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? comment,
-    @JsonKey(name: '_comment') Element? commentElement,
-  }) = _StructureDefinitionMapping;
-  factory StructureDefinitionContext({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    String? expression,
-    @JsonKey(name: '_expression') Element? expressionElement,
-  }) = _StructureDefinitionContext;
-  factory StructureDefinitionSnapshot({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required List<ElementDefinition> element,
-  }) = _StructureDefinitionSnapshot;
-  factory StructureDefinitionDifferential({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required List<ElementDefinition> element,
-  }) = _StructureDefinitionDifferential;
-  factory StructureMap({
-    @Default(R4ResourceType.StructureMap)
-    @JsonKey(unknownEnumValue: R4ResourceType.StructureMap)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) FhirUri? url,
-    @JsonKey(name: '_url') @HiveField(12) Element? urlElement,
-    @HiveField(13) List<Identifier>? identifier,
-    @HiveField(14) String? version,
-    @JsonKey(name: '_version') @HiveField(15) Element? versionElement,
-    @HiveField(16) String? name,
-    @JsonKey(name: '_name') @HiveField(17) Element? nameElement,
-    @HiveField(18) String? title,
-    @JsonKey(name: '_title') @HiveField(19) Element? titleElement,
-    @HiveField(20) Code? status,
-    @JsonKey(name: '_status') @HiveField(21) Element? statusElement,
-    @HiveField(22) Boolean? experimental,
-    @JsonKey(name: '_experimental') @HiveField(23) Element? experimentalElement,
-    @HiveField(24) FhirDateTime? date,
-    @JsonKey(name: '_date') @HiveField(25) Element? dateElement,
-    @HiveField(26) String? publisher,
-    @JsonKey(name: '_publisher') @HiveField(27) Element? publisherElement,
-    @HiveField(28) List<ContactDetail>? contact,
-    @HiveField(29) Markdown? description,
-    @JsonKey(name: '_description') @HiveField(30) Element? descriptionElement,
-    @HiveField(31) List<UsageContext>? useContext,
-    @HiveField(32) List<CodeableConcept>? jurisdiction,
-    @HiveField(33) Markdown? purpose,
-    @JsonKey(name: '_purpose') @HiveField(34) Element? purposeElement,
-    @HiveField(35) Markdown? copyright,
-    @JsonKey(name: '_copyright') @HiveField(36) Element? copyrightElement,
-    @HiveField(37) List<StructureMapStructure>? structure,
-    @JsonKey(name: 'import') @HiveField(38) List<Canonical>? import_,
-    @HiveField(39) required List<StructureMapGroup> group,
-  }) = _StructureMap;
-  factory StructureMapStructure({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required Canonical url,
-    Code? mode,
-    @JsonKey(name: '_mode') Element? modeElement,
-    String? alias,
-    @JsonKey(name: '_alias') Element? aliasElement,
-    String? documentation,
-    @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _StructureMapStructure;
-  factory StructureMapGroup({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    FhirId? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    @JsonKey(name: 'extends') FhirId? extends_,
-    @JsonKey(name: '_extends') Element? extendsElement,
-    Code? typeMode,
-    @JsonKey(name: '_typeMode') Element? typeModeElement,
-    String? documentation,
-    @JsonKey(name: '_documentation') Element? documentationElement,
-    required List<StructureMapInput> input,
-    required List<StructureMapRule> rule,
-  }) = _StructureMapGroup;
-  factory StructureMapInput({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    FhirId? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    Code? mode,
-    @JsonKey(name: '_mode') Element? modeElement,
-    String? documentation,
-    @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _StructureMapInput;
-  factory StructureMapRule({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    FhirId? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    required List<StructureMapSource> source,
-    List<StructureMapTarget>? target,
-    List<StructureMapRule>? rule,
-    List<StructureMapDependent>? dependent,
-    String? documentation,
-    @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _StructureMapRule;
-  factory StructureMapSource({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    FhirId? context,
-    @JsonKey(name: '_context') Element? contextElement,
-    Integer? min,
-    @JsonKey(name: '_min') Element? minElement,
-    String? max,
-    @JsonKey(name: '_max') Element? maxElement,
-    String? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    Base64Binary? defaultValueBase64Binary,
-    @JsonKey(name: '_defaultValueBase64Binary')
-        Element? defaultValueBase64BinaryElement,
-    Boolean? defaultValueBoolean,
-    @JsonKey(name: '_defaultValueBoolean') Element? defaultValueBooleanElement,
-    Canonical? defaultValueCanonical,
-    @JsonKey(name: '_defaultValueCanonical')
-        Element? defaultValueCanonicalElement,
-    Code? defaultValueCode,
-    @JsonKey(name: '_defaultValueCode') Element? defaultValueCodeElement,
-    Date? defaultValueDate,
-    @JsonKey(name: '_defaultValueDate') Element? defaultValueDateElement,
-    FhirDateTime? defaultValueDateTime,
-    @JsonKey(name: '_defaultValueDateTime')
-        Element? defaultValueDateTimeElement,
-    Decimal? defaultValueDecimal,
-    @JsonKey(name: '_defaultValueDecimal') Element? defaultValueDecimalElement,
-    FhirId? defaultValueId,
-    @JsonKey(name: '_defaultValueId') Element? defaultValueIdElement,
-    Instant? defaultValueInstant,
-    @JsonKey(name: '_defaultValueInstant') Element? defaultValueInstantElement,
-    Integer? defaultValueInteger,
-    @JsonKey(name: '_defaultValueInteger') Element? defaultValueIntegerElement,
-    Markdown? defaultValueMarkdown,
-    @JsonKey(name: '_defaultValueMarkdown')
-        Element? defaultValueMarkdownElement,
-    Oid? defaultValueOid,
-    @JsonKey(name: '_defaultValueOid') Element? defaultValueOidElement,
-    PositiveInt? defaultValuePositiveInt,
-    @JsonKey(name: '_defaultValuePositiveInt')
-        Element? defaultValuePositiveIntElement,
-    String? defaultValueString,
-    @JsonKey(name: '_defaultValueString') Element? defaultValueStringElement,
-    Time? defaultValueTime,
-    @JsonKey(name: '_defaultValueTime') Element? defaultValueTimeElement,
-    UnsignedInt? defaultValueUnsignedInt,
-    @JsonKey(name: '_defaultValueUnsignedInt')
-        Element? defaultValueUnsignedIntElement,
-    FhirUri? defaultValueUri,
-    @JsonKey(name: '_defaultValueUri') Element? defaultValueUriElement,
-    FhirUrl? defaultValueUrl,
-    @JsonKey(name: '_defaultValueUrl') Element? defaultValueUrlElement,
-    Uuid? defaultValueUuid,
-    @JsonKey(name: '_defaultValueUuid') Element? defaultValueUuidElement,
-    Address? defaultValueAddress,
-    Age? defaultValueAge,
-    Annotation? defaultValueAnnotation,
-    Attachment? defaultValueAttachment,
-    CodeableConcept? defaultValueCodeableConcept,
-    Coding? defaultValueCoding,
-    ContactPoint? defaultValueContactPoint,
-    Count? defaultValueCount,
-    Distance? defaultValueDistance,
-    FhirDuration? defaultValueDuration,
-    HumanName? defaultValueHumanName,
-    Identifier? defaultValueIdentifier,
-    Money? defaultValueMoney,
-    Period? defaultValuePeriod,
-    Quantity? defaultValueQuantity,
-    Range? defaultValueRange,
-    Ratio? defaultValueRatio,
-    Reference? defaultValueReference,
-    SampledData? defaultValueSampledData,
-    Signature? defaultValueSignature,
-    Timing? defaultValueTiming,
-    ContactDetail? defaultValueContactDetail,
-    Contributor? defaultValueContributor,
-    DataRequirement? defaultValueDataRequirement,
-    Expression? defaultValueExpression,
-    ParameterDefinition? defaultValueParameterDefinition,
-    RelatedArtifact? defaultValueRelatedArtifact,
-    TriggerDefinition? defaultValueTriggerDefinition,
-    UsageContext? defaultValueUsageContext,
-    Dosage? defaultValueDosage,
-    Meta? defaultValueMeta,
-    String? element,
-    @JsonKey(name: '_element') Element? elementElement,
-    Code? listMode,
-    @JsonKey(name: '_listMode') Element? listModeElement,
-    FhirId? variable,
-    @JsonKey(name: '_variable') Element? variableElement,
-    String? condition,
-    @JsonKey(name: '_condition') Element? conditionElement,
-    String? check,
-    @JsonKey(name: '_check') Element? checkElement,
-    String? logMessage,
-    @JsonKey(name: '_logMessage') Element? logMessageElement,
-  }) = _StructureMapSource;
-  factory StructureMapTarget({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    FhirId? context,
-    @JsonKey(name: '_context') Element? contextElement,
-    Code? contextType,
-    @JsonKey(name: '_contextType') Element? contextTypeElement,
-    String? element,
-    @JsonKey(name: '_element') Element? elementElement,
-    FhirId? variable,
-    @JsonKey(name: '_variable') Element? variableElement,
-    List<Code>? listMode,
-    @JsonKey(name: '_listMode') List<Element?>? listModeElement,
-    FhirId? listRuleId,
-    @JsonKey(name: '_listRuleId') Element? listRuleIdElement,
-    Code? transform,
-    @JsonKey(name: '_transform') Element? transformElement,
-    List<StructureMapParameter>? parameter,
-  }) = _StructureMapTarget;
-  factory StructureMapParameter({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    FhirId? valueId,
-    @JsonKey(name: '_valueId') Element? valueIdElement,
-    String? valueString,
-    @JsonKey(name: '_valueString') Element? valueStringElement,
-    Boolean? valueBoolean,
-    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-    Integer? valueInteger,
-    @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-    Decimal? valueDecimal,
-    @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-  }) = _StructureMapParameter;
-  factory StructureMapDependent({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    FhirId? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    List<String>? variable,
-    @JsonKey(name: '_variable') List<Element?>? variableElement,
-  }) = _StructureMapDependent;
+import '../../../../r4.dart';
+
+class CapabilityStatement {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirUri? url;
+  Element? urlElement;
+  String? version;
+  Element? versionElement;
+  String? name;
+  Element? nameElement;
+  String? title;
+  Element? titleElement;
+  Code? status;
+  Element? statusElement;
+  Boolean? experimental;
+  Element? experimentalElement;
+  FhirDateTime? date;
+  Element? dateElement;
+  String? publisher;
+  Element? publisherElement;
+  List<ContactDetail>? contact;
+  Markdown? description;
+  Element? descriptionElement;
+  List<UsageContext>? useContext;
+  List<CodeableConcept>? jurisdiction;
+  Markdown? purpose;
+  Element? purposeElement;
+  Markdown? copyright;
+  Element? copyrightElement;
+  Code? kind;
+  Element? kindElement;
+  List<Canonical>? instantiates;
+  List<Canonical>? imports;
+  CapabilityStatementSoftware? software;
+
+  CapabilityStatementImplementation? implementation;
+  Code? fhirVersion;
+  Element? fhirVersionElement;
+  List<Code>? format;
+  List<Element?>? formatElement;
+  List<Code>? patchFormat;
+
+  List<Element?>? patchFormatElement;
+  List<Canonical>? implementationGuide;
+  List<CapabilityStatementRest>? rest;
+  List<CapabilityStatementMessaging>? messaging;
+  List<CapabilityStatementDocument>? document;
+}
+
+class CapabilityStatementSoftware {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? name;
+  Element? nameElement;
+  String? version;
+  Element? versionElement;
+  FhirDateTime? releaseDate;
+  Element? releaseDateElement;
+}
+
+class CapabilityStatementImplementation {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? description;
+  Element? descriptionElement;
+  FhirUrl? url;
+  Element? urlElement;
+  Reference? custodian;
+}
+
+class CapabilityStatementRest {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code? mode;
+  Element? modeElement;
+  Markdown? documentation;
+  Element? documentationElement;
+  CapabilityStatementSecurity? security;
+  List<CapabilityStatementResource>? resource;
+  List<CapabilityStatementInteraction1>? interaction;
+  List<CapabilityStatementSearchParam>? searchParam;
+  List<CapabilityStatementOperation>? operation;
+  List<Canonical>? compartment;
+}
+
+class CapabilityStatementSecurity {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Boolean? cors;
+  Element? corsElement;
+  List<CodeableConcept>? service;
+  Markdown? description;
+  Element? descriptionElement;
+}
+
+class CapabilityStatementResource {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code? type;
+  Element? typeElement;
+  Canonical? profile;
+  List<Canonical>? supportedProfile;
+  Markdown? documentation;
+  Element? documentationElement;
+  List<CapabilityStatementInteraction>? interaction;
+  Code? versioning;
+  Element? versioningElement;
+  Boolean? readHistory;
+  Element? readHistoryElement;
+  Boolean? updateCreate;
+  Element? updateCreateElement;
+  Boolean? conditionalCreate;
+  Element? conditionalCreateElement;
+  Code? conditionalRead;
+  Element? conditionalReadElement;
+  Boolean? conditionalUpdate;
+  Element? conditionalUpdateElement;
+  Code? conditionalDelete;
+  Element? conditionalDeleteElement;
+  List<Code>? referencePolicy;
+  List<Element?>? referencePolicyElement;
+  List<String>? searchInclude;
+  List<Element?>? searchIncludeElement;
+  List<String>? searchRevInclude;
+  List<Element?>? searchRevIncludeElement;
+  List<CapabilityStatementSearchParam>? searchParam;
+  List<CapabilityStatementOperation>? operation;
+}
+
+class CapabilityStatementInteraction {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code? code;
+  Element? codeElement;
+  Markdown? documentation;
+  Element? documentationElement;
+}
+
+class CapabilityStatementSearchParam {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? name;
+  Element? nameElement;
+  Canonical? definition;
+  Code? type;
+  Element? typeElement;
+  Markdown? documentation;
+  Element? documentationElement;
+}
+
+class CapabilityStatementOperation {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? name;
+  Element? nameElement;
+  Canonical definition;
+  Markdown? documentation;
+  Element? documentationElement;
+}
+
+class CapabilityStatementInteraction1 {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code? code;
+  Element? codeElement;
+  Markdown? documentation;
+  Element? documentationElement;
+}
+
+class CapabilityStatementMessaging {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<CapabilityStatementEndpoint>? endpoint;
+  UnsignedInt? reliableCache;
+  Element? reliableCacheElement;
+  Markdown? documentation;
+  Element? documentationElement;
+  List<CapabilityStatementSupportedMessage>? supportedMessage;
+}
+
+class CapabilityStatementEndpoint {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Coding protocol;
+  FhirUrl? address;
+  Element? addressElement;
+}
+
+class CapabilityStatementSupportedMessage {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code? mode;
+  Element? modeElement;
+  Canonical definition;
+}
+
+class CapabilityStatementDocument {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code? mode;
+  Element? modeElement;
+  Markdown? documentation;
+  Element? documentationElement;
+  Canonical profile;
+}
+
+class CompartmentDefinition {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirUri? url;
+  Element? urlElement;
+  String? version;
+  Element? versionElement;
+  String? name;
+  Element? nameElement;
+  Code? status;
+  Element? statusElement;
+  Boolean? experimental;
+  Element? experimentalElement;
+  FhirDateTime? date;
+  Element? dateElement;
+  String? publisher;
+  Element? publisherElement;
+  List<ContactDetail>? contact;
+  Markdown? description;
+  Element? descriptionElement;
+  List<UsageContext>? useContext;
+  Markdown? purpose;
+  Element? purposeElement;
+  Code? code;
+  Element? codeElement;
+  Boolean? search;
+  Element? searchElement;
+  List<CompartmentDefinitionResource>? resource;
+}
+
+class CompartmentDefinitionResource {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code? code;
+  Element? codeElement;
+  List<String>? param;
+  List<Element?>? paramElement;
+  String? documentation;
+  Element? documentationElement;
+}
+
+class ExampleScenario {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirUri? url;
+  Element? urlElement;
+  List<Identifier>? identifier;
+  String? version;
+  Element? versionElement;
+  String? name;
+  Element? nameElement;
+  Code? status;
+  Element? statusElement;
+  Boolean? experimental;
+  Element? experimentalElement;
+  FhirDateTime? date;
+  Element? dateElement;
+  String? publisher;
+  Element? publisherElement;
+  List<ContactDetail>? contact;
+  List<UsageContext>? useContext;
+  List<CodeableConcept>? jurisdiction;
+  Markdown? copyright;
+  Element? copyrightElement;
+  Markdown? purpose;
+  Element? purposeElement;
+  List<ExampleScenarioActor>? actor;
+  List<ExampleScenarioInstance>? instance;
+  List<ExampleScenarioProcess>? process;
+  List<Canonical>? workflow;
+}
+
+class ExampleScenarioActor {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? actorId;
+  Element? actorIdElement;
+  Code? type;
+  Element? typeElement;
+  String? name;
+  Element? nameElement;
+  Markdown? description;
+  Element? descriptionElement;
+}
+
+class ExampleScenarioInstance {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? resourceId;
+  Element? resourceIdElement;
+  Code? resourceType;
+  Element? resourceTypeElement;
+  String? name;
+  Element? nameElement;
+  Markdown? description;
+  Element? descriptionElement;
+  List<ExampleScenarioVersion>? version;
+  List<ExampleScenarioContainedInstance>? containedInstance;
+}
+
+class ExampleScenarioVersion {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? versionId;
+  Element? versionIdElement;
+  Markdown? description;
+  Element? descriptionElement;
+}
+
+class ExampleScenarioContainedInstance {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? resourceId;
+  Element? resourceIdElement;
+  String? versionId;
+  Element? versionIdElement;
+}
+
+class ExampleScenarioProcess {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? title;
+  Element? titleElement;
+  Markdown? description;
+  Element? descriptionElement;
+  Markdown? preConditions;
+  Element? preConditionsElement;
+  Markdown? postConditions;
+  Element? postConditionsElement;
+  List<ExampleScenarioStep>? step;
+}
+
+class ExampleScenarioStep {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<ExampleScenarioProcess>? process;
+  Boolean? pause;
+  Element? pauseElement;
+  ExampleScenarioOperation? operation;
+  List<ExampleScenarioAlternative>? alternative;
+}
+
+class ExampleScenarioOperation {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? number;
+  Element? numberElement;
+  String? type;
+  Element? typeElement;
+  String? name;
+  Element? nameElement;
+  String? initiator;
+  Element? initiatorElement;
+  String? receiver;
+  Element? receiverElement;
+  Markdown? description;
+  Element? descriptionElement;
+  Boolean? initiatorActive;
+  Element? initiatorActiveElement;
+  Boolean? receiverActive;
+  Element? receiverActiveElement;
+  ExampleScenarioContainedInstance? request;
+  ExampleScenarioContainedInstance? response;
+}
+
+class ExampleScenarioAlternative {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? title;
+  Element? titleElement;
+  Markdown? description;
+  Element? descriptionElement;
+  List<ExampleScenarioStep>? step;
+}
+
+class GraphDefinition {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirUri? url;
+  Element? urlElement;
+  String? version;
+  Element? versionElement;
+  String? name;
+  Element? nameElement;
+  Code? status;
+  Element? statusElement;
+  Boolean? experimental;
+  Element? experimentalElement;
+  FhirDateTime? date;
+  Element? dateElement;
+  String? publisher;
+  Element? publisherElement;
+  List<ContactDetail>? contact;
+  Markdown? description;
+  Element? descriptionElement;
+  List<UsageContext>? useContext;
+  List<CodeableConcept>? jurisdiction;
+  Markdown? purpose;
+  Element? purposeElement;
+  Code? start;
+  Element? startElement;
+  Canonical? profile;
+  List<GraphDefinitionLink>? link;
+}
+
+class GraphDefinitionLink {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? path;
+  Element? pathElement;
+  String? sliceName;
+  Element? sliceNameElement;
+  Integer? min;
+  Element? minElement;
+  String? max;
+  Element? maxElement;
+  String? description;
+  Element? descriptionElement;
+  List<GraphDefinitionTarget>? target;
+}
+
+class GraphDefinitionTarget {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code? type;
+  Element? typeElement;
+  String? params;
+  Element? paramsElement;
+  Canonical? profile;
+  List<GraphDefinitionCompartment>? compartment;
+  List<GraphDefinitionLink>? link;
+}
+
+class GraphDefinitionCompartment {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code? use;
+  Element? useElement;
+  Code? code;
+  Element? codeElement;
+  Code? rule;
+  Element? ruleElement;
+  String? expression;
+  Element? expressionElement;
+  String? description;
+  Element? descriptionElement;
+}
+
+class ImplementationGuide {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirUri? url;
+  Element? urlElement;
+  String? version;
+  Element? versionElement;
+  String? name;
+  Element? nameElement;
+  String? title;
+  Element? titleElement;
+  Code? status;
+  Element? statusElement;
+  Boolean? experimental;
+  Element? experimentalElement;
+  FhirDateTime? date;
+  Element? dateElement;
+  String? publisher;
+  Element? publisherElement;
+  List<ContactDetail>? contact;
+  Markdown? description;
+  Element? descriptionElement;
+  List<UsageContext>? useContext;
+  List<CodeableConcept>? jurisdiction;
+  Markdown? copyright;
+  Element? copyrightElement;
+  FhirId? packageId;
+  Element? packageIdElement;
+  Code? license;
+  Element? licenseElement;
+  List<Code>? fhirVersion;
+
+  List<Element?>? fhirVersionElement;
+  List<ImplementationGuideDependsOn>? dependsOn;
+  List<ImplementationGuideGlobal>? global;
+  ImplementationGuideDefinition? definition;
+  ImplementationGuideManifest? manifest;
+}
+
+class ImplementationGuideDependsOn {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Canonical uri;
+  FhirId? packageId;
+  Element? packageIdElement;
+  String? version;
+  Element? versionElement;
+}
+
+class ImplementationGuideGlobal {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code? type;
+  Element? typeElement;
+  Canonical profile;
+}
+
+class ImplementationGuideDefinition {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<ImplementationGuideGrouping>? grouping;
+  List<ImplementationGuideResource> resource;
+  ImplementationGuidePage? page;
+  List<ImplementationGuideParameter>? parameter;
+  List<ImplementationGuideTemplate>? template;
+}
+
+class ImplementationGuideGrouping {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? name;
+  Element? nameElement;
+  String? description;
+  Element? descriptionElement;
+}
+
+class ImplementationGuideResource {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Reference reference;
+  List<Code>? fhirVersion;
+  List<Element?>? fhirVersionElement;
+  String? name;
+  Element? nameElement;
+  String? description;
+  Element? descriptionElement;
+  Boolean? exampleBoolean;
+  Element? exampleBooleanElement;
+  Canonical? exampleCanonical;
+  Element? exampleCanonicalElement;
+  FhirId? groupingId;
+  Element? groupingIdElement;
+}
+
+class ImplementationGuidePage {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirUrl? nameUrl;
+  Element? nameUrlElement;
+  Reference? nameReference;
+  String? title;
+  Element? titleElement;
+  Code? generation;
+  Element? generationElement;
+  List<ImplementationGuidePage>? page;
+}
+
+class ImplementationGuideParameter {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code? code;
+  Element? codeElement;
+  String? value;
+  Element? valueElement;
+}
+
+class ImplementationGuideTemplate {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code? code;
+  Element? codeElement;
+  String? source;
+  Element? sourceElement;
+  String? scope;
+  Element? scopeElement;
+}
+
+class ImplementationGuideManifest {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirUrl? rendering;
+  Element? renderingElement;
+  List<ImplementationGuideResource1> resource;
+  List<ImplementationGuidePage1>? page;
+  List<String>? image;
+  List<Element?>? imageElement;
+  List<String>? other;
+  List<Element?>? otherElement;
+}
+
+class ImplementationGuideResource1 {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Reference reference;
+  Boolean? exampleBoolean;
+  Element? exampleBooleanElement;
+  Canonical? exampleCanonical;
+  Element? exampleCanonicalElement;
+  FhirUrl? relativePath;
+  Element? relativePathElement;
+}
+
+class ImplementationGuidePage1 {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? name;
+  Element? nameElement;
+  String? title;
+  Element? titleElement;
+  List<String>? anchor;
+  List<Element?>? anchorElement;
+}
+
+class MessageDefinition {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirUri? url;
+  Element? urlElement;
+  List<Identifier>? identifier;
+  String? version;
+  Element? versionElement;
+  String? name;
+  Element? nameElement;
+  String? title;
+  Element? titleElement;
+  List<Canonical>? replaces;
+  Code? status;
+  Element? statusElement;
+  Boolean? experimental;
+  Element? experimentalElement;
+  FhirDateTime? date;
+  Element? dateElement;
+  String? publisher;
+  Element? publisherElement;
+  List<ContactDetail>? contact;
+  Markdown? description;
+  Element? descriptionElement;
+  List<UsageContext>? useContext;
+  List<CodeableConcept>? jurisdiction;
+  Markdown? purpose;
+  Element? purposeElement;
+  Markdown? copyright;
+  Element? copyrightElement;
+  Canonical? base;
+  List<Canonical>? parent;
+  Coding? eventCoding;
+  FhirUri? eventUri;
+  Element? eventUriElement;
+  Code? category;
+  Element? categoryElement;
+  List<MessageDefinitionFocus>? focus;
+  Code? responseRequired;
+
+  Element? responseRequiredElement;
+  List<MessageDefinitionAllowedResponse>? allowedResponse;
+  List<Canonical>? graph;
+}
+
+class MessageDefinitionFocus {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code? code;
+  Element? codeElement;
+  Canonical? profile;
+  UnsignedInt? min;
+  Element? minElement;
+  String? max;
+  Element? maxElement;
+}
+
+class MessageDefinitionAllowedResponse {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Canonical message;
+  Markdown? situation;
+  Element? situationElement;
+}
+
+class OperationDefinition {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirUri? url;
+  Element? urlElement;
+  String? version;
+  Element? versionElement;
+  String? name;
+  Element? nameElement;
+  String? title;
+  Element? titleElement;
+  Code? status;
+  Element? statusElement;
+  Code? kind;
+  Element? kindElement;
+  Boolean? experimental;
+  Element? experimentalElement;
+  FhirDateTime? date;
+  Element? dateElement;
+  String? publisher;
+  Element? publisherElement;
+  List<ContactDetail>? contact;
+  Markdown? description;
+  Element? descriptionElement;
+  List<UsageContext>? useContext;
+  List<CodeableConcept>? jurisdiction;
+  Markdown? purpose;
+  Element? purposeElement;
+  Boolean? affectsState;
+  Element? affectsStateElement;
+  Code? code;
+  Element? codeElement;
+  Markdown? comment;
+  Element? commentElement;
+  Canonical? base;
+  List<Code>? resource;
+  List<Element?>? resourceElement;
+  Boolean? system;
+  Element? systemElement;
+  Boolean? type;
+  Element? typeElement;
+  Boolean? instance;
+  Element? instanceElement;
+  Canonical? inputProfile;
+  Canonical? outputProfile;
+  List<OperationDefinitionParameter>? parameter;
+  List<OperationDefinitionOverload>? overload;
+}
+
+class OperationDefinitionParameter {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code? name;
+  Element? nameElement;
+  Code? use;
+  Element? useElement;
+  Integer? min;
+  Element? minElement;
+  String? max;
+  Element? maxElement;
+  String? documentation;
+  Element? documentationElement;
+  Code? type;
+  Element? typeElement;
+  List<Canonical>? targetProfile;
+  Code? searchType;
+  Element? searchTypeElement;
+  OperationDefinitionBinding? binding;
+  List<OperationDefinitionReferencedFrom>? referencedFrom;
+  List<OperationDefinitionParameter>? part_;
+}
+
+class OperationDefinitionBinding {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code? strength;
+  Element? strengthElement;
+  Canonical valueSet;
+}
+
+class OperationDefinitionReferencedFrom {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? source;
+  Element? sourceElement;
+  String? sourceId;
+  Element? sourceIdElement;
+}
+
+class OperationDefinitionOverload {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<String>? parameterName;
+  List<Element?>? parameterNameElement;
+  String? comment;
+  Element? commentElement;
+}
+
+class SearchParameter {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirUri? url;
+  Element? urlElement;
+  String? version;
+  Element? versionElement;
+  String? name;
+  Element? nameElement;
+  Canonical? derivedFrom;
+  Code? status;
+  Element? statusElement;
+  Boolean? experimental;
+  Element? experimentalElement;
+  FhirDateTime? date;
+  Element? dateElement;
+  String? publisher;
+  Element? publisherElement;
+  List<ContactDetail>? contact;
+  Markdown? description;
+  Element? descriptionElement;
+  List<UsageContext>? useContext;
+  List<CodeableConcept>? jurisdiction;
+  Markdown? purpose;
+  Element? purposeElement;
+  Code? code;
+  Element? codeElement;
+  List<Code>? base;
+  List<Element?>? baseElement;
+  Code? type;
+  Element? typeElement;
+  String? expression;
+  Element? expressionElement;
+  String? xpath;
+  Element? xpathElement;
+  Code? xpathUsage;
+  Element? xpathUsageElement;
+  List<Code>? target;
+  List<Element?>? targetElement;
+  Boolean? multipleOr;
+  Element? multipleOrElement;
+  Boolean? multipleAnd;
+  Element? multipleAndElement;
+  List<Code>? comparator;
+
+  List<Element?>? comparatorElement;
+  List<Code>? modifier;
+  List<Element?>? modifierElement;
+  List<String>? chain;
+  List<Element?>? chainElement;
+  List<SearchParameterComponent>? component;
+}
+
+class SearchParameterComponent {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Canonical definition;
+  String? expression;
+  Element? expressionElement;
+}
+
+class StructureDefinition {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirUri? url;
+  Element? urlElement;
+  List<Identifier>? identifier;
+  String? version;
+  Element? versionElement;
+  String? name;
+  Element? nameElement;
+  String? title;
+  Element? titleElement;
+  Code? status;
+  Element? statusElement;
+  Boolean? experimental;
+  Element? experimentalElement;
+  FhirDateTime? date;
+  Element? dateElement;
+  String? publisher;
+  Element? publisherElement;
+  List<ContactDetail>? contact;
+  Markdown? description;
+  Element? descriptionElement;
+  List<UsageContext>? useContext;
+  List<CodeableConcept>? jurisdiction;
+  Markdown? purpose;
+  Element? purposeElement;
+  Markdown? copyright;
+  Element? copyrightElement;
+  List<Coding>? keyword;
+  Code? fhirVersion;
+  Element? fhirVersionElement;
+  List<StructureDefinitionMapping>? mapping;
+  Code? kind;
+  Element? kindElement;
+  Boolean? abstract_;
+  Element? abstractElement;
+  List<StructureDefinitionContext>? context;
+  List<String>? contextInvariant;
+
+  List<Element?>? contextInvariantElement;
+  FhirUri? type;
+  Element? typeElement;
+  Canonical? baseDefinition;
+
+  Element? baseDefinitionElement;
+  Code? derivation;
+  Element? derivationElement;
+  StructureDefinitionSnapshot? snapshot;
+  StructureDefinitionDifferential? differential;
+}
+
+class StructureDefinitionMapping {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirId? identity;
+  Element? identityElement;
+  FhirUri? uri;
+  Element? uriElement;
+  String? name;
+  Element? nameElement;
+  String? comment;
+  Element? commentElement;
+}
+
+class StructureDefinitionContext {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code? type;
+  Element? typeElement;
+  String? expression;
+  Element? expressionElement;
+}
+
+class StructureDefinitionSnapshot {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<ElementDefinition> element;
+}
+
+class StructureDefinitionDifferential {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<ElementDefinition> element;
+}
+
+class StructureMap {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirUri? url;
+  Element? urlElement;
+  List<Identifier>? identifier;
+  String? version;
+  Element? versionElement;
+  String? name;
+  Element? nameElement;
+  String? title;
+  Element? titleElement;
+  Code? status;
+  Element? statusElement;
+  Boolean? experimental;
+  Element? experimentalElement;
+  FhirDateTime? date;
+  Element? dateElement;
+  String? publisher;
+  Element? publisherElement;
+  List<ContactDetail>? contact;
+  Markdown? description;
+  Element? descriptionElement;
+  List<UsageContext>? useContext;
+  List<CodeableConcept>? jurisdiction;
+  Markdown? purpose;
+  Element? purposeElement;
+  Markdown? copyright;
+  Element? copyrightElement;
+  List<StructureMapStructure>? structure;
+  List<Canonical>? import_;
+  List<StructureMapGroup> group;
+}
+
+class StructureMapStructure {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Canonical url;
+  Code? mode;
+  Element? modeElement;
+  String? alias;
+  Element? aliasElement;
+  String? documentation;
+  Element? documentationElement;
+}
+
+class StructureMapGroup {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirId? name;
+  Element? nameElement;
+  FhirId? extends_;
+  Element? extendsElement;
+  Code? typeMode;
+  Element? typeModeElement;
+  String? documentation;
+  Element? documentationElement;
+  List<StructureMapInput> input;
+  List<StructureMapRule> rule;
+}
+
+class StructureMapInput {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirId? name;
+  Element? nameElement;
+  String? type;
+  Element? typeElement;
+  Code? mode;
+  Element? modeElement;
+  String? documentation;
+  Element? documentationElement;
+}
+
+class StructureMapRule {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirId? name;
+  Element? nameElement;
+  List<StructureMapSource> source;
+  List<StructureMapTarget>? target;
+  List<StructureMapRule>? rule;
+  List<StructureMapDependent>? dependent;
+  String? documentation;
+  Element? documentationElement;
+}
+
+class StructureMapSource {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirId? context;
+  Element? contextElement;
+  Integer? min;
+  Element? minElement;
+  String? max;
+  Element? maxElement;
+  String? type;
+  Element? typeElement;
+  Base64Binary? defaultValueBase64Binary;
+
+  Element? defaultValueBase64BinaryElement;
+  Boolean? defaultValueBoolean;
+  Element? defaultValueBooleanElement;
+  Canonical? defaultValueCanonical;
+
+  Element? defaultValueCanonicalElement;
+  Code? defaultValueCode;
+  Element? defaultValueCodeElement;
+  Date? defaultValueDate;
+  Element? defaultValueDateElement;
+  FhirDateTime? defaultValueDateTime;
+
+  Element? defaultValueDateTimeElement;
+  Decimal? defaultValueDecimal;
+  Element? defaultValueDecimalElement;
+  FhirId? defaultValueId;
+  Element? defaultValueIdElement;
+  Instant? defaultValueInstant;
+  Element? defaultValueInstantElement;
+  Integer? defaultValueInteger;
+  Element? defaultValueIntegerElement;
+  Markdown? defaultValueMarkdown;
+
+  Element? defaultValueMarkdownElement;
+  Oid? defaultValueOid;
+  Element? defaultValueOidElement;
+  PositiveInt? defaultValuePositiveInt;
+
+  Element? defaultValuePositiveIntElement;
+  String? defaultValueString;
+  Element? defaultValueStringElement;
+  Time? defaultValueTime;
+  Element? defaultValueTimeElement;
+  UnsignedInt? defaultValueUnsignedInt;
+
+  Element? defaultValueUnsignedIntElement;
+  FhirUri? defaultValueUri;
+  Element? defaultValueUriElement;
+  FhirUrl? defaultValueUrl;
+  Element? defaultValueUrlElement;
+  Uuid? defaultValueUuid;
+  Element? defaultValueUuidElement;
+  Address? defaultValueAddress;
+  Age? defaultValueAge;
+  Annotation? defaultValueAnnotation;
+  Attachment? defaultValueAttachment;
+  CodeableConcept? defaultValueCodeableConcept;
+  Coding? defaultValueCoding;
+  ContactPoint? defaultValueContactPoint;
+  Count? defaultValueCount;
+  Distance? defaultValueDistance;
+  FhirDuration? defaultValueDuration;
+  HumanName? defaultValueHumanName;
+  Identifier? defaultValueIdentifier;
+  Money? defaultValueMoney;
+  Period? defaultValuePeriod;
+  Quantity? defaultValueQuantity;
+  Range? defaultValueRange;
+  Ratio? defaultValueRatio;
+  Reference? defaultValueReference;
+  SampledData? defaultValueSampledData;
+  Signature? defaultValueSignature;
+  Timing? defaultValueTiming;
+  ContactDetail? defaultValueContactDetail;
+  Contributor? defaultValueContributor;
+  DataRequirement? defaultValueDataRequirement;
+  Expression? defaultValueExpression;
+  ParameterDefinition? defaultValueParameterDefinition;
+  RelatedArtifact? defaultValueRelatedArtifact;
+  TriggerDefinition? defaultValueTriggerDefinition;
+  UsageContext? defaultValueUsageContext;
+  Dosage? defaultValueDosage;
+  Meta? defaultValueMeta;
+  String? element;
+  Element? elementElement;
+  Code? listMode;
+  Element? listModeElement;
+  FhirId? variable;
+  Element? variableElement;
+  String? condition;
+  Element? conditionElement;
+  String? check;
+  Element? checkElement;
+  String? logMessage;
+  Element? logMessageElement;
+}
+
+class StructureMapTarget {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirId? context;
+  Element? contextElement;
+  Code? contextType;
+  Element? contextTypeElement;
+  String? element;
+  Element? elementElement;
+  FhirId? variable;
+  Element? variableElement;
+  List<Code>? listMode;
+  List<Element?>? listModeElement;
+  FhirId? listRuleId;
+  Element? listRuleIdElement;
+  Code? transform;
+  Element? transformElement;
+  List<StructureMapParameter>? parameter;
+}
+
+class StructureMapParameter {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirId? valueId;
+  Element? valueIdElement;
+  String? valueString;
+  Element? valueStringElement;
+  Boolean? valueBoolean;
+  Element? valueBooleanElement;
+  Integer? valueInteger;
+  Element? valueIntegerElement;
+  Decimal? valueDecimal;
+  Element? valueDecimalElement;
+}
+
+class StructureMapDependent {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirId? name;
+  Element? nameElement;
+  List<String>? variable;
+  List<Element?>? variableElement;
+}

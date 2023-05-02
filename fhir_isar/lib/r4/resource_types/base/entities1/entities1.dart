@@ -1,239 +1,238 @@
-  factory Endpoint({
-    @Default(R4ResourceType.Endpoint)
-    @JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) Code? status,
-    @JsonKey(name: '_status') @HiveField(13) Element? statusElement,
-    @HiveField(14) required Coding connectionType,
-    @HiveField(15) String? name,
-    @JsonKey(name: '_name') @HiveField(16) Element? nameElement,
-    @HiveField(17) Reference? managingOrganization,
-    @HiveField(18) List<ContactPoint>? contact,
-    @HiveField(19) Period? period,
-    @HiveField(20) required List<CodeableConcept> payloadType,
-    @HiveField(21) List<Code>? payloadMimeType,
-    @JsonKey(name: '_payloadMimeType')
-    @HiveField(22)
-        List<Element?>? payloadMimeTypeElement,
-    @HiveField(23) FhirUrl? address,
-    @JsonKey(name: '_address') @HiveField(24) Element? addressElement,
-    @HiveField(25) List<String>? header,
-    @JsonKey(name: '_header') @HiveField(26) List<Element?>? headerElement,
-  }) = _Endpoint;
-  factory HealthcareService({
-    @Default(R4ResourceType.HealthcareService)
-    @JsonKey(unknownEnumValue: R4ResourceType.HealthcareService)
-        R4ResourceType resourceType,
-    String? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    Boolean? active,
-    @JsonKey(name: '_active') Element? activeElement,
-    Reference? providedBy,
-    List<CodeableConcept>? category,
-    List<CodeableConcept>? type,
-    List<CodeableConcept>? specialty,
-    List<Reference>? location,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? comment,
-    @JsonKey(name: '_comment') Element? commentElement,
-    Markdown? extraDetails,
-    @JsonKey(name: '_extraDetails') Element? extraDetailsElement,
-    Attachment? photo,
-    List<ContactPoint>? telecom,
-    List<Reference>? coverageArea,
-    List<CodeableConcept>? serviceProvisionCode,
-    List<HealthcareServiceEligibility>? eligibility,
-    List<CodeableConcept>? program,
-    List<CodeableConcept>? characteristic,
-    List<CodeableConcept>? communication,
-    List<CodeableConcept>? referralMethod,
-    Boolean? appointmentRequired,
-    @JsonKey(name: '_appointmentRequired') Element? appointmentRequiredElement,
-    List<HealthcareServiceAvailableTime>? availableTime,
-    List<HealthcareServiceNotAvailable>? notAvailable,
-    String? availabilityExceptions,
-    @JsonKey(name: '_availabilityExceptions')
-        Element? availabilityExceptionsElement,
-    List<Reference>? endpoint,
-  }) = _HealthcareService;
-  factory HealthcareServiceEligibility({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? code,
-    Markdown? comment,
-    @JsonKey(name: '_comment') Element? commentElement,
-  }) = _HealthcareServiceEligibility;
-  factory HealthcareServiceAvailableTime({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Code>? daysOfWeek,
-    @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
-    Boolean? allDay,
-    @JsonKey(name: '_allDay') Element? allDayElement,
-    Time? availableStartTime,
-    @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
-    Time? availableEndTime,
-    @JsonKey(name: '_availableEndTime') Element? availableEndTimeElement,
-  }) = _HealthcareServiceAvailableTime;
-  factory HealthcareServiceNotAvailable({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    Period? during,
-  }) = _HealthcareServiceNotAvailable;
-  factory Location({
-    @Default(R4ResourceType.Location)
-    @JsonKey(unknownEnumValue: R4ResourceType.Location)
-        R4ResourceType resourceType,
-    String? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    Code? status,
-    @JsonKey(name: '_status') Element? statusElement,
-    Coding? operationalStatus,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    List<String>? alias,
-    @JsonKey(name: '_alias') List<Element?>? aliasElement,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    Code? mode,
-    @JsonKey(name: '_mode') Element? modeElement,
-    List<CodeableConcept>? type,
-    List<ContactPoint>? telecom,
-    Address? address,
-    CodeableConcept? physicalType,
-    LocationPosition? position,
-    Reference? managingOrganization,
-    Reference? partOf,
-    List<LocationHoursOfOperation>? hoursOfOperation,
-    String? availabilityExceptions,
-    @JsonKey(name: '_availabilityExceptions')
-        Element? availabilityExceptionsElement,
-    List<Reference>? endpoint,
-  }) = _Location;
-  factory LocationPosition({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Decimal? longitude,
-    @JsonKey(name: '_longitude') Element? longitudeElement,
-    Decimal? latitude,
-    @JsonKey(name: '_latitude') Element? latitudeElement,
-    Decimal? altitude,
-    @JsonKey(name: '_altitude') Element? altitudeElement,
-  }) = _LocationPosition;
-  factory LocationHoursOfOperation({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Code>? daysOfWeek,
-    @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
-    Boolean? allDay,
-    @JsonKey(name: '_allDay') Element? allDayElement,
-    Time? openingTime,
-    @JsonKey(name: '_openingTime') Element? openingTimeElement,
-    Time? closingTime,
-    @JsonKey(name: '_closingTime') Element? closingTimeElement,
-  }) = _LocationHoursOfOperation;
-  factory Organization({
-    @Default(R4ResourceType.Organization)
-    @JsonKey(unknownEnumValue: R4ResourceType.Organization)
-        R4ResourceType resourceType,
-    String? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    Boolean? active,
-    @JsonKey(name: '_active') Element? activeElement,
-    List<CodeableConcept>? type,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    List<String>? alias,
-    @JsonKey(name: '_alias') List<Element?>? aliasElement,
-    List<ContactPoint>? telecom,
-    List<Address>? address,
-    Reference? partOf,
-    List<OrganizationContact>? contact,
-    List<Reference>? endpoint,
-  }) = _Organization;
-  factory OrganizationContact({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? purpose,
-    HumanName? name,
-    List<ContactPoint>? telecom,
-    Address? address,
-  }) = _OrganizationContact;
-  factory OrganizationAffiliation({
-    @Default(R4ResourceType.OrganizationAffiliation)
-    @JsonKey(unknownEnumValue: R4ResourceType.OrganizationAffiliation)
-        R4ResourceType resourceType,
-    String? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    Boolean? active,
-    @JsonKey(name: '_active') Element? activeElement,
-    Period? period,
-    Reference? organization,
-    Reference? participatingOrganization,
-    List<Reference>? network,
-    List<CodeableConcept>? code,
-    List<CodeableConcept>? specialty,
-    List<Reference>? location,
-    List<Reference>? healthcareService,
-    List<ContactPoint>? telecom,
-    List<Reference>? endpoint,
-  }) = _OrganizationAffiliation;
+import '../../../../r4.dart';
+
+class Endpoint {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  Code? status;
+  Element? statusElement;
+  Coding connectionType;
+  String? name;
+  Element? nameElement;
+  Reference? managingOrganization;
+  List<ContactPoint>? contact;
+  Period? period;
+  List<CodeableConcept> payloadType;
+  List<Code>? payloadMimeType;
+
+  List<Element?>? payloadMimeTypeElement;
+  FhirUrl? address;
+  Element? addressElement;
+  List<String>? header;
+  List<Element?>? headerElement;
+}
+
+class HealthcareService {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  Boolean? active;
+  Element? activeElement;
+  Reference? providedBy;
+  List<CodeableConcept>? category;
+  List<CodeableConcept>? type;
+  List<CodeableConcept>? specialty;
+  List<Reference>? location;
+  String? name;
+  Element? nameElement;
+  String? comment;
+  Element? commentElement;
+  Markdown? extraDetails;
+  Element? extraDetailsElement;
+  Attachment? photo;
+  List<ContactPoint>? telecom;
+  List<Reference>? coverageArea;
+  List<CodeableConcept>? serviceProvisionCode;
+  List<HealthcareServiceEligibility>? eligibility;
+  List<CodeableConcept>? program;
+  List<CodeableConcept>? characteristic;
+  List<CodeableConcept>? communication;
+  List<CodeableConcept>? referralMethod;
+  Boolean? appointmentRequired;
+  Element? appointmentRequiredElement;
+  List<HealthcareServiceAvailableTime>? availableTime;
+  List<HealthcareServiceNotAvailable>? notAvailable;
+  String? availabilityExceptions;
+
+  Element? availabilityExceptionsElement;
+  List<Reference>? endpoint;
+}
+
+class HealthcareServiceEligibility {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? code;
+  Markdown? comment;
+  Element? commentElement;
+}
+
+class HealthcareServiceAvailableTime {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Code>? daysOfWeek;
+  List<Element?>? daysOfWeekElement;
+  Boolean? allDay;
+  Element? allDayElement;
+  Time? availableStartTime;
+  Element? availableStartTimeElement;
+  Time? availableEndTime;
+  Element? availableEndTimeElement;
+}
+
+class HealthcareServiceNotAvailable {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? description;
+  Element? descriptionElement;
+  Period? during;
+}
+
+class Location {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  Code? status;
+  Element? statusElement;
+  Coding? operationalStatus;
+  String? name;
+  Element? nameElement;
+  List<String>? alias;
+  List<Element?>? aliasElement;
+  String? description;
+  Element? descriptionElement;
+  Code? mode;
+  Element? modeElement;
+  List<CodeableConcept>? type;
+  List<ContactPoint>? telecom;
+  Address? address;
+  CodeableConcept? physicalType;
+  LocationPosition? position;
+  Reference? managingOrganization;
+  Reference? partOf;
+  List<LocationHoursOfOperation>? hoursOfOperation;
+  String? availabilityExceptions;
+
+  Element? availabilityExceptionsElement;
+  List<Reference>? endpoint;
+}
+
+class LocationPosition {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Decimal? longitude;
+  Element? longitudeElement;
+  Decimal? latitude;
+  Element? latitudeElement;
+  Decimal? altitude;
+  Element? altitudeElement;
+}
+
+class LocationHoursOfOperation {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Code>? daysOfWeek;
+  List<Element?>? daysOfWeekElement;
+  Boolean? allDay;
+  Element? allDayElement;
+  Time? openingTime;
+  Element? openingTimeElement;
+  Time? closingTime;
+  Element? closingTimeElement;
+}
+
+class Organization {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  Boolean? active;
+  Element? activeElement;
+  List<CodeableConcept>? type;
+  String? name;
+  Element? nameElement;
+  List<String>? alias;
+  List<Element?>? aliasElement;
+  List<ContactPoint>? telecom;
+  List<Address>? address;
+  Reference? partOf;
+  List<OrganizationContact>? contact;
+  List<Reference>? endpoint;
+}
+
+class OrganizationContact {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? purpose;
+  HumanName? name;
+  List<ContactPoint>? telecom;
+  Address? address;
+}
+
+class OrganizationAffiliation {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  Boolean? active;
+  Element? activeElement;
+  Period? period;
+  Reference? organization;
+  Reference? participatingOrganization;
+  List<Reference>? network;
+  List<CodeableConcept>? code;
+  List<CodeableConcept>? specialty;
+  List<Reference>? location;
+  List<Reference>? healthcareService;
+  List<ContactPoint>? telecom;
+  List<Reference>? endpoint;
+}

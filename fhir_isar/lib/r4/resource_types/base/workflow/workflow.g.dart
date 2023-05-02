@@ -1121,9 +1121,8 @@ _$_AppointmentParticipant _$$_AppointmentParticipantFromJson(
       actor: json['actor'] == null
           ? null
           : Reference.fromJson(json['actor'] as Map<String, dynamic>),
-      required_:
-          json['required'] == null ? null : Code.fromJson(json['required']),
-      requiredElement: json['_required'] == null
+      _: json['required'] == null ? null : Code.fromJson(json['required']),
+      Element: json['_required'] == null
           ? null
           : Element.fromJson(json['_required'] as Map<String, dynamic>),
       status: json['status'] == null ? null : Code.fromJson(json['status']),

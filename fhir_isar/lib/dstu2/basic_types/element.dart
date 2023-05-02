@@ -1,5 +1,7 @@
-  factory Element({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-  }) = _Element;
+import '../../dstu2.dart';
+
+class Element {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<String>? fhirComments;
+}

@@ -2551,9 +2551,8 @@ _$_TestScriptCapability _$$_TestScriptCapabilityFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      required_:
-          json['required'] == null ? null : Boolean.fromJson(json['required']),
-      requiredElement: json['_required'] == null
+      _: json['required'] == null ? null : Boolean.fromJson(json['required']),
+      Element: json['_required'] == null
           ? null
           : Element.fromJson(json['_required'] as Map<String, dynamic>),
       validated: json['validated'] == null

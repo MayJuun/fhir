@@ -863,10 +863,10 @@ _$_PlanDefinitionAction _$$_PlanDefinitionActionFromJson(
           ? null
           : Element.fromJson(
               json['_selectionBehavior'] as Map<String, dynamic>),
-      requiredBehavior: $enumDecodeNullable(
+      Behavior: $enumDecodeNullable(
           _$PlanDefinitionActionRequiredBehaviorEnumMap,
           json['requiredBehavior']),
-      requiredBehaviorElement: json['_requiredBehavior'] == null
+      BehaviorElement: json['_requiredBehavior'] == null
           ? null
           : Element.fromJson(json['_requiredBehavior'] as Map<String, dynamic>),
       precheckBehavior: $enumDecodeNullable(
@@ -1417,9 +1417,8 @@ _$_QuestionnaireItem _$$_QuestionnaireItemFromJson(Map<String, dynamic> json) =>
           ?.map((e) =>
               QuestionnaireEnableWhen.fromJson(e as Map<String, dynamic>))
           .toList(),
-      required_:
-          json['required'] == null ? null : Boolean.fromJson(json['required']),
-      requiredElement: json['_required'] == null
+      _: json['required'] == null ? null : Boolean.fromJson(json['required']),
+      Element: json['_required'] == null
           ? null
           : Element.fromJson(json['_required'] as Map<String, dynamic>),
       repeats:

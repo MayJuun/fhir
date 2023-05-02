@@ -1,82 +1,84 @@
-  factory PaymentNotice({
-    @Default(Dstu2ResourceType.PaymentNotice)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.PaymentNotice)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    Coding? ruleset,
-    Coding? originalRuleset,
-    FhirDateTime? created,
-    @JsonKey(name: '_created') Element? createdElement,
-    Reference? target,
-    Reference? provider,
-    Reference? organization,
-    Reference? request,
-    Reference? response,
-    required Coding paymentStatus,
-  }) = _PaymentNotice;
-  factory PaymentReconciliation({
-    @Default(Dstu2ResourceType.PaymentReconciliation)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.PaymentReconciliation)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    Reference? request,
-    @JsonKey(unknownEnumValue: PaymentReconciliationOutcome.unknown)
-        PaymentReconciliationOutcome? outcome,
-    @JsonKey(name: '_outcome') Element? outcomeElement,
-    String? disposition,
-    @JsonKey(name: '_disposition') Element? dispositionElement,
-    Coding? ruleset,
-    Coding? originalRuleset,
-    FhirDateTime? created,
-    @JsonKey(name: '_created') Element? createdElement,
-    Period? period,
-    Reference? organization,
-    Reference? requestProvider,
-    Reference? requestOrganization,
-    List<PaymentReconciliationDetail>? detail,
-    Coding? form,
-    required Quantity total,
-    List<PaymentReconciliationNote>? note,
-  }) = _PaymentReconciliation;
-  factory PaymentReconciliationDetail({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required Coding type,
-    Reference? request,
-    Reference? responce,
-    Reference? submitter,
-    Reference? payee,
-    Date? date,
-    @JsonKey(name: '_date') Element? dateElement,
-    Quantity? amount,
-  }) = _PaymentReconciliationDetail;
-  factory PaymentReconciliationNote({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Coding? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    String? text,
-    @JsonKey(name: '_text') Element? textElement,
-  }) = _PaymentReconciliationNote;
+import '../../../../dstu2.dart';
+part 'payment.enums.dart';
+
+class PaymentNotice {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  Coding? ruleset;
+  Coding? originalRuleset;
+  FhirDateTime? created;
+  Element? createdElement;
+  Reference? target;
+  Reference? provider;
+  Reference? organization;
+  Reference? request;
+  Reference? response;
+  Coding paymentStatus;
+}
+
+class PaymentReconciliation {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  Reference? request;
+
+  PaymentReconciliationOutcome? outcome;
+  Element? outcomeElement;
+  String? disposition;
+  Element? dispositionElement;
+  Coding? ruleset;
+  Coding? originalRuleset;
+  FhirDateTime? created;
+  Element? createdElement;
+  Period? period;
+  Reference? organization;
+  Reference? requestProvider;
+  Reference? requestOrganization;
+  List<PaymentReconciliationDetail>? detail;
+  Coding? form;
+  Quantity total;
+  List<PaymentReconciliationNote>? note;
+}
+
+class PaymentReconciliationDetail {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Coding type;
+  Reference? request;
+  Reference? responce;
+  Reference? submitter;
+  Reference? payee;
+  Date? date;
+  Element? dateElement;
+  Quantity? amount;
+}
+
+class PaymentReconciliationNote {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Coding? type;
+  Element? typeElement;
+  String? text;
+  Element? textElement;
+}

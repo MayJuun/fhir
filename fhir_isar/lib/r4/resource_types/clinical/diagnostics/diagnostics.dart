@@ -1,644 +1,631 @@
-  factory BodyStructure({
-    @Default(R4ResourceType.BodyStructure)
-    @JsonKey(unknownEnumValue: R4ResourceType.BodyStructure)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) Boolean? active,
-    @JsonKey(name: '_active') @HiveField(13) Element? activeElement,
-    @HiveField(14) CodeableConcept? morphology,
-    @HiveField(15) CodeableConcept? location,
-    @HiveField(16) @HiveField(17) List<CodeableConcept>? locationQualifier,
-    @HiveField(18) String? description,
-    @JsonKey(name: '_description') @HiveField(19) Element? descriptionElement,
-    @HiveField(20) List<Attachment>? image,
-    @HiveField(21) required Reference patient,
-  }) = _BodyStructure;
-  factory DiagnosticReport({
-    @Default(R4ResourceType.DiagnosticReport)
-    @JsonKey(unknownEnumValue: R4ResourceType.DiagnosticReport)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) List<Reference>? basedOn,
-    @HiveField(13) Code? status,
-    @JsonKey(name: '_status') @HiveField(14) Element? statusElement,
-    @HiveField(15) @HiveField(16) List<CodeableConcept>? category,
-    @HiveField(17) required CodeableConcept code,
-    @HiveField(18) Reference? subject,
-    @HiveField(19) Reference? encounter,
-    @HiveField(20) FhirDateTime? effectiveDateTime,
-    @JsonKey(name: '_effectiveDateTime')
-    @HiveField(21)
-        Element? effectiveDateTimeElement,
-    @HiveField(22) Period? effectivePeriod,
-    @HiveField(23) Instant? issued,
-    @JsonKey(name: '_issued') @HiveField(24) Element? issuedElement,
-    @HiveField(25) List<Reference>? performer,
-    @HiveField(26) List<Reference>? resultsInterpreter,
-    @HiveField(27) List<Reference>? specimen,
-    @HiveField(28) List<Reference>? result,
-    @HiveField(29) List<Reference>? imagingStudy,
-    @HiveField(30) List<DiagnosticReportMedia>? media,
-    @HiveField(31) String? conclusion,
-    @JsonKey(name: '_conclusion') @HiveField(32) Element? conclusionElement,
-    @HiveField(33) List<CodeableConcept>? conclusionCode,
-    @HiveField(34) List<Attachment>? presentedForm,
-  }) = _DiagnosticReport;
-  factory DiagnosticReportMedia({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? comment,
-    @JsonKey(name: '_comment') Element? commentElement,
-    required Reference link,
-  }) = _DiagnosticReportMedia;
-  factory ImagingStudy({
-    @Default(R4ResourceType.ImagingStudy)
-    @JsonKey(unknownEnumValue: R4ResourceType.ImagingStudy)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) Code? status,
-    @JsonKey(name: '_status') @HiveField(13) Element? statusElement,
-    @HiveField(14) List<Coding>? modality,
-    @HiveField(15) required Reference subject,
-    @HiveField(16) Reference? encounter,
-    @HiveField(17) FhirDateTime? started,
-    @JsonKey(name: '_started') @HiveField(18) Element? startedElement,
-    @HiveField(19) List<Reference>? basedOn,
-    @HiveField(20) Reference? referrer,
-    @HiveField(21) List<Reference>? interpreter,
-    @HiveField(22) List<Reference>? endpoint,
-    @HiveField(23) UnsignedInt? numberOfSeries,
-    @JsonKey(name: '_numberOfSeries')
-    @HiveField(24)
-        Element? numberOfSeriesElement,
-    @HiveField(25) UnsignedInt? numberOfInstances,
-    @JsonKey(name: '_numberOfInstances')
-    @HiveField(26)
-        Element? numberOfInstancesElement,
-    @HiveField(27) Reference? procedureReference,
-    @HiveField(28) List<CodeableConcept>? procedureCode,
-    @HiveField(29) Reference? location,
-    @HiveField(30) List<CodeableConcept>? reasonCode,
-    @HiveField(31) List<Reference>? reasonReference,
-    @HiveField(32) List<Annotation>? note,
-    @HiveField(33) String? description,
-    @JsonKey(name: '_description') @HiveField(34) Element? descriptionElement,
-    @HiveField(35) List<ImagingStudySeries>? series,
-  }) = _ImagingStudy;
-  factory ImagingStudySeries({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    FhirId? uid,
-    @JsonKey(name: '_uid') Element? uidElement,
-    UnsignedInt? number,
-    @JsonKey(name: '_number') Element? numberElement,
-    required Coding modality,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    UnsignedInt? numberOfInstances,
-    @JsonKey(name: '_numberOfInstances') Element? numberOfInstancesElement,
-    List<Reference>? endpoint,
-    Coding? bodySite,
-    Coding? laterality,
-    List<Reference>? specimen,
-    FhirDateTime? started,
-    @JsonKey(name: '_started') Element? startedElement,
-    List<ImagingStudyPerformer>? performer,
-    List<ImagingStudyInstance>? instance,
-  }) = _ImagingStudySeries;
-  factory ImagingStudyPerformer({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? function,
-    required Reference actor,
-  }) = _ImagingStudyPerformer;
-  factory ImagingStudyInstance({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    FhirId? uid,
-    @JsonKey(name: '_uid') Element? uidElement,
-    required Coding sopClass,
-    UnsignedInt? number,
-    @JsonKey(name: '_number') Element? numberElement,
-    String? title,
-    @JsonKey(name: '_title') Element? titleElement,
-  }) = _ImagingStudyInstance;
-  factory Media({
-    @Default(R4ResourceType.Media)
-    @JsonKey(unknownEnumValue: R4ResourceType.Media)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) List<Reference>? basedOn,
-    @HiveField(13) List<Reference>? partOf,
-    @HiveField(14) Code? status,
-    @JsonKey(name: '_status') @HiveField(15) Element? statusElement,
-    @HiveField(16) CodeableConcept? type,
-    @HiveField(17) CodeableConcept? modality,
-    @HiveField(18) CodeableConcept? view,
-    @HiveField(19) Reference? subject,
-    @HiveField(20) Reference? encounter,
-    @HiveField(21) FhirDateTime? createdDateTime,
-    @JsonKey(name: '_createdDateTime')
-    @HiveField(22)
-        Element? createdDateTimeElement,
-    @HiveField(23) Period? createdPeriod,
-    @HiveField(24) Instant? issued,
-    @JsonKey(name: '_issued') @HiveField(25) Element? issuedElement,
-    @JsonKey(name: 'operator') @HiveField(26) Reference? operator_,
-    @HiveField(27) List<CodeableConcept>? reasonCode,
-    @HiveField(28) CodeableConcept? bodySite,
-    @HiveField(29) String? deviceName,
-    @JsonKey(name: '_deviceName') @HiveField(30) Element? deviceNameElement,
-    @HiveField(31) Reference? device,
-    @HiveField(32) PositiveInt? height,
-    @JsonKey(name: '_height') @HiveField(33) Element? heightElement,
-    @HiveField(34) PositiveInt? width,
-    @JsonKey(name: '_width') @HiveField(35) Element? widthElement,
-    @HiveField(36) PositiveInt? frames,
-    @JsonKey(name: '_frames') @HiveField(37) Element? framesElement,
-    @HiveField(38) Decimal? duration,
-    @JsonKey(name: '_duration') @HiveField(39) Element? durationElement,
-    @HiveField(40) required Attachment content,
-    @HiveField(41) List<Annotation>? note,
-  }) = _Media;
-  factory MolecularSequence({
-    @Default(R4ResourceType.MolecularSequence)
-    @JsonKey(unknownEnumValue: R4ResourceType.MolecularSequence)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) Code? type,
-    @JsonKey(name: '_type') @HiveField(13) Element? typeElement,
-    @HiveField(14) Integer? coordinateSystem,
-    @JsonKey(name: '_coordinateSystem')
-    @HiveField(15)
-        Element? coordinateSystemElement,
-    @HiveField(16) Reference? patient,
-    @HiveField(17) Reference? specimen,
-    @HiveField(18) Reference? device,
-    @HiveField(19) Reference? performer,
-    @HiveField(20) Quantity? quantity,
-    @HiveField(21) MolecularSequenceReferenceSeq? referenceSeq,
-    @HiveField(22) List<MolecularSequenceVariant>? variant,
-    @HiveField(23) String? observedSeq,
-    @JsonKey(name: '_observedSeq') @HiveField(24) Element? observedSeqElement,
-    @HiveField(25) List<MolecularSequenceQuality>? quality,
-    @HiveField(26) Integer? readCoverage,
-    @JsonKey(name: '_readCoverage') @HiveField(27) Element? readCoverageElement,
-    @HiveField(28) List<MolecularSequenceRepository>? repository,
-    @HiveField(29) List<Reference>? pointer,
-    @HiveField(30) List<MolecularSequenceStructureVariant>? structureVariant,
-  }) = _MolecularSequence;
-  factory MolecularSequenceReferenceSeq({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? chromosome,
-    String? genomeBuild,
-    @JsonKey(name: '_genomeBuild') Element? genomeBuildElement,
-    Code? orientation,
-    @JsonKey(name: '_orientation') Element? orientationElement,
-    CodeableConcept? referenceSeqId,
-    Reference? referenceSeqPointer,
-    String? referenceSeqString,
-    @JsonKey(name: '_referenceSeqString') Element? referenceSeqStringElement,
-    Code? strand,
-    @JsonKey(name: '_strand') Element? strandElement,
-    Integer? windowStart,
-    @JsonKey(name: '_windowStart') Element? windowStartElement,
-    Integer? windowEnd,
-    @JsonKey(name: '_windowEnd') Element? windowEndElement,
-  }) = _MolecularSequenceReferenceSeq;
-  factory MolecularSequenceVariant({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Integer? start,
-    @JsonKey(name: '_start') Element? startElement,
-    Integer? end,
-    @JsonKey(name: '_end') Element? endElement,
-    String? observedAllele,
-    @JsonKey(name: '_observedAllele') Element? observedAlleleElement,
-    String? referenceAllele,
-    @JsonKey(name: '_referenceAllele') Element? referenceAlleleElement,
-    String? cigar,
-    @JsonKey(name: '_cigar') Element? cigarElement,
-    Reference? variantPointer,
-  }) = _MolecularSequenceVariant;
-  factory MolecularSequenceQuality({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    CodeableConcept? standardSequence,
-    Integer? start,
-    @JsonKey(name: '_start') Element? startElement,
-    Integer? end,
-    @JsonKey(name: '_end') Element? endElement,
-    Quantity? score,
-    CodeableConcept? method,
-    Decimal? truthTP,
-    @JsonKey(name: '_truthTP') Element? truthTPElement,
-    Decimal? queryTP,
-    @JsonKey(name: '_queryTP') Element? queryTPElement,
-    Decimal? truthFN,
-    @JsonKey(name: '_truthFN') Element? truthFNElement,
-    Decimal? queryFP,
-    @JsonKey(name: '_queryFP') Element? queryFPElement,
-    Decimal? gtFP,
-    @JsonKey(name: '_gtFP') Element? gtFPElement,
-    Decimal? precision,
-    @JsonKey(name: '_precision') Element? precisionElement,
-    Decimal? recall,
-    @JsonKey(name: '_recall') Element? recallElement,
-    Decimal? fScore,
-    @JsonKey(name: '_fScore') Element? fScoreElement,
-    MolecularSequenceRoc? roc,
-  }) = _MolecularSequenceQuality;
-  factory MolecularSequenceRoc({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Integer>? score,
-    @JsonKey(name: '_score') List<Element?>? scoreElement,
-    List<Integer>? numTP,
-    @JsonKey(name: '_numTP') List<Element?>? numTPElement,
-    List<Integer>? numFP,
-    @JsonKey(name: '_numFP') List<Element?>? numFPElement,
-    List<Integer>? numFN,
-    @JsonKey(name: '_numFN') List<Element?>? numFNElement,
-    List<Decimal>? precision,
-    @JsonKey(name: '_precision') List<Element?>? precisionElement,
-    List<Decimal>? sensitivity,
-    @JsonKey(name: '_sensitivity') List<Element?>? sensitivityElement,
-    List<Decimal>? fMeasure,
-    @JsonKey(name: '_fMeasure') List<Element?>? fMeasureElement,
-  }) = _MolecularSequenceRoc;
-  factory MolecularSequenceRepository({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    FhirUri? url,
-    @JsonKey(name: '_url') Element? urlElement,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? datasetId,
-    @JsonKey(name: '_datasetId') Element? datasetIdElement,
-    String? variantsetId,
-    @JsonKey(name: '_variantsetId') Element? variantsetIdElement,
-    String? readsetId,
-    @JsonKey(name: '_readsetId') Element? readsetIdElement,
-  }) = _MolecularSequenceRepository;
-  factory MolecularSequenceStructureVariant({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? variantType,
-    Boolean? exact,
-    @JsonKey(name: '_exact') Element? exactElement,
-    Integer? length,
-    @JsonKey(name: '_length') Element? lengthElement,
-    MolecularSequenceOuter? outer,
-    MolecularSequenceInner? inner,
-  }) = _MolecularSequenceStructureVariant;
-  factory MolecularSequenceOuter({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Integer? start,
-    @JsonKey(name: '_start') Element? startElement,
-    Integer? end,
-    @JsonKey(name: '_end') Element? endElement,
-  }) = _MolecularSequenceOuter;
-  factory MolecularSequenceInner({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Integer? start,
-    @JsonKey(name: '_start') Element? startElement,
-    Integer? end,
-    @JsonKey(name: '_end') Element? endElement,
-  }) = _MolecularSequenceInner;
-  factory Observation({
-    @Default(R4ResourceType.Observation)
-    @JsonKey(unknownEnumValue: R4ResourceType.Observation)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) List<Reference>? basedOn,
-    @HiveField(13) List<Reference>? partOf,
-    @HiveField(14) Code? status,
-    @JsonKey(name: '_status') @HiveField(15) Element? statusElement,
-    @HiveField(16) List<CodeableConcept>? category,
-    @HiveField(17) required CodeableConcept code,
-    @HiveField(18) Reference? subject,
-    @HiveField(19) List<Reference>? focus,
-    @HiveField(20) Reference? encounter,
-    @HiveField(21) FhirDateTime? effectiveDateTime,
-    @JsonKey(name: '_effectiveDateTime')
-    @HiveField(22)
-        Element? effectiveDateTimeElement,
-    @HiveField(23) Period? effectivePeriod,
-    @HiveField(24) Timing? effectiveTiming,
-    @HiveField(25) Instant? effectiveInstant,
-    @JsonKey(name: '_effectiveInstant')
-    @HiveField(26)
-        Element? effectiveInstantElement,
-    @HiveField(27) Instant? issued,
-    @JsonKey(name: '_issued') @HiveField(28) Element? issuedElement,
-    @HiveField(29) List<Reference>? performer,
-    @HiveField(30) Quantity? valueQuantity,
-    @HiveField(31) CodeableConcept? valueCodeableConcept,
-    @HiveField(32) String? valueString,
-    @JsonKey(name: '_valueString') @HiveField(33) Element? valueStringElement,
-    @HiveField(34) Boolean? valueBoolean,
-    @JsonKey(name: '_valueBoolean') @HiveField(35) Element? valueBooleanElement,
-    @HiveField(36) Integer? valueInteger,
-    @JsonKey(name: '_valueInteger') @HiveField(37) Element? valueIntegerElement,
-    @HiveField(38) Range? valueRange,
-    @HiveField(39) Ratio? valueRatio,
-    @HiveField(40) SampledData? valueSampledData,
-    @HiveField(41) Time? valueTime,
-    @JsonKey(name: '_valueTime') @HiveField(42) Element? valueTimeElement,
-    @HiveField(43) FhirDateTime? valueDateTime,
-    @JsonKey(name: '_valueDateTime')
-    @HiveField(44)
-        Element? valueDateTimeElement,
-    @HiveField(45) Period? valuePeriod,
-    @HiveField(46) CodeableConcept? dataAbsentReason,
-    @HiveField(47) List<CodeableConcept>? interpretation,
-    @HiveField(48) List<Annotation>? note,
-    @HiveField(49) CodeableConcept? bodySite,
-    @HiveField(50) CodeableConcept? method,
-    @HiveField(51) Reference? specimen,
-    @HiveField(52) Reference? device,
-    @HiveField(53) List<ObservationReferenceRange>? referenceRange,
-    @HiveField(54) List<Reference>? hasMember,
-    @HiveField(55) List<Reference>? derivedFrom,
-    @HiveField(56) List<ObservationComponent>? component,
-  }) = _Observation;
-  factory ObservationReferenceRange({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Quantity? low,
-    Quantity? high,
-    CodeableConcept? type,
-    List<CodeableConcept>? appliesTo,
-    Range? age,
-    String? text,
-    @JsonKey(name: '_text') Element? textElement,
-  }) = _ObservationReferenceRange;
-  factory ObservationComponent({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept code,
-    Quantity? valueQuantity,
-    CodeableConcept? valueCodeableConcept,
-    String? valueString,
-    @JsonKey(name: '_valueString') Element? valueStringElement,
-    Boolean? valueBoolean,
-    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-    Integer? valueInteger,
-    @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-    Range? valueRange,
-    Ratio? valueRatio,
-    SampledData? valueSampledData,
-    Time? valueTime,
-    @JsonKey(name: '_valueTime') Element? valueTimeElement,
-    FhirDateTime? valueDateTime,
-    @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-    Period? valuePeriod,
-    CodeableConcept? dataAbsentReason,
-    List<CodeableConcept>? interpretation,
-    List<ObservationReferenceRange>? referenceRange,
-  }) = _ObservationComponent;
-  factory QuestionnaireResponse({
-    @Default(R4ResourceType.QuestionnaireResponse)
-    @JsonKey(unknownEnumValue: R4ResourceType.QuestionnaireResponse)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) Identifier? identifier,
-    @HiveField(12) List<Reference>? basedOn,
-    @HiveField(13) List<Reference>? partOf,
-    @HiveField(14) Canonical? questionnaire,
-    @JsonKey(name: '_questionnaire')
-    @HiveField(15)
-        Element? questionnaireElement,
-    @HiveField(16) Code? status,
-    @JsonKey(name: '_status') @HiveField(17) Element? statusElement,
-    @HiveField(18) Reference? subject,
-    @HiveField(19) Reference? encounter,
-    @HiveField(20) FhirDateTime? authored,
-    @JsonKey(name: '_authored') @HiveField(21) Element? authoredElement,
-    @HiveField(22) Reference? author,
-    @HiveField(23) Reference? source,
-    @HiveField(24) List<QuestionnaireResponseItem>? item,
-  }) = _QuestionnaireResponse;
-  factory QuestionnaireResponseItem({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? linkId,
-    @JsonKey(name: '_linkId') Element? linkIdElement,
-    FhirUri? definition,
-    @JsonKey(name: '_definition') Element? definitionElement,
-    String? text,
-    @JsonKey(name: '_text') Element? textElement,
-    List<QuestionnaireResponseAnswer>? answer,
-    List<QuestionnaireResponseItem>? item,
-  }) = _QuestionnaireResponseItem;
-  factory QuestionnaireResponseAnswer({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Boolean? valueBoolean,
-    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-    Decimal? valueDecimal,
-    @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-    Integer? valueInteger,
-    @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-    Date? valueDate,
-    @JsonKey(name: '_valueDate') Element? valueDateElement,
-    FhirDateTime? valueDateTime,
-    @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-    Time? valueTime,
-    @JsonKey(name: '_valueTime') Element? valueTimeElement,
-    String? valueString,
-    @JsonKey(name: '_valueString') Element? valueStringElement,
-    FhirUri? valueUri,
-    @JsonKey(name: '_valueUri') Element? valueUriElement,
-    Attachment? valueAttachment,
-    Coding? valueCoding,
-    Quantity? valueQuantity,
-    Reference? valueReference,
-    List<QuestionnaireResponseItem>? item,
-  }) = _QuestionnaireResponseAnswer;
-  factory Specimen({
-    @Default(R4ResourceType.Specimen)
-    @JsonKey(unknownEnumValue: R4ResourceType.Specimen)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) Identifier? accessionIdentifier,
-    @HiveField(13) Code? status,
-    @JsonKey(name: '_status') @HiveField(14) Element? statusElement,
-    @HiveField(15) CodeableConcept? type,
-    @HiveField(16) Reference? subject,
-    @HiveField(17) FhirDateTime? receivedTime,
-    @JsonKey(name: '_receivedTime') @HiveField(18) Element? receivedTimeElement,
-    @HiveField(19) List<Reference>? parent,
-    @HiveField(20) List<Reference>? request,
-    @HiveField(21) SpecimenCollection? collection,
-    @HiveField(22) List<SpecimenProcessing>? processing,
-    @HiveField(23) List<SpecimenContainer>? container,
-    @HiveField(24) List<CodeableConcept>? condition,
-    @HiveField(25) @HiveField(26) List<Annotation>? note,
-  }) = _Specimen;
-  factory SpecimenCollection({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Reference? collector,
-    FhirDateTime? collectedDateTime,
-    @JsonKey(name: '_collectedDateTime') Element? collectedDateTimeElement,
-    Period? collectedPeriod,
-    FhirDuration? duration,
-    Quantity? quantity,
-    CodeableConcept? method,
-    CodeableConcept? bodySite,
-    CodeableConcept? fastingStatusCodeableConcept,
-    FhirDuration? fastingStatusDuration,
-  }) = _SpecimenCollection;
-  factory SpecimenProcessing({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    CodeableConcept? procedure,
-    List<Reference>? additive,
-    FhirDateTime? timeDateTime,
-    @JsonKey(name: '_timeDateTime') Element? timeDateTimeElement,
-    Period? timePeriod,
-  }) = _SpecimenProcessing;
-  factory SpecimenContainer({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    CodeableConcept? type,
-    Quantity? capacity,
-    Quantity? specimenQuantity,
-    CodeableConcept? additiveCodeableConcept,
-    Reference? additiveReference,
-  }) = _SpecimenContainer;
+import '../../../../r4.dart';
+
+class BodyStructure {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  Boolean? active;
+  Element? activeElement;
+  CodeableConcept? morphology;
+  CodeableConcept? location;
+  List<CodeableConcept>? locationQualifier;
+  String? description;
+  Element? descriptionElement;
+  List<Attachment>? image;
+  Reference patient;
+}
+
+class DiagnosticReport {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  List<Reference>? basedOn;
+  Code? status;
+  Element? statusElement;
+  List<CodeableConcept>? category;
+  CodeableConcept code;
+  Reference? subject;
+  Reference? encounter;
+  FhirDateTime? effectiveDateTime;
+
+  Element? effectiveDateTimeElement;
+  Period? effectivePeriod;
+  Instant? issued;
+  Element? issuedElement;
+  List<Reference>? performer;
+  List<Reference>? resultsInterpreter;
+  List<Reference>? specimen;
+  List<Reference>? result;
+  List<Reference>? imagingStudy;
+  List<DiagnosticReportMedia>? media;
+  String? conclusion;
+  Element? conclusionElement;
+  List<CodeableConcept>? conclusionCode;
+  List<Attachment>? presentedForm;
+}
+
+class DiagnosticReportMedia {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? comment;
+  Element? commentElement;
+  Reference link;
+}
+
+class ImagingStudy {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  Code? status;
+  Element? statusElement;
+  List<Coding>? modality;
+  Reference subject;
+  Reference? encounter;
+  FhirDateTime? started;
+  Element? startedElement;
+  List<Reference>? basedOn;
+  Reference? referrer;
+  List<Reference>? interpreter;
+  List<Reference>? endpoint;
+  UnsignedInt? numberOfSeries;
+
+  Element? numberOfSeriesElement;
+  UnsignedInt? numberOfInstances;
+
+  Element? numberOfInstancesElement;
+  Reference? procedureReference;
+  List<CodeableConcept>? procedureCode;
+  Reference? location;
+  List<CodeableConcept>? reasonCode;
+  List<Reference>? reasonReference;
+  List<Annotation>? note;
+  String? description;
+  Element? descriptionElement;
+  List<ImagingStudySeries>? series;
+}
+
+class ImagingStudySeries {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirId? uid;
+  Element? uidElement;
+  UnsignedInt? number;
+  Element? numberElement;
+  Coding modality;
+  String? description;
+  Element? descriptionElement;
+  UnsignedInt? numberOfInstances;
+  Element? numberOfInstancesElement;
+  List<Reference>? endpoint;
+  Coding? bodySite;
+  Coding? laterality;
+  List<Reference>? specimen;
+  FhirDateTime? started;
+  Element? startedElement;
+  List<ImagingStudyPerformer>? performer;
+  List<ImagingStudyInstance>? instance;
+}
+
+class ImagingStudyPerformer {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? function;
+  Reference actor;
+}
+
+class ImagingStudyInstance {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirId? uid;
+  Element? uidElement;
+  Coding sopClass;
+  UnsignedInt? number;
+  Element? numberElement;
+  String? title;
+  Element? titleElement;
+}
+
+class Media {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  List<Reference>? basedOn;
+  List<Reference>? partOf;
+  Code? status;
+  Element? statusElement;
+  CodeableConcept? type;
+  CodeableConcept? modality;
+  CodeableConcept? view;
+  Reference? subject;
+  Reference? encounter;
+  FhirDateTime? createdDateTime;
+
+  Element? createdDateTimeElement;
+  Period? createdPeriod;
+  Instant? issued;
+  Element? issuedElement;
+  Reference? operator_;
+  List<CodeableConcept>? reasonCode;
+  CodeableConcept? bodySite;
+  String? deviceName;
+  Element? deviceNameElement;
+  Reference? device;
+  PositiveInt? height;
+  Element? heightElement;
+  PositiveInt? width;
+  Element? widthElement;
+  PositiveInt? frames;
+  Element? framesElement;
+  Decimal? duration;
+  Element? durationElement;
+  Attachment content;
+  List<Annotation>? note;
+}
+
+class MolecularSequence {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  Code? type;
+  Element? typeElement;
+  Integer? coordinateSystem;
+
+  Element? coordinateSystemElement;
+  Reference? patient;
+  Reference? specimen;
+  Reference? device;
+  Reference? performer;
+  Quantity? quantity;
+  MolecularSequenceReferenceSeq? referenceSeq;
+  List<MolecularSequenceVariant>? variant;
+  String? observedSeq;
+  Element? observedSeqElement;
+  List<MolecularSequenceQuality>? quality;
+  Integer? readCoverage;
+  Element? readCoverageElement;
+  List<MolecularSequenceRepository>? repository;
+  List<Reference>? pointer;
+  List<MolecularSequenceStructureVariant>? structureVariant;
+}
+
+class MolecularSequenceReferenceSeq {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? chromosome;
+  String? genomeBuild;
+  Element? genomeBuildElement;
+  Code? orientation;
+  Element? orientationElement;
+  CodeableConcept? referenceSeqId;
+  Reference? referenceSeqPointer;
+  String? referenceSeqString;
+  Element? referenceSeqStringElement;
+  Code? strand;
+  Element? strandElement;
+  Integer? windowStart;
+  Element? windowStartElement;
+  Integer? windowEnd;
+  Element? windowEndElement;
+}
+
+class MolecularSequenceVariant {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Integer? start;
+  Element? startElement;
+  Integer? end;
+  Element? endElement;
+  String? observedAllele;
+  Element? observedAlleleElement;
+  String? referenceAllele;
+  Element? referenceAlleleElement;
+  String? cigar;
+  Element? cigarElement;
+  Reference? variantPointer;
+}
+
+class MolecularSequenceQuality {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code? type;
+  Element? typeElement;
+  CodeableConcept? standardSequence;
+  Integer? start;
+  Element? startElement;
+  Integer? end;
+  Element? endElement;
+  Quantity? score;
+  CodeableConcept? method;
+  Decimal? truthTP;
+  Element? truthTPElement;
+  Decimal? queryTP;
+  Element? queryTPElement;
+  Decimal? truthFN;
+  Element? truthFNElement;
+  Decimal? queryFP;
+  Element? queryFPElement;
+  Decimal? gtFP;
+  Element? gtFPElement;
+  Decimal? precision;
+  Element? precisionElement;
+  Decimal? recall;
+  Element? recallElement;
+  Decimal? fScore;
+  Element? fScoreElement;
+  MolecularSequenceRoc? roc;
+}
+
+class MolecularSequenceRoc {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Integer>? score;
+  List<Element?>? scoreElement;
+  List<Integer>? numTP;
+  List<Element?>? numTPElement;
+  List<Integer>? numFP;
+  List<Element?>? numFPElement;
+  List<Integer>? numFN;
+  List<Element?>? numFNElement;
+  List<Decimal>? precision;
+  List<Element?>? precisionElement;
+  List<Decimal>? sensitivity;
+  List<Element?>? sensitivityElement;
+  List<Decimal>? fMeasure;
+  List<Element?>? fMeasureElement;
+}
+
+class MolecularSequenceRepository {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code? type;
+  Element? typeElement;
+  FhirUri? url;
+  Element? urlElement;
+  String? name;
+  Element? nameElement;
+  String? datasetId;
+  Element? datasetIdElement;
+  String? variantsetId;
+  Element? variantsetIdElement;
+  String? readsetId;
+  Element? readsetIdElement;
+}
+
+class MolecularSequenceStructureVariant {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? variantType;
+  Boolean? exact;
+  Element? exactElement;
+  Integer? length;
+  Element? lengthElement;
+  MolecularSequenceOuter? outer;
+  MolecularSequenceInner? inner;
+}
+
+class MolecularSequenceOuter {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Integer? start;
+  Element? startElement;
+  Integer? end;
+  Element? endElement;
+}
+
+class MolecularSequenceInner {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Integer? start;
+  Element? startElement;
+  Integer? end;
+  Element? endElement;
+}
+
+class Observation {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  List<Reference>? basedOn;
+  List<Reference>? partOf;
+  Code? status;
+  Element? statusElement;
+  List<CodeableConcept>? category;
+  CodeableConcept code;
+  Reference? subject;
+  List<Reference>? focus;
+  Reference? encounter;
+  FhirDateTime? effectiveDateTime;
+
+  Element? effectiveDateTimeElement;
+  Period? effectivePeriod;
+  Timing? effectiveTiming;
+  Instant? effectiveInstant;
+
+  Element? effectiveInstantElement;
+  Instant? issued;
+  Element? issuedElement;
+  List<Reference>? performer;
+  Quantity? valueQuantity;
+  CodeableConcept? valueCodeableConcept;
+  String? valueString;
+  Element? valueStringElement;
+  Boolean? valueBoolean;
+  Element? valueBooleanElement;
+  Integer? valueInteger;
+  Element? valueIntegerElement;
+  Range? valueRange;
+  Ratio? valueRatio;
+  SampledData? valueSampledData;
+  Time? valueTime;
+  Element? valueTimeElement;
+  FhirDateTime? valueDateTime;
+
+  Element? valueDateTimeElement;
+  Period? valuePeriod;
+  CodeableConcept? dataAbsentReason;
+  List<CodeableConcept>? interpretation;
+  List<Annotation>? note;
+  CodeableConcept? bodySite;
+  CodeableConcept? method;
+  Reference? specimen;
+  Reference? device;
+  List<ObservationReferenceRange>? referenceRange;
+  List<Reference>? hasMember;
+  List<Reference>? derivedFrom;
+  List<ObservationComponent>? component;
+}
+
+class ObservationReferenceRange {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Quantity? low;
+  Quantity? high;
+  CodeableConcept? type;
+  List<CodeableConcept>? appliesTo;
+  Range? age;
+  String? text;
+  Element? textElement;
+}
+
+class ObservationComponent {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept code;
+  Quantity? valueQuantity;
+  CodeableConcept? valueCodeableConcept;
+  String? valueString;
+  Element? valueStringElement;
+  Boolean? valueBoolean;
+  Element? valueBooleanElement;
+  Integer? valueInteger;
+  Element? valueIntegerElement;
+  Range? valueRange;
+  Ratio? valueRatio;
+  SampledData? valueSampledData;
+  Time? valueTime;
+  Element? valueTimeElement;
+  FhirDateTime? valueDateTime;
+  Element? valueDateTimeElement;
+  Period? valuePeriod;
+  CodeableConcept? dataAbsentReason;
+  List<CodeableConcept>? interpretation;
+  List<ObservationReferenceRange>? referenceRange;
+}
+
+class QuestionnaireResponse {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Identifier? identifier;
+  List<Reference>? basedOn;
+  List<Reference>? partOf;
+  Canonical? questionnaire;
+
+  Element? questionnaireElement;
+  Code? status;
+  Element? statusElement;
+  Reference? subject;
+  Reference? encounter;
+  FhirDateTime? authored;
+  Element? authoredElement;
+  Reference? author;
+  Reference? source;
+  List<QuestionnaireResponseItem>? item;
+}
+
+class QuestionnaireResponseItem {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? linkId;
+  Element? linkIdElement;
+  FhirUri? definition;
+  Element? definitionElement;
+  String? text;
+  Element? textElement;
+  List<QuestionnaireResponseAnswer>? answer;
+  List<QuestionnaireResponseItem>? item;
+}
+
+class QuestionnaireResponseAnswer {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Boolean? valueBoolean;
+  Element? valueBooleanElement;
+  Decimal? valueDecimal;
+  Element? valueDecimalElement;
+  Integer? valueInteger;
+  Element? valueIntegerElement;
+  Date? valueDate;
+  Element? valueDateElement;
+  FhirDateTime? valueDateTime;
+  Element? valueDateTimeElement;
+  Time? valueTime;
+  Element? valueTimeElement;
+  String? valueString;
+  Element? valueStringElement;
+  FhirUri? valueUri;
+  Element? valueUriElement;
+  Attachment? valueAttachment;
+  Coding? valueCoding;
+  Quantity? valueQuantity;
+  Reference? valueReference;
+  List<QuestionnaireResponseItem>? item;
+}
+
+class Specimen {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  Identifier? accessionIdentifier;
+  Code? status;
+  Element? statusElement;
+  CodeableConcept? type;
+  Reference? subject;
+  FhirDateTime? receivedTime;
+  Element? receivedTimeElement;
+  List<Reference>? parent;
+  List<Reference>? request;
+  SpecimenCollection? collection;
+  List<SpecimenProcessing>? processing;
+  List<SpecimenContainer>? container;
+  List<CodeableConcept>? condition;
+  List<Annotation>? note;
+}
+
+class SpecimenCollection {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Reference? collector;
+  FhirDateTime? collectedDateTime;
+  Element? collectedDateTimeElement;
+  Period? collectedPeriod;
+  FhirDuration? duration;
+  Quantity? quantity;
+  CodeableConcept? method;
+  CodeableConcept? bodySite;
+  CodeableConcept? fastingStatusCodeableConcept;
+  FhirDuration? fastingStatusDuration;
+}
+
+class SpecimenProcessing {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? description;
+  Element? descriptionElement;
+  CodeableConcept? procedure;
+  List<Reference>? additive;
+  FhirDateTime? timeDateTime;
+  Element? timeDateTimeElement;
+  Period? timePeriod;
+}
+
+class SpecimenContainer {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  String? description;
+  Element? descriptionElement;
+  CodeableConcept? type;
+  Quantity? capacity;
+  Quantity? specimenQuantity;
+  CodeableConcept? additiveCodeableConcept;
+  Reference? additiveReference;
+}

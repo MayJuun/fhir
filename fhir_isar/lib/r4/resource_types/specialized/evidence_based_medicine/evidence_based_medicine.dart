@@ -1,849 +1,867 @@
-  factory Citation({
-    @HiveField(0) @Default(R4ResourceType.Citation) R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) FhirUri? url,
-    @HiveField(12) @JsonKey(name: '_url') Element? urlElement,
-    @HiveField(13) List<Identifier>? identifier,
-    @HiveField(14) String? version,
-    @HiveField(15) @JsonKey(name: '_version') Element? versionElement,
-    @HiveField(16) String? name,
-    @HiveField(17) @JsonKey(name: '_name') Element? nameElement,
-    @HiveField(18) String? title,
-    @HiveField(19) @JsonKey(name: '_title') Element? titleElement,
-    @HiveField(20) Code? status,
-    @HiveField(21) @JsonKey(name: '_status') Element? statusElement,
-    @HiveField(22) Boolean? experimental,
-    @HiveField(23) @JsonKey(name: '_experimental') Element? experimentalElement,
-    @HiveField(24) FhirDateTime? date,
-    @HiveField(25) @JsonKey(name: '_date') Element? dateElement,
-    @HiveField(26) String? publisher,
-    @HiveField(27) @JsonKey(name: '_publisher') Element? publisherElement,
-    @HiveField(28) List<ContactDetail>? contact,
-    @HiveField(29) Markdown? description,
-    @HiveField(30) @JsonKey(name: '_description') Element? descriptionElement,
-    @HiveField(31) List<UsageContext>? useContext,
-    @HiveField(32) List<CodeableConcept>? jurisdiction,
-    @HiveField(33) Markdown? purpose,
-    @HiveField(34) @JsonKey(name: '_purpose') Element? purposeElement,
-    @HiveField(35) Markdown? copyright,
-    @HiveField(36) @JsonKey(name: '_copyright') Element? copyrightElement,
-    @HiveField(37) Date? approvalDate,
-    @HiveField(38) @JsonKey(name: '_approvalDate') Element? approvalDateElement,
-    @HiveField(39) Date? lastReviewDate,
-    @HiveField(40)
-    @JsonKey(name: '_lastReviewDate')
-        Element? lastReviewDateElement,
-    @HiveField(41) Period? effectivePeriod,
-    @HiveField(42) @HiveField(43) List<ContactDetail>? author,
-    @HiveField(44) List<ContactDetail>? editor,
-    @HiveField(45) List<ContactDetail>? reviewer,
-    @HiveField(46) List<ContactDetail>? endorser,
-    @HiveField(47) @HiveField(48) List<CitationSummary>? summary,
-    @HiveField(49) List<CitationClassification>? classification,
-    @HiveField(50) List<Annotation>? note,
-    @HiveField(51) List<CodeableConcept>? currentState,
-    @HiveField(52) List<CitationStatusDate>? statusDate,
-    @HiveField(53) List<CitationRelatesTo>? relatesTo,
-    @HiveField(54) CitationCitedArtifact? citedArtifact,
-  }) = _Citation;
-  factory CitationSummary({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? style,
-    Markdown? text,
-    @JsonKey(name: '_text') Element? textElement,
-  }) = _CitationSummary;
-  factory CitationClassification({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? type,
-    List<CodeableConcept>? classifier,
-  }) = _CitationClassification;
-  factory CitationStatusDate({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept activity,
-    Boolean? actual,
-    @JsonKey(name: '_actual') Element? actualElement,
-    required Period period,
-  }) = _CitationStatusDate;
-  factory CitationRelatesTo({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept relationshipType,
-    List<CodeableConcept>? targetClassifier,
-    FhirUri? targetUri,
-    @JsonKey(name: '_targetUri') Element? targetUriElement,
-    Identifier? targetIdentifier,
-    Reference? targetReference,
-    Attachment? targetAttachment,
-  }) = _CitationRelatesTo;
-  factory CitationCitedArtifact({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    List<Identifier>? relatedIdentifier,
-    FhirDateTime? dateAccessed,
-    @JsonKey(name: '_dateAccessed') Element? dateAccessedElement,
-    CitationVersion? version,
-    List<CodeableConcept>? currentState,
-    List<CitationStatusDate1>? statusDate,
-    List<CitationTitle>? title,
-    @JsonKey(name: 'abstract') List<CitationAbstract>? abstract_,
-    @JsonKey(name: 'part') CitationPart? part_,
-    List<CitationRelatesTo1>? relatesTo,
-    List<CitationPublicationForm>? publicationForm,
-    List<CitationWebLocation>? webLocation,
-    List<CitationClassification1>? classification,
-    CitationContributorship? contributorship,
-    List<Annotation>? note,
-  }) = _CitationCitedArtifact;
-  factory CitationVersion({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? value,
-    @JsonKey(name: '_value') Element? valueElement,
-    Reference? baseCitation,
-  }) = _CitationVersion;
-  factory CitationStatusDate1({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept activity,
-    Boolean? actual,
-    @JsonKey(name: '_actual') Element? actualElement,
-    required Period period,
-  }) = _CitationStatusDate1;
-  factory CitationTitle({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<CodeableConcept>? type,
-    CodeableConcept? language,
-    Markdown? text,
-    @JsonKey(name: '_text') Element? textElement,
-  }) = _CitationTitle;
-  factory CitationAbstract({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? type,
-    CodeableConcept? language,
-    Markdown? text,
-    @JsonKey(name: '_text') Element? textElement,
-    Markdown? copyright,
-    @JsonKey(name: '_copyright') Element? copyrightElement,
-  }) = _CitationAbstract;
-  factory CitationPart({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? type,
-    String? value,
-    @JsonKey(name: '_value') Element? valueElement,
-    Reference? baseCitation,
-  }) = _CitationPart;
-  factory CitationRelatesTo1({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept relationshipType,
-    List<CodeableConcept>? targetClassifier,
-    FhirUri? targetUri,
-    @JsonKey(name: '_targetUri') Element? targetUriElement,
-    Identifier? targetIdentifier,
-    Reference? targetReference,
-    Attachment? targetAttachment,
-  }) = _CitationRelatesTo1;
-  factory CitationPublicationForm({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CitationPublishedIn? publishedIn,
-    CitationPeriodicRelease? periodicRelease,
-    FhirDateTime? articleDate,
-    @JsonKey(name: '_articleDate') Element? articleDateElement,
-    FhirDateTime? lastRevisionDate,
-    @JsonKey(name: '_lastRevisionDate') Element? lastRevisionDateElement,
-    List<CodeableConcept>? language,
-    String? accessionNumber,
-    @JsonKey(name: '_accessionNumber') Element? accessionNumberElement,
-    String? pageString,
-    @JsonKey(name: '_pageString') Element? pageStringElement,
-    String? firstPage,
-    @JsonKey(name: '_firstPage') Element? firstPageElement,
-    String? lastPage,
-    @JsonKey(name: '_lastPage') Element? lastPageElement,
-    String? pageCount,
-    @JsonKey(name: '_pageCount') Element? pageCountElement,
-    Markdown? copyright,
-    @JsonKey(name: '_copyright') Element? copyrightElement,
-  }) = _CitationPublicationForm;
-  factory CitationPublishedIn({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? type,
-    List<Identifier>? identifier,
-    String? title,
-    @JsonKey(name: '_title') Element? titleElement,
-    Reference? publisher,
-    String? publisherLocation,
-    @JsonKey(name: '_publisherLocation') Element? publisherLocationElement,
-  }) = _CitationPublishedIn;
-  factory CitationPeriodicRelease({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? citedMedium,
-    String? volume,
-    @JsonKey(name: '_volume') Element? volumeElement,
-    String? issue,
-    @JsonKey(name: '_issue') Element? issueElement,
-    CitationDateOfPublication? dateOfPublication,
-  }) = _CitationPeriodicRelease;
-  factory CitationDateOfPublication({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Date? date,
-    @JsonKey(name: '_date') Element? dateElement,
-    String? year,
-    @JsonKey(name: '_year') Element? yearElement,
-    String? month,
-    @JsonKey(name: '_month') Element? monthElement,
-    String? day,
-    @JsonKey(name: '_day') Element? dayElement,
-    String? season,
-    @JsonKey(name: '_season') Element? seasonElement,
-    String? text,
-    @JsonKey(name: '_text') Element? textElement,
-  }) = _CitationDateOfPublication;
-  factory CitationWebLocation({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? type,
-    FhirUri? url,
-    @JsonKey(name: '_url') Element? urlElement,
-  }) = _CitationWebLocation;
-  factory CitationClassification1({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? type,
-    List<CodeableConcept>? classifier,
-    CitationWhoClassified? whoClassified,
-    List<Reference>? artifactAssessment,
-  }) = _CitationClassification1;
-  factory CitationWhoClassified({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Reference? person,
-    Reference? organization,
-    Reference? publisher,
-    String? classifierCopyright,
-    @JsonKey(name: '_classifierCopyright') Element? classifierCopyrightElement,
-    Boolean? freeToShare,
-    @JsonKey(name: '_freeToShare') Element? freeToShareElement,
-  }) = _CitationWhoClassified;
-  factory CitationContributorship({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Boolean? complete,
-    @JsonKey(name: '_complete') Element? completeElement,
-    List<CitationEntry>? entry,
-    List<CitationSummary1>? summary,
-  }) = _CitationContributorship;
-  factory CitationEntry({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    HumanName? name,
-    String? initials,
-    @JsonKey(name: '_initials') Element? initialsElement,
-    String? collectiveName,
-    @JsonKey(name: '_collectiveName') Element? collectiveNameElement,
-    List<Identifier>? identifier,
-    List<CitationAffiliationInfo>? affiliationInfo,
-    List<Address>? address,
-    List<ContactPoint>? telecom,
-    List<CodeableConcept>? contributionType,
-    CodeableConcept? role,
-    List<CitationContributionInstance>? contributionInstance,
-    Boolean? correspondingContact,
-    @JsonKey(name: '_correspondingContact')
-        Element? correspondingContactElement,
-    PositiveInt? listOrder,
-    @JsonKey(name: '_listOrder') Element? listOrderElement,
-  }) = _CitationEntry;
-  factory CitationAffiliationInfo({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? affiliation,
-    @JsonKey(name: '_affiliation') Element? affiliationElement,
-    String? role,
-    @JsonKey(name: '_role') Element? roleElement,
-    List<Identifier>? identifier,
-  }) = _CitationAffiliationInfo;
-  factory CitationContributionInstance({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept type,
-    FhirDateTime? time,
-    @JsonKey(name: '_time') Element? timeElement,
-  }) = _CitationContributionInstance;
-  factory CitationSummary1({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? type,
-    CodeableConcept? style,
-    CodeableConcept? source,
-    Markdown? value,
-    @JsonKey(name: '_value') Element? valueElement,
-  }) = _CitationSummary1;
-  factory Evidence({
-    @Default(R4ResourceType.Evidence)
-    @JsonKey(unknownEnumValue: R4ResourceType.Evidence)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) FhirUri? url,
-    @HiveField(12) @JsonKey(name: '_url') Element? urlElement,
-    @HiveField(13) List<Identifier>? identifier,
-    @HiveField(14) String? version,
-    @HiveField(15) @JsonKey(name: '_version') Element? versionElement,
-    @HiveField(16) String? title,
-    @HiveField(17) @JsonKey(name: '_title') Element? titleElement,
-    @HiveField(18) Reference? citeAsReference,
-    @HiveField(19) Markdown? citAsMarkdown,
-    @HiveField(20)
-    @JsonKey(name: '_citeAsMarkdown')
-        Element? citeAsMarkdownElement,
-    @HiveField(21) Code? status,
-    @HiveField(22) @JsonKey(name: '_status') Element? statusElement,
-    @HiveField(23) FhirDateTime? date,
-    @HiveField(24) @JsonKey(name: '_date') Element? dateElement,
-    @HiveField(25) List<UsageContext>? useContext,
-    @HiveField(26) Date? approvalDate,
-    @HiveField(27) @JsonKey(name: '_approvalDate') Element? approvalDateElement,
-    @HiveField(28) Date? lastReviewDate,
-    @HiveField(29)
-    @JsonKey(name: '_lastReviewDate')
-        Element? lastReviewDateElement,
-    @HiveField(30) String? publisher,
-    @HiveField(31) @JsonKey(name: '_publisher') Element? publisherElement,
-    @HiveField(32) List<ContactDetail>? contact,
-    @HiveField(33) List<ContactDetail>? author,
-    @HiveField(34) List<ContactDetail>? editor,
-    @HiveField(35) List<ContactDetail>? reviewer,
-    @HiveField(36) List<ContactDetail>? endorser,
-    @HiveField(37) List<RelatedArtifact>? relatedArtifact,
-    @HiveField(38) Markdown? description,
-    @HiveField(39) @JsonKey(name: '_description') Element? descriptionElement,
-    @HiveField(40) Markdown? assertion,
-    @HiveField(41) @JsonKey(name: '_assertion') Element? assertionElement,
-    @HiveField(42) List<Annotation>? note,
-    @HiveField(43) required List<EvidenceVariableDefinition> variableDefinition,
-    @HiveField(44) CodeableConcept? synthesisType,
-    @HiveField(45) CodeableConcept? studyType,
-    @HiveField(46) List<EvidenceStatistic>? statistic,
-    @HiveField(47) List<EvidenceCertainty>? certainty,
-  }) = _Evidence;
-  factory EvidenceVariableDefinition({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Markdown? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    List<Annotation>? note,
-    required CodeableConcept variableRole,
-    Reference? observed,
-    Reference? intended,
-    CodeableConcept? directnessMatch,
-  }) = _EvidenceVariableDefinition;
-  factory EvidenceStatistic({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    List<Annotation>? note,
-    CodeableConcept? statisticType,
-    CodeableConcept? category,
-    Quantity? quantity,
-    UnsignedInt? numberOfEvents,
-    @JsonKey(name: '_numberOfEvents') Element? numberOfEventsElement,
-    UnsignedInt? numberAffected,
-    @JsonKey(name: '_numberAffected') Element? numberAffectedElement,
-    EvidenceSampleSize? sampleSize,
-    List<EvidenceAttributeEstimate>? attributeEstimate,
-    List<EvidenceModelCharacteristic>? modelCharacteristic,
-  }) = _EvidenceStatistic;
-  factory EvidenceSampleSize({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    List<Annotation>? note,
-    UnsignedInt? numberOfStudies,
-    @JsonKey(name: '_numberOfStudies') Element? numberOfStudiesElement,
-    UnsignedInt? numberOfParticipants,
-    @JsonKey(name: '_numberOfParticipants')
-        Element? numberOfParticipantsElement,
-    UnsignedInt? knownDataCount,
-    @JsonKey(name: '_knownDataCount') Element? knownDataCountElement,
-  }) = _EvidenceSampleSize;
-  factory EvidenceAttributeEstimate({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    List<Annotation>? note,
-    CodeableConcept? type,
-    Quantity? quantity,
-    Decimal? level,
-    @JsonKey(name: '_level') Element? levelElement,
-    Range? range,
-    List<EvidenceAttributeEstimate>? attributeEstimate,
-  }) = _EvidenceAttributeEstimate;
-  factory EvidenceModelCharacteristic({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept code,
-    Quantity? value,
-    List<EvidenceVar>? variable,
-    List<EvidenceAttributeEstimate>? attributeEstimate,
-  }) = _EvidenceModelCharacteristic;
-  factory EvidenceVar({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required Reference variableDefinition,
-    Code? handling,
-    @JsonKey(name: '_handling') Element? handlingElement,
-    List<CodeableConcept>? valueCategory,
-    List<Quantity>? valueQuantity,
-    List<Range>? valueRange,
-  }) = _EvidenceVar;
-  factory EvidenceCertainty({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    List<Annotation>? note,
-    CodeableConcept? type,
-    CodeableConcept? rating,
-    String? rater,
-    @JsonKey(name: '_rater') Element? raterElement,
-    List<EvidenceCertainty>? subcomponent,
-  }) = _EvidenceCertainty;
-  factory EvidenceReport({
-    @HiveField(0)
-    @Default(R4ResourceType.EvidenceReport)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) FhirUri? url,
-    @HiveField(12) @JsonKey(name: '_url') Element? urlElement,
-    @HiveField(13) Code? status,
-    @HiveField(14) @JsonKey(name: '_status') Element? statusElement,
-    @HiveField(15) List<UsageContext>? useContext,
-    @HiveField(16) List<Identifier>? identifier,
-    @HiveField(17) List<Identifier>? relatedIdentifier,
-    @HiveField(18) Reference? citeAsReference,
-    @HiveField(19) Markdown? citeAsMarkdown,
-    @HiveField(20)
-    @JsonKey(name: '_citeAsMarkdown')
-        Element? citeAsMarkdownElement,
-    @HiveField(21) CodeableConcept? type,
-    @HiveField(22) List<Annotation>? note,
-    @HiveField(23) List<RelatedArtifact>? relatedArtifact,
-    @HiveField(24) required EvidenceReportSubject subject,
-    @HiveField(25) String? publisher,
-    @HiveField(26) @JsonKey(name: '_publisher') Element? publisherElement,
-    @HiveField(27) List<ContactDetail>? contact,
-    @HiveField(28) List<ContactDetail>? author,
-    @HiveField(29) List<ContactDetail>? editor,
-    @HiveField(30) List<ContactDetail>? reviewer,
-    @HiveField(31) List<ContactDetail>? endorser,
-    @HiveField(32) List<EvidenceReportRelatesTo>? relatesTo,
-    @HiveField(33) List<EvidenceReportSection>? section,
-  }) = _EvidenceReport;
-  factory EvidenceReportSubject({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<EvidenceReportCharacteristic>? characteristic,
-    List<Annotation>? note,
-  }) = _EvidenceReportSubject;
-  factory EvidenceReportCharacteristic({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept code,
-    Reference? valueReference,
-    CodeableConcept? valueCodeableConcept,
-    Boolean? valueBoolean,
-    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-    Quantity? valueQuantity,
-    Range? valueRange,
-    Boolean? exclude,
-    @JsonKey(name: '_exclude') Element? excludeElement,
-    Period? period,
-  }) = _EvidenceReportCharacteristic;
-  factory EvidenceReportRelatesTo({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? code,
-    @JsonKey(name: '_code') Element? codeElement,
-    Identifier? targetIdentifier,
-    Reference? targetReference,
-  }) = _EvidenceReportRelatesTo;
-  factory EvidenceReportSection({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? title,
-    @JsonKey(name: '_title') Element? titleElement,
-    CodeableConcept? focus,
-    Reference? focusReference,
-    List<Reference>? author,
-    Narrative? text,
-    Code? mode,
-    @JsonKey(name: '_mode') Element? modeElement,
-    CodeableConcept? orderedBy,
-    List<CodeableConcept>? entryClassifier,
-    List<Reference>? entryReference,
-    List<Quantity>? entryQuantity,
-    CodeableConcept? emptyReason,
-    List<EvidenceReportSection>? section,
-  }) = _EvidenceReportSection;
-  factory EvidenceVariable({
-    @Default(R4ResourceType.EvidenceVariable)
-    @JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) FhirUri? url,
-    @HiveField(12) @JsonKey(name: '_url') Element? urlElement,
-    @HiveField(13) List<Identifier>? identifier,
-    @HiveField(14) String? version,
-    @HiveField(15) @JsonKey(name: '_version') Element? versionElement,
-    @HiveField(16) String? name,
-    @HiveField(17) @JsonKey(name: '_name') Element? nameElement,
-    @HiveField(18) String? title,
-    @HiveField(19) @JsonKey(name: '_title') Element? titleElement,
-    @HiveField(20) String? shortTitle,
-    @HiveField(21) @JsonKey(name: '_shortTitle') Element? shortTitleElement,
-    @HiveField(22) String? subtitle,
-    @HiveField(23) @JsonKey(name: '_subtitle') Element? subtitleElement,
-    @HiveField(24) Code? status,
-    @HiveField(25) @JsonKey(name: '_status') Element? statusElement,
-    @HiveField(26) FhirDateTime? date,
-    @HiveField(27) @JsonKey(name: '_date') Element? dateElement,
-    @HiveField(28) Markdown? description,
-    @HiveField(29) @JsonKey(name: '_description') Element? descriptionElement,
-    @HiveField(30) List<Annotation>? note,
-    @HiveField(31) List<UsageContext>? useContext,
-    @HiveField(32) String? publisher,
-    @HiveField(33) @JsonKey(name: '_publisher') Element? publisherElement,
-    @HiveField(34) List<ContactDetail>? contact,
-    @HiveField(35) List<ContactDetail>? author,
-    @HiveField(36) List<ContactDetail>? editor,
-    @HiveField(37) List<ContactDetail>? reviewer,
-    @HiveField(38) List<ContactDetail>? endorser,
-    @HiveField(39) List<RelatedArtifact>? relatedArtifact,
-    @HiveField(40) Boolean? actual,
-    @HiveField(41) @JsonKey(name: '_actual') Element? actualElement,
-    @HiveField(42) Code? characteristicCombination,
-    @JsonKey(name: '_characteristicCombination')
-    @HiveField(43)
-        Element? characteristicCombinationElement,
-    @HiveField(44) required List<EvidenceVariableCharacteristic> characteristic,
-    @HiveField(45) Code? handling,
-    @HiveField(46) @JsonKey(name: '_handling') Element? handlingElement,
-    @HiveField(47) List<EvidenceVariableCategory>? category,
-  }) = _EvidenceVariable;
-  factory EvidenceVariableCharacteristic({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    Reference? definitionReference,
-    Canonical? definitionCanonical,
-    @JsonKey(name: '_definitionCanonical') Element? definitionCanonicalElement,
-    CodeableConcept? definitionCodeableConcept,
-    Expression? definitionExpression,
-    Boolean? exclude,
-    @JsonKey(name: '_exclude') Element? excludeElement,
-    EvidenceVariableTimeFromStart? timeFromStart,
-    Code? groupMeasure,
-    @JsonKey(name: '_groupMeasure') Element? groupMeasureElement,
-  }) = _EvidenceVariableCharacteristic;
-  factory EvidenceVariableTimeFromStart({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    Quantity? quantity,
-    Range? range,
-    List<Annotation>? note,
-  }) = _EvidenceVariableTimeFromStart;
-  factory EvidenceVariableCategory({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    CodeableConcept? valueCodeableConcept,
-    Quantity? valueQuantity,
-    Range? valueRange,
-  }) = _EvidenceVariableCategory;
-  factory ResearchDefinition({
-    @Default(R4ResourceType.ResearchDefinition)
-    @JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) FhirUri? url,
-    @HiveField(12) @JsonKey(name: '_url') Element? urlElement,
-    @HiveField(13) List<Identifier>? identifier,
-    @HiveField(14) String? version,
-    @HiveField(15) @JsonKey(name: '_version') Element? versionElement,
-    @HiveField(16) String? name,
-    @HiveField(17) @JsonKey(name: '_name') Element? nameElement,
-    @HiveField(18) String? title,
-    @HiveField(19) @JsonKey(name: '_title') Element? titleElement,
-    @HiveField(20) String? shortTitle,
-    @HiveField(21) @JsonKey(name: '_shortTitle') Element? shortTitleElement,
-    @HiveField(22) String? subtitle,
-    @HiveField(23) @JsonKey(name: '_subtitle') Element? subtitleElement,
-    @HiveField(24) Code? status,
-    @HiveField(25) @JsonKey(name: '_status') Element? statusElement,
-    @HiveField(26) Boolean? experimental,
-    @HiveField(27) @JsonKey(name: '_experimental') Element? experimentalElement,
-    @HiveField(28) CodeableConcept? subjectCodeableConcept,
-    @HiveField(29) Reference? subjectReference,
-    @HiveField(30) FhirDateTime? date,
-    @HiveField(31) @JsonKey(name: '_date') Element? dateElement,
-    @HiveField(32) String? publisher,
-    @HiveField(33) @JsonKey(name: '_publisher') Element? publisherElement,
-    @HiveField(34) List<ContactDetail>? contact,
-    @HiveField(35) Markdown? description,
-    @HiveField(36) @JsonKey(name: '_description') Element? descriptionElement,
-    @HiveField(37) List<String>? comment,
-    @HiveField(38) @JsonKey(name: '_comment') List<Element?>? commentElement,
-    @HiveField(39) List<UsageContext>? useContext,
-    @HiveField(40) List<CodeableConcept>? jurisdiction,
-    @HiveField(41) Markdown? purpose,
-    @HiveField(42) @JsonKey(name: '_purpose') Element? purposeElement,
-    @HiveField(43) String? usage,
-    @HiveField(44) @JsonKey(name: '_usage') Element? usageElement,
-    @HiveField(45) Markdown? copyright,
-    @HiveField(46) @JsonKey(name: '_copyright') Element? copyrightElement,
-    @HiveField(47) Date? approvalDate,
-    @HiveField(48) @JsonKey(name: '_approvalDate') Element? approvalDateElement,
-    @HiveField(49) Date? lastReviewDate,
-    @HiveField(50)
-    @JsonKey(name: '_lastReviewDate')
-        Element? lastReviewDateElement,
-    @HiveField(51) Period? effectivePeriod,
-    @HiveField(52) List<CodeableConcept>? topic,
-    @HiveField(53) List<ContactDetail>? author,
-    @HiveField(54) List<ContactDetail>? editor,
-    @HiveField(55) List<ContactDetail>? reviewer,
-    @HiveField(56) List<ContactDetail>? endorser,
-    @HiveField(57) List<RelatedArtifact>? relatedArtifact,
-    @HiveField(58) @JsonKey(name: 'library') List<Canonical>? library_,
-    @HiveField(59) required Reference population,
-    @HiveField(60) Reference? exposure,
-    @HiveField(61) Reference? exposureAlternative,
-    @HiveField(62) Reference? outcome,
-  }) = _ResearchDefinition;
-  factory ResearchElementDefinition({
-    @Default(R4ResourceType.ResearchElementDefinition)
-    @JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) FhirUri? url,
-    @HiveField(12) @JsonKey(name: '_url') Element? urlElement,
-    @HiveField(13) List<Identifier>? identifier,
-    @HiveField(14) String? version,
-    @HiveField(15) @JsonKey(name: '_version') Element? versionElement,
-    @HiveField(16) String? name,
-    @HiveField(17) @JsonKey(name: '_name') Element? nameElement,
-    @HiveField(18) String? title,
-    @HiveField(19) @JsonKey(name: '_title') Element? titleElement,
-    @HiveField(20) String? shortTitle,
-    @HiveField(21) @JsonKey(name: '_shortTitle') Element? shortTitleElement,
-    @HiveField(22) String? subtitle,
-    @HiveField(23) @JsonKey(name: '_subtitle') Element? subtitleElement,
-    @HiveField(24) Code? status,
-    @HiveField(25) @JsonKey(name: '_status') Element? statusElement,
-    @HiveField(26) Boolean? experimental,
-    @HiveField(27) @JsonKey(name: '_experimental') Element? experimentalElement,
-    @HiveField(28) CodeableConcept? subjectCodeableConcept,
-    @HiveField(29) Reference? subjectReference,
-    @HiveField(30) FhirDateTime? date,
-    @HiveField(31) @JsonKey(name: '_date') Element? dateElement,
-    @HiveField(32) String? publisher,
-    @HiveField(33) @JsonKey(name: '_publisher') Element? publisherElement,
-    @HiveField(34) List<ContactDetail>? contact,
-    @HiveField(35) Markdown? description,
-    @HiveField(36) @JsonKey(name: '_description') Element? descriptionElement,
-    @HiveField(37) List<String>? comment,
-    @HiveField(38) @JsonKey(name: '_comment') List<Element?>? commentElement,
-    @HiveField(39) List<UsageContext>? useContext,
-    @HiveField(40) List<CodeableConcept>? jurisdiction,
-    @HiveField(41) Markdown? purpose,
-    @HiveField(42) @JsonKey(name: '_purpose') Element? purposeElement,
-    @HiveField(43) String? usage,
-    @HiveField(44) @JsonKey(name: '_usage') Element? usageElement,
-    @HiveField(45) Markdown? copyright,
-    @HiveField(46) @JsonKey(name: '_copyright') Element? copyrightElement,
-    @HiveField(47) Date? approvalDate,
-    @HiveField(48) @JsonKey(name: '_approvalDate') Element? approvalDateElement,
-    @HiveField(49) Date? lastReviewDate,
-    @HiveField(50)
-    @JsonKey(name: '_lastReviewDate')
-        Element? lastReviewDateElement,
-    @HiveField(51) Period? effectivePeriod,
-    @HiveField(52) List<CodeableConcept>? topic,
-    @HiveField(53) List<ContactDetail>? author,
-    @HiveField(54) List<ContactDetail>? editor,
-    @HiveField(55) List<ContactDetail>? reviewer,
-    @HiveField(56) List<ContactDetail>? endorser,
-    @HiveField(57) List<RelatedArtifact>? relatedArtifact,
-    @HiveField(58) @JsonKey(name: 'library') List<Canonical>? library_,
-    @HiveField(59) Code? type,
-    @HiveField(60) @JsonKey(name: '_type') Element? typeElement,
-    @HiveField(61) Code? variableType,
-    @HiveField(62) @JsonKey(name: '_variableType') Element? variableTypeElement,
-    @HiveField(63)
-        required List<ResearchElementDefinitionCharacteristic> characteristic,
-  }) = _ResearchElementDefinition;
-  factory ResearchElementDefinitionCharacteristic({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? definitionCodeableConcept,
-    Canonical? definitionCanonical,
-    @JsonKey(name: '_definitionCanonical') Element? definitionCanonicalElement,
-    Expression? definitionExpression,
-    DataRequirement? definitionDataRequirement,
-    List<UsageContext>? usageContext,
-    Boolean? exclude,
-    @JsonKey(name: '_exclude') Element? excludeElement,
-    CodeableConcept? unitOfMeasure,
-    String? studyEffectiveDescription,
-    @JsonKey(name: '_studyEffectiveDescription')
-        Element? studyEffectiveDescriptionElement,
-    FhirDateTime? studyEffectiveDateTime,
-    @JsonKey(name: '_studyEffectiveDateTime')
-        Element? studyEffectiveDateTimeElement,
-    Period? studyEffectivePeriod,
-    FhirDuration? studyEffectiveDuration,
-    Timing? studyEffectiveTiming,
-    FhirDuration? studyEffectiveTimeFromStart,
-    Code? studyEffectiveGroupMeasure,
-    @JsonKey(name: '_studyEffectiveGroupMeasure')
-        Element? studyEffectiveGroupMeasureElement,
-    String? participantEffectiveDescription,
-    @JsonKey(name: '_participantEffectiveDescription')
-        Element? participantEffectiveDescriptionElement,
-    FhirDateTime? participantEffectiveDateTime,
-    @JsonKey(name: '_participantEffectiveDateTime')
-        Element? participantEffectiveDateTimeElement,
-    Period? participantEffectivePeriod,
-    FhirDuration? participantEffectiveDuration,
-    Timing? participantEffectiveTiming,
-    FhirDuration? participantEffectiveTimeFromStart,
-    Code? participantEffectiveGroupMeasure,
-    @JsonKey(name: '_participantEffectiveGroupMeasure')
-        Element? participantEffectiveGroupMeasureElement,
-  }) = _ResearchElementDefinitionCharacteristic;
+import '../../../../r4.dart';
+
+class Citation {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirUri? url;
+  Element? urlElement;
+  List<Identifier>? identifier;
+  String? version;
+  Element? versionElement;
+  String? name;
+  Element? nameElement;
+  String? title;
+  Element? titleElement;
+  Code? status;
+  Element? statusElement;
+  Boolean? experimental;
+  Element? experimentalElement;
+  FhirDateTime? date;
+  Element? dateElement;
+  String? publisher;
+  Element? publisherElement;
+  List<ContactDetail>? contact;
+  Markdown? description;
+  Element? descriptionElement;
+  List<UsageContext>? useContext;
+  List<CodeableConcept>? jurisdiction;
+  Markdown? purpose;
+  Element? purposeElement;
+  Markdown? copyright;
+  Element? copyrightElement;
+  Date? approvalDate;
+  Element? approvalDateElement;
+  Date? lastReviewDate;
+
+  Element? lastReviewDateElement;
+  Period? effectivePeriod;
+  List<ContactDetail>? author;
+  List<ContactDetail>? editor;
+  List<ContactDetail>? reviewer;
+  List<ContactDetail>? endorser;
+  List<CitationSummary>? summary;
+  List<CitationClassification>? classification;
+  List<Annotation>? note;
+  List<CodeableConcept>? currentState;
+  List<CitationStatusDate>? statusDate;
+  List<CitationRelatesTo>? relatesTo;
+  CitationCitedArtifact? citedArtifact;
+}
+
+class CitationSummary {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? style;
+  Markdown? text;
+  Element? textElement;
+}
+
+class CitationClassification {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? type;
+  List<CodeableConcept>? classifier;
+}
+
+class CitationStatusDate {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept activity;
+  Boolean? actual;
+  Element? actualElement;
+  Period period;
+}
+
+class CitationRelatesTo {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept relationshipType;
+  List<CodeableConcept>? targetClassifier;
+  FhirUri? targetUri;
+  Element? targetUriElement;
+  Identifier? targetIdentifier;
+  Reference? targetReference;
+  Attachment? targetAttachment;
+}
+
+class CitationCitedArtifact {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  List<Identifier>? relatedIdentifier;
+  FhirDateTime? dateAccessed;
+  Element? dateAccessedElement;
+  CitationVersion? version;
+  List<CodeableConcept>? currentState;
+  List<CitationStatusDate1>? statusDate;
+  List<CitationTitle>? title;
+  List<CitationAbstract>? abstract_;
+  CitationPart? part_;
+  List<CitationRelatesTo1>? relatesTo;
+  List<CitationPublicationForm>? publicationForm;
+  List<CitationWebLocation>? webLocation;
+  List<CitationClassification1>? classification;
+  CitationContributorship? contributorship;
+  List<Annotation>? note;
+}
+
+class CitationVersion {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? value;
+  Element? valueElement;
+  Reference? baseCitation;
+}
+
+class CitationStatusDate1 {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept activity;
+  Boolean? actual;
+  Element? actualElement;
+  Period period;
+}
+
+class CitationTitle {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<CodeableConcept>? type;
+  CodeableConcept? language;
+  Markdown? text;
+  Element? textElement;
+}
+
+class CitationAbstract {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? type;
+  CodeableConcept? language;
+  Markdown? text;
+  Element? textElement;
+  Markdown? copyright;
+  Element? copyrightElement;
+}
+
+class CitationPart {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? type;
+  String? value;
+  Element? valueElement;
+  Reference? baseCitation;
+}
+
+class CitationRelatesTo1 {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept relationshipType;
+  List<CodeableConcept>? targetClassifier;
+  FhirUri? targetUri;
+  Element? targetUriElement;
+  Identifier? targetIdentifier;
+  Reference? targetReference;
+  Attachment? targetAttachment;
+}
+
+class CitationPublicationForm {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CitationPublishedIn? publishedIn;
+  CitationPeriodicRelease? periodicRelease;
+  FhirDateTime? articleDate;
+  Element? articleDateElement;
+  FhirDateTime? lastRevisionDate;
+  Element? lastRevisionDateElement;
+  List<CodeableConcept>? language;
+  String? accessionNumber;
+  Element? accessionNumberElement;
+  String? pageString;
+  Element? pageStringElement;
+  String? firstPage;
+  Element? firstPageElement;
+  String? lastPage;
+  Element? lastPageElement;
+  String? pageCount;
+  Element? pageCountElement;
+  Markdown? copyright;
+  Element? copyrightElement;
+}
+
+class CitationPublishedIn {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? type;
+  List<Identifier>? identifier;
+  String? title;
+  Element? titleElement;
+  Reference? publisher;
+  String? publisherLocation;
+  Element? publisherLocationElement;
+}
+
+class CitationPeriodicRelease {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? citedMedium;
+  String? volume;
+  Element? volumeElement;
+  String? issue;
+  Element? issueElement;
+  CitationDateOfPublication? dateOfPublication;
+}
+
+class CitationDateOfPublication {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Date? date;
+  Element? dateElement;
+  String? year;
+  Element? yearElement;
+  String? month;
+  Element? monthElement;
+  String? day;
+  Element? dayElement;
+  String? season;
+  Element? seasonElement;
+  String? text;
+  Element? textElement;
+}
+
+class CitationWebLocation {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? type;
+  FhirUri? url;
+  Element? urlElement;
+}
+
+class CitationClassification1 {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? type;
+  List<CodeableConcept>? classifier;
+  CitationWhoClassified? whoClassified;
+  List<Reference>? artifactAssessment;
+}
+
+class CitationWhoClassified {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Reference? person;
+  Reference? organization;
+  Reference? publisher;
+  String? classifierCopyright;
+  Element? classifierCopyrightElement;
+  Boolean? freeToShare;
+  Element? freeToShareElement;
+}
+
+class CitationContributorship {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Boolean? complete;
+  Element? completeElement;
+  List<CitationEntry>? entry;
+  List<CitationSummary1>? summary;
+}
+
+class CitationEntry {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  HumanName? name;
+  String? initials;
+  Element? initialsElement;
+  String? collectiveName;
+  Element? collectiveNameElement;
+  List<Identifier>? identifier;
+  List<CitationAffiliationInfo>? affiliationInfo;
+  List<Address>? address;
+  List<ContactPoint>? telecom;
+  List<CodeableConcept>? contributionType;
+  CodeableConcept? role;
+  List<CitationContributionInstance>? contributionInstance;
+  Boolean? correspondingContact;
+
+  Element? correspondingContactElement;
+  PositiveInt? listOrder;
+  Element? listOrderElement;
+}
+
+class CitationAffiliationInfo {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? affiliation;
+  Element? affiliationElement;
+  String? role;
+  Element? roleElement;
+  List<Identifier>? identifier;
+}
+
+class CitationContributionInstance {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept type;
+  FhirDateTime? time;
+  Element? timeElement;
+}
+
+class CitationSummary1 {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? type;
+  CodeableConcept? style;
+  CodeableConcept? source;
+  Markdown? value;
+  Element? valueElement;
+}
+
+class Evidence {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirUri? url;
+  Element? urlElement;
+  List<Identifier>? identifier;
+  String? version;
+  Element? versionElement;
+  String? title;
+  Element? titleElement;
+  Reference? citeAsReference;
+  Markdown? citAsMarkdown;
+
+  Element? citeAsMarkdownElement;
+  Code? status;
+  Element? statusElement;
+  FhirDateTime? date;
+  Element? dateElement;
+  List<UsageContext>? useContext;
+  Date? approvalDate;
+  Element? approvalDateElement;
+  Date? lastReviewDate;
+
+  Element? lastReviewDateElement;
+  String? publisher;
+  Element? publisherElement;
+  List<ContactDetail>? contact;
+  List<ContactDetail>? author;
+  List<ContactDetail>? editor;
+  List<ContactDetail>? reviewer;
+  List<ContactDetail>? endorser;
+  List<RelatedArtifact>? relatedArtifact;
+  Markdown? description;
+  Element? descriptionElement;
+  Markdown? assertion;
+  Element? assertionElement;
+  List<Annotation>? note;
+  List<EvidenceVariableDefinition> variableDefinition;
+  CodeableConcept? synthesisType;
+  CodeableConcept? studyType;
+  List<EvidenceStatistic>? statistic;
+  List<EvidenceCertainty>? certainty;
+}
+
+class EvidenceVariableDefinition {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Markdown? description;
+  Element? descriptionElement;
+  List<Annotation>? note;
+  CodeableConcept variableRole;
+  Reference? observed;
+  Reference? intended;
+  CodeableConcept? directnessMatch;
+}
+
+class EvidenceStatistic {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? description;
+  Element? descriptionElement;
+  List<Annotation>? note;
+  CodeableConcept? statisticType;
+  CodeableConcept? category;
+  Quantity? quantity;
+  UnsignedInt? numberOfEvents;
+  Element? numberOfEventsElement;
+  UnsignedInt? numberAffected;
+  Element? numberAffectedElement;
+  EvidenceSampleSize? sampleSize;
+  List<EvidenceAttributeEstimate>? attributeEstimate;
+  List<EvidenceModelCharacteristic>? modelCharacteristic;
+}
+
+class EvidenceSampleSize {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? description;
+  Element? descriptionElement;
+  List<Annotation>? note;
+  UnsignedInt? numberOfStudies;
+  Element? numberOfStudiesElement;
+  UnsignedInt? numberOfParticipants;
+
+  Element? numberOfParticipantsElement;
+  UnsignedInt? knownDataCount;
+  Element? knownDataCountElement;
+}
+
+class EvidenceAttributeEstimate {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? description;
+  Element? descriptionElement;
+  List<Annotation>? note;
+  CodeableConcept? type;
+  Quantity? quantity;
+  Decimal? level;
+  Element? levelElement;
+  Range? range;
+  List<EvidenceAttributeEstimate>? attributeEstimate;
+}
+
+class EvidenceModelCharacteristic {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept code;
+  Quantity? value;
+  List<EvidenceVar>? variable;
+  List<EvidenceAttributeEstimate>? attributeEstimate;
+}
+
+class EvidenceVar {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Reference variableDefinition;
+  Code? handling;
+  Element? handlingElement;
+  List<CodeableConcept>? valueCategory;
+  List<Quantity>? valueQuantity;
+  List<Range>? valueRange;
+}
+
+class EvidenceCertainty {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? description;
+  Element? descriptionElement;
+  List<Annotation>? note;
+  CodeableConcept? type;
+  CodeableConcept? rating;
+  String? rater;
+  Element? raterElement;
+  List<EvidenceCertainty>? subcomponent;
+}
+
+class EvidenceReport {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirUri? url;
+  Element? urlElement;
+  Code? status;
+  Element? statusElement;
+  List<UsageContext>? useContext;
+  List<Identifier>? identifier;
+  List<Identifier>? relatedIdentifier;
+  Reference? citeAsReference;
+  Markdown? citeAsMarkdown;
+
+  Element? citeAsMarkdownElement;
+  CodeableConcept? type;
+  List<Annotation>? note;
+  List<RelatedArtifact>? relatedArtifact;
+  EvidenceReportSubject subject;
+  String? publisher;
+  Element? publisherElement;
+  List<ContactDetail>? contact;
+  List<ContactDetail>? author;
+  List<ContactDetail>? editor;
+  List<ContactDetail>? reviewer;
+  List<ContactDetail>? endorser;
+  List<EvidenceReportRelatesTo>? relatesTo;
+  List<EvidenceReportSection>? section;
+}
+
+class EvidenceReportSubject {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<EvidenceReportCharacteristic>? characteristic;
+  List<Annotation>? note;
+}
+
+class EvidenceReportCharacteristic {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept code;
+  Reference? valueReference;
+  CodeableConcept? valueCodeableConcept;
+  Boolean? valueBoolean;
+  Element? valueBooleanElement;
+  Quantity? valueQuantity;
+  Range? valueRange;
+  Boolean? exclude;
+  Element? excludeElement;
+  Period? period;
+}
+
+class EvidenceReportRelatesTo {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code? code;
+  Element? codeElement;
+  Identifier? targetIdentifier;
+  Reference? targetReference;
+}
+
+class EvidenceReportSection {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? title;
+  Element? titleElement;
+  CodeableConcept? focus;
+  Reference? focusReference;
+  List<Reference>? author;
+  Narrative? text;
+  Code? mode;
+  Element? modeElement;
+  CodeableConcept? orderedBy;
+  List<CodeableConcept>? entryClassifier;
+  List<Reference>? entryReference;
+  List<Quantity>? entryQuantity;
+  CodeableConcept? emptyReason;
+  List<EvidenceReportSection>? section;
+}
+
+class EvidenceVariable {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirUri? url;
+  Element? urlElement;
+  List<Identifier>? identifier;
+  String? version;
+  Element? versionElement;
+  String? name;
+  Element? nameElement;
+  String? title;
+  Element? titleElement;
+  String? shortTitle;
+  Element? shortTitleElement;
+  String? subtitle;
+  Element? subtitleElement;
+  Code? status;
+  Element? statusElement;
+  FhirDateTime? date;
+  Element? dateElement;
+  Markdown? description;
+  Element? descriptionElement;
+  List<Annotation>? note;
+  List<UsageContext>? useContext;
+  String? publisher;
+  Element? publisherElement;
+  List<ContactDetail>? contact;
+  List<ContactDetail>? author;
+  List<ContactDetail>? editor;
+  List<ContactDetail>? reviewer;
+  List<ContactDetail>? endorser;
+  List<RelatedArtifact>? relatedArtifact;
+  Boolean? actual;
+  Element? actualElement;
+  Code? characteristicCombination;
+
+  Element? characteristicCombinationElement;
+  List<EvidenceVariableCharacteristic> characteristic;
+  Code? handling;
+  Element? handlingElement;
+  List<EvidenceVariableCategory>? category;
+}
+
+class EvidenceVariableCharacteristic {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? description;
+  Element? descriptionElement;
+  Reference? definitionReference;
+  Canonical? definitionCanonical;
+  Element? definitionCanonicalElement;
+  CodeableConcept? definitionCodeableConcept;
+  Expression? definitionExpression;
+  Boolean? exclude;
+  Element? excludeElement;
+  EvidenceVariableTimeFromStart? timeFromStart;
+  Code? groupMeasure;
+  Element? groupMeasureElement;
+}
+
+class EvidenceVariableTimeFromStart {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? description;
+  Element? descriptionElement;
+  Quantity? quantity;
+  Range? range;
+  List<Annotation>? note;
+}
+
+class EvidenceVariableCategory {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? name;
+  Element? nameElement;
+  CodeableConcept? valueCodeableConcept;
+  Quantity? valueQuantity;
+  Range? valueRange;
+}
+
+class ResearchDefinition {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirUri? url;
+  Element? urlElement;
+  List<Identifier>? identifier;
+  String? version;
+  Element? versionElement;
+  String? name;
+  Element? nameElement;
+  String? title;
+  Element? titleElement;
+  String? shortTitle;
+  Element? shortTitleElement;
+  String? subtitle;
+  Element? subtitleElement;
+  Code? status;
+  Element? statusElement;
+  Boolean? experimental;
+  Element? experimentalElement;
+  CodeableConcept? subjectCodeableConcept;
+  Reference? subjectReference;
+  FhirDateTime? date;
+  Element? dateElement;
+  String? publisher;
+  Element? publisherElement;
+  List<ContactDetail>? contact;
+  Markdown? description;
+  Element? descriptionElement;
+  List<String>? comment;
+  List<Element?>? commentElement;
+  List<UsageContext>? useContext;
+  List<CodeableConcept>? jurisdiction;
+  Markdown? purpose;
+  Element? purposeElement;
+  String? usage;
+  Element? usageElement;
+  Markdown? copyright;
+  Element? copyrightElement;
+  Date? approvalDate;
+  Element? approvalDateElement;
+  Date? lastReviewDate;
+
+  Element? lastReviewDateElement;
+  Period? effectivePeriod;
+  List<CodeableConcept>? topic;
+  List<ContactDetail>? author;
+  List<ContactDetail>? editor;
+  List<ContactDetail>? reviewer;
+  List<ContactDetail>? endorser;
+  List<RelatedArtifact>? relatedArtifact;
+  List<Canonical>? library_;
+  Reference population;
+  Reference? exposure;
+  Reference? exposureAlternative;
+  Reference? outcome;
+}
+
+class ResearchElementDefinition {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirUri? url;
+  Element? urlElement;
+  List<Identifier>? identifier;
+  String? version;
+  Element? versionElement;
+  String? name;
+  Element? nameElement;
+  String? title;
+  Element? titleElement;
+  String? shortTitle;
+  Element? shortTitleElement;
+  String? subtitle;
+  Element? subtitleElement;
+  Code? status;
+  Element? statusElement;
+  Boolean? experimental;
+  Element? experimentalElement;
+  CodeableConcept? subjectCodeableConcept;
+  Reference? subjectReference;
+  FhirDateTime? date;
+  Element? dateElement;
+  String? publisher;
+  Element? publisherElement;
+  List<ContactDetail>? contact;
+  Markdown? description;
+  Element? descriptionElement;
+  List<String>? comment;
+  List<Element?>? commentElement;
+  List<UsageContext>? useContext;
+  List<CodeableConcept>? jurisdiction;
+  Markdown? purpose;
+  Element? purposeElement;
+  String? usage;
+  Element? usageElement;
+  Markdown? copyright;
+  Element? copyrightElement;
+  Date? approvalDate;
+  Element? approvalDateElement;
+  Date? lastReviewDate;
+
+  Element? lastReviewDateElement;
+  Period? effectivePeriod;
+  List<CodeableConcept>? topic;
+  List<ContactDetail>? author;
+  List<ContactDetail>? editor;
+  List<ContactDetail>? reviewer;
+  List<ContactDetail>? endorser;
+  List<RelatedArtifact>? relatedArtifact;
+  List<Canonical>? library_;
+  Code? type;
+  Element? typeElement;
+  Code? variableType;
+  Element? variableTypeElement;
+
+  List<ResearchElementDefinitionCharacteristic> characteristic;
+}
+
+class ResearchElementDefinitionCharacteristic {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? definitionCodeableConcept;
+  Canonical? definitionCanonical;
+  Element? definitionCanonicalElement;
+  Expression? definitionExpression;
+  DataRequirement? definitionDataRequirement;
+  List<UsageContext>? usageContext;
+  Boolean? exclude;
+  Element? excludeElement;
+  CodeableConcept? unitOfMeasure;
+  String? studyEffectiveDescription;
+
+  Element? studyEffectiveDescriptionElement;
+  FhirDateTime? studyEffectiveDateTime;
+
+  Element? studyEffectiveDateTimeElement;
+  Period? studyEffectivePeriod;
+  FhirDuration? studyEffectiveDuration;
+  Timing? studyEffectiveTiming;
+  FhirDuration? studyEffectiveTimeFromStart;
+  Code? studyEffectiveGroupMeasure;
+
+  Element? studyEffectiveGroupMeasureElement;
+  String? participantEffectiveDescription;
+
+  Element? participantEffectiveDescriptionElement;
+  FhirDateTime? participantEffectiveDateTime;
+
+  Element? participantEffectiveDateTimeElement;
+  Period? participantEffectivePeriod;
+  FhirDuration? participantEffectiveDuration;
+  Timing? participantEffectiveTiming;
+  FhirDuration? participantEffectiveTimeFromStart;
+  Code? participantEffectiveGroupMeasure;
+
+  Element? participantEffectiveGroupMeasureElement;
+}

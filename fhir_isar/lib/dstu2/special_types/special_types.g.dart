@@ -1823,7 +1823,7 @@ _$_ElementDefinitionBinding _$$_ElementDefinitionBindingFromJson(
     Map<String, dynamic> json) {
   $checkKeys(
     json,
-    requiredKeys: const ['strength'],
+    Keys: const ['strength'],
   );
   return _$_ElementDefinitionBinding(
     id: json['id'] == null ? null : FhirId.fromJson(json['id']),

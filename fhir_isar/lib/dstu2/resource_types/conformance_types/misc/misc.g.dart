@@ -10,7 +10,7 @@ _$_ImplementationGuide _$$_ImplementationGuideFromJson(
     Map<String, dynamic> json) {
   $checkKeys(
     json,
-    requiredKeys: const ['status'],
+    Keys: const ['status'],
   );
   return _$_ImplementationGuide(
     resourceType: $enumDecodeNullable(
@@ -364,7 +364,7 @@ _$_ImplementationGuidePackage _$$_ImplementationGuidePackageFromJson(
     Map<String, dynamic> json) {
   $checkKeys(
     json,
-    requiredKeys: const ['resource'],
+    Keys: const ['resource'],
   );
   return _$_ImplementationGuidePackage(
     id: json['id'] == null ? null : FhirId.fromJson(json['id']),
@@ -781,7 +781,7 @@ _$_TestScriptMetadata _$$_TestScriptMetadataFromJson(
     Map<String, dynamic> json) {
   $checkKeys(
     json,
-    requiredKeys: const ['capability'],
+    Keys: const ['capability'],
   );
   return _$_TestScriptMetadata(
     id: json['id'] == null ? null : FhirId.fromJson(json['id']),
@@ -873,9 +873,8 @@ _$_TestScriptMetadataCapability _$$_TestScriptMetadataCapabilityFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      required_:
-          json['required'] == null ? null : Boolean.fromJson(json['required']),
-      requiredElement: json['_required'] == null
+      _: json['required'] == null ? null : Boolean.fromJson(json['required']),
+      Element: json['_required'] == null
           ? null
           : Element.fromJson(json['_required'] as Map<String, dynamic>),
       validated: json['validated'] == null

@@ -1,605 +1,587 @@
-  factory CarePlan({
-    @Default(R4ResourceType.CarePlan)
-    @JsonKey(unknownEnumValue: R4ResourceType.CarePlan)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) @HiveField(13) List<Canonical>? instantiatesCanonical,
-    @HiveField(14) @HiveField(15) List<FhirUri>? instantiatesUri,
-    @JsonKey(name: '_instantiatesUri')
-    @HiveField(16)
-        List<Element?>? instantiatesUriElement,
-    @HiveField(17) List<Reference>? basedOn,
-    @HiveField(18) List<Reference>? replaces,
-    @HiveField(19) List<Reference>? partOf,
-    @HiveField(20) @HiveField(21) Code? status,
-    @JsonKey(name: '_status') @HiveField(22) Element? statusElement,
-    @HiveField(23) Code? intent,
-    @JsonKey(name: '_intent') @HiveField(24) Element? intentElement,
-    @HiveField(25) @HiveField(26) List<CodeableConcept>? category,
-    @HiveField(27) String? title,
-    @JsonKey(name: '_title') @HiveField(28) Element? titleElement,
-    @HiveField(29) String? description,
-    @JsonKey(name: '_description') @HiveField(30) Element? descriptionElement,
-    @HiveField(31) required Reference subject,
-    @HiveField(32) Reference? encounter,
-    @HiveField(33) Period? period,
-    @HiveField(34) FhirDateTime? created,
-    @JsonKey(name: '_created') @HiveField(35) Element? createdElement,
-    @HiveField(36) Reference? author,
-    @HiveField(37) List<Reference>? contributor,
-    @HiveField(38) List<Reference>? careTeam,
-    @HiveField(39) List<Reference>? addresses,
-    @HiveField(40) List<Reference>? supportingInfo,
-    @HiveField(41) List<Reference>? goal,
-    @HiveField(42) @HiveField(43) List<CarePlanActivity>? activity,
-    @HiveField(44) List<Annotation>? note,
-  }) = _CarePlan;
-  factory CarePlanActivity({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<CodeableConcept>? outcomeCodeableConcept,
-    List<Reference>? outcomeReference,
-    List<Annotation>? progress,
-    Reference? reference,
-    CarePlanDetail? detail,
-  }) = _CarePlanActivity;
-  factory CarePlanDetail({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? kind,
-    @JsonKey(name: '_kind') Element? kindElement,
-    List<Canonical>? instantiatesCanonical,
-    List<FhirUri>? instantiatesUri,
-    @JsonKey(name: '_instantiatesUri') List<Element?>? instantiatesUriElement,
-    CodeableConcept? code,
-    List<CodeableConcept>? reasonCode,
-    List<Reference>? reasonReference,
-    List<Reference>? goal,
-    Code? status,
-    @JsonKey(name: '_status') Element? statusElement,
-    CodeableConcept? statusReason,
-    Boolean? doNotPerform,
-    @JsonKey(name: '_doNotPerform') Element? doNotPerformElement,
-    Timing? scheduledTiming,
-    Period? scheduledPeriod,
-    String? scheduledString,
-    @JsonKey(name: '_scheduledString') Element? scheduledStringElement,
-    Reference? location,
-    List<Reference>? performer,
-    CodeableConcept? productCodeableConcept,
-    Reference? productReference,
-    Quantity? dailyAmount,
-    Quantity? quantity,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-  }) = _CarePlanDetail;
-  factory CareTeam({
-    @Default(R4ResourceType.CareTeam)
-    @JsonKey(unknownEnumValue: R4ResourceType.CareTeam)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) Code? status,
-    @JsonKey(name: '_status') @HiveField(13) Element? statusElement,
-    @HiveField(14) List<CodeableConcept>? category,
-    @HiveField(15) String? name,
-    @JsonKey(name: '_name') @HiveField(16) Element? nameElement,
-    @HiveField(17) Reference? subject,
-    @HiveField(18) Reference? encounter,
-    @HiveField(19) Period? period,
-    @HiveField(20) List<CareTeamParticipant>? participant,
-    @HiveField(21) List<CodeableConcept>? reasonCode,
-    @HiveField(22) List<Reference>? reasonReference,
-    @HiveField(23) List<Reference>? managingOrganization,
-    @HiveField(24) List<ContactPoint>? telecom,
-    @HiveField(25) List<Annotation>? note,
-  }) = _CareTeam;
-  factory CareTeamParticipant({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<CodeableConcept>? role,
-    Reference? member,
-    Reference? onBehalfOf,
-    Period? period,
-  }) = _CareTeamParticipant;
-  factory Goal({
-    @Default(R4ResourceType.Goal)
-    @JsonKey(unknownEnumValue: R4ResourceType.Goal)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) Code? lifecycleStatus,
-    @JsonKey(name: '_lifecycleStatus')
-    @HiveField(13)
-        Element? lifecycleStatusElement,
-    @HiveField(14) CodeableConcept? achievementStatus,
-    @HiveField(15) List<CodeableConcept>? category,
-    @HiveField(16) CodeableConcept? priority,
-    @HiveField(17) required CodeableConcept description,
-    @HiveField(18) required Reference subject,
-    @HiveField(19) Date? startDate,
-    @JsonKey(name: '_startDate') @HiveField(20) Element? startDateElement,
-    @HiveField(21) CodeableConcept? startCodeableConcept,
-    @HiveField(22) List<GoalTarget>? target,
-    @HiveField(23) Date? statusDate,
-    @JsonKey(name: '_statusDate') @HiveField(24) Element? statusDateElement,
-    @HiveField(25) String? statusReason,
-    @JsonKey(name: '_statusReason') @HiveField(26) Element? statusReasonElement,
-    @HiveField(27) Reference? expressedBy,
-    @HiveField(28) List<Reference>? addresses,
-    @HiveField(29) List<Annotation>? note,
-    @HiveField(30) List<CodeableConcept>? outcomeCode,
-    @HiveField(31) List<Reference>? outcomeReference,
-  }) = _Goal;
-  factory GoalTarget({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? measure,
-    Quantity? detailQuantity,
-    Range? detailRange,
-    CodeableConcept? detailCodeableConcept,
-    String? detailString,
-    @JsonKey(name: '_detailString') Element? detailStringElement,
-    Boolean? detailBoolean,
-    @JsonKey(name: '_detailBoolean') Element? detailBooleanElement,
-    Integer? detailInteger,
-    @JsonKey(name: '_detailInteger') Element? detailIntegerElement,
-    Ratio? detailRatio,
-    Date? dueDate,
-    @JsonKey(name: '_dueDate') Element? dueDateElement,
-    FhirDuration? dueDuration,
-  }) = _GoalTarget;
-  factory NutritionOrder({
-    @Default(R4ResourceType.NutritionOrder)
-    @JsonKey(unknownEnumValue: R4ResourceType.NutritionOrder)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) @HiveField(13) List<Canonical>? instantiatesCanonical,
-    @HiveField(14) @HiveField(15) List<FhirUri>? instantiatesUri,
-    @JsonKey(name: '_instantiatesUri')
-    @HiveField(16)
-        List<Element?>? instantiatesUriElement,
-    @HiveField(17) List<FhirUri>? instantiates,
-    @JsonKey(name: '_instantiates')
-    @HiveField(18)
-        List<Element?>? instantiatesElement,
-    @HiveField(19) Code? status,
-    @JsonKey(name: '_status') @HiveField(20) Element? statusElement,
-    @HiveField(21) Code? intent,
-    @JsonKey(name: '_intent') @HiveField(22) Element? intentElement,
-    @HiveField(23) required Reference patient,
-    @HiveField(24) Reference? encounter,
-    @HiveField(25) FhirDateTime? dateTime,
-    @JsonKey(name: '_dateTime') @HiveField(26) Element? dateTimeElement,
-    @HiveField(27) Reference? orderer,
-    @HiveField(28) List<Reference>? allergyIntolerance,
-    @HiveField(29) List<CodeableConcept>? foodPreferenceModifier,
-    @HiveField(30) List<CodeableConcept>? excludeFoodModifier,
-    @HiveField(31) NutritionOrderOralDiet? oralDiet,
-    @HiveField(32) List<NutritionOrderSupplement>? supplement,
-    @HiveField(33) NutritionOrderEnteralFormula? enteralFormula,
-    @HiveField(34) @HiveField(35) List<Annotation>? note,
-  }) = _NutritionOrder;
-  factory NutritionOrderOralDiet({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<CodeableConcept>? type,
-    List<Timing>? schedule,
-    List<NutritionOrderNutrient>? nutrient,
-    List<NutritionOrderTexture>? texture,
-    List<CodeableConcept>? fluidConsistencyType,
-    String? instruction,
-    @JsonKey(name: '_instruction') Element? instructionElement,
-  }) = _NutritionOrderOralDiet;
-  factory NutritionOrderNutrient({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? modifier,
-    Quantity? amount,
-  }) = _NutritionOrderNutrient;
-  factory NutritionOrderTexture({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? modifier,
-    CodeableConcept? foodType,
-  }) = _NutritionOrderTexture;
-  factory NutritionOrderSupplement({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? type,
-    String? productName,
-    @JsonKey(name: '_productName') Element? productNameElement,
-    List<Timing>? schedule,
-    Quantity? quantity,
-    String? instruction,
-    @JsonKey(name: '_instruction') Element? instructionElement,
-  }) = _NutritionOrderSupplement;
-  factory NutritionOrderEnteralFormula({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? baseFormulaType,
-    String? baseFormulaProductName,
-    @JsonKey(name: '_baseFormulaProductName')
-        Element? baseFormulaProductNameElement,
-    CodeableConcept? additiveType,
-    String? additiveProductName,
-    @JsonKey(name: '_additiveProductName') Element? additiveProductNameElement,
-    Quantity? caloricDensity,
-    CodeableConcept? routeofAdministration,
-    List<NutritionOrderAdministration>? administration,
-    Quantity? maxVolumeToDeliver,
-    String? administrationInstruction,
-    @JsonKey(name: '_administrationInstruction')
-        Element? administrationInstructionElement,
-  }) = _NutritionOrderEnteralFormula;
-  factory NutritionOrderAdministration({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Timing? schedule,
-    Quantity? quantity,
-    Quantity? rateQuantity,
-    Ratio? rateRatio,
-  }) = _NutritionOrderAdministration;
-  factory RequestGroup({
-    @Default(R4ResourceType.RequestGroup)
-    @JsonKey(unknownEnumValue: R4ResourceType.RequestGroup)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) List<Canonical>? instantiatesCanonical,
-    @JsonKey(name: '_instantiatesCanonical')
-    @HiveField(13)
-        List<Element>? instantiatesCanonicalElement,
-    @HiveField(14) @HiveField(15) List<FhirUri>? instantiatesUri,
-    @JsonKey(name: '_instantiatesUri')
-    @HiveField(16)
-        List<Element?>? instantiatesUriElement,
-    @HiveField(17) List<Reference>? basedOn,
-    @HiveField(18) List<Reference>? replaces,
-    @HiveField(19) Identifier? groupIdentifier,
-    @HiveField(20) Code? status,
-    @JsonKey(name: '_status') @HiveField(21) Element? statusElement,
-    @HiveField(22) Code? intent,
-    @JsonKey(name: '_intent') @HiveField(23) Element? intentElement,
-    @HiveField(24) Code? priority,
-    @JsonKey(name: '_priority') @HiveField(25) Element? priorityElement,
-    @HiveField(26) CodeableConcept? code,
-    @HiveField(27) Reference? subject,
-    @HiveField(28) Reference? encounter,
-    @HiveField(29) FhirDateTime? authoredOn,
-    @JsonKey(name: '_authoredOn') @HiveField(30) Element? authoredOnElement,
-    @HiveField(31) Reference? author,
-    @HiveField(32) List<CodeableConcept>? reasonCode,
-    @HiveField(33) List<Reference>? reasonReference,
-    @HiveField(34) List<Annotation>? note,
-    @HiveField(35) List<RequestGroupAction>? action,
-  }) = _RequestGroup;
-  factory RequestGroupAction({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? prefix,
-    @JsonKey(name: '_prefix') Element? prefixElement,
-    String? title,
-    @JsonKey(name: '_title') Element? titleElement,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    String? textEquivalent,
-    @JsonKey(name: '_textEquivalent') Element? textEquivalentElement,
-    Code? priority,
-    @JsonKey(name: '_priority') Element? priorityElement,
-    List<CodeableConcept>? code,
-    List<RelatedArtifact>? documentation,
-    List<RequestGroupCondition>? condition,
-    List<RequestGroupRelatedAction>? relatedAction,
-    FhirDateTime? timingDateTime,
-    @JsonKey(name: '_timingDateTime') Element? timingDateTimeElement,
-    Age? timingAge,
-    Period? timingPeriod,
-    FhirDuration? timingDuration,
-    Range? timingRange,
-    Timing? timingTiming,
-    List<Reference>? participant,
-    CodeableConcept? type,
-    Code? groupingBehavior,
-    @JsonKey(name: '_groupingBehavior') Element? groupingBehaviorElement,
-    Code? selectionBehavior,
-    @JsonKey(name: '_selectionBehavior') Element? selectionBehaviorElement,
-    Code? requiredBehavior,
-    @JsonKey(name: '_requiredBehavior') Element? requiredBehaviorElement,
-    Code? precheckBehavior,
-    @JsonKey(name: '_precheckBehavior') Element? precheckBehaviorElement,
-    Code? cardinalityBehavior,
-    @JsonKey(name: '_cardinalityBehavior') Element? cardinalityBehaviorElement,
-    Reference? resource,
-    List<RequestGroupAction>? action,
-  }) = _RequestGroupAction;
-  factory RequestGroupCondition({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? kind,
-    @JsonKey(name: '_kind') Element? kindElement,
-    Expression? expression,
-  }) = _RequestGroupCondition;
-  factory RequestGroupRelatedAction({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    FhirId? actionId,
-    @JsonKey(name: '_actionId') Element? actionIdElement,
-    Code? relationship,
-    @JsonKey(name: '_relationship') Element? relationshipElement,
-    FhirDuration? offsetDuration,
-    Range? offsetRange,
-  }) = _RequestGroupRelatedAction;
-  factory RiskAssessment({
-    @Default(R4ResourceType.RiskAssessment)
-    @JsonKey(unknownEnumValue: R4ResourceType.RiskAssessment)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) Reference? basedOn,
-    @HiveField(13) @HiveField(14) Reference? parent,
-    @HiveField(15) Code? status,
-    @JsonKey(name: '_status') @HiveField(16) Element? statusElement,
-    @HiveField(17) CodeableConcept? method,
-    @HiveField(18) CodeableConcept? code,
-    @HiveField(19) required Reference subject,
-    @HiveField(20) Reference? encounter,
-    @HiveField(21) FhirDateTime? occurrenceDateTime,
-    @JsonKey(name: '_occurrenceDateTime')
-    @HiveField(22)
-        Element? occurrenceDateTimeElement,
-    @HiveField(23) Period? occurrencePeriod,
-    @HiveField(24) Reference? condition,
-    @HiveField(25) Reference? performer,
-    @HiveField(26) List<CodeableConcept>? reasonCode,
-    @HiveField(27) List<Reference>? reasonReference,
-    @HiveField(28) List<Reference>? basis,
-    @HiveField(29) List<RiskAssessmentPrediction>? prediction,
-    @HiveField(30) String? mitigation,
-    @JsonKey(name: '_mitigation') @HiveField(31) Element? mitigationElement,
-    @HiveField(32) List<Annotation>? note,
-  }) = _RiskAssessment;
-  factory RiskAssessmentPrediction({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? outcome,
-    Decimal? probabilityDecimal,
-    @JsonKey(name: '_probabilityDecimal') Element? probabilityDecimalElement,
-    Range? probabilityRange,
-    CodeableConcept? qualitativeRisk,
-    Decimal? relativeRisk,
-    @JsonKey(name: '_relativeRisk') Element? relativeRiskElement,
-    Period? whenPeriod,
-    Range? whenRange,
-    String? rationale,
-    @JsonKey(name: '_rationale') Element? rationaleElement,
-  }) = _RiskAssessmentPrediction;
-  factory ServiceRequest({
-    @Default(R4ResourceType.ServiceRequest)
-    @JsonKey(unknownEnumValue: R4ResourceType.ServiceRequest)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) @HiveField(13) List<Canonical>? instantiatesCanonical,
-    @HiveField(14) @HiveField(15) List<FhirUri>? instantiatesUri,
-    @JsonKey(name: '_instantiatesUri')
-    @HiveField(16)
-        List<Element?>? instantiatesUriElement,
-    @HiveField(17) List<Reference>? basedOn,
-    @HiveField(18) List<Reference>? replaces,
-    @HiveField(19) @HiveField(20) Identifier? requisition,
-    @HiveField(21) Code? status,
-    @JsonKey(name: '_status') @HiveField(22) Element? statusElement,
-    @HiveField(23) Code? intent,
-    @JsonKey(name: '_intent') @HiveField(24) Element? intentElement,
-    @HiveField(25) List<CodeableConcept>? category,
-    @HiveField(26) Code? priority,
-    @JsonKey(name: '_priority') @HiveField(27) Element? priorityElement,
-    @HiveField(28) Boolean? doNotPerform,
-    @JsonKey(name: '_doNotPerform') @HiveField(29) Element? doNotPerformElement,
-    @HiveField(30) @HiveField(31) CodeableConcept? code,
-    @HiveField(32) @HiveField(33) List<CodeableConcept>? orderDetail,
-    @HiveField(34) @HiveField(35) Quantity? quantityQuantity,
-    @HiveField(36) @HiveField(37) Ratio? quantityRatio,
-    @HiveField(38) @HiveField(39) Range? quantityRange,
-    @HiveField(40) required Reference subject,
-    @HiveField(41) Reference? encounter,
-    @HiveField(42) FhirDateTime? occurrenceDateTime,
-    @JsonKey(name: '_occurrenceDateTime')
-    @HiveField(43)
-        Element? occurrenceDateTimeElement,
-    @HiveField(44) Period? occurrencePeriod,
-    @HiveField(45) Timing? occurrenceTiming,
-    @HiveField(46) Boolean? asNeededBoolean,
-    @JsonKey(name: '_asNeededBoolean')
-    @HiveField(47)
-        Element? asNeededBooleanElement,
-    @HiveField(48) CodeableConcept? asNeededCodeableConcept,
-    @HiveField(49) FhirDateTime? authoredOn,
-    @JsonKey(name: '_authoredOn') @HiveField(50) Element? authoredOnElement,
-    @HiveField(51) Reference? requester,
-    @HiveField(52) CodeableConcept? performerType,
-    @HiveField(53) List<Reference>? performer,
-    @HiveField(54) List<CodeableConcept>? locationCode,
-    @HiveField(55) List<Reference>? locationReference,
-    @HiveField(56) List<CodeableConcept>? reasonCode,
-    @HiveField(57) List<Reference>? reasonReference,
-    @HiveField(58) List<Reference>? insurance,
-    @HiveField(59) @HiveField(60) List<Reference>? supportingInfo,
-    @HiveField(61) List<Reference>? specimen,
-    @HiveField(62) List<CodeableConcept>? bodySite,
-    @HiveField(63) List<Annotation>? note,
-    @HiveField(64) String? patientInstruction,
-    @JsonKey(name: '_patientInstruction')
-    @HiveField(65)
-        Element? patientInstructionElement,
-    @HiveField(66) List<Reference>? relevantHistory,
-  }) = _ServiceRequest;
-  factory VisionPrescription({
-    @Default(R4ResourceType.VisionPrescription)
-    @JsonKey(unknownEnumValue: R4ResourceType.VisionPrescription)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) Code? status,
-    @JsonKey(name: '_status') @HiveField(13) Element? statusElement,
-    @HiveField(14) FhirDateTime? created,
-    @JsonKey(name: '_created') @HiveField(15) Element? createdElement,
-    @HiveField(16) required Reference patient,
-    @HiveField(17) Reference? encounter,
-    @HiveField(18) FhirDateTime? dateWritten,
-    @JsonKey(name: '_dateWritten') @HiveField(19) Element? dateWrittenElement,
-    @HiveField(20) required Reference prescriber,
-    @HiveField(21)
-        required List<VisionPrescriptionLensSpecification> lensSpecification,
-  }) = _VisionPrescription;
-  factory VisionPrescriptionLensSpecification({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept product,
-    Code? eye,
-    @JsonKey(name: '_eye') Element? eyeElement,
-    Decimal? sphere,
-    @JsonKey(name: '_sphere') Element? sphereElement,
-    Decimal? cylinder,
-    @JsonKey(name: '_cylinder') Element? cylinderElement,
-    Integer? axis,
-    @JsonKey(name: '_axis') Element? axisElement,
-    List<VisionPrescriptionPrism>? prism,
-    Decimal? add,
-    @JsonKey(name: '_add') Element? addElement,
-    Decimal? power,
-    @JsonKey(name: '_power') Element? powerElement,
-    Decimal? backCurve,
-    @JsonKey(name: '_backCurve') Element? backCurveElement,
-    Decimal? diameter,
-    @JsonKey(name: '_diameter') Element? diameterElement,
-    Quantity? duration,
-    String? color,
-    @JsonKey(name: '_color') Element? colorElement,
-    String? brand,
-    @JsonKey(name: '_brand') Element? brandElement,
-    List<Annotation>? note,
-  }) = _VisionPrescriptionLensSpecification;
-  factory VisionPrescriptionPrism({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Decimal? amount,
-    @JsonKey(name: '_amount') Element? amountElement,
-    Code? base,
-    @JsonKey(name: '_base') Element? baseElement,
-  }) = _VisionPrescriptionPrism;
+import '../../../../r4.dart';
+
+class CarePlan {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  List<Canonical>? instantiatesCanonical;
+  List<FhirUri>? instantiatesUri;
+
+  List<Element?>? instantiatesUriElement;
+  List<Reference>? basedOn;
+  List<Reference>? replaces;
+  List<Reference>? partOf;
+  Code? status;
+  Element? statusElement;
+  Code? intent;
+  Element? intentElement;
+  List<CodeableConcept>? category;
+  String? title;
+  Element? titleElement;
+  String? description;
+  Element? descriptionElement;
+  Reference subject;
+  Reference? encounter;
+  Period? period;
+  FhirDateTime? created;
+  Element? createdElement;
+  Reference? author;
+  List<Reference>? contributor;
+  List<Reference>? careTeam;
+  List<Reference>? addresses;
+  List<Reference>? supportingInfo;
+  List<Reference>? goal;
+  List<CarePlanActivity>? activity;
+  List<Annotation>? note;
+}
+
+class CarePlanActivity {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<CodeableConcept>? outcomeCodeableConcept;
+  List<Reference>? outcomeReference;
+  List<Annotation>? progress;
+  Reference? reference;
+  CarePlanDetail? detail;
+}
+
+class CarePlanDetail {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code? kind;
+  Element? kindElement;
+  List<Canonical>? instantiatesCanonical;
+  List<FhirUri>? instantiatesUri;
+  List<Element?>? instantiatesUriElement;
+  CodeableConcept? code;
+  List<CodeableConcept>? reasonCode;
+  List<Reference>? reasonReference;
+  List<Reference>? goal;
+  Code? status;
+  Element? statusElement;
+  CodeableConcept? statusReason;
+  Boolean? doNotPerform;
+  Element? doNotPerformElement;
+  Timing? scheduledTiming;
+  Period? scheduledPeriod;
+  String? scheduledString;
+  Element? scheduledStringElement;
+  Reference? location;
+  List<Reference>? performer;
+  CodeableConcept? productCodeableConcept;
+  Reference? productReference;
+  Quantity? dailyAmount;
+  Quantity? quantity;
+  String? description;
+  Element? descriptionElement;
+}
+
+class CareTeam {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  Code? status;
+  Element? statusElement;
+  List<CodeableConcept>? category;
+  String? name;
+  Element? nameElement;
+  Reference? subject;
+  Reference? encounter;
+  Period? period;
+  List<CareTeamParticipant>? participant;
+  List<CodeableConcept>? reasonCode;
+  List<Reference>? reasonReference;
+  List<Reference>? managingOrganization;
+  List<ContactPoint>? telecom;
+  List<Annotation>? note;
+}
+
+class CareTeamParticipant {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<CodeableConcept>? role;
+  Reference? member;
+  Reference? onBehalfOf;
+  Period? period;
+}
+
+class Goal {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  Code? lifecycleStatus;
+
+  Element? lifecycleStatusElement;
+  CodeableConcept? achievementStatus;
+  List<CodeableConcept>? category;
+  CodeableConcept? priority;
+  CodeableConcept description;
+  Reference subject;
+  Date? startDate;
+  Element? startDateElement;
+  CodeableConcept? startCodeableConcept;
+  List<GoalTarget>? target;
+  Date? statusDate;
+  Element? statusDateElement;
+  String? statusReason;
+  Element? statusReasonElement;
+  Reference? expressedBy;
+  List<Reference>? addresses;
+  List<Annotation>? note;
+  List<CodeableConcept>? outcomeCode;
+  List<Reference>? outcomeReference;
+}
+
+class GoalTarget {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? measure;
+  Quantity? detailQuantity;
+  Range? detailRange;
+  CodeableConcept? detailCodeableConcept;
+  String? detailString;
+  Element? detailStringElement;
+  Boolean? detailBoolean;
+  Element? detailBooleanElement;
+  Integer? detailInteger;
+  Element? detailIntegerElement;
+  Ratio? detailRatio;
+  Date? dueDate;
+  Element? dueDateElement;
+  FhirDuration? dueDuration;
+}
+
+class NutritionOrder {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  List<Canonical>? instantiatesCanonical;
+  List<FhirUri>? instantiatesUri;
+
+  List<Element?>? instantiatesUriElement;
+  List<FhirUri>? instantiates;
+
+  List<Element?>? instantiatesElement;
+  Code? status;
+  Element? statusElement;
+  Code? intent;
+  Element? intentElement;
+  Reference patient;
+  Reference? encounter;
+  FhirDateTime? dateTime;
+  Element? dateTimeElement;
+  Reference? orderer;
+  List<Reference>? allergyIntolerance;
+  List<CodeableConcept>? foodPreferenceModifier;
+  List<CodeableConcept>? excludeFoodModifier;
+  NutritionOrderOralDiet? oralDiet;
+  List<NutritionOrderSupplement>? supplement;
+  NutritionOrderEnteralFormula? enteralFormula;
+  List<Annotation>? note;
+}
+
+class NutritionOrderOralDiet {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<CodeableConcept>? type;
+  List<Timing>? schedule;
+  List<NutritionOrderNutrient>? nutrient;
+  List<NutritionOrderTexture>? texture;
+  List<CodeableConcept>? fluidConsistencyType;
+  String? instruction;
+  Element? instructionElement;
+}
+
+class NutritionOrderNutrient {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? modifier;
+  Quantity? amount;
+}
+
+class NutritionOrderTexture {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? modifier;
+  CodeableConcept? foodType;
+}
+
+class NutritionOrderSupplement {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? type;
+  String? productName;
+  Element? productNameElement;
+  List<Timing>? schedule;
+  Quantity? quantity;
+  String? instruction;
+  Element? instructionElement;
+}
+
+class NutritionOrderEnteralFormula {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? baseFormulaType;
+  String? baseFormulaProductName;
+
+  Element? baseFormulaProductNameElement;
+  CodeableConcept? additiveType;
+  String? additiveProductName;
+  Element? additiveProductNameElement;
+  Quantity? caloricDensity;
+  CodeableConcept? routeofAdministration;
+  List<NutritionOrderAdministration>? administration;
+  Quantity? maxVolumeToDeliver;
+  String? administrationInstruction;
+
+  Element? administrationInstructionElement;
+}
+
+class NutritionOrderAdministration {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Timing? schedule;
+  Quantity? quantity;
+  Quantity? rateQuantity;
+  Ratio? rateRatio;
+}
+
+class RequestGroup {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  List<Canonical>? instantiatesCanonical;
+
+  List<Element>? instantiatesCanonicalElement;
+  List<FhirUri>? instantiatesUri;
+
+  List<Element?>? instantiatesUriElement;
+  List<Reference>? basedOn;
+  List<Reference>? replaces;
+  Identifier? groupIdentifier;
+  Code? status;
+  Element? statusElement;
+  Code? intent;
+  Element? intentElement;
+  Code? priority;
+  Element? priorityElement;
+  CodeableConcept? code;
+  Reference? subject;
+  Reference? encounter;
+  FhirDateTime? authoredOn;
+  Element? authoredOnElement;
+  Reference? author;
+  List<CodeableConcept>? reasonCode;
+  List<Reference>? reasonReference;
+  List<Annotation>? note;
+  List<RequestGroupAction>? action;
+}
+
+class RequestGroupAction {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? prefix;
+  Element? prefixElement;
+  String? title;
+  Element? titleElement;
+  String? description;
+  Element? descriptionElement;
+  String? textEquivalent;
+  Element? textEquivalentElement;
+  Code? priority;
+  Element? priorityElement;
+  List<CodeableConcept>? code;
+  List<RelatedArtifact>? documentation;
+  List<RequestGroupCondition>? condition;
+  List<RequestGroupRelatedAction>? relatedAction;
+  FhirDateTime? timingDateTime;
+  Element? timingDateTimeElement;
+  Age? timingAge;
+  Period? timingPeriod;
+  FhirDuration? timingDuration;
+  Range? timingRange;
+  Timing? timingTiming;
+  List<Reference>? participant;
+  CodeableConcept? type;
+  Code? groupingBehavior;
+  Element? groupingBehaviorElement;
+  Code? selectionBehavior;
+  Element? selectionBehaviorElement;
+  Code? Behavior;
+  Element? BehaviorElement;
+  Code? precheckBehavior;
+  Element? precheckBehaviorElement;
+  Code? cardinalityBehavior;
+  Element? cardinalityBehaviorElement;
+  Reference? resource;
+  List<RequestGroupAction>? action;
+}
+
+class RequestGroupCondition {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code? kind;
+  Element? kindElement;
+  Expression? expression;
+}
+
+class RequestGroupRelatedAction {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirId? actionId;
+  Element? actionIdElement;
+  Code? relationship;
+  Element? relationshipElement;
+  FhirDuration? offsetDuration;
+  Range? offsetRange;
+}
+
+class RiskAssessment {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  Reference? basedOn;
+  Reference? parent;
+  Code? status;
+  Element? statusElement;
+  CodeableConcept? method;
+  CodeableConcept? code;
+  Reference subject;
+  Reference? encounter;
+  FhirDateTime? occurrenceDateTime;
+
+  Element? occurrenceDateTimeElement;
+  Period? occurrencePeriod;
+  Reference? condition;
+  Reference? performer;
+  List<CodeableConcept>? reasonCode;
+  List<Reference>? reasonReference;
+  List<Reference>? basis;
+  List<RiskAssessmentPrediction>? prediction;
+  String? mitigation;
+  Element? mitigationElement;
+  List<Annotation>? note;
+}
+
+class RiskAssessmentPrediction {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? outcome;
+  Decimal? probabilityDecimal;
+  Element? probabilityDecimalElement;
+  Range? probabilityRange;
+  CodeableConcept? qualitativeRisk;
+  Decimal? relativeRisk;
+  Element? relativeRiskElement;
+  Period? whenPeriod;
+  Range? whenRange;
+  String? rationale;
+  Element? rationaleElement;
+}
+
+class ServiceRequest {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  List<Canonical>? instantiatesCanonical;
+  List<FhirUri>? instantiatesUri;
+
+  List<Element?>? instantiatesUriElement;
+  List<Reference>? basedOn;
+  List<Reference>? replaces;
+  Identifier? requisition;
+  Code? status;
+  Element? statusElement;
+  Code? intent;
+  Element? intentElement;
+  List<CodeableConcept>? category;
+  Code? priority;
+  Element? priorityElement;
+  Boolean? doNotPerform;
+  Element? doNotPerformElement;
+  CodeableConcept? code;
+  List<CodeableConcept>? orderDetail;
+  Quantity? quantityQuantity;
+  Ratio? quantityRatio;
+  Range? quantityRange;
+  Reference subject;
+  Reference? encounter;
+  FhirDateTime? occurrenceDateTime;
+
+  Element? occurrenceDateTimeElement;
+  Period? occurrencePeriod;
+  Timing? occurrenceTiming;
+  Boolean? asNeededBoolean;
+
+  Element? asNeededBooleanElement;
+  CodeableConcept? asNeededCodeableConcept;
+  FhirDateTime? authoredOn;
+  Element? authoredOnElement;
+  Reference? requester;
+  CodeableConcept? performerType;
+  List<Reference>? performer;
+  List<CodeableConcept>? locationCode;
+  List<Reference>? locationReference;
+  List<CodeableConcept>? reasonCode;
+  List<Reference>? reasonReference;
+  List<Reference>? insurance;
+  List<Reference>? supportingInfo;
+  List<Reference>? specimen;
+  List<CodeableConcept>? bodySite;
+  List<Annotation>? note;
+  String? patientInstruction;
+
+  Element? patientInstructionElement;
+  List<Reference>? relevantHistory;
+}
+
+class VisionPrescription {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  Code? status;
+  Element? statusElement;
+  FhirDateTime? created;
+  Element? createdElement;
+  Reference patient;
+  Reference? encounter;
+  FhirDateTime? dateWritten;
+  Element? dateWrittenElement;
+  Reference prescriber;
+
+  List<VisionPrescriptionLensSpecification> lensSpecification;
+}
+
+class VisionPrescriptionLensSpecification {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept product;
+  Code? eye;
+  Element? eyeElement;
+  Decimal? sphere;
+  Element? sphereElement;
+  Decimal? cylinder;
+  Element? cylinderElement;
+  Integer? axis;
+  Element? axisElement;
+  List<VisionPrescriptionPrism>? prism;
+  Decimal? add;
+  Element? addElement;
+  Decimal? power;
+  Element? powerElement;
+  Decimal? backCurve;
+  Element? backCurveElement;
+  Decimal? diameter;
+  Element? diameterElement;
+  Quantity? duration;
+  String? color;
+  Element? colorElement;
+  String? brand;
+  Element? brandElement;
+  List<Annotation>? note;
+}
+
+class VisionPrescriptionPrism {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Decimal? amount;
+  Element? amountElement;
+  Code? base;
+  Element? baseElement;
+}

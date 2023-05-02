@@ -1,231 +1,241 @@
-  factory Location({
-    @Default(Dstu2ResourceType.Location)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Location)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: LocationStatus.unknown) LocationStatus? status,
-    @JsonKey(name: '_status') Element? statusElement,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    @JsonKey(unknownEnumValue: LocationMode.unknown) LocationMode? mode,
-    @JsonKey(name: '_mode') Element? modeElement,
-    CodeableConcept? type,
-    List<ContactPoint>? telecom,
-    Address? address,
-    CodeableConcept? physicalType,
-    LocationPosition? position,
-    Reference? managingOrganization,
-    Reference? partOf,
-  }) = _Location;
-  factory LocationPosition({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required Decimal longitude,
-    @JsonKey(name: '_longitude') Element? longitudeElement,
-    required Decimal latitude,
-    @JsonKey(name: '_latitude') Element? latitudeElement,
-    Decimal? altitude,
-    @JsonKey(name: '_altitude') Element? altitudeElement,
-  }) = _LocationPosition;
-  factory Substance({
-    @Default(Dstu2ResourceType.Substance)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Substance)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    List<CodeableConcept>? category,
-    required CodeableConcept code,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    List<SubstanceInstance>? instance,
-    List<SubstanceIngredient>? ingredient,
-  }) = _Substance;
-  factory SubstanceInstance({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Identifier? identifier,
-    FhirDateTime? expiry,
-    @JsonKey(name: '_expiry') Element? expiryElement,
-    Quantity? quantity,
-  }) = _SubstanceInstance;
-  factory SubstanceIngredient({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Ratio? quantity,
-    required Reference substance,
-  }) = _SubstanceIngredient;
-  factory Person({
-    @Default(Dstu2ResourceType.Person)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Person)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    List<HumanName>? name,
-    List<ContactPoint>? telecom,
-    @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender? gender,
-    @JsonKey(name: '_gender') Element? genderElement,
-    Date? birthDate,
-    @JsonKey(name: '_birthDate') Element? birthDateElement,
-    List<Address>? address,
-    Attachment? photo,
-    Reference? managingOrganization,
-    Boolean? active,
-    @JsonKey(name: '_active') Element? activeElement,
-    List<PersonLink>? link,
-  }) = _Person;
-  factory PersonLink({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required Reference target,
-    @JsonKey(unknownEnumValue: LinkAssurance.unknown) LinkAssurance? assurance,
-    @JsonKey(name: '_assurance') Element? assuranceElement,
-  }) = _PersonLink;
-  factory Contract({
-    @Default(Dstu2ResourceType.Contract)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Contract)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Identifier? identifier,
-    FhirDateTime? issued,
-    @JsonKey(name: '_issued') Element? issuedElement,
-    Period? applies,
-    List<Reference>? subject,
-    List<Reference>? authority,
-    List<Reference>? domain,
-    CodeableConcept? type,
-    List<CodeableConcept>? subType,
-    List<CodeableConcept>? action,
-    List<CodeableConcept>? actionReason,
-    List<ContractActor>? actor,
-    List<ContractValuedItem>? valuedItem,
-    List<ContractSigner>? signer,
-    List<ContractTerm>? term,
-    Attachment? bindingAttachment,
-    Reference? bindingReference,
-    List<ContractFriendly>? friendly,
-    List<ContractLegal>? legal,
-    List<ContractRule>? rule,
-  }) = _Contract;
-  factory ContractActor({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required Reference entity,
-    List<CodeableConcept>? role,
-  }) = _ContractActor;
-  factory ContractValuedItem({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? entityCodeableConcept,
-    Reference? entityReference,
-    Identifier? identifier,
-    FhirDateTime? effectiveTime,
-    @JsonKey(name: '_effectiveTime') Element? effectiveTimeElement,
-    Quantity? quantity,
-    Quantity? unitPrice,
-    Decimal? factor,
-    @JsonKey(name: '_factor') Element? factorElement,
-    Decimal? points,
-    @JsonKey(name: '_points') Element? pointsElement,
-    Quantity? net,
-    List<Element>? securityLabelNumberElement,
-  }) = _ContractValuedItem;
-  factory ContractSigner({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required Coding type,
-    required Reference party,
-    required String signature,
-  }) = _ContractSigner;
-  factory ContractTerm({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Identifier? identifier,
-    FhirDateTime? issued,
-    @JsonKey(name: '_issued') Element? issuedElement,
-    Period? applies,
-    CodeableConcept? type,
-    CodeableConcept? subType,
-    Reference? subject,
-    List<CodeableConcept>? action,
-    List<CodeableConcept>? actionReason,
-    List<ContractTermActor>? actor,
-    String? text,
-    @JsonKey(name: '_text') Element? textElement,
-    List<ContractValuedItem>? valuedItem,
-    List<ContractTerm>? group,
-  }) = _ContractTerm;
-  factory ContractTermActor({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required Reference entity,
-    List<CodeableConcept>? role,
-  }) = _ContractTermActor;
-  factory ContractFriendly({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Attachment? contentAttachment,
-    Reference? contactReference,
-  }) = _ContractFriendly;
-  factory ContractLegal({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Attachment? contentAttachment,
-    Reference? content,
-  }) = _ContractLegal;
-  factory ContractRule({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Attachment? contentAttachment,
-    Reference? contentReference,
-  }) = _ContractRule;
+import '../../../../dstu2.dart';
+part 'entities.enums.dart';
+
+class Location {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  LocationStatus? status;
+  Element? statusElement;
+  String? name;
+  Element? nameElement;
+  String? description;
+  Element? descriptionElement;
+  LocationMode? mode;
+  Element? modeElement;
+  CodeableConcept? type;
+  List<ContactPoint>? telecom;
+  Address? address;
+  CodeableConcept? physicalType;
+  LocationPosition? position;
+  Reference? managingOrganization;
+  Reference? partOf;
+}
+
+class LocationPosition {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Decimal longitude;
+  Element? longitudeElement;
+  Decimal latitude;
+  Element? latitudeElement;
+  Decimal? altitude;
+  Element? altitudeElement;
+}
+
+class Substance {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  List<CodeableConcept>? category;
+  CodeableConcept code;
+  String? description;
+  Element? descriptionElement;
+  List<SubstanceInstance>? instance;
+  List<SubstanceIngredient>? ingredient;
+}
+
+class SubstanceInstance {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Identifier? identifier;
+  FhirDateTime? expiry;
+  Element? expiryElement;
+  Quantity? quantity;
+}
+
+class SubstanceIngredient {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Ratio? quantity;
+  Reference substance;
+}
+
+class Person {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  List<HumanName>? name;
+  List<ContactPoint>? telecom;
+  PersonGender? gender;
+  Element? genderElement;
+  Date? birthDate;
+  Element? birthDateElement;
+  List<Address>? address;
+  Attachment? photo;
+  Reference? managingOrganization;
+  Boolean? active;
+  Element? activeElement;
+  List<PersonLink>? link;
+}
+
+class PersonLink {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Reference target;
+  LinkAssurance? assurance;
+  Element? assuranceElement;
+}
+
+class Contract {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Identifier? identifier;
+  FhirDateTime? issued;
+  Element? issuedElement;
+  Period? applies;
+  List<Reference>? subject;
+  List<Reference>? authority;
+  List<Reference>? domain;
+  CodeableConcept? type;
+  List<CodeableConcept>? subType;
+  List<CodeableConcept>? action;
+  List<CodeableConcept>? actionReason;
+  List<ContractActor>? actor;
+  List<ContractValuedItem>? valuedItem;
+  List<ContractSigner>? signer;
+  List<ContractTerm>? term;
+  Attachment? bindingAttachment;
+  Reference? bindingReference;
+  List<ContractFriendly>? friendly;
+  List<ContractLegal>? legal;
+  List<ContractRule>? rule;
+}
+
+class ContractActor {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Reference entity;
+  List<CodeableConcept>? role;
+}
+
+class ContractValuedItem {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? entityCodeableConcept;
+  Reference? entityReference;
+  Identifier? identifier;
+  FhirDateTime? effectiveTime;
+  Element? effectiveTimeElement;
+  Quantity? quantity;
+  Quantity? unitPrice;
+  Decimal? factor;
+  Element? factorElement;
+  Decimal? points;
+  Element? pointsElement;
+  Quantity? net;
+  List<Element>? securityLabelNumberElement;
+}
+
+class ContractSigner {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Coding type;
+  Reference party;
+  String signature;
+}
+
+class ContractTerm {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Identifier? identifier;
+  FhirDateTime? issued;
+  Element? issuedElement;
+  Period? applies;
+  CodeableConcept? type;
+  CodeableConcept? subType;
+  Reference? subject;
+  List<CodeableConcept>? action;
+  List<CodeableConcept>? actionReason;
+  List<ContractTermActor>? actor;
+  String? text;
+  Element? textElement;
+  List<ContractValuedItem>? valuedItem;
+  List<ContractTerm>? group;
+}
+
+class ContractTermActor {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Reference entity;
+  List<CodeableConcept>? role;
+}
+
+class ContractFriendly {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Attachment? contentAttachment;
+  Reference? contactReference;
+}
+
+class ContractLegal {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Attachment? contentAttachment;
+  Reference? content;
+}
+
+class ContractRule {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Attachment? contentAttachment;
+  Reference? contentReference;
+}

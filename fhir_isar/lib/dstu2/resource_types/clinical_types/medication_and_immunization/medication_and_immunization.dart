@@ -1,415 +1,428 @@
-  factory Medication({
-    @Default(Dstu2ResourceType.Medication)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Medication)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? code,
-    Boolean? isBrand,
-    Reference? manufacturer,
-    MedicationProduct? product,
-    MedicationPackage? package,
-  }) = _Medication;
-  factory MedicationProduct({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    CodeableConcept? form,
-    List<MedicationProductIngredient>? ingredient,
-    List<MedicationProductBatch>? batch,
-  }) = _MedicationProduct;
-  factory MedicationProductIngredient({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required Reference item,
-    Ratio? amount,
-  }) = _MedicationProductIngredient;
-  factory MedicationProductBatch({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? lotNumber,
-    @JsonKey(name: '_lotNumber') Element? lotNumberElement,
-    FhirDateTime? expirationDate,
-    @JsonKey(name: '_expirationDate') Element? expirationDateElement,
-  }) = _MedicationProductBatch;
-  factory MedicationPackage({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    CodeableConcept? container,
-    List<MedicationPackageContent>? content,
-  }) = _MedicationPackage;
-  factory MedicationPackageContent({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required Reference item,
-    Quantity? amount,
-  }) = _MedicationPackageContent;
-  factory MedicationOrder({
-    @Default(Dstu2ResourceType.MedicationOrder)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationOrder)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    @JsonKey(name: '_id') Element? idElement,
-    Meta? meta,
-    FhirUri? implicitRules,
-    Code? language,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    FhirDateTime? dateWritten,
-    @JsonKey(unknownEnumValue: MedicationOrderStatus.unknown)
-        MedicationOrderStatus? status,
-    @JsonKey(name: '_status') Element? statusElement,
-    FhirDateTime? dateEnded,
-    CodeableConcept? reasonEnded,
-    Reference? patient,
-    Reference? prescriber,
-    Reference? encounter,
-    CodeableConcept? reasonCodeableConcept,
-    Reference? reasonReference,
-    String? note,
-    CodeableConcept? medicationCodeableConcept,
-    Reference? medicationReference,
-    List<MedicationOrderDosageInstruction>? dosageInstruction,
-    MedicationOrderDispenseRequest? dispenseRequest,
-    MedicationOrderSubstitution? substitution,
-    Reference? priorPrescription,
-  }) = _MedicationOrder;
-  factory MedicationOrderDosageInstruction({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? text,
-    CodeableConcept? additionalInstructions,
-    Timing? timing,
-    Boolean? asNeededBoolean,
-    CodeableConcept? asNeededCodeableConcept,
-    CodeableConcept? siteCodeableConcept,
-    Reference? siteReference,
-    CodeableConcept? route,
-    CodeableConcept? method,
-    Range? doseRange,
-    Quantity? doseQuantity,
-    Ratio? rateRatio,
-    Range? rateRange,
-    Ratio? maxDosePerPeriod,
-  }) = _MedicationOrderDosageInstruction;
-  factory MedicationOrderDispenseRequest({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? medicationCodeableConcept,
-    Reference? medicationReference,
-    Period? validityPeriod,
-    PositiveInt? numberOfRepeatsAllowed,
-    Quantity? quantity,
-    Quantity? expectedSupplyDuration,
-  }) = _MedicationOrderDispenseRequest;
-  factory MedicationOrderSubstitution({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept type,
-    CodeableConcept? reason,
-  }) = _MedicationOrderSubstitution;
-  factory MedicationAdministration({
-    @Default(Dstu2ResourceType.MedicationAdministration)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationAdministration)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    @JsonKey(required: true, unknownEnumValue: MedicationAdministrationStatus.unknown)
-        required MedicationAdministrationStatus status,
-    @JsonKey(name: '_status') Element? statusElement,
-    required Reference patient,
-    Reference? practitioner,
-    Reference? encounter,
-    Reference? prescription,
-    Boolean? wasNotGiven,
-    List<CodeableConcept>? reasonNotGiven,
-    List<CodeableConcept>? reasonGiven,
-    FhirDateTime? effectiveTimeDateTime,
-    @JsonKey(name: '_effectiveDateTime') Element? effectiveDateTimeElement,
-    Period? effectiveTimePeriod,
-    CodeableConcept? medicationCodeableConcept,
-    Reference? medicationReference,
-    List<Reference>? device,
-    String? note,
-    MedicationAdministrationDosage? dosage,
-  }) = _MedicationAdministration;
-  factory MedicationAdministrationDosage({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? text,
-    @JsonKey(name: '_text') Element? textElement,
-    CodeableConcept? siteCodeableConcept,
-    Reference? siteReference,
-    CodeableConcept? route,
-    CodeableConcept? method,
-    Quantity? quantity,
-    Ratio? rateRatio,
-    Range? rateRange,
-  }) = _MedicationAdministrationDosage;
-  factory MedicationDispense({
-    @Default(Dstu2ResourceType.MedicationDispense)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationDispense)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Identifier? identifier,
-    @JsonKey(unknownEnumValue: MedicationDispenseStatus.unknown)
-        MedicationDispenseStatus? status,
-    @JsonKey(name: '_status') Element? statusElement,
-    Reference? patient,
-    Reference? dispenser,
-    List<Reference>? authorizingPrescription,
-    CodeableConcept? type,
-    Quantity? quantity,
-    Quantity? daysSupply,
-    CodeableConcept? medicationCodeableConcept,
-    Reference? medicationReference,
-    FhirDateTime? whenPrepared,
-    @JsonKey(name: '_whenPrepared') Element? whenPreparedElement,
-    FhirDateTime? whenHandedOver,
-    @JsonKey(name: '_whenHandedOver') Element? whenHandedOverElement,
-    Reference? destination,
-    List<Reference>? receiver,
-    String? note,
-    List<MedicationDispenseDosageInstruction>? dosageInstruction,
-    MedicationDispenseSubstitution? substitution,
-  }) = _MedicationDispense;
-  factory MedicationDispenseDosageInstruction({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? text,
-    CodeableConcept? additionalInstructions,
-    Timing? timing,
-    Boolean? asNeededBoolean,
-    CodeableConcept? asNeededCodeableConcept,
-    CodeableConcept? siteCodeableConcept,
-    Reference? siteReference,
-    CodeableConcept? route,
-    CodeableConcept? method,
-    Range? doseRange,
-    Quantity? doseQuantity,
-    Ratio? rateRatio,
-    Range? rateRange,
-    Ratio? maxDosePerPeriod,
-  }) = _MedicationDispenseDosageInstruction;
-  factory MedicationDispenseSubstitution({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept type,
-    List<CodeableConcept>? reason,
-    List<Reference>? responsibleParty,
-  }) = _MedicationDispenseSubstitution;
-  factory MedicationStatement({
-    @Default(Dstu2ResourceType.MedicationStatement)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationStatement)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    required Reference patient,
-    Reference? informationSource,
-    FhirDateTime? dateAsserted,
-    @JsonKey(name: '_dateAsserted') Element? dateAssertedElement,
-    @JsonKey(required: true, unknownEnumValue: MedicationStatementStatus.unknown)
-        required MedicationStatementStatus status,
-    @JsonKey(name: '_status') Element? statusElement,
-    Boolean? wasNotTaken,
-    List<CodeableConcept>? reasonNotTaken,
-    CodeableConcept? reasonForUseCodeableConcept,
-    Reference? reasonForUseReference,
-    FhirDateTime? effectiveDateTime,
-    @JsonKey(name: '_effectiveDateTime') Element? effectiveDateTimeElement,
-    Period? effectivePeriod,
-    String? note,
-    List<Reference>? supportingInformation,
-    CodeableConcept? medicationCodeableConcept,
-    Reference? medicationReference,
-    List<MedicationStatementDosage>? dosage,
-  }) = _MedicationStatement;
-  factory MedicationStatementDosage({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? text,
-    Timing? timing,
-    Boolean? asNeededBoolean,
-    CodeableConcept? asNeededCodeableConcept,
-    CodeableConcept? siteCodeableConcept,
-    Reference? siteReference,
-    CodeableConcept? route,
-    CodeableConcept? method,
-    Quantity? quantityQuantity,
-    Range? quantityRange,
-    Ratio? rateRatio,
-    Range? rateRange,
-    Ratio? maxDosePerPeriod,
-  }) = _MedicationStatementDosage;
-  factory Immunization({
-    @Default(Dstu2ResourceType.Immunization)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Immunization)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: ImmunizationStatus.unknown)
-        required ImmunizationStatus status,
-    @JsonKey(name: '_status') Element? statusElement,
-    FhirDateTime? date,
-    required CodeableConcept vaccineCode,
-    required Reference patient,
-    required Boolean wasNotGiven,
-    required Boolean reported,
-    Reference? performer,
-    Reference? requester,
-    Reference? encounter,
-    Reference? manufacturer,
-    Reference? location,
-    String? lotNumber,
-    @JsonKey(name: '_lotNumber') Element? lotNumberElement,
-    Date? expirationDate,
-    @JsonKey(name: '_expirationDate') Element? expirationDateElement,
-    CodeableConcept? site,
-    CodeableConcept? route,
-    Quantity? doseQuantity,
-    List<Annotation>? note,
-    ImmunizationExplanation? explanation,
-    List<ImmunizationReaction>? reaction,
-    List<ImmunizationVaccinationProtocol>? vaccinationProtocol,
-  }) = _Immunization;
-  factory ImmunizationExplanation({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<CodeableConcept>? reason,
-    List<CodeableConcept>? reasonNotGiven,
-  }) = _ImmunizationExplanation;
-  factory ImmunizationReaction({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    FhirDateTime? date,
-    @JsonKey(name: '_date') Element? dateElement,
-    Reference? detail,
-    Boolean? reported,
-    @JsonKey(name: '_reported') Element? reportedElement,
-  }) = _ImmunizationReaction;
-  factory ImmunizationVaccinationProtocol({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required PositiveInt doseSequence,
-    String? description,
-    Reference? authority,
-    String? series,
-    @JsonKey(name: '_series') Element? seriesElement,
-    PositiveInt? seriesDoses,
-    List<CodeableConcept>? targetDisease,
-    required CodeableConcept doseStatus,
-    CodeableConcept? doseStatusReason,
-  }) = _ImmunizationVaccinationProtocol;
-  factory ImmunizationRecommendation({
-    @Default(Dstu2ResourceType.ImmunizationRecommendation)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.ImmunizationRecommendation)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    required Reference patient,
-    @JsonKey(required: true)
-        required List<ImmunizationRecommendationRecommendation> recommendation,
-  }) = _ImmunizationRecommendation;
-  factory ImmunizationRecommendationRecommendation({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required FhirDateTime date,
-    required CodeableConcept vaccineCode,
-    PositiveInt? doseNumber,
-    required CodeableConcept forecastStatus,
-    List<ImmunizationRecommendationRecommendationDateCriterion>? dateCriterion,
-    ImmunizationRecommendationRecommendationProtocol? protocol,
-    List<Reference>? supportingImmunization,
-    List<Reference>? supportingPatientInformation,
-  }) = _ImmunizationRecommendationRecommendation;
-  factory ImmunizationRecommendationRecommendationDateCriterion({
-    FhirId? id,
-    FhirExtension? extensio,
-    FhirExtension? modifier,
-    required CodeableConcept code,
-    required FhirDateTime value,
-    @JsonKey(name: '_value') Element? valueElement,
-  }) = _ImmunizationRecommendationRecommendationDateCriterion;
-  factory ImmunizationRecommendationRecommendationProtocol({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    FhirExtension? modifierExten,
-    Integer? doseSequence,
-    String? description,
-    Reference? authority,
-    String? series,
-    @JsonKey(name: '_series') Element? seriesElement,
-  }) = _ImmunizationRecommendationRecommendationProtocol;
+import '../../../../dstu2.dart';
+part 'medication_and_immunization.enums.dart';
+
+class Medication {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? code;
+  Boolean? isBrand;
+  Reference? manufacturer;
+  MedicationProduct? product;
+  MedicationPackage? package;
+}
+
+class MedicationProduct {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<String>? fhirComments;
+  CodeableConcept? form;
+  List<MedicationProductIngredient>? ingredient;
+  List<MedicationProductBatch>? batch;
+}
+
+class MedicationProductIngredient {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Reference item;
+  Ratio? amount;
+}
+
+class MedicationProductBatch {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? lotNumber;
+  Element? lotNumberElement;
+  FhirDateTime? expirationDate;
+  Element? expirationDateElement;
+}
+
+class MedicationPackage {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<String>? fhirComments;
+  CodeableConcept? container;
+  List<MedicationPackageContent>? content;
+}
+
+class MedicationPackageContent {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Reference item;
+  Quantity? amount;
+}
+
+class MedicationOrder {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Element? idElement;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Code? language;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  FhirDateTime? dateWritten;
+
+  MedicationOrderStatus? status;
+  Element? statusElement;
+  FhirDateTime? dateEnded;
+  CodeableConcept? reasonEnded;
+  Reference? patient;
+  Reference? prescriber;
+  Reference? encounter;
+  CodeableConcept? reasonCodeableConcept;
+  Reference? reasonReference;
+  String? note;
+  CodeableConcept? medicationCodeableConcept;
+  Reference? medicationReference;
+  List<MedicationOrderDosageInstruction>? dosageInstruction;
+  MedicationOrderDispenseRequest? dispenseRequest;
+  MedicationOrderSubstitution? substitution;
+  Reference? priorPrescription;
+}
+
+class MedicationOrderDosageInstruction {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? text;
+  CodeableConcept? additionalInstructions;
+  Timing? timing;
+  Boolean? asNeededBoolean;
+  CodeableConcept? asNeededCodeableConcept;
+  CodeableConcept? siteCodeableConcept;
+  Reference? siteReference;
+  CodeableConcept? route;
+  CodeableConcept? method;
+  Range? doseRange;
+  Quantity? doseQuantity;
+  Ratio? rateRatio;
+  Range? rateRange;
+  Ratio? maxDosePerPeriod;
+}
+
+class MedicationOrderDispenseRequest {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? medicationCodeableConcept;
+  Reference? medicationReference;
+  Period? validityPeriod;
+  PositiveInt? numberOfRepeatsAllowed;
+  Quantity? quantity;
+  Quantity? expectedSupplyDuration;
+}
+
+class MedicationOrderSubstitution {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept type;
+  CodeableConcept? reason;
+}
+
+class MedicationAdministration {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+
+  MedicationAdministrationStatus status;
+  Element? statusElement;
+  Reference patient;
+  Reference? practitioner;
+  Reference? encounter;
+  Reference? prescription;
+  Boolean? wasNotGiven;
+  List<CodeableConcept>? reasonNotGiven;
+  List<CodeableConcept>? reasonGiven;
+  FhirDateTime? effectiveTimeDateTime;
+  Element? effectiveDateTimeElement;
+  Period? effectiveTimePeriod;
+  CodeableConcept? medicationCodeableConcept;
+  Reference? medicationReference;
+  List<Reference>? device;
+  String? note;
+  MedicationAdministrationDosage? dosage;
+}
+
+class MedicationAdministrationDosage {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? text;
+  Element? textElement;
+  CodeableConcept? siteCodeableConcept;
+  Reference? siteReference;
+  CodeableConcept? route;
+  CodeableConcept? method;
+  Quantity? quantity;
+  Ratio? rateRatio;
+  Range? rateRange;
+}
+
+class MedicationDispense {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Identifier? identifier;
+
+  MedicationDispenseStatus? status;
+  Element? statusElement;
+  Reference? patient;
+  Reference? dispenser;
+  List<Reference>? authorizingPrescription;
+  CodeableConcept? type;
+  Quantity? quantity;
+  Quantity? daysSupply;
+  CodeableConcept? medicationCodeableConcept;
+  Reference? medicationReference;
+  FhirDateTime? whenPrepared;
+  Element? whenPreparedElement;
+  FhirDateTime? whenHandedOver;
+  Element? whenHandedOverElement;
+  Reference? destination;
+  List<Reference>? receiver;
+  String? note;
+  List<MedicationDispenseDosageInstruction>? dosageInstruction;
+  MedicationDispenseSubstitution? substitution;
+}
+
+class MedicationDispenseDosageInstruction {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? text;
+  CodeableConcept? additionalInstructions;
+  Timing? timing;
+  Boolean? asNeededBoolean;
+  CodeableConcept? asNeededCodeableConcept;
+  CodeableConcept? siteCodeableConcept;
+  Reference? siteReference;
+  CodeableConcept? route;
+  CodeableConcept? method;
+  Range? doseRange;
+  Quantity? doseQuantity;
+  Ratio? rateRatio;
+  Range? rateRange;
+  Ratio? maxDosePerPeriod;
+}
+
+class MedicationDispenseSubstitution {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept type;
+  List<CodeableConcept>? reason;
+  List<Reference>? responsibleParty;
+}
+
+class MedicationStatement {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  Reference patient;
+  Reference? informationSource;
+  FhirDateTime? dateAsserted;
+  Element? dateAssertedElement;
+
+  MedicationStatementStatus status;
+  Element? statusElement;
+  Boolean? wasNotTaken;
+  List<CodeableConcept>? reasonNotTaken;
+  CodeableConcept? reasonForUseCodeableConcept;
+  Reference? reasonForUseReference;
+  FhirDateTime? effectiveDateTime;
+  Element? effectiveDateTimeElement;
+  Period? effectivePeriod;
+  String? note;
+  List<Reference>? supportingInformation;
+  CodeableConcept? medicationCodeableConcept;
+  Reference? medicationReference;
+  List<MedicationStatementDosage>? dosage;
+}
+
+class MedicationStatementDosage {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? text;
+  Timing? timing;
+  Boolean? asNeededBoolean;
+  CodeableConcept? asNeededCodeableConcept;
+  CodeableConcept? siteCodeableConcept;
+  Reference? siteReference;
+  CodeableConcept? route;
+  CodeableConcept? method;
+  Quantity? quantityQuantity;
+  Range? quantityRange;
+  Ratio? rateRatio;
+  Range? rateRange;
+  Ratio? maxDosePerPeriod;
+}
+
+class Immunization {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+
+  ImmunizationStatus status;
+  Element? statusElement;
+  FhirDateTime? date;
+  CodeableConcept vaccineCode;
+  Reference patient;
+  Boolean wasNotGiven;
+  Boolean reported;
+  Reference? performer;
+  Reference? requester;
+  Reference? encounter;
+  Reference? manufacturer;
+  Reference? location;
+  String? lotNumber;
+  Element? lotNumberElement;
+  Date? expirationDate;
+  Element? expirationDateElement;
+  CodeableConcept? site;
+  CodeableConcept? route;
+  Quantity? doseQuantity;
+  List<Annotation>? note;
+  ImmunizationExplanation? explanation;
+  List<ImmunizationReaction>? reaction;
+  List<ImmunizationVaccinationProtocol>? vaccinationProtocol;
+}
+
+class ImmunizationExplanation {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<CodeableConcept>? reason;
+  List<CodeableConcept>? reasonNotGiven;
+}
+
+class ImmunizationReaction {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirDateTime? date;
+  Element? dateElement;
+  Reference? detail;
+  Boolean? reported;
+  Element? reportedElement;
+}
+
+class ImmunizationVaccinationProtocol {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  PositiveInt doseSequence;
+  String? description;
+  Reference? authority;
+  String? series;
+  Element? seriesElement;
+  PositiveInt? seriesDoses;
+  List<CodeableConcept>? targetDisease;
+  CodeableConcept doseStatus;
+  CodeableConcept? doseStatusReason;
+}
+
+class ImmunizationRecommendation {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  Reference patient;
+
+  List<ImmunizationRecommendationRecommendation> recommendation;
+}
+
+class ImmunizationRecommendationRecommendation {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirDateTime date;
+  CodeableConcept vaccineCode;
+  PositiveInt? doseNumber;
+  CodeableConcept forecastStatus;
+  List<ImmunizationRecommendationRecommendationDateCriterion>? dateCriterion;
+  ImmunizationRecommendationRecommendationProtocol? protocol;
+  List<Reference>? supportingImmunization;
+  List<Reference>? supportingPatientInformation;
+}
+
+class ImmunizationRecommendationRecommendationDateCriterion {
+  FhirId? id;
+  FhirExtension? extensio;
+  FhirExtension? modifier;
+  CodeableConcept code;
+  FhirDateTime value;
+  Element? valueElement;
+}
+
+class ImmunizationRecommendationRecommendationProtocol {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  FhirExtension? modifierExten;
+  Integer? doseSequence;
+  String? description;
+  Reference? authority;
+  String? series;
+  Element? seriesElement;
+}

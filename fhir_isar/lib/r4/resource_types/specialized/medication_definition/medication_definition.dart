@@ -1,695 +1,717 @@
-  factory AdministrableProductDefinition({
-    @Default(R4ResourceType.AdministrableProductDefinition)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) @HiveField(2) String? id,
-    @HiveField(3) Meta? meta,
-    @HiveField(4) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(5)
-        Element? implicitRulesElement,
-    @HiveField(6) Code? language,
-    @JsonKey(name: '_language') @HiveField(7) Element? languageElement,
-    @HiveField(8) Narrative? text,
-    @HiveField(9) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(10) List<FhirExtension>? extension_,
-    @HiveField(11) List<FhirExtension>? modifierExtension,
-    @HiveField(12) List<Identifier>? identifier,
-    @HiveField(13) Code? status,
-    @JsonKey(name: '_status') @HiveField(14) Element? statusElement,
-    @HiveField(15) List<Reference>? formOf,
-    @HiveField(16) CodeableConcept? administrableDoseForm,
-    @HiveField(17) CodeableConcept? unitOfPresentation,
-    @HiveField(18) List<Reference>? producedFrom,
-    @HiveField(19) List<CodeableConcept>? ingredient,
-    @HiveField(20) Reference? device,
-    @HiveField(21) List<AdministrableProductDefinitionProperty>? property,
-    @HiveField(22)
-        required List<AdministrableProductDefinitionRouteOfAdministration>
-            routeOfAdministration,
-  }) = _AdministrableProductDefinition;
-  factory AdministrableProductDefinitionProperty({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept type,
-    CodeableConcept? valueCodeableConcept,
-    Quantity? valueQuantity,
-    Date? valueDate,
-    @JsonKey(name: '_valueDate') Element? valueDateElement,
-    Boolean? valueBoolean,
-    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-    Attachment? valueAttachment,
-    CodeableConcept? status,
-  }) = _AdministrableProductDefinitionProperty;
-  factory AdministrableProductDefinitionRouteOfAdministration({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept code,
-    Quantity? firstDose,
-    Quantity? maxSingleDose,
-    Quantity? maxDosePerDay,
-    Ratio? maxDosePerTreatmentPeriod,
-    FhirDuration? maxTreatmentPeriod,
-    List<AdministrableProductDefinitionTargetSpecies>? targetSpecies,
-  }) = _AdministrableProductDefinitionRouteOfAdministration;
-  factory AdministrableProductDefinitionTargetSpecies({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept code,
-    List<AdministrableProductDefinitionWithdrawalPeriod>? withdrawalPeriod,
-  }) = _AdministrableProductDefinitionTargetSpecies;
-  factory AdministrableProductDefinitionWithdrawalPeriod({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept tissue,
-    required Quantity value,
-    String? supportingInformation,
-    @JsonKey(name: '_supportingInformation')
-        Element? supportingInformationElement,
-  }) = _AdministrableProductDefinitionWithdrawalPeriod;
-  factory Ingredient({
-    @HiveField(0)
-    @Default(R4ResourceType.Ingredient)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) Identifier? identifier,
-    @HiveField(12) Code? status,
-    @HiveField(13) @JsonKey(name: '_status') Element? statusElement,
-    @HiveField(14) @JsonKey(name: 'for') List<Reference>? for_,
-    @HiveField(15) required CodeableConcept role,
-    @HiveField(16) List<CodeableConcept>? function,
-    @HiveField(17) CodeableConcept? group,
-    @HiveField(18) Boolean? allergenicIndicator,
-    @HiveField(19)
-    @JsonKey(name: '_allergenicIndicator')
-        Element? allergenicIndicatorElement,
-    @HiveField(20) List<IngredientManufacturer>? manufacturer,
-    @HiveField(21) required IngredientSubstance substance,
-  }) = _Ingredient;
-  factory IngredientManufacturer({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? role,
-    @JsonKey(name: '_role') Element? roleElement,
-    required Reference manufacturer,
-  }) = _IngredientManufacturer;
-  factory IngredientSubstance({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableReference code,
-    List<IngredientStrength>? strength,
-  }) = _IngredientSubstance;
-  factory IngredientStrength({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Ratio? presentationRatio,
-    RatioRange? presentationRatioRange,
-    String? textPresentation,
-    @JsonKey(name: '_textPresentation') Element? textPresentationElement,
-    Ratio? concentrationRatio,
-    RatioRange? concentrationRatioRange,
-    String? textConcentration,
-    @JsonKey(name: '_textConcentration') Element? textConcentrationElement,
-    String? measurementPoint,
-    @JsonKey(name: '_measurementPoint') Element? measurementPointElement,
-    List<CodeableConcept>? country,
-    List<IngredientReferenceStrength>? referenceStrength,
-  }) = _IngredientStrength;
-  factory IngredientReferenceStrength({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableReference? substance,
-    Ratio? strengthRatio,
-    RatioRange? strengthRatioRange,
-    Quantity? strengthQuantity,
-    String? measurementPoint,
-    @JsonKey(name: '_measurementPoint') Element? measurementPointElement,
-    List<CodeableConcept>? country,
-  }) = _IngredientReferenceStrength;
-  factory ClinicalUseDefinition({
-    @HiveField(0)
-    @Default(R4ResourceType.ClinicalUseDefinition)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) Code? type,
-    @HiveField(13) @JsonKey(name: '_type') Element? typeElement,
-    @HiveField(14) List<CodeableConcept>? category,
-    @HiveField(15) List<Reference>? subject,
-    @HiveField(16) CodeableConcept? status,
-    @HiveField(17) ClinicalUseDefinitionContraindication? contraindication,
-    @HiveField(18) ClinicalUseDefinitionIndication? indication,
-    @HiveField(19) ClinicalUseDefinitionInteraction? interaction,
-    @HiveField(20) List<Reference>? population,
-    @HiveField(21) ClinicalUseDefinitionUndesirableEffect? undesirableEffect,
-    @HiveField(22) ClinicalUseDefinitionWarning? warning,
-  }) = _ClinicalUseDefinition;
-  factory ClinicalUseDefinitionContraindication({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableReference? diseaseSymptomProcedure,
-    CodeableReference? diseaseStatus,
-    List<CodeableReference>? comorbidity,
-    List<Reference>? indication,
-    List<ClinicalUseDefinitionOtherTherapy>? otherTherapy,
-  }) = _ClinicalUseDefinitionContraindication;
-  factory ClinicalUseDefinitionOtherTherapy({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept relationshipType,
-    required CodeableReference therapy,
-  }) = _ClinicalUseDefinitionOtherTherapy;
-  factory ClinicalUseDefinitionIndication({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableReference? diseaseSymptomProcedure,
-    CodeableReference? diseaseStatus,
-    List<CodeableReference>? comorbidity,
-    CodeableReference? intendedEffect,
-    Range? durationRange,
-    Markdown? durationString,
-    @JsonKey(name: '_durationString') Element? durationStringElement,
-    List<Reference>? undesirableEffect,
-    List<ClinicalUseDefinitionOtherTherapy>? otherTherapy,
-  }) = _ClinicalUseDefinitionIndication;
-  factory ClinicalUseDefinitionInteraction({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<ClinicalUseDefinitionInteractant>? interactant,
-    CodeableConcept? type,
-    CodeableReference? effect,
-    CodeableConcept? incidence,
-    List<CodeableConcept>? management,
-  }) = _ClinicalUseDefinitionInteraction;
-  factory ClinicalUseDefinitionInteractant({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Reference? itemReference,
-    CodeableConcept? itemCodeableConcept,
-  }) = _ClinicalUseDefinitionInteractant;
-  factory ClinicalUseDefinitionUndesirableEffect({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableReference? symptomConditionEffect,
-    CodeableConcept? classification,
-    CodeableConcept? frequencyOfOccurrence,
-  }) = _ClinicalUseDefinitionUndesirableEffect;
-  factory ClinicalUseDefinitionWarning({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Markdown? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    CodeableConcept? code,
-  }) = _ClinicalUseDefinitionWarning;
-  factory ManufacturedItemDefinition({
-    @Default(R4ResourceType.ManufacturedItemDefinition)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) Code? status,
-    @JsonKey(name: '_status') @HiveField(13) Element? statusElement,
-    @HiveField(14) required CodeableConcept manufacturedDoseForm,
-    @HiveField(15) CodeableConcept? unitOfPresentation,
-    @HiveField(16) List<Reference>? manufacturer,
-    @HiveField(17) List<CodeableConcept>? ingredient,
-    @HiveField(18) List<ManufacturedItemDefinitionProperty>? property,
-  }) = _ManufacturedItemDefinition;
-  factory ManufacturedItemDefinitionProperty({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept type,
-    CodeableConcept? valueCodeableConcept,
-    Quantity? valueQuantity,
-    Date? valueDate,
-    @JsonKey(name: '_valueDate') Element? valueDateElement,
-    Boolean? valueBoolean,
-    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-    Attachment? valueAttachment,
-  }) = _ManufacturedItemDefinitionProperty;
-  factory MedicinalProductDefinition({
-    @Default(R4ResourceType.MedicinalProductDefinition)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) CodeableConcept? type,
-    @HiveField(13) CodeableConcept? domain,
-    @HiveField(14) String? version,
-    @JsonKey(name: '_version') @HiveField(15) Element? versionElement,
-    @HiveField(16) CodeableConcept? status,
-    @HiveField(17) FhirDateTime? statusDate,
-    @JsonKey(name: '_statusDate') @HiveField(18) Element? statusDateElement,
-    @HiveField(19) Markdown? description,
-    @JsonKey(name: '_description') @HiveField(20) Element? descriptionElement,
-    @HiveField(21) CodeableConcept? combinedPharmaceuticalDoseForm,
-    @HiveField(22) List<CodeableConcept>? route,
-    @HiveField(23) Markdown? indication,
-    @JsonKey(name: '_indication') @HiveField(24) Element? indicationElement,
-    @HiveField(25) CodeableConcept? legalStatusOfSupply,
-    @HiveField(26) CodeableConcept? additionalMonitoringIndicator,
-    @HiveField(27) List<CodeableConcept>? specialMeasures,
-    @HiveField(28) CodeableConcept? pediatricUseIndicator,
-    @HiveField(29) List<CodeableConcept>? classification,
-    @HiveField(30) List<MarketingStatus>? marketingStatus,
-    @HiveField(31) List<CodeableConcept>? packagedMedicinalProduct,
-    @HiveField(32) List<CodeableConcept>? ingredient,
-    @HiveField(33) List<CodeableReference>? impurity,
-    @HiveField(34) List<Reference>? attachedDocument,
-    @HiveField(35) List<Reference>? masterFile,
-    @HiveField(36) List<MedicinalProductDefinitionContact>? contact,
-    @HiveField(37) List<Reference>? clinicalTrial,
-    @HiveField(38) List<Coding>? code,
-    @HiveField(39) required List<MedicinalProductDefinitionName> name,
-    @HiveField(40)
-        List<MedicinalProductDefinitionCrossReference>? crossReference,
-    @HiveField(41) List<MedicinalProductDefinitionOperation>? operation,
-    @HiveField(42)
-        List<MedicinalProductDefinitionCharacteristic>? characteristic,
-  }) = _MedicinalProductDefinition;
-  factory MedicinalProductDefinitionContact({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? type,
-    required Reference contact,
-  }) = _MedicinalProductDefinitionContact;
-  factory MedicinalProductDefinitionName({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? productName,
-    @JsonKey(name: '_productName') Element? productNameElement,
-    CodeableConcept? type,
-    List<MedicinalProductDefinitionNamePart>? namePart,
-    List<MedicinalProductDefinitionCountryLanguage>? countryLanguage,
-  }) = _MedicinalProductDefinitionName;
-  factory MedicinalProductDefinitionNamePart({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'part') String? part_,
-    @JsonKey(name: '_part') Element? partElement,
-    required CodeableConcept type,
-  }) = _MedicinalProductDefinitionNamePart;
-  factory MedicinalProductDefinitionCountryLanguage({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept country,
-    CodeableConcept? jurisdiction,
-    required CodeableConcept language,
-  }) = _MedicinalProductDefinitionCountryLanguage;
-  factory MedicinalProductDefinitionCrossReference({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableReference product,
-    CodeableConcept? type,
-  }) = _MedicinalProductDefinitionCrossReference;
-  factory MedicinalProductDefinitionOperation({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableReference? type,
-    Period? effectiveDate,
-    List<Reference>? organization,
-    CodeableConcept? confidentialityIndicator,
-  }) = _MedicinalProductDefinitionOperation;
-  factory MedicinalProductDefinitionCharacteristic({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept type,
-    CodeableConcept? valueCodeableConcept,
-    Quantity? valueQuantity,
-    Date? valueDate,
-    @JsonKey(name: '_valueDate') Element? valueDateElement,
-    Boolean? valueBoolean,
-    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-    Attachment? valueAttachment,
-  }) = _MedicinalProductDefinitionCharacteristic;
-  factory PackagedProductDefinition({
-    @Default(R4ResourceType.PackagedProductDefinition)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) String? name,
-    @JsonKey(name: '_name') @HiveField(13) Element? nameElement,
-    @HiveField(14) CodeableConcept? type,
-    @HiveField(15) List<Reference>? packageFor,
-    @HiveField(16) CodeableConcept? status,
-    @HiveField(17) FhirDateTime? statusDate,
-    @JsonKey(name: '_statusDate') @HiveField(18) Element? statusDateElement,
-    @HiveField(19) List<Quantity>? containedItemQuantity,
-    @HiveField(20) Markdown? description,
-    @JsonKey(name: '_description') @HiveField(21) Element? descriptionElement,
-    @HiveField(22)
-        List<PackagedProductDefinitionLegalStatusOfSupply>? legalStatusOfSupply,
-    @HiveField(23) List<MarketingStatus>? marketingStatus,
-    @HiveField(24) List<CodeableConcept>? characteristic,
-    @HiveField(25) Boolean? copackagedIndicator,
-    @JsonKey(name: '_copackagedIndicator')
-    @HiveField(26)
-        Element? copackagedIndicatorElement,
-    @HiveField(27) List<Reference>? manufacturer,
-    @HiveField(28) PackagedProductDefinitionPackage? package,
-  }) = _PackagedProductDefinition;
-  factory PackagedProductDefinitionLegalStatusOfSupply({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? code,
-    CodeableConcept? jurisdiction,
-  }) = _PackagedProductDefinitionLegalStatusOfSupply;
-  factory PackagedProductDefinitionPackage({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    CodeableConcept? type,
-    Integer? quantity,
-    @JsonKey(name: '_quantity') Element? quantityElement,
-    List<CodeableConcept>? material,
-    List<CodeableConcept>? alternateMaterial,
-    List<PackagedProductDefinitionShelfLifeStorage>? shelfLifeStorage,
-    List<Reference>? manufacturer,
-    List<PackagedProductDefinitionProperty>? property,
-    List<PackagedProductDefinitionContainedItem>? containedItem,
-    List<PackagedProductDefinitionPackage>? package,
-  }) = _PackagedProductDefinitionPackage;
-  factory PackagedProductDefinitionShelfLifeStorage({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Identifier? identifier,
-    required CodeableConcept type,
-    FhirDuration? periodDuration,
-    String? periodString,
-    @JsonKey(name: '_periodString') Element? periodStringElement,
-    List<CodeableConcept>? specialPrecautionsForStorage,
-  }) = _PackagedProductDefinitionShelfLifeStorage;
-  factory PackagedProductDefinitionProperty({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept type,
-    CodeableConcept? valueCodeableConcept,
-    Quantity? valueQuantity,
-    Date? valueDate,
-    @JsonKey(name: '_valueDate') Element? valueDateElement,
-    Boolean? valueBoolean,
-    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-    Attachment? valueAttachment,
-  }) = _PackagedProductDefinitionProperty;
-  factory PackagedProductDefinitionContainedItem({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableReference item,
-    Quantity? amount,
-  }) = _PackagedProductDefinitionContainedItem;
-  factory RegulatedAuthorization({
-    @HiveField(0)
-    @Default(R4ResourceType.RegulatedAuthorization)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) List<Reference>? subject,
-    @HiveField(13) CodeableConcept? type,
-    @HiveField(14) Markdown? description,
-    @HiveField(15) @JsonKey(name: '_description') Element? descriptionElement,
-    @HiveField(16) List<CodeableConcept>? region,
-    @HiveField(17) CodeableConcept? status,
-    @HiveField(18) FhirDateTime? statusDate,
-    @HiveField(19) @JsonKey(name: '_statusDate') Element? statusDateElement,
-    @HiveField(20) Period? validityPeriod,
-    @HiveField(21) CodeableReference? indication,
-    @HiveField(22) CodeableConcept? intendedUse,
-    @HiveField(23) List<CodeableConcept>? basis,
-    @HiveField(24) Reference? holder,
-    @HiveField(25) Reference? regulator,
-    @HiveField(26) @JsonKey(name: 'case') RegulatedAuthorizationCase? case_,
-  }) = _RegulatedAuthorization;
-  factory RegulatedAuthorizationCase({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Identifier? identifier,
-    CodeableConcept? type,
-    CodeableConcept? status,
-    Period? datePeriod,
-    FhirDateTime? dateDateTime,
-    @JsonKey(name: '_dateDateTime') Element? dateDateTimeElement,
-    List<RegulatedAuthorizationCase>? application,
-  }) = _RegulatedAuthorizationCase;
-  factory SubstanceDefinition({
-    @HiveField(0)
-    @Default(R4ResourceType.SubstanceDefinition)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) String? version,
-    @HiveField(13) @JsonKey(name: '_version') Element? versionElement,
-    @HiveField(14) CodeableConcept? status,
-    @HiveField(15) List<CodeableConcept>? classification,
-    @HiveField(16) CodeableConcept? domain,
-    @HiveField(17) List<CodeableConcept>? grade,
-    @HiveField(18) Markdown? description,
-    @HiveField(19) @JsonKey(name: '_description') Element? descriptionElement,
-    @HiveField(20) List<Reference>? informationSource,
-    @HiveField(21) List<Annotation>? note,
-    @HiveField(22) List<Reference>? manufacturer,
-    @HiveField(23) List<Reference>? supplier,
-    @HiveField(24) List<SubstanceDefinitionMoiety>? moiety,
-    @HiveField(25) List<SubstanceDefinitionProperty>? property,
-    @HiveField(26) List<SubstanceDefinitionMolecularWeight>? molecularWeight,
-    @HiveField(27) SubstanceDefinitionStructure? structure,
-    @HiveField(28) List<SubstanceDefinitionCode>? code,
-    @HiveField(29) List<SubstanceDefinitionName>? name,
-    @HiveField(30) List<SubstanceDefinitionRelationship>? relationship,
-    @HiveField(31) SubstanceDefinitionSourceMaterial? sourceMaterial,
-  }) = _SubstanceDefinition;
-  factory SubstanceDefinitionMoiety({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? role,
-    Identifier? identifier,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    CodeableConcept? stereochemistry,
-    CodeableConcept? opticalActivity,
-    String? molecularFormula,
-    @JsonKey(name: '_molecularFormula') Element? molecularFormulaElement,
-    Quantity? amountQuantity,
-    Markdown? amountString,
-    @JsonKey(name: '_amountString') Element? amountStringElement,
-    CodeableConcept? measurementType,
-  }) = _SubstanceDefinitionMoiety;
-  factory SubstanceDefinitionProperty({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept type,
-    CodeableConcept? valueCodeableConcept,
-    Quantity? valueQuantity,
-    Date? valueDate,
-    @JsonKey(name: '_valueDate') Element? valueDateElement,
-    Boolean? valueBoolean,
-    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-    Attachment? valueAttachment,
-  }) = _SubstanceDefinitionProperty;
-  factory SubstanceDefinitionMolecularWeight({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? method,
-    CodeableConcept? type,
-    required Quantity amount,
-  }) = _SubstanceDefinitionMolecularWeight;
-  factory SubstanceDefinitionStructure({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? stereochemistry,
-    CodeableConcept? opticalActivity,
-    String? molecularFormula,
-    @JsonKey(name: '_molecularFormula') Element? molecularFormulaElement,
-    String? molecularFormulaByMoiety,
-    @JsonKey(name: '_molecularFormulaByMoiety')
-        Element? molecularFormulaByMoietyElement,
-    SubstanceDefinitionMolecularWeight? molecularWeight,
-    List<CodeableConcept>? technique,
-    List<Reference>? sourceDocument,
-    List<SubstanceDefinitionRepresentation>? representation,
-  }) = _SubstanceDefinitionStructure;
-  factory SubstanceDefinitionRepresentation({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? type,
-    String? representation,
-    @JsonKey(name: '_representation') Element? representationElement,
-    CodeableConcept? format,
-    Reference? document,
-  }) = _SubstanceDefinitionRepresentation;
-  factory SubstanceDefinitionCode({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? code,
-    CodeableConcept? status,
-    FhirDateTime? statusDate,
-    @JsonKey(name: '_statusDate') Element? statusDateElement,
-    List<Annotation>? note,
-    List<Reference>? source,
-  }) = _SubstanceDefinitionCode;
-  factory SubstanceDefinitionName({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    CodeableConcept? type,
-    CodeableConcept? status,
-    Boolean? preferred,
-    @JsonKey(name: '_preferred') Element? preferredElement,
-    List<CodeableConcept>? language,
-    List<CodeableConcept>? domain,
-    List<CodeableConcept>? jurisdiction,
-    List<SubstanceDefinitionName>? synonym,
-    List<SubstanceDefinitionName>? translation,
-    List<SubstanceDefinitionOfficial>? official,
-    List<Reference>? source,
-  }) = _SubstanceDefinitionName;
-  factory SubstanceDefinitionOfficial({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? authority,
-    CodeableConcept? status,
-    FhirDateTime? date,
-    @JsonKey(name: '_date') Element? dateElement,
-  }) = _SubstanceDefinitionOfficial;
-  factory SubstanceDefinitionRelationship({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Reference? substanceDefinitionReference,
-    CodeableConcept? substanceDefinitionCodeableConcept,
-    required CodeableConcept type,
-    Boolean? isDefining,
-    @JsonKey(name: '_isDefining') Element? isDefiningElement,
-    Quantity? amountQuantity,
-    Ratio? amountRatio,
-    Markdown? amountString,
-    @JsonKey(name: '_amountString') Element? amountStringElement,
-    Ratio? ratioHighLimitAmount,
-    CodeableConcept? comparator,
-    List<Reference>? source,
-  }) = _SubstanceDefinitionRelationship;
-  factory SubstanceDefinitionSourceMaterial({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? type,
-    CodeableConcept? genus,
-    CodeableConcept? species,
-    @JsonKey(name: 'part') CodeableConcept? part_,
-    List<CodeableConcept>? countryOfOrigin,
-  }) = _SubstanceDefinitionSourceMaterial;
+import '../../../../r4.dart';
+
+class AdministrableProductDefinition {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  Code? status;
+  Element? statusElement;
+  List<Reference>? formOf;
+  CodeableConcept? administrableDoseForm;
+  CodeableConcept? unitOfPresentation;
+  List<Reference>? producedFrom;
+  List<CodeableConcept>? ingredient;
+  Reference? device;
+  List<AdministrableProductDefinitionProperty>? property;
+
+  List<AdministrableProductDefinitionRouteOfAdministration>
+      routeOfAdministration;
+}
+
+class AdministrableProductDefinitionProperty {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept type;
+  CodeableConcept? valueCodeableConcept;
+  Quantity? valueQuantity;
+  Date? valueDate;
+  Element? valueDateElement;
+  Boolean? valueBoolean;
+  Element? valueBooleanElement;
+  Attachment? valueAttachment;
+  CodeableConcept? status;
+}
+
+class AdministrableProductDefinitionRouteOfAdministration {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept code;
+  Quantity? firstDose;
+  Quantity? maxSingleDose;
+  Quantity? maxDosePerDay;
+  Ratio? maxDosePerTreatmentPeriod;
+  FhirDuration? maxTreatmentPeriod;
+  List<AdministrableProductDefinitionTargetSpecies>? targetSpecies;
+}
+
+class AdministrableProductDefinitionTargetSpecies {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept code;
+  List<AdministrableProductDefinitionWithdrawalPeriod>? withdrawalPeriod;
+}
+
+class AdministrableProductDefinitionWithdrawalPeriod {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept tissue;
+  Quantity value;
+  String? supportingInformation;
+
+  Element? supportingInformationElement;
+}
+
+class Ingredient {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Identifier? identifier;
+  Code? status;
+  Element? statusElement;
+  List<Reference>? for_;
+  CodeableConcept role;
+  List<CodeableConcept>? function;
+  CodeableConcept? group;
+  Boolean? allergenicIndicator;
+
+  Element? allergenicIndicatorElement;
+  List<IngredientManufacturer>? manufacturer;
+  IngredientSubstance substance;
+}
+
+class IngredientManufacturer {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code? role;
+  Element? roleElement;
+  Reference manufacturer;
+}
+
+class IngredientSubstance {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableReference code;
+  List<IngredientStrength>? strength;
+}
+
+class IngredientStrength {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Ratio? presentationRatio;
+  RatioRange? presentationRatioRange;
+  String? textPresentation;
+  Element? textPresentationElement;
+  Ratio? concentrationRatio;
+  RatioRange? concentrationRatioRange;
+  String? textConcentration;
+  Element? textConcentrationElement;
+  String? measurementPoint;
+  Element? measurementPointElement;
+  List<CodeableConcept>? country;
+  List<IngredientReferenceStrength>? referenceStrength;
+}
+
+class IngredientReferenceStrength {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableReference? substance;
+  Ratio? strengthRatio;
+  RatioRange? strengthRatioRange;
+  Quantity? strengthQuantity;
+  String? measurementPoint;
+  Element? measurementPointElement;
+  List<CodeableConcept>? country;
+}
+
+class ClinicalUseDefinition {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  Code? type;
+  Element? typeElement;
+  List<CodeableConcept>? category;
+  List<Reference>? subject;
+  CodeableConcept? status;
+  ClinicalUseDefinitionContraindication? contraindication;
+  ClinicalUseDefinitionIndication? indication;
+  ClinicalUseDefinitionInteraction? interaction;
+  List<Reference>? population;
+  ClinicalUseDefinitionUndesirableEffect? undesirableEffect;
+  ClinicalUseDefinitionWarning? warning;
+}
+
+class ClinicalUseDefinitionContraindication {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableReference? diseaseSymptomProcedure;
+  CodeableReference? diseaseStatus;
+  List<CodeableReference>? comorbidity;
+  List<Reference>? indication;
+  List<ClinicalUseDefinitionOtherTherapy>? otherTherapy;
+}
+
+class ClinicalUseDefinitionOtherTherapy {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept relationshipType;
+  CodeableReference therapy;
+}
+
+class ClinicalUseDefinitionIndication {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableReference? diseaseSymptomProcedure;
+  CodeableReference? diseaseStatus;
+  List<CodeableReference>? comorbidity;
+  CodeableReference? intendedEffect;
+  Range? durationRange;
+  Markdown? durationString;
+  Element? durationStringElement;
+  List<Reference>? undesirableEffect;
+  List<ClinicalUseDefinitionOtherTherapy>? otherTherapy;
+}
+
+class ClinicalUseDefinitionInteraction {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<ClinicalUseDefinitionInteractant>? interactant;
+  CodeableConcept? type;
+  CodeableReference? effect;
+  CodeableConcept? incidence;
+  List<CodeableConcept>? management;
+}
+
+class ClinicalUseDefinitionInteractant {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Reference? itemReference;
+  CodeableConcept? itemCodeableConcept;
+}
+
+class ClinicalUseDefinitionUndesirableEffect {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableReference? symptomConditionEffect;
+  CodeableConcept? classification;
+  CodeableConcept? frequencyOfOccurrence;
+}
+
+class ClinicalUseDefinitionWarning {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Markdown? description;
+  Element? descriptionElement;
+  CodeableConcept? code;
+}
+
+class ManufacturedItemDefinition {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  Code? status;
+  Element? statusElement;
+  CodeableConcept manufacturedDoseForm;
+  CodeableConcept? unitOfPresentation;
+  List<Reference>? manufacturer;
+  List<CodeableConcept>? ingredient;
+  List<ManufacturedItemDefinitionProperty>? property;
+}
+
+class ManufacturedItemDefinitionProperty {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept type;
+  CodeableConcept? valueCodeableConcept;
+  Quantity? valueQuantity;
+  Date? valueDate;
+  Element? valueDateElement;
+  Boolean? valueBoolean;
+  Element? valueBooleanElement;
+  Attachment? valueAttachment;
+}
+
+class MedicinalProductDefinition {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  CodeableConcept? type;
+  CodeableConcept? domain;
+  String? version;
+  Element? versionElement;
+  CodeableConcept? status;
+  FhirDateTime? statusDate;
+  Element? statusDateElement;
+  Markdown? description;
+  Element? descriptionElement;
+  CodeableConcept? combinedPharmaceuticalDoseForm;
+  List<CodeableConcept>? route;
+  Markdown? indication;
+  Element? indicationElement;
+  CodeableConcept? legalStatusOfSupply;
+  CodeableConcept? additionalMonitoringIndicator;
+  List<CodeableConcept>? specialMeasures;
+  CodeableConcept? pediatricUseIndicator;
+  List<CodeableConcept>? classification;
+  List<MarketingStatus>? marketingStatus;
+  List<CodeableConcept>? packagedMedicinalProduct;
+  List<CodeableConcept>? ingredient;
+  List<CodeableReference>? impurity;
+  List<Reference>? attachedDocument;
+  List<Reference>? masterFile;
+  List<MedicinalProductDefinitionContact>? contact;
+  List<Reference>? clinicalTrial;
+  List<Coding>? code;
+  List<MedicinalProductDefinitionName> name;
+
+  List<MedicinalProductDefinitionCrossReference>? crossReference;
+  List<MedicinalProductDefinitionOperation>? operation;
+
+  List<MedicinalProductDefinitionCharacteristic>? characteristic;
+}
+
+class MedicinalProductDefinitionContact {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? type;
+  Reference contact;
+}
+
+class MedicinalProductDefinitionName {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? productName;
+  Element? productNameElement;
+  CodeableConcept? type;
+  List<MedicinalProductDefinitionNamePart>? namePart;
+  List<MedicinalProductDefinitionCountryLanguage>? countryLanguage;
+}
+
+class MedicinalProductDefinitionNamePart {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? part_;
+  Element? partElement;
+  CodeableConcept type;
+}
+
+class MedicinalProductDefinitionCountryLanguage {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept country;
+  CodeableConcept? jurisdiction;
+  CodeableConcept language;
+}
+
+class MedicinalProductDefinitionCrossReference {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableReference product;
+  CodeableConcept? type;
+}
+
+class MedicinalProductDefinitionOperation {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableReference? type;
+  Period? effectiveDate;
+  List<Reference>? organization;
+  CodeableConcept? confidentialityIndicator;
+}
+
+class MedicinalProductDefinitionCharacteristic {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept type;
+  CodeableConcept? valueCodeableConcept;
+  Quantity? valueQuantity;
+  Date? valueDate;
+  Element? valueDateElement;
+  Boolean? valueBoolean;
+  Element? valueBooleanElement;
+  Attachment? valueAttachment;
+}
+
+class PackagedProductDefinition {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  String? name;
+  Element? nameElement;
+  CodeableConcept? type;
+  List<Reference>? packageFor;
+  CodeableConcept? status;
+  FhirDateTime? statusDate;
+  Element? statusDateElement;
+  List<Quantity>? containedItemQuantity;
+  Markdown? description;
+  Element? descriptionElement;
+
+  List<PackagedProductDefinitionLegalStatusOfSupply>? legalStatusOfSupply;
+  List<MarketingStatus>? marketingStatus;
+  List<CodeableConcept>? characteristic;
+  Boolean? copackagedIndicator;
+
+  Element? copackagedIndicatorElement;
+  List<Reference>? manufacturer;
+  PackagedProductDefinitionPackage? package;
+}
+
+class PackagedProductDefinitionLegalStatusOfSupply {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? code;
+  CodeableConcept? jurisdiction;
+}
+
+class PackagedProductDefinitionPackage {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  CodeableConcept? type;
+  Integer? quantity;
+  Element? quantityElement;
+  List<CodeableConcept>? material;
+  List<CodeableConcept>? alternateMaterial;
+  List<PackagedProductDefinitionShelfLifeStorage>? shelfLifeStorage;
+  List<Reference>? manufacturer;
+  List<PackagedProductDefinitionProperty>? property;
+  List<PackagedProductDefinitionContainedItem>? containedItem;
+  List<PackagedProductDefinitionPackage>? package;
+}
+
+class PackagedProductDefinitionShelfLifeStorage {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Identifier? identifier;
+  CodeableConcept type;
+  FhirDuration? periodDuration;
+  String? periodString;
+  Element? periodStringElement;
+  List<CodeableConcept>? specialPrecautionsForStorage;
+}
+
+class PackagedProductDefinitionProperty {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept type;
+  CodeableConcept? valueCodeableConcept;
+  Quantity? valueQuantity;
+  Date? valueDate;
+  Element? valueDateElement;
+  Boolean? valueBoolean;
+  Element? valueBooleanElement;
+  Attachment? valueAttachment;
+}
+
+class PackagedProductDefinitionContainedItem {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableReference item;
+  Quantity? amount;
+}
+
+class RegulatedAuthorization {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  List<Reference>? subject;
+  CodeableConcept? type;
+  Markdown? description;
+  Element? descriptionElement;
+  List<CodeableConcept>? region;
+  CodeableConcept? status;
+  FhirDateTime? statusDate;
+  Element? statusDateElement;
+  Period? validityPeriod;
+  CodeableReference? indication;
+  CodeableConcept? intendedUse;
+  List<CodeableConcept>? basis;
+  Reference? holder;
+  Reference? regulator;
+  RegulatedAuthorizationCase? case_;
+}
+
+class RegulatedAuthorizationCase {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Identifier? identifier;
+  CodeableConcept? type;
+  CodeableConcept? status;
+  Period? datePeriod;
+  FhirDateTime? dateDateTime;
+  Element? dateDateTimeElement;
+  List<RegulatedAuthorizationCase>? application;
+}
+
+class SubstanceDefinition {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  String? version;
+  Element? versionElement;
+  CodeableConcept? status;
+  List<CodeableConcept>? classification;
+  CodeableConcept? domain;
+  List<CodeableConcept>? grade;
+  Markdown? description;
+  Element? descriptionElement;
+  List<Reference>? informationSource;
+  List<Annotation>? note;
+  List<Reference>? manufacturer;
+  List<Reference>? supplier;
+  List<SubstanceDefinitionMoiety>? moiety;
+  List<SubstanceDefinitionProperty>? property;
+  List<SubstanceDefinitionMolecularWeight>? molecularWeight;
+  SubstanceDefinitionStructure? structure;
+  List<SubstanceDefinitionCode>? code;
+  List<SubstanceDefinitionName>? name;
+  List<SubstanceDefinitionRelationship>? relationship;
+  SubstanceDefinitionSourceMaterial? sourceMaterial;
+}
+
+class SubstanceDefinitionMoiety {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? role;
+  Identifier? identifier;
+  String? name;
+  Element? nameElement;
+  CodeableConcept? stereochemistry;
+  CodeableConcept? opticalActivity;
+  String? molecularFormula;
+  Element? molecularFormulaElement;
+  Quantity? amountQuantity;
+  Markdown? amountString;
+  Element? amountStringElement;
+  CodeableConcept? measurementType;
+}
+
+class SubstanceDefinitionProperty {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept type;
+  CodeableConcept? valueCodeableConcept;
+  Quantity? valueQuantity;
+  Date? valueDate;
+  Element? valueDateElement;
+  Boolean? valueBoolean;
+  Element? valueBooleanElement;
+  Attachment? valueAttachment;
+}
+
+class SubstanceDefinitionMolecularWeight {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? method;
+  CodeableConcept? type;
+  Quantity amount;
+}
+
+class SubstanceDefinitionStructure {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? stereochemistry;
+  CodeableConcept? opticalActivity;
+  String? molecularFormula;
+  Element? molecularFormulaElement;
+  String? molecularFormulaByMoiety;
+
+  Element? molecularFormulaByMoietyElement;
+  SubstanceDefinitionMolecularWeight? molecularWeight;
+  List<CodeableConcept>? technique;
+  List<Reference>? sourceDocument;
+  List<SubstanceDefinitionRepresentation>? representation;
+}
+
+class SubstanceDefinitionRepresentation {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? type;
+  String? representation;
+  Element? representationElement;
+  CodeableConcept? format;
+  Reference? document;
+}
+
+class SubstanceDefinitionCode {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? code;
+  CodeableConcept? status;
+  FhirDateTime? statusDate;
+  Element? statusDateElement;
+  List<Annotation>? note;
+  List<Reference>? source;
+}
+
+class SubstanceDefinitionName {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? name;
+  Element? nameElement;
+  CodeableConcept? type;
+  CodeableConcept? status;
+  Boolean? preferred;
+  Element? preferredElement;
+  List<CodeableConcept>? language;
+  List<CodeableConcept>? domain;
+  List<CodeableConcept>? jurisdiction;
+  List<SubstanceDefinitionName>? synonym;
+  List<SubstanceDefinitionName>? translation;
+  List<SubstanceDefinitionOfficial>? official;
+  List<Reference>? source;
+}
+
+class SubstanceDefinitionOfficial {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? authority;
+  CodeableConcept? status;
+  FhirDateTime? date;
+  Element? dateElement;
+}
+
+class SubstanceDefinitionRelationship {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Reference? substanceDefinitionReference;
+  CodeableConcept? substanceDefinitionCodeableConcept;
+  CodeableConcept type;
+  Boolean? isDefining;
+  Element? isDefiningElement;
+  Quantity? amountQuantity;
+  Ratio? amountRatio;
+  Markdown? amountString;
+  Element? amountStringElement;
+  Ratio? ratioHighLimitAmount;
+  CodeableConcept? comparator;
+  List<Reference>? source;
+}
+
+class SubstanceDefinitionSourceMaterial {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? type;
+  CodeableConcept? genus;
+  CodeableConcept? species;
+  CodeableConcept? part_;
+  List<CodeableConcept>? countryOfOrigin;
+}

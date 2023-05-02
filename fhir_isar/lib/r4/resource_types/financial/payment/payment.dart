@@ -1,96 +1,93 @@
-  factory PaymentNotice({
-    @Default(R4ResourceType.PaymentNotice)
-    @JsonKey(unknownEnumValue: R4ResourceType.PaymentNotice)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) Code? status,
-    @JsonKey(name: '_status') @HiveField(13) Element? statusElement,
-    @HiveField(14) Reference? request,
-    @HiveField(15) Reference? response,
-    @HiveField(16) FhirDateTime? created,
-    @JsonKey(name: '_created') @HiveField(17) Element? createdElement,
-    @HiveField(18) Reference? provider,
-    @HiveField(19) required Reference payment,
-    @HiveField(20) Date? paymentDate,
-    @JsonKey(name: '_paymentDate') @HiveField(21) Element? paymentDateElement,
-    @HiveField(22) Reference? payee,
-    @HiveField(23) required Reference recipient,
-    @HiveField(24) required Money amount,
-    @HiveField(25) CodeableConcept? paymentStatus,
-  }) = _PaymentNotice;
-  factory PaymentReconciliation({
-    @Default(R4ResourceType.PaymentReconciliation)
-    @JsonKey(unknownEnumValue: R4ResourceType.PaymentReconciliation)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) Code? status,
-    @JsonKey(name: '_status') @HiveField(13) Element? statusElement,
-    @HiveField(14) Period? period,
-    @HiveField(15) FhirDateTime? created,
-    @JsonKey(name: '_created') @HiveField(16) Element? createdElement,
-    @HiveField(17) Reference? paymentIssuer,
-    @HiveField(18) Reference? request,
-    @HiveField(19) Reference? requestor,
-    @HiveField(20) Code? outcome,
-    @JsonKey(name: '_outcome') @HiveField(21) Element? outcomeElement,
-    @HiveField(22) String? disposition,
-    @JsonKey(name: '_disposition') @HiveField(23) Element? dispositionElement,
-    @HiveField(24) Date? paymentDate,
-    @JsonKey(name: '_paymentDate') @HiveField(25) Element? paymentDateElement,
-    @HiveField(26) required Money paymentAmount,
-    @HiveField(27) Identifier? paymentIdentifier,
-    @HiveField(28) List<PaymentReconciliationDetail>? detail,
-    @HiveField(29) CodeableConcept? formCode,
-    @HiveField(30) List<PaymentReconciliationProcessNote>? processNote,
-  }) = _PaymentReconciliation;
-  factory PaymentReconciliationDetail({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Identifier? identifier,
-    Identifier? predecessor,
-    required CodeableConcept type,
-    Reference? request,
-    Reference? submitter,
-    Reference? response,
-    Date? date,
-    @JsonKey(name: '_date') Element? dateElement,
-    Reference? responsible,
-    Reference? payee,
-    Money? amount,
-  }) = _PaymentReconciliationDetail;
-  factory PaymentReconciliationProcessNote({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    String? text,
-    @JsonKey(name: '_text') Element? textElement,
-  }) = _PaymentReconciliationProcessNote;
+import '../../../../r4.dart';
+
+class PaymentNotice {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  Code? status;
+  Element? statusElement;
+  Reference? request;
+  Reference? response;
+  FhirDateTime? created;
+  Element? createdElement;
+  Reference? provider;
+  Reference payment;
+  Date? paymentDate;
+  Element? paymentDateElement;
+  Reference? payee;
+  Reference recipient;
+  Money amount;
+  CodeableConcept? paymentStatus;
+}
+
+class PaymentReconciliation {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  Code? status;
+  Element? statusElement;
+  Period? period;
+  FhirDateTime? created;
+  Element? createdElement;
+  Reference? paymentIssuer;
+  Reference? request;
+  Reference? requestor;
+  Code? outcome;
+  Element? outcomeElement;
+  String? disposition;
+  Element? dispositionElement;
+  Date? paymentDate;
+  Element? paymentDateElement;
+  Money paymentAmount;
+  Identifier? paymentIdentifier;
+  List<PaymentReconciliationDetail>? detail;
+  CodeableConcept? formCode;
+  List<PaymentReconciliationProcessNote>? processNote;
+}
+
+class PaymentReconciliationDetail {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Identifier? identifier;
+  Identifier? predecessor;
+  CodeableConcept type;
+  Reference? request;
+  Reference? submitter;
+  Reference? response;
+  Date? date;
+  Element? dateElement;
+  Reference? responsible;
+  Reference? payee;
+  Money? amount;
+}
+
+class PaymentReconciliationProcessNote {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code? type;
+  Element? typeElement;
+  String? text;
+  Element? textElement;
+}

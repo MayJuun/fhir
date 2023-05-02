@@ -759,7 +759,7 @@ _$_ConformanceRestResource _$$_ConformanceRestResourceFromJson(
     Map<String, dynamic> json) {
   $checkKeys(
     json,
-    requiredKeys: const ['interaction'],
+    Keys: const ['interaction'],
   );
   return _$_ConformanceRestResource(
     id: json['id'] == null ? null : FhirId.fromJson(json['id']),
@@ -1231,7 +1231,7 @@ _$_OperationDefinition _$$_OperationDefinitionFromJson(
     Map<String, dynamic> json) {
   $checkKeys(
     json,
-    requiredKeys: const ['status'],
+    Keys: const ['status'],
   );
   return _$_OperationDefinition(
     resourceType: $enumDecodeNullable(
@@ -1461,7 +1461,7 @@ _$_OperationDefinitionParameterBinding
     _$$_OperationDefinitionParameterBindingFromJson(Map<String, dynamic> json) {
   $checkKeys(
     json,
-    requiredKeys: const ['strength'],
+    Keys: const ['strength'],
   );
   return _$_OperationDefinitionParameterBinding(
     id: json['id'] == null ? null : FhirId.fromJson(json['id']),

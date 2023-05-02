@@ -1,974 +1,1008 @@
-  factory CapabilityStatement({
-    @Default(Stu3ResourceType.CapabilityStatement)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.CapabilityStatement)
-        Stu3ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? url,
-    @JsonKey(name: '_url') Element? urlElement,
-    String? version,
-    @JsonKey(name: '_version') Element? versionElement,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? title,
-    @JsonKey(name: '_title') Element? titleElement,
-    CapabilityStatementStatus? status,
-    @JsonKey(name: '_status') Element? statusElement,
-    Boolean? experimental,
-    @JsonKey(name: '_experimental') Element? experimentalElement,
-    FhirDateTime? date,
-    @JsonKey(name: '_date') Element? dateElement,
-    String? publisher,
-    @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail>? contact,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext>? useContext,
-    List<CodeableConcept>? jurisdiction,
-    String? purpose,
-    @JsonKey(name: '_purpose') Element? purposeElement,
-    String? copyright,
-    @JsonKey(name: '_copyright') Element? copyrightElement,
-    CapabilityStatementKind? kind,
-    @JsonKey(name: '_kind') Element? kindElement,
-    List<Instant>? instantiates,
-    @JsonKey(name: '_instantiates') List<Element?>? instantiatesElement,
-    CapabilityStatementSoftware? software,
-    CapabilityStatementImplementation? implementation,
-    String? fhirVersion,
-    @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
-    CapabilityStatementAcceptUnknown? acceptUnknown,
-    @JsonKey(name: '_acceptUnknown') Element? acceptUnknownElement,
-    List<String>? format,
-    @JsonKey(name: '_format') List<Element?>? formatElement,
-    List<String>? patchFormat,
-    @JsonKey(name: '_patchFormat') List<Element?>? patchFormatElement,
-    List<FhirId>? implementationGuide,
-    @JsonKey(name: '_implementationGuide')
-        List<Element>? implementationGuideElement,
-    List<Reference>? profile,
-    List<CapabilityStatementRest>? rest,
-    List<CapabilityStatementMessaging>? messaging,
-    List<CapabilityStatementDocument>? document,
-  }) = _CapabilityStatement;
-  factory CapabilityStatementSoftware({
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? version,
-    @JsonKey(name: '_version') Element? versionElement,
-    Date? releaseDate,
-    @JsonKey(name: '_releaseDate') Element? releaseDateElement,
-  }) = _CapabilityStatementSoftware;
-  factory CapabilityStatementImplementation({
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    String? url,
-    @JsonKey(name: '_url') Element? urlElement,
-  }) = _CapabilityStatementImplementation;
-  factory CapabilityStatementRest({
-    CapabilityStatementRestMode? mode,
-    @JsonKey(name: '_mode') Element? modeElement,
-    String? documentation,
-    @JsonKey(name: '_documentation') Element? documentationElement,
-    CapabilityStatementSecurity? security,
-    List<CapabilityStatementResource>? resource,
-    List<CapabilityStatementInteraction1>? interaction,
-    List<CapabilityStatementSearchParam>? searchParam,
-    List<CapabilityStatementOperation>? operation,
-    List<String>? compartment,
-    @JsonKey(name: '_compartment') List<Element?>? compartmentElement,
-  }) = _CapabilityStatementRest;
-  factory CapabilityStatementSecurity({
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    Boolean? cors,
-    @JsonKey(name: '_cors') Element? corsElement,
-    List<CodeableConcept>? service,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    List<CapabilityStatementCertificate>? certificate,
-  }) = _CapabilityStatementSecurity;
-  factory CapabilityStatementCertificate({
-    String? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    String? blob,
-    @JsonKey(name: '_blob') Element? blobElement,
-  }) = _CapabilityStatementCertificate;
-  factory CapabilityStatementResource({
-    String? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    Reference? profile,
-    String? documentation,
-    @JsonKey(name: '_documentation') Element? documentationElement,
-    required List<CapabilityStatementInteraction> interaction,
-    CapabilityStatementResourceVersioning? versioning,
-    @JsonKey(name: '_versioning') Element? versioningElement,
-    Boolean? readHistory,
-    @JsonKey(name: '_readHistory') Element? readHistoryElement,
-    Boolean? updateCreate,
-    @JsonKey(name: '_updateCreate') Element? updateCreateElement,
-    Boolean? conditionalCreate,
-    @JsonKey(name: '_conditionalCreate') Element? conditionalCreateElement,
-    CapabilityStatementResourceConditionalRead? conditionalRead,
-    @JsonKey(name: '_conditionalRead') Element? conditionalReadElement,
-    Boolean? conditionalUpdate,
-    @JsonKey(name: '_conditionalUpdate') Element? conditionalUpdateElement,
-    CapabilityStatementResourceConditionalDelete? conditionalDelete,
-    @JsonKey(name: '_conditionalDelete') Element? conditionalDeleteElement,
-    List<CapabilityStatementResourceReferencePolicy>? referencePolicy,
-    @JsonKey(name: '_referencePolicy') List<Element?>? referencePolicyElement,
-    List<String>? searchInclude,
-    @JsonKey(name: '_searchInclude') List<Element?>? searchIncludeElement,
-    List<String>? searchRevInclude,
-    @JsonKey(name: '_searchRevInclude') List<Element?>? searchRevIncludeElement,
-    List<CapabilityStatementSearchParam>? searchParam,
-  }) = _CapabilityStatementResource;
-  factory CapabilityStatementInteraction({
-    CapabilityStatementInteractionCode? code,
-    @JsonKey(name: '_code') Element? codeElement,
-    String? documentation,
-    @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _CapabilityStatementInteraction;
-  factory CapabilityStatementSearchParam({
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? definition,
-    @JsonKey(name: '_definition') Element? definitionElement,
-    CapabilityStatementSearchParamType? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    String? documentation,
-    @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _CapabilityStatementSearchParam;
-  factory CapabilityStatementInteraction1({
-    CapabilityStatementInteraction1Code? code,
-    @JsonKey(name: '_code') Element? codeElement,
-    String? documentation,
-    @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _CapabilityStatementInteraction1;
-  factory CapabilityStatementOperation({
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    required Reference definition,
-  }) = _CapabilityStatementOperation;
-  factory CapabilityStatementMessaging({
-    List<CapabilityStatementEndpoint>? endpoint,
-    Decimal? reliableCache,
-    @JsonKey(name: '_reliableCache') Element? reliableCacheElement,
-    String? documentation,
-    @JsonKey(name: '_documentation') Element? documentationElement,
-    List<CapabilityStatementSupportedMessage>? supportedMessage,
-    List<CapabilityStatementEvent>? event,
-  }) = _CapabilityStatementMessaging;
-  factory CapabilityStatementEndpoint({
-    required Coding protocol,
-    String? address,
-    @JsonKey(name: '_address') Element? addressElement,
-  }) = _CapabilityStatementEndpoint;
-  factory CapabilityStatementSupportedMessage({
-    CapabilityStatementSupportedMessageMode? mode,
-    @JsonKey(name: '_mode') Element? modeElement,
-    required Reference definition,
-  }) = _CapabilityStatementSupportedMessage;
-  factory CapabilityStatementEvent({
-    required Coding code,
-    CapabilityStatementEventCategory? category,
-    @JsonKey(name: '_category') Element? categoryElement,
-    CapabilityStatementEventMode? mode,
-    @JsonKey(name: '_mode') Element? modeElement,
-    String? focus,
-    @JsonKey(name: '_focus') Element? focusElement,
-    required Reference request,
-    required Reference response,
-    String? documentation,
-    @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _CapabilityStatementEvent;
-  factory CapabilityStatementDocument({
-    CapabilityStatementDocumentMode? mode,
-    @JsonKey(name: '_mode') Element? modeElement,
-    String? documentation,
-    @JsonKey(name: '_documentation') Element? documentationElement,
-    required Reference profile,
-  }) = _CapabilityStatementDocument;
-  factory CompartmentDefinition({
-    @Default(Stu3ResourceType.CompartmentDefinition)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.CompartmentDefinition)
-        Stu3ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? url,
-    @JsonKey(name: '_url') Element? urlElement,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? title,
-    @JsonKey(name: '_title') Element? titleElement,
-    CompartmentDefinitionStatus? status,
-    @JsonKey(name: '_status') Element? statusElement,
-    Boolean? experimental,
-    @JsonKey(name: '_experimental') Element? experimentalElement,
-    FhirDateTime? date,
-    @JsonKey(name: '_date') Element? dateElement,
-    String? publisher,
-    @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail>? contact,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    String? purpose,
-    @JsonKey(name: '_purpose') Element? purposeElement,
-    List<UsageContext>? useContext,
-    List<CodeableConcept>? jurisdiction,
-    CompartmentDefinitionCode? code,
-    @JsonKey(name: '_code') Element? codeElement,
-    Boolean? search,
-    @JsonKey(name: '_search') Element? searchElement,
-    List<CompartmentDefinitionResource>? resource,
-  }) = _CompartmentDefinition;
-  factory CompartmentDefinitionResource({
-    Code? code,
-    @JsonKey(name: '_code') Element? codeElement,
-    List<String>? param,
-    @JsonKey(name: '_param') List<Element?>? paramElement,
-    String? documentation,
-    @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _CompartmentDefinitionResource;
-  factory DataElement({
-    @Default(Stu3ResourceType.DataElement)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.DataElement)
-        Stu3ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? url,
-    @JsonKey(name: '_url') Element? urlElement,
-    List<Identifier>? identifier,
-    String? version,
-    @JsonKey(name: '_version') Element? versionElement,
-    DataElementStatus? status,
-    @JsonKey(name: '_status') Element? statusElement,
-    Boolean? experimental,
-    @JsonKey(name: '_experimental') Element? experimentalElement,
-    Date? date,
-    @JsonKey(name: '_date') Element? dateElement,
-    String? publisher,
-    @JsonKey(name: '_publisher') Element? publisherElement,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? title,
-    @JsonKey(name: '_title') Element? titleElement,
-    List<ContactDetail>? contact,
-    List<UsageContext>? useContext,
-    List<CodeableConcept>? jurisdiction,
-    String? copyright,
-    @JsonKey(name: '_copyright') Element? copyrightElement,
-    DataElementStringency? stringency,
-    @JsonKey(name: '_stringency') Element? stringencyElement,
-    List<DataElementMapping>? mapping,
-    required List<ElementDefinition> element,
-  }) = _DataElement;
-  factory DataElementMapping({
-    FhirId? identity,
-    @JsonKey(name: '_identity') Element? identityElement,
-    String? uri,
-    @JsonKey(name: '_uri') Element? uriElement,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? comment,
-    @JsonKey(name: '_comment') Element? commentElement,
-  }) = _DataElementMapping;
-  factory GraphDefinition({
-    @Default(Stu3ResourceType.GraphDefinition)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.GraphDefinition)
-        Stu3ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? url,
-    @JsonKey(name: '_url') Element? urlElement,
-    String? version,
-    @JsonKey(name: '_version') Element? versionElement,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    GraphDefinitionStatus? status,
-    @JsonKey(name: '_status') Element? statusElement,
-    Boolean? experimental,
-    @JsonKey(name: '_experimental') Element? experimentalElement,
-    Date? date,
-    @JsonKey(name: '_date') Element? dateElement,
-    String? publisher,
-    @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail>? contact,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext>? useContext,
-    List<CodeableConcept>? jurisdiction,
-    String? purpose,
-    @JsonKey(name: '_purpose') Element? purposeElement,
-    String? start,
-    @JsonKey(name: '_start') Element? startElement,
-    String? profile,
-    @JsonKey(name: '_profile') Element? profileElement,
-    List<GraphDefinitionLink>? link,
-  }) = _GraphDefinition;
-  factory GraphDefinitionLink({
-    String? path,
-    @JsonKey(name: '_path') Element? pathElement,
-    String? sliceName,
-    @JsonKey(name: '_sliceName') Element? sliceNameElement,
-    Decimal? min,
-    @JsonKey(name: '_min') Element? minElement,
-    String? max,
-    @JsonKey(name: '_max') Element? maxElement,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    required List<GraphDefinitionTarget> target,
-  }) = _GraphDefinitionLink;
-  factory GraphDefinitionTarget({
-    String? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    String? profile,
-    @JsonKey(name: '_profile') Element? profileElement,
-    List<GraphDefinitionCompartment>? compartment,
-    List<GraphDefinitionLink>? link,
-  }) = _GraphDefinitionTarget;
-  factory GraphDefinitionCompartment({
-    Code? code,
-    @JsonKey(name: '_code') Element? codeElement,
-    GraphDefinitionCompartmentRule? rule,
-    @JsonKey(name: '_rule') Element? ruleElement,
-    String? expression,
-    @JsonKey(name: '_expression') Element? expressionElement,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-  }) = _GraphDefinitionCompartment;
-  factory ImplementationGuide({
-    @Default(Stu3ResourceType.ImplementationGuide)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.ImplementationGuide)
-        Stu3ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? url,
-    @JsonKey(name: '_url') Element? urlElement,
-    String? version,
-    @JsonKey(name: '_version') Element? versionElement,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    ImplementationGuideStatus? status,
-    @JsonKey(name: '_status') Element? statusElement,
-    Boolean? experimental,
-    @JsonKey(name: '_experimental') Element? experimentalElement,
-    Date? date,
-    @JsonKey(name: '_date') Element? dateElement,
-    String? publisher,
-    @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail>? contact,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext>? useContext,
-    List<CodeableConcept>? jurisdiction,
-    String? copyright,
-    @JsonKey(name: '_copyright') Element? copyrightElement,
-    String? fhirVersion,
-    @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
-    List<ImplementationGuideDependency>? dependency,
-    List<ImplementationGuidePackage>? package,
-    List<ImplementationGuideGlobal>? global,
-    List<String>? binary,
-    @JsonKey(name: '_binary') List<Element?>? binaryElement,
-    ImplementationGuidePage? page,
-  }) = _ImplementationGuide;
-  factory ImplementationGuideDependency({
-    ImplementationGuideDependencyType? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    String? uri,
-    @JsonKey(name: '_uri') Element? uriElement,
-  }) = _ImplementationGuideDependency;
-  factory ImplementationGuidePackage({
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    required List<ImplementationGuideResource> resource,
-  }) = _ImplementationGuidePackage;
-  factory ImplementationGuideResource({
-    Boolean? example,
-    @JsonKey(name: '_example') Element? exampleElement,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    String? acronym,
-    @JsonKey(name: '_acronym') Element? acronymElement,
-    String? sourceUri,
-    @JsonKey(name: '_sourceUri') Element? sourceUriElement,
-    Reference? sourceReference,
-    Reference? exampleFor,
-  }) = _ImplementationGuideResource;
-  factory ImplementationGuideGlobal({
-    String? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    required Reference profile,
-  }) = _ImplementationGuideGlobal;
-  factory ImplementationGuidePage({
-    String? source,
-    @JsonKey(name: '_source') Element? sourceElement,
-    String? title,
-    @JsonKey(name: '_title') Element? titleElement,
-    ImplementationGuidePageKind? kind,
-    @JsonKey(name: '_kind') Element? kindElement,
-    List<String>? type,
-    @JsonKey(name: '_type') List<Element?>? typeElement,
-    List<String>? package,
-    @JsonKey(name: '_package') List<Element?>? packageElement,
-    String? format,
-    @JsonKey(name: '_format') Element? formatElement,
-    List<ImplementationGuidePage>? page,
-  }) = _ImplementationGuidePage;
-  factory MessageDefinition({
-    @Default(Stu3ResourceType.MessageDefinition)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.MessageDefinition)
-        Stu3ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? url,
-    @JsonKey(name: '_url') Element? urlElement,
-    Identifier? identifier,
-    String? version,
-    @JsonKey(name: '_version') Element? versionElement,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? title,
-    @JsonKey(name: '_title') Element? titleElement,
-    MessageDefinitionStatus? status,
-    @JsonKey(name: '_status') Element? statusElement,
-    Boolean? experimental,
-    @JsonKey(name: '_experimental') Element? experimentalElement,
-    Date? date,
-    @JsonKey(name: '_date') Element? dateElement,
-    String? publisher,
-    @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail>? contact,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext>? useContext,
-    List<CodeableConcept>? jurisdiction,
-    String? purpose,
-    @JsonKey(name: '_purpose') Element? purposeElement,
-    String? copyright,
-    @JsonKey(name: '_copyright') Element? copyrightElement,
-    Reference? base,
-    List<Reference>? parent,
-    List<Reference>? replaces,
-    required Coding event,
-    String? category,
-    @JsonKey(name: '_category') Element? categoryElement,
-    List<MessageDefinitionFocus>? focus,
-    Boolean? responseRequired,
-    @JsonKey(name: '_responseRequired') Element? responseRequiredElement,
-    List<MessageDefinitionAllowedResponse>? allowedResponse,
-  }) = _MessageDefinition;
-  factory MessageDefinitionFocus({
-    Code? code,
-    @JsonKey(name: '_code') Element? codeElement,
-    Reference? profile,
-    Decimal? min,
-    @JsonKey(name: '_min') Element? minElement,
-    String? max,
-    @JsonKey(name: '_max') Element? maxElement,
-  }) = _MessageDefinitionFocus;
-  factory MessageDefinitionAllowedResponse({
-    required Reference message,
-    String? situation,
-    @JsonKey(name: '_situation') Element? situationElement,
-  }) = _MessageDefinitionAllowedResponse;
-  factory OperationDefinition({
-    @Default(Stu3ResourceType.OperationDefinition)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.OperationDefinition)
-        Stu3ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? url,
-    @JsonKey(name: '_url') Element? urlElement,
-    String? version,
-    @JsonKey(name: '_version') Element? versionElement,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    OperationDefinitionStatus? status,
-    @JsonKey(name: '_status') Element? statusElement,
-    OperationDefinitionKind? kind,
-    @JsonKey(name: '_kind') Element? kindElement,
-    Boolean? experimental,
-    @JsonKey(name: '_experimental') Element? experimentalElement,
-    FhirDateTime? date,
-    @JsonKey(name: '_date') Element? dateElement,
-    String? publisher,
-    @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail>? contact,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext>? useContext,
-    List<CodeableConcept>? jurisdiction,
-    String? purpose,
-    @JsonKey(name: '_purpose') Element? purposeElement,
-    Boolean? idempotent,
-    @JsonKey(name: '_idempotent') Element? idempotentElement,
-    Code? code,
-    @JsonKey(name: '_code') Element? codeElement,
-    String? comment,
-    @JsonKey(name: '_comment') Element? commentElement,
-    Reference? base,
-    List<String>? resource,
-    @JsonKey(name: '_resource') List<Element?>? resourceElement,
-    Boolean? system,
-    @JsonKey(name: '_system') Element? systemElement,
-    Boolean? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    Boolean? instance,
-    @JsonKey(name: '_instance') Element? instanceElement,
-    List<OperationDefinitionParameter>? parameter,
-    List<OperationDefinitionOverload>? overload,
-  }) = _OperationDefinition;
-  factory OperationDefinitionParameter({
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    OperationDefinitionParameterUse? use,
-    @JsonKey(name: '_use') Element? useElement,
-    Decimal? min,
-    @JsonKey(name: '_min') Element? minElement,
-    String? max,
-    @JsonKey(name: '_max') Element? maxElement,
-    String? documentation,
-    @JsonKey(name: '_documentation') Element? documentationElement,
-    String? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    OperationDefinitionParameterSearchType? searchType,
-    @JsonKey(name: '_searchType') Element? searchTypeElement,
-    Reference? profile,
-    OperationDefinitionBinding? binding,
-    @JsonKey(name: 'part') List<OperationDefinitionParameter>? part_,
-  }) = _OperationDefinitionParameter;
-  factory OperationDefinitionBinding({
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    OperationDefinitionBindingStrength? strength,
-    @JsonKey(name: '_strength') Element? strengthElement,
-    String? valueSetUri,
-    @JsonKey(name: '_valueSetUri') Element? valueSetUriElement,
-    Reference? valueSetReference,
-  }) = _OperationDefinitionBinding;
-  factory OperationDefinitionOverload({
-    List<String>? parameterName,
-    @JsonKey(name: '_parameterName') List<Element?>? parameterNameElement,
-    String? comment,
-    @JsonKey(name: '_comment') Element? commentElement,
-  }) = _OperationDefinitionOverload;
-  factory SearchParameter({
-    @Default(Stu3ResourceType.SearchParameter)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.SearchParameter)
-        Stu3ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? url,
-    @JsonKey(name: '_url') Element? urlElement,
-    String? version,
-    @JsonKey(name: '_version') Element? versionElement,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    SearchParameterStatus? status,
-    @JsonKey(name: '_status') Element? statusElement,
-    Boolean? experimental,
-    @JsonKey(name: '_experimental') Element? experimentalElement,
-    Date? date,
-    @JsonKey(name: '_date') Element? dateElement,
-    String? publisher,
-    @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail>? contact,
-    List<UsageContext>? useContext,
-    List<CodeableConcept>? jurisdiction,
-    String? purpose,
-    @JsonKey(name: '_purpose') Element? purposeElement,
-    Code? code,
-    @JsonKey(name: '_code') Element? codeElement,
-    List<String>? base,
-    @JsonKey(name: '_base') List<Element?>? baseElement,
-    SearchParameterType? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    String? derivedFrom,
-    @JsonKey(name: '_derivedFrom') Element? derivedFromElement,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    String? expression,
-    @JsonKey(name: '_expression') Element? expressionElement,
-    String? xpath,
-    @JsonKey(name: '_xpath') Element? xpathElement,
-    SearchParameterXpathUsage? xpathUsage,
-    @JsonKey(name: '_xpathUsage') Element? xpathUsageElement,
-    List<String>? target,
-    @JsonKey(name: '_target') List<Element?>? targetElement,
-    List<SearchParameterComparator>? comparator,
-    @JsonKey(name: '_comparator') List<Element?>? comparatorElement,
-    List<SearchParameterModifier>? modifier,
-    @JsonKey(name: '_modifier') List<Element?>? modifierElement,
-    List<String>? chain,
-    @JsonKey(name: '_chain') List<Element?>? chainElement,
-    List<SearchParameterComponent>? component,
-  }) = _SearchParameter;
-  factory SearchParameterComponent({
-    required Reference definition,
-    String? expression,
-    @JsonKey(name: '_expression') Element? expressionElement,
-  }) = _SearchParameterComponent;
-  factory StructureDefinition({
-    @Default(Stu3ResourceType.StructureDefinition)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.StructureDefinition)
-        Stu3ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? url,
-    @JsonKey(name: '_url') Element? urlElement,
-    List<Identifier>? identifier,
-    String? version,
-    @JsonKey(name: '_version') Element? versionElement,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? title,
-    @JsonKey(name: '_title') Element? titleElement,
-    StructureDefinitionStatus? status,
-    @JsonKey(name: '_status') Element? statusElement,
-    Boolean? experimental,
-    @JsonKey(name: '_experimental') Element? experimentalElement,
-    FhirDateTime? date,
-    @JsonKey(name: '_date') Element? dateElement,
-    String? publisher,
-    @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail>? contact,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext>? useContext,
-    List<CodeableConcept>? jurisdiction,
-    String? purpose,
-    @JsonKey(name: '_purpose') Element? purposeElement,
-    String? copyright,
-    @JsonKey(name: '_copyright') Element? copyrightElement,
-    List<Coding>? keyword,
-    String? fhirVersion,
-    @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
-    List<StructureDefinitionMapping>? mapping,
-    StructureDefinitionKind? kind,
-    @JsonKey(name: '_kind') Element? kindElement,
-    @JsonKey(name: 'abstract') Boolean? abstract_,
-    @JsonKey(name: '_abstract') Element? abstractElement,
-    StructureDefinitionContextType? contextType,
-    @JsonKey(name: '_contextType') Element? contextTypeElement,
-    List<String>? context,
-    @JsonKey(name: '_context') List<Element?>? contextElement,
-    List<String>? contextInvariant,
-    @JsonKey(name: '_contextInvariant') List<Element?>? contextInvariantElement,
-    String? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    String? baseDefinition,
-    @JsonKey(name: '_baseDefinition') Element? baseDefinitionElement,
-    StructureDefinitionDerivation? derivation,
-    @JsonKey(name: '_derivation') Element? derivationElement,
-    StructureDefinitionSnapshot? snapshot,
-    StructureDefinitionDifferential? differential,
-  }) = _StructureDefinition;
-  factory StructureDefinitionMapping({
-    FhirId? identity,
-    @JsonKey(name: '_identity') Element? identityElement,
-    String? uri,
-    @JsonKey(name: '_uri') Element? uriElement,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? comment,
-    @JsonKey(name: '_comment') Element? commentElement,
-  }) = _StructureDefinitionMapping;
-  factory StructureDefinitionSnapshot({
-    required List<ElementDefinition> element,
-  }) = _StructureDefinitionSnapshot;
-  factory StructureDefinitionDifferential({
-    required List<ElementDefinition> element,
-  }) = _StructureDefinitionDifferential;
-  factory StructureMap({
-    @Default(Stu3ResourceType.StructureMap)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.StructureMap)
-        Stu3ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? url,
-    @JsonKey(name: '_url') Element? urlElement,
-    List<Identifier>? identifier,
-    String? version,
-    @JsonKey(name: '_version') Element? versionElement,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? title,
-    @JsonKey(name: '_title') Element? titleElement,
-    StructureMapStatus? status,
-    @JsonKey(name: '_status') Element? statusElement,
-    Boolean? experimental,
-    @JsonKey(name: '_experimental') Element? experimentalElement,
-    Date? date,
-    @JsonKey(name: '_date') Element? dateElement,
-    String? publisher,
-    @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail>? contact,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext>? useContext,
-    List<CodeableConcept>? jurisdiction,
-    String? purpose,
-    @JsonKey(name: '_purpose') Element? purposeElement,
-    String? copyright,
-    @JsonKey(name: '_copyright') Element? copyrightElement,
-    List<StructureMapStructure>? structure,
-    @JsonKey(name: 'import') List<String>? import_,
-    @JsonKey(name: '_import') List<Element?>? importElement,
-    required List<StructureMapGroup> group,
-  }) = _StructureMap;
-  factory StructureMapStructure({
-    String? url,
-    @JsonKey(name: '_url') Element? urlElement,
-    StructureMapStructureMode? mode,
-    @JsonKey(name: '_mode') Element? modeElement,
-    String? alias,
-    @JsonKey(name: '_alias') Element? aliasElement,
-    String? documentation,
-    @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _StructureMapStructure;
-  factory StructureMapGroup({
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    @JsonKey(name: 'extends') String? extends_,
-    @JsonKey(name: '_extends') Element? extendsElement,
-    StructureMapGroupTypeMode? typeMode,
-    @JsonKey(name: '_typeMode') Element? typeModeElement,
-    String? documentation,
-    @JsonKey(name: '_documentation') Element? documentationElement,
-    required List<StructureMapInput> input,
-    required List<StructureMapRule> rule,
-  }) = _StructureMapGroup;
-  factory StructureMapInput({
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    StructureMapInputMode? mode,
-    @JsonKey(name: '_mode') Element? modeElement,
-    String? documentation,
-    @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _StructureMapInput;
-  factory StructureMapRule({
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    required List<StructureMapSource> source,
-    List<StructureMapTarget>? target,
-    List<StructureMapRule>? rule,
-    List<StructureMapDependent>? dependent,
-    String? documentation,
-    @JsonKey(name: '_documentation') Element? documentationElement,
-  }) = _StructureMapRule;
-  factory StructureMapSource({
-    String? context,
-    @JsonKey(name: '_context') Element? contextElement,
-    Decimal? min,
-    @JsonKey(name: '_min') Element? minElement,
-    String? max,
-    @JsonKey(name: '_max') Element? maxElement,
-    String? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    Boolean? defaultValueBoolean,
-    @JsonKey(name: '_defaultValueBoolean') Element? defaultValueBooleanElement,
-    Decimal? defaultValueInteger,
-    @JsonKey(name: '_defaultValueInteger') Element? defaultValueIntegerElement,
-    Decimal? defaultValueDecimal,
-    @JsonKey(name: '_defaultValueDecimal') Element? defaultValueDecimalElement,
-    String? defaultValueBase64Binary,
-    @JsonKey(name: '_defaultValueBase64Binary')
-        Element? defaultValueBase64BinaryElement,
-    String? defaultValueInstant,
-    @JsonKey(name: '_defaultValueInstant') Element? defaultValueInstantElement,
-    String? defaultValueString,
-    @JsonKey(name: '_defaultValueString') Element? defaultValueStringElement,
-    String? defaultValueUri,
-    @JsonKey(name: '_defaultValueUri') Element? defaultValueUriElement,
-    Date? defaultValueDate,
-    @JsonKey(name: '_defaultValueDate') Element? defaultValueDateElement,
-    FhirDateTime? defaultValueDateTime,
-    @JsonKey(name: '_defaultValueDateTime')
-        Element? defaultValueDateTimeElement,
-    Time? defaultValueTime,
-    @JsonKey(name: '_defaultValueTime') Element? defaultValueTimeElement,
-    Code? defaultValueCode,
-    @JsonKey(name: '_defaultValueCode') Element? defaultValueCodeElement,
-    FhirId? defaultValueOid,
-    @JsonKey(name: '_defaultValueOid') Element? defaultValueOidElement,
-    FhirId? defaultValueUuid,
-    @JsonKey(name: '_defaultValueUuid') Element? defaultValueUuidElement,
-    FhirId? defaultValueId,
-    @JsonKey(name: '_defaultValueId') Element? defaultValueIdElement,
-    Decimal? defaultValueUnsignedInt,
-    @JsonKey(name: '_defaultValueUnsignedInt')
-        Element? defaultValueUnsignedIntElement,
-    Decimal? defaultValuePositiveInt,
-    @JsonKey(name: '_defaultValuePositiveInt')
-        Element? defaultValuePositiveIntElement,
-    String? defaultValueMarkdown,
-    @JsonKey(name: '_defaultValueMarkdown')
-        Element? defaultValueMarkdownElement,
-    Element? defaultValueElement,
-    FhirExtension? defaultValueExtension,
-    BackboneElement? defaultValueBackboneElement,
-    Narrative? defaultValueNarrative,
-    Annotation? defaultValueAnnotation,
-    Attachment? defaultValueAttachment,
-    Identifier? defaultValueIdentifier,
-    CodeableConcept? defaultValueCodeableConcept,
-    Coding? defaultValueCoding,
-    Quantity? defaultValueQuantity,
-    FhirDuration? defaultValueDuration,
-    Quantity? defaultValueSimpleQuantity,
-    Distance? defaultValueDistance,
-    Count? defaultValueCount,
-    Money? defaultValueMoney,
-    Age? defaultValueAge,
-    Range? defaultValueRange,
-    Period? defaultValuePeriod,
-    Ratio? defaultValueRatio,
-    Reference? defaultValueReference,
-    SampledData? defaultValueSampledData,
-    Signature? defaultValueSignature,
-    HumanName? defaultValueHumanName,
-    Address? defaultValueAddress,
-    ContactPoint? defaultValueContactPoint,
-    Timing? defaultValueTiming,
-    Meta? defaultValueMeta,
-    ElementDefinition? defaultValueElementDefinition,
-    ContactDetail? defaultValueContactDetail,
-    Contributor? defaultValueContributor,
-    Dosage? defaultValueDosage,
-    RelatedArtifact? defaultValueRelatedArtifact,
-    UsageContext? defaultValueUsageContext,
-    DataRequirement? defaultValueDataRequirement,
-    ParameterDefinition? defaultValueParameterDefinition,
-    TriggerDefinition? defaultValueTriggerDefinition,
-    String? element,
-    @JsonKey(name: '_element') Element? elementElement,
-    StructureMapSourceListMode? listMode,
-    @JsonKey(name: '_listMode') Element? listModeElement,
-    String? variable,
-    @JsonKey(name: '_variable') Element? variableElement,
-    String? condition,
-    @JsonKey(name: '_condition') Element? conditionElement,
-    String? check,
-    @JsonKey(name: '_check') Element? checkElement,
-  }) = _StructureMapSource;
-  factory StructureMapTarget({
-    String? context,
-    @JsonKey(name: '_context') Element? contextElement,
-    StructureMapTargetContextType? contextType,
-    @JsonKey(name: '_contextType') Element? contextTypeElement,
-    String? element,
-    @JsonKey(name: '_element') Element? elementElement,
-    String? variable,
-    @JsonKey(name: '_variable') Element? variableElement,
-    List<StructureMapTargetListMode>? listMode,
-    @JsonKey(name: '_listMode') List<Element?>? listModeElement,
-    FhirId? listRuleId,
-    @JsonKey(name: '_listRuleId') Element? listRuleIdElement,
-    StructureMapTargetTransform? transform,
-    @JsonKey(name: '_transform') Element? transformElement,
-    List<StructureMapParameter>? parameter,
-  }) = _StructureMapTarget;
-  factory StructureMapParameter({
-    FhirId? valueId,
-    @JsonKey(name: '_valueId') Element? valueIdElement,
-    String? valueString,
-    @JsonKey(name: '_valueString') Element? valueStringElement,
-    Boolean? valueBoolean,
-    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-    Decimal? valueInteger,
-    @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-    Decimal? valueDecimal,
-    @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-  }) = _StructureMapParameter;
-  factory StructureMapDependent({
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    List<String>? variable,
-    @JsonKey(name: '_variable') List<Element?>? variableElement,
-  }) = _StructureMapDependent;
+import '../../../../stu3.dart';
+part 'conformance.enums.dart';
+
+class CapabilityStatement {
+  Stu3ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? url;
+  Element? urlElement;
+  String? version;
+  Element? versionElement;
+  String? name;
+  Element? nameElement;
+  String? title;
+  Element? titleElement;
+  CapabilityStatementStatus? status;
+  Element? statusElement;
+  Boolean? experimental;
+  Element? experimentalElement;
+  FhirDateTime? date;
+  Element? dateElement;
+  String? publisher;
+  Element? publisherElement;
+  List<ContactDetail>? contact;
+  String? description;
+  Element? descriptionElement;
+  List<UsageContext>? useContext;
+  List<CodeableConcept>? jurisdiction;
+  String? purpose;
+  Element? purposeElement;
+  String? copyright;
+  Element? copyrightElement;
+  CapabilityStatementKind? kind;
+  Element? kindElement;
+  List<Instant>? instantiates;
+  List<Element?>? instantiatesElement;
+  CapabilityStatementSoftware? software;
+  CapabilityStatementImplementation? implementation;
+  String? fhirVersion;
+  Element? fhirVersionElement;
+  CapabilityStatementAcceptUnknown? acceptUnknown;
+  Element? acceptUnknownElement;
+  List<String>? format;
+  List<Element?>? formatElement;
+  List<String>? patchFormat;
+  List<Element?>? patchFormatElement;
+  List<FhirId>? implementationGuide;
+
+  List<Element>? implementationGuideElement;
+  List<Reference>? profile;
+  List<CapabilityStatementRest>? rest;
+  List<CapabilityStatementMessaging>? messaging;
+  List<CapabilityStatementDocument>? document;
+}
+
+class CapabilityStatementSoftware {
+  String? name;
+  Element? nameElement;
+  String? version;
+  Element? versionElement;
+  Date? releaseDate;
+  Element? releaseDateElement;
+}
+
+class CapabilityStatementImplementation {
+  String? description;
+  Element? descriptionElement;
+  String? url;
+  Element? urlElement;
+}
+
+class CapabilityStatementRest {
+  CapabilityStatementRestMode? mode;
+  Element? modeElement;
+  String? documentation;
+  Element? documentationElement;
+  CapabilityStatementSecurity? security;
+  List<CapabilityStatementResource>? resource;
+  List<CapabilityStatementInteraction1>? interaction;
+  List<CapabilityStatementSearchParam>? searchParam;
+  List<CapabilityStatementOperation>? operation;
+  List<String>? compartment;
+  List<Element?>? compartmentElement;
+}
+
+class CapabilityStatementSecurity {
+  List<FhirExtension>? extension_;
+  Boolean? cors;
+  Element? corsElement;
+  List<CodeableConcept>? service;
+  String? description;
+  Element? descriptionElement;
+  List<CapabilityStatementCertificate>? certificate;
+}
+
+class CapabilityStatementCertificate {
+  String? type;
+  Element? typeElement;
+  String? blob;
+  Element? blobElement;
+}
+
+class CapabilityStatementResource {
+  String? type;
+  Element? typeElement;
+  Reference? profile;
+  String? documentation;
+  Element? documentationElement;
+  List<CapabilityStatementInteraction> interaction;
+  CapabilityStatementResourceVersioning? versioning;
+  Element? versioningElement;
+  Boolean? readHistory;
+  Element? readHistoryElement;
+  Boolean? updateCreate;
+  Element? updateCreateElement;
+  Boolean? conditionalCreate;
+  Element? conditionalCreateElement;
+  CapabilityStatementResourceConditionalRead? conditionalRead;
+  Element? conditionalReadElement;
+  Boolean? conditionalUpdate;
+  Element? conditionalUpdateElement;
+  CapabilityStatementResourceConditionalDelete? conditionalDelete;
+  Element? conditionalDeleteElement;
+  List<CapabilityStatementResourceReferencePolicy>? referencePolicy;
+  List<Element?>? referencePolicyElement;
+  List<String>? searchInclude;
+  List<Element?>? searchIncludeElement;
+  List<String>? searchRevInclude;
+  List<Element?>? searchRevIncludeElement;
+  List<CapabilityStatementSearchParam>? searchParam;
+}
+
+class CapabilityStatementInteraction {
+  CapabilityStatementInteractionCode? code;
+  Element? codeElement;
+  String? documentation;
+  Element? documentationElement;
+}
+
+class CapabilityStatementSearchParam {
+  String? name;
+  Element? nameElement;
+  String? definition;
+  Element? definitionElement;
+  CapabilityStatementSearchParamType? type;
+  Element? typeElement;
+  String? documentation;
+  Element? documentationElement;
+}
+
+class CapabilityStatementInteraction1 {
+  CapabilityStatementInteraction1Code? code;
+  Element? codeElement;
+  String? documentation;
+  Element? documentationElement;
+}
+
+class CapabilityStatementOperation {
+  String? name;
+  Element? nameElement;
+  Reference definition;
+}
+
+class CapabilityStatementMessaging {
+  List<CapabilityStatementEndpoint>? endpoint;
+  Decimal? reliableCache;
+  Element? reliableCacheElement;
+  String? documentation;
+  Element? documentationElement;
+  List<CapabilityStatementSupportedMessage>? supportedMessage;
+  List<CapabilityStatementEvent>? event;
+}
+
+class CapabilityStatementEndpoint {
+  Coding protocol;
+  String? address;
+  Element? addressElement;
+}
+
+class CapabilityStatementSupportedMessage {
+  CapabilityStatementSupportedMessageMode? mode;
+  Element? modeElement;
+  Reference definition;
+}
+
+class CapabilityStatementEvent {
+  Coding code;
+  CapabilityStatementEventCategory? category;
+  Element? categoryElement;
+  CapabilityStatementEventMode? mode;
+  Element? modeElement;
+  String? focus;
+  Element? focusElement;
+  Reference request;
+  Reference response;
+  String? documentation;
+  Element? documentationElement;
+}
+
+class CapabilityStatementDocument {
+  CapabilityStatementDocumentMode? mode;
+  Element? modeElement;
+  String? documentation;
+  Element? documentationElement;
+  Reference profile;
+}
+
+class CompartmentDefinition {
+  Stu3ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? url;
+  Element? urlElement;
+  String? name;
+  Element? nameElement;
+  String? title;
+  Element? titleElement;
+  CompartmentDefinitionStatus? status;
+  Element? statusElement;
+  Boolean? experimental;
+  Element? experimentalElement;
+  FhirDateTime? date;
+  Element? dateElement;
+  String? publisher;
+  Element? publisherElement;
+  List<ContactDetail>? contact;
+  String? description;
+  Element? descriptionElement;
+  String? purpose;
+  Element? purposeElement;
+  List<UsageContext>? useContext;
+  List<CodeableConcept>? jurisdiction;
+  CompartmentDefinitionCode? code;
+  Element? codeElement;
+  Boolean? search;
+  Element? searchElement;
+  List<CompartmentDefinitionResource>? resource;
+}
+
+class CompartmentDefinitionResource {
+  Code? code;
+  Element? codeElement;
+  List<String>? param;
+  List<Element?>? paramElement;
+  String? documentation;
+  Element? documentationElement;
+}
+
+class DataElement {
+  Stu3ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? url;
+  Element? urlElement;
+  List<Identifier>? identifier;
+  String? version;
+  Element? versionElement;
+  DataElementStatus? status;
+  Element? statusElement;
+  Boolean? experimental;
+  Element? experimentalElement;
+  Date? date;
+  Element? dateElement;
+  String? publisher;
+  Element? publisherElement;
+  String? name;
+  Element? nameElement;
+  String? title;
+  Element? titleElement;
+  List<ContactDetail>? contact;
+  List<UsageContext>? useContext;
+  List<CodeableConcept>? jurisdiction;
+  String? copyright;
+  Element? copyrightElement;
+  DataElementStringency? stringency;
+  Element? stringencyElement;
+  List<DataElementMapping>? mapping;
+  List<ElementDefinition> element;
+}
+
+class DataElementMapping {
+  FhirId? identity;
+  Element? identityElement;
+  String? uri;
+  Element? uriElement;
+  String? name;
+  Element? nameElement;
+  String? comment;
+  Element? commentElement;
+}
+
+class GraphDefinition {
+  Stu3ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? url;
+  Element? urlElement;
+  String? version;
+  Element? versionElement;
+  String? name;
+  Element? nameElement;
+  GraphDefinitionStatus? status;
+  Element? statusElement;
+  Boolean? experimental;
+  Element? experimentalElement;
+  Date? date;
+  Element? dateElement;
+  String? publisher;
+  Element? publisherElement;
+  List<ContactDetail>? contact;
+  String? description;
+  Element? descriptionElement;
+  List<UsageContext>? useContext;
+  List<CodeableConcept>? jurisdiction;
+  String? purpose;
+  Element? purposeElement;
+  String? start;
+  Element? startElement;
+  String? profile;
+  Element? profileElement;
+  List<GraphDefinitionLink>? link;
+}
+
+class GraphDefinitionLink {
+  String? path;
+  Element? pathElement;
+  String? sliceName;
+  Element? sliceNameElement;
+  Decimal? min;
+  Element? minElement;
+  String? max;
+  Element? maxElement;
+  String? description;
+  Element? descriptionElement;
+  List<GraphDefinitionTarget> target;
+}
+
+class GraphDefinitionTarget {
+  String? type;
+  Element? typeElement;
+  String? profile;
+  Element? profileElement;
+  List<GraphDefinitionCompartment>? compartment;
+  List<GraphDefinitionLink>? link;
+}
+
+class GraphDefinitionCompartment {
+  Code? code;
+  Element? codeElement;
+  GraphDefinitionCompartmentRule? rule;
+  Element? ruleElement;
+  String? expression;
+  Element? expressionElement;
+  String? description;
+  Element? descriptionElement;
+}
+
+class ImplementationGuide {
+  Stu3ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? url;
+  Element? urlElement;
+  String? version;
+  Element? versionElement;
+  String? name;
+  Element? nameElement;
+  ImplementationGuideStatus? status;
+  Element? statusElement;
+  Boolean? experimental;
+  Element? experimentalElement;
+  Date? date;
+  Element? dateElement;
+  String? publisher;
+  Element? publisherElement;
+  List<ContactDetail>? contact;
+  String? description;
+  Element? descriptionElement;
+  List<UsageContext>? useContext;
+  List<CodeableConcept>? jurisdiction;
+  String? copyright;
+  Element? copyrightElement;
+  String? fhirVersion;
+  Element? fhirVersionElement;
+  List<ImplementationGuideDependency>? dependency;
+  List<ImplementationGuidePackage>? package;
+  List<ImplementationGuideGlobal>? global;
+  List<String>? binary;
+  List<Element?>? binaryElement;
+  ImplementationGuidePage? page;
+}
+
+class ImplementationGuideDependency {
+  ImplementationGuideDependencyType? type;
+  Element? typeElement;
+  String? uri;
+  Element? uriElement;
+}
+
+class ImplementationGuidePackage {
+  String? name;
+  Element? nameElement;
+  String? description;
+  Element? descriptionElement;
+  List<ImplementationGuideResource> resource;
+}
+
+class ImplementationGuideResource {
+  Boolean? example;
+  Element? exampleElement;
+  String? name;
+  Element? nameElement;
+  String? description;
+  Element? descriptionElement;
+  String? acronym;
+  Element? acronymElement;
+  String? sourceUri;
+  Element? sourceUriElement;
+  Reference? sourceReference;
+  Reference? exampleFor;
+}
+
+class ImplementationGuideGlobal {
+  String? type;
+  Element? typeElement;
+  Reference profile;
+}
+
+class ImplementationGuidePage {
+  String? source;
+  Element? sourceElement;
+  String? title;
+  Element? titleElement;
+  ImplementationGuidePageKind? kind;
+  Element? kindElement;
+  List<String>? type;
+  List<Element?>? typeElement;
+  List<String>? package;
+  List<Element?>? packageElement;
+  String? format;
+  Element? formatElement;
+  List<ImplementationGuidePage>? page;
+}
+
+class MessageDefinition {
+  Stu3ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? url;
+  Element? urlElement;
+  Identifier? identifier;
+  String? version;
+  Element? versionElement;
+  String? name;
+  Element? nameElement;
+  String? title;
+  Element? titleElement;
+  MessageDefinitionStatus? status;
+  Element? statusElement;
+  Boolean? experimental;
+  Element? experimentalElement;
+  Date? date;
+  Element? dateElement;
+  String? publisher;
+  Element? publisherElement;
+  List<ContactDetail>? contact;
+  String? description;
+  Element? descriptionElement;
+  List<UsageContext>? useContext;
+  List<CodeableConcept>? jurisdiction;
+  String? purpose;
+  Element? purposeElement;
+  String? copyright;
+  Element? copyrightElement;
+  Reference? base;
+  List<Reference>? parent;
+  List<Reference>? replaces;
+  Coding event;
+  String? category;
+  Element? categoryElement;
+  List<MessageDefinitionFocus>? focus;
+  Boolean? responseRequired;
+  Element? responseRequiredElement;
+  List<MessageDefinitionAllowedResponse>? allowedResponse;
+}
+
+class MessageDefinitionFocus {
+  Code? code;
+  Element? codeElement;
+  Reference? profile;
+  Decimal? min;
+  Element? minElement;
+  String? max;
+  Element? maxElement;
+}
+
+class MessageDefinitionAllowedResponse {
+  Reference message;
+  String? situation;
+  Element? situationElement;
+}
+
+class OperationDefinition {
+  Stu3ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? url;
+  Element? urlElement;
+  String? version;
+  Element? versionElement;
+  String? name;
+  Element? nameElement;
+  OperationDefinitionStatus? status;
+  Element? statusElement;
+  OperationDefinitionKind? kind;
+  Element? kindElement;
+  Boolean? experimental;
+  Element? experimentalElement;
+  FhirDateTime? date;
+  Element? dateElement;
+  String? publisher;
+  Element? publisherElement;
+  List<ContactDetail>? contact;
+  String? description;
+  Element? descriptionElement;
+  List<UsageContext>? useContext;
+  List<CodeableConcept>? jurisdiction;
+  String? purpose;
+  Element? purposeElement;
+  Boolean? idempotent;
+  Element? idempotentElement;
+  Code? code;
+  Element? codeElement;
+  String? comment;
+  Element? commentElement;
+  Reference? base;
+  List<String>? resource;
+  List<Element?>? resourceElement;
+  Boolean? system;
+  Element? systemElement;
+  Boolean? type;
+  Element? typeElement;
+  Boolean? instance;
+  Element? instanceElement;
+  List<OperationDefinitionParameter>? parameter;
+  List<OperationDefinitionOverload>? overload;
+}
+
+class OperationDefinitionParameter {
+  String? name;
+  Element? nameElement;
+  OperationDefinitionParameterUse? use;
+  Element? useElement;
+  Decimal? min;
+  Element? minElement;
+  String? max;
+  Element? maxElement;
+  String? documentation;
+  Element? documentationElement;
+  String? type;
+  Element? typeElement;
+  OperationDefinitionParameterSearchType? searchType;
+  Element? searchTypeElement;
+  Reference? profile;
+  OperationDefinitionBinding? binding;
+  List<OperationDefinitionParameter>? part_;
+}
+
+class OperationDefinitionBinding {
+  List<FhirExtension>? extension_;
+  OperationDefinitionBindingStrength? strength;
+  Element? strengthElement;
+  String? valueSetUri;
+  Element? valueSetUriElement;
+  Reference? valueSetReference;
+}
+
+class OperationDefinitionOverload {
+  List<String>? parameterName;
+  List<Element?>? parameterNameElement;
+  String? comment;
+  Element? commentElement;
+}
+
+class SearchParameter {
+  Stu3ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? url;
+  Element? urlElement;
+  String? version;
+  Element? versionElement;
+  String? name;
+  Element? nameElement;
+  SearchParameterStatus? status;
+  Element? statusElement;
+  Boolean? experimental;
+  Element? experimentalElement;
+  Date? date;
+  Element? dateElement;
+  String? publisher;
+  Element? publisherElement;
+  List<ContactDetail>? contact;
+  List<UsageContext>? useContext;
+  List<CodeableConcept>? jurisdiction;
+  String? purpose;
+  Element? purposeElement;
+  Code? code;
+  Element? codeElement;
+  List<String>? base;
+  List<Element?>? baseElement;
+  SearchParameterType? type;
+  Element? typeElement;
+  String? derivedFrom;
+  Element? derivedFromElement;
+  String? description;
+  Element? descriptionElement;
+  String? expression;
+  Element? expressionElement;
+  String? xpath;
+  Element? xpathElement;
+  SearchParameterXpathUsage? xpathUsage;
+  Element? xpathUsageElement;
+  List<String>? target;
+  List<Element?>? targetElement;
+  List<SearchParameterComparator>? comparator;
+  List<Element?>? comparatorElement;
+  List<SearchParameterModifier>? modifier;
+  List<Element?>? modifierElement;
+  List<String>? chain;
+  List<Element?>? chainElement;
+  List<SearchParameterComponent>? component;
+}
+
+class SearchParameterComponent {
+  Reference definition;
+  String? expression;
+  Element? expressionElement;
+}
+
+class StructureDefinition {
+  Stu3ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? url;
+  Element? urlElement;
+  List<Identifier>? identifier;
+  String? version;
+  Element? versionElement;
+  String? name;
+  Element? nameElement;
+  String? title;
+  Element? titleElement;
+  StructureDefinitionStatus? status;
+  Element? statusElement;
+  Boolean? experimental;
+  Element? experimentalElement;
+  FhirDateTime? date;
+  Element? dateElement;
+  String? publisher;
+  Element? publisherElement;
+  List<ContactDetail>? contact;
+  String? description;
+  Element? descriptionElement;
+  List<UsageContext>? useContext;
+  List<CodeableConcept>? jurisdiction;
+  String? purpose;
+  Element? purposeElement;
+  String? copyright;
+  Element? copyrightElement;
+  List<Coding>? keyword;
+  String? fhirVersion;
+  Element? fhirVersionElement;
+  List<StructureDefinitionMapping>? mapping;
+  StructureDefinitionKind? kind;
+  Element? kindElement;
+  Boolean? abstract_;
+  Element? abstractElement;
+  StructureDefinitionContextType? contextType;
+  Element? contextTypeElement;
+  List<String>? context;
+  List<Element?>? contextElement;
+  List<String>? contextInvariant;
+  List<Element?>? contextInvariantElement;
+  String? type;
+  Element? typeElement;
+  String? baseDefinition;
+  Element? baseDefinitionElement;
+  StructureDefinitionDerivation? derivation;
+  Element? derivationElement;
+  StructureDefinitionSnapshot? snapshot;
+  StructureDefinitionDifferential? differential;
+}
+
+class StructureDefinitionMapping {
+  FhirId? identity;
+  Element? identityElement;
+  String? uri;
+  Element? uriElement;
+  String? name;
+  Element? nameElement;
+  String? comment;
+  Element? commentElement;
+}
+
+class StructureDefinitionSnapshot {
+  List<ElementDefinition> element;
+}
+
+class StructureDefinitionDifferential {
+  List<ElementDefinition> element;
+}
+
+class StructureMap {
+  Stu3ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? url;
+  Element? urlElement;
+  List<Identifier>? identifier;
+  String? version;
+  Element? versionElement;
+  String? name;
+  Element? nameElement;
+  String? title;
+  Element? titleElement;
+  StructureMapStatus? status;
+  Element? statusElement;
+  Boolean? experimental;
+  Element? experimentalElement;
+  Date? date;
+  Element? dateElement;
+  String? publisher;
+  Element? publisherElement;
+  List<ContactDetail>? contact;
+  String? description;
+  Element? descriptionElement;
+  List<UsageContext>? useContext;
+  List<CodeableConcept>? jurisdiction;
+  String? purpose;
+  Element? purposeElement;
+  String? copyright;
+  Element? copyrightElement;
+  List<StructureMapStructure>? structure;
+  List<String>? import_;
+  List<Element?>? importElement;
+  List<StructureMapGroup> group;
+}
+
+class StructureMapStructure {
+  String? url;
+  Element? urlElement;
+  StructureMapStructureMode? mode;
+  Element? modeElement;
+  String? alias;
+  Element? aliasElement;
+  String? documentation;
+  Element? documentationElement;
+}
+
+class StructureMapGroup {
+  String? name;
+  Element? nameElement;
+  String? extends_;
+  Element? extendsElement;
+  StructureMapGroupTypeMode? typeMode;
+  Element? typeModeElement;
+  String? documentation;
+  Element? documentationElement;
+  List<StructureMapInput> input;
+  List<StructureMapRule> rule;
+}
+
+class StructureMapInput {
+  String? name;
+  Element? nameElement;
+  String? type;
+  Element? typeElement;
+  StructureMapInputMode? mode;
+  Element? modeElement;
+  String? documentation;
+  Element? documentationElement;
+}
+
+class StructureMapRule {
+  String? name;
+  Element? nameElement;
+  List<StructureMapSource> source;
+  List<StructureMapTarget>? target;
+  List<StructureMapRule>? rule;
+  List<StructureMapDependent>? dependent;
+  String? documentation;
+  Element? documentationElement;
+}
+
+class StructureMapSource {
+  String? context;
+  Element? contextElement;
+  Decimal? min;
+  Element? minElement;
+  String? max;
+  Element? maxElement;
+  String? type;
+  Element? typeElement;
+  Boolean? defaultValueBoolean;
+  Element? defaultValueBooleanElement;
+  Decimal? defaultValueInteger;
+  Element? defaultValueIntegerElement;
+  Decimal? defaultValueDecimal;
+  Element? defaultValueDecimalElement;
+  String? defaultValueBase64Binary;
+
+  Element? defaultValueBase64BinaryElement;
+  String? defaultValueInstant;
+  Element? defaultValueInstantElement;
+  String? defaultValueString;
+  Element? defaultValueStringElement;
+  String? defaultValueUri;
+  Element? defaultValueUriElement;
+  Date? defaultValueDate;
+  Element? defaultValueDateElement;
+  FhirDateTime? defaultValueDateTime;
+
+  Element? defaultValueDateTimeElement;
+  Time? defaultValueTime;
+  Element? defaultValueTimeElement;
+  Code? defaultValueCode;
+  Element? defaultValueCodeElement;
+  FhirId? defaultValueOid;
+  Element? defaultValueOidElement;
+  FhirId? defaultValueUuid;
+  Element? defaultValueUuidElement;
+  FhirId? defaultValueId;
+  Element? defaultValueIdElement;
+  Decimal? defaultValueUnsignedInt;
+
+  Element? defaultValueUnsignedIntElement;
+  Decimal? defaultValuePositiveInt;
+
+  Element? defaultValuePositiveIntElement;
+  String? defaultValueMarkdown;
+
+  Element? defaultValueMarkdownElement;
+  Element? defaultValueElement;
+  FhirExtension? defaultValueExtension;
+  BackboneElement? defaultValueBackboneElement;
+  Narrative? defaultValueNarrative;
+  Annotation? defaultValueAnnotation;
+  Attachment? defaultValueAttachment;
+  Identifier? defaultValueIdentifier;
+  CodeableConcept? defaultValueCodeableConcept;
+  Coding? defaultValueCoding;
+  Quantity? defaultValueQuantity;
+  FhirDuration? defaultValueDuration;
+  Quantity? defaultValueSimpleQuantity;
+  Distance? defaultValueDistance;
+  Count? defaultValueCount;
+  Money? defaultValueMoney;
+  Age? defaultValueAge;
+  Range? defaultValueRange;
+  Period? defaultValuePeriod;
+  Ratio? defaultValueRatio;
+  Reference? defaultValueReference;
+  SampledData? defaultValueSampledData;
+  Signature? defaultValueSignature;
+  HumanName? defaultValueHumanName;
+  Address? defaultValueAddress;
+  ContactPoint? defaultValueContactPoint;
+  Timing? defaultValueTiming;
+  Meta? defaultValueMeta;
+  ElementDefinition? defaultValueElementDefinition;
+  ContactDetail? defaultValueContactDetail;
+  Contributor? defaultValueContributor;
+  Dosage? defaultValueDosage;
+  RelatedArtifact? defaultValueRelatedArtifact;
+  UsageContext? defaultValueUsageContext;
+  DataRequirement? defaultValueDataRequirement;
+  ParameterDefinition? defaultValueParameterDefinition;
+  TriggerDefinition? defaultValueTriggerDefinition;
+  String? element;
+  Element? elementElement;
+  StructureMapSourceListMode? listMode;
+  Element? listModeElement;
+  String? variable;
+  Element? variableElement;
+  String? condition;
+  Element? conditionElement;
+  String? check;
+  Element? checkElement;
+}
+
+class StructureMapTarget {
+  String? context;
+  Element? contextElement;
+  StructureMapTargetContextType? contextType;
+  Element? contextTypeElement;
+  String? element;
+  Element? elementElement;
+  String? variable;
+  Element? variableElement;
+  List<StructureMapTargetListMode>? listMode;
+  List<Element?>? listModeElement;
+  FhirId? listRuleId;
+  Element? listRuleIdElement;
+  StructureMapTargetTransform? transform;
+  Element? transformElement;
+  List<StructureMapParameter>? parameter;
+}
+
+class StructureMapParameter {
+  FhirId? valueId;
+  Element? valueIdElement;
+  String? valueString;
+  Element? valueStringElement;
+  Boolean? valueBoolean;
+  Element? valueBooleanElement;
+  Decimal? valueInteger;
+  Element? valueIntegerElement;
+  Decimal? valueDecimal;
+  Element? valueDecimalElement;
+}
+
+class StructureMapDependent {
+  String? name;
+  Element? nameElement;
+  List<String>? variable;
+  List<Element?>? variableElement;
+}

@@ -1,607 +1,626 @@
-  factory Measure({
-    @Default(R4ResourceType.Measure)
-    @JsonKey(unknownEnumValue: R4ResourceType.Measure)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) FhirUri? url,
-    @JsonKey(name: '_url') @HiveField(12) Element? urlElement,
-    @HiveField(13) @HiveField(14) List<Identifier>? identifier,
-    @HiveField(15) String? version,
-    @JsonKey(name: '_version') @HiveField(16) Element? versionElement,
-    @HiveField(17) String? name,
-    @JsonKey(name: '_name') @HiveField(18) Element? nameElement,
-    @HiveField(19) String? title,
-    @JsonKey(name: '_title') @HiveField(20) Element? titleElement,
-    @HiveField(21) String? subtitle,
-    @JsonKey(name: '_subtitle') @HiveField(22) Element? subtitleElement,
-    @HiveField(23) Code? status,
-    @JsonKey(name: '_status') @HiveField(24) Element? statusElement,
-    @HiveField(25) Boolean? experimental,
-    @JsonKey(name: '_experimental') @HiveField(26) Element? experimentalElement,
-    @HiveField(27) CodeableConcept? subjectCodeableConcept,
-    @HiveField(28) Reference? subjectReference,
-    @HiveField(29) FhirDateTime? date,
-    @JsonKey(name: '_date') @HiveField(30) Element? dateElement,
-    @HiveField(31) String? publisher,
-    @JsonKey(name: '_publisher') @HiveField(32) Element? publisherElement,
-    @HiveField(33) List<ContactDetail>? contact,
-    @HiveField(34) Markdown? description,
-    @JsonKey(name: '_description') @HiveField(35) Element? descriptionElement,
-    @HiveField(36) List<UsageContext>? useContext,
-    @HiveField(37) List<CodeableConcept>? jurisdiction,
-    @HiveField(38) Markdown? purpose,
-    @JsonKey(name: '_purpose') @HiveField(39) Element? purposeElement,
-    @HiveField(40) String? usage,
-    @JsonKey(name: '_usage') @HiveField(41) Element? usageElement,
-    @HiveField(42) Markdown? copyright,
-    @JsonKey(name: '_copyright') @HiveField(43) Element? copyrightElement,
-    @HiveField(44) Date? approvalDate,
-    @JsonKey(name: '_approvalDate') @HiveField(45) Element? approvalDateElement,
-    @HiveField(46) Date? lastReviewDate,
-    @JsonKey(name: '_lastReviewDate')
-    @HiveField(47)
-        Element? lastReviewDateElement,
-    @HiveField(48) Period? effectivePeriod,
-    @HiveField(49) List<CodeableConcept>? topic,
-    @HiveField(50) List<ContactDetail>? author,
-    @HiveField(51) List<ContactDetail>? editor,
-    @HiveField(52) List<ContactDetail>? reviewer,
-    @HiveField(53) List<ContactDetail>? endorser,
-    @HiveField(54) @HiveField(55) List<RelatedArtifact>? relatedArtifact,
-    @JsonKey(name: 'library') @HiveField(56) List<Canonical>? library_,
-    @HiveField(57) Markdown? disclaimer,
-    @JsonKey(name: '_disclaimer') @HiveField(58) Element? disclaimerElement,
-    @HiveField(59) @HiveField(60) CodeableConcept? scoring,
-    @HiveField(61) CodeableConcept? compositeScoring,
-    @HiveField(62) List<CodeableConcept>? type,
-    @HiveField(63) String? riskAdjustment,
-    @JsonKey(name: '_riskAdjustment')
-    @HiveField(64)
-        Element? riskAdjustmentElement,
-    @HiveField(65) @HiveField(66) String? rateAggregation,
-    @JsonKey(name: '_rateAggregation')
-    @HiveField(67)
-        Element? rateAggregationElement,
-    @HiveField(68) @HiveField(69) Markdown? rationale,
-    @JsonKey(name: '_rationale') @HiveField(70) Element? rationaleElement,
-    @HiveField(71) Markdown? clinicalRecommendationStatement,
-    @JsonKey(name: '_clinicalRecommendationStatement')
-    @HiveField(72)
-        Element? clinicalRecommendationStatementElement,
-    @HiveField(73) CodeableConcept? improvementNotation,
-    @HiveField(74) List<Markdown>? definition,
-    @JsonKey(name: '_definition')
-    @HiveField(75)
-        List<Element?>? definitionElement,
-    @HiveField(76) Markdown? guidance,
-    @JsonKey(name: '_guidance') @HiveField(77) Element? guidanceElement,
-    @HiveField(78) List<MeasureGroup>? group,
-    @HiveField(79)
-    @HiveField(80)
-        List<MeasureSupplementalData>? supplementalData,
-  }) = _Measure;
-  factory MeasureGroup({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? code,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    List<MeasurePopulation>? population,
-    List<MeasureStratifier>? stratifier,
-  }) = _MeasureGroup;
-  factory MeasurePopulation({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? code,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    required Expression criteria,
-  }) = _MeasurePopulation;
-  factory MeasureStratifier({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? code,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    Expression? criteria,
-    List<MeasureComponent>? component,
-  }) = _MeasureStratifier;
-  factory MeasureComponent({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? code,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    required Expression criteria,
-  }) = _MeasureComponent;
-  factory MeasureSupplementalData({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? code,
-    List<CodeableConcept>? usage,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    required Expression criteria,
-  }) = _MeasureSupplementalData;
-  factory MeasureReport({
-    @Default(R4ResourceType.MeasureReport)
-    @JsonKey(unknownEnumValue: R4ResourceType.MeasureReport)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) Code? status,
-    @JsonKey(name: '_status') @HiveField(13) Element? statusElement,
-    @HiveField(14) @HiveField(15) Code? type,
-    @JsonKey(name: '_type') @HiveField(16) Element? typeElement,
-    @HiveField(17) required Canonical measure,
-    @HiveField(18) Reference? subject,
-    @HiveField(19) FhirDateTime? date,
-    @JsonKey(name: '_date') @HiveField(20) Element? dateElement,
-    @HiveField(21) Reference? reporter,
-    @HiveField(22) required Period period,
-    @HiveField(23) CodeableConcept? improvementNotation,
-    @HiveField(24) List<MeasureReportGroup>? group,
-    @HiveField(25) List<Reference>? evaluatedResource,
-  }) = _MeasureReport;
-  factory MeasureReportGroup({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? code,
-    List<MeasureReportPopulation>? population,
-    Quantity? measureScore,
-    List<MeasureReportStratifier>? stratifier,
-  }) = _MeasureReportGroup;
-  factory MeasureReportPopulation({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? code,
-    Integer? count,
-    @JsonKey(name: '_count') Element? countElement,
-    Reference? subjectResults,
-  }) = _MeasureReportPopulation;
-  factory MeasureReportStratifier({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<CodeableConcept>? code,
-    List<MeasureReportStratum>? stratum,
-  }) = _MeasureReportStratifier;
-  factory MeasureReportStratum({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? value,
-    List<MeasureReportComponent>? component,
-    List<MeasureReportPopulation1>? population,
-    Quantity? measureScore,
-  }) = _MeasureReportStratum;
-  factory MeasureReportComponent({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept code,
-    required CodeableConcept value,
-  }) = _MeasureReportComponent;
-  factory MeasureReportPopulation1({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? code,
-    Integer? count,
-    @JsonKey(name: '_count') Element? countElement,
-    Reference? subjectResults,
-  }) = _MeasureReportPopulation1;
-  factory TestReport({
-    @Default(R4ResourceType.TestReport)
-    @JsonKey(unknownEnumValue: R4ResourceType.TestReport)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) Identifier? identifier,
-    @HiveField(12) String? name,
-    @JsonKey(name: '_name') @HiveField(13) Element? nameElement,
-    @HiveField(14) Code? status,
-    @JsonKey(name: '_status') @HiveField(15) Element? statusElement,
-    @HiveField(16) required Reference testScript,
-    @HiveField(17) Code? result,
-    @JsonKey(name: '_result') @HiveField(18) Element? resultElement,
-    @HiveField(19) Decimal? score,
-    @JsonKey(name: '_score') @HiveField(20) Element? scoreElement,
-    @HiveField(21) String? tester,
-    @JsonKey(name: '_tester') @HiveField(22) Element? testerElement,
-    @HiveField(23) FhirDateTime? issued,
-    @JsonKey(name: '_issued') @HiveField(24) Element? issuedElement,
-    @HiveField(25) List<TestReportParticipant>? participant,
-    @HiveField(26) TestReportSetup? setup,
-    @HiveField(27) List<TestReportTest>? test,
-    @HiveField(28) TestReportTeardown? teardown,
-  }) = _TestReport;
-  factory TestReportParticipant({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    FhirUri? uri,
-    @JsonKey(name: '_uri') Element? uriElement,
-    String? display,
-    @JsonKey(name: '_display') Element? displayElement,
-  }) = _TestReportParticipant;
-  factory TestReportSetup({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required List<TestReportAction> action,
-  }) = _TestReportSetup;
-  factory TestReportAction({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    TestReportOperation? operation,
-    @JsonKey(name: 'assert') TestReportAssert? assert_,
-  }) = _TestReportAction;
-  factory TestReportOperation({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? result,
-    @JsonKey(name: '_result') Element? resultElement,
-    Markdown? message,
-    @JsonKey(name: '_message') Element? messageElement,
-    FhirUri? detail,
-    @JsonKey(name: '_detail') Element? detailElement,
-  }) = _TestReportOperation;
-  factory TestReportAssert({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? result,
-    @JsonKey(name: '_result') Element? resultElement,
-    Markdown? message,
-    @JsonKey(name: '_message') Element? messageElement,
-    String? detail,
-    @JsonKey(name: '_detail') Element? detailElement,
-  }) = _TestReportAssert;
-  factory TestReportTest({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    required List<TestReportAction1> action,
-  }) = _TestReportTest;
-  factory TestReportAction1({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    TestReportOperation? operation,
-    @JsonKey(name: 'assert') TestReportAssert? assert_,
-  }) = _TestReportAction1;
-  factory TestReportTeardown({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required List<TestReportAction2> action,
-  }) = _TestReportTeardown;
-  factory TestReportAction2({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required TestReportOperation operation,
-  }) = _TestReportAction2;
-  factory TestScript({
-    @Default(R4ResourceType.TestScript)
-    @JsonKey(unknownEnumValue: R4ResourceType.TestScript)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) FhirUri? url,
-    @JsonKey(name: '_url') @HiveField(12) Element? urlElement,
-    @HiveField(13) Identifier? identifier,
-    @HiveField(14) String? version,
-    @JsonKey(name: '_version') @HiveField(15) Element? versionElement,
-    @HiveField(16) String? name,
-    @JsonKey(name: '_name') @HiveField(17) Element? nameElement,
-    @HiveField(18) String? title,
-    @JsonKey(name: '_title') @HiveField(19) Element? titleElement,
-    @HiveField(20) Code? status,
-    @JsonKey(name: '_status') @HiveField(21) Element? statusElement,
-    @HiveField(22) Boolean? experimental,
-    @JsonKey(name: '_experimental') @HiveField(23) Element? experimentalElement,
-    @HiveField(24) FhirDateTime? date,
-    @JsonKey(name: '_date') @HiveField(25) Element? dateElement,
-    @HiveField(26) String? publisher,
-    @JsonKey(name: '_publisher') @HiveField(27) Element? publisherElement,
-    @HiveField(28) List<ContactDetail>? contact,
-    @HiveField(29) Markdown? description,
-    @JsonKey(name: '_description') @HiveField(30) Element? descriptionElement,
-    @HiveField(31) List<UsageContext>? useContext,
-    @HiveField(32) List<CodeableConcept>? jurisdiction,
-    @HiveField(33) Markdown? purpose,
-    @JsonKey(name: '_purpose') @HiveField(34) Element? purposeElement,
-    @HiveField(35) Markdown? copyright,
-    @JsonKey(name: '_copyright') @HiveField(36) Element? copyrightElement,
-    @HiveField(37) List<TestScriptOrigin>? origin,
-    @HiveField(38) List<TestScriptDestination>? destination,
-    @HiveField(39) TestScriptMetadata? metadata,
-    @HiveField(40) List<TestScriptFixture>? fixture,
-    @HiveField(41) List<Reference>? profile,
-    @HiveField(42) List<TestScriptVariable>? variable,
-    @HiveField(43) TestScriptSetup? setup,
-    @HiveField(44) List<TestScriptTest>? test,
-    @HiveField(45) TestScriptTeardown? teardown,
-  }) = _TestScript;
-  factory TestScriptOrigin({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Integer? index,
-    @JsonKey(name: '_index') Element? indexElement,
-    required Coding profile,
-  }) = _TestScriptOrigin;
-  factory TestScriptDestination({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Integer? index,
-    @JsonKey(name: '_index') Element? indexElement,
-    required Coding profile,
-  }) = _TestScriptDestination;
-  factory TestScriptMetadata({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<TestScriptLink>? link,
-    required List<TestScriptCapability> capability,
-  }) = _TestScriptMetadata;
-  factory TestScriptLink({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    FhirUri? url,
-    @JsonKey(name: '_url') Element? urlElement,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-  }) = _TestScriptLink;
-  factory TestScriptCapability({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'required') Boolean? required_,
-    @JsonKey(name: '_required') Element? requiredElement,
-    Boolean? validated,
-    @JsonKey(name: '_validated') Element? validatedElement,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    List<Integer>? origin,
-    @JsonKey(name: '_origin') List<Element?>? originElement,
-    Integer? destination,
-    @JsonKey(name: '_destination') Element? destinationElement,
-    List<FhirUri>? link,
-    @JsonKey(name: '_link') List<Element?>? linkElement,
-    required Canonical capabilities,
-  }) = _TestScriptCapability;
-  factory TestScriptFixture({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Boolean? autocreate,
-    @JsonKey(name: '_autocreate') Element? autocreateElement,
-    Boolean? autodelete,
-    @JsonKey(name: '_autodelete') Element? autodeleteElement,
-    Reference? resource,
-  }) = _TestScriptFixture;
-  factory TestScriptVariable({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? defaultValue,
-    @JsonKey(name: '_defaultValue') Element? defaultValueElement,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    String? expression,
-    @JsonKey(name: '_expression') Element? expressionElement,
-    String? headerField,
-    @JsonKey(name: '_headerField') Element? headerFieldElement,
-    String? hint,
-    @JsonKey(name: '_hint') Element? hintElement,
-    String? path,
-    @JsonKey(name: '_path') Element? pathElement,
-    FhirId? sourceId,
-    @JsonKey(name: '_sourceId') Element? sourceIdElement,
-  }) = _TestScriptVariable;
-  factory TestScriptSetup({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required List<TestScriptAction> action,
-  }) = _TestScriptSetup;
-  factory TestScriptAction({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    TestScriptOperation? operation,
-    @JsonKey(name: 'assert') TestScriptAssert? assert_,
-  }) = _TestScriptAction;
-  factory TestScriptOperation({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Coding? type,
-    Code? resource,
-    @JsonKey(name: '_resource') Element? resourceElement,
-    String? label,
-    @JsonKey(name: '_label') Element? labelElement,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    Code? accept,
-    @JsonKey(name: '_accept') Element? acceptElement,
-    Code? contentType,
-    @JsonKey(name: '_contentType') Element? contentTypeElement,
-    Integer? destination,
-    @JsonKey(name: '_destination') Element? destinationElement,
-    Boolean? encodeRequestUrl,
-    @JsonKey(name: '_encodeRequestUrl') Element? encodeRequestUrlElement,
-    Code? method,
-    @JsonKey(name: '_method') Element? methodElement,
-    Integer? origin,
-    @JsonKey(name: '_origin') Element? originElement,
-    String? params,
-    @JsonKey(name: '_params') Element? paramsElement,
-    List<TestScriptRequestHeader>? requestHeader,
-    FhirId? requestId,
-    @JsonKey(name: '_requestId') Element? requestIdElement,
-    FhirId? responseId,
-    @JsonKey(name: '_responseId') Element? responseIdElement,
-    FhirId? sourceId,
-    @JsonKey(name: '_sourceId') Element? sourceIdElement,
-    FhirId? targetId,
-    @JsonKey(name: '_targetId') Element? targetIdElement,
-    String? url,
-    @JsonKey(name: '_url') Element? urlElement,
-  }) = _TestScriptOperation;
-  factory TestScriptRequestHeader({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? field,
-    @JsonKey(name: '_field') Element? fieldElement,
-    String? value,
-    @JsonKey(name: '_value') Element? valueElement,
-  }) = _TestScriptRequestHeader;
-  factory TestScriptAssert({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? label,
-    @JsonKey(name: '_label') Element? labelElement,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    Code? direction,
-    @JsonKey(name: '_direction') Element? directionElement,
-    String? compareToSourceId,
-    @JsonKey(name: '_compareToSourceId') Element? compareToSourceIdElement,
-    String? compareToSourceExpression,
-    @JsonKey(name: '_compareToSourceExpression')
-        Element? compareToSourceExpressionElement,
-    String? compareToSourcePath,
-    @JsonKey(name: '_compareToSourcePath') Element? compareToSourcePathElement,
-    Code? contentType,
-    @JsonKey(name: '_contentType') Element? contentTypeElement,
-    String? expression,
-    @JsonKey(name: '_expression') Element? expressionElement,
-    String? headerField,
-    @JsonKey(name: '_headerField') Element? headerFieldElement,
-    String? minimumId,
-    @JsonKey(name: '_minimumId') Element? minimumIdElement,
-    Boolean? navigationLinks,
-    @JsonKey(name: '_navigationLinks') Element? navigationLinksElement,
-    @JsonKey(name: 'operator') Code? operator_,
-    @JsonKey(name: '_operator') Element? operatorElement,
-    String? path,
-    @JsonKey(name: '_path') Element? pathElement,
-    Code? requestMethod,
-    @JsonKey(name: '_requestMethod') Element? requestMethodElement,
-    String? requestURL,
-    @JsonKey(name: '_requestURL') Element? requestURLElement,
-    Code? resource,
-    @JsonKey(name: '_resource') Element? resourceElement,
-    Code? response,
-    @JsonKey(name: '_response') Element? responseElement,
-    String? responseCode,
-    @JsonKey(name: '_responseCode') Element? responseCodeElement,
-    FhirId? sourceId,
-    @JsonKey(name: '_sourceId') Element? sourceIdElement,
-    FhirId? validateProfileId,
-    @JsonKey(name: '_validateProfileId') Element? validateProfileIdElement,
-    String? value,
-    @JsonKey(name: '_value') Element? valueElement,
-    Boolean? warningOnly,
-    @JsonKey(name: '_warningOnly') Element? warningOnlyElement,
-  }) = _TestScriptAssert;
-  factory TestScriptTest({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    required List<TestScriptAction1> action,
-  }) = _TestScriptTest;
-  factory TestScriptAction1({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    TestScriptOperation? operation,
-    @JsonKey(name: 'assert') TestScriptAssert? assert_,
-  }) = _TestScriptAction1;
-  factory TestScriptTeardown({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required List<TestScriptAction2> action,
-  }) = _TestScriptTeardown;
-  factory TestScriptAction2({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required TestScriptOperation operation,
-  }) = _TestScriptAction2;
+import '../../../../r4.dart';
+
+class Measure {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirUri? url;
+  Element? urlElement;
+  List<Identifier>? identifier;
+  String? version;
+  Element? versionElement;
+  String? name;
+  Element? nameElement;
+  String? title;
+  Element? titleElement;
+  String? subtitle;
+  Element? subtitleElement;
+  Code? status;
+  Element? statusElement;
+  Boolean? experimental;
+  Element? experimentalElement;
+  CodeableConcept? subjectCodeableConcept;
+  Reference? subjectReference;
+  FhirDateTime? date;
+  Element? dateElement;
+  String? publisher;
+  Element? publisherElement;
+  List<ContactDetail>? contact;
+  Markdown? description;
+  Element? descriptionElement;
+  List<UsageContext>? useContext;
+  List<CodeableConcept>? jurisdiction;
+  Markdown? purpose;
+  Element? purposeElement;
+  String? usage;
+  Element? usageElement;
+  Markdown? copyright;
+  Element? copyrightElement;
+  Date? approvalDate;
+  Element? approvalDateElement;
+  Date? lastReviewDate;
+
+  Element? lastReviewDateElement;
+  Period? effectivePeriod;
+  List<CodeableConcept>? topic;
+  List<ContactDetail>? author;
+  List<ContactDetail>? editor;
+  List<ContactDetail>? reviewer;
+  List<ContactDetail>? endorser;
+  List<RelatedArtifact>? relatedArtifact;
+  List<Canonical>? library_;
+  Markdown? disclaimer;
+  Element? disclaimerElement;
+  CodeableConcept? scoring;
+  CodeableConcept? compositeScoring;
+  List<CodeableConcept>? type;
+  String? riskAdjustment;
+
+  Element? riskAdjustmentElement;
+  String? rateAggregation;
+
+  Element? rateAggregationElement;
+  Markdown? rationale;
+  Element? rationaleElement;
+  Markdown? clinicalRecommendationStatement;
+
+  Element? clinicalRecommendationStatementElement;
+  CodeableConcept? improvementNotation;
+  List<Markdown>? definition;
+
+  List<Element?>? definitionElement;
+  Markdown? guidance;
+  Element? guidanceElement;
+  List<MeasureGroup>? group;
+
+  List<MeasureSupplementalData>? supplementalData;
+}
+
+class MeasureGroup {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? code;
+  String? description;
+  Element? descriptionElement;
+  List<MeasurePopulation>? population;
+  List<MeasureStratifier>? stratifier;
+}
+
+class MeasurePopulation {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? code;
+  String? description;
+  Element? descriptionElement;
+  Expression criteria;
+}
+
+class MeasureStratifier {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? code;
+  String? description;
+  Element? descriptionElement;
+  Expression? criteria;
+  List<MeasureComponent>? component;
+}
+
+class MeasureComponent {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? code;
+  String? description;
+  Element? descriptionElement;
+  Expression criteria;
+}
+
+class MeasureSupplementalData {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? code;
+  List<CodeableConcept>? usage;
+  String? description;
+  Element? descriptionElement;
+  Expression criteria;
+}
+
+class MeasureReport {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  Code? status;
+  Element? statusElement;
+  Code? type;
+  Element? typeElement;
+  Canonical measure;
+  Reference? subject;
+  FhirDateTime? date;
+  Element? dateElement;
+  Reference? reporter;
+  Period period;
+  CodeableConcept? improvementNotation;
+  List<MeasureReportGroup>? group;
+  List<Reference>? evaluatedResource;
+}
+
+class MeasureReportGroup {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? code;
+  List<MeasureReportPopulation>? population;
+  Quantity? measureScore;
+  List<MeasureReportStratifier>? stratifier;
+}
+
+class MeasureReportPopulation {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? code;
+  Integer? count;
+  Element? countElement;
+  Reference? subjectResults;
+}
+
+class MeasureReportStratifier {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<CodeableConcept>? code;
+  List<MeasureReportStratum>? stratum;
+}
+
+class MeasureReportStratum {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? value;
+  List<MeasureReportComponent>? component;
+  List<MeasureReportPopulation1>? population;
+  Quantity? measureScore;
+}
+
+class MeasureReportComponent {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept code;
+  CodeableConcept value;
+}
+
+class MeasureReportPopulation1 {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? code;
+  Integer? count;
+  Element? countElement;
+  Reference? subjectResults;
+}
+
+class TestReport {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Identifier? identifier;
+  String? name;
+  Element? nameElement;
+  Code? status;
+  Element? statusElement;
+  Reference testScript;
+  Code? result;
+  Element? resultElement;
+  Decimal? score;
+  Element? scoreElement;
+  String? tester;
+  Element? testerElement;
+  FhirDateTime? issued;
+  Element? issuedElement;
+  List<TestReportParticipant>? participant;
+  TestReportSetup? setup;
+  List<TestReportTest>? test;
+  TestReportTeardown? teardown;
+}
+
+class TestReportParticipant {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code? type;
+  Element? typeElement;
+  FhirUri? uri;
+  Element? uriElement;
+  String? display;
+  Element? displayElement;
+}
+
+class TestReportSetup {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<TestReportAction> action;
+}
+
+class TestReportAction {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  TestReportOperation? operation;
+  TestReportAssert? assert_;
+}
+
+class TestReportOperation {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code? result;
+  Element? resultElement;
+  Markdown? message;
+  Element? messageElement;
+  FhirUri? detail;
+  Element? detailElement;
+}
+
+class TestReportAssert {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code? result;
+  Element? resultElement;
+  Markdown? message;
+  Element? messageElement;
+  String? detail;
+  Element? detailElement;
+}
+
+class TestReportTest {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? name;
+  Element? nameElement;
+  String? description;
+  Element? descriptionElement;
+  List<TestReportAction1> action;
+}
+
+class TestReportAction1 {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  TestReportOperation? operation;
+  TestReportAssert? assert_;
+}
+
+class TestReportTeardown {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<TestReportAction2> action;
+}
+
+class TestReportAction2 {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  TestReportOperation operation;
+}
+
+class TestScript {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirUri? url;
+  Element? urlElement;
+  Identifier? identifier;
+  String? version;
+  Element? versionElement;
+  String? name;
+  Element? nameElement;
+  String? title;
+  Element? titleElement;
+  Code? status;
+  Element? statusElement;
+  Boolean? experimental;
+  Element? experimentalElement;
+  FhirDateTime? date;
+  Element? dateElement;
+  String? publisher;
+  Element? publisherElement;
+  List<ContactDetail>? contact;
+  Markdown? description;
+  Element? descriptionElement;
+  List<UsageContext>? useContext;
+  List<CodeableConcept>? jurisdiction;
+  Markdown? purpose;
+  Element? purposeElement;
+  Markdown? copyright;
+  Element? copyrightElement;
+  List<TestScriptOrigin>? origin;
+  List<TestScriptDestination>? destination;
+  TestScriptMetadata? metadata;
+  List<TestScriptFixture>? fixture;
+  List<Reference>? profile;
+  List<TestScriptVariable>? variable;
+  TestScriptSetup? setup;
+  List<TestScriptTest>? test;
+  TestScriptTeardown? teardown;
+}
+
+class TestScriptOrigin {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Integer? index;
+  Element? indexElement;
+  Coding profile;
+}
+
+class TestScriptDestination {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Integer? index;
+  Element? indexElement;
+  Coding profile;
+}
+
+class TestScriptMetadata {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<TestScriptLink>? link;
+  List<TestScriptCapability> capability;
+}
+
+class TestScriptLink {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirUri? url;
+  Element? urlElement;
+  String? description;
+  Element? descriptionElement;
+}
+
+class TestScriptCapability {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Boolean? _;
+  Element? Element;
+  Boolean? validated;
+  Element? validatedElement;
+  String? description;
+  Element? descriptionElement;
+  List<Integer>? origin;
+  List<Element?>? originElement;
+  Integer? destination;
+  Element? destinationElement;
+  List<FhirUri>? link;
+  List<Element?>? linkElement;
+  Canonical capabilities;
+}
+
+class TestScriptFixture {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Boolean? autocreate;
+  Element? autocreateElement;
+  Boolean? autodelete;
+  Element? autodeleteElement;
+  Reference? resource;
+}
+
+class TestScriptVariable {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? name;
+  Element? nameElement;
+  String? defaultValue;
+  Element? defaultValueElement;
+  String? description;
+  Element? descriptionElement;
+  String? expression;
+  Element? expressionElement;
+  String? headerField;
+  Element? headerFieldElement;
+  String? hint;
+  Element? hintElement;
+  String? path;
+  Element? pathElement;
+  FhirId? sourceId;
+  Element? sourceIdElement;
+}
+
+class TestScriptSetup {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<TestScriptAction> action;
+}
+
+class TestScriptAction {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  TestScriptOperation? operation;
+  TestScriptAssert? assert_;
+}
+
+class TestScriptOperation {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Coding? type;
+  Code? resource;
+  Element? resourceElement;
+  String? label;
+  Element? labelElement;
+  String? description;
+  Element? descriptionElement;
+  Code? accept;
+  Element? acceptElement;
+  Code? contentType;
+  Element? contentTypeElement;
+  Integer? destination;
+  Element? destinationElement;
+  Boolean? encodeRequestUrl;
+  Element? encodeRequestUrlElement;
+  Code? method;
+  Element? methodElement;
+  Integer? origin;
+  Element? originElement;
+  String? params;
+  Element? paramsElement;
+  List<TestScriptRequestHeader>? requestHeader;
+  FhirId? requestId;
+  Element? requestIdElement;
+  FhirId? responseId;
+  Element? responseIdElement;
+  FhirId? sourceId;
+  Element? sourceIdElement;
+  FhirId? targetId;
+  Element? targetIdElement;
+  String? url;
+  Element? urlElement;
+}
+
+class TestScriptRequestHeader {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? field;
+  Element? fieldElement;
+  String? value;
+  Element? valueElement;
+}
+
+class TestScriptAssert {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? label;
+  Element? labelElement;
+  String? description;
+  Element? descriptionElement;
+  Code? direction;
+  Element? directionElement;
+  String? compareToSourceId;
+  Element? compareToSourceIdElement;
+  String? compareToSourceExpression;
+
+  Element? compareToSourceExpressionElement;
+  String? compareToSourcePath;
+  Element? compareToSourcePathElement;
+  Code? contentType;
+  Element? contentTypeElement;
+  String? expression;
+  Element? expressionElement;
+  String? headerField;
+  Element? headerFieldElement;
+  String? minimumId;
+  Element? minimumIdElement;
+  Boolean? navigationLinks;
+  Element? navigationLinksElement;
+  Code? operator_;
+  Element? operatorElement;
+  String? path;
+  Element? pathElement;
+  Code? requestMethod;
+  Element? requestMethodElement;
+  String? requestURL;
+  Element? requestURLElement;
+  Code? resource;
+  Element? resourceElement;
+  Code? response;
+  Element? responseElement;
+  String? responseCode;
+  Element? responseCodeElement;
+  FhirId? sourceId;
+  Element? sourceIdElement;
+  FhirId? validateProfileId;
+  Element? validateProfileIdElement;
+  String? value;
+  Element? valueElement;
+  Boolean? warningOnly;
+  Element? warningOnlyElement;
+}
+
+class TestScriptTest {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? name;
+  Element? nameElement;
+  String? description;
+  Element? descriptionElement;
+  List<TestScriptAction1> action;
+}
+
+class TestScriptAction1 {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  TestScriptOperation? operation;
+  TestScriptAssert? assert_;
+}
+
+class TestScriptTeardown {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<TestScriptAction2> action;
+}
+
+class TestScriptAction2 {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  TestScriptOperation operation;
+}

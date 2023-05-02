@@ -1,554 +1,543 @@
-  factory Basic({
-    @Default(R4ResourceType.Basic)
-    @JsonKey(unknownEnumValue: R4ResourceType.Basic)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) @HiveField(12) List<Identifier>? identifier,
-    @HiveField(13) required CodeableConcept code,
-    @HiveField(14) Reference? subject,
-    @HiveField(15) Date? created,
-    @JsonKey(name: '_created') @HiveField(16) Element? createdElement,
-    @HiveField(17) Reference? author,
-  }) = _Basic;
-  factory Binary({
-    @Default(R4ResourceType.Binary)
-    @JsonKey(unknownEnumValue: R4ResourceType.Binary)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Code? contentType,
-    @JsonKey(name: '_contentType') @HiveField(8) Element? contentTypeElement,
-    @HiveField(9) @HiveField(10) Reference? securityContext,
-    @HiveField(11) Base64Binary? data,
-    @JsonKey(name: '_data') @HiveField(12) Element? dataElement,
-  }) = _Binary;
-  factory Bundle({
-    @Default(R4ResourceType.Bundle)
-    @JsonKey(unknownEnumValue: R4ResourceType.Bundle)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Identifier? identifier,
-    @HiveField(8) Code? type,
-    @JsonKey(name: '_type') @HiveField(9) Element? typeElement,
-    @HiveField(10) Instant? timestamp,
-    @JsonKey(name: '_timestamp') @HiveField(11) Element? timestampElement,
-    @HiveField(12) UnsignedInt? total,
-    @JsonKey(name: '_total') @HiveField(13) Element? totalElement,
-    @HiveField(14) List<BundleLink>? link,
-    @HiveField(15) List<BundleEntry>? entry,
-    @HiveField(16) Signature? signature,
-  }) = _Bundle;
-  factory BundleLink({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? relation,
-    @JsonKey(name: '_relation') Element? relationElement,
-    FhirUri? url,
-    @JsonKey(name: '_url') Element? urlElement,
-  }) = _BundleLink;
-  factory BundleEntry({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<BundleLink>? link,
-    FhirUri? fullUrl,
-    @JsonKey(name: '_fullUrl') Element? fullUrlElement,
-    Resource? resource,
-    BundleSearch? search,
-    BundleRequest? request,
-    BundleResponse? response,
-  }) = _BundleEntry;
-  factory BundleSearch({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? mode,
-    @JsonKey(name: '_mode') Element? modeElement,
-    Decimal? score,
-    @JsonKey(name: '_score') Element? scoreElement,
-  }) = _BundleSearch;
-  factory BundleRequest({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? method,
-    @JsonKey(name: '_method') Element? methodElement,
-    FhirUri? url,
-    @JsonKey(name: '_url') Element? urlElement,
-    String? ifNoneMatch,
-    @JsonKey(name: '_ifNoneMatch') Element? ifNoneMatchElement,
-    Instant? ifModifiedSince,
-    @JsonKey(name: '_ifModifiedSince') Element? ifModifiedSinceElement,
-    String? ifMatch,
-    @JsonKey(name: '_ifMatch') Element? ifMatchElement,
-    String? ifNoneExist,
-    @JsonKey(name: '_ifNoneExist') Element? ifNoneExistElement,
-  }) = _BundleRequest;
-  factory BundleResponse({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? status,
-    @JsonKey(name: '_status') Element? statusElement,
-    FhirUri? location,
-    @JsonKey(name: '_location') Element? locationElement,
-    String? etag,
-    @JsonKey(name: '_etag') Element? etagElement,
-    Instant? lastModified,
-    @JsonKey(name: '_lastModified') Element? lastModifiedElement,
-    Resource? outcome,
-  }) = _BundleResponse;
-  factory Linkage({
-    @Default(R4ResourceType.Linkage)
-    @JsonKey(unknownEnumValue: R4ResourceType.Linkage)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) Boolean? active,
-    @JsonKey(name: '_active') @HiveField(12) Element? activeElement,
-    @HiveField(13) Reference? author,
-    @HiveField(14) required List<LinkageItem> item,
-  }) = _Linkage;
-  factory LinkageItem({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    required Reference resource,
-  }) = _LinkageItem;
-  factory MessageHeader({
-    @Default(R4ResourceType.MessageHeader)
-    @JsonKey(unknownEnumValue: R4ResourceType.MessageHeader)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) Coding? eventCoding,
-    @HiveField(12) FhirUri? eventUri,
-    @JsonKey(name: '_eventUri') @HiveField(13) Element? eventUriElement,
-    @HiveField(14) List<MessageHeaderDestination>? destination,
-    @HiveField(15) Reference? sender,
-    @HiveField(16) Reference? enterer,
-    @HiveField(17) Reference? author,
-    @HiveField(18) required MessageHeaderSource source,
-    @HiveField(19) Reference? responsible,
-    @HiveField(20) CodeableConcept? reason,
-    @HiveField(21) MessageHeaderResponse? response,
-    @HiveField(22) List<Reference>? focus,
-    @HiveField(23) Canonical? definition,
-  }) = _MessageHeader;
-  factory MessageHeaderDestination({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    Reference? target,
-    FhirUrl? endpoint,
-    @JsonKey(name: '_endpoint') Element? endpointElement,
-    Reference? receiver,
-  }) = _MessageHeaderDestination;
-  factory MessageHeaderSource({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? software,
-    @JsonKey(name: '_software') Element? softwareElement,
-    String? version,
-    @JsonKey(name: '_version') Element? versionElement,
-    ContactPoint? contact,
-    FhirUrl? endpoint,
-    @JsonKey(name: '_endpoint') Element? endpointElement,
-  }) = _MessageHeaderSource;
-  factory MessageHeaderResponse({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    FhirId? identifier,
-    @JsonKey(name: '_identifier') Element? identifierElement,
-    Code? code,
-    @JsonKey(name: '_code') Element? codeElement,
-    Reference? details,
-  }) = _MessageHeaderResponse;
-  factory OperationOutcome({
-    @Default(R4ResourceType.OperationOutcome)
-    @JsonKey(unknownEnumValue: R4ResourceType.OperationOutcome)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) required List<OperationOutcomeIssue> issue,
-  }) = _OperationOutcome;
-  factory OperationOutcomeIssue({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? severity,
-    @JsonKey(name: '_severity') Element? severityElement,
-    Code? code,
-    @JsonKey(name: '_code') Element? codeElement,
-    CodeableConcept? details,
-    String? diagnostics,
-    @JsonKey(name: '_diagnostics') Element? diagnosticsElement,
-    List<String>? location,
-    @JsonKey(name: '_location') List<Element?>? locationElement,
-    List<String>? expression,
-    @JsonKey(name: '_expression') List<Element?>? expressionElement,
-  }) = _OperationOutcomeIssue;
-  factory Parameters({
-    @Default(R4ResourceType.Parameters)
-    @JsonKey(unknownEnumValue: R4ResourceType.Parameters)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) List<ParametersParameter>? parameter,
-  }) = _Parameters;
-  factory ParametersParameter({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    Base64Binary? valueBase64Binary,
-    @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
-    Boolean? valueBoolean,
-    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-    Canonical? valueCanonical,
-    @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
-    Code? valueCode,
-    @JsonKey(name: '_valueCode') Element? valueCodeElement,
-    Date? valueDate,
-    @JsonKey(name: '_valueDate') Element? valueDateElement,
-    FhirDateTime? valueDateTime,
-    @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-    Decimal? valueDecimal,
-    @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-    FhirId? valueId,
-    @JsonKey(name: '_valueId') Element? valueIdElement,
-    Instant? valueInstant,
-    @JsonKey(name: '_valueInstant') Element? valueInstantElement,
-    Integer? valueInteger,
-    @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-    Markdown? valueMarkdown,
-    @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
-    Oid? valueOid,
-    @JsonKey(name: '_valueOid') Element? valueOidElement,
-    PositiveInt? valuePositiveInt,
-    @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
-    String? valueString,
-    @JsonKey(name: '_valueString') Element? valueStringElement,
-    Time? valueTime,
-    @JsonKey(name: '_valueTime') Element? valueTimeElement,
-    UnsignedInt? valueUnsignedInt,
-    @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
-    FhirUri? valueUri,
-    @JsonKey(name: '_valueUri') Element? valueUriElement,
-    FhirUrl? valueUrl,
-    @JsonKey(name: '_valueUrl') Element? valueUrlElement,
-    Uuid? valueUuid,
-    @JsonKey(name: '_valueUuid') Element? valueUuidElement,
-    Address? valueAddress,
-    Age? valueAge,
-    Annotation? valueAnnotation,
-    Attachment? valueAttachment,
-    CodeableConcept? valueCodeableConcept,
-    Coding? valueCoding,
-    ContactPoint? valueContactPoint,
-    Count? valueCount,
-    Distance? valueDistance,
-    FhirDuration? valueDuration,
-    HumanName? valueHumanName,
-    Identifier? valueIdentifier,
-    Money? valueMoney,
-    Period? valuePeriod,
-    Quantity? valueQuantity,
-    Range? valueRange,
-    Ratio? valueRatio,
-    Reference? valueReference,
-    SampledData? valueSampledData,
-    Signature? valueSignature,
-    Timing? valueTiming,
-    ContactDetail? valueContactDetail,
-    Contributor? valueContributor,
-    DataRequirement? valueDataRequirement,
-    Expression? valueExpression,
-    ParameterDefinition? valueParameterDefinition,
-    RelatedArtifact? valueRelatedArtifact,
-    TriggerDefinition? valueTriggerDefinition,
-    UsageContext? valueUsageContext,
-    Dosage? valueDosage,
-    Meta? valueMeta,
-    Resource? resource,
-    @JsonKey(name: 'part') List<ParametersParameter>? part_,
-  }) = _ParametersParameter;
-  factory Subscription({
-    @Default(R4ResourceType.Subscription)
-    @JsonKey(unknownEnumValue: R4ResourceType.Subscription)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) Code? status,
-    @JsonKey(name: '_status') @HiveField(12) Element? statusElement,
-    @HiveField(13) List<ContactPoint>? contact,
-    @HiveField(14) Instant? end,
-    @JsonKey(name: '_end') @HiveField(15) Element? endElement,
-    @HiveField(16) String? reason,
-    @JsonKey(name: '_reason') @HiveField(17) Element? reasonElement,
-    @HiveField(18) String? criteria,
-    @JsonKey(name: '_criteria') @HiveField(19) Element? criteriaElement,
-    @HiveField(20) String? error,
-    @JsonKey(name: '_error') @HiveField(21) Element? errorElement,
-    @HiveField(22) required SubscriptionChannel channel,
-  }) = _Subscription;
-  factory SubscriptionChannel({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    FhirUrl? endpoint,
-    @JsonKey(name: '_endpoint') Element? endpointElement,
-    Code? payload,
-    @JsonKey(name: '_payload') Element? payloadElement,
-    List<String>? header,
-    @JsonKey(name: '_header') List<Element?>? headerElement,
-  }) = _SubscriptionChannel;
-  factory SubscriptionStatus({
-    @Default(R4ResourceType.SubscriptionStatus)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) Code? status,
-    @JsonKey(name: '_status') @HiveField(12) Element? statusElement,
-    @HiveField(13) Code? type,
-    @JsonKey(name: '_type') @HiveField(14) Element? typeElement,
-    @HiveField(15) Integer64? eventsSinceSubscriptionStart,
-    @JsonKey(name: '_eventsSinceSubscriptionStart')
-    @HiveField(16)
-        Element? eventsSinceSubscriptionStartElement,
-    @HiveField(17) List<SubscriptionStatusNotificationEvent>? notificationEvent,
-    @HiveField(18) required Reference subscription,
-    @HiveField(19) Canonical? topic,
-    @HiveField(20) List<CodeableConcept>? error,
-  }) = _SubscriptionStatus;
-  factory SubscriptionStatusNotificationEvent({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Integer64? eventNumber,
-    @JsonKey(name: '_eventNumber') Element? eventNumberElement,
-    Instant? timestamp,
-    @JsonKey(name: '_timestamp') Element? timestampElement,
-    Reference? focus,
-    List<Reference>? additionalContext,
-  }) = _SubscriptionStatusNotificationEvent;
-  factory SubscriptionTopic({
-    @HiveField(0)
-    @Default(R4ResourceType.SubscriptionTopic)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @HiveField(4)
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @HiveField(6) @JsonKey(name: '_language') Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @HiveField(9) @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) FhirUri? url,
-    @HiveField(12) @JsonKey(name: '_url') Element? urlElement,
-    @HiveField(13) List<Identifier>? identifier,
-    @HiveField(14) String? version,
-    @HiveField(15) @JsonKey(name: '_version') Element? versionElement,
-    @HiveField(16) String? title,
-    @HiveField(17) @JsonKey(name: '_title') Element? titleElement,
-    @HiveField(18) List<Canonical>? derivedFrom,
-    @HiveField(19) Code? status,
-    @HiveField(20) @JsonKey(name: '_status') Element? statusElement,
-    @HiveField(21) Boolean? experimental,
-    @HiveField(22) @JsonKey(name: '_experimental') Element? experimentalElement,
-    @HiveField(23) FhirDateTime? date,
-    @HiveField(24) @JsonKey(name: '_date') Element? dateElement,
-    @HiveField(25) String? publisher,
-    @HiveField(26) @JsonKey(name: '_publisher') Element? publisherElement,
-    @HiveField(27) List<ContactDetail>? contact,
-    @HiveField(28) Markdown? description,
-    @HiveField(29) @JsonKey(name: '_description') Element? descriptionElement,
-    @HiveField(30) List<UsageContext>? useContext,
-    @HiveField(31) List<CodeableConcept>? jurisdiction,
-    @HiveField(32) Markdown? purpose,
-    @HiveField(33) @JsonKey(name: '_purpose') Element? purposeElement,
-    @HiveField(34) Markdown? copyright,
-    @HiveField(35) @JsonKey(name: '_copyright') Element? copyrightElement,
-    @HiveField(36) Date? approvalDate,
-    @HiveField(37) @JsonKey(name: '_approvalDate') Element? approvalDateElement,
-    @HiveField(38) Date? lastReviewDate,
-    @HiveField(39)
-    @JsonKey(name: '_lastReviewDate')
-        Element? lastReviewDateElement,
-    @HiveField(40) Period? effectivePeriod,
-    @HiveField(41) List<SubscriptionTopicResourceTrigger>? resourceTrigger,
-    @HiveField(42) List<SubscriptionTopicEventTrigger>? eventTrigger,
-    @HiveField(43) List<SubscriptionTopicCanFilterBy>? canFilterBy,
-    @HiveField(44) List<SubscriptionTopicNotificationShape>? notificationShape,
-  }) = _SubscriptionTopic;
-  factory SubscriptionTopicResourceTrigger({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Markdown? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    FhirUri? resource,
-    @JsonKey(name: '_resource') Element? resourceElement,
-    List<Code>? supportedInteraction,
-    @JsonKey(name: '_supportedInteraction')
-        List<Element>? supportedInteractionElement,
-    SubscriptionTopicQueryCriteria? queryCriteria,
-    String? fhirPathCriteria,
-    @JsonKey(name: '_fhirPathCriteria') Element? fhirPathCriteriaElement,
-  }) = _SubscriptionTopicResourceTrigger;
-  factory SubscriptionTopicQueryCriteria({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? previous,
-    @JsonKey(name: '_previous') Element? previousElement,
-    Code? resultForCreate,
-    @JsonKey(name: '_resultForCreate') Element? resultForCreateElement,
-    String? current,
-    @JsonKey(name: '_current') Element? currentElement,
-    Code? resultForDelete,
-    @JsonKey(name: '_resultForDelete') Element? resultForDeleteElement,
-    Boolean? requireBoth,
-    @JsonKey(name: '_requireBoth') Element? requireBothElement,
-  }) = _SubscriptionTopicQueryCriteria;
-  factory SubscriptionTopicEventTrigger({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Markdown? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    required CodeableConcept event,
-    FhirUri? resource,
-    @JsonKey(name: '_resource') Element? resourceElement,
-  }) = _SubscriptionTopicEventTrigger;
-  factory SubscriptionTopicCanFilterBy({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Markdown? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    FhirUri? resource,
-    @JsonKey(name: '_resource') Element? resourceElement,
-    String? filterParameter,
-    @JsonKey(name: '_filterParameter') Element? filterParameterElement,
-    FhirUri? filterDefinition,
-    @JsonKey(name: '_filterDefinition') Element? filterDefinitionElement,
-    List<Code>? modifier,
-    @JsonKey(name: '_modifier') List<Element>? modifierElement,
-  }) = _SubscriptionTopicCanFilterBy;
-  factory SubscriptionTopicNotificationShape({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    FhirUri? resource,
-    @JsonKey(name: '_resource') Element? resourceElement,
-    List<String>? include,
-    @JsonKey(name: '_include') List<Element>? includeElement,
-    List<String>? revInclude,
-    @JsonKey(name: '_revInclude') List<Element>? revIncludeElement,
-  }) = _SubscriptionTopicNotificationShape;
+import '../../../../r4.dart';
+
+class Basic {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  CodeableConcept code;
+  Reference? subject;
+  Date? created;
+  Element? createdElement;
+  Reference? author;
+}
+
+class Binary {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Code? contentType;
+  Element? contentTypeElement;
+  Reference? securityContext;
+  Base64Binary? data;
+  Element? dataElement;
+}
+
+class Bundle {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Identifier? identifier;
+  Code? type;
+  Element? typeElement;
+  Instant? timestamp;
+  Element? timestampElement;
+  UnsignedInt? total;
+  Element? totalElement;
+  List<BundleLink>? link;
+  List<BundleEntry>? entry;
+  Signature? signature;
+}
+
+class BundleLink {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? relation;
+  Element? relationElement;
+  FhirUri? url;
+  Element? urlElement;
+}
+
+class BundleEntry {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<BundleLink>? link;
+  FhirUri? fullUrl;
+  Element? fullUrlElement;
+  Resource? resource;
+  BundleSearch? search;
+  BundleRequest? request;
+  BundleResponse? response;
+}
+
+class BundleSearch {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code? mode;
+  Element? modeElement;
+  Decimal? score;
+  Element? scoreElement;
+}
+
+class BundleRequest {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code? method;
+  Element? methodElement;
+  FhirUri? url;
+  Element? urlElement;
+  String? ifNoneMatch;
+  Element? ifNoneMatchElement;
+  Instant? ifModifiedSince;
+  Element? ifModifiedSinceElement;
+  String? ifMatch;
+  Element? ifMatchElement;
+  String? ifNoneExist;
+  Element? ifNoneExistElement;
+}
+
+class BundleResponse {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? status;
+  Element? statusElement;
+  FhirUri? location;
+  Element? locationElement;
+  String? etag;
+  Element? etagElement;
+  Instant? lastModified;
+  Element? lastModifiedElement;
+  Resource? outcome;
+}
+
+class Linkage {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Boolean? active;
+  Element? activeElement;
+  Reference? author;
+  List<LinkageItem> item;
+}
+
+class LinkageItem {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code? type;
+  Element? typeElement;
+  Reference resource;
+}
+
+class MessageHeader {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Coding? eventCoding;
+  FhirUri? eventUri;
+  Element? eventUriElement;
+  List<MessageHeaderDestination>? destination;
+  Reference? sender;
+  Reference? enterer;
+  Reference? author;
+  MessageHeaderSource source;
+  Reference? responsible;
+  CodeableConcept? reason;
+  MessageHeaderResponse? response;
+  List<Reference>? focus;
+  Canonical? definition;
+}
+
+class MessageHeaderDestination {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? name;
+  Element? nameElement;
+  Reference? target;
+  FhirUrl? endpoint;
+  Element? endpointElement;
+  Reference? receiver;
+}
+
+class MessageHeaderSource {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? name;
+  Element? nameElement;
+  String? software;
+  Element? softwareElement;
+  String? version;
+  Element? versionElement;
+  ContactPoint? contact;
+  FhirUrl? endpoint;
+  Element? endpointElement;
+}
+
+class MessageHeaderResponse {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirId? identifier;
+  Element? identifierElement;
+  Code? code;
+  Element? codeElement;
+  Reference? details;
+}
+
+class OperationOutcome {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<OperationOutcomeIssue> issue;
+}
+
+class OperationOutcomeIssue {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code? severity;
+  Element? severityElement;
+  Code? code;
+  Element? codeElement;
+  CodeableConcept? details;
+  String? diagnostics;
+  Element? diagnosticsElement;
+  List<String>? location;
+  List<Element?>? locationElement;
+  List<String>? expression;
+  List<Element?>? expressionElement;
+}
+
+class Parameters {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  List<ParametersParameter>? parameter;
+}
+
+class ParametersParameter {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? name;
+  Element? nameElement;
+  Base64Binary? valueBase64Binary;
+  Element? valueBase64BinaryElement;
+  Boolean? valueBoolean;
+  Element? valueBooleanElement;
+  Canonical? valueCanonical;
+  Element? valueCanonicalElement;
+  Code? valueCode;
+  Element? valueCodeElement;
+  Date? valueDate;
+  Element? valueDateElement;
+  FhirDateTime? valueDateTime;
+  Element? valueDateTimeElement;
+  Decimal? valueDecimal;
+  Element? valueDecimalElement;
+  FhirId? valueId;
+  Element? valueIdElement;
+  Instant? valueInstant;
+  Element? valueInstantElement;
+  Integer? valueInteger;
+  Element? valueIntegerElement;
+  Markdown? valueMarkdown;
+  Element? valueMarkdownElement;
+  Oid? valueOid;
+  Element? valueOidElement;
+  PositiveInt? valuePositiveInt;
+  Element? valuePositiveIntElement;
+  String? valueString;
+  Element? valueStringElement;
+  Time? valueTime;
+  Element? valueTimeElement;
+  UnsignedInt? valueUnsignedInt;
+  Element? valueUnsignedIntElement;
+  FhirUri? valueUri;
+  Element? valueUriElement;
+  FhirUrl? valueUrl;
+  Element? valueUrlElement;
+  Uuid? valueUuid;
+  Element? valueUuidElement;
+  Address? valueAddress;
+  Age? valueAge;
+  Annotation? valueAnnotation;
+  Attachment? valueAttachment;
+  CodeableConcept? valueCodeableConcept;
+  Coding? valueCoding;
+  ContactPoint? valueContactPoint;
+  Count? valueCount;
+  Distance? valueDistance;
+  FhirDuration? valueDuration;
+  HumanName? valueHumanName;
+  Identifier? valueIdentifier;
+  Money? valueMoney;
+  Period? valuePeriod;
+  Quantity? valueQuantity;
+  Range? valueRange;
+  Ratio? valueRatio;
+  Reference? valueReference;
+  SampledData? valueSampledData;
+  Signature? valueSignature;
+  Timing? valueTiming;
+  ContactDetail? valueContactDetail;
+  Contributor? valueContributor;
+  DataRequirement? valueDataRequirement;
+  Expression? valueExpression;
+  ParameterDefinition? valueParameterDefinition;
+  RelatedArtifact? valueRelatedArtifact;
+  TriggerDefinition? valueTriggerDefinition;
+  UsageContext? valueUsageContext;
+  Dosage? valueDosage;
+  Meta? valueMeta;
+  Resource? resource;
+  List<ParametersParameter>? part_;
+}
+
+class Subscription {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code? status;
+  Element? statusElement;
+  List<ContactPoint>? contact;
+  Instant? end;
+  Element? endElement;
+  String? reason;
+  Element? reasonElement;
+  String? criteria;
+  Element? criteriaElement;
+  String? error;
+  Element? errorElement;
+  SubscriptionChannel channel;
+}
+
+class SubscriptionChannel {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code? type;
+  Element? typeElement;
+  FhirUrl? endpoint;
+  Element? endpointElement;
+  Code? payload;
+  Element? payloadElement;
+  List<String>? header;
+  List<Element?>? headerElement;
+}
+
+class SubscriptionStatus {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code? status;
+  Element? statusElement;
+  Code? type;
+  Element? typeElement;
+  Integer64? eventsSinceSubscriptionStart;
+
+  Element? eventsSinceSubscriptionStartElement;
+  List<SubscriptionStatusNotificationEvent>? notificationEvent;
+  Reference subscription;
+  Canonical? topic;
+  List<CodeableConcept>? error;
+}
+
+class SubscriptionStatusNotificationEvent {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Integer64? eventNumber;
+  Element? eventNumberElement;
+  Instant? timestamp;
+  Element? timestampElement;
+  Reference? focus;
+  List<Reference>? additionalContext;
+}
+
+class SubscriptionTopic {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirUri? url;
+  Element? urlElement;
+  List<Identifier>? identifier;
+  String? version;
+  Element? versionElement;
+  String? title;
+  Element? titleElement;
+  List<Canonical>? derivedFrom;
+  Code? status;
+  Element? statusElement;
+  Boolean? experimental;
+  Element? experimentalElement;
+  FhirDateTime? date;
+  Element? dateElement;
+  String? publisher;
+  Element? publisherElement;
+  List<ContactDetail>? contact;
+  Markdown? description;
+  Element? descriptionElement;
+  List<UsageContext>? useContext;
+  List<CodeableConcept>? jurisdiction;
+  Markdown? purpose;
+  Element? purposeElement;
+  Markdown? copyright;
+  Element? copyrightElement;
+  Date? approvalDate;
+  Element? approvalDateElement;
+  Date? lastReviewDate;
+
+  Element? lastReviewDateElement;
+  Period? effectivePeriod;
+  List<SubscriptionTopicResourceTrigger>? resourceTrigger;
+  List<SubscriptionTopicEventTrigger>? eventTrigger;
+  List<SubscriptionTopicCanFilterBy>? canFilterBy;
+  List<SubscriptionTopicNotificationShape>? notificationShape;
+}
+
+class SubscriptionTopicResourceTrigger {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Markdown? description;
+  Element? descriptionElement;
+  FhirUri? resource;
+  Element? resourceElement;
+  List<Code>? supportedInteraction;
+
+  List<Element>? supportedInteractionElement;
+  SubscriptionTopicQueryCriteria? queryCriteria;
+  String? fhirPathCriteria;
+  Element? fhirPathCriteriaElement;
+}
+
+class SubscriptionTopicQueryCriteria {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? previous;
+  Element? previousElement;
+  Code? resultForCreate;
+  Element? resultForCreateElement;
+  String? current;
+  Element? currentElement;
+  Code? resultForDelete;
+  Element? resultForDeleteElement;
+  Boolean? requireBoth;
+  Element? requireBothElement;
+}
+
+class SubscriptionTopicEventTrigger {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Markdown? description;
+  Element? descriptionElement;
+  CodeableConcept event;
+  FhirUri? resource;
+  Element? resourceElement;
+}
+
+class SubscriptionTopicCanFilterBy {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Markdown? description;
+  Element? descriptionElement;
+  FhirUri? resource;
+  Element? resourceElement;
+  String? filterParameter;
+  Element? filterParameterElement;
+  FhirUri? filterDefinition;
+  Element? filterDefinitionElement;
+  List<Code>? modifier;
+  List<Element>? modifierElement;
+}
+
+class SubscriptionTopicNotificationShape {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  FhirUri? resource;
+  Element? resourceElement;
+  List<String>? include;
+  List<Element>? includeElement;
+  List<String>? revInclude;
+  List<Element>? revIncludeElement;
+}

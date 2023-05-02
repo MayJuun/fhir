@@ -1,503 +1,520 @@
-  factory Claim({
-    @Default(R4ResourceType.Claim)
-    @JsonKey(unknownEnumValue: R4ResourceType.Claim)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) Code? status,
-    @JsonKey(name: '_status') @HiveField(13) Element? statusElement,
-    @HiveField(14) @HiveField(15) required CodeableConcept type,
-    @HiveField(16) CodeableConcept? subType,
-    @HiveField(17) Code? use,
-    @JsonKey(name: '_use') @HiveField(18) Element? useElement,
-    @HiveField(19) required Reference patient,
-    @HiveField(20) Period? billablePeriod,
-    @HiveField(21) FhirDateTime? created,
-    @JsonKey(name: '_created') @HiveField(22) Element? createdElement,
-    @HiveField(23) Reference? enterer,
-    @HiveField(24) Reference? insurer,
-    @HiveField(25) @HiveField(26) required Reference provider,
-    @HiveField(27) required CodeableConcept priority,
-    @HiveField(28) CodeableConcept? fundsReserve,
-    @HiveField(29) List<ClaimRelated>? related,
-    @HiveField(30) Reference? prescription,
-    @HiveField(31) @HiveField(32) Reference? originalPrescription,
-    @HiveField(33) ClaimPayee? payee,
-    @HiveField(34) Reference? referral,
-    @HiveField(35) Reference? facility,
-    @HiveField(36) List<ClaimCareTeam>? careTeam,
-    @HiveField(37) @HiveField(38) List<ClaimSupportingInfo>? supportingInfo,
-    @HiveField(39) List<ClaimDiagnosis>? diagnosis,
-    @HiveField(40) List<ClaimProcedure>? procedure,
-    @HiveField(41) required List<ClaimInsurance> insurance,
-    @HiveField(42) ClaimAccident? accident,
-    @HiveField(43) List<ClaimItem>? item,
-    @HiveField(44) Money? total,
-  }) = _Claim;
-  factory ClaimRelated({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Reference? claim,
-    CodeableConcept? relationship,
-    Identifier? reference,
-  }) = _ClaimRelated;
-  factory ClaimPayee({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept type,
-    Reference? party,
-  }) = _ClaimPayee;
-  factory ClaimCareTeam({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    PositiveInt? sequence,
-    @JsonKey(name: '_sequence') Element? sequenceElement,
-    required Reference provider,
-    Boolean? responsible,
-    @JsonKey(name: '_responsible') Element? responsibleElement,
-    CodeableConcept? role,
-    CodeableConcept? qualification,
-  }) = _ClaimCareTeam;
-  factory ClaimSupportingInfo({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    PositiveInt? sequence,
-    @JsonKey(name: '_sequence') Element? sequenceElement,
-    required CodeableConcept category,
-    CodeableConcept? code,
-    Date? timingDate,
-    @JsonKey(name: '_timingDate') Element? timingDateElement,
-    Period? timingPeriod,
-    Boolean? valueBoolean,
-    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-    String? valueString,
-    @JsonKey(name: '_valueString') Element? valueStringElement,
-    Quantity? valueQuantity,
-    Attachment? valueAttachment,
-    Reference? valueReference,
-    CodeableConcept? reason,
-  }) = _ClaimSupportingInfo;
-  factory ClaimDiagnosis({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    PositiveInt? sequence,
-    @JsonKey(name: '_sequence') Element? sequenceElement,
-    CodeableConcept? diagnosisCodeableConcept,
-    Reference? diagnosisReference,
-    List<CodeableConcept>? type,
-    CodeableConcept? onAdmission,
-    CodeableConcept? packageCode,
-  }) = _ClaimDiagnosis;
-  factory ClaimProcedure({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    PositiveInt? sequence,
-    @JsonKey(name: '_sequence') Element? sequenceElement,
-    List<CodeableConcept>? type,
-    FhirDateTime? date,
-    @JsonKey(name: '_date') Element? dateElement,
-    CodeableConcept? procedureCodeableConcept,
-    Reference? procedureReference,
-    List<Reference>? udi,
-  }) = _ClaimProcedure;
-  factory ClaimInsurance({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    PositiveInt? sequence,
-    @JsonKey(name: '_sequence') Element? sequenceElement,
-    Boolean? focal,
-    @JsonKey(name: '_focal') Element? focalElement,
-    Identifier? identifier,
-    required Reference coverage,
-    String? businessArrangement,
-    @JsonKey(name: '_businessArrangement') Element? businessArrangementElement,
-    List<String>? preAuthRef,
-    @JsonKey(name: '_preAuthRef') List<Element?>? preAuthRefElement,
-    Reference? claimResponse,
-  }) = _ClaimInsurance;
-  factory ClaimAccident({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Date? date,
-    @JsonKey(name: '_date') Element? dateElement,
-    CodeableConcept? type,
-    Address? locationAddress,
-    Reference? locationReference,
-  }) = _ClaimAccident;
-  factory ClaimItem({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    PositiveInt? sequence,
-    @JsonKey(name: '_sequence') Element? sequenceElement,
-    List<PositiveInt>? careTeamSequence,
-    @JsonKey(name: '_careTeamSequence') List<Element?>? careTeamSequenceElement,
-    List<PositiveInt>? diagnosisSequence,
-    @JsonKey(name: '_diagnosisSequence')
-        List<Element>? diagnosisSequenceElement,
-    List<PositiveInt>? procedureSequence,
-    @JsonKey(name: '_procedureSequence')
-        List<Element>? procedureSequenceElement,
-    List<PositiveInt>? informationSequence,
-    @JsonKey(name: '_informationSequence')
-        List<Element>? informationSequenceElement,
-    CodeableConcept? revenue,
-    CodeableConcept? category,
-    required CodeableConcept productOrService,
-    List<CodeableConcept>? modifier,
-    List<CodeableConcept>? programCode,
-    Date? servicedDate,
-    @JsonKey(name: '_servicedDate') Element? servicedDateElement,
-    Period? servicedPeriod,
-    CodeableConcept? locationCodeableConcept,
-    Address? locationAddress,
-    Reference? locationReference,
-    Quantity? quantity,
-    Money? unitPrice,
-    Decimal? factor,
-    @JsonKey(name: '_factor') Element? factorElement,
-    Money? net,
-    List<Reference>? udi,
-    CodeableConcept? bodySite,
-    List<CodeableConcept>? subSite,
-    List<Reference>? encounter,
-    List<ClaimDetail>? detail,
-  }) = _ClaimItem;
-  factory ClaimDetail({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    PositiveInt? sequence,
-    @JsonKey(name: '_sequence') Element? sequenceElement,
-    CodeableConcept? revenue,
-    CodeableConcept? category,
-    required CodeableConcept productOrService,
-    List<CodeableConcept>? modifier,
-    List<CodeableConcept>? programCode,
-    Quantity? quantity,
-    Money? unitPrice,
-    Decimal? factor,
-    @JsonKey(name: '_factor') Element? factorElement,
-    Money? net,
-    List<Reference>? udi,
-    List<ClaimSubDetail>? subDetail,
-  }) = _ClaimDetail;
-  factory ClaimSubDetail({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    PositiveInt? sequence,
-    @JsonKey(name: '_sequence') Element? sequenceElement,
-    CodeableConcept? revenue,
-    CodeableConcept? category,
-    required CodeableConcept productOrService,
-    List<CodeableConcept>? modifier,
-    List<CodeableConcept>? programCode,
-    Quantity? quantity,
-    Money? unitPrice,
-    Decimal? factor,
-    @JsonKey(name: '_factor') Element? factorElement,
-    Money? net,
-    List<Reference>? udi,
-  }) = _ClaimSubDetail;
-  factory ClaimResponse({
-    @Default(R4ResourceType.ClaimResponse)
-    @JsonKey(unknownEnumValue: R4ResourceType.ClaimResponse)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) Code? status,
-    @JsonKey(name: '_status') @HiveField(13) Element? statusElement,
-    @HiveField(14) required CodeableConcept type,
-    @HiveField(15) CodeableConcept? subType,
-    @HiveField(16) Code? use,
-    @JsonKey(name: '_use') @HiveField(17) Element? useElement,
-    @HiveField(18) required Reference patient,
-    @HiveField(19) FhirDateTime? created,
-    @JsonKey(name: '_created') @HiveField(20) Element? createdElement,
-    @HiveField(21) required Reference insurer,
-    @HiveField(22) @HiveField(23) Reference? requestor,
-    @HiveField(24) Reference? request,
-    @HiveField(25) Code? outcome,
-    @JsonKey(name: '_outcome') @HiveField(26) Element? outcomeElement,
-    @HiveField(27) String? disposition,
-    @JsonKey(name: '_disposition') @HiveField(28) Element? dispositionElement,
-    @HiveField(29) String? preAuthRef,
-    @JsonKey(name: '_preAuthRef') @HiveField(30) Element? preAuthRefElement,
-    @HiveField(31) Period? preAuthPeriod,
-    @HiveField(32) CodeableConcept? payeeType,
-    @HiveField(33) List<ClaimResponseItem>? item,
-    @HiveField(34) List<ClaimResponseAddItem>? addItem,
-    @HiveField(35) List<ClaimResponseAdjudication>? adjudication,
-    @HiveField(36) List<ClaimResponseTotal>? total,
-    @HiveField(37) ClaimResponsePayment? payment,
-    @HiveField(38) CodeableConcept? fundsReserve,
-    @HiveField(39) CodeableConcept? formCode,
-    @HiveField(40) Attachment? form,
-    @HiveField(41) List<ClaimResponseProcessNote>? processNote,
-    @HiveField(42) List<Reference>? communicationRequest,
-    @HiveField(43) List<ClaimResponseInsurance>? insurance,
-    @HiveField(44) List<ClaimResponseError>? error,
-  }) = _ClaimResponse;
-  factory ClaimResponseItem({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    PositiveInt? itemSequence,
-    @JsonKey(name: '_itemSequence') Element? itemSequenceElement,
-    List<PositiveInt>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
-    required List<ClaimResponseAdjudication> adjudication,
-    List<ClaimResponseDetail>? detail,
-  }) = _ClaimResponseItem;
-  factory ClaimResponseAdjudication({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept category,
-    CodeableConcept? reason,
-    Money? amount,
-    Decimal? value,
-    @JsonKey(name: '_value') Element? valueElement,
-  }) = _ClaimResponseAdjudication;
-  factory ClaimResponseDetail({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    PositiveInt? detailSequence,
-    @JsonKey(name: '_detailSequence') Element? detailSequenceElement,
-    List<PositiveInt>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
-    required List<ClaimResponseAdjudication> adjudication,
-    List<ClaimResponseSubDetail>? subDetail,
-  }) = _ClaimResponseDetail;
-  factory ClaimResponseSubDetail({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    PositiveInt? subDetailSequence,
-    @JsonKey(name: '_subDetailSequence') Element? subDetailSequenceElement,
-    List<PositiveInt>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
-    List<ClaimResponseAdjudication>? adjudication,
-  }) = _ClaimResponseSubDetail;
-  factory ClaimResponseAddItem({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<PositiveInt>? itemSequence,
-    @JsonKey(name: '_itemSequence') List<Element?>? itemSequenceElement,
-    List<PositiveInt>? detailSequence,
-    @JsonKey(name: '_detailSequence') List<Element?>? detailSequenceElement,
-    List<PositiveInt>? subdetailSequence,
-    @JsonKey(name: '_subdetailSequence')
-        List<Element>? subdetailSequenceElement,
-    List<Reference>? provider,
-    required CodeableConcept productOrService,
-    List<CodeableConcept>? modifier,
-    List<CodeableConcept>? programCode,
-    Date? servicedDate,
-    @JsonKey(name: '_servicedDate') Element? servicedDateElement,
-    Period? servicedPeriod,
-    CodeableConcept? locationCodeableConcept,
-    Address? locationAddress,
-    Reference? locationReference,
-    Quantity? quantity,
-    Money? unitPrice,
-    Decimal? factor,
-    @JsonKey(name: '_factor') Element? factorElement,
-    Money? net,
-    CodeableConcept? bodySite,
-    List<CodeableConcept>? subSite,
-    List<PositiveInt>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
-    required List<ClaimResponseAdjudication> adjudication,
-    List<ClaimResponseDetail1>? detail,
-  }) = _ClaimResponseAddItem;
-  factory ClaimResponseDetail1({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept productOrService,
-    List<CodeableConcept>? modifier,
-    Quantity? quantity,
-    Money? unitPrice,
-    Decimal? factor,
-    @JsonKey(name: '_factor') Element? factorElement,
-    Money? net,
-    List<PositiveInt>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
-    required List<ClaimResponseAdjudication> adjudication,
-    List<ClaimResponseSubDetail1>? subDetail,
-  }) = _ClaimResponseDetail1;
-  factory ClaimResponseSubDetail1({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept productOrService,
-    List<CodeableConcept>? modifier,
-    Quantity? quantity,
-    Money? unitPrice,
-    Decimal? factor,
-    @JsonKey(name: '_factor') Element? factorElement,
-    Money? net,
-    List<PositiveInt>? noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
-    required List<ClaimResponseAdjudication> adjudication,
-  }) = _ClaimResponseSubDetail1;
-  factory ClaimResponseTotal({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept category,
-    required Money amount,
-  }) = _ClaimResponseTotal;
-  factory ClaimResponsePayment({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept type,
-    Money? adjustment,
-    CodeableConcept? adjustmentReason,
-    Date? date,
-    @JsonKey(name: '_date') Element? dateElement,
-    required Money amount,
-    Identifier? identifier,
-  }) = _ClaimResponsePayment;
-  factory ClaimResponseProcessNote({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    PositiveInt? number,
-    @JsonKey(name: '_number') Element? numberElement,
-    Code? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    String? text,
-    @JsonKey(name: '_text') Element? textElement,
-    CodeableConcept? language,
-  }) = _ClaimResponseProcessNote;
-  factory ClaimResponseInsurance({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    PositiveInt? sequence,
-    @JsonKey(name: '_sequence') Element? sequenceElement,
-    Boolean? focal,
-    @JsonKey(name: '_focal') Element? focalElement,
-    required Reference coverage,
-    String? businessArrangement,
-    @JsonKey(name: '_businessArrangement') Element? businessArrangementElement,
-    Reference? claimResponse,
-  }) = _ClaimResponseInsurance;
-  factory ClaimResponseError({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    PositiveInt? itemSequence,
-    @JsonKey(name: '_itemSequence') Element? itemSequenceElement,
-    PositiveInt? detailSequence,
-    @JsonKey(name: '_detailSequence') Element? detailSequenceElement,
-    PositiveInt? subDetailSequence,
-    @JsonKey(name: '_subDetailSequence') Element? subDetailSequenceElement,
-    required CodeableConcept code,
-  }) = _ClaimResponseError;
-  factory Invoice({
-    @Default(R4ResourceType.Invoice)
-    @JsonKey(unknownEnumValue: R4ResourceType.Invoice)
-    @HiveField(0)
-        R4ResourceType resourceType,
-    @HiveField(1) String? id,
-    @HiveField(2) Meta? meta,
-    @HiveField(3) FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules')
-    @HiveField(4)
-        Element? implicitRulesElement,
-    @HiveField(5) Code? language,
-    @JsonKey(name: '_language') @HiveField(6) Element? languageElement,
-    @HiveField(7) Narrative? text,
-    @HiveField(8) List<Resource>? contained,
-    @JsonKey(name: 'extension') @HiveField(9) List<FhirExtension>? extension_,
-    @HiveField(10) List<FhirExtension>? modifierExtension,
-    @HiveField(11) List<Identifier>? identifier,
-    @HiveField(12) Code? status,
-    @JsonKey(name: '_status') @HiveField(13) Element? statusElement,
-    @HiveField(14) String? cancelledReason,
-    @JsonKey(name: '_cancelledReason')
-    @HiveField(15)
-        Element? cancelledReasonElement,
-    @HiveField(16) CodeableConcept? type,
-    @HiveField(17) Reference? subject,
-    @HiveField(18) Reference? recipient,
-    @HiveField(19) FhirDateTime? date,
-    @JsonKey(name: '_date') @HiveField(20) Element? dateElement,
-    @HiveField(21) List<InvoiceParticipant>? participant,
-    @HiveField(22) Reference? issuer,
-    @HiveField(23) Reference? account,
-    @HiveField(24) List<InvoiceLineItem>? lineItem,
-    @HiveField(25) List<InvoicePriceComponent>? totalPriceComponent,
-    @HiveField(26) Money? totalNet,
-    @HiveField(27) Money? totalGross,
-    @HiveField(28) Markdown? paymentTerms,
-    @JsonKey(name: '_paymentTerms') @HiveField(29) Element? paymentTermsElement,
-    @HiveField(30) List<Annotation>? note,
-  }) = _Invoice;
-  factory InvoiceParticipant({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? role,
-    required Reference actor,
-  }) = _InvoiceParticipant;
-  factory InvoiceLineItem({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    PositiveInt? sequence,
-    @JsonKey(name: '_sequence') Element? sequenceElement,
-    Reference? chargeItemReference,
-    CodeableConcept? chargeItemCodeableConcept,
-    List<InvoicePriceComponent>? priceComponent,
-  }) = _InvoiceLineItem;
-  factory InvoicePriceComponent({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Code? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    CodeableConcept? code,
-    Decimal? factor,
-    @JsonKey(name: '_factor') Element? factorElement,
-    Money? amount,
-  }) = _InvoicePriceComponent;
+import '../../../../r4.dart';
+
+class Claim {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  Code? status;
+  Element? statusElement;
+  CodeableConcept type;
+  CodeableConcept? subType;
+  Code? use;
+  Element? useElement;
+  Reference patient;
+  Period? billablePeriod;
+  FhirDateTime? created;
+  Element? createdElement;
+  Reference? enterer;
+  Reference? insurer;
+  Reference provider;
+  CodeableConcept priority;
+  CodeableConcept? fundsReserve;
+  List<ClaimRelated>? related;
+  Reference? prescription;
+  Reference? originalPrescription;
+  ClaimPayee? payee;
+  Reference? referral;
+  Reference? facility;
+  List<ClaimCareTeam>? careTeam;
+  List<ClaimSupportingInfo>? supportingInfo;
+  List<ClaimDiagnosis>? diagnosis;
+  List<ClaimProcedure>? procedure;
+  List<ClaimInsurance> insurance;
+  ClaimAccident? accident;
+  List<ClaimItem>? item;
+  Money? total;
+}
+
+class ClaimRelated {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Reference? claim;
+  CodeableConcept? relationship;
+  Identifier? reference;
+}
+
+class ClaimPayee {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept type;
+  Reference? party;
+}
+
+class ClaimCareTeam {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  PositiveInt? sequence;
+  Element? sequenceElement;
+  Reference provider;
+  Boolean? responsible;
+  Element? responsibleElement;
+  CodeableConcept? role;
+  CodeableConcept? qualification;
+}
+
+class ClaimSupportingInfo {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  PositiveInt? sequence;
+  Element? sequenceElement;
+  CodeableConcept category;
+  CodeableConcept? code;
+  Date? timingDate;
+  Element? timingDateElement;
+  Period? timingPeriod;
+  Boolean? valueBoolean;
+  Element? valueBooleanElement;
+  String? valueString;
+  Element? valueStringElement;
+  Quantity? valueQuantity;
+  Attachment? valueAttachment;
+  Reference? valueReference;
+  CodeableConcept? reason;
+}
+
+class ClaimDiagnosis {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  PositiveInt? sequence;
+  Element? sequenceElement;
+  CodeableConcept? diagnosisCodeableConcept;
+  Reference? diagnosisReference;
+  List<CodeableConcept>? type;
+  CodeableConcept? onAdmission;
+  CodeableConcept? packageCode;
+}
+
+class ClaimProcedure {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  PositiveInt? sequence;
+  Element? sequenceElement;
+  List<CodeableConcept>? type;
+  FhirDateTime? date;
+  Element? dateElement;
+  CodeableConcept? procedureCodeableConcept;
+  Reference? procedureReference;
+  List<Reference>? udi;
+}
+
+class ClaimInsurance {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  PositiveInt? sequence;
+  Element? sequenceElement;
+  Boolean? focal;
+  Element? focalElement;
+  Identifier? identifier;
+  Reference coverage;
+  String? businessArrangement;
+  Element? businessArrangementElement;
+  List<String>? preAuthRef;
+  List<Element?>? preAuthRefElement;
+  Reference? claimResponse;
+}
+
+class ClaimAccident {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Date? date;
+  Element? dateElement;
+  CodeableConcept? type;
+  Address? locationAddress;
+  Reference? locationReference;
+}
+
+class ClaimItem {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  PositiveInt? sequence;
+  Element? sequenceElement;
+  List<PositiveInt>? careTeamSequence;
+  List<Element?>? careTeamSequenceElement;
+  List<PositiveInt>? diagnosisSequence;
+
+  List<Element>? diagnosisSequenceElement;
+  List<PositiveInt>? procedureSequence;
+
+  List<Element>? procedureSequenceElement;
+  List<PositiveInt>? informationSequence;
+
+  List<Element>? informationSequenceElement;
+  CodeableConcept? revenue;
+  CodeableConcept? category;
+  CodeableConcept productOrService;
+  List<CodeableConcept>? modifier;
+  List<CodeableConcept>? programCode;
+  Date? servicedDate;
+  Element? servicedDateElement;
+  Period? servicedPeriod;
+  CodeableConcept? locationCodeableConcept;
+  Address? locationAddress;
+  Reference? locationReference;
+  Quantity? quantity;
+  Money? unitPrice;
+  Decimal? factor;
+  Element? factorElement;
+  Money? net;
+  List<Reference>? udi;
+  CodeableConcept? bodySite;
+  List<CodeableConcept>? subSite;
+  List<Reference>? encounter;
+  List<ClaimDetail>? detail;
+}
+
+class ClaimDetail {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  PositiveInt? sequence;
+  Element? sequenceElement;
+  CodeableConcept? revenue;
+  CodeableConcept? category;
+  CodeableConcept productOrService;
+  List<CodeableConcept>? modifier;
+  List<CodeableConcept>? programCode;
+  Quantity? quantity;
+  Money? unitPrice;
+  Decimal? factor;
+  Element? factorElement;
+  Money? net;
+  List<Reference>? udi;
+  List<ClaimSubDetail>? subDetail;
+}
+
+class ClaimSubDetail {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  PositiveInt? sequence;
+  Element? sequenceElement;
+  CodeableConcept? revenue;
+  CodeableConcept? category;
+  CodeableConcept productOrService;
+  List<CodeableConcept>? modifier;
+  List<CodeableConcept>? programCode;
+  Quantity? quantity;
+  Money? unitPrice;
+  Decimal? factor;
+  Element? factorElement;
+  Money? net;
+  List<Reference>? udi;
+}
+
+class ClaimResponse {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  Code? status;
+  Element? statusElement;
+  CodeableConcept type;
+  CodeableConcept? subType;
+  Code? use;
+  Element? useElement;
+  Reference patient;
+  FhirDateTime? created;
+  Element? createdElement;
+  Reference insurer;
+  Reference? requestor;
+  Reference? request;
+  Code? outcome;
+  Element? outcomeElement;
+  String? disposition;
+  Element? dispositionElement;
+  String? preAuthRef;
+  Element? preAuthRefElement;
+  Period? preAuthPeriod;
+  CodeableConcept? payeeType;
+  List<ClaimResponseItem>? item;
+  List<ClaimResponseAddItem>? addItem;
+  List<ClaimResponseAdjudication>? adjudication;
+  List<ClaimResponseTotal>? total;
+  ClaimResponsePayment? payment;
+  CodeableConcept? fundsReserve;
+  CodeableConcept? formCode;
+  Attachment? form;
+  List<ClaimResponseProcessNote>? processNote;
+  List<Reference>? communicationRequest;
+  List<ClaimResponseInsurance>? insurance;
+  List<ClaimResponseError>? error;
+}
+
+class ClaimResponseItem {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  PositiveInt? itemSequence;
+  Element? itemSequenceElement;
+  List<PositiveInt>? noteNumber;
+  List<Element?>? noteNumberElement;
+  List<ClaimResponseAdjudication> adjudication;
+  List<ClaimResponseDetail>? detail;
+}
+
+class ClaimResponseAdjudication {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept category;
+  CodeableConcept? reason;
+  Money? amount;
+  Decimal? value;
+  Element? valueElement;
+}
+
+class ClaimResponseDetail {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  PositiveInt? detailSequence;
+  Element? detailSequenceElement;
+  List<PositiveInt>? noteNumber;
+  List<Element?>? noteNumberElement;
+  List<ClaimResponseAdjudication> adjudication;
+  List<ClaimResponseSubDetail>? subDetail;
+}
+
+class ClaimResponseSubDetail {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  PositiveInt? subDetailSequence;
+  Element? subDetailSequenceElement;
+  List<PositiveInt>? noteNumber;
+  List<Element?>? noteNumberElement;
+  List<ClaimResponseAdjudication>? adjudication;
+}
+
+class ClaimResponseAddItem {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<PositiveInt>? itemSequence;
+  List<Element?>? itemSequenceElement;
+  List<PositiveInt>? detailSequence;
+  List<Element?>? detailSequenceElement;
+  List<PositiveInt>? subdetailSequence;
+
+  List<Element>? subdetailSequenceElement;
+  List<Reference>? provider;
+  CodeableConcept productOrService;
+  List<CodeableConcept>? modifier;
+  List<CodeableConcept>? programCode;
+  Date? servicedDate;
+  Element? servicedDateElement;
+  Period? servicedPeriod;
+  CodeableConcept? locationCodeableConcept;
+  Address? locationAddress;
+  Reference? locationReference;
+  Quantity? quantity;
+  Money? unitPrice;
+  Decimal? factor;
+  Element? factorElement;
+  Money? net;
+  CodeableConcept? bodySite;
+  List<CodeableConcept>? subSite;
+  List<PositiveInt>? noteNumber;
+  List<Element?>? noteNumberElement;
+  List<ClaimResponseAdjudication> adjudication;
+  List<ClaimResponseDetail1>? detail;
+}
+
+class ClaimResponseDetail1 {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept productOrService;
+  List<CodeableConcept>? modifier;
+  Quantity? quantity;
+  Money? unitPrice;
+  Decimal? factor;
+  Element? factorElement;
+  Money? net;
+  List<PositiveInt>? noteNumber;
+  List<Element?>? noteNumberElement;
+  List<ClaimResponseAdjudication> adjudication;
+  List<ClaimResponseSubDetail1>? subDetail;
+}
+
+class ClaimResponseSubDetail1 {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept productOrService;
+  List<CodeableConcept>? modifier;
+  Quantity? quantity;
+  Money? unitPrice;
+  Decimal? factor;
+  Element? factorElement;
+  Money? net;
+  List<PositiveInt>? noteNumber;
+  List<Element?>? noteNumberElement;
+  List<ClaimResponseAdjudication> adjudication;
+}
+
+class ClaimResponseTotal {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept category;
+  Money amount;
+}
+
+class ClaimResponsePayment {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept type;
+  Money? adjustment;
+  CodeableConcept? adjustmentReason;
+  Date? date;
+  Element? dateElement;
+  Money amount;
+  Identifier? identifier;
+}
+
+class ClaimResponseProcessNote {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  PositiveInt? number;
+  Element? numberElement;
+  Code? type;
+  Element? typeElement;
+  String? text;
+  Element? textElement;
+  CodeableConcept? language;
+}
+
+class ClaimResponseInsurance {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  PositiveInt? sequence;
+  Element? sequenceElement;
+  Boolean? focal;
+  Element? focalElement;
+  Reference coverage;
+  String? businessArrangement;
+  Element? businessArrangementElement;
+  Reference? claimResponse;
+}
+
+class ClaimResponseError {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  PositiveInt? itemSequence;
+  Element? itemSequenceElement;
+  PositiveInt? detailSequence;
+  Element? detailSequenceElement;
+  PositiveInt? subDetailSequence;
+  Element? subDetailSequenceElement;
+  CodeableConcept code;
+}
+
+class Invoice {
+  R4ResourceType resourceType;
+  String? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  Code? status;
+  Element? statusElement;
+  String? cancelledReason;
+
+  Element? cancelledReasonElement;
+  CodeableConcept? type;
+  Reference? subject;
+  Reference? recipient;
+  FhirDateTime? date;
+  Element? dateElement;
+  List<InvoiceParticipant>? participant;
+  Reference? issuer;
+  Reference? account;
+  List<InvoiceLineItem>? lineItem;
+  List<InvoicePriceComponent>? totalPriceComponent;
+  Money? totalNet;
+  Money? totalGross;
+  Markdown? paymentTerms;
+  Element? paymentTermsElement;
+  List<Annotation>? note;
+}
+
+class InvoiceParticipant {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  CodeableConcept? role;
+  Reference actor;
+}
+
+class InvoiceLineItem {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  PositiveInt? sequence;
+  Element? sequenceElement;
+  Reference? chargeItemReference;
+  CodeableConcept? chargeItemCodeableConcept;
+  List<InvoicePriceComponent>? priceComponent;
+}
+
+class InvoicePriceComponent {
+  String? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Code? type;
+  Element? typeElement;
+  CodeableConcept? code;
+  Decimal? factor;
+  Element? factorElement;
+  Money? amount;
+}

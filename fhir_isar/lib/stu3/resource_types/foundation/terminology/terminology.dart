@@ -1,481 +1,504 @@
-  factory CodeSystem({
-    @Default(Stu3ResourceType.CodeSystem)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.CodeSystem)
-        Stu3ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? url,
-    @JsonKey(name: '_url') Element? urlElement,
-    Identifier? identifier,
-    String? version,
-    @JsonKey(name: '_version') Element? versionElement,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? title,
-    @JsonKey(name: '_title') Element? titleElement,
-    CodeSystemStatus? status,
-    @JsonKey(name: '_status') Element? statusElement,
-    Boolean? experimental,
-    @JsonKey(name: '_experimental') Element? experimentalElement,
-    FhirDateTime? date,
-    @JsonKey(name: '_date') Element? dateElement,
-    String? publisher,
-    @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail>? contact,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext>? useContext,
-    List<CodeableConcept>? jurisdiction,
-    String? purpose,
-    @JsonKey(name: '_purpose') Element? purposeElement,
-    String? copyright,
-    @JsonKey(name: '_copyright') Element? copyrightElement,
-    Boolean? caseSensitive,
-    @JsonKey(name: '_caseSensitive') Element? caseSensitiveElement,
-    String? valueSet,
-    @JsonKey(name: '_valueSet') Element? valueSetElement,
-    CodeSystemHierarchyMeaning? hierarchyMeaning,
-    @JsonKey(name: '_hierarchyMeaning') Element? hierarchyMeaningElement,
-    Boolean? compositional,
-    @JsonKey(name: '_compositional') Element? compositionalElement,
-    Boolean? versionNeeded,
-    @JsonKey(name: '_versionNeeded') Element? versionNeededElement,
-    CodeSystemContent? content,
-    @JsonKey(name: '_content') Element? contentElement,
-    Decimal? count,
-    @JsonKey(name: '_count') Element? countElement,
-    List<CodeSystemFilter>? filter,
-    List<CodeSystemProperty>? property,
-    List<CodeSystemConcept>? concept,
-  }) = _CodeSystem;
-  factory CodeSystemFilter({
-    Code? code,
-    @JsonKey(name: '_code') Element? codeElement,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    @JsonKey(name: 'operator') List<String>? operator_,
-    @JsonKey(name: '_operator') List<Element?>? operatorElement,
-    String? value,
-    @JsonKey(name: '_value') Element? valueElement,
-  }) = _CodeSystemFilter;
-  factory CodeSystemProperty({
-    Code? code,
-    @JsonKey(name: '_code') Element? codeElement,
-    String? uri,
-    @JsonKey(name: '_uri') Element? uriElement,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    CodeSystemPropertyType? type,
-    @JsonKey(name: '_type') Element? typeElement,
-  }) = _CodeSystemProperty;
-  factory CodeSystemConcept({
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    Code? code,
-    @JsonKey(name: '_code') Element? codeElement,
-    String? display,
-    @JsonKey(name: '_display') Element? displayElement,
-    String? definition,
-    @JsonKey(name: '_definition') Element? definitionElement,
-    List<CodeSystemDesignation>? designation,
-    List<CodeSystemProperty1>? property,
-    List<CodeSystemConcept>? concept,
-  }) = _CodeSystemConcept;
-  factory CodeSystemDesignation({
-    String? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Coding? use,
-    String? value,
-    @JsonKey(name: '_value') Element? valueElement,
-  }) = _CodeSystemDesignation;
-  factory CodeSystemProperty1({
-    Code? code,
-    @JsonKey(name: '_code') Element? codeElement,
-    Code? valueCode,
-    @JsonKey(name: '_valueCode') Element? valueCodeElement,
-    Coding? valueCoding,
-    String? valueString,
-    @JsonKey(name: '_valueString') Element? valueStringElement,
-    Decimal? valueInteger,
-    @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-    Boolean? valueBoolean,
-    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-    FhirDateTime? valueDateTime,
-    @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
-  }) = _CodeSystemProperty1;
-  factory ConceptMap({
-    @Default(Stu3ResourceType.ConceptMap)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.ConceptMap)
-        Stu3ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? url,
-    @JsonKey(name: '_url') Element? urlElement,
-    Identifier? identifier,
-    String? version,
-    @JsonKey(name: '_version') Element? versionElement,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? title,
-    @JsonKey(name: '_title') Element? titleElement,
-    ConceptMapStatus? status,
-    @JsonKey(name: '_status') Element? statusElement,
-    Boolean? experimental,
-    @JsonKey(name: '_experimental') Element? experimentalElement,
-    FhirDateTime? date,
-    @JsonKey(name: '_date') Element? dateElement,
-    String? publisher,
-    @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail>? contact,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext>? useContext,
-    List<CodeableConcept>? jurisdiction,
-    String? purpose,
-    @JsonKey(name: '_purpose') Element? purposeElement,
-    String? copyright,
-    @JsonKey(name: '_copyright') Element? copyrightElement,
-    String? sourceUri,
-    @JsonKey(name: '_sourceUri') Element? sourceUriElement,
-    Reference? sourceReference,
-    String? targetUri,
-    @JsonKey(name: '_targetUri') Element? targetUriElement,
-    Reference? targetReference,
-    List<ConceptMapGroup>? group,
-  }) = _ConceptMap;
-  factory ConceptMapGroup({
-    String? source,
-    @JsonKey(name: '_source') Element? sourceElement,
-    String? sourceVersion,
-    @JsonKey(name: '_sourceVersion') Element? sourceVersionElement,
-    String? target,
-    @JsonKey(name: '_target') Element? targetElement,
-    String? targetVersion,
-    @JsonKey(name: '_targetVersion') Element? targetVersionElement,
-    required List<ConceptMapElement> element,
-    ConceptMapUnmapped? unmapped,
-  }) = _ConceptMapGroup;
-  factory ConceptMapElement({
-    Code? code,
-    @JsonKey(name: '_code') Element? codeElement,
-    String? display,
-    @JsonKey(name: '_display') Element? displayElement,
-    List<ConceptMapTarget>? target,
-  }) = _ConceptMapElement;
-  factory ConceptMapTarget({
-    Code? code,
-    @JsonKey(name: '_code') Element? codeElement,
-    String? display,
-    @JsonKey(name: '_display') Element? displayElement,
-    ConceptMapTargetEquivalence? equivalence,
-    @JsonKey(name: '_equivalence') Element? equivalenceElement,
-    String? comment,
-    @JsonKey(name: '_comment') Element? commentElement,
-    List<ConceptMapDependsOn>? dependsOn,
-    List<ConceptMapDependsOn>? product,
-  }) = _ConceptMapTarget;
-  factory ConceptMapDependsOn({
-    String? property,
-    @JsonKey(name: '_property') Element? propertyElement,
-    String? system,
-    @JsonKey(name: '_system') Element? systemElement,
-    String? code,
-    @JsonKey(name: '_code') Element? codeElement,
-    String? display,
-    @JsonKey(name: '_display') Element? displayElement,
-  }) = _ConceptMapDependsOn;
-  factory ConceptMapUnmapped({
-    ConceptMapUnmappedMode? mode,
-    @JsonKey(name: '_mode') Element? modeElement,
-    Code? code,
-    @JsonKey(name: '_code') Element? codeElement,
-    String? display,
-    @JsonKey(name: '_display') Element? displayElement,
-    String? url,
-    @JsonKey(name: '_url') Element? urlElement,
-  }) = _ConceptMapUnmapped;
-  factory ExpansionProfile({
-    @Default(Stu3ResourceType.ExpansionProfile)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.ExpansionProfile)
-        Stu3ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? url,
-    @JsonKey(name: '_url') Element? urlElement,
-    Identifier? identifier,
-    String? version,
-    @JsonKey(name: '_version') Element? versionElement,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    ExpansionProfileStatus? status,
-    @JsonKey(name: '_status') Element? statusElement,
-    Boolean? experimental,
-    @JsonKey(name: '_experimental') Element? experimentalElement,
-    Date? date,
-    @JsonKey(name: '_date') Element? dateElement,
-    String? publisher,
-    @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail>? contact,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext>? useContext,
-    List<CodeableConcept>? jurisdiction,
-    List<ExpansionProfileFixedVersion>? fixedVersion,
-    ExpansionProfileExcludedSystem? excludedSystem,
-    Boolean? includeDesignations,
-    @JsonKey(name: '_includeDesignations') Element? includeDesignationsElement,
-    ExpansionProfileDesignation? designation,
-    Boolean? includeDefinition,
-    @JsonKey(name: '_includeDefinition') Element? includeDefinitionElement,
-    Boolean? activeOnly,
-    @JsonKey(name: '_activeOnly') Element? activeOnlyElement,
-    Boolean? excludeNested,
-    @JsonKey(name: '_excludeNested') Element? excludeNestedElement,
-    Boolean? excludeNotForUI,
-    @JsonKey(name: '_excludeNotForUI') Element? excludeNotForUIElement,
-    Boolean? excludePostCoordinated,
-    @JsonKey(name: '_excludePostCoordinated')
-        Element? excludePostCoordinatedElement,
-    String? displayLanguage,
-    @JsonKey(name: '_displayLanguage') Element? displayLanguageElement,
-    Boolean? limitedExpansion,
-    @JsonKey(name: '_limitedExpansion') Element? limitedExpansionElement,
-  }) = _ExpansionProfile;
-  factory ExpansionProfileFixedVersion({
-    String? system,
-    @JsonKey(name: '_system') Element? systemElement,
-    String? version,
-    @JsonKey(name: '_version') Element? versionElement,
-    ExpansionProfileFixedVersionMode? mode,
-    @JsonKey(name: '_mode') Element? modeElement,
-  }) = _ExpansionProfileFixedVersion;
-  factory ExpansionProfileExcludedSystem({
-    String? system,
-    @JsonKey(name: '_system') Element? systemElement,
-    String? version,
-    @JsonKey(name: '_version') Element? versionElement,
-  }) = _ExpansionProfileExcludedSystem;
-  factory ExpansionProfileDesignation({
-    ExpansionProfileInclude? include,
-    ExpansionProfileExclude? exclude,
-  }) = _ExpansionProfileDesignation;
-  factory ExpansionProfileInclude({
-    List<ExpansionProfileDesignation1>? designation,
-  }) = _ExpansionProfileInclude;
-  factory ExpansionProfileDesignation1({
-    String? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Coding? use,
-  }) = _ExpansionProfileDesignation1;
-  factory ExpansionProfileExclude({
-    List<ExpansionProfileDesignation2>? designation,
-  }) = _ExpansionProfileExclude;
-  factory ExpansionProfileDesignation2({
-    String? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Coding? use,
-  }) = _ExpansionProfileDesignation2;
-  factory NamingSystem({
-    @Default(Stu3ResourceType.NamingSystem)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.NamingSystem)
-        Stu3ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    NamingSystemStatus? status,
-    @JsonKey(name: '_status') Element? statusElement,
-    NamingSystemKind? kind,
-    @JsonKey(name: '_kind') Element? kindElement,
-    FhirDateTime? date,
-    @JsonKey(name: '_date') Element? dateElement,
-    String? publisher,
-    @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail>? contact,
-    String? responsible,
-    @JsonKey(name: '_responsible') Element? responsibleElement,
-    CodeableConcept? type,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext>? useContext,
-    List<CodeableConcept>? jurisdiction,
-    String? usage,
-    @JsonKey(name: '_usage') Element? usageElement,
-    required List<NamingSystemUniqueId> uniqueId,
-    Reference? replacedBy,
-  }) = _NamingSystem;
-  factory NamingSystemUniqueId({
-    NamingSystemUniqueIdType? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    String? value,
-    @JsonKey(name: '_value') Element? valueElement,
-    Boolean? preferred,
-    @JsonKey(name: '_preferred') Element? preferredElement,
-    String? comment,
-    @JsonKey(name: '_comment') Element? commentElement,
-    Period? period,
-  }) = _NamingSystemUniqueId;
-  factory ValueSet({
-    @Default(Stu3ResourceType.ValueSet)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.ValueSet)
-        Stu3ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? url,
-    @JsonKey(name: '_url') Element? urlElement,
-    List<Identifier>? identifier,
-    String? version,
-    @JsonKey(name: '_version') Element? versionElement,
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? title,
-    @JsonKey(name: '_title') Element? titleElement,
-    ValueSetStatus? status,
-    @JsonKey(name: '_status') Element? statusElement,
-    Boolean? experimental,
-    @JsonKey(name: '_experimental') Element? experimentalElement,
-    FhirDateTime? date,
-    @JsonKey(name: '_date') Element? dateElement,
-    String? publisher,
-    @JsonKey(name: '_publisher') Element? publisherElement,
-    List<ContactDetail>? contact,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    List<UsageContext>? useContext,
-    List<CodeableConcept>? jurisdiction,
-    Boolean? immutable,
-    @JsonKey(name: '_immutable') Element? immutableElement,
-    String? purpose,
-    @JsonKey(name: '_purpose') Element? purposeElement,
-    String? copyright,
-    @JsonKey(name: '_copyright') Element? copyrightElement,
-    Boolean? extensible,
-    @JsonKey(name: '_extensible') Element? extensibleElement,
-    ValueSetCompose? compose,
-    ValueSetExpansion? expansion,
-  }) = _ValueSet;
-  factory ValueSetCompose({
-    Date? lockedDate,
-    @JsonKey(name: '_lockedDate') Element? lockedDateElement,
-    Boolean? inactive,
-    @JsonKey(name: '_inactive') Element? inactiveElement,
-    required List<ValueSetInclude> include,
-    List<ValueSetInclude>? exclude,
-  }) = _ValueSetCompose;
-  factory ValueSetInclude({
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    String? system,
-    @JsonKey(name: '_system') Element? systemElement,
-    String? version,
-    @JsonKey(name: '_version') Element? versionElement,
-    List<ValueSetConcept>? concept,
-    List<ValueSetFilter>? filter,
-    List<String>? valueSet,
-    @JsonKey(name: '_valueSet') List<Element?>? valueSetElement,
-  }) = _ValueSetInclude;
-  factory ValueSetConcept({
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    Code? code,
-    @JsonKey(name: '_code') Element? codeElement,
-    String? display,
-    @JsonKey(name: '_display') Element? displayElement,
-    List<ValueSetDesignation>? designation,
-  }) = _ValueSetConcept;
-  factory ValueSetDesignation({
-    String? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Coding? use,
-    String? value,
-    @JsonKey(name: '_value') Element? valueElement,
-  }) = _ValueSetDesignation;
-  factory ValueSetFilter({
-    String? property,
-    @JsonKey(name: '_property') Element? propertyElement,
-    ValueSetFilterOp? op,
-    @JsonKey(name: '_op') Element? opElement,
-    String? value,
-    @JsonKey(name: '_value') Element? valueElement,
-  }) = _ValueSetFilter;
-  factory ValueSetExpansion({
-    String? identifier,
-    @JsonKey(name: '_identifier') Element? identifierElement,
-    FhirDateTime? timestamp,
-    @JsonKey(name: '_timestamp') Element? timestampElement,
-    Decimal? total,
-    @JsonKey(name: '_total') Element? totalElement,
-    Decimal? offset,
-    @JsonKey(name: '_offset') Element? offsetElement,
-    List<ValueSetParameter>? parameter,
-    List<ValueSetContains>? contains,
-  }) = _ValueSetExpansion;
-  factory ValueSetParameter({
-    String? name,
-    @JsonKey(name: '_name') Element? nameElement,
-    String? valueString,
-    @JsonKey(name: '_valueString') Element? valueStringElement,
-    Boolean? valueBoolean,
-    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
-    Decimal? valueInteger,
-    @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
-    Decimal? valueDecimal,
-    @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
-    String? valueUri,
-    @JsonKey(name: '_valueUri') Element? valueUriElement,
-    Code? valueCode,
-    @JsonKey(name: '_valueCode') Element? valueCodeElement,
-  }) = _ValueSetParameter;
-  factory ValueSetContains({
-    String? system,
-    @JsonKey(name: '_system') Element? systemElement,
-    @JsonKey(name: 'abstract') Boolean? abstract_,
-    @JsonKey(name: '_abstract') Element? abstractElement,
-    Boolean? inactive,
-    @JsonKey(name: '_inactive') Element? inactiveElement,
-    String? version,
-    @JsonKey(name: '_version') Element? versionElement,
-    Code? code,
-    @JsonKey(name: '_code') Element? codeElement,
-    String? display,
-    @JsonKey(name: '_display') Element? displayElement,
-    List<ValueSetDesignation>? designation,
-    List<ValueSetContains>? contains,
-  }) = _ValueSetContains;
+import '../../../../stu3.dart';
+part 'terminology.enums.dart';
+
+class CodeSystem {
+  Stu3ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? url;
+  Element? urlElement;
+  Identifier? identifier;
+  String? version;
+  Element? versionElement;
+  String? name;
+  Element? nameElement;
+  String? title;
+  Element? titleElement;
+  CodeSystemStatus? status;
+  Element? statusElement;
+  Boolean? experimental;
+  Element? experimentalElement;
+  FhirDateTime? date;
+  Element? dateElement;
+  String? publisher;
+  Element? publisherElement;
+  List<ContactDetail>? contact;
+  String? description;
+  Element? descriptionElement;
+  List<UsageContext>? useContext;
+  List<CodeableConcept>? jurisdiction;
+  String? purpose;
+  Element? purposeElement;
+  String? copyright;
+  Element? copyrightElement;
+  Boolean? caseSensitive;
+  Element? caseSensitiveElement;
+  String? valueSet;
+  Element? valueSetElement;
+  CodeSystemHierarchyMeaning? hierarchyMeaning;
+  Element? hierarchyMeaningElement;
+  Boolean? compositional;
+  Element? compositionalElement;
+  Boolean? versionNeeded;
+  Element? versionNeededElement;
+  CodeSystemContent? content;
+  Element? contentElement;
+  Decimal? count;
+  Element? countElement;
+  List<CodeSystemFilter>? filter;
+  List<CodeSystemProperty>? property;
+  List<CodeSystemConcept>? concept;
+}
+
+class CodeSystemFilter {
+  Code? code;
+  Element? codeElement;
+  String? description;
+  Element? descriptionElement;
+  List<String>? operator_;
+  List<Element?>? operatorElement;
+  String? value;
+  Element? valueElement;
+}
+
+class CodeSystemProperty {
+  Code? code;
+  Element? codeElement;
+  String? uri;
+  Element? uriElement;
+  String? description;
+  Element? descriptionElement;
+  CodeSystemPropertyType? type;
+  Element? typeElement;
+}
+
+class CodeSystemConcept {
+  List<FhirExtension>? extension_;
+  Code? code;
+  Element? codeElement;
+  String? display;
+  Element? displayElement;
+  String? definition;
+  Element? definitionElement;
+  List<CodeSystemDesignation>? designation;
+  List<CodeSystemProperty1>? property;
+  List<CodeSystemConcept>? concept;
+}
+
+class CodeSystemDesignation {
+  String? language;
+  Element? languageElement;
+  Coding? use;
+  String? value;
+  Element? valueElement;
+}
+
+class CodeSystemProperty1 {
+  Code? code;
+  Element? codeElement;
+  Code? valueCode;
+  Element? valueCodeElement;
+  Coding? valueCoding;
+  String? valueString;
+  Element? valueStringElement;
+  Decimal? valueInteger;
+  Element? valueIntegerElement;
+  Boolean? valueBoolean;
+  Element? valueBooleanElement;
+  FhirDateTime? valueDateTime;
+  Element? valueDateTimeElement;
+}
+
+class ConceptMap {
+  Stu3ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? url;
+  Element? urlElement;
+  Identifier? identifier;
+  String? version;
+  Element? versionElement;
+  String? name;
+  Element? nameElement;
+  String? title;
+  Element? titleElement;
+  ConceptMapStatus? status;
+  Element? statusElement;
+  Boolean? experimental;
+  Element? experimentalElement;
+  FhirDateTime? date;
+  Element? dateElement;
+  String? publisher;
+  Element? publisherElement;
+  List<ContactDetail>? contact;
+  String? description;
+  Element? descriptionElement;
+  List<UsageContext>? useContext;
+  List<CodeableConcept>? jurisdiction;
+  String? purpose;
+  Element? purposeElement;
+  String? copyright;
+  Element? copyrightElement;
+  String? sourceUri;
+  Element? sourceUriElement;
+  Reference? sourceReference;
+  String? targetUri;
+  Element? targetUriElement;
+  Reference? targetReference;
+  List<ConceptMapGroup>? group;
+}
+
+class ConceptMapGroup {
+  String? source;
+  Element? sourceElement;
+  String? sourceVersion;
+  Element? sourceVersionElement;
+  String? target;
+  Element? targetElement;
+  String? targetVersion;
+  Element? targetVersionElement;
+  List<ConceptMapElement> element;
+  ConceptMapUnmapped? unmapped;
+}
+
+class ConceptMapElement {
+  Code? code;
+  Element? codeElement;
+  String? display;
+  Element? displayElement;
+  List<ConceptMapTarget>? target;
+}
+
+class ConceptMapTarget {
+  Code? code;
+  Element? codeElement;
+  String? display;
+  Element? displayElement;
+  ConceptMapTargetEquivalence? equivalence;
+  Element? equivalenceElement;
+  String? comment;
+  Element? commentElement;
+  List<ConceptMapDependsOn>? dependsOn;
+  List<ConceptMapDependsOn>? product;
+}
+
+class ConceptMapDependsOn {
+  String? property;
+  Element? propertyElement;
+  String? system;
+  Element? systemElement;
+  String? code;
+  Element? codeElement;
+  String? display;
+  Element? displayElement;
+}
+
+class ConceptMapUnmapped {
+  ConceptMapUnmappedMode? mode;
+  Element? modeElement;
+  Code? code;
+  Element? codeElement;
+  String? display;
+  Element? displayElement;
+  String? url;
+  Element? urlElement;
+}
+
+class ExpansionProfile {
+  Stu3ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? url;
+  Element? urlElement;
+  Identifier? identifier;
+  String? version;
+  Element? versionElement;
+  String? name;
+  Element? nameElement;
+  ExpansionProfileStatus? status;
+  Element? statusElement;
+  Boolean? experimental;
+  Element? experimentalElement;
+  Date? date;
+  Element? dateElement;
+  String? publisher;
+  Element? publisherElement;
+  List<ContactDetail>? contact;
+  String? description;
+  Element? descriptionElement;
+  List<UsageContext>? useContext;
+  List<CodeableConcept>? jurisdiction;
+  List<ExpansionProfileFixedVersion>? fixedVersion;
+  ExpansionProfileExcludedSystem? excludedSystem;
+  Boolean? includeDesignations;
+  Element? includeDesignationsElement;
+  ExpansionProfileDesignation? designation;
+  Boolean? includeDefinition;
+  Element? includeDefinitionElement;
+  Boolean? activeOnly;
+  Element? activeOnlyElement;
+  Boolean? excludeNested;
+  Element? excludeNestedElement;
+  Boolean? excludeNotForUI;
+  Element? excludeNotForUIElement;
+  Boolean? excludePostCoordinated;
+
+  Element? excludePostCoordinatedElement;
+  String? displayLanguage;
+  Element? displayLanguageElement;
+  Boolean? limitedExpansion;
+  Element? limitedExpansionElement;
+}
+
+class ExpansionProfileFixedVersion {
+  String? system;
+  Element? systemElement;
+  String? version;
+  Element? versionElement;
+  ExpansionProfileFixedVersionMode? mode;
+  Element? modeElement;
+}
+
+class ExpansionProfileExcludedSystem {
+  String? system;
+  Element? systemElement;
+  String? version;
+  Element? versionElement;
+}
+
+class ExpansionProfileDesignation {
+  ExpansionProfileInclude? include;
+  ExpansionProfileExclude? exclude;
+}
+
+class ExpansionProfileInclude {
+  List<ExpansionProfileDesignation1>? designation;
+}
+
+class ExpansionProfileDesignation1 {
+  String? language;
+  Element? languageElement;
+  Coding? use;
+}
+
+class ExpansionProfileExclude {
+  List<ExpansionProfileDesignation2>? designation;
+}
+
+class ExpansionProfileDesignation2 {
+  String? language;
+  Element? languageElement;
+  Coding? use;
+}
+
+class NamingSystem {
+  Stu3ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? name;
+  Element? nameElement;
+  NamingSystemStatus? status;
+  Element? statusElement;
+  NamingSystemKind? kind;
+  Element? kindElement;
+  FhirDateTime? date;
+  Element? dateElement;
+  String? publisher;
+  Element? publisherElement;
+  List<ContactDetail>? contact;
+  String? responsible;
+  Element? responsibleElement;
+  CodeableConcept? type;
+  String? description;
+  Element? descriptionElement;
+  List<UsageContext>? useContext;
+  List<CodeableConcept>? jurisdiction;
+  String? usage;
+  Element? usageElement;
+  List<NamingSystemUniqueId> uniqueId;
+  Reference? replacedBy;
+}
+
+class NamingSystemUniqueId {
+  NamingSystemUniqueIdType? type;
+  Element? typeElement;
+  String? value;
+  Element? valueElement;
+  Boolean? preferred;
+  Element? preferredElement;
+  String? comment;
+  Element? commentElement;
+  Period? period;
+}
+
+class ValueSet {
+  Stu3ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? url;
+  Element? urlElement;
+  List<Identifier>? identifier;
+  String? version;
+  Element? versionElement;
+  String? name;
+  Element? nameElement;
+  String? title;
+  Element? titleElement;
+  ValueSetStatus? status;
+  Element? statusElement;
+  Boolean? experimental;
+  Element? experimentalElement;
+  FhirDateTime? date;
+  Element? dateElement;
+  String? publisher;
+  Element? publisherElement;
+  List<ContactDetail>? contact;
+  String? description;
+  Element? descriptionElement;
+  List<UsageContext>? useContext;
+  List<CodeableConcept>? jurisdiction;
+  Boolean? immutable;
+  Element? immutableElement;
+  String? purpose;
+  Element? purposeElement;
+  String? copyright;
+  Element? copyrightElement;
+  Boolean? extensible;
+  Element? extensibleElement;
+  ValueSetCompose? compose;
+  ValueSetExpansion? expansion;
+}
+
+class ValueSetCompose {
+  Date? lockedDate;
+  Element? lockedDateElement;
+  Boolean? inactive;
+  Element? inactiveElement;
+  List<ValueSetInclude> include;
+  List<ValueSetInclude>? exclude;
+}
+
+class ValueSetInclude {
+  List<FhirExtension>? extension_;
+  String? system;
+  Element? systemElement;
+  String? version;
+  Element? versionElement;
+  List<ValueSetConcept>? concept;
+  List<ValueSetFilter>? filter;
+  List<String>? valueSet;
+  List<Element?>? valueSetElement;
+}
+
+class ValueSetConcept {
+  List<FhirExtension>? extension_;
+  Code? code;
+  Element? codeElement;
+  String? display;
+  Element? displayElement;
+  List<ValueSetDesignation>? designation;
+}
+
+class ValueSetDesignation {
+  String? language;
+  Element? languageElement;
+  Coding? use;
+  String? value;
+  Element? valueElement;
+}
+
+class ValueSetFilter {
+  String? property;
+  Element? propertyElement;
+  ValueSetFilterOp? op;
+  Element? opElement;
+  String? value;
+  Element? valueElement;
+}
+
+class ValueSetExpansion {
+  String? identifier;
+  Element? identifierElement;
+  FhirDateTime? timestamp;
+  Element? timestampElement;
+  Decimal? total;
+  Element? totalElement;
+  Decimal? offset;
+  Element? offsetElement;
+  List<ValueSetParameter>? parameter;
+  List<ValueSetContains>? contains;
+}
+
+class ValueSetParameter {
+  String? name;
+  Element? nameElement;
+  String? valueString;
+  Element? valueStringElement;
+  Boolean? valueBoolean;
+  Element? valueBooleanElement;
+  Decimal? valueInteger;
+  Element? valueIntegerElement;
+  Decimal? valueDecimal;
+  Element? valueDecimalElement;
+  String? valueUri;
+  Element? valueUriElement;
+  Code? valueCode;
+  Element? valueCodeElement;
+}
+
+class ValueSetContains {
+  String? system;
+  Element? systemElement;
+  Boolean? abstract_;
+  Element? abstractElement;
+  Boolean? inactive;
+  Element? inactiveElement;
+  String? version;
+  Element? versionElement;
+  Code? code;
+  Element? codeElement;
+  String? display;
+  Element? displayElement;
+  List<ValueSetDesignation>? designation;
+  List<ValueSetContains>? contains;
+}

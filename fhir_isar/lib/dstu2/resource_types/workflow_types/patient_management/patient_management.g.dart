@@ -632,7 +632,7 @@ _$_EpisodeOfCareStatusHistory _$$_EpisodeOfCareStatusHistoryFromJson(
     Map<String, dynamic> json) {
   $checkKeys(
     json,
-    requiredKeys: const ['status'],
+    Keys: const ['status'],
   );
   return _$_EpisodeOfCareStatusHistory(
     id: json['id'] == null ? null : FhirId.fromJson(json['id']),

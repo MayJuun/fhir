@@ -1,192 +1,197 @@
-  factory Encounter({
-    @Default(Dstu2ResourceType.Encounter)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Encounter)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: EncounterStatus.unknown)
-        required EncounterStatus status,
-    @JsonKey(name: '_status') Element? statusElement,
-    List<EncounterStatusHistory>? statusHistory,
-    @JsonKey(unknownEnumValue: EncounterClass.unknown, name: 'class')
-        EncounterClass? class_,
-    @JsonKey(name: '_class') Element? classElement,
-    List<CodeableConcept>? type,
-    CodeableConcept? priority,
-    Reference? patient,
-    List<Reference>? episodeOfCare,
-    List<Reference>? incomingReferral,
-    List<EncounterParticipant>? participant,
-    Reference? appointment,
-    Period? period,
-    Quantity? length,
-    List<CodeableConcept>? reason,
-    List<Reference>? indication,
-    EncounterHospitalization? hospitalization,
-    List<EncounterLocation>? location,
-    Reference? serviceProvider,
-    Reference? partOf,
-  }) = _Encounter;
-  factory EncounterStatusHistory({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: EncounterHistoryStatus.unknown)
-        required EncounterHistoryStatus status,
-    @JsonKey(name: '_status') Element? statusElement,
-    required Period period,
-  }) = _EncounterStatusHistory;
-  factory EncounterParticipant({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<CodeableConcept>? type,
-    Period? period,
-    Reference? individual,
-  }) = _EncounterParticipant;
-  factory EncounterHospitalization({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    List<FhirExtension>? modifierExtension,
-    Identifier? preAdmissionIdentifier,
-    Reference? origin,
-    CodeableConcept? admitSource,
-    List<Reference>? admittingDiagnosis,
-    CodeableConcept? reAdmission,
-    List<CodeableConcept>? dietPreference,
-    List<CodeableConcept>? specialCourtesy,
-    List<CodeableConcept>? specialArrangement,
-    Reference? destination,
-    CodeableConcept? dischargeDisposition,
-    List<Reference>? dischargeDiagnosis,
-  }) = _EncounterHospitalization;
-  factory EncounterLocation({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required Reference location,
-    @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
-        EncounterLocationStatus? status,
-    @JsonKey(name: '_status') Element? statusElement,
-    Period? period,
-  }) = _EncounterLocation;
-  factory EpisodeOfCare({
-    @Default(Dstu2ResourceType.EpisodeOfCare)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.EpisodeOfCare)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
-        required EpisodeOfCareStatus status,
-    @JsonKey(name: '_status') Element? statusElement,
-    List<EpisodeOfCareStatusHistory>? statusHistory,
-    List<CodeableConcept>? type,
-    List<Reference>? condition,
-    required Reference patient,
-    Reference? managingOrganization,
-    Period? period,
-    List<Reference>? referralRequest,
-    Reference? careManager,
-    List<EpisodeOfCareCareTeam>? careTeam,
-  }) = _EpisodeOfCare;
-  factory EpisodeOfCareStatusHistory({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true, unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
-        required EpisodeOfCareHistoryStatus status,
-    @JsonKey(name: '_status') Element? statusElement,
-    required Period period,
-  }) = _EpisodeOfCareStatusHistory;
-  factory EpisodeOfCareCareTeam({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<CodeableConcept>? role,
-    Period? period,
-    Reference? member,
-  }) = _EpisodeOfCareCareTeam;
-  factory Communication({
-    @Default(Dstu2ResourceType.Communication)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Communication)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    CodeableConcept? category,
-    Reference? sender,
-    List<Reference>? recipient,
-    List<CommunicationPayload>? payload,
-    List<CodeableConcept>? medium,
-    @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
-        CommunicationStatus? status,
-    @JsonKey(name: '_status') Element? statusElement,
-    Reference? encounter,
-    FhirDateTime? sent,
-    @JsonKey(name: '_sent') Element? sentElement,
-    FhirDateTime? received,
-    @JsonKey(name: '_received') Element? receivedElement,
-    List<CodeableConcept>? reason,
-    Reference? subject,
-    Reference? requestDetail,
-  }) = _Communication;
-  factory CommunicationPayload({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? contentString,
-    @JsonKey(name: '_contentString') Element? contentStringElement,
-    Attachment? contentAttachment,
-    Reference? contentReference,
-  }) = _CommunicationPayload;
-  factory Flag({
-    @Default(Dstu2ResourceType.Flag)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Flag)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    CodeableConcept? category,
-    @JsonKey(unknownEnumValue: FlagStatus.unknown) required FlagStatus status,
-    @JsonKey(name: '_status') Element? statusElement,
-    Period? period,
-    required Reference subject,
-    Reference? encounter,
-    Reference? author,
-    required CodeableConcept code,
-  }) = _Flag;
+import '../../../../dstu2.dart';
+part 'patient_management.enums.dart';
+
+class Encounter {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+
+  EncounterStatus status;
+  Element? statusElement;
+  List<EncounterStatusHistory>? statusHistory;
+
+  EncounterClass? class_;
+  Element? classElement;
+  List<CodeableConcept>? type;
+  CodeableConcept? priority;
+  Reference? patient;
+  List<Reference>? episodeOfCare;
+  List<Reference>? incomingReferral;
+  List<EncounterParticipant>? participant;
+  Reference? appointment;
+  Period? period;
+  Quantity? length;
+  List<CodeableConcept>? reason;
+  List<Reference>? indication;
+  EncounterHospitalization? hospitalization;
+  List<EncounterLocation>? location;
+  Reference? serviceProvider;
+  Reference? partOf;
+}
+
+class EncounterStatusHistory {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+
+  EncounterHistoryStatus status;
+  Element? statusElement;
+  Period period;
+}
+
+class EncounterParticipant {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<CodeableConcept>? type;
+  Period? period;
+  Reference? individual;
+}
+
+class EncounterHospitalization {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<String>? fhirComments;
+  List<FhirExtension>? modifierExtension;
+  Identifier? preAdmissionIdentifier;
+  Reference? origin;
+  CodeableConcept? admitSource;
+  List<Reference>? admittingDiagnosis;
+  CodeableConcept? reAdmission;
+  List<CodeableConcept>? dietPreference;
+  List<CodeableConcept>? specialCourtesy;
+  List<CodeableConcept>? specialArrangement;
+  Reference? destination;
+  CodeableConcept? dischargeDisposition;
+  List<Reference>? dischargeDiagnosis;
+}
+
+class EncounterLocation {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  Reference location;
+
+  EncounterLocationStatus? status;
+  Element? statusElement;
+  Period? period;
+}
+
+class EpisodeOfCare {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+
+  EpisodeOfCareStatus status;
+  Element? statusElement;
+  List<EpisodeOfCareStatusHistory>? statusHistory;
+  List<CodeableConcept>? type;
+  List<Reference>? condition;
+  Reference patient;
+  Reference? managingOrganization;
+  Period? period;
+  List<Reference>? referralRequest;
+  Reference? careManager;
+  List<EpisodeOfCareCareTeam>? careTeam;
+}
+
+class EpisodeOfCareStatusHistory {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+
+  EpisodeOfCareHistoryStatus status;
+  Element? statusElement;
+  Period period;
+}
+
+class EpisodeOfCareCareTeam {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<CodeableConcept>? role;
+  Period? period;
+  Reference? member;
+}
+
+class Communication {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  CodeableConcept? category;
+  Reference? sender;
+  List<Reference>? recipient;
+  List<CommunicationPayload>? payload;
+  List<CodeableConcept>? medium;
+
+  CommunicationStatus? status;
+  Element? statusElement;
+  Reference? encounter;
+  FhirDateTime? sent;
+  Element? sentElement;
+  FhirDateTime? received;
+  Element? receivedElement;
+  List<CodeableConcept>? reason;
+  Reference? subject;
+  Reference? requestDetail;
+}
+
+class CommunicationPayload {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  String? contentString;
+  Element? contentStringElement;
+  Attachment? contentAttachment;
+  Reference? contentReference;
+}
+
+class Flag {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  CodeableConcept? category;
+  FlagStatus status;
+  Element? statusElement;
+  Period? period;
+  Reference subject;
+  Reference? encounter;
+  Reference? author;
+  CodeableConcept code;
+}

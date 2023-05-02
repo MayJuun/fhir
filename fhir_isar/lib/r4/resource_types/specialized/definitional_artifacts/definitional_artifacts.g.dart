@@ -3243,10 +3243,10 @@ _$_PlanDefinitionAction _$$_PlanDefinitionActionFromJson(
           ? null
           : Element.fromJson(
               json['_selectionBehavior'] as Map<String, dynamic>),
-      requiredBehavior: json['requiredBehavior'] == null
+      Behavior: json['requiredBehavior'] == null
           ? null
           : Code.fromJson(json['requiredBehavior']),
-      requiredBehaviorElement: json['_requiredBehavior'] == null
+      BehaviorElement: json['_requiredBehavior'] == null
           ? null
           : Element.fromJson(json['_requiredBehavior'] as Map<String, dynamic>),
       precheckBehavior: json['precheckBehavior'] == null
@@ -3782,9 +3782,8 @@ _$_QuestionnaireItem _$$_QuestionnaireItemFromJson(Map<String, dynamic> json) =>
       enableBehaviorElement: json['_enableBehavior'] == null
           ? null
           : Element.fromJson(json['_enableBehavior'] as Map<String, dynamic>),
-      required_:
-          json['required'] == null ? null : Boolean.fromJson(json['required']),
-      requiredElement: json['_required'] == null
+      _: json['required'] == null ? null : Boolean.fromJson(json['required']),
+      Element: json['_required'] == null
           ? null
           : Element.fromJson(json['_required'] as Map<String, dynamic>),
       repeats:

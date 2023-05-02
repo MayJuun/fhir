@@ -831,9 +831,8 @@ Map<String, dynamic> _$$_TestScriptLinkToJson(_$_TestScriptLink instance) {
 _$_TestScriptCapability _$$_TestScriptCapabilityFromJson(
         Map<String, dynamic> json) =>
     _$_TestScriptCapability(
-      required_:
-          json['required'] == null ? null : Boolean.fromJson(json['required']),
-      requiredElement: json['_required'] == null
+      _: json['required'] == null ? null : Boolean.fromJson(json['required']),
+      Element: json['_required'] == null
           ? null
           : Element.fromJson(json['_required'] as Map<String, dynamic>),
       validated: json['validated'] == null

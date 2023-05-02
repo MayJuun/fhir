@@ -1,151 +1,154 @@
-  factory Media({
-    @Default(Dstu2ResourceType.Media)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Media)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: MediaType.unknown) required MediaType type,
-    CodeableConcept? subtype,
-    List<Identifier>? identifier,
-    Reference? subject,
-    @JsonKey(name: 'operator') Reference? operator_,
-    CodeableConcept? view,
-    String? deviceName,
-    @JsonKey(name: '_deviceName') Element? deviceNameElement,
-    PositiveInt? height,
-    @JsonKey(name: '_height') Element? heightElement,
-    PositiveInt? width,
-    @JsonKey(name: '_width') Element? widthElement,
-    PositiveInt? frames,
-    @JsonKey(name: '_frames') Element? framesElement,
-    UnsignedInt? duration,
-    @JsonKey(name: '_duration') Element? durationElement,
-    required Attachment content,
-  }) = _Media;
-  factory Binary({
-    @Default(Dstu2ResourceType.Binary)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Binary)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Code? contentType,
-    @JsonKey(name: '_contentType') Element? contentTypeElement,
-    Base64Binary? content,
-  }) = _Binary;
-  factory Bundle({
-    @Default(Dstu2ResourceType.Bundle)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Bundle)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    @JsonKey(unknownEnumValue: BundleType.unknown) required BundleType type,
-    @JsonKey(name: '_type') Element? typeElement,
-    UnsignedInt? total,
-    @JsonKey(name: '_total') Element? totalElement,
-    List<BundleLink>? link,
-    List<BundleEntry>? entry,
-    Signature? signature,
-  }) = _Bundle;
-  factory BundleLink({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    required String relation,
-    @JsonKey(name: '_relation') Element? relationElement,
-    required FhirUri url,
-    @JsonKey(name: '_url') Element? urlElement,
-  }) = _BundleLink;
-  factory BundleEntry({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    List<BundleLink>? link,
-    FhirUri? fullUrl,
-    @JsonKey(name: '_fullUrl') Element? fullUrlElement,
-    Resource? resource,
-    BundleEntrySearch? search,
-    BundleEntryRequest? request,
-    BundleEntryResponse? response,
-  }) = _BundleEntry;
-  factory BundleEntrySearch({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    @JsonKey(unknownEnumValue: SearchMode.unknown) SearchMode? mode,
-    @JsonKey(name: '_mode') Element? modeElement,
-    Decimal? score,
-    @JsonKey(name: '_score') Element? scoreElement,
-  }) = _BundleEntrySearch;
-  factory BundleEntryRequest({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    @JsonKey(unknownEnumValue: RequestMethod.unknown)
-        required RequestMethod method,
-    @JsonKey(name: '_method') Element? methodElement,
-    required FhirUri url,
-    @JsonKey(name: '_url') Element? urlElement,
-    String? ifNoneMatch,
-    @JsonKey(name: '_ifNoneMatch') Element? ifNoneMatchElement,
-    Instant? ifModifiedSince,
-    @JsonKey(name: '_ifModifiedSince') Element? ifModifiedSinceElement,
-    String? ifMatch,
-    @JsonKey(name: '_ifMatch') Element? ifMatchElement,
-    String? ifNoneExist,
-    @JsonKey(name: '_ifNoneExist') Element? ifNoneExistElement,
-  }) = _BundleEntryRequest;
-  factory BundleEntryResponse({
-    FhirId? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
-    required String status,
-    @JsonKey(name: '_status') Element? statusElement,
-    FhirUri? location,
-    @JsonKey(name: '_location') Element? locationElement,
-    String? etag,
-    @JsonKey(name: '_etag') Element? etagElement,
-    Instant? lastModified,
-    @JsonKey(name: '_lastModified') Element? lastModifiedElement,
-  }) = _BundleEntryResponse;
-  factory Basic({
-    @Default(Dstu2ResourceType.Basic)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Basic)
-        Dstu2ResourceType resourceType,
-    FhirId? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    required CodeableConcept code,
-    Reference? subject,
-    Reference? author,
-    Date? created,
-    @JsonKey(name: '_created') Element? createdElement,
-  }) = _Basic;
+import '../../../../dstu2.dart';
+part 'structure.enums.dart';
+
+class Media {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  MediaType type;
+  CodeableConcept? subtype;
+  List<Identifier>? identifier;
+  Reference? subject;
+  Reference? operator_;
+  CodeableConcept? view;
+  String? deviceName;
+  Element? deviceNameElement;
+  PositiveInt? height;
+  Element? heightElement;
+  PositiveInt? width;
+  Element? widthElement;
+  PositiveInt? frames;
+  Element? framesElement;
+  UnsignedInt? duration;
+  Element? durationElement;
+  Attachment content;
+}
+
+class Binary {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Code? contentType;
+  Element? contentTypeElement;
+  Base64Binary? content;
+}
+
+class Bundle {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  BundleType type;
+  Element? typeElement;
+  UnsignedInt? total;
+  Element? totalElement;
+  List<BundleLink>? link;
+  List<BundleEntry>? entry;
+  Signature? signature;
+}
+
+class BundleLink {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<String>? fhirComments;
+  String relation;
+  Element? relationElement;
+  FhirUri url;
+  Element? urlElement;
+}
+
+class BundleEntry {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<String>? fhirComments;
+  List<BundleLink>? link;
+  FhirUri? fullUrl;
+  Element? fullUrlElement;
+  Resource? resource;
+  BundleEntrySearch? search;
+  BundleEntryRequest? request;
+  BundleEntryResponse? response;
+}
+
+class BundleEntrySearch {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<String>? fhirComments;
+  SearchMode? mode;
+  Element? modeElement;
+  Decimal? score;
+  Element? scoreElement;
+}
+
+class BundleEntryRequest {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<String>? fhirComments;
+
+  RequestMethod method;
+  Element? methodElement;
+  FhirUri url;
+  Element? urlElement;
+  String? ifNoneMatch;
+  Element? ifNoneMatchElement;
+  Instant? ifModifiedSince;
+  Element? ifModifiedSinceElement;
+  String? ifMatch;
+  Element? ifMatchElement;
+  String? ifNoneExist;
+  Element? ifNoneExistElement;
+}
+
+class BundleEntryResponse {
+  FhirId? id;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<String>? fhirComments;
+  String status;
+  Element? statusElement;
+  FhirUri? location;
+  Element? locationElement;
+  String? etag;
+  Element? etagElement;
+  Instant? lastModified;
+  Element? lastModifiedElement;
+}
+
+class Basic {
+  Dstu2ResourceType resourceType;
+  FhirId? id;
+  Meta? meta;
+  FhirUri? implicitRules;
+  Element? implicitRulesElement;
+  Code? language;
+  Element? languageElement;
+  Narrative? text;
+  List<Resource>? contained;
+  List<FhirExtension>? extension_;
+  List<FhirExtension>? modifierExtension;
+  List<Identifier>? identifier;
+  CodeableConcept code;
+  Reference? subject;
+  Reference? author;
+  Date? created;
+  Element? createdElement;
+}
