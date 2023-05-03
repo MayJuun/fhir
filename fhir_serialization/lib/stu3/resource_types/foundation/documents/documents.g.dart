@@ -7,8 +7,9 @@ part of 'documents.dart';
 // **************************************************************************
 
 Composition _$CompositionFromJson(Map<String, dynamic> json) => Composition(
-      resourceType:
-          $enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
+          Stu3ResourceType.Composition,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -88,9 +89,7 @@ Composition _$CompositionFromJson(Map<String, dynamic> json) => Composition(
     );
 
 Map<String, dynamic> _$CompositionToJson(Composition instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -99,6 +98,8 @@ Map<String, dynamic> _$CompositionToJson(Composition instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -424,8 +425,9 @@ Map<String, dynamic> _$CompositionSectionToJson(CompositionSection instance) {
 
 DocumentManifest _$DocumentManifestFromJson(Map<String, dynamic> json) =>
     DocumentManifest(
-      resourceType:
-          $enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
+          Stu3ResourceType.DocumentManifest,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -502,9 +504,7 @@ DocumentManifest _$DocumentManifestFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$DocumentManifestToJson(DocumentManifest instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -513,6 +513,8 @@ Map<String, dynamic> _$DocumentManifestToJson(DocumentManifest instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -607,8 +609,9 @@ Map<String, dynamic> _$DocumentManifestRelatedToJson(
 
 DocumentReference _$DocumentReferenceFromJson(Map<String, dynamic> json) =>
     DocumentReference(
-      resourceType:
-          $enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
+          Stu3ResourceType.DocumentReference,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -700,9 +703,7 @@ DocumentReference _$DocumentReferenceFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$DocumentReferenceToJson(DocumentReference instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -711,6 +712,8 @@ Map<String, dynamic> _$DocumentReferenceToJson(DocumentReference instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());

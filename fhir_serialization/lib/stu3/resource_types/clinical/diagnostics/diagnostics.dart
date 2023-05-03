@@ -8,19 +8,19 @@ part 'diagnostics.enums.dart';
 part 'diagnostics.g.dart';
 
 @JsonSerializable()
-class BodySite {
+class BodySite extends Resource {
   const BodySite({
-    @Default(Stu3ResourceType.BodySite) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Stu3ResourceType.BodySite,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.active,
     @JsonKey(name: '_active') required this.activeElement,
@@ -31,17 +31,6 @@ class BodySite {
     required this.image,
     required this.patient,
   });
-  final Stu3ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;
   final Boolean? active;
   final Element? activeElement;
@@ -57,19 +46,19 @@ class BodySite {
 }
 
 @JsonSerializable()
-class DiagnosticReport {
+class DiagnosticReport extends Resource {
   const DiagnosticReport({
-    @Default(Stu3ResourceType.DiagnosticReport) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Stu3ResourceType.DiagnosticReport,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.basedOn,
     required this.status,
@@ -93,17 +82,6 @@ class DiagnosticReport {
     required this.codedDiagnosis,
     required this.presentedForm,
   });
-  final Stu3ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;
   final List<Reference>? basedOn;
   final DiagnosticReportStatus? status;
@@ -160,19 +138,19 @@ class DiagnosticReportImage {
 }
 
 @JsonSerializable()
-class ImagingManifest {
+class ImagingManifest extends Resource {
   const ImagingManifest({
-    @Default(Stu3ResourceType.ImagingManifest) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Stu3ResourceType.ImagingManifest,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.patient,
     required this.authoringTime,
@@ -182,17 +160,6 @@ class ImagingManifest {
     @JsonKey(name: '_description') required this.descriptionElement,
     required this.study,
   });
-  final Stu3ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final Identifier? identifier;
   final Reference patient;
   final Time? authoringTime;
@@ -260,19 +227,19 @@ class ImagingManifestInstance {
 }
 
 @JsonSerializable()
-class ImagingStudy {
+class ImagingStudy extends Resource {
   const ImagingStudy({
-    @Default(Stu3ResourceType.ImagingStudy) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Stu3ResourceType.ImagingStudy,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.uid,
     @JsonKey(name: '_uid') required this.uidElement,
     required this.accession,
@@ -299,17 +266,6 @@ class ImagingStudy {
     @JsonKey(name: '_description') required this.descriptionElement,
     required this.series,
   });
-  final Stu3ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final Id? uid;
   final Element? uidElement;
   final Identifier? accession;
@@ -411,19 +367,19 @@ class ImagingStudyInstance {
 }
 
 @JsonSerializable()
-class Observation {
+class Observation extends Resource {
   const Observation({
-    @Default(Stu3ResourceType.Observation) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Stu3ResourceType.Observation,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.basedOn,
     required this.status,
@@ -465,17 +421,6 @@ class Observation {
     required this.related,
     required this.component,
   });
-  final Stu3ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;
   final List<Reference>? basedOn;
   final ObservationStatus? status;
@@ -603,19 +548,19 @@ class ObservationComponent {
 }
 
 @JsonSerializable()
-class QuestionnaireResponse {
+class QuestionnaireResponse extends Resource {
   const QuestionnaireResponse({
-    @Default(Stu3ResourceType.QuestionnaireResponse) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Stu3ResourceType.QuestionnaireResponse,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.basedOn,
     required this.parent,
@@ -630,17 +575,6 @@ class QuestionnaireResponse {
     required this.source,
     required this.item,
   });
-  final Stu3ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final Identifier? identifier;
   final List<Reference>? basedOn;
   final List<Reference>? parent;
@@ -738,19 +672,19 @@ class QuestionnaireResponseAnswer {
 }
 
 @JsonSerializable()
-class Sequence {
+class Sequence extends Resource {
   const Sequence({
-    @Default(Stu3ResourceType.Sequence) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Stu3ResourceType.Sequence,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.type,
     @JsonKey(name: '_type') required this.typeElement,
@@ -771,17 +705,6 @@ class Sequence {
     required this.repository,
     required this.pointer,
   });
-  final Stu3ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;
   final SequenceType? type;
   final Element? typeElement;
@@ -966,19 +889,19 @@ class SequenceRepository {
 }
 
 @JsonSerializable()
-class Specimen {
+class Specimen extends Resource {
   const Specimen({
-    @Default(Stu3ResourceType.Specimen) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Stu3ResourceType.Specimen,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.accessionIdentifier,
     required this.status,
@@ -994,17 +917,6 @@ class Specimen {
     required this.container,
     required this.note,
   });
-  final Stu3ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;
   final Identifier? accessionIdentifier;
   final SpecimenStatus? status;

@@ -8,42 +8,31 @@ part 'groups.enums.dart';
 part 'groups.g.dart';
 
 @JsonSerializable()
-class Organization {
+class Organization extends Resource {
   const Organization({
-    @Default(Dstu2ResourceType.Organization) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.identifier,
-    required this.active,
-    @JsonKey(name: '_active') required this.activeElement,
-    required this.type,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.telecom,
-    required this.address,
-    required this.partOf,
-    required this.contact,
-// @JsonKey(name: '_alias')required  this.aliasElement,
+    super.resourceType = Dstu2ResourceType.Organization,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.identifier,
+    this.active,
+    @JsonKey(name: '_active') this.activeElement,
+    this.type,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.telecom,
+    this.address,
+    this.partOf,
+    this.contact,
+    @JsonKey(name: '_alias') this.aliasElement,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;
   final Boolean? active;
   final Element? activeElement;
@@ -63,14 +52,14 @@ class Organization {
 @JsonSerializable()
 class OrganizationContact {
   const OrganizationContact({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'fhir_comments') required this.fhirComments,
-    required this.purpose,
-    required this.name,
-    required this.telecom,
-    required this.address,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'fhir_comments') this.fhirComments,
+    this.purpose,
+    this.name,
+    this.telecom,
+    this.address,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -86,59 +75,47 @@ class OrganizationContact {
 }
 
 @JsonSerializable()
-class HealthcareService {
+class HealthcareService extends Resource {
   const HealthcareService({
-    @Default(Dstu2ResourceType.HealthcareService) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.identifier,
-    required this.providedBy,
-    required this.serviceCategory,
-    required this.serviceType,
+    super.resourceType = Dstu2ResourceType.HealthcareService,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.identifier,
+    this.providedBy,
+    this.serviceCategory,
+    this.serviceType,
     required this.location,
-    required this.serviceName,
-    required this.comment,
-    @JsonKey(name: '_comment') required this.commentElement,
-    required this.extraDetails,
-    @JsonKey(name: '_extraDetails') required this.extraDetailsElement,
-    required this.photo,
-    required this.telecom,
-    required this.coverageArea,
-    required this.serviceProvisionCode,
-    required this.eligibility,
-    required this.eligibilityNote,
-    required this.programName,
-    required this.characteristic,
-    required this.referralMethod,
-    required this.publicKey,
-    required this.appointmentRequired,
-    @JsonKey(name: '_appointmentRequired')
-        required this.appointmentRequiredElement,
-    required this.availableTime,
-    required this.notAvailable,
-    required this.availabilityExceptions,
+    this.serviceName,
+    this.comment,
+    @JsonKey(name: '_comment') this.commentElement,
+    this.extraDetails,
+    @JsonKey(name: '_extraDetails') this.extraDetailsElement,
+    this.photo,
+    this.telecom,
+    this.coverageArea,
+    this.serviceProvisionCode,
+    this.eligibility,
+    this.eligibilityNote,
+    this.programName,
+    this.characteristic,
+    this.referralMethod,
+    this.publicKey,
+    this.appointment,
+    @JsonKey(name: '_appointment') this.appointmentElement,
+    this.availableTime,
+    this.notAvailable,
+    this.availabilityExceptions,
     @JsonKey(name: '__availabilityExceptions')
-        required this.availabilityExceptionsElement,
+        this.availabilityExceptionsElement,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;
   final Reference? providedBy;
   final CodeableConcept? serviceCategory;
@@ -159,8 +136,8 @@ class HealthcareService {
   final List<CodeableConcept>? characteristic;
   final List<CodeableConcept>? referralMethod;
   final String? publicKey;
-  final Boolean? appointmentRequired;
-  final Element? appointmentRequiredElement;
+  final Boolean? appointment;
+  final Element? appointmentElement;
   final List<HealthcareServiceAvailableTime>? availableTime;
   final List<HealthcareServiceNotAvailable>? notAvailable;
   final String? availabilityExceptions;
@@ -174,11 +151,11 @@ class HealthcareService {
 @JsonSerializable()
 class HealthcareServiceServiceType {
   const HealthcareServiceServiceType({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.type,
-    required this.specialty,
+    this.specialty,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -193,18 +170,17 @@ class HealthcareServiceServiceType {
 @JsonSerializable()
 class HealthcareServiceAvailableTime {
   const HealthcareServiceAvailableTime({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.daysOfWeek,
-    @JsonKey(name: '_daysOfWeek') required this.daysOfWeekElement,
-    required this.allDay,
-    @JsonKey(name: '_allDay') required this.allDayElement,
-    required this.availableStartTime,
-    @JsonKey(name: '_availableStartTime')
-        required this.availableStartTimeElement,
-    required this.availableEndTime,
-    @JsonKey(name: '_availableEndTime') required this.availableEndTimeElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.daysOfWeek,
+    @JsonKey(name: '_daysOfWeek') this.daysOfWeekElement,
+    this.allDay,
+    @JsonKey(name: '_allDay') this.allDayElement,
+    this.availableStartTime,
+    @JsonKey(name: '_availableStartTime') this.availableStartTimeElement,
+    this.availableEndTime,
+    @JsonKey(name: '_availableEndTime') this.availableEndTimeElement,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -225,12 +201,12 @@ class HealthcareServiceAvailableTime {
 @JsonSerializable()
 class HealthcareServiceNotAvailable {
   const HealthcareServiceNotAvailable({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.during,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.during,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -244,45 +220,34 @@ class HealthcareServiceNotAvailable {
 }
 
 @JsonSerializable()
-class Group {
+class Group extends Resource {
   const Group({
-    @Default(Dstu2ResourceType.Group) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.identifier,
-    @JsonKey(unknownEnumValue: GroupType.unknown) required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
+    super.resourceType = Dstu2ResourceType.Group,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.identifier,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
     required this.actual,
-    @JsonKey(name: '_actual') required this.actualElement,
-    required this.code,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.quantity,
-    @JsonKey(name: '_quantity') required this.quantityElement,
-    required this.characteristic,
-    required this.member,
+    @JsonKey(name: '_actual') this.actualElement,
+    this.code,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.quantity,
+    @JsonKey(name: '_quantity') this.quantityElement,
+    this.characteristic,
+    this.member,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;
-  final GroupType type;
+  final GroupType? type;
   final Element? typeElement;
   final Boolean actual;
   final Element? actualElement;
@@ -300,17 +265,17 @@ class Group {
 @JsonSerializable()
 class GroupCharacteristic {
   const GroupCharacteristic({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.code,
-    required this.valueCodeableConcept,
-    required this.valueBoolean,
-    @JsonKey(name: '_valueBoolean') required this.valueBooleanElement,
-    required this.valueQuantity,
-    required this.valueRange,
+    this.valueCodeableConcept,
+    this.valueBoolean,
+    @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+    this.valueQuantity,
+    this.valueRange,
     required this.exclude,
-    required this.period,
+    this.period,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -331,13 +296,13 @@ class GroupCharacteristic {
 @JsonSerializable()
 class GroupMember {
   const GroupMember({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.entity,
-    required this.period,
-    required this.inactive,
-    @JsonKey(name: '_inactive') required this.inactiveElement,
+    this.period,
+    this.inactive,
+    @JsonKey(name: '_inactive') this.inactiveElement,
   });
   final Id? id;
   final List<FhirExtension>? extension_;

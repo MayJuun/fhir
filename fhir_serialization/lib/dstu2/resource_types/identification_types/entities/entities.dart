@@ -8,27 +8,27 @@ part 'entities.enums.dart';
 part 'entities.g.dart';
 
 @JsonSerializable()
-class Location {
+class Location extends Resource {
   const Location({
-    @Default(Dstu2ResourceType.Location) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.Location,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
-    @JsonKey(unknownEnumValue: LocationStatus.unknown) required this.status,
+    required this.status,
     @JsonKey(name: '_status') required this.statusElement,
     required this.name,
     @JsonKey(name: '_name') required this.nameElement,
     required this.description,
     @JsonKey(name: '_description') required this.descriptionElement,
-    @JsonKey(unknownEnumValue: LocationMode.unknown) required this.mode,
+    required this.mode,
     @JsonKey(name: '_mode') required this.modeElement,
     required this.type,
     required this.telecom,
@@ -38,17 +38,6 @@ class Location {
     required this.managingOrganization,
     required this.partOf,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;
   final LocationStatus? status;
   final Element? statusElement;
@@ -98,19 +87,19 @@ class LocationPosition {
 }
 
 @JsonSerializable()
-class Substance {
+class Substance extends Resource {
   const Substance({
-    @Default(Dstu2ResourceType.Substance) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.Substance,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.category,
     required this.code,
@@ -119,17 +108,6 @@ class Substance {
     required this.instance,
     required this.ingredient,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;
   final List<CodeableConcept>? category;
   final CodeableConcept code;
@@ -185,23 +163,23 @@ class SubstanceIngredient {
 }
 
 @JsonSerializable()
-class Person {
+class Person extends Resource {
   const Person({
-    @Default(Dstu2ResourceType.Person) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.Person,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.name,
     required this.telecom,
-    @JsonKey(unknownEnumValue: PersonGender.unknown) required this.gender,
+    required this.gender,
     @JsonKey(name: '_gender') required this.genderElement,
     required this.birthDate,
     @JsonKey(name: '_birthDate') required this.birthDateElement,
@@ -212,17 +190,6 @@ class Person {
     @JsonKey(name: '_active') required this.activeElement,
     required this.link,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;
   final List<HumanName>? name;
   final List<ContactPoint>? telecom;
@@ -247,7 +214,7 @@ class PersonLink {
     @JsonKey(name: 'extension') required this.extension_,
     required this.modifierExtension,
     required this.target,
-    @JsonKey(unknownEnumValue: LinkAssurance.unknown) required this.assurance,
+    required this.assurance,
     @JsonKey(name: '_assurance') required this.assuranceElement,
   });
   final Id? id;
@@ -262,19 +229,19 @@ class PersonLink {
 }
 
 @JsonSerializable()
-class Contract {
+class Contract extends Resource {
   const Contract({
-    @Default(Dstu2ResourceType.Contract) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.Contract,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.issued,
     @JsonKey(name: '_issued') required this.issuedElement,
@@ -296,17 +263,6 @@ class Contract {
     required this.legal,
     required this.rule,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final Identifier? identifier;
   final FhirDateTime? issued;
   final Element? issuedElement;

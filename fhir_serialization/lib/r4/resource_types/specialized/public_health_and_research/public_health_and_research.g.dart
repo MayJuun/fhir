@@ -8,7 +8,9 @@ part of 'public_health_and_research.dart';
 
 ResearchStudy _$ResearchStudyFromJson(Map<String, dynamic> json) =>
     ResearchStudy(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.ResearchStudy,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -413,7 +415,9 @@ Map<String, dynamic> _$ResearchStudyObjectiveToJson(
 
 ResearchSubject _$ResearchSubjectFromJson(Map<String, dynamic> json) =>
     ResearchSubject(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.ResearchSubject,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null

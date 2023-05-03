@@ -8,7 +8,9 @@ part of 'evidence_based_medicine.dart';
 
 ArtifactAssessment _$ArtifactAssessmentFromJson(Map<String, dynamic> json) =>
     ArtifactAssessment(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.ArtifactAssessment,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -113,9 +115,7 @@ ArtifactAssessment _$ArtifactAssessmentFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$ArtifactAssessmentToJson(ArtifactAssessment instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -136,6 +136,7 @@ Map<String, dynamic> _$ArtifactAssessmentToJson(ArtifactAssessment instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('citeAsReference', instance.citeAsReference?.toJson());
@@ -414,7 +415,9 @@ Map<String, dynamic> _$ArtifactAssessmentContentToJson(
 }
 
 Citation _$CitationFromJson(Map<String, dynamic> json) => Citation(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.Citation,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -581,9 +584,7 @@ Citation _$CitationFromJson(Map<String, dynamic> json) => Citation(
     );
 
 Map<String, dynamic> _$CitationToJson(Citation instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -604,6 +605,7 @@ Map<String, dynamic> _$CitationToJson(Citation instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('urlElement', instance.urlElement?.toJson());
   writeNotNull(
@@ -1675,7 +1677,9 @@ Map<String, dynamic> _$CitationSummary1ToJson(CitationSummary1 instance) {
 }
 
 Evidence _$EvidenceFromJson(Map<String, dynamic> json) => Evidence(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.Evidence,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1858,9 +1862,7 @@ Evidence _$EvidenceFromJson(Map<String, dynamic> json) => Evidence(
     );
 
 Map<String, dynamic> _$EvidenceToJson(Evidence instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1881,6 +1883,7 @@ Map<String, dynamic> _$EvidenceToJson(Evidence instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('urlElement', instance.urlElement?.toJson());
   writeNotNull(
@@ -2391,7 +2394,9 @@ Map<String, dynamic> _$EvidenceCertaintyToJson(EvidenceCertainty instance) {
 
 EvidenceReport _$EvidenceReportFromJson(Map<String, dynamic> json) =>
     EvidenceReport(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.EvidenceReport,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -2567,9 +2572,7 @@ EvidenceReport _$EvidenceReportFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$EvidenceReportToJson(EvidenceReport instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -2590,6 +2593,7 @@ Map<String, dynamic> _$EvidenceReportToJson(EvidenceReport instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('urlElement', instance.urlElement?.toJson());
   writeNotNull(
@@ -2943,7 +2947,9 @@ Map<String, dynamic> _$EvidenceReportSectionToJson(
 
 EvidenceVariable _$EvidenceVariableFromJson(Map<String, dynamic> json) =>
     EvidenceVariable(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.EvidenceVariable,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -3118,9 +3124,7 @@ EvidenceVariable _$EvidenceVariableFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$EvidenceVariableToJson(EvidenceVariable instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -3141,6 +3145,7 @@ Map<String, dynamic> _$EvidenceVariableToJson(EvidenceVariable instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('urlElement', instance.urlElement?.toJson());
   writeNotNull(

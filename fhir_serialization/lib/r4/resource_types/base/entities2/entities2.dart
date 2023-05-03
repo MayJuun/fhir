@@ -6,20 +6,20 @@ import '../../../../r4.dart';
 part 'entities2.g.dart';
 
 @JsonSerializable()
-class BiologicallyDerivedProduct {
+class BiologicallyDerivedProduct extends Resource {
   const BiologicallyDerivedProduct({
     @Default(R4ResourceType.BiologicallyDerivedProduct)
         required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.productCategory,
     @JsonKey(name: '_productCategory') required this.productCategoryElement,
@@ -35,17 +35,7 @@ class BiologicallyDerivedProduct {
     required this.manipulation,
     required this.storage,
   });
-  final R4ResourceType resourceType;
-  final String? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final List<Identifier>? identifier;
   final Code? productCategory;
   final Element? productCategoryElement;
@@ -221,19 +211,19 @@ class DeviceProperty {
 }
 
 @JsonSerializable()
-class DeviceMetric {
+class DeviceMetric extends Resource {
   const DeviceMetric({
-    @Default(R4ResourceType.DeviceMetric) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R4ResourceType.DeviceMetric,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.type,
     required this.unit,
@@ -248,17 +238,7 @@ class DeviceMetric {
     required this.measurementPeriod,
     required this.calibration,
   });
-  final R4ResourceType resourceType;
-  final String? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final List<Identifier>? identifier;
   final CodeableConcept type;
   final CodeableConcept? unit;
@@ -305,19 +285,19 @@ class DeviceMetricCalibration {
 }
 
 @JsonSerializable()
-class NutritionProduct {
+class NutritionProduct extends Resource {
   const NutritionProduct({
-    @Default(R4ResourceType.NutritionProduct) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R4ResourceType.NutritionProduct,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.status,
     @JsonKey(name: '_status') required this.statusElement,
     required this.category,
@@ -330,17 +310,7 @@ class NutritionProduct {
     required this.instance,
     required this.note,
   });
-  final R4ResourceType resourceType;
-  final String? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final Code? status;
   final Element? statusElement;
   final List<CodeableConcept>? category;
@@ -468,19 +438,19 @@ class NutritionProductInstance {
 }
 
 @JsonSerializable()
-class Substance {
+class Substance extends Resource {
   const Substance({
-    @Default(R4ResourceType.Substance) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R4ResourceType.Substance,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.status,
     @JsonKey(name: '_status') required this.statusElement,
@@ -491,17 +461,7 @@ class Substance {
     required this.instance,
     required this.ingredient,
   });
-  final R4ResourceType resourceType;
-  final String? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final List<Identifier>? identifier;
   final Code? status;
   final Element? statusElement;

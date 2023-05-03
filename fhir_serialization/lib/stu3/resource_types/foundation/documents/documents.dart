@@ -8,19 +8,19 @@ part 'documents.enums.dart';
 part 'documents.g.dart';
 
 @JsonSerializable()
-class Composition {
+class Composition extends Resource {
   const Composition({
-    @Default(Stu3ResourceType.Composition) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Stu3ResourceType.Composition,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.status,
     @JsonKey(name: '_status') required this.statusElement,
@@ -41,17 +41,6 @@ class Composition {
     required this.event,
     required this.section,
   });
-  final Stu3ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final Identifier? identifier;
   final CompositionStatus? status;
   final Element? statusElement;
@@ -157,19 +146,19 @@ class CompositionSection {
 }
 
 @JsonSerializable()
-class DocumentManifest {
+class DocumentManifest extends Resource {
   const DocumentManifest({
-    @Default(Stu3ResourceType.DocumentManifest) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Stu3ResourceType.DocumentManifest,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.masterIdentifier,
     required this.identifier,
     required this.status,
@@ -187,17 +176,6 @@ class DocumentManifest {
     required this.content,
     required this.related,
   });
-  final Stu3ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final Identifier? masterIdentifier;
   final List<Identifier>? identifier;
   final DocumentManifestStatus? status;
@@ -246,19 +224,19 @@ class DocumentManifestRelated {
 }
 
 @JsonSerializable()
-class DocumentReference {
+class DocumentReference extends Resource {
   const DocumentReference({
-    @Default(Stu3ResourceType.DocumentReference) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Stu3ResourceType.DocumentReference,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.masterIdentifier,
     required this.identifier,
     required this.status,
@@ -282,17 +260,6 @@ class DocumentReference {
     required this.content,
     required this.context,
   });
-  final Stu3ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final Identifier? masterIdentifier;
   final List<Identifier>? identifier;
   final DocumentReferenceStatus? status;

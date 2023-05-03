@@ -7,8 +7,9 @@ part of 'workflow.dart';
 // **************************************************************************
 
 Appointment _$AppointmentFromJson(Map<String, dynamic> json) => Appointment(
-      resourceType:
-          $enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
+          Stu3ResourceType.Appointment,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -116,9 +117,7 @@ Appointment _$AppointmentFromJson(Map<String, dynamic> json) => Appointment(
     );
 
 Map<String, dynamic> _$AppointmentToJson(Appointment instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -127,6 +126,8 @@ Map<String, dynamic> _$AppointmentToJson(Appointment instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -369,8 +370,9 @@ const _$AppointmentParticipantStatusEnumMap = {
 
 AppointmentResponse _$AppointmentResponseFromJson(Map<String, dynamic> json) =>
     AppointmentResponse(
-      resourceType:
-          $enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
+          Stu3ResourceType.AppointmentResponse,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -430,9 +432,7 @@ AppointmentResponse _$AppointmentResponseFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$AppointmentResponseToJson(AppointmentResponse instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -441,6 +441,8 @@ Map<String, dynamic> _$AppointmentResponseToJson(AppointmentResponse instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -473,8 +475,9 @@ Map<String, dynamic> _$AppointmentResponseToJson(AppointmentResponse instance) {
 
 ProcessRequest _$ProcessRequestFromJson(Map<String, dynamic> json) =>
     ProcessRequest(
-      resourceType:
-          $enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
+          Stu3ResourceType.ProcessRequest,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -564,9 +567,7 @@ ProcessRequest _$ProcessRequestFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$ProcessRequestToJson(ProcessRequest instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -575,6 +576,8 @@ Map<String, dynamic> _$ProcessRequestToJson(ProcessRequest instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -651,8 +654,9 @@ Map<String, dynamic> _$ProcessRequestItemToJson(ProcessRequestItem instance) {
 
 ProcessResponse _$ProcessResponseFromJson(Map<String, dynamic> json) =>
     ProcessResponse(
-      resourceType:
-          $enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
+          Stu3ResourceType.ProcessResponse,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -729,9 +733,7 @@ ProcessResponse _$ProcessResponseFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$ProcessResponseToJson(ProcessResponse instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -740,6 +742,8 @@ Map<String, dynamic> _$ProcessResponseToJson(ProcessResponse instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -803,8 +807,9 @@ Map<String, dynamic> _$ProcessResponseProcessNoteToJson(
 }
 
 RequestGroup _$RequestGroupFromJson(Map<String, dynamic> json) => RequestGroup(
-      resourceType:
-          $enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
+          Stu3ResourceType.RequestGroup,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -890,9 +895,7 @@ RequestGroup _$RequestGroupFromJson(Map<String, dynamic> json) => RequestGroup(
     );
 
 Map<String, dynamic> _$RequestGroupToJson(RequestGroup instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -901,6 +904,8 @@ Map<String, dynamic> _$RequestGroupToJson(RequestGroup instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -1171,8 +1176,9 @@ Map<String, dynamic> _$RequestGroupRelatedActionToJson(
 }
 
 Schedule _$ScheduleFromJson(Map<String, dynamic> json) => Schedule(
-      resourceType:
-          $enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
+          Stu3ResourceType.Schedule,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1231,9 +1237,7 @@ Schedule _$ScheduleFromJson(Map<String, dynamic> json) => Schedule(
     );
 
 Map<String, dynamic> _$ScheduleToJson(Schedule instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1242,6 +1246,8 @@ Map<String, dynamic> _$ScheduleToJson(Schedule instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -1271,8 +1277,9 @@ Map<String, dynamic> _$ScheduleToJson(Schedule instance) {
 }
 
 Slot _$SlotFromJson(Map<String, dynamic> json) => Slot(
-      resourceType:
-          $enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
+          Stu3ResourceType.Slot,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1344,9 +1351,7 @@ Slot _$SlotFromJson(Map<String, dynamic> json) => Slot(
     );
 
 Map<String, dynamic> _$SlotToJson(Slot instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1355,6 +1360,8 @@ Map<String, dynamic> _$SlotToJson(Slot instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -1399,8 +1406,9 @@ const _$SlotStatusEnumMap = {
 };
 
 Task _$TaskFromJson(Map<String, dynamic> json) => Task(
-      resourceType:
-          $enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
+          Stu3ResourceType.Task,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1531,9 +1539,7 @@ Task _$TaskFromJson(Map<String, dynamic> json) => Task(
     );
 
 Map<String, dynamic> _$TaskToJson(Task instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1542,6 +1548,8 @@ Map<String, dynamic> _$TaskToJson(Task instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());

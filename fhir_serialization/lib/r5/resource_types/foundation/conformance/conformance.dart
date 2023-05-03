@@ -6,19 +6,19 @@ import '../../../../r5.dart';
 part 'conformance.g.dart';
 
 @JsonSerializable()
-class CapabilityStatement {
+class CapabilityStatement extends Resource {
   const CapabilityStatement({
-    @Default(R5ResourceType.CapabilityStatement) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R5ResourceType.CapabilityStatement,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.url,
     @JsonKey(name: '_url') required this.urlElement,
     required this.identifier,
@@ -71,16 +71,7 @@ class CapabilityStatement {
     required this.document,
   });
   final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final FhirUri? url;
   final Element? urlElement;
   final List<Identifier>? identifier;
@@ -525,19 +516,19 @@ class CapabilityStatementDocument {
 }
 
 @JsonSerializable()
-class CompartmentDefinition {
+class CompartmentDefinition extends Resource {
   const CompartmentDefinition({
-    @Default(R5ResourceType.CompartmentDefinition) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R5ResourceType.CompartmentDefinition,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.url,
     @JsonKey(name: '_url') required this.urlElement,
     required this.identifier,
@@ -577,16 +568,7 @@ class CompartmentDefinition {
     required this.resource,
   });
   final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final FhirUri? url;
   final Element? urlElement;
   final List<Identifier>? identifier;
@@ -665,19 +647,19 @@ class CompartmentDefinitionResource {
 }
 
 @JsonSerializable()
-class GraphDefinition {
+class GraphDefinition extends Resource {
   const GraphDefinition({
-    @Default(R5ResourceType.GraphDefinition) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R5ResourceType.GraphDefinition,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.url,
     @JsonKey(name: '_url') required this.urlElement,
     required this.identifier,
@@ -716,16 +698,7 @@ class GraphDefinition {
     required this.link,
   });
   final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final FhirUri? url;
   final Element? urlElement;
   final List<Identifier>? identifier;
@@ -881,19 +854,19 @@ class GraphDefinitionCompartment {
 }
 
 @JsonSerializable()
-class ImplementationGuide {
+class ImplementationGuide extends Resource {
   const ImplementationGuide({
-    @Default(R5ResourceType.ImplementationGuide) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R5ResourceType.ImplementationGuide,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.url,
     @JsonKey(name: '_url') required this.urlElement,
     required this.identifier,
@@ -938,16 +911,7 @@ class ImplementationGuide {
     required this.manifest,
   });
   final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final FhirUri? url;
   final Element? urlElement;
   final List<Identifier>? identifier;
@@ -1307,19 +1271,19 @@ class ImplementationGuidePage1 {
 }
 
 @JsonSerializable()
-class MessageDefinition {
+class MessageDefinition extends Resource {
   const MessageDefinition({
-    @Default(R5ResourceType.MessageDefinition) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R5ResourceType.MessageDefinition,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.url,
     @JsonKey(name: '_url') required this.urlElement,
     required this.identifier,
@@ -1367,16 +1331,7 @@ class MessageDefinition {
     required this.graph,
   });
   final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final FhirUri? url;
   final Element? urlElement;
   final List<Identifier>? identifier;
@@ -1480,19 +1435,19 @@ class MessageDefinitionAllowedResponse {
 }
 
 @JsonSerializable()
-class OperationDefinition {
+class OperationDefinition extends Resource {
   const OperationDefinition({
-    @Default(R5ResourceType.OperationDefinition) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R5ResourceType.OperationDefinition,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.url,
     @JsonKey(name: '_url') required this.urlElement,
     required this.identifier,
@@ -1548,16 +1503,7 @@ class OperationDefinition {
     required this.overload,
   });
   final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final FhirUri? url;
   final Element? urlElement;
   final List<Identifier>? identifier;
@@ -1745,7 +1691,7 @@ class OperationDefinitionOverload {
 }
 
 @JsonSerializable()
-class SearchParameter {
+class SearchParameter extends Resource {
   const SearchParameter({
     @JsonKey(name: '_constraint') this.constraintElement,
     this.target,
@@ -1785,123 +1731,14 @@ class SearchParameter {
 @JsonSerializable()
 class SearchParameterComponent {
   const SearchParameterComponent({
-    @Default(R5ResourceType.SearchParameter) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.url,
-    @JsonKey(name: '_url') required this.urlElement,
-    required this.identifier,
-    required this.version,
-    @JsonKey(name: '_version') required this.versionElement,
-    required this.versionAlgorithmString,
-    @JsonKey(name: '__versionAlgorithmString')
-        required this.versionAlgorithmStringElement,
-    required this.versionAlgorithmCoding,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.title,
-    @JsonKey(name: '_title') required this.titleElement,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.experimental,
-    @JsonKey(name: '_experimental') required this.experimentalElement,
-    required this.date,
-    @JsonKey(name: '_date') required this.dateElement,
-    required this.publisher,
-    @JsonKey(name: '_publisher') required this.publisherElement,
-    required this.contact,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.useContext,
-    required this.jurisdiction,
-    required this.purpose,
-    @JsonKey(name: '_purpose') required this.purposeElement,
-    required this.copyright,
-    @JsonKey(name: '_copyright') required this.copyrightElement,
-    required this.copyrightLabel,
-    @JsonKey(name: '_copyrightLabel') required this.copyrightLabelElement,
-    required this.derivedFrom,
-    required this.code,
-    @JsonKey(name: '_code') required this.codeElement,
-    required this.base,
-    @JsonKey(name: '_base') required this.baseElement,
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.expression,
-    @JsonKey(name: '_expression') required this.expressionElement,
-    required this.processingMode,
-    @JsonKey(name: '_processingMode') required this.processingModeElement,
-    required this.constraint,
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.definition,
-    required this.expression,
+    this.expression,
     @JsonKey(name: '_expression') required this.expressionElement,
   });
-  final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
-  final FhirUri? url;
-  final Element? urlElement;
-  final List<Identifier>? identifier;
-  final String? version;
-  final Element? versionElement;
-  final String? versionAlgorithmString;
 
-  final Element? versionAlgorithmStringElement;
-  final Coding? versionAlgorithmCoding;
-  final String? name;
-  final Element? nameElement;
-  final String? title;
-  final Element? titleElement;
-  final Code? status;
-  final Element? statusElement;
-  final Boolean? experimental;
-  final Element? experimentalElement;
-  final FhirDateTime? date;
-  final Element? dateElement;
-  final String? publisher;
-  final Element? publisherElement;
-  final List<ContactDetail>? contact;
-  final Markdown? description;
-  final Element? descriptionElement;
-  final List<UsageContext>? useContext;
-  final List<CodeableConcept>? jurisdiction;
-  final Markdown? purpose;
-  final Element? purposeElement;
-  final Markdown? copyright;
-  final Element? copyrightElement;
-  final String? copyrightLabel;
-  final Element? copyrightLabelElement;
-  final Canonical? derivedFrom;
-  final Code? code;
-  final Element? codeElement;
-  final List<Code>? base;
-  final List<Element>? baseElement;
-  final Code? type;
-  final Element? typeElement;
-  final String? expression;
-  final Element? expressionElement;
-  final Code? processingMode;
-  final Element? processingModeElement;
-  final String? constraint;
   final String? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
@@ -1914,19 +1751,19 @@ class SearchParameterComponent {
 }
 
 @JsonSerializable()
-class StructureDefinition {
+class StructureDefinition extends Resource {
   const StructureDefinition({
-    @Default(R5ResourceType.StructureDefinition) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R5ResourceType.StructureDefinition,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.url,
     @JsonKey(name: '_url') required this.urlElement,
     required this.identifier,
@@ -1979,16 +1816,7 @@ class StructureDefinition {
     required this.differential,
   });
   final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final FhirUri? url;
   final Element? urlElement;
   final List<Identifier>? identifier;
@@ -2134,19 +1962,19 @@ class StructureDefinitionDifferential {
 }
 
 @JsonSerializable()
-class StructureMap {
+class StructureMap extends Resource {
   const StructureMap({
-    @Default(R5ResourceType.StructureMap) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R5ResourceType.StructureMap,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.url,
     @JsonKey(name: '_url') required this.urlElement,
     required this.identifier,
@@ -2184,16 +2012,7 @@ class StructureMap {
     required this.group,
   });
   final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final FhirUri? url;
   final Element? urlElement;
   final List<Identifier>? identifier;

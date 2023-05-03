@@ -6,19 +6,19 @@ import '../../../../r5.dart';
 part 'workflow.g.dart';
 
 @JsonSerializable()
-class Appointment {
+class Appointment extends Resource {
   const Appointment({
-    @Default(R5ResourceType.Appointment) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R5ResourceType.Appointment,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.status,
     @JsonKey(name: '_status') required this.statusElement,
@@ -60,16 +60,7 @@ class Appointment {
     required this.recurrenceTemplate,
   });
   final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final List<Identifier>? identifier;
   final Code? status;
   final Element? statusElement;
@@ -285,19 +276,19 @@ class AppointmentYearlyTemplate {
 }
 
 @JsonSerializable()
-class AppointmentResponse {
+class AppointmentResponse extends Resource {
   const AppointmentResponse({
-    @Default(R5ResourceType.AppointmentResponse) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R5ResourceType.AppointmentResponse,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.appointment,
     required this.proposedNewTime,
@@ -320,16 +311,7 @@ class AppointmentResponse {
     @JsonKey(name: '_recurrenceId') required this.recurrenceIdElement,
   });
   final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final List<Identifier>? identifier;
   final Reference appointment;
   final Boolean? proposedNewTime;
@@ -356,19 +338,19 @@ class AppointmentResponse {
 }
 
 @JsonSerializable()
-class Schedule {
+class Schedule extends Resource {
   const Schedule({
-    @Default(R5ResourceType.Schedule) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R5ResourceType.Schedule,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.active,
     @JsonKey(name: '_active') required this.activeElement,
@@ -383,16 +365,7 @@ class Schedule {
     @JsonKey(name: '_comment') required this.commentElement,
   });
   final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final List<Identifier>? identifier;
   final Boolean? active;
   final Element? activeElement;
@@ -411,19 +384,19 @@ class Schedule {
 }
 
 @JsonSerializable()
-class Slot {
+class Slot extends Resource {
   const Slot({
-    @Default(R5ResourceType.Slot) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R5ResourceType.Slot,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.serviceCategory,
     required this.serviceType,
@@ -442,16 +415,7 @@ class Slot {
     @JsonKey(name: '_comment') required this.commentElement,
   });
   final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final List<Identifier>? identifier;
   final List<CodeableConcept>? serviceCategory;
   final List<CodeableReference>? serviceType;
@@ -473,19 +437,19 @@ class Slot {
 }
 
 @JsonSerializable()
-class Task {
+class Task extends Resource {
   const Task({
-    @Default(R5ResourceType.Task) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R5ResourceType.Task,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.instantiatesCanonical,
     required this.instantiatesUri,
@@ -528,16 +492,7 @@ class Task {
     required this.output,
   });
   final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final List<Identifier>? identifier;
   final Canonical? instantiatesCanonical;
   final FhirUri? instantiatesUri;
@@ -936,19 +891,19 @@ class TaskOutput {
 }
 
 @JsonSerializable()
-class Transport {
+class Transport extends Resource {
   const Transport({
-    @Default(R5ResourceType.Transport) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R5ResourceType.Transport,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.instantiatesCanonical,
     required this.instantiatesUri,
@@ -992,16 +947,7 @@ class Transport {
     required this.history,
   });
   final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final List<Identifier>? identifier;
   final Canonical? instantiatesCanonical;
   final FhirUri? instantiatesUri;
@@ -1402,19 +1348,19 @@ class TransportOutput {
 }
 
 @JsonSerializable()
-class VerificationResult {
+class VerificationResult extends Resource {
   const VerificationResult({
-    @Default(R5ResourceType.VerificationResult) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R5ResourceType.VerificationResult,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.target,
     required this.targetLocation,
     @JsonKey(name: '_targetLocation') required this.targetLocationElement,
@@ -1436,16 +1382,7 @@ class VerificationResult {
     required this.validator,
   });
   final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final List<Reference>? target;
   final List<String>? targetLocation;
   final List<Element>? targetLocationElement;

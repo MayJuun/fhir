@@ -8,7 +8,9 @@ part of 'definitional_artifacts.dart';
 
 ActivityDefinition _$ActivityDefinitionFromJson(Map<String, dynamic> json) =>
     ActivityDefinition(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.ActivityDefinition,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -272,9 +274,7 @@ ActivityDefinition _$ActivityDefinitionFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$ActivityDefinitionToJson(ActivityDefinition instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -295,6 +295,7 @@ Map<String, dynamic> _$ActivityDefinitionToJson(ActivityDefinition instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('urlElement', instance.urlElement?.toJson());
   writeNotNull(
@@ -647,7 +648,9 @@ Map<String, dynamic> _$ActivityDefinitionDynamicValueToJson(
 
 ActorDefinition _$ActorDefinitionFromJson(Map<String, dynamic> json) =>
     ActorDefinition(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.ActorDefinition,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -782,9 +785,7 @@ ActorDefinition _$ActorDefinitionFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$ActorDefinitionToJson(ActorDefinition instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -805,6 +806,7 @@ Map<String, dynamic> _$ActorDefinitionToJson(ActorDefinition instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('urlElement', instance.urlElement?.toJson());
   writeNotNull(
@@ -858,7 +860,9 @@ Map<String, dynamic> _$ActorDefinitionToJson(ActorDefinition instance) {
 
 ConditionDefinition _$ConditionDefinitionFromJson(Map<String, dynamic> json) =>
     ConditionDefinition(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.ConditionDefinition,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1067,9 +1071,7 @@ ConditionDefinition _$ConditionDefinitionFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$ConditionDefinitionToJson(ConditionDefinition instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1090,6 +1092,7 @@ Map<String, dynamic> _$ConditionDefinitionToJson(ConditionDefinition instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('urlElement', instance.urlElement?.toJson());
   writeNotNull(
@@ -1368,7 +1371,9 @@ Map<String, dynamic> _$ConditionDefinitionPlanToJson(
 
 DeviceDefinition _$DeviceDefinitionFromJson(Map<String, dynamic> json) =>
     DeviceDefinition(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.DeviceDefinition,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1505,9 +1510,7 @@ DeviceDefinition _$DeviceDefinitionFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$DeviceDefinitionToJson(DeviceDefinition instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1528,6 +1531,7 @@ Map<String, dynamic> _$DeviceDefinitionToJson(DeviceDefinition instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('description', instance.description?.toJson());
   writeNotNull('descriptionElement', instance.descriptionElement?.toJson());
   writeNotNull(
@@ -2326,7 +2330,9 @@ Map<String, dynamic> _$DeviceDefinitionChargeItemToJson(
 
 EventDefinition _$EventDefinitionFromJson(Map<String, dynamic> json) =>
     EventDefinition(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.EventDefinition,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -2492,9 +2498,7 @@ EventDefinition _$EventDefinitionFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$EventDefinitionToJson(EventDefinition instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -2515,6 +2519,7 @@ Map<String, dynamic> _$EventDefinitionToJson(EventDefinition instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('urlElement', instance.urlElement?.toJson());
   writeNotNull(
@@ -2578,7 +2583,9 @@ Map<String, dynamic> _$EventDefinitionToJson(EventDefinition instance) {
 
 ExampleScenario _$ExampleScenarioFromJson(Map<String, dynamic> json) =>
     ExampleScenario(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.ExampleScenario,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -2701,9 +2708,7 @@ ExampleScenario _$ExampleScenarioFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$ExampleScenarioToJson(ExampleScenario instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -2724,6 +2729,7 @@ Map<String, dynamic> _$ExampleScenarioToJson(ExampleScenario instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('urlElement', instance.urlElement?.toJson());
   writeNotNull(
@@ -3295,7 +3301,9 @@ Map<String, dynamic> _$ExampleScenarioAlternativeToJson(
 ObservationDefinition _$ObservationDefinitionFromJson(
         Map<String, dynamic> json) =>
     ObservationDefinition(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.ObservationDefinition,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -3510,9 +3518,7 @@ ObservationDefinition _$ObservationDefinitionFromJson(
 
 Map<String, dynamic> _$ObservationDefinitionToJson(
     ObservationDefinition instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -3533,6 +3539,7 @@ Map<String, dynamic> _$ObservationDefinitionToJson(
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('urlElement', instance.urlElement?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
@@ -3825,7 +3832,9 @@ Map<String, dynamic> _$ObservationDefinitionComponentToJson(
 
 PlanDefinition _$PlanDefinitionFromJson(Map<String, dynamic> json) =>
     PlanDefinition(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.PlanDefinition,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -4021,9 +4030,7 @@ PlanDefinition _$PlanDefinitionFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$PlanDefinitionToJson(PlanDefinition instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -4044,6 +4051,7 @@ Map<String, dynamic> _$PlanDefinitionToJson(PlanDefinition instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('urlElement', instance.urlElement?.toJson());
   writeNotNull(
@@ -4891,7 +4899,9 @@ Map<String, dynamic> _$PlanDefinitionDynamicValueToJson(
 
 Questionnaire _$QuestionnaireFromJson(Map<String, dynamic> json) =>
     Questionnaire(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.Questionnaire,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -5053,9 +5063,7 @@ Questionnaire _$QuestionnaireFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$QuestionnaireToJson(Questionnaire instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -5076,6 +5084,7 @@ Map<String, dynamic> _$QuestionnaireToJson(Questionnaire instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('urlElement', instance.urlElement?.toJson());
   writeNotNull(
@@ -5588,7 +5597,9 @@ Map<String, dynamic> _$QuestionnaireInitialToJson(
 }
 
 Requirements _$RequirementsFromJson(Map<String, dynamic> json) => Requirements(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.Requirements,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -5710,9 +5721,7 @@ Requirements _$RequirementsFromJson(Map<String, dynamic> json) => Requirements(
     );
 
 Map<String, dynamic> _$RequirementsToJson(Requirements instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -5733,6 +5742,7 @@ Map<String, dynamic> _$RequirementsToJson(Requirements instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('urlElement', instance.urlElement?.toJson());
   writeNotNull(
@@ -5888,7 +5898,9 @@ Map<String, dynamic> _$RequirementsStatementToJson(
 
 SpecimenDefinition _$SpecimenDefinitionFromJson(Map<String, dynamic> json) =>
     SpecimenDefinition(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.SpecimenDefinition,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -6070,9 +6082,7 @@ SpecimenDefinition _$SpecimenDefinitionFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$SpecimenDefinitionToJson(SpecimenDefinition instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -6093,6 +6103,7 @@ Map<String, dynamic> _$SpecimenDefinitionToJson(SpecimenDefinition instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('urlElement', instance.urlElement?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());

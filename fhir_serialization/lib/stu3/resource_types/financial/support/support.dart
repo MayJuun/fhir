@@ -8,19 +8,19 @@ part 'support.enums.dart';
 part 'support.g.dart';
 
 @JsonSerializable()
-class Coverage {
+class Coverage extends Resource {
   const Coverage({
-    @Default(Stu3ResourceType.Coverage) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Stu3ResourceType.Coverage,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.status,
     @JsonKey(name: '_status') required this.statusElement,
@@ -44,17 +44,6 @@ class Coverage {
     @JsonKey(name: '_network') required this.networkElement,
     required this.contract,
   });
-  final Stu3ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;
   final String? status;
   final Element? statusElement;
@@ -140,19 +129,19 @@ class CoverageGrouping {
 }
 
 @JsonSerializable()
-class EligibilityRequest {
+class EligibilityRequest extends Resource {
   const EligibilityRequest({
-    @Default(Stu3ResourceType.EligibilityRequest) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Stu3ResourceType.EligibilityRequest,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.status,
     @JsonKey(name: '_status') required this.statusElement,
@@ -175,17 +164,6 @@ class EligibilityRequest {
     required this.benefitCategory,
     required this.benefitSubCategory,
   });
-  final Stu3ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;
   final String? status;
   final Element? statusElement;
@@ -212,19 +190,19 @@ class EligibilityRequest {
 }
 
 @JsonSerializable()
-class EligibilityResponse {
+class EligibilityResponse extends Resource {
   const EligibilityResponse({
-    @Default(Stu3ResourceType.EligibilityResponse) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Stu3ResourceType.EligibilityResponse,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.status,
     @JsonKey(name: '_status') required this.statusElement,
@@ -243,17 +221,6 @@ class EligibilityResponse {
     required this.form,
     required this.error,
   });
-  final Stu3ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;
   final String? status;
   final Element? statusElement;
@@ -339,19 +306,19 @@ class EligibilityResponseError {
 }
 
 @JsonSerializable()
-class EnrollmentRequest {
+class EnrollmentRequest extends Resource {
   const EnrollmentRequest({
-    @Default(Stu3ResourceType.EnrollmentRequest) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Stu3ResourceType.EnrollmentRequest,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.status,
     @JsonKey(name: '_status') required this.statusElement,
@@ -363,17 +330,6 @@ class EnrollmentRequest {
     required this.subject,
     required this.coverage,
   });
-  final Stu3ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;
   final String? status;
   final Element? statusElement;
@@ -390,19 +346,19 @@ class EnrollmentRequest {
 }
 
 @JsonSerializable()
-class EnrollmentResponse {
+class EnrollmentResponse extends Resource {
   const EnrollmentResponse({
-    @Default(Stu3ResourceType.EnrollmentResponse) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Stu3ResourceType.EnrollmentResponse,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.status,
     @JsonKey(name: '_status') required this.statusElement,
@@ -416,17 +372,6 @@ class EnrollmentResponse {
     required this.requestProvider,
     required this.requestOrganization,
   });
-  final Stu3ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;
   final String? status;
   final Element? statusElement;

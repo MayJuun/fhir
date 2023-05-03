@@ -10,19 +10,19 @@ part 'documents_and_lists.enums.dart';
 part 'documents_and_lists.g.dart';
 
 @JsonSerializable()
-class Composition {
+class Composition extends Resource {
   const Composition({
-    @Default(Dstu2ResourceType.Composition) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.Composition,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.date,
     @JsonKey(name: '_date') required this.dateElement,
@@ -42,17 +42,6 @@ class Composition {
     required this.encounter,
     required this.section,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final Identifier? identifier;
   final FhirDateTime date;
   final Element? dateElement;
@@ -134,7 +123,7 @@ class CompositionSection {
     @JsonKey(name: '_title') required this.titleElement,
     required this.code,
     required this.text,
-    @JsonKey(unknownEnumValue: SectionMode.unknown) required this.mode,
+    required this.mode,
     @JsonKey(name: '_mode') required this.modeElement,
     required this.orderedBy,
     required this.entry,
@@ -161,19 +150,19 @@ class CompositionSection {
 }
 
 @JsonSerializable()
-class DocumentManifest {
+class DocumentManifest extends Resource {
   const DocumentManifest({
-    @Default(Dstu2ResourceType.DocumentManifest) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.DocumentManifest,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.masterIdentifier,
     required this.identifier,
     required this.subject,
@@ -191,17 +180,6 @@ class DocumentManifest {
     required this.content,
     required this.related,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final Identifier? masterIdentifier;
   final List<Identifier>? identifier;
   final Reference? subject;
@@ -263,19 +241,19 @@ class DocumentManifestRelated {
 }
 
 @JsonSerializable()
-class DocumentReference {
+class DocumentReference extends Resource {
   const DocumentReference({
-    @Default(Dstu2ResourceType.DocumentReference) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.DocumentReference,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.masterIdentifier,
     required this.identifier,
     required this.subject,
@@ -297,17 +275,6 @@ class DocumentReference {
     required this.content,
     required this.context,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final Identifier? masterIdentifier;
   final List<Identifier>? identifier;
   final Reference? subject;
@@ -425,19 +392,19 @@ class DocumentReferenceContextRelated {
 }
 
 @JsonSerializable()
-class List_ {
+class List_ extends Resource {
   const List_({
-    @Default(Dstu2ResourceType.List_) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.List_,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.title,
     @JsonKey(name: '_title') required this.titleElement,
@@ -445,28 +412,17 @@ class List_ {
     required this.subject,
     required this.source,
     required this.encounter,
-    @JsonKey(unknownEnumValue: ListStatus.unknown) required this.status,
+    required this.status,
     @JsonKey(name: '_status') required this.statusElement,
     required this.date,
     @JsonKey(name: '_date') required this.dateElement,
     required this.orderedBy,
-    @JsonKey(unknownEnumValue: ListMode.unknown) required this.mode,
+    required this.mode,
     @JsonKey(name: '_mode') required this.modeElement,
     required this.note,
     required this.entry,
     required this.emptyReason,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;
   final String? title;
   final Element? titleElement;

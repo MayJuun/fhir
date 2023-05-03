@@ -6,9 +6,9 @@ import '../../../../r4.dart';
 part 'quality_reporting_and_testing.g.dart';
 
 @JsonSerializable()
-class Measure {
+class Measure extends Resource {
   const Measure({
-    @Default(R4ResourceType.Measure) required this.resourceType,
+    super.resourceType = R4ResourceType.Measure,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -313,9 +313,9 @@ class MeasureSupplementalData {
 }
 
 @JsonSerializable()
-class MeasureReport {
+class MeasureReport extends Resource {
   const MeasureReport({
-    @Default(R4ResourceType.MeasureReport) required this.resourceType,
+    super.resourceType = R4ResourceType.MeasureReport,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -508,9 +508,9 @@ class MeasureReportPopulation1 {
 }
 
 @JsonSerializable()
-class TestReport {
+class TestReport extends Resource {
   const TestReport({
-    @Default(R4ResourceType.TestReport) required this.resourceType,
+    super.resourceType = R4ResourceType.TestReport,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -779,9 +779,9 @@ class TestReportAction2 {
 }
 
 @JsonSerializable()
-class TestScript {
+class TestScript extends Resource {
   const TestScript({
-    @Default(R4ResourceType.TestScript) required this.resourceType,
+    super.resourceType = R4ResourceType.TestScript,
     required this.id,
     required this.meta,
     required this.implicitRules,

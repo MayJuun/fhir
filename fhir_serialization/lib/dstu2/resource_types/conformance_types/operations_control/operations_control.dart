@@ -8,17 +8,17 @@ part 'operations_control.enums.dart';
 part 'operations_control.g.dart';
 
 @JsonSerializable()
-class Conformance {
+class Conformance extends Resource {
   const Conformance({
-    @Default(Dstu2ResourceType.Conformance) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    required this.language,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.Conformance,
+    required super.id,
+    required super.meta,
+    required super.implicitRules,
+    required super.language,
+    required super.text,
+    required super.contained,
+    @JsonKey(name: 'extension') required super.extension_,
+    required super.modifierExtension,
     required this.url,
     @JsonKey(name: '_url') required this.urlElement,
     required this.version,
@@ -44,15 +44,7 @@ class Conformance {
     required this.messaging,
     required this.document,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Code? language;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final FhirUri? url;
   final Element? urlElement;
   final String? version;
@@ -86,17 +78,17 @@ class Conformance {
 }
 
 @JsonSerializable()
-class CapabilityStatement {
+class CapabilityStatement extends Resource {
   const CapabilityStatement({
-    @Default(Dstu2ResourceType.CapabilityStatement) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    required this.language,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.CapabilityStatement,
+    required super.id,
+    required super.meta,
+    required super.implicitRules,
+    required super.language,
+    required super.text,
+    required super.contained,
+    @JsonKey(name: 'extension') required super.extension_,
+    required super.modifierExtension,
     required this.url,
     @JsonKey(name: '_url') required this.urlElement,
     required this.version,
@@ -122,15 +114,7 @@ class CapabilityStatement {
     required this.messaging,
     required this.document,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Code? language;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final FhirUri? url;
   final Element? urlElement;
   final String? version;
@@ -229,7 +213,7 @@ class ConformanceRest {
     @JsonKey(name: 'extension') required this.extension_,
     required this.modifierExtension,
     @JsonKey(name: 'fhir_comments') required this.fhirComments,
-    @JsonKey(unknownEnumValue: RestMode.unknown) required this.mode,
+    required this.mode,
     @JsonKey(name: '_mode') required this.modeElement,
     required this.documentation,
     required this.security,
@@ -292,7 +276,7 @@ class ConformanceDocument {
     @JsonKey(name: 'extension') required this.extension_,
     required this.modifierExtension,
     @JsonKey(name: 'fhir_comments') required this.fhirComments,
-    @JsonKey(unknownEnumValue: DocumentMode.unknown) required this.mode,
+    required this.mode,
     required this.documentation,
     required this.profile,
   });
@@ -454,8 +438,8 @@ class ConformanceMessagingEvent {
     @JsonKey(name: 'extension') required this.extension_,
     required this.modifierExtension,
     required this.code,
-    @JsonKey(unknownEnumValue: EventCategory.unknown) required this.category,
-    @JsonKey(unknownEnumValue: EventMode.unknown) required this.mode,
+    required this.category,
+    required this.mode,
     @JsonKey(name: '_mode') required this.modeElement,
     required this.focus,
     required this.request,
@@ -552,17 +536,17 @@ class ConformanceResourceSearchParam {
 }
 
 @JsonSerializable()
-class OperationDefinition {
+class OperationDefinition extends Resource {
   const OperationDefinition({
-    @Default(Dstu2ResourceType.OperationDefinition) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    required this.language,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.OperationDefinition,
+    required super.id,
+    required super.meta,
+    required super.implicitRules,
+    required super.language,
+    required super.text,
+    required super.contained,
+    @JsonKey(name: 'extension') required super.extension_,
+    required super.modifierExtension,
     required this.url,
     required this.version,
     required this.name,
@@ -583,15 +567,7 @@ class OperationDefinition {
     required this.instance,
     required this.parameter,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Code? language;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final FhirUri? url;
   final String? version;
   final String name;
@@ -644,7 +620,7 @@ class OperationDefinitionParameter {
     required this.modifierExtension,
     @JsonKey(name: 'fhir_comments') required this.fhirComments,
     required this.name,
-    @JsonKey(unknownEnumValue: ParameterUse.unknown) required this.use,
+    required this.use,
     required this.min,
     required this.max,
     required this.documentation,

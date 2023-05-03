@@ -7,7 +7,9 @@ part of 'billing.dart';
 // **************************************************************************
 
 Claim _$ClaimFromJson(Map<String, dynamic> json) => Claim(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.Claim,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -133,9 +135,7 @@ Claim _$ClaimFromJson(Map<String, dynamic> json) => Claim(
     );
 
 Map<String, dynamic> _$ClaimToJson(Claim instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -156,6 +156,7 @@ Map<String, dynamic> _$ClaimToJson(Claim instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('status', instance.status?.toJson());
@@ -1215,7 +1216,9 @@ Map<String, dynamic> _$ClaimSubDetailToJson(ClaimSubDetail instance) {
 
 ClaimResponse _$ClaimResponseFromJson(Map<String, dynamic> json) =>
     ClaimResponse(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.ClaimResponse,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1348,9 +1351,7 @@ ClaimResponse _$ClaimResponseFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$ClaimResponseToJson(ClaimResponse instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1371,6 +1372,7 @@ Map<String, dynamic> _$ClaimResponseToJson(ClaimResponse instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('status', instance.status?.toJson());
@@ -2297,7 +2299,9 @@ Map<String, dynamic> _$ClaimResponseErrorToJson(ClaimResponseError instance) {
 }
 
 Invoice _$InvoiceFromJson(Map<String, dynamic> json) => Invoice(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.Invoice,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -2399,9 +2403,7 @@ Invoice _$InvoiceFromJson(Map<String, dynamic> json) => Invoice(
     );
 
 Map<String, dynamic> _$InvoiceToJson(Invoice instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -2422,6 +2424,7 @@ Map<String, dynamic> _$InvoiceToJson(Invoice instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('status', instance.status?.toJson());

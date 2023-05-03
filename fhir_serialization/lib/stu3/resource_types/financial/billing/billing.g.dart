@@ -7,8 +7,9 @@ part of 'billing.dart';
 // **************************************************************************
 
 Claim _$ClaimFromJson(Map<String, dynamic> json) => Claim(
-      resourceType:
-          $enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
+          Stu3ResourceType.Claim,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -135,9 +136,7 @@ Claim _$ClaimFromJson(Map<String, dynamic> json) => Claim(
     );
 
 Map<String, dynamic> _$ClaimToJson(Claim instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -146,6 +145,8 @@ Map<String, dynamic> _$ClaimToJson(Claim instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -948,8 +949,9 @@ Map<String, dynamic> _$ClaimSubDetailToJson(ClaimSubDetail instance) {
 
 ClaimResponse _$ClaimResponseFromJson(Map<String, dynamic> json) =>
     ClaimResponse(
-      resourceType:
-          $enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
+          Stu3ResourceType.ClaimResponse,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1058,9 +1060,7 @@ ClaimResponse _$ClaimResponseFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$ClaimResponseToJson(ClaimResponse instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1069,6 +1069,8 @@ Map<String, dynamic> _$ClaimResponseToJson(ClaimResponse instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());

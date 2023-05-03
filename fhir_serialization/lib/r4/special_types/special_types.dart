@@ -12,7 +12,7 @@ class Narrative {
   const Narrative({
     required this.id,
     @JsonKey(name: 'extension') required this.extension_,
-    @JsonKey(unknownEnumValue: NarrativeStatus.unknown) required this.status,
+    required this.status,
     @JsonKey(name: '_status') required this.statusElement,
     required this.div,
   });
@@ -505,9 +505,6 @@ class ElementDefinitionSlicing {
     required this.condition,
     @JsonKey(name: '__condition') required this.conditionElement,
     required this.constraint,
-    required this.id,
-    @JsonKey(name: '_extension') required this.extension_,
-    required this.modifierExtension,
     required this.discriminator,
     required this.description,
     @JsonKey(name: '__description') required this.descriptionElement,
@@ -894,10 +891,6 @@ class ElementDefinitionSlicing {
 
   final List<Element?>? conditionElement;
   final List<ElementDefinitionConstraint>? constraint;
-  final String? id;
-
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<ElementDefinitionDiscriminator>? discriminator;
   final String? description;
 

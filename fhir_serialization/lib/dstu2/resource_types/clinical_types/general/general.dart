@@ -8,19 +8,19 @@ part 'general.enums.dart';
 part 'general.g.dart';
 
 @JsonSerializable()
-class AllergyIntolerance {
+class AllergyIntolerance extends Resource {
   const AllergyIntolerance({
-    @Default(Dstu2ResourceType.AllergyIntolerance) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.AllergyIntolerance,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.onset,
     required this.recordedDate,
@@ -42,17 +42,6 @@ class AllergyIntolerance {
     required this.note,
     required this.reaction,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;
   final FhirDateTime? onset;
   final FhirDateTime? recordedDate;
@@ -126,19 +115,19 @@ class AllergyIntoleranceReaction {
 }
 
 @JsonSerializable()
-class Condition {
+class Condition extends Resource {
   const Condition({
-    @Default(Dstu2ResourceType.Condition) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.Condition,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.patient,
     required this.encounter,
@@ -170,17 +159,6 @@ class Condition {
     required this.bodySite,
     required this.notes,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;
   final Reference patient;
   final Reference? encounter;
@@ -260,19 +238,19 @@ class ConditionEvidence {
 }
 
 @JsonSerializable()
-class Procedure {
+class Procedure extends Resource {
   const Procedure({
-    @Default(Dstu2ResourceType.Procedure) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.Procedure,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.subject,
     required this.status,
@@ -299,17 +277,6 @@ class Procedure {
     required this.focalDevice,
     required this.used,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;
   final Reference subject;
 
@@ -382,19 +349,19 @@ class ProcedureFocalDevice {
 }
 
 @JsonSerializable()
-class ClinicalImpression {
+class ClinicalImpression extends Resource {
   const ClinicalImpression({
-    @Default(Dstu2ResourceType.ClinicalImpression) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.ClinicalImpression,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.patient,
     required this.assessor,
     required this.status,
@@ -419,17 +386,6 @@ class ClinicalImpression {
     required this.plan,
     required this.action,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final Reference patient;
   final Reference? assessor;
 
@@ -481,6 +437,26 @@ class ClinicalImpressionInvestigations {
 }
 
 @JsonSerializable()
+class ClinicalImpressionFinding {
+  const ClinicalImpressionFinding({
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    required this.item,
+    this.cause,
+  });
+
+  final Id? id;
+  final List<FhirExtension>? extension_;
+  final List<FhirExtension>? modifierExtension;
+  final CodeableConcept item;
+  final String? cause;
+
+  factory ClinicalImpressionFinding.fromJson(Map<String, dynamic> json) =>
+      _$ClinicalImpressionFindingFromJson(json);
+}
+
+@JsonSerializable()
 class ClinicalImpressionRuledOut {
   const ClinicalImpressionRuledOut({
     required this.id,
@@ -500,19 +476,19 @@ class ClinicalImpressionRuledOut {
 }
 
 @JsonSerializable()
-class FamilyMemberHistory {
+class FamilyMemberHistory extends Resource {
   const FamilyMemberHistory({
-    @Default(Dstu2ResourceType.FamilyMemberHistory) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.FamilyMemberHistory,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.patient,
     required this.date,
@@ -543,17 +519,6 @@ class FamilyMemberHistory {
     required this.note,
     required this.condition,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;
   final Reference patient;
   final FhirDateTime? date;
@@ -621,19 +586,19 @@ class FamilyMemberHistoryCondition {
 }
 
 @JsonSerializable()
-class RiskAssessment {
+class RiskAssessment extends Resource {
   const RiskAssessment({
-    @Default(Dstu2ResourceType.RiskAssessment) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.RiskAssessment,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.subject,
     required this.date,
     required this.condition,
@@ -646,17 +611,6 @@ class RiskAssessment {
     required this.mitigation,
     @JsonKey(name: '_mitigation') required this.mitigationElement,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final Reference? subject;
   final FhirDateTime? date;
   final Reference? condition;
@@ -712,19 +666,19 @@ class RiskAssessmentPrediction {
 }
 
 @JsonSerializable()
-class DetectedIssue {
+class DetectedIssue extends Resource {
   const DetectedIssue({
-    @Default(Dstu2ResourceType.DetectedIssue) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.DetectedIssue,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.patient,
     required this.category,
     required this.severity,
@@ -739,17 +693,6 @@ class DetectedIssue {
     @JsonKey(name: '_reference') required this.referenceElement,
     required this.mitigation,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final Reference? patient;
   final CodeableConcept? category;
 

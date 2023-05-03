@@ -7,8 +7,10 @@ part of 'management.dart';
 // **************************************************************************
 
 Encounter _$EncounterFromJson(Map<String, dynamic> json) => Encounter(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
-      id: json['id'] as String?,
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.Encounter,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -111,9 +113,7 @@ Encounter _$EncounterFromJson(Map<String, dynamic> json) => Encounter(
     );
 
 Map<String, dynamic> _$EncounterToJson(Encounter instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -121,7 +121,8 @@ Map<String, dynamic> _$EncounterToJson(Encounter instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -590,8 +591,10 @@ Map<String, dynamic> _$EncounterLocationToJson(EncounterLocation instance) {
 
 EpisodeOfCare _$EpisodeOfCareFromJson(Map<String, dynamic> json) =>
     EpisodeOfCare(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
-      id: json['id'] as String?,
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.EpisodeOfCare,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -660,9 +663,7 @@ EpisodeOfCare _$EpisodeOfCareFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$EpisodeOfCareToJson(EpisodeOfCare instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -670,7 +671,8 @@ Map<String, dynamic> _$EpisodeOfCareToJson(EpisodeOfCare instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -784,8 +786,10 @@ Map<String, dynamic> _$EpisodeOfCareDiagnosisToJson(
 }
 
 Flag _$FlagFromJson(Map<String, dynamic> json) => Flag(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
-      id: json['id'] as String?,
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.Flag,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -837,9 +841,7 @@ Flag _$FlagFromJson(Map<String, dynamic> json) => Flag(
     );
 
 Map<String, dynamic> _$FlagToJson(Flag instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -847,7 +849,8 @@ Map<String, dynamic> _$FlagToJson(Flag instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -874,8 +877,10 @@ Map<String, dynamic> _$FlagToJson(Flag instance) {
 }
 
 Library _$LibraryFromJson(Map<String, dynamic> json) => Library(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
-      id: json['id'] as String?,
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.Library,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1032,9 +1037,7 @@ Library _$LibraryFromJson(Map<String, dynamic> json) => Library(
     );
 
 Map<String, dynamic> _$LibraryToJson(Library instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1042,7 +1045,8 @@ Map<String, dynamic> _$LibraryToJson(Library instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -1114,8 +1118,10 @@ Map<String, dynamic> _$LibraryToJson(Library instance) {
 }
 
 List_ _$List_FromJson(Map<String, dynamic> json) => List_(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
-      id: json['id'] as String?,
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.List_,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1190,9 +1196,7 @@ List_ _$List_FromJson(Map<String, dynamic> json) => List_(
     );
 
 Map<String, dynamic> _$List_ToJson(List_ instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1200,7 +1204,8 @@ Map<String, dynamic> _$List_ToJson(List_ instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());

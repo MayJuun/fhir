@@ -6,9 +6,9 @@ import '../../../../r4.dart';
 part 'medications.g.dart';
 
 @JsonSerializable()
-class Immunization {
+class Immunization extends Resource {
   const Immunization({
-    @Default(R4ResourceType.Immunization) required this.resourceType,
+    super.resourceType = R4ResourceType.Immunization,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -246,9 +246,9 @@ class ImmunizationProtocolApplied {
 }
 
 @JsonSerializable()
-class ImmunizationEvaluation {
+class ImmunizationEvaluation extends Resource {
   const ImmunizationEvaluation({
-    @Default(R4ResourceType.ImmunizationEvaluation) required this.resourceType,
+    super.resourceType = R4ResourceType.ImmunizationEvaluation,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -337,7 +337,7 @@ class ImmunizationEvaluation {
 }
 
 @JsonSerializable()
-class ImmunizationRecommendation {
+class ImmunizationRecommendation extends Resource {
   const ImmunizationRecommendation({
     @Default(R4ResourceType.ImmunizationRecommendation)
         required this.resourceType,
@@ -501,7 +501,7 @@ class MedicationBatch {
 }
 
 @JsonSerializable()
-class MedicationAdministration {
+class MedicationAdministration extends Resource {
   const MedicationAdministration({
     @Default(R4ResourceType.MedicationAdministration)
         required this.resourceType,
@@ -610,9 +610,9 @@ class MedicationAdministrationPerformer {
 }
 
 @JsonSerializable()
-class MedicationDispense {
+class MedicationDispense extends Resource {
   const MedicationDispense({
-    @Default(R4ResourceType.MedicationDispense) required this.resourceType,
+    super.resourceType = R4ResourceType.MedicationDispense,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -749,9 +749,9 @@ class MedicationDispenseSubstitution {
 }
 
 @JsonSerializable()
-class MedicationKnowledge {
+class MedicationKnowledge extends Resource {
   const MedicationKnowledge({
-    @Default(R4ResourceType.MedicationKnowledge) required this.resourceType,
+    super.resourceType = R4ResourceType.MedicationKnowledge,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -1069,9 +1069,9 @@ class MedicationKnowledgeKinetics {
 }
 
 @JsonSerializable()
-class MedicationRequest {
+class MedicationRequest extends Resource {
   const MedicationRequest({
-    @Default(R4ResourceType.MedicationRequest) required this.resourceType,
+    super.resourceType = R4ResourceType.MedicationRequest,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -1255,9 +1255,9 @@ class MedicationRequestSubstitution {
 }
 
 @JsonSerializable()
-class MedicationStatement {
+class MedicationStatement extends Resource {
   const MedicationStatement({
-    @Default(R4ResourceType.MedicationStatement) required this.resourceType,
+    super.resourceType = R4ResourceType.MedicationStatement,
     required this.id,
     required this.meta,
     required this.implicitRules,

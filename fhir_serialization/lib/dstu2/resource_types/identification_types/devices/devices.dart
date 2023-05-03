@@ -8,53 +8,42 @@ part 'devices.enums.dart';
 part 'devices.g.dart';
 
 @JsonSerializable()
-class Device {
+class Device extends Resource {
   const Device({
-    @Default(Dstu2ResourceType.Device) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.identifier,
+    super.resourceType = Dstu2ResourceType.Device,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.identifier,
     required this.type,
-    required this.note,
-    @JsonKey(unknownEnumValue: DeviceStatus.unknown) required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.manufacturer,
-    @JsonKey(name: '_manufacturer') required this.manufacturerElement,
-    required this.model,
-    required this.version,
-    required this.manufactureDate,
-    @JsonKey(name: '_manufactureDate') required this.manufactureDateElement,
-    required this.expiry,
-    required this.udi,
-    @JsonKey(name: '_udi') required this.udiElement,
-    required this.lotNumber,
-    @JsonKey(name: '_lotNumber') required this.lotNumberElement,
-    required this.owner,
-    required this.location,
-    required this.patient,
-    required this.contact,
-    required this.url,
-    @JsonKey(name: '_url') required this.urlElement,
+    this.note,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.manufacturer,
+    @JsonKey(name: '_manufacturer') this.manufacturerElement,
+    this.model,
+    this.version,
+    this.manufactureDate,
+    @JsonKey(name: '_manufactureDate') this.manufactureDateElement,
+    this.expiry,
+    this.udi,
+    @JsonKey(name: '_udi') this.udiElement,
+    this.lotNumber,
+    @JsonKey(name: '_lotNumber') this.lotNumberElement,
+    this.owner,
+    this.location,
+    this.patient,
+    this.contact,
+    this.url,
+    @JsonKey(name: '_url') this.urlElement,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;
   final CodeableConcept type;
   final List<Annotation>? note;
@@ -82,39 +71,30 @@ class Device {
 }
 
 @JsonSerializable()
-class DeviceComponent {
+class DeviceComponent extends Resource {
   const DeviceComponent({
-    @Default(Dstu2ResourceType.DeviceComponent) required this.resourceType,
-    required this.id,
-    @JsonKey(name: '_id') required this.idElement,
-    required this.meta,
-    required this.implicitRules,
-    required this.language,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.DeviceComponent,
+    super.id,
+    @JsonKey(name: '_id') super.idElement,
+    super.meta,
+    super.implicitRules,
+    super.language,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.type,
     required this.identifier,
     required this.lastSystemChange,
-    required this.source,
-    required this.parent,
-    required this.operationalStatus,
-    required this.parameterGroup,
-    required this.measurementPrinciple,
-    required this.productionSpecification,
-    required this.languageCode,
+    this.source,
+    this.parent,
+    this.operationalStatus,
+    this.parameterGroup,
+    this.measurementPrinciple,
+    this.productionSpecification,
+    this.languageCode,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Element? idElement;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Code? language;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final CodeableConcept type;
   final Identifier identifier;
   final Instant lastSystemChange;
@@ -134,12 +114,12 @@ class DeviceComponent {
 @JsonSerializable()
 class DeviceComponentProductionSpecification {
   const DeviceComponentProductionSpecification({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.specType,
-    required this.componentId,
-    required this.productionSpec,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.specType,
+    this.componentId,
+    this.productionSpec,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -157,15 +137,15 @@ class DeviceComponentProductionSpecification {
 @JsonSerializable()
 class DeviceMetricCalibration {
   const DeviceMetricCalibration({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(unknownEnumValue: CalibrationType.unknown) required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.state,
-    @JsonKey(name: '_state') required this.stateElement,
-    required this.time,
-    @JsonKey(name: '_time') required this.timeElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
+    this.state,
+    @JsonKey(name: '_state') this.stateElement,
+    this.time,
+    @JsonKey(name: '_time') this.timeElement,
   });
   final Id? id;
   final List<FhirExtension>? extension_;

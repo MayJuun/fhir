@@ -119,3 +119,4 @@ class FhirExtension {
       _$FhirExtensionFromJson(json);
   Map<String, dynamic> toJson() => _$FhirExtensionToJson(this);
 }
+

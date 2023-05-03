@@ -628,3 +628,4 @@ class TimingRepeat {
       _$TimingRepeatFromJson(json);
   Map<String, dynamic> toJson() => _$TimingRepeatToJson(this);
 }
+

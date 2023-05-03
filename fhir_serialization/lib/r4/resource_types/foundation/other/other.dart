@@ -6,9 +6,9 @@ import '../../../../r4.dart';
 part 'other.g.dart';
 
 @JsonSerializable()
-class Basic {
+class Basic extends Resource {
   const Basic({
-    @Default(R4ResourceType.Basic) required this.resourceType,
+    super.resourceType = R4ResourceType.Basic,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -52,9 +52,9 @@ class Basic {
 }
 
 @JsonSerializable()
-class Binary {
+class Binary extends Resource {
   const Binary({
-    @Default(R4ResourceType.Binary) required this.resourceType,
+    super.resourceType = R4ResourceType.Binary,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -88,9 +88,9 @@ class Binary {
 }
 
 @JsonSerializable()
-class Bundle {
+class Bundle extends Resource {
   const Bundle({
-    @Default(R4ResourceType.Bundle) required this.resourceType,
+    super.resourceType = R4ResourceType.Bundle,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -282,9 +282,9 @@ class BundleResponse {
 }
 
 @JsonSerializable()
-class Linkage {
+class Linkage extends Resource {
   const Linkage({
-    @Default(R4ResourceType.Linkage) required this.resourceType,
+    super.resourceType = R4ResourceType.Linkage,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -346,9 +346,9 @@ class LinkageItem {
 }
 
 @JsonSerializable()
-class MessageHeader {
+class MessageHeader extends Resource {
   const MessageHeader({
-    @Default(R4ResourceType.MessageHeader) required this.resourceType,
+    super.resourceType = R4ResourceType.MessageHeader,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -492,9 +492,9 @@ class MessageHeaderResponse {
 }
 
 @JsonSerializable()
-class OperationOutcome {
+class OperationOutcome extends Resource {
   const OperationOutcome({
-    @Default(R4ResourceType.OperationOutcome) required this.resourceType,
+    super.resourceType = R4ResourceType.OperationOutcome,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -565,9 +565,9 @@ class OperationOutcomeIssue {
 }
 
 @JsonSerializable()
-class Parameters {
+class Parameters extends Resource {
   const Parameters({
-    @Default(R4ResourceType.Parameters) required this.resourceType,
+    super.resourceType = R4ResourceType.Parameters,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -753,9 +753,9 @@ class ParametersParameter {
 }
 
 @JsonSerializable()
-class Subscription {
+class Subscription extends Resource {
   const Subscription({
-    @Default(R4ResourceType.Subscription) required this.resourceType,
+    super.resourceType = R4ResourceType.Subscription,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -847,7 +847,7 @@ class SubscriptionChannel {
 }
 
 @JsonSerializable()
-class SubscriptionStatus {
+class SubscriptionStatus extends Resource {
   const SubscriptionStatus({
     @Default(R4ResourceType.SubscriptionStatus) required this.id,
     required this.meta,
@@ -933,19 +933,19 @@ class SubscriptionStatusNotificationEvent {
 }
 
 @JsonSerializable()
-class SubscriptionTopic {
+class SubscriptionTopic extends Resource {
   const SubscriptionTopic({
-    @Default(R4ResourceType.SubscriptionTopic) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R4ResourceType.SubscriptionTopic,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.url,
     @JsonKey(name: '_url') required this.urlElement,
     required this.identifier,
@@ -981,17 +981,7 @@ class SubscriptionTopic {
     required this.canFilterBy,
     required this.notificationShape,
   });
-  final R4ResourceType resourceType;
-  final String? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final FhirUri? url;
   final Element? urlElement;
   final List<Identifier>? identifier;

@@ -6,9 +6,9 @@ import '../../../../r4.dart';
 part 'conformance.g.dart';
 
 @JsonSerializable()
-class CapabilityStatement {
+class CapabilityStatement extends Resource {
   const CapabilityStatement({
-    @Default(R4ResourceType.CapabilityStatement) required this.resourceType,
+    super.resourceType = R4ResourceType.CapabilityStatement,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -463,9 +463,9 @@ class CapabilityStatementSupportedMessage {
 }
 
 @JsonSerializable()
-class CompartmentDefinition {
+class CompartmentDefinition extends Resource {
   const CompartmentDefinition({
-    @Default(R4ResourceType.CompartmentDefinition) required this.resourceType,
+    super.resourceType = R4ResourceType.CompartmentDefinition,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -585,9 +585,9 @@ class CompartmentDefinitionResource {
 }
 
 @JsonSerializable()
-class ExampleScenario {
+class ExampleScenario extends Resource {
   const ExampleScenario({
-    @Default(R4ResourceType.ExampleScenario) required this.resourceType,
+    super.resourceType = R4ResourceType.ExampleScenario,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -895,9 +895,9 @@ class ExampleScenarioAlternative {
 }
 
 @JsonSerializable()
-class GraphDefinition {
+class GraphDefinition extends Resource {
   const GraphDefinition({
-    @Default(R4ResourceType.GraphDefinition) required this.resourceType,
+    super.resourceType = R4ResourceType.GraphDefinition,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -1090,9 +1090,9 @@ class GraphDefinitionCompartment {
 }
 
 @JsonSerializable()
-class ImplementationGuide {
+class ImplementationGuide extends Resource {
   const ImplementationGuide({
-    @Default(R4ResourceType.ImplementationGuide) required this.resourceType,
+    super.resourceType = R4ResourceType.ImplementationGuide,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -1506,9 +1506,9 @@ class ImplementationGuidePage1 {
 }
 
 @JsonSerializable()
-class MessageDefinition {
+class MessageDefinition extends Resource {
   const MessageDefinition({
-    @Default(R4ResourceType.MessageDefinition) required this.resourceType,
+    super.resourceType = R4ResourceType.MessageDefinition,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -1782,9 +1782,9 @@ class OperationDefinitionReferencedFrom {
 }
 
 @JsonSerializable()
-class SearchParameter {
+class SearchParameter extends Resource {
   const SearchParameter({
-    @Default(R4ResourceType.SearchParameter) required this.resourceType,
+    super.resourceType = R4ResourceType.SearchParameter,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -1952,9 +1952,9 @@ class SearchParameterComponent {
 }
 
 @JsonSerializable()
-class StructureDefinition {
+class StructureDefinition extends Resource {
   const StructureDefinition({
-    @Default(R4ResourceType.StructureDefinition) required this.resourceType,
+    super.resourceType = R4ResourceType.StructureDefinition,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -2184,9 +2184,9 @@ class StructureDefinitionDifferential {
 }
 
 @JsonSerializable()
-class StructureMap {
+class StructureMap extends Resource {
   const StructureMap({
-    @Default(R4ResourceType.StructureMap) required this.resourceType,
+    super.resourceType = R4ResourceType.StructureMap,
     required this.id,
     required this.meta,
     required this.implicitRules,

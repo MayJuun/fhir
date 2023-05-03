@@ -8,7 +8,9 @@ part of 'diagnostics.dart';
 
 BodyStructure _$BodyStructureFromJson(Map<String, dynamic> json) =>
     BodyStructure(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.BodyStructure,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -251,7 +253,9 @@ const _$R4ResourceTypeEnumMap = {
 
 DiagnosticReport _$DiagnosticReportFromJson(Map<String, dynamic> json) =>
     DiagnosticReport(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.DiagnosticReport,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -441,7 +445,9 @@ Map<String, dynamic> _$DiagnosticReportMediaToJson(
 }
 
 ImagingStudy _$ImagingStudyFromJson(Map<String, dynamic> json) => ImagingStudy(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.ImagingStudy,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -786,7 +792,9 @@ Map<String, dynamic> _$ImagingStudyInstanceToJson(
 }
 
 Media _$MediaFromJson(Map<String, dynamic> json) => Media(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.Media,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -961,7 +969,9 @@ Map<String, dynamic> _$MediaToJson(Media instance) {
 
 MolecularSequence _$MolecularSequenceFromJson(Map<String, dynamic> json) =>
     MolecularSequence(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.MolecularSequence,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1652,7 +1662,9 @@ Map<String, dynamic> _$MolecularSequenceInnerToJson(
 }
 
 Observation _$ObservationFromJson(Map<String, dynamic> json) => Observation(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.Observation,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -2079,7 +2091,9 @@ Map<String, dynamic> _$ObservationComponentToJson(
 QuestionnaireResponse _$QuestionnaireResponseFromJson(
         Map<String, dynamic> json) =>
     QuestionnaireResponse(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.QuestionnaireResponse,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -2371,7 +2385,9 @@ Map<String, dynamic> _$QuestionnaireResponseAnswerToJson(
 }
 
 Specimen _$SpecimenFromJson(Map<String, dynamic> json) => Specimen(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.Specimen,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null

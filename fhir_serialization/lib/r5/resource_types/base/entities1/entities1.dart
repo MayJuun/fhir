@@ -6,19 +6,19 @@ import '../../../../r5.dart';
 part 'entities1.g.dart';
 
 @JsonSerializable()
-class Endpoint {
+class Endpoint extends Resource {
   const Endpoint({
-    @Default(R5ResourceType.Endpoint) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R5ResourceType.Endpoint,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.status,
     @JsonKey(name: '_status') required this.statusElement,
@@ -39,17 +39,8 @@ class Endpoint {
     required this.header,
     @JsonKey(name: '_header') required this.headerElement,
   });
-  final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
+  final FhirUri? implicitRulesElement;
   final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;
   final Code? status;
   final Element? statusElement;
@@ -75,19 +66,19 @@ class Endpoint {
 }
 
 @JsonSerializable()
-class HealthcareService {
+class HealthcareService extends Resource {
   const HealthcareService({
-    @Default(R5ResourceType.HealthcareService) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R5ResourceType.HealthcareService,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.active,
     @JsonKey(name: '_active') required this.activeElement,
@@ -118,17 +109,9 @@ class HealthcareService {
     required this.availability,
     required this.endpoint,
   });
-  final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
+  final FhirUri? implicitRulesElement;
   final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final List<Identifier>? identifier;
   final Boolean? active;
   final Element? activeElement;
@@ -184,19 +167,19 @@ class HealthcareServiceEligibility {
 }
 
 @JsonSerializable()
-class Location {
+class Location extends Resource {
   const Location({
-    @Default(R5ResourceType.Location) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R5ResourceType.Location,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.status,
     @JsonKey(name: '_status') required this.statusElement,
@@ -221,17 +204,9 @@ class Location {
     required this.virtualService,
     required this.endpoint,
   });
-  final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
+  final FhirUri? implicitRulesElement;
   final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final List<Identifier>? identifier;
   final Code? status;
   final Element? statusElement;
@@ -288,19 +263,19 @@ class LocationPosition {
 }
 
 @JsonSerializable()
-class Organization {
+class Organization extends Resource {
   const Organization({
-    @Default(R5ResourceType.Organization) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R5ResourceType.Organization,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.active,
     @JsonKey(name: '_active') required this.activeElement,
@@ -316,17 +291,9 @@ class Organization {
     required this.endpoint,
     required this.qualification,
   });
-  final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
+  final FhirUri? implicitRulesElement;
   final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final List<Identifier>? identifier;
   final Boolean? active;
   final Element? activeElement;
@@ -370,19 +337,19 @@ class OrganizationQualification {
 }
 
 @JsonSerializable()
-class OrganizationAffiliation {
+class OrganizationAffiliation extends Resource {
   const OrganizationAffiliation({
-    @Default(R5ResourceType.OrganizationAffiliation) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R5ResourceType.OrganizationAffiliation,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.active,
     @JsonKey(name: '_active') required this.activeElement,
@@ -397,17 +364,9 @@ class OrganizationAffiliation {
     required this.contact,
     required this.endpoint,
   });
-  final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
+  final FhirUri? implicitRulesElement;
   final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final List<Identifier>? identifier;
   final Boolean? active;
   final Element? activeElement;

@@ -6,9 +6,9 @@ import '../../../../r4.dart';
 part 'general.g.dart';
 
 @JsonSerializable()
-class Account {
+class Account extends Resource {
   const Account({
-    @Default(R4ResourceType.Account) required this.resourceType,
+    super.resourceType = R4ResourceType.Account,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -115,9 +115,9 @@ class AccountGuarantor {
 }
 
 @JsonSerializable()
-class ChargeItem {
+class ChargeItem extends Resource {
   const ChargeItem({
-    @Default(R4ResourceType.ChargeItem) required this.resourceType,
+    super.resourceType = R4ResourceType.ChargeItem,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -245,9 +245,9 @@ class ChargeItemPerformer {
 }
 
 @JsonSerializable()
-class ChargeItemDefinition {
+class ChargeItemDefinition extends Resource {
   const ChargeItemDefinition({
-    @Default(R4ResourceType.ChargeItemDefinition) required this.resourceType,
+    super.resourceType = R4ResourceType.ChargeItemDefinition,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -952,9 +952,9 @@ class ContractRule {
 }
 
 @JsonSerializable()
-class ExplanationOfBenefit {
+class ExplanationOfBenefit extends Resource {
   const ExplanationOfBenefit({
-    @Default(R4ResourceType.ExplanationOfBenefit) required this.resourceType,
+    super.resourceType = R4ResourceType.ExplanationOfBenefit,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -1727,9 +1727,9 @@ class ExplanationOfBenefitBenefitBalance {
 }
 
 @JsonSerializable()
-class InsurancePlan {
+class InsurancePlan extends Resource {
   const InsurancePlan({
-    @Default(R4ResourceType.InsurancePlan) required this.resourceType,
+    super.resourceType = R4ResourceType.InsurancePlan,
     required this.id,
     required this.meta,
     required this.implicitRules,

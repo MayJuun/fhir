@@ -8,19 +8,19 @@ part 'conformance.enums.dart';
 part 'conformance.g.dart';
 
 @JsonSerializable()
-class CapabilityStatement {
+class CapabilityStatement extends Resource {
   const CapabilityStatement({
-    @Default(Stu3ResourceType.CapabilityStatement) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Stu3ResourceType.CapabilityStatement,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.url,
     @JsonKey(name: '_url') required this.urlElement,
     required this.version,
@@ -68,17 +68,6 @@ class CapabilityStatement {
     required this.messaging,
     required this.document,
   });
-  final Stu3ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final String? url;
   final Element? urlElement;
   final String? version;
@@ -425,19 +414,19 @@ class CapabilityStatementDocument {
 }
 
 @JsonSerializable()
-class CompartmentDefinition {
+class CompartmentDefinition extends Resource {
   const CompartmentDefinition({
-    @Default(Stu3ResourceType.CompartmentDefinition) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Stu3ResourceType.CompartmentDefinition,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.url,
     @JsonKey(name: '_url') required this.urlElement,
     required this.name,
@@ -465,17 +454,6 @@ class CompartmentDefinition {
     @JsonKey(name: '_search') required this.searchElement,
     required this.resource,
   });
-  final Stu3ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final String? url;
   final Element? urlElement;
   final String? name;
@@ -529,19 +507,19 @@ class CompartmentDefinitionResource {
 }
 
 @JsonSerializable()
-class DataElement {
+class DataElement extends Resource {
   const DataElement({
-    @Default(Stu3ResourceType.DataElement) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Stu3ResourceType.DataElement,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.url,
     @JsonKey(name: '_url') required this.urlElement,
     required this.identifier,
@@ -569,17 +547,6 @@ class DataElement {
     required this.mapping,
     required this.element,
   });
-  final Stu3ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final String? url;
   final Element? urlElement;
   final List<Identifier>? identifier;
@@ -637,19 +604,19 @@ class DataElementMapping {
 }
 
 @JsonSerializable()
-class GraphDefinition {
+class GraphDefinition extends Resource {
   const GraphDefinition({
-    @Default(Stu3ResourceType.GraphDefinition) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Stu3ResourceType.GraphDefinition,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.url,
     @JsonKey(name: '_url') required this.urlElement,
     required this.version,
@@ -677,17 +644,6 @@ class GraphDefinition {
     @JsonKey(name: '_profile') required this.profileElement,
     required this.link,
   });
-  final Stu3ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final String? url;
   final Element? urlElement;
   final String? version;
@@ -797,19 +753,19 @@ class GraphDefinitionCompartment {
 }
 
 @JsonSerializable()
-class ImplementationGuide {
+class ImplementationGuide extends Resource {
   const ImplementationGuide({
-    @Default(Stu3ResourceType.ImplementationGuide) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Stu3ResourceType.ImplementationGuide,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.url,
     @JsonKey(name: '_url') required this.urlElement,
     required this.version,
@@ -840,17 +796,6 @@ class ImplementationGuide {
     @JsonKey(name: '_binary') required this.binaryElement,
     required this.page,
   });
-  final Stu3ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final String? url;
   final Element? urlElement;
   final String? version;
@@ -1005,19 +950,19 @@ class ImplementationGuidePage {
 }
 
 @JsonSerializable()
-class MessageDefinition {
+class MessageDefinition extends Resource {
   const MessageDefinition({
-    @Default(Stu3ResourceType.MessageDefinition) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Stu3ResourceType.MessageDefinition,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.url,
     @JsonKey(name: '_url') required this.urlElement,
     required this.identifier,
@@ -1055,17 +1000,6 @@ class MessageDefinition {
     @JsonKey(name: '_responseRequired') required this.responseRequiredElement,
     required this.allowedResponse,
   });
-  final Stu3ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final String? url;
   final Element? urlElement;
   final Identifier? identifier;
@@ -1229,19 +1163,19 @@ class OperationDefinitionOverload {
 }
 
 @JsonSerializable()
-class SearchParameter {
+class SearchParameter extends Resource {
   const SearchParameter({
-    @Default(Stu3ResourceType.SearchParameter) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Stu3ResourceType.SearchParameter,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.url,
     @JsonKey(name: '_url') required this.urlElement,
     required this.version,
@@ -1287,17 +1221,6 @@ class SearchParameter {
     @JsonKey(name: '_chain') required this.chainElement,
     required this.component,
   });
-  final Stu3ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final String? url;
   final Element? urlElement;
   final String? version;
@@ -1363,19 +1286,19 @@ class SearchParameterComponent {
 }
 
 @JsonSerializable()
-class StructureDefinition {
+class StructureDefinition extends Resource {
   const StructureDefinition({
-    @Default(Stu3ResourceType.StructureDefinition) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Stu3ResourceType.StructureDefinition,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.url,
     @JsonKey(name: '_url') required this.urlElement,
     required this.identifier,
@@ -1425,17 +1348,6 @@ class StructureDefinition {
     required this.snapshot,
     required this.differential,
   });
-  final Stu3ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final String? url;
   final Element? urlElement;
   final List<Identifier>? identifier;
@@ -1538,19 +1450,19 @@ class StructureDefinitionDifferential {
 }
 
 @JsonSerializable()
-class StructureMap {
+class StructureMap extends Resource {
   const StructureMap({
-    @Default(Stu3ResourceType.StructureMap) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Stu3ResourceType.StructureMap,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.url,
     @JsonKey(name: '_url') required this.urlElement,
     required this.identifier,
@@ -1582,17 +1494,6 @@ class StructureMap {
     @JsonKey(name: '_import') required this.importElement,
     required this.group,
   });
-  final Stu3ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final String? url;
   final Element? urlElement;
   final List<Identifier>? identifier;

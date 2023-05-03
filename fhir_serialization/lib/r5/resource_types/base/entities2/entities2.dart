@@ -6,20 +6,20 @@ import '../../../../r5.dart';
 part 'entities2.g.dart';
 
 @JsonSerializable()
-class BiologicallyDerivedProduct {
+class BiologicallyDerivedProduct extends Resource {
   const BiologicallyDerivedProduct({
     @Default(R5ResourceType.BiologicallyDerivedProduct)
         required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.productCategory,
     required this.productCode,
     required this.parent,
@@ -37,16 +37,7 @@ class BiologicallyDerivedProduct {
     required this.property,
   });
   final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final Coding? productCategory;
   final CodeableConcept? productCode;
   final List<Reference>? parent;
@@ -140,19 +131,19 @@ class BiologicallyDerivedProductProperty {
 }
 
 @JsonSerializable()
-class Device {
+class Device extends Resource {
   const Device({
-    @Default(R5ResourceType.Device) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R5ResourceType.Device,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.displayName,
     @JsonKey(name: '_displayName') required this.displayNameElement,
@@ -196,16 +187,7 @@ class Device {
     required this.parent,
   });
   final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final List<Identifier>? identifier;
   final String? displayName;
   final Element? displayNameElement;
@@ -451,19 +433,19 @@ class DeviceAssociation {
 }
 
 @JsonSerializable()
-class DeviceMetric {
+class DeviceMetric extends Resource {
   const DeviceMetric({
-    @Default(R5ResourceType.DeviceMetric) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R5ResourceType.DeviceMetric,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.type,
     required this.unit,
@@ -479,16 +461,7 @@ class DeviceMetric {
     required this.calibration,
   });
   final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final List<Identifier>? identifier;
   final CodeableConcept type;
   final CodeableConcept? unit;
@@ -535,19 +508,19 @@ class DeviceMetricCalibration {
 }
 
 @JsonSerializable()
-class NutritionProduct {
+class NutritionProduct extends Resource {
   const NutritionProduct({
-    @Default(R5ResourceType.NutritionProduct) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R5ResourceType.NutritionProduct,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.code,
     required this.status,
     @JsonKey(name: '_status') required this.statusElement,
@@ -561,16 +534,7 @@ class NutritionProduct {
     required this.note,
   });
   final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final CodeableConcept? code;
   final Code? status;
   final Element? statusElement;
@@ -698,19 +662,19 @@ class NutritionProductInstance {
 }
 
 @JsonSerializable()
-class Substance {
+class Substance extends Resource {
   const Substance({
-    @Default(R5ResourceType.Substance) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R5ResourceType.Substance,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.instance,
     @JsonKey(name: '_instance') required this.instanceElement,
@@ -726,16 +690,7 @@ class Substance {
     required this.ingredient,
   });
   final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final List<Identifier>? identifier;
   final Boolean? instance;
   final Element? instanceElement;

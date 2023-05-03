@@ -6,9 +6,9 @@ import '../../../../r4.dart';
 part 'documents.g.dart';
 
 @JsonSerializable()
-class CatalogEntry {
+class CatalogEntry extends Resource {
   const CatalogEntry({
-    @Default(R4ResourceType.CatalogEntry) required this.resourceType,
+    super.resourceType = R4ResourceType.CatalogEntry,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -99,9 +99,9 @@ class CatalogEntryRelatedEntry {
 }
 
 @JsonSerializable()
-class Composition {
+class Composition extends Resource {
   const Composition({
-    @Default(R4ResourceType.Composition) required this.resourceType,
+    super.resourceType = R4ResourceType.Composition,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -283,9 +283,9 @@ class CompositionSection {
 }
 
 @JsonSerializable()
-class DocumentManifest {
+class DocumentManifest extends Resource {
   const DocumentManifest({
-    @Default(R4ResourceType.DocumentManifest) required this.resourceType,
+    super.resourceType = R4ResourceType.DocumentManifest,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -372,9 +372,9 @@ class DocumentManifestRelated {
 }
 
 @JsonSerializable()
-class DocumentReference {
+class DocumentReference extends Resource {
   const DocumentReference({
-    @Default(R4ResourceType.DocumentReference) required this.resourceType,
+    super.resourceType = R4ResourceType.DocumentReference,
     required this.id,
     required this.meta,
     required this.implicitRules,

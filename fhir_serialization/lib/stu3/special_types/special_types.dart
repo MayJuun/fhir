@@ -1628,3 +1628,4 @@ class Dosage {
   factory Dosage.fromJson(Map<String, dynamic> json) => _$DosageFromJson(json);
   Map<String, dynamic> toJson() => _$DosageToJson(this);
 }
+

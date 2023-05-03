@@ -7,7 +7,9 @@ part of 'security.dart';
 // **************************************************************************
 
 AuditEvent _$AuditEventFromJson(Map<String, dynamic> json) => AuditEvent(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.AuditEvent,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -553,7 +555,9 @@ Map<String, dynamic> _$AuditEventDetailToJson(AuditEventDetail instance) {
 }
 
 Consent _$ConsentFromJson(Map<String, dynamic> json) => Consent(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.Consent,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -912,7 +916,9 @@ Map<String, dynamic> _$ConsentDataToJson(ConsentData instance) {
 }
 
 Provenance _$ProvenanceFromJson(Map<String, dynamic> json) => Provenance(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.Provenance,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null

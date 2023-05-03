@@ -7,8 +7,9 @@ part of 'medications.dart';
 // **************************************************************************
 
 Immunization _$ImmunizationFromJson(Map<String, dynamic> json) => Immunization(
-      resourceType:
-          $enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
+          Stu3ResourceType.Immunization,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -117,9 +118,7 @@ Immunization _$ImmunizationFromJson(Map<String, dynamic> json) => Immunization(
     );
 
 Map<String, dynamic> _$ImmunizationToJson(Immunization instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -128,6 +127,8 @@ Map<String, dynamic> _$ImmunizationToJson(Immunization instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -448,8 +449,7 @@ Map<String, dynamic> _$ImmunizationVaccinationProtocolToJson(
 ImmunizationRecommendation _$ImmunizationRecommendationFromJson(
         Map<String, dynamic> json) =>
     ImmunizationRecommendation(
-      resourceType:
-          $enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType']),
+      resourceType: json['resourceType'],
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -490,9 +490,7 @@ ImmunizationRecommendation _$ImmunizationRecommendationFromJson(
 
 Map<String, dynamic> _$ImmunizationRecommendationToJson(
     ImmunizationRecommendation instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -501,6 +499,8 @@ Map<String, dynamic> _$ImmunizationRecommendationToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -714,8 +714,7 @@ Map<String, dynamic> _$MedicationBatchToJson(MedicationBatch instance) {
 MedicationAdministration _$MedicationAdministrationFromJson(
         Map<String, dynamic> json) =>
     MedicationAdministration(
-      resourceType:
-          $enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType']),
+      resourceType: json['resourceType'],
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -821,9 +820,7 @@ MedicationAdministration _$MedicationAdministrationFromJson(
 
 Map<String, dynamic> _$MedicationAdministrationToJson(
     MedicationAdministration instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -832,6 +829,8 @@ Map<String, dynamic> _$MedicationAdministrationToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -919,8 +918,9 @@ Map<String, dynamic> _$MedicationAdministrationPerformerToJson(
 
 MedicationDispense _$MedicationDispenseFromJson(Map<String, dynamic> json) =>
     MedicationDispense(
-      resourceType:
-          $enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
+          Stu3ResourceType.MedicationDispense,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1045,9 +1045,7 @@ MedicationDispense _$MedicationDispenseFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$MedicationDispenseToJson(MedicationDispense instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1056,6 +1054,8 @@ Map<String, dynamic> _$MedicationDispenseToJson(MedicationDispense instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -1190,8 +1190,9 @@ Map<String, dynamic> _$MedicationDispenseSubstitutionToJson(
 
 MedicationRequest _$MedicationRequestFromJson(Map<String, dynamic> json) =>
     MedicationRequest(
-      resourceType:
-          $enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
+          Stu3ResourceType.MedicationRequest,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1307,9 +1308,7 @@ MedicationRequest _$MedicationRequestFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$MedicationRequestToJson(MedicationRequest instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1318,6 +1317,8 @@ Map<String, dynamic> _$MedicationRequestToJson(MedicationRequest instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -1474,8 +1475,9 @@ Map<String, dynamic> _$MedicationRequestDispenseRequestToJson(
 
 MedicationStatement _$MedicationStatementFromJson(Map<String, dynamic> json) =>
     MedicationStatement(
-      resourceType:
-          $enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
+          Stu3ResourceType.MedicationStatement,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1580,9 +1582,7 @@ MedicationStatement _$MedicationStatementFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$MedicationStatementToJson(MedicationStatement instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1591,6 +1591,8 @@ Map<String, dynamic> _$MedicationStatementToJson(MedicationStatement instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());

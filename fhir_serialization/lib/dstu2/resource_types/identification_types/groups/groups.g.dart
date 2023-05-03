@@ -7,8 +7,9 @@ part of 'groups.dart';
 // **************************************************************************
 
 Organization _$OrganizationFromJson(Map<String, dynamic> json) => Organization(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.Organization,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -63,12 +64,13 @@ Organization _$OrganizationFromJson(Map<String, dynamic> json) => Organization(
       contact: (json['contact'] as List<dynamic>?)
           ?.map((e) => OrganizationContact.fromJson(e as Map<String, dynamic>))
           .toList(),
+      aliasElement: json['aliasElement'] == null
+          ? null
+          : Element.fromJson(json['aliasElement'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$OrganizationToJson(Organization instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -76,6 +78,8 @@ Map<String, dynamic> _$OrganizationToJson(Organization instance) {
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -100,6 +104,7 @@ Map<String, dynamic> _$OrganizationToJson(Organization instance) {
   writeNotNull('address', instance.address?.map((e) => e.toJson()).toList());
   writeNotNull('partOf', instance.partOf?.toJson());
   writeNotNull('contact', instance.contact?.map((e) => e.toJson()).toList());
+  writeNotNull('aliasElement', instance.aliasElement?.toJson());
   return val;
 }
 
@@ -251,8 +256,9 @@ Map<String, dynamic> _$OrganizationContactToJson(OrganizationContact instance) {
 
 HealthcareService _$HealthcareServiceFromJson(Map<String, dynamic> json) =>
     HealthcareService(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.HealthcareService,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -333,13 +339,13 @@ HealthcareService _$HealthcareServiceFromJson(Map<String, dynamic> json) =>
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
       publicKey: json['publicKey'] as String?,
-      appointmentRequired: json['appointmentRequired'] == null
+      appointment: json['appointment'] == null
           ? null
-          : Boolean.fromJson(json['appointmentRequired']),
-      appointmentRequiredElement: json['appointmentRequiredElement'] == null
+          : Boolean.fromJson(json['appointment']),
+      appointmentElement: json['appointmentElement'] == null
           ? null
           : Element.fromJson(
-              json['appointmentRequiredElement'] as Map<String, dynamic>),
+              json['appointmentElement'] as Map<String, dynamic>),
       availableTime: (json['availableTime'] as List<dynamic>?)
           ?.map((e) => HealthcareServiceAvailableTime.fromJson(
               e as Map<String, dynamic>))
@@ -357,9 +363,7 @@ HealthcareService _$HealthcareServiceFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$HealthcareServiceToJson(HealthcareService instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -367,6 +371,8 @@ Map<String, dynamic> _$HealthcareServiceToJson(HealthcareService instance) {
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -406,9 +412,8 @@ Map<String, dynamic> _$HealthcareServiceToJson(HealthcareService instance) {
   writeNotNull('referralMethod',
       instance.referralMethod?.map((e) => e.toJson()).toList());
   writeNotNull('publicKey', instance.publicKey);
-  writeNotNull('appointmentRequired', instance.appointmentRequired?.toJson());
-  writeNotNull('appointmentRequiredElement',
-      instance.appointmentRequiredElement?.toJson());
+  writeNotNull('appointment', instance.appointment?.toJson());
+  writeNotNull('appointmentElement', instance.appointmentElement?.toJson());
   writeNotNull(
       'availableTime', instance.availableTime?.map((e) => e.toJson()).toList());
   writeNotNull(
@@ -577,8 +582,9 @@ Map<String, dynamic> _$HealthcareServiceNotAvailableToJson(
 }
 
 Group _$GroupFromJson(Map<String, dynamic> json) => Group(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.Group,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -610,7 +616,7 @@ Group _$GroupFromJson(Map<String, dynamic> json) => Group(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: $enumDecode(_$GroupTypeEnumMap, json['type']),
+      type: $enumDecodeNullable(_$GroupTypeEnumMap, json['type']),
       typeElement: json['typeElement'] == null
           ? null
           : Element.fromJson(json['typeElement'] as Map<String, dynamic>),
@@ -640,9 +646,7 @@ Group _$GroupFromJson(Map<String, dynamic> json) => Group(
     );
 
 Map<String, dynamic> _$GroupToJson(Group instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -650,6 +654,8 @@ Map<String, dynamic> _$GroupToJson(Group instance) {
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -665,7 +671,7 @@ Map<String, dynamic> _$GroupToJson(Group instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  val['type'] = _$GroupTypeEnumMap[instance.type]!;
+  writeNotNull('type', _$GroupTypeEnumMap[instance.type]);
   writeNotNull('typeElement', instance.typeElement?.toJson());
   val['actual'] = instance.actual.toJson();
   writeNotNull('actualElement', instance.actualElement?.toJson());

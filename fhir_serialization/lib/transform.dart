@@ -15,7 +15,6 @@ Future<void> main() async {
         !file.contains('transform.dart') &&
         !file.contains('primitive') &&
         !(file.contains('r5') && file.contains('basic_types'))) {
-      print(file);
       writeFile = true;
       final fileText = await File(file).readAsString();
       final fileList = fileText.split('\n');
@@ -25,74 +24,595 @@ Future<void> main() async {
       final classVars = [];
       var className = '';
       for (final line in fileList) {
-        if (line.contains('@JsonSerializable')) {
-          writeFile = false;
-          break;
-        }
-        if (!classFile) {
-          if (line.contains('class')) {
-            newText += '@JsonSerializable()\n';
-            newText += '$line\n';
-            className = line.replaceAll('class', '').replaceAll('{', '').trim();
-            classFile = true;
-            isClass = true;
+        if (line.contains('class')) {
+          final tempLine =
+              line.replaceAll('class', '').replaceAll('{', '').trim();
+          if (classTypes.contains(tempLine)) {
+            newText += 'class $tempLine extends Resource {\n';
           } else {
             newText += '$line\n';
-          }
-        } else if (isClass) {
-          if (line.contains('const')) {
-            classFile = false;
-            isClass = false;
-          }
-          if (line.contains('}')) {
-            isClass = false;
-            newText += 'const $className({\n';
-            classVars.forEach((element) {
-              final varList = element.toString().split(' ');
-              varList.removeWhere((e) => e == '' || e == ' ');
-              if (varList.length == 2) {
-                newText +=
-                    '${line.contains("?") ? "" : "required "}this.${varList.last}\n';
-              } else if (varList.length > 2) {
-                newText += varList.sublist(0, varList.length - 2).join(' ');
-                newText +=
-                    '${line.contains("?") ? "" : "required "} this.${varList.last}\n';
-              } else {
-                // print('VarList: $varList');
-              }
-            });
-            newText += '});\n';
-            classVars.forEach((element) {
-              final varList = element.toString().split(' ');
-              varList.removeWhere((e) => e == '' || e == ' ');
-              print('$className:VarList: $varList');
-              if (varList.isNotEmpty) {
-                newText +=
-                    'final ${varList[varList.length - 2]} ${varList.last.replaceAll(",", ";")}\n';
-              }
-            });
-
-            newText +=
-                'factory $className.fromJson(Map<String, dynamic> json) => _\$${className}FromJson(json);\n';
-            newText +=
-                'Map<String, dynamic> toJson() => _\$${className}ToJson(this);\n';
-            newText += '}\n';
-            classVars.clear();
-          } else {
-            classVars.add(line);
           }
         } else {
           newText += '$line\n';
-          if (line.contains('class')) {
-            className = line.replaceAll('class', '').replaceAll('{', '').trim();
-            classFile = true;
-            isClass = true;
-          }
         }
       }
-      if (writeFile) {
-        await File(file).writeAsString(newText);
-      }
+      //   if (line.contains('@JsonSerializable')) {
+      //     writeFile = false;
+      //     break;
+      //   }
+      //   if (!classFile) {
+      //     if (line.contains('class')) {
+      //       newText += '@JsonSerializable()\n';
+      //       newText += '$line\n';
+      //       className = line.replaceAll('class', '').replaceAll('{', '').trim();
+      //       classFile = true;
+      //       isClass = true;
+      //     } else {
+      //       newText += '$line\n';
+      //     }
+      //   } else if (isClass) {
+      //     if (line.contains('const')) {
+      //       classFile = false;
+      //       isClass = false;
+      //     }
+      //     if (line.contains('}')) {
+      //       isClass = false;
+      //       newText += 'const $className({\n';
+      //       classVars.forEach((element) {
+      //         final varList = element.toString().split(' ');
+      //         varList.removeWhere((e) => e == '' || e == ' ');
+      //         if (varList.length == 2) {
+      //           newText +=
+      //               '${line.contains("?") ? "" : "required "}this.${varList.last}\n';
+      //         } else if (varList.length > 2) {
+      //           newText += varList.sublist(0, varList.length - 2).join(' ');
+      //           newText +=
+      //               '${line.contains("?") ? "" : "required "} this.${varList.last}\n';
+      //         } else {
+      //           // print('VarList: $varList');
+      //         }
+      //       });
+      //       newText += '});\n';
+      //       classVars.forEach((element) {
+      //         final varList = element.toString().split(' ');
+      //         varList.removeWhere((e) => e == '' || e == ' ');
+      //         print('$className:VarList: $varList');
+      //         if (varList.isNotEmpty) {
+      //           newText +=
+      //               'final ${varList[varList.length - 2]} ${varList.last.replaceAll(",", ";")}\n';
+      //         }
+      //       });
+
+      //       newText +=
+      //           'factory $className.fromJson(Map<String, dynamic> json) => _\$${className}FromJson(json);\n';
+      //       newText +=
+      //           'Map<String, dynamic> toJson() => _\$${className}ToJson(this);\n';
+      //       newText += '}\n';
+      //       classVars.clear();
+      //     } else {
+      //       classVars.add(line);
+      //     }
+      //   } else {
+      //     newText += '$line\n';
+      //     if (line.contains('class')) {
+      //       className = line.replaceAll('class', '').replaceAll('{', '').trim();
+      //       classFile = true;
+      //       isClass = true;
+      //     }
+      //   }
+      // }
+      // if (writeFile) {
+      await File(file).writeAsString(newText);
     }
   }
 }
+
+final classTypes = [
+  'Account',
+  'AllergyIntolerance',
+  'Appointment',
+  'AppointmentResponse',
+  'AuditEvent',
+  'Basic',
+  'Binary',
+  'BodySite',
+  'Bundle',
+  'CapabilityStatement',
+  'CarePlan',
+  'Claim',
+  'ClaimResponse',
+  'ClinicalImpression',
+  'Communication',
+  'CommunicationRequest',
+  'Composition',
+  'ConceptMap',
+  'Condition',
+  'Conformance',
+  'Contract',
+  'Coverage',
+  'DataElement',
+  'DetectedIssue',
+  'Device',
+  'DeviceComponent',
+  'DeviceMetric',
+  'DeviceUseRequest',
+  'DeviceUseStatement',
+  'DiagnosticOrder',
+  'DiagnosticReport',
+  'DocumentManifest',
+  'DocumentReference',
+  'EligibilityRequest',
+  'EligibilityResponse',
+  'Encounter',
+  'EnrollmentRequest',
+  'EnrollmentResponse',
+  'EpisodeOfCare',
+  'ExplanationOfBenefit',
+  'FamilyMemberHistory',
+  'Flag',
+  'Goal',
+  'Group',
+  'HealthcareService',
+  'ImagingObjectSelection',
+  'ImagingStudy',
+  'Immunization',
+  'ImmunizationRecommendation',
+  'ImplementationGuide',
+  'List',
+  'Location',
+  'Media',
+  'Medication',
+  'MedicationAdministration',
+  'MedicationDispense',
+  'MedicationOrder',
+  'MedicationStatement',
+  'MessageHeader',
+  'NamingSystem',
+  'NutritionOrder',
+  'Observation',
+  'OperationDefinition',
+  'OperationOutcome',
+  'Order',
+  'OrderResponse',
+  'Organization',
+  'Parameters',
+  'Patient',
+  'PaymentNotice',
+  'PaymentReconciliation',
+  'Person',
+  'Practitioner',
+  'Procedure',
+  'ProcedureRequest',
+  'ProcessRequest',
+  'ProcessResponse',
+  'Provenance',
+  'Questionnaire',
+  'QuestionnaireResponse',
+  'ReferralRequest',
+  'RelatedPerson',
+  'RiskAssessment',
+  'Schedule',
+  'SearchParameter',
+  'Slot',
+  'Specimen',
+  'StructureDefinition',
+  'Subscription',
+  'Substance',
+  'SupplyDelivery',
+  'SupplyRequest',
+  'TestScript',
+  'ValueSet',
+  'VisionPrescription',
+  'Account',
+  'ActivityDefinition',
+  'AdministrableProductDefinition',
+  'AdverseEvent',
+  'AllergyIntolerance',
+  'Appointment',
+  'AppointmentResponse',
+  'AuditEvent',
+  'Basic',
+  'Binary',
+  'BiologicallyDerivedProduct',
+  'BodyStructure',
+  'Bundle',
+  'CapabilityStatement',
+  'CarePlan',
+  'CareTeam',
+  'CatalogEntry',
+  'ChargeItem',
+  'ChargeItemDefinition',
+  'Citation',
+  'Claim',
+  'ClaimResponse',
+  'ClinicalImpression',
+  'ClinicalUseDefinition',
+  'CodeSystem',
+  'Communication',
+  'CommunicationRequest',
+  'CompartmentDefinition',
+  'Composition',
+  'ConceptMap',
+  'Condition',
+  'Consent',
+  'Contract',
+  'Coverage',
+  'CoverageEligibilityRequest',
+  'CoverageEligibilityResponse',
+  'DetectedIssue',
+  'Device',
+  'DeviceDefinition',
+  'DeviceMetric',
+  'DeviceRequest',
+  'DeviceUseStatement',
+  'DiagnosticReport',
+  'DocumentManifest',
+  'DocumentReference',
+  'Encounter',
+  'Endpoint',
+  'EnrollmentRequest',
+  'EnrollmentResponse',
+  'EpisodeOfCare',
+  'EventDefinition',
+  'Evidence',
+  'EvidenceReport',
+  'EvidenceVariable',
+  'ExampleScenario',
+  'ExplanationOfBenefit',
+  'FamilyMemberHistory',
+  'Flag',
+  'Goal',
+  'GraphDefinition',
+  'Group',
+  'GuidanceResponse',
+  'HealthcareService',
+  'ImagingStudy',
+  'Immunization',
+  'ImmunizationEvaluation',
+  'ImmunizationRecommendation',
+  'ImplementationGuide',
+  'Ingredient',
+  'InsurancePlan',
+  'Invoice',
+  'Library',
+  'Linkage',
+  'List',
+  'Location',
+  'ManufacturedItemDefinition',
+  'Measure',
+  'MeasureReport',
+  'Media',
+  'Medication',
+  'MedicationAdministration',
+  'MedicationDispense',
+  'MedicationKnowledge',
+  'MedicationRequest',
+  'MedicationStatement',
+  'MedicinalProductDefinition',
+  'MessageDefinition',
+  'MessageHeader',
+  'MolecularSequence',
+  'NamingSystem',
+  'NutritionOrder',
+  'NutritionProduct',
+  'Observation',
+  'ObservationDefinition',
+  'OperationDefinition',
+  'OperationOutcome',
+  'Organization',
+  'OrganizationAffiliation',
+  'PackagedProductDefinition',
+  'Parameters',
+  'Patient',
+  'PaymentNotice',
+  'PaymentReconciliation',
+  'Person',
+  'PlanDefinition',
+  'Practitioner',
+  'PractitionerRole',
+  'Procedure',
+  'Provenance',
+  'Questionnaire',
+  'QuestionnaireResponse',
+  'RegulatedAuthorization',
+  'RelatedPerson',
+  'RequestGroup',
+  'ResearchDefinition',
+  'ResearchElementDefinition',
+  'ResearchStudy',
+  'ResearchSubject',
+  'RiskAssessment',
+  'Schedule',
+  'SearchParameter',
+  'ServiceRequest',
+  'Slot',
+  'Specimen',
+  'SpecimenDefinition',
+  'StructureDefinition',
+  'StructureMap',
+  'Subscription',
+  'SubscriptionStatus',
+  'SubscriptionTopic',
+  'Substance',
+  'SubstanceDefinition',
+  'SupplyDelivery',
+  'SupplyRequest',
+  'Task',
+  'TerminologyCapabilities',
+  'TestReport',
+  'TestScript',
+  'ValueSet',
+  'VerificationResult',
+  'VisionPrescription',
+  'Account',
+  'ActivityDefinition',
+  'ActorDefinition',
+  'AdministrableProductDefinition',
+  'AdverseEvent',
+  'AllergyIntolerance',
+  'Appointment',
+  'AppointmentResponse',
+  'ArtifactAssessment',
+  'AuditEvent',
+  'Basic',
+  'Binary',
+  'BiologicallyDerivedProduct',
+  'BodyStructure',
+  'Bundle',
+  'CapabilityStatement',
+  'CarePlan',
+  'CareTeam',
+  'ChargeItem',
+  'ChargeItemDefinition',
+  'Citation',
+  'Claim',
+  'ClaimResponse',
+  'ClinicalImpression',
+  'ClinicalUseDefinition',
+  'CodeSystem',
+  'Communication',
+  'CommunicationRequest',
+  'CompartmentDefinition',
+  'Composition',
+  'ConceptMap',
+  'Condition',
+  'ConditionDefinition',
+  'Consent',
+  'Contract',
+  'Coverage',
+  'CoverageEligibilityRequest',
+  'CoverageEligibilityResponse',
+  'DetectedIssue',
+  'Device',
+  'DeviceDefinition',
+  'DeviceDispense',
+  'DeviceMetric',
+  'DeviceRequest',
+  'DeviceUsage',
+  'DiagnosticReport',
+  'DocumentManifest',
+  'DocumentReference',
+  'Encounter',
+  'Endpoint',
+  'EnrollmentRequest',
+  'EnrollmentResponse',
+  'EpisodeOfCare',
+  'EventDefinition',
+  'Evidence',
+  'EvidenceReport',
+  'EvidenceVariable',
+  'ExampleScenario',
+  'ExplanationOfBenefit',
+  'FamilyMemberHistory',
+  'Flag',
+  'FormularyItem',
+  'GenomicStudy',
+  'Goal',
+  'GraphDefinition',
+  'Group',
+  'GuidanceResponse',
+  'HealthcareService',
+  'ImagingSelection',
+  'ImagingStudy',
+  'Immunization',
+  'ImmunizationEvaluation',
+  'ImmunizationRecommendation',
+  'ImplementationGuide',
+  'Ingredient',
+  'InsurancePlan',
+  'InventoryReport',
+  'Invoice',
+  'Library',
+  'Linkage',
+  'List',
+  'Location',
+  'ManufacturedItemDefinition',
+  'Measure',
+  'MeasureReport',
+  'Medication',
+  'MedicationAdministration',
+  'MedicationDispense',
+  'MedicationKnowledge',
+  'MedicationRequest',
+  'MedicationUsage',
+  'MedicinalProductDefinition',
+  'MessageDefinition',
+  'MessageHeader',
+  'MolecularSequence',
+  'NamingSystem',
+  'NutritionIntake',
+  'NutritionOrder',
+  'NutritionProduct',
+  'Observation',
+  'ObservationDefinition',
+  'OperationDefinition',
+  'OperationOutcome',
+  'Organization',
+  'OrganizationAffiliation',
+  'PackagedProductDefinition',
+  'Parameters',
+  'Patient',
+  'PaymentNotice',
+  'PaymentReconciliation',
+  'Permission',
+  'Person',
+  'PlanDefinition',
+  'Practitioner',
+  'PractitionerRole',
+  'Procedure',
+  'Provenance',
+  'Questionnaire',
+  'QuestionnaireResponse',
+  'RegulatedAuthorization',
+  'RelatedPerson',
+  'RequestOrchestration',
+  'Requirements',
+  'ResearchStudy',
+  'ResearchSubject',
+  'RiskAssessment',
+  'Schedule',
+  'SearchParameter',
+  'ServiceRequest',
+  'Slot',
+  'Specimen',
+  'SpecimenDefinition',
+  'StructureDefinition',
+  'StructureMap',
+  'Subscription',
+  'SubscriptionStatus',
+  'SubscriptionTopic',
+  'Substance',
+  'SubstanceDefinition',
+  'SubstanceNucleicAcid',
+  'SubstancePolymer',
+  'SubstanceProtein',
+  'SubstanceReferenceInformation',
+  'SubstanceSourceMaterial',
+  'SupplyDelivery',
+  'SupplyRequest',
+  'Task',
+  'TerminologyCapabilities',
+  'TestReport',
+  'TestScript',
+  'Transport',
+  'ValueSet',
+  'VerificationResult',
+  'VisionPrescription',
+  'Account',
+  'ActivityDefinition',
+  'AdverseEvent',
+  'AllergyIntolerance',
+  'Appointment',
+  'AppointmentResponse',
+  'AuditEvent',
+  'Basic',
+  'Binary',
+  'BodySite',
+  'Bundle',
+  'CapabilityStatement',
+  'CarePlan',
+  'CareTeam',
+  'ChargeItem',
+  'Claim',
+  'ClaimResponse',
+  'ClinicalImpression',
+  'CodeSystem',
+  'Communication',
+  'CommunicationRequest',
+  'CompartmentDefinition',
+  'Composition',
+  'ConceptMap',
+  'Condition',
+  'Consent',
+  'Contract',
+  'Coverage',
+  'DataElement',
+  'DetectedIssue',
+  'Device',
+  'DeviceComponent',
+  'DeviceMetric',
+  'DeviceRequest',
+  'DeviceUseStatement',
+  'DiagnosticReport',
+  'DocumentManifest',
+  'DocumentReference',
+  'EligibilityRequest',
+  'EligibilityResponse',
+  'Encounter',
+  'Endpoint',
+  'EnrollmentRequest',
+  'EnrollmentResponse',
+  'EpisodeOfCare',
+  'ExpansionProfile',
+  'ExplanationOfBenefit',
+  'FamilyMemberHistory',
+  'Flag',
+  'Goal',
+  'GraphDefinition',
+  'Group',
+  'GuidanceResponse',
+  'HealthcareService',
+  'ImagingManifest',
+  'ImagingStudy',
+  'Immunization',
+  'ImmunizationRecommendation',
+  'ImplementationGuide',
+  'Library',
+  'Linkage',
+  'List',
+  'Location',
+  'Measure',
+  'MeasureReport',
+  'Media',
+  'Medication',
+  'MedicationAdministration',
+  'MedicationDispense',
+  'MedicationRequest',
+  'MedicationStatement',
+  'MessageDefinition',
+  'MessageHeader',
+  'NamingSystem',
+  'NutritionOrder',
+  'Observation',
+  'OperationDefinition',
+  'OperationOutcome',
+  'Organization',
+  'Parameters',
+  'Patient',
+  'PaymentNotice',
+  'PaymentReconciliation',
+  'Person',
+  'PlanDefinition',
+  'Practitioner',
+  'PractitionerRole',
+  'Procedure',
+  'ProcedureRequest',
+  'ProcessRequest',
+  'ProcessResponse',
+  'Provenance',
+  'Questionnaire',
+  'QuestionnaireResponse',
+  'ReferralRequest',
+  'RelatedPerson',
+  'RequestGroup',
+  'ResearchStudy',
+  'ResearchSubject',
+  'RiskAssessment',
+  'Schedule',
+  'SearchParameter',
+  'Sequence',
+  'ServiceDefinition',
+  'Slot',
+  'Specimen',
+  'StructureDefinition',
+  'StructureMap',
+  'Subscription',
+  'Substance',
+  'SupplyDelivery',
+  'SupplyRequest',
+  'Task',
+  'TestReport',
+  'TestScript',
+  'ValueSet',
+  'VisionPrescription',
+];

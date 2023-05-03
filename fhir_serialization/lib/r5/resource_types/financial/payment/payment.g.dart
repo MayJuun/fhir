@@ -8,7 +8,9 @@ part of 'payment.dart';
 
 PaymentNotice _$PaymentNoticeFromJson(Map<String, dynamic> json) =>
     PaymentNotice(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.PaymentNotice,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -79,9 +81,7 @@ PaymentNotice _$PaymentNoticeFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$PaymentNoticeToJson(PaymentNotice instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -102,6 +102,7 @@ Map<String, dynamic> _$PaymentNoticeToJson(PaymentNotice instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('status', instance.status?.toJson());
@@ -282,7 +283,9 @@ const _$R5ResourceTypeEnumMap = {
 PaymentReconciliation _$PaymentReconciliationFromJson(
         Map<String, dynamic> json) =>
     PaymentReconciliation(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.PaymentReconciliation,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -422,9 +425,7 @@ PaymentReconciliation _$PaymentReconciliationFromJson(
 
 Map<String, dynamic> _$PaymentReconciliationToJson(
     PaymentReconciliation instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -445,6 +446,7 @@ Map<String, dynamic> _$PaymentReconciliationToJson(
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   val['type'] = instance.type.toJson();

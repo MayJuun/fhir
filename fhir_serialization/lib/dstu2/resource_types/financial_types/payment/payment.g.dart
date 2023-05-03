@@ -8,8 +8,9 @@ part of 'payment.dart';
 
 PaymentNotice _$PaymentNoticeFromJson(Map<String, dynamic> json) =>
     PaymentNotice(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.PaymentNotice,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -73,9 +74,7 @@ PaymentNotice _$PaymentNoticeFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$PaymentNoticeToJson(PaymentNotice instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -83,6 +82,8 @@ Map<String, dynamic> _$PaymentNoticeToJson(PaymentNotice instance) {
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -212,8 +213,9 @@ const _$Dstu2ResourceTypeEnumMap = {
 PaymentReconciliation _$PaymentReconciliationFromJson(
         Map<String, dynamic> json) =>
     PaymentReconciliation(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.PaymentReconciliation,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -299,9 +301,7 @@ PaymentReconciliation _$PaymentReconciliationFromJson(
 
 Map<String, dynamic> _$PaymentReconciliationToJson(
     PaymentReconciliation instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -309,6 +309,8 @@ Map<String, dynamic> _$PaymentReconciliationToJson(
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());

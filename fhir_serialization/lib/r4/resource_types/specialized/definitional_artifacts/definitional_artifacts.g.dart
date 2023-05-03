@@ -8,7 +8,9 @@ part of 'definitional_artifacts.dart';
 
 ActivityDefinition _$ActivityDefinitionFromJson(Map<String, dynamic> json) =>
     ActivityDefinition(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.ActivityDefinition,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -596,7 +598,9 @@ Map<String, dynamic> _$ActivityDefinitionDynamicValueToJson(
 
 DeviceDefinition _$DeviceDefinitionFromJson(Map<String, dynamic> json) =>
     DeviceDefinition(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.DeviceDefinition,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1007,7 +1011,9 @@ Map<String, dynamic> _$DeviceDefinitionMaterialToJson(
 
 EventDefinition _$EventDefinitionFromJson(Map<String, dynamic> json) =>
     EventDefinition(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.EventDefinition,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1237,7 +1243,9 @@ Map<String, dynamic> _$EventDefinitionToJson(EventDefinition instance) {
 ObservationDefinition _$ObservationDefinitionFromJson(
         Map<String, dynamic> json) =>
     ObservationDefinition(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.ObservationDefinition,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1973,7 +1981,9 @@ Map<String, dynamic> _$PlanDefinitionDynamicValueToJson(
 
 Questionnaire _$QuestionnaireFromJson(Map<String, dynamic> json) =>
     Questionnaire(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.Questionnaire,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -2604,7 +2614,9 @@ Map<String, dynamic> _$QuestionnaireInitialToJson(
 
 SpecimenDefinition _$SpecimenDefinitionFromJson(Map<String, dynamic> json) =>
     SpecimenDefinition(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.SpecimenDefinition,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null

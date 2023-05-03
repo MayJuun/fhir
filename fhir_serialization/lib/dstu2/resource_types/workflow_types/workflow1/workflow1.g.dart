@@ -7,8 +7,9 @@ part of 'workflow1.dart';
 // **************************************************************************
 
 Order _$OrderFromJson(Map<String, dynamic> json) => Order(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.Order,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -59,9 +60,7 @@ Order _$OrderFromJson(Map<String, dynamic> json) => Order(
     );
 
 Map<String, dynamic> _$OrderToJson(Order instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -69,6 +68,8 @@ Map<String, dynamic> _$OrderToJson(Order instance) {
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -233,8 +234,9 @@ Map<String, dynamic> _$OrderWhenToJson(OrderWhen instance) {
 
 OrderResponse _$OrderResponseFromJson(Map<String, dynamic> json) =>
     OrderResponse(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.OrderResponse,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -277,9 +279,7 @@ OrderResponse _$OrderResponseFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$OrderResponseToJson(OrderResponse instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -287,6 +287,8 @@ Map<String, dynamic> _$OrderResponseToJson(OrderResponse instance) {
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -327,8 +329,9 @@ const _$OrderResponseOrderStatusEnumMap = {
 CommunicationRequest _$CommunicationRequestFromJson(
         Map<String, dynamic> json) =>
     CommunicationRequest(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.CommunicationRequest,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -412,9 +415,7 @@ CommunicationRequest _$CommunicationRequestFromJson(
 
 Map<String, dynamic> _$CommunicationRequestToJson(
     CommunicationRequest instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -422,6 +423,8 @@ Map<String, dynamic> _$CommunicationRequestToJson(
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -520,8 +523,9 @@ Map<String, dynamic> _$CommunicationRequestPayloadToJson(
 
 DeviceUseRequest _$DeviceUseRequestFromJson(Map<String, dynamic> json) =>
     DeviceUseRequest(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.DeviceUseRequest,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -601,9 +605,7 @@ DeviceUseRequest _$DeviceUseRequestFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$DeviceUseRequestToJson(DeviceUseRequest instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -611,6 +613,8 @@ Map<String, dynamic> _$DeviceUseRequestToJson(DeviceUseRequest instance) {
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -674,8 +678,9 @@ const _$DeviceUseRequestPriorityEnumMap = {
 
 DeviceUseStatement _$DeviceUseStatementFromJson(Map<String, dynamic> json) =>
     DeviceUseStatement(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.DeviceUseStatement,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -747,9 +752,7 @@ DeviceUseStatement _$DeviceUseStatementFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$DeviceUseStatementToJson(DeviceUseStatement instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -757,6 +760,8 @@ Map<String, dynamic> _$DeviceUseStatementToJson(DeviceUseStatement instance) {
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());

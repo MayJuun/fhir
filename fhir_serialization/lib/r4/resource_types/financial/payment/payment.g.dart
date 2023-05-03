@@ -8,8 +8,10 @@ part of 'payment.dart';
 
 PaymentNotice _$PaymentNoticeFromJson(Map<String, dynamic> json) =>
     PaymentNotice(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
-      id: json['id'] as String?,
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.PaymentNotice,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -79,9 +81,7 @@ PaymentNotice _$PaymentNoticeFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$PaymentNoticeToJson(PaymentNotice instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -89,7 +89,8 @@ Map<String, dynamic> _$PaymentNoticeToJson(PaymentNotice instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -269,8 +270,10 @@ const _$R4ResourceTypeEnumMap = {
 PaymentReconciliation _$PaymentReconciliationFromJson(
         Map<String, dynamic> json) =>
     PaymentReconciliation(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
-      id: json['id'] as String?,
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.PaymentReconciliation,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -360,9 +363,7 @@ PaymentReconciliation _$PaymentReconciliationFromJson(
 
 Map<String, dynamic> _$PaymentReconciliationToJson(
     PaymentReconciliation instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -370,7 +371,8 @@ Map<String, dynamic> _$PaymentReconciliationToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());

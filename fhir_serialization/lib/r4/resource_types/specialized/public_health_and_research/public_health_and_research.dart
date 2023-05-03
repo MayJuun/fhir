@@ -6,9 +6,9 @@ import '../../../../r4.dart';
 part 'public_health_and_research.g.dart';
 
 @JsonSerializable()
-class ResearchStudy {
+class ResearchStudy extends Resource {
   const ResearchStudy({
-    @Default(R4ResourceType.ResearchStudy) required this.resourceType,
+    super.resourceType = R4ResourceType.ResearchStudy,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -143,9 +143,9 @@ class ResearchStudyObjective {
 }
 
 @JsonSerializable()
-class ResearchSubject {
+class ResearchSubject extends Resource {
   const ResearchSubject({
-    @Default(R4ResourceType.ResearchSubject) required this.resourceType,
+    super.resourceType = R4ResourceType.ResearchSubject,
     required this.id,
     required this.meta,
     required this.implicitRules,

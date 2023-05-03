@@ -8,17 +8,17 @@ part 'workflow2.enums.dart';
 part 'workflow2.g.dart';
 
 @JsonSerializable()
-class ProcessRequest {
+class ProcessRequest extends Resource {
   const ProcessRequest({
-    @Default(Dstu2ResourceType.ProcessRequest) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    required this.language,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.ProcessRequest,
+    required super.id,
+    required super.meta,
+    required super.implicitRules,
+    required super.language,
+    required super.text,
+    required super.contained,
+    @JsonKey(name: 'extension') required super.extension_,
+    required super.modifierExtension,
     required this.action,
     required this.identifier,
     required this.ruleset,
@@ -36,15 +36,6 @@ class ProcessRequest {
     required this.exclude,
     required this.period,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Code? language;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
 
   final ProcessRequestAction action;
   final List<Identifier>? identifier;
@@ -85,17 +76,17 @@ class ProcessRequestItem {
 }
 
 @JsonSerializable()
-class ProcessResponse {
+class ProcessResponse extends Resource {
   const ProcessResponse({
-    @Default(Dstu2ResourceType.ProcessResponse) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    required this.language,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.ProcessResponse,
+    required super.id,
+    required super.meta,
+    required super.implicitRules,
+    required super.language,
+    required super.text,
+    required super.contained,
+    @JsonKey(name: 'extension') required super.extension_,
+    required super.modifierExtension,
     required this.identifier,
     required this.request,
     required this.outcome,
@@ -110,15 +101,7 @@ class ProcessResponse {
     required this.notes,
     required this.error,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Code? language;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final List<Identifier>? identifier;
   final Reference? request;
   final Coding? outcome;
@@ -157,19 +140,19 @@ class ProcessResponseNotes {
 }
 
 @JsonSerializable()
-class SupplyRequest {
+class SupplyRequest extends Resource {
   const SupplyRequest({
-    @Default(Dstu2ResourceType.SupplyRequest) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.SupplyRequest,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.patient,
     required this.source,
     required this.date,
@@ -183,17 +166,6 @@ class SupplyRequest {
     required this.reasonReference,
     required this.when,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final Reference? patient;
   final Reference? source;
   final FhirDateTime? date;
@@ -232,19 +204,19 @@ class SupplyRequestWhen {
 }
 
 @JsonSerializable()
-class SupplyDelivery {
+class SupplyDelivery extends Resource {
   const SupplyDelivery({
-    @Default(Dstu2ResourceType.SupplyDelivery) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.SupplyDelivery,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.status,
     @JsonKey(name: '_status') required this.statusElement,
@@ -258,17 +230,6 @@ class SupplyDelivery {
     required this.destination,
     required this.receiver,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final Identifier? identifier;
 
   final SupplyDeliveryStatus? status;

@@ -8,24 +8,24 @@ part 'billing.enums.dart';
 part 'billing.g.dart';
 
 @JsonSerializable()
-class Account {
+class Account extends Resource {
   const Account({
-    @Default(Dstu2ResourceType.Account) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.Account,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.name,
     @JsonKey(name: '_name') required this.nameElement,
     required this.type,
-    @JsonKey(unknownEnumValue: AccountStatus.unknown) required this.status,
+    required this.status,
     @JsonKey(name: '_status') required this.statusElement,
     required this.activePeriod,
     required this.currency,
@@ -36,17 +36,6 @@ class Account {
     required this.description,
     @JsonKey(name: '_description') required this.descriptionElement,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;
   final String? name;
   final Element? nameElement;
@@ -67,20 +56,20 @@ class Account {
 }
 
 @JsonSerializable()
-class Claim {
+class Claim extends Resource {
   const Claim({
-    @Default(Dstu2ResourceType.Claim) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(unknownEnumValue: ClaimType.unknown) required this.type,
+    super.resourceType = Dstu2ResourceType.Claim,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    required this.type,
     required this.identifier,
     required this.ruleset,
     required this.originalRuleset,
@@ -89,7 +78,7 @@ class Claim {
     required this.target,
     required this.provider,
     required this.organization,
-    @JsonKey(unknownEnumValue: ClaimUse.unknown) required this.use,
+    required this.use,
     @JsonKey(name: '_use') required this.useElement,
     required this.priority,
     required this.fundsReserve,
@@ -112,17 +101,6 @@ class Claim {
     required this.additionalMaterials,
     required this.missingTeeth,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final ClaimType type;
   final List<Identifier>? identifier;
   final Coding? ruleset;
@@ -407,19 +385,19 @@ class ClaimMissingTeeth {
 }
 
 @JsonSerializable()
-class ClaimResponse {
+class ClaimResponse extends Resource {
   const ClaimResponse({
-    @Default(Dstu2ResourceType.ClaimResponse) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.ClaimResponse,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.request,
     required this.ruleset,
@@ -451,17 +429,6 @@ class ClaimResponse {
     required this.note,
     required this.coverage,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;
   final Reference? request;
   final Coding? ruleset;

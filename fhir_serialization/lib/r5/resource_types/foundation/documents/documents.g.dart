@@ -7,7 +7,9 @@ part of 'documents.dart';
 // **************************************************************************
 
 Composition _$CompositionFromJson(Map<String, dynamic> json) => Composition(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.Composition,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -100,9 +102,7 @@ Composition _$CompositionFromJson(Map<String, dynamic> json) => Composition(
     );
 
 Map<String, dynamic> _$CompositionToJson(Composition instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -123,6 +123,7 @@ Map<String, dynamic> _$CompositionToJson(Composition instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('urlElement', instance.urlElement?.toJson());
   writeNotNull(
@@ -467,7 +468,9 @@ Map<String, dynamic> _$CompositionSectionToJson(CompositionSection instance) {
 
 DocumentManifest _$DocumentManifestFromJson(Map<String, dynamic> json) =>
     DocumentManifest(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.DocumentManifest,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -544,9 +547,7 @@ DocumentManifest _$DocumentManifestFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$DocumentManifestToJson(DocumentManifest instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -567,6 +568,7 @@ Map<String, dynamic> _$DocumentManifestToJson(DocumentManifest instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('masterIdentifier', instance.masterIdentifier?.toJson());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
@@ -628,7 +630,9 @@ Map<String, dynamic> _$DocumentManifestRelatedToJson(
 
 DocumentReference _$DocumentReferenceFromJson(Map<String, dynamic> json) =>
     DocumentReference(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.DocumentReference,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -733,9 +737,7 @@ DocumentReference _$DocumentReferenceFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$DocumentReferenceToJson(DocumentReference instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -756,6 +758,7 @@ Map<String, dynamic> _$DocumentReferenceToJson(DocumentReference instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('basedOn', instance.basedOn?.map((e) => e.toJson()).toList());

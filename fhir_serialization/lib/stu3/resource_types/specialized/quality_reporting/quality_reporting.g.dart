@@ -7,8 +7,9 @@ part of 'quality_reporting.dart';
 // **************************************************************************
 
 Measure _$MeasureFromJson(Map<String, dynamic> json) => Measure(
-      resourceType:
-          $enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
+          Stu3ResourceType.Measure,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -195,9 +196,7 @@ Measure _$MeasureFromJson(Map<String, dynamic> json) => Measure(
     );
 
 Map<String, dynamic> _$MeasureToJson(Measure instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -206,6 +205,8 @@ Map<String, dynamic> _$MeasureToJson(Measure instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -578,8 +579,9 @@ Map<String, dynamic> _$MeasureSupplementalDataToJson(
 
 MeasureReport _$MeasureReportFromJson(Map<String, dynamic> json) =>
     MeasureReport(
-      resourceType:
-          $enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
+          Stu3ResourceType.MeasureReport,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -642,9 +644,7 @@ MeasureReport _$MeasureReportFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$MeasureReportToJson(MeasureReport instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -653,6 +653,8 @@ Map<String, dynamic> _$MeasureReportToJson(MeasureReport instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());

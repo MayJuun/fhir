@@ -8,61 +8,48 @@ part 'individuals.enums.dart';
 part 'individuals.g.dart';
 
 @JsonSerializable()
-class Patient {
+class Patient extends Resource {
   const Patient({
-    @Default(Dstu2ResourceType.Patient) required this.resourceType,
-    required this.id,
-    @JsonKey(name: '_id') required this.idElement,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.identifier,
-    required this.active,
-    @JsonKey(name: '_active') required this.activeElement,
-    required this.name,
-    required this.telecom,
-    @JsonKey(unknownEnumValue: PatientGender.unknown) required this.gender,
-    @JsonKey(name: '_gender') required this.genderElement,
-    required this.birthDate,
-    @JsonKey(name: '_birthDate') required this.birthDateElement,
-    required this.deceasedBoolean,
-    @JsonKey(name: '_deceasedBoolean') required this.deceasedBooleanElement,
-    required this.deceasedDateTime,
-    @JsonKey(name: '_deceasedDateTime') required this.deceasedDateTimeElement,
-    required this.address,
-    required this.maritalStatus,
-    required this.multipleBirthBoolean,
-    @JsonKey(name: '__multipleBirthBoolean')
-        required this.multipleBirthBooleanElement,
-    required this.multipleBirthInteger,
-    @JsonKey(name: '__multipleBirthInteger')
-        required this.multipleBirthIntegerElement,
-    required this.photo,
-    required this.contact,
-    required this.animal,
-    required this.communication,
-    required this.careProvider,
-    required this.managingOrganization,
-    required this.link,
+    super.resourceType = Dstu2ResourceType.Patient,
+    super.id,
+    @JsonKey(name: '_id') super.idElement,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.identifier,
+    this.active,
+    @JsonKey(name: '_active') this.activeElement,
+    this.name,
+    this.telecom,
+    this.gender,
+    @JsonKey(name: '_gender') this.genderElement,
+    this.birthDate,
+    @JsonKey(name: '_birthDate') this.birthDateElement,
+    this.deceasedBoolean,
+    @JsonKey(name: '_deceasedBoolean') this.deceasedBooleanElement,
+    this.deceasedDateTime,
+    @JsonKey(name: '_deceasedDateTime') this.deceasedDateTimeElement,
+    this.address,
+    this.maritalStatus,
+    this.multipleBirthBoolean,
+    @JsonKey(name: '__multipleBirthBoolean') this.multipleBirthBooleanElement,
+    this.multipleBirthInteger,
+    @JsonKey(name: '__multipleBirthInteger') this.multipleBirthIntegerElement,
+    this.photo,
+    this.contact,
+    this.animal,
+    this.communication,
+    this.careProvider,
+    this.managingOrganization,
+    this.link,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Element? idElement;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final List<Identifier>? identifier;
   final Boolean? active;
   final Element? activeElement;
@@ -99,17 +86,17 @@ class Patient {
 @JsonSerializable()
 class PatientContact {
   const PatientContact({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.relationship,
-    required this.name,
-    required this.telecom,
-    required this.address,
-    @JsonKey(unknownEnumValue: ContactGender.unknown) required this.gender,
-    @JsonKey(name: '_gender') required this.genderElement,
-    required this.organization,
-    required this.period,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.relationship,
+    this.name,
+    this.telecom,
+    this.address,
+    this.gender,
+    @JsonKey(name: '_gender') this.genderElement,
+    this.organization,
+    this.period,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -130,12 +117,12 @@ class PatientContact {
 @JsonSerializable()
 class PatientAnimal {
   const PatientAnimal({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.species,
-    required this.breed,
-    required this.genderStatus,
+    this.breed,
+    this.genderStatus,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -151,12 +138,12 @@ class PatientAnimal {
 @JsonSerializable()
 class PatientCommunication {
   const PatientCommunication({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.language,
-    required this.preferred,
-    @JsonKey(name: '_preferred') required this.preferredElement,
+    this.preferred,
+    @JsonKey(name: '_preferred') this.preferredElement,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -172,18 +159,18 @@ class PatientCommunication {
 @JsonSerializable()
 class PatientLink {
   const PatientLink({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.other,
-    @JsonKey(unknownEnumValue: LinkType.unknown) required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
   final List<FhirExtension>? modifierExtension;
   final Reference other;
-  final LinkType type;
+  final LinkType? type;
   final Element? typeElement;
   factory PatientLink.fromJson(Map<String, dynamic> json) =>
       _$PatientLinkFromJson(json);
@@ -191,45 +178,34 @@ class PatientLink {
 }
 
 @JsonSerializable()
-class Practitioner {
+class Practitioner extends Resource {
   const Practitioner({
-    @Default(Dstu2ResourceType.Practitioner) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.identifier,
-    required this.active,
-    @JsonKey(name: '_active') required this.activeElement,
-    required this.name,
-    required this.telecom,
-    required this.address,
-    required this.gender,
-    @JsonKey(name: '_gender') required this.genderElement,
-    required this.birthDate,
-    @JsonKey(name: '_birthDate') required this.birthDateElement,
-    required this.photo,
-    required this.practitionerRole,
-    required this.qualification,
-    required this.communication,
+    super.resourceType = Dstu2ResourceType.Practitioner,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.identifier,
+    this.active,
+    @JsonKey(name: '_active') this.activeElement,
+    this.name,
+    this.telecom,
+    this.address,
+    this.gender,
+    @JsonKey(name: '_gender') this.genderElement,
+    this.birthDate,
+    @JsonKey(name: '_birthDate') this.birthDateElement,
+    this.photo,
+    this.practitionerRole,
+    this.qualification,
+    this.communication,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;
   final Boolean? active;
   final Element? activeElement;
@@ -253,16 +229,16 @@ class Practitioner {
 @JsonSerializable()
 class PractitionerPractitionerRole {
   const PractitionerPractitionerRole({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    @JsonKey(name: 'fhir_comments') required this.fhirComments,
-    required this.modifierExtension,
-    required this.managingOrganization,
-    required this.role,
-    required this.specialty,
-    required this.period,
-    required this.location,
-    required this.healthcareService,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    @JsonKey(name: 'fhir_comments') this.fhirComments,
+    this.modifierExtension,
+    this.managingOrganization,
+    this.role,
+    this.specialty,
+    this.period,
+    this.location,
+    this.healthcareService,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -282,13 +258,13 @@ class PractitionerPractitionerRole {
 @JsonSerializable()
 class PractitionerQualification {
   const PractitionerQualification({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.identifier,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.identifier,
     required this.code,
-    required this.period,
-    required this.issuer,
+    this.period,
+    this.issuer,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -303,44 +279,33 @@ class PractitionerQualification {
 }
 
 @JsonSerializable()
-class RelatedPerson {
+class RelatedPerson extends Resource {
   const RelatedPerson({
-    @Default(Dstu2ResourceType.RelatedPerson) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.identifier,
+    super.resourceType = Dstu2ResourceType.RelatedPerson,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.identifier,
     required this.patient,
-    required this.relationship,
-    required this.name,
-    required this.telecom,
-    required this.gender,
-    @JsonKey(name: '_gender') required this.genderElement,
-    required this.birthDate,
-    @JsonKey(name: '_birthDate') required this.birthDateElement,
-    required this.address,
-    required this.photo,
-    required this.period,
-// @JsonKey(name: '_active')required  this.activeElement,
+    this.relationship,
+    this.name,
+    this.telecom,
+    this.gender,
+    @JsonKey(name: '_gender') this.genderElement,
+    this.birthDate,
+    @JsonKey(name: '_birthDate') this.birthDateElement,
+    this.address,
+    this.photo,
+    this.period,
+    @JsonKey(name: '_active') this.activeElement,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;
   final Reference patient;
   final CodeableConcept? relationship;

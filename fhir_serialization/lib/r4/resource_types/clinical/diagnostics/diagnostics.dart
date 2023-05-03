@@ -6,9 +6,9 @@ import '../../../../r4.dart';
 part 'diagnostics.g.dart';
 
 @JsonSerializable()
-class BodyStructure {
+class BodyStructure extends Resource {
   const BodyStructure({
-    @Default(R4ResourceType.BodyStructure) required this.resourceType,
+    super.resourceType = R4ResourceType.BodyStructure,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -62,9 +62,9 @@ class BodyStructure {
 }
 
 @JsonSerializable()
-class DiagnosticReport {
+class DiagnosticReport extends Resource {
   const DiagnosticReport({
-    @Default(R4ResourceType.DiagnosticReport) required this.resourceType,
+    super.resourceType = R4ResourceType.DiagnosticReport,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -168,9 +168,9 @@ class DiagnosticReportMedia {
 }
 
 @JsonSerializable()
-class ImagingStudy {
+class ImagingStudy extends Resource {
   const ImagingStudy({
-    @Default(R4ResourceType.ImagingStudy) required this.resourceType,
+    super.resourceType = R4ResourceType.ImagingStudy,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -355,9 +355,9 @@ class ImagingStudyInstance {
 }
 
 @JsonSerializable()
-class Media {
+class Media extends Resource {
   const Media({
-    @Default(R4ResourceType.Media) required this.resourceType,
+    super.resourceType = R4ResourceType.Media,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -459,9 +459,9 @@ class Media {
 }
 
 @JsonSerializable()
-class MolecularSequence {
+class MolecularSequence extends Resource {
   const MolecularSequence({
-    @Default(R4ResourceType.MolecularSequence) required this.resourceType,
+    super.resourceType = R4ResourceType.MolecularSequence,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -824,9 +824,9 @@ class MolecularSequenceInner {
 }
 
 @JsonSerializable()
-class Observation {
+class Observation extends Resource {
   const Observation({
-    @Default(R4ResourceType.Observation) required this.resourceType,
+    super.resourceType = R4ResourceType.Observation,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -1044,9 +1044,9 @@ class ObservationComponent {
 }
 
 @JsonSerializable()
-class QuestionnaireResponse {
+class QuestionnaireResponse extends Resource {
   const QuestionnaireResponse({
-    @Default(R4ResourceType.QuestionnaireResponse) required this.resourceType,
+    super.resourceType = R4ResourceType.QuestionnaireResponse,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -1197,9 +1197,9 @@ class QuestionnaireResponseAnswer {
 }
 
 @JsonSerializable()
-class Specimen {
+class Specimen extends Resource {
   const Specimen({
-    @Default(R4ResourceType.Specimen) required this.resourceType,
+    super.resourceType = R4ResourceType.Specimen,
     required this.id,
     required this.meta,
     required this.implicitRules,

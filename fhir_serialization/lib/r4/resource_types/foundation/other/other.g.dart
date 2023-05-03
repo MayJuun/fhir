@@ -7,7 +7,9 @@ part of 'other.dart';
 // **************************************************************************
 
 Basic _$BasicFromJson(Map<String, dynamic> json) => Basic(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.Basic,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -232,7 +234,9 @@ const _$R4ResourceTypeEnumMap = {
 };
 
 Binary _$BinaryFromJson(Map<String, dynamic> json) => Binary(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.Binary,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -291,7 +295,9 @@ Map<String, dynamic> _$BinaryToJson(Binary instance) {
 }
 
 Bundle _$BundleFromJson(Map<String, dynamic> json) => Bundle(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.Bundle,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -629,7 +635,9 @@ Map<String, dynamic> _$BundleResponseToJson(BundleResponse instance) {
 }
 
 Linkage _$LinkageFromJson(Map<String, dynamic> json) => Linkage(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.Linkage,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -738,7 +746,9 @@ Map<String, dynamic> _$LinkageItemToJson(LinkageItem instance) {
 
 MessageHeader _$MessageHeaderFromJson(Map<String, dynamic> json) =>
     MessageHeader(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.MessageHeader,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1006,7 +1016,9 @@ Map<String, dynamic> _$MessageHeaderResponseToJson(
 
 OperationOutcome _$OperationOutcomeFromJson(Map<String, dynamic> json) =>
     OperationOutcome(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.OperationOutcome,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1143,7 +1155,9 @@ Map<String, dynamic> _$OperationOutcomeIssueToJson(
 }
 
 Parameters _$ParametersFromJson(Map<String, dynamic> json) => Parameters(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.Parameters,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1527,7 +1541,9 @@ Map<String, dynamic> _$ParametersParameterToJson(ParametersParameter instance) {
 }
 
 Subscription _$SubscriptionFromJson(Map<String, dynamic> json) => Subscription(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.Subscription,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1833,8 +1849,10 @@ Map<String, dynamic> _$SubscriptionStatusNotificationEventToJson(
 
 SubscriptionTopic _$SubscriptionTopicFromJson(Map<String, dynamic> json) =>
     SubscriptionTopic(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
-      id: json['id'] as String?,
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.SubscriptionTopic,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1962,9 +1980,7 @@ SubscriptionTopic _$SubscriptionTopicFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$SubscriptionTopicToJson(SubscriptionTopic instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1972,7 +1988,8 @@ Map<String, dynamic> _$SubscriptionTopicToJson(SubscriptionTopic instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());

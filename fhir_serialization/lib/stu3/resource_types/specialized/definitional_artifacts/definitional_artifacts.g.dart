@@ -8,8 +8,9 @@ part of 'definitional_artifacts.dart';
 
 ActivityDefinition _$ActivityDefinitionFromJson(Map<String, dynamic> json) =>
     ActivityDefinition(
-      resourceType:
-          $enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
+          Stu3ResourceType.ActivityDefinition,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -189,9 +190,7 @@ ActivityDefinition _$ActivityDefinitionFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$ActivityDefinitionToJson(ActivityDefinition instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -200,6 +199,8 @@ Map<String, dynamic> _$ActivityDefinitionToJson(ActivityDefinition instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -479,8 +480,9 @@ Map<String, dynamic> _$ActivityDefinitionDynamicValueToJson(
 
 PlanDefinition _$PlanDefinitionFromJson(Map<String, dynamic> json) =>
     PlanDefinition(
-      resourceType:
-          $enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
+          Stu3ResourceType.PlanDefinition,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -615,9 +617,7 @@ PlanDefinition _$PlanDefinitionFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$PlanDefinitionToJson(PlanDefinition instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -626,6 +626,8 @@ Map<String, dynamic> _$PlanDefinitionToJson(PlanDefinition instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -1213,8 +1215,9 @@ Map<String, dynamic> _$PlanDefinitionDynamicValueToJson(
 
 Questionnaire _$QuestionnaireFromJson(Map<String, dynamic> json) =>
     Questionnaire(
-      resourceType:
-          $enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
+          Stu3ResourceType.Questionnaire,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1336,9 +1339,7 @@ Questionnaire _$QuestionnaireFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$QuestionnaireToJson(Questionnaire instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1347,6 +1348,8 @@ Map<String, dynamic> _$QuestionnaireToJson(Questionnaire instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -1786,8 +1789,9 @@ Map<String, dynamic> _$QuestionnaireOptionToJson(QuestionnaireOption instance) {
 
 ServiceDefinition _$ServiceDefinitionFromJson(Map<String, dynamic> json) =>
     ServiceDefinition(
-      resourceType:
-          $enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
+          Stu3ResourceType.ServiceDefinition,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1920,9 +1924,7 @@ ServiceDefinition _$ServiceDefinitionFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$ServiceDefinitionToJson(ServiceDefinition instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1931,6 +1933,8 @@ Map<String, dynamic> _$ServiceDefinitionToJson(ServiceDefinition instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());

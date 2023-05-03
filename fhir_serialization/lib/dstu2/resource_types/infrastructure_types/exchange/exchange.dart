@@ -8,42 +8,31 @@ part 'exchange.enums.dart';
 part 'exchange.g.dart';
 
 @JsonSerializable()
-class MessageHeader {
+class MessageHeader extends Resource {
   const MessageHeader({
-    @Default(Dstu2ResourceType.MessageHeader) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.MessageHeader,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.timestamp,
     required this.event,
-    required this.response,
+    this.response,
     required this.source,
-    required this.destination,
-    required this.enterer,
-    required this.author,
-    required this.receiver,
-    required this.responsible,
-    required this.reason,
-    required this.data,
+    this.destination,
+    this.enterer,
+    this.author,
+    this.receiver,
+    this.responsible,
+    this.reason,
+    this.data,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final Instant timestamp;
   final Coding event;
   final MessageHeaderResponse? response;
@@ -63,14 +52,14 @@ class MessageHeader {
 @JsonSerializable()
 class MessageHeaderResponse {
   const MessageHeaderResponse({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.identifier,
-    @JsonKey(name: '_identifier') required this.identifierElement,
-    @JsonKey(unknownEnumValue: ResponseCode.unknown) required this.code,
-    @JsonKey(name: '_code') required this.codeElement,
-    required this.details,
+    @JsonKey(name: '_identifier') this.identifierElement,
+    required this.code,
+    @JsonKey(name: '_code') this.codeElement,
+    this.details,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -88,18 +77,18 @@ class MessageHeaderResponse {
 @JsonSerializable()
 class MessageHeaderSource {
   const MessageHeaderSource({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.software,
-    @JsonKey(name: '_software') required this.softwareElement,
-    required this.version,
-    @JsonKey(name: '_version') required this.versionElement,
-    required this.contact,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.software,
+    @JsonKey(name: '_software') this.softwareElement,
+    this.version,
+    @JsonKey(name: '_version') this.versionElement,
+    this.contact,
     required this.endpoint,
-    @JsonKey(name: '_endpoint') required this.endpointElement,
+    @JsonKey(name: '_endpoint') this.endpointElement,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -121,14 +110,14 @@ class MessageHeaderSource {
 @JsonSerializable()
 class MessageHeaderDestination {
   const MessageHeaderDestination({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.target,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
+    this.target,
     required this.endpoint,
-    @JsonKey(name: '_endpoint') required this.endpointElement,
+    @JsonKey(name: '_endpoint') this.endpointElement,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -144,34 +133,23 @@ class MessageHeaderDestination {
 }
 
 @JsonSerializable()
-class OperationOutcome {
+class OperationOutcome extends Resource {
   const OperationOutcome({
-    @Default(Dstu2ResourceType.OperationOutcome) required this.resourceType,
-    required this.id,
-    @JsonKey(name: '_id') required this.idElement,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.OperationOutcome,
+    super.id,
+    @JsonKey(name: '_id') super.idElement,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.issue,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Element? idElement;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final List<OperationOutcomeIssue> issue;
   factory OperationOutcome.fromJson(Map<String, dynamic> json) =>
       _$OperationOutcomeFromJson(json);
@@ -181,14 +159,14 @@ class OperationOutcome {
 @JsonSerializable()
 class OperationOutcomeIssue {
   const OperationOutcomeIssue({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.severity,
     required this.code,
-    required this.details,
-    required this.diagnostics,
-    required this.location,
+    this.details,
+    this.diagnostics,
+    this.location,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -205,24 +183,21 @@ class OperationOutcomeIssue {
 }
 
 @JsonSerializable()
-class Parameters {
+class Parameters extends Resource {
   const Parameters({
-    @Default(Dstu2ResourceType.Parameters) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.parameter,
+    super.resourceType = Dstu2ResourceType.Parameters,
+    super.idElement,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.parameter,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
   final List<ParametersParameter>? parameter;
   factory Parameters.fromJson(Map<String, dynamic> json) =>
       _$ParametersFromJson(json);
@@ -232,46 +207,46 @@ class Parameters {
 @JsonSerializable()
 class ParametersParameter {
   const ParametersParameter({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
-    required this.valueInteger,
-    @JsonKey(name: '_valueInteger') required this.valueIntegerElement,
-    required this.valueDecimal,
-    @JsonKey(name: '_valueDecimal') required this.valueDecimalElement,
-    required this.valueDateTime,
-    @JsonKey(name: '_valueDateTime') required this.valueDateTimeElement,
-    required this.valueDate,
-    @JsonKey(name: '_valueDate') required this.valueDateElement,
-    required this.valueInstant,
-    @JsonKey(name: '_valueInstant') required this.valueInstantElement,
-    required this.valueString,
-    @JsonKey(name: '_valueString') required this.valueStringElement,
-    required this.valueUri,
-    @JsonKey(name: '_valueUri') required this.valueUriElement,
-    required this.valueBoolean,
-    @JsonKey(name: '_valueBoolean') required this.valueBooleanElement,
-    required this.valueCode,
-    @JsonKey(name: '_valueCode') required this.valueCodeElement,
-    required this.valueBase64Binary,
-    @JsonKey(name: '_valueBase64Binary') required this.valueBase64BinaryElement,
-    required this.valueCoding,
-    required this.valueCodeableConcept,
-    required this.valueAttachment,
-    required this.valueIdentifier,
-    required this.valueQuantity,
-    required this.valueRange,
-    required this.valuePeriod,
-    required this.valueRatio,
-    required this.valueHumanName,
-    required this.valueAddresss,
-    required this.valueContactPoint,
-    required this.valueSchedule,
-    required this.valueReference,
-    required this.resource,
-    @JsonKey(name: 'part') required this.part_,
+    @JsonKey(name: '_name') this.nameElement,
+    this.valueInteger,
+    @JsonKey(name: '_valueInteger') this.valueIntegerElement,
+    this.valueDecimal,
+    @JsonKey(name: '_valueDecimal') this.valueDecimalElement,
+    this.valueDateTime,
+    @JsonKey(name: '_valueDateTime') this.valueDateTimeElement,
+    this.valueDate,
+    @JsonKey(name: '_valueDate') this.valueDateElement,
+    this.valueInstant,
+    @JsonKey(name: '_valueInstant') this.valueInstantElement,
+    this.valueString,
+    @JsonKey(name: '_valueString') this.valueStringElement,
+    this.valueUri,
+    @JsonKey(name: '_valueUri') this.valueUriElement,
+    this.valueBoolean,
+    @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+    this.valueCode,
+    @JsonKey(name: '_valueCode') this.valueCodeElement,
+    this.valueBase64Binary,
+    @JsonKey(name: '_valueBase64Binary') this.valueBase64BinaryElement,
+    this.valueCoding,
+    this.valueCodeableConcept,
+    this.valueAttachment,
+    this.valueIdentifier,
+    this.valueQuantity,
+    this.valueRange,
+    this.valuePeriod,
+    this.valueRatio,
+    this.valueHumanName,
+    this.valueAddresss,
+    this.valueContactPoint,
+    this.valueSchedule,
+    this.valueReference,
+    this.resource,
+    @JsonKey(name: 'part') this.part_,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -319,44 +294,33 @@ class ParametersParameter {
 }
 
 @JsonSerializable()
-class Subscription {
+class Subscription extends Resource {
   const Subscription({
-    @Default(Dstu2ResourceType.Subscription) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.Subscription,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.criteria,
-    @JsonKey(name: '_criteria') required this.criteriaElement,
-    required this.contact,
+    @JsonKey(name: '_criteria') this.criteriaElement,
+    this.contact,
     required this.reason,
-    @JsonKey(name: '_reason') required this.reasonElement,
+    @JsonKey(name: '_reason') this.reasonElement,
     required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.error,
-    @JsonKey(name: '_error') required this.errorElement,
+    @JsonKey(name: '_status') this.statusElement,
+    this.error,
+    @JsonKey(name: '_error') this.errorElement,
     required this.channel,
-    required this.end,
-    @JsonKey(name: '_end') required this.endElement,
-    required this.tag,
+    this.end,
+    @JsonKey(name: '_end') this.endElement,
+    this.tag,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final String criteria;
   final Element? criteriaElement;
   final List<ContactPoint>? contact;
@@ -379,17 +343,17 @@ class Subscription {
 @JsonSerializable()
 class SubscriptionChannel {
   const SubscriptionChannel({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(unknownEnumValue: ChannelType.unknown) required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.endpoint,
-    @JsonKey(name: '_endpoint') required this.endpointElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    required this.type,
+    @JsonKey(name: '_type') this.typeElement,
+    this.endpoint,
+    @JsonKey(name: '_endpoint') this.endpointElement,
     required this.payload,
-    @JsonKey(name: '_payload') required this.payloadElement,
-    required this.header,
-    @JsonKey(name: '_header') required this.headerElement,
+    @JsonKey(name: '_payload') this.payloadElement,
+    this.header,
+    @JsonKey(name: '_header') this.headerElement,
   });
   final Id? id;
   final List<FhirExtension>? extension_;

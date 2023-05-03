@@ -7,8 +7,9 @@ part of 'testing.dart';
 // **************************************************************************
 
 TestReport _$TestReportFromJson(Map<String, dynamic> json) => TestReport(
-      resourceType:
-          $enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
+          Stu3ResourceType.TestReport,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -83,9 +84,7 @@ TestReport _$TestReportFromJson(Map<String, dynamic> json) => TestReport(
     );
 
 Map<String, dynamic> _$TestReportToJson(TestReport instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -94,6 +93,8 @@ Map<String, dynamic> _$TestReportToJson(TestReport instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -515,8 +516,9 @@ Map<String, dynamic> _$TestReportAction2ToJson(TestReportAction2 instance) =>
     };
 
 TestScript _$TestScriptFromJson(Map<String, dynamic> json) => TestScript(
-      resourceType:
-          $enumDecode(_$Stu3ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Stu3ResourceTypeEnumMap, json['resourceType']) ??
+          Stu3ResourceType.TestScript,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -644,9 +646,7 @@ TestScript _$TestScriptFromJson(Map<String, dynamic> json) => TestScript(
     );
 
 Map<String, dynamic> _$TestScriptToJson(TestScript instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -655,6 +655,8 @@ Map<String, dynamic> _$TestScriptToJson(TestScript instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'resourceType', _$Stu3ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());

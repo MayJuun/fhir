@@ -8,8 +8,9 @@ part of 'information_tracking.dart';
 
 Questionnaire _$QuestionnaireFromJson(Map<String, dynamic> json) =>
     Questionnaire(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.Questionnaire,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       idElement: json['idElement'] == null
           ? null
@@ -74,9 +75,7 @@ Questionnaire _$QuestionnaireFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$QuestionnaireToJson(Questionnaire instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -84,6 +83,8 @@ Map<String, dynamic> _$QuestionnaireToJson(Questionnaire instance) {
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('idElement', instance.idElement?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
@@ -246,9 +247,6 @@ QuestionnaireGroup _$QuestionnaireGroupFromJson(Map<String, dynamic> json) =>
           ?.map((e) => Coding.fromJson(e as Map<String, dynamic>))
           .toList(),
       text: json['text'] as String?,
-      required_: json['required_'] == null
-          ? null
-          : Boolean.fromJson(json['required_']),
       repeats:
           json['repeats'] == null ? null : Boolean.fromJson(json['repeats']),
       group: (json['group'] as List<dynamic>?)
@@ -281,7 +279,6 @@ Map<String, dynamic> _$QuestionnaireGroupToJson(QuestionnaireGroup instance) {
   writeNotNull('titleElement', instance.titleElement?.toJson());
   writeNotNull('concept', instance.concept?.map((e) => e.toJson()).toList());
   writeNotNull('text', instance.text);
-  writeNotNull('required_', instance.required_?.toJson());
   writeNotNull('repeats', instance.repeats?.toJson());
   writeNotNull('group', instance.group?.map((e) => e.toJson()).toList());
   writeNotNull('question', instance.question?.map((e) => e.toJson()).toList());
@@ -310,9 +307,6 @@ QuestionnaireGroupQuestion _$QuestionnaireGroupQuestionFromJson(
           .toList(),
       text: json['text'] as String?,
       type: $enumDecodeNullable(_$QuestionTypeEnumMap, json['type']),
-      required_: json['required_'] == null
-          ? null
-          : Boolean.fromJson(json['required_']),
       repeats:
           json['repeats'] == null ? null : Boolean.fromJson(json['repeats']),
       options: json['options'] == null
@@ -347,7 +341,6 @@ Map<String, dynamic> _$QuestionnaireGroupQuestionToJson(
   writeNotNull('concept', instance.concept?.map((e) => e.toJson()).toList());
   writeNotNull('text', instance.text);
   writeNotNull('type', _$QuestionTypeEnumMap[instance.type]);
-  writeNotNull('required_', instance.required_?.toJson());
   writeNotNull('repeats', instance.repeats?.toJson());
   writeNotNull('options', instance.options?.toJson());
   writeNotNull('option', instance.option?.map((e) => e.toJson()).toList());
@@ -377,8 +370,9 @@ const _$QuestionTypeEnumMap = {
 QuestionnaireResponse _$QuestionnaireResponseFromJson(
         Map<String, dynamic> json) =>
     QuestionnaireResponse(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.QuestionnaireResponse,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       idElement: json['idElement'] == null
           ? null
@@ -446,9 +440,7 @@ QuestionnaireResponse _$QuestionnaireResponseFromJson(
 
 Map<String, dynamic> _$QuestionnaireResponseToJson(
     QuestionnaireResponse instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -456,6 +448,8 @@ Map<String, dynamic> _$QuestionnaireResponseToJson(
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('idElement', instance.idElement?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
@@ -571,7 +565,10 @@ QuestionnaireResponseGroupQuestion _$QuestionnaireResponseGroupQuestionFromJson(
           ? null
           : Element.fromJson(json['linkIdElement'] as Map<String, dynamic>),
       text: json['text'] as String?,
-      answer: json['answer'] as List<dynamic>?,
+      answer: (json['answer'] as List<dynamic>?)
+          ?.map((e) => QuestionnaireResponseQuestionAnswer.fromJson(
+              e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$QuestionnaireResponseGroupQuestionToJson(
@@ -593,7 +590,258 @@ Map<String, dynamic> _$QuestionnaireResponseGroupQuestionToJson(
   writeNotNull('linkId', instance.linkId);
   writeNotNull('linkIdElement', instance.linkIdElement?.toJson());
   writeNotNull('text', instance.text);
-  writeNotNull('answer', instance.answer);
+  writeNotNull('answer', instance.answer?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+QuestionnaireResponseQuestionAnswer
+    _$QuestionnaireResponseQuestionAnswerFromJson(Map<String, dynamic> json) =>
+        QuestionnaireResponseQuestionAnswer(
+          id: json['id'] == null ? null : Id.fromJson(json['id']),
+          extension_: (json['extension_'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          fhirComments: (json['fhirComments'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList(),
+          valueBoolean: json['valueBoolean'] == null
+              ? null
+              : Boolean.fromJson(json['valueBoolean']),
+          valueBooleanElement: json['valueBooleanElement'] == null
+              ? null
+              : Element.fromJson(
+                  json['valueBooleanElement'] as Map<String, dynamic>),
+          valueDecimal: json['valueDecimal'] == null
+              ? null
+              : Decimal.fromJson(json['valueDecimal']),
+          valueDecimalElement: json['valueDecimalElement'] == null
+              ? null
+              : Element.fromJson(
+                  json['valueDecimalElement'] as Map<String, dynamic>),
+          valueInteger: json['valueInteger'] == null
+              ? null
+              : Integer.fromJson(json['valueInteger']),
+          valueIntegerElement: json['valueIntegerElement'] == null
+              ? null
+              : Element.fromJson(
+                  json['valueIntegerElement'] as Map<String, dynamic>),
+          valueDate: json['valueDate'] == null
+              ? null
+              : Date.fromJson(json['valueDate']),
+          valueDateElement: json['valueDateElement'] == null
+              ? null
+              : Element.fromJson(
+                  json['valueDateElement'] as Map<String, dynamic>),
+          valueDateTime: json['valueDateTime'] == null
+              ? null
+              : FhirDateTime.fromJson(json['valueDateTime']),
+          valueDateTimeElement: json['valueDateTimeElement'] == null
+              ? null
+              : Element.fromJson(
+                  json['valueDateTimeElement'] as Map<String, dynamic>),
+          valueInstant: json['valueInstant'] == null
+              ? null
+              : Instant.fromJson(json['valueInstant']),
+          valueInstantElement: json['valueInstantElement'] == null
+              ? null
+              : Element.fromJson(
+                  json['valueInstantElement'] as Map<String, dynamic>),
+          valueTime: json['valueTime'] == null
+              ? null
+              : Time.fromJson(json['valueTime']),
+          valueTimeElement: json['valueTimeElement'] == null
+              ? null
+              : Element.fromJson(
+                  json['valueTimeElement'] as Map<String, dynamic>),
+          valueString: json['valueString'] as String?,
+          valueStringElement: json['valueStringElement'] == null
+              ? null
+              : Element.fromJson(
+                  json['valueStringElement'] as Map<String, dynamic>),
+          valueUri: json['valueUri'] == null
+              ? null
+              : FhirUri.fromJson(json['valueUri']),
+          valueUriElement: json['valueUriElement'] == null
+              ? null
+              : Element.fromJson(
+                  json['valueUriElement'] as Map<String, dynamic>),
+          valueAttachment: json['valueAttachment'] == null
+              ? null
+              : Attachment.fromJson(
+                  json['valueAttachment'] as Map<String, dynamic>),
+          valueCoding: json['valueCoding'] == null
+              ? null
+              : Coding.fromJson(json['valueCoding'] as Map<String, dynamic>),
+          valueQuantity: json['valueQuantity'] == null
+              ? null
+              : Quantity.fromJson(
+                  json['valueQuantity'] as Map<String, dynamic>),
+          valueReference: json['valueReference'] == null
+              ? null
+              : Reference.fromJson(
+                  json['valueReference'] as Map<String, dynamic>),
+          group: (json['group'] as List<dynamic>?)
+              ?.map((e) => QuestionnaireResponseGroup.fromJson(
+                  e as Map<String, dynamic>))
+              .toList(),
+        );
+
+Map<String, dynamic> _$QuestionnaireResponseQuestionAnswerToJson(
+    QuestionnaireResponseQuestionAnswer instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'extension_', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('fhirComments', instance.fhirComments);
+  writeNotNull('valueBoolean', instance.valueBoolean?.toJson());
+  writeNotNull('valueBooleanElement', instance.valueBooleanElement?.toJson());
+  writeNotNull('valueDecimal', instance.valueDecimal?.toJson());
+  writeNotNull('valueDecimalElement', instance.valueDecimalElement?.toJson());
+  writeNotNull('valueInteger', instance.valueInteger?.toJson());
+  writeNotNull('valueIntegerElement', instance.valueIntegerElement?.toJson());
+  writeNotNull('valueDate', instance.valueDate?.toJson());
+  writeNotNull('valueDateElement', instance.valueDateElement?.toJson());
+  writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
+  writeNotNull('valueDateTimeElement', instance.valueDateTimeElement?.toJson());
+  writeNotNull('valueInstant', instance.valueInstant?.toJson());
+  writeNotNull('valueInstantElement', instance.valueInstantElement?.toJson());
+  writeNotNull('valueTime', instance.valueTime?.toJson());
+  writeNotNull('valueTimeElement', instance.valueTimeElement?.toJson());
+  writeNotNull('valueString', instance.valueString);
+  writeNotNull('valueStringElement', instance.valueStringElement?.toJson());
+  writeNotNull('valueUri', instance.valueUri?.toJson());
+  writeNotNull('valueUriElement', instance.valueUriElement?.toJson());
+  writeNotNull('valueAttachment', instance.valueAttachment?.toJson());
+  writeNotNull('valueCoding', instance.valueCoding?.toJson());
+  writeNotNull('valueQuantity', instance.valueQuantity?.toJson());
+  writeNotNull('valueReference', instance.valueReference?.toJson());
+  writeNotNull('group', instance.group?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+Provenance _$ProvenanceFromJson(Map<String, dynamic> json) => Provenance(
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.Provenance,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      idElement: json['idElement'] == null
+          ? null
+          : Element.fromJson(json['idElement'] as Map<String, dynamic>),
+      meta: json['meta'] == null
+          ? null
+          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+      implicitRules: json['implicitRules'] == null
+          ? null
+          : FhirUri.fromJson(json['implicitRules']),
+      implicitRulesElement: json['implicitRulesElement'] == null
+          ? null
+          : Element.fromJson(
+              json['implicitRulesElement'] as Map<String, dynamic>),
+      language:
+          json['language'] == null ? null : Code.fromJson(json['language']),
+      languageElement: json['languageElement'] == null
+          ? null
+          : Element.fromJson(json['languageElement'] as Map<String, dynamic>),
+      text: json['text'] == null
+          ? null
+          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+      contained: (json['contained'] as List<dynamic>?)
+          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      extension_: (json['extension_'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      target: (json['target'] as List<dynamic>)
+          .map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      period: json['period'] == null
+          ? null
+          : Period.fromJson(json['period'] as Map<String, dynamic>),
+      recorded: Instant.fromJson(json['recorded']),
+      recordedElement: json['recordedElement'] == null
+          ? null
+          : Element.fromJson(json['recordedElement'] as Map<String, dynamic>),
+      reason: (json['reason'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      activity: json['activity'] == null
+          ? null
+          : CodeableConcept.fromJson(json['activity'] as Map<String, dynamic>),
+      location: json['location'] == null
+          ? null
+          : Reference.fromJson(json['location'] as Map<String, dynamic>),
+      policy: (json['policy'] as List<dynamic>?)
+          ?.map((e) => FhirUri.fromJson(e))
+          .toList(),
+      policyElement: (json['policyElement'] as List<dynamic>?)
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      agent: (json['agent'] as List<dynamic>?)
+          ?.map((e) => ProvenanceAgent.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      entity: (json['entity'] as List<dynamic>?)
+          ?.map((e) => ProvenanceEntity.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      signature: (json['signature'] as List<dynamic>?)
+          ?.map((e) => Signature.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$ProvenanceToJson(Provenance instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('idElement', instance.idElement?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('languageElement', instance.languageElement?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull(
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'extension_', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['target'] = instance.target.map((e) => e.toJson()).toList();
+  writeNotNull('period', instance.period?.toJson());
+  val['recorded'] = instance.recorded.toJson();
+  writeNotNull('recordedElement', instance.recordedElement?.toJson());
+  writeNotNull('reason', instance.reason?.map((e) => e.toJson()).toList());
+  writeNotNull('activity', instance.activity?.toJson());
+  writeNotNull('location', instance.location?.toJson());
+  writeNotNull('policy', instance.policy?.map((e) => e.toJson()).toList());
+  writeNotNull('policyElement',
+      instance.policyElement?.map((e) => e?.toJson()).toList());
+  writeNotNull('agent', instance.agent?.map((e) => e.toJson()).toList());
+  writeNotNull('entity', instance.entity?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'signature', instance.signature?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -740,8 +988,9 @@ Map<String, dynamic> _$ProvenanceAgentRelatedAgentToJson(
 }
 
 AuditEvent _$AuditEventFromJson(Map<String, dynamic> json) => AuditEvent(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.AuditEvent,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -781,9 +1030,7 @@ AuditEvent _$AuditEventFromJson(Map<String, dynamic> json) => AuditEvent(
     );
 
 Map<String, dynamic> _$AuditEventToJson(AuditEvent instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -791,6 +1038,8 @@ Map<String, dynamic> _$AuditEventToJson(AuditEvent instance) {
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());

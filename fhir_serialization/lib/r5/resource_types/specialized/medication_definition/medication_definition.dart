@@ -6,20 +6,20 @@ import '../../../../r5.dart';
 part 'medication_definition.g.dart';
 
 @JsonSerializable()
-class AdministrableProductDefinition {
+class AdministrableProductDefinition extends Resource {
   const AdministrableProductDefinition({
     @Default(R5ResourceType.AdministrableProductDefinition)
         required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.status,
     @JsonKey(name: '_status') required this.statusElement,
@@ -34,16 +34,7 @@ class AdministrableProductDefinition {
   });
 
   final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final List<Identifier>? identifier;
   final Code? status;
   final Element? statusElement;
@@ -180,19 +171,19 @@ class AdministrableProductDefinitionWithdrawalPeriod {
 }
 
 @JsonSerializable()
-class ClinicalUseDefinition {
+class ClinicalUseDefinition extends Resource {
   const ClinicalUseDefinition({
-    @Default(R5ResourceType.ClinicalUseDefinition) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R5ResourceType.ClinicalUseDefinition,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.type,
     @JsonKey(name: '_type') required this.typeElement,
@@ -208,16 +199,7 @@ class ClinicalUseDefinition {
     required this.warning,
   });
   final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final List<Identifier>? identifier;
   final Code? type;
   final Element? typeElement;
@@ -418,19 +400,19 @@ class ClinicalUseDefinitionWarning {
 }
 
 @JsonSerializable()
-class Ingredient {
+class Ingredient extends Resource {
   const Ingredient({
-    @Default(R5ResourceType.Ingredient) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R5ResourceType.Ingredient,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.status,
     @JsonKey(name: '_status') required this.statusElement,
@@ -445,16 +427,7 @@ class Ingredient {
     required this.substance,
   });
   final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final Identifier? identifier;
   final Code? status;
   final Element? statusElement;
@@ -590,20 +563,20 @@ class IngredientReferenceStrength {
 }
 
 @JsonSerializable()
-class ManufacturedItemDefinition {
+class ManufacturedItemDefinition extends Resource {
   const ManufacturedItemDefinition({
     @Default(R5ResourceType.ManufacturedItemDefinition)
         required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.status,
     @JsonKey(name: '_status') required this.statusElement,
@@ -618,16 +591,7 @@ class ManufacturedItemDefinition {
     required this.component,
   });
   final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final List<Identifier>? identifier;
   final Code? status;
   final Element? statusElement;
@@ -737,20 +701,20 @@ class ManufacturedItemDefinitionConstituent {
 }
 
 @JsonSerializable()
-class MedicinalProductDefinition {
+class MedicinalProductDefinition extends Resource {
   const MedicinalProductDefinition({
     @Default(R5ResourceType.MedicinalProductDefinition)
         required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.type,
     required this.domain,
@@ -786,16 +750,7 @@ class MedicinalProductDefinition {
     required this.characteristic,
   });
   final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final List<Identifier>? identifier;
   final CodeableConcept? type;
   final CodeableConcept? domain;
@@ -1015,20 +970,20 @@ class MedicinalProductDefinitionCharacteristic {
 }
 
 @JsonSerializable()
-class PackagedProductDefinition {
+class PackagedProductDefinition extends Resource {
   const PackagedProductDefinition({
     @Default(R5ResourceType.PackagedProductDefinition)
         required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.name,
     @JsonKey(name: '_name') required this.nameElement,
@@ -1051,16 +1006,7 @@ class PackagedProductDefinition {
     required this.characteristic,
   });
   final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final List<Identifier>? identifier;
   final String? name;
   final Element? nameElement;
@@ -1208,19 +1154,19 @@ class PackagedProductDefinitionContainedItem {
 }
 
 @JsonSerializable()
-class RegulatedAuthorization {
+class RegulatedAuthorization extends Resource {
   const RegulatedAuthorization({
-    @Default(R5ResourceType.RegulatedAuthorization) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R5ResourceType.RegulatedAuthorization,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.subject,
     required this.type,
@@ -1240,16 +1186,7 @@ class RegulatedAuthorization {
     @JsonKey(name: 'case') required this.case_,
   });
   final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final List<Identifier>? identifier;
   final List<Reference>? subject;
   final CodeableConcept? type;
@@ -1302,19 +1239,19 @@ class RegulatedAuthorizationCase {
 }
 
 @JsonSerializable()
-class SubstanceDefinition {
+class SubstanceDefinition extends Resource {
   const SubstanceDefinition({
-    @Default(R5ResourceType.SubstanceDefinition) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R5ResourceType.SubstanceDefinition,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.version,
     @JsonKey(name: '_version') required this.versionElement,
@@ -1343,16 +1280,7 @@ class SubstanceDefinition {
     required this.sourceMaterial,
   });
   final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final List<Identifier>? identifier;
   final String? version;
   final Element? versionElement;
@@ -1731,19 +1659,19 @@ class SubstanceDefinitionSourceMaterial {
 }
 
 @JsonSerializable()
-class SubstanceNucleicAcid {
+class SubstanceNucleicAcid extends Resource {
   const SubstanceNucleicAcid({
-    @Default(R5ResourceType.SubstanceNucleicAcid) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R5ResourceType.SubstanceNucleicAcid,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.sequenceType,
     required this.numberOfSubunits,
     @JsonKey(name: '_numberOfSubunits') required this.numberOfSubunitsElement,
@@ -1754,16 +1682,7 @@ class SubstanceNucleicAcid {
     required this.subunit,
   });
   final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final CodeableConcept? sequenceType;
   final Integer? numberOfSubunits;
   final Element? numberOfSubunitsElement;
@@ -1868,19 +1787,19 @@ class SubstanceNucleicAcidSugar {
 }
 
 @JsonSerializable()
-class SubstancePolymer {
+class SubstancePolymer extends Resource {
   const SubstancePolymer({
-    @Default(R5ResourceType.SubstancePolymer) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R5ResourceType.SubstancePolymer,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     @JsonKey(name: 'class') required this.class_,
     required this.geometry,
@@ -1891,16 +1810,7 @@ class SubstancePolymer {
     required this.repeat,
   });
   final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final Identifier? identifier;
   final CodeableConcept? class_;
   final CodeableConcept? geometry;
@@ -2076,19 +1986,19 @@ class SubstancePolymerStructuralRepresentation {
 }
 
 @JsonSerializable()
-class SubstanceProtein {
+class SubstanceProtein extends Resource {
   const SubstanceProtein({
-    @Default(R5ResourceType.SubstanceProtein) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R5ResourceType.SubstanceProtein,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.sequenceType,
     required this.numberOfSubunits,
     @JsonKey(name: '_numberOfSubunits') required this.numberOfSubunitsElement,
@@ -2097,16 +2007,7 @@ class SubstanceProtein {
     required this.subunit,
   });
   final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final CodeableConcept? sequenceType;
   final Integer? numberOfSubunits;
   final Element? numberOfSubunitsElement;
@@ -2164,20 +2065,20 @@ class SubstanceProteinSubunit {
 }
 
 @JsonSerializable()
-class SubstanceReferenceInformation {
+class SubstanceReferenceInformation extends Resource {
   const SubstanceReferenceInformation({
     @Default(R5ResourceType.SubstanceReferenceInformation)
         required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.comment,
     @JsonKey(name: '_comment') required this.commentElement,
     required this.gene,
@@ -2186,16 +2087,7 @@ class SubstanceReferenceInformation {
   });
 
   final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final String? comment;
   final Element? commentElement;
   final List<SubstanceReferenceInformationGene>? gene;
@@ -2295,19 +2187,19 @@ class SubstanceReferenceInformationTarget {
 }
 
 @JsonSerializable()
-class SubstanceSourceMaterial {
+class SubstanceSourceMaterial extends Resource {
   const SubstanceSourceMaterial({
-    @Default(R5ResourceType.SubstanceSourceMaterial) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R5ResourceType.SubstanceSourceMaterial,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.sourceMaterialClass,
     required this.sourceMaterialType,
     required this.sourceMaterialState,
@@ -2328,16 +2220,7 @@ class SubstanceSourceMaterial {
     required this.partDescription,
   });
   final R5ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final CodeableConcept? sourceMaterialClass;
   final CodeableConcept? sourceMaterialType;
   final CodeableConcept? sourceMaterialState;

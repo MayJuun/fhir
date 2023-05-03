@@ -7,7 +7,9 @@ part of 'terminology.dart';
 // **************************************************************************
 
 CodeSystem _$CodeSystemFromJson(Map<String, dynamic> json) => CodeSystem(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.CodeSystem,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -680,7 +682,9 @@ Map<String, dynamic> _$CodeSystemProperty1ToJson(CodeSystemProperty1 instance) {
 }
 
 ConceptMap _$ConceptMapFromJson(Map<String, dynamic> json) => ConceptMap(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.ConceptMap,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1141,7 +1145,9 @@ Map<String, dynamic> _$ConceptMapUnmappedToJson(ConceptMapUnmapped instance) {
 }
 
 NamingSystem _$NamingSystemFromJson(Map<String, dynamic> json) => NamingSystem(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.NamingSystem,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1336,7 +1342,9 @@ Map<String, dynamic> _$NamingSystemUniqueIdToJson(
 TerminologyCapabilities _$TerminologyCapabilitiesFromJson(
         Map<String, dynamic> json) =>
     TerminologyCapabilities(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.TerminologyCapabilities,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1722,7 +1730,9 @@ Map<String, dynamic> _$TerminologyCapabilitiesExpansionToJson(
 }
 
 ValueSet _$ValueSetFromJson(Map<String, dynamic> json) => ValueSet(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.ValueSet,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null

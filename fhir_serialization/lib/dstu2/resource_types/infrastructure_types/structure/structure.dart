@@ -8,48 +8,37 @@ part 'structure.enums.dart';
 part 'structure.g.dart';
 
 @JsonSerializable()
-class Media {
+class Media extends Resource {
   const Media({
-    @Default(Dstu2ResourceType.Media) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(unknownEnumValue: MediaType.unknown) required this.type,
-    required this.subtype,
-    required this.identifier,
-    required this.subject,
-    @JsonKey(name: 'operator') required this.operator_,
-    required this.view,
-    required this.deviceName,
-    @JsonKey(name: '_deviceName') required this.deviceNameElement,
-    required this.height,
-    @JsonKey(name: '_height') required this.heightElement,
-    required this.width,
-    @JsonKey(name: '_width') required this.widthElement,
-    required this.frames,
-    @JsonKey(name: '_frames') required this.framesElement,
-    required this.duration,
-    @JsonKey(name: '_duration') required this.durationElement,
+    super.resourceType = Dstu2ResourceType.Media,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    required this.type,
+    this.subtype,
+    this.identifier,
+    this.subject,
+    @JsonKey(name: 'operator') this.operator_,
+    this.view,
+    this.deviceName,
+    @JsonKey(name: '_deviceName') this.deviceNameElement,
+    this.height,
+    @JsonKey(name: '_height') this.heightElement,
+    this.width,
+    @JsonKey(name: '_width') this.widthElement,
+    this.frames,
+    @JsonKey(name: '_frames') this.framesElement,
+    this.duration,
+    @JsonKey(name: '_duration') this.durationElement,
     required this.content,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final MediaType type;
   final CodeableConcept? subtype;
   final List<Identifier>? identifier;
@@ -72,26 +61,23 @@ class Media {
 }
 
 @JsonSerializable()
-class Binary {
+class Binary extends Resource {
   const Binary({
-    @Default(Dstu2ResourceType.Binary) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.contentType,
-    @JsonKey(name: '_contentType') required this.contentTypeElement,
-    required this.content,
+    super.resourceType = Dstu2ResourceType.Binary,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.contentType,
+    @JsonKey(name: '_contentType') this.contentTypeElement,
+    this.content,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
   final Code? contentType;
   final Element? contentTypeElement;
   final Base64Binary? content;
@@ -100,30 +86,27 @@ class Binary {
 }
 
 @JsonSerializable()
-class Bundle {
+class Bundle extends Resource {
   const Bundle({
-    @Default(Dstu2ResourceType.Bundle) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    @JsonKey(unknownEnumValue: BundleType.unknown) required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
-    required this.total,
-    @JsonKey(name: '_total') required this.totalElement,
-    required this.link,
-    required this.entry,
-    required this.signature,
+    super.resourceType = Dstu2ResourceType.Bundle,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    required this.type,
+    @JsonKey(name: '_type') this.typeElement,
+    this.total,
+    @JsonKey(name: '_total') this.totalElement,
+    this.link,
+    this.entry,
+    this.signature,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
   final BundleType type;
   final Element? typeElement;
   final UnsignedInt? total;
@@ -138,14 +121,14 @@ class Bundle {
 @JsonSerializable()
 class BundleLink {
   const BundleLink({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'fhir_comments') required this.fhirComments,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'fhir_comments') this.fhirComments,
     required this.relation,
-    @JsonKey(name: '_relation') required this.relationElement,
+    @JsonKey(name: '_relation') this.relationElement,
     required this.url,
-    @JsonKey(name: '_url') required this.urlElement,
+    @JsonKey(name: '_url') this.urlElement,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -163,17 +146,17 @@ class BundleLink {
 @JsonSerializable()
 class BundleEntry {
   const BundleEntry({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'fhir_comments') required this.fhirComments,
-    required this.link,
-    required this.fullUrl,
-    @JsonKey(name: '_fullUrl') required this.fullUrlElement,
-    required this.resource,
-    required this.search,
-    required this.request,
-    required this.response,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'fhir_comments') this.fhirComments,
+    this.link,
+    this.fullUrl,
+    @JsonKey(name: '_fullUrl') this.fullUrlElement,
+    this.resource,
+    this.search,
+    this.request,
+    this.response,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -194,14 +177,14 @@ class BundleEntry {
 @JsonSerializable()
 class BundleEntrySearch {
   const BundleEntrySearch({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'fhir_comments') required this.fhirComments,
-    @JsonKey(unknownEnumValue: SearchMode.unknown) required this.mode,
-    @JsonKey(name: '_mode') required this.modeElement,
-    required this.score,
-    @JsonKey(name: '_score') required this.scoreElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'fhir_comments') this.fhirComments,
+    this.mode,
+    @JsonKey(name: '_mode') this.modeElement,
+    this.score,
+    @JsonKey(name: '_score') this.scoreElement,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -219,22 +202,22 @@ class BundleEntrySearch {
 @JsonSerializable()
 class BundleEntryRequest {
   const BundleEntryRequest({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'fhir_comments') required this.fhirComments,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'fhir_comments') this.fhirComments,
     required this.method,
-    @JsonKey(name: '_method') required this.methodElement,
+    @JsonKey(name: '_method') this.methodElement,
     required this.url,
-    @JsonKey(name: '_url') required this.urlElement,
-    required this.ifNoneMatch,
-    @JsonKey(name: '_ifNoneMatch') required this.ifNoneMatchElement,
-    required this.ifModifiedSince,
-    @JsonKey(name: '_ifModifiedSince') required this.ifModifiedSinceElement,
-    required this.ifMatch,
-    @JsonKey(name: '_ifMatch') required this.ifMatchElement,
-    required this.ifNoneExist,
-    @JsonKey(name: '_ifNoneExist') required this.ifNoneExistElement,
+    @JsonKey(name: '_url') this.urlElement,
+    this.ifNoneMatch,
+    @JsonKey(name: '_ifNoneMatch') this.ifNoneMatchElement,
+    this.ifModifiedSince,
+    @JsonKey(name: '_ifModifiedSince') this.ifModifiedSinceElement,
+    this.ifMatch,
+    @JsonKey(name: '_ifMatch') this.ifMatchElement,
+    this.ifNoneExist,
+    @JsonKey(name: '_ifNoneExist') this.ifNoneExistElement,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -261,18 +244,18 @@ class BundleEntryRequest {
 @JsonSerializable()
 class BundleEntryResponse {
   const BundleEntryResponse({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'fhir_comments') required this.fhirComments,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'fhir_comments') this.fhirComments,
     required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.location,
-    @JsonKey(name: '_location') required this.locationElement,
-    required this.etag,
-    @JsonKey(name: '_etag') required this.etagElement,
-    required this.lastModified,
-    @JsonKey(name: '_lastModified') required this.lastModifiedElement,
+    @JsonKey(name: '_status') this.statusElement,
+    this.location,
+    @JsonKey(name: '_location') this.locationElement,
+    this.etag,
+    @JsonKey(name: '_etag') this.etagElement,
+    this.lastModified,
+    @JsonKey(name: '_lastModified') this.lastModifiedElement,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -292,37 +275,26 @@ class BundleEntryResponse {
 }
 
 @JsonSerializable()
-class Basic {
+class Basic extends Resource {
   const Basic({
-    @Default(Dstu2ResourceType.Basic) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.identifier,
+    super.resourceType = Dstu2ResourceType.Basic,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.identifier,
     required this.code,
-    required this.subject,
-    required this.author,
-    required this.created,
-    @JsonKey(name: '_created') required this.createdElement,
+    this.subject,
+    this.author,
+    this.created,
+    @JsonKey(name: '_created') this.createdElement,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;
   final CodeableConcept code;
   final Reference? subject;

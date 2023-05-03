@@ -8,7 +8,9 @@ part of 'conformance.dart';
 
 CapabilityStatement _$CapabilityStatementFromJson(Map<String, dynamic> json) =>
     CapabilityStatement(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.CapabilityStatement,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1016,7 +1018,9 @@ Map<String, dynamic> _$CapabilityStatementSupportedMessageToJson(
 CompartmentDefinition _$CompartmentDefinitionFromJson(
         Map<String, dynamic> json) =>
     CompartmentDefinition(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.CompartmentDefinition,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1216,7 +1220,9 @@ Map<String, dynamic> _$CompartmentDefinitionResourceToJson(
 
 ExampleScenario _$ExampleScenarioFromJson(Map<String, dynamic> json) =>
     ExampleScenario(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.ExampleScenario,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1780,7 +1786,9 @@ Map<String, dynamic> _$ExampleScenarioAlternativeToJson(
 
 GraphDefinition _$GraphDefinitionFromJson(Map<String, dynamic> json) =>
     GraphDefinition(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.GraphDefinition,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -2108,7 +2116,9 @@ Map<String, dynamic> _$GraphDefinitionCompartmentToJson(
 
 ImplementationGuide _$ImplementationGuideFromJson(Map<String, dynamic> json) =>
     ImplementationGuide(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.ImplementationGuide,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -2887,7 +2897,9 @@ Map<String, dynamic> _$ImplementationGuidePage1ToJson(
 
 MessageDefinition _$MessageDefinitionFromJson(Map<String, dynamic> json) =>
     MessageDefinition(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.MessageDefinition,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -3361,7 +3373,9 @@ Map<String, dynamic> _$OperationDefinitionReferencedFromToJson(
 
 SearchParameter _$SearchParameterFromJson(Map<String, dynamic> json) =>
     SearchParameter(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.SearchParameter,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -3642,7 +3656,9 @@ Map<String, dynamic> _$SearchParameterComponentToJson(
 
 StructureDefinition _$StructureDefinitionFromJson(Map<String, dynamic> json) =>
     StructureDefinition(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.StructureDefinition,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -4040,7 +4056,9 @@ Map<String, dynamic> _$StructureDefinitionDifferentialToJson(
 }
 
 StructureMap _$StructureMapFromJson(Map<String, dynamic> json) => StructureMap(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.StructureMap,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null

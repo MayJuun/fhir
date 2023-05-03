@@ -7,7 +7,9 @@ part of 'security.dart';
 // **************************************************************************
 
 AuditEvent _$AuditEventFromJson(Map<String, dynamic> json) => AuditEvent(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.AuditEvent,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -89,9 +91,7 @@ AuditEvent _$AuditEventFromJson(Map<String, dynamic> json) => AuditEvent(
     );
 
 Map<String, dynamic> _$AuditEventToJson(AuditEvent instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -112,6 +112,7 @@ Map<String, dynamic> _$AuditEventToJson(AuditEvent instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
   val['code'] = instance.code.toJson();
   writeNotNull('action', instance.action?.toJson());
@@ -609,7 +610,9 @@ Map<String, dynamic> _$AuditEventDetailToJson(AuditEventDetail instance) {
 }
 
 Consent _$ConsentFromJson(Map<String, dynamic> json) => Consent(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.Consent,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -696,9 +699,7 @@ Consent _$ConsentFromJson(Map<String, dynamic> json) => Consent(
     );
 
 Map<String, dynamic> _$ConsentToJson(Consent instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -719,6 +720,7 @@ Map<String, dynamic> _$ConsentToJson(Consent instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('status', instance.status?.toJson());
@@ -1002,7 +1004,9 @@ Map<String, dynamic> _$ConsentDataToJson(ConsentData instance) {
 }
 
 Permission _$PermissionFromJson(Map<String, dynamic> json) => Permission(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.Permission,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1062,9 +1066,7 @@ Permission _$PermissionFromJson(Map<String, dynamic> json) => Permission(
     );
 
 Map<String, dynamic> _$PermissionToJson(Permission instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1085,6 +1087,7 @@ Map<String, dynamic> _$PermissionToJson(Permission instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('statusElement', instance.statusElement?.toJson());
   writeNotNull('asserter', instance.asserter?.toJson());
@@ -1304,7 +1307,9 @@ Map<String, dynamic> _$PermissionActivityToJson(PermissionActivity instance) {
 }
 
 Provenance _$ProvenanceFromJson(Map<String, dynamic> json) => Provenance(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.Provenance,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1387,9 +1392,7 @@ Provenance _$ProvenanceFromJson(Map<String, dynamic> json) => Provenance(
     );
 
 Map<String, dynamic> _$ProvenanceToJson(Provenance instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1410,6 +1413,7 @@ Map<String, dynamic> _$ProvenanceToJson(Provenance instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   val['target'] = instance.target.map((e) => e.toJson()).toList();
   writeNotNull('occurredPeriod', instance.occurredPeriod?.toJson());
   writeNotNull('occurredDateTime', instance.occurredDateTime?.toJson());

@@ -7,8 +7,9 @@ part of 'diagnostics.dart';
 // **************************************************************************
 
 Observation _$ObservationFromJson(Map<String, dynamic> json) => Observation(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.Observation,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       idElement: json['idElement'] == null
           ? null
@@ -149,9 +150,7 @@ Observation _$ObservationFromJson(Map<String, dynamic> json) => Observation(
     );
 
 Map<String, dynamic> _$ObservationToJson(Observation instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -159,6 +158,8 @@ Map<String, dynamic> _$ObservationToJson(Observation instance) {
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('idElement', instance.idElement?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
@@ -530,8 +531,9 @@ Map<String, dynamic> _$ObservationComponentToJson(
 
 DiagnosticReport _$DiagnosticReportFromJson(Map<String, dynamic> json) =>
     DiagnosticReport(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.DiagnosticReport,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -619,9 +621,7 @@ DiagnosticReport _$DiagnosticReportFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$DiagnosticReportToJson(DiagnosticReport instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -629,6 +629,8 @@ Map<String, dynamic> _$DiagnosticReportToJson(DiagnosticReport instance) {
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -723,8 +725,9 @@ Map<String, dynamic> _$DiagnosticReportImageToJson(
 
 DiagnosticOrder _$DiagnosticOrderFromJson(Map<String, dynamic> json) =>
     DiagnosticOrder(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.DiagnosticOrder,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -781,9 +784,7 @@ DiagnosticOrder _$DiagnosticOrderFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$DiagnosticOrderToJson(DiagnosticOrder instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -791,6 +792,8 @@ Map<String, dynamic> _$DiagnosticOrderToJson(DiagnosticOrder instance) {
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -966,8 +969,9 @@ const _$ItemStatusEnumMap = {
 };
 
 Specimen _$SpecimenFromJson(Map<String, dynamic> json) => Specimen(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.Specimen,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1034,9 +1038,7 @@ Specimen _$SpecimenFromJson(Map<String, dynamic> json) => Specimen(
     );
 
 Map<String, dynamic> _$SpecimenToJson(Specimen instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1044,6 +1046,8 @@ Map<String, dynamic> _$SpecimenToJson(Specimen instance) {
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -1250,8 +1254,9 @@ Map<String, dynamic> _$SpecimenContainerToJson(SpecimenContainer instance) {
 }
 
 BodySite _$BodySiteFromJson(Map<String, dynamic> json) => BodySite(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.BodySite,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1290,9 +1295,7 @@ BodySite _$BodySiteFromJson(Map<String, dynamic> json) => BodySite(
     );
 
 Map<String, dynamic> _$BodySiteToJson(BodySite instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1300,6 +1303,8 @@ Map<String, dynamic> _$BodySiteToJson(BodySite instance) {
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -1322,8 +1327,9 @@ Map<String, dynamic> _$BodySiteToJson(BodySite instance) {
 }
 
 ImagingStudy _$ImagingStudyFromJson(Map<String, dynamic> json) => ImagingStudy(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.ImagingStudy,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1405,9 +1411,7 @@ ImagingStudy _$ImagingStudyFromJson(Map<String, dynamic> json) => ImagingStudy(
     );
 
 Map<String, dynamic> _$ImagingStudyToJson(ImagingStudy instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1415,6 +1419,8 @@ Map<String, dynamic> _$ImagingStudyToJson(ImagingStudy instance) {
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -1618,8 +1624,9 @@ Map<String, dynamic> _$ImagingStudySeriesInstanceToJson(
 ImagingObjectSelection _$ImagingObjectSelectionFromJson(
         Map<String, dynamic> json) =>
     ImagingObjectSelection(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.ImagingObjectSelection,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1659,9 +1666,7 @@ ImagingObjectSelection _$ImagingObjectSelectionFromJson(
 
 Map<String, dynamic> _$ImagingObjectSelectionToJson(
     ImagingObjectSelection instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1669,6 +1674,8 @@ Map<String, dynamic> _$ImagingObjectSelectionToJson(
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());

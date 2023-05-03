@@ -6,7 +6,7 @@ import '../../../../r4.dart';
 part 'medication_definition.g.dart';
 
 @JsonSerializable()
-class AdministrableProductDefinition {
+class AdministrableProductDefinition extends Resource {
   const AdministrableProductDefinition({
     @Default(R4ResourceType.AdministrableProductDefinition)
         required this.resourceType,
@@ -185,19 +185,19 @@ class AdministrableProductDefinitionWithdrawalPeriod {
 }
 
 @JsonSerializable()
-class Ingredient {
+class Ingredient extends Resource {
   const Ingredient({
-    @Default(R4ResourceType.Ingredient) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R4ResourceType.Ingredient,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.status,
     @JsonKey(name: '_status') required this.statusElement,
@@ -211,17 +211,7 @@ class Ingredient {
     required this.manufacturer,
     required this.substance,
   });
-  final R4ResourceType resourceType;
-  final String? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final Identifier? identifier;
   final Code? status;
   final Element? statusElement;
@@ -347,19 +337,19 @@ class IngredientReferenceStrength {
 }
 
 @JsonSerializable()
-class ClinicalUseDefinition {
+class ClinicalUseDefinition extends Resource {
   const ClinicalUseDefinition({
-    @Default(R4ResourceType.ClinicalUseDefinition) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R4ResourceType.ClinicalUseDefinition,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.type,
     @JsonKey(name: '_type') required this.typeElement,
@@ -373,17 +363,7 @@ class ClinicalUseDefinition {
     required this.undesirableEffect,
     required this.warning,
   });
-  final R4ResourceType resourceType;
-  final String? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final List<Identifier>? identifier;
   final Code? type;
   final Element? typeElement;
@@ -579,7 +559,7 @@ class ClinicalUseDefinitionWarning {
 }
 
 @JsonSerializable()
-class ManufacturedItemDefinition {
+class ManufacturedItemDefinition extends Resource {
   const ManufacturedItemDefinition({
     @Default(R4ResourceType.ManufacturedItemDefinition)
         required this.resourceType,
@@ -665,7 +645,7 @@ class ManufacturedItemDefinitionProperty {
 }
 
 @JsonSerializable()
-class MedicinalProductDefinition {
+class MedicinalProductDefinition extends Resource {
   const MedicinalProductDefinition({
     @Default(R4ResourceType.MedicinalProductDefinition)
         required this.resourceType,
@@ -945,7 +925,7 @@ class MedicinalProductDefinitionCharacteristic {
 }
 
 @JsonSerializable()
-class PackagedProductDefinition {
+class PackagedProductDefinition extends Resource {
   const PackagedProductDefinition({
     @Default(R4ResourceType.PackagedProductDefinition)
         required this.resourceType,
@@ -1168,19 +1148,19 @@ class PackagedProductDefinitionContainedItem {
 }
 
 @JsonSerializable()
-class RegulatedAuthorization {
+class RegulatedAuthorization extends Resource {
   const RegulatedAuthorization({
-    @Default(R4ResourceType.RegulatedAuthorization) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R4ResourceType.RegulatedAuthorization,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.subject,
     required this.type,
@@ -1198,17 +1178,7 @@ class RegulatedAuthorization {
     required this.regulator,
     @JsonKey(name: 'case') required this.case_,
   });
-  final R4ResourceType resourceType;
-  final String? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final List<Identifier>? identifier;
   final List<Reference>? subject;
   final CodeableConcept? type;
@@ -1260,19 +1230,19 @@ class RegulatedAuthorizationCase {
 }
 
 @JsonSerializable()
-class SubstanceDefinition {
+class SubstanceDefinition extends Resource {
   const SubstanceDefinition({
-    @Default(R4ResourceType.SubstanceDefinition) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = R4ResourceType.SubstanceDefinition,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.version,
     @JsonKey(name: '_version') required this.versionElement,
@@ -1295,17 +1265,7 @@ class SubstanceDefinition {
     required this.relationship,
     required this.sourceMaterial,
   });
-  final R4ResourceType resourceType;
-  final String? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final List<Identifier>? identifier;
   final String? version;
   final Element? versionElement;

@@ -7,7 +7,9 @@ part of 'documents.dart';
 // **************************************************************************
 
 CatalogEntry _$CatalogEntryFromJson(Map<String, dynamic> json) => CatalogEntry(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.CatalogEntry,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -327,7 +329,9 @@ Map<String, dynamic> _$CatalogEntryRelatedEntryToJson(
 }
 
 Composition _$CompositionFromJson(Map<String, dynamic> json) => Composition(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.Composition,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -660,7 +664,9 @@ Map<String, dynamic> _$CompositionSectionToJson(CompositionSection instance) {
 
 DocumentManifest _$DocumentManifestFromJson(Map<String, dynamic> json) =>
     DocumentManifest(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.DocumentManifest,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -821,7 +827,9 @@ Map<String, dynamic> _$DocumentManifestRelatedToJson(
 
 DocumentReference _$DocumentReferenceFromJson(Map<String, dynamic> json) =>
     DocumentReference(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.DocumentReference,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null

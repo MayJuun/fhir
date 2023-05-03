@@ -8,19 +8,19 @@ part 'misc.enums.dart';
 part 'misc.g.dart';
 
 @JsonSerializable()
-class ImplementationGuide {
+class ImplementationGuide extends Resource {
   const ImplementationGuide({
-    @Default(Dstu2ResourceType.ImplementationGuide) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.ImplementationGuide,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.url,
     @JsonKey(name: '_url') required this.urlElement,
     required this.version,
@@ -49,17 +49,6 @@ class ImplementationGuide {
     required this.binary,
     required this.page,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final FhirUri url;
   final Element? urlElement;
   final String? version;
@@ -185,7 +174,7 @@ class ImplementationGuidePage {
     required this.modifierExtension,
     required this.source,
     required this.name,
-    @JsonKey(unknownEnumValue: PageKind.unknown) required this.kind,
+    required this.kind,
     required this.type,
     required this.package,
     required this.format,
@@ -436,6 +425,94 @@ class TestScriptSetupAction {
 }
 
 @JsonSerializable()
+class TestScriptActionAssert {
+  const TestScriptActionAssert({
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.label,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.direction,
+    @JsonKey(name: '_direction') this.directionElement,
+    this.compareToSourceId,
+    @JsonKey(name: '_compareToSourceId') this.compareToSourceIdElement,
+    this.compareToSourcePath,
+    @JsonKey(name: '_compareToSourcePath') this.compareToSourcePathElement,
+    this.contentType,
+    @JsonKey(name: '_contentType') this.contentTypeElement,
+    this.headerField,
+    @JsonKey(name: '_headerField') this.headerFieldElement,
+    this.minimumId,
+    this.minimumIdElement,
+    this.navigationLinks,
+    @JsonKey(name: '_navigationLinks') this.navigationLinksElement,
+    @JsonKey(unknownEnumValue: AssertOperator.unknown, name: 'operator')
+        this.operator_,
+    @JsonKey(name: '_operator') this.operatorElement,
+    this.path,
+    @JsonKey(name: '_path') this.pathElement,
+    this.resource,
+    @JsonKey(name: '_resource') this.resourceElement,
+    this.response,
+    @JsonKey(name: '_response') this.responseElement,
+    this.responseCode,
+    @JsonKey(name: '_responseCode') this.responseCodeElement,
+    this.sourceId,
+    @JsonKey(name: '_sourceId') this.sourceIdElement,
+    this.validateProfileId,
+    @JsonKey(name: '_validateProfileId') this.validateProfileIdElement,
+    this.value,
+    @JsonKey(name: '_value') this.valueElement,
+    this.warningOnly,
+    @JsonKey(name: '_warningOnly') this.warningOnlyElement,
+  });
+
+  final Id? id;
+  final List<FhirExtension>? extension_;
+  final List<FhirExtension>? modifierExtension;
+  final String? label;
+  final String? description;
+  final Element? descriptionElement;
+  final AssertDirection? direction;
+  final Element? directionElement;
+  final String? compareToSourceId;
+  final Element? compareToSourceIdElement;
+  final String? compareToSourcePath;
+  final Element? compareToSourcePathElement;
+  final AssertContentType? contentType;
+  final Element? contentTypeElement;
+  final String? headerField;
+  final Element? headerFieldElement;
+  final String? minimumId;
+  final Element? minimumIdElement;
+  final Boolean? navigationLinks;
+  final Element? navigationLinksElement;
+  final AssertOperator? operator_;
+  final Element? operatorElement;
+  final String? path;
+  final Element? pathElement;
+  final Code? resource;
+  final Element? resourceElement;
+  final AssertResponse? response;
+  final Element? responseElement;
+  final String? responseCode;
+  final Element? responseCodeElement;
+  final Id? sourceId;
+  final Element? sourceIdElement;
+  final Id? validateProfileId;
+  final Element? validateProfileIdElement;
+  final String? value;
+  final Element? valueElement;
+  final Boolean? warningOnly;
+  final Element? warningOnlyElement;
+
+  factory TestScriptActionAssert.fromJson(Map<String, dynamic> json) =>
+      _$TestScriptActionAssertFromJson(json);
+  Map<String, dynamic> toJson() => _$TestScriptActionAssertToJson(this);
+}
+
+@JsonSerializable()
 class TestScriptActionOperation {
   const TestScriptActionOperation({
     required this.id,
@@ -449,7 +526,7 @@ class TestScriptActionOperation {
     @JsonKey(name: '_label') required this.labelElement,
     required this.description,
     @JsonKey(name: '_description') required this.descriptionElement,
-    @JsonKey(unknownEnumValue: OperationAccept.unknown) required this.accept,
+    required this.accept,
     @JsonKey(name: '_accept') required this.acceptElement,
     required this.contentType,
     @JsonKey(name: '_contentType') required this.contentTypeElement,

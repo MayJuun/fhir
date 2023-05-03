@@ -8,17 +8,17 @@ part 'workflow1.enums.dart';
 part 'workflow1.g.dart';
 
 @JsonSerializable()
-class Order {
+class Order extends Resource {
   const Order({
-    @Default(Dstu2ResourceType.Order) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    required this.language,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.Order,
+    required super.id,
+    required super.meta,
+    required super.implicitRules,
+    required super.language,
+    required super.text,
+    required super.contained,
+    @JsonKey(name: 'extension') required super.extension_,
+    required super.modifierExtension,
     required this.identifier,
     required this.date,
     required this.subject,
@@ -29,15 +29,7 @@ class Order {
     required this.when,
     required this.detail,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Code? language;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final List<Identifier>? identifier;
   final FhirDateTime? date;
   final Reference? subject;
@@ -73,17 +65,17 @@ class OrderWhen {
 }
 
 @JsonSerializable()
-class OrderResponse {
+class OrderResponse extends Resource {
   const OrderResponse({
-    @Default(Dstu2ResourceType.OrderResponse) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    required this.language,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.OrderResponse,
+    required super.id,
+    required super.meta,
+    required super.implicitRules,
+    required super.language,
+    required super.text,
+    required super.contained,
+    @JsonKey(name: 'extension') required super.extension_,
+    required super.modifierExtension,
     required this.identifier,
     required this.request,
     required this.date,
@@ -93,15 +85,7 @@ class OrderResponse {
     required this.description,
     required this.fulfillment,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Code? language;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final List<Identifier>? identifier;
   final Reference request;
   final FhirDateTime? date;
@@ -117,19 +101,19 @@ class OrderResponse {
 }
 
 @JsonSerializable()
-class CommunicationRequest {
+class CommunicationRequest extends Resource {
   const CommunicationRequest({
-    @Default(Dstu2ResourceType.CommunicationRequest) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.CommunicationRequest,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.identifier,
     required this.category,
     required this.sender,
@@ -148,17 +132,6 @@ class CommunicationRequest {
     required this.priority,
     @JsonKey(name: '_priority') required this.priorityElement,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;
   final CodeableConcept? category;
   final Reference? sender;
@@ -206,19 +179,19 @@ class CommunicationRequestPayload {
 }
 
 @JsonSerializable()
-class DeviceUseRequest {
+class DeviceUseRequest extends Resource {
   const DeviceUseRequest({
-    @Default(Dstu2ResourceType.DeviceUseRequest) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.DeviceUseRequest,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.bodySiteCodeableConcept,
     required this.bodySiteReference,
     required this.status,
@@ -238,17 +211,6 @@ class DeviceUseRequest {
     required this.priority,
     @JsonKey(name: '_priority') required this.priorityElement,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final CodeableConcept? bodySiteCodeableConcept;
   final Reference? bodySiteReference;
 
@@ -275,19 +237,19 @@ class DeviceUseRequest {
 }
 
 @JsonSerializable()
-class DeviceUseStatement {
+class DeviceUseStatement extends Resource {
   const DeviceUseStatement({
-    @Default(Dstu2ResourceType.DeviceUseStatement) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.DeviceUseStatement,
+    super.id,
+    super.meta,
+    required super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.bodySiteCodeableConcept,
     required this.bodySiteReference,
     required this.whenUsed,
@@ -303,17 +265,6 @@ class DeviceUseStatement {
     required this.timingDateTime,
     @JsonKey(name: '_timingDateTime') required this.timingDateTimeElement,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final CodeableConcept? bodySiteCodeableConcept;
   final Reference? bodySiteReference;
   final Period? whenUsed;

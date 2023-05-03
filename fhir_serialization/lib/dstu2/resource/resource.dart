@@ -17,17 +17,33 @@ part 'resource_from_json.dart';
 part 'resource_types_enum.dart';
 
 @JsonSerializable()
-class Resource {
-  Id? id;
-  Dstu2ResourceType? resourceType;
-  Meta? meta;
-  FhirUri? implicitRules;
-  Code? language;
-  Narrative? text;
-  List<Resource>? contained;
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? extension_;
-  List<FhirExtension>? modifierExtension;
+abstract class Resource {
+  const Resource({
+    this.resourceType,
+    this.id,
+    this.idElement,
+    this.meta,
+    this.implicitRules,
+    @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+    this.language,
+    @JsonKey(name: '_language') this.languageElement,
+    this.text,
+    this.contained,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+  });
+  final Dstu2ResourceType? resourceType;
+  final Id? id;
+  final Element? idElement;
+  final Meta? meta;
+  final FhirUri? implicitRules;
+  final Element? implicitRulesElement;
+  final Code? language;
+  final Element? languageElement;
+  final Narrative? text;
+  final List<Resource>? contained;
+  final List<FhirExtension>? extension_;
+  final List<FhirExtension>? modifierExtension;
 
   static Resource fromJson(Map<String, dynamic> json) =>
       _resourceFromJson(json);

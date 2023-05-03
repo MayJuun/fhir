@@ -8,52 +8,41 @@ part 'care_provision.enums.dart';
 part 'care_provision.g.dart';
 
 @JsonSerializable()
-class CarePlan {
+class CarePlan extends Resource {
   const CarePlan({
-    @Default(Dstu2ResourceType.CarePlan) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.identifier,
-    required this.subject,
+    super.resourceType = Dstu2ResourceType.CarePlan,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.identifier,
+    this.subject,
     required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.context,
-    required this.period,
-    required this.author,
-    required this.modified,
-    required this.category,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
-    required this.addresses,
-    required this.support,
-    required this.relatedPlan,
-    required this.participant,
-    required this.goal,
-    required this.activity,
-    required this.note,
+    @JsonKey(name: '_status') this.statusElement,
+    this.context,
+    this.period,
+    this.author,
+    this.modified,
+    this.category,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
+    this.addresses,
+    this.support,
+    this.relatedPlan,
+    this.participant,
+    this.goal,
+    this.activity,
+    this.note,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final List<Identifier>? identifier;
   final Reference? subject;
-
   final CarePlanStatus status;
   final Element? statusElement;
   final Reference? context;
@@ -78,10 +67,10 @@ class CarePlan {
 @JsonSerializable()
 class CarePlanRelatedPlan {
   const CarePlanRelatedPlan({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(unknownEnumValue: RelatedPlanCode.unknown) required this.code,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.code,
     required this.plan,
   });
   final Id? id;
@@ -97,11 +86,11 @@ class CarePlanRelatedPlan {
 @JsonSerializable()
 class CarePlanParticipant {
   const CarePlanParticipant({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.role,
-    required this.member,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.role,
+    this.member,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -116,14 +105,14 @@ class CarePlanParticipant {
 @JsonSerializable()
 class CarePlanActivity {
   const CarePlanActivity({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'fhir_comments') required this.fhirComments,
-    required this.actionResulting,
-    required this.progress,
-    required this.reference,
-    required this.detail,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'fhir_comments') this.fhirComments,
+    this.actionResulting,
+    this.progress,
+    this.reference,
+    this.detail,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -141,31 +130,31 @@ class CarePlanActivity {
 @JsonSerializable()
 class CarePlanActivityDetail {
   const CarePlanActivityDetail({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'fhir_comments') required this.fhirComments,
-    required this.category,
-    required this.code,
-    required this.reasonCode,
-    required this.reasonReference,
-    required this.goal,
-    @JsonKey(unknownEnumValue: DetailStatus.unknown) required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.statusReason,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'fhir_comments') this.fhirComments,
+    this.category,
+    this.code,
+    this.reasonCode,
+    this.reasonReference,
+    this.goal,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.statusReason,
     required this.prohibited,
-    required this.scheduledTiming,
-    required this.scheduledPeriod,
-    required this.scheduledString,
-    @JsonKey(name: '_scheduledString') required this.scheduledStringElement,
-    required this.location,
-    required this.performer,
-    required this.productCodeableConcept,
-    required this.productReference,
-    required this.dailyAmount,
-    required this.quantity,
-    required this.description,
-    @JsonKey(name: '_description') required this.descriptionElement,
+    this.scheduledTiming,
+    this.scheduledPeriod,
+    this.scheduledString,
+    @JsonKey(name: '_scheduledString') this.scheduledStringElement,
+    this.location,
+    this.performer,
+    this.productCodeableConcept,
+    this.productReference,
+    this.dailyAmount,
+    this.quantity,
+    this.description,
+    @JsonKey(name: '_description') this.descriptionElement,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -198,50 +187,39 @@ class CarePlanActivityDetail {
 }
 
 @JsonSerializable()
-class Goal {
+class Goal extends Resource {
   const Goal({
-    @Default(Dstu2ResourceType.Goal) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.identifier,
-    required this.subject,
-    required this.startDate,
-    @JsonKey(name: '_startDate') required this.startDateElement,
-    required this.startCodeableConcept,
-    required this.targetDate,
-    required this.targetQuantity,
-    required this.category,
+    super.resourceType = Dstu2ResourceType.Goal,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.identifier,
+    this.subject,
+    this.startDate,
+    @JsonKey(name: '_startDate') this.startDateElement,
+    this.startCodeableConcept,
+    this.targetDate,
+    this.targetQuantity,
+    this.category,
     required this.description,
-    @JsonKey(unknownEnumValue: GoalStatus.unknown) required this.status,
-    required this.statusDate,
-    @JsonKey(name: '_statusDate') required this.statusDateElement,
-    required this.statusReason,
-    @JsonKey(name: '_statusReason') required this.statusReasonElement,
-    required this.author,
-    required this.priority,
-    required this.addresses,
-    required this.note,
-    required this.outcome,
+    required this.status,
+    this.statusDate,
+    @JsonKey(name: '_statusDate') this.statusDateElement,
+    this.statusReason,
+    @JsonKey(name: '_statusReason') this.statusReasonElement,
+    this.author,
+    this.priority,
+    this.addresses,
+    this.note,
+    this.outcome,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;
   final Reference? subject;
   final Date? startDate;
@@ -268,11 +246,11 @@ class Goal {
 @JsonSerializable()
 class GoalOutcome {
   const GoalOutcome({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.resultCodeableConcept,
-    required this.resultReference,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.resultCodeableConcept,
+    this.resultReference,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -285,43 +263,34 @@ class GoalOutcome {
 }
 
 @JsonSerializable()
-class ReferralRequest {
+class ReferralRequest extends Resource {
   const ReferralRequest({
-    @Default(Dstu2ResourceType.ReferralRequest) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    required this.language,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.ReferralRequest,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    super.language,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.status,
-    required this.identifier,
-    required this.date,
-    required this.type,
-    required this.specialty,
-    required this.priority,
-    required this.patient,
-    required this.requester,
-    required this.recipient,
-    required this.encounter,
-    required this.dateSent,
-    required this.reason,
-    required this.description,
-    required this.serviceRequested,
-    required this.supportingInformation,
-    required this.fulfillmentTime,
+    this.identifier,
+    this.date,
+    this.type,
+    this.specialty,
+    this.priority,
+    this.patient,
+    this.requester,
+    this.recipient,
+    this.encounter,
+    this.dateSent,
+    this.reason,
+    this.description,
+    this.serviceRequested,
+    this.supportingInformation,
+    this.fulfillmentTime,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Code? language;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
 
   final ReferralRequestStatus status;
   final List<Identifier>? identifier;
@@ -345,45 +314,37 @@ class ReferralRequest {
 }
 
 @JsonSerializable()
-class ProcedureRequest {
+class ProcedureRequest extends Resource {
   const ProcedureRequest({
-    @Default(Dstu2ResourceType.ProcedureRequest) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    required this.language,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.identifier,
+    super.resourceType = Dstu2ResourceType.ProcedureRequest,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    super.language,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.identifier,
     required this.subject,
     required this.code,
-    required this.bodySite,
-    required this.reasonCodeableConcept,
-    required this.reasonReference,
-    required this.scheduledDateTime,
-    required this.scheduledPeriod,
-    required this.scheduledTiming,
-    required this.encounter,
-    required this.performer,
-    required this.status,
-    required this.notes,
-    required this.asNeededBoolean,
-    required this.asNeededCodeableConcept,
-    required this.orderedOn,
-    required this.orderer,
-    required this.priority,
+    this.bodySite,
+    this.reasonCodeableConcept,
+    this.reasonReference,
+    this.scheduledDateTime,
+    this.scheduledPeriod,
+    this.scheduledTiming,
+    this.encounter,
+    this.performer,
+    this.status,
+    this.notes,
+    this.asNeededBoolean,
+    this.asNeededCodeableConcept,
+    this.orderedOn,
+    this.orderer,
+    this.priority,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Code? language;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final List<Identifier>? identifier;
   final Reference subject;
   final CodeableConcept code;
@@ -410,45 +371,34 @@ class ProcedureRequest {
 }
 
 @JsonSerializable()
-class NutritionOrder {
+class NutritionOrder extends Resource {
   const NutritionOrder({
-    @Default(Dstu2ResourceType.NutritionOrder) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.NutritionOrder,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.patient,
-    required this.orderer,
-    required this.identifier,
-    required this.encounter,
+    this.orderer,
+    this.identifier,
+    this.encounter,
     required this.dateTime,
-    @JsonKey(name: '_dateTime') required this.dateTimeElement,
-    required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.allergyIntolerance,
-    required this.foodPreferenceModifier,
-    required this.excludeFoodModifier,
-    required this.oralDiet,
-    required this.supplement,
-    required this.enteralFormula,
+    @JsonKey(name: '_dateTime') this.dateTimeElement,
+    this.status,
+    @JsonKey(name: '_status') this.statusElement,
+    this.allergyIntolerance,
+    this.foodPreferenceModifier,
+    this.excludeFoodModifier,
+    this.oralDiet,
+    this.supplement,
+    this.enteralFormula,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final Reference patient;
   final Reference? orderer;
   final List<Identifier>? identifier;
@@ -472,17 +422,17 @@ class NutritionOrder {
 @JsonSerializable()
 class NutritionOrderOralDiet {
   const NutritionOrderOralDiet({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'fhir_comments') required this.fhirComments,
-    required this.type,
-    required this.schedule,
-    required this.nutrient,
-    required this.texture,
-    required this.fluidConsistencyType,
-    required this.instruction,
-    @JsonKey(name: '_instruction') required this.instructionElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'fhir_comments') this.fhirComments,
+    this.type,
+    this.schedule,
+    this.nutrient,
+    this.texture,
+    this.fluidConsistencyType,
+    this.instruction,
+    @JsonKey(name: '_instruction') this.instructionElement,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -503,17 +453,17 @@ class NutritionOrderOralDiet {
 @JsonSerializable()
 class NutritionOrderSupplement {
   const NutritionOrderSupplement({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'fhir_comments') required this.fhirComments,
-    required this.type,
-    required this.productName,
-    @JsonKey(name: '_productName') required this.productNameElement,
-    required this.schedule,
-    required this.quantity,
-    required this.instruction,
-    @JsonKey(name: '_instruction') required this.instructionElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'fhir_comments') this.fhirComments,
+    this.type,
+    this.productName,
+    @JsonKey(name: '_productName') this.productNameElement,
+    this.schedule,
+    this.quantity,
+    this.instruction,
+    @JsonKey(name: '_instruction') this.instructionElement,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -534,25 +484,24 @@ class NutritionOrderSupplement {
 @JsonSerializable()
 class NutritionOrderEnteralFormula {
   const NutritionOrderEnteralFormula({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'fhir_comments') required this.fhirComments,
-    required this.baseFormulaType,
-    required this.baseFormulaProductName,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'fhir_comments') this.fhirComments,
+    this.baseFormulaType,
+    this.baseFormulaProductName,
     @JsonKey(name: '_baseFormulaProductName')
-        required this.baseFormulaProductNameElement,
-    required this.additiveType,
-    @JsonKey(name: '_additiveProductName')
-        required this.additiveProductNameElement,
-    required this.additiveProductName,
-    required this.caloricDensity,
-    required this.routeofAdministration,
-    required this.administration,
-    required this.maxVolumeToDeliver,
-    required this.administrationInstruction,
+        this.baseFormulaProductNameElement,
+    this.additiveType,
+    @JsonKey(name: '_additiveProductName') this.additiveProductNameElement,
+    this.additiveProductName,
+    this.caloricDensity,
+    this.routeofAdministration,
+    this.administration,
+    this.maxVolumeToDeliver,
+    this.administrationInstruction,
     @JsonKey(name: '_administrationInstruction')
-        required this.administrationInstructionElement,
+        this.administrationInstructionElement,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -580,12 +529,12 @@ class NutritionOrderEnteralFormula {
 @JsonSerializable()
 class NutritionOrderOralDietNutrient {
   const NutritionOrderOralDietNutrient({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'fhir_comments') required this.fhirComments,
-    required this.modifier,
-    required this.amount,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'fhir_comments') this.fhirComments,
+    this.modifier,
+    this.amount,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -601,12 +550,12 @@ class NutritionOrderOralDietNutrient {
 @JsonSerializable()
 class NutritionOrderOralDietTexture {
   const NutritionOrderOralDietTexture({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'fhir_comments') required this.fhirComments,
-    required this.modifier,
-    required this.foodType,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'fhir_comments') this.fhirComments,
+    this.modifier,
+    this.foodType,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -622,13 +571,13 @@ class NutritionOrderOralDietTexture {
 @JsonSerializable()
 class NutritionOrderEnteralFormulaAdministration {
   const NutritionOrderEnteralFormulaAdministration({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.schedule,
-    required this.quantity,
-    required this.rateQuantity,
-    required this.rateRatio,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.schedule,
+    this.quantity,
+    this.rateQuantity,
+    this.rateRatio,
   });
 
   final Id? id;
@@ -646,40 +595,29 @@ class NutritionOrderEnteralFormulaAdministration {
 }
 
 @JsonSerializable()
-class VisionPrescription {
+class VisionPrescription extends Resource {
   const VisionPrescription({
-    @Default(Dstu2ResourceType.VisionPrescription) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.identifier,
-    required this.dateWritten,
-    @JsonKey(name: '_dateWritten') required this.dateWrittenElement,
-    required this.patient,
-    required this.prescriber,
-    required this.encounter,
-    required this.reasonCodeableConcept,
-    required this.reasonReference,
-    required this.dispense,
+    super.resourceType = Dstu2ResourceType.VisionPrescription,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.identifier,
+    this.dateWritten,
+    @JsonKey(name: '_dateWritten') this.dateWrittenElement,
+    this.patient,
+    this.prescriber,
+    this.encounter,
+    this.reasonCodeableConcept,
+    this.reasonReference,
+    this.dispense,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final List<Identifier>? identifier;
   final FhirDateTime? dateWritten;
   final Element? dateWrittenElement;
@@ -692,4 +630,51 @@ class VisionPrescription {
   factory VisionPrescription.fromJson(Map<String, dynamic> json) =>
       _$VisionPrescriptionFromJson(json);
   Map<String, dynamic> toJson() => _$VisionPrescriptionToJson(this);
+}
+
+@JsonSerializable()
+class VisionPrescriptionDispense {
+  const VisionPrescriptionDispense({
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    required this.product,
+    this.eye,
+    this.sphere,
+    this.cylinder,
+    this.axis,
+    this.prism,
+    this.base,
+    this.add,
+    this.power,
+    this.backCurve,
+    this.diameter,
+    this.duration,
+    this.color,
+    this.brand,
+    this.notes,
+  });
+
+  final Id? id;
+  final List<FhirExtension>? extension_;
+  final List<FhirExtension>? modifierExtension;
+  final Coding product;
+  final DispenseEye? eye;
+  final Decimal? sphere;
+  final Decimal? cylinder;
+  final Integer? axis;
+  final Decimal? prism;
+  final DispenseBase? base;
+  final Decimal? add;
+  final Decimal? power;
+  final Decimal? backCurve;
+  final Decimal? diameter;
+  final Quantity? duration;
+  final String? color;
+  final String? brand;
+  final String? notes;
+
+  factory VisionPrescriptionDispense.fromJson(Map<String, dynamic> json) =>
+      _$VisionPrescriptionDispenseFromJson(json);
+  Map<String, dynamic> toJson() => _$VisionPrescriptionDispenseToJson(this);
 }

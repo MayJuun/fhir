@@ -6,9 +6,9 @@ import '../../../../r4.dart';
 part 'security.g.dart';
 
 @JsonSerializable()
-class AuditEvent {
+class AuditEvent extends Resource {
   const AuditEvent({
-    @Default(R4ResourceType.AuditEvent) required this.resourceType,
+    super.resourceType = R4ResourceType.AuditEvent,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -231,9 +231,9 @@ class AuditEventDetail {
 }
 
 @JsonSerializable()
-class Consent {
+class Consent extends Resource {
   const Consent({
-    @Default(R4ResourceType.Consent) required this.resourceType,
+    super.resourceType = R4ResourceType.Consent,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -426,9 +426,9 @@ class ConsentData {
 }
 
 @JsonSerializable()
-class Provenance {
+class Provenance extends Resource {
   const Provenance({
-    @Default(R4ResourceType.Provenance) required this.resourceType,
+    super.resourceType = R4ResourceType.Provenance,
     required this.id,
     required this.meta,
     required this.implicitRules,

@@ -7,8 +7,9 @@ part of 'devices.dart';
 // **************************************************************************
 
 Device _$DeviceFromJson(Map<String, dynamic> json) => Device(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.Device,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -91,9 +92,7 @@ Device _$DeviceFromJson(Map<String, dynamic> json) => Device(
     );
 
 Map<String, dynamic> _$DeviceToJson(Device instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -101,6 +100,8 @@ Map<String, dynamic> _$DeviceToJson(Device instance) {
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -248,8 +249,9 @@ const _$DeviceStatusEnumMap = {
 
 DeviceComponent _$DeviceComponentFromJson(Map<String, dynamic> json) =>
     DeviceComponent(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.DeviceComponent,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       idElement: json['idElement'] == null
           ? null
@@ -306,9 +308,7 @@ DeviceComponent _$DeviceComponentFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$DeviceComponentToJson(DeviceComponent instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -316,6 +316,8 @@ Map<String, dynamic> _$DeviceComponentToJson(DeviceComponent instance) {
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('idElement', instance.idElement?.toJson());
   writeNotNull('meta', instance.meta?.toJson());

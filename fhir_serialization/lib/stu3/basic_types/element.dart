@@ -17,3 +17,4 @@ class Element {
       _$ElementFromJson(json);
   Map<String, dynamic> toJson() => _$ElementToJson(this);
 }
+

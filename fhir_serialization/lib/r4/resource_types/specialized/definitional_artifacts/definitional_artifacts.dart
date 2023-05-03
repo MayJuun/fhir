@@ -6,9 +6,9 @@ import '../../../../r4.dart';
 part 'definitional_artifacts.g.dart';
 
 @JsonSerializable()
-class ActivityDefinition {
+class ActivityDefinition extends Resource {
   const ActivityDefinition({
-    @Default(R4ResourceType.ActivityDefinition) required this.resourceType,
+    super.resourceType = R4ResourceType.ActivityDefinition,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -254,9 +254,9 @@ class ActivityDefinitionDynamicValue {
 }
 
 @JsonSerializable()
-class DeviceDefinition {
+class DeviceDefinition extends Resource {
   const DeviceDefinition({
-    @Default(R4ResourceType.DeviceDefinition) required this.resourceType,
+    super.resourceType = R4ResourceType.DeviceDefinition,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -470,9 +470,9 @@ class DeviceDefinitionMaterial {
 }
 
 @JsonSerializable()
-class EventDefinition {
+class EventDefinition extends Resource {
   const EventDefinition({
-    @Default(R4ResourceType.EventDefinition) required this.resourceType,
+    super.resourceType = R4ResourceType.EventDefinition,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -607,9 +607,9 @@ class EventDefinition {
 }
 
 @JsonSerializable()
-class ObservationDefinition {
+class ObservationDefinition extends Resource {
   const ObservationDefinition({
-    @Default(R4ResourceType.ObservationDefinition) required this.resourceType,
+    super.resourceType = R4ResourceType.ObservationDefinition,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -970,9 +970,9 @@ class PlanDefinitionDynamicValue {
 }
 
 @JsonSerializable()
-class Questionnaire {
+class Questionnaire extends Resource {
   const Questionnaire({
-    @Default(R4ResourceType.Questionnaire) required this.resourceType,
+    super.resourceType = R4ResourceType.Questionnaire,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -1308,9 +1308,9 @@ class QuestionnaireInitial {
 }
 
 @JsonSerializable()
-class SpecimenDefinition {
+class SpecimenDefinition extends Resource {
   const SpecimenDefinition({
-    @Default(R4ResourceType.SpecimenDefinition) required this.resourceType,
+    super.resourceType = R4ResourceType.SpecimenDefinition,
     required this.id,
     required this.meta,
     required this.implicitRules,

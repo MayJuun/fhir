@@ -1092,8 +1092,6 @@ class Narrative {
     required this.condition,
     @JsonKey(name: '_condition') required this.conditionElement,
     required this.constraint,
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
     @JsonKey(name: 'fhir_comments') required this.fhirComments,
     required this.status,
     @JsonKey(name: '_status') required this.statusElement,
@@ -1432,10 +1430,7 @@ class Narrative {
   final List<Id>? condition;
   final Element? conditionElement;
   final List<ElementDefinitionConstraint>? constraint;
-  final Id? id;
-  final List<FhirExtension>? extension_;
   final List<String>? fhirComments;
-
   final NarrativeStatus status;
   final Element? statusElement;
   final String div;

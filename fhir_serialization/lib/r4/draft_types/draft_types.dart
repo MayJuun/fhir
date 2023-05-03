@@ -122,3 +122,4 @@ class MarketingStatus {
       _$MarketingStatusFromJson(json);
   Map<String, dynamic> toJson() => _$MarketingStatusToJson(this);
 }
+

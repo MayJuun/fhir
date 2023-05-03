@@ -226,3 +226,4 @@ class TriggerDefinition {
       _$TriggerDefinitionFromJson(json);
   Map<String, dynamic> toJson() => _$TriggerDefinitionToJson(this);
 }
+

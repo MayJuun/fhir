@@ -7,7 +7,9 @@ part of 'medications.dart';
 // **************************************************************************
 
 Immunization _$ImmunizationFromJson(Map<String, dynamic> json) => Immunization(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.Immunization,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -606,7 +608,9 @@ Map<String, dynamic> _$ImmunizationProtocolAppliedToJson(
 ImmunizationEvaluation _$ImmunizationEvaluationFromJson(
         Map<String, dynamic> json) =>
     ImmunizationEvaluation(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.ImmunizationEvaluation,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1261,7 +1265,9 @@ Map<String, dynamic> _$MedicationAdministrationPerformerToJson(
 
 MedicationDispense _$MedicationDispenseFromJson(Map<String, dynamic> json) =>
     MedicationDispense(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.MedicationDispense,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1544,7 +1550,9 @@ Map<String, dynamic> _$MedicationDispenseSubstitutionToJson(
 
 MedicationKnowledge _$MedicationKnowledgeFromJson(Map<String, dynamic> json) =>
     MedicationKnowledge(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.MedicationKnowledge,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -2151,7 +2159,9 @@ Map<String, dynamic> _$MedicationKnowledgeKineticsToJson(
 
 MedicationRequest _$MedicationRequestFromJson(Map<String, dynamic> json) =>
     MedicationRequest(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.MedicationRequest,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -2517,7 +2527,9 @@ Map<String, dynamic> _$MedicationRequestSubstitutionToJson(
 
 MedicationStatement _$MedicationStatementFromJson(Map<String, dynamic> json) =>
     MedicationStatement(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.MedicationStatement,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null

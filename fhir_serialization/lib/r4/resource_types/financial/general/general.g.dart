@@ -7,7 +7,9 @@ part of 'general.dart';
 // **************************************************************************
 
 Account _$AccountFromJson(Map<String, dynamic> json) => Account(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.Account,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -342,7 +344,9 @@ Map<String, dynamic> _$AccountGuarantorToJson(AccountGuarantor instance) {
 }
 
 ChargeItem _$ChargeItemFromJson(Map<String, dynamic> json) => ChargeItem(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.ChargeItem,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -590,7 +594,9 @@ Map<String, dynamic> _$ChargeItemPerformerToJson(ChargeItemPerformer instance) {
 ChargeItemDefinition _$ChargeItemDefinitionFromJson(
         Map<String, dynamic> json) =>
     ChargeItemDefinition(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.ChargeItemDefinition,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1895,7 +1901,9 @@ Map<String, dynamic> _$ContractRuleToJson(ContractRule instance) {
 ExplanationOfBenefit _$ExplanationOfBenefitFromJson(
         Map<String, dynamic> json) =>
     ExplanationOfBenefit(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.ExplanationOfBenefit,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -3400,7 +3408,9 @@ Map<String, dynamic> _$ExplanationOfBenefitBenefitBalanceToJson(
 
 InsurancePlan _$InsurancePlanFromJson(Map<String, dynamic> json) =>
     InsurancePlan(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.InsurancePlan,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null

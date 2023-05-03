@@ -6,9 +6,9 @@ import '../../../../r4.dart';
 part 'care_provision.g.dart';
 
 @JsonSerializable()
-class CarePlan {
+class CarePlan extends Resource {
   const CarePlan({
-    @Default(R4ResourceType.CarePlan) required this.resourceType,
+    super.resourceType = R4ResourceType.CarePlan,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -196,9 +196,9 @@ class CarePlanDetail {
 }
 
 @JsonSerializable()
-class CareTeam {
+class CareTeam extends Resource {
   const CareTeam({
-    @Default(R4ResourceType.CareTeam) required this.resourceType,
+    super.resourceType = R4ResourceType.CareTeam,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -285,9 +285,9 @@ class CareTeamParticipant {
 }
 
 @JsonSerializable()
-class Goal {
+class Goal extends Resource {
   const Goal({
-    @Default(R4ResourceType.Goal) required this.resourceType,
+    super.resourceType = R4ResourceType.Goal,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -407,9 +407,9 @@ class GoalTarget {
 }
 
 @JsonSerializable()
-class NutritionOrder {
+class NutritionOrder extends Resource {
   const NutritionOrder({
-    @Default(R4ResourceType.NutritionOrder) required this.resourceType,
+    super.resourceType = R4ResourceType.NutritionOrder,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -655,9 +655,9 @@ class NutritionOrderAdministration {
 }
 
 @JsonSerializable()
-class RequestGroup {
+class RequestGroup extends Resource {
   const RequestGroup({
-    @Default(R4ResourceType.RequestGroup) required this.resourceType,
+    super.resourceType = R4ResourceType.RequestGroup,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -878,9 +878,9 @@ class RequestGroupRelatedAction {
 }
 
 @JsonSerializable()
-class RiskAssessment {
+class RiskAssessment extends Resource {
   const RiskAssessment({
-    @Default(R4ResourceType.RiskAssessment) required this.resourceType,
+    super.resourceType = R4ResourceType.RiskAssessment,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -996,9 +996,9 @@ class RiskAssessmentPrediction {
 }
 
 @JsonSerializable()
-class ServiceRequest {
+class ServiceRequest extends Resource {
   const ServiceRequest({
-    @Default(R4ResourceType.ServiceRequest) required this.resourceType,
+    super.resourceType = R4ResourceType.ServiceRequest,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -1135,9 +1135,9 @@ class ServiceRequest {
 }
 
 @JsonSerializable()
-class VisionPrescription {
+class VisionPrescription extends Resource {
   const VisionPrescription({
-    @Default(R4ResourceType.VisionPrescription) required this.resourceType,
+    super.resourceType = R4ResourceType.VisionPrescription,
     required this.id,
     required this.meta,
     required this.implicitRules,

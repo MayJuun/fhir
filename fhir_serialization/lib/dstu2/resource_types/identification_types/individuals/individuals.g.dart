@@ -7,8 +7,9 @@ part of 'individuals.dart';
 // **************************************************************************
 
 Patient _$PatientFromJson(Map<String, dynamic> json) => Patient(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.Patient,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       idElement: json['idElement'] == null
           ? null
@@ -122,9 +123,7 @@ Patient _$PatientFromJson(Map<String, dynamic> json) => Patient(
     );
 
 Map<String, dynamic> _$PatientToJson(Patient instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -132,6 +131,8 @@ Map<String, dynamic> _$PatientToJson(Patient instance) {
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('idElement', instance.idElement?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
@@ -443,7 +444,7 @@ PatientLink _$PatientLinkFromJson(Map<String, dynamic> json) => PatientLink(
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       other: Reference.fromJson(json['other'] as Map<String, dynamic>),
-      type: $enumDecode(_$LinkTypeEnumMap, json['type']),
+      type: $enumDecodeNullable(_$LinkTypeEnumMap, json['type']),
       typeElement: json['typeElement'] == null
           ? null
           : Element.fromJson(json['typeElement'] as Map<String, dynamic>),
@@ -464,7 +465,7 @@ Map<String, dynamic> _$PatientLinkToJson(PatientLink instance) {
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['other'] = instance.other.toJson();
-  val['type'] = _$LinkTypeEnumMap[instance.type]!;
+  writeNotNull('type', _$LinkTypeEnumMap[instance.type]);
   writeNotNull('typeElement', instance.typeElement?.toJson());
   return val;
 }
@@ -477,8 +478,9 @@ const _$LinkTypeEnumMap = {
 };
 
 Practitioner _$PractitionerFromJson(Map<String, dynamic> json) => Practitioner(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.Practitioner,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -549,9 +551,7 @@ Practitioner _$PractitionerFromJson(Map<String, dynamic> json) => Practitioner(
     );
 
 Map<String, dynamic> _$PractitionerToJson(Practitioner instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -559,6 +559,8 @@ Map<String, dynamic> _$PractitionerToJson(Practitioner instance) {
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -708,8 +710,9 @@ Map<String, dynamic> _$PractitionerQualificationToJson(
 
 RelatedPerson _$RelatedPersonFromJson(Map<String, dynamic> json) =>
     RelatedPerson(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.RelatedPerson,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -770,12 +773,13 @@ RelatedPerson _$RelatedPersonFromJson(Map<String, dynamic> json) =>
       period: json['period'] == null
           ? null
           : Period.fromJson(json['period'] as Map<String, dynamic>),
+      activeElement: json['activeElement'] == null
+          ? null
+          : Element.fromJson(json['activeElement'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$RelatedPersonToJson(RelatedPerson instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -783,6 +787,8 @@ Map<String, dynamic> _$RelatedPersonToJson(RelatedPerson instance) {
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -809,6 +815,7 @@ Map<String, dynamic> _$RelatedPersonToJson(RelatedPerson instance) {
   writeNotNull('address', instance.address?.map((e) => e.toJson()).toList());
   writeNotNull('photo', instance.photo?.map((e) => e.toJson()).toList());
   writeNotNull('period', instance.period?.toJson());
+  writeNotNull('activeElement', instance.activeElement?.toJson());
   return val;
 }
 

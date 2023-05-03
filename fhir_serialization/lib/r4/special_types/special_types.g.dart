@@ -1308,13 +1308,6 @@ ElementDefinitionSlicing _$ElementDefinitionSlicingFromJson(
           ?.map((e) =>
               ElementDefinitionConstraint.fromJson(e as Map<String, dynamic>))
           .toList(),
-      id: json['id'] as String?,
-      extension_: (json['extension_'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
       discriminator: (json['discriminator'] as List<dynamic>?)
           ?.map((e) => ElementDefinitionDiscriminator.fromJson(
               e as Map<String, dynamic>))
@@ -1346,6 +1339,11 @@ Map<String, dynamic> _$ElementDefinitionSlicingToJson(
     }
   }
 
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension_', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('path', instance.path);
   writeNotNull('pathElement', instance.pathElement?.toJson());
   writeNotNull(
@@ -1719,11 +1717,6 @@ Map<String, dynamic> _$ElementDefinitionSlicingToJson(
       instance.conditionElement?.map((e) => e?.toJson()).toList());
   writeNotNull(
       'constraint', instance.constraint?.map((e) => e.toJson()).toList());
-  writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension_', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'discriminator', instance.discriminator?.map((e) => e.toJson()).toList());
   writeNotNull('description', instance.description);

@@ -7,7 +7,9 @@ part of 'quality_reporting_and_testing.dart';
 // **************************************************************************
 
 Measure _$MeasureFromJson(Map<String, dynamic> json) => Measure(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.Measure,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -697,7 +699,9 @@ Map<String, dynamic> _$MeasureSupplementalDataToJson(
 
 MeasureReport _$MeasureReportFromJson(Map<String, dynamic> json) =>
     MeasureReport(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.MeasureReport,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1063,7 +1067,9 @@ Map<String, dynamic> _$MeasureReportPopulation1ToJson(
 }
 
 TestReport _$TestReportFromJson(Map<String, dynamic> json) => TestReport(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.TestReport,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1541,7 +1547,9 @@ Map<String, dynamic> _$TestReportAction2ToJson(TestReportAction2 instance) {
 }
 
 TestScript _$TestScriptFromJson(Map<String, dynamic> json) => TestScript(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.TestScript,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null

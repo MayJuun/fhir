@@ -7,7 +7,9 @@ part of 'care_provision.dart';
 // **************************************************************************
 
 CarePlan _$CarePlanFromJson(Map<String, dynamic> json) => CarePlan(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.CarePlan,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -515,7 +517,9 @@ Map<String, dynamic> _$CarePlanDetailToJson(CarePlanDetail instance) {
 }
 
 CareTeam _$CareTeamFromJson(Map<String, dynamic> json) => CareTeam(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.CareTeam,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -679,7 +683,9 @@ Map<String, dynamic> _$CareTeamParticipantToJson(CareTeamParticipant instance) {
 }
 
 Goal _$GoalFromJson(Map<String, dynamic> json) => Goal(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.Goal,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -909,7 +915,9 @@ Map<String, dynamic> _$GoalTargetToJson(GoalTarget instance) {
 
 NutritionOrder _$NutritionOrderFromJson(Map<String, dynamic> json) =>
     NutritionOrder(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.NutritionOrder,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1390,7 +1398,9 @@ Map<String, dynamic> _$NutritionOrderAdministrationToJson(
 }
 
 RequestGroup _$RequestGroupFromJson(Map<String, dynamic> json) => RequestGroup(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.RequestGroup,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1826,7 +1836,9 @@ Map<String, dynamic> _$RequestGroupRelatedActionToJson(
 
 RiskAssessment _$RiskAssessmentFromJson(Map<String, dynamic> json) =>
     RiskAssessment(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.RiskAssessment,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -2047,7 +2059,9 @@ Map<String, dynamic> _$RiskAssessmentPredictionToJson(
 
 ServiceRequest _$ServiceRequestFromJson(Map<String, dynamic> json) =>
     ServiceRequest(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.ServiceRequest,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -2310,7 +2324,9 @@ Map<String, dynamic> _$ServiceRequestToJson(ServiceRequest instance) {
 
 VisionPrescription _$VisionPrescriptionFromJson(Map<String, dynamic> json) =>
     VisionPrescription(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.VisionPrescription,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null

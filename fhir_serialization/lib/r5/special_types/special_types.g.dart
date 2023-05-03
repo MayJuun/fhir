@@ -422,10 +422,11 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) =>
       defaultValueBase64Binary: json['defaultValueBase64Binary'] == null
           ? null
           : Base64Binary.fromJson(json['defaultValueBase64Binary']),
-      defaultValueBase64BinaryElement: json['_defaultValueBase64Binary'] == null
-          ? null
-          : Element.fromJson(
-              json['_defaultValueBase64Binary'] as Map<String, dynamic>),
+      defaultValueBase64BinaryElement:
+          json['defaultValueBase64BinaryElement'] == null
+              ? null
+              : Element.fromJson(json['defaultValueBase64BinaryElement']
+                  as Map<String, dynamic>),
       defaultValueBoolean: json['defaultValueBoolean'] == null
           ? null
           : Boolean.fromJson(json['defaultValueBoolean']),
@@ -436,10 +437,10 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) =>
       defaultValueCanonical: json['defaultValueCanonical'] == null
           ? null
           : Canonical.fromJson(json['defaultValueCanonical']),
-      defaultValueCanonicalElement: json['_defaultValueCanonical'] == null
+      defaultValueCanonicalElement: json['defaultValueCanonicalElement'] == null
           ? null
           : Element.fromJson(
-              json['_defaultValueCanonical'] as Map<String, dynamic>),
+              json['defaultValueCanonicalElement'] as Map<String, dynamic>),
       defaultValueCode: json['defaultValueCode'] == null
           ? null
           : Code.fromJson(json['defaultValueCode']),
@@ -457,10 +458,10 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) =>
       defaultValueDateTime: json['defaultValueDateTime'] == null
           ? null
           : FhirDateTime.fromJson(json['defaultValueDateTime']),
-      defaultValueDateTimeElement: json['_defaultValueDateTime'] == null
+      defaultValueDateTimeElement: json['defaultValueDateTimeElement'] == null
           ? null
           : Element.fromJson(
-              json['_defaultValueDateTime'] as Map<String, dynamic>),
+              json['defaultValueDateTimeElement'] as Map<String, dynamic>),
       defaultValueDecimal: json['defaultValueDecimal'] == null
           ? null
           : Decimal.fromJson(json['defaultValueDecimal']),
@@ -492,17 +493,17 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) =>
       defaultValueInteger64: json['defaultValueInteger64'] == null
           ? null
           : Integer64.fromJson(json['defaultValueInteger64']),
-      defaultValueInteger64Element: json['_defaultValueInteger64'] == null
+      defaultValueInteger64Element: json['defaultValueInteger64Element'] == null
           ? null
           : Element.fromJson(
-              json['_defaultValueInteger64'] as Map<String, dynamic>),
+              json['defaultValueInteger64Element'] as Map<String, dynamic>),
       defaultValueMarkdown: json['defaultValueMarkdown'] == null
           ? null
           : Markdown.fromJson(json['defaultValueMarkdown']),
-      defaultValueMarkdownElement: json['_defaultValueMarkdown'] == null
+      defaultValueMarkdownElement: json['defaultValueMarkdownElement'] == null
           ? null
           : Element.fromJson(
-              json['_defaultValueMarkdown'] as Map<String, dynamic>),
+              json['defaultValueMarkdownElement'] as Map<String, dynamic>),
       defaultValueOid: json['defaultValueOid'] == null
           ? null
           : Id.fromJson(json['defaultValueOid']),
@@ -513,10 +514,11 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) =>
       defaultValuePositiveInt: json['defaultValuePositiveInt'] == null
           ? null
           : PositiveInt.fromJson(json['defaultValuePositiveInt']),
-      defaultValuePositiveIntElement: json['_defaultValuePositiveInt'] == null
+      defaultValuePositiveIntElement: json['defaultValuePositiveIntElement'] ==
+              null
           ? null
           : Element.fromJson(
-              json['_defaultValuePositiveInt'] as Map<String, dynamic>),
+              json['defaultValuePositiveIntElement'] as Map<String, dynamic>),
       defaultValueString: json['defaultValueString'] as String?,
       defaultValueStringElement: json['defaultValueStringElement'] == null
           ? null
@@ -532,10 +534,11 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) =>
       defaultValueUnsignedInt: json['defaultValueUnsignedInt'] == null
           ? null
           : UnsignedInt.fromJson(json['defaultValueUnsignedInt']),
-      defaultValueUnsignedIntElement: json['_defaultValueUnsignedInt'] == null
+      defaultValueUnsignedIntElement: json['defaultValueUnsignedIntElement'] ==
+              null
           ? null
           : Element.fromJson(
-              json['_defaultValueUnsignedInt'] as Map<String, dynamic>),
+              json['defaultValueUnsignedIntElement'] as Map<String, dynamic>),
       defaultValueUri: json['defaultValueUri'] == null
           ? null
           : FhirUri.fromJson(json['defaultValueUri']),
@@ -1449,14 +1452,14 @@ Map<String, dynamic> _$ElementDefinitionToJson(ElementDefinition instance) {
   writeNotNull('type', instance.type?.map((e) => e.toJson()).toList());
   writeNotNull(
       'defaultValueBase64Binary', instance.defaultValueBase64Binary?.toJson());
-  writeNotNull('_defaultValueBase64Binary',
+  writeNotNull('defaultValueBase64BinaryElement',
       instance.defaultValueBase64BinaryElement?.toJson());
   writeNotNull('defaultValueBoolean', instance.defaultValueBoolean?.toJson());
   writeNotNull('defaultValueBooleanElement',
       instance.defaultValueBooleanElement?.toJson());
   writeNotNull(
       'defaultValueCanonical', instance.defaultValueCanonical?.toJson());
-  writeNotNull('_defaultValueCanonical',
+  writeNotNull('defaultValueCanonicalElement',
       instance.defaultValueCanonicalElement?.toJson());
   writeNotNull('defaultValueCode', instance.defaultValueCode?.toJson());
   writeNotNull(
@@ -1465,8 +1468,8 @@ Map<String, dynamic> _$ElementDefinitionToJson(ElementDefinition instance) {
   writeNotNull(
       'defaultValueDateElement', instance.defaultValueDateElement?.toJson());
   writeNotNull('defaultValueDateTime', instance.defaultValueDateTime?.toJson());
-  writeNotNull(
-      '_defaultValueDateTime', instance.defaultValueDateTimeElement?.toJson());
+  writeNotNull('defaultValueDateTimeElement',
+      instance.defaultValueDateTimeElement?.toJson());
   writeNotNull('defaultValueDecimal', instance.defaultValueDecimal?.toJson());
   writeNotNull('defaultValueDecimalElement',
       instance.defaultValueDecimalElement?.toJson());
@@ -1481,17 +1484,17 @@ Map<String, dynamic> _$ElementDefinitionToJson(ElementDefinition instance) {
       instance.defaultValueIntegerElement?.toJson());
   writeNotNull(
       'defaultValueInteger64', instance.defaultValueInteger64?.toJson());
-  writeNotNull('_defaultValueInteger64',
+  writeNotNull('defaultValueInteger64Element',
       instance.defaultValueInteger64Element?.toJson());
   writeNotNull('defaultValueMarkdown', instance.defaultValueMarkdown?.toJson());
-  writeNotNull(
-      '_defaultValueMarkdown', instance.defaultValueMarkdownElement?.toJson());
+  writeNotNull('defaultValueMarkdownElement',
+      instance.defaultValueMarkdownElement?.toJson());
   writeNotNull('defaultValueOid', instance.defaultValueOid?.toJson());
   writeNotNull(
       'defaultValueOidElement', instance.defaultValueOidElement?.toJson());
   writeNotNull(
       'defaultValuePositiveInt', instance.defaultValuePositiveInt?.toJson());
-  writeNotNull('_defaultValuePositiveInt',
+  writeNotNull('defaultValuePositiveIntElement',
       instance.defaultValuePositiveIntElement?.toJson());
   writeNotNull('defaultValueString', instance.defaultValueString);
   writeNotNull('defaultValueStringElement',
@@ -1501,7 +1504,7 @@ Map<String, dynamic> _$ElementDefinitionToJson(ElementDefinition instance) {
       'defaultValueTimeElement', instance.defaultValueTimeElement?.toJson());
   writeNotNull(
       'defaultValueUnsignedInt', instance.defaultValueUnsignedInt?.toJson());
-  writeNotNull('_defaultValueUnsignedInt',
+  writeNotNull('defaultValueUnsignedIntElement',
       instance.defaultValueUnsignedIntElement?.toJson());
   writeNotNull('defaultValueUri', instance.defaultValueUri?.toJson());
   writeNotNull(

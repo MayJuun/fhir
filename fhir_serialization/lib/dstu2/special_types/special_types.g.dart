@@ -2717,10 +2717,6 @@ Narrative _$NarrativeFromJson(Map<String, dynamic> json) => Narrative(
           ?.map((e) =>
               ElementDefinitionConstraint.fromJson(e as Map<String, dynamic>))
           .toList(),
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
-      extension_: (json['extension_'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
       fhirComments: (json['fhirComments'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
@@ -2732,9 +2728,7 @@ Narrative _$NarrativeFromJson(Map<String, dynamic> json) => Narrative(
     );
 
 Map<String, dynamic> _$NarrativeToJson(Narrative instance) {
-  final val = <String, dynamic>{
-    'path': instance.path,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -2742,6 +2736,10 @@ Map<String, dynamic> _$NarrativeToJson(Narrative instance) {
     }
   }
 
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'extension_', instance.extension_?.map((e) => e.toJson()).toList());
+  val['path'] = instance.path;
   writeNotNull('representation',
       instance.representation?.map((e) => e.toJson()).toList());
   writeNotNull(
@@ -3143,9 +3141,6 @@ Map<String, dynamic> _$NarrativeToJson(Narrative instance) {
   writeNotNull('conditionElement', instance.conditionElement?.toJson());
   writeNotNull(
       'constraint', instance.constraint?.map((e) => e.toJson()).toList());
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull(
-      'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('fhirComments', instance.fhirComments);
   val['status'] = _$NarrativeStatusEnumMap[instance.status]!;
   writeNotNull('statusElement', instance.statusElement?.toJson());

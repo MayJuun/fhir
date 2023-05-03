@@ -7,7 +7,9 @@ part of 'care_provision.dart';
 // **************************************************************************
 
 CarePlan _$CarePlanFromJson(Map<String, dynamic> json) => CarePlan(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.CarePlan,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -117,9 +119,7 @@ CarePlan _$CarePlanFromJson(Map<String, dynamic> json) => CarePlan(
     );
 
 Map<String, dynamic> _$CarePlanToJson(CarePlan instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -140,6 +140,7 @@ Map<String, dynamic> _$CarePlanToJson(CarePlan instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('instantiatesCanonical',
@@ -537,7 +538,9 @@ Map<String, dynamic> _$CarePlanPlannedActivityDetailToJson(
 }
 
 CareTeam _$CareTeamFromJson(Map<String, dynamic> json) => CareTeam(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.CareTeam,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -604,9 +607,7 @@ CareTeam _$CareTeamFromJson(Map<String, dynamic> json) => CareTeam(
     );
 
 Map<String, dynamic> _$CareTeamToJson(CareTeam instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -627,6 +628,7 @@ Map<String, dynamic> _$CareTeamToJson(CareTeam instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('status', instance.status?.toJson());
@@ -695,7 +697,9 @@ Map<String, dynamic> _$CareTeamParticipantToJson(CareTeamParticipant instance) {
 }
 
 Goal _$GoalFromJson(Map<String, dynamic> json) => Goal(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.Goal,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -790,9 +794,7 @@ Goal _$GoalFromJson(Map<String, dynamic> json) => Goal(
     );
 
 Map<String, dynamic> _$GoalToJson(Goal instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -813,6 +815,7 @@ Map<String, dynamic> _$GoalToJson(Goal instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('lifecycleStatus', instance.lifecycleStatus?.toJson());
@@ -927,7 +930,9 @@ Map<String, dynamic> _$GoalTargetToJson(GoalTarget instance) {
 
 NutritionIntake _$NutritionIntakeFromJson(Map<String, dynamic> json) =>
     NutritionIntake(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.NutritionIntake,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1042,9 +1047,7 @@ NutritionIntake _$NutritionIntakeFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$NutritionIntakeToJson(NutritionIntake instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1065,6 +1068,7 @@ Map<String, dynamic> _$NutritionIntakeToJson(NutritionIntake instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('instantiatesCanonical',
@@ -1239,7 +1243,9 @@ Map<String, dynamic> _$NutritionIntakePerformerToJson(
 
 NutritionOrder _$NutritionOrderFromJson(Map<String, dynamic> json) =>
     NutritionOrder(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.NutritionOrder,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1355,9 +1361,7 @@ NutritionOrder _$NutritionOrderFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$NutritionOrderToJson(NutritionOrder instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1378,6 +1382,7 @@ Map<String, dynamic> _$NutritionOrderToJson(NutritionOrder instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('instantiatesCanonical',
@@ -1934,7 +1939,9 @@ Map<String, dynamic> _$NutritionOrderSchedule2ToJson(
 RequestOrchestration _$RequestOrchestrationFromJson(
         Map<String, dynamic> json) =>
     RequestOrchestration(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.RequestOrchestration,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -2037,9 +2044,7 @@ RequestOrchestration _$RequestOrchestrationFromJson(
 
 Map<String, dynamic> _$RequestOrchestrationToJson(
     RequestOrchestration instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -2060,6 +2065,7 @@ Map<String, dynamic> _$RequestOrchestrationToJson(
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('instantiatesCanonical',
@@ -2630,7 +2636,9 @@ Map<String, dynamic> _$RequestOrchestrationDynamicValueToJson(
 
 RiskAssessment _$RiskAssessmentFromJson(Map<String, dynamic> json) =>
     RiskAssessment(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.RiskAssessment,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -2718,9 +2726,7 @@ RiskAssessment _$RiskAssessmentFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$RiskAssessmentToJson(RiskAssessment instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -2741,6 +2747,7 @@ Map<String, dynamic> _$RiskAssessmentToJson(RiskAssessment instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('basedOn', instance.basedOn?.toJson());
@@ -2845,7 +2852,9 @@ Map<String, dynamic> _$RiskAssessmentPredictionToJson(
 
 ServiceRequest _$ServiceRequestFromJson(Map<String, dynamic> json) =>
     ServiceRequest(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.ServiceRequest,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -3015,9 +3024,7 @@ ServiceRequest _$ServiceRequestFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$ServiceRequestToJson(ServiceRequest instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -3038,6 +3045,7 @@ Map<String, dynamic> _$ServiceRequestToJson(ServiceRequest instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('instantiatesCanonical',
@@ -3103,7 +3111,9 @@ Map<String, dynamic> _$ServiceRequestToJson(ServiceRequest instance) {
 
 VisionPrescription _$VisionPrescriptionFromJson(Map<String, dynamic> json) =>
     VisionPrescription(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.VisionPrescription,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -3165,9 +3175,7 @@ VisionPrescription _$VisionPrescriptionFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$VisionPrescriptionToJson(VisionPrescription instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -3188,6 +3196,7 @@ Map<String, dynamic> _$VisionPrescriptionToJson(VisionPrescription instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['resourceType'] = _$R5ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('status', instance.status?.toJson());

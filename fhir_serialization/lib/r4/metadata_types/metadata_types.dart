@@ -31,7 +31,7 @@ class Contributor {
   const Contributor({
     required this.id,
     @JsonKey(name: 'extension') required this.extension_,
-    @JsonKey(unknownEnumValue: ContributorType.unknown) required this.type,
+    required this.type,
     @JsonKey(name: '_type') required this.typeElement,
     required this.name,
     @JsonKey(name: '_name') required this.nameElement,

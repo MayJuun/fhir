@@ -7,8 +7,10 @@ part of 'billing.dart';
 // **************************************************************************
 
 Claim _$ClaimFromJson(Map<String, dynamic> json) => Claim(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
-      id: json['id'] as String?,
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.Claim,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -120,9 +122,7 @@ Claim _$ClaimFromJson(Map<String, dynamic> json) => Claim(
     );
 
 Map<String, dynamic> _$ClaimToJson(Claim instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -130,7 +130,8 @@ Map<String, dynamic> _$ClaimToJson(Claim instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -1109,8 +1110,10 @@ Map<String, dynamic> _$ClaimSubDetailToJson(ClaimSubDetail instance) {
 
 ClaimResponse _$ClaimResponseFromJson(Map<String, dynamic> json) =>
     ClaimResponse(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
-      id: json['id'] as String?,
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.ClaimResponse,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : Meta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1230,9 +1233,7 @@ ClaimResponse _$ClaimResponseFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$ClaimResponseToJson(ClaimResponse instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1240,7 +1241,8 @@ Map<String, dynamic> _$ClaimResponseToJson(ClaimResponse instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
@@ -2073,7 +2075,9 @@ Map<String, dynamic> _$ClaimResponseErrorToJson(ClaimResponseError instance) {
 }
 
 Invoice _$InvoiceFromJson(Map<String, dynamic> json) => Invoice(
-      resourceType: $enumDecode(_$R4ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
+              R4ResourceType.Invoice,
       id: json['id'] as String?,
       meta: json['meta'] == null
           ? null

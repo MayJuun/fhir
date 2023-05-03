@@ -8,8 +8,9 @@ part of 'workflow2.dart';
 
 ProcessRequest _$ProcessRequestFromJson(Map<String, dynamic> json) =>
     ProcessRequest(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.ProcessRequest,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -75,9 +76,7 @@ ProcessRequest _$ProcessRequestFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$ProcessRequestToJson(ProcessRequest instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -85,6 +84,8 @@ Map<String, dynamic> _$ProcessRequestToJson(ProcessRequest instance) {
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -254,8 +255,9 @@ Map<String, dynamic> _$ProcessRequestItemToJson(ProcessRequestItem instance) {
 
 ProcessResponse _$ProcessResponseFromJson(Map<String, dynamic> json) =>
     ProcessResponse(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.ProcessResponse,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -318,9 +320,7 @@ ProcessResponse _$ProcessResponseFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$ProcessResponseToJson(ProcessResponse instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -328,6 +328,8 @@ Map<String, dynamic> _$ProcessResponseToJson(ProcessResponse instance) {
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -394,8 +396,9 @@ Map<String, dynamic> _$ProcessResponseNotesToJson(
 
 SupplyRequest _$SupplyRequestFromJson(Map<String, dynamic> json) =>
     SupplyRequest(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.SupplyRequest,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -460,9 +463,7 @@ SupplyRequest _$SupplyRequestFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$SupplyRequestToJson(SupplyRequest instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -470,6 +471,8 @@ Map<String, dynamic> _$SupplyRequestToJson(SupplyRequest instance) {
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -545,8 +548,9 @@ Map<String, dynamic> _$SupplyRequestWhenToJson(SupplyRequestWhen instance) {
 
 SupplyDelivery _$SupplyDeliveryFromJson(Map<String, dynamic> json) =>
     SupplyDelivery(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.SupplyDelivery,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -611,9 +615,7 @@ SupplyDelivery _$SupplyDeliveryFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$SupplyDeliveryToJson(SupplyDelivery instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -621,6 +623,8 @@ Map<String, dynamic> _$SupplyDeliveryToJson(SupplyDelivery instance) {
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());

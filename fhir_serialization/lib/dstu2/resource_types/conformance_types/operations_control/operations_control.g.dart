@@ -7,8 +7,9 @@ part of 'operations_control.dart';
 // **************************************************************************
 
 Conformance _$ConformanceFromJson(Map<String, dynamic> json) => Conformance(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.Conformance,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -86,9 +87,7 @@ Conformance _$ConformanceFromJson(Map<String, dynamic> json) => Conformance(
     );
 
 Map<String, dynamic> _$ConformanceToJson(Conformance instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -96,6 +95,8 @@ Map<String, dynamic> _$ConformanceToJson(Conformance instance) {
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -270,8 +271,9 @@ const _$ConformanceFormatEnumMap = {
 
 CapabilityStatement _$CapabilityStatementFromJson(Map<String, dynamic> json) =>
     CapabilityStatement(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.CapabilityStatement,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -349,9 +351,7 @@ CapabilityStatement _$CapabilityStatementFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$CapabilityStatementToJson(CapabilityStatement instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -359,6 +359,8 @@ Map<String, dynamic> _$CapabilityStatementToJson(CapabilityStatement instance) {
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -1202,8 +1204,9 @@ const _$SearchParamModifierEnumMap = {
 
 OperationDefinition _$OperationDefinitionFromJson(Map<String, dynamic> json) =>
     OperationDefinition(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.OperationDefinition,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1261,9 +1264,7 @@ OperationDefinition _$OperationDefinitionFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$OperationDefinitionToJson(OperationDefinition instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1271,6 +1272,8 @@ Map<String, dynamic> _$OperationDefinitionToJson(OperationDefinition instance) {
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());

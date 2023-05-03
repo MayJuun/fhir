@@ -542,3 +542,4 @@ class Expression {
       _$ExpressionFromJson(json);
   Map<String, dynamic> toJson() => _$ExpressionToJson(this);
 }
+

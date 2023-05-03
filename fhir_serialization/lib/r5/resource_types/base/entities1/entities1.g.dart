@@ -7,7 +7,9 @@ part of 'entities1.dart';
 // **************************************************************************
 
 Endpoint _$EndpointFromJson(Map<String, dynamic> json) => Endpoint(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.Endpoint,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -90,9 +92,7 @@ Endpoint _$EndpointFromJson(Map<String, dynamic> json) => Endpoint(
     );
 
 Map<String, dynamic> _$EndpointToJson(Endpoint instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -101,11 +101,10 @@ Map<String, dynamic> _$EndpointToJson(Endpoint instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R5ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
   writeNotNull('language', instance.language?.toJson());
-  writeNotNull('languageElement', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
       'contained', instance.contained?.map((e) => e.toJson()).toList());
@@ -113,6 +112,8 @@ Map<String, dynamic> _$EndpointToJson(Endpoint instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
+  writeNotNull('languageElement', instance.languageElement?.toJson());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('status', instance.status?.toJson());
@@ -302,7 +303,9 @@ const _$R5ResourceTypeEnumMap = {
 
 HealthcareService _$HealthcareServiceFromJson(Map<String, dynamic> json) =>
     HealthcareService(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.HealthcareService,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -416,9 +419,7 @@ HealthcareService _$HealthcareServiceFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$HealthcareServiceToJson(HealthcareService instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -427,11 +428,10 @@ Map<String, dynamic> _$HealthcareServiceToJson(HealthcareService instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R5ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
   writeNotNull('language', instance.language?.toJson());
-  writeNotNull('languageElement', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
       'contained', instance.contained?.map((e) => e.toJson()).toList());
@@ -439,6 +439,8 @@ Map<String, dynamic> _$HealthcareServiceToJson(HealthcareService instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
+  writeNotNull('languageElement', instance.languageElement?.toJson());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('active', instance.active?.toJson());
@@ -523,7 +525,9 @@ Map<String, dynamic> _$HealthcareServiceEligibilityToJson(
 }
 
 Location _$LocationFromJson(Map<String, dynamic> json) => Location(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.Location,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -618,9 +622,7 @@ Location _$LocationFromJson(Map<String, dynamic> json) => Location(
     );
 
 Map<String, dynamic> _$LocationToJson(Location instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -629,11 +631,10 @@ Map<String, dynamic> _$LocationToJson(Location instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R5ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
   writeNotNull('language', instance.language?.toJson());
-  writeNotNull('languageElement', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
       'contained', instance.contained?.map((e) => e.toJson()).toList());
@@ -641,6 +642,8 @@ Map<String, dynamic> _$LocationToJson(Location instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
+  writeNotNull('languageElement', instance.languageElement?.toJson());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('status', instance.status?.toJson());
@@ -723,7 +726,9 @@ Map<String, dynamic> _$LocationPositionToJson(LocationPosition instance) {
 }
 
 Organization _$OrganizationFromJson(Map<String, dynamic> json) => Organization(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.Organization,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -793,9 +798,7 @@ Organization _$OrganizationFromJson(Map<String, dynamic> json) => Organization(
     );
 
 Map<String, dynamic> _$OrganizationToJson(Organization instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -804,11 +807,10 @@ Map<String, dynamic> _$OrganizationToJson(Organization instance) {
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R5ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
   writeNotNull('language', instance.language?.toJson());
-  writeNotNull('languageElement', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
       'contained', instance.contained?.map((e) => e.toJson()).toList());
@@ -816,6 +818,8 @@ Map<String, dynamic> _$OrganizationToJson(Organization instance) {
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
+  writeNotNull('languageElement', instance.languageElement?.toJson());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('active', instance.active?.toJson());
@@ -884,7 +888,9 @@ Map<String, dynamic> _$OrganizationQualificationToJson(
 OrganizationAffiliation _$OrganizationAffiliationFromJson(
         Map<String, dynamic> json) =>
     OrganizationAffiliation(
-      resourceType: $enumDecode(_$R5ResourceTypeEnumMap, json['resourceType']),
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.OrganizationAffiliation,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -956,9 +962,7 @@ OrganizationAffiliation _$OrganizationAffiliationFromJson(
 
 Map<String, dynamic> _$OrganizationAffiliationToJson(
     OrganizationAffiliation instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -967,11 +971,10 @@ Map<String, dynamic> _$OrganizationAffiliationToJson(
   }
 
   writeNotNull('id', instance.id?.toJson());
+  writeNotNull('resourceType', _$R5ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
   writeNotNull('language', instance.language?.toJson());
-  writeNotNull('languageElement', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
       'contained', instance.contained?.map((e) => e.toJson()).toList());
@@ -979,6 +982,8 @@ Map<String, dynamic> _$OrganizationAffiliationToJson(
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('implicitRulesElement', instance.implicitRulesElement?.toJson());
+  writeNotNull('languageElement', instance.languageElement?.toJson());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('active', instance.active?.toJson());

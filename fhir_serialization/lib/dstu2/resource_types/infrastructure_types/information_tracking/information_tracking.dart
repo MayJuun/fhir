@@ -8,46 +8,35 @@ part 'information_tracking.enums.dart';
 part 'information_tracking.g.dart';
 
 @JsonSerializable()
-class Questionnaire {
+class Questionnaire extends Resource {
   const Questionnaire({
-    @Default(Dstu2ResourceType.Questionnaire) required this.resourceType,
-    required this.id,
-    @JsonKey(name: '_id') required this.idElement,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.identifier,
-    required this.version,
-    @JsonKey(name: '_version') required this.versionElement,
+    super.resourceType = Dstu2ResourceType.Questionnaire,
+    super.id,
+    @JsonKey(name: '_id') super.idElement,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.identifier,
+    this.version,
+    @JsonKey(name: '_version') this.versionElement,
     required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.date,
-    @JsonKey(name: '_date') required this.dateElement,
-    required this.publisher,
-    @JsonKey(name: '_publisher') required this.publisherElement,
-    required this.telecom,
-    required this.subjectType,
-    @JsonKey(name: '_subjectType') required this.subjectTypeElement,
+    @JsonKey(name: '_status') this.statusElement,
+    this.date,
+    @JsonKey(name: '_date') this.dateElement,
+    this.publisher,
+    @JsonKey(name: '_publisher') this.publisherElement,
+    this.telecom,
+    this.subjectType,
+    @JsonKey(name: '_subjectType') this.subjectTypeElement,
     required this.group,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Element? idElement;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final List<Identifier>? identifier;
   final String? version;
   final Element? versionElement;
@@ -70,20 +59,19 @@ class Questionnaire {
 @JsonSerializable()
 class QuestionnaireGroup {
   const QuestionnaireGroup({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'fhir_comments') required this.fhirComments,
-    required this.linkId,
-    @JsonKey(name: '_linkId') required this.linkIdElement,
-    required this.title,
-    @JsonKey(name: '_title') required this.titleElement,
-    required this.concept,
-    required this.text,
-    @JsonKey(name: 'required') required this.required_,
-    required this.repeats,
-    required this.group,
-    required this.question,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'fhir_comments') this.fhirComments,
+    this.linkId,
+    @JsonKey(name: '_linkId') this.linkIdElement,
+    this.title,
+    @JsonKey(name: '_title') this.titleElement,
+    this.concept,
+    this.text,
+    this.repeats,
+    this.group,
+    this.question,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -95,7 +83,6 @@ class QuestionnaireGroup {
   final Element? titleElement;
   final List<Coding>? concept;
   final String? text;
-  final Boolean? required_;
   final Boolean? repeats;
   final List<QuestionnaireGroup>? group;
   final List<QuestionnaireGroupQuestion>? question;
@@ -107,20 +94,19 @@ class QuestionnaireGroup {
 @JsonSerializable()
 class QuestionnaireGroupQuestion {
   const QuestionnaireGroupQuestion({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'fhir_comments') required this.fhirComments,
-    required this.linkId,
-    @JsonKey(name: '_linkId') required this.linkIdElement,
-    required this.concept,
-    required this.text,
-    @JsonKey(unknownEnumValue: QuestionType.unknown) required this.type,
-    @JsonKey(name: 'required') required this.required_,
-    required this.repeats,
-    required this.options,
-    required this.option,
-    required this.group,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'fhir_comments') this.fhirComments,
+    this.linkId,
+    @JsonKey(name: '_linkId') this.linkIdElement,
+    this.concept,
+    this.text,
+    this.type,
+    this.repeats,
+    this.options,
+    this.option,
+    this.group,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -131,7 +117,6 @@ class QuestionnaireGroupQuestion {
   final List<Coding>? concept;
   final String? text;
   final QuestionType? type;
-  final Boolean? required_;
   final Boolean? repeats;
   final Reference? options;
   final List<Coding>? option;
@@ -142,45 +127,33 @@ class QuestionnaireGroupQuestion {
 }
 
 @JsonSerializable()
-class QuestionnaireResponse {
+class QuestionnaireResponse extends Resource {
   const QuestionnaireResponse({
-    @Default(Dstu2ResourceType.QuestionnaireResponse)
-        required this.resourceType,
-    required this.id,
-    @JsonKey(name: '_id') required this.idElement,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.identifier,
-    required this.questionnaire,
+    super.resourceType = Dstu2ResourceType.QuestionnaireResponse,
+    super.id,
+    @JsonKey(name: '_id') super.idElement,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    this.identifier,
+    this.questionnaire,
     @JsonKey(required: true) required this.status,
-    @JsonKey(name: '_status') required this.statusElement,
-    required this.subject,
-    required this.author,
-    required this.authored,
-    @JsonKey(name: '_authored') required this.authoredElement,
-    required this.source,
-    required this.encounter,
-    required this.group,
+    @JsonKey(name: '_status') this.statusElement,
+    this.subject,
+    this.author,
+    this.authored,
+    @JsonKey(name: '_authored') this.authoredElement,
+    this.source,
+    this.encounter,
+    this.group,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Element? idElement;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
+
   final Identifier? identifier;
   final Reference? questionnaire;
 
@@ -201,18 +174,18 @@ class QuestionnaireResponse {
 @JsonSerializable()
 class QuestionnaireResponseGroup {
   const QuestionnaireResponseGroup({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'fhir_comments') required this.fhirComments,
-    required this.linkId,
-    @JsonKey(name: '_linkId') required this.linkIdElement,
-    required this.title,
-    @JsonKey(name: '_title') required this.titleElement,
-    required this.text,
-    required this.subject,
-    required this.group,
-    required this.question,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'fhir_comments') this.fhirComments,
+    this.linkId,
+    @JsonKey(name: '_linkId') this.linkIdElement,
+    this.title,
+    @JsonKey(name: '_title') this.titleElement,
+    this.text,
+    this.subject,
+    this.group,
+    this.question,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -234,14 +207,14 @@ class QuestionnaireResponseGroup {
 @JsonSerializable()
 class QuestionnaireResponseGroupQuestion {
   const QuestionnaireResponseGroupQuestion({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'fhir_comments') required this.fhirComments,
-    required this.linkId,
-    @JsonKey(name: '_linkId') required this.linkIdElement,
-    required this.text,
-    required this.answer,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'fhir_comments') this.fhirComments,
+    this.linkId,
+    @JsonKey(name: '_linkId') this.linkIdElement,
+    this.text,
+    this.answer,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -259,16 +232,130 @@ class QuestionnaireResponseGroupQuestion {
 }
 
 @JsonSerializable()
+class QuestionnaireResponseQuestionAnswer {
+  const QuestionnaireResponseQuestionAnswer({
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'fhir_comments') this.fhirComments,
+    this.valueBoolean,
+    @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+    this.valueDecimal,
+    @JsonKey(name: '_valueDecimal') this.valueDecimalElement,
+    this.valueInteger,
+    @JsonKey(name: '_valueInteger') this.valueIntegerElement,
+    this.valueDate,
+    @JsonKey(name: '_valueDate') this.valueDateElement,
+    this.valueDateTime,
+    @JsonKey(name: '_valueDateTime') this.valueDateTimeElement,
+    this.valueInstant,
+    @JsonKey(name: '_valueInstant') this.valueInstantElement,
+    this.valueTime,
+    @JsonKey(name: '_valueTime') this.valueTimeElement,
+    this.valueString,
+    @JsonKey(name: '_valueString') this.valueStringElement,
+    this.valueUri,
+    @JsonKey(name: '_valueUri') this.valueUriElement,
+    this.valueAttachment,
+    this.valueCoding,
+    this.valueQuantity,
+    this.valueReference,
+    this.group,
+  });
+
+  final Id? id;
+  final List<FhirExtension>? extension_;
+  final List<FhirExtension>? modifierExtension;
+  final List<String>? fhirComments;
+  final Boolean? valueBoolean;
+  final Element? valueBooleanElement;
+  final Decimal? valueDecimal;
+  final Element? valueDecimalElement;
+  final Integer? valueInteger;
+  final Element? valueIntegerElement;
+  final Date? valueDate;
+  final Element? valueDateElement;
+  final FhirDateTime? valueDateTime;
+  final Element? valueDateTimeElement;
+  final Instant? valueInstant;
+  final Element? valueInstantElement;
+  final Time? valueTime;
+  final Element? valueTimeElement;
+  final String? valueString;
+  final Element? valueStringElement;
+  final FhirUri? valueUri;
+  final Element? valueUriElement;
+  final Attachment? valueAttachment;
+  final Coding? valueCoding;
+  final Quantity? valueQuantity;
+  final Reference? valueReference;
+  final List<QuestionnaireResponseGroup>? group;
+
+  factory QuestionnaireResponseQuestionAnswer.fromJson(
+          Map<String, dynamic> json) =>
+      _$QuestionnaireResponseQuestionAnswerFromJson(json);
+  Map<String, dynamic> toJson() =>
+      _$QuestionnaireResponseQuestionAnswerToJson(this);
+}
+
+@JsonSerializable()
+class Provenance extends Resource {
+  const Provenance({
+    super.resourceType = Dstu2ResourceType.Provenance,
+    super.id,
+    @JsonKey(name: '_id') super.idElement,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
+    required this.target,
+    this.period,
+    required this.recorded,
+    @JsonKey(name: '_recorded') this.recordedElement,
+    this.reason,
+    this.activity,
+    this.location,
+    this.policy,
+    @JsonKey(name: '_policy') this.policyElement,
+    this.agent,
+    this.entity,
+    this.signature,
+  });
+
+  final List<Reference> target;
+  final Period? period;
+  final Instant recorded;
+  final Element? recordedElement;
+  final List<CodeableConcept>? reason;
+  final CodeableConcept? activity;
+  final Reference? location;
+  final List<FhirUri>? policy;
+  final List<Element?>? policyElement;
+  final List<ProvenanceAgent>? agent;
+  final List<ProvenanceEntity>? entity;
+  final List<Signature>? signature;
+
+  factory Provenance.fromJson(Map<String, dynamic> json) =>
+      _$ProvenanceFromJson(json);
+  Map<String, dynamic> toJson() => _$ProvenanceToJson(this);
+}
+
+@JsonSerializable()
 class ProvenanceAgent {
   const ProvenanceAgent({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'fhir_comments') required this.fhirComments,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'fhir_comments') this.fhirComments,
     required this.role,
-    required this.actor,
-    required this.userId,
-    required this.relatedAgent,
+    this.actor,
+    this.userId,
+    this.relatedAgent,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -286,17 +373,17 @@ class ProvenanceAgent {
 @JsonSerializable()
 class ProvenanceEntity {
   const ProvenanceEntity({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    @JsonKey(name: 'fhir_comments') required this.fhirComments,
-    @JsonKey(unknownEnumValue: EntityRole.unknown) required this.role,
-    @JsonKey(name: '_role') required this.roleElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    @JsonKey(name: 'fhir_comments') this.fhirComments,
+    required this.role,
+    @JsonKey(name: '_role') this.roleElement,
     required this.type,
     required this.reference,
-    @JsonKey(name: '_reference') required this.referenceElement,
-    required this.display,
-    required this.agent,
+    @JsonKey(name: '_reference') this.referenceElement,
+    this.display,
+    this.agent,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -317,9 +404,9 @@ class ProvenanceEntity {
 @JsonSerializable()
 class ProvenanceAgentRelatedAgent {
   const ProvenanceAgentRelatedAgent({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.type,
     required this.target,
   });
@@ -334,35 +421,24 @@ class ProvenanceAgentRelatedAgent {
 }
 
 @JsonSerializable()
-class AuditEvent {
+class AuditEvent extends Resource {
   const AuditEvent({
-    @Default(Dstu2ResourceType.AuditEvent) required this.resourceType,
-    required this.id,
-    required this.meta,
-    required this.implicitRules,
-    @JsonKey(name: '_implicitRules') required this.implicitRulesElement,
-    required this.language,
-    @JsonKey(name: '_language') required this.languageElement,
-    required this.text,
-    required this.contained,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    super.resourceType = Dstu2ResourceType.AuditEvent,
+    super.id,
+    super.meta,
+    super.implicitRules,
+    @JsonKey(name: '_implicitRules') super.implicitRulesElement,
+    super.language,
+    @JsonKey(name: '_language') super.languageElement,
+    super.text,
+    super.contained,
+    @JsonKey(name: 'extension') super.extension_,
+    super.modifierExtension,
     required this.event,
     required this.participant,
     required this.source,
-    required this.object,
+    this.object,
   });
-  final Dstu2ResourceType resourceType;
-  final Id? id;
-  final Meta? meta;
-  final FhirUri? implicitRules;
-  final Element? implicitRulesElement;
-  final Code? language;
-  final Element? languageElement;
-  final Narrative? text;
-  final List<Resource>? contained;
-  final List<FhirExtension>? extension_;
-  final List<FhirExtension>? modifierExtension;
   final AuditEventEvent event;
   final List<AuditEventParticipant> participant;
   final AuditEventSource source;
@@ -375,16 +451,16 @@ class AuditEvent {
 @JsonSerializable()
 class AuditEventEvent {
   const AuditEventEvent({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.type,
-    required this.subtype,
-    required this.action,
+    this.subtype,
+    this.action,
     required this.dateTime,
-    required this.outcome,
-    required this.outcomeDesc,
-    required this.purposeOfEvent,
+    this.outcome,
+    this.outcomeDesc,
+    this.purposeOfEvent,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -404,21 +480,21 @@ class AuditEventEvent {
 @JsonSerializable()
 class AuditEventParticipant {
   const AuditEventParticipant({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.role,
-    required this.reference,
-    required this.userId,
-    required this.altId,
-    required this.name,
-    @JsonKey(name: '_name') required this.nameElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.role,
+    this.reference,
+    this.userId,
+    this.altId,
+    this.name,
+    @JsonKey(name: '_name') this.nameElement,
     required this.requestor,
-    required this.location,
-    required this.policy,
-    required this.media,
-    required this.network,
-    required this.purposeOfUse,
+    this.location,
+    this.policy,
+    this.media,
+    this.network,
+    this.purposeOfUse,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -443,13 +519,13 @@ class AuditEventParticipant {
 @JsonSerializable()
 class AuditEventSource {
   const AuditEventSource({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.site,
-    @JsonKey(name: '_site') required this.siteElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.site,
+    @JsonKey(name: '_site') this.siteElement,
     required this.identifier,
-    required this.type,
+    this.type,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -466,20 +542,20 @@ class AuditEventSource {
 @JsonSerializable()
 class AuditEventObject {
   const AuditEventObject({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.identifier,
-    required this.reference,
-    required this.type,
-    required this.role,
-    required this.lifecycle,
-    required this.securityLabel,
-    required this.name,
-    required this.description,
-    required this.query,
-    @JsonKey(name: '_query') required this.queryElement,
-    required this.detail,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.identifier,
+    this.reference,
+    this.type,
+    this.role,
+    this.lifecycle,
+    this.securityLabel,
+    this.name,
+    this.description,
+    this.query,
+    @JsonKey(name: '_query') this.queryElement,
+    this.detail,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -503,13 +579,13 @@ class AuditEventObject {
 @JsonSerializable()
 class AuditEventParticipantNetwork {
   const AuditEventParticipantNetwork({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
-    required this.address,
-    @JsonKey(name: '_address') required this.addressElement,
-    required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
+    this.address,
+    @JsonKey(name: '_address') this.addressElement,
+    this.type,
+    @JsonKey(name: '_type') this.typeElement,
   });
   final Id? id;
   final List<FhirExtension>? extension_;
@@ -526,11 +602,11 @@ class AuditEventParticipantNetwork {
 @JsonSerializable()
 class AuditEventObjectDetail {
   const AuditEventObjectDetail({
-    required this.id,
-    @JsonKey(name: 'extension') required this.extension_,
-    required this.modifierExtension,
+    this.id,
+    @JsonKey(name: 'extension') this.extension_,
+    this.modifierExtension,
     required this.type,
-    @JsonKey(name: '_type') required this.typeElement,
+    @JsonKey(name: '_type') this.typeElement,
     required this.value,
   });
   final Id? id;

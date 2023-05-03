@@ -8,8 +8,9 @@ part of 'misc.dart';
 
 ImplementationGuide _$ImplementationGuideFromJson(Map<String, dynamic> json) =>
     ImplementationGuide(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.ImplementationGuide,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -111,9 +112,7 @@ ImplementationGuide _$ImplementationGuideFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$ImplementationGuideToJson(ImplementationGuide instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -121,6 +120,8 @@ Map<String, dynamic> _$ImplementationGuideToJson(ImplementationGuide instance) {
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -900,7 +901,10 @@ TestScriptSetupAction _$TestScriptSetupActionFromJson(
           ? null
           : TestScriptActionOperation.fromJson(
               json['operation'] as Map<String, dynamic>),
-      assert_: json['assert_'],
+      assert_: json['assert_'] == null
+          ? null
+          : TestScriptActionAssert.fromJson(
+              json['assert_'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$TestScriptSetupActionToJson(
@@ -920,9 +924,208 @@ Map<String, dynamic> _$TestScriptSetupActionToJson(
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('fhirComments', instance.fhirComments);
   writeNotNull('operation', instance.operation?.toJson());
-  writeNotNull('assert_', instance.assert_);
+  writeNotNull('assert_', instance.assert_?.toJson());
   return val;
 }
+
+TestScriptActionAssert _$TestScriptActionAssertFromJson(
+        Map<String, dynamic> json) =>
+    TestScriptActionAssert(
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      extension_: (json['extension_'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      label: json['label'] as String?,
+      description: json['description'] as String?,
+      descriptionElement: json['descriptionElement'] == null
+          ? null
+          : Element.fromJson(
+              json['descriptionElement'] as Map<String, dynamic>),
+      direction:
+          $enumDecodeNullable(_$AssertDirectionEnumMap, json['direction']),
+      directionElement: json['directionElement'] == null
+          ? null
+          : Element.fromJson(json['directionElement'] as Map<String, dynamic>),
+      compareToSourceId: json['compareToSourceId'] as String?,
+      compareToSourceIdElement: json['compareToSourceIdElement'] == null
+          ? null
+          : Element.fromJson(
+              json['compareToSourceIdElement'] as Map<String, dynamic>),
+      compareToSourcePath: json['compareToSourcePath'] as String?,
+      compareToSourcePathElement: json['compareToSourcePathElement'] == null
+          ? null
+          : Element.fromJson(
+              json['compareToSourcePathElement'] as Map<String, dynamic>),
+      contentType:
+          $enumDecodeNullable(_$AssertContentTypeEnumMap, json['contentType']),
+      contentTypeElement: json['contentTypeElement'] == null
+          ? null
+          : Element.fromJson(
+              json['contentTypeElement'] as Map<String, dynamic>),
+      headerField: json['headerField'] as String?,
+      headerFieldElement: json['headerFieldElement'] == null
+          ? null
+          : Element.fromJson(
+              json['headerFieldElement'] as Map<String, dynamic>),
+      minimumId: json['minimumId'] as String?,
+      minimumIdElement: json['minimumIdElement'] == null
+          ? null
+          : Element.fromJson(json['minimumIdElement'] as Map<String, dynamic>),
+      navigationLinks: json['navigationLinks'] == null
+          ? null
+          : Boolean.fromJson(json['navigationLinks']),
+      navigationLinksElement: json['navigationLinksElement'] == null
+          ? null
+          : Element.fromJson(
+              json['navigationLinksElement'] as Map<String, dynamic>),
+      operator_:
+          $enumDecodeNullable(_$AssertOperatorEnumMap, json['operator_']),
+      operatorElement: json['operatorElement'] == null
+          ? null
+          : Element.fromJson(json['operatorElement'] as Map<String, dynamic>),
+      path: json['path'] as String?,
+      pathElement: json['pathElement'] == null
+          ? null
+          : Element.fromJson(json['pathElement'] as Map<String, dynamic>),
+      resource:
+          json['resource'] == null ? null : Code.fromJson(json['resource']),
+      resourceElement: json['resourceElement'] == null
+          ? null
+          : Element.fromJson(json['resourceElement'] as Map<String, dynamic>),
+      response: $enumDecodeNullable(_$AssertResponseEnumMap, json['response']),
+      responseElement: json['responseElement'] == null
+          ? null
+          : Element.fromJson(json['responseElement'] as Map<String, dynamic>),
+      responseCode: json['responseCode'] as String?,
+      responseCodeElement: json['responseCodeElement'] == null
+          ? null
+          : Element.fromJson(
+              json['responseCodeElement'] as Map<String, dynamic>),
+      sourceId: json['sourceId'] == null ? null : Id.fromJson(json['sourceId']),
+      sourceIdElement: json['sourceIdElement'] == null
+          ? null
+          : Element.fromJson(json['sourceIdElement'] as Map<String, dynamic>),
+      validateProfileId: json['validateProfileId'] == null
+          ? null
+          : Id.fromJson(json['validateProfileId']),
+      validateProfileIdElement: json['validateProfileIdElement'] == null
+          ? null
+          : Element.fromJson(
+              json['validateProfileIdElement'] as Map<String, dynamic>),
+      value: json['value'] as String?,
+      valueElement: json['valueElement'] == null
+          ? null
+          : Element.fromJson(json['valueElement'] as Map<String, dynamic>),
+      warningOnly: json['warningOnly'] == null
+          ? null
+          : Boolean.fromJson(json['warningOnly']),
+      warningOnlyElement: json['warningOnlyElement'] == null
+          ? null
+          : Element.fromJson(
+              json['warningOnlyElement'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$TestScriptActionAssertToJson(
+    TestScriptActionAssert instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull(
+      'extension_', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('label', instance.label);
+  writeNotNull('description', instance.description);
+  writeNotNull('descriptionElement', instance.descriptionElement?.toJson());
+  writeNotNull('direction', _$AssertDirectionEnumMap[instance.direction]);
+  writeNotNull('directionElement', instance.directionElement?.toJson());
+  writeNotNull('compareToSourceId', instance.compareToSourceId);
+  writeNotNull(
+      'compareToSourceIdElement', instance.compareToSourceIdElement?.toJson());
+  writeNotNull('compareToSourcePath', instance.compareToSourcePath);
+  writeNotNull('compareToSourcePathElement',
+      instance.compareToSourcePathElement?.toJson());
+  writeNotNull('contentType', _$AssertContentTypeEnumMap[instance.contentType]);
+  writeNotNull('contentTypeElement', instance.contentTypeElement?.toJson());
+  writeNotNull('headerField', instance.headerField);
+  writeNotNull('headerFieldElement', instance.headerFieldElement?.toJson());
+  writeNotNull('minimumId', instance.minimumId);
+  writeNotNull('minimumIdElement', instance.minimumIdElement?.toJson());
+  writeNotNull('navigationLinks', instance.navigationLinks?.toJson());
+  writeNotNull(
+      'navigationLinksElement', instance.navigationLinksElement?.toJson());
+  writeNotNull('operator_', _$AssertOperatorEnumMap[instance.operator_]);
+  writeNotNull('operatorElement', instance.operatorElement?.toJson());
+  writeNotNull('path', instance.path);
+  writeNotNull('pathElement', instance.pathElement?.toJson());
+  writeNotNull('resource', instance.resource?.toJson());
+  writeNotNull('resourceElement', instance.resourceElement?.toJson());
+  writeNotNull('response', _$AssertResponseEnumMap[instance.response]);
+  writeNotNull('responseElement', instance.responseElement?.toJson());
+  writeNotNull('responseCode', instance.responseCode);
+  writeNotNull('responseCodeElement', instance.responseCodeElement?.toJson());
+  writeNotNull('sourceId', instance.sourceId?.toJson());
+  writeNotNull('sourceIdElement', instance.sourceIdElement?.toJson());
+  writeNotNull('validateProfileId', instance.validateProfileId?.toJson());
+  writeNotNull(
+      'validateProfileIdElement', instance.validateProfileIdElement?.toJson());
+  writeNotNull('value', instance.value);
+  writeNotNull('valueElement', instance.valueElement?.toJson());
+  writeNotNull('warningOnly', instance.warningOnly?.toJson());
+  writeNotNull('warningOnlyElement', instance.warningOnlyElement?.toJson());
+  return val;
+}
+
+const _$AssertDirectionEnumMap = {
+  AssertDirection.response: 'response',
+  AssertDirection.request: 'request',
+  AssertDirection.unknown: 'unknown',
+};
+
+const _$AssertContentTypeEnumMap = {
+  AssertContentType.xml: 'xml',
+  AssertContentType.json: 'json',
+  AssertContentType.unknown: 'unknown',
+};
+
+const _$AssertOperatorEnumMap = {
+  AssertOperator.equals: 'equals',
+  AssertOperator.notequals: 'notEquals',
+  AssertOperator.in_: 'in',
+  AssertOperator.notin: 'notIn',
+  AssertOperator.greaterthan: 'greaterThan',
+  AssertOperator.lessthan: 'lessThan',
+  AssertOperator.empty: 'empty',
+  AssertOperator.notempty: 'notEmpty',
+  AssertOperator.contains: 'contains',
+  AssertOperator.notcontains: 'notContains',
+  AssertOperator.unknown: 'unknown',
+};
+
+const _$AssertResponseEnumMap = {
+  AssertResponse.okay: 'okay',
+  AssertResponse.created: 'created',
+  AssertResponse.nocontent: 'noContent',
+  AssertResponse.notmodified: 'notModified',
+  AssertResponse.bad: 'bad',
+  AssertResponse.forbidden: 'forbidden',
+  AssertResponse.notfound: 'notFound',
+  AssertResponse.methodnotallowed: 'methodNotAllowed',
+  AssertResponse.conflict: 'conflict',
+  AssertResponse.gone: 'gone',
+  AssertResponse.preconditionfailed: 'preconditionFailed',
+  AssertResponse.unprocessable: 'unprocessable',
+  AssertResponse.unknown: 'unknown',
+};
 
 TestScriptActionOperation _$TestScriptActionOperationFromJson(
         Map<String, dynamic> json) =>

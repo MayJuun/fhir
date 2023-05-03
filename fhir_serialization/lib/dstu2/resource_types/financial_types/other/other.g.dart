@@ -9,8 +9,9 @@ part of 'other.dart';
 ExplanationOfBenefit _$ExplanationOfBenefitFromJson(
         Map<String, dynamic> json) =>
     ExplanationOfBenefit(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.ExplanationOfBenefit,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -81,9 +82,7 @@ ExplanationOfBenefit _$ExplanationOfBenefitFromJson(
 
 Map<String, dynamic> _$ExplanationOfBenefitToJson(
     ExplanationOfBenefit instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -91,6 +90,8 @@ Map<String, dynamic> _$ExplanationOfBenefitToJson(
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());

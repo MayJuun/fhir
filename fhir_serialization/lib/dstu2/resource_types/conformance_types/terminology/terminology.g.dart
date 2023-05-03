@@ -7,8 +7,9 @@ part of 'terminology.dart';
 // **************************************************************************
 
 ValueSet _$ValueSetFromJson(Map<String, dynamic> json) => ValueSet(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.ValueSet,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       idElement: json['idElement'] == null
           ? null
@@ -118,9 +119,7 @@ ValueSet _$ValueSetFromJson(Map<String, dynamic> json) => ValueSet(
     );
 
 Map<String, dynamic> _$ValueSetToJson(ValueSet instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -128,6 +127,8 @@ Map<String, dynamic> _$ValueSetToJson(ValueSet instance) {
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('idElement', instance.idElement?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
@@ -658,7 +659,7 @@ ValueSetIncludeFilter _$ValueSetIncludeFilterFromJson(
       propertyElement: json['propertyElement'] == null
           ? null
           : Element.fromJson(json['propertyElement'] as Map<String, dynamic>),
-      op: $enumDecode(_$FilterOpEnumMap, json['op']),
+      op: $enumDecodeNullable(_$FilterOpEnumMap, json['op']),
       opElement: json['opElement'] == null
           ? null
           : Element.fromJson(json['opElement'] as Map<String, dynamic>),
@@ -686,7 +687,7 @@ Map<String, dynamic> _$ValueSetIncludeFilterToJson(
   writeNotNull('fhirComments', instance.fhirComments);
   val['property'] = instance.property.toJson();
   writeNotNull('propertyElement', instance.propertyElement?.toJson());
-  val['op'] = _$FilterOpEnumMap[instance.op]!;
+  writeNotNull('op', _$FilterOpEnumMap[instance.op]);
   writeNotNull('opElement', instance.opElement?.toJson());
   val['value'] = instance.value.toJson();
   writeNotNull('valueElement', instance.valueElement?.toJson());
@@ -930,8 +931,9 @@ Map<String, dynamic> _$ValueSetExpansionContainsToJson(
 }
 
 ConceptMap _$ConceptMapFromJson(Map<String, dynamic> json) => ConceptMap(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.ConceptMap,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1034,9 +1036,7 @@ ConceptMap _$ConceptMapFromJson(Map<String, dynamic> json) => ConceptMap(
     );
 
 Map<String, dynamic> _$ConceptMapToJson(ConceptMap instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1044,6 +1044,8 @@ Map<String, dynamic> _$ConceptMapToJson(ConceptMap instance) {
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -1288,8 +1290,9 @@ Map<String, dynamic> _$ConceptMapTargetDependsOnToJson(
 }
 
 NamingSystem _$NamingSystemFromJson(Map<String, dynamic> json) => NamingSystem(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.NamingSystem,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1370,9 +1373,7 @@ NamingSystem _$NamingSystemFromJson(Map<String, dynamic> json) => NamingSystem(
     );
 
 Map<String, dynamic> _$NamingSystemToJson(NamingSystem instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1380,6 +1381,8 @@ Map<String, dynamic> _$NamingSystemToJson(NamingSystem instance) {
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -1476,7 +1479,7 @@ NamingSystemUniqueId _$NamingSystemUniqueIdFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: $enumDecode(_$UniqueIdTypeEnumMap, json['type']),
+      type: $enumDecodeNullable(_$UniqueIdTypeEnumMap, json['type']),
       typeElement: json['typeElement'] == null
           ? null
           : Element.fromJson(json['typeElement'] as Map<String, dynamic>),
@@ -1510,7 +1513,7 @@ Map<String, dynamic> _$NamingSystemUniqueIdToJson(
       'extension_', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['type'] = _$UniqueIdTypeEnumMap[instance.type]!;
+  writeNotNull('type', _$UniqueIdTypeEnumMap[instance.type]);
   writeNotNull('typeElement', instance.typeElement?.toJson());
   val['value'] = instance.value;
   writeNotNull('valueElement', instance.valueElement?.toJson());

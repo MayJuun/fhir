@@ -6,9 +6,9 @@ import '../../../../r4.dart';
 part 'terminology.g.dart';
 
 @JsonSerializable()
-class CodeSystem {
+class CodeSystem extends Resource {
   const CodeSystem({
-    @Default(R4ResourceType.CodeSystem) required this.resourceType,
+    super.resourceType = R4ResourceType.CodeSystem,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -308,9 +308,9 @@ class CodeSystemProperty1 {
 }
 
 @JsonSerializable()
-class ConceptMap {
+class ConceptMap extends Resource {
   const ConceptMap({
-    @Default(R4ResourceType.ConceptMap) required this.resourceType,
+    super.resourceType = R4ResourceType.ConceptMap,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -580,9 +580,9 @@ class ConceptMapUnmapped {
 }
 
 @JsonSerializable()
-class NamingSystem {
+class NamingSystem extends Resource {
   const NamingSystem({
-    @Default(R4ResourceType.NamingSystem) required this.resourceType,
+    super.resourceType = R4ResourceType.NamingSystem,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -697,9 +697,9 @@ class NamingSystemUniqueId {
 }
 
 @JsonSerializable()
-class TerminologyCapabilities {
+class TerminologyCapabilities extends Resource {
   const TerminologyCapabilities({
-    @Default(R4ResourceType.TerminologyCapabilities) required this.resourceType,
+    super.resourceType = R4ResourceType.TerminologyCapabilities,
     required this.id,
     required this.meta,
     required this.implicitRules,
@@ -929,9 +929,9 @@ class TerminologyCapabilitiesExpansion {
 }
 
 @JsonSerializable()
-class ValueSet {
+class ValueSet extends Resource {
   const ValueSet({
-    @Default(R4ResourceType.ValueSet) required this.resourceType,
+    super.resourceType = R4ResourceType.ValueSet,
     required this.id,
     required this.meta,
     required this.implicitRules,

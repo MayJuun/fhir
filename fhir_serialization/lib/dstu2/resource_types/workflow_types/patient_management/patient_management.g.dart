@@ -7,8 +7,9 @@ part of 'patient_management.dart';
 // **************************************************************************
 
 Encounter _$EncounterFromJson(Map<String, dynamic> json) => Encounter(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.Encounter,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -101,9 +102,7 @@ Encounter _$EncounterFromJson(Map<String, dynamic> json) => Encounter(
     );
 
 Map<String, dynamic> _$EncounterToJson(Encounter instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -111,6 +110,8 @@ Map<String, dynamic> _$EncounterToJson(Encounter instance) {
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -500,8 +501,9 @@ const _$EncounterLocationStatusEnumMap = {
 
 EpisodeOfCare _$EpisodeOfCareFromJson(Map<String, dynamic> json) =>
     EpisodeOfCare(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.EpisodeOfCare,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -568,9 +570,7 @@ EpisodeOfCare _$EpisodeOfCareFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$EpisodeOfCareToJson(EpisodeOfCare instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -578,6 +578,8 @@ Map<String, dynamic> _$EpisodeOfCareToJson(EpisodeOfCare instance) {
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -712,8 +714,9 @@ Map<String, dynamic> _$EpisodeOfCareCareTeamToJson(
 
 Communication _$CommunicationFromJson(Map<String, dynamic> json) =>
     Communication(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.Communication,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -789,9 +792,7 @@ Communication _$CommunicationFromJson(Map<String, dynamic> json) =>
     );
 
 Map<String, dynamic> _$CommunicationToJson(Communication instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -799,6 +800,8 @@ Map<String, dynamic> _$CommunicationToJson(Communication instance) {
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -890,8 +893,9 @@ Map<String, dynamic> _$CommunicationPayloadToJson(
 }
 
 Flag _$FlagFromJson(Map<String, dynamic> json) => Flag(
-      resourceType:
-          $enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType']),
+      resourceType: $enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType']) ??
+          Dstu2ResourceType.Flag,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -944,9 +948,7 @@ Flag _$FlagFromJson(Map<String, dynamic> json) => Flag(
     );
 
 Map<String, dynamic> _$FlagToJson(Flag instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -954,6 +956,8 @@ Map<String, dynamic> _$FlagToJson(Flag instance) {
     }
   }
 
+  writeNotNull(
+      'resourceType', _$Dstu2ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
