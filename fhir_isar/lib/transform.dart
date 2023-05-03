@@ -4,6 +4,7 @@ Future<void> main() async {
   final dir = Directory('.');
   final fileList =
       await dir.list(recursive: true).map((event) => event.path).toList();
+  var writeFile = true;
   for (final file in fileList) {
     if (!file.contains('enums') &&
         !file.contains('freezed') &&
@@ -12,8 +13,10 @@ Future<void> main() async {
         file.contains('dart') &&
         !(file.contains('resource') && !file.contains('resource_types')) &&
         !file.contains('transform.dart') &&
-        !file.contains('primitive')) {
+        !file.contains('primitive') &&
+        !(file.contains('r5') && file.contains('basic_types'))) {
       print(file);
+      writeFile = true;
       final fileText = await File(file).readAsString();
       final fileList = fileText.split('\n');
       var newText = '';
@@ -22,6 +25,10 @@ Future<void> main() async {
       final classVars = [];
       var className = '';
       for (final line in fileList) {
+        if (line.contains('@JsonSerializable')) {
+          writeFile = false;
+          break;
+        }
         if (!classFile) {
           if (line.contains('class')) {
             newText += '@JsonSerializable()\n';
@@ -33,6 +40,10 @@ Future<void> main() async {
             newText += '$line\n';
           }
         } else if (isClass) {
+          if (line.contains('const')) {
+            classFile = false;
+            isClass = false;
+          }
           if (line.contains('}')) {
             isClass = false;
             newText += 'const $className({\n';
@@ -40,10 +51,12 @@ Future<void> main() async {
               final varList = element.toString().split(' ');
               varList.removeWhere((e) => e == '' || e == ' ');
               if (varList.length == 2) {
-                newText += 'this.${varList.last}\n';
+                newText +=
+                    '${line.contains("?") ? "" : "required "}this.${varList.last}\n';
               } else if (varList.length > 2) {
                 newText += varList.sublist(0, varList.length - 2).join(' ');
-                newText += ' this.${varList.last}\n';
+                newText +=
+                    '${line.contains("?") ? "" : "required "} this.${varList.last}\n';
               } else {
                 // print('VarList: $varList');
               }
@@ -52,9 +65,10 @@ Future<void> main() async {
             classVars.forEach((element) {
               final varList = element.toString().split(' ');
               varList.removeWhere((e) => e == '' || e == ' ');
+              print('$className:VarList: $varList');
               if (varList.isNotEmpty) {
                 newText +=
-                    '${varList[varList.length - 2]} ${varList.last.replaceAll(",", ";")}\n';
+                    'final ${varList[varList.length - 2]} ${varList.last.replaceAll(",", ";")}\n';
               }
             });
 
@@ -76,7 +90,9 @@ Future<void> main() async {
           }
         }
       }
-      await File(file).writeAsString(newText);
+      if (writeFile) {
+        await File(file).writeAsString(newText);
+      }
     }
   }
 }

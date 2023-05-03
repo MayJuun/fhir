@@ -20,7 +20,7 @@ packages:
   fhir:
     dependency: "direct main"
     description:
-      path: ".."
+      path: "../../fhir"
       relative: true
     source: path
     version: "0.9.5"
