@@ -13,9 +13,7 @@ part 'workflow.g.dart';
 
 class Appointment {
   
-    @Default(R4ResourceType.Appointment)
-    @JsonKey(unknownEnumValue: R4ResourceType.Appointment)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Appointment) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -77,9 +75,7 @@ class AppointmentParticipant {
 
 class AppointmentResponse {
   
-    @Default(R4ResourceType.AppointmentResponse)
-    @JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.AppointmentResponse) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -107,9 +103,7 @@ class AppointmentResponse {
 
 class Schedule {
   
-    @Default(R4ResourceType.Schedule)
-    @JsonKey(unknownEnumValue: R4ResourceType.Schedule)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Schedule) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -135,9 +129,7 @@ class Schedule {
 
 class Slot {
   
-    @Default(R4ResourceType.Slot)
-    @JsonKey(unknownEnumValue: R4ResourceType.Slot)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Slot) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -169,9 +161,7 @@ class Slot {
 
 class Task {
   
-    @Default(R4ResourceType.Task)
-    @JsonKey(unknownEnumValue: R4ResourceType.Task)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Task) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -393,9 +383,7 @@ class TaskOutput {
 
 class VerificationResult {
   
-    @Default(R4ResourceType.VerificationResult)
-    @JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.VerificationResult) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,

@@ -266,9 +266,7 @@ class CodeSystem {
   
   
     
-    @Default(R5ResourceType.CodeSystem)
-    @JsonKey(unknownEnumValue: R5ResourceType.CodeSystem)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.CodeSystem) R5ResourceType resourceType,
 
     
     
@@ -1304,9 +1302,7 @@ class ConceptMap {
   
   
     
-    @Default(R5ResourceType.ConceptMap)
-    @JsonKey(unknownEnumValue: R5ResourceType.ConceptMap)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.ConceptMap) R5ResourceType resourceType,
 
     
     
@@ -2359,9 +2355,7 @@ class NamingSystem {
   
   
     
-    @Default(R5ResourceType.NamingSystem)
-    @JsonKey(unknownEnumValue: R5ResourceType.NamingSystem)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.NamingSystem) R5ResourceType resourceType,
 
     
     
@@ -2903,9 +2897,7 @@ class TerminologyCapabilities {
   
   
     
-    @Default(R5ResourceType.TerminologyCapabilities)
-    @JsonKey(unknownEnumValue: R5ResourceType.TerminologyCapabilities)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.TerminologyCapabilities) R5ResourceType resourceType,
 
     
     
@@ -4251,9 +4243,7 @@ class ValueSet {
   
   
     
-    @Default(R5ResourceType.ValueSet)
-    @JsonKey(unknownEnumValue: R5ResourceType.ValueSet)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.ValueSet) R5ResourceType resourceType,
 
     
     

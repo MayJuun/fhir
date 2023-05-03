@@ -13,33 +13,15 @@ part 'element.g.dart';
 
 
 
+@JsonSerializable()
 class Element {
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    
-    
-
-    String? id,
-
-    
-    
-    
-    
-    
-    
-    
-    
-
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-  
+const Element({
+this.id,
+@JsonKey(name: 'extension') this.extension_,
+});
+String? id;
+List<FhirExtension>? extension_;
+factory Element.fromJson(Map<String, dynamic> json) => _$ElementFromJson(json);
+Map<String, dynamic> toJson() => _$ElementToJson(this);
 }
+

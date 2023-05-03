@@ -127,9 +127,7 @@ class AuditEvent {
   
   
     
-    @Default(R5ResourceType.AuditEvent)
-    @JsonKey(unknownEnumValue: R5ResourceType.AuditEvent)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.AuditEvent) R5ResourceType resourceType,
 
     
     
@@ -916,9 +914,7 @@ class Consent {
   
   
     
-    @Default(R5ResourceType.Consent)
-    @JsonKey(unknownEnumValue: R5ResourceType.Consent)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Consent) R5ResourceType resourceType,
 
     
     
@@ -1629,9 +1625,7 @@ class Permission {
   
   
     
-    @Default(R5ResourceType.Permission)
-    @JsonKey(unknownEnumValue: R5ResourceType.Permission)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Permission) R5ResourceType resourceType,
 
     
     
@@ -2251,9 +2245,7 @@ class Provenance {
   
   
     
-    @Default(R5ResourceType.Provenance)
-    @JsonKey(unknownEnumValue: R5ResourceType.Provenance)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Provenance) R5ResourceType resourceType,
 
     
     

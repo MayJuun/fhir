@@ -15,9 +15,7 @@ part 'exchange.g.dart';
 
 class MessageHeader {
   
-    @Default(Dstu2ResourceType.MessageHeader)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.MessageHeader)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.MessageHeader) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -87,9 +85,7 @@ class MessageHeaderDestination {
 
 class OperationOutcome {
   
-    @Default(Dstu2ResourceType.OperationOutcome)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationOutcome)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.OperationOutcome) Dstu2ResourceType resourceType,
     Id? id,
     @JsonKey(name: '_id') Element? idElement,
     Meta? meta,
@@ -121,9 +117,7 @@ class OperationOutcomeIssue {
 
 class Parameters {
   
-    @Default(Dstu2ResourceType.Parameters)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Parameters)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.Parameters) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -181,9 +175,7 @@ class ParametersParameter {
 
 class Subscription {
   
-    @Default(Dstu2ResourceType.Subscription)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Subscription)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.Subscription) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

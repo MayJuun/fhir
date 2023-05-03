@@ -126,9 +126,7 @@ class BiologicallyDerivedProduct {
   
   
     
-    @Default(R5ResourceType.BiologicallyDerivedProduct)
-    @JsonKey(unknownEnumValue: R5ResourceType.BiologicallyDerivedProduct)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.BiologicallyDerivedProduct) R5ResourceType resourceType,
 
     
     
@@ -686,9 +684,7 @@ class Device {
   
   
     
-    @Default(R5ResourceType.Device)
-    @JsonKey(unknownEnumValue: R5ResourceType.Device)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Device) R5ResourceType resourceType,
 
     
     
@@ -1844,9 +1840,7 @@ class DeviceMetric {
   
   
     
-    @Default(R5ResourceType.DeviceMetric)
-    @JsonKey(unknownEnumValue: R5ResourceType.DeviceMetric)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.DeviceMetric) R5ResourceType resourceType,
 
     
     
@@ -2172,9 +2166,7 @@ class NutritionProduct {
   
   
     
-    @Default(R5ResourceType.NutritionProduct)
-    @JsonKey(unknownEnumValue: R5ResourceType.NutritionProduct)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.NutritionProduct) R5ResourceType resourceType,
 
     
     
@@ -2790,9 +2782,7 @@ class Substance {
   
   
     
-    @Default(R5ResourceType.Substance)
-    @JsonKey(unknownEnumValue: R5ResourceType.Substance)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Substance) R5ResourceType resourceType,
 
     
     

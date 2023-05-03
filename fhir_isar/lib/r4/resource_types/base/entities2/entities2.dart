@@ -13,9 +13,7 @@ part 'entities2.g.dart';
 
 class BiologicallyDerivedProduct {
   
-    @Default(R4ResourceType.BiologicallyDerivedProduct)
-    @JsonKey(unknownEnumValue: R4ResourceType.BiologicallyDerivedProduct)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.BiologicallyDerivedProduct) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -125,9 +123,7 @@ class DeviceProperty {
 
 class DeviceMetric {
   
-    @Default(R4ResourceType.DeviceMetric)
-    @JsonKey(unknownEnumValue: R4ResourceType.DeviceMetric)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.DeviceMetric) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -254,9 +250,7 @@ class NutritionProductInstance {
 
 class Substance {
   
-    @Default(R4ResourceType.Substance)
-    @JsonKey(unknownEnumValue: R4ResourceType.Substance)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Substance) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,

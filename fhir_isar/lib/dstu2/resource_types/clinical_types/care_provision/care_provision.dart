@@ -15,9 +15,7 @@ part 'care_provision.g.dart';
 
 class CarePlan {
   
-    @Default(Dstu2ResourceType.CarePlan)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.CarePlan)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.CarePlan) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -115,9 +113,7 @@ class CarePlanActivityDetail {
 
 class Goal {
   
-    @Default(Dstu2ResourceType.Goal)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Goal)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.Goal) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -162,9 +158,7 @@ class GoalOutcome {
 
 class ReferralRequest {
   
-    @Default(Dstu2ResourceType.ReferralRequest)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.ReferralRequest)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.ReferralRequest) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -195,9 +189,7 @@ class ReferralRequest {
 
 class ProcedureRequest {
   
-    @Default(Dstu2ResourceType.ProcedureRequest)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.ProcedureRequest)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.ProcedureRequest) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -231,9 +223,7 @@ class ProcedureRequest {
 
 class NutritionOrder {
   
-    @Default(Dstu2ResourceType.NutritionOrder)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.NutritionOrder)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.NutritionOrder) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -354,9 +344,7 @@ class NutritionOrderEnteralFormulaAdministration
 
 class VisionPrescription {
   
-    @Default(Dstu2ResourceType.VisionPrescription)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.VisionPrescription)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.VisionPrescription) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

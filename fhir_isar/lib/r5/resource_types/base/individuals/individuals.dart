@@ -134,9 +134,7 @@ class Group {
   
   
     
-    @Default(R5ResourceType.Group)
-    @JsonKey(unknownEnumValue: R5ResourceType.Group)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Group) R5ResourceType resourceType,
 
     
     
@@ -640,9 +638,7 @@ class Patient {
   
   
     
-    @Default(R5ResourceType.Patient)
-    @JsonKey(unknownEnumValue: R5ResourceType.Patient)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Patient) R5ResourceType resourceType,
 
     
     
@@ -1207,9 +1203,7 @@ class Person {
   
   
     
-    @Default(R5ResourceType.Person)
-    @JsonKey(unknownEnumValue: R5ResourceType.Person)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Person) R5ResourceType resourceType,
 
     
     
@@ -1624,9 +1618,7 @@ class Practitioner {
   
   
     
-    @Default(R5ResourceType.Practitioner)
-    @JsonKey(unknownEnumValue: R5ResourceType.Practitioner)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Practitioner) R5ResourceType resourceType,
 
     
     
@@ -1945,9 +1937,7 @@ class PractitionerRole {
   
   
     
-    @Default(R5ResourceType.PractitionerRole)
-    @JsonKey(unknownEnumValue: R5ResourceType.PractitionerRole)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.PractitionerRole) R5ResourceType resourceType,
 
     
     
@@ -2171,9 +2161,7 @@ class RelatedPerson {
   
   
     
-    @Default(R5ResourceType.RelatedPerson)
-    @JsonKey(unknownEnumValue: R5ResourceType.RelatedPerson)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.RelatedPerson) R5ResourceType resourceType,
 
     
     

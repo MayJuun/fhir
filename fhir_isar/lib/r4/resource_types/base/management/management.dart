@@ -15,9 +15,7 @@ part 'management.g.dart';
 
 class Encounter {
   
-    @Default(R4ResourceType.Encounter)
-    @JsonKey(unknownEnumValue: R4ResourceType.Encounter)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Encounter) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -131,9 +129,7 @@ class EncounterLocation {
 
 class EpisodeOfCare {
   
-    @Default(R4ResourceType.EpisodeOfCare)
-    @JsonKey(unknownEnumValue: R4ResourceType.EpisodeOfCare)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.EpisodeOfCare) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -185,9 +181,7 @@ class EpisodeOfCareDiagnosis {
 
 class Flag {
   
-    @Default(R4ResourceType.Flag)
-    @JsonKey(unknownEnumValue: R4ResourceType.Flag)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Flag) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -212,9 +206,7 @@ class Flag {
 
 class Library {
   
-    @Default(R4ResourceType.Library)
-    @JsonKey(unknownEnumValue: R4ResourceType.Library)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Library) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -277,9 +269,7 @@ class Library {
 
 class List_ {
   
-    @Default(R4ResourceType.List_)
-    @JsonKey(unknownEnumValue: R4ResourceType.List_)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.List_) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,

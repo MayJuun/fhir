@@ -140,9 +140,7 @@ class AdministrableProductDefinition
   
   
     
-    @Default(R5ResourceType.AdministrableProductDefinition)
-    @JsonKey(unknownEnumValue: R5ResourceType.AdministrableProductDefinition)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.AdministrableProductDefinition) R5ResourceType resourceType,
 
     
     
@@ -707,9 +705,7 @@ class ClinicalUseDefinition {
   
   
     
-    @Default(R5ResourceType.ClinicalUseDefinition)
-    @JsonKey(unknownEnumValue: R5ResourceType.ClinicalUseDefinition)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.ClinicalUseDefinition) R5ResourceType resourceType,
 
     
     
@@ -1541,9 +1537,7 @@ class Ingredient {
   
   
     
-    @Default(R5ResourceType.Ingredient)
-    @JsonKey(unknownEnumValue: R5ResourceType.Ingredient)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Ingredient) R5ResourceType resourceType,
 
     
     
@@ -2163,9 +2157,7 @@ class ManufacturedItemDefinition {
   
   
     
-    @Default(R5ResourceType.ManufacturedItemDefinition)
-    @JsonKey(unknownEnumValue: R5ResourceType.ManufacturedItemDefinition)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.ManufacturedItemDefinition) R5ResourceType resourceType,
 
     
     
@@ -2751,9 +2743,7 @@ class MedicinalProductDefinition {
   
   
     
-    @Default(R5ResourceType.MedicinalProductDefinition)
-    @JsonKey(unknownEnumValue: R5ResourceType.MedicinalProductDefinition)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.MedicinalProductDefinition) R5ResourceType resourceType,
 
     
     
@@ -3749,9 +3739,7 @@ class PackagedProductDefinition {
   
   
     
-    @Default(R5ResourceType.PackagedProductDefinition)
-    @JsonKey(unknownEnumValue: R5ResourceType.PackagedProductDefinition)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.PackagedProductDefinition) R5ResourceType resourceType,
 
     
     
@@ -4380,9 +4368,7 @@ class RegulatedAuthorization {
   
   
     
-    @Default(R5ResourceType.RegulatedAuthorization)
-    @JsonKey(unknownEnumValue: R5ResourceType.RegulatedAuthorization)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.RegulatedAuthorization) R5ResourceType resourceType,
 
     
     
@@ -4711,9 +4697,7 @@ class SubstanceDefinition {
   
   
     
-    @Default(R5ResourceType.SubstanceDefinition)
-    @JsonKey(unknownEnumValue: R5ResourceType.SubstanceDefinition)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.SubstanceDefinition) R5ResourceType resourceType,
 
     
     
@@ -6087,9 +6071,7 @@ class SubstanceNucleicAcid {
   
   
     
-    @Default(R5ResourceType.SubstanceNucleicAcid)
-    @JsonKey(unknownEnumValue: R5ResourceType.SubstanceNucleicAcid)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.SubstanceNucleicAcid) R5ResourceType resourceType,
 
     
     
@@ -6580,9 +6562,7 @@ class SubstancePolymer {
   
   
     
-    @Default(R5ResourceType.SubstancePolymer)
-    @JsonKey(unknownEnumValue: R5ResourceType.SubstancePolymer)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.SubstancePolymer) R5ResourceType resourceType,
 
     
     
@@ -7307,9 +7287,7 @@ class SubstanceProtein {
   
   
     
-    @Default(R5ResourceType.SubstanceProtein)
-    @JsonKey(unknownEnumValue: R5ResourceType.SubstanceProtein)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.SubstanceProtein) R5ResourceType resourceType,
 
     
     
@@ -7615,9 +7593,7 @@ class SubstanceReferenceInformation
   
   
     
-    @Default(R5ResourceType.SubstanceReferenceInformation)
-    @JsonKey(unknownEnumValue: R5ResourceType.SubstanceReferenceInformation)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.SubstanceReferenceInformation) R5ResourceType resourceType,
 
     
     
@@ -8105,9 +8081,7 @@ class SubstanceSourceMaterial {
   
   
     
-    @Default(R5ResourceType.SubstanceSourceMaterial)
-    @JsonKey(unknownEnumValue: R5ResourceType.SubstanceSourceMaterial)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.SubstanceSourceMaterial) R5ResourceType resourceType,
 
     
     

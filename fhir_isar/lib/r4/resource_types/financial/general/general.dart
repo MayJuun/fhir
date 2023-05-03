@@ -110,11 +110,7 @@ class Account {
   
   
   
-    @Default(R4ResourceType.Account)
-    @JsonKey(unknownEnumValue: R4ResourceType.Account)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Account) R4ResourceType resourceType,
 
     
     
@@ -561,11 +557,7 @@ class ChargeItem {
   
   
   
-    @Default(R4ResourceType.ChargeItem)
-    @JsonKey(unknownEnumValue: R4ResourceType.ChargeItem)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.ChargeItem) R4ResourceType resourceType,
 
     
     
@@ -1024,11 +1016,7 @@ class ChargeItemDefinition {
   
   
   
-    @Default(R4ResourceType.ChargeItemDefinition)
-    @JsonKey(unknownEnumValue: R4ResourceType.ChargeItemDefinition)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.ChargeItemDefinition) R4ResourceType resourceType,
 
     
     
@@ -3501,11 +3489,7 @@ class ExplanationOfBenefit {
   
   
   
-    @Default(R4ResourceType.ExplanationOfBenefit)
-    @JsonKey(unknownEnumValue: R4ResourceType.ExplanationOfBenefit)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.ExplanationOfBenefit) R4ResourceType resourceType,
 
     
     
@@ -6071,11 +6055,7 @@ class InsurancePlan {
   
   
   
-    @Default(R4ResourceType.InsurancePlan)
-    @JsonKey(unknownEnumValue: R4ResourceType.InsurancePlan)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.InsurancePlan) R4ResourceType resourceType,
 
     
     

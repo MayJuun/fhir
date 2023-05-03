@@ -355,9 +355,7 @@ class ActivityDefinition {
   
   
     
-    @Default(R5ResourceType.ActivityDefinition)
-    @JsonKey(unknownEnumValue: R5ResourceType.ActivityDefinition)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.ActivityDefinition) R5ResourceType resourceType,
 
     
     
@@ -1016,9 +1014,7 @@ class ActorDefinition {
   
   
     
-    @Default(R5ResourceType.ActorDefinition)
-    @JsonKey(unknownEnumValue: R5ResourceType.ActorDefinition)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.ActorDefinition) R5ResourceType resourceType,
 
     
     
@@ -1426,9 +1422,7 @@ class ConditionDefinition {
   
   
     
-    @Default(R5ResourceType.ConditionDefinition)
-    @JsonKey(unknownEnumValue: R5ResourceType.ConditionDefinition)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.ConditionDefinition) R5ResourceType resourceType,
 
     
     
@@ -2198,9 +2192,7 @@ class DeviceDefinition {
   
   
     
-    @Default(R5ResourceType.DeviceDefinition)
-    @JsonKey(unknownEnumValue: R5ResourceType.DeviceDefinition)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.DeviceDefinition) R5ResourceType resourceType,
 
     
     
@@ -3936,9 +3928,7 @@ class EventDefinition {
   
   
     
-    @Default(R5ResourceType.EventDefinition)
-    @JsonKey(unknownEnumValue: R5ResourceType.EventDefinition)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.EventDefinition) R5ResourceType resourceType,
 
     
     
@@ -4299,9 +4289,7 @@ class ExampleScenario {
   
   
     
-    @Default(R5ResourceType.ExampleScenario)
-    @JsonKey(unknownEnumValue: R5ResourceType.ExampleScenario)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.ExampleScenario) R5ResourceType resourceType,
 
     
     
@@ -5599,9 +5587,7 @@ class ObservationDefinition {
   
   
     
-    @Default(R5ResourceType.ObservationDefinition)
-    @JsonKey(unknownEnumValue: R5ResourceType.ObservationDefinition)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.ObservationDefinition) R5ResourceType resourceType,
 
     
     
@@ -6469,9 +6455,7 @@ class PlanDefinition {
   
   
     
-    @Default(R5ResourceType.PlanDefinition)
-    @JsonKey(unknownEnumValue: R5ResourceType.PlanDefinition)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.PlanDefinition) R5ResourceType resourceType,
 
     
     
@@ -8407,9 +8391,7 @@ class Questionnaire {
   
   
     
-    @Default(R5ResourceType.Questionnaire)
-    @JsonKey(unknownEnumValue: R5ResourceType.Questionnaire)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Questionnaire) R5ResourceType resourceType,
 
     
     
@@ -9539,9 +9521,7 @@ class Requirements {
   
   
     
-    @Default(R5ResourceType.Requirements)
-    @JsonKey(unknownEnumValue: R5ResourceType.Requirements)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Requirements) R5ResourceType resourceType,
 
     
     
@@ -10076,9 +10056,7 @@ class SpecimenDefinition {
   
   
     
-    @Default(R5ResourceType.SpecimenDefinition)
-    @JsonKey(unknownEnumValue: R5ResourceType.SpecimenDefinition)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.SpecimenDefinition) R5ResourceType resourceType,
 
     
     

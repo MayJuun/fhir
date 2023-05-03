@@ -13,9 +13,7 @@ part 'entities1.g.dart';
 
 class Endpoint {
   
-    @Default(R4ResourceType.Endpoint)
-    @JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Endpoint) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -47,9 +45,7 @@ class Endpoint {
 
 class HealthcareService {
   
-    @Default(R4ResourceType.HealthcareService)
-    @JsonKey(unknownEnumValue: R4ResourceType.HealthcareService)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.HealthcareService) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -134,9 +130,7 @@ class HealthcareServiceNotAvailable {
 
 class Location {
   
-    @Default(R4ResourceType.Location)
-    @JsonKey(unknownEnumValue: R4ResourceType.Location)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Location) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -206,9 +200,7 @@ class LocationHoursOfOperation {
 
 class Organization {
   
-    @Default(R4ResourceType.Organization)
-    @JsonKey(unknownEnumValue: R4ResourceType.Organization)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Organization) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -249,9 +241,7 @@ class OrganizationContact {
 
 class OrganizationAffiliation {
   
-    @Default(R4ResourceType.OrganizationAffiliation)
-    @JsonKey(unknownEnumValue: R4ResourceType.OrganizationAffiliation)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.OrganizationAffiliation) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,

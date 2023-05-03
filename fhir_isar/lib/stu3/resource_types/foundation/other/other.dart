@@ -15,9 +15,7 @@ part 'other.g.dart';
 
 class Basic {
   
-    @Default(Stu3ResourceType.Basic)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Basic)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Basic) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -39,9 +37,7 @@ class Basic {
 
 class Binary {
   
-    @Default(Stu3ResourceType.Binary)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Binary)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Binary) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -62,9 +58,7 @@ class Binary {
 
 class Bundle {
   
-    @Default(Stu3ResourceType.Bundle)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Bundle)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Bundle) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -149,9 +143,7 @@ class BundleResponse {
 
 class Linkage {
   
-    @Default(Stu3ResourceType.Linkage)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Linkage)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Linkage) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -179,9 +171,7 @@ class LinkageItem {
 
 class Media {
   
-    @Default(Stu3ResourceType.Media)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Media)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Media) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -222,9 +212,7 @@ class Media {
 
 class MessageHeader {
   
-    @Default(Stu3ResourceType.MessageHeader)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.MessageHeader)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.MessageHeader) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -287,9 +275,7 @@ class MessageHeaderResponse {
 
 class OperationOutcome {
   
-    @Default(Stu3ResourceType.OperationOutcome)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.OperationOutcome)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.OperationOutcome) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -322,9 +308,7 @@ class OperationOutcomeIssue {
 
 class Parameters {
   
-    @Default(Stu3ResourceType.Parameters)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Parameters)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Parameters) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -420,9 +404,7 @@ class ParametersParameter {
 
 class Subscription {
   
-    @Default(Stu3ResourceType.Subscription)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Subscription)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Subscription) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

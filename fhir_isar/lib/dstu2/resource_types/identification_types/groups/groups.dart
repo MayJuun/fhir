@@ -15,9 +15,7 @@ part 'groups.g.dart';
 
 class Organization {
   
-    @Default(Dstu2ResourceType.Organization)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Organization)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.Organization) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -58,9 +56,7 @@ class OrganizationContact {
 
 class HealthcareService {
   
-    @Default(Dstu2ResourceType.HealthcareService)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.HealthcareService)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.HealthcareService) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -140,9 +136,7 @@ class HealthcareServiceNotAvailable {
 
 class Group {
   
-    @Default(Dstu2ResourceType.Group)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Group)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.Group) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

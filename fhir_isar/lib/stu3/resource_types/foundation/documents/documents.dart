@@ -15,9 +15,7 @@ part 'documents.g.dart';
 
 class Composition {
   
-    @Default(Stu3ResourceType.Composition)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Composition) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -94,9 +92,7 @@ class CompositionSection {
 
 class DocumentManifest {
   
-    @Default(Stu3ResourceType.DocumentManifest)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.DocumentManifest) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -142,9 +138,7 @@ class DocumentManifestRelated {
 
 class DocumentReference {
   
-    @Default(Stu3ResourceType.DocumentReference)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.DocumentReference) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

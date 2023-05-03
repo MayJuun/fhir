@@ -15,9 +15,7 @@ part 'payment.g.dart';
 
 class PaymentNotice {
   
-    @Default(Stu3ResourceType.PaymentNotice)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.PaymentNotice)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.PaymentNotice) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -46,9 +44,7 @@ class PaymentNotice {
 
 class PaymentReconciliation {
   
-    @Default(Stu3ResourceType.PaymentReconciliation)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.PaymentReconciliation)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.PaymentReconciliation) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

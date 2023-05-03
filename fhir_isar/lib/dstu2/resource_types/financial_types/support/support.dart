@@ -15,9 +15,7 @@ part 'support.g.dart';
 
 class Coverage {
   
-    @Default(Dstu2ResourceType.Coverage)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Coverage)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.Coverage) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -50,9 +48,7 @@ class Coverage {
 
 class EligibilityRequest {
   
-    @Default(Dstu2ResourceType.EligibilityRequest)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityRequest)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.EligibilityRequest) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -76,9 +72,7 @@ class EligibilityRequest {
 
 class EligibilityResponse {
   
-    @Default(Dstu2ResourceType.EligibilityResponse)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityResponse)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.EligibilityResponse) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -108,9 +102,7 @@ class EligibilityResponse {
 
 class EnrollmentRequest {
   
-    @Default(Dstu2ResourceType.EnrollmentRequest)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentRequest)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.EnrollmentRequest) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -137,9 +129,7 @@ class EnrollmentRequest {
 
 class EnrollmentResponse {
   
-    @Default(Dstu2ResourceType.EnrollmentResponse)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentResponse)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.EnrollmentResponse) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

@@ -15,9 +15,7 @@ part 'entities.g.dart';
 
 class Location {
   
-    @Default(Dstu2ResourceType.Location)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Location)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.Location) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -63,9 +61,7 @@ class LocationPosition {
 
 class Substance {
   
-    @Default(Dstu2ResourceType.Substance)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Substance)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.Substance) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -110,9 +106,7 @@ class SubstanceIngredient {
 
 class Person {
   
-    @Default(Dstu2ResourceType.Person)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Person)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.Person) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -152,9 +146,7 @@ class PersonLink {
 
 class Contract {
   
-    @Default(Dstu2ResourceType.Contract)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Contract)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.Contract) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

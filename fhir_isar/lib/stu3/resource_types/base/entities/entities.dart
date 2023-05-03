@@ -15,9 +15,7 @@ part 'entities.g.dart';
 
 class Device {
   
-    @Default(Stu3ResourceType.Device)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Device)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Device) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -77,9 +75,7 @@ class DeviceUdi {
 
 class DeviceComponent {
   
-    @Default(Stu3ResourceType.DeviceComponent)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceComponent)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.DeviceComponent) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -129,9 +125,7 @@ class DeviceMetricCalibration {
 
 class Endpoint {
   
-    @Default(Stu3ResourceType.Endpoint)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Endpoint)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Endpoint) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -163,9 +157,7 @@ class Endpoint {
 
 class HealthcareService {
   
-    @Default(Stu3ResourceType.HealthcareService)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.HealthcareService)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.HealthcareService) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -235,9 +227,7 @@ class HealthcareServiceNotAvailable {
 
 class Location {
   
-    @Default(Stu3ResourceType.Location)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Location)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Location) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -284,9 +274,7 @@ class LocationPosition {
 
 class Organization {
   
-    @Default(Stu3ResourceType.Organization)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Organization)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Organization) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -324,9 +312,7 @@ class OrganizationContact {
 
 class Substance {
   
-    @Default(Stu3ResourceType.Substance)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Substance)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Substance) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

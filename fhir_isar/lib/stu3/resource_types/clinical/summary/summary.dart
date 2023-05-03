@@ -15,9 +15,7 @@ part 'summary.g.dart';
 
 class AdverseEvent {
   
-    @Default(Stu3ResourceType.AdverseEvent)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.AdverseEvent)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.AdverseEvent) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -67,9 +65,7 @@ class AdverseEventSuspectEntity {
 
 class AllergyIntolerance {
   
-    @Default(Stu3ResourceType.AllergyIntolerance)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.AllergyIntolerance)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.AllergyIntolerance) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -128,9 +124,7 @@ class AllergyIntoleranceReaction {
 
 class ClinicalImpression {
   
-    @Default(Stu3ResourceType.ClinicalImpression)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.ClinicalImpression)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.ClinicalImpression) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -188,9 +182,7 @@ class ClinicalImpressionFinding {
 
 class Condition {
   
-    @Default(Stu3ResourceType.Condition)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Condition)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Condition) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -253,9 +245,7 @@ class ConditionEvidence {
 
 class DetectedIssue {
   
-    @Default(Stu3ResourceType.DetectedIssue)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.DetectedIssue)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.DetectedIssue) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -296,9 +286,7 @@ class DetectedIssueMitigation {
 
 class FamilyMemberHistory {
   
-    @Default(Stu3ResourceType.FamilyMemberHistory)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.FamilyMemberHistory)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.FamilyMemberHistory) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -365,9 +353,7 @@ class FamilyMemberHistoryCondition {
 
 class Procedure {
   
-    @Default(Stu3ResourceType.Procedure)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Procedure)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Procedure) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

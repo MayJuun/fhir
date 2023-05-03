@@ -15,9 +15,7 @@ part 'patient_management.g.dart';
 
 class Encounter {
   
-    @Default(Dstu2ResourceType.Encounter)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Encounter)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.Encounter) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -112,9 +110,7 @@ class EncounterLocation {
 
 class EpisodeOfCare {
   
-    @Default(Dstu2ResourceType.EpisodeOfCare)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.EpisodeOfCare)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.EpisodeOfCare) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -166,9 +162,7 @@ class EpisodeOfCareCareTeam {
 
 class Communication {
   
-    @Default(Dstu2ResourceType.Communication)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Communication)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.Communication) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -213,9 +207,7 @@ class CommunicationPayload {
 
 class Flag {
   
-    @Default(Dstu2ResourceType.Flag)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Flag)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.Flag) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

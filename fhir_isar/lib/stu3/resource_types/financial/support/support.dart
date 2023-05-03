@@ -15,9 +15,7 @@ part 'support.g.dart';
 
 class Coverage {
   
-    @Default(Stu3ResourceType.Coverage)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Coverage)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Coverage) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -84,9 +82,7 @@ class CoverageGrouping {
 
 class EligibilityRequest {
   
-    @Default(Stu3ResourceType.EligibilityRequest)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityRequest)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.EligibilityRequest) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -122,9 +118,7 @@ class EligibilityRequest {
 
 class EligibilityResponse {
   
-    @Default(Stu3ResourceType.EligibilityResponse)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityResponse)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.EligibilityResponse) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -189,9 +183,7 @@ class EligibilityResponseError {
 
 class EnrollmentRequest {
   
-    @Default(Stu3ResourceType.EnrollmentRequest)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentRequest)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.EnrollmentRequest) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -217,9 +209,7 @@ class EnrollmentRequest {
 
 class EnrollmentResponse {
   
-    @Default(Stu3ResourceType.EnrollmentResponse)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentResponse)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.EnrollmentResponse) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

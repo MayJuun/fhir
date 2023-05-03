@@ -15,9 +15,7 @@ part 'billing.g.dart';
 
 class Claim {
   
-    @Default(Stu3ResourceType.Claim)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Claim)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Claim) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -232,9 +230,7 @@ class ClaimSubDetail {
 
 class ClaimResponse {
   
-    @Default(Stu3ResourceType.ClaimResponse)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.ClaimResponse)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.ClaimResponse) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

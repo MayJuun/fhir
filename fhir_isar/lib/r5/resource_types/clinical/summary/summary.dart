@@ -200,9 +200,7 @@ class AdverseEvent {
   
   
     
-    @Default(R5ResourceType.AdverseEvent)
-    @JsonKey(unknownEnumValue: R5ResourceType.AdverseEvent)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.AdverseEvent) R5ResourceType resourceType,
 
     
     
@@ -1253,9 +1251,7 @@ class AllergyIntolerance {
   
   
     
-    @Default(R5ResourceType.AllergyIntolerance)
-    @JsonKey(unknownEnumValue: R5ResourceType.AllergyIntolerance)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.AllergyIntolerance) R5ResourceType resourceType,
 
     
     
@@ -1735,9 +1731,7 @@ class ClinicalImpression {
   
   
     
-    @Default(R5ResourceType.ClinicalImpression)
-    @JsonKey(unknownEnumValue: R5ResourceType.ClinicalImpression)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.ClinicalImpression) R5ResourceType resourceType,
 
     
     
@@ -2121,9 +2115,7 @@ class Condition {
   
   
     
-    @Default(R5ResourceType.Condition)
-    @JsonKey(unknownEnumValue: R5ResourceType.Condition)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Condition) R5ResourceType resourceType,
 
     
     
@@ -2538,9 +2530,7 @@ class DetectedIssue {
   
   
     
-    @Default(R5ResourceType.DetectedIssue)
-    @JsonKey(unknownEnumValue: R5ResourceType.DetectedIssue)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.DetectedIssue) R5ResourceType resourceType,
 
     
     
@@ -2984,9 +2974,7 @@ class FamilyMemberHistory {
   
   
     
-    @Default(R5ResourceType.FamilyMemberHistory)
-    @JsonKey(unknownEnumValue: R5ResourceType.FamilyMemberHistory)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.FamilyMemberHistory) R5ResourceType resourceType,
 
     
     
@@ -3730,9 +3718,7 @@ class Procedure {
   
   
     
-    @Default(R5ResourceType.Procedure)
-    @JsonKey(unknownEnumValue: R5ResourceType.Procedure)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Procedure) R5ResourceType resourceType,
 
     
     

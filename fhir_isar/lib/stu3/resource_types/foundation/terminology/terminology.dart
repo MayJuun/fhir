@@ -15,9 +15,7 @@ part 'terminology.g.dart';
 
 class CodeSystem {
   
-    @Default(Stu3ResourceType.CodeSystem)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.CodeSystem)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.CodeSystem) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -145,9 +143,7 @@ class CodeSystemProperty1 {
 
 class ConceptMap {
   
-    @Default(Stu3ResourceType.ConceptMap)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.ConceptMap)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.ConceptMap) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -262,9 +258,7 @@ class ConceptMapUnmapped {
 
 class ExpansionProfile {
   
-    @Default(Stu3ResourceType.ExpansionProfile)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.ExpansionProfile)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.ExpansionProfile) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -375,9 +369,7 @@ class ExpansionProfileDesignation2 {
 
 class NamingSystem {
   
-    @Default(Stu3ResourceType.NamingSystem)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.NamingSystem)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.NamingSystem) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -429,9 +421,7 @@ class NamingSystemUniqueId {
 
 class ValueSet {
   
-    @Default(Stu3ResourceType.ValueSet)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.ValueSet)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.ValueSet) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

@@ -167,9 +167,7 @@ class CarePlan {
   
   
     
-    @Default(R5ResourceType.CarePlan)
-    @JsonKey(unknownEnumValue: R5ResourceType.CarePlan)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.CarePlan) R5ResourceType resourceType,
 
     
     
@@ -742,9 +740,7 @@ class CareTeam {
   
   
     
-    @Default(R5ResourceType.CareTeam)
-    @JsonKey(unknownEnumValue: R5ResourceType.CareTeam)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.CareTeam) R5ResourceType resourceType,
 
     
     
@@ -1050,9 +1046,7 @@ class Goal {
   
   
     
-    @Default(R5ResourceType.Goal)
-    @JsonKey(unknownEnumValue: R5ResourceType.Goal)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Goal) R5ResourceType resourceType,
 
     
     
@@ -1513,9 +1507,7 @@ class NutritionIntake {
   
   
     
-    @Default(R5ResourceType.NutritionIntake)
-    @JsonKey(unknownEnumValue: R5ResourceType.NutritionIntake)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.NutritionIntake) R5ResourceType resourceType,
 
     
     
@@ -2132,9 +2124,7 @@ class NutritionOrder {
   
   
     
-    @Default(R5ResourceType.NutritionOrder)
-    @JsonKey(unknownEnumValue: R5ResourceType.NutritionOrder)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.NutritionOrder) R5ResourceType resourceType,
 
     
     
@@ -3323,9 +3313,7 @@ class RequestOrchestration {
   
   
     
-    @Default(R5ResourceType.RequestOrchestration)
-    @JsonKey(unknownEnumValue: R5ResourceType.RequestOrchestration)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.RequestOrchestration) R5ResourceType resourceType,
 
     
     
@@ -4477,9 +4465,7 @@ class RiskAssessment {
   
   
     
-    @Default(R5ResourceType.RiskAssessment)
-    @JsonKey(unknownEnumValue: R5ResourceType.RiskAssessment)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.RiskAssessment) R5ResourceType resourceType,
 
     
     
@@ -4931,9 +4917,7 @@ class ServiceRequest {
   
   
     
-    @Default(R5ResourceType.ServiceRequest)
-    @JsonKey(unknownEnumValue: R5ResourceType.ServiceRequest)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.ServiceRequest) R5ResourceType resourceType,
 
     
     
@@ -5209,9 +5193,7 @@ class VisionPrescription {
   
   
     
-    @Default(R5ResourceType.VisionPrescription)
-    @JsonKey(unknownEnumValue: R5ResourceType.VisionPrescription)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.VisionPrescription) R5ResourceType resourceType,
 
     
     

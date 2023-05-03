@@ -307,11 +307,7 @@ class ActivityDefinition {
   
   
   
-    @Default(R4ResourceType.ActivityDefinition)
-    @JsonKey(unknownEnumValue: R4ResourceType.ActivityDefinition)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.ActivityDefinition) R4ResourceType resourceType,
 
     
     
@@ -1014,11 +1010,7 @@ class DeviceDefinition {
   
   
   
-    @Default(R4ResourceType.DeviceDefinition)
-    @JsonKey(unknownEnumValue: R4ResourceType.DeviceDefinition)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.DeviceDefinition) R4ResourceType resourceType,
 
     
     
@@ -1804,11 +1796,7 @@ class EventDefinition {
   
   
   
-    @Default(R4ResourceType.EventDefinition)
-    @JsonKey(unknownEnumValue: R4ResourceType.EventDefinition)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.EventDefinition) R4ResourceType resourceType,
 
     
     
@@ -2181,11 +2169,7 @@ class ObservationDefinition {
   
   
   
-    @Default(R4ResourceType.ObservationDefinition)
-    @JsonKey(unknownEnumValue: R4ResourceType.ObservationDefinition)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.ObservationDefinition) R4ResourceType resourceType,
 
     
     
@@ -3565,11 +3549,7 @@ class Questionnaire {
   
   
   
-    @Default(R4ResourceType.Questionnaire)
-    @JsonKey(unknownEnumValue: R4ResourceType.Questionnaire)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Questionnaire) R4ResourceType resourceType,
 
     
     
@@ -4615,11 +4595,7 @@ class SpecimenDefinition {
   
   
   
-    @Default(R4ResourceType.SpecimenDefinition)
-    @JsonKey(unknownEnumValue: R4ResourceType.SpecimenDefinition)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.SpecimenDefinition) R4ResourceType resourceType,
 
     
     

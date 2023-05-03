@@ -158,9 +158,7 @@ class Coverage {
   
   
     
-    @Default(R5ResourceType.Coverage)
-    @JsonKey(unknownEnumValue: R5ResourceType.Coverage)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Coverage) R5ResourceType resourceType,
 
     
     
@@ -763,9 +761,7 @@ class CoverageEligibilityRequest {
   
   
     
-    @Default(R5ResourceType.CoverageEligibilityRequest)
-    @JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityRequest)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.CoverageEligibilityRequest) R5ResourceType resourceType,
 
     
     
@@ -1413,9 +1409,7 @@ class CoverageEligibilityResponse {
   
   
     
-    @Default(R5ResourceType.CoverageEligibilityResponse)
-    @JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityResponse)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.CoverageEligibilityResponse) R5ResourceType resourceType,
 
     
     
@@ -2080,9 +2074,7 @@ class EnrollmentRequest {
   
   
     
-    @Default(R5ResourceType.EnrollmentRequest)
-    @JsonKey(unknownEnumValue: R5ResourceType.EnrollmentRequest)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.EnrollmentRequest) R5ResourceType resourceType,
 
     
     
@@ -2241,9 +2233,7 @@ class EnrollmentResponse {
   
   
     
-    @Default(R5ResourceType.EnrollmentResponse)
-    @JsonKey(unknownEnumValue: R5ResourceType.EnrollmentResponse)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.EnrollmentResponse) R5ResourceType resourceType,
 
     
     

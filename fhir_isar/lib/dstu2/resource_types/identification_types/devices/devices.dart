@@ -15,9 +15,7 @@ part 'devices.g.dart';
 
 class Device {
   
-    @Default(Dstu2ResourceType.Device)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Device)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.Device) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -55,9 +53,7 @@ class Device {
 
 class DeviceComponent {
   
-    @Default(Dstu2ResourceType.DeviceComponent)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceComponent)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.DeviceComponent) Dstu2ResourceType resourceType,
     Id? id,
     @JsonKey(name: '_id') Element? idElement,
     Meta? meta,

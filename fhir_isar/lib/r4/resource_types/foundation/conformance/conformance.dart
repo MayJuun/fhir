@@ -211,11 +211,7 @@ class CapabilityStatement {
   
   
   
-    @Default(R4ResourceType.CapabilityStatement)
-    @JsonKey(unknownEnumValue: R4ResourceType.CapabilityStatement)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.CapabilityStatement) R4ResourceType resourceType,
 
     
     
@@ -1893,11 +1889,7 @@ class CompartmentDefinition {
   
   
   
-    @Default(R4ResourceType.CompartmentDefinition)
-    @JsonKey(unknownEnumValue: R4ResourceType.CompartmentDefinition)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.CompartmentDefinition) R4ResourceType resourceType,
 
     
     
@@ -2325,11 +2317,7 @@ class ExampleScenario {
   
   
   
-    @Default(R4ResourceType.ExampleScenario)
-    @JsonKey(unknownEnumValue: R4ResourceType.ExampleScenario)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.ExampleScenario) R4ResourceType resourceType,
 
     
     
@@ -3363,11 +3351,7 @@ class GraphDefinition {
   
   
   
-    @Default(R4ResourceType.GraphDefinition)
-    @JsonKey(unknownEnumValue: R4ResourceType.GraphDefinition)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.GraphDefinition) R4ResourceType resourceType,
 
     
     
@@ -4060,11 +4044,7 @@ class ImplementationGuide {
   
   
   
-    @Default(R4ResourceType.ImplementationGuide)
-    @JsonKey(unknownEnumValue: R4ResourceType.ImplementationGuide)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.ImplementationGuide) R4ResourceType resourceType,
 
     
     
@@ -5584,11 +5564,7 @@ class MessageDefinition {
   
   
   
-    @Default(R4ResourceType.MessageDefinition)
-    @JsonKey(unknownEnumValue: R4ResourceType.MessageDefinition)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.MessageDefinition) R4ResourceType resourceType,
 
     
     
@@ -6565,11 +6541,7 @@ class SearchParameter {
   
   
   
-    @Default(R4ResourceType.SearchParameter)
-    @JsonKey(unknownEnumValue: R4ResourceType.SearchParameter)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.SearchParameter) R4ResourceType resourceType,
 
     
     
@@ -7134,11 +7106,7 @@ class StructureDefinition {
   
   
   
-    @Default(R4ResourceType.StructureDefinition)
-    @JsonKey(unknownEnumValue: R4ResourceType.StructureDefinition)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.StructureDefinition) R4ResourceType resourceType,
 
     
     
@@ -7902,11 +7870,7 @@ class StructureMap {
   
   
   
-    @Default(R4ResourceType.StructureMap)
-    @JsonKey(unknownEnumValue: R4ResourceType.StructureMap)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.StructureMap) R4ResourceType resourceType,
 
     
     

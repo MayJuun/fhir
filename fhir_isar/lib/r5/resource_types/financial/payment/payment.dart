@@ -113,9 +113,7 @@ class PaymentNotice {
   
   
     
-    @Default(R5ResourceType.PaymentNotice)
-    @JsonKey(unknownEnumValue: R5ResourceType.PaymentNotice)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.PaymentNotice) R5ResourceType resourceType,
 
     
     
@@ -366,9 +364,7 @@ class PaymentReconciliation {
   
   
     
-    @Default(R5ResourceType.PaymentReconciliation)
-    @JsonKey(unknownEnumValue: R5ResourceType.PaymentReconciliation)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.PaymentReconciliation) R5ResourceType resourceType,
 
     
     

@@ -15,9 +15,7 @@ part 'misc.g.dart';
 
 class ImplementationGuide {
   
-    @Default(Dstu2ResourceType.ImplementationGuide)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.ImplementationGuide) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

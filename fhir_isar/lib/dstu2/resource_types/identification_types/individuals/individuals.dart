@@ -15,9 +15,7 @@ part 'individuals.g.dart';
 
 class Patient {
   
-    @Default(Dstu2ResourceType.Patient)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Patient)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.Patient) Dstu2ResourceType resourceType,
     Id? id,
     @JsonKey(name: '_id') Element? idElement,
     Meta? meta,
@@ -111,9 +109,7 @@ class PatientLink {
 
 class Practitioner {
   
-    @Default(Dstu2ResourceType.Practitioner)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Practitioner)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.Practitioner) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -171,9 +167,7 @@ class PractitionerQualification {
 
 class RelatedPerson {
   
-    @Default(Dstu2ResourceType.RelatedPerson)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.RelatedPerson)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.RelatedPerson) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

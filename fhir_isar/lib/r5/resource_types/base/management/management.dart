@@ -192,9 +192,7 @@ class Encounter {
   
   
     
-    @Default(R5ResourceType.Encounter)
-    @JsonKey(unknownEnumValue: R5ResourceType.Encounter)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Encounter) R5ResourceType resourceType,
 
     
     
@@ -1124,9 +1122,7 @@ class EpisodeOfCare {
   
   
     
-    @Default(R5ResourceType.EpisodeOfCare)
-    @JsonKey(unknownEnumValue: R5ResourceType.EpisodeOfCare)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.EpisodeOfCare) R5ResourceType resourceType,
 
     
     
@@ -1521,9 +1517,7 @@ class Flag {
   
   
     
-    @Default(R5ResourceType.Flag)
-    @JsonKey(unknownEnumValue: R5ResourceType.Flag)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Flag) R5ResourceType resourceType,
 
     
     
@@ -1871,9 +1865,7 @@ class Library {
   
   
     
-    @Default(R5ResourceType.Library)
-    @JsonKey(unknownEnumValue: R5ResourceType.Library)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Library) R5ResourceType resourceType,
 
     
     
@@ -2277,9 +2269,7 @@ class List_ {
   
   
     
-    @Default(R5ResourceType.List_)
-    @JsonKey(unknownEnumValue: R5ResourceType.List_)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.List_) R5ResourceType resourceType,
 
     
     

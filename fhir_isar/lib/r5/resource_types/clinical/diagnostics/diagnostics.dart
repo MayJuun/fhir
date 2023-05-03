@@ -105,9 +105,7 @@ class BodyStructure {
   
   
     
-    @Default(R5ResourceType.BodyStructure)
-    @JsonKey(unknownEnumValue: R5ResourceType.BodyStructure)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.BodyStructure) R5ResourceType resourceType,
 
     
     
@@ -514,9 +512,7 @@ class DiagnosticReport {
   
   
     
-    @Default(R5ResourceType.DiagnosticReport)
-    @JsonKey(unknownEnumValue: R5ResourceType.DiagnosticReport)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.DiagnosticReport) R5ResourceType resourceType,
 
     
     
@@ -933,9 +929,7 @@ class GenomicStudy {
   
   
     
-    @Default(R5ResourceType.GenomicStudy)
-    @JsonKey(unknownEnumValue: R5ResourceType.GenomicStudy)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.GenomicStudy) R5ResourceType resourceType,
 
     
     
@@ -1662,9 +1656,7 @@ class ImagingSelection {
   
   
     
-    @Default(R5ResourceType.ImagingSelection)
-    @JsonKey(unknownEnumValue: R5ResourceType.ImagingSelection)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.ImagingSelection) R5ResourceType resourceType,
 
     
     
@@ -2332,9 +2324,7 @@ class ImagingStudy {
   
   
     
-    @Default(R5ResourceType.ImagingStudy)
-    @JsonKey(unknownEnumValue: R5ResourceType.ImagingStudy)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.ImagingStudy) R5ResourceType resourceType,
 
     
     
@@ -2905,9 +2895,7 @@ class MolecularSequence {
   
   
     
-    @Default(R5ResourceType.MolecularSequence)
-    @JsonKey(unknownEnumValue: R5ResourceType.MolecularSequence)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.MolecularSequence) R5ResourceType resourceType,
 
     
     
@@ -3589,9 +3577,7 @@ class Observation {
   
   
     
-    @Default(R5ResourceType.Observation)
-    @JsonKey(unknownEnumValue: R5ResourceType.Observation)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Observation) R5ResourceType resourceType,
 
     
     
@@ -4292,9 +4278,7 @@ class QuestionnaireResponse {
   
   
     
-    @Default(R5ResourceType.QuestionnaireResponse)
-    @JsonKey(unknownEnumValue: R5ResourceType.QuestionnaireResponse)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.QuestionnaireResponse) R5ResourceType resourceType,
 
     
     
@@ -4793,9 +4777,7 @@ class Specimen {
   
   
     
-    @Default(R5ResourceType.Specimen)
-    @JsonKey(unknownEnumValue: R5ResourceType.Specimen)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Specimen) R5ResourceType resourceType,
 
     
     

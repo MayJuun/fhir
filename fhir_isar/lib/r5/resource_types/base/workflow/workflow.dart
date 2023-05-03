@@ -212,9 +212,7 @@ class Appointment {
   
   
     
-    @Default(R5ResourceType.Appointment)
-    @JsonKey(unknownEnumValue: R5ResourceType.Appointment)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Appointment) R5ResourceType resourceType,
 
     
     
@@ -1194,9 +1192,7 @@ class AppointmentResponse {
   
   
     
-    @Default(R5ResourceType.AppointmentResponse)
-    @JsonKey(unknownEnumValue: R5ResourceType.AppointmentResponse)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.AppointmentResponse) R5ResourceType resourceType,
 
     
     
@@ -1449,9 +1445,7 @@ class Schedule {
   
   
     
-    @Default(R5ResourceType.Schedule)
-    @JsonKey(unknownEnumValue: R5ResourceType.Schedule)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Schedule) R5ResourceType resourceType,
 
     
     
@@ -1676,9 +1670,7 @@ class Slot {
   
   
     
-    @Default(R5ResourceType.Slot)
-    @JsonKey(unknownEnumValue: R5ResourceType.Slot)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Slot) R5ResourceType resourceType,
 
     
     
@@ -1981,9 +1973,7 @@ class Task {
   
   
     
-    @Default(R5ResourceType.Task)
-    @JsonKey(unknownEnumValue: R5ResourceType.Task)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Task) R5ResourceType resourceType,
 
     
     
@@ -3385,9 +3375,7 @@ class Transport {
   
   
     
-    @Default(R5ResourceType.Transport)
-    @JsonKey(unknownEnumValue: R5ResourceType.Transport)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Transport) R5ResourceType resourceType,
 
     
     
@@ -4725,9 +4713,7 @@ class VerificationResult {
   
   
     
-    @Default(R5ResourceType.VerificationResult)
-    @JsonKey(unknownEnumValue: R5ResourceType.VerificationResult)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.VerificationResult) R5ResourceType resourceType,
 
     
     

@@ -15,9 +15,7 @@ part 'diagnostics.g.dart';
 
 class Observation {
   
-    @Default(Dstu2ResourceType.Observation)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Observation)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.Observation) Dstu2ResourceType resourceType,
     Id? id,
     @JsonKey(name: '_id') Element? idElement,
     Meta? meta,
@@ -122,9 +120,7 @@ class ObservationComponent {
 
 class DiagnosticReport {
   
-    @Default(Dstu2ResourceType.DiagnosticReport)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.DiagnosticReport)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.DiagnosticReport) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -174,9 +170,7 @@ class DiagnosticReportImage {
 
 class DiagnosticOrder {
   
-    @Default(Dstu2ResourceType.DiagnosticOrder)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.DiagnosticOrder)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.DiagnosticOrder) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -229,9 +223,7 @@ class DiagnosticOrderItem {
 
 class Specimen {
   
-    @Default(Dstu2ResourceType.Specimen)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Specimen)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.Specimen) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -303,9 +295,7 @@ class SpecimenContainer {
 
 class BodySite {
   
-    @Default(Dstu2ResourceType.BodySite)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.BodySite)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.BodySite) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -325,9 +315,7 @@ class BodySite {
 
 class ImagingStudy {
   
-    @Default(Dstu2ResourceType.ImagingStudy)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.ImagingStudy)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.ImagingStudy) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -406,9 +394,7 @@ class ImagingStudySeriesInstance {
 
 class ImagingObjectSelection {
   
-    @Default(Dstu2ResourceType.ImagingObjectSelection)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.ImagingObjectSelection)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.ImagingObjectSelection) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

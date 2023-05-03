@@ -143,9 +143,7 @@ class ArtifactAssessment {
   
   
     
-    @Default(R5ResourceType.ArtifactAssessment)
-    @JsonKey(unknownEnumValue: R5ResourceType.ArtifactAssessment)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.ArtifactAssessment) R5ResourceType resourceType,
 
     
     
@@ -609,9 +607,7 @@ class Citation {
   
   
     
-    @Default(R5ResourceType.Citation)
-    @JsonKey(unknownEnumValue: R5ResourceType.Citation)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Citation) R5ResourceType resourceType,
 
     
     
@@ -3019,9 +3015,7 @@ class Evidence {
   
   
     
-    @Default(R5ResourceType.Evidence)
-    @JsonKey(unknownEnumValue: R5ResourceType.Evidence)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Evidence) R5ResourceType resourceType,
 
     
     
@@ -4259,9 +4253,7 @@ class EvidenceReport {
   
   
     
-    @Default(R5ResourceType.EvidenceReport)
-    @JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.EvidenceReport) R5ResourceType resourceType,
 
     
     
@@ -5229,9 +5221,7 @@ class EvidenceVariable {
   
   
     
-    @Default(R5ResourceType.EvidenceVariable)
-    @JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.EvidenceVariable) R5ResourceType resourceType,
 
     
     

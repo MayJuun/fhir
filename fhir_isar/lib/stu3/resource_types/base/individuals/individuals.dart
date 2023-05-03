@@ -15,9 +15,7 @@ part 'individuals.g.dart';
 
 class Group {
   
-    @Default(Stu3ResourceType.Group)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Group)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Group) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -70,9 +68,7 @@ class GroupMember {
 
 class Patient {
   
-    @Default(Stu3ResourceType.Patient)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Patient)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Patient) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -153,9 +149,7 @@ class PatientLink {
 
 class Person {
   
-    @Default(Stu3ResourceType.Person)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Person)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Person) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -192,9 +186,7 @@ class PersonLink {
 
 class Practitioner {
   
-    @Default(Stu3ResourceType.Practitioner)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Practitioner)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Practitioner) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -232,9 +224,7 @@ class PractitionerQualification {
 
 class PractitionerRole {
   
-    @Default(Stu3ResourceType.PractitionerRole)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.PractitionerRole)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.PractitionerRole) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -288,9 +278,7 @@ class PractitionerRoleNotAvailable {
 
 class RelatedPerson {
   
-    @Default(Stu3ResourceType.RelatedPerson)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.RelatedPerson)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.RelatedPerson) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

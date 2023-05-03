@@ -17,9 +17,7 @@ part 'management.g.dart';
 
 class Encounter {
   
-    @Default(Stu3ResourceType.Encounter)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Encounter)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Encounter) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -112,9 +110,7 @@ class EncounterLocation {
 
 class EpisodeOfCare {
   
-    @Default(Stu3ResourceType.EpisodeOfCare)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.EpisodeOfCare)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.EpisodeOfCare) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -160,9 +156,7 @@ class EpisodeOfCareDiagnosis {
 
 class Flag {
   
-    @Default(Stu3ResourceType.Flag)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Flag)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Flag) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -187,9 +181,7 @@ class Flag {
 
 class Library {
   
-    @Default(Stu3ResourceType.Library)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Library)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Library) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -245,9 +237,7 @@ class Library {
 
 class List_ {
   
-    @Default(Stu3ResourceType.List_)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.List_)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.List_) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

@@ -158,9 +158,7 @@ class Communication {
   
   
     
-    @Default(R5ResourceType.Communication)
-    @JsonKey(unknownEnumValue: R5ResourceType.Communication)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Communication) R5ResourceType resourceType,
 
     
     
@@ -524,9 +522,7 @@ class CommunicationRequest {
   
   
     
-    @Default(R5ResourceType.CommunicationRequest)
-    @JsonKey(unknownEnumValue: R5ResourceType.CommunicationRequest)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.CommunicationRequest) R5ResourceType resourceType,
 
     
     
@@ -863,9 +859,7 @@ class DeviceDispense {
   
   
     
-    @Default(R5ResourceType.DeviceDispense)
-    @JsonKey(unknownEnumValue: R5ResourceType.DeviceDispense)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.DeviceDispense) R5ResourceType resourceType,
 
     
     
@@ -1231,9 +1225,7 @@ class DeviceRequest {
   
   
     
-    @Default(R5ResourceType.DeviceRequest)
-    @JsonKey(unknownEnumValue: R5ResourceType.DeviceRequest)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.DeviceRequest) R5ResourceType resourceType,
 
     
     
@@ -1609,9 +1601,7 @@ class DeviceUsage {
   
   
     
-    @Default(R5ResourceType.DeviceUsage)
-    @JsonKey(unknownEnumValue: R5ResourceType.DeviceUsage)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.DeviceUsage) R5ResourceType resourceType,
 
     
     
@@ -1938,9 +1928,7 @@ class GuidanceResponse {
   
   
     
-    @Default(R5ResourceType.GuidanceResponse)
-    @JsonKey(unknownEnumValue: R5ResourceType.GuidanceResponse)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.GuidanceResponse) R5ResourceType resourceType,
 
     
     
@@ -2135,9 +2123,7 @@ class InventoryReport {
   
   
     
-    @Default(R5ResourceType.InventoryReport)
-    @JsonKey(unknownEnumValue: R5ResourceType.InventoryReport)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.InventoryReport) R5ResourceType resourceType,
 
     
     
@@ -2520,9 +2506,7 @@ class SupplyDelivery {
   
   
     
-    @Default(R5ResourceType.SupplyDelivery)
-    @JsonKey(unknownEnumValue: R5ResourceType.SupplyDelivery)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.SupplyDelivery) R5ResourceType resourceType,
 
     
     
@@ -2811,9 +2795,7 @@ class SupplyRequest {
   
   
     
-    @Default(R5ResourceType.SupplyRequest)
-    @JsonKey(unknownEnumValue: R5ResourceType.SupplyRequest)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.SupplyRequest) R5ResourceType resourceType,
 
     
     

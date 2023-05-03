@@ -249,9 +249,7 @@ class CapabilityStatement {
   
   
     
-    @Default(R5ResourceType.CapabilityStatement)
-    @JsonKey(unknownEnumValue: R5ResourceType.CapabilityStatement)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.CapabilityStatement) R5ResourceType resourceType,
 
     
     
@@ -2125,9 +2123,7 @@ class CompartmentDefinition {
   
   
     
-    @Default(R5ResourceType.CompartmentDefinition)
-    @JsonKey(unknownEnumValue: R5ResourceType.CompartmentDefinition)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.CompartmentDefinition) R5ResourceType resourceType,
 
     
     
@@ -2580,9 +2576,7 @@ class GraphDefinition {
   
   
     
-    @Default(R5ResourceType.GraphDefinition)
-    @JsonKey(unknownEnumValue: R5ResourceType.GraphDefinition)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.GraphDefinition) R5ResourceType resourceType,
 
     
     
@@ -3321,9 +3315,7 @@ class ImplementationGuide {
   
   
     
-    @Default(R5ResourceType.ImplementationGuide)
-    @JsonKey(unknownEnumValue: R5ResourceType.ImplementationGuide)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.ImplementationGuide) R5ResourceType resourceType,
 
     
     
@@ -4881,9 +4873,7 @@ class MessageDefinition {
   
   
     
-    @Default(R5ResourceType.MessageDefinition)
-    @JsonKey(unknownEnumValue: R5ResourceType.MessageDefinition)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.MessageDefinition) R5ResourceType resourceType,
 
     
     
@@ -5479,9 +5469,7 @@ class OperationDefinition {
   
   
     
-    @Default(R5ResourceType.OperationDefinition)
-    @JsonKey(unknownEnumValue: R5ResourceType.OperationDefinition)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.OperationDefinition) R5ResourceType resourceType,
 
     
     
@@ -6370,9 +6358,7 @@ class SearchParameter {
   
   
     
-    @Default(R5ResourceType.SearchParameter)
-    @JsonKey(unknownEnumValue: R5ResourceType.SearchParameter)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.SearchParameter) R5ResourceType resourceType,
 
     
     
@@ -6900,9 +6886,7 @@ class StructureDefinition {
   
   
     
-    @Default(R5ResourceType.StructureDefinition)
-    @JsonKey(unknownEnumValue: R5ResourceType.StructureDefinition)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.StructureDefinition) R5ResourceType resourceType,
 
     
     
@@ -7617,9 +7601,7 @@ class StructureMap {
   
   
     
-    @Default(R5ResourceType.StructureMap)
-    @JsonKey(unknownEnumValue: R5ResourceType.StructureMap)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.StructureMap) R5ResourceType resourceType,
 
     
     

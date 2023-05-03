@@ -15,9 +15,7 @@ part 'quality_reporting.g.dart';
 
 class Measure {
   
-    @Default(Stu3ResourceType.Measure)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Measure) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -140,9 +138,7 @@ class MeasureSupplementalData {
 
 class MeasureReport {
   
-    @Default(Stu3ResourceType.MeasureReport)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.MeasureReport) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

@@ -89,11 +89,7 @@ class Basic {
   
   
   
-    @Default(R4ResourceType.Basic)
-    @JsonKey(unknownEnumValue: R4ResourceType.Basic)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Basic) R4ResourceType resourceType,
 
     
     
@@ -234,11 +230,7 @@ class Binary {
   
   
   
-    @Default(R4ResourceType.Binary)
-    @JsonKey(unknownEnumValue: R4ResourceType.Binary)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Binary) R4ResourceType resourceType,
 
     
     
@@ -350,11 +342,7 @@ class Bundle {
   
   
   
-    @Default(R4ResourceType.Bundle)
-    @JsonKey(unknownEnumValue: R4ResourceType.Bundle)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Bundle) R4ResourceType resourceType,
 
     
     
@@ -1050,11 +1038,7 @@ class Linkage {
   
   
   
-    @Default(R4ResourceType.Linkage)
-    @JsonKey(unknownEnumValue: R4ResourceType.Linkage)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Linkage) R4ResourceType resourceType,
 
     
     
@@ -1328,11 +1312,7 @@ class MessageHeader {
   
   
   
-    @Default(R4ResourceType.MessageHeader)
-    @JsonKey(unknownEnumValue: R4ResourceType.MessageHeader)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.MessageHeader) R4ResourceType resourceType,
 
     
     
@@ -1832,11 +1812,7 @@ class OperationOutcome {
   
   
   
-    @Default(R4ResourceType.OperationOutcome)
-    @JsonKey(unknownEnumValue: R4ResourceType.OperationOutcome)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.OperationOutcome) R4ResourceType resourceType,
 
     
     
@@ -2083,11 +2059,7 @@ class Parameters {
   
   
   
-    @Default(R4ResourceType.Parameters)
-    @JsonKey(unknownEnumValue: R4ResourceType.Parameters)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Parameters) R4ResourceType resourceType,
 
     
     
@@ -2641,11 +2613,7 @@ class Subscription {
   
   
   
-    @Default(R4ResourceType.Subscription)
-    @JsonKey(unknownEnumValue: R4ResourceType.Subscription)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Subscription) R4ResourceType resourceType,
 
     
     
@@ -2929,11 +2897,7 @@ class SubscriptionStatus {
   
   
     
-    @Default(R4ResourceType.SubscriptionStatus)
-        R4ResourceType resourceType,
-
-    
-    String? id,
+    @Default(R4ResourceType.SubscriptionStatus) String? id,
 
     
     Meta? meta,

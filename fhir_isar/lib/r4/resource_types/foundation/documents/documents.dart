@@ -114,11 +114,7 @@ class CatalogEntry {
   
   
   
-    @Default(R4ResourceType.CatalogEntry)
-    @JsonKey(unknownEnumValue: R4ResourceType.CatalogEntry)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.CatalogEntry) R4ResourceType resourceType,
 
     
     
@@ -452,11 +448,7 @@ class Composition {
   
   
   
-    @Default(R4ResourceType.Composition)
-    @JsonKey(unknownEnumValue: R4ResourceType.Composition)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Composition) R4ResourceType resourceType,
 
     
     
@@ -1170,11 +1162,7 @@ class DocumentManifest {
   
   
   
-    @Default(R4ResourceType.DocumentManifest)
-    @JsonKey(unknownEnumValue: R4ResourceType.DocumentManifest)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.DocumentManifest) R4ResourceType resourceType,
 
     
     
@@ -1511,11 +1499,7 @@ class DocumentReference {
   
   
   
-    @Default(R4ResourceType.DocumentReference)
-    @JsonKey(unknownEnumValue: R4ResourceType.DocumentReference)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.DocumentReference) R4ResourceType resourceType,
 
     
     

@@ -15,9 +15,7 @@ part 'structure.g.dart';
 
 class Media {
   
-    @Default(Dstu2ResourceType.Media)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Media)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.Media) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -50,9 +48,7 @@ class Media {
 
 class Binary {
   
-    @Default(Dstu2ResourceType.Binary)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Binary)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.Binary) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -67,9 +63,7 @@ class Binary {
 
 class Bundle {
   
-    @Default(Dstu2ResourceType.Bundle)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Bundle)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.Bundle) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -169,9 +163,7 @@ class BundleEntryResponse {
 
 class Basic {
   
-    @Default(Dstu2ResourceType.Basic)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Basic)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.Basic) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

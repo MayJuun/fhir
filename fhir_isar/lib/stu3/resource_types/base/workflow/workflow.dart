@@ -15,9 +15,7 @@ part 'workflow.g.dart';
 
 class Appointment {
   
-    @Default(Stu3ResourceType.Appointment)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Appointment)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Appointment) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -72,9 +70,7 @@ class AppointmentParticipant {
 
 class AppointmentResponse {
   
-    @Default(Stu3ResourceType.AppointmentResponse)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.AppointmentResponse)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.AppointmentResponse) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -102,9 +98,7 @@ class AppointmentResponse {
 
 class ProcessRequest {
   
-    @Default(Stu3ResourceType.ProcessRequest)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.ProcessRequest)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.ProcessRequest) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -149,9 +143,7 @@ class ProcessRequestItem {
 
 class ProcessResponse {
   
-    @Default(Stu3ResourceType.ProcessResponse)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.ProcessResponse)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.ProcessResponse) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -191,9 +183,7 @@ class ProcessResponseProcessNote {
 
 class RequestGroup {
   
-    @Default(Stu3ResourceType.RequestGroup)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.RequestGroup)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.RequestGroup) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -290,9 +280,7 @@ class RequestGroupRelatedAction {
 
 class Schedule {
   
-    @Default(Stu3ResourceType.Schedule)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Schedule)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Schedule) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -318,9 +306,7 @@ class Schedule {
 
 class Slot {
   
-    @Default(Stu3ResourceType.Slot)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Slot)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Slot) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -352,9 +338,7 @@ class Slot {
 
 class Task {
   
-    @Default(Stu3ResourceType.Task)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Task)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Task) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

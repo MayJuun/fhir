@@ -279,11 +279,7 @@ class Measure {
   
   
   
-    @Default(R4ResourceType.Measure)
-    @JsonKey(unknownEnumValue: R4ResourceType.Measure)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Measure) R4ResourceType resourceType,
 
     
     
@@ -1230,11 +1226,7 @@ class MeasureReport {
   
   
   
-    @Default(R4ResourceType.MeasureReport)
-    @JsonKey(unknownEnumValue: R4ResourceType.MeasureReport)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.MeasureReport) R4ResourceType resourceType,
 
     
     
@@ -1973,11 +1965,7 @@ class TestReport {
   
   
   
-    @Default(R4ResourceType.TestReport)
-    @JsonKey(unknownEnumValue: R4ResourceType.TestReport)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.TestReport) R4ResourceType resourceType,
 
     
     
@@ -2992,11 +2980,7 @@ class TestScript {
   
   
   
-    @Default(R4ResourceType.TestScript)
-    @JsonKey(unknownEnumValue: R4ResourceType.TestScript)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.TestScript) R4ResourceType resourceType,
 
     
     

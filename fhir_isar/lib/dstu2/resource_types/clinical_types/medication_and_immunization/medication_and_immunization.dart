@@ -15,9 +15,7 @@ part 'medication_and_immunization.g.dart';
 
 class Medication {
   
-    @Default(Dstu2ResourceType.Medication)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Medication)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.Medication) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -93,9 +91,7 @@ class MedicationPackageContent {
 
 class MedicationOrder {
   
-    @Default(Dstu2ResourceType.MedicationOrder)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationOrder)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.MedicationOrder) Dstu2ResourceType resourceType,
     Id? id,
     @JsonKey(name: '_id') Element? idElement,
     Meta? meta,
@@ -161,9 +157,7 @@ class MedicationOrderSubstitution {
 
 class MedicationAdministration {
   
-    @Default(Dstu2ResourceType.MedicationAdministration)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationAdministration)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.MedicationAdministration) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -215,9 +209,7 @@ class MedicationAdministrationDosage {
 
 class MedicationDispense {
   
-    @Default(Dstu2ResourceType.MedicationDispense)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationDispense)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.MedicationDispense) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -277,9 +269,7 @@ class MedicationDispenseDosageInstruction
 
 class MedicationStatement {
   
-    @Default(Dstu2ResourceType.MedicationStatement)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationStatement)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.MedicationStatement) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -336,9 +326,7 @@ class MedicationStatementDosage {
 
 class Immunization {
   
-    @Default(Dstu2ResourceType.Immunization)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Immunization)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.Immunization) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -419,9 +407,7 @@ class ImmunizationVaccinationProtocol {
 
 class ImmunizationRecommendation {
   
-    @Default(Dstu2ResourceType.ImmunizationRecommendation)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.ImmunizationRecommendation)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.ImmunizationRecommendation) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

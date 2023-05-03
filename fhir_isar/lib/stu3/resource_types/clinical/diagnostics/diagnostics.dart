@@ -15,9 +15,7 @@ part 'diagnostics.g.dart';
 
 class BodySite {
   
-    @Default(Stu3ResourceType.BodySite)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.BodySite)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.BodySite) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -42,9 +40,7 @@ class BodySite {
 
 class DiagnosticReport {
   
-    @Default(Stu3ResourceType.DiagnosticReport)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.DiagnosticReport)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.DiagnosticReport) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -97,9 +93,7 @@ class DiagnosticReportImage {
 
 class ImagingManifest {
   
-    @Default(Stu3ResourceType.ImagingManifest)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.ImagingManifest)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.ImagingManifest) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -151,9 +145,7 @@ class ImagingManifestInstance {
 
 class ImagingStudy {
   
-    @Default(Stu3ResourceType.ImagingStudy)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.ImagingStudy)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.ImagingStudy) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -230,9 +222,7 @@ class ImagingStudyInstance {
 
 class Observation {
   
-    @Default(Stu3ResourceType.Observation)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Observation)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Observation) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -330,9 +320,7 @@ class ObservationComponent {
 
 class QuestionnaireResponse {
   
-    @Default(Stu3ResourceType.QuestionnaireResponse)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.QuestionnaireResponse)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.QuestionnaireResponse) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -401,9 +389,7 @@ class QuestionnaireResponseAnswer {
 
 class Sequence {
   
-    @Default(Stu3ResourceType.Sequence)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Sequence)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Sequence) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -519,9 +505,7 @@ class SequenceRepository {
 
 class Specimen {
   
-    @Default(Stu3ResourceType.Specimen)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Specimen)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Specimen) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

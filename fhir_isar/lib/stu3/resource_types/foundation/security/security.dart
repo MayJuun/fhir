@@ -15,9 +15,7 @@ part 'security.g.dart';
 
 class AuditEvent {
   
-    @Default(Stu3ResourceType.AuditEvent)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.AuditEvent)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.AuditEvent) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -112,9 +110,7 @@ class AuditEventDetail {
 
 class Consent {
   
-    @Default(Stu3ResourceType.Consent)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Consent)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Consent) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -208,9 +204,7 @@ class ConsentData1 {
 
 class Provenance {
   
-    @Default(Stu3ResourceType.Provenance)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Provenance)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Provenance) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

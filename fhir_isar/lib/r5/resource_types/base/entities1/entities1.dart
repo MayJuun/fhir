@@ -13,9 +13,7 @@ part 'entities1.g.dart';
 
 class Endpoint {
   
-    @Default(R5ResourceType.Endpoint)
-    @JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Endpoint) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -50,9 +48,7 @@ class Endpoint {
 
 class HealthcareService {
   
-    @Default(R5ResourceType.HealthcareService)
-    @JsonKey(unknownEnumValue: R5ResourceType.HealthcareService)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.HealthcareService) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -107,9 +103,7 @@ class HealthcareServiceEligibility {
 
 class Location {
   
-    @Default(R5ResourceType.Location)
-    @JsonKey(unknownEnumValue: R5ResourceType.Location)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Location) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -162,9 +156,7 @@ class LocationPosition {
 
 class Organization {
   
-    @Default(R5ResourceType.Organization)
-    @JsonKey(unknownEnumValue: R5ResourceType.Organization)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Organization) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -206,9 +198,7 @@ class OrganizationQualification {
 
 class OrganizationAffiliation {
   
-    @Default(R5ResourceType.OrganizationAffiliation)
-    @JsonKey(unknownEnumValue: R5ResourceType.OrganizationAffiliation)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.OrganizationAffiliation) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

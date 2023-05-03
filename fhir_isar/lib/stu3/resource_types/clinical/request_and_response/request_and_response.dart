@@ -15,9 +15,7 @@ part 'request_and_response.g.dart';
 
 class Communication {
   
-    @Default(Stu3ResourceType.Communication)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Communication)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Communication) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -66,9 +64,7 @@ class CommunicationPayload {
 
 class CommunicationRequest {
   
-    @Default(Stu3ResourceType.CommunicationRequest)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.CommunicationRequest)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.CommunicationRequest) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -125,9 +121,7 @@ class CommunicationRequestRequester {
 
 class DeviceRequest {
   
-    @Default(Stu3ResourceType.DeviceRequest)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceRequest)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.DeviceRequest) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -178,9 +172,7 @@ class DeviceRequestRequester {
 
 class DeviceUseStatement {
   
-    @Default(Stu3ResourceType.DeviceUseStatement)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceUseStatement)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.DeviceUseStatement) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -212,9 +204,7 @@ class DeviceUseStatement {
 
 class SupplyDelivery {
   
-    @Default(Stu3ResourceType.SupplyDelivery)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.SupplyDelivery)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.SupplyDelivery) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -253,9 +243,7 @@ class SupplyDeliverySuppliedItem {
 
 class SupplyRequest {
   
-    @Default(Stu3ResourceType.SupplyRequest)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.SupplyRequest)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.SupplyRequest) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

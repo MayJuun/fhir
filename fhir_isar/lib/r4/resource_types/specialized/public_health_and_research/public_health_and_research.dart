@@ -158,11 +158,7 @@ class ResearchStudy {
   
   
   
-    @Default(R4ResourceType.ResearchStudy)
-    @JsonKey(unknownEnumValue: R4ResourceType.ResearchStudy)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.ResearchStudy) R4ResourceType resourceType,
 
     
     
@@ -605,11 +601,7 @@ class ResearchSubject {
   
   
   
-    @Default(R4ResourceType.ResearchSubject)
-    @JsonKey(unknownEnumValue: R4ResourceType.ResearchSubject)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.ResearchSubject) R4ResourceType resourceType,
 
     
     

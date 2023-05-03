@@ -157,11 +157,7 @@ class CarePlan {
   
   
   
-    @Default(R4ResourceType.CarePlan)
-    @JsonKey(unknownEnumValue: R4ResourceType.CarePlan)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.CarePlan) R4ResourceType resourceType,
 
     
     
@@ -810,11 +806,7 @@ class CareTeam {
   
   
   
-    @Default(R4ResourceType.CareTeam)
-    @JsonKey(unknownEnumValue: R4ResourceType.CareTeam)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.CareTeam) R4ResourceType resourceType,
 
     
     
@@ -1147,11 +1139,7 @@ class Goal {
   
   
   
-    @Default(R4ResourceType.Goal)
-    @JsonKey(unknownEnumValue: R4ResourceType.Goal)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Goal) R4ResourceType resourceType,
 
     
     
@@ -1646,11 +1634,7 @@ class NutritionOrder {
   
   
   
-    @Default(R4ResourceType.NutritionOrder)
-    @JsonKey(unknownEnumValue: R4ResourceType.NutritionOrder)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.NutritionOrder) R4ResourceType resourceType,
 
     
     
@@ -2561,11 +2545,7 @@ class RequestGroup {
   
   
   
-    @Default(R4ResourceType.RequestGroup)
-    @JsonKey(unknownEnumValue: R4ResourceType.RequestGroup)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.RequestGroup) R4ResourceType resourceType,
 
     
     
@@ -3299,11 +3279,7 @@ class RiskAssessment {
   
   
   
-    @Default(R4ResourceType.RiskAssessment)
-    @JsonKey(unknownEnumValue: R4ResourceType.RiskAssessment)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.RiskAssessment) R4ResourceType resourceType,
 
     
     
@@ -3796,11 +3772,7 @@ class ServiceRequest {
   
   
   
-    @Default(R4ResourceType.ServiceRequest)
-    @JsonKey(unknownEnumValue: R4ResourceType.ServiceRequest)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.ServiceRequest) R4ResourceType resourceType,
 
     
     
@@ -4166,11 +4138,7 @@ class VisionPrescription {
   
   
   
-    @Default(R4ResourceType.VisionPrescription)
-    @JsonKey(unknownEnumValue: R4ResourceType.VisionPrescription)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.VisionPrescription) R4ResourceType resourceType,
 
     
     

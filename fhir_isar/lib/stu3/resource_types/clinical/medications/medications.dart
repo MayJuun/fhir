@@ -15,9 +15,7 @@ part 'medications.g.dart';
 
 class Immunization {
   
-    @Default(Stu3ResourceType.Immunization)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Immunization)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Immunization) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -101,9 +99,7 @@ class ImmunizationVaccinationProtocol {
 
 class ImmunizationRecommendation {
   
-    @Default(Stu3ResourceType.ImmunizationRecommendation)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.ImmunizationRecommendation)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.ImmunizationRecommendation) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -174,9 +170,7 @@ class MedicationBatch {
 
 class MedicationAdministration {
   
-    @Default(Stu3ResourceType.MedicationAdministration)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.MedicationAdministration)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.MedicationAdministration) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -225,9 +219,7 @@ class MedicationAdministrationPerformer
 
 class MedicationDispense {
   
-    @Default(Stu3ResourceType.MedicationDispense)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.MedicationDispense)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.MedicationDispense) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -290,9 +282,7 @@ class MedicationDispenseSubstitution {
 
 class MedicationRequest {
   
-    @Default(Stu3ResourceType.MedicationRequest)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.MedicationRequest)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.MedicationRequest) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -356,9 +346,7 @@ class MedicationRequestDispenseRequest {
 
 class MedicationStatement {
   
-    @Default(Stu3ResourceType.MedicationStatement)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.MedicationStatement)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.MedicationStatement) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

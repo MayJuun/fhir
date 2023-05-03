@@ -15,9 +15,7 @@ part 'terminology.g.dart';
 
 class ValueSet {
   
-    @Default(Dstu2ResourceType.ValueSet)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.ValueSet)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.ValueSet) Dstu2ResourceType resourceType,
     Id? id,
     @JsonKey(name: '_id') Element? idElement,
     Meta? meta,
@@ -240,9 +238,7 @@ class ValueSetExpansionContains {
 
 class ConceptMap {
   
-    @Default(Dstu2ResourceType.ConceptMap)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.ConceptMap)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.ConceptMap) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -339,9 +335,7 @@ class ConceptMapTargetDependsOn {
 
 class NamingSystem {
   
-    @Default(Dstu2ResourceType.NamingSystem)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.NamingSystem)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.NamingSystem) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

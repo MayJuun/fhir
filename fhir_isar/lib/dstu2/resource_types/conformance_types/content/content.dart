@@ -15,9 +15,7 @@ part 'content.g.dart';
 
 class StructureDefinition {
   
-    @Default(Dstu2ResourceType.StructureDefinition)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.StructureDefinition)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.StructureDefinition) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -119,9 +117,7 @@ class StructureDefinitionDifferential {
 
 class DataElement {
   
-    @Default(Dstu2ResourceType.DataElement)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.DataElement)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.DataElement) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

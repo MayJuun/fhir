@@ -15,9 +15,7 @@ part 'billing.g.dart';
 
 class Account {
   
-    @Default(Dstu2ResourceType.Account)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Account)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.Account) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -47,9 +45,7 @@ class Account {
 
 class Claim {
   
-    @Default(Dstu2ResourceType.Claim)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Claim)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.Claim) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -224,9 +220,7 @@ class ClaimMissingTeeth {
 
 class ClaimResponse {
   
-    @Default(Dstu2ResourceType.ClaimResponse)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.ClaimResponse)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.ClaimResponse) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

@@ -108,11 +108,7 @@ class AuditEvent {
   
   
   
-    @Default(R4ResourceType.AuditEvent)
-    @JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.AuditEvent) R4ResourceType resourceType,
 
     
     
@@ -904,11 +900,7 @@ class Consent {
   
   
   
-    @Default(R4ResourceType.Consent)
-    @JsonKey(unknownEnumValue: R4ResourceType.Consent)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Consent) R4ResourceType resourceType,
 
     
     
@@ -1633,11 +1625,7 @@ class Provenance {
   
   
   
-    @Default(R4ResourceType.Provenance)
-    @JsonKey(unknownEnumValue: R4ResourceType.Provenance)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Provenance) R4ResourceType resourceType,
 
     
     

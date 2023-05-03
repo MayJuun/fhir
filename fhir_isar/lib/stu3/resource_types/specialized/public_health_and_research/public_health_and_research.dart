@@ -15,9 +15,7 @@ part 'public_health_and_research.g.dart';
 
 class ResearchStudy {
   
-    @Default(Stu3ResourceType.ResearchStudy)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.ResearchStudy)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.ResearchStudy) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -66,9 +64,7 @@ class ResearchStudyArm {
 
 class ResearchSubject {
   
-    @Default(Stu3ResourceType.ResearchSubject)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.ResearchSubject)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.ResearchSubject) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

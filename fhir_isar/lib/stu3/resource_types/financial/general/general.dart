@@ -15,9 +15,7 @@ part 'general.g.dart';
 
 class Account {
   
-    @Default(Stu3ResourceType.Account)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Account)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Account) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -65,9 +63,7 @@ class AccountGuarantor {
 
 class ChargeItem {
   
-    @Default(Stu3ResourceType.ChargeItem)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.ChargeItem) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -121,9 +117,7 @@ class ChargeItemParticipant {
 
 class Contract {
   
-    @Default(Stu3ResourceType.Contract)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Contract) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -262,9 +256,7 @@ class ContractRule {
 
 class ExplanationOfBenefit {
   
-    @Default(Stu3ResourceType.ExplanationOfBenefit)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.ExplanationOfBenefit) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

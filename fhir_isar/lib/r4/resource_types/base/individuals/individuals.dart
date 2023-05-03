@@ -13,9 +13,7 @@ part 'individuals.g.dart';
 
 class Group {
   
-    @Default(R4ResourceType.Group)
-    @JsonKey(unknownEnumValue: R4ResourceType.Group)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Group) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -76,9 +74,7 @@ class GroupMember {
 
 class Patient {
   
-    @Default(R4ResourceType.Patient)
-    @JsonKey(unknownEnumValue: R4ResourceType.Patient)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Patient) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -159,9 +155,7 @@ class PatientLink {
 
 class Person {
   
-    @Default(R4ResourceType.Person)
-    @JsonKey(unknownEnumValue: R4ResourceType.Person)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Person) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -201,9 +195,7 @@ class PersonLink {
 
 class Practitioner {
   
-    @Default(R4ResourceType.Practitioner)
-    @JsonKey(unknownEnumValue: R4ResourceType.Practitioner)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Practitioner) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -244,9 +236,7 @@ class PractitionerQualification {
 
 class PractitionerRole {
   
-    @Default(R4ResourceType.PractitionerRole)
-    @JsonKey(unknownEnumValue: R4ResourceType.PractitionerRole)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.PractitionerRole) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -306,9 +296,7 @@ class PractitionerRoleNotAvailable {
 
 class RelatedPerson {
   
-    @Default(R4ResourceType.RelatedPerson)
-    @JsonKey(unknownEnumValue: R4ResourceType.RelatedPerson)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.RelatedPerson) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,

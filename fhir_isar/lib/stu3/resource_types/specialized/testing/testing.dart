@@ -15,9 +15,7 @@ part 'testing.g.dart';
 
 class TestReport {
   
-    @Default(Stu3ResourceType.TestReport)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.TestReport)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.TestReport) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -126,9 +124,7 @@ class TestReportAction2 {
 
 class TestScript {
   
-    @Default(Stu3ResourceType.TestScript)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.TestScript)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.TestScript) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

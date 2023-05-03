@@ -181,9 +181,7 @@ class Composition {
   
   
     
-    @Default(R5ResourceType.Composition)
-    @JsonKey(unknownEnumValue: R5ResourceType.Composition)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Composition) R5ResourceType resourceType,
 
     
     
@@ -799,9 +797,7 @@ class DocumentManifest {
   
   
     
-    @Default(R5ResourceType.DocumentManifest)
-    @JsonKey(unknownEnumValue: R5ResourceType.DocumentManifest)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.DocumentManifest) R5ResourceType resourceType,
 
     
     
@@ -1134,9 +1130,7 @@ class DocumentReference {
   
   
     
-    @Default(R5ResourceType.DocumentReference)
-    @JsonKey(unknownEnumValue: R5ResourceType.DocumentReference)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.DocumentReference) R5ResourceType resourceType,
 
     
     

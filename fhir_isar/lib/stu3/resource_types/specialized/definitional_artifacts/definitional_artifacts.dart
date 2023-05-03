@@ -15,9 +15,7 @@ part 'definitional_artifacts.g.dart';
 
 class ActivityDefinition {
   
-    @Default(Stu3ResourceType.ActivityDefinition)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.ActivityDefinition)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.ActivityDefinition) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -108,9 +106,7 @@ class ActivityDefinitionDynamicValue {
 
 class PlanDefinition {
   
-    @Default(Stu3ResourceType.PlanDefinition)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.PlanDefinition)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.PlanDefinition) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -278,9 +274,7 @@ class PlanDefinitionDynamicValue {
 
 class Questionnaire {
   
-    @Default(Stu3ResourceType.Questionnaire)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.Questionnaire)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.Questionnaire) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -423,9 +417,7 @@ class QuestionnaireOption {
 
 class ServiceDefinition {
   
-    @Default(Stu3ResourceType.ServiceDefinition)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.ServiceDefinition)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.ServiceDefinition) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

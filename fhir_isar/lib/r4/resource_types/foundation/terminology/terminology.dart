@@ -207,11 +207,7 @@ class CodeSystem {
   
   
   
-    @Default(R4ResourceType.CodeSystem)
-    @JsonKey(unknownEnumValue: R4ResourceType.CodeSystem)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.CodeSystem) R4ResourceType resourceType,
 
     
     
@@ -1216,11 +1212,7 @@ class ConceptMap {
   
   
   
-    @Default(R4ResourceType.ConceptMap)
-    @JsonKey(unknownEnumValue: R4ResourceType.ConceptMap)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.ConceptMap) R4ResourceType resourceType,
 
     
     
@@ -2152,11 +2144,7 @@ class NamingSystem {
   
   
   
-    @Default(R4ResourceType.NamingSystem)
-    @JsonKey(unknownEnumValue: R4ResourceType.NamingSystem)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.NamingSystem) R4ResourceType resourceType,
 
     
     
@@ -2616,11 +2604,7 @@ class TerminologyCapabilities {
   
   
   
-    @Default(R4ResourceType.TerminologyCapabilities)
-    @JsonKey(unknownEnumValue: R4ResourceType.TerminologyCapabilities)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.TerminologyCapabilities) R4ResourceType resourceType,
 
     
     
@@ -3383,11 +3367,7 @@ class ValueSet {
   
   
   
-    @Default(R4ResourceType.ValueSet)
-    @JsonKey(unknownEnumValue: R4ResourceType.ValueSet)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.ValueSet) R4ResourceType resourceType,
 
     
     

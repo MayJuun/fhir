@@ -96,9 +96,7 @@ class FormularyItem {
   
   
     
-    @Default(R5ResourceType.FormularyItem)
-    @JsonKey(unknownEnumValue: R5ResourceType.FormularyItem)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.FormularyItem) R5ResourceType resourceType,
 
     
     
@@ -326,9 +324,7 @@ class Immunization {
   
   
     
-    @Default(R5ResourceType.Immunization)
-    @JsonKey(unknownEnumValue: R5ResourceType.Immunization)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Immunization) R5ResourceType resourceType,
 
     
     
@@ -951,9 +947,7 @@ class ImmunizationEvaluation {
   
   
     
-    @Default(R5ResourceType.ImmunizationEvaluation)
-    @JsonKey(unknownEnumValue: R5ResourceType.ImmunizationEvaluation)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.ImmunizationEvaluation) R5ResourceType resourceType,
 
     
     
@@ -1133,9 +1127,7 @@ class ImmunizationRecommendation {
   
   
     
-    @Default(R5ResourceType.ImmunizationRecommendation)
-    @JsonKey(unknownEnumValue: R5ResourceType.ImmunizationRecommendation)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.ImmunizationRecommendation) R5ResourceType resourceType,
 
     
     
@@ -1539,9 +1531,7 @@ class Medication {
   
   
     
-    @Default(R5ResourceType.Medication)
-    @JsonKey(unknownEnumValue: R5ResourceType.Medication)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Medication) R5ResourceType resourceType,
 
     
     
@@ -1981,9 +1971,7 @@ class MedicationAdministration {
   
   
     
-    @Default(R5ResourceType.MedicationAdministration)
-    @JsonKey(unknownEnumValue: R5ResourceType.MedicationAdministration)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.MedicationAdministration) R5ResourceType resourceType,
 
     
     
@@ -2499,9 +2487,7 @@ class MedicationDispense {
   
   
     
-    @Default(R5ResourceType.MedicationDispense)
-    @JsonKey(unknownEnumValue: R5ResourceType.MedicationDispense)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.MedicationDispense) R5ResourceType resourceType,
 
     
     
@@ -3082,9 +3068,7 @@ class MedicationKnowledge {
   
   
     
-    @Default(R5ResourceType.MedicationKnowledge)
-    @JsonKey(unknownEnumValue: R5ResourceType.MedicationKnowledge)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.MedicationKnowledge) R5ResourceType resourceType,
 
     
     
@@ -5057,9 +5041,7 @@ class MedicationRequest {
   
   
     
-    @Default(R5ResourceType.MedicationRequest)
-    @JsonKey(unknownEnumValue: R5ResourceType.MedicationRequest)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.MedicationRequest) R5ResourceType resourceType,
 
     
     
@@ -5848,9 +5830,7 @@ class MedicationUsage {
   
   
     
-    @Default(R5ResourceType.MedicationUsage)
-    @JsonKey(unknownEnumValue: R5ResourceType.MedicationUsage)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.MedicationUsage) R5ResourceType resourceType,
 
     
     

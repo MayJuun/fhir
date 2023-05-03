@@ -13,9 +13,7 @@ part 'support.g.dart';
 
 class Coverage {
   
-    @Default(R4ResourceType.Coverage)
-    @JsonKey(unknownEnumValue: R4ResourceType.Coverage)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Coverage) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -89,9 +87,7 @@ class CoverageException {
 
 class CoverageEligibilityRequest {
   
-    @Default(R4ResourceType.CoverageEligibilityRequest)
-    @JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityRequest)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.CoverageEligibilityRequest) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -185,9 +181,7 @@ class CoverageEligibilityResponseBenefit
 
 class EnrollmentResponse {
   
-    @Default(R4ResourceType.EnrollmentResponse)
-    @JsonKey(unknownEnumValue: R4ResourceType.EnrollmentResponse)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.EnrollmentResponse) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,

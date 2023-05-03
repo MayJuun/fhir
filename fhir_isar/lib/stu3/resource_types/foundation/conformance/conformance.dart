@@ -15,9 +15,7 @@ part 'conformance.g.dart';
 
 class CapabilityStatement {
   
-    @Default(Stu3ResourceType.CapabilityStatement)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.CapabilityStatement)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.CapabilityStatement) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -231,9 +229,7 @@ class CapabilityStatementDocument {
 
 class CompartmentDefinition {
   
-    @Default(Stu3ResourceType.CompartmentDefinition)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.CompartmentDefinition)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.CompartmentDefinition) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -286,9 +282,7 @@ class CompartmentDefinitionResource {
 
 class DataElement {
   
-    @Default(Stu3ResourceType.DataElement)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.DataElement)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.DataElement) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -343,9 +337,7 @@ class DataElementMapping {
 
 class GraphDefinition {
   
-    @Default(Stu3ResourceType.GraphDefinition)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.GraphDefinition)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.GraphDefinition) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -427,9 +419,7 @@ class GraphDefinitionCompartment {
 
 class ImplementationGuide {
   
-    @Default(Stu3ResourceType.ImplementationGuide)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.ImplementationGuide)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.ImplementationGuide) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -536,9 +526,7 @@ class ImplementationGuidePage {
 
 class MessageDefinition {
   
-    @Default(Stu3ResourceType.MessageDefinition)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.MessageDefinition)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.MessageDefinition) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -652,9 +640,7 @@ class OperationDefinitionOverload {
 
 class SearchParameter {
   
-    @Default(Stu3ResourceType.SearchParameter)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.SearchParameter)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.SearchParameter) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -722,9 +708,7 @@ class SearchParameterComponent {
 
 class StructureDefinition {
   
-    @Default(Stu3ResourceType.StructureDefinition)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.StructureDefinition)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.StructureDefinition) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -813,9 +797,7 @@ class StructureDefinitionDifferential {
 
 class StructureMap {
   
-    @Default(Stu3ResourceType.StructureMap)
-    @JsonKey(unknownEnumValue: Stu3ResourceType.StructureMap)
-        Stu3ResourceType resourceType,
+    @Default(Stu3ResourceType.StructureMap) Stu3ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

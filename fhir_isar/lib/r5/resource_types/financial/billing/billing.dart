@@ -188,9 +188,7 @@ class Claim {
   
   
     
-    @Default(R5ResourceType.Claim)
-    @JsonKey(unknownEnumValue: R5ResourceType.Claim)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Claim) R5ResourceType resourceType,
 
     
     
@@ -2041,9 +2039,7 @@ class ClaimResponse {
   
   
     
-    @Default(R5ResourceType.ClaimResponse)
-    @JsonKey(unknownEnumValue: R5ResourceType.ClaimResponse)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.ClaimResponse) R5ResourceType resourceType,
 
     
     
@@ -3835,9 +3831,7 @@ class Invoice {
   
   
     
-    @Default(R5ResourceType.Invoice)
-    @JsonKey(unknownEnumValue: R5ResourceType.Invoice)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Invoice) R5ResourceType resourceType,
 
     
     

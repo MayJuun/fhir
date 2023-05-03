@@ -15,9 +15,7 @@ part 'general.g.dart';
 
 class AllergyIntolerance {
   
-    @Default(Dstu2ResourceType.AllergyIntolerance)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.AllergyIntolerance)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.AllergyIntolerance) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -80,9 +78,7 @@ class AllergyIntoleranceReaction {
 
 class Condition {
   
-    @Default(Dstu2ResourceType.Condition)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Condition)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.Condition) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -152,9 +148,7 @@ class ConditionEvidence {
 
 class Procedure {
   
-    @Default(Dstu2ResourceType.Procedure)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Procedure)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.Procedure) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -217,9 +211,7 @@ class ProcedureFocalDevice {
 
 class ClinicalImpression {
   
-    @Default(Dstu2ResourceType.ClinicalImpression)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.ClinicalImpression)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.ClinicalImpression) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -279,9 +271,7 @@ class ClinicalImpressionRuledOut {
 
 class FamilyMemberHistory {
   
-    @Default(Dstu2ResourceType.FamilyMemberHistory)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.FamilyMemberHistory)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.FamilyMemberHistory) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -344,9 +334,7 @@ class FamilyMemberHistoryCondition {
 
 class RiskAssessment {
   
-    @Default(Dstu2ResourceType.RiskAssessment)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.RiskAssessment)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.RiskAssessment) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -392,9 +380,7 @@ class RiskAssessmentPrediction {
 
 class DetectedIssue {
   
-    @Default(Dstu2ResourceType.DetectedIssue)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.DetectedIssue)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.DetectedIssue) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

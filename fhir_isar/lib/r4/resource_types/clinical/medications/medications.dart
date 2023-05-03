@@ -168,11 +168,7 @@ class Immunization {
   
   
   
-    @Default(R4ResourceType.Immunization)
-    @JsonKey(unknownEnumValue: R4ResourceType.Immunization)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Immunization) R4ResourceType resourceType,
 
     
     
@@ -901,11 +897,7 @@ class ImmunizationEvaluation {
   
   
   
-    @Default(R4ResourceType.ImmunizationEvaluation)
-    @JsonKey(unknownEnumValue: R4ResourceType.ImmunizationEvaluation)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.ImmunizationEvaluation) R4ResourceType resourceType,
 
     
     
@@ -1136,11 +1128,7 @@ class ImmunizationRecommendation {
   
   
   
-    @Default(R4ResourceType.ImmunizationRecommendation)
-    @JsonKey(unknownEnumValue: R4ResourceType.ImmunizationRecommendation)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.ImmunizationRecommendation) R4ResourceType resourceType,
 
     
     
@@ -1746,11 +1734,7 @@ class MedicationAdministration {
   
   
   
-    @Default(R4ResourceType.MedicationAdministration)
-    @JsonKey(unknownEnumValue: R4ResourceType.MedicationAdministration)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.MedicationAdministration) R4ResourceType resourceType,
 
     
     
@@ -2159,11 +2143,7 @@ class MedicationDispense {
   
   
   
-    @Default(R4ResourceType.MedicationDispense)
-    @JsonKey(unknownEnumValue: R4ResourceType.MedicationDispense)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.MedicationDispense) R4ResourceType resourceType,
 
     
     
@@ -2670,11 +2650,7 @@ class MedicationKnowledge {
   
   
   
-    @Default(R4ResourceType.MedicationKnowledge)
-    @JsonKey(unknownEnumValue: R4ResourceType.MedicationKnowledge)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.MedicationKnowledge) R4ResourceType resourceType,
 
     
     
@@ -3849,11 +3825,7 @@ class MedicationRequest {
   
   
   
-    @Default(R4ResourceType.MedicationRequest)
-    @JsonKey(unknownEnumValue: R4ResourceType.MedicationRequest)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.MedicationRequest) R4ResourceType resourceType,
 
     
     
@@ -4493,11 +4465,7 @@ class MedicationStatement {
   
   
   
-    @Default(R4ResourceType.MedicationStatement)
-    @JsonKey(unknownEnumValue: R4ResourceType.MedicationStatement)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.MedicationStatement) R4ResourceType resourceType,
 
     
     

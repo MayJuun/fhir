@@ -99,11 +99,7 @@ class BodyStructure {
   
   
   
-    @Default(R4ResourceType.BodyStructure)
-    @JsonKey(unknownEnumValue: R4ResourceType.BodyStructure)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.BodyStructure) R4ResourceType resourceType,
 
     
     
@@ -350,11 +346,7 @@ class DiagnosticReport {
   
   
   
-    @Default(R4ResourceType.DiagnosticReport)
-    @JsonKey(unknownEnumValue: R4ResourceType.DiagnosticReport)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.DiagnosticReport) R4ResourceType resourceType,
 
     
     
@@ -748,11 +740,7 @@ class ImagingStudy {
   
   
   
-    @Default(R4ResourceType.ImagingStudy)
-    @JsonKey(unknownEnumValue: R4ResourceType.ImagingStudy)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.ImagingStudy) R4ResourceType resourceType,
 
     
     
@@ -1426,11 +1414,7 @@ class Media {
   
   
   
-    @Default(R4ResourceType.Media)
-    @JsonKey(unknownEnumValue: R4ResourceType.Media)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Media) R4ResourceType resourceType,
 
     
     
@@ -1738,11 +1722,7 @@ class MolecularSequence {
   
   
   
-    @Default(R4ResourceType.MolecularSequence)
-    @JsonKey(unknownEnumValue: R4ResourceType.MolecularSequence)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.MolecularSequence) R4ResourceType resourceType,
 
     
     
@@ -3140,11 +3120,7 @@ class Observation {
   
   
   
-    @Default(R4ResourceType.Observation)
-    @JsonKey(unknownEnumValue: R4ResourceType.Observation)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Observation) R4ResourceType resourceType,
 
     
     
@@ -3846,11 +3822,7 @@ class QuestionnaireResponse {
   
   
   
-    @Default(R4ResourceType.QuestionnaireResponse)
-    @JsonKey(unknownEnumValue: R4ResourceType.QuestionnaireResponse)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.QuestionnaireResponse) R4ResourceType resourceType,
 
     
     
@@ -4381,11 +4353,7 @@ class Specimen {
   
   
   
-    @Default(R4ResourceType.Specimen)
-    @JsonKey(unknownEnumValue: R4ResourceType.Specimen)
-
-        
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Specimen) R4ResourceType resourceType,
 
     
     

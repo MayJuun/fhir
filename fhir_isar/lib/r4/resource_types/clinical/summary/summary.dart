@@ -13,9 +13,7 @@ part 'summary.g.dart';
 
 class AdverseEvent {
   
-    @Default(R4ResourceType.AdverseEvent)
-    @JsonKey(unknownEnumValue: R4ResourceType.AdverseEvent)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.AdverseEvent) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -78,9 +76,7 @@ class AdverseEventCausality {
 
 class AllergyIntolerance {
   
-    @Default(R4ResourceType.AllergyIntolerance)
-    @JsonKey(unknownEnumValue: R4ResourceType.AllergyIntolerance)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.AllergyIntolerance) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -141,9 +137,7 @@ class AllergyIntoleranceReaction {
 
 class ClinicalImpression {
   
-    @Default(R4ResourceType.ClinicalImpression)
-    @JsonKey(unknownEnumValue: R4ResourceType.ClinicalImpression)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.ClinicalImpression) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -208,9 +202,7 @@ class ClinicalImpressionFinding {
 
 class Condition {
   
-    @Default(R4ResourceType.Condition)
-    @JsonKey(unknownEnumValue: R4ResourceType.Condition)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Condition) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -277,9 +269,7 @@ class ConditionEvidence {
 
 class DetectedIssue {
   
-    @Default(R4ResourceType.DetectedIssue)
-    @JsonKey(unknownEnumValue: R4ResourceType.DetectedIssue)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.DetectedIssue) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -335,9 +325,7 @@ class DetectedIssueMitigation {
 
 class FamilyMemberHistory {
   
-    @Default(R4ResourceType.FamilyMemberHistory)
-    @JsonKey(unknownEnumValue: R4ResourceType.FamilyMemberHistory)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.FamilyMemberHistory) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -408,9 +396,7 @@ class FamilyMemberHistoryCondition {
 
 class Procedure {
   
-    @Default(R4ResourceType.Procedure)
-    @JsonKey(unknownEnumValue: R4ResourceType.Procedure)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Procedure) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,

@@ -15,9 +15,7 @@ part 'other.g.dart';
 
 class ExplanationOfBenefit {
   
-    @Default(Dstu2ResourceType.ExplanationOfBenefit)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.ExplanationOfBenefit) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

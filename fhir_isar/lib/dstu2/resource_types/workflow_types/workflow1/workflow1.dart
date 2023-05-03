@@ -15,9 +15,7 @@ part 'workflow1.g.dart';
 
 class Order {
   
-    @Default(Dstu2ResourceType.Order)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Order)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.Order) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -51,9 +49,7 @@ class OrderWhen {
 
 class OrderResponse {
   
-    @Default(Dstu2ResourceType.OrderResponse)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.OrderResponse)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.OrderResponse) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -76,9 +72,7 @@ class OrderResponse {
 
 class CommunicationRequest {
   
-    @Default(Dstu2ResourceType.CommunicationRequest)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.CommunicationRequest)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.CommunicationRequest) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -124,9 +118,7 @@ class CommunicationRequestPayload {
 
 class DeviceUseRequest {
   
-    @Default(Dstu2ResourceType.DeviceUseRequest)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseRequest)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.DeviceUseRequest) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -162,9 +154,7 @@ class DeviceUseRequest {
 
 class DeviceUseStatement {
   
-    @Default(Dstu2ResourceType.DeviceUseStatement)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseStatement)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.DeviceUseStatement) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

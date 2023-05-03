@@ -15,9 +15,7 @@ part 'scheduling.g.dart';
 
 class Appointment {
   
-    @Default(Dstu2ResourceType.Appointment)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.Appointment) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -69,9 +67,7 @@ class AppointmentParticipant {
 
 class AppointmentResponse {
   
-    @Default(Dstu2ResourceType.AppointmentResponse)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.AppointmentResponse) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -100,9 +96,7 @@ class AppointmentResponse {
 
 class Schedule {
   
-    @Default(Dstu2ResourceType.Schedule)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.Schedule) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -124,9 +118,7 @@ class Schedule {
 
 class Slot {
   
-    @Default(Dstu2ResourceType.Slot)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.Slot) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

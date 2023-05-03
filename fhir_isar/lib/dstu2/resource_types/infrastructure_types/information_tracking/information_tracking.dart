@@ -15,9 +15,7 @@ part 'information_tracking.g.dart';
 
 class Questionnaire {
   
-    @Default(Dstu2ResourceType.Questionnaire)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Questionnaire)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.Questionnaire) Dstu2ResourceType resourceType,
     Id? id,
     @JsonKey(name: '_id') Element? idElement,
     Meta? meta,
@@ -86,9 +84,7 @@ class QuestionnaireGroupQuestion {
 
 class QuestionnaireResponse {
   
-    @Default(Dstu2ResourceType.QuestionnaireResponse)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.QuestionnaireResponse)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.QuestionnaireResponse) Dstu2ResourceType resourceType,
     Id? id,
     @JsonKey(name: '_id') Element? idElement,
     Meta? meta,
@@ -187,9 +183,7 @@ class ProvenanceAgentRelatedAgent {
 
 class AuditEvent {
   
-    @Default(Dstu2ResourceType.AuditEvent)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.AuditEvent)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.AuditEvent) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

@@ -13,9 +13,7 @@ part 'request_and_response.g.dart';
 
 class Communication {
   
-    @Default(R4ResourceType.Communication)
-    @JsonKey(unknownEnumValue: R4ResourceType.Communication)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Communication) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -71,9 +69,7 @@ class CommunicationPayload {
 
 class CommunicationRequest {
   
-    @Default(R4ResourceType.CommunicationRequest)
-    @JsonKey(unknownEnumValue: R4ResourceType.CommunicationRequest)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.CommunicationRequest) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -129,9 +125,7 @@ class CommunicationRequestPayload {
 
 class DeviceRequest {
   
-    @Default(R4ResourceType.DeviceRequest)
-    @JsonKey(unknownEnumValue: R4ResourceType.DeviceRequest)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.DeviceRequest) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -194,9 +188,7 @@ class DeviceRequestParameter {
 
 class DeviceUseStatement {
   
-    @Default(R4ResourceType.DeviceUseStatement)
-    @JsonKey(unknownEnumValue: R4ResourceType.DeviceUseStatement)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.DeviceUseStatement) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -230,9 +222,7 @@ class DeviceUseStatement {
 
 class GuidanceResponse {
   
-    @Default(R4ResourceType.GuidanceResponse)
-    @JsonKey(unknownEnumValue: R4ResourceType.GuidanceResponse)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.GuidanceResponse) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -269,9 +259,7 @@ class GuidanceResponse {
 
 class SupplyDelivery {
   
-    @Default(R4ResourceType.SupplyDelivery)
-    @JsonKey(unknownEnumValue: R4ResourceType.SupplyDelivery)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.SupplyDelivery) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -313,9 +301,7 @@ class SupplyDeliverySuppliedItem {
 
 class SupplyRequest {
   
-    @Default(R4ResourceType.SupplyRequest)
-    @JsonKey(unknownEnumValue: R4ResourceType.SupplyRequest)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.SupplyRequest) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,

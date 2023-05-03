@@ -15,9 +15,7 @@ part 'workflow2.g.dart';
 
 class ProcessRequest {
   
-    @Default(Dstu2ResourceType.ProcessRequest)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessRequest)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.ProcessRequest) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -57,9 +55,7 @@ class ProcessRequestItem {
 
 class ProcessResponse {
   
-    @Default(Dstu2ResourceType.ProcessResponse)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessResponse)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.ProcessResponse) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -96,9 +92,7 @@ class ProcessResponseNotes {
 
 class SupplyRequest {
   
-    @Default(Dstu2ResourceType.SupplyRequest)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyRequest)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.SupplyRequest) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -137,9 +131,7 @@ class SupplyRequestWhen {
 
 class SupplyDelivery {
   
-    @Default(Dstu2ResourceType.SupplyDelivery)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyDelivery)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.SupplyDelivery) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

@@ -15,9 +15,7 @@ part 'operations_control.g.dart';
 
 class Conformance {
   
-    @Default(Dstu2ResourceType.Conformance)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.Conformance) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -58,9 +56,7 @@ class Conformance {
 
 class CapabilityStatement {
   
-    @Default(Dstu2ResourceType.CapabilityStatement)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.CapabilityStatement) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -306,9 +302,7 @@ class ConformanceResourceSearchParam {
 
 class OperationDefinition {
   
-    @Default(Dstu2ResourceType.OperationDefinition)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.OperationDefinition) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

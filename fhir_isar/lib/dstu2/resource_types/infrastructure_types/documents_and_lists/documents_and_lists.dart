@@ -17,9 +17,7 @@ part 'documents_and_lists.g.dart';
 
 class Composition {
   
-    @Default(Dstu2ResourceType.Composition)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.Composition)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.Composition) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -97,9 +95,7 @@ class CompositionSection {
 
 class DocumentManifest {
   
-    @Default(Dstu2ResourceType.DocumentManifest)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentManifest)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.DocumentManifest) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -152,9 +148,7 @@ class DocumentManifestRelated {
 
 class DocumentReference {
   
-    @Default(Dstu2ResourceType.DocumentReference)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentReference)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.DocumentReference) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -238,9 +232,7 @@ class DocumentReferenceContextRelated {
 
 class List_ {
   
-    @Default(Dstu2ResourceType.List_)
-    @JsonKey(unknownEnumValue: Dstu2ResourceType.List_)
-        Dstu2ResourceType resourceType,
+    @Default(Dstu2ResourceType.List_) Dstu2ResourceType resourceType,
     Id? id,
     Meta? meta,
     FhirUri? implicitRules,

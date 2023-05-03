@@ -131,9 +131,7 @@ class Account {
   
   
     
-    @Default(R5ResourceType.Account)
-    @JsonKey(unknownEnumValue: R5ResourceType.Account)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Account) R5ResourceType resourceType,
 
     
     
@@ -733,9 +731,7 @@ class ChargeItem {
   
   
     
-    @Default(R5ResourceType.ChargeItem)
-    @JsonKey(unknownEnumValue: R5ResourceType.ChargeItem)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.ChargeItem) R5ResourceType resourceType,
 
     
     
@@ -1199,9 +1195,7 @@ class ChargeItemDefinition {
   
   
     
-    @Default(R5ResourceType.ChargeItemDefinition)
-    @JsonKey(unknownEnumValue: R5ResourceType.ChargeItemDefinition)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.ChargeItemDefinition) R5ResourceType resourceType,
 
     
     
@@ -1793,9 +1787,7 @@ class Contract {
   
   
     
-    @Default(R5ResourceType.Contract)
-    @JsonKey(unknownEnumValue: R5ResourceType.Contract)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Contract) R5ResourceType resourceType,
 
     
     
@@ -4023,9 +4015,7 @@ class ExplanationOfBenefit {
   
   
     
-    @Default(R5ResourceType.ExplanationOfBenefit)
-    @JsonKey(unknownEnumValue: R5ResourceType.ExplanationOfBenefit)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.ExplanationOfBenefit) R5ResourceType resourceType,
 
     
     
@@ -7267,9 +7257,7 @@ class InsurancePlan {
   
   
     
-    @Default(R5ResourceType.InsurancePlan)
-    @JsonKey(unknownEnumValue: R5ResourceType.InsurancePlan)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.InsurancePlan) R5ResourceType resourceType,
 
     
     

@@ -1851,9 +1851,7 @@ class Evidence {
   
   
   
-    @Default(R4ResourceType.Evidence)
-    @JsonKey(unknownEnumValue: R4ResourceType.Evidence)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.Evidence) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -2760,9 +2758,7 @@ class EvidenceVariable {
   
   
   
-    @Default(R4ResourceType.EvidenceVariable)
-    @JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.EvidenceVariable) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -3255,9 +3251,7 @@ class ResearchDefinition {
   
   
   
-    @Default(R4ResourceType.ResearchDefinition)
-    @JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.ResearchDefinition) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
@@ -3562,9 +3556,7 @@ class ResearchElementDefinition {
   
   
   
-    @Default(R4ResourceType.ResearchElementDefinition)
-    @JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.ResearchElementDefinition) R4ResourceType resourceType,
     String? id,
     Meta? meta,
     FhirUri? implicitRules,
